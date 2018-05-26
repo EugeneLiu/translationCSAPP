@@ -37,7 +37,7 @@ Dialogue: 0,0:00:20.58,0:00:26.24,csapp,,0,0,0,,the individual instructions to g
 Dialogue: 0,0:00:26.54,0:00:29.64,csapp,,0,0,0,,and there's really two forms of machine programs
 Dialogue: 0,0:00:29.64,0:00:33.44,csapp,,0,0,0,,one is the actual object code that runs on the computer
 Dialogue: 0,0:00:33.62,0:00:36.34,csapp,,0,0,0,,and as we'll see that's a series of bytes
-Dialogue: 0,0:00:36.34,0:00:39.92,csapp,,0,0,0,,that encode instructions  that the prostitute executes
+Dialogue: 0,0:00:36.34,0:00:39.92,csapp,,0,0,0,,that encode instructions  that the processor executes
 Dialogue: 0,0:00:40.46,0:00:43.46,csapp,,0,0,0,,but well because it's hard to look at bytes
 Dialogue: 0,0:00:43.94,0:00:48.40,csapp,,0,0,0,,and understand them there's various text forms to make it more clear
 Dialogue: 0,0:00:48.88,0:00:51.04,csapp,,0,0,0,,and one of  those is assembly code
@@ -93,10 +93,10 @@ Dialogue: 0,0:04:13.46,0:04:16.91,csapp,,0,0,0,,so I'll go through a little bit 
 Dialogue: 0,0:04:16.91,0:04:18.50,csapp,,0,0,0,,and how it got to where it is
 Dialogue: 0,0:04:19.74,0:04:25.56,csapp,,0,0,0,,we'll look at through this idea of how does C code relate to assembly code machine code and so forth
 Dialogue: 0,0:04:26.36,0:04:29.22,csapp,,0,0,0,,we'll go through set of low-level basics
-Dialogue: 0,0:04:29.22,0:04:33.94,csapp,,0,0,0,,that you need to understand the of what assembly cup machine code looks like
+Dialogue: 0,0:04:29.22,0:04:33.94,csapp,,0,0,0,,that you need to understand the of what assembly code machine code looks like
 Dialogue: 0,0:04:34.28,0:04:36.86,csapp,,0,0,0,,and then we'll actually take on and look at some real code
 Dialogue: 0,0:04:38.12,0:04:40.48,csapp,,0,0,0,,focusing specifically on arithmetic operations
-Dialogue: 0,0:04:42.86,0:04:48.66,csapp,,0,0,0,,so x86 is insert a colloquial term for Intel processors
+Dialogue: 0,0:04:42.86,0:04:48.66,csapp,,0,0,0,,so x86 is sort of a colloquial term for Intel processors
 Dialogue: 0,0:04:48.66,0:04:51.66,csapp,,0,0,0,,and the reason is that the first one was called the 8086
 Dialogue: 0,0:04:52.80,0:04:58.65,csapp,,0,0,0,,and then they kind of skipped a t1 but then they went to 80 to 86
 Dialogue: 0,0:04:58.65,0:05:01.50,csapp,,0,0,0,,and so forth 8386
@@ -268,12 +268,12 @@ Dialogue: 0,0:17:35.38,0:17:37.34,csapp,,0,0,0,,because it assumes you kind of a
 Dialogue: 0,0:17:39.76,0:17:43.76,csapp,,0,0,0,,okay so let's go in and I should mention - if just for general interest
 Dialogue: 0,0:17:44.26,0:17:48.84,csapp,,0,0,0,, the other major class of processor and common use today are called arm
 Dialogue: 0,0:17:49.48,0:17:53.82,csapp,,0,0,0,,so arm actually is an acronym for acorn RISC machine
-Dialogue: 0,0:17:54.66,0:17:58.58,csapp,,0,0,0,,I just told you at-risk means it means risk reduced instruction set computer
+Dialogue: 0,0:17:54.66,0:17:58.58,csapp,,0,0,0,,I just told you what RISC means. It means risk reduced instruction set computer
 Dialogue: 0,0:17:59.04,0:18:04.64,csapp,,0,0,0,,an acorn means like you know the seed of an oak tree it was a British company
 Dialogue: 0,0:18:04.86,0:18:10.96,csapp,,0,0,0,, that decided to make its own personal computers in the early days of it and they said
 Dialogue: 0,0:18:11.58,0:18:13.18,csapp,,0,0,0,,we're not going to buy those chips from Intel
 Dialogue: 0,0:18:13.18,0:18:16.42,csapp,,0,0,0,,we're going to make them ourselves so they designed and manufactured their own chips
-Dialogue: 0,0:18:17.10,0:18:20.62,csapp,,0,0,0,,well as a company a computer manufacturer it was a complete bus
+Dialogue: 0,0:18:17.10,0:18:20.62,csapp,,0,0,0,,well as a company a computer manufacturer it was a complete bust
 Dialogue: 0,0:18:21.32,0:18:26.24,csapp,,0,0,0,,but it turned out that they'd come up with a fairly good instruction set
 Dialogue: 0,0:18:26.32,0:18:32.60,csapp,,0,0,0,,that was sufficiently simple that it could be put on chips and better yet
 Dialogue: 0,0:18:32.60,0:18:33.84,csapp,,0,0,0,,it could be customized
@@ -285,7 +285,7 @@ Dialogue: 0,0:18:52.86,0:18:58.86,csapp,,0,0,0,,they sell companies the rights t
 Dialogue: 0,0:18:59.34,0:19:03.50,csapp,,0,0,0,,and so if you look at like a a cell phone processor
 Dialogue: 0,0:19:03.50,0:19:07.56,csapp,,0,0,0,, the actual ARM processor is a little tiny part of it on the chip
 Dialogue: 0,0:19:08.20,0:19:14.80,csapp,,0,0,0,,and then they'll have other stuff to make the graphics go better to improve your phone calls and so forth
-Dialogue: 0,0:19:14.84,0:19:19.36,csapp,,0,0,0,,and so they're really selling what intellectual property is opposed to chips
+Dialogue: 0,0:19:14.84,0:19:19.36,csapp,,0,0,0,,and so they're really selling what intellectual property is as opposed to chips
 Dialogue: 0,0:19:20.10,0:19:23.66,csapp,,0,0,0,,and so people we've gotten various enquiries
 Dialogue: 0,0:19:23.66,0:19:28.08,csapp,,0,0,0,,when are you going to start talking about ARM in your book or your course or something and we go
 Dialogue: 0,0:19:28.46,0:19:31.74,csapp,,0,0,0,, it would be another book to write to do justice to ARM
@@ -432,7 +432,7 @@ Dialogue: 0,0:30:44.38,0:30:47.92,csapp,,0,0,0,,it's very tedious the way it wor
 Dialogue: 0,0:30:48.56,0:30:51.56,csapp,,0,0,0,,you say -01 
 Dialogue: 0,0:30:51.56,0:30:55.76,csapp,,0,0,0,,which is what you used to do to turn on the optimizer 
 Dialogue: 0,0:30:55.96,0:30:59.44,csapp,,0,0,0,,it turns out that as GCC as they've gotten more advanced 
-Dialogue: 0,0:30:59.90,0:31:02.22,csapp,,0,0,0,,it does a lot of up Touma's ations now 
+Dialogue: 0,0:30:59.90,0:31:02.22,csapp,,0,0,0,,it does a lot of optimizations now 
 Dialogue: 0,0:31:02.66,0:31:07.34,csapp,,0,0,0,,that for the purpose of this course make the code pretty hard to understand 
 Dialogue: 0,0:31:07.90,0:31:16.46,csapp,,0,0,0,,so just with one of the most recent generations of GCC came out with this level called G for debugging
 Dialogue: 0,0:31:16.88,0:31:22.10,csapp,,0,0,0,,that's a nice for this course purpose of this course a nice level that 
@@ -651,9 +651,9 @@ Dialogue: 0,0:50:12.56,0:50:19.62,csapp,,0,0,0,,and one of the changes that went
 Dialogue: 0,0:50:20.08,0:50:22.66,csapp,,0,0,0,,and by the way this is a really helpful thing because 
 Dialogue: 0,0:50:23.12,0:50:29.42,csapp,,0,0,0,,it was very frustrating how few registers there were in the old IA32 machines 
 Dialogue: 0,0:50:32.20,0:50:35.04,csapp,,0,0,0,,and then the as I mentioned
-Dialogue: 0,0:50:37.36,0:50:44.74,csapp,,0,0,0,, you could actually in the old machine refer to the Lord or 16 bytes of these registers 
+Dialogue: 0,0:50:37.36,0:50:44.74,csapp,,0,0,0,, you could actually in the old machine refer to the lower order 16 bytes of these registers 
 Dialogue: 0,0:50:44.74,0:50:48.42,csapp,,0,0,0,,and that was a legacy from the 8086 days 
-Dialogue: 0,0:50:49.68,0:50:57.58,csapp,,0,0,0,,and within the first four you could even refer to the individual to Lord or bytes in those 
+Dialogue: 0,0:50:49.68,0:50:57.58,csapp,,0,0,0,,and within the first four you could even refer to the individual to lower order or bytes in those 
 Dialogue: 0,0:50:58.46,0:51:03.14,csapp,,0,0,0,,so nowadays you can actually get to the low order byte of all of them 
 Dialogue: 0,0:51:03.32,0:51:08.04,csapp,,0,0,0,,and we just sort of got that's covered in the book actually 
 Dialogue: 0,0:51:08.46,0:51:13.84,csapp,,0,0,0,,we don't talk about how you can get to these bytes because  that's really a legacy from back 
@@ -684,7 +684,7 @@ Dialogue: 0,0:53:27.62,0:53:30.70,csapp,,0,0,0,,and there's sort of three differ
 Dialogue: 0,0:53:30.84,0:53:35.18,csapp,,0,0,0,,the move instruction in x86 is actually can do a lot of things
 Dialogue: 0,0:53:38.00,0:53:43.06,csapp,,0,0,0,,oh because it can take different types of information or what they call operands 
 Dialogue: 0,0:53:43.84,0:53:49.46,csapp,,0,0,0,,so the source is some where you're you're copying from the source to the destination 
-Dialogue: 0,0:53:50.86,0:53:53.42,csapp,,0,0,0,,the source can be some what's called a mediate.
+Dialogue: 0,0:53:50.86,0:53:53.42,csapp,,0,0,0,,the source can be some what's called an Immediate.
 Dialogue: 0,0:53:53.42,0:53:56.18,csapp,,0,0,0,,it's actually a number that's baked into the program.
 Dialogue: 0,0:53:56.56,0:53:59.82,csapp,,0,0,0,,that you want to copy into some other location 
 Dialogue: 0,0:54:00.64,0:54:06.66,csapp,,0,0,0,,a register we've talked about is one a specially named memory of locations 
