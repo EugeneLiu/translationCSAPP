@@ -16,8 +16,8 @@ Video File: ../../../Desktop/csapp/Lecture 02  Bits, Bytes, and Integers.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 1.000000
-Active Line: 15
-Video Position: 1092
+Active Line: 25
+Video Position: 1915
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -43,15 +43,15 @@ Dialogue: 0,0:00:31.84,0:00:36.38,Chinese,,0,0,0,,你可以将一些正数相乘
 Dialogue: 0,0:00:36.38,0:00:41.46,English,,0,0,0,,So what we want to understand is what is the bit level representation of numbers
 Dialogue: 0,0:00:36.38,0:00:41.46,Chinese,,0,0,0,,所以我们必须要了解的是数字的位级表示
 Dialogue: 0,0:00:41.90,0:00:47.28,English,,0,0,0,,And how does that affect some of the properties you have when you operate them on
-Dialogue: 0,0:00:41.90,0:00:47.28,Chinese,,0,0,0,,当你操作它们时，这些属性会如何影响你的一些属性
+Dialogue: 0,0:00:41.90,0:00:47.28,Chinese,,0,0,0,,当你操作它们时，这些属性会有怎样的影响
 Dialogue: 0,0:00:47.28,0:00:51.12,English,,0,0,0,, and especially looking at the corner cases when things overflow
-Dialogue: 0,0:00:47.28,0:00:51.12,Chinese,,0,0,0,,特别是在事物溢出时看角落的情况
-Dialogue: 0,0:00:51.50,0:00:54.08,English,,0,0,0,,We sort of don't do what you might expect them to do
-Dialogue: 0,0:00:51.50,0:00:54.08,Chinese,,0,0,0,,我们不会做你可能期望他们做的事情
+Dialogue: 0,0:00:47.28,0:00:51.12,Chinese,,0,0,0,,特别是在临界条件发生溢出时
+Dialogue: 0,0:00:51.50,0:00:54.08,English,,0,0,0,,We sort of don't do what, you might expect them to do
+Dialogue: 0,0:00:51.50,0:00:54.08,Chinese,,0,0,0,,哪些我们不能做，哪些你期望它们实现
 Dialogue: 0,0:00:55.04,0:00:57.44,English,,0,0,0,, So we'll start off with very basic stuff of
-Dialogue: 0,0:00:55.04,0:00:57.44,Chinese,,0,0,0,,所以我们将从非常基本的东西开始
+Dialogue: 0,0:00:55.04,0:00:57.44,Chinese,,0,0,0,,所以我们从非常基本的东西开始
 Dialogue: 0,0:00:57.44,0:01:03.84,English,,0,0,0,,How numbers are represented especially integer valued numbers are represented in bits
-Dialogue: 0,0:00:57.44,0:01:03.84,Chinese,,0,0,0,,如何表示数字，尤其是整数值的数字以位表示
+Dialogue: 0,0:00:57.44,0:01:03.84,Chinese,,0,0,0,,如何表示数字，尤其是整数值的位级表示
 Dialogue: 0,0:01:05.82,0:01:09.76,English,,0,0,0,,Um so I think you pretty well figured out in this world
 Dialogue: 0,0:01:05.82,0:01:09.76,Chinese,,0,0,0,,恩，所以我觉得你在这个世界很好
 Dialogue: 0,0:01:09.76,0:01:13.72,English,,0,0,0,, That the whole digital world is sort of based on on binary values
