@@ -16,9 +16,8 @@ Video File: ../../../Desktop/csapp/Lecture 02  Bits, Bytes, and Integers.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 1.000000
-Scroll Position: 634
-Active Line: 656
-Video Position: 127679
+Active Line: 15
+Video Position: 1092
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -28,659 +27,1316 @@ Style: English,Source Han Sans CN,30,&H00FFFFFF,&H00412A2C,&H00412A2C,&H00412A2C
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 0,0:00:00.00,0:00:04.68,English,,0,0,0,,I see a lot of people figure it out to come early so good see you
+Dialogue: 0,0:00:00.00,0:00:04.68,Chinese,,0,0,0,,我看到很多人很早就来了，很高兴见到你们
 Dialogue: 0,0:00:05.38,0:00:08.80,English,,0,0,0,,So as you recall,my name is Randy Bryant
-Dialogue: 0,0:00:08.80,0:00:12.36,English,,0,0,0,,And I'm Co instructor of this course along with Dave Hallaron
-Dialogue: 0,0:00:12.80,0:00:23.44,English,,0,0,0,,And for the next couple lectures the first part of this course really will be talking about a sort of data representations in particular
-Dialogue: 0,0:00:23.68,0:00:28.30,English,,0,0,0,,How numbers are represented in different forms and some of the properties and you saw that
+Dialogue: 0,0:00:05.38,0:00:08.80,Chinese,,0,0,0,,你们记得，我的名字是兰德尔·布莱恩特
+Dialogue: 0,0:00:08.80,0:00:12.36,English,,0,0,0,,And I'm co-instructor of this course along with Dave Hallaron
+Dialogue: 0,0:00:08.80,0:00:12.36,Chinese,,0,0,0,,我是大卫·奥哈拉伦的合作导师
+Dialogue: 0,0:00:12.80,0:00:22.66,English,,0,0,0,,And for the next couple lectures the first part of this course really will be talking about a sort of data representations 
+Dialogue: 0,0:00:12.80,0:00:22.66,Chinese,,0,0,0,,接下来的几次课，我们主要讨论课程的第一部分数据的表示
+Dialogue: 0,0:00:22.66,0:00:28.30,English,,0,0,0,,In particular how numbers are represented in different forms and some of the properties and you saw that
+Dialogue: 0,0:00:22.66,0:00:28.30,Chinese,,0,0,0,,特别是数字怎样以不同形式展示和它们对应的属性。你们会看到这些性质
 Dialogue: 0,0:00:29.02,0:00:31.84,English,,0,0,0,,When I talked last week I showed you things like
+Dialogue: 0,0:00:29.02,0:00:31.84,Chinese,,0,0,0,,上周的课上，我给你们展示过类似的东西
 Dialogue: 0,0:00:31.84,0:00:36.38,English,,0,0,0,,You can multiply some numbers together that are positive and get negative result
+Dialogue: 0,0:00:31.84,0:00:36.38,Chinese,,0,0,0,,你可以将一些正数相乘得到负数
 Dialogue: 0,0:00:36.38,0:00:41.46,English,,0,0,0,,So what we want to understand is what is the bit level representation of numbers
+Dialogue: 0,0:00:36.38,0:00:41.46,Chinese,,0,0,0,,所以我们必须要了解的是数字的位级表示
 Dialogue: 0,0:00:41.90,0:00:47.28,English,,0,0,0,,And how does that affect some of the properties you have when you operate them on
+Dialogue: 0,0:00:41.90,0:00:47.28,Chinese,,0,0,0,,当你操作它们时，这些属性会如何影响你的一些属性
 Dialogue: 0,0:00:47.28,0:00:51.12,English,,0,0,0,, and especially looking at the corner cases when things overflow
+Dialogue: 0,0:00:47.28,0:00:51.12,Chinese,,0,0,0,,特别是在事物溢出时看角落的情况
 Dialogue: 0,0:00:51.50,0:00:54.08,English,,0,0,0,,We sort of don't do what you might expect them to do
+Dialogue: 0,0:00:51.50,0:00:54.08,Chinese,,0,0,0,,我们不会做你可能期望他们做的事情
 Dialogue: 0,0:00:55.04,0:00:57.44,English,,0,0,0,, So we'll start off with very basic stuff of
+Dialogue: 0,0:00:55.04,0:00:57.44,Chinese,,0,0,0,,所以我们将从非常基本的东西开始
 Dialogue: 0,0:00:57.44,0:01:03.84,English,,0,0,0,,How numbers are represented especially integer valued numbers are represented in bits
+Dialogue: 0,0:00:57.44,0:01:03.84,Chinese,,0,0,0,,如何表示数字，尤其是整数值的数字以位表示
 Dialogue: 0,0:01:05.82,0:01:09.76,English,,0,0,0,,Um so I think you pretty well figured out in this world
+Dialogue: 0,0:01:05.82,0:01:09.76,Chinese,,0,0,0,,恩，所以我觉得你在这个世界很好
 Dialogue: 0,0:01:09.76,0:01:13.72,English,,0,0,0,, That the whole digital world is sort of based on on binary values
+Dialogue: 0,0:01:09.76,0:01:13.72,Chinese,,0,0,0,,整个数字世界都是基于二元价值
 Dialogue: 0,0:01:14.48,0:01:21.98,English,,0,0,0,,And that wasn't always the case I mean since humans have ten fingers and ten toes
-Dialogue: 0,0:01:22.26,0:01:25.04,English,,0,0,0,,A lot of the world was based on the decimal system 
+Dialogue: 0,0:01:14.48,0:01:21.98,Chinese,,0,0,0,,我并不总是这样，因为人类有十个手指和十个脚趾
+Dialogue: 0,0:01:22.26,0:01:25.04,English,,0,0,0,,A lot of the world was based on the decimal system
+Dialogue: 0,0:01:22.26,0:01:25.04,Chinese,,0,0,0,,很多世界都是基于十进制的
 Dialogue: 0,0:01:25.52,0:01:33.82,English,,0,0,0,,And it was really only and in fact the first electronic computer the ENIAC built in University of Pennsylvania
+Dialogue: 0,0:01:25.52,0:01:33.82,Chinese,,0,0,0,,这实际上只是ENIAC在宾夕法尼亚大学建立的第一台电子计算机
 Dialogue: 0,0:01:34.10,0:01:38.28,English,,0,0,0,, basically encoded did all of its arithmetic using base ten
+Dialogue: 0,0:01:34.10,0:01:38.28,Chinese,,0,0,0,,基本上编码完成了所有的算术运算，使用十进制
 Dialogue: 0,0:01:38.60,0:01:42.82,English,,0,0,0,,They had ten vacuum tubes per digit they wanted to represent
+Dialogue: 0,0:01:38.60,0:01:42.82,Chinese,,0,0,0,,他们想要代表每个数字10个真空管
 Dialogue: 0,0:01:43.36,0:01:47.32,English,,0,0,0,,So they basically turned on or off those tubes to represent
+Dialogue: 0,0:01:43.36,0:01:47.32,Chinese,,0,0,0,,所以他们基本上打开或关闭这些管来代表
 Dialogue: 0,0:01:47.58,0:01:50.74,English,,0,0,0,,Which of the ten possible digits you could want
+Dialogue: 0,0:01:47.58,0:01:50.74,Chinese,,0,0,0,,你可能想要的十个可能的数字中的哪一个
 Dialogue: 0,0:01:51.18,0:01:56.26,English,,0,0,0,,And it really didn't come to people until later than that
+Dialogue: 0,0:01:51.18,0:01:56.26,Chinese,,0,0,0,,直到晚些时候才真正发现它
 Dialogue: 0,0:01:56.52,0:02:01.58,English,,0,0,0,,So that's 1948 that they really should just think about base two for everything
+Dialogue: 0,0:01:56.52,0:02:01.58,Chinese,,0,0,0,,那是1948年，他们真的应该考虑为所有事情做好准备
 Dialogue: 0,0:02:04.06,0:02:08.78,English,,0,0,0,,And the reason why bits are great is in the digital world
+Dialogue: 0,0:02:04.06,0:02:08.78,Chinese,,0,0,0,,在数字世界中，位是伟大的原因
 Dialogue: 0,0:02:08.96,0:02:14.00,English,,0,0,0,,You can sort of take what otherwise an analog signal and quantify it
+Dialogue: 0,0:02:08.96,0:02:14.00,Chinese,,0,0,0,,您可以采取其他方式模拟信号并对其进行量化
 Dialogue: 0,0:02:14.36,0:02:17.56,English,,0,0,0,, And just say I'm going to say that one range of values
+Dialogue: 0,0:02:14.36,0:02:17.56,Chinese,,0,0,0,,只是说我要说一个价值范围
 Dialogue: 0,0:02:17.56,0:02:21.18,English,,0,0,0,, Let's say it's a low voltage I'm going to call that a zero
+Dialogue: 0,0:02:17.56,0:02:21.18,Chinese,,0,0,0,,假设这是一个低电压，我将称之为零
 Dialogue: 0,0:02:21.46,0:02:24.52,English,,0,0,0,,And a high range of values I'm going to call it a one
+Dialogue: 0,0:02:21.46,0:02:24.52,Chinese,,0,0,0,,我将称之为一个值的高价值范围
 Dialogue: 0,0:02:24.98,0:02:31.18,English,,0,0,0,, And if there's noise or imperfections in the circuit or anything going on
+Dialogue: 0,0:02:24.98,0:02:31.18,Chinese,,0,0,0,,如果电路中有噪音或不完善之处，或者发生任何事情
 Dialogue: 0,0:02:31.76,0:02:37.78,English,,0,0,0,,As long as that doesn't exceed these bit these thresholds you've set up
+Dialogue: 0,0:02:31.76,0:02:37.78,Chinese,,0,0,0,,只要不超过你设定的这些阈值
 Dialogue: 0,0:02:38.18,0:02:40.38,English,,0,0,0,,Then you'll get a nice clean signal out of it
+Dialogue: 0,0:02:38.18,0:02:40.38,Chinese,,0,0,0,,然后你会得到一个很好的干净信号
 Dialogue: 0,0:02:40.38,0:02:45.06,English,,0,0,0,,And that's the main advantage of digital processing over analog processing
+Dialogue: 0,0:02:40.38,0:02:45.06,Chinese,,0,0,0,,这是数字处理比模拟处理的主要优势
 Dialogue: 0,0:02:46.80,0:02:50.10,English,,0,0,0,, And so that's sort of at the core why everything we do
+Dialogue: 0,0:02:46.80,0:02:50.10,Chinese,,0,0,0,,这就是我们所做的一切的核心
 Dialogue: 0,0:02:50.10,0:02:54.40,English,,0,0,0,, And especially for storing information it turns out it's much easier to store
+Dialogue: 0,0:02:50.10,0:02:54.40,Chinese,,0,0,0,,特别是对于存储信息来说，它更容易存储
 Dialogue: 0,0:02:54.66,0:03:00.10,English,,0,0,0,,One bit of information or a digital value than it is to store an analog value
+Dialogue: 0,0:02:54.66,0:03:00.10,Chinese,,0,0,0,,一位信息或一个数字值，而不是存储模拟值
 Dialogue: 0,0:03:02.10,0:03:09.28,English,,0,0,0,,And sorry this kind of slides went a little crazy on animations
+Dialogue: 0,0:03:02.10,0:03:09.28,Chinese,,0,0,0,,对不起，这种幻灯片在动画上有点疯狂
 Dialogue: 0,0:03:09.56,0:03:15.42,English,,0,0,0,,So the point is that we represent all the numbers in a computer as sets of bits
+Dialogue: 0,0:03:09.56,0:03:15.42,Chinese,,0,0,0,,所以重点是我们将计算机中的所有数字表示为位组
 Dialogue: 0,0:03:15.42,0:03:18.24,English,,0,0,0,,And I think you generally understand that fairly well
+Dialogue: 0,0:03:15.42,0:03:18.24,Chinese,,0,0,0,,我认为你一般都很了解
 Dialogue: 0,0:03:18.68,0:03:23.98,English,,0,0,0,,And so of course the familiar binary representation of integers which we'll go over today
+Dialogue: 0,0:03:18.68,0:03:23.98,Chinese,,0,0,0,,当然，我们今天将要讨论的整数的熟悉的二进制表示
 Dialogue: 0,0:03:24.34,0:03:28.54,English,,0,0,0,, Just uses a bit position for each power of two
+Dialogue: 0,0:03:24.34,0:03:28.54,Chinese,,0,0,0,,只需使用两个位的每个幂
 Dialogue: 0,0:03:29.04,0:03:32.87,English,,0,0,0,,We can also represent values that are fractional
+Dialogue: 0,0:03:29.04,0:03:32.87,Chinese,,0,0,0,,我们也可以表示分数的值
 Dialogue: 0,0:03:32.96,0:03:37.64,English,,0,0,0,,And we'll talk about that a week from today when we do floating-point numbers
+Dialogue: 0,0:03:32.96,0:03:37.64,Chinese,,0,0,0,,我们将从今天开始讨论这个问题，当时我们做了浮点数
 Dialogue: 0,0:03:37.98,0:03:41.04,English,,0,0,0,, Where what you do is to the right of the binary point
+Dialogue: 0,0:03:37.98,0:03:41.04,Chinese,,0,0,0,,你在哪里做的是在二进制的右边
 Dialogue: 0,0:03:41.18,0:03:46.60,English,,0,0,0,,So this is no longer a decimal point it's a binary point
+Dialogue: 0,0:03:41.18,0:03:46.60,Chinese,,0,0,0,,所以这不再是一个小数点，它是一个二元点
 Dialogue: 0,0:03:47.20,0:03:52.44,English,,0,0,0,,And so something to the left of that would have a weight one two to the zero
+Dialogue: 0,0:03:47.20,0:03:52.44,Chinese,,0,0,0,,所以左边的东西会有一个重量为零的重量
 Dialogue: 0,0:03:53.84,0:03:56.62,English,,0,0,0,,And the next one over would have weight to the one
+Dialogue: 0,0:03:53.84,0:03:56.62,Chinese,,0,0,0,,接下来的一个会对这个人有影响
 Dialogue: 0,0:03:57.04,0:04:03.88,English,,0,0,0,,But what you do is as you go to the right that adds weight 2^-1,2^-2
+Dialogue: 0,0:03:57.04,0:04:03.88,Chinese,,0,0,0,,但是你做的是当你向右增加2 ^ -1,2 ^ -2的重量时
 Dialogue: 0,0:04:03.88,0:04:10.34,English,,0,0,0,, In other words this is 1,this is 2, this is 1/2 and this is 1/4
+Dialogue: 0,0:04:03.88,0:04:10.34,Chinese,,0,0,0,,换句话说，这是1，这是2，这是1/2，这是1/4
 Dialogue: 0,0:04:11.44,0:04:15.70,English,,0,0,0,,So we can represent just like you do the decimal representation of fractions
+Dialogue: 0,0:04:11.44,0:04:15.70,Chinese,,0,0,0,,所以我们可以像你做分数的十进制表示一样表示
 Dialogue: 0,0:04:16.06,0:04:18.44,English,,0,0,0,,We can do the binary representation of fractions
+Dialogue: 0,0:04:16.06,0:04:18.44,Chinese,,0,0,0,,我们可以做分数的二进制表示
 Dialogue: 0,0:04:18.44,0:04:22.22,English,,0,0,0,, And that's the core of floating-point number of representations
+Dialogue: 0,0:04:18.44,0:04:22.22,Chinese,,0,0,0,,这是浮点数表示的核心
 Dialogue: 0,0:04:23.94,0:04:35.06,English,,0,0,0,,And so it gets very annoying if you have say 32 or even 64-bit numbers to be writing the strings of 1 and 0 out
+Dialogue: 0,0:04:23.94,0:04:35.06,Chinese,,0,0,0,,所以如果你有32位甚至64位的数字写入1和0的字符串，那么它会变得非常烦人
 Dialogue: 0,0:04:35.42,0:04:45.54,English,,0,0,0,,And so what we use,and what's become largely the most common is to group collections of 4bits at a time into
+Dialogue: 0,0:04:35.42,0:04:45.54,Chinese,,0,0,0,,所以我们使用的是什么，最常见的是将4bits的数据集合分组
 Dialogue: 0,0:04:45.98,0:04:50.90,English,,0,0,0,,And then represent that in base 16 or what's known as hexadecimal representation
+Dialogue: 0,0:04:45.98,0:04:50.90,Chinese,,0,0,0,,然后用16进制表示或者称为十六进制表示
 Dialogue: 0,0:04:51.28,0:04:56.12,English,,0,0,0,, Using the letters A through F as values 10 through 15
+Dialogue: 0,0:04:51.28,0:04:56.12,Chinese,,0,0,0,,使用字母A到F作为值10到15
 Dialogue: 0,0:04:56.12,0:05:00.78,English,,0,0,0,,And you'll spend a lot of time staring at exa decimal numbers this year
+Dialogue: 0,0:04:56.12,0:05:00.78,Chinese,,0,0,0,,而今年你会花很多时间盯着十进制数字
 Dialogue: 0,0:05:01.10,0:05:05.66,English,,0,0,0,,And you'll get pretty good at being able to look at a hex number and just write it out in binary
+Dialogue: 0,0:05:01.10,0:05:05.66,Chinese,,0,0,0,,而且你可以很好地看到一个十六进制数字，然后用二进制写出来
 Dialogue: 0,0:05:06.20,0:05:09.90,English,,0,0,0,,The way I do it just to tell you is
+Dialogue: 0,0:05:06.20,0:05:09.90,Chinese,,0,0,0,,我这样做只是为了告诉你
 Dialogue: 0,0:05:10.48,0:05:22.86,English,,0,0,0,,I mean I've got the values from 0 to 9 wired down pretty well
+Dialogue: 0,0:05:10.48,0:05:22.86,Chinese,,0,0,0,,我的意思是我已经从0到9的数值相当好
 Dialogue: 0,0:05:24.10,0:05:28.90,English,,0,0,0,,And then I keep track of a few special cases 1010 is A
+Dialogue: 0,0:05:24.10,0:05:28.90,Chinese,,0,0,0,,然后我跟踪一些特殊情况1010是A.
 Dialogue: 0,0:05:29.78,0:05:37.94,English,,0,0,0,,1100 is C and 1111 is F
+Dialogue: 0,0:05:29.78,0:05:37.94,Chinese,,0,0,0,,1100是C，1111是F.
 Dialogue: 0,0:05:39.00,0:05:45.46,English,,0,0,0,, And for B,D and E I kind of interpolate between those
+Dialogue: 0,0:05:39.00,0:05:45.46,Chinese,,0,0,0,,而对于B，D和E，我在这些之间进行插值
 Dialogue: 0,0:05:45.46,0:05:49.10,English,,0,0,0,,So if you want to develop that skill that's the way you can do it
+Dialogue: 0,0:05:45.46,0:05:49.10,Chinese,,0,0,0,,所以如果你想发展这种技能，那就是你可以做到的
 Dialogue: 0,0:05:49.10,0:05:54.26,English,,0,0,0,,...an HDMI to what...
+Dialogue: 0,0:05:49.10,0:05:54.26,Chinese,,0,0,0,,... HDMI到什么...
 Dialogue: 0,0:05:54.48,0:05:57.24,English,,0,0,0,,No,I don't think there's any connector here you know no
+Dialogue: 0,0:05:54.48,0:05:57.24,Chinese,,0,0,0,,不，我不认为这里有任何连接器，你不知道
 Dialogue: 0,0:06:03.36,0:06:06.68,English,,0,0,0,, So that's something you're going to end up wanting to be able to do
+Dialogue: 0,0:06:03.36,0:06:06.68,Chinese,,0,0,0,,所以这就是你最终希望能够做到的事情
 Dialogue: 0,0:06:07.92,0:06:11.65,English,,0,0,0,,So in C we don't...
+Dialogue: 0,0:06:07.92,0:06:11.65,Chinese,,0,0,0,,所以在C中我们不...
 Dialogue: 0,0:06:12.14,0:06:18.30,English,,0,0,0,,In most declarations you don't actually are told exactly how many bytes
+Dialogue: 0,0:06:12.14,0:06:18.30,Chinese,,0,0,0,,在大多数声明中，实际上并没有准确告知多少字节
 Dialogue: 0,0:06:18.30,0:06:20.30,English,,0,0,0,,A byte is 8bits
+Dialogue: 0,0:06:18.30,0:06:20.30,Chinese,,0,0,0,,一个字节是8位
 Dialogue: 0,0:06:20.96,0:06:23.14,English,,0,0,0,,Each data value is represented as
+Dialogue: 0,0:06:20.96,0:06:23.14,Chinese,,0,0,0,,每个数据值表示为
 Dialogue: 0,0:06:23.52,0:06:30.46,English,,0,0,0,,And that's partly C was designed actually back when microprocessors only had 16-bit words
+Dialogue: 0,0:06:23.52,0:06:30.46,Chinese,,0,0,0,,这部分是C的设计实际上是当微处理器只有16位字时
 Dialogue: 0,0:06:30.46,0:06:32.38,English,,0,0,0,, It was actually before microprocessors
+Dialogue: 0,0:06:30.46,0:06:32.38,Chinese,,0,0,0,,它实际上是在微处理器之前
 Dialogue: 0,0:06:32.90,0:06:40.20,English,,0,0,0,, So 16-bit words were a fairly standard and over time that's expanded from 16 to 32 to now 64
+Dialogue: 0,0:06:32.90,0:06:40.20,Chinese,,0,0,0,,所以16位字是一个相当标准的字，随着时间的推移，它从16位扩展到32位，现在是64位
 Dialogue: 0,0:06:40.70,0:06:44.36,English,,0,0,0,,And so C rather than a sort of an advanced thing
+Dialogue: 0,0:06:40.70,0:06:44.36,Chinese,,0,0,0,,所以C而不是一种先进的东西
 Dialogue: 0,0:06:44.36,0:06:49.34,English,,0,0,0,,Here is how many bytes every value will have has these slightly ambiguous terms
+Dialogue: 0,0:06:44.36,0:06:49.34,Chinese,,0,0,0,,这里是每个值有多少个字节会有这些含糊不清的术语
 Dialogue: 0,0:06:49.84,0:06:53.20,English,,0,0,0,, That vary actually from one machine to the next
+Dialogue: 0,0:06:49.84,0:06:53.20,Chinese,,0,0,0,,从一台机器到另一台机器实际上有所不同
 Dialogue: 0,0:06:55.26,0:07:01.00,English,,0,0,0,,And if you're a very careful C programmer you have to anticipate that some
+Dialogue: 0,0:06:55.26,0:07:01.00,Chinese,,0,0,0,,如果你是一个非常小心的C程序员，你必须预料到一些
 Dialogue: 0,0:07:01.44,0:07:09.80,English,,0,0,0,,But what won't deal with is x86-64 is the class of machines will be working with exclusively this term
+Dialogue: 0,0:07:01.44,0:07:09.80,Chinese,,0,0,0,,但是不能处理的是x86-64是机器类将专门用于这个术语
 Dialogue: 0,0:07:10.10,0:07:13.22,English,,0,0,0,,And so you can see that when you declare something to be a care
-Dialogue: 0,0:07:13.80,0:07:17.68,English,,0,0,0,, Sometimes people call it a char that's a 1 byte value 
+Dialogue: 0,0:07:10.10,0:07:13.22,Chinese,,0,0,0,,所以你可以看到，当你宣布某件事需要关心时
+Dialogue: 0,0:07:13.80,0:07:17.68,English,,0,0,0,, Sometimes people call it a char that's a 1 byte value
+Dialogue: 0,0:07:13.80,0:07:17.68,Chinese,,0,0,0,,有时候人们称它为一个字节值为1的字符
 Dialogue: 0,0:07:17.88,0:07:20.66,English,,0,0,0,,A short is 16 bits
+Dialogue: 0,0:07:17.88,0:07:20.66,Chinese,,0,0,0,,短小是16位
 Dialogue: 0,0:07:21.58,0:07:29.76,English,,0,0,0,,An int is 32 and if you want to get all 64 bits you have to declare it to be along
+Dialogue: 0,0:07:21.58,0:07:29.76,Chinese,,0,0,0,,一个int是32，如果你想获得所有的64位，你必须声明它是一致的
 Dialogue: 0,0:07:32.20,0:07:35.88,English,,0,0,0,,And then again there's two different representations of floating-point there's 4 byte
+Dialogue: 0,0:07:32.20,0:07:35.88,Chinese,,0,0,0,,然后又有两个不同的浮点表示，有4个字节
 Dialogue: 0,0:07:35.88,0:07:39.34,English,,0,0,0,, Or 32 bit of floating-point numbers and 64 bit
+Dialogue: 0,0:07:35.88,0:07:39.34,Chinese,,0,0,0,,或32位浮点数和64位
 Dialogue: 0,0:07:39.84,0:07:47.48,English,,0,0,0,,There's also a slightly obscure holdover from ancient days of floating-point
+Dialogue: 0,0:07:39.84,0:07:47.48,Chinese,,0,0,0,,从古代的浮点运算中也有一个稍微模糊的保留
 Dialogue: 0,0:07:47.48,0:07:54.24,English,,0,0,0,,Where there's a special representation in Intel machines that uses a 10 bit or 80 bit representation
+Dialogue: 0,0:07:47.48,0:07:54.24,Chinese,,0,0,0,,英特尔机器中使用10位或80位表示的特殊表示
 Dialogue: 0,0:07:54.70,0:08:03.68,English,,0,0,0,, And when you use that on a 64-bit machine they sort of waste an extra 6 bytes out of that
+Dialogue: 0,0:07:54.70,0:08:03.68,Chinese,,0,0,0,,当你在64位机器上使用它时，它们会浪费额外的6个字节
 Dialogue: 0,0:08:03.68,0:08:07.88,English,,0,0,0,,So that everything is aligned in 16 byte increments
+Dialogue: 0,0:08:03.68,0:08:07.88,Chinese,,0,0,0,,这样一切都以16字节为增量对齐
 Dialogue: 0,0:08:08.80,0:08:17.86,English,,0,0,0,, The other thing and this is an important feature is any address is find to be the sort of the word size of the machine
+Dialogue: 0,0:08:08.80,0:08:17.86,Chinese,,0,0,0,,另一件事，这是一个重要的功能是任何地址是发现是机器的字大小的排序
 Dialogue: 0,0:08:17.86,0:08:25.98,English,,0,0,0,, When they say it's a 64-bit machine,what they really mean is that the addresses are 64-bit values or 8-byte values
+Dialogue: 0,0:08:17.86,0:08:25.98,Chinese,,0,0,0,,当他们说这是一个64位机器时，他们的真正含义是这些地址是64位值或8字节值
 Dialogue: 0,0:08:26.28,0:08:31.54,English,,0,0,0,,And that's different for example if you use a older machine a 32-bit machine
+Dialogue: 0,0:08:26.28,0:08:31.54,Chinese,,0,0,0,,例如，如果您使用较旧的机器和32位机器，情况就不同了
 Dialogue: 0,0:08:31.56,0:08:34.06,English,,0,0,0,,Those will only be 32-bit addresses
+Dialogue: 0,0:08:31.56,0:08:34.06,Chinese,,0,0,0,,那些只会是32位地址
 Dialogue: 0,0:08:37.42,0:08:48.14,English,,0,0,0,,So the basis sent I imagine you've had this at some point of how do we then think about bits is based on boolean algebra
+Dialogue: 0,0:08:37.42,0:08:48.14,Chinese,,0,0,0,,所以发送的基础，我想你已经有了这样的一点，我们如何再考虑位是基于布尔代数
 Dialogue: 0,0:08:48.40,0:08:55.14,English,,0,0,0,, Which is actually comes from the 1890s that a guy named George Boole
+Dialogue: 0,0:08:48.40,0:08:55.14,Chinese,,0,0,0,,这实际上来自1890年代的一个名叫George Boole的人
 Dialogue: 0,0:08:55.38,0:09:02.44,English,,0,0,0,,Who recognized is sort of relation between what we'd call bits  but they weren't called bits back then
+Dialogue: 0,0:08:55.38,0:09:02.44,Chinese,,0,0,0,,谁承认是我们所谓的位之间的关系，但当时他们并不称之为位
 Dialogue: 0,0:09:02.98,0:09:08.76,English,,0,0,0,,0,1 and logic are basically truth values in logic
+Dialogue: 0,0:09:02.98,0:09:08.76,Chinese,,0,0,0,,0,1和逻辑基本上是逻辑上的真值
 Dialogue: 0,0:09:09.06,0:09:13.26,English,,0,0,0,,I thinking of an algebra sort of a structured set of operations
+Dialogue: 0,0:09:09.06,0:09:13.26,Chinese,,0,0,0,,我想到了一系列结构化操作的代数
 Dialogue: 0,0:09:13.26,0:09:19.08,English,,0,0,0,, You could apply that would capture some of the concepts that people assume in logic
+Dialogue: 0,0:09:13.26,0:09:19.08,Chinese,,0,0,0,,你可以运用它来捕捉人们在逻辑中假设的一些概念
 Dialogue: 0,0:09:19.56,0:09:24.14,English,,0,0,0,,So for example if we think of 1 being true and 0 being false
+Dialogue: 0,0:09:19.56,0:09:24.14,Chinese,,0,0,0,,例如，如果我们认为1是真的而0是假的
 Dialogue: 0,0:09:24.80,0:09:31.06,English,,0,0,0,,Then the and operation is true if both of the inputs the both of the arguments are true
+Dialogue: 0,0:09:24.80,0:09:31.06,Chinese,,0,0,0,,然后，如果两个参数的两个输入均为真，则操作为真
 Dialogue: 0,0:09:31.48,0:09:33.00,English,,0,0,0,,so we get this chart here
+Dialogue: 0,0:09:31.48,0:09:33.00,Chinese,,0,0,0,,所以我们在这里得到这张图表
 Dialogue: 0,0:09:33.00,0:09:38.86,English,,0,0,0,,Similarly the or operation is true if either input is true or 1
+Dialogue: 0,0:09:33.00,0:09:38.86,Chinese,,0,0,0,,同样，如果任何一个输入为真或1，则操作为真
 Dialogue: 0,0:09:39.30,0:09:43.04,English,,0,0,0,,The NOT is just to flip the bit
+Dialogue: 0,0:09:39.30,0:09:43.04,Chinese,,0,0,0,,NOT只是为了翻转这一点
 Dialogue: 0,0:09:43.42,0:09:49.36,English,,0,0,0,,And then the exclusive-or is what you get when you say it's one or the other but not both
+Dialogue: 0,0:09:43.42,0:09:49.36,Chinese,,0,0,0,,然后，独占 - 或者当你说它是一个或另一个，但不是两个时，你会得到什么
 Dialogue: 0,0:09:49.70,0:09:52.26,English,,0,0,0,, And so it has this representation
+Dialogue: 0,0:09:49.70,0:09:52.26,Chinese,,0,0,0,,所以它有这种表示
 Dialogue: 0,0:09:52.56,0:09:59.74,English,,0,0,0,, So just as a bit of history it was a master's degree student at MIT named Claude Shannon
+Dialogue: 0,0:09:52.56,0:09:59.74,Chinese,,0,0,0,,就像一点点历史一样，它是麻省理工学院的一位名为Claude Shannon的硕士学生
 Dialogue: 0,0:10:00.28,0:10:07.02,English,,0,0,0,, Who had taken a course in logic as an undergraduate at University of Michigan
+Dialogue: 0,0:10:00.28,0:10:07.02,Chinese,,0,0,0,,谁曾在密歇根大学攻读逻辑学课程的本科生
 Dialogue: 0,0:10:07.80,0:10:12.86,English,,0,0,0,,And he was the one who made the connection between thinking about
+Dialogue: 0,0:10:07.80,0:10:12.86,Chinese,,0,0,0,,而他是在思考之间建立联系的人
 Dialogue: 0,0:10:12.86,0:10:20.34,English,,0,0,0,,This this what was at the time very obscure branch of something a rather of logic
+Dialogue: 0,0:10:12.86,0:10:20.34,Chinese,,0,0,0,,这在当时是非常模糊的东西，而非逻辑
 Dialogue: 0,0:10:20.52,0:10:24.30,English,,0,0,0,,And applying it to digital systems back in an era when they actually built
+Dialogue: 0,0:10:20.52,0:10:24.30,Chinese,,0,0,0,,并将它应用到数字系统，回到他们实际构建的时代
 Dialogue: 0,0:10:24.66,0:10:27.44,English,,0,0,0,, These things out of electromechanical noise
+Dialogue: 0,0:10:24.66,0:10:27.44,Chinese,,0,0,0,,这些东西没有机电噪音
 Dialogue: 0,0:10:28.12,0:10:36.88,English,,0,0,0,, And so his master's thesis is probably the most impactful master's thesis in the history of humankind
+Dialogue: 0,0:10:28.12,0:10:36.88,Chinese,,0,0,0,,所以他的硕士论文可能是人类历史上最具影响力的硕士论文
 Dialogue: 0,0:10:37.58,0:10:41.96,English,,0,0,0,,And he always wonder well what did they do before that then
+Dialogue: 0,0:10:37.58,0:10:41.96,Chinese,,0,0,0,,他总是很好奇他们在那之前做了什么
 Dialogue: 0,0:10:41.96,0:10:44.18,English,,0,0,0,,You know how do they even think about these things
+Dialogue: 0,0:10:41.96,0:10:44.18,Chinese,,0,0,0,,你知道他们怎么看待这些事情
 Dialogue: 0,0:10:44.72,0:10:49.84,English,,0,0,0,,Anyways the idea of applying this algebra then to bits is not
+Dialogue: 0,0:10:44.72,0:10:49.84,Chinese,,0,0,0,,无论如何，将这个代数应用于位的想法不是
 Dialogue: 0,0:10:50.40,0:10:54.34,English,,0,0,0,,Something that should have been true since the the world began
+Dialogue: 0,0:10:50.40,0:10:54.34,Chinese,,0,0,0,,自从世界开始以来本应该是真的
 Dialogue: 0,0:10:54.36,0:10:57.20,English,,0,0,0,, Something that's a relatively modern concept
-Dialogue: 0,0:10:57.86,0:11:06.82,English,,0,0,0,,Now what's an important thing that might be less obvious is we can also do these over words 
+Dialogue: 0,0:10:54.36,0:10:57.20,Chinese,,0,0,0,,这是一个相对现代的概念
+Dialogue: 0,0:10:57.86,0:11:06.82,English,,0,0,0,,Now what's an important thing that might be less obvious is we can also do these over words
+Dialogue: 0,0:10:57.86,0:11:06.82,Chinese,,0,0,0,,现在可能不那么明显的一件重要事情是，我们也可以用言语来做这些事情
 Dialogue: 0,0:11:06.82,0:11:13.42,English,,0,0,0,,We can do these boolean operations where we apply them on each successive bit in that word
+Dialogue: 0,0:11:06.82,0:11:13.42,Chinese,,0,0,0,,我们可以在这些布尔操作中将这些操作应用到该单词中的每个连续位上
 Dialogue: 0,0:11:13.70,0:11:18.58,English,,0,0,0,,And these symbols we use the ampersand vertical bar carrot and tilde
+Dialogue: 0,0:11:13.70,0:11:18.58,Chinese,,0,0,0,,而这些符号我们使用＆符竖杆胡萝卜和波浪线
 Dialogue: 0,0:11:18.80,0:11:22.54,English,,0,0,0,, are actually the ones that see use is to represent these operations
+Dialogue: 0,0:11:18.80,0:11:22.54,Chinese,,0,0,0,,实际上是用来代表这些操作的那些
 Dialogue: 0,0:11:23.16,0:11:28.46,English,,0,0,0,,And so again if we look at here the 1 is only if both of the values 1
+Dialogue: 0,0:11:23.16,0:11:28.46,Chinese,,0,0,0,,如果我们再看这里，那么1就是两个值都是1
 Dialogue: 0,0:11:28.98,0:11:33.38,English,,0,0,0,,And the for the or for the and for the one
+Dialogue: 0,0:11:28.98,0:11:33.38,Chinese,,0,0,0,,和为或为和为一个
 Dialogue: 0,0:11:33.72,0:11:36.02,English,,0,0,0,, 'Or' its if either of them are 1
+Dialogue: 0,0:11:33.72,0:11:36.02,Chinese,,0,0,0,,'或者'如果它们中的任何一个是1
 Dialogue: 0,0:11:36.58,0:11:40.46,English,,0,0,0,,The exclusive or if 1 is 1 and the other is zero
+Dialogue: 0,0:11:36.58,0:11:40.46,Chinese,,0,0,0,,独占或如果1是1而另一个是零
 Dialogue: 0,0:11:40.58,0:11:43.74,English,,0,0,0,,And tilde is just to invert the bits of it
+Dialogue: 0,0:11:40.58,0:11:43.74,Chinese,,0,0,0,,代字符只是反转它的位
 Dialogue: 0,0:11:43.74,0:11:49.16,English,,0,0,0,,So again we will spend a lot of time making use of the fact that in C
+Dialogue: 0,0:11:43.74,0:11:49.16,Chinese,,0,0,0,,所以我们再次花费大量的时间来利用C中的事实
 Dialogue: 0,0:11:49.16,0:11:51.48,English,,0,0,0,,And this is one of the features to C that people like
+Dialogue: 0,0:11:49.16,0:11:51.48,Chinese,,0,0,0,,这是人们喜欢的C特性之一
 Dialogue: 0,0:11:51.78,0:11:57.16,English,,0,0,0,,is that you can do these sort of very low level of bit manipulations directly in the language
+Dialogue: 0,0:11:51.78,0:11:57.16,Chinese,,0,0,0,,您可以直接在语言中执行这些低级别的位操作
 Dialogue: 0,0:11:58.28,0:11:59.50,English,,0,0,0,,and um
+Dialogue: 0,0:11:58.28,0:11:59.50,Chinese,,0,0,0,,和一个
 Dialogue: 0,0:12:00.60,0:12:04.34,English,,0,0,0,,This actually turns out to be useful in practice
+Dialogue: 0,0:12:00.60,0:12:04.34,Chinese,,0,0,0,,这实际上在实践中证明是有用的
 Dialogue: 0,0:12:04.34,0:12:08.66,English,,0,0,0,, And it's sort of implicit of a way of representing sets of values
+Dialogue: 0,0:12:04.34,0:12:08.66,Chinese,,0,0,0,,这是隐含的一种表示值集合的方式
 Dialogue: 0,0:12:08.76,0:12:13.12,English,,0,0,0,,So this example is a imagine we want to represent sets
+Dialogue: 0,0:12:08.76,0:12:13.12,Chinese,,0,0,0,,所以这个例子是我们想要表示集合的想象
 Dialogue: 0,0:12:13.78,0:12:18.40,English,,0,0,0,,Where the elements of the set are numbers ranging between 0 and 7
+Dialogue: 0,0:12:13.78,0:12:18.40,Chinese,,0,0,0,,该集合中的元素的数量介于0到7之间
 Dialogue: 0,0:12:18.92,0:12:23.92,English,,0,0,0,,So 1 byte is enough to capture eight cases
+Dialogue: 0,0:12:18.92,0:12:23.92,Chinese,,0,0,0,,所以1个字节足以捕获8个案例
 Dialogue: 0,0:12:24.22,0:12:29.00,English,,0,0,0,,And we'll just if we number the bits and we number them from right to left
+Dialogue: 0,0:12:24.22,0:12:29.00,Chinese,,0,0,0,,我们只需要对这些位进行编号并从右向左编号即可
 Dialogue: 0,0:12:29.58,0:12:36.96,English,,0,0,0,,So this is bit 0 so that would represent whether or not the value 0 is an element of the set
+Dialogue: 0,0:12:29.58,0:12:36.96,Chinese,,0,0,0,,所以这是第0位，以表示值0是否是该集合的一个元素
 Dialogue: 0,0:12:37.58,0:12:41.06,English,,0,0,0,,And similarly here you'll see 0,1,2,3
+Dialogue: 0,0:12:37.58,0:12:41.06,Chinese,,0,0,0,,同样在这里你会看到0,1,2,3
 Dialogue: 0,0:12:41.06,0:12:47.84,English,,0,0,0,,So we're saying that bit 3 being one here means 3 is an element of the set and so forth
+Dialogue: 0,0:12:41.06,0:12:47.84,Chinese,,0,0,0,,所以我们说第3位就是一个，这意味着3是这个集合中的一个元素，等等
 Dialogue: 0,0:12:48.40,0:12:52.30,English,,0,0,0,,and the
+Dialogue: 0,0:12:48.40,0:12:52.30,Chinese,,0,0,0,,和
 Dialogue: 0,0:12:54.74,0:12:59.32,English,,0,0,0,,So the idea is then the AND operation becomes like set intersection
+Dialogue: 0,0:12:54.74,0:12:59.32,Chinese,,0,0,0,,所以这个想法就是AND操作变得像集合交集
 Dialogue: 0,0:12:59.66,0:13:02.30,English,,0,0,0,, The OR operation becomes like set Union
+Dialogue: 0,0:12:59.66,0:13:02.30,Chinese,,0,0,0,,OR操作变得像联盟
 Dialogue: 0,0:13:02.66,0:13:08.70,English,,0,0,0,,And the X-OR operation is what's called symmetric difference
+Dialogue: 0,0:13:02.66,0:13:08.70,Chinese,,0,0,0,,而X-OR操作就是所谓的对称差异
 Dialogue: 0,0:13:11.40,0:13:14.84,English,,0,0,0,,And so these are actually and ~ is like set complement
+Dialogue: 0,0:13:11.40,0:13:14.84,Chinese,,0,0,0,,所以这些实际上和〜就像套补
 Dialogue: 0,0:13:14.86,0:13:18.28,English,,0,0,0,,So these are actually very common for example
-Dialogue: 0,0:13:18.54,0:13:27.80,English,,0,0,0,,There are operations you'll learn later when we look at a file i/o 
+Dialogue: 0,0:13:14.86,0:13:18.28,Chinese,,0,0,0,,所以这些实际上很常见
+Dialogue: 0,0:13:18.54,0:13:27.80,English,,0,0,0,,There are operations you'll learn later when we look at a file i/o
+Dialogue: 0,0:13:18.54,0:13:27.80,Chinese,,0,0,0,,当我们查看文件I / O时，稍后会学到一些操作
 Dialogue: 0,0:13:27.98,0:13:35.36,English,,0,0,0,,About i/o that you can track I want to know which set of possible inputs to the system
+Dialogue: 0,0:13:27.98,0:13:35.36,Chinese,,0,0,0,,关于您可以跟踪的I / O我想知道系统可能有哪些输入
 Dialogue: 0,0:13:35.36,0:13:40.04,English,,0,0,0,,think of different network connections have an input ready for me to read
+Dialogue: 0,0:13:35.36,0:13:40.04,Chinese,,0,0,0,,想想不同的网络连接有一个输入可供我阅读
 Dialogue: 0,0:13:40.80,0:13:44.04,English,,0,0,0,,And there is a data structure that
+Dialogue: 0,0:13:40.80,0:13:44.04,Chinese,,0,0,0,,并且有一个数据结构
 Dialogue: 0,0:13:44.78,0:13:47.60,English,,0,0,0,,It's sort of hidden away among some seeing library calls
+Dialogue: 0,0:13:44.78,0:13:47.60,Chinese,,0,0,0,,这在某些看到图书馆电话中隐藏起来
 Dialogue: 0,0:13:47.60,0:13:52.20,English,,0,0,0,, But it basically is using exactly this representation about a thousand
+Dialogue: 0,0:13:47.60,0:13:52.20,Chinese,,0,0,0,,但它基本上使用了大约一千个这种表示
 Dialogue: 0,0:13:52.50,0:13:55.90,English,,0,0,0,,A bits worth of information to represent these sets
+Dialogue: 0,0:13:52.50,0:13:55.90,Chinese,,0,0,0,,有价值的信息来表示这些集合
 Dialogue: 0,0:13:56.54,0:14:00.18,English,,0,0,0,,And do manipulation on those sets so this is a very common
+Dialogue: 0,0:13:56.54,0:14:00.18,Chinese,,0,0,0,,并且对这些设置进行操作，所以这是非常常见的
 Dialogue: 0,0:14:00.48,0:14:05.48,English,,0,0,0,,And why do we use representation of sets in computer science
+Dialogue: 0,0:14:00.48,0:14:05.48,Chinese,,0,0,0,,为什么我们在计算机科学中使用集合表示
 Dialogue: 0,0:14:07.98,0:14:15.68,English,,0,0,0,,so as I mentioned those are available directly and  C the &,||, ~ and ^
+Dialogue: 0,0:14:07.98,0:14:15.68,Chinese,,0,0,0,,所以我刚才提到那些可以直接使用，C是＆，||，〜和^
 Dialogue: 0,0:14:16.46,0:14:21.82,English,,0,0,0,,One thing that's really really important and that programmers screw it up all the time
+Dialogue: 0,0:14:16.46,0:14:21.82,Chinese,,0,0,0,,有一件事情真的非常重要，程序员总是把它搞砸
 Dialogue: 0,0:14:21.82,0:14:31.12,English,,0,0,0,,Beginning programmers a lot and even experienced programmers from time to time is to mix up the & in the &&
+Dialogue: 0,0:14:21.82,0:14:31.12,Chinese,,0,0,0,,开始程序员很多，有时甚至是有经验的程序员都会混淆＆＆在&&
 Dialogue: 0,0:14:31.12,0:14:34.14,English,,0,0,0,,or the | in the ||
+Dialogue: 0,0:14:31.12,0:14:34.14,Chinese,,0,0,0,,或|在||中
 Dialogue: 0,0:14:34.88,0:14:39.70,English,,0,0,0,,and the ~ versus the exclamation mark which is often pronounced bang
+Dialogue: 0,0:14:34.88,0:14:39.70,Chinese,,0,0,0,,而〜与感叹号经常发音一样
 Dialogue: 0,0:14:40.66,0:14:44.68,English,,0,0,0,,so and the reason
+Dialogue: 0,0:14:40.66,0:14:44.68,Chinese,,0,0,0,,所以和原因
 Dialogue: 0,0:14:45.58,0:14:49.00,English,,0,0,0,, So obviously there's sort of a syntactic similarity
+Dialogue: 0,0:14:45.58,0:14:49.00,Chinese,,0,0,0,,所以显然有句法相似之处
 Dialogue: 0,0:14:49.00,0:14:51.60,English,,0,0,0,,And there's actually a somewhat of a semantic relation to that
+Dialogue: 0,0:14:49.00,0:14:51.60,Chinese,,0,0,0,,而且实际上有一些与此有关的语义关系
 Dialogue: 0,0:14:52.10,0:14:56.74,English,,0,0,0,, This is another kind of AND another kind of OR and another kind of NOT
+Dialogue: 0,0:14:52.10,0:14:56.74,Chinese,,0,0,0,,这是另一种AND的另一种OR和另一种NOT
 Dialogue: 0,0:14:57.90,0:15:02.06,English,,0,0,0,,But if you mix and match these you're certainly going to have problems
+Dialogue: 0,0:14:57.90,0:15:02.06,Chinese,,0,0,0,,但是，如果你混搭这些，你肯定会遇到问题
 Dialogue: 0,0:15:02.66,0:15:07.42,English,,0,0,0,,So the || ones aren't thinking about bitwise operations
+Dialogue: 0,0:15:02.66,0:15:07.42,Chinese,,0,0,0,,所以||那些人并没有考虑按位操作
 Dialogue: 0,0:15:07.42,0:15:11.10,English,,0,0,0,,through thinking about something that's either true or false period
+Dialogue: 0,0:15:07.42,0:15:11.10,Chinese,,0,0,0,,通过思考真假时期的事情
 Dialogue: 0,0:15:12.18,0:15:17.48,English,,0,0,0,,And in that representation the number 0 is the thing that's false
+Dialogue: 0,0:15:12.18,0:15:17.48,Chinese,,0,0,0,,在这个表示中，数字0是错误的
 Dialogue: 0,0:15:17.48,0:15:21.70,English,,0,0,0,,And anything else any other bit pattern is considered to be true
+Dialogue: 0,0:15:17.48,0:15:21.70,Chinese,,0,0,0,,而其他任何其他位模式都被认为是正确的
 Dialogue: 0,0:15:23.60,0:15:31.72,English,,0,0,0,,The other feature that the || give you is what's called early termination
+Dialogue: 0,0:15:23.60,0:15:31.72,Chinese,,0,0,0,,||的另一个特点给你是什么叫提前终止
 Dialogue: 0,0:15:32.86,0:15:37.56,English,,0,0,0,,So in particular if we do some examples
+Dialogue: 0,0:15:32.86,0:15:37.56,Chinese,,0,0,0,,所以特别是如果我们做一些例子
 Dialogue: 0,0:15:37.78,0:15:48.92,English,,0,0,0,,On the some hex pattern for 1, so this is a not a 0  and so that's considered true
+Dialogue: 0,0:15:37.78,0:15:48.92,Chinese,,0,0,0,,在1的一些十六进制模式，所以这是一个不是0，所以这被认为是真实的
 Dialogue: 0,0:15:48.92,0:15:54.02,English,,0,0,0,,In this interpretation and so the the bang of that the not of that is 0
+Dialogue: 0,0:15:48.92,0:15:54.02,Chinese,,0,0,0,,在这个解释中，那个不是那个的爆炸就是0
 Dialogue: 0,0:15:54.04,0:15:57.36,English,,0,0,0,,The same way if you have 0 the not event is 1
+Dialogue: 0,0:15:54.04,0:15:57.36,Chinese,,0,0,0,,如果你有0，那么没有事件就是1
 Dialogue: 0,0:15:57.66,0:16:04.18,English,,0,0,0,,And if you apply bang to a number twice you'll get back a 1 unless it was 0
+Dialogue: 0,0:15:57.66,0:16:04.18,Chinese,,0,0,0,,如果你对一个数字应用两次，你会得到一个1，除非它是0
 Dialogue: 0,0:16:08.84,0:16:13.04,English,,0,0,0,,And then a simile these patterns here
+Dialogue: 0,0:16:08.84,0:16:13.04,Chinese,,0,0,0,,然后在这里比喻一下这些模式
 Dialogue: 0,0:16:13.44,0:16:18.30,English,,0,0,0,,The reason why this returns 1 is because it's considered two cases that are true
+Dialogue: 0,0:16:13.44,0:16:18.30,Chinese,,0,0,0,,这返回1的原因是因为它被认为是两种情况
 Dialogue: 0,0:16:19.88,0:16:24.50,English,,0,0,0,,So it's not doing bitwise operations it's just trying to create true and fault
+Dialogue: 0,0:16:19.88,0:16:24.50,Chinese,,0,0,0,,所以这不是按位操作，它只是试图创建真实和错误
 Dialogue: 0,0:16:24.50,0:16:29.28,English,,0,0,0,,It's interpreting arguments be there true or false and returning either true or false
+Dialogue: 0,0:16:24.50,0:16:29.28,Chinese,,0,0,0,,它解释的参数是真或假，并返回true或false
 Dialogue: 0,0:16:29.78,0:16:34.92,English,,0,0,0,,But when it returns true it returns one and not whatever number you happen to give
+Dialogue: 0,0:16:29.78,0:16:34.92,Chinese,,0,0,0,,但是当它返回true时，它会返回一个，而不是你碰巧给出的任何数字
 Dialogue: 0,0:16:35.82,0:16:39.12,English,,0,0,0,,So obviously this is a very different operations
+Dialogue: 0,0:16:35.82,0:16:39.12,Chinese,,0,0,0,,所以显然这是一个非常不同的操作
 Dialogue: 0,0:16:39.12,0:16:43.72,English,,0,0,0,,Than you have with the single versions of those and
+Dialogue: 0,0:16:39.12,0:16:43.72,Chinese,,0,0,0,,比你拥有这些和单一版本
 Dialogue: 0,0:16:44.74,0:16:51.66,English,,0,0,0,,But it's easy just because you mentally slip or because you type something wrong to do the wrong thing
+Dialogue: 0,0:16:44.74,0:16:51.66,Chinese,,0,0,0,,但是，这很容易，只是因为你精神错乱，或者因为你错误地做错了事情
 Dialogue: 0,0:16:52.18,0:16:56.22,English,,0,0,0,,But in particularly this early termination is something that of course people use a lot
+Dialogue: 0,0:16:52.18,0:16:56.22,Chinese,,0,0,0,,但特别是这种提前终止是当然人们使用很多的东西
 Dialogue: 0,0:16:56.74,0:17:01.04,English,,0,0,0,,If you want to make sure that you're not accessing a null pointer
+Dialogue: 0,0:16:56.74,0:17:01.04,Chinese,,0,0,0,,如果你想确保你没有访问空指针
 Dialogue: 0,0:17:01.04,0:17:05.68,English,,0,0,0,, You can test whether that's a null pointer first before accessing it
+Dialogue: 0,0:17:01.04,0:17:05.68,Chinese,,0,0,0,,在访问它之前，您可以先测试它是否为空指针
 Dialogue: 0,0:17:05.68,0:17:11.18,English,,0,0,0,,And this if this is 0 or then it will do the the dereferencing of null
+Dialogue: 0,0:17:05.68,0:17:11.18,Chinese,,0,0,0,,如果这是0，或者它会执行null的取消引用
 Dialogue: 0,0:17:12.12,0:17:15.44,English,,0,0,0,,So it's a fairly useful feature as well
+Dialogue: 0,0:17:12.12,0:17:15.44,Chinese,,0,0,0,,所以这也是一个相当有用的功能
 Dialogue: 0,0:17:15.66,0:17:21.38,English,,0,0,0,,So anyways just that's an aside at this level we're mostly looking at bits
+Dialogue: 0,0:17:15.66,0:17:21.38,Chinese,,0,0,0,,所以无论如何，在这个层面上，我们大多数都是看点位
 Dialogue: 0,0:17:21.38,0:17:24.62,English,,0,0,0,,But just as a programming no don't mix these up
+Dialogue: 0,0:17:21.38,0:17:24.62,Chinese,,0,0,0,,但就像编程一样，不要混淆
 Dialogue: 0,0:17:32.62,0:17:36.68,English,,0,0,0,,The other class of operations will make use of a lot our shifting
+Dialogue: 0,0:17:32.62,0:17:36.68,Chinese,,0,0,0,,其他类别的业务将使我们有很大的转变
 Dialogue: 0,0:17:37.08,0:17:42.24,English,,0,0,0,, Which again is not something that you normally sort of as beginning programmers think about too much
+Dialogue: 0,0:17:37.08,0:17:42.24,Chinese,,0,0,0,,当程序员开始思考太多时，这又不是你通常所说的
 Dialogue: 0,0:17:42.92,0:17:47.10,English,,0,0,0,,And if there's a curious feature that a left shifts are always the same
+Dialogue: 0,0:17:42.92,0:17:47.10,Chinese,,0,0,0,,如果有一个奇怪的功能，左移总是相同的
 Dialogue: 0,0:17:47.10,0:17:49.20,English,,0,0,0,,But there's two different flavors of right shift
+Dialogue: 0,0:17:47.10,0:17:49.20,Chinese,,0,0,0,,但是有两种不同的右移方式
 Dialogue: 0,0:17:49.62,0:17:53.72,English,,0,0,0,, And we'll see in a little bit later why there's two different flavors of right shift
+Dialogue: 0,0:17:49.62,0:17:53.72,Chinese,,0,0,0,,稍后我们会看到为什么有两种不同的右移方式
 Dialogue: 0,0:17:54.90,0:17:58.61,English,,0,0,0,,But um
+Dialogue: 0,0:17:54.90,0:17:58.61,Chinese,,0,0,0,,但其中一个
 Dialogue: 0,0:17:59.00,0:18:03.22,English,,0,0,0,,The idea that of shifting is that you have some argument x
+Dialogue: 0,0:17:59.00,0:18:03.22,Chinese,,0,0,0,,转移的想法是你有一些论点x
 Dialogue: 0,0:18:03.22,0:18:08.52,English,,0,0,0,,And you want to shift it some number of positions either to the left or to the right given by y
+Dialogue: 0,0:18:03.22,0:18:08.52,Chinese,,0,0,0,,你想要将它的位置向左或向右移动一些位置
 Dialogue: 0,0:18:09.50,0:18:15.02,English,,0,0,0,,And so when you shift left you just fill in whatever value there was so you pick up the
+Dialogue: 0,0:18:09.50,0:18:15.02,Chinese,,0,0,0,,所以，当你向左移动时，你只需填写任何有价值的东西，然后你就可以拿起它了
 Dialogue: 0,0:18:15.62,0:18:21.34,English,,0,0,0,,I'm shifting by three,so I'll take the low order five bits move them over three positions
+Dialogue: 0,0:18:15.62,0:18:21.34,Chinese,,0,0,0,,我正在移动三个，所以我会把低位五位移动到三个位置
 Dialogue: 0,0:18:21.68,0:18:23.30,English,,0,0,0,,Then fill in with a zero
+Dialogue: 0,0:18:21.68,0:18:23.30,Chinese,,0,0,0,,然后填写零
 Dialogue: 0,0:18:23.64,0:18:31.55,English,,0,0,0,,And whatever was in the upper positions of that original words they just sort of disappear into nowhere
+Dialogue: 0,0:18:23.64,0:18:31.55,Chinese,,0,0,0,,而且，无论在原始单词的上层位置，他们都会消失无踪
 Dialogue: 0,0:18:32.10,0:18:39.56,English,,0,0,0,,Similarly if I do a right shift I take the upper six bits I move them over to positions and I fill in with zeros
+Dialogue: 0,0:18:32.10,0:18:39.56,Chinese,,0,0,0,,同样，如果我做右移，我将把高位移动到位置，然后用零填充
 Dialogue: 0,0:18:40.32,0:18:44.96,English,,0,0,0,,So that's a logical shift and that's well it's logic
+Dialogue: 0,0:18:40.32,0:18:44.96,Chinese,,0,0,0,,所以这是一个逻辑转变，这就是逻辑
 Dialogue: 0,0:18:45.44,0:18:48.00,English,,0,0,0,,There's another flavor called the arithmetic shift
+Dialogue: 0,0:18:45.44,0:18:48.00,Chinese,,0,0,0,,还有另外一种叫算术转换的味道
 Dialogue: 0,0:18:48.00,0:18:54.38,English,,0,0,0,,Which it differs in that the rule for what bits you fill in with are not based on the are
+Dialogue: 0,0:18:48.00,0:18:54.38,Chinese,,0,0,0,,它的不同之处在于你填写什么位的规则不是基于is的
 Dialogue: 0,0:18:55.70,0:19:01.56,English,,0,0,0,,not zeros necessarily but it's whatever the most significant bit was in the original value
+Dialogue: 0,0:18:55.70,0:19:01.56,Chinese,,0,0,0,,不一定是零，但它是原始值中最重要的一点
 Dialogue: 0,0:19:02.00,0:19:04.90,English,,0,0,0,,So it doesn't matter here because the most significant bit was zero
+Dialogue: 0,0:19:02.00,0:19:04.90,Chinese,,0,0,0,,所以这里没关系，因为最重要的位是零
 Dialogue: 0,0:19:04.90,0:19:11.74,English,,0,0,0,, But you'll see in the case here of where the leading bit was a 1
+Dialogue: 0,0:19:04.90,0:19:11.74,Chinese,,0,0,0,,但你会在这里看到领先位是1的位置
 Dialogue: 0,0:19:12.80,0:19:18.68,English,,0,0,0,, That when I shift it to the right arithmetic we I'll fill it in with 1
+Dialogue: 0,0:19:12.80,0:19:18.68,Chinese,,0,0,0,,当我将它转换为正确的算术时，我将用1填充它
 Dialogue: 0,0:19:19.40,0:19:25.38,English,,0,0,0,,And that'll make sense more when we understand how negative numbers get represented in a machine
+Dialogue: 0,0:19:19.40,0:19:25.38,Chinese,,0,0,0,,当我们理解负数在机器中的表现方式时，这会更有意义
 Dialogue: 0,0:19:25.98,0:19:28.82,English,,0,0,0,,And that's the purpose of it and why it's called arithmetic
+Dialogue: 0,0:19:25.98,0:19:28.82,Chinese,,0,0,0,,这就是它的目的以及为什么它被称为算术
 Dialogue: 0,0:19:31.60,0:19:37.54,English,,0,0,0,,Um the other thing is confusing to people is
+Dialogue: 0,0:19:31.60,0:19:37.54,Chinese,,0,0,0,,另一件事让人感到困惑
 Dialogue: 0,0:19:37.80,0:19:44.80,English,,0,0,0,,What should happen if you say I want to shift an 8-bit number 8 positions to the left
+Dialogue: 0,0:19:37.80,0:19:44.80,Chinese,,0,0,0,,如果你说我想将一个8位数的8位移到左边，应该发生什么
 Dialogue: 0,0:19:54.60,0:19:58.92,English,,0,0,0,,And X is a single byte what do you think you should get
+Dialogue: 0,0:19:54.60,0:19:58.92,Chinese,,0,0,0,,而X是一个单字节，你认为你应该得到什么
 Dialogue: 0,0:20:02.84,0:20:07.86,English,,0,0,0,, Zero that would be a pretty logical thing you kind of shift all those bits out you fill them with zeros
+Dialogue: 0,0:20:02.84,0:20:07.86,Chinese,,0,0,0,,零这将是一个非常合乎逻辑的事情，你把所有这些位移出来，你用零填充它们
 Dialogue: 0,0:20:08.40,0:20:13.12,English,,0,0,0,,On most machines you'll get whatever x was
+Dialogue: 0,0:20:08.40,0:20:13.12,Chinese,,0,0,0,,在大多数机器上，你会得到任何x
 Dialogue: 0,0:20:17.38,0:20:21.88,English,,0,0,0,,Because what will do is it will compute this number mod 8
+Dialogue: 0,0:20:17.38,0:20:21.88,Chinese,,0,0,0,,因为将要做的是它将计算这个数字mod 8
 Dialogue: 0,0:20:25.90,0:20:28.64,English,,0,0,0,,And the reason that happens is if you think about it
+Dialogue: 0,0:20:25.90,0:20:28.64,Chinese,,0,0,0,,而发生的原因是，如果你考虑一下
 Dialogue: 0,0:20:28.64,0:20:34.02,English,,0,0,0,,It's looking at just the lower two three bits of the shift amount and ignoring all the rest
+Dialogue: 0,0:20:28.64,0:20:34.02,Chinese,,0,0,0,,它只是查看移位量的低两位，忽略所有其他位
 Dialogue: 0,0:20:34.26,0:20:36.90,English,,0,0,0,, So that's effectively like module 8
+Dialogue: 0,0:20:34.26,0:20:36.90,Chinese,,0,0,0,,所以这就像模块8一样
 Dialogue: 0,0:20:37.76,0:20:41.38,English,,0,0,0,,So that's just a warning I and some machines it does
+Dialogue: 0,0:20:37.76,0:20:41.38,Chinese,,0,0,0,,所以这只是一个警告我和它的一些机器
 Dialogue: 0,0:20:41.38,0:20:44.44,English,,0,0,0,,What you just thought it should and other machines it does this
+Dialogue: 0,0:20:41.38,0:20:44.44,Chinese,,0,0,0,,你只是认为它应该和其他机器这样做
 Dialogue: 0,0:20:44.88,0:20:50.12,English,,0,0,0,,And so there's no no guarantee and see that it will be one way or the other
+Dialogue: 0,0:20:44.88,0:20:50.12,Chinese,,0,0,0,,所以没有保证，并且看到它会是单向的或其他的
 Dialogue: 0,0:20:52.80,0:20:58.70,English,,0,0,0,,Same with if you try to shift left by a negative number that might be logically
+Dialogue: 0,0:20:52.80,0:20:58.70,Chinese,,0,0,0,,同样如果您尝试向左移动可能是逻辑上的负数
 Dialogue: 0,0:20:58.70,0:21:02.88,English,,0,0,0,,Well I guess you really want to shift right then but that usually doesn't work either
+Dialogue: 0,0:20:58.70,0:21:02.88,Chinese,,0,0,0,,那么我想你真的想要正确地转移，但通常也不起作用
 Dialogue: 0,0:21:05.40,0:21:09.06,English,,0,0,0,,So now let's talk about number representations
+Dialogue: 0,0:21:05.40,0:21:09.06,Chinese,,0,0,0,,现在让我们来谈谈数字表示
 Dialogue: 0,0:21:09.68,0:21:10.32,English,,0,0,0,,And
+Dialogue: 0,0:21:09.68,0:21:10.32,Chinese,,0,0,0,,和
 Dialogue: 0,0:21:12.10,0:21:18.24,English,,0,0,0,,This is sort of a very core its idea that you have to really have wired in you
+Dialogue: 0,0:21:12.10,0:21:18.24,Chinese,,0,0,0,,这是它的一个非常核心的想法，你必须真正连接到你
 Dialogue: 0,0:21:18.56,0:21:22.20,English,,0,0,0,,And I'm going to illustrate it with some examples
+Dialogue: 0,0:21:18.56,0:21:22.20,Chinese,,0,0,0,,我将用一些例子来说明它
 Dialogue: 0,0:21:27.74,0:21:35.30,English,,0,0,0,,So the these two equations that are everything that we'll talk about sort of stems from them
+Dialogue: 0,0:21:27.74,0:21:35.30,Chinese,,0,0,0,,所以这两个方程就是我们要谈论的一切，都源于他们
 Dialogue: 0,0:21:35.98,0:21:38.64,English,,0,0,0,,So one is if you have an unsigned number
+Dialogue: 0,0:21:35.98,0:21:38.64,Chinese,,0,0,0,,所以一个是如果你有一个无符号的数字
 Dialogue: 0,0:21:39.22,0:21:45.18,English,,0,0,0,,Then basically...it keeps jumping on me
+Dialogue: 0,0:21:39.22,0:21:45.18,Chinese,,0,0,0,,然后基本上...它不断跳跃着我
 Dialogue: 0,0:21:46.78,0:21:52.42,English,,0,0,0,,If you have an unsigned number then this is just the conversion
+Dialogue: 0,0:21:46.78,0:21:52.42,Chinese,,0,0,0,,如果你有一个无符号的数字，那么这只是转换
 Dialogue: 0,0:21:52.42,0:22:00.56,English,,0,0,0,,B2U means from a bit level representation to an unsigned number of some bit pattern
+Dialogue: 0,0:21:52.42,0:22:00.56,Chinese,,0,0,0,,B2U的意思是从比特级表示到某个位模式的无符号数
 Dialogue: 0,0:22:00.56,0:22:04.68,English,,0,0,0,,It just says we'll just add up the sum of the weighted bits
+Dialogue: 0,0:22:00.56,0:22:04.68,Chinese,,0,0,0,,它只是说我们将加权加权位的总和
 Dialogue: 0,0:22:04.94,0:22:07.86,English,,0,0,0,,Where each bit is weighted by a power of two
+Dialogue: 0,0:22:04.94,0:22:07.86,Chinese,,0,0,0,,每个比特用2的幂来加权
 Dialogue: 0,0:22:08.48,0:22:10.88,English,,0,0,0,, And the only difference when we look at two's complement
+Dialogue: 0,0:22:08.48,0:22:10.88,Chinese,,0,0,0,,唯一的区别就是我们看两个补码
 Dialogue: 0,0:22:10.88,0:22:14.74,English,,0,0,0,,Which is a way to represent both negative and positive numbers
+Dialogue: 0,0:22:10.88,0:22:14.74,Chinese,,0,0,0,,哪一种方法可以表示负数和正数
 Dialogue: 0,0:22:15.00,0:22:18.86,English,,0,0,0,,It's we'll consider the most significant bit to be what's called the sign bit
+Dialogue: 0,0:22:15.00,0:22:18.86,Chinese,,0,0,0,,这是我们认为最重要的一点是所谓的符号位
 Dialogue: 0,0:22:19.60,0:22:21.66,English,,0,0,0,,So it will have a negative value
+Dialogue: 0,0:22:19.60,0:22:21.66,Chinese,,0,0,0,,所以它会有一个负值
 Dialogue: 0,0:22:22.10,0:22:26.68,English,,0,0,0,,So let me just illustrate this with I'll use some running examples
+Dialogue: 0,0:22:22.10,0:22:26.68,Chinese,,0,0,0,,所以让我来说明一下，我将使用一些运行示例
 Dialogue: 0,0:22:26.68,0:22:34.90,English,,0,0,0,,We'll just use five bit numbers just as a way it really helps often if you're trying to understand  this stuff to do it for some smaller cases
+Dialogue: 0,0:22:26.68,0:22:34.90,Chinese,,0,0,0,,我们只会使用五位数字，这样做通常可以帮助您，如果您想要了解这些内容以适用于某些较小的情况
 Dialogue: 0,0:22:36.10,0:22:39.38,English,,0,0,0,,So if we think about bit positions
+Dialogue: 0,0:22:36.10,0:22:39.38,Chinese,,0,0,0,,所以如果我们考虑位位置
 Dialogue: 0,0:22:49.38,0:22:51.28,English,,0,0,0,,zero through four
+Dialogue: 0,0:22:49.38,0:22:51.28,Chinese,,0,0,0,,从零到四
 Dialogue: 0,0:22:59.18,0:23:04.70,English,,0,0,0,,Then those represent of different powers of two weights of as I've shown
+Dialogue: 0,0:22:59.18,0:23:04.70,Chinese,,0,0,0,,然后那些代表两个权重的不同权力，正如我所示
 Dialogue: 0,0:23:05.40,0:23:08.04,English,,0,0,0,,And so now if we take some bit a pattern
+Dialogue: 0,0:23:05.40,0:23:08.04,Chinese,,0,0,0,,所以现在如果我们采取一些模式
 Dialogue: 0,0:23:18.92,0:23:19.96,English,,0,0,0,,Like so
+Dialogue: 0,0:23:18.92,0:23:19.96,Chinese,,0,0,0,,像这样
 Dialogue: 0,0:23:20.34,0:23:26.32,English,,0,0,0,,So that's what I'll call X and I want to convert that to an unsigned number
+Dialogue: 0,0:23:20.34,0:23:26.32,Chinese,,0,0,0,,所以这就是我所说的X，我想将其转换为无符号数
 Dialogue: 0,0:23:26.98,0:23:37.32,English,,0,0,0,,I will just combine 8 + 4 + 1 and I'll get 13
+Dialogue: 0,0:23:26.98,0:23:37.32,Chinese,,0,0,0,,我会结合8 + 4 + 1，我会得到13
 Dialogue: 0,0:23:38.18,0:23:38.76,English,,0,0,0,,all right
+Dialogue: 0,0:23:38.18,0:23:38.76,Chinese,,0,0,0,,好吧
 Dialogue: 0,0:23:39.20,0:23:46.36,English,,0,0,0,,So that's all that equation says the left hand equations just take the the bit positions that are ones
+Dialogue: 0,0:23:39.20,0:23:46.36,Chinese,,0,0,0,,所以这就是所有这个方程式说左边的方程式只是将位置定义为1
 Dialogue: 0,0:23:46.86,0:23:48.97,English,,0,0,0,,Use the corresponding power of 2 and you're done
+Dialogue: 0,0:23:46.86,0:23:48.97,Chinese,,0,0,0,,使用相应的2的幂，你就完成了
 Dialogue: 0,0:23:50.18,0:23:53.56,English,,0,0,0,,And similarly if I have a number where there's a leading bit
+Dialogue: 0,0:23:50.18,0:23:53.56,Chinese,,0,0,0,,同样的，如果我有一个数字，那里有一个领先的位
 Dialogue: 0,0:24:01.48,0:24:09.06,English,,0,0,0,,It will be 16 + 4 + 2  so that will be 22
+Dialogue: 0,0:24:01.48,0:24:09.06,Chinese,,0,0,0,,它将是16 + 4 + 2，因此将是22
 Dialogue: 0,0:24:11.20,0:24:13.26,English,,0,0,0,,And so that's the unsigned case
+Dialogue: 0,0:24:11.20,0:24:13.26,Chinese,,0,0,0,,这是没有签名的情况
 Dialogue: 0,0:24:15.24,0:24:18.32,English,,0,0,0,,And the sign case is the same idea
+Dialogue: 0,0:24:15.24,0:24:18.32,Chinese,,0,0,0,,标志性案例是一样的想法
 Dialogue: 0,0:24:18.86,0:24:26.02,English,,0,0,0,,Except that most significant debt has a negative value
+Dialogue: 0,0:24:18.86,0:24:26.02,Chinese,,0,0,0,,除了最重要的债务是负值
 Dialogue: 0,0:24:27.08,0:24:29.42,English,,0,0,0,,So it will still this is i
+Dialogue: 0,0:24:27.08,0:24:29.42,Chinese,,0,0,0,,所以它仍然是我
 Dialogue: 0,0:24:32.70,0:24:36.50,English,,0,0,0,,And our weights will be 1,2,4,8
+Dialogue: 0,0:24:32.70,0:24:36.50,Chinese,,0,0,0,,我们的权重将是1,2,4,8
 Dialogue: 0,0:24:36.54,0:24:38.40,English,,0,0,0,,But this will be -16
+Dialogue: 0,0:24:36.54,0:24:38.40,Chinese,,0,0,0,,但是这将是-16
 Dialogue: 0,0:24:39.54,0:24:43.76,English,,0,0,0,,So that's what the equation on the right is saying this fit
+Dialogue: 0,0:24:39.54,0:24:43.76,Chinese,,0,0,0,,所以这就是右边的这个公式所说的
 Dialogue: 0,0:24:44.80,0:24:47.68,English,,0,0,0,,Now we're going to change it from being a negative number to a positive
+Dialogue: 0,0:24:44.80,0:24:47.68,Chinese,,0,0,0,,现在我们要把它从一个负数变成一个正数
 Dialogue: 0,0:24:48.42,0:24:52.32,English,,0,0,0,,So obviously if I have this is my bit pattern it's going to be the same because
+Dialogue: 0,0:24:48.42,0:24:52.32,Chinese,,0,0,0,,所以很显然，如果我有这是我的位模式，它将是相同的，因为
 Dialogue: 0,0:24:52.78,0:25:01.16,English,,0,0,0,,The other bits stayed at the same so let's do it for this case of 10110
+Dialogue: 0,0:24:52.78,0:25:01.16,Chinese,,0,0,0,,其他位保持不变，所以让我们来做这个10110的情况
 Dialogue: 0,0:25:03.12,0:25:10.04,English,,0,0,0,,So that will be -16 + 4 + 2 = -10
+Dialogue: 0,0:25:03.12,0:25:10.04,Chinese,,0,0,0,,所以这将是-16 + 4 + 2 = -10
 Dialogue: 0,0:25:13.92,0:25:17.78,English,,0,0,0,,So you see in this case we have the same bit pattern
+Dialogue: 0,0:25:13.92,0:25:17.78,Chinese,,0,0,0,,所以你在这种情况下看到我们有相同的位模式
 Dialogue: 0,0:25:18.86,0:25:24.32,English,,0,0,0,, It's just if we interpret it you know how we think about what number this represents
+Dialogue: 0,0:25:18.86,0:25:24.32,Chinese,,0,0,0,,只是如果我们解释它，你就知道我们如何看待这个代表的数字
 Dialogue: 0,0:25:24.64,0:25:30.92,English,,0,0,0,,Then in one case it's a positive number 22 in another case it's a negative number -10
+Dialogue: 0,0:25:24.64,0:25:30.92,Chinese,,0,0,0,,那么在另一种情况下，这是一个正数22，在另一种情况下，它是一个负数-10
 Dialogue: 0,0:25:32.50,0:25:34.80,English,,0,0,0,, And that's what these equations you see
+Dialogue: 0,0:25:32.50,0:25:34.80,Chinese,,0,0,0,,这就是你看到的这些方程
 Dialogue: 0,0:25:40.16,0:25:45.04,English,,0,0,0,,And so the most significant bit is sometimes called the sign bit because
+Dialogue: 0,0:25:40.16,0:25:45.04,Chinese,,0,0,0,,因此，最重要的位有时称为符号位
 Dialogue: 0,0:25:45.04,0:25:47.46,English,,0,0,0,,If it's a 1 the number is going to be negative
+Dialogue: 0,0:25:45.04,0:25:47.46,Chinese,,0,0,0,,如果它是1，则该数字将是负数
 Dialogue: 0,0:25:51.22,0:25:55.72,English,,0,0,0,, So let's sort of think about
+Dialogue: 0,0:25:51.22,0:25:55.72,Chinese,,0,0,0,,所以让我们思考一下
 Dialogue: 0,0:25:57.94,0:26:01.40,English,,0,0,0,,What extreme,what are the sort of extreme ranges of numbers
+Dialogue: 0,0:25:57.94,0:26:01.40,Chinese,,0,0,0,,什么极端，数字的极端范围是什么
 Dialogue: 0,0:26:01.40,0:26:03.62,English,,0,0,0,,We can get with these two different representations
+Dialogue: 0,0:26:01.40,0:26:03.62,Chinese,,0,0,0,,我们可以得到这两种不同的表述
 Dialogue: 0,0:26:12.48,0:26:16.24,English,,0,0,0,, So obviously if these are all zeros my number is going to equal zero
+Dialogue: 0,0:26:12.48,0:26:16.24,Chinese,,0,0,0,,所以显然，如果这些都是零，我的号码将等于零
 Dialogue: 0,0:26:20.00,0:26:34.42,English,,0,0,0,,And if it's all 1 it will be 16 + 8 + 4 + 2 + 1 will be 31
-Dialogue: 0,0:26:35.86,0:26:39.62,English,,0,0,0,,And over here for the two's complement 
+Dialogue: 0,0:26:20.00,0:26:34.42,Chinese,,0,0,0,,如果全是1，那么将是16 + 8 + 4 + 2 + 1将是31
+Dialogue: 0,0:26:35.86,0:26:39.62,English,,0,0,0,,And over here for the two's complement
+Dialogue: 0,0:26:35.86,0:26:39.62,Chinese,,0,0,0,,在这里补充一下
 Dialogue: 0,0:26:41.68,0:26:51.82,English,,0,0,0,,The smallest number,well the largest number will actually be let me do it this way
+Dialogue: 0,0:26:41.68,0:26:51.82,Chinese,,0,0,0,,最小的数字，最大的数字实际上会让我这样做
 Dialogue: 0,0:26:52.02,0:26:56.74,English,,0,0,0,,Actually the most negative number so the smallest number and the strictest sense of the word is
+Dialogue: 0,0:26:52.02,0:26:56.74,Chinese,,0,0,0,,其实最负数是最小的数字，也是最严格的意思
 Dialogue: 0,0:26:57.56,0:27:03.20,English,,0,0,0,, is this it's -16. you can argue this by the way
+Dialogue: 0,0:26:57.56,0:27:03.20,Chinese,,0,0,0,,这是-16。你可以顺便说一句
 Dialogue: 0,0:27:03.48,0:27:08.54,English,,0,0,0,,This is the only bit that has a negative weight all the other ones have positive ones
+Dialogue: 0,0:27:03.48,0:27:08.54,Chinese,,0,0,0,,这是唯一一个负重的人，所有其他人都有积极的一面
 Dialogue: 0,0:27:08.54,0:27:13.16,English,,0,0,0,,So certainly one and all the rest being zeros is going to be the smallest number
+Dialogue: 0,0:27:08.54,0:27:13.16,Chinese,,0,0,0,,所以当然一​​个和所有其余的零都将是最小的数字
 Dialogue: 0,0:27:13.60,0:27:16.26,English,,0,0,0,,And similarly the largest number you can represent
+Dialogue: 0,0:27:13.60,0:27:16.26,Chinese,,0,0,0,,同样，您可以表示的最大数量
 Dialogue: 0,0:27:20.44,0:27:27.32,English,,0,0,0,,We'll be 8 + 4 + 2 + 1 which is 15
+Dialogue: 0,0:27:20.44,0:27:27.32,Chinese,,0,0,0,,我们将是8 + 4 + 2 + 1这是15
 Dialogue: 0,0:27:31.42,0:27:33.80,English,,0,0,0,, And so we call this number UMax
+Dialogue: 0,0:27:31.42,0:27:33.80,Chinese,,0,0,0,,所以我们把这个号码称为UMax
 Dialogue: 0,0:27:38.52,0:27:41.06,English,,0,0,0,,And we call this number TMax
+Dialogue: 0,0:27:38.52,0:27:41.06,Chinese,,0,0,0,,我们称这个号码为TMax
 Dialogue: 0,0:27:43.72,0:27:45.54,English,,0,0,0,,And we call this number TMin
+Dialogue: 0,0:27:43.72,0:27:45.54,Chinese,,0,0,0,,我们称这个号码为TMin
 Dialogue: 0,0:27:48.58,0:27:51.36,English,,0,0,0,,So there's a few things to observe about these numbers
+Dialogue: 0,0:27:48.58,0:27:51.36,Chinese,,0,0,0,,所以有几件事要注意这些数字
 Dialogue: 0,0:27:55.04,0:27:58.42,English,,0,0,0,,That remember this is a 5-bit word size right so
+Dialogue: 0,0:27:55.04,0:27:58.42,Chinese,,0,0,0,,请记住，这是一个5位字的大小
 Dialogue: 0,0:28:00.62,0:28:06.23,English,,0,0,0,,You'll see that 31 is pretty close to 32 right
+Dialogue: 0,0:28:00.62,0:28:06.23,Chinese,,0,0,0,,你会看到31很接近32
 Dialogue: 0,0:28:06.23,0:28:10.82,English,,0,0,0,,In fact it's 2^5-1
+Dialogue: 0,0:28:06.23,0:28:10.82,Chinese,,0,0,0,,实际上它是2 ^ 5-1
 Dialogue: 0,0:28:12.56,0:28:17.04,English,,0,0,0,,And in general if it's a five and that's for a 5-bit word size
+Dialogue: 0,0:28:12.56,0:28:17.04,Chinese,,0,0,0,,一般来说，如果它是一个五位字，并且这是一个5位字大小
 Dialogue: 0,0:28:17.04,0:28:27.14,English,,0,0,0,,So you would say in general it will have value 2^w if I have a W bit number minus 1 and that's what this shows
+Dialogue: 0,0:28:17.04,0:28:27.14,Chinese,,0,0,0,,所以，如果我有一个W位数减1，那么一般来说，它将具有2 ^ w的值，这就是这个结果
 Dialogue: 0,0:28:31.04,0:28:36.96,English,,0,0,0,,And similarly over here this is -2^4
+Dialogue: 0,0:28:31.04,0:28:36.96,Chinese,,0,0,0,,同样在这里，这是-2 ^ 4
 Dialogue: 0,0:28:40.38,0:28:46.74,English,,0,0,0,,And so we'd say in general that will be -2^w if it's a W bit number minus 1
+Dialogue: 0,0:28:40.38,0:28:46.74,Chinese,,0,0,0,,所以我们一般会说，如果W位数减1，那么它将是-2 ^ w
 Dialogue: 0,0:28:49.22,0:28:54.18,English,,0,0,0,,Right all these make sense by the way you'll notice one other feature is
+Dialogue: 0,0:28:49.22,0:28:54.18,Chinese,,0,0,0,,所有这些都是有道理的，你会注意到另一个特征是
 Dialogue: 0,0:28:58.60,0:29:06.74,English,,0,0,0,, A whole string of ones like this if you sum up those digits 8 + 4 + 2 + 1
+Dialogue: 0,0:28:58.60,0:29:06.74,Chinese,,0,0,0,,如果总结那些数字8 + 4 + 2 + 1，那么就是这样的整个字符串
 Dialogue: 0,0:29:07.12,0:29:11.84,English,,0,0,0,, Will be 1 less than the next bit position up
+Dialogue: 0,0:29:07.12,0:29:11.84,Chinese,,0,0,0,,将比下一个位置上升1个
 Dialogue: 0,0:29:13.22,0:29:18.64,English,,0,0,0,,And you can think about that if you were to count this number
-Dialogue: 0,0:29:18.94,0:29:25.16,English,,0,0,0,,If you were to increment this number by 1 you'd get 1 1 is 0 carry 1 and so forth 
+Dialogue: 0,0:29:13.22,0:29:18.64,Chinese,,0,0,0,,如果你要计算这个数字，你可以考虑一下
+Dialogue: 0,0:29:18.94,0:29:25.16,English,,0,0,0,,If you were to increment this number by 1 you'd get 1 1 is 0 carry 1 and so forth
+Dialogue: 0,0:29:18.94,0:29:25.16,Chinese,,0,0,0,,如果你将这个数字加1，你会得到1 1是0 carry 1等等
 Dialogue: 0,0:29:25.22,0:29:29.42,English,,0,0,0,,And you'd carry that value up to this position so these various ways you can think about that
+Dialogue: 0,0:29:25.22,0:29:29.42,Chinese,,0,0,0,,你会把这个价值推到这个位置，所以你可以用这些不同的方式来思考
 Dialogue: 0,0:29:31.52,0:29:37.38,English,,0,0,0,,And then similarly this number is 2^4-1
+Dialogue: 0,0:29:31.52,0:29:37.38,Chinese,,0,0,0,,然后同样这个数字是2 ^ 4-1
 Dialogue: 0,0:29:38.52,0:29:42.98,English,,0,0,0,,And so that's equal to 2^(w-1) - 1
+Dialogue: 0,0:29:38.52,0:29:42.98,Chinese,,0,0,0,,等于2 ^（w-1） -  1
 Dialogue: 0,0:29:47.76,0:29:49.40,English,,0,0,0,,As is shown here
+Dialogue: 0,0:29:47.76,0:29:49.40,Chinese,,0,0,0,,如这里所示
 Dialogue: 0,0:29:51.98,0:29:59.02,English,,0,0,0,, So there's a lot of the book goes through formulas and does derivation
+Dialogue: 0,0:29:51.98,0:29:59.02,Chinese,,0,0,0,,所以有很多这本书通过公式，并推导出来
 Dialogue: 0,0:29:59.60,0:30:03.68,English,,0,0,0,, But if you just think about it in these smaller scale ways
+Dialogue: 0,0:29:59.60,0:30:03.68,Chinese,,0,0,0,,但是，如果你只是用这些小规模的方式来思考它
 Dialogue: 0,0:30:04.10,0:30:10.10,English,,0,0,0,, The intuition is pretty easy to get and don't get lost in in formulas when
+Dialogue: 0,0:30:04.10,0:30:10.10,Chinese,,0,0,0,,直觉很容易得到，并且在公式中不会迷失方向
 Dialogue: 0,0:30:10.26,0:30:13.92,English,,0,0,0,,Really at the gut level it's a fairly straightforward sort of ideas
+Dialogue: 0,0:30:10.26,0:30:13.92,Chinese,,0,0,0,,真正在内心深处，这是一个相当直接的想法
 Dialogue: 0,0:30:15.00,0:30:18.52,English,,0,0,0,, Or if you ever see some confusions and you're confused
+Dialogue: 0,0:30:15.00,0:30:18.52,Chinese,,0,0,0,,或者如果你看到一些混乱，你感到困惑
 Dialogue: 0,0:30:19.12,0:30:22.25,English,,0,0,0,, Try out some small examples and see what they're saying
+Dialogue: 0,0:30:19.12,0:30:22.25,Chinese,,0,0,0,,尝试一些小例子，看看他们在说什么
 Dialogue: 0,0:30:22.90,0:30:31.60,English,,0,0,0,,Another interesting number in the world of two's complement  is what happens when you have all ones in your bit patterns
+Dialogue: 0,0:30:22.90,0:30:31.60,Chinese,,0,0,0,,二进制补码世界中另一个有趣的数字是当你的位模式中有所有的时候会发生什么
 Dialogue: 0,0:30:35.80,0:30:45.66,English,,0,0,0,,And that will have mate -16 + 8 + 4 + 2 + 1 and that will equal -1
+Dialogue: 0,0:30:35.80,0:30:45.66,Chinese,,0,0,0,,这将有队友-16 + 8 + 4 + 2 + 1，这将等于-1
 Dialogue: 0,0:30:47.80,0:30:53.85,English,,0,0,0,,So the bit pattern all ones is always a -1 in this representation
+Dialogue: 0,0:30:47.80,0:30:53.85,Chinese,,0,0,0,,所以在这种表示中，所有的位模式总是-1
 Dialogue: 0,0:30:54.04,0:30:59.74,English,,0,0,0,,I should mention two's complement is not the only way to represent a positive and negative numbers
+Dialogue: 0,0:30:54.04,0:30:59.74,Chinese,,0,0,0,,我应该提到两个补码不是表示正数和负数的唯一方式
 Dialogue: 0,0:30:59.74,0:31:01.48,English,,0,0,0,,what's sometimes called signed numbers
+Dialogue: 0,0:30:59.74,0:31:01.48,Chinese,,0,0,0,,有时称为有符号数字
 Dialogue: 0,0:31:01.78,0:31:06.62,English,,0,0,0,,But it's so universal that you'll hardly ever encounter another case
+Dialogue: 0,0:31:01.78,0:31:06.62,Chinese,,0,0,0,,但它很普遍，你几乎不会遇到另一种情况
 Dialogue: 0,0:31:07.12,0:31:14.62,English,,0,0,0,, So if you understand two's complement you have a pretty good understanding of  what really is going on
+Dialogue: 0,0:31:07.12,0:31:14.62,Chinese,,0,0,0,,所以，如果你理解了两个补码，你就能很好地理解真正发生了什么
 Dialogue: 0,0:31:22.06,0:31:26.90,English,,0,0,0,,So these numbers I call UMax the biggest unsigned number
+Dialogue: 0,0:31:22.06,0:31:26.90,Chinese,,0,0,0,,所以这些数字我称为UMax最大的无符号数字
 Dialogue: 0,0:31:27.38,0:31:32.60,English,,0,0,0,,TMin the smallest most negative two's complement monitor and
+Dialogue: 0,0:31:27.38,0:31:32.60,Chinese,,0,0,0,,TMin是最小的最负二补码监视器
 Dialogue: 0,0:31:32.60,0:31:36.42,English,,0,0,0,,TMax the largest most positive two's complement
+Dialogue: 0,0:31:32.60,0:31:36.42,Chinese,,0,0,0,,TMax是最大的正数二进制补码
 Dialogue: 0,0:31:36.76,0:31:42.46,English,,0,0,0,,This chart shows the range of values for different word sizes different numbers of bytes
+Dialogue: 0,0:31:36.76,0:31:42.46,Chinese,,0,0,0,,此图表显示了不同字大小的不同字节数值的范围
 Dialogue: 0,0:31:43.02,0:31:51.16,English,,0,0,0,,And so you'll see that with an 8 bit number you only have 256 possibilities right
+Dialogue: 0,0:31:43.02,0:31:51.16,Chinese,,0,0,0,,所以你会看到，用8位数字你只有256个可能性
 Dialogue: 0,0:31:54.66,0:32:01.68,English,,0,0,0,, And so we can either choose to rate think of those as representing the range from 0 to 255
-Dialogue: 0,0:32:01.86,0:32:07.52,English,,0,0,0,, Or basically with two's complement numbers we're just doing a sort of a wraparound we're saying 
+Dialogue: 0,0:31:54.66,0:32:01.68,Chinese,,0,0,0,,因此，我们可以选择将其视为代表范围从0到255的范围
+Dialogue: 0,0:32:01.86,0:32:07.52,English,,0,0,0,, Or basically with two's complement numbers we're just doing a sort of a wraparound we're saying
+Dialogue: 0,0:32:01.86,0:32:07.52,Chinese,,0,0,0,,或者基本上用二进制补码来表示，我们只是在做一个简单的说明
 Dialogue: 0,0:32:07.52,0:32:13.24,English,,0,0,0,,Well we're going to have half of them be negative and the other half will be either 0 or positive
+Dialogue: 0,0:32:07.52,0:32:13.24,Chinese,,0,0,0,,那么我们将有一半是负面的，另一半是0或正面
 Dialogue: 0,0:32:16.62,0:32:19.34,English,,0,0,0,,And so it's a pretty limited range of values of course
+Dialogue: 0,0:32:16.62,0:32:19.34,Chinese,,0,0,0,,所以这当然是一个相当有限的价值范围
 Dialogue: 0,0:32:19.34,0:32:25.74,English,,0,0,0,,Then 16 and believe me back when computers had 16-bit word sizes
+Dialogue: 0,0:32:19.34,0:32:25.74,Chinese,,0,0,0,,然后16，当计算机有16位字长时，请相信我
 Dialogue: 0,0:32:25.74,0:32:29.48,English,,0,0,0,, It was a nuisance to keep your numbers within that range
+Dialogue: 0,0:32:25.74,0:32:29.48,Chinese,,0,0,0,,将您的数字保持在该范围内是一件令人讨厌的事情
 Dialogue: 0,0:32:29.94,0:32:33.61,English,,0,0,0,, And 32 gives you a pretty decent range it used to be said
+Dialogue: 0,0:32:29.94,0:32:33.61,Chinese,,0,0,0,,而32给你一个相当不错的范围，它曾经说过
 Dialogue: 0,0:32:33.98,0:32:41.00,English,,0,0,0,,Microsoft had to go to 64-bit word size to represent Bill Gates's net worth but
+Dialogue: 0,0:32:33.98,0:32:41.00,Chinese,,0,0,0,,微软必须以64位字大小来表示比尔盖茨的净资产，但是
 Dialogue: 0,0:32:43.90,0:32:49.66,English,,0,0,0,,For me at least this would easily handle my range of normal day-to-day transactions so
+Dialogue: 0,0:32:43.90,0:32:49.66,Chinese,,0,0,0,,至少对我来说，这很容易处理我正常的日常交易范围
 Dialogue: 0,0:32:51.74,0:33:00.16,English,,0,0,0,, But now with 64 bits at least to us nowadays those seem like really big numbers and  hard to imagine exceeding the bounds of those
+Dialogue: 0,0:32:51.74,0:33:00.16,Chinese,,0,0,0,,但现在至少对我们来说，64位数字看起来非常庞大，很难想象它们超出了这些限制
 Dialogue: 0,0:33:04.88,0:33:11.68,English,,0,0,0,, So one interesting feature that you noticed here was I was um
+Dialogue: 0,0:33:04.88,0:33:11.68,Chinese,,0,0,0,,所以你注意到的一个有趣的功能就是我
 Dialogue: 0,0:33:15.82,0:33:17.96,English,,0,0,0,,like this case here
+Dialogue: 0,0:33:15.82,0:33:17.96,Chinese,,0,0,0,,像这里的情况一样
 Dialogue: 0,0:33:24.88,0:33:27.02,English,,0,0,0,,In this case here...
-Dialogue: 0,0:33:36.16,0:33:39.88,English,,0,0,0,,And then this case here  of all ones 
+Dialogue: 0,0:33:24.88,0:33:27.02,Chinese,,0,0,0,,在这里这里...
+Dialogue: 0,0:33:36.16,0:33:39.88,English,,0,0,0,,And then this case here  of all ones
+Dialogue: 0,0:33:36.16,0:33:39.88,Chinese,,0,0,0,,然后在这里所有的情况
 Dialogue: 0,0:33:43.28,0:33:47.98,English,,0,0,0,,I was comparing it to this case here of all ones
+Dialogue: 0,0:33:43.28,0:33:47.98,Chinese,,0,0,0,,我在这里比较所有的这种情况
 Dialogue: 0,0:33:49.40,0:33:54.24,English,,0,0,0,,So in other words in both these cases and it's a little hard to jump boards here
+Dialogue: 0,0:33:49.40,0:33:54.24,Chinese,,0,0,0,,换句话说，在这两种情况下，在这里跳板都有点困难
 Dialogue: 0,0:33:56.64,0:34:00.04,English,,0,0,0,,You're seeing that you have the same bit pattern in either case
+Dialogue: 0,0:33:56.64,0:34:00.04,Chinese,,0,0,0,,无论哪种情况，您都会看到您具有相同的位模式
 Dialogue: 0,0:34:01.12,0:34:06.56,English,,0,0,0,,But they the numeric they represent different numeric values because one is a two's complement case
+Dialogue: 0,0:34:01.12,0:34:06.56,Chinese,,0,0,0,,但他们的数字代表不同的数值，因为一个是二补的情况
 Dialogue: 0,0:34:07.80,0:34:10.06,English,,0,0,0,,And the other is an unsigned right
+Dialogue: 0,0:34:07.80,0:34:10.06,Chinese,,0,0,0,,另一个是未签名的权利
 Dialogue: 0,0:34:10.12,0:34:14.38,English,,0,0,0,,And you can actually see the relation between them is pretty simple
-Dialogue: 0,0:34:14.76,0:34:24.08,English,,0,0,0,, Because basically what we're doing is we're jumping between +16 and -16 between those 
+Dialogue: 0,0:34:10.12,0:34:14.38,Chinese,,0,0,0,,你可以看到它们之间的关系非常简单
+Dialogue: 0,0:34:14.76,0:34:24.08,English,,0,0,0,, Because basically what we're doing is we're jumping between +16 and -16 between those
+Dialogue: 0,0:34:14.76,0:34:24.08,Chinese,,0,0,0,,因为基本上我们正在做的是我们在这些之间的+16和-16之间跳跃
 Dialogue: 0,0:34:24.44,0:34:27.84,English,,0,0,0,,And so you'd expect it to change by 32 right
+Dialogue: 0,0:34:24.44,0:34:27.84,Chinese,,0,0,0,,所以你会期望它改变32
 Dialogue: 0,0:34:28.54,0:34:32.16,English,,0,0,0,,And you see that here that this is 31 here and -1
+Dialogue: 0,0:34:28.54,0:34:32.16,Chinese,,0,0,0,,你在这里看到，这里是31和-1
 Dialogue: 0,0:34:32.68,0:34:43.14,English,,0,0,0,,This is 22 and -10 so they're differ from each other by plus  -32 ,2^4,two to the word size
+Dialogue: 0,0:34:32.68,0:34:43.14,Chinese,,0,0,0,,这是22和-10，所以他们是不同的，加上-32，2 ^ 4，两个字的大小
 Dialogue: 0,0:34:43.60,0:34:48.80,English,,0,0,0,,and so we there's sort of a long derivation in the book and things here
+Dialogue: 0,0:34:43.60,0:34:48.80,Chinese,,0,0,0,,所以我们在这本书和这里的东西中有很长一段时间的推导
 Dialogue: 0,0:34:48.80,0:34:53.60,English,,0,0,0,,But that connection is actually fairly important
+Dialogue: 0,0:34:48.80,0:34:53.60,Chinese,,0,0,0,,但是这种联系实际上相当重要
 Dialogue: 0,0:34:54.06,0:34:56.90,English,,0,0,0,,Because when you jump back and forth
+Dialogue: 0,0:34:54.06,0:34:56.90,Chinese,,0,0,0,,因为当你跳来跳去
 Dialogue: 0,0:34:57.70,0:35:01.82,English,,0,0,0,, Between unsigned numbers and two's complement numbers in C
+Dialogue: 0,0:34:57.70,0:35:01.82,Chinese,,0,0,0,,在C中的无符号数和二进制补码之间
 Dialogue: 0,0:35:03.08,0:35:07.44,English,,0,0,0,,That's the jump that you get in other words
+Dialogue: 0,0:35:03.08,0:35:07.44,Chinese,,0,0,0,,换句话说，这就是跳跃
 Dialogue: 0,0:35:07.64,0:35:10.48,English,,0,0,0,,when of and so
+Dialogue: 0,0:35:07.64,0:35:10.48,Chinese,,0,0,0,,何时等等
 Dialogue: 0,0:35:12.50,0:35:18.12,English,,0,0,0,,You'll often find cases where what used to be a very large number
+Dialogue: 0,0:35:12.50,0:35:18.12,Chinese,,0,0,0,,您经常会发现过去曾经是一个非常大的数字的情况
 Dialogue: 0,0:35:18.12,0:35:20.80,English,,0,0,0,,Because it was unsigned all of a sudden becomes a negative number
+Dialogue: 0,0:35:18.12,0:35:20.80,Chinese,,0,0,0,,因为它没有签名，所以突然变成了一个负数
 Dialogue: 0,0:35:20.80,0:35:22.72,English,,0,0,0,,Because it's considered two's complement
+Dialogue: 0,0:35:20.80,0:35:22.72,Chinese,,0,0,0,,因为它被认为是补码
 Dialogue: 0,0:35:24.00,0:35:26.96,English,,0,0,0,,So that's what this next part covers will say that
+Dialogue: 0,0:35:24.00,0:35:26.96,Chinese,,0,0,0,,所以接下来的部分就是这么说的
 Dialogue: 0,0:35:32.24,0:35:35.91,English,,0,0,0,,If we take a cart of 4 bit numbers and
+Dialogue: 0,0:35:32.24,0:35:35.91,Chinese,,0,0,0,,如果我们购买一个4位数的购物车
 Dialogue: 0,0:35:36.14,0:35:43.36,English,,0,0,0,,We write out all the possible values is unsigned or as  two's complement numbers
+Dialogue: 0,0:35:36.14,0:35:43.36,Chinese,,0,0,0,,我们写出所有可能的值都是无符号或二进制补码
 Dialogue: 0,0:35:43.64,0:35:48.83,English,,0,0,0,,Then the ones where the low the higher bid is 0 will be the same in both cases
+Dialogue: 0,0:35:43.64,0:35:48.83,Chinese,,0,0,0,,那么，在这两种情况下，出价越低为0的那个都是相同的
 Dialogue: 0,0:35:49.38,0:35:54.80,English,,0,0,0,,The ones where the higher order bit is a 1 in this case will differ by 16 2^4
+Dialogue: 0,0:35:49.38,0:35:54.80,Chinese,,0,0,0,,在这种情况下，高位比特是1的那些将相差16 2 ^ 4
 Dialogue: 0,0:35:56.70,0:36:02.88,English,,0,0,0,,And similarly you'll notice that these numbers there's a unique
+Dialogue: 0,0:35:56.70,0:36:02.88,Chinese,,0,0,0,,同样你会注意到这些数字是独一无二的
 Dialogue: 0,0:36:03.16,0:36:07.56,English,,0,0,0,,It goes unique in both directions there's a for any given bit pattern
+Dialogue: 0,0:36:03.16,0:36:07.56,Chinese,,0,0,0,,它在两个方向都是独一无二的，适用于任何给定的位模式
 Dialogue: 0,0:36:07.78,0:36:10.95,English,,0,0,0,,There's a unique number it represents and
+Dialogue: 0,0:36:07.78,0:36:10.95,Chinese,,0,0,0,,有一个独特的数字代表和
 Dialogue: 0,0:36:11.32,0:36:16.36,English,,0,0,0,,And similarly for any number within the given range there's a unique bit pattern
+Dialogue: 0,0:36:11.32,0:36:16.36,Chinese,,0,0,0,,同样，对于给定范围内的任何数字，都有一个唯一的位模式
 Dialogue: 0,0:36:17.02,0:36:22.68,English,,0,0,0,,So we can sort of jump between those two and say
+Dialogue: 0,0:36:17.02,0:36:22.68,Chinese,,0,0,0,,所以我们可以在这两者之间跳跃并说
 Dialogue: 0,0:36:23.88,0:36:29.84,English,,0,0,0,, I can make up a rule for converting between a two's complement number X
+Dialogue: 0,0:36:23.88,0:36:29.84,Chinese,,0,0,0,,我可以制定一个在二进制补码X之间转换的规则
 Dialogue: 0,0:36:29.84,0:36:32.18,English,,0,0,0,, and an unsigned number UX
+Dialogue: 0,0:36:29.84,0:36:32.18,Chinese,,0,0,0,,和一个无符号数字UX
 Dialogue: 0,0:36:32.36,0:36:37.50,English,,0,0,0,,That basically says I'll use the same bits I'll just think of them as being different numbers
+Dialogue: 0,0:36:32.36,0:36:37.50,Chinese,,0,0,0,,基本上说，我会使用相同的位，我只是认为它们是不同的数字
 Dialogue: 0,0:36:38.10,0:36:42.12,English,,0,0,0,, And so and you can go either way
+Dialogue: 0,0:36:38.10,0:36:42.12,Chinese,,0,0,0,,所以你可以去任何一个方向
 Dialogue: 0,0:36:42.42,0:36:53.10,English,,0,0,0,, So for example if we thought of this is a a two's complement representative representation
+Dialogue: 0,0:36:42.42,0:36:53.10,Chinese,,0,0,0,,举例来说，如果我们认为这是一个二补的代表性表示
 Dialogue: 0,0:36:53.86,0:37:04.48,English,,0,0,0,, It's -1 this function I'm calling T2U goes from that number -1 to this number 31
+Dialogue: 0,0:36:53.86,0:37:04.48,Chinese,,0,0,0,,这是我打电话给T2U的这个函数，从这个数字-1到这个数字31
 Dialogue: 0,0:37:06.12,0:37:11.90,English,,0,0,0,,Where in between the two I'm saying they both have the same bit pattern
+Dialogue: 0,0:37:06.12,0:37:11.90,Chinese,,0,0,0,,在两者之间我说他们都有相同的位模式
 Dialogue: 0,0:37:16.88,0:37:23.42,English,,0,0,0,,And the reason why this rather function that would otherwise seem to have no particular use is important
+Dialogue: 0,0:37:16.88,0:37:23.42,Chinese,,0,0,0,,而这个功能似乎没有特别用处的原因很重要
 Dialogue: 0,0:37:23.50,0:37:30.66,English,,0,0,0,,Because that's basically what happens in C or actually in the program
+Dialogue: 0,0:37:23.50,0:37:30.66,Chinese,,0,0,0,,因为这基本上是C或实际在程序中发生的事情
 Dialogue: 0,0:37:30.94,0:37:35.52,English,,0,0,0,,On the computer itself has no clue whether a given bit pattern if it's something
+Dialogue: 0,0:37:30.94,0:37:35.52,Chinese,,0,0,0,,在计算机上本身并不知道是否给定位模式
 Dialogue: 0,0:37:35.52,0:37:41.80,English,,0,0,0,, You're thinking of as being a negative number or two's complement number it's just a bunch of bits to it
+Dialogue: 0,0:37:35.52,0:37:41.80,Chinese,,0,0,0,,你正在考虑作为一个负数或二进制补码，它只是一堆点
 Dialogue: 0,0:37:43.60,0:37:51.22,English,,0,0,0,,And similarly so we can go back and forth between a two's complement and unsigned  keeping the bit patterns the same
+Dialogue: 0,0:37:43.60,0:37:51.22,Chinese,,0,0,0,,同样，我们可以在二进制补码和无符号二进制之间来回保持位模式相同
 Dialogue: 0,0:37:54.72,0:38:01.32,English,,0,0,0,,And so I'll call that T2U when I go from signed to unsigned two's complement unsigned
+Dialogue: 0,0:37:54.72,0:38:01.32,Chinese,,0,0,0,,所以当我从签名到无符号二进制补码无符号时，我会调用该T2U
 Dialogue: 0,0:38:01.60,0:38:04.94,English,,0,0,0,, And say well I'll call U2T if I go from unsigned to signed
+Dialogue: 0,0:38:01.60,0:38:04.94,Chinese,,0,0,0,,并说好，如果我从无签名到签名，我会打电话给U2T
 Dialogue: 0,0:38:07.36,0:38:13.44,English,,0,0,0,,And as I mentioned the difference for the the numbers where the high-order bit is a 1
+Dialogue: 0,0:38:07.36,0:38:13.44,Chinese,,0,0,0,,正如我提到的高阶位是1的数字的区别
 Dialogue: 0,0:38:13.68,0:38:18.28,English,,0,0,0,,will be by a factor 2^w where w is the word size of the word
+Dialogue: 0,0:38:13.68,0:38:18.28,Chinese,,0,0,0,,将是一个因子2 ^ w，其中w是单词的单词大小
 Dialogue: 0,0:38:22.16,0:38:24.66,English,,0,0,0,, And so this can be thought of as a function
+Dialogue: 0,0:38:22.16,0:38:24.66,Chinese,,0,0,0,,所以这可以被认为是一种功能
 Dialogue: 0,0:38:27.28,0:38:28.48,English,,0,0,0,, Where
+Dialogue: 0,0:38:27.28,0:38:28.48,Chinese,,0,0,0,,哪里
 Dialogue: 0,0:38:34.84,0:38:36.18,English,,0,0,0,,Let me just draw it up
+Dialogue: 0,0:38:34.84,0:38:36.18,Chinese,,0,0,0,,让我把它画出来
 Dialogue: 0,0:38:47.48,0:38:51.98,English,,0,0,0,,Over here with my five of bit numbers
+Dialogue: 0,0:38:47.48,0:38:51.98,Chinese,,0,0,0,,在这里用我的五位数字
 Dialogue: 0,0:38:55.30,0:39:01.50,English,,0,0,0,,That is the number this is two's complement again so that was the number -16
+Dialogue: 0,0:38:55.30,0:39:01.50,Chinese,,0,0,0,,这是这个数字，这又是2的补码，所以这是数字-16
 Dialogue: 0,0:39:02.72,0:39:06.18,English,,0,0,0,,And then there'll be some other negative numbers up to all ones
+Dialogue: 0,0:39:02.72,0:39:06.18,Chinese,,0,0,0,,然后会有一些其他的负数直到所有的负数
 Dialogue: 0,0:39:09.48,0:39:11.00,English,,0,0,0,,This is number negative one
+Dialogue: 0,0:39:09.48,0:39:11.00,Chinese,,0,0,0,,这是数字否定的
 Dialogue: 0,0:39:11.60,0:39:18.78,English,,0,0,0,,Then I'll have zero and so forth and then all up to
+Dialogue: 0,0:39:11.60,0:39:18.78,Chinese,,0,0,0,,然后我会有零等等，然后一切
 Dialogue: 0,0:39:23.26,0:39:29.06,English,,0,0,0,,Plus 15
+Dialogue: 0,0:39:23.26,0:39:29.06,Chinese,,0,0,0,,更多15
 Dialogue: 0,0:39:30.82,0:39:32.96,English,,0,0,0,,Destroys,I got myself in trouble
+Dialogue: 0,0:39:30.82,0:39:32.96,Chinese,,0,0,0,,毁灭，我陷入了麻烦
 Dialogue: 0,0:39:37.00,0:39:41.34,English,,0,0,0,,Blackboard management is they didn't teach me this in school
+Dialogue: 0,0:39:37.00,0:39:41.34,Chinese,,0,0,0,,黑板管理是他们没有在学校教我这个
 Dialogue: 0,0:39:44.42,0:39:50.18,English,,0,0,0,, So I'm gonna use two boards and ones here
+Dialogue: 0,0:39:44.42,0:39:50.18,Chinese,,0,0,0,,所以我要在这里使用两块木板和一块木板
 Dialogue: 0,0:40:02.29,0:40:15.58,English,,0,0,0,,Okay let me send this out,okay we'll make it work
+Dialogue: 0,0:40:02.29,0:40:15.58,Chinese,,0,0,0,,好，让我发送出去，好吧，我们会让它工作
 Dialogue: 0,0:40:16.52,0:40:21.84,English,,0,0,0,,So now when we go from the T2U function then
+Dialogue: 0,0:40:16.52,0:40:21.84,Chinese,,0,0,0,,所以现在我们从T2U功能开始
 Dialogue: 0,0:40:22.64,0:40:25.10,English,,0,0,0,,These numbers are going to just carry over
+Dialogue: 0,0:40:22.64,0:40:25.10,Chinese,,0,0,0,,这些数字将继续存在
 Dialogue: 0,0:40:25.50,0:40:30.18,English,,0,0,0,, We'll get 0 up through 15
+Dialogue: 0,0:40:25.50,0:40:30.18,Chinese,,0,0,0,,我们会从0到15
 Dialogue: 0,0:40:32.46,0:40:36.84,English,,0,0,0,, But now this number here will become positive 16
+Dialogue: 0,0:40:32.46,0:40:36.84,Chinese,,0,0,0,,但现在这个数字会变成正数16
 Dialogue: 0,0:40:41.70,0:40:51.02,English,,0,0,0,,And all ones will become positive 31 right
+Dialogue: 0,0:40:41.70,0:40:51.02,Chinese,,0,0,0,,所有的人都会变得积极31
 Dialogue: 0,0:40:51.34,0:40:56.46,English,,0,0,0,,And so that's what this picture is showing is it for the pink numbers
+Dialogue: 0,0:40:51.34,0:40:56.46,Chinese,,0,0,0,,所以这张照片显示的是粉色数字
 Dialogue: 0,0:40:57.50,0:41:03.25,English,,0,0,0,,are the ones that flip between negative and actually the largest of the positive numbers
+Dialogue: 0,0:40:57.50,0:41:03.25,Chinese,,0,0,0,,是那些在负数和实际上最大的正数之间翻转的数字
 Dialogue: 0,0:41:03.92,0:41:08.68,English,,0,0,0,,And then the green numbers are the ones that stay the same because they're leading bits or zeros
+Dialogue: 0,0:41:03.92,0:41:08.68,Chinese,,0,0,0,,然后绿色数字保持不变，因为它们是前导比特或零
 Dialogue: 0,0:41:14.82,0:41:16.26,English,,0,0,0,, So why does this matter bits or zeros
+Dialogue: 0,0:41:14.82,0:41:16.26,Chinese,,0,0,0,,那么为什么这有点重要
 Dialogue: 0,0:41:16.56,0:41:23.04,English,,0,0,0,,You never thought if you programmed in Python  or even Java
+Dialogue: 0,0:41:16.56,0:41:23.04,Chinese,,0,0,0,,你从来没有想过如果你用Python或甚至Java编程
 Dialogue: 0,0:41:23.30,0:41:33.32,English,,0,0,0,, You don't see that and the reason is because C is one of the few languages where unsigned is actually an explicit datatype
+Dialogue: 0,0:41:23.30,0:41:33.32,Chinese,,0,0,0,,你没有看到这一点，原因是因为C是少数语言之一，其中unsigned实际上是一个明确的数据类型
 Dialogue: 0,0:41:34.32,0:41:37.94,English,,0,0,0,,So you can declare a value being unsigned
+Dialogue: 0,0:41:34.32,0:41:37.94,Chinese,,0,0,0,,所以你可以声明一个没有签名的值
 Dialogue: 0,0:41:38.34,0:41:42.52,English,,0,0,0,,And it's you can if you just say unsigned what you're really saying is unsigned int
+Dialogue: 0,0:41:38.34,0:41:42.52,Chinese,,0,0,0,,如果你只是说unsigned你真正说的是unsigned int，你可以
 Dialogue: 0,0:41:43.32,0:41:48.46,English,,0,0,0,,Or you can call something an unsigned care and unsigned short or an unsigned long
+Dialogue: 0,0:41:43.32,0:41:48.46,Chinese,,0,0,0,,或者你可以调用一些无符号的关注和unsigned short或unsigned long
 Dialogue: 0,0:41:49.78,0:41:56.68,English,,0,0,0,,So and you're declaring and see that it should think about using this representation we show on the right
+Dialogue: 0,0:41:49.78,0:41:56.68,Chinese,,0,0,0,,所以你在声明并且看到它应该考虑使用我们在右边展示的这个表示
 Dialogue: 0,0:41:56.98,0:41:59.72,English,,0,0,0,,When it's working on those numbers
+Dialogue: 0,0:41:56.98,0:41:59.72,Chinese,,0,0,0,,当它在处理这些数字时
 Dialogue: 0,0:42:01.82,0:42:08.28,English,,0,0,0,,So that's sort of one thing and this it's one thing if you declare a number and use it that way
+Dialogue: 0,0:42:01.82,0:42:08.28,Chinese,,0,0,0,,所以这就是一回事，如果你申报了一个号码并以这种方式使用它，这是一回事
 Dialogue: 0,0:42:08.28,0:42:17.30,English,,0,0,0,,But what gets people and the often got you is if you declare something if you have a in this case
+Dialogue: 0,0:42:08.28,0:42:17.30,Chinese,,0,0,0,,但是，如果你在这种情况下拥有某种东西，那么获得人们和经常得到你的是什么
 Dialogue: 0,0:42:17.72,0:42:21.34,English,,0,0,0,,Something that's declared as a two's complement number X to TX
+Dialogue: 0,0:42:17.72,0:42:21.34,Chinese,,0,0,0,,一些声明为TX的补码数X的事物
 Dialogue: 0,0:42:22.00,0:42:26.34,English,,0,0,0,,And you assign it a value you at Y X it'll do an implicit casting
+Dialogue: 0,0:42:22.00,0:42:26.34,Chinese,,0,0,0,,你在Y X给它赋值，它会进行隐式转换
 Dialogue: 0,0:42:26.84,0:42:32.18,English,,0,0,0,, Which is exactly based on this conversion that we've been talking about and vice versa
+Dialogue: 0,0:42:26.84,0:42:32.18,Chinese,,0,0,0,,这正是基于我们一直在谈论的这种转换，反之亦然
 Dialogue: 0,0:42:34.32,0:42:41.86,English,,0,0,0,, And so as this example goes through this goes through some examples that
+Dialogue: 0,0:42:34.32,0:42:41.86,Chinese,,0,0,0,,所以这个例子经历了这个例子
 Dialogue: 0,0:42:42.24,0:42:49.06,English,,0,0,0,,If I look at two numbers and I compare them or I actually I do any operation on them
+Dialogue: 0,0:42:42.24,0:42:49.06,Chinese,,0,0,0,,如果我看看两个数字，然后比较它们，或者实际上我会对它们进行任何操作
 Dialogue: 0,0:42:49.06,0:42:56.18,English,,0,0,0,, I add them divide them anything implicitly it will try to make these to be of the same type
+Dialogue: 0,0:42:49.06,0:42:56.18,Chinese,,0,0,0,,我添加它们会将它们分开，它会尝试使它们成为相同的类型
 Dialogue: 0,0:42:56.72,0:43:00.68,English,,0,0,0,,And the way it will do that is to say if both of them are signed
+Dialogue: 0,0:42:56.72,0:43:00.68,Chinese,,0,0,0,,而这样做的方式就是说如果两个人都签了名
 Dialogue: 0,0:43:01.00,0:43:05.34,English,,0,0,0,, Then I'll do I'll treat them as a signed case
+Dialogue: 0,0:43:01.00,0:43:05.34,Chinese,,0,0,0,,那么我会做我会把他们作为一个签名的案件
 Dialogue: 0,0:43:05.60,0:43:07.88,English,,0,0,0,,If either of them is unsigned
+Dialogue: 0,0:43:05.60,0:43:07.88,Chinese,,0,0,0,,如果其中任何一个没有签名
 Dialogue: 0,0:43:08.24,0:43:12.78,English,,0,0,0,,Then I'll convert the other one to be an unsigned number and do the operation
+Dialogue: 0,0:43:08.24,0:43:12.78,Chinese,,0,0,0,,然后我会将另一个转换为一个无符号数并进行操作
 Dialogue: 0,0:43:13.20,0:43:16.86,English,,0,0,0,, And so in particular this set of examples is imagine
+Dialogue: 0,0:43:13.20,0:43:16.86,Chinese,,0,0,0,,特别是这套例子是可想而知的
 Dialogue: 0,0:43:16.86,0:43:21.73,English,,0,0,0,, I'm comparing these I'm saying these numbers are either equal less or greater
+Dialogue: 0,0:43:16.86,0:43:21.73,Chinese,,0,0,0,,我比较这些我说这些数字要么等于或大于等于
 Dialogue: 0,0:43:22.14,0:43:27.66,English,,0,0,0,,What will the outcomes be and the key to answering that question is to first of all figure out
+Dialogue: 0,0:43:22.14,0:43:27.66,Chinese,,0,0,0,,结果会是什么，回答这个问题的关键首先要弄清楚
 Dialogue: 0,0:43:28.20,0:43:32.52,English,,0,0,0,, Okay is it a signed or an unsigned comparison should I convert
+Dialogue: 0,0:43:28.20,0:43:32.52,Chinese,,0,0,0,,好的，这是一个有符号或无符号的比较，如果我转换
 Dialogue: 0,0:43:33.40,0:43:39.80,English,,0,0,0,, One of these numbers to either of these numbers to an unsigned form before I do it
+Dialogue: 0,0:43:33.40,0:43:39.80,Chinese,,0,0,0,,这些数字之一，这些数字之前，我这样做了一个无符号的形式
 Dialogue: 0,0:43:40.38,0:43:44.38,English,,0,0,0,,And the rule was if either argument is unsigned then you got to do it
+Dialogue: 0,0:43:40.38,0:43:44.38,Chinese,,0,0,0,,而规则是如果任何一个参数都没有签名，那么你必须这样做
 Dialogue: 0,0:43:45.30,0:43:53.80,English,,0,0,0,,And as you see when you put a u at the end either a  u or U at the end of a numeric constant
+Dialogue: 0,0:43:45.30,0:43:53.80,Chinese,,0,0,0,,正如你所看到的，当你在结尾处放置一个u或U时，它就是一个数字常量的末尾
 Dialogue: 0,0:43:54.20,0:43:56.70,English,,0,0,0,,You're saying this is an unsigned value
+Dialogue: 0,0:43:54.20,0:43:56.70,Chinese,,0,0,0,,你说这是一个无符号值
 Dialogue: 0,0:43:57.50,0:44:05.32,English,,0,0,0,, So for example if we compare a zero and zero unsigned they're equal
+Dialogue: 0,0:43:57.50,0:44:05.32,Chinese,,0,0,0,,举例来说，如果我们比较零和零无符号，它们是相等的
 Dialogue: 0,0:44:07.50,0:44:13.12,English,,0,0,0,,And if we combine negative one compare negative one to zero
+Dialogue: 0,0:44:07.50,0:44:13.12,Chinese,,0,0,0,,如果我们将负数与负数相比，则为零
 Dialogue: 0,0:44:13.72,0:44:17.20,English,,0,0,0,,We'll get that the first one is less
+Dialogue: 0,0:44:13.72,0:44:17.20,Chinese,,0,0,0,,我们会得到第一个更少
 Dialogue: 0,0:44:17.46,0:44:19.74,English,,0,0,0,,Because -1 is less than 0
+Dialogue: 0,0:44:17.46,0:44:19.74,Chinese,,0,0,0,,因为-1小于0
 Dialogue: 0,0:44:20.40,0:44:25.22,English,,0,0,0,, But what would happen with the next one when we compare negative 1 to an unsigned 0
+Dialogue: 0,0:44:20.40,0:44:25.22,Chinese,,0,0,0,,但是当我们将负1与无符号0进行比较时，下一个会发生什么
 Dialogue: 0,0:44:26.86,0:44:30.24,English,,0,0,0,,greater right
+Dialogue: 0,0:44:26.86,0:44:30.24,Chinese,,0,0,0,,更大的权利
 Dialogue: 0,0:44:31.10,0:44:40.54,English,,0,0,0,,So this is the surprise and it has to do with...a number that I erased
+Dialogue: 0,0:44:31.10,0:44:40.54,Chinese,,0,0,0,,所以这是一个惊喜，它与我擦掉的一个数字有关
 Dialogue: 0,0:44:44.38,0:44:47.64,English,,0,0,0,, but we can still get it remember this is negative one
+Dialogue: 0,0:44:44.38,0:44:47.64,Chinese,,0,0,0,,但我们仍然可以记住这是负面的
 Dialogue: 0,0:44:49.84,0:44:54.20,English,,0,0,0,, But when I cast that to an unsigned number
-Dialogue: 0,0:44:54.71,0:45:03.84,English,,0,0,0,, I'm flipping this from -16 to +16 and turning this into 31 I'm turning it into actually the largest number I can represent 
+Dialogue: 0,0:44:49.84,0:44:54.20,Chinese,,0,0,0,,但是当我把它转换成一个无符号数时
+Dialogue: 0,0:44:54.71,0:45:03.84,English,,0,0,0,, I'm flipping this from -16 to +16 and turning this into 31 I'm turning it into actually the largest number I can represent
+Dialogue: 0,0:44:54.71,0:45:03.84,Chinese,,0,0,0,,我把这个从-16改为+16，并把它变成31，我把它变成了我能代表的最大数字
 Dialogue: 0,0:45:04.64,0:45:06.72,English,,0,0,0,,And so it will be greater than zero
+Dialogue: 0,0:45:04.64,0:45:06.72,Chinese,,0,0,0,,所以它会大于零
 Dialogue: 0,0:45:07.80,0:45:15.42,English,,0,0,0,, So it's a little bit weird to think about I took an u0 which after all is to 0  and compared it to a negative 1
+Dialogue: 0,0:45:07.80,0:45:15.42,Chinese,,0,0,0,,所以有点奇怪的是，我想到了一个u0，它毕竟是0，并将其与负1进行比较
 Dialogue: 0,0:45:15.70,0:45:21.38,English,,0,0,0,,And it said oh you really meant 31 didn't you or whatever word size we're using
+Dialogue: 0,0:45:15.70,0:45:21.38,Chinese,,0,0,0,,它说哦，你真的意味着31没有你或我们正在使用的任何字号
 Dialogue: 0,0:45:21.86,0:45:23.32,English,,0,0,0,, And so it said it's greater
+Dialogue: 0,0:45:21.86,0:45:23.32,Chinese,,0,0,0,,所以它说这更大
 Dialogue: 0,0:45:25.14,0:45:29.04,English,,0,0,0,,And basically the rest of these you can answer in a similar way
+Dialogue: 0,0:45:25.14,0:45:29.04,Chinese,,0,0,0,,基本上其余的你可以用类似的方式回答
 Dialogue: 0,0:45:32.76,0:45:39.02,English,,0,0,0,, That these two numbers are this is clearly one smaller than this
+Dialogue: 0,0:45:32.76,0:45:39.02,Chinese,,0,0,0,,这两个数字是这个数字显然小于这个数字
 Dialogue: 0,0:45:40.28,0:45:46.04,English,,0,0,0,,No I'm sorry this is a positive this is a negative number and
+Dialogue: 0,0:45:40.28,0:45:46.04,Chinese,,0,0,0,,不，我很抱歉，这是积极的，这是一个负数和
 Dialogue: 0,0:45:46.18,0:45:51.14,English,,0,0,0,,I compare those and the positive will be greater than the negative
+Dialogue: 0,0:45:46.18,0:45:51.14,Chinese,,0,0,0,,我比较这些和积极的将大于否定
 Dialogue: 0,0:45:51.86,0:45:55.68,English,,0,0,0,, I'll tell you in a minute why this number is written this way
+Dialogue: 0,0:45:51.86,0:45:55.68,Chinese,,0,0,0,,我会在一分钟内告诉你为什么这个数字是这样写的
 Dialogue: 0,0:45:56.82,0:45:59.78,English,,0,0,0,, The next one it's the same pair of numbers
-Dialogue: 0,0:46:01.30,0:46:02.54,English,,0,0,0,,But you see it's flipped 
+Dialogue: 0,0:45:56.82,0:45:59.78,Chinese,,0,0,0,,下一个它是同一对数字
+Dialogue: 0,0:46:01.30,0:46:02.54,English,,0,0,0,,But you see it's flipped
+Dialogue: 0,0:46:01.30,0:46:02.54,Chinese,,0,0,0,,但你看它翻转了
 Dialogue: 0,0:46:03.80,0:46:13.68,English,,0,0,0,,And the reason is this number on the left is TMax for
+Dialogue: 0,0:46:03.80,0:46:13.68,Chinese,,0,0,0,,原因是这个左边的数字是TMax的
 Dialogue: 0,0:46:19.82,0:46:22.82,English,,0,0,0,,So it's the bit pattern in a 32-bit number
+Dialogue: 0,0:46:19.82,0:46:22.82,Chinese,,0,0,0,,所以这是32位数字中的位模式
 Dialogue: 0,0:46:50.92,0:46:53.46,English,,0,0,0,,And to this day I have not memorized this number by the way
+Dialogue: 0,0:46:50.92,0:46:53.46,Chinese,,0,0,0,,直到今天，我还没有记住这个数字
 Dialogue: 0,0:46:53.88,0:46:57.44,English,,0,0,0,,But and then this number is actually TMin
+Dialogue: 0,0:46:53.88,0:46:57.44,Chinese,,0,0,0,,但是，这个数字实际上是TMin
 Dialogue: 0,0:47:15.68,0:47:24.72,English,,0,0,0,,And that when I subtract you can think of it as this is negative TMax - 1 so that's TMin
+Dialogue: 0,0:47:15.68,0:47:24.72,Chinese,,0,0,0,,而当我减去时，你可以认为它是负的TMax  -  1，所以这就是TMin
 Dialogue: 0,0:47:25.14,0:47:29.30,English,,0,0,0,, So if I do an unsigned comparison between those two now think of those
+Dialogue: 0,0:47:25.14,0:47:29.30,Chinese,,0,0,0,,所以，如果我现在想一下这两者之间的无符号比较
 Dialogue: 0,0:47:29.58,0:47:36.72,English,,0,0,0,,This leading bit  not being a negative weight But a positive weight you'll see that this is a bigger number than this one
+Dialogue: 0,0:47:29.58,0:47:36.72,Chinese,,0,0,0,,这个领先位不是一个负面的重量，但一个正面的重量，你会看到这是一个比这个更大的数字
 Dialogue: 0,0:47:41.96,0:47:48.42,English,,0,0,0,, And so it goes that -1 is greater than -2 if they're unsigned
+Dialogue: 0,0:47:41.96,0:47:48.42,Chinese,,0,0,0,,因此，如果它们是无符号的，则-1大于-2
 Dialogue: 0,0:47:49.40,0:47:56.71,English,,0,0,0,, Because -1 is you can think of it as converts into UMax it'll be the biggest number possible
+Dialogue: 0,0:47:49.40,0:47:56.71,Chinese,,0,0,0,,因为-1可以把它看作转换成UMax，它可能是最大的数字
 Dialogue: 0,0:47:57.06,0:48:05.84,English,,0,0,0,,And -2 will be would be 11110
+Dialogue: 0,0:47:57.06,0:48:05.84,Chinese,,0,0,0,,-2将会是11110
 Dialogue: 0,0:48:17.98,0:48:20.44,English,,0,0,0,,So that can get fairly confusing
+Dialogue: 0,0:48:17.98,0:48:20.44,Chinese,,0,0,0,,所以这可能会让人相当困惑
 Dialogue: 0,0:48:23.78,0:48:29.98,English,,0,0,0,,One final quirk this way of writing this number is there's a little side in the book about it
+Dialogue: 0,0:48:23.78,0:48:29.98,Chinese,,0,0,0,,写这个数字的最后一个怪癖是书中有一点关于它的一面
 Dialogue: 0,0:48:30.54,0:48:37.84,English,,0,0,0,, If you write a business number Oh as you'd expect - as - blah blah blah 648
+Dialogue: 0,0:48:30.54,0:48:37.84,Chinese,,0,0,0,,如果你写一个商业编号哦，正如你所期望的那样 - 等等等等等等等等
 Dialogue: 0,0:48:40.60,0:48:47.70,English,,0,0,0,,It will actually get the C compiler gets kind of confused by that for obscure reasons
+Dialogue: 0,0:48:40.60,0:48:47.70,Chinese,,0,0,0,,它实际上会让C编译器因为一些模糊的原因而感到困惑
 Dialogue: 0,0:48:48.14,0:48:54.36,English,,0,0,0,, One other thing I should point out that it's a property that I don't think we cover well enough here
+Dialogue: 0,0:48:48.14,0:48:54.36,Chinese,,0,0,0,,还有一件事我应该指出，这是一个财产，我认为我们在这里覆盖得不够好
 Dialogue: 0,0:48:56.44,0:48:57.88,English,,0,0,0,,Let me see
+Dialogue: 0,0:48:56.44,0:48:57.88,Chinese,,0,0,0,,让我看看
 Dialogue: 0,0:49:02.64,0:49:06.50,English,,0,0,0,,There's a few things that the tides don't really cover here and I don't know why not
+Dialogue: 0,0:49:02.64,0:49:06.50,Chinese,,0,0,0,,这里有一些潮流并不真正涵盖在这里，我不知道为什么不
 Dialogue: 0,0:49:07.26,0:49:08.58,English,,0,0,0,,They like to point out
+Dialogue: 0,0:49:07.26,0:49:08.58,Chinese,,0,0,0,,他们喜欢指出
 Dialogue: 0,0:49:13.66,0:49:17.62,English,,0,0,0,,That are kind of useful properties to keep track of
+Dialogue: 0,0:49:13.66,0:49:17.62,Chinese,,0,0,0,,这是一些有用的特性来跟踪
 Dialogue: 0,0:49:25.38,0:49:32.84,English,,0,0,0,,It's that you notice that if you look at the absolute value of TMax
+Dialogue: 0,0:49:25.38,0:49:32.84,Chinese,,0,0,0,,这是你注意到，如果你看看TMax的绝对值
 Dialogue: 0,0:49:35.26,0:49:38.12,English,,0,0,0,,And you compare it to the absolute value of TMin
+Dialogue: 0,0:49:35.26,0:49:38.12,Chinese,,0,0,0,,你将它与TMin的绝对值进行比较
 Dialogue: 0,0:49:40.72,0:49:46.90,English,,0,0,0,,That it's off by one right
+Dialogue: 0,0:49:40.72,0:49:46.90,Chinese,,0,0,0,,这是一个权利
 Dialogue: 0,0:49:47.36,0:49:50.24,English,,0,0,0,,So that the negative number is more negative
+Dialogue: 0,0:49:47.36,0:49:50.24,Chinese,,0,0,0,,所以负数更负面
 Dialogue: 0,0:49:50.24,0:49:55.42,English,,0,0,0,,The smallest negative number is more negative than the largest positive number is positive
+Dialogue: 0,0:49:50.24,0:49:55.42,Chinese,,0,0,0,,最小的负数比最大的正数更负
 Dialogue: 0,0:49:56.24,0:49:59.44,English,,0,0,0,,And the reason for that actually is fairly simple if you think about
+Dialogue: 0,0:49:56.24,0:49:59.44,Chinese,,0,0,0,,如果你想一想，其中的原因其实很简单
 Dialogue: 0,0:49:59.78,0:50:05.62,English,,0,0,0,, It is that the the cases where you have zeros
+Dialogue: 0,0:49:59.78,0:50:05.62,Chinese,,0,0,0,,这是你有零的情况
 Dialogue: 0,0:50:07.88,0:50:09.36,English,,0,0,0,,Include the number 0
+Dialogue: 0,0:50:07.88,0:50:09.36,Chinese,,0,0,0,,包含数字0
 Dialogue: 0,0:50:21.24,0:50:22.56,English,,0,0,0,,So you can see it better
+Dialogue: 0,0:50:21.24,0:50:22.56,Chinese,,0,0,0,,所以你可以看到它更好
 Dialogue: 0,0:50:26.40,0:50:32.40,English,,0,0,0,,And there's two to the half-year range is occupied by those numbers
+Dialogue: 0,0:50:26.40,0:50:32.40,Chinese,,0,0,0,,这些数字占据了两到半年的范围
 Dialogue: 0,0:50:32.96,0:50:36.86,English,,0,0,0,, And the negative numbers are all negative
+Dialogue: 0,0:50:32.96,0:50:36.86,Chinese,,0,0,0,,负数都是负数
 Dialogue: 0,0:50:42.10,0:50:46.80,English,,0,0,0,,And there's so the other half of the range is in there
+Dialogue: 0,0:50:42.10,0:50:46.80,Chinese,,0,0,0,,另外还有一半是在那里
 Dialogue: 0,0:50:48.26,0:50:51.70,English,,0,0,0,,And the point is that you had to use one of these four zero
+Dialogue: 0,0:50:48.26,0:50:51.70,Chinese,,0,0,0,,关键是你必须使用这四个零中的一个
 Dialogue: 0,0:50:52.16,0:50:57.34,English,,0,0,0,,And so they're only there's one left one less value left over
+Dialogue: 0,0:50:52.16,0:50:57.34,Chinese,,0,0,0,,所以他们只剩下一个剩下的价值
 Dialogue: 0,0:50:57.72,0:51:01.82,English,,0,0,0,, And that's why you end up with this through a symmetry
+Dialogue: 0,0:50:57.72,0:51:01.82,Chinese,,0,0,0,,这就是为什么你通过对称结束这一点
 Dialogue: 0,0:51:02.50,0:51:06.92,English,,0,0,0,,And this a symmetry is the cause of no end of pain in various ways
+Dialogue: 0,0:51:02.50,0:51:06.92,Chinese,,0,0,0,,而这种对称性是以各种方式结束痛苦的原因
 Dialogue: 0,0:51:07.72,0:51:15.62,English,,0,0,0,,That like a few the classic example is if you implement absolute value
+Dialogue: 0,0:51:07.72,0:51:15.62,Chinese,,0,0,0,,这就像一些经典的例子，如果你实现绝对值
 Dialogue: 0,0:51:33.40,0:51:39.96,English,,0,0,0,,Like so what do you what does this return for TMin
+Dialogue: 0,0:51:33.40,0:51:39.96,Chinese,,0,0,0,,像这样，你对TMin的回报是什么？
 Dialogue: 0,0:51:44.62,0:51:50.32,English,,0,0,0,,Yeah the returns team in we'll talk a little bit basically
+Dialogue: 0,0:51:44.62,0:51:50.32,Chinese,,0,0,0,,是的，我们的回报团队基本上会谈一点
 Dialogue: 0,0:51:51.84,0:51:56.04,English,,0,0,0,, When you try to negate this number that's here
+Dialogue: 0,0:51:51.84,0:51:56.04,Chinese,,0,0,0,,当你试图否定这个在这里的数字
 Dialogue: 0,0:51:59.14,0:52:00.84,English,,0,0,0,, You'll end up with it back again
+Dialogue: 0,0:51:59.14,0:52:00.84,Chinese,,0,0,0,,你会最终回来
 Dialogue: 0,0:52:08.06,0:52:12.92,English,,0,0,0,,So it's always a corner case and whenever we do program testing
+Dialogue: 0,0:52:08.06,0:52:12.92,Chinese,,0,0,0,,所以，当我们进行程序测试时，它总是一个角落案例
 Dialogue: 0,0:52:12.92,0:52:16.24,English,,0,0,0,, We always throw that case in there to break things question
+Dialogue: 0,0:52:12.92,0:52:16.24,Chinese,,0,0,0,,我们总是把那个案子扔在那里来解决问题
 Dialogue: 0,0:52:17.00,0:52:33.36,English,,0,0,0,, well that case you said oh yeah big number but how negative - one yes
+Dialogue: 0,0:52:17.00,0:52:33.36,Chinese,,0,0,0,,那么你说，哦，是大数字，但如何消极 - 一个是的
 Dialogue: 0,0:52:33.36,0:52:40.00,English,,0,0,0,,No that's what they do that if you ever look at the in the C constance
+Dialogue: 0,0:52:33.36,0:52:40.00,Chinese,,0,0,0,,不，那是他们这样做，如果你看过C constance
 Dialogue: 0,0:52:40.00,0:52:42.70,English,,0,0,0,, They use this as a way of representing TMin
+Dialogue: 0,0:52:40.00,0:52:42.70,Chinese,,0,0,0,,他们将此用作表示TMin的一种方式
 Dialogue: 0,0:52:43.26,0:52:46.84,English,,0,0,0,, And they do it for that reason because you see
+Dialogue: 0,0:52:43.26,0:52:46.84,Chinese,,0,0,0,,因为你看到，所以他们这样做
 Dialogue: 0,0:52:47.16,0:52:52.54,English,,0,0,0,,It's exactly this problem and they put parentheses around it so there's no president's problem
+Dialogue: 0,0:52:47.16,0:52:52.54,Chinese,,0,0,0,,这正是这个问题，他们把括号括在里面，所以没有总统的问题
 Dialogue: 0,0:52:52.72,0:52:56.38,English,,0,0,0,, But you see that number that in six for seven that's TMax
+Dialogue: 0,0:52:52.72,0:52:56.38,Chinese,,0,0,0,,但是你看到那个数字是在六点七点那是TMax
 Dialogue: 0,0:52:57.74,0:53:04.36,English,,0,0,0,,And so basically it's just saying that TMin is -TMax - 1
+Dialogue: 0,0:52:57.74,0:53:04.36,Chinese,,0,0,0,,所以基本上只是说TMin是-TMax-1
 Dialogue: 0,0:53:04.72,0:53:05.64,English,,0,0,0,,Question
+Dialogue: 0,0:53:04.72,0:53:05.64,Chinese,,0,0,0,,题
 Dialogue: 0,0:53:06.34,0:53:15.70,English,,0,0,0,,[student speaking]
+Dialogue: 0,0:53:06.34,0:53:15.70,Chinese,,0,0,0,,[学生发言]
 Dialogue: 0,0:53:17.46,0:53:20.06,English,,0,0,0,,yeah hmm yes
+Dialogue: 0,0:53:17.46,0:53:20.06,Chinese,,0,0,0,,是的，嗯，是的
 Dialogue: 0,0:53:20.28,0:53:23.76,English,,0,0,0,,So comparison is just a special case of the more general one
+Dialogue: 0,0:53:20.28,0:53:23.76,Chinese,,0,0,0,,所以比较只是更一般的特例
 Dialogue: 0,0:53:24.00,0:53:28.16,English,,0,0,0,, Which is addition subtraction all of those
+Dialogue: 0,0:53:24.00,0:53:28.16,Chinese,,0,0,0,,这些都是加法减法
 Dialogue: 0,0:53:28.94,0:53:34.18,English,,0,0,0,,If either argument is unsigned then it interprets remaining one as being unsigned
+Dialogue: 0,0:53:28.94,0:53:34.18,Chinese,,0,0,0,,如果任何一个参数都是无符号的，那么它将其余的解释为无符号
 Dialogue: 0,0:53:35.24,0:53:39.92,English,,0,0,0,,It turns out and we'll get into this more next time as far as bit patterns but
+Dialogue: 0,0:53:35.24,0:53:39.92,Chinese,,0,0,0,,事实证明，我们将在下一次就位模式进入这一点，但是
 Dialogue: 0,0:53:40.00,0:53:48.56,English,,0,0,0,,But it turns out that at the bit level addition subtraction even multiplication
+Dialogue: 0,0:53:40.00,0:53:48.56,Chinese,,0,0,0,,但事实证明，在位级减法甚至乘法
 Dialogue: 0,0:53:49.08,0:53:52.44,English,,0,0,0,, are the same whether it's an unsigned number two's complement number
+Dialogue: 0,0:53:49.08,0:53:52.44,Chinese,,0,0,0,,无论它是一个无符号数的二进制补码是相同的
 Dialogue: 0,0:53:52.84,0:53:55.28,English,,0,0,0,, So what we'll talk about that more next time
+Dialogue: 0,0:53:52.84,0:53:55.28,Chinese,,0,0,0,,所以下次我们会再谈这个问题
 Dialogue: 0,0:53:59.50,0:54:04.00,English,,0,0,0,, And the other thing to observe sort of property
+Dialogue: 0,0:53:59.50,0:54:04.00,Chinese,,0,0,0,,另一件事是观察某种财产
 Dialogue: 0,0:54:17.36,0:54:31.56,English,,0,0,0,,is you saw that UMax is sort of like  2 * TMax + 1 right so
+Dialogue: 0,0:54:17.36,0:54:31.56,Chinese,,0,0,0,,你是否看到UMax有点像2 * TMax + 1
 Dialogue: 0,0:54:32.74,0:54:39.26,English,,0,0,0,,So before UMax was 15 in our five bit numbers
+Dialogue: 0,0:54:32.74,0:54:39.26,Chinese,,0,0,0,,所以在UMax之前，我们的五位数字是15
 Dialogue: 0,0:54:39.66,0:54:42.74,English,,0,0,0,,And and that's again not too hard to figure out
+Dialogue: 0,0:54:39.66,0:54:42.74,Chinese,,0,0,0,,而且这也不难解决
 Dialogue: 0,0:54:44.66,0:54:50.40,English,,0,0,0,,Here's one way to think about it ,TMax is a zero followed by a bunch of ones
+Dialogue: 0,0:54:44.66,0:54:50.40,Chinese,,0,0,0,,这里有一种思考方式，TMax是一个零，然后是一堆
 Dialogue: 0,0:54:53.18,0:54:55.36,English,,0,0,0,,And if I want to double that number position
+Dialogue: 0,0:54:53.18,0:54:55.36,Chinese,,0,0,0,,如果我想把这个数字的位置翻倍
 Dialogue: 0,0:54:55.88,0:55:00.32,English,,0,0,0,,I basically shift it left by one position
+Dialogue: 0,0:54:55.88,0:55:00.32,Chinese,,0,0,0,,我基本上将它左移一个位置
 Dialogue: 0,0:55:01.66,0:55:03.78,English,,0,0,0,, And that would end up with a zero here
+Dialogue: 0,0:55:01.66,0:55:03.78,Chinese,,0,0,0,,这最终会在这里结束
 Dialogue: 0,0:55:04.96,0:55:10.96,English,,0,0,0,, So this is TMax and this is twice TMax
+Dialogue: 0,0:55:04.96,0:55:10.96,Chinese,,0,0,0,,所以这是TMax，这是TMax的两倍
 Dialogue: 0,0:55:13.04,0:55:14.72,English,,0,0,0,,And now if I add a one to that
+Dialogue: 0,0:55:13.04,0:55:14.72,Chinese,,0,0,0,,现在，如果我添加一个
 Dialogue: 0,0:55:16.30,0:55:18.82,English,,0,0,0,,That I'll just set this bit to one and get this
+Dialogue: 0,0:55:16.30,0:55:18.82,Chinese,,0,0,0,,我只需将这一点设置为1即可
 Dialogue: 0,0:55:18.82,0:55:22.72,English,,0,0,0,, So there's various ways you can think about it but that's one way to do it
+Dialogue: 0,0:55:18.82,0:55:22.72,Chinese,,0,0,0,,所以有多种方式可以考虑，但这是一种方法
 Dialogue: 0,0:55:40.34,0:55:46.36,English,,0,0,0,,It's one other thing that I wanted to mention too
+Dialogue: 0,0:55:40.34,0:55:46.36,Chinese,,0,0,0,,这也是我想提及的另一件事
 Dialogue: 0,0:55:47.20,0:55:57.58,English,,0,0,0,,This can get you into a lot of trouble programming wise so let me just show you what I mean
+Dialogue: 0,0:55:47.20,0:55:57.58,Chinese,,0,0,0,,这会让你在编程方面遇到很多麻烦，所以让我告诉你我的意思
 Dialogue: 0,0:56:07.08,0:56:15.64,English,,0,0,0,,So I mentioned I wanted to go backwards through an array
+Dialogue: 0,0:56:07.08,0:56:15.64,Chinese,,0,0,0,,所以我提到我想通过数组倒退
 Dialogue: 0,0:56:16.06,0:56:22.78,English,,0,0,0,, So I write a loop of the form for i = n - 1
+Dialogue: 0,0:56:16.06,0:56:22.78,Chinese,,0,0,0,,所以我写了一个形式为i = n  -  1的循环
 Dialogue: 0,0:56:23.52,0:56:29.70,English,,0,0,0,,i >= 0
+Dialogue: 0,0:56:23.52,0:56:29.70,Chinese,,0,0,0,,i> = 0
 Dialogue: 0,0:56:31.20,0:56:32.54,English,,0,0,0,,i--
+Dialogue: 0,0:56:31.20,0:56:32.54,Chinese,,0,0,0,,一世 -
 Dialogue: 0,0:56:33.98,0:56:37.34,English,,0,0,0,,then I do something with array element a of i
+Dialogue: 0,0:56:33.98,0:56:37.34,Chinese,,0,0,0,,然后我用数组元素a做一些事情
 Dialogue: 0,0:56:40.56,0:56:42.60,English,,0,0,0,,I just call some function of
+Dialogue: 0,0:56:40.56,0:56:42.60,Chinese,,0,0,0,,我只是打电话的一些功能
 Dialogue: 0,0:56:43.90,0:56:47.94,English,,0,0,0,,Whatever you want to do in that loop so that's a pretty standard pattern in a loop right
+Dialogue: 0,0:56:43.90,0:56:47.94,Chinese,,0,0,0,,无论你想在循环中做什么，这是循环中的一个非常标准的模式
 Dialogue: 0,0:56:48.68,0:56:53.36,English,,0,0,0,, Except that you write this greater equal to1 0
+Dialogue: 0,0:56:48.68,0:56:53.36,Chinese,,0,0,0,,除了你写这个更大的等于1 0
 Dialogue: 0,0:56:54.56,0:56:56.84,English,,0,0,0,,You can imagine various uses for that
+Dialogue: 0,0:56:54.56,0:56:56.84,Chinese,,0,0,0,,你可以想象它的各种用途
 Dialogue: 0,0:56:57.76,0:57:06.04,English,,0,0,0,,So here's an interesting question what if I were declared as being unsigned
+Dialogue: 0,0:56:57.76,0:57:06.04,Chinese,,0,0,0,,所以这里有一个有趣的问题，如果我被声明为未签名
 Dialogue: 0,0:57:09.16,0:57:12.66,English,,0,0,0,, Because it's array index after all what will happen with this loop
+Dialogue: 0,0:57:09.16,0:57:12.66,Chinese,,0,0,0,,因为它是数组索引，毕竟这个循环会发生什么
 Dialogue: 0,0:57:18.02,0:57:18.90,English,,0,0,0,,What's that?
+Dialogue: 0,0:57:18.02,0:57:18.90,Chinese,,0,0,0,,那是什么？
 Dialogue: 0,0:57:20.46,0:57:24.22,English,,0,0,0,, Yes! So the loop will go forever what would most likely happen is
+Dialogue: 0,0:57:20.46,0:57:24.22,Chinese,,0,0,0,,是!所以循环将永远走到最可能发生的地步
 Dialogue: 0,0:57:24.98,0:57:27.56,English,,0,0,0,,I would go from being zero to being UMax
+Dialogue: 0,0:57:24.98,0:57:27.56,Chinese,,0,0,0,,我会从零到成为UMax
 Dialogue: 0,0:57:28.66,0:57:31.00,English,,0,0,0,, And that's a really big number and
+Dialogue: 0,0:57:28.66,0:57:31.00,Chinese,,0,0,0,,这是一个非常大的数字
 Dialogue: 0,0:57:31.10,0:57:39.14,English,,0,0,0,,The ray,you'd uh, most likely cause a memory fault because it's so far out of bounds
+Dialogue: 0,0:57:31.10,0:57:39.14,Chinese,,0,0,0,,光线，你会很可能导致内存故障，因为它远远超出了界限
 Dialogue: 0,0:57:39.72,0:57:43.86,English,,0,0,0,, But the point is it wouldn't do what you want it wouldn't stop where you want it to
+Dialogue: 0,0:57:39.72,0:57:43.86,Chinese,,0,0,0,,但重点是它不会做你想做的事，它不会停在你想要的地方
 Dialogue: 0,0:57:44.42,0:57:47.58,English,,0,0,0,, Because of the simple reason that I is of course
+Dialogue: 0,0:57:44.42,0:57:47.58,Chinese,,0,0,0,,因为我当然很简单
 Dialogue: 0,0:57:48.52,0:57:52.66,English,,0,0,0,,i is always going to be greater than or equal to zero because it's an unsigned number
+Dialogue: 0,0:57:48.52,0:57:52.66,Chinese,,0,0,0,,我总是会大于或等于零，因为它是一个无符号数
 Dialogue: 0,0:57:53.46,0:57:59.84,English,,0,0,0,,So that's one you'd say okay well you should have figured that one out
+Dialogue: 0,0:57:53.46,0:57:59.84,Chinese,,0,0,0,,所以这是一个你会说好的，你应该想出一个
 Dialogue: 0,0:58:00.28,0:58:02.44,English,,0,0,0,,It can be fair it more subtle though
+Dialogue: 0,0:58:00.28,0:58:02.44,Chinese,,0,0,0,,它可以是公平的，但它更微妙
 Dialogue: 0,0:58:06.60,0:58:10.62,English,,0,0,0,, If you have something like int i
+Dialogue: 0,0:58:06.60,0:58:10.62,Chinese,,0,0,0,,如果你有像int一样的东西
 Dialogue: 0,0:58:14.40,0:58:22.86,English,,0,0,0,, And then we say something like let me just change it here a little bit so this will be
+Dialogue: 0,0:58:14.40,0:58:22.86,Chinese,,0,0,0,,然后我们说一些事情，比如让我在这里稍微改变一下，这样就可以了
 Dialogue: 0,0:58:40.70,0:58:46.18,English,,0,0,0,,Something like this where the I'm mixing metaphors here I have to confess
+Dialogue: 0,0:58:40.70,0:58:46.18,Chinese,,0,0,0,,像这样的事情，我在这里混合比喻，我不得不承认
 Dialogue: 0,0:58:46.72,0:58:52.82,English,,0,0,0,,But if you use the standard the term size of which is the way you get
+Dialogue: 0,0:58:46.72,0:58:52.82,Chinese,,0,0,0,,但是，如果您使用标准，那么您获得的方式就是其大小
 Dialogue: 0,0:58:53.18,0:58:56.26,English,,0,0,0,, How many bytes it takes to represent some given data type
+Dialogue: 0,0:58:53.18,0:58:56.26,Chinese,,0,0,0,,代表某些给定数据类型需要多少字节
 Dialogue: 0,0:58:56.66,0:58:58.64,English,,0,0,0,,So this will actually be the number one
+Dialogue: 0,0:58:56.66,0:58:58.64,Chinese,,0,0,0,,所以这实际上是第一名
 Dialogue: 0,0:58:59.68,0:59:08.20,English,,0,0,0,,So it's not the same loop as before but imagine I'm sort of mixing in my arithmetic and making use of some of these built-in forms
+Dialogue: 0,0:58:59.68,0:59:08.20,Chinese,,0,0,0,,所以它不是像以前一样的循环，但想象一下，我在我的算术混合，并利用这些内置的形式
 Dialogue: 0,0:59:10.08,0:59:11.80,English,,0,0,0,, What would happen with this loop
+Dialogue: 0,0:59:10.08,0:59:11.80,Chinese,,0,0,0,,这个循环会发生什么
 Dialogue: 0,0:59:14.08,0:59:21.42,English,,0,0,0,, Yes right yes
+Dialogue: 0,0:59:14.08,0:59:21.42,Chinese,,0,0,0,,是的，是的
 Dialogue: 0,0:59:21.76,0:59:26.92,English,,0,0,0,,Exactly so sizeof returns an unsigned value
+Dialogue: 0,0:59:21.76,0:59:26.92,Chinese,,0,0,0,,确实如此sizeof返回一个无符号值
 Dialogue: 0,0:59:26.92,0:59:32.76,English,,0,0,0,, It's not actually a function it's a built in but it's the result of sizeof is considered to be unsigned
+Dialogue: 0,0:59:26.92,0:59:32.76,Chinese,,0,0,0,,它实际上不是它内置的函数，而是sizeof的结果被认为是未签名的
 Dialogue: 0,0:59:33.48,0:59:37.32,English,,0,0,0,, And so just like I was saying
+Dialogue: 0,0:59:33.48,0:59:37.32,Chinese,,0,0,0,,就像我说的那样
 Dialogue: 0,0:59:37.62,0:59:42.78,English,,0,0,0,,If you have a signed value in it unsigned in any kind of arithmetic
+Dialogue: 0,0:59:37.62,0:59:42.78,Chinese,,0,0,0,,如果你有一个有符号的值，它以任何类型的算术无符号
 Dialogue: 0,0:59:43.32,0:59:47.78,English,,0,0,0,, It'll turn treat the combination of the two is unsigned
+Dialogue: 0,0:59:43.32,0:59:47.78,Chinese,,0,0,0,,它会转而处理两者的组合是无符号的
 Dialogue: 0,0:59:48.14,0:59:51.30,English,,0,0,0,, And so it will actually do an unsigned comparison here
+Dialogue: 0,0:59:48.14,0:59:51.30,Chinese,,0,0,0,,所以它实际上会在这里做一个无符号的比较
 Dialogue: 0,0:59:51.80,0:59:53.94,English,,0,0,0,, Which is almost surely not what you wanted
+Dialogue: 0,0:59:51.80,0:59:53.94,Chinese,,0,0,0,,这几乎肯定不是你想要的
 Dialogue: 0,0:59:54.92,1:00:02.61,English,,0,0,0,,And this will just you'll look at this program and you won't have any idea why it's crashing
+Dialogue: 0,0:59:54.92,1:00:02.61,Chinese,,0,0,0,,这只是你看看这个程序，你不知道它为什么会崩溃
 Dialogue: 0,1:00:02.84,1:00:07.04,English,,0,0,0,,You'll be so confused and that's the kind of thing you have to know
+Dialogue: 0,1:00:02.84,1:00:07.04,Chinese,,0,0,0,,你会很困惑，而这是你必须知道的事情
 Dialogue: 0,1:00:07.04,1:00:11.80,English,,0,0,0,, It's one of the quirks of C that probably a fake could start over again and redesign it
+Dialogue: 0,1:00:07.04,1:00:11.80,Chinese,,0,0,0,,这是C的怪癖之一，可能是一个假的可能会重新开始并重新设计它
 Dialogue: 0,1:00:11.80,1:00:14.84,English,,0,0,0,,They'd come up with some different set of conventions than they did
+Dialogue: 0,1:00:11.80,1:00:14.84,Chinese,,0,0,0,,他们想出了一些不同的约定
 Dialogue: 0,1:00:15.20,1:00:19.78,English,,0,0,0,,But unfortunately it's way too late for that so this is just one of those things you have to remember
+Dialogue: 0,1:00:15.20,1:00:19.78,Chinese,,0,0,0,,但不幸的是，这太迟了，所以这只是你必须记住的事情之一
 Dialogue: 0,1:00:21.18,1:00:25.54,English,,0,0,0,, But yes the my point is through some subtleties to spent about in signed
+Dialogue: 0,1:00:21.18,1:00:25.54,Chinese,,0,0,0,,但是，是的，我的观点是通过一些微妙的东西来签名
 Dialogue: 0,1:00:25.78,1:00:29.10,English,,0,0,0,,About this business of signed versus unsigned arithmetic
+Dialogue: 0,1:00:25.78,1:00:29.10,Chinese,,0,0,0,,关于有符号运算和无符号运算的业务
 Dialogue: 0,1:00:36.16,1:00:41.86,English,,0,0,0,,Okay so now let's look at a sort of final class of operations which is
+Dialogue: 0,1:00:36.16,1:00:41.86,Chinese,,0,0,0,,好吧，现在我们来看一下最后一类的操作
 Dialogue: 0,1:00:42.46,1:00:46.42,English,,0,0,0,,Suppose I have a number that's so many bits say eight bits
+Dialogue: 0,1:00:42.46,1:00:46.42,Chinese,,0,0,0,,假设我有一个数字，这么多位表示八位
 Dialogue: 0,1:00:46.48,1:00:51.02,English,,0,0,0,, And I want to now expand it to be a 16-bit number
+Dialogue: 0,1:00:46.48,1:00:51.02,Chinese,,0,0,0,,我现在想把它扩展成一个16位数字
 Dialogue: 0,1:00:51.60,1:00:54.70,English,,0,0,0,,There's a fairly cute rule for doing this
+Dialogue: 0,1:00:51.60,1:00:54.70,Chinese,,0,0,0,,这样做有一个相当可爱的规则
 Dialogue: 0,1:00:55.12,1:00:59.82,English,,0,0,0,,That's called sign extension I'm talking about two's complement numbers here
+Dialogue: 0,1:00:55.12,1:00:59.82,Chinese,,0,0,0,,这就是所谓的符号扩展我在这里讨论的是补码数
 Dialogue: 0,1:01:00.36,1:01:06.64,English,,0,0,0,, Of how you go take a and make it bigger without changing its value
+Dialogue: 0,1:01:00.36,1:01:06.64,Chinese,,0,0,0,,你如何去做并在不改变其价值的情况下做大
 Dialogue: 0,1:01:08.48,1:01:14.96,English,,0,0,0,,And the basic rule is you do it by copying  the sign bit to the left
+Dialogue: 0,1:01:08.48,1:01:14.96,Chinese,,0,0,0,,基本规则是通过将符号位复制到左侧来完成
 Dialogue: 0,1:01:15.42,1:01:18.12,English,,0,0,0,,So let me give you the intuition behind it
+Dialogue: 0,1:01:15.42,1:01:18.12,Chinese,,0,0,0,,所以让我给你一个背后的直觉
 Dialogue: 0,1:01:29.50,1:01:32.38,English,,0,0,0,,So let's go get some 4-bit values
+Dialogue: 0,1:01:29.50,1:01:32.38,Chinese,,0,0,0,,所以让我们去获取一些4位值
 Dialogue: 0,1:01:42.10,1:01:45.54,English,,0,0,0,,Well it's pretty straightforward if the leading bit is a zero
-Dialogue: 0,1:01:46.84,1:01:52.32,English,,0,0,0,,I'm just going to do a left shift and then fill in so 
+Dialogue: 0,1:01:42.10,1:01:45.54,Chinese,,0,0,0,,如果前导位是零，那么它非常简单
+Dialogue: 0,1:01:46.84,1:01:52.32,English,,0,0,0,,I'm just going to do a left shift and then fill in so
+Dialogue: 0,1:01:46.84,1:01:52.32,Chinese,,0,0,0,,我只是要做一个左移，然后填写
 Dialogue: 0,1:01:59.54,1:02:00.80,English,,0,0,0,,Wait what am I talking about
+Dialogue: 0,1:01:59.54,1:02:00.80,Chinese,,0,0,0,,等一下我在说什么
 Dialogue: 0,1:02:04.80,1:02:07.10,English,,0,0,0,, I got ahead of myself I'm talking about something totally different
+Dialogue: 0,1:02:04.80,1:02:07.10,Chinese,,0,0,0,,我领先于自己，我正在谈论完全不同的事情
 Dialogue: 0,1:02:07.12,1:02:11.54,English,,0,0,0,, No sorry the same number I'm not changing the number I keeping it  the same
+Dialogue: 0,1:02:07.12,1:02:11.54,Chinese,,0,0,0,,没有抱歉，相同的号码，我不改变号码，我保持不变
 Dialogue: 0,1:02:11.54,1:02:19.48,English,,0,0,0,,So I just add a zero to the lead and this will be the number six still this is 4 + 2=6
+Dialogue: 0,1:02:11.54,1:02:19.48,Chinese,,0,0,0,,所以我只是给主角加一个零，这将是六号仍然是4 + 2 = 6
 Dialogue: 0,1:02:21.94,1:02:25.88,English,,0,0,0,,But now let's think about it as a where there's a leading sign bit
+Dialogue: 0,1:02:21.94,1:02:25.88,Chinese,,0,0,0,,但是现在让我们把它看作一个有着领先迹象的地方
 Dialogue: 0,1:02:29.12,1:02:36.24,English,,0,0,0,, So this is -8 + 4 + 2 = -2
+Dialogue: 0,1:02:29.12,1:02:36.24,Chinese,,0,0,0,,所以这是-8 + 4 + 2 = -2
 Dialogue: 0,1:02:38.08,1:02:45.24,English,,0,0,0,,So now look at what happens if I copy that sign bit over one position
+Dialogue: 0,1:02:38.08,1:02:45.24,Chinese,,0,0,0,,所以现在看看如果我将这个符号位复制到一个位置会发生什么
 Dialogue: 0,1:02:48.18,1:02:56.34,English,,0,0,0,,so this becomes a 11110
+Dialogue: 0,1:02:48.18,1:02:56.34,Chinese,,0,0,0,,所以这变成了11110
 Dialogue: 0,1:02:57.64,1:03:02.42,English,,0,0,0,, And what happens is this is a now has value plus 8 here
+Dialogue: 0,1:02:57.64,1:03:02.42,Chinese,,0,0,0,,然后会发生什么，这是一个现在有价值加8这里
 Dialogue: 0,1:03:02.72,1:03:05.56,English,,0,0,0,, But the sign bit has value -16
+Dialogue: 0,1:03:02.72,1:03:05.56,Chinese,,0,0,0,,但符号位的值为-16
 Dialogue: 0,1:03:06.22,1:03:08.50,English,,0,0,0,,And then this is still +2 and +4 and
+Dialogue: 0,1:03:06.22,1:03:08.50,Chinese,,0,0,0,,然后这仍然是+2和+4和
 Dialogue: 0,1:03:10.58,1:03:12.62,English,,0,0,0,,So it will still equal -2
+Dialogue: 0,1:03:10.58,1:03:12.62,Chinese,,0,0,0,,所以它仍然等于-2
 Dialogue: 0,1:03:14.02,1:03:20.58,English,,0,0,0,,So here's what happened before my sign bit had a weight of -8
+Dialogue: 0,1:03:14.02,1:03:20.58,Chinese,,0,0,0,,所以这是在我的符号位有-8的权重之前发生的事情
 Dialogue: 0,1:03:21.80,1:03:24.76,English,,0,0,0,,My new sign bit has a weight of -16
+Dialogue: 0,1:03:21.80,1:03:24.76,Chinese,,0,0,0,,我的新符号位的重量为-16
 Dialogue: 0,1:03:25.72,1:03:29.90,English,,0,0,0,, But I converted that old sign bit into a positive number which is +8
+Dialogue: 0,1:03:25.72,1:03:29.90,Chinese,,0,0,0,,但我把那个旧的符号位转换成+8的正数
 Dialogue: 0,1:03:30.64,1:03:34.20,English,,0,0,0,, And those 2 cancelled out sit right the duck
+Dialogue: 0,1:03:30.64,1:03:34.20,Chinese,,0,0,0,,而那两个取消了坐在鸭子
 Dialogue: 0,1:03:34.40,1:03:39.06,English,,0,0,0,, That you combine those two and you get a -8 which is exactly this
+Dialogue: 0,1:03:34.40,1:03:39.06,Chinese,,0,0,0,,你把这两个结合起来，你就会得到一个-8这就是这个
 Dialogue: 0,1:03:39.66,1:03:50.46,English,,0,0,0,, So you see by sort of copying that sign bit over  giving it twice the weight turning it what was the sign bit into a positive number
+Dialogue: 0,1:03:39.66,1:03:50.46,Chinese,,0,0,0,,所以你通过复制这种符号的方式看到它给了它两倍的权重，把它的符号位变成了正数
 Dialogue: 0,1:03:50.80,1:03:53.92,English,,0,0,0,,You don't change the net effect of the sum
+Dialogue: 0,1:03:50.80,1:03:53.92,Chinese,,0,0,0,,你不改变总和的净效应
 Dialogue: 0,1:03:54.22,1:04:00.51,English,,0,0,0,,And that's exactly the idea of sign extension just keep going with that as far as you need to carry it over
+Dialogue: 0,1:03:54.22,1:04:00.51,Chinese,,0,0,0,,这就是符号扩展的想法，只要您需要继续完成即可
 Dialogue: 0,1:04:00.86,1:04:08.22,English,,0,0,0,,And each time you're doing it you're effectively doing this business of coming up with a pair of bits
+Dialogue: 0,1:04:00.86,1:04:08.22,Chinese,,0,0,0,,而且每次你​​做这件事时，你都会在做这个事情时想出一对双刃剑
 Dialogue: 0,1:04:08.84,1:04:11.94,English,,0,0,0,,that end up with the same value as this original bit
+Dialogue: 0,1:04:08.84,1:04:11.94,Chinese,,0,0,0,,最终会得到与原始位相同的值
 Dialogue: 0,1:04:13.70,1:04:20.88,English,,0,0,0,,So that's the idea of sign extension and you'll see that a lot in bit patterns
+Dialogue: 0,1:04:13.70,1:04:20.88,Chinese,,0,0,0,,所以这就是符号扩展的想法，你会看到很多位模式
 Dialogue: 0,1:04:21.50,1:04:27.46,English,,0,0,0,, Especially if you see a bit pattern with it starts with a bunch of Fs
+Dialogue: 0,1:04:21.50,1:04:27.46,Chinese,,0,0,0,,特别是如果你看到一个位模式，它开始于一堆Fs
 Dialogue: 0,1:04:35.92,1:04:40.98,English,,0,0,0,,What that tells you remember F is just four ones
+Dialogue: 0,1:04:35.92,1:04:40.98,Chinese,,0,0,0,,那告诉你记得F只有四个
 Dialogue: 0,1:04:46.70,1:04:50.10,English,,0,0,0,, is a whole bunch of leading ones that tells you the number is negative
+Dialogue: 0,1:04:46.70,1:04:50.10,Chinese,,0,0,0,,是一大堆领先的，告诉你这个数字是否定的
 Dialogue: 0,1:04:51.14,1:04:54.10,English,,0,0,0,, Negative but not too far away from zero right
+Dialogue: 0,1:04:51.14,1:04:54.10,Chinese,,0,0,0,,负面但不太远离零权利
 Dialogue: 0,1:04:54.76,1:04:58.74,English,,0,0,0,,And you'll see that over and over again you'll see bit patterns and you just sort of want it
+Dialogue: 0,1:04:54.76,1:04:58.74,Chinese,,0,0,0,,而且你会一遍又一遍地看到你会看到一些模式，而你只是想要它
 Dialogue: 0,1:04:58.94,1:05:03.24,English,,0,0,0,,When you see leading Fs you say oh that's a negative number I know what's going on there
+Dialogue: 0,1:04:58.94,1:05:03.24,Chinese,,0,0,0,,当你看到领先的Fs时，你会说哦，这是一个负数，我知道那里发生了什么
 Dialogue: 0,1:05:07.56,1:05:13.76,English,,0,0,0,,And so here's some examples but like you can see the main idea is you carry that leading bit
+Dialogue: 0,1:05:07.56,1:05:13.76,Chinese,,0,0,0,,所以这里有一些例子，但是你可以看到主要想法是你携带那个领先的位
 Dialogue: 0,1:05:14.56,1:05:20.32,English,,0,0,0,,from the 16-bit case over and make as many copies you need to expand the word size
+Dialogue: 0,1:05:14.56,1:05:20.32,Chinese,,0,0,0,,从16位的情况下，并作出尽可能多的副本，你需要扩大字的大小
 Dialogue: 0,1:05:24.73,1:05:31.60,English,,0,0,0,,And I should mention with the unsigned case obviously you just want to fill in with zeros
+Dialogue: 0,1:05:24.73,1:05:31.60,Chinese,,0,0,0,,我应该提及未签名的情况，显然你只是想填充零
 Dialogue: 0,1:05:36.84,1:05:42.48,English,,0,0,0,,To talk about truncation and send missing slides in this but um
+Dialogue: 0,1:05:36.84,1:05:42.48,Chinese,,0,0,0,,谈论截断并发送失踪的幻灯片，但这个
 Dialogue: 0,1:05:49.98,1:05:54.42,English,,0,0,0,,A final case to look at is what happens if I make something shorter
+Dialogue: 0,1:05:49.98,1:05:54.42,Chinese,,0,0,0,,最后一个要看的案例是如果我缩短一些东西会发生什么
 Dialogue: 0,1:05:57.44,1:06:00.16,English,,0,0,0,,So if I had my unsigned number from before
+Dialogue: 0,1:05:57.44,1:06:00.16,Chinese,,0,0,0,,所以如果我之前有我的无符号号码
 Dialogue: 0,1:06:07.18,1:06:10.74,English,,0,0,0,,If this were an unsigned number this would be
+Dialogue: 0,1:06:07.18,1:06:10.74,Chinese,,0,0,0,,如果这是一个无符号数字，这将是
 Dialogue: 0,1:06:12.04,1:06:20.78,English,,0,0,0,,1 2 8 16 14 17 right
+Dialogue: 0,1:06:12.04,1:06:20.78,Chinese,,0,0,0,,1 2 8 16 14 17正确
 Dialogue: 0,1:06:21.48,1:06:32.34,English,,0,0,0,,What if I decided oh I can't afford 4 bit I don't have enough money for 5 bits I'm only going to give you 4
+Dialogue: 0,1:06:21.48,1:06:32.34,Chinese,,0,0,0,,如果我决定哦，我买不起4位，我没有足够的钱5位，我只给你4
 Dialogue: 0,1:06:33.74,1:06:36.40,English,,0,0,0,,Well you basically just drop the most significant bit
+Dialogue: 0,1:06:33.74,1:06:36.40,Chinese,,0,0,0,,那么你基本上只是放弃最重要的一点
 Dialogue: 0,1:06:38.44,1:06:43.72,English,,0,0,0,,And you get 8 + 2 + 1 which is 11
+Dialogue: 0,1:06:38.44,1:06:43.72,Chinese,,0,0,0,,你得到8 + 2 + 1这是11
 Dialogue: 0,1:06:44.20,1:06:53.32,English,,0,0,0,,Which is 9 and the relation there is that this is a it's like modular arithmetic
+Dialogue: 0,1:06:44.20,1:06:53.32,Chinese,,0,0,0,,这是9和它的关系，这是一个它就像模块化算术
 Dialogue: 0,1:06:59.52,1:07:02.90,English,,0,0,0,,Right mod 16 you're taking...no
+Dialogue: 0,1:06:59.52,1:07:02.90,Chinese,,0,0,0,,正确的mod 16你正在采取...不
 Dialogue: 0,1:07:07.30,1:07:08.32,English,,0,0,0,,Thank you
+Dialogue: 0,1:07:07.30,1:07:08.32,Chinese,,0,0,0,,谢谢
 Dialogue: 0,1:07:12.62,1:07:23.58,English,,0,0,0,,It's the risk of improvising so 27 and 11
+Dialogue: 0,1:07:12.62,1:07:23.58,Chinese,,0,0,0,,这是27和11即兴创作的风险
 Dialogue: 0,1:07:26.82,1:07:33.28,English,,0,0,0,,Yeah it makes sense,difference is 16  that I knew that
+Dialogue: 0,1:07:26.82,1:07:33.28,Chinese,,0,0,0,,是的，这是有道理的，我知道的不同是16
 Dialogue: 0,1:07:34.50,1:07:38.10,English,,0,0,0,, Okay excuse me for my stumbling
+Dialogue: 0,1:07:34.50,1:07:38.10,Chinese,,0,0,0,,好，请原谅我的绊脚石
 Dialogue: 0,1:07:38.10,1:07:46.72,English,,0,0,0,, But the point being that when you drop this thing effectively you're just taking the mod some power of 2 of it like
+Dialogue: 0,1:07:38.10,1:07:46.72,Chinese,,0,0,0,,但重要的是，当你有效地放弃这件事情时，你只是将mod的一部分权力放在了其中
 Dialogue: 0,1:07:47.10,1:07:49.72,English,,0,0,0,, I mentioned the case where you're taking module 8
+Dialogue: 0,1:07:47.10,1:07:49.72,Chinese,,0,0,0,,我提到了你采用模块8的情况
 Dialogue: 0,1:07:50.02,1:07:54.10,English,,0,0,0,,If you just keep only the lowest order 3 bits you're having a module 8
+Dialogue: 0,1:07:50.02,1:07:54.10,Chinese,,0,0,0,,如果你只保留最低3位，你有一个模块8
 Dialogue: 0,1:07:54.52,1:07:58.78,English,,0,0,0,, Now one really this is a sort of logical in the unsigned world
+Dialogue: 0,1:07:54.52,1:07:58.78,Chinese,,0,0,0,,现在，这真的是在未签名的世界中的一种逻辑
 Dialogue: 0,1:07:59.24,1:08:04.78,English,,0,0,0,,Your modular arithmetic is something that was understood by the ancient Greeks
+Dialogue: 0,1:07:59.24,1:08:04.78,Chinese,,0,0,0,,你的模块化算术是古希腊人所理解的
 Dialogue: 0,1:08:05.84,1:08:12.64,English,,0,0,0,,So not too far away from human experience
+Dialogue: 0,1:08:05.84,1:08:12.64,Chinese,,0,0,0,,所以离人类经验不太远
 Dialogue: 0,1:08:13.50,1:08:23.77,English,,0,0,0,,But it gets a little bit funky if you're dealing with two's complement numbers
-Dialogue: 0,1:08:24.38,1:08:33.26,English,,0,0,0,,Because this is now 10 11 -5 right 
+Dialogue: 0,1:08:13.50,1:08:23.77,Chinese,,0,0,0,,但是如果你处理二进制补码，它会变得有点时髦
+Dialogue: 0,1:08:24.38,1:08:33.26,English,,0,0,0,,Because this is now 10 11 -5 right
+Dialogue: 0,1:08:24.38,1:08:33.26,Chinese,,0,0,0,,因为这现在是10 11 -5
 Dialogue: 0,1:08:35.90,1:08:38.30,English,,0,0,0,,But this number if I just drop this bit and
+Dialogue: 0,1:08:35.90,1:08:38.30,Chinese,,0,0,0,,但是这个数字，如果我放弃这一点和
 Dialogue: 0,1:08:39.96,1:08:44.90,English,,0,0,0,,And call it a 4-bit number this now becomes -8,2,1
+Dialogue: 0,1:08:39.96,1:08:44.90,Chinese,,0,0,0,,并将其称为4位数字，现在变成-8,2,1
 Dialogue: 0,1:08:50.48,1:08:51.56,English,,0,0,0,,It's -5
+Dialogue: 0,1:08:50.48,1:08:51.56,Chinese,,0,0,0,,它是-5
 Dialogue: 0,1:08:56.98,1:09:03.24,English,,0,0,0,,You say how'd that happen well actually if you look at it this is just what you'd get by sign extension right
+Dialogue: 0,1:08:56.98,1:09:03.24,Chinese,,0,0,0,,你说过，如果你看到它，那么它实际上发生得很好，这正是你通过签名扩展获得的权利
 Dialogue: 0,1:09:05.04,1:09:07.74,English,,0,0,0,, So this wasn't a very interesting example
+Dialogue: 0,1:09:05.04,1:09:07.74,Chinese,,0,0,0,,所以这不是一个很有趣的例子
 Dialogue: 0,1:09:12.48,1:09:14.12,English,,0,0,0,, But if we changed it to this
+Dialogue: 0,1:09:12.48,1:09:14.12,Chinese,,0,0,0,,但是，如果我们改变这一点
 Dialogue: 0,1:09:22.88,1:09:27.32,English,,0,0,0,,Then this would be -13
+Dialogue: 0,1:09:22.88,1:09:27.32,Chinese,,0,0,0,,那么这将是-13
 Dialogue: 0,1:09:28.06,1:09:30.46,English,,0,0,0,,And this would be +3
+Dialogue: 0,1:09:28.06,1:09:30.46,Chinese,,0,0,0,,这将是+3
 Dialogue: 0,1:09:33.42,1:09:41.98,English,,0,0,0,,And it's a little harder to think about in terms of modular arithmetic
+Dialogue: 0,1:09:33.42,1:09:41.98,Chinese,,0,0,0,,就模块化算术而言，思考有点困难
 Dialogue: 0,1:09:41.98,1:09:45.56,English,,0,0,0,, The way you basically have to think about it is well
+Dialogue: 0,1:09:41.98,1:09:45.56,Chinese,,0,0,0,,你基本上必须考虑的方式很好
 Dialogue: 0,1:09:46.40,1:09:56.94,English,,0,0,0,,You know this is -13 but it's really kind of like 27 and  27 mod 16 is sort of like or,no this isn't 20
-Dialogue: 0,1:09:57.24,1:10:05.70,English,,0,0,0,,We changed our number right so this is really kind of like 19.And 19 mod 16 is 3.And this is 3 
+Dialogue: 0,1:09:46.40,1:09:56.94,Chinese,,0,0,0,,你知道这是-13，但它有点像27和27模16有点像，或者这不是20
+Dialogue: 0,1:09:57.24,1:10:05.70,English,,0,0,0,,We changed our number right so this is really kind of like 19.And 19 mod 16 is 3.And this is 3
+Dialogue: 0,1:09:57.24,1:10:05.70,Chinese,,0,0,0,,我们改变了我们的号码，所以这真的有点像19。19模16是3，这是3
 Dialogue: 0,1:10:05.82,1:10:10.86,English,,0,0,0,,So you can sort of do it by coming back around to it
+Dialogue: 0,1:10:05.82,1:10:10.86,Chinese,,0,0,0,,所以你可以通过回头来做到这一点
 Dialogue: 0,1:10:10.86,1:10:16.82,English,,0,0,0,, But it's not sum of arithmetic property that would jump out at you as being something logical
+Dialogue: 0,1:10:10.86,1:10:16.82,Chinese,,0,0,0,,但它不是算术属性的总和，会跳出你的逻辑
 Dialogue: 0,1:10:17.72,1:10:21.82,English,,0,0,0,, But that happens all the time that and it's very common
+Dialogue: 0,1:10:17.72,1:10:21.82,Chinese,,0,0,0,,但是这种情况一直发生，这很常见
 Dialogue: 0,1:10:22.18,1:10:25.64,English,,0,0,0,, For numbers to get truncated for one reason or another
+Dialogue: 0,1:10:22.18,1:10:25.64,Chinese,,0,0,0,,数字因某种原因被截断
 Dialogue: 0,1:10:25.68,1:10:29.74,English,,0,0,0,,And you can see that you can have a negative number become a positive number
+Dialogue: 0,1:10:25.68,1:10:29.74,Chinese,,0,0,0,,你可以看到你可以有一个负数成为一个正数
 Dialogue: 0,1:10:30.06,1:10:32.48,English,,0,0,0,,You can have a positive number become a negative number
+Dialogue: 0,1:10:30.06,1:10:32.48,Chinese,,0,0,0,,你可以让一个正数成为负数
 Dialogue: 0,1:10:32.48,1:10:34.64,English,,0,0,0,,And all kinds of goofy stuff can happen
+Dialogue: 0,1:10:32.48,1:10:34.64,Chinese,,0,0,0,,而各种愚蠢的东西都可能发生
 Dialogue: 0,1:10:36.20,1:10:39.32,English,,0,0,0,,And we'll see plenty examples of that when we look at arithmetic
+Dialogue: 0,1:10:36.20,1:10:39.32,Chinese,,0,0,0,,当我们看看算术时，我们会看到很多例子
 Dialogue: 0,1:10:41.04,1:10:47.94,English,,0,0,0,,So that's,that is what I want to cover today
+Dialogue: 0,1:10:41.04,1:10:47.94,Chinese,,0,0,0,,所以这就是我今天想要介绍的内容
 Dialogue: 0,1:10:47.94,1:10:52.26,English,,0,0,0,,And we'll cover the other arithmetic operations on Tuesday
+Dialogue: 0,1:10:47.94,1:10:52.26,Chinese,,0,0,0,,我们将在周二介绍其他算术运算
 Dialogue: 0,1:10:52.96,1:10:55.97,English,,0,0,0,,So thank you very much
+Dialogue: 0,1:10:52.96,1:10:55.97,Chinese,,0,0,0,,非常感谢你
