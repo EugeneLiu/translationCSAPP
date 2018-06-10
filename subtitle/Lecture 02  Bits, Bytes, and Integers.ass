@@ -10,711 +10,677 @@ PlayResX: 1280
 PlayResY: 720
 
 [Aegisub Project Garbage]
-Last Style Storage: csapp
+Last Style Storage: zh
 Audio File: ../../../Desktop/csapp/Lecture 02  Bits, Bytes, and Integers.mp4
 Video File: ../../../Desktop/csapp/Lecture 02  Bits, Bytes, and Integers.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 1.000000
-Active Line: 691
-Video Position: 127593
+Scroll Position: 634
+Active Line: 656
+Video Position: 127679
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: csapp,Source Han Sans CN,34,&H00FFFFFF,&H00FF0000,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
-Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+Style: Chinese,Source Han Sans CN,34,&H00E0FD00,&H00FFFFFF,&H00362A28,&H00FFFFFF,0,0,0,0,100,100,0,0,1,2,0.2,2,10,10,10,1
+Style: English,Source Han Sans CN,30,&H00FFFFFF,&H00412A2C,&H00412A2C,&H00412A2C,0,0,0,0,100,100,0,0,1,2,0.5,2,10,10,10,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.00,0:00:04.68,csapp,,0,0,0,,I see a lot of people figure it out to come early so good see you
-Dialogue: 0,0:00:05.38,0:00:08.80,csapp,,0,0,0,,so as you recall my name is Randy Bryant
-Dialogue: 0,0:00:08.80,0:00:12.36,csapp,,0,0,0,, and I'm Co instructor of this course along with Dave Hallaron
-Dialogue: 0,0:00:12.80,0:00:17.28,csapp,,0,0,0,,and for the next couple lectures the first part of this 
-Dialogue: 0,0:00:17.72,0:00:23.44,csapp,,0,0,0,,course really will be talking about a sort of data representations in particular 
-Dialogue: 0,0:00:23.68,0:00:25.94,csapp,,0,0,0,,how numbers are represented in different forms
-Dialogue: 0,0:00:25.96,0:00:28.30,csapp,,0,0,0,,and some of the properties and you saw that 
-Dialogue: 0,0:00:29.02,0:00:31.84,csapp,,0,0,0,,when I talked last week I showed you things like 
-Dialogue: 0,0:00:31.84,0:00:36.38,csapp,,0,0,0,,you can multiply some numbers together that are positive and get negative results 
-Dialogue: 0,0:00:36.38,0:00:41.46,csapp,,0,0,0,,so what we want to understand is what is the bit level representation of numbers 
-Dialogue: 0,0:00:41.90,0:00:47.28,csapp,,0,0,0,,and how does that affect some of the properties you have when you operate them on
-Dialogue: 0,0:00:47.28,0:00:51.12,csapp,,0,0,0,, and especially looking at the corner cases when things overflow 
-Dialogue: 0,0:00:51.50,0:00:54.08,csapp,,0,0,0,,or we sort of don't do what you might expect them to do
-Dialogue: 0,0:00:55.04,0:00:57.44,csapp,,0,0,0,, so we'll start off with very basic stuff of 
-Dialogue: 0,0:00:57.44,0:01:03.84,csapp,,0,0,0,,how numbers are represented especially integer valued numbers are represented in bits 
-Dialogue: 0,0:01:05.82,0:01:09.76,csapp,,0,0,0,,um so I think you pretty well figured out in this world
-Dialogue: 0,0:01:09.76,0:01:13.72,csapp,,0,0,0,, that the whole digital world is sort of based on on binary values 
-Dialogue: 0,0:01:14.48,0:01:21.98,csapp,,0,0,0,,and that wasn't always the case I mean since humans have ten fingers and ten toes 
-Dialogue: 0,0:01:22.26,0:01:26.70,csapp,,0,0,0,,a lot of the world was based on the decimal system and it was really only 
-Dialogue: 0,0:01:26.70,0:01:33.82,csapp,,0,0,0,,and in fact the first electronic computer the ENIAC built in University of Pennsylvania
-Dialogue: 0,0:01:34.10,0:01:38.28,csapp,,0,0,0,, basically encoded did all of its arithmetic using base ten 
-Dialogue: 0,0:01:38.60,0:01:42.82,csapp,,0,0,0,,they had ten vacuum tubes per digit they wanted to represent 
-Dialogue: 0,0:01:43.36,0:01:47.32,csapp,,0,0,0,,so they basically turned on or off those tubes to represent 
-Dialogue: 0,0:01:47.58,0:01:50.74,csapp,,0,0,0,,which of the ten possible digits you could want 
-Dialogue: 0,0:01:51.18,0:01:56.26,csapp,,0,0,0,,and it really didn't come to people until later than that
-Dialogue: 0,0:01:56.52,0:02:02.03,csapp,,0,0,0,,so that's 1948 that they really should just think about base two for everything
-Dialogue: 0,0:02:04.06,0:02:08.78,csapp,,0,0,0,,and the reason why bits are great is in the digital world 
-Dialogue: 0,0:02:08.96,0:02:14.00,csapp,,0,0,0,,you can sort of take what otherwise an analog signal and quantify it
-Dialogue: 0,0:02:14.36,0:02:17.56,csapp,,0,0,0,, and just say I'm going to say that one range of values
-Dialogue: 0,0:02:17.56,0:02:21.18,csapp,,0,0,0,, let's say it's a low voltage I'm going to call that a zero
-Dialogue: 0,0:02:21.46,0:02:24.52,csapp,,0,0,0,,and a high range of values I'm going to call it a one
-Dialogue: 0,0:02:24.98,0:02:31.18,csapp,,0,0,0,, and if there's noise or imperfections in the circuit or anything going on 
-Dialogue: 0,0:02:31.76,0:02:37.78,csapp,,0,0,0,,as long as that doesn't exceed these bit these thresholds you've set up
-Dialogue: 0,0:02:38.18,0:02:40.38,csapp,,0,0,0,,then you'll get a nice clean signal out of it 
-Dialogue: 0,0:02:40.38,0:02:45.06,csapp,,0,0,0,,and that's the main advantage of digital processing over analog processing
-Dialogue: 0,0:02:46.80,0:02:50.10,csapp,,0,0,0,, and so that's sort of at the core why everything we do
-Dialogue: 0,0:02:50.10,0:02:54.40,csapp,,0,0,0,, and especially for storing information it turns out it's much easier to store 
-Dialogue: 0,0:02:54.66,0:03:00.10,csapp,,0,0,0,,one bit of information or a digital value than it is to store an analog value
-Dialogue: 0,0:03:02.10,0:03:09.28,csapp,,0,0,0,,and sorry this kind of slides went a little crazy on animations 
-Dialogue: 0,0:03:09.56,0:03:15.42,csapp,,0,0,0,,so the point is that we represent all the numbers in a computer as sets of bits 
-Dialogue: 0,0:03:15.42,0:03:18.24,csapp,,0,0,0,,and I think you generally understand that fairly well
-Dialogue: 0,0:03:18.68,0:03:23.98,csapp,,0,0,0,,and so of course the familiar binary representation of integers which we'll go over today
-Dialogue: 0,0:03:24.34,0:03:28.54,csapp,,0,0,0,, just uses a bit position for each power of two 
-Dialogue: 0,0:03:29.04,0:03:32.87,csapp,,0,0,0,,we can also represent values that are fractional and
-Dialogue: 0,0:03:32.96,0:03:37.64,csapp,,0,0,0,,we'll talk about that a week from today when we do floating-point numbers
-Dialogue: 0,0:03:37.98,0:03:41.04,csapp,,0,0,0,, where what you do is to the right of the binary point 
-Dialogue: 0,0:03:41.18,0:03:46.60,csapp,,0,0,0,,so this is no longer a decimal point it's a binary point 
-Dialogue: 0,0:03:47.20,0:03:52.44,csapp,,0,0,0,,and so something to the left of that would have a weight one two to the zero 
-Dialogue: 0,0:03:53.84,0:03:56.62,csapp,,0,0,0,,and the next one over would have weight to the one
-Dialogue: 0,0:03:57.04,0:04:03.88,csapp,,0,0,0,,but what you do is as you go to the right that adds weight to the minus one to the minus two
-Dialogue: 0,0:04:03.88,0:04:10.34,csapp,,0,0,0,, in other words this is 1 this is 2 this is one half and this is 1/4.
-Dialogue: 0,0:04:11.44,0:04:15.70,csapp,,0,0,0,,so we can represent just like you do the decimal representation of fractions
-Dialogue: 0,0:04:16.06,0:04:18.44,csapp,,0,0,0,,we can do the binary representation of fractions
-Dialogue: 0,0:04:18.44,0:04:22.22,csapp,,0,0,0,, and that's the core of floating-point number of representations
-Dialogue: 0,0:04:23.94,0:04:30.78,csapp,,0,0,0,,and so it gets very annoying if you have say 32 or even 64-bit  
-Dialogue: 0,0:04:31.02,0:04:35.06,csapp,,0,0,0,,numbers to be writing the strings of 1 and 0 out 
-Dialogue: 0,0:04:35.42,0:04:39.96,csapp,,0,0,0,,and so what we use and what's become largely the  into
-Dialogue: 0,0:04:39.96,0:04:45.54,csapp,,0,0,0,,the most common is to group collections of four bits at a time into 
-Dialogue: 0,0:04:45.98,0:04:50.90,csapp,,0,0,0,,and then represent that in base 16 or what's known as hexadecimal representation
-Dialogue: 0,0:04:51.28,0:04:55.98,csapp,,0,0,0,, using the letters A through F as values 10 through 15 
-Dialogue: 0,0:04:55.98,0:05:00.78,csapp,,0,0,0,,and you'll spend a lot of time staring at exa decimal numbers this year 
-Dialogue: 0,0:05:01.10,0:05:05.66,csapp,,0,0,0,,and you'll get pretty good at being able to look at a hex number and just write it out in binary 
-Dialogue: 0,0:05:06.20,0:05:09.90,csapp,,0,0,0,,the way I do it just to tell you is
-Dialogue: 0,0:05:10.48,0:05:23.22,csapp,,0,0,0,,I mean I've got the values from 0 to 9 wired down pretty well 
-Dialogue: 0,0:05:24.10,0:05:28.90,csapp,,0,0,0,,and then I keep track of a few special cases 1 0 1 0 is A.
-Dialogue: 0,0:05:29.78,0:05:37.94,csapp,,0,0,0,,1100 is C and 1111 is F
-Dialogue: 0,0:05:39.00,0:05:45.46,csapp,,0,0,0,, and for B D and E I kind of interpolate between those 
-Dialogue: 0,0:05:45.46,0:05:49.10,csapp,,0,0,0,,so if you want to develop that skill that's the way you can do it  
-Dialogue: 0,0:05:49.10,0:05:54.26,csapp,,0,0,0,,you looking at an HDMI to what no 
-Dialogue: 0,0:05:54.48,0:05:57.24,csapp,,0,0,0,,I don't think there's any connector here you know no
-Dialogue: 0,0:06:03.36,0:06:06.68,csapp,,0,0,0,, so that's something you're going to end up wanting to be able to do 
-Dialogue: 0,0:06:07.92,0:06:11.65,csapp,,0,0,0,,so in C we we don't uh
-Dialogue: 0,0:06:12.14,0:06:18.30,csapp,,0,0,0,,in most declarations you don't actually are told exactly how many bytes
-Dialogue: 0,0:06:18.30,0:06:20.30,csapp,,0,0,0,, a byte is eight bits 
-Dialogue: 0,0:06:20.96,0:06:23.14,csapp,,0,0,0,,each data value is represented as 
-Dialogue: 0,0:06:23.52,0:06:30.46,csapp,,0,0,0,,and that's partly C was designed actually back when microprocessors only had 16-bit words
-Dialogue: 0,0:06:30.46,0:06:32.38,csapp,,0,0,0,, it was actually before microprocessors
-Dialogue: 0,0:06:32.90,0:06:36.02,csapp,,0,0,0,, so 16-bit words were a fairly standard
-Dialogue: 0,0:06:36.02,0:06:40.20,csapp,,0,0,0,,and over time that's expanded from 16 to 32 to now 64 
-Dialogue: 0,0:06:40.70,0:06:44.36,csapp,,0,0,0,,and so C rather than a sort of an advanced thing 
-Dialogue: 0,0:06:44.36,0:06:49.34,csapp,,0,0,0,,here is how many bytes every value will have has these slightly ambiguous terms
-Dialogue: 0,0:06:49.84,0:06:53.20,csapp,,0,0,0,, that vary actually from one machine to the next
-Dialogue: 0,0:06:55.26,0:07:01.00,csapp,,0,0,0,,and if you're a very careful C programmer you have to anticipate that some.
-Dialogue: 0,0:07:01.44,0:07:09.80,csapp,,0,0,0,,but what won't deal with is x86 64 is the class of machines will be working with exclusively this term 
-Dialogue: 0,0:07:10.10,0:07:13.22,csapp,,0,0,0,,and so you can see that when you declare something to be a care
-Dialogue: 0,0:07:13.80,0:07:17.68,csapp,,0,0,0,, sometimes people call it a char that's a 1 byte value .
-Dialogue: 0,0:07:17.88,0:07:20.66,csapp,,0,0,0,,a short is 16 bits
-Dialogue: 0,0:07:21.58,0:07:29.76,csapp,,0,0,0,,an int is 32 and if you want to get all 64 bits you have to declare it to be along 
-Dialogue: 0,0:07:32.20,0:07:35.88,csapp,,0,0,0,,and then again there's two different Precision's of floating-point there's four byte
-Dialogue: 0,0:07:35.88,0:07:39.34,csapp,,0,0,0,, or 32 bit of floating-point numbers and 64 bit
-Dialogue: 0,0:07:39.84,0:07:47.48,csapp,,0,0,0,,there's also a slightly obscure holdover from ancient days of floating-point
-Dialogue: 0,0:07:47.48,0:07:54.24,csapp,,0,0,0,,where there's a special representation in Intel machines that uses a 10 bit or 80 bit representation
-Dialogue: 0,0:07:54.70,0:08:03.68,csapp,,0,0,0,, and when you use that on a 64 bit machine they sort of waste an extra 6 bits bytes out of that
-Dialogue: 0,0:08:03.68,0:08:07.88,csapp,,0,0,0,,so that everything is aligned in 16 byte increments
-Dialogue: 0,0:08:08.80,0:08:14.90,csapp,,0,0,0,, the other thing and this is an important feature is any address is find to be the
-Dialogue: 0,0:08:15.38,0:08:20.04,csapp,,0,0,0,, sort of the word size of the machine when they say it's a 64-bit machine 
-Dialogue: 0,0:08:20.04,0:08:25.98,csapp,,0,0,0,,what they really mean is that the addresses are 64-bit values or 8-bytes values.
-Dialogue: 0,0:08:26.28,0:08:31.54,csapp,,0,0,0,,and that's different for example if you use a older machine a 32-bit machine 
-Dialogue: 0,0:08:31.56,0:08:34.06,csapp,,0,0,0,,those will only be 32-bit addresses
-Dialogue: 0,0:08:37.42,0:08:42.56,csapp,,0,0,0,, so the basis sent I imagine you've had this at some point 
-Dialogue: 0,0:08:43.18,0:08:48.14,csapp,,0,0,0,,of how do we then think about bits is based on boolean algebra
-Dialogue: 0,0:08:48.40,0:08:55.14,csapp,,0,0,0,, which is actually comes from the 1890s that a guy named George Boole.
-Dialogue: 0,0:08:55.38,0:09:02.44,csapp,,0,0,0,,who recognized is sort of relation between what we'd call bits  but they weren't called bits back then
-Dialogue: 0,0:09:02.98,0:09:08.76,csapp,,0,0,0,,0 1 and logic are basically truth values in logic
-Dialogue: 0,0:09:09.06,0:09:13.26,csapp,,0,0,0,,I thinking of an algebra sort of a structured set of operations
-Dialogue: 0,0:09:13.26,0:09:19.08,csapp,,0,0,0,, you could apply that would capture some of the concepts that people assume in logic
-Dialogue: 0,0:09:19.56,0:09:24.14,csapp,,0,0,0,, so for example if we think of 1 being true and 0 being false 
-Dialogue: 0,0:09:24.80,0:09:31.06,csapp,,0,0,0,,then the and operation is true if both of the inputs the both of the arguments are true
-Dialogue: 0,0:09:31.48,0:09:33.00,csapp,,0,0,0,, so we get this chart here
-Dialogue: 0,0:09:33.00,0:09:38.86,csapp,,0,0,0,, and similarly the or operation is true if either input is true or 1 
-Dialogue: 0,0:09:39.30,0:09:43.04,csapp,,0,0,0,,the NOT is just to flip the bit.
-Dialogue: 0,0:09:43.42,0:09:49.36,csapp,,0,0,0,,and then the exclusive-or is what you get when you say it's one or the other but not both
-Dialogue: 0,0:09:49.70,0:09:52.26,csapp,,0,0,0,, and so it has this representation
-Dialogue: 0,0:09:52.56,0:09:59.74,csapp,,0,0,0,, so just as a bit of history it was a master's degree student at MIT named Claude Shannon
-Dialogue: 0,0:10:00.28,0:10:07.38,csapp,,0,0,0,, who had taken a course in logic as an undergraduate at University of Michigan
-Dialogue: 0,0:10:07.80,0:10:12.86,csapp,,0,0,0,,and he was the one who made the connection between thinking about 
-Dialogue: 0,0:10:12.86,0:10:20.34,csapp,,0,0,0,,this this what was at the time very obscure branch of something a rather of logic
-Dialogue: 0,0:10:20.52,0:10:24.30,csapp,,0,0,0,,and applying it to digital systems back in an era when they actually built
-Dialogue: 0,0:10:24.66,0:10:27.44,csapp,,0,0,0,, these things out of electromechanical noise
-Dialogue: 0,0:10:28.12,0:10:36.88,csapp,,0,0,0,, and so his master's thesis is probably the most impactful master's thesis in the history of humankind
-Dialogue: 0,0:10:37.58,0:10:41.96,csapp,,0,0,0,,and he always wonder well what did they do before that then 
-Dialogue: 0,0:10:41.96,0:10:44.18,csapp,,0,0,0,,you know how do they even think about these things 
-Dialogue: 0,0:10:44.72,0:10:49.84,csapp,,0,0,0,,so anyways the idea of applying this algebra then to bits is not 
-Dialogue: 0,0:10:50.40,0:10:54.34,csapp,,0,0,0,,something that should have been true since the the world began
-Dialogue: 0,0:10:54.36,0:10:57.20,csapp,,0,0,0,, it's something that's a relatively modern concept  
-Dialogue: 0,0:10:57.86,0:11:05.38,csapp,,0,0,0,,now what's an important thing that might be less obvious is we can also do these
-Dialogue: 0,0:11:05.76,0:11:10.04,csapp,,0,0,0,, over words we can do these boolean operations where we apply
-Dialogue: 0,0:11:10.60,0:11:13.42,csapp,,0,0,0,,them on each successive bit in that word
-Dialogue: 0,0:11:13.70,0:11:18.58,csapp,,0,0,0,,and these symbols we use the ampersand vertical bar carrot and tilde
-Dialogue: 0,0:11:18.80,0:11:22.54,csapp,,0,0,0,, are actually the ones that see use is to represent these operations 
-Dialogue: 0,0:11:23.16,0:11:28.46,csapp,,0,0,0,,and so again if we look at here the 1 is only if both of the values 1 
-Dialogue: 0,0:11:28.98,0:11:33.38,csapp,,0,0,0,,and the of for the or for the and for the one
-Dialogue: 0,0:11:33.72,0:11:36.02,csapp,,0,0,0,, or its if either of them are 1 
-Dialogue: 0,0:11:36.58,0:11:40.46,csapp,,0,0,0,,the exclusive or if 1 is 1 and the other is zero 
-Dialogue: 0,0:11:40.58,0:11:43.74,csapp,,0,0,0,,and tilde is just to invert the bits of it
-Dialogue: 0,0:11:43.74,0:11:49.16,csapp,,0,0,0,,so again we will spend a lot of time making use of the fact that in C 
-Dialogue: 0,0:11:49.16,0:11:51.48,csapp,,0,0,0,,and this is one of the features to C that people like 
-Dialogue: 0,0:11:51.78,0:11:57.16,csapp,,0,0,0,,is that you can do these sort of very low level of bit manipulations directly in the language
-Dialogue: 0,0:11:58.28,0:11:59.50,csapp,,0,0,0,,and um
-Dialogue: 0,0:12:00.60,0:12:04.34,csapp,,0,0,0,,this actually turns out to be useful in practice
-Dialogue: 0,0:12:04.34,0:12:08.66,csapp,,0,0,0,, and it's sort of implicit of a way of representing sets of values
-Dialogue: 0,0:12:08.76,0:12:13.12,csapp,,0,0,0,,so this example is a imagine we want to represent sets 
-Dialogue: 0,0:12:13.78,0:12:18.40,csapp,,0,0,0,,where the elements of the set are numbers ranging between 0 and 7 
-Dialogue: 0,0:12:18.92,0:12:23.92,csapp,,0,0,0,,so 1 byte is enough to capture eight cases 
-Dialogue: 0,0:12:24.22,0:12:29.00,csapp,,0,0,0,,and we'll just if we number the bits and we number them from right to left 
-Dialogue: 0,0:12:29.58,0:12:32.36,csapp,,0,0,0,,so this is bit 0 so that would represent 
-Dialogue: 0,0:12:32.72,0:12:36.96,csapp,,0,0,0,,whether or not the value 0 is an element of the set
-Dialogue: 0,0:12:37.58,0:12:41.06,csapp,,0,0,0,,and similarly here you'll see 0 1 2 3
-Dialogue: 0,0:12:41.06,0:12:47.84,csapp,,0,0,0,,so we're saying that bit 3 being one here means 3 is an element of the set and so forth 
-Dialogue: 0,0:12:48.40,0:12:52.30,csapp,,0,0,0,,and the
-Dialogue: 0,0:12:54.74,0:12:59.32,csapp,,0,0,0,, so the idea is then the AND operation becomes like set intersection
-Dialogue: 0,0:12:59.66,0:13:02.30,csapp,,0,0,0,, the OR operation becomes like set Union 
-Dialogue: 0,0:13:02.66,0:13:08.70,csapp,,0,0,0,,and the X-OR operation is what's called symmetric difference 
-Dialogue: 0,0:13:11.40,0:13:14.84,csapp,,0,0,0,,and so these are actually and ~ is like set complement 
-Dialogue: 0,0:13:14.86,0:13:18.28,csapp,,0,0,0,,so these are actually very common for example 
-Dialogue: 0,0:13:18.54,0:13:26.06,csapp,,0,0,0,,there are operations you'll learn later when we look at a
-Dialogue: 0,0:13:26.40,0:13:30.20,csapp,,0,0,0,,a file i/o about i/o that you can track 
-Dialogue: 0,0:13:30.42,0:13:35.36,csapp,,0,0,0,,I want to know which set of possible inputs to the system 
-Dialogue: 0,0:13:35.36,0:13:40.04,csapp,,0,0,0,,think of different network connections have an input ready for me to read 
-Dialogue: 0,0:13:40.80,0:13:44.04,csapp,,0,0,0,,and there is a data structure that 
-Dialogue: 0,0:13:44.78,0:13:47.60,csapp,,0,0,0,,it's sort of hidden away among some seeing library calls
-Dialogue: 0,0:13:47.60,0:13:52.20,csapp,,0,0,0,, but it basically is using exactly this representation about a thousand 
-Dialogue: 0,0:13:52.50,0:13:55.90,csapp,,0,0,0,,a bits worth of information to represent these sets.
-Dialogue: 0,0:13:56.54,0:14:00.18,csapp,,0,0,0,,sets and do manipulation on those sets so this is a very common 
-Dialogue: 0,0:14:00.48,0:14:05.48,csapp,,0,0,0,,and why do we use representation of sets in computer science 
-Dialogue: 0,0:14:07.56,0:14:11.32,csapp,,0,0,0,,so as I mentioned those are available directly and
-Dialogue: 0,0:14:11.32,0:14:15.68,csapp,,0,0,0,, C the &,||, ~ and ^ 
-Dialogue: 0,0:14:16.46,0:14:19.26,csapp,,0,0,0,,well one thing that's really really important and
-Dialogue: 0,0:14:20.00,0:14:21.82,csapp,,0,0,0,,that programmers screw it up all the time
-Dialogue: 0,0:14:21.82,0:14:25.84,csapp,,0,0,0,,beginning programmers a lot and even experienced programmers from time to time 
-Dialogue: 0,0:14:26.24,0:14:31.12,csapp,,0,0,0,,is to mix up the & in the &&
-Dialogue: 0,0:14:31.12,0:14:34.14,csapp,,0,0,0,,or the | in the ||
-Dialogue: 0,0:14:34.88,0:14:39.70,csapp,,0,0,0,,and the ~ versus the exclamation mark which is often pronounced bang 
-Dialogue: 0,0:14:40.66,0:14:44.88,csapp,,0,0,0,,so and the reason
-Dialogue: 0,0:14:45.58,0:14:49.00,csapp,,0,0,0,, so obviously there's sort of a syntactic similarity 
-Dialogue: 0,0:14:49.00,0:14:51.60,csapp,,0,0,0,,and there's actually a somewhat of a semantic relation to that
-Dialogue: 0,0:14:52.10,0:14:56.74,csapp,,0,0,0,, this is another kind of AND another kind of OR and another kind of NOT
-Dialogue: 0,0:14:57.90,0:15:02.06,csapp,,0,0,0,,but if you mix and match these you're certainly going to have problems
-Dialogue: 0,0:15:02.66,0:15:07.42,csapp,,0,0,0,,so the || ones aren't thinking about bitwise operations 
-Dialogue: 0,0:15:07.42,0:15:11.10,csapp,,0,0,0,,through thinking about something that's either true or false---period 
-Dialogue: 0,0:15:12.18,0:15:17.48,csapp,,0,0,0,,and in that representation the number 0 is the thing that's false 
-Dialogue: 0,0:15:17.48,0:15:21.70,csapp,,0,0,0,,and anything else any other bit pattern is considered to be true
-Dialogue: 0,0:15:23.60,0:15:31.72,csapp,,0,0,0,,it the other feature that the || give you is what's called early termination 
-Dialogue: 0,0:15:32.86,0:15:37.56,csapp,,0,0,0,,so in particular if we do some examples 
-Dialogue: 0,0:15:37.78,0:15:48.92,csapp,,0,0,0,,on the some hex pattern for one so this is a not a 0  and so that's considered true 
-Dialogue: 0,0:15:48.92,0:15:54.02,csapp,,0,0,0,,in this interpretation and so the the bang of that the not of that is 0 
-Dialogue: 0,0:15:54.04,0:15:57.36,csapp,,0,0,0,,and same way if you have 0 the not event is 1
-Dialogue: 0,0:15:57.66,0:16:04.18,csapp,,0,0,0,,and if you apply bang to a number twice you'll get back a 1 unless it was 0
-Dialogue: 0,0:16:08.84,0:16:13.04,csapp,,0,0,0,,and then a simile these patterns here
-Dialogue: 0,0:16:13.44,0:16:18.30,csapp,,0,0,0,,the reason why this returns 1 is because it's considered two cases that are true 
-Dialogue: 0,0:16:19.88,0:16:24.50,csapp,,0,0,0,,so it's not doing bitwise operations it's just trying to create true and fault 
-Dialogue: 0,0:16:24.50,0:16:29.28,csapp,,0,0,0,,it's interpreting arguments be there true or false and returning either true or false
-Dialogue: 0,0:16:29.78,0:16:34.92,csapp,,0,0,0,,but when it returns true it returns one and not whatever number you happen to give
-Dialogue: 0,0:16:35.82,0:16:39.12,csapp,,0,0,0,,so obviously this is a very different operations 
-Dialogue: 0,0:16:39.12,0:16:43.72,csapp,,0,0,0,,than you have with the single versions of those and 
-Dialogue: 0,0:16:44.74,0:16:48.76,csapp,,0,0,0,,but it's easy just because you mentally slip or
-Dialogue: 0,0:16:48.76,0:16:51.66,csapp,,0,0,0,,because you type something wrong to do the wrong thing
-Dialogue: 0,0:16:52.18,0:16:56.22,csapp,,0,0,0,,but in particularly this early termination is something that of course people use a lot 
-Dialogue: 0,0:16:56.74,0:17:01.04,csapp,,0,0,0,,if you want to make sure that you're not accessing a null pointer
-Dialogue: 0,0:17:01.04,0:17:05.68,csapp,,0,0,0,, you can test whether that's a null pointer first before accessing it
-Dialogue: 0,0:17:05.68,0:17:11.18,csapp,,0,0,0,, and this if this is 0 or then it will do the the dereferencing of null
-Dialogue: 0,0:17:12.12,0:17:15.44,csapp,,0,0,0,,but so it's a fairly useful feature as well
-Dialogue: 0,0:17:15.66,0:17:21.38,csapp,,0,0,0,,so anyways just that's an aside at this level we're mostly looking at bits
-Dialogue: 0,0:17:21.38,0:17:24.62,csapp,,0,0,0,,but just as a programming note don't mix these up
-Dialogue: 0,0:17:32.62,0:17:36.68,csapp,,0,0,0,,the other class of operations will make use of a lot our shifting
-Dialogue: 0,0:17:37.08,0:17:42.24,csapp,,0,0,0,, which again is not something that you normally sort of as beginning programmers think about too much
-Dialogue: 0,0:17:42.92,0:17:47.10,csapp,,0,0,0,,and if there's a curious feature that a left shifts are always the same 
-Dialogue: 0,0:17:47.10,0:17:49.20,csapp,,0,0,0,,but there's two different flavors of right shift
-Dialogue: 0,0:17:49.62,0:17:53.72,csapp,,0,0,0,, and we'll see in a little bit later why there's two different flavors of right shift 
-Dialogue: 0,0:17:54.90,0:17:58.61,csapp,,0,0,0,,but um 
-Dialogue: 0,0:17:59.00,0:18:03.22,csapp,,0,0,0,,the idea that of shifting is that you have some argument X 
-Dialogue: 0,0:18:03.22,0:18:08.52,csapp,,0,0,0,,and you want to shift it some number of positions either to the left or to the right given by Y 
-Dialogue: 0,0:18:09.50,0:18:15.02,csapp,,0,0,0,,and so when you shift left you just fill in whatever value there was so you pick up the 
-Dialogue: 0,0:18:15.62,0:18:21.34,csapp,,0,0,0,,I'm shifting by three so I'll take the low order five bits move them over three positions
-Dialogue: 0,0:18:21.68,0:18:23.30,csapp,,0,0,0,, and then fill in with a zero
-Dialogue: 0,0:18:23.64,0:18:31.55,csapp,,0,0,0,,and whatever was in the upper positions of that original words they just sort of disappear into nowhere
-Dialogue: 0,0:18:32.10,0:18:39.56,csapp,,0,0,0,,similarly if I do a right shift I take the upper six bits I move them over to positions and I fill in with zeros
-Dialogue: 0,0:18:40.32,0:18:44.96,csapp,,0,0,0,,so that's a logical shift and that's well
-Dialogue: 0,0:18:45.44,0:18:48.00,csapp,,0,0,0,,there's another flavor called the arithmetic shift 
-Dialogue: 0,0:18:48.00,0:18:52.12,csapp,,0,0,0,,which it differs in that the rule for what bits you fill in with 
-Dialogue: 0,0:18:52.52,0:18:54.70,csapp,,0,0,0,,are not based on the are 
-Dialogue: 0,0:18:55.70,0:19:01.56,csapp,,0,0,0,,not zeros necessarily but it's whatever the most significant bit was in the original value 
-Dialogue: 0,0:19:02.00,0:19:04.90,csapp,,0,0,0,,so it doesn't matter here because the most significant bit was zero
-Dialogue: 0,0:19:04.90,0:19:11.74,csapp,,0,0,0,, but you'll see in the case here of where the leading bit was a 1
-Dialogue: 0,0:19:12.80,0:19:18.68,csapp,,0,0,0,, that when I shift it to the right arithmetic we I'll fill it in with 1 
-Dialogue: 0,0:19:19.40,0:19:25.38,csapp,,0,0,0,,and that'll make sense more when we understand how negative numbers get represented in a machine
-Dialogue: 0,0:19:25.66,0:19:28.82,csapp,,0,0,0,,and that's the purpose of it and why it's called arithmetic 
-Dialogue: 0,0:19:31.60,0:19:37.54,csapp,,0,0,0,,um the other thing is confusing to people is 
-Dialogue: 0,0:19:37.80,0:19:44.80,csapp,,0,0,0,,what should happen if you say I want to shift an 8-bit number 8 positions to the left
-Dialogue: 0,0:19:54.60,0:19:58.92,csapp,,0,0,0,,and X is a single byte what do you think you should get
-Dialogue: 0,0:20:02.84,0:20:07.86,csapp,,0,0,0,, zero that would be a pretty logical thing you kind of shift all those bits out you fill them with zeros.
-Dialogue: 0,0:20:08.40,0:20:13.12,csapp,,0,0,0,,on most machines you'll get whatever X was 
-Dialogue: 0,0:20:17.38,0:20:21.88,csapp,,0,0,0,,because what it will do is it will compute this number mod 8
-Dialogue: 0,0:20:25.90,0:20:28.64,csapp,,0,0,0,,and the reason that happens is if you think about it 
-Dialogue: 0,0:20:28.64,0:20:34.02,csapp,,0,0,0,,it's looking at just the lower two three bits of the shift amount and ignoring all the rest
-Dialogue: 0,0:20:34.26,0:20:36.90,csapp,,0,0,0,, so that's effectively like module 8 
-Dialogue: 0,0:20:37.76,0:20:41.38,csapp,,0,0,0,,so that's just a warning I and some machines it does.
-Dialogue: 0,0:20:41.38,0:20:44.44,csapp,,0,0,0,,what you just thought it should and other machines it does this 
-Dialogue: 0,0:20:44.88,0:20:50.12,csapp,,0,0,0,,and so there's no no guarantee and see that it will be one way or the other
-Dialogue: 0,0:20:52.80,0:20:58.70,csapp,,0,0,0,,same with if you try to shift left by a negative number that might be logically
-Dialogue: 0,0:20:58.70,0:21:02.88,csapp,,0,0,0,,well I guess you really want to shift right then but that usually doesn't work either
-Dialogue: 0,0:21:05.40,0:21:09.06,csapp,,0,0,0,,so now let's talk about number representations 
-Dialogue: 0,0:21:09.68,0:21:10.32,csapp,,0,0,0,,and 
-Dialogue: 0,0:21:12.10,0:21:18.24,csapp,,0,0,0,,this is sort of a very core its idea that you have to really have wired in you 
-Dialogue: 0,0:21:18.56,0:21:22.20,csapp,,0,0,0,,and I'm going to illustrate it with some examples
-Dialogue: 0,0:21:27.74,0:21:35.30,csapp,,0,0,0,,so the these two equations that are everything that we'll talk about sort of stems from them 
-Dialogue: 0,0:21:35.98,0:21:38.64,csapp,,0,0,0,,so one is if you have an unsigned number 
-Dialogue: 0,0:21:39.22,0:21:45.18,csapp,,0,0,0,,then basically...it keeps jumping on me 
-Dialogue: 0,0:21:46.78,0:21:52.42,csapp,,0,0,0,,if you have an unsigned number then this is just the conversion
-Dialogue: 0,0:21:52.42,0:22:00.56,csapp,,0,0,0,, then B2U means from bits some a bit level representation to an unsigned number of some bit pattern
-Dialogue: 0,0:22:00.56,0:22:04.68,csapp,,0,0,0,,it just says we'll just add up the sum of the weighted bits 
-Dialogue: 0,0:22:04.94,0:22:07.86,csapp,,0,0,0,,where each bit is weighted by a power of two
-Dialogue: 0,0:22:08.48,0:22:10.88,csapp,,0,0,0,, and the only difference when we look at two's complement 
-Dialogue: 0,0:22:10.88,0:22:14.74,csapp,,0,0,0,,which is a way to represent both negative and positive numbers
-Dialogue: 0,0:22:15.00,0:22:18.86,csapp,,0,0,0,,we'll consider the most significant bit to be what's called the sign bit 
-Dialogue: 0,0:22:19.60,0:22:21.66,csapp,,0,0,0,,so it will have a negative value 
-Dialogue: 0,0:22:22.10,0:22:26.68,csapp,,0,0,0,,so let me just illustrate this with I'll use some running examples 
-Dialogue: 0,0:22:26.68,0:22:31.90,csapp,,0,0,0,,we'll just use five bit numbers just as a way it really helps often if you're trying to understand
-Dialogue: 0,0:22:31.90,0:22:34.90,csapp,,0,0,0,, this stuff to do it for some smaller cases 
-Dialogue: 0,0:22:36.10,0:22:39.38,csapp,,0,0,0,,so if we think about bit positions
-Dialogue: 0,0:22:49.38,0:22:51.28,csapp,,0,0,0,,zero through four 
-Dialogue: 0,0:22:59.18,0:23:04.70,csapp,,0,0,0,,then those represent of different powers of two weights of as I've shown 
-Dialogue: 0,0:23:05.40,0:23:08.04,csapp,,0,0,0,,and so now if we take some bit a pattern 
-Dialogue: 0,0:23:18.92,0:23:19.96,csapp,,0,0,0,,like so 
-Dialogue: 0,0:23:20.34,0:23:26.32,csapp,,0,0,0,,so that's what I'll call X and I want to convert that to an unsigned number
-Dialogue: 0,0:23:26.98,0:23:37.32,csapp,,0,0,0,,I will just combine 8 plus 4 plus 1 and I'll get 13
-Dialogue: 0,0:23:37.84,0:23:38.76,csapp,,0,0,0,,all right
-Dialogue: 0,0:23:39.20,0:23:46.36,csapp,,0,0,0,,so that's all that equation says the left hand equations just take the the bit positions that are ones
-Dialogue: 0,0:23:46.86,0:23:48.97,csapp,,0,0,0,,use the corresponding power of 2 and you're done
-Dialogue: 0,0:23:50.18,0:23:53.56,csapp,,0,0,0,,and similarly if I have a number where there's a leading bit
-Dialogue: 0,0:24:01.48,0:24:09.06,csapp,,0,0,0,,it will be 16 plus 4 plus 2  so that will be 22 
-Dialogue: 0,0:24:11.20,0:24:13.26,csapp,,0,0,0,,and so that's the unsigned case
-Dialogue: 0,0:24:15.24,0:24:18.32,csapp,,0,0,0,,and the sign case is the same idea
-Dialogue: 0,0:24:18.86,0:24:26.02,csapp,,0,0,0,,except that most significant debt has a negative value 
-Dialogue: 0,0:24:27.08,0:24:29.42,csapp,,0,0,0,,so it will still this is i
-Dialogue: 0,0:24:32.70,0:24:36.50,csapp,,0,0,0,,and our weights will be 1 2 4 8 
-Dialogue: 0,0:24:36.54,0:24:38.40,csapp,,0,0,0,,but this one I'll be minus 16
-Dialogue: 0,0:24:39.54,0:24:43.76,csapp,,0,0,0,, so that's what the equation on the right is saying this fit
-Dialogue: 0,0:24:44.80,0:24:47.68,csapp,,0,0,0,,now we're going to change it from being a negative number to a positive
-Dialogue: 0,0:24:48.42,0:24:52.32,csapp,,0,0,0,,so obviously if I have this is my bit pattern it's going to be the same because
-Dialogue: 0,0:24:52.78,0:25:01.16,csapp,,0,0,0,,the other bits stayed at the same so let's do it for this case of 1 0 1 1 0
-Dialogue: 0,0:25:03.12,0:25:10.04,csapp,,0,0,0,,so that will be -16+4+2 = -10 
-Dialogue: 0,0:25:13.92,0:25:17.78,csapp,,0,0,0,,right so you see in this case we have the same bit pattern
-Dialogue: 0,0:25:18.86,0:25:24.32,csapp,,0,0,0,, it's just if we interpret it you know how we think about what number this represents 
-Dialogue: 0,0:25:24.64,0:25:30.92,csapp,,0,0,0,,then in one case it's a positive number 22 in another case it's a negative number -10
-Dialogue: 0,0:25:32.50,0:25:34.80,csapp,,0,0,0,, and that's what these equations you see
-Dialogue: 0,0:25:40.16,0:25:45.04,csapp,,0,0,0,,and so the most significant bit is sometimes called the sign bit because
-Dialogue: 0,0:25:45.04,0:25:47.46,csapp,,0,0,0,,if it's a 1 the number is going to be negative
-Dialogue: 0,0:25:51.22,0:25:55.72,csapp,,0,0,0,, so let's sort of think about
-Dialogue: 0,0:25:57.94,0:26:01.40,csapp,,0,0,0,,what extreme what are the sort of extreme ranges of numbers 
-Dialogue: 0,0:26:01.40,0:26:03.62,csapp,,0,0,0,,we can get with these two different representations
-Dialogue: 0,0:26:12.48,0:26:16.24,csapp,,0,0,0,, so obviously if these are all zeros my number is going to equal zero 
-Dialogue: 0,0:26:20.00,0:26:34.42,csapp,,0,0,0,,and if it's all 1 it will be 16 + 8 + 4 + 2 + 1 will be 31
-Dialogue: 0,0:26:35.86,0:26:42.96,csapp,,0,0,0,,and over here for the two's complement the smallest number
-Dialogue: 0,0:26:43.38,0:26:51.82,csapp,,0,0,0,, well the largest number will actually be let me do it this way
-Dialogue: 0,0:26:52.02,0:26:56.74,csapp,,0,0,0,,actually the most negative number so the smallest number and the strictest sense of the word is
-Dialogue: 0,0:26:57.56,0:27:03.20,csapp,,0,0,0,, is this it's -16 you can argue this by the way
-Dialogue: 0,0:27:03.48,0:27:08.54,csapp,,0,0,0,,this is the only bit that has a negative weight all the other ones have positive ones
-Dialogue: 0,0:27:08.54,0:27:13.16,csapp,,0,0,0,,so certainly one and all the rest being zeros is going to be the smallest number
-Dialogue: 0,0:27:13.60,0:27:16.26,csapp,,0,0,0,,and similarly the largest number you can represent
-Dialogue: 0,0:27:20.44,0:27:27.32,csapp,,0,0,0,,we'll be 8 + 4 + 2 + 1 which is 15
-Dialogue: 0,0:27:31.42,0:27:33.80,csapp,,0,0,0,, and so we call this number UMax
-Dialogue: 0,0:27:38.52,0:27:41.06,csapp,,0,0,0,,and we call this number TMax 
-Dialogue: 0,0:27:43.72,0:27:45.54,csapp,,0,0,0,,and we call this number TMin 
-Dialogue: 0,0:27:48.58,0:27:51.36,csapp,,0,0,0,,so there's a few things to observe about these numbers
-Dialogue: 0,0:27:55.04,0:27:58.42,csapp,,0,0,0,,that remember this is a 5-bit word size right so
-Dialogue: 0,0:28:00.62,0:28:06.23,csapp,,0,0,0,,you'll see that 31 is pretty close to 32 right
-Dialogue: 0,0:28:06.23,0:28:10.82,csapp,,0,0,0,,in fact it's 2 to the fifth -1 
-Dialogue: 0,0:28:12.56,0:28:17.04,csapp,,0,0,0,,and in general if it's a five and that's for a 5-bit word size 
-Dialogue: 0,0:28:17.04,0:28:23.84,csapp,,0,0,0,,so you would say in general it will have value 2 to the W if I have a W bit number minus 1 and that's what 
-Dialogue: 0,0:28:26.14,0:28:27.14,csapp,,0,0,0,,this shows
-Dialogue: 0,0:28:31.04,0:28:36.96,csapp,,0,0,0,, and similarly over here this is 2 to the minus 2 to the 4th 
-Dialogue: 0,0:28:40.38,0:28:46.74,csapp,,0,0,0,,and so we'd say in general that will be minus 2 to the W if it's a W bit number minus 1 
-Dialogue: 0,0:28:49.22,0:28:54.18,csapp,,0,0,0,,right all these make sense by the way you'll notice one other feature is
-Dialogue: 0,0:28:58.60,0:29:06.74,csapp,,0,0,0,, a whole string of ones like this if you sum up those digits 8 + 4 + 2 + 1
-Dialogue: 0,0:29:07.12,0:29:11.84,csapp,,0,0,0,, will be 1 less than the next bit position up 
-Dialogue: 0,0:29:13.22,0:29:18.64,csapp,,0,0,0,,and you can think about that if you were to count this number
-Dialogue: 0,0:29:18.94,0:29:24.16,csapp,,0,0,0,,if you were to increment this number by 1 you'd get 1 1 is 0 carry 1
-Dialogue: 0,0:29:24.46,0:29:29.42,csapp,,0,0,0,,and so forth and you'd carry that value up to this position so these various ways you can think about that 
-Dialogue: 0,0:29:31.52,0:29:37.38,csapp,,0,0,0,,and then similarly this number is 2 to the 4th -1
-Dialogue: 0,0:29:38.52,0:29:42.98,csapp,,0,0,0,,and so that's equal to 2 to the W minus 1 minus 1
-Dialogue: 0,0:29:47.12,0:29:49.40,csapp,,0,0,0,,as is shown here
-Dialogue: 0,0:29:51.98,0:29:59.02,csapp,,0,0,0,, so there's a lot of the book goes through formulas and does derivation
-Dialogue: 0,0:29:59.60,0:30:03.68,csapp,,0,0,0,, but if you just think about it in these smaller scale ways
-Dialogue: 0,0:30:04.10,0:30:10.10,csapp,,0,0,0,, the intuition is pretty easy to get and don't get lost in in formulas when
-Dialogue: 0,0:30:10.26,0:30:13.92,csapp,,0,0,0,,really at the gut level it's a fairly straightforward sort of ideas
-Dialogue: 0,0:30:15.00,0:30:18.52,csapp,,0,0,0,, or if you ever see some confusions and you're confused
-Dialogue: 0,0:30:19.12,0:30:22.25,csapp,,0,0,0,, try out some small examples and see what they're saying
-Dialogue: 0,0:30:22.90,0:30:27.90,csapp,,0,0,0,,another interesting number in the world of two's complement
-Dialogue: 0,0:30:28.46,0:30:31.60,csapp,,0,0,0,, is what happens when you have all ones in your bit patterns
-Dialogue: 0,0:30:35.80,0:30:45.66,csapp,,0,0,0,,and that will have mate -16 + 8 + 4 + 2 + 1 and that will equal -1
-Dialogue: 0,0:30:47.80,0:30:53.85,csapp,,0,0,0,,so the bit pattern all ones is always a -1 in this representation
-Dialogue: 0,0:30:54.04,0:30:59.74,csapp,,0,0,0,,I should mention two's complement is not the only way to represent a positive and negative numbers 
-Dialogue: 0,0:30:59.74,0:31:01.48,csapp,,0,0,0,,what's sometimes called signed numbers 
-Dialogue: 0,0:31:01.78,0:31:06.62,csapp,,0,0,0,,but it's so Universal that you'll hardly ever encounter another case
-Dialogue: 0,0:31:07.12,0:31:14.62,csapp,,0,0,0,, so if you understand two's complement you have a pretty good understanding of  what really is going on
-Dialogue: 0,0:31:22.06,0:31:26.90,csapp,,0,0,0,,so these numbers I call UMax the biggest unsigned number
-Dialogue: 0,0:31:27.38,0:31:32.60,csapp,,0,0,0,,TMin the smallest most negative two's complement monitor and
-Dialogue: 0,0:31:32.60,0:31:36.42,csapp,,0,0,0,,TMax the largest most positive two's complement 
-Dialogue: 0,0:31:36.76,0:31:42.46,csapp,,0,0,0,,this chart shows the range of values for different word sizes different numbers of bytes
-Dialogue: 0,0:31:43.02,0:31:51.16,csapp,,0,0,0,,and so you'll see that with an 8 bit number you only have 256 possibilities right
-Dialogue: 0,0:31:54.66,0:32:01.68,csapp,,0,0,0,, and so we can either choose to rate think of those as representing the range from 0 to 255
-Dialogue: 0,0:32:01.86,0:32:07.28,csapp,,0,0,0,, or basically with two's complement numbers we're just doing a sort of a wraparound we're saying well 
-Dialogue: 0,0:32:07.28,0:32:13.24,csapp,,0,0,0,,we're going to have half of them be negative and the other half will be either 0 or positive 
-Dialogue: 0,0:32:16.62,0:32:19.34,csapp,,0,0,0,,and so it's a pretty limited range of values of course
-Dialogue: 0,0:32:19.34,0:32:25.74,csapp,,0,0,0,,then 16 and believe me back when computers had 16-bit word sizes
-Dialogue: 0,0:32:25.74,0:32:29.48,csapp,,0,0,0,, it was a nuisance to keep your numbers within that range
-Dialogue: 0,0:32:29.94,0:32:33.61,csapp,,0,0,0,, and 32 gives you a pretty decent range it used to be said
-Dialogue: 0,0:32:33.98,0:32:41.00,csapp,,0,0,0,,Microsoft had to go to 64-bit word size to represent Bill Gates's net worth but
-Dialogue: 0,0:32:43.90,0:32:49.66,csapp,,0,0,0,,for me at least this would easily handle my range of normal day-to-day transactions so
-Dialogue: 0,0:32:51.74,0:32:57.12,csapp,,0,0,0,, but now with 64 bits at least to us nowadays those seem like really big numbers and
-Dialogue: 0,0:32:57.56,0:33:00.16,csapp,,0,0,0,, hard to imagine exceeding the bounds of those
-Dialogue: 0,0:33:04.88,0:33:11.68,csapp,,0,0,0,, so one interesting feature that you noticed here was I was um
-Dialogue: 0,0:33:15.82,0:33:17.96,csapp,,0,0,0,,like this case here 
-Dialogue: 0,0:33:24.88,0:33:27.02,csapp,,0,0,0,,in this case here
-Dialogue: 0,0:33:36.16,0:33:39.88,csapp,,0,0,0,,and then this case here  of all ones I
-Dialogue: 0,0:33:43.28,0:33:47.98,csapp,,0,0,0,,I was comparing it to this case here of all ones 
-Dialogue: 0,0:33:49.40,0:33:54.24,csapp,,0,0,0,,so in other words in both these cases and it's a little hard to jump boards here 
-Dialogue: 0,0:33:56.64,0:34:00.04,csapp,,0,0,0,,you're seeing that you have the same bit pattern in either case
-Dialogue: 0,0:34:01.12,0:34:06.56,csapp,,0,0,0,,but they the numeric they represent different numeric values because one is a two's complement case 
-Dialogue: 0,0:34:07.80,0:34:10.06,csapp,,0,0,0,,and the other is an unsigned right 
-Dialogue: 0,0:34:10.12,0:34:14.38,csapp,,0,0,0,,and you can actually see the relation between them is pretty simple
-Dialogue: 0,0:34:14.76,0:34:24.08,csapp,,0,0,0,, because basically what we're doing is we're jumping between +16 and -16 between those .
-Dialogue: 0,0:34:24.44,0:34:27.84,csapp,,0,0,0,,and so you'd expect it to change by 32 right
-Dialogue: 0,0:34:28.54,0:34:32.16,csapp,,0,0,0,,and you see that here that this is 31 here and -1 
-Dialogue: 0,0:34:32.68,0:34:41.22,csapp,,0,0,0,,this is 22 and -10 so they're differ from each other by +  -32  two to the fifth
-Dialogue: 0,0:34:41.94,0:34:43.14,csapp,,0,0,0,,two to the word size 
-Dialogue: 0,0:34:43.60,0:34:48.80,csapp,,0,0,0,,and so we there's sort of a long derivation in the book and things here 
-Dialogue: 0,0:34:48.80,0:34:53.60,csapp,,0,0,0,,but that connection is actually fairly important 
-Dialogue: 0,0:34:54.06,0:34:56.90,csapp,,0,0,0,,because when you jump back and forth
-Dialogue: 0,0:34:57.70,0:35:01.82,csapp,,0,0,0,, between unsigned numbers and two's complement numbers in C
-Dialogue: 0,0:35:03.08,0:35:07.44,csapp,,0,0,0,,that's the jump that you get in other words 
-Dialogue: 0,0:35:07.64,0:35:10.48,csapp,,0,0,0,,when of and so
-Dialogue: 0,0:35:12.50,0:35:17.46,csapp,,0,0,0,,you'll often find cases where what used to be a very large number 
-Dialogue: 0,0:35:17.72,0:35:20.80,csapp,,0,0,0,,because it was unsigned all of a sudden becomes a negative number 
-Dialogue: 0,0:35:20.80,0:35:22.72,csapp,,0,0,0,,because it's considered two's complement 
-Dialogue: 0,0:35:24.00,0:35:26.96,csapp,,0,0,0,,so that's what this next part covers will say that
-Dialogue: 0,0:35:32.24,0:35:35.91,csapp,,0,0,0,,if we take a cart of 4 bit numbers and
-Dialogue: 0,0:35:36.14,0:35:43.36,csapp,,0,0,0,,we write out all the possible values is unsigned or as  two's complement numbers
-Dialogue: 0,0:35:43.64,0:35:48.83,csapp,,0,0,0,,then the ones where the low the higher bid is 0 will be the same in both cases
-Dialogue: 0,0:35:49.38,0:35:54.80,csapp,,0,0,0,,the ones where the higher order bit is a 1 in this case will differ by 16 2 to the 4th 
-Dialogue: 0,0:35:56.70,0:36:02.88,csapp,,0,0,0,,and similarly you'll notice that these numbers there's a unique 
-Dialogue: 0,0:36:03.16,0:36:07.56,csapp,,0,0,0,,it goes unique in both directions there's a for any given bit pattern 
-Dialogue: 0,0:36:07.78,0:36:10.95,csapp,,0,0,0,,there's a unique number it represents and
-Dialogue: 0,0:36:11.32,0:36:16.36,csapp,,0,0,0,,similarly for any number within the given range there's a unique bit pattern
-Dialogue: 0,0:36:17.02,0:36:22.68,csapp,,0,0,0,,so we can sort of jump between those two and say
-Dialogue: 0,0:36:23.88,0:36:29.84,csapp,,0,0,0,, I can make up a rule for converting between a two's complement number X
-Dialogue: 0,0:36:29.84,0:36:32.18,csapp,,0,0,0,, and an unsigned number UX 
-Dialogue: 0,0:36:32.36,0:36:37.50,csapp,,0,0,0,,that basically says I'll use the same bits I'll just think of them as being different numbers
-Dialogue: 0,0:36:38.10,0:36:42.12,csapp,,0,0,0,, and so and you can go either way
-Dialogue: 0,0:36:42.42,0:36:53.10,csapp,,0,0,0,, so for example if we thought of this is a a two's complement representative representation
-Dialogue: 0,0:36:53.86,0:36:59.32,csapp,,0,0,0,, it's minus 1 this function I'm calling T2U
-Dialogue: 0,0:37:00.04,0:37:04.48,csapp,,0,0,0,,goes from that number minus 1 to this number 31
-Dialogue: 0,0:37:06.12,0:37:11.90,csapp,,0,0,0,, as the where in between the two I'm saying they both have the same bit pattern
-Dialogue: 0,0:37:16.88,0:37:22.42,csapp,,0,0,0,,and the reason why this rather function that would otherwise seem to have no particular use
-Dialogue: 0,0:37:22.50,0:37:30.66,csapp,,0,0,0,, is important is because that's basically what happens in C or actually in the program
-Dialogue: 0,0:37:30.94,0:37:35.68,csapp,,0,0,0,,on the computer itself has no clue whether a given bit pattern if it's something
-Dialogue: 0,0:37:35.68,0:37:38.40,csapp,,0,0,0,, you're thinking of as being a negative number 
-Dialogue: 0,0:37:38.40,0:37:41.80,csapp,,0,0,0,,or two's complement number it's just a bunch of bits to it
-Dialogue: 0,0:37:43.60,0:37:49.56,csapp,,0,0,0,,and similarly so we can go back and forth between a two's complement and unsigned
-Dialogue: 0,0:37:49.56,0:37:51.22,csapp,,0,0,0,, keeping the bit patterns the same
-Dialogue: 0,0:37:54.72,0:38:01.32,csapp,,0,0,0,,so I'll call that T2U when I go from signed to unsigned two's complement unsigned
-Dialogue: 0,0:38:01.60,0:38:04.94,csapp,,0,0,0,, and say well I'll call U2T if I go from unsigned to signed 
-Dialogue: 0,0:38:07.36,0:38:13.44,csapp,,0,0,0,,and as I mentioned the difference for the the numbers where the high-order bit is a 1 
-Dialogue: 0,0:38:13.68,0:38:18.28,csapp,,0,0,0,,will be by a factor 2 to the W where W is the word size of the word
-Dialogue: 0,0:38:22.16,0:38:24.66,csapp,,0,0,0,, and so this can be thought of as a function
-Dialogue: 0,0:38:27.28,0:38:28.48,csapp,,0,0,0,, where
-Dialogue: 0,0:38:34.84,0:38:36.18,csapp,,0,0,0,,let me just draw it up 
-Dialogue: 0,0:38:47.48,0:38:51.98,csapp,,0,0,0,,over here with my five of bit numbers 
-Dialogue: 0,0:38:55.30,0:39:01.50,csapp,,0,0,0,,that is the number this is two's complement again so that was the number -16 
-Dialogue: 0,0:39:02.72,0:39:06.18,csapp,,0,0,0,,and then there'll be some other negative numbers up to all ones 
-Dialogue: 0,0:39:09.48,0:39:11.00,csapp,,0,0,0,,this is number negative one
-Dialogue: 0,0:39:11.60,0:39:18.78,csapp,,0,0,0,,then I'll have zero and so forth and then all up to
-Dialogue: 0,0:39:23.26,0:39:29.06,csapp,,0,0,0,,oops going to run out of room +15
-Dialogue: 0,0:39:30.82,0:39:32.96,csapp,,0,0,0,,destroys I got myself in trouble
-Dialogue: 0,0:39:37.00,0:39:41.34,csapp,,0,0,0,,blackboard management is they didn't teach me this in school
-Dialogue: 0,0:39:44.42,0:39:50.18,csapp,,0,0,0,, so I'm gonna use two boards and ones here
-Dialogue: 0,0:40:02.29,0:40:15.58,csapp,,0,0,0,,okay let me send this out okay we'll make it work 
-Dialogue: 0,0:40:16.52,0:40:21.84,csapp,,0,0,0,,so now when we go from the TTU function then 
-Dialogue: 0,0:40:22.64,0:40:25.10,csapp,,0,0,0,,these numbers are going to just carry over
-Dialogue: 0,0:40:25.50,0:40:30.18,csapp,,0,0,0,, we'll get zero up through 15
-Dialogue: 0,0:40:32.46,0:40:34.16,csapp,,0,0,0,, but now this number here
-Dialogue: 0,0:40:34.90,0:40:36.84,csapp,,0,0,0,,will become positive 16
-Dialogue: 0,0:40:41.70,0:40:43.14,csapp,,0,0,0,, and all ones
-Dialogue: 0,0:40:46.70,0:40:51.02,csapp,,0,0,0,,will become positive 31 right 
-Dialogue: 0,0:40:51.34,0:40:56.46,csapp,,0,0,0,,and so that's what this picture is showing is it for the pink numbers 
-Dialogue: 0,0:40:57.50,0:41:03.25,csapp,,0,0,0,,are the ones that flip between negative and actually the largest of the positive numbers 
-Dialogue: 0,0:41:03.92,0:41:08.68,csapp,,0,0,0,,and then the green numbers are the ones that stay the same because they're leading bits or zeros
-Dialogue: 0,0:41:14.82,0:41:16.26,csapp,,0,0,0,, so why does this matter bits or zeros 
-Dialogue: 0,0:41:16.56,0:41:23.04,csapp,,0,0,0,,you never thought if you programmed in Python  or even Java
-Dialogue: 0,0:41:23.30,0:41:29.32,csapp,,0,0,0,, you don't see that and the reason is because C is one of the few languages 
-Dialogue: 0,0:41:29.84,0:41:33.32,csapp,,0,0,0,,where unsigned is actually an explicit datatype 
-Dialogue: 0,0:41:34.32,0:41:37.94,csapp,,0,0,0,,and you so you can declare a value being unsigned
-Dialogue: 0,0:41:38.34,0:41:42.52,csapp,,0,0,0,,and it's you can if you just say unsigned what you're really saying is unsigned int 
-Dialogue: 0,0:41:43.32,0:41:48.46,csapp,,0,0,0,,or you can call something an unsigned care and unsigned short or an unsigned long 
-Dialogue: 0,0:41:49.78,0:41:56.68,csapp,,0,0,0,,so and you're declaring and see that it should think about using this representation we show on the right
-Dialogue: 0,0:41:56.98,0:41:59.72,csapp,,0,0,0,,when it's working on those numbers
-Dialogue: 0,0:42:01.82,0:42:08.28,csapp,,0,0,0,,so that's sort of one thing and this it's one thing if you declare a number and use it that way 
-Dialogue: 0,0:42:08.28,0:42:11.46,csapp,,0,0,0,,but what gets people and the often got you is
-Dialogue: 0,0:42:12.28,0:42:17.30,csapp,,0,0,0,, if you declare something if you have a in this case
-Dialogue: 0,0:42:17.72,0:42:21.34,csapp,,0,0,0,,something that's declared as a two's complement number X to TX
-Dialogue: 0,0:42:22.00,0:42:26.34,csapp,,0,0,0,, and you assign it a value you at Y X it'll do an implicit casting
-Dialogue: 0,0:42:26.84,0:42:32.18,csapp,,0,0,0,, which is exactly based on this conversion that we've been talking about and vice versa
-Dialogue: 0,0:42:34.32,0:42:41.86,csapp,,0,0,0,, and so as this example goes through this goes through some examples that 
-Dialogue: 0,0:42:42.24,0:42:49.06,csapp,,0,0,0,,if I look at two numbers and I compare them or I actually I do any operation on them
-Dialogue: 0,0:42:49.06,0:42:56.18,csapp,,0,0,0,, I add them divide them anything implicitly it will try to make these to be of the same type
-Dialogue: 0,0:42:56.72,0:43:00.68,csapp,,0,0,0,,and the way it will do that is to say if both of them are signed
-Dialogue: 0,0:43:01.00,0:43:05.34,csapp,,0,0,0,, then I'll do I'll treat them as a signed case
-Dialogue: 0,0:43:05.60,0:43:07.88,csapp,,0,0,0,,if either of them is unsigned 
-Dialogue: 0,0:43:08.24,0:43:12.78,csapp,,0,0,0,,then I'll convert the other one to be an unsigned number and do the operation
-Dialogue: 0,0:43:13.20,0:43:16.86,csapp,,0,0,0,, and so in particular this set of examples is imagine
-Dialogue: 0,0:43:16.86,0:43:21.73,csapp,,0,0,0,, I'm comparing these I'm saying these numbers are either equal less or greater
-Dialogue: 0,0:43:22.14,0:43:27.66,csapp,,0,0,0,,what will the outcomes be and the key to answering that question is to first of all figure out
-Dialogue: 0,0:43:28.20,0:43:32.52,csapp,,0,0,0,, okay is it a signed or an unsigned comparison should I convert
-Dialogue: 0,0:43:33.40,0:43:39.80,csapp,,0,0,0,, one of these numbers to either of these numbers to an unsigned form before I do it
-Dialogue: 0,0:43:40.38,0:43:44.38,csapp,,0,0,0,,and the rule was if either argument is unsigned then you got to do it 
-Dialogue: 0,0:43:45.30,0:43:53.80,csapp,,0,0,0,,and as you see out when you put a you at the end either a  u or U at the end of a numeric constant
-Dialogue: 0,0:43:54.20,0:43:56.70,csapp,,0,0,0,,you're saying this is an unsigned value
-Dialogue: 0,0:43:57.50,0:44:05.32,csapp,,0,0,0,, so for example if we compare a zero and zero unsigned they're equal
-Dialogue: 0,0:44:07.50,0:44:13.12,csapp,,0,0,0,,and if we combine negative one compare negative one to zero
-Dialogue: 0,0:44:13.72,0:44:17.20,csapp,,0,0,0,,we'll get that the first one is less
-Dialogue: 0,0:44:17.46,0:44:19.74,csapp,,0,0,0,,because -1 is less than 0
-Dialogue: 0,0:44:20.40,0:44:25.22,csapp,,0,0,0,, but what would happen with the next one when we compare negative 1 to an unsigned 0
-Dialogue: 0,0:44:26.86,0:44:30.24,csapp,,0,0,0,,greater right 
-Dialogue: 0,0:44:31.10,0:44:40.54,csapp,,0,0,0,,so this is the surprise and it has to do with a number that I erased
-Dialogue: 0,0:44:44.38,0:44:47.64,csapp,,0,0,0,, but we can still get it remember this is negative one
-Dialogue: 0,0:44:49.84,0:44:54.20,csapp,,0,0,0,, but when I cast that to an unsigned number
-Dialogue: 0,0:44:54.71,0:45:01.54,csapp,,0,0,0,, I'm flipping this from -16 to +16 and turning this into 31 I'm turning it into actually 
-Dialogue: 0,0:45:01.96,0:45:06.72,csapp,,0,0,0,,the largest number I can represent and so it will be greater than zero
-Dialogue: 0,0:45:07.80,0:45:15.42,csapp,,0,0,0,, so it's a little bit weird to think about I took an u0 which after all is to 0  and compared it to a negative 1
-Dialogue: 0,0:45:15.70,0:45:21.38,csapp,,0,0,0,,and it said oh you really meant 31 didn't you or whatever word size we're using
-Dialogue: 0,0:45:21.86,0:45:23.32,csapp,,0,0,0,, and so it said it's greater 
-Dialogue: 0,0:45:25.14,0:45:29.04,csapp,,0,0,0,,and basically the rest of these you can answer in a similar way
-Dialogue: 0,0:45:32.76,0:45:39.02,csapp,,0,0,0,, that these two numbers are this is clearly one smaller than this 
-Dialogue: 0,0:45:40.28,0:45:46.04,csapp,,0,0,0,,no I'm sorry this is a positive this is a negative number and
-Dialogue: 0,0:45:46.18,0:45:51.14,csapp,,0,0,0,,I compare those and the positive will be greater than the negative
-Dialogue: 0,0:45:51.86,0:45:55.68,csapp,,0,0,0,, I'll tell you in a minute why this number is written this way
-Dialogue: 0,0:45:56.82,0:45:59.78,csapp,,0,0,0,, the next one it's the same pair of numbers 
-Dialogue: 0,0:46:01.30,0:46:05.02,csapp,,0,0,0,,but you see it's flipped and the reason is that 
-Dialogue: 0,0:46:07.22,0:46:13.68,csapp,,0,0,0,,this number on the left is Tmax for
-Dialogue: 0,0:46:19.82,0:46:22.82,csapp,,0,0,0,,so it's the bit pattern in a 32-bit number
-Dialogue: 0,0:46:50.92,0:46:53.46,csapp,,0,0,0,,and to this day I have not memorized this number by the way 
-Dialogue: 0,0:46:53.88,0:46:57.44,csapp,,0,0,0,,but and then this number is actually TMin
-Dialogue: 0,0:47:15.68,0:47:22.20,csapp,,0,0,0,,and that when I subtract you can think of it as this is negative TMax
-Dialogue: 0,0:47:22.86,0:47:24.72,csapp,,0,0,0,,minus one so that's TMin
-Dialogue: 0,0:47:25.14,0:47:29.30,csapp,,0,0,0,, so if I do an unsigned comparison between those two now think of those 
-Dialogue: 0,0:47:29.58,0:47:33.30,csapp,,0,0,0,,this leading bit  not being a negative weight 
-Dialogue: 0,0:47:33.30,0:47:36.72,csapp,,0,0,0,,but a positive weight you'll see that this is a bigger number than this one
-Dialogue: 0,0:47:41.96,0:47:48.42,csapp,,0,0,0,, and so it goes that -1 is greater than -2 if they're unsigned
-Dialogue: 0,0:47:49.40,0:47:56.71,csapp,,0,0,0,, because -1 is you can think of it as converts into UMax it'll be the biggest number possible 
-Dialogue: 0,0:47:57.06,0:48:05.84,csapp,,0,0,0,,and -2 will be would be 1 1 1 1 0
-Dialogue: 0,0:48:17.98,0:48:20.44,csapp,,0,0,0,,Oh so that can get fairly confusing 
-Dialogue: 0,0:48:23.78,0:48:29.98,csapp,,0,0,0,,one final quirk this way of writing this number is there's a little side in the book about it
-Dialogue: 0,0:48:30.54,0:48:37.84,csapp,,0,0,0,, if you write a business number Oh as you'd expect - as - blah blah blah six four eight 
-Dialogue: 0,0:48:40.60,0:48:47.70,csapp,,0,0,0,,it will actually get the C compiler gets kind of confused by that for obscure reasons
-Dialogue: 0,0:48:48.14,0:48:54.36,csapp,,0,0,0,, one other thing I should point out that it's a property that I don't think we cover well enough here
-Dialogue: 0,0:48:56.44,0:48:57.88,csapp,,0,0,0,,let me see
-Dialogue: 0,0:49:02.64,0:49:06.50,csapp,,0,0,0,,there's a few things that the tides don't really cover here and I don't know why not 
-Dialogue: 0,0:49:07.26,0:49:08.58,csapp,,0,0,0,,they like to point out 
-Dialogue: 0,0:49:13.66,0:49:17.62,csapp,,0,0,0,,that are kind of useful properties to keep track of
-Dialogue: 0,0:49:25.38,0:49:32.84,csapp,,0,0,0,,It's that you notice that if you look at the absolute value of TMax 
-Dialogue: 0,0:49:35.26,0:49:38.12,csapp,,0,0,0,,and you compare it to the absolute value of TMin
-Dialogue: 0,0:49:40.72,0:49:46.90,csapp,,0,0,0,,that it's off by one right 
-Dialogue: 0,0:49:47.36,0:49:50.24,csapp,,0,0,0,,so that the negative number is more negative 
-Dialogue: 0,0:49:50.24,0:49:55.42,csapp,,0,0,0,,the smallest negative number is more negative than the largest positive number is positive 
-Dialogue: 0,0:49:56.24,0:49:59.44,csapp,,0,0,0,,and the reason for that actually is fairly simple if you think about
-Dialogue: 0,0:49:59.78,0:50:05.62,csapp,,0,0,0,, it is that the the cases where you have zeros 
-Dialogue: 0,0:50:07.88,0:50:09.36,csapp,,0,0,0,,include the number 0
-Dialogue: 0,0:50:21.24,0:50:22.56,csapp,,0,0,0,,so you can see it better 
-Dialogue: 0,0:50:26.40,0:50:32.40,csapp,,0,0,0,,and there's two to the half-year range is occupied by those numbers
-Dialogue: 0,0:50:32.96,0:50:36.86,csapp,,0,0,0,, and the negative numbers are all negative
-Dialogue: 0,0:50:42.10,0:50:46.80,csapp,,0,0,0,,and there's so the other half of the range is in there
-Dialogue: 0,0:50:48.26,0:50:51.70,csapp,,0,0,0,, and the point is that you had to use one of these four zero
-Dialogue: 0,0:50:52.16,0:50:57.34,csapp,,0,0,0,,and so they're only there's one left one less value left over
-Dialogue: 0,0:50:57.72,0:51:01.82,csapp,,0,0,0,, and that's why you end up with this through a symmetry 
-Dialogue: 0,0:51:02.50,0:51:06.92,csapp,,0,0,0,,and this asymmetry is the cause of no end of pain in various ways 
-Dialogue: 0,0:51:07.72,0:51:15.62,csapp,,0,0,0,,that like a few the classic example is if you implement absolute value like
-Dialogue: 0,0:51:33.40,0:51:39.96,csapp,,0,0,0,, so what do you what does this return for TMin
-Dialogue: 0,0:51:44.62,0:51:50.32,csapp,,0,0,0,,yeah the returns team in we'll talk a little bit basically
-Dialogue: 0,0:51:51.84,0:51:56.04,csapp,,0,0,0,, when you try to negate this number that's here
-Dialogue: 0,0:51:59.14,0:52:00.84,csapp,,0,0,0,, you'll end up with it back again
-Dialogue: 0,0:52:08.06,0:52:12.92,csapp,,0,0,0,,so it's always a corner case and whenever we do program testing
-Dialogue: 0,0:52:12.92,0:52:16.24,csapp,,0,0,0,, we always throw that case in there to break things question
-Dialogue: 0,0:52:17.00,0:52:33.36,csapp,,0,0,0,, well that case you said oh yeah big number but how negative - one yes 
-Dialogue: 0,0:52:33.36,0:52:40.00,csapp,,0,0,0,,no that's what they do that if you ever look at the in the wing in the sea Constance
-Dialogue: 0,0:52:40.00,0:52:42.70,csapp,,0,0,0,, they use this as a way of representing team in
-Dialogue: 0,0:52:43.26,0:52:46.84,csapp,,0,0,0,, and they do it for that reason because you see oh 
-Dialogue: 0,0:52:47.16,0:52:52.54,csapp,,0,0,0,,it's exactly this problem and they put parentheses around it so there's no president's problem
-Dialogue: 0,0:52:52.72,0:52:56.38,csapp,,0,0,0,, but you see that number that in six for seven that's TMax
-Dialogue: 0,0:52:57.74,0:53:04.36,csapp,,0,0,0,,and so basically it's just saying that team n is minus T max minus one 
-Dialogue: 0,0:53:04.72,0:53:05.64,csapp,,0,0,0,,question
-Dialogue: 0,0:53:17.46,0:53:20.06,csapp,,0,0,0,,yeah hmm yes
-Dialogue: 0,0:53:20.28,0:53:23.76,csapp,,0,0,0,,so comparison is just a special case of the more general one
-Dialogue: 0,0:53:24.00,0:53:28.16,csapp,,0,0,0,, which is addition subtraction all of those 
-Dialogue: 0,0:53:28.94,0:53:34.18,csapp,,0,0,0,,if either argument is unsigned then it interprets remaining one as being unsigned it
-Dialogue: 0,0:53:35.24,0:53:40.28,csapp,,0,0,0,,it turns out and we'll get into this more next time as far as bit patterns 
-Dialogue: 0,0:53:40.56,0:53:48.56,csapp,,0,0,0,,but it turns out that at the bit level addition subtraction even multiplication
-Dialogue: 0,0:53:49.08,0:53:52.44,csapp,,0,0,0,, are the same whether it's an unsigned number two's complement number
-Dialogue: 0,0:53:52.84,0:53:55.28,csapp,,0,0,0,, so what we'll talk about that more next time
-Dialogue: 0,0:53:59.50,0:54:04.00,csapp,,0,0,0,, and the other thing to observe sort of property
-Dialogue: 0,0:54:17.36,0:54:22.00,csapp,,0,0,0,,is you saw that UMax is sort of like
-Dialogue: 0,0:54:25.42,0:54:31.56,csapp,,0,0,0,, twice Team X plus one right so
-Dialogue: 0,0:54:32.74,0:54:39.26,csapp,,0,0,0,,so before UMax was 15 in our five bit numbers.
-Dialogue: 0,0:54:39.66,0:54:42.74,csapp,,0,0,0,,and and that's again not too hard to figure out 
-Dialogue: 0,0:54:44.66,0:54:50.40,csapp,,0,0,0,,here's one way to think about it TMax is a zero followed by a bunch of ones 
-Dialogue: 0,0:54:53.18,0:54:55.36,csapp,,0,0,0,,and if I want to double that number position
-Dialogue: 0,0:54:55.88,0:55:00.32,csapp,,0,0,0,,I basically shift it left by one position
-Dialogue: 0,0:55:01.66,0:55:03.78,csapp,,0,0,0,, and that would end up with a zero here
-Dialogue: 0,0:55:04.96,0:55:10.96,csapp,,0,0,0,, so this is TMax and this is twice TMax 
-Dialogue: 0,0:55:13.04,0:55:14.72,csapp,,0,0,0,,and now if I add a one to that
-Dialogue: 0,0:55:16.30,0:55:18.82,csapp,,0,0,0,,that I'll just set this bit to one and get this
-Dialogue: 0,0:55:18.82,0:55:22.72,csapp,,0,0,0,, so there's various ways you can think about it but that's one way to do it
-Dialogue: 0,0:55:40.34,0:55:46.36,csapp,,0,0,0,,it's one other thing that I wanted to mention too 
-Dialogue: 0,0:55:47.20,0:55:49.80,csapp,,0,0,0,,this can get you into a lot of trouble
-Dialogue: 0,0:55:51.72,0:55:57.58,csapp,,0,0,0,,programming wise so let me just show you what I mean
-Dialogue: 0,0:56:07.08,0:56:15.64,csapp,,0,0,0,,so I mentioned I wanted to go backwards through an array
-Dialogue: 0,0:56:16.06,0:56:22.78,csapp,,0,0,0,, so I write a loop of the form for I equals n - 1
-Dialogue: 0,0:56:23.52,0:56:29.70,csapp,,0,0,0,,i is greater than or equal to 0 
-Dialogue: 0,0:56:31.14,0:56:37.34,csapp,,0,0,0,,then I do something with array element a of i
-Dialogue: 0,0:56:40.56,0:56:42.60,csapp,,0,0,0,,i'll just call some function of
-Dialogue: 0,0:56:43.90,0:56:47.94,csapp,,0,0,0,,whatever you want to do in that loop so that's a pretty standard pattern in a loop right
-Dialogue: 0,0:56:48.68,0:56:53.36,csapp,,0,0,0,, except that you write this greater equal to1 0 
-Dialogue: 0,0:56:54.56,0:56:56.84,csapp,,0,0,0,,you can imagine various uses for that 
-Dialogue: 0,0:56:57.76,0:57:06.04,csapp,,0,0,0,,so here's an interesting question what if I were declared as being unsigned
-Dialogue: 0,0:57:09.16,0:57:12.66,csapp,,0,0,0,, because it's array index after all what will happen with this loop
-Dialogue: 0,0:57:18.02,0:57:18.90,csapp,,0,0,0,,what's that
-Dialogue: 0,0:57:20.46,0:57:24.22,csapp,,0,0,0,, yes so the loop will go forever what would most likely happen is
-Dialogue: 0,0:57:24.98,0:57:27.56,csapp,,0,0,0,,I would go from being zero to being UMax
-Dialogue: 0,0:57:28.66,0:57:31.00,csapp,,0,0,0,, and that's a really big number and
-Dialogue: 0,0:57:31.10,0:57:39.14,csapp,,0,0,0,,the Ray you'd uh most likely cause a memory fault because it's so far out of bounds
-Dialogue: 0,0:57:39.72,0:57:42.48,csapp,,0,0,0,, but the point is it wouldn't do what you want it wouldn't stop 
-Dialogue: 0,0:57:42.90,0:57:47.58,csapp,,0,0,0,,where you want it to and because of the simple reason that I is of course 
-Dialogue: 0,0:57:48.52,0:57:52.66,csapp,,0,0,0,,i is always going to be greater than or equal to zero because it's an unsigned number 
-Dialogue: 0,0:57:53.46,0:57:59.84,csapp,,0,0,0,,so that's one you'd say okay well you should have figured that one out 
-Dialogue: 0,0:58:00.28,0:58:02.44,csapp,,0,0,0,,it can be fair it more subtle though
-Dialogue: 0,0:58:06.60,0:58:10.62,csapp,,0,0,0,, if you have something like int i
-Dialogue: 0,0:58:14.40,0:58:22.86,csapp,,0,0,0,, and then we say something like let me just change it here a little bit so this will be
-Dialogue: 0,0:58:40.70,0:58:46.18,csapp,,0,0,0,,something like this where the I'm mixing metaphors here I have to confess 
-Dialogue: 0,0:58:46.72,0:58:52.82,csapp,,0,0,0,,but if you use the standard the term size of which is the way you get
-Dialogue: 0,0:58:53.18,0:58:56.26,csapp,,0,0,0,, how many bytes it takes to represent some given data type
-Dialogue: 0,0:58:56.66,0:58:58.64,csapp,,0,0,0,,so this will actually be the number one
-Dialogue: 0,0:58:59.68,0:59:04.34,csapp,,0,0,0,,one so it's not the same loop as before but imagine I'm sort of mixing in
-Dialogue: 0,0:59:04.92,0:59:08.20,csapp,,0,0,0,,my arithmetic and making use of some of these built-in forms
-Dialogue: 0,0:59:10.08,0:59:11.80,csapp,,0,0,0,, what would happen with this loop
-Dialogue: 0,0:59:14.08,0:59:21.42,csapp,,0,0,0,, yes right yes
-Dialogue: 0,0:59:21.76,0:59:26.92,csapp,,0,0,0,,exactly so sizeof returns an unsigned value
-Dialogue: 0,0:59:26.92,0:59:32.76,csapp,,0,0,0,, it's not actually a function it's a built in but it's the result of sizeof is considered to be unsigned
-Dialogue: 0,0:59:33.48,0:59:37.32,csapp,,0,0,0,, and so just like I was saying
-Dialogue: 0,0:59:37.62,0:59:42.78,csapp,,0,0,0,,if you have a signed value in it unsigned in any kind of arithmetic
-Dialogue: 0,0:59:43.32,0:59:47.78,csapp,,0,0,0,, it'll turn treat the combination of the two is unsigned
-Dialogue: 0,0:59:48.14,0:59:51.30,csapp,,0,0,0,, and so it will actually do an unsigned comparison here
-Dialogue: 0,0:59:51.80,0:59:53.94,csapp,,0,0,0,, which is almost surely not what you wanted
-Dialogue: 0,0:59:54.92,1:00:02.61,csapp,,0,0,0,, I and this will just you'll look at this program and you won't have any idea why it's crashing
-Dialogue: 0,1:00:02.84,1:00:07.04,csapp,,0,0,0,,you'll be so confused and that's the kind of thing you have to know
-Dialogue: 0,1:00:07.04,1:00:11.80,csapp,,0,0,0,, it's one of the quirks of C that probably a fake could start over again and redesign it
-Dialogue: 0,1:00:11.80,1:00:14.84,csapp,,0,0,0,,they'd come up with some different set of conventions than they did 
-Dialogue: 0,1:00:15.20,1:00:19.78,csapp,,0,0,0,,but unfortunately it's way too late for that so this is just one of those things you have to remember
-Dialogue: 0,1:00:21.18,1:00:25.54,csapp,,0,0,0,, but yes the my point is through some subtleties to spencey about
-Dialogue: 0,1:00:25.78,1:00:29.10,csapp,,0,0,0,,about this business of signed versus unsigned arithmetic
-Dialogue: 0,1:00:36.16,1:00:41.86,csapp,,0,0,0,,okay so now let's look at a sort of final class of operations which is
-Dialogue: 0,1:00:42.46,1:00:46.42,csapp,,0,0,0,,suppose I have a number that's so many bits say eight bits
-Dialogue: 0,1:00:46.48,1:00:51.02,csapp,,0,0,0,, and I want to now expand it to be a 16-bit number 
-Dialogue: 0,1:00:51.60,1:00:54.70,csapp,,0,0,0,,there's a fairly cute rule for doing this 
-Dialogue: 0,1:00:55.12,1:00:59.82,csapp,,0,0,0,,that's called sign extension I'm talking about two's complement numbers here
-Dialogue: 0,1:01:00.36,1:01:06.64,csapp,,0,0,0,, of how you go take a and make it bigger without changing its value 
-Dialogue: 0,1:01:08.48,1:01:14.96,csapp,,0,0,0,,and the basic rule is you do it by copying  the sign bit to the left
-Dialogue: 0,1:01:15.42,1:01:18.12,csapp,,0,0,0,,so let me give you the intuition behind it
-Dialogue: 0,1:01:29.50,1:01:32.38,csapp,,0,0,0,,so let's go get some 4-bit values 
-Dialogue: 0,1:01:42.10,1:01:46.28,csapp,,0,0,0,,well it's pretty straightforward if the leading bit is a zero
-Dialogue: 0,1:01:46.28,1:01:49.74,csapp,,0,0,0,,I'm just going to do a left shift and
-Dialogue: 0,1:01:51.02,1:02:01.04,csapp,,0,0,0,,then fill in so right wait what am I talking about
-Dialogue: 0,1:02:04.72,1:02:07.44,csapp,,0,0,0,, I got ahead of myself I'm talking about something totally different
-Dialogue: 0,1:02:07.52,1:02:11.54,csapp,,0,0,0,, no sorry the same number I'm not changing the number I keeping it  the same
-Dialogue: 0,1:02:11.54,1:02:19.48,csapp,,0,0,0,,same so I just add a zero to the lead and this will be the number six still this is 4 + 2=6 
-Dialogue: 0,1:02:21.94,1:02:25.88,csapp,,0,0,0,,but now let's think about it as a where there's a leading sign bit
-Dialogue: 0,1:02:29.12,1:02:36.24,csapp,,0,0,0,, so this is -8 + 4 + 2 = -2  
-Dialogue: 0,1:02:38.08,1:02:45.24,csapp,,0,0,0,,what happens if I copy that sign bit over one position
-Dialogue: 0,1:02:48.18,1:02:56.34,csapp,,0,0,0,,so this becomes a 1 1 1 1 0
-Dialogue: 0,1:02:57.64,1:03:02.42,csapp,,0,0,0,, and what happens is this is a now has value plus 8 here
-Dialogue: 0,1:03:02.72,1:03:05.56,csapp,,0,0,0,, but the sign bit has value -16
-Dialogue: 0,1:03:06.22,1:03:08.50,csapp,,0,0,0,,and then this is still +2 and +4 and
-Dialogue: 0,1:03:10.58,1:03:12.62,csapp,,0,0,0,,so it will still equal - 2 
-Dialogue: 0,1:03:14.02,1:03:20.58,csapp,,0,0,0,,so here's what happened before my sign bit had a weight of - 8
-Dialogue: 0,1:03:21.80,1:03:24.76,csapp,,0,0,0,, and my new sign bit has a weight of -16
-Dialogue: 0,1:03:25.72,1:03:29.90,csapp,,0,0,0,, but I converted that old sign bit into a positive number which is +8
-Dialogue: 0,1:03:30.64,1:03:34.20,csapp,,0,0,0,, and those 2 cancelled out sit right the duck
-Dialogue: 0,1:03:34.40,1:03:39.06,csapp,,0,0,0,, that you combine those two and you get a minus 8 which is exactly this
-Dialogue: 0,1:03:39.66,1:03:44.14,csapp,,0,0,0,, so you see by sort of copying that sign bit over
-Dialogue: 0,1:03:44.84,1:03:50.46,csapp,,0,0,0,, giving it twice the weight turning it what was the sign bit into a positive number 
-Dialogue: 0,1:03:50.80,1:03:53.92,csapp,,0,0,0,,you don't change the net effect of the sum
-Dialogue: 0,1:03:54.22,1:04:00.51,csapp,,0,0,0,,and that's exactly the idea of sign extension just keep going with that as far as you need to carry it over 
-Dialogue: 0,1:04:00.86,1:04:08.22,csapp,,0,0,0,,and each time you're doing it you're effectively doing this business of coming up with a pair of bits 
-Dialogue: 0,1:04:08.84,1:04:11.94,csapp,,0,0,0,,that end up with the same value as this original bit
-Dialogue: 0,1:04:13.70,1:04:20.88,csapp,,0,0,0,,so that's the idea of sign extension and you'll see that a lot in bit patterns
-Dialogue: 0,1:04:21.50,1:04:27.46,csapp,,0,0,0,, especially if you see a bit pattern with it starts with a bunch of Fs
-Dialogue: 0,1:04:35.92,1:04:40.98,csapp,,0,0,0,,what that tells you remember F is just four ones
-Dialogue: 0,1:04:46.70,1:04:50.10,csapp,,0,0,0,, is a whole bunch of leading ones that tells you the number is negative
-Dialogue: 0,1:04:51.14,1:04:54.10,csapp,,0,0,0,, negative but not too far away from zero right 
-Dialogue: 0,1:04:54.76,1:04:58.74,csapp,,0,0,0,,and and you'll see that over and over again you'll see bit patterns and you just sort of want it
-Dialogue: 0,1:04:58.94,1:05:03.24,csapp,,0,0,0,,when you see leading F's you say oh that's a negative number I know what's going on there
-Dialogue: 0,1:05:07.56,1:05:13.76,csapp,,0,0,0,, and so here's some examples but like you can see the main idea is you carry that leading bit 
-Dialogue: 0,1:05:14.56,1:05:20.32,csapp,,0,0,0,,from the 16-bit case over and make as many copies you need to expand the word size
-Dialogue: 0,1:05:24.73,1:05:31.60,csapp,,0,0,0,,and I should mention with the unsigned case obviously you just want to fill in with zeros
-Dialogue: 0,1:05:36.84,1:05:42.48,csapp,,0,0,0,,to talk about truncation and send missing slides in this but um
-Dialogue: 0,1:05:48.00,1:05:54.42,csapp,,0,0,0,,a final case to look at is what happens if I make something shorter
-Dialogue: 0,1:05:57.44,1:06:00.16,csapp,,0,0,0,, so if I had my unsigned number from before 
-Dialogue: 0,1:06:07.18,1:06:10.74,csapp,,0,0,0,,now if this were an unsigned number this would be
-Dialogue: 0,1:06:12.04,1:06:20.78,csapp,,0,0,0,,1 2 8 16 14 17 right 
-Dialogue: 0,1:06:21.48,1:06:32.34,csapp,,0,0,0,,what if I decided oh I can't afford 4 bit I don't have enough money for 5 bits I'm only going to give you 4 
-Dialogue: 0,1:06:33.74,1:06:36.40,csapp,,0,0,0,,well you basically just drop the most significant bit 
-Dialogue: 0,1:06:38.44,1:06:43.72,csapp,,0,0,0,,and you get 8 plus 2 plus 1 which is 11
-Dialogue: 0,1:06:44.20,1:06:53.32,csapp,,0,0,0,,which is 9 and the relation there is that this is a it's like modular arithmetic
-Dialogue: 0,1:06:57.92,1:07:02.90,csapp,,0,0,0,,right mod 16 you're taking no
-Dialogue: 0,1:07:07.30,1:07:08.32,csapp,,0,0,0,,thank you
-Dialogue: 0,1:07:12.62,1:07:23.58,csapp,,0,0,0,,it's the risk of improvising so 27 and 11 
-Dialogue: 0,1:07:26.82,1:07:33.28,csapp,,0,0,0,,yeah it makes sense difference is 16  that I knew that
-Dialogue: 0,1:07:34.50,1:07:38.10,csapp,,0,0,0,, okay excuse me for my stumbling
-Dialogue: 0,1:07:38.10,1:07:46.50,csapp,,0,0,0,, but the point
-Dialogue: 0,1:07:39.07,1:07:43.80,csapp,,0,0,0,,being that when you drop this thing effectively you're just taking the mod 
-Dialogue: 0,1:07:44.34,1:07:46.72,csapp,,0,0,0,,some power of 2 
-Dialogue: 0,1:07:47.10,1:07:49.72,csapp,,0,0,0,,of it like I mentioned the case where you're taking module 8 
-Dialogue: 0,1:07:50.02,1:07:54.10,csapp,,0,0,0,,if you just keep only the lowest order 3 bits you're having a module 8
-Dialogue: 0,1:07:54.52,1:07:58.78,csapp,,0,0,0,, now one really this is a sort of logical in the unsigned world 
-Dialogue: 0,1:07:59.24,1:08:01.58,csapp,,0,0,0,,your modular arithmetic is something that 
-Dialogue: 0,1:08:02.00,1:08:04.78,csapp,,0,0,0,,was understood by the ancient Greeks 
-Dialogue: 0,1:08:05.84,1:08:12.64,csapp,,0,0,0,,so not too far away from human experience
-Dialogue: 0,1:08:12.64,1:08:23.77,csapp,,0,0,0,,but it gets a little bit funky if you're dealing with two's complement numbers
-Dialogue: 0,1:08:24.38,1:08:33.26,csapp,,0,0,0,,because this is now an 11-5 right but
-Dialogue: 0,1:08:35.90,1:08:38.30,csapp,,0,0,0,,but this number if I just drop this bit and
-Dialogue: 0,1:08:39.96,1:08:44.90,csapp,,0,0,0,,and call it a 4-bit number this now becomes minus 8 2 & 1
-Dialogue: 0,1:08:50.48,1:08:51.56,csapp,,0,0,0,,which minus five 
-Dialogue: 0,1:08:56.98,1:09:03.24,csapp,,0,0,0,,you say how'd that happen well actually if you look at it this is just what you'd get by sign extension right
-Dialogue: 0,1:09:05.04,1:09:07.74,csapp,,0,0,0,, so this wasn't a very interesting example
-Dialogue: 0,1:09:12.48,1:09:14.12,csapp,,0,0,0,, but if we changed it to this 
-Dialogue: 0,1:09:22.88,1:09:27.32,csapp,,0,0,0,,then this would be minus thirteen 
-Dialogue: 0,1:09:28.06,1:09:30.46,csapp,,0,0,0,,and this would be plus three
-Dialogue: 0,1:09:33.42,1:09:41.98,csapp,,0,0,0,,and it's a little harder to think about in terms of modular arithmetic
-Dialogue: 0,1:09:41.98,1:09:45.56,csapp,,0,0,0,, the way you basically have to think about it is well
-Dialogue: 0,1:09:46.40,1:09:51.64,csapp,,0,0,0,,well you know this is - 13 but it's really kind of like 27 and
-Dialogue: 0,1:09:52.12,1:09:56.94,csapp,,0,0,0,, 27 mod 16 is sort of like or no this isn't 20
-Dialogue: 0,1:09:57.24,1:10:04.44,csapp,,0,0,0,,we changed our number right so this is really kind of like 19 and 19 mod 16 is 3
-Dialogue: 0,1:10:04.72,1:10:11.18,csapp,,0,0,0,,and this is 3 so you can sort of do it by coming back around to it
-Dialogue: 0,1:10:11.18,1:10:16.82,csapp,,0,0,0,, but it's not sum of arithmetic property that would jump out at you as being something logical
-Dialogue: 0,1:10:17.72,1:10:21.82,csapp,,0,0,0,, but that happens all the time that and it's very common
-Dialogue: 0,1:10:22.18,1:10:25.64,csapp,,0,0,0,, for numbers to get truncated for one reason or another
-Dialogue: 0,1:10:25.68,1:10:29.74,csapp,,0,0,0,,and you can see that you can have a negative number become a positive number
-Dialogue: 0,1:10:30.06,1:10:32.48,csapp,,0,0,0,,you can have a positive number become a negative number 
-Dialogue: 0,1:10:32.48,1:10:34.64,csapp,,0,0,0,,and all kinds of goofy stuff can happen 
-Dialogue: 0,1:10:36.20,1:10:39.32,csapp,,0,0,0,,and we'll see plenty examples of that when we look at arithmetic
-Dialogue: 0,1:10:41.04,1:10:47.94,csapp,,0,0,0,, so that's that is what I want to cover today
-Dialogue: 0,1:10:47.94,1:10:52.26,csapp,,0,0,0,, and we'll cover the other arithmetic operations on Tuesday so
-Dialogue: 0,1:10:52.96,1:10:55.97,csapp,,0,0,0,,so thank you very much
+Dialogue: 0,0:00:00.00,0:00:04.68,English,,0,0,0,,I see a lot of people figure it out to come early so good see you
+Dialogue: 0,0:00:05.38,0:00:08.80,English,,0,0,0,,So as you recall,my name is Randy Bryant
+Dialogue: 0,0:00:08.80,0:00:12.36,English,,0,0,0,,And I'm Co instructor of this course along with Dave Hallaron
+Dialogue: 0,0:00:12.80,0:00:23.44,English,,0,0,0,,And for the next couple lectures the first part of this course really will be talking about a sort of data representations in particular
+Dialogue: 0,0:00:23.68,0:00:28.30,English,,0,0,0,,How numbers are represented in different forms and some of the properties and you saw that
+Dialogue: 0,0:00:29.02,0:00:31.84,English,,0,0,0,,When I talked last week I showed you things like
+Dialogue: 0,0:00:31.84,0:00:36.38,English,,0,0,0,,You can multiply some numbers together that are positive and get negative result
+Dialogue: 0,0:00:36.38,0:00:41.46,English,,0,0,0,,So what we want to understand is what is the bit level representation of numbers
+Dialogue: 0,0:00:41.90,0:00:47.28,English,,0,0,0,,And how does that affect some of the properties you have when you operate them on
+Dialogue: 0,0:00:47.28,0:00:51.12,English,,0,0,0,, and especially looking at the corner cases when things overflow
+Dialogue: 0,0:00:51.50,0:00:54.08,English,,0,0,0,,We sort of don't do what you might expect them to do
+Dialogue: 0,0:00:55.04,0:00:57.44,English,,0,0,0,, So we'll start off with very basic stuff of
+Dialogue: 0,0:00:57.44,0:01:03.84,English,,0,0,0,,How numbers are represented especially integer valued numbers are represented in bits
+Dialogue: 0,0:01:05.82,0:01:09.76,English,,0,0,0,,Um so I think you pretty well figured out in this world
+Dialogue: 0,0:01:09.76,0:01:13.72,English,,0,0,0,, That the whole digital world is sort of based on on binary values
+Dialogue: 0,0:01:14.48,0:01:21.98,English,,0,0,0,,And that wasn't always the case I mean since humans have ten fingers and ten toes
+Dialogue: 0,0:01:22.26,0:01:25.04,English,,0,0,0,,A lot of the world was based on the decimal system 
+Dialogue: 0,0:01:25.52,0:01:33.82,English,,0,0,0,,And it was really only and in fact the first electronic computer the ENIAC built in University of Pennsylvania
+Dialogue: 0,0:01:34.10,0:01:38.28,English,,0,0,0,, basically encoded did all of its arithmetic using base ten
+Dialogue: 0,0:01:38.60,0:01:42.82,English,,0,0,0,,They had ten vacuum tubes per digit they wanted to represent
+Dialogue: 0,0:01:43.36,0:01:47.32,English,,0,0,0,,So they basically turned on or off those tubes to represent
+Dialogue: 0,0:01:47.58,0:01:50.74,English,,0,0,0,,Which of the ten possible digits you could want
+Dialogue: 0,0:01:51.18,0:01:56.26,English,,0,0,0,,And it really didn't come to people until later than that
+Dialogue: 0,0:01:56.52,0:02:01.58,English,,0,0,0,,So that's 1948 that they really should just think about base two for everything
+Dialogue: 0,0:02:04.06,0:02:08.78,English,,0,0,0,,And the reason why bits are great is in the digital world
+Dialogue: 0,0:02:08.96,0:02:14.00,English,,0,0,0,,You can sort of take what otherwise an analog signal and quantify it
+Dialogue: 0,0:02:14.36,0:02:17.56,English,,0,0,0,, And just say I'm going to say that one range of values
+Dialogue: 0,0:02:17.56,0:02:21.18,English,,0,0,0,, Let's say it's a low voltage I'm going to call that a zero
+Dialogue: 0,0:02:21.46,0:02:24.52,English,,0,0,0,,And a high range of values I'm going to call it a one
+Dialogue: 0,0:02:24.98,0:02:31.18,English,,0,0,0,, And if there's noise or imperfections in the circuit or anything going on
+Dialogue: 0,0:02:31.76,0:02:37.78,English,,0,0,0,,As long as that doesn't exceed these bit these thresholds you've set up
+Dialogue: 0,0:02:38.18,0:02:40.38,English,,0,0,0,,Then you'll get a nice clean signal out of it
+Dialogue: 0,0:02:40.38,0:02:45.06,English,,0,0,0,,And that's the main advantage of digital processing over analog processing
+Dialogue: 0,0:02:46.80,0:02:50.10,English,,0,0,0,, And so that's sort of at the core why everything we do
+Dialogue: 0,0:02:50.10,0:02:54.40,English,,0,0,0,, And especially for storing information it turns out it's much easier to store
+Dialogue: 0,0:02:54.66,0:03:00.10,English,,0,0,0,,One bit of information or a digital value than it is to store an analog value
+Dialogue: 0,0:03:02.10,0:03:09.28,English,,0,0,0,,And sorry this kind of slides went a little crazy on animations
+Dialogue: 0,0:03:09.56,0:03:15.42,English,,0,0,0,,So the point is that we represent all the numbers in a computer as sets of bits
+Dialogue: 0,0:03:15.42,0:03:18.24,English,,0,0,0,,And I think you generally understand that fairly well
+Dialogue: 0,0:03:18.68,0:03:23.98,English,,0,0,0,,And so of course the familiar binary representation of integers which we'll go over today
+Dialogue: 0,0:03:24.34,0:03:28.54,English,,0,0,0,, Just uses a bit position for each power of two
+Dialogue: 0,0:03:29.04,0:03:32.87,English,,0,0,0,,We can also represent values that are fractional
+Dialogue: 0,0:03:32.96,0:03:37.64,English,,0,0,0,,And we'll talk about that a week from today when we do floating-point numbers
+Dialogue: 0,0:03:37.98,0:03:41.04,English,,0,0,0,, Where what you do is to the right of the binary point
+Dialogue: 0,0:03:41.18,0:03:46.60,English,,0,0,0,,So this is no longer a decimal point it's a binary point
+Dialogue: 0,0:03:47.20,0:03:52.44,English,,0,0,0,,And so something to the left of that would have a weight one two to the zero
+Dialogue: 0,0:03:53.84,0:03:56.62,English,,0,0,0,,And the next one over would have weight to the one
+Dialogue: 0,0:03:57.04,0:04:03.88,English,,0,0,0,,But what you do is as you go to the right that adds weight 2^-1,2^-2
+Dialogue: 0,0:04:03.88,0:04:10.34,English,,0,0,0,, In other words this is 1,this is 2, this is 1/2 and this is 1/4
+Dialogue: 0,0:04:11.44,0:04:15.70,English,,0,0,0,,So we can represent just like you do the decimal representation of fractions
+Dialogue: 0,0:04:16.06,0:04:18.44,English,,0,0,0,,We can do the binary representation of fractions
+Dialogue: 0,0:04:18.44,0:04:22.22,English,,0,0,0,, And that's the core of floating-point number of representations
+Dialogue: 0,0:04:23.94,0:04:35.06,English,,0,0,0,,And so it gets very annoying if you have say 32 or even 64-bit numbers to be writing the strings of 1 and 0 out
+Dialogue: 0,0:04:35.42,0:04:45.54,English,,0,0,0,,And so what we use,and what's become largely the most common is to group collections of 4bits at a time into
+Dialogue: 0,0:04:45.98,0:04:50.90,English,,0,0,0,,And then represent that in base 16 or what's known as hexadecimal representation
+Dialogue: 0,0:04:51.28,0:04:56.12,English,,0,0,0,, Using the letters A through F as values 10 through 15
+Dialogue: 0,0:04:56.12,0:05:00.78,English,,0,0,0,,And you'll spend a lot of time staring at exa decimal numbers this year
+Dialogue: 0,0:05:01.10,0:05:05.66,English,,0,0,0,,And you'll get pretty good at being able to look at a hex number and just write it out in binary
+Dialogue: 0,0:05:06.20,0:05:09.90,English,,0,0,0,,The way I do it just to tell you is
+Dialogue: 0,0:05:10.48,0:05:22.86,English,,0,0,0,,I mean I've got the values from 0 to 9 wired down pretty well
+Dialogue: 0,0:05:24.10,0:05:28.90,English,,0,0,0,,And then I keep track of a few special cases 1010 is A
+Dialogue: 0,0:05:29.78,0:05:37.94,English,,0,0,0,,1100 is C and 1111 is F
+Dialogue: 0,0:05:39.00,0:05:45.46,English,,0,0,0,, And for B,D and E I kind of interpolate between those
+Dialogue: 0,0:05:45.46,0:05:49.10,English,,0,0,0,,So if you want to develop that skill that's the way you can do it
+Dialogue: 0,0:05:49.10,0:05:54.26,English,,0,0,0,,...an HDMI to what...
+Dialogue: 0,0:05:54.48,0:05:57.24,English,,0,0,0,,No,I don't think there's any connector here you know no
+Dialogue: 0,0:06:03.36,0:06:06.68,English,,0,0,0,, So that's something you're going to end up wanting to be able to do
+Dialogue: 0,0:06:07.92,0:06:11.65,English,,0,0,0,,So in C we don't...
+Dialogue: 0,0:06:12.14,0:06:18.30,English,,0,0,0,,In most declarations you don't actually are told exactly how many bytes
+Dialogue: 0,0:06:18.30,0:06:20.30,English,,0,0,0,,A byte is 8bits
+Dialogue: 0,0:06:20.96,0:06:23.14,English,,0,0,0,,Each data value is represented as
+Dialogue: 0,0:06:23.52,0:06:30.46,English,,0,0,0,,And that's partly C was designed actually back when microprocessors only had 16-bit words
+Dialogue: 0,0:06:30.46,0:06:32.38,English,,0,0,0,, It was actually before microprocessors
+Dialogue: 0,0:06:32.90,0:06:40.20,English,,0,0,0,, So 16-bit words were a fairly standard and over time that's expanded from 16 to 32 to now 64
+Dialogue: 0,0:06:40.70,0:06:44.36,English,,0,0,0,,And so C rather than a sort of an advanced thing
+Dialogue: 0,0:06:44.36,0:06:49.34,English,,0,0,0,,Here is how many bytes every value will have has these slightly ambiguous terms
+Dialogue: 0,0:06:49.84,0:06:53.20,English,,0,0,0,, That vary actually from one machine to the next
+Dialogue: 0,0:06:55.26,0:07:01.00,English,,0,0,0,,And if you're a very careful C programmer you have to anticipate that some
+Dialogue: 0,0:07:01.44,0:07:09.80,English,,0,0,0,,But what won't deal with is x86-64 is the class of machines will be working with exclusively this term
+Dialogue: 0,0:07:10.10,0:07:13.22,English,,0,0,0,,And so you can see that when you declare something to be a care
+Dialogue: 0,0:07:13.80,0:07:17.68,English,,0,0,0,, Sometimes people call it a char that's a 1 byte value 
+Dialogue: 0,0:07:17.88,0:07:20.66,English,,0,0,0,,A short is 16 bits
+Dialogue: 0,0:07:21.58,0:07:29.76,English,,0,0,0,,An int is 32 and if you want to get all 64 bits you have to declare it to be along
+Dialogue: 0,0:07:32.20,0:07:35.88,English,,0,0,0,,And then again there's two different representations of floating-point there's 4 byte
+Dialogue: 0,0:07:35.88,0:07:39.34,English,,0,0,0,, Or 32 bit of floating-point numbers and 64 bit
+Dialogue: 0,0:07:39.84,0:07:47.48,English,,0,0,0,,There's also a slightly obscure holdover from ancient days of floating-point
+Dialogue: 0,0:07:47.48,0:07:54.24,English,,0,0,0,,Where there's a special representation in Intel machines that uses a 10 bit or 80 bit representation
+Dialogue: 0,0:07:54.70,0:08:03.68,English,,0,0,0,, And when you use that on a 64-bit machine they sort of waste an extra 6 bytes out of that
+Dialogue: 0,0:08:03.68,0:08:07.88,English,,0,0,0,,So that everything is aligned in 16 byte increments
+Dialogue: 0,0:08:08.80,0:08:17.86,English,,0,0,0,, The other thing and this is an important feature is any address is find to be the sort of the word size of the machine
+Dialogue: 0,0:08:17.86,0:08:25.98,English,,0,0,0,, When they say it's a 64-bit machine,what they really mean is that the addresses are 64-bit values or 8-byte values
+Dialogue: 0,0:08:26.28,0:08:31.54,English,,0,0,0,,And that's different for example if you use a older machine a 32-bit machine
+Dialogue: 0,0:08:31.56,0:08:34.06,English,,0,0,0,,Those will only be 32-bit addresses
+Dialogue: 0,0:08:37.42,0:08:48.14,English,,0,0,0,,So the basis sent I imagine you've had this at some point of how do we then think about bits is based on boolean algebra
+Dialogue: 0,0:08:48.40,0:08:55.14,English,,0,0,0,, Which is actually comes from the 1890s that a guy named George Boole
+Dialogue: 0,0:08:55.38,0:09:02.44,English,,0,0,0,,Who recognized is sort of relation between what we'd call bits  but they weren't called bits back then
+Dialogue: 0,0:09:02.98,0:09:08.76,English,,0,0,0,,0,1 and logic are basically truth values in logic
+Dialogue: 0,0:09:09.06,0:09:13.26,English,,0,0,0,,I thinking of an algebra sort of a structured set of operations
+Dialogue: 0,0:09:13.26,0:09:19.08,English,,0,0,0,, You could apply that would capture some of the concepts that people assume in logic
+Dialogue: 0,0:09:19.56,0:09:24.14,English,,0,0,0,,So for example if we think of 1 being true and 0 being false
+Dialogue: 0,0:09:24.80,0:09:31.06,English,,0,0,0,,Then the and operation is true if both of the inputs the both of the arguments are true
+Dialogue: 0,0:09:31.48,0:09:33.00,English,,0,0,0,,so we get this chart here
+Dialogue: 0,0:09:33.00,0:09:38.86,English,,0,0,0,,Similarly the or operation is true if either input is true or 1
+Dialogue: 0,0:09:39.30,0:09:43.04,English,,0,0,0,,The NOT is just to flip the bit
+Dialogue: 0,0:09:43.42,0:09:49.36,English,,0,0,0,,And then the exclusive-or is what you get when you say it's one or the other but not both
+Dialogue: 0,0:09:49.70,0:09:52.26,English,,0,0,0,, And so it has this representation
+Dialogue: 0,0:09:52.56,0:09:59.74,English,,0,0,0,, So just as a bit of history it was a master's degree student at MIT named Claude Shannon
+Dialogue: 0,0:10:00.28,0:10:07.02,English,,0,0,0,, Who had taken a course in logic as an undergraduate at University of Michigan
+Dialogue: 0,0:10:07.80,0:10:12.86,English,,0,0,0,,And he was the one who made the connection between thinking about
+Dialogue: 0,0:10:12.86,0:10:20.34,English,,0,0,0,,This this what was at the time very obscure branch of something a rather of logic
+Dialogue: 0,0:10:20.52,0:10:24.30,English,,0,0,0,,And applying it to digital systems back in an era when they actually built
+Dialogue: 0,0:10:24.66,0:10:27.44,English,,0,0,0,, These things out of electromechanical noise
+Dialogue: 0,0:10:28.12,0:10:36.88,English,,0,0,0,, And so his master's thesis is probably the most impactful master's thesis in the history of humankind
+Dialogue: 0,0:10:37.58,0:10:41.96,English,,0,0,0,,And he always wonder well what did they do before that then
+Dialogue: 0,0:10:41.96,0:10:44.18,English,,0,0,0,,You know how do they even think about these things
+Dialogue: 0,0:10:44.72,0:10:49.84,English,,0,0,0,,Anyways the idea of applying this algebra then to bits is not
+Dialogue: 0,0:10:50.40,0:10:54.34,English,,0,0,0,,Something that should have been true since the the world began
+Dialogue: 0,0:10:54.36,0:10:57.20,English,,0,0,0,, Something that's a relatively modern concept
+Dialogue: 0,0:10:57.86,0:11:06.82,English,,0,0,0,,Now what's an important thing that might be less obvious is we can also do these over words 
+Dialogue: 0,0:11:06.82,0:11:13.42,English,,0,0,0,,We can do these boolean operations where we apply them on each successive bit in that word
+Dialogue: 0,0:11:13.70,0:11:18.58,English,,0,0,0,,And these symbols we use the ampersand vertical bar carrot and tilde
+Dialogue: 0,0:11:18.80,0:11:22.54,English,,0,0,0,, are actually the ones that see use is to represent these operations
+Dialogue: 0,0:11:23.16,0:11:28.46,English,,0,0,0,,And so again if we look at here the 1 is only if both of the values 1
+Dialogue: 0,0:11:28.98,0:11:33.38,English,,0,0,0,,And the for the or for the and for the one
+Dialogue: 0,0:11:33.72,0:11:36.02,English,,0,0,0,, 'Or' its if either of them are 1
+Dialogue: 0,0:11:36.58,0:11:40.46,English,,0,0,0,,The exclusive or if 1 is 1 and the other is zero
+Dialogue: 0,0:11:40.58,0:11:43.74,English,,0,0,0,,And tilde is just to invert the bits of it
+Dialogue: 0,0:11:43.74,0:11:49.16,English,,0,0,0,,So again we will spend a lot of time making use of the fact that in C
+Dialogue: 0,0:11:49.16,0:11:51.48,English,,0,0,0,,And this is one of the features to C that people like
+Dialogue: 0,0:11:51.78,0:11:57.16,English,,0,0,0,,is that you can do these sort of very low level of bit manipulations directly in the language
+Dialogue: 0,0:11:58.28,0:11:59.50,English,,0,0,0,,and um
+Dialogue: 0,0:12:00.60,0:12:04.34,English,,0,0,0,,This actually turns out to be useful in practice
+Dialogue: 0,0:12:04.34,0:12:08.66,English,,0,0,0,, And it's sort of implicit of a way of representing sets of values
+Dialogue: 0,0:12:08.76,0:12:13.12,English,,0,0,0,,So this example is a imagine we want to represent sets
+Dialogue: 0,0:12:13.78,0:12:18.40,English,,0,0,0,,Where the elements of the set are numbers ranging between 0 and 7
+Dialogue: 0,0:12:18.92,0:12:23.92,English,,0,0,0,,So 1 byte is enough to capture eight cases
+Dialogue: 0,0:12:24.22,0:12:29.00,English,,0,0,0,,And we'll just if we number the bits and we number them from right to left
+Dialogue: 0,0:12:29.58,0:12:36.96,English,,0,0,0,,So this is bit 0 so that would represent whether or not the value 0 is an element of the set
+Dialogue: 0,0:12:37.58,0:12:41.06,English,,0,0,0,,And similarly here you'll see 0,1,2,3
+Dialogue: 0,0:12:41.06,0:12:47.84,English,,0,0,0,,So we're saying that bit 3 being one here means 3 is an element of the set and so forth
+Dialogue: 0,0:12:48.40,0:12:52.30,English,,0,0,0,,and the
+Dialogue: 0,0:12:54.74,0:12:59.32,English,,0,0,0,,So the idea is then the AND operation becomes like set intersection
+Dialogue: 0,0:12:59.66,0:13:02.30,English,,0,0,0,, The OR operation becomes like set Union
+Dialogue: 0,0:13:02.66,0:13:08.70,English,,0,0,0,,And the X-OR operation is what's called symmetric difference
+Dialogue: 0,0:13:11.40,0:13:14.84,English,,0,0,0,,And so these are actually and ~ is like set complement
+Dialogue: 0,0:13:14.86,0:13:18.28,English,,0,0,0,,So these are actually very common for example
+Dialogue: 0,0:13:18.54,0:13:27.80,English,,0,0,0,,There are operations you'll learn later when we look at a file i/o 
+Dialogue: 0,0:13:27.98,0:13:35.36,English,,0,0,0,,About i/o that you can track I want to know which set of possible inputs to the system
+Dialogue: 0,0:13:35.36,0:13:40.04,English,,0,0,0,,think of different network connections have an input ready for me to read
+Dialogue: 0,0:13:40.80,0:13:44.04,English,,0,0,0,,And there is a data structure that
+Dialogue: 0,0:13:44.78,0:13:47.60,English,,0,0,0,,It's sort of hidden away among some seeing library calls
+Dialogue: 0,0:13:47.60,0:13:52.20,English,,0,0,0,, But it basically is using exactly this representation about a thousand
+Dialogue: 0,0:13:52.50,0:13:55.90,English,,0,0,0,,A bits worth of information to represent these sets
+Dialogue: 0,0:13:56.54,0:14:00.18,English,,0,0,0,,And do manipulation on those sets so this is a very common
+Dialogue: 0,0:14:00.48,0:14:05.48,English,,0,0,0,,And why do we use representation of sets in computer science
+Dialogue: 0,0:14:07.98,0:14:15.68,English,,0,0,0,,so as I mentioned those are available directly and  C the &,||, ~ and ^
+Dialogue: 0,0:14:16.46,0:14:21.82,English,,0,0,0,,One thing that's really really important and that programmers screw it up all the time
+Dialogue: 0,0:14:21.82,0:14:31.12,English,,0,0,0,,Beginning programmers a lot and even experienced programmers from time to time is to mix up the & in the &&
+Dialogue: 0,0:14:31.12,0:14:34.14,English,,0,0,0,,or the | in the ||
+Dialogue: 0,0:14:34.88,0:14:39.70,English,,0,0,0,,and the ~ versus the exclamation mark which is often pronounced bang
+Dialogue: 0,0:14:40.66,0:14:44.68,English,,0,0,0,,so and the reason
+Dialogue: 0,0:14:45.58,0:14:49.00,English,,0,0,0,, So obviously there's sort of a syntactic similarity
+Dialogue: 0,0:14:49.00,0:14:51.60,English,,0,0,0,,And there's actually a somewhat of a semantic relation to that
+Dialogue: 0,0:14:52.10,0:14:56.74,English,,0,0,0,, This is another kind of AND another kind of OR and another kind of NOT
+Dialogue: 0,0:14:57.90,0:15:02.06,English,,0,0,0,,But if you mix and match these you're certainly going to have problems
+Dialogue: 0,0:15:02.66,0:15:07.42,English,,0,0,0,,So the || ones aren't thinking about bitwise operations
+Dialogue: 0,0:15:07.42,0:15:11.10,English,,0,0,0,,through thinking about something that's either true or false period
+Dialogue: 0,0:15:12.18,0:15:17.48,English,,0,0,0,,And in that representation the number 0 is the thing that's false
+Dialogue: 0,0:15:17.48,0:15:21.70,English,,0,0,0,,And anything else any other bit pattern is considered to be true
+Dialogue: 0,0:15:23.60,0:15:31.72,English,,0,0,0,,The other feature that the || give you is what's called early termination
+Dialogue: 0,0:15:32.86,0:15:37.56,English,,0,0,0,,So in particular if we do some examples
+Dialogue: 0,0:15:37.78,0:15:48.92,English,,0,0,0,,On the some hex pattern for 1, so this is a not a 0  and so that's considered true
+Dialogue: 0,0:15:48.92,0:15:54.02,English,,0,0,0,,In this interpretation and so the the bang of that the not of that is 0
+Dialogue: 0,0:15:54.04,0:15:57.36,English,,0,0,0,,The same way if you have 0 the not event is 1
+Dialogue: 0,0:15:57.66,0:16:04.18,English,,0,0,0,,And if you apply bang to a number twice you'll get back a 1 unless it was 0
+Dialogue: 0,0:16:08.84,0:16:13.04,English,,0,0,0,,And then a simile these patterns here
+Dialogue: 0,0:16:13.44,0:16:18.30,English,,0,0,0,,The reason why this returns 1 is because it's considered two cases that are true
+Dialogue: 0,0:16:19.88,0:16:24.50,English,,0,0,0,,So it's not doing bitwise operations it's just trying to create true and fault
+Dialogue: 0,0:16:24.50,0:16:29.28,English,,0,0,0,,It's interpreting arguments be there true or false and returning either true or false
+Dialogue: 0,0:16:29.78,0:16:34.92,English,,0,0,0,,But when it returns true it returns one and not whatever number you happen to give
+Dialogue: 0,0:16:35.82,0:16:39.12,English,,0,0,0,,So obviously this is a very different operations
+Dialogue: 0,0:16:39.12,0:16:43.72,English,,0,0,0,,Than you have with the single versions of those and
+Dialogue: 0,0:16:44.74,0:16:51.66,English,,0,0,0,,But it's easy just because you mentally slip or because you type something wrong to do the wrong thing
+Dialogue: 0,0:16:52.18,0:16:56.22,English,,0,0,0,,But in particularly this early termination is something that of course people use a lot
+Dialogue: 0,0:16:56.74,0:17:01.04,English,,0,0,0,,If you want to make sure that you're not accessing a null pointer
+Dialogue: 0,0:17:01.04,0:17:05.68,English,,0,0,0,, You can test whether that's a null pointer first before accessing it
+Dialogue: 0,0:17:05.68,0:17:11.18,English,,0,0,0,,And this if this is 0 or then it will do the the dereferencing of null
+Dialogue: 0,0:17:12.12,0:17:15.44,English,,0,0,0,,So it's a fairly useful feature as well
+Dialogue: 0,0:17:15.66,0:17:21.38,English,,0,0,0,,So anyways just that's an aside at this level we're mostly looking at bits
+Dialogue: 0,0:17:21.38,0:17:24.62,English,,0,0,0,,But just as a programming no don't mix these up
+Dialogue: 0,0:17:32.62,0:17:36.68,English,,0,0,0,,The other class of operations will make use of a lot our shifting
+Dialogue: 0,0:17:37.08,0:17:42.24,English,,0,0,0,, Which again is not something that you normally sort of as beginning programmers think about too much
+Dialogue: 0,0:17:42.92,0:17:47.10,English,,0,0,0,,And if there's a curious feature that a left shifts are always the same
+Dialogue: 0,0:17:47.10,0:17:49.20,English,,0,0,0,,But there's two different flavors of right shift
+Dialogue: 0,0:17:49.62,0:17:53.72,English,,0,0,0,, And we'll see in a little bit later why there's two different flavors of right shift
+Dialogue: 0,0:17:54.90,0:17:58.61,English,,0,0,0,,But um
+Dialogue: 0,0:17:59.00,0:18:03.22,English,,0,0,0,,The idea that of shifting is that you have some argument x
+Dialogue: 0,0:18:03.22,0:18:08.52,English,,0,0,0,,And you want to shift it some number of positions either to the left or to the right given by y
+Dialogue: 0,0:18:09.50,0:18:15.02,English,,0,0,0,,And so when you shift left you just fill in whatever value there was so you pick up the
+Dialogue: 0,0:18:15.62,0:18:21.34,English,,0,0,0,,I'm shifting by three,so I'll take the low order five bits move them over three positions
+Dialogue: 0,0:18:21.68,0:18:23.30,English,,0,0,0,,Then fill in with a zero
+Dialogue: 0,0:18:23.64,0:18:31.55,English,,0,0,0,,And whatever was in the upper positions of that original words they just sort of disappear into nowhere
+Dialogue: 0,0:18:32.10,0:18:39.56,English,,0,0,0,,Similarly if I do a right shift I take the upper six bits I move them over to positions and I fill in with zeros
+Dialogue: 0,0:18:40.32,0:18:44.96,English,,0,0,0,,So that's a logical shift and that's well it's logic
+Dialogue: 0,0:18:45.44,0:18:48.00,English,,0,0,0,,There's another flavor called the arithmetic shift
+Dialogue: 0,0:18:48.00,0:18:54.38,English,,0,0,0,,Which it differs in that the rule for what bits you fill in with are not based on the are
+Dialogue: 0,0:18:55.70,0:19:01.56,English,,0,0,0,,not zeros necessarily but it's whatever the most significant bit was in the original value
+Dialogue: 0,0:19:02.00,0:19:04.90,English,,0,0,0,,So it doesn't matter here because the most significant bit was zero
+Dialogue: 0,0:19:04.90,0:19:11.74,English,,0,0,0,, But you'll see in the case here of where the leading bit was a 1
+Dialogue: 0,0:19:12.80,0:19:18.68,English,,0,0,0,, That when I shift it to the right arithmetic we I'll fill it in with 1
+Dialogue: 0,0:19:19.40,0:19:25.38,English,,0,0,0,,And that'll make sense more when we understand how negative numbers get represented in a machine
+Dialogue: 0,0:19:25.98,0:19:28.82,English,,0,0,0,,And that's the purpose of it and why it's called arithmetic
+Dialogue: 0,0:19:31.60,0:19:37.54,English,,0,0,0,,Um the other thing is confusing to people is
+Dialogue: 0,0:19:37.80,0:19:44.80,English,,0,0,0,,What should happen if you say I want to shift an 8-bit number 8 positions to the left
+Dialogue: 0,0:19:54.60,0:19:58.92,English,,0,0,0,,And X is a single byte what do you think you should get
+Dialogue: 0,0:20:02.84,0:20:07.86,English,,0,0,0,, Zero that would be a pretty logical thing you kind of shift all those bits out you fill them with zeros
+Dialogue: 0,0:20:08.40,0:20:13.12,English,,0,0,0,,On most machines you'll get whatever x was
+Dialogue: 0,0:20:17.38,0:20:21.88,English,,0,0,0,,Because what will do is it will compute this number mod 8
+Dialogue: 0,0:20:25.90,0:20:28.64,English,,0,0,0,,And the reason that happens is if you think about it
+Dialogue: 0,0:20:28.64,0:20:34.02,English,,0,0,0,,It's looking at just the lower two three bits of the shift amount and ignoring all the rest
+Dialogue: 0,0:20:34.26,0:20:36.90,English,,0,0,0,, So that's effectively like module 8
+Dialogue: 0,0:20:37.76,0:20:41.38,English,,0,0,0,,So that's just a warning I and some machines it does
+Dialogue: 0,0:20:41.38,0:20:44.44,English,,0,0,0,,What you just thought it should and other machines it does this
+Dialogue: 0,0:20:44.88,0:20:50.12,English,,0,0,0,,And so there's no no guarantee and see that it will be one way or the other
+Dialogue: 0,0:20:52.80,0:20:58.70,English,,0,0,0,,Same with if you try to shift left by a negative number that might be logically
+Dialogue: 0,0:20:58.70,0:21:02.88,English,,0,0,0,,Well I guess you really want to shift right then but that usually doesn't work either
+Dialogue: 0,0:21:05.40,0:21:09.06,English,,0,0,0,,So now let's talk about number representations
+Dialogue: 0,0:21:09.68,0:21:10.32,English,,0,0,0,,And
+Dialogue: 0,0:21:12.10,0:21:18.24,English,,0,0,0,,This is sort of a very core its idea that you have to really have wired in you
+Dialogue: 0,0:21:18.56,0:21:22.20,English,,0,0,0,,And I'm going to illustrate it with some examples
+Dialogue: 0,0:21:27.74,0:21:35.30,English,,0,0,0,,So the these two equations that are everything that we'll talk about sort of stems from them
+Dialogue: 0,0:21:35.98,0:21:38.64,English,,0,0,0,,So one is if you have an unsigned number
+Dialogue: 0,0:21:39.22,0:21:45.18,English,,0,0,0,,Then basically...it keeps jumping on me
+Dialogue: 0,0:21:46.78,0:21:52.42,English,,0,0,0,,If you have an unsigned number then this is just the conversion
+Dialogue: 0,0:21:52.42,0:22:00.56,English,,0,0,0,,B2U means from a bit level representation to an unsigned number of some bit pattern
+Dialogue: 0,0:22:00.56,0:22:04.68,English,,0,0,0,,It just says we'll just add up the sum of the weighted bits
+Dialogue: 0,0:22:04.94,0:22:07.86,English,,0,0,0,,Where each bit is weighted by a power of two
+Dialogue: 0,0:22:08.48,0:22:10.88,English,,0,0,0,, And the only difference when we look at two's complement
+Dialogue: 0,0:22:10.88,0:22:14.74,English,,0,0,0,,Which is a way to represent both negative and positive numbers
+Dialogue: 0,0:22:15.00,0:22:18.86,English,,0,0,0,,It's we'll consider the most significant bit to be what's called the sign bit
+Dialogue: 0,0:22:19.60,0:22:21.66,English,,0,0,0,,So it will have a negative value
+Dialogue: 0,0:22:22.10,0:22:26.68,English,,0,0,0,,So let me just illustrate this with I'll use some running examples
+Dialogue: 0,0:22:26.68,0:22:34.90,English,,0,0,0,,We'll just use five bit numbers just as a way it really helps often if you're trying to understand  this stuff to do it for some smaller cases
+Dialogue: 0,0:22:36.10,0:22:39.38,English,,0,0,0,,So if we think about bit positions
+Dialogue: 0,0:22:49.38,0:22:51.28,English,,0,0,0,,zero through four
+Dialogue: 0,0:22:59.18,0:23:04.70,English,,0,0,0,,Then those represent of different powers of two weights of as I've shown
+Dialogue: 0,0:23:05.40,0:23:08.04,English,,0,0,0,,And so now if we take some bit a pattern
+Dialogue: 0,0:23:18.92,0:23:19.96,English,,0,0,0,,Like so
+Dialogue: 0,0:23:20.34,0:23:26.32,English,,0,0,0,,So that's what I'll call X and I want to convert that to an unsigned number
+Dialogue: 0,0:23:26.98,0:23:37.32,English,,0,0,0,,I will just combine 8 + 4 + 1 and I'll get 13
+Dialogue: 0,0:23:38.18,0:23:38.76,English,,0,0,0,,all right
+Dialogue: 0,0:23:39.20,0:23:46.36,English,,0,0,0,,So that's all that equation says the left hand equations just take the the bit positions that are ones
+Dialogue: 0,0:23:46.86,0:23:48.97,English,,0,0,0,,Use the corresponding power of 2 and you're done
+Dialogue: 0,0:23:50.18,0:23:53.56,English,,0,0,0,,And similarly if I have a number where there's a leading bit
+Dialogue: 0,0:24:01.48,0:24:09.06,English,,0,0,0,,It will be 16 + 4 + 2  so that will be 22
+Dialogue: 0,0:24:11.20,0:24:13.26,English,,0,0,0,,And so that's the unsigned case
+Dialogue: 0,0:24:15.24,0:24:18.32,English,,0,0,0,,And the sign case is the same idea
+Dialogue: 0,0:24:18.86,0:24:26.02,English,,0,0,0,,Except that most significant debt has a negative value
+Dialogue: 0,0:24:27.08,0:24:29.42,English,,0,0,0,,So it will still this is i
+Dialogue: 0,0:24:32.70,0:24:36.50,English,,0,0,0,,And our weights will be 1,2,4,8
+Dialogue: 0,0:24:36.54,0:24:38.40,English,,0,0,0,,But this will be -16
+Dialogue: 0,0:24:39.54,0:24:43.76,English,,0,0,0,,So that's what the equation on the right is saying this fit
+Dialogue: 0,0:24:44.80,0:24:47.68,English,,0,0,0,,Now we're going to change it from being a negative number to a positive
+Dialogue: 0,0:24:48.42,0:24:52.32,English,,0,0,0,,So obviously if I have this is my bit pattern it's going to be the same because
+Dialogue: 0,0:24:52.78,0:25:01.16,English,,0,0,0,,The other bits stayed at the same so let's do it for this case of 10110
+Dialogue: 0,0:25:03.12,0:25:10.04,English,,0,0,0,,So that will be -16 + 4 + 2 = -10
+Dialogue: 0,0:25:13.92,0:25:17.78,English,,0,0,0,,So you see in this case we have the same bit pattern
+Dialogue: 0,0:25:18.86,0:25:24.32,English,,0,0,0,, It's just if we interpret it you know how we think about what number this represents
+Dialogue: 0,0:25:24.64,0:25:30.92,English,,0,0,0,,Then in one case it's a positive number 22 in another case it's a negative number -10
+Dialogue: 0,0:25:32.50,0:25:34.80,English,,0,0,0,, And that's what these equations you see
+Dialogue: 0,0:25:40.16,0:25:45.04,English,,0,0,0,,And so the most significant bit is sometimes called the sign bit because
+Dialogue: 0,0:25:45.04,0:25:47.46,English,,0,0,0,,If it's a 1 the number is going to be negative
+Dialogue: 0,0:25:51.22,0:25:55.72,English,,0,0,0,, So let's sort of think about
+Dialogue: 0,0:25:57.94,0:26:01.40,English,,0,0,0,,What extreme,what are the sort of extreme ranges of numbers
+Dialogue: 0,0:26:01.40,0:26:03.62,English,,0,0,0,,We can get with these two different representations
+Dialogue: 0,0:26:12.48,0:26:16.24,English,,0,0,0,, So obviously if these are all zeros my number is going to equal zero
+Dialogue: 0,0:26:20.00,0:26:34.42,English,,0,0,0,,And if it's all 1 it will be 16 + 8 + 4 + 2 + 1 will be 31
+Dialogue: 0,0:26:35.86,0:26:39.62,English,,0,0,0,,And over here for the two's complement 
+Dialogue: 0,0:26:41.68,0:26:51.82,English,,0,0,0,,The smallest number,well the largest number will actually be let me do it this way
+Dialogue: 0,0:26:52.02,0:26:56.74,English,,0,0,0,,Actually the most negative number so the smallest number and the strictest sense of the word is
+Dialogue: 0,0:26:57.56,0:27:03.20,English,,0,0,0,, is this it's -16. you can argue this by the way
+Dialogue: 0,0:27:03.48,0:27:08.54,English,,0,0,0,,This is the only bit that has a negative weight all the other ones have positive ones
+Dialogue: 0,0:27:08.54,0:27:13.16,English,,0,0,0,,So certainly one and all the rest being zeros is going to be the smallest number
+Dialogue: 0,0:27:13.60,0:27:16.26,English,,0,0,0,,And similarly the largest number you can represent
+Dialogue: 0,0:27:20.44,0:27:27.32,English,,0,0,0,,We'll be 8 + 4 + 2 + 1 which is 15
+Dialogue: 0,0:27:31.42,0:27:33.80,English,,0,0,0,, And so we call this number UMax
+Dialogue: 0,0:27:38.52,0:27:41.06,English,,0,0,0,,And we call this number TMax
+Dialogue: 0,0:27:43.72,0:27:45.54,English,,0,0,0,,And we call this number TMin
+Dialogue: 0,0:27:48.58,0:27:51.36,English,,0,0,0,,So there's a few things to observe about these numbers
+Dialogue: 0,0:27:55.04,0:27:58.42,English,,0,0,0,,That remember this is a 5-bit word size right so
+Dialogue: 0,0:28:00.62,0:28:06.23,English,,0,0,0,,You'll see that 31 is pretty close to 32 right
+Dialogue: 0,0:28:06.23,0:28:10.82,English,,0,0,0,,In fact it's 2^5-1
+Dialogue: 0,0:28:12.56,0:28:17.04,English,,0,0,0,,And in general if it's a five and that's for a 5-bit word size
+Dialogue: 0,0:28:17.04,0:28:27.14,English,,0,0,0,,So you would say in general it will have value 2^w if I have a W bit number minus 1 and that's what this shows
+Dialogue: 0,0:28:31.04,0:28:36.96,English,,0,0,0,,And similarly over here this is -2^4
+Dialogue: 0,0:28:40.38,0:28:46.74,English,,0,0,0,,And so we'd say in general that will be -2^w if it's a W bit number minus 1
+Dialogue: 0,0:28:49.22,0:28:54.18,English,,0,0,0,,Right all these make sense by the way you'll notice one other feature is
+Dialogue: 0,0:28:58.60,0:29:06.74,English,,0,0,0,, A whole string of ones like this if you sum up those digits 8 + 4 + 2 + 1
+Dialogue: 0,0:29:07.12,0:29:11.84,English,,0,0,0,, Will be 1 less than the next bit position up
+Dialogue: 0,0:29:13.22,0:29:18.64,English,,0,0,0,,And you can think about that if you were to count this number
+Dialogue: 0,0:29:18.94,0:29:25.16,English,,0,0,0,,If you were to increment this number by 1 you'd get 1 1 is 0 carry 1 and so forth 
+Dialogue: 0,0:29:25.22,0:29:29.42,English,,0,0,0,,And you'd carry that value up to this position so these various ways you can think about that
+Dialogue: 0,0:29:31.52,0:29:37.38,English,,0,0,0,,And then similarly this number is 2^4-1
+Dialogue: 0,0:29:38.52,0:29:42.98,English,,0,0,0,,And so that's equal to 2^(w-1) - 1
+Dialogue: 0,0:29:47.76,0:29:49.40,English,,0,0,0,,As is shown here
+Dialogue: 0,0:29:51.98,0:29:59.02,English,,0,0,0,, So there's a lot of the book goes through formulas and does derivation
+Dialogue: 0,0:29:59.60,0:30:03.68,English,,0,0,0,, But if you just think about it in these smaller scale ways
+Dialogue: 0,0:30:04.10,0:30:10.10,English,,0,0,0,, The intuition is pretty easy to get and don't get lost in in formulas when
+Dialogue: 0,0:30:10.26,0:30:13.92,English,,0,0,0,,Really at the gut level it's a fairly straightforward sort of ideas
+Dialogue: 0,0:30:15.00,0:30:18.52,English,,0,0,0,, Or if you ever see some confusions and you're confused
+Dialogue: 0,0:30:19.12,0:30:22.25,English,,0,0,0,, Try out some small examples and see what they're saying
+Dialogue: 0,0:30:22.90,0:30:31.60,English,,0,0,0,,Another interesting number in the world of two's complement  is what happens when you have all ones in your bit patterns
+Dialogue: 0,0:30:35.80,0:30:45.66,English,,0,0,0,,And that will have mate -16 + 8 + 4 + 2 + 1 and that will equal -1
+Dialogue: 0,0:30:47.80,0:30:53.85,English,,0,0,0,,So the bit pattern all ones is always a -1 in this representation
+Dialogue: 0,0:30:54.04,0:30:59.74,English,,0,0,0,,I should mention two's complement is not the only way to represent a positive and negative numbers
+Dialogue: 0,0:30:59.74,0:31:01.48,English,,0,0,0,,what's sometimes called signed numbers
+Dialogue: 0,0:31:01.78,0:31:06.62,English,,0,0,0,,But it's so universal that you'll hardly ever encounter another case
+Dialogue: 0,0:31:07.12,0:31:14.62,English,,0,0,0,, So if you understand two's complement you have a pretty good understanding of  what really is going on
+Dialogue: 0,0:31:22.06,0:31:26.90,English,,0,0,0,,So these numbers I call UMax the biggest unsigned number
+Dialogue: 0,0:31:27.38,0:31:32.60,English,,0,0,0,,TMin the smallest most negative two's complement monitor and
+Dialogue: 0,0:31:32.60,0:31:36.42,English,,0,0,0,,TMax the largest most positive two's complement
+Dialogue: 0,0:31:36.76,0:31:42.46,English,,0,0,0,,This chart shows the range of values for different word sizes different numbers of bytes
+Dialogue: 0,0:31:43.02,0:31:51.16,English,,0,0,0,,And so you'll see that with an 8 bit number you only have 256 possibilities right
+Dialogue: 0,0:31:54.66,0:32:01.68,English,,0,0,0,, And so we can either choose to rate think of those as representing the range from 0 to 255
+Dialogue: 0,0:32:01.86,0:32:07.52,English,,0,0,0,, Or basically with two's complement numbers we're just doing a sort of a wraparound we're saying 
+Dialogue: 0,0:32:07.52,0:32:13.24,English,,0,0,0,,Well we're going to have half of them be negative and the other half will be either 0 or positive
+Dialogue: 0,0:32:16.62,0:32:19.34,English,,0,0,0,,And so it's a pretty limited range of values of course
+Dialogue: 0,0:32:19.34,0:32:25.74,English,,0,0,0,,Then 16 and believe me back when computers had 16-bit word sizes
+Dialogue: 0,0:32:25.74,0:32:29.48,English,,0,0,0,, It was a nuisance to keep your numbers within that range
+Dialogue: 0,0:32:29.94,0:32:33.61,English,,0,0,0,, And 32 gives you a pretty decent range it used to be said
+Dialogue: 0,0:32:33.98,0:32:41.00,English,,0,0,0,,Microsoft had to go to 64-bit word size to represent Bill Gates's net worth but
+Dialogue: 0,0:32:43.90,0:32:49.66,English,,0,0,0,,For me at least this would easily handle my range of normal day-to-day transactions so
+Dialogue: 0,0:32:51.74,0:33:00.16,English,,0,0,0,, But now with 64 bits at least to us nowadays those seem like really big numbers and  hard to imagine exceeding the bounds of those
+Dialogue: 0,0:33:04.88,0:33:11.68,English,,0,0,0,, So one interesting feature that you noticed here was I was um
+Dialogue: 0,0:33:15.82,0:33:17.96,English,,0,0,0,,like this case here
+Dialogue: 0,0:33:24.88,0:33:27.02,English,,0,0,0,,In this case here...
+Dialogue: 0,0:33:36.16,0:33:39.88,English,,0,0,0,,And then this case here  of all ones 
+Dialogue: 0,0:33:43.28,0:33:47.98,English,,0,0,0,,I was comparing it to this case here of all ones
+Dialogue: 0,0:33:49.40,0:33:54.24,English,,0,0,0,,So in other words in both these cases and it's a little hard to jump boards here
+Dialogue: 0,0:33:56.64,0:34:00.04,English,,0,0,0,,You're seeing that you have the same bit pattern in either case
+Dialogue: 0,0:34:01.12,0:34:06.56,English,,0,0,0,,But they the numeric they represent different numeric values because one is a two's complement case
+Dialogue: 0,0:34:07.80,0:34:10.06,English,,0,0,0,,And the other is an unsigned right
+Dialogue: 0,0:34:10.12,0:34:14.38,English,,0,0,0,,And you can actually see the relation between them is pretty simple
+Dialogue: 0,0:34:14.76,0:34:24.08,English,,0,0,0,, Because basically what we're doing is we're jumping between +16 and -16 between those 
+Dialogue: 0,0:34:24.44,0:34:27.84,English,,0,0,0,,And so you'd expect it to change by 32 right
+Dialogue: 0,0:34:28.54,0:34:32.16,English,,0,0,0,,And you see that here that this is 31 here and -1
+Dialogue: 0,0:34:32.68,0:34:43.14,English,,0,0,0,,This is 22 and -10 so they're differ from each other by plus  -32 ,2^4,two to the word size
+Dialogue: 0,0:34:43.60,0:34:48.80,English,,0,0,0,,and so we there's sort of a long derivation in the book and things here
+Dialogue: 0,0:34:48.80,0:34:53.60,English,,0,0,0,,But that connection is actually fairly important
+Dialogue: 0,0:34:54.06,0:34:56.90,English,,0,0,0,,Because when you jump back and forth
+Dialogue: 0,0:34:57.70,0:35:01.82,English,,0,0,0,, Between unsigned numbers and two's complement numbers in C
+Dialogue: 0,0:35:03.08,0:35:07.44,English,,0,0,0,,That's the jump that you get in other words
+Dialogue: 0,0:35:07.64,0:35:10.48,English,,0,0,0,,when of and so
+Dialogue: 0,0:35:12.50,0:35:18.12,English,,0,0,0,,You'll often find cases where what used to be a very large number
+Dialogue: 0,0:35:18.12,0:35:20.80,English,,0,0,0,,Because it was unsigned all of a sudden becomes a negative number
+Dialogue: 0,0:35:20.80,0:35:22.72,English,,0,0,0,,Because it's considered two's complement
+Dialogue: 0,0:35:24.00,0:35:26.96,English,,0,0,0,,So that's what this next part covers will say that
+Dialogue: 0,0:35:32.24,0:35:35.91,English,,0,0,0,,If we take a cart of 4 bit numbers and
+Dialogue: 0,0:35:36.14,0:35:43.36,English,,0,0,0,,We write out all the possible values is unsigned or as  two's complement numbers
+Dialogue: 0,0:35:43.64,0:35:48.83,English,,0,0,0,,Then the ones where the low the higher bid is 0 will be the same in both cases
+Dialogue: 0,0:35:49.38,0:35:54.80,English,,0,0,0,,The ones where the higher order bit is a 1 in this case will differ by 16 2^4
+Dialogue: 0,0:35:56.70,0:36:02.88,English,,0,0,0,,And similarly you'll notice that these numbers there's a unique
+Dialogue: 0,0:36:03.16,0:36:07.56,English,,0,0,0,,It goes unique in both directions there's a for any given bit pattern
+Dialogue: 0,0:36:07.78,0:36:10.95,English,,0,0,0,,There's a unique number it represents and
+Dialogue: 0,0:36:11.32,0:36:16.36,English,,0,0,0,,And similarly for any number within the given range there's a unique bit pattern
+Dialogue: 0,0:36:17.02,0:36:22.68,English,,0,0,0,,So we can sort of jump between those two and say
+Dialogue: 0,0:36:23.88,0:36:29.84,English,,0,0,0,, I can make up a rule for converting between a two's complement number X
+Dialogue: 0,0:36:29.84,0:36:32.18,English,,0,0,0,, and an unsigned number UX
+Dialogue: 0,0:36:32.36,0:36:37.50,English,,0,0,0,,That basically says I'll use the same bits I'll just think of them as being different numbers
+Dialogue: 0,0:36:38.10,0:36:42.12,English,,0,0,0,, And so and you can go either way
+Dialogue: 0,0:36:42.42,0:36:53.10,English,,0,0,0,, So for example if we thought of this is a a two's complement representative representation
+Dialogue: 0,0:36:53.86,0:37:04.48,English,,0,0,0,, It's -1 this function I'm calling T2U goes from that number -1 to this number 31
+Dialogue: 0,0:37:06.12,0:37:11.90,English,,0,0,0,,Where in between the two I'm saying they both have the same bit pattern
+Dialogue: 0,0:37:16.88,0:37:23.42,English,,0,0,0,,And the reason why this rather function that would otherwise seem to have no particular use is important
+Dialogue: 0,0:37:23.50,0:37:30.66,English,,0,0,0,,Because that's basically what happens in C or actually in the program
+Dialogue: 0,0:37:30.94,0:37:35.52,English,,0,0,0,,On the computer itself has no clue whether a given bit pattern if it's something
+Dialogue: 0,0:37:35.52,0:37:41.80,English,,0,0,0,, You're thinking of as being a negative number or two's complement number it's just a bunch of bits to it
+Dialogue: 0,0:37:43.60,0:37:51.22,English,,0,0,0,,And similarly so we can go back and forth between a two's complement and unsigned  keeping the bit patterns the same
+Dialogue: 0,0:37:54.72,0:38:01.32,English,,0,0,0,,And so I'll call that T2U when I go from signed to unsigned two's complement unsigned
+Dialogue: 0,0:38:01.60,0:38:04.94,English,,0,0,0,, And say well I'll call U2T if I go from unsigned to signed
+Dialogue: 0,0:38:07.36,0:38:13.44,English,,0,0,0,,And as I mentioned the difference for the the numbers where the high-order bit is a 1
+Dialogue: 0,0:38:13.68,0:38:18.28,English,,0,0,0,,will be by a factor 2^w where w is the word size of the word
+Dialogue: 0,0:38:22.16,0:38:24.66,English,,0,0,0,, And so this can be thought of as a function
+Dialogue: 0,0:38:27.28,0:38:28.48,English,,0,0,0,, Where
+Dialogue: 0,0:38:34.84,0:38:36.18,English,,0,0,0,,Let me just draw it up
+Dialogue: 0,0:38:47.48,0:38:51.98,English,,0,0,0,,Over here with my five of bit numbers
+Dialogue: 0,0:38:55.30,0:39:01.50,English,,0,0,0,,That is the number this is two's complement again so that was the number -16
+Dialogue: 0,0:39:02.72,0:39:06.18,English,,0,0,0,,And then there'll be some other negative numbers up to all ones
+Dialogue: 0,0:39:09.48,0:39:11.00,English,,0,0,0,,This is number negative one
+Dialogue: 0,0:39:11.60,0:39:18.78,English,,0,0,0,,Then I'll have zero and so forth and then all up to
+Dialogue: 0,0:39:23.26,0:39:29.06,English,,0,0,0,,Plus 15
+Dialogue: 0,0:39:30.82,0:39:32.96,English,,0,0,0,,Destroys,I got myself in trouble
+Dialogue: 0,0:39:37.00,0:39:41.34,English,,0,0,0,,Blackboard management is they didn't teach me this in school
+Dialogue: 0,0:39:44.42,0:39:50.18,English,,0,0,0,, So I'm gonna use two boards and ones here
+Dialogue: 0,0:40:02.29,0:40:15.58,English,,0,0,0,,Okay let me send this out,okay we'll make it work
+Dialogue: 0,0:40:16.52,0:40:21.84,English,,0,0,0,,So now when we go from the T2U function then
+Dialogue: 0,0:40:22.64,0:40:25.10,English,,0,0,0,,These numbers are going to just carry over
+Dialogue: 0,0:40:25.50,0:40:30.18,English,,0,0,0,, We'll get 0 up through 15
+Dialogue: 0,0:40:32.46,0:40:36.84,English,,0,0,0,, But now this number here will become positive 16
+Dialogue: 0,0:40:41.70,0:40:51.02,English,,0,0,0,,And all ones will become positive 31 right
+Dialogue: 0,0:40:51.34,0:40:56.46,English,,0,0,0,,And so that's what this picture is showing is it for the pink numbers
+Dialogue: 0,0:40:57.50,0:41:03.25,English,,0,0,0,,are the ones that flip between negative and actually the largest of the positive numbers
+Dialogue: 0,0:41:03.92,0:41:08.68,English,,0,0,0,,And then the green numbers are the ones that stay the same because they're leading bits or zeros
+Dialogue: 0,0:41:14.82,0:41:16.26,English,,0,0,0,, So why does this matter bits or zeros
+Dialogue: 0,0:41:16.56,0:41:23.04,English,,0,0,0,,You never thought if you programmed in Python  or even Java
+Dialogue: 0,0:41:23.30,0:41:33.32,English,,0,0,0,, You don't see that and the reason is because C is one of the few languages where unsigned is actually an explicit datatype
+Dialogue: 0,0:41:34.32,0:41:37.94,English,,0,0,0,,So you can declare a value being unsigned
+Dialogue: 0,0:41:38.34,0:41:42.52,English,,0,0,0,,And it's you can if you just say unsigned what you're really saying is unsigned int
+Dialogue: 0,0:41:43.32,0:41:48.46,English,,0,0,0,,Or you can call something an unsigned care and unsigned short or an unsigned long
+Dialogue: 0,0:41:49.78,0:41:56.68,English,,0,0,0,,So and you're declaring and see that it should think about using this representation we show on the right
+Dialogue: 0,0:41:56.98,0:41:59.72,English,,0,0,0,,When it's working on those numbers
+Dialogue: 0,0:42:01.82,0:42:08.28,English,,0,0,0,,So that's sort of one thing and this it's one thing if you declare a number and use it that way
+Dialogue: 0,0:42:08.28,0:42:17.30,English,,0,0,0,,But what gets people and the often got you is if you declare something if you have a in this case
+Dialogue: 0,0:42:17.72,0:42:21.34,English,,0,0,0,,Something that's declared as a two's complement number X to TX
+Dialogue: 0,0:42:22.00,0:42:26.34,English,,0,0,0,,And you assign it a value you at Y X it'll do an implicit casting
+Dialogue: 0,0:42:26.84,0:42:32.18,English,,0,0,0,, Which is exactly based on this conversion that we've been talking about and vice versa
+Dialogue: 0,0:42:34.32,0:42:41.86,English,,0,0,0,, And so as this example goes through this goes through some examples that
+Dialogue: 0,0:42:42.24,0:42:49.06,English,,0,0,0,,If I look at two numbers and I compare them or I actually I do any operation on them
+Dialogue: 0,0:42:49.06,0:42:56.18,English,,0,0,0,, I add them divide them anything implicitly it will try to make these to be of the same type
+Dialogue: 0,0:42:56.72,0:43:00.68,English,,0,0,0,,And the way it will do that is to say if both of them are signed
+Dialogue: 0,0:43:01.00,0:43:05.34,English,,0,0,0,, Then I'll do I'll treat them as a signed case
+Dialogue: 0,0:43:05.60,0:43:07.88,English,,0,0,0,,If either of them is unsigned
+Dialogue: 0,0:43:08.24,0:43:12.78,English,,0,0,0,,Then I'll convert the other one to be an unsigned number and do the operation
+Dialogue: 0,0:43:13.20,0:43:16.86,English,,0,0,0,, And so in particular this set of examples is imagine
+Dialogue: 0,0:43:16.86,0:43:21.73,English,,0,0,0,, I'm comparing these I'm saying these numbers are either equal less or greater
+Dialogue: 0,0:43:22.14,0:43:27.66,English,,0,0,0,,What will the outcomes be and the key to answering that question is to first of all figure out
+Dialogue: 0,0:43:28.20,0:43:32.52,English,,0,0,0,, Okay is it a signed or an unsigned comparison should I convert
+Dialogue: 0,0:43:33.40,0:43:39.80,English,,0,0,0,, One of these numbers to either of these numbers to an unsigned form before I do it
+Dialogue: 0,0:43:40.38,0:43:44.38,English,,0,0,0,,And the rule was if either argument is unsigned then you got to do it
+Dialogue: 0,0:43:45.30,0:43:53.80,English,,0,0,0,,And as you see when you put a u at the end either a  u or U at the end of a numeric constant
+Dialogue: 0,0:43:54.20,0:43:56.70,English,,0,0,0,,You're saying this is an unsigned value
+Dialogue: 0,0:43:57.50,0:44:05.32,English,,0,0,0,, So for example if we compare a zero and zero unsigned they're equal
+Dialogue: 0,0:44:07.50,0:44:13.12,English,,0,0,0,,And if we combine negative one compare negative one to zero
+Dialogue: 0,0:44:13.72,0:44:17.20,English,,0,0,0,,We'll get that the first one is less
+Dialogue: 0,0:44:17.46,0:44:19.74,English,,0,0,0,,Because -1 is less than 0
+Dialogue: 0,0:44:20.40,0:44:25.22,English,,0,0,0,, But what would happen with the next one when we compare negative 1 to an unsigned 0
+Dialogue: 0,0:44:26.86,0:44:30.24,English,,0,0,0,,greater right
+Dialogue: 0,0:44:31.10,0:44:40.54,English,,0,0,0,,So this is the surprise and it has to do with...a number that I erased
+Dialogue: 0,0:44:44.38,0:44:47.64,English,,0,0,0,, but we can still get it remember this is negative one
+Dialogue: 0,0:44:49.84,0:44:54.20,English,,0,0,0,, But when I cast that to an unsigned number
+Dialogue: 0,0:44:54.71,0:45:03.84,English,,0,0,0,, I'm flipping this from -16 to +16 and turning this into 31 I'm turning it into actually the largest number I can represent 
+Dialogue: 0,0:45:04.64,0:45:06.72,English,,0,0,0,,And so it will be greater than zero
+Dialogue: 0,0:45:07.80,0:45:15.42,English,,0,0,0,, So it's a little bit weird to think about I took an u0 which after all is to 0  and compared it to a negative 1
+Dialogue: 0,0:45:15.70,0:45:21.38,English,,0,0,0,,And it said oh you really meant 31 didn't you or whatever word size we're using
+Dialogue: 0,0:45:21.86,0:45:23.32,English,,0,0,0,, And so it said it's greater
+Dialogue: 0,0:45:25.14,0:45:29.04,English,,0,0,0,,And basically the rest of these you can answer in a similar way
+Dialogue: 0,0:45:32.76,0:45:39.02,English,,0,0,0,, That these two numbers are this is clearly one smaller than this
+Dialogue: 0,0:45:40.28,0:45:46.04,English,,0,0,0,,No I'm sorry this is a positive this is a negative number and
+Dialogue: 0,0:45:46.18,0:45:51.14,English,,0,0,0,,I compare those and the positive will be greater than the negative
+Dialogue: 0,0:45:51.86,0:45:55.68,English,,0,0,0,, I'll tell you in a minute why this number is written this way
+Dialogue: 0,0:45:56.82,0:45:59.78,English,,0,0,0,, The next one it's the same pair of numbers
+Dialogue: 0,0:46:01.30,0:46:02.54,English,,0,0,0,,But you see it's flipped 
+Dialogue: 0,0:46:03.80,0:46:13.68,English,,0,0,0,,And the reason is this number on the left is TMax for
+Dialogue: 0,0:46:19.82,0:46:22.82,English,,0,0,0,,So it's the bit pattern in a 32-bit number
+Dialogue: 0,0:46:50.92,0:46:53.46,English,,0,0,0,,And to this day I have not memorized this number by the way
+Dialogue: 0,0:46:53.88,0:46:57.44,English,,0,0,0,,But and then this number is actually TMin
+Dialogue: 0,0:47:15.68,0:47:24.72,English,,0,0,0,,And that when I subtract you can think of it as this is negative TMax - 1 so that's TMin
+Dialogue: 0,0:47:25.14,0:47:29.30,English,,0,0,0,, So if I do an unsigned comparison between those two now think of those
+Dialogue: 0,0:47:29.58,0:47:36.72,English,,0,0,0,,This leading bit  not being a negative weight But a positive weight you'll see that this is a bigger number than this one
+Dialogue: 0,0:47:41.96,0:47:48.42,English,,0,0,0,, And so it goes that -1 is greater than -2 if they're unsigned
+Dialogue: 0,0:47:49.40,0:47:56.71,English,,0,0,0,, Because -1 is you can think of it as converts into UMax it'll be the biggest number possible
+Dialogue: 0,0:47:57.06,0:48:05.84,English,,0,0,0,,And -2 will be would be 11110
+Dialogue: 0,0:48:17.98,0:48:20.44,English,,0,0,0,,So that can get fairly confusing
+Dialogue: 0,0:48:23.78,0:48:29.98,English,,0,0,0,,One final quirk this way of writing this number is there's a little side in the book about it
+Dialogue: 0,0:48:30.54,0:48:37.84,English,,0,0,0,, If you write a business number Oh as you'd expect - as - blah blah blah 648
+Dialogue: 0,0:48:40.60,0:48:47.70,English,,0,0,0,,It will actually get the C compiler gets kind of confused by that for obscure reasons
+Dialogue: 0,0:48:48.14,0:48:54.36,English,,0,0,0,, One other thing I should point out that it's a property that I don't think we cover well enough here
+Dialogue: 0,0:48:56.44,0:48:57.88,English,,0,0,0,,Let me see
+Dialogue: 0,0:49:02.64,0:49:06.50,English,,0,0,0,,There's a few things that the tides don't really cover here and I don't know why not
+Dialogue: 0,0:49:07.26,0:49:08.58,English,,0,0,0,,They like to point out
+Dialogue: 0,0:49:13.66,0:49:17.62,English,,0,0,0,,That are kind of useful properties to keep track of
+Dialogue: 0,0:49:25.38,0:49:32.84,English,,0,0,0,,It's that you notice that if you look at the absolute value of TMax
+Dialogue: 0,0:49:35.26,0:49:38.12,English,,0,0,0,,And you compare it to the absolute value of TMin
+Dialogue: 0,0:49:40.72,0:49:46.90,English,,0,0,0,,That it's off by one right
+Dialogue: 0,0:49:47.36,0:49:50.24,English,,0,0,0,,So that the negative number is more negative
+Dialogue: 0,0:49:50.24,0:49:55.42,English,,0,0,0,,The smallest negative number is more negative than the largest positive number is positive
+Dialogue: 0,0:49:56.24,0:49:59.44,English,,0,0,0,,And the reason for that actually is fairly simple if you think about
+Dialogue: 0,0:49:59.78,0:50:05.62,English,,0,0,0,, It is that the the cases where you have zeros
+Dialogue: 0,0:50:07.88,0:50:09.36,English,,0,0,0,,Include the number 0
+Dialogue: 0,0:50:21.24,0:50:22.56,English,,0,0,0,,So you can see it better
+Dialogue: 0,0:50:26.40,0:50:32.40,English,,0,0,0,,And there's two to the half-year range is occupied by those numbers
+Dialogue: 0,0:50:32.96,0:50:36.86,English,,0,0,0,, And the negative numbers are all negative
+Dialogue: 0,0:50:42.10,0:50:46.80,English,,0,0,0,,And there's so the other half of the range is in there
+Dialogue: 0,0:50:48.26,0:50:51.70,English,,0,0,0,,And the point is that you had to use one of these four zero
+Dialogue: 0,0:50:52.16,0:50:57.34,English,,0,0,0,,And so they're only there's one left one less value left over
+Dialogue: 0,0:50:57.72,0:51:01.82,English,,0,0,0,, And that's why you end up with this through a symmetry
+Dialogue: 0,0:51:02.50,0:51:06.92,English,,0,0,0,,And this a symmetry is the cause of no end of pain in various ways
+Dialogue: 0,0:51:07.72,0:51:15.62,English,,0,0,0,,That like a few the classic example is if you implement absolute value
+Dialogue: 0,0:51:33.40,0:51:39.96,English,,0,0,0,,Like so what do you what does this return for TMin
+Dialogue: 0,0:51:44.62,0:51:50.32,English,,0,0,0,,Yeah the returns team in we'll talk a little bit basically
+Dialogue: 0,0:51:51.84,0:51:56.04,English,,0,0,0,, When you try to negate this number that's here
+Dialogue: 0,0:51:59.14,0:52:00.84,English,,0,0,0,, You'll end up with it back again
+Dialogue: 0,0:52:08.06,0:52:12.92,English,,0,0,0,,So it's always a corner case and whenever we do program testing
+Dialogue: 0,0:52:12.92,0:52:16.24,English,,0,0,0,, We always throw that case in there to break things question
+Dialogue: 0,0:52:17.00,0:52:33.36,English,,0,0,0,, well that case you said oh yeah big number but how negative - one yes
+Dialogue: 0,0:52:33.36,0:52:40.00,English,,0,0,0,,No that's what they do that if you ever look at the in the C constance
+Dialogue: 0,0:52:40.00,0:52:42.70,English,,0,0,0,, They use this as a way of representing TMin
+Dialogue: 0,0:52:43.26,0:52:46.84,English,,0,0,0,, And they do it for that reason because you see
+Dialogue: 0,0:52:47.16,0:52:52.54,English,,0,0,0,,It's exactly this problem and they put parentheses around it so there's no president's problem
+Dialogue: 0,0:52:52.72,0:52:56.38,English,,0,0,0,, But you see that number that in six for seven that's TMax
+Dialogue: 0,0:52:57.74,0:53:04.36,English,,0,0,0,,And so basically it's just saying that TMin is -TMax - 1
+Dialogue: 0,0:53:04.72,0:53:05.64,English,,0,0,0,,Question
+Dialogue: 0,0:53:06.34,0:53:15.70,English,,0,0,0,,[student speaking]
+Dialogue: 0,0:53:17.46,0:53:20.06,English,,0,0,0,,yeah hmm yes
+Dialogue: 0,0:53:20.28,0:53:23.76,English,,0,0,0,,So comparison is just a special case of the more general one
+Dialogue: 0,0:53:24.00,0:53:28.16,English,,0,0,0,, Which is addition subtraction all of those
+Dialogue: 0,0:53:28.94,0:53:34.18,English,,0,0,0,,If either argument is unsigned then it interprets remaining one as being unsigned
+Dialogue: 0,0:53:35.24,0:53:39.92,English,,0,0,0,,It turns out and we'll get into this more next time as far as bit patterns but
+Dialogue: 0,0:53:40.00,0:53:48.56,English,,0,0,0,,But it turns out that at the bit level addition subtraction even multiplication
+Dialogue: 0,0:53:49.08,0:53:52.44,English,,0,0,0,, are the same whether it's an unsigned number two's complement number
+Dialogue: 0,0:53:52.84,0:53:55.28,English,,0,0,0,, So what we'll talk about that more next time
+Dialogue: 0,0:53:59.50,0:54:04.00,English,,0,0,0,, And the other thing to observe sort of property
+Dialogue: 0,0:54:17.36,0:54:31.56,English,,0,0,0,,is you saw that UMax is sort of like  2 * TMax + 1 right so
+Dialogue: 0,0:54:32.74,0:54:39.26,English,,0,0,0,,So before UMax was 15 in our five bit numbers
+Dialogue: 0,0:54:39.66,0:54:42.74,English,,0,0,0,,And and that's again not too hard to figure out
+Dialogue: 0,0:54:44.66,0:54:50.40,English,,0,0,0,,Here's one way to think about it ,TMax is a zero followed by a bunch of ones
+Dialogue: 0,0:54:53.18,0:54:55.36,English,,0,0,0,,And if I want to double that number position
+Dialogue: 0,0:54:55.88,0:55:00.32,English,,0,0,0,,I basically shift it left by one position
+Dialogue: 0,0:55:01.66,0:55:03.78,English,,0,0,0,, And that would end up with a zero here
+Dialogue: 0,0:55:04.96,0:55:10.96,English,,0,0,0,, So this is TMax and this is twice TMax
+Dialogue: 0,0:55:13.04,0:55:14.72,English,,0,0,0,,And now if I add a one to that
+Dialogue: 0,0:55:16.30,0:55:18.82,English,,0,0,0,,That I'll just set this bit to one and get this
+Dialogue: 0,0:55:18.82,0:55:22.72,English,,0,0,0,, So there's various ways you can think about it but that's one way to do it
+Dialogue: 0,0:55:40.34,0:55:46.36,English,,0,0,0,,It's one other thing that I wanted to mention too
+Dialogue: 0,0:55:47.20,0:55:57.58,English,,0,0,0,,This can get you into a lot of trouble programming wise so let me just show you what I mean
+Dialogue: 0,0:56:07.08,0:56:15.64,English,,0,0,0,,So I mentioned I wanted to go backwards through an array
+Dialogue: 0,0:56:16.06,0:56:22.78,English,,0,0,0,, So I write a loop of the form for i = n - 1
+Dialogue: 0,0:56:23.52,0:56:29.70,English,,0,0,0,,i >= 0
+Dialogue: 0,0:56:31.20,0:56:32.54,English,,0,0,0,,i--
+Dialogue: 0,0:56:33.98,0:56:37.34,English,,0,0,0,,then I do something with array element a of i
+Dialogue: 0,0:56:40.56,0:56:42.60,English,,0,0,0,,I just call some function of
+Dialogue: 0,0:56:43.90,0:56:47.94,English,,0,0,0,,Whatever you want to do in that loop so that's a pretty standard pattern in a loop right
+Dialogue: 0,0:56:48.68,0:56:53.36,English,,0,0,0,, Except that you write this greater equal to1 0
+Dialogue: 0,0:56:54.56,0:56:56.84,English,,0,0,0,,You can imagine various uses for that
+Dialogue: 0,0:56:57.76,0:57:06.04,English,,0,0,0,,So here's an interesting question what if I were declared as being unsigned
+Dialogue: 0,0:57:09.16,0:57:12.66,English,,0,0,0,, Because it's array index after all what will happen with this loop
+Dialogue: 0,0:57:18.02,0:57:18.90,English,,0,0,0,,What's that?
+Dialogue: 0,0:57:20.46,0:57:24.22,English,,0,0,0,, Yes! So the loop will go forever what would most likely happen is
+Dialogue: 0,0:57:24.98,0:57:27.56,English,,0,0,0,,I would go from being zero to being UMax
+Dialogue: 0,0:57:28.66,0:57:31.00,English,,0,0,0,, And that's a really big number and
+Dialogue: 0,0:57:31.10,0:57:39.14,English,,0,0,0,,The ray,you'd uh, most likely cause a memory fault because it's so far out of bounds
+Dialogue: 0,0:57:39.72,0:57:43.86,English,,0,0,0,, But the point is it wouldn't do what you want it wouldn't stop where you want it to
+Dialogue: 0,0:57:44.42,0:57:47.58,English,,0,0,0,, Because of the simple reason that I is of course
+Dialogue: 0,0:57:48.52,0:57:52.66,English,,0,0,0,,i is always going to be greater than or equal to zero because it's an unsigned number
+Dialogue: 0,0:57:53.46,0:57:59.84,English,,0,0,0,,So that's one you'd say okay well you should have figured that one out
+Dialogue: 0,0:58:00.28,0:58:02.44,English,,0,0,0,,It can be fair it more subtle though
+Dialogue: 0,0:58:06.60,0:58:10.62,English,,0,0,0,, If you have something like int i
+Dialogue: 0,0:58:14.40,0:58:22.86,English,,0,0,0,, And then we say something like let me just change it here a little bit so this will be
+Dialogue: 0,0:58:40.70,0:58:46.18,English,,0,0,0,,Something like this where the I'm mixing metaphors here I have to confess
+Dialogue: 0,0:58:46.72,0:58:52.82,English,,0,0,0,,But if you use the standard the term size of which is the way you get
+Dialogue: 0,0:58:53.18,0:58:56.26,English,,0,0,0,, How many bytes it takes to represent some given data type
+Dialogue: 0,0:58:56.66,0:58:58.64,English,,0,0,0,,So this will actually be the number one
+Dialogue: 0,0:58:59.68,0:59:08.20,English,,0,0,0,,So it's not the same loop as before but imagine I'm sort of mixing in my arithmetic and making use of some of these built-in forms
+Dialogue: 0,0:59:10.08,0:59:11.80,English,,0,0,0,, What would happen with this loop
+Dialogue: 0,0:59:14.08,0:59:21.42,English,,0,0,0,, Yes right yes
+Dialogue: 0,0:59:21.76,0:59:26.92,English,,0,0,0,,Exactly so sizeof returns an unsigned value
+Dialogue: 0,0:59:26.92,0:59:32.76,English,,0,0,0,, It's not actually a function it's a built in but it's the result of sizeof is considered to be unsigned
+Dialogue: 0,0:59:33.48,0:59:37.32,English,,0,0,0,, And so just like I was saying
+Dialogue: 0,0:59:37.62,0:59:42.78,English,,0,0,0,,If you have a signed value in it unsigned in any kind of arithmetic
+Dialogue: 0,0:59:43.32,0:59:47.78,English,,0,0,0,, It'll turn treat the combination of the two is unsigned
+Dialogue: 0,0:59:48.14,0:59:51.30,English,,0,0,0,, And so it will actually do an unsigned comparison here
+Dialogue: 0,0:59:51.80,0:59:53.94,English,,0,0,0,, Which is almost surely not what you wanted
+Dialogue: 0,0:59:54.92,1:00:02.61,English,,0,0,0,,And this will just you'll look at this program and you won't have any idea why it's crashing
+Dialogue: 0,1:00:02.84,1:00:07.04,English,,0,0,0,,You'll be so confused and that's the kind of thing you have to know
+Dialogue: 0,1:00:07.04,1:00:11.80,English,,0,0,0,, It's one of the quirks of C that probably a fake could start over again and redesign it
+Dialogue: 0,1:00:11.80,1:00:14.84,English,,0,0,0,,They'd come up with some different set of conventions than they did
+Dialogue: 0,1:00:15.20,1:00:19.78,English,,0,0,0,,But unfortunately it's way too late for that so this is just one of those things you have to remember
+Dialogue: 0,1:00:21.18,1:00:25.54,English,,0,0,0,, But yes the my point is through some subtleties to spent about in signed
+Dialogue: 0,1:00:25.78,1:00:29.10,English,,0,0,0,,About this business of signed versus unsigned arithmetic
+Dialogue: 0,1:00:36.16,1:00:41.86,English,,0,0,0,,Okay so now let's look at a sort of final class of operations which is
+Dialogue: 0,1:00:42.46,1:00:46.42,English,,0,0,0,,Suppose I have a number that's so many bits say eight bits
+Dialogue: 0,1:00:46.48,1:00:51.02,English,,0,0,0,, And I want to now expand it to be a 16-bit number
+Dialogue: 0,1:00:51.60,1:00:54.70,English,,0,0,0,,There's a fairly cute rule for doing this
+Dialogue: 0,1:00:55.12,1:00:59.82,English,,0,0,0,,That's called sign extension I'm talking about two's complement numbers here
+Dialogue: 0,1:01:00.36,1:01:06.64,English,,0,0,0,, Of how you go take a and make it bigger without changing its value
+Dialogue: 0,1:01:08.48,1:01:14.96,English,,0,0,0,,And the basic rule is you do it by copying  the sign bit to the left
+Dialogue: 0,1:01:15.42,1:01:18.12,English,,0,0,0,,So let me give you the intuition behind it
+Dialogue: 0,1:01:29.50,1:01:32.38,English,,0,0,0,,So let's go get some 4-bit values
+Dialogue: 0,1:01:42.10,1:01:45.54,English,,0,0,0,,Well it's pretty straightforward if the leading bit is a zero
+Dialogue: 0,1:01:46.84,1:01:52.32,English,,0,0,0,,I'm just going to do a left shift and then fill in so 
+Dialogue: 0,1:01:59.54,1:02:00.80,English,,0,0,0,,Wait what am I talking about
+Dialogue: 0,1:02:04.80,1:02:07.10,English,,0,0,0,, I got ahead of myself I'm talking about something totally different
+Dialogue: 0,1:02:07.12,1:02:11.54,English,,0,0,0,, No sorry the same number I'm not changing the number I keeping it  the same
+Dialogue: 0,1:02:11.54,1:02:19.48,English,,0,0,0,,So I just add a zero to the lead and this will be the number six still this is 4 + 2=6
+Dialogue: 0,1:02:21.94,1:02:25.88,English,,0,0,0,,But now let's think about it as a where there's a leading sign bit
+Dialogue: 0,1:02:29.12,1:02:36.24,English,,0,0,0,, So this is -8 + 4 + 2 = -2
+Dialogue: 0,1:02:38.08,1:02:45.24,English,,0,0,0,,So now look at what happens if I copy that sign bit over one position
+Dialogue: 0,1:02:48.18,1:02:56.34,English,,0,0,0,,so this becomes a 11110
+Dialogue: 0,1:02:57.64,1:03:02.42,English,,0,0,0,, And what happens is this is a now has value plus 8 here
+Dialogue: 0,1:03:02.72,1:03:05.56,English,,0,0,0,, But the sign bit has value -16
+Dialogue: 0,1:03:06.22,1:03:08.50,English,,0,0,0,,And then this is still +2 and +4 and
+Dialogue: 0,1:03:10.58,1:03:12.62,English,,0,0,0,,So it will still equal -2
+Dialogue: 0,1:03:14.02,1:03:20.58,English,,0,0,0,,So here's what happened before my sign bit had a weight of -8
+Dialogue: 0,1:03:21.80,1:03:24.76,English,,0,0,0,,My new sign bit has a weight of -16
+Dialogue: 0,1:03:25.72,1:03:29.90,English,,0,0,0,, But I converted that old sign bit into a positive number which is +8
+Dialogue: 0,1:03:30.64,1:03:34.20,English,,0,0,0,, And those 2 cancelled out sit right the duck
+Dialogue: 0,1:03:34.40,1:03:39.06,English,,0,0,0,, That you combine those two and you get a -8 which is exactly this
+Dialogue: 0,1:03:39.66,1:03:50.46,English,,0,0,0,, So you see by sort of copying that sign bit over  giving it twice the weight turning it what was the sign bit into a positive number
+Dialogue: 0,1:03:50.80,1:03:53.92,English,,0,0,0,,You don't change the net effect of the sum
+Dialogue: 0,1:03:54.22,1:04:00.51,English,,0,0,0,,And that's exactly the idea of sign extension just keep going with that as far as you need to carry it over
+Dialogue: 0,1:04:00.86,1:04:08.22,English,,0,0,0,,And each time you're doing it you're effectively doing this business of coming up with a pair of bits
+Dialogue: 0,1:04:08.84,1:04:11.94,English,,0,0,0,,that end up with the same value as this original bit
+Dialogue: 0,1:04:13.70,1:04:20.88,English,,0,0,0,,So that's the idea of sign extension and you'll see that a lot in bit patterns
+Dialogue: 0,1:04:21.50,1:04:27.46,English,,0,0,0,, Especially if you see a bit pattern with it starts with a bunch of Fs
+Dialogue: 0,1:04:35.92,1:04:40.98,English,,0,0,0,,What that tells you remember F is just four ones
+Dialogue: 0,1:04:46.70,1:04:50.10,English,,0,0,0,, is a whole bunch of leading ones that tells you the number is negative
+Dialogue: 0,1:04:51.14,1:04:54.10,English,,0,0,0,, Negative but not too far away from zero right
+Dialogue: 0,1:04:54.76,1:04:58.74,English,,0,0,0,,And you'll see that over and over again you'll see bit patterns and you just sort of want it
+Dialogue: 0,1:04:58.94,1:05:03.24,English,,0,0,0,,When you see leading Fs you say oh that's a negative number I know what's going on there
+Dialogue: 0,1:05:07.56,1:05:13.76,English,,0,0,0,,And so here's some examples but like you can see the main idea is you carry that leading bit
+Dialogue: 0,1:05:14.56,1:05:20.32,English,,0,0,0,,from the 16-bit case over and make as many copies you need to expand the word size
+Dialogue: 0,1:05:24.73,1:05:31.60,English,,0,0,0,,And I should mention with the unsigned case obviously you just want to fill in with zeros
+Dialogue: 0,1:05:36.84,1:05:42.48,English,,0,0,0,,To talk about truncation and send missing slides in this but um
+Dialogue: 0,1:05:49.98,1:05:54.42,English,,0,0,0,,A final case to look at is what happens if I make something shorter
+Dialogue: 0,1:05:57.44,1:06:00.16,English,,0,0,0,,So if I had my unsigned number from before
+Dialogue: 0,1:06:07.18,1:06:10.74,English,,0,0,0,,If this were an unsigned number this would be
+Dialogue: 0,1:06:12.04,1:06:20.78,English,,0,0,0,,1 2 8 16 14 17 right
+Dialogue: 0,1:06:21.48,1:06:32.34,English,,0,0,0,,What if I decided oh I can't afford 4 bit I don't have enough money for 5 bits I'm only going to give you 4
+Dialogue: 0,1:06:33.74,1:06:36.40,English,,0,0,0,,Well you basically just drop the most significant bit
+Dialogue: 0,1:06:38.44,1:06:43.72,English,,0,0,0,,And you get 8 + 2 + 1 which is 11
+Dialogue: 0,1:06:44.20,1:06:53.32,English,,0,0,0,,Which is 9 and the relation there is that this is a it's like modular arithmetic
+Dialogue: 0,1:06:59.52,1:07:02.90,English,,0,0,0,,Right mod 16 you're taking...no
+Dialogue: 0,1:07:07.30,1:07:08.32,English,,0,0,0,,Thank you
+Dialogue: 0,1:07:12.62,1:07:23.58,English,,0,0,0,,It's the risk of improvising so 27 and 11
+Dialogue: 0,1:07:26.82,1:07:33.28,English,,0,0,0,,Yeah it makes sense,difference is 16  that I knew that
+Dialogue: 0,1:07:34.50,1:07:38.10,English,,0,0,0,, Okay excuse me for my stumbling
+Dialogue: 0,1:07:38.10,1:07:46.72,English,,0,0,0,, But the point being that when you drop this thing effectively you're just taking the mod some power of 2 of it like
+Dialogue: 0,1:07:47.10,1:07:49.72,English,,0,0,0,, I mentioned the case where you're taking module 8
+Dialogue: 0,1:07:50.02,1:07:54.10,English,,0,0,0,,If you just keep only the lowest order 3 bits you're having a module 8
+Dialogue: 0,1:07:54.52,1:07:58.78,English,,0,0,0,, Now one really this is a sort of logical in the unsigned world
+Dialogue: 0,1:07:59.24,1:08:04.78,English,,0,0,0,,Your modular arithmetic is something that was understood by the ancient Greeks
+Dialogue: 0,1:08:05.84,1:08:12.64,English,,0,0,0,,So not too far away from human experience
+Dialogue: 0,1:08:13.50,1:08:23.77,English,,0,0,0,,But it gets a little bit funky if you're dealing with two's complement numbers
+Dialogue: 0,1:08:24.38,1:08:33.26,English,,0,0,0,,Because this is now 10 11 -5 right 
+Dialogue: 0,1:08:35.90,1:08:38.30,English,,0,0,0,,But this number if I just drop this bit and
+Dialogue: 0,1:08:39.96,1:08:44.90,English,,0,0,0,,And call it a 4-bit number this now becomes -8,2,1
+Dialogue: 0,1:08:50.48,1:08:51.56,English,,0,0,0,,It's -5
+Dialogue: 0,1:08:56.98,1:09:03.24,English,,0,0,0,,You say how'd that happen well actually if you look at it this is just what you'd get by sign extension right
+Dialogue: 0,1:09:05.04,1:09:07.74,English,,0,0,0,, So this wasn't a very interesting example
+Dialogue: 0,1:09:12.48,1:09:14.12,English,,0,0,0,, But if we changed it to this
+Dialogue: 0,1:09:22.88,1:09:27.32,English,,0,0,0,,Then this would be -13
+Dialogue: 0,1:09:28.06,1:09:30.46,English,,0,0,0,,And this would be +3
+Dialogue: 0,1:09:33.42,1:09:41.98,English,,0,0,0,,And it's a little harder to think about in terms of modular arithmetic
+Dialogue: 0,1:09:41.98,1:09:45.56,English,,0,0,0,, The way you basically have to think about it is well
+Dialogue: 0,1:09:46.40,1:09:56.94,English,,0,0,0,,You know this is -13 but it's really kind of like 27 and  27 mod 16 is sort of like or,no this isn't 20
+Dialogue: 0,1:09:57.24,1:10:05.70,English,,0,0,0,,We changed our number right so this is really kind of like 19.And 19 mod 16 is 3.And this is 3 
+Dialogue: 0,1:10:05.82,1:10:10.86,English,,0,0,0,,So you can sort of do it by coming back around to it
+Dialogue: 0,1:10:10.86,1:10:16.82,English,,0,0,0,, But it's not sum of arithmetic property that would jump out at you as being something logical
+Dialogue: 0,1:10:17.72,1:10:21.82,English,,0,0,0,, But that happens all the time that and it's very common
+Dialogue: 0,1:10:22.18,1:10:25.64,English,,0,0,0,, For numbers to get truncated for one reason or another
+Dialogue: 0,1:10:25.68,1:10:29.74,English,,0,0,0,,And you can see that you can have a negative number become a positive number
+Dialogue: 0,1:10:30.06,1:10:32.48,English,,0,0,0,,You can have a positive number become a negative number
+Dialogue: 0,1:10:32.48,1:10:34.64,English,,0,0,0,,And all kinds of goofy stuff can happen
+Dialogue: 0,1:10:36.20,1:10:39.32,English,,0,0,0,,And we'll see plenty examples of that when we look at arithmetic
+Dialogue: 0,1:10:41.04,1:10:47.94,English,,0,0,0,,So that's,that is what I want to cover today
+Dialogue: 0,1:10:47.94,1:10:52.26,English,,0,0,0,,And we'll cover the other arithmetic operations on Tuesday
+Dialogue: 0,1:10:52.96,1:10:55.97,English,,0,0,0,,So thank you very much
