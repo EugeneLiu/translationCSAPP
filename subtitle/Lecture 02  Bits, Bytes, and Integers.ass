@@ -16,8 +16,9 @@ Video File: ../../../Desktop/csapp/Lecture 02  Bits, Bytes, and Integers.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 1.000000
-Active Line: 25
-Video Position: 1915
+Scroll Position: 78
+Active Line: 105
+Video Position: 9033
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -52,96 +53,86 @@ Dialogue: 0,0:00:55.04,0:00:57.44,English,,0,0,0,, So we'll start off with very 
 Dialogue: 0,0:00:55.04,0:00:57.44,Chinese,,0,0,0,,所以我们从非常基本的东西开始
 Dialogue: 0,0:00:57.44,0:01:03.84,English,,0,0,0,,How numbers are represented especially integer valued numbers are represented in bits
 Dialogue: 0,0:00:57.44,0:01:03.84,Chinese,,0,0,0,,如何表示数字，尤其是整数值的位级表示
-Dialogue: 0,0:01:05.82,0:01:09.76,English,,0,0,0,,Um so I think you pretty well figured out in this world
-Dialogue: 0,0:01:05.82,0:01:09.76,Chinese,,0,0,0,,恩，所以我觉得你在这个世界很好
-Dialogue: 0,0:01:09.76,0:01:13.72,English,,0,0,0,, That the whole digital world is sort of based on on binary values
-Dialogue: 0,0:01:09.76,0:01:13.72,Chinese,,0,0,0,,整个数字世界都是基于二元价值
+Dialogue: 0,0:01:05.82,0:01:13.72,English,,0,0,0,,Um so I think you pretty well figured out in this world that the whole digital world is sort of based on on binary values
+Dialogue: 0,0:01:05.82,0:01:13.72,Chinese,,0,0,0,,恩，我觉得你们能很好的掌握基于二进制的数字世界
 Dialogue: 0,0:01:14.48,0:01:21.98,English,,0,0,0,,And that wasn't always the case I mean since humans have ten fingers and ten toes
-Dialogue: 0,0:01:14.48,0:01:21.98,Chinese,,0,0,0,,我并不总是这样，因为人类有十个手指和十个脚趾
+Dialogue: 0,0:01:14.48,0:01:21.98,Chinese,,0,0,0,,但二进制并不总是适用，因为人类有十个手指和十个脚趾
 Dialogue: 0,0:01:22.26,0:01:25.04,English,,0,0,0,,A lot of the world was based on the decimal system
-Dialogue: 0,0:01:22.26,0:01:25.04,Chinese,,0,0,0,,很多世界都是基于十进制的
-Dialogue: 0,0:01:25.52,0:01:33.82,English,,0,0,0,,And it was really only and in fact the first electronic computer the ENIAC built in University of Pennsylvania
-Dialogue: 0,0:01:25.52,0:01:33.82,Chinese,,0,0,0,,这实际上只是ENIAC在宾夕法尼亚大学建立的第一台电子计算机
-Dialogue: 0,0:01:34.10,0:01:38.28,English,,0,0,0,, basically encoded did all of its arithmetic using base ten
-Dialogue: 0,0:01:34.10,0:01:38.28,Chinese,,0,0,0,,基本上编码完成了所有的算术运算，使用十进制
+Dialogue: 0,0:01:22.26,0:01:25.04,Chinese,,0,0,0,,世界上的很多地方都是基于十进制的
+Dialogue: 0,0:01:25.52,0:01:38.28,English,,0,0,0,,And it was really only and in fact the first electronic computer the ENIAC built in University of Pennsylvania  basically encoded did all of its arithmetic using base ten
+Dialogue: 0,0:01:25.52,0:01:38.28,Chinese,,0,0,0,,实际上只有宾夕法尼亚大学建立的第一台电子计算机ENIAC使用十进制进行了算术运算
 Dialogue: 0,0:01:38.60,0:01:42.82,English,,0,0,0,,They had ten vacuum tubes per digit they wanted to represent
-Dialogue: 0,0:01:38.60,0:01:42.82,Chinese,,0,0,0,,他们想要代表每个数字10个真空管
-Dialogue: 0,0:01:43.36,0:01:47.32,English,,0,0,0,,So they basically turned on or off those tubes to represent
-Dialogue: 0,0:01:43.36,0:01:47.32,Chinese,,0,0,0,,所以他们基本上打开或关闭这些管来代表
-Dialogue: 0,0:01:47.58,0:01:50.74,English,,0,0,0,,Which of the ten possible digits you could want
-Dialogue: 0,0:01:47.58,0:01:50.74,Chinese,,0,0,0,,你可能想要的十个可能的数字中的哪一个
+Dialogue: 0,0:01:38.60,0:01:42.82,Chinese,,0,0,0,,他们使用10个电子管来表示每个数字
+Dialogue: 0,0:01:43.36,0:01:50.74,English,,0,0,0,,So they basically turned on or off those tubes to represent which of the ten possible digits you could want
+Dialogue: 0,0:01:43.36,0:01:50.74,Chinese,,0,0,0,,所以他们通过控制电子管的开关来表示10个数字中的其中一个
 Dialogue: 0,0:01:51.18,0:01:56.26,English,,0,0,0,,And it really didn't come to people until later than that
 Dialogue: 0,0:01:51.18,0:01:56.26,Chinese,,0,0,0,,直到晚些时候才真正发现它
 Dialogue: 0,0:01:56.52,0:02:01.58,English,,0,0,0,,So that's 1948 that they really should just think about base two for everything
-Dialogue: 0,0:01:56.52,0:02:01.58,Chinese,,0,0,0,,那是1948年，他们真的应该考虑为所有事情做好准备
-Dialogue: 0,0:02:04.06,0:02:08.78,English,,0,0,0,,And the reason why bits are great is in the digital world
-Dialogue: 0,0:02:04.06,0:02:08.78,Chinese,,0,0,0,,在数字世界中，位是伟大的原因
-Dialogue: 0,0:02:08.96,0:02:14.00,English,,0,0,0,,You can sort of take what otherwise an analog signal and quantify it
-Dialogue: 0,0:02:08.96,0:02:14.00,Chinese,,0,0,0,,您可以采取其他方式模拟信号并对其进行量化
+Dialogue: 0,0:01:56.52,0:02:01.58,Chinese,,0,0,0,,1948年，他们应该考虑到了使用二进制构建一切
+Dialogue: 0,0:02:04.06,0:02:14.00,English,,0,0,0,,And the reason why bits are great is in the digital world you can sort of take what otherwise an analog signal and quantify it
+Dialogue: 0,0:02:04.06,0:02:14.00,Chinese,,0,0,0,,比特之所以伟大的原因是在数字世界中你可以采取其他方式的模拟信号对其进行量化
 Dialogue: 0,0:02:14.36,0:02:17.56,English,,0,0,0,, And just say I'm going to say that one range of values
-Dialogue: 0,0:02:14.36,0:02:17.56,Chinese,,0,0,0,,只是说我要说一个价值范围
+Dialogue: 0,0:02:14.36,0:02:17.56,Chinese,,0,0,0,,接下来我是用一组范围值来说明
 Dialogue: 0,0:02:17.56,0:02:21.18,English,,0,0,0,, Let's say it's a low voltage I'm going to call that a zero
-Dialogue: 0,0:02:17.56,0:02:21.18,Chinese,,0,0,0,,假设这是一个低电压，我将称之为零
+Dialogue: 0,0:02:17.56,0:02:21.18,Chinese,,0,0,0,,假如低电压表示0
 Dialogue: 0,0:02:21.46,0:02:24.52,English,,0,0,0,,And a high range of values I'm going to call it a one
-Dialogue: 0,0:02:21.46,0:02:24.52,Chinese,,0,0,0,,我将称之为一个值的高价值范围
+Dialogue: 0,0:02:21.46,0:02:24.52,Chinese,,0,0,0,,我用某个高电压区间表示1
 Dialogue: 0,0:02:24.98,0:02:31.18,English,,0,0,0,, And if there's noise or imperfections in the circuit or anything going on
-Dialogue: 0,0:02:24.98,0:02:31.18,Chinese,,0,0,0,,如果电路中有噪音或不完善之处，或者发生任何事情
+Dialogue: 0,0:02:24.98,0:02:31.18,Chinese,,0,0,0,,如果电路中存在噪音或不完善之地方，或者其他什么事情
 Dialogue: 0,0:02:31.76,0:02:37.78,English,,0,0,0,,As long as that doesn't exceed these bit these thresholds you've set up
 Dialogue: 0,0:02:31.76,0:02:37.78,Chinese,,0,0,0,,只要不超过你设定的这些阈值
 Dialogue: 0,0:02:38.18,0:02:40.38,English,,0,0,0,,Then you'll get a nice clean signal out of it
-Dialogue: 0,0:02:38.18,0:02:40.38,Chinese,,0,0,0,,然后你会得到一个很好的干净信号
+Dialogue: 0,0:02:38.18,0:02:40.38,Chinese,,0,0,0,,你就会得到一个很清晰的信号
 Dialogue: 0,0:02:40.38,0:02:45.06,English,,0,0,0,,And that's the main advantage of digital processing over analog processing
-Dialogue: 0,0:02:40.38,0:02:45.06,Chinese,,0,0,0,,这是数字处理比模拟处理的主要优势
+Dialogue: 0,0:02:40.38,0:02:45.06,Chinese,,0,0,0,,这是数字处理和模拟处理相比的主要优势
 Dialogue: 0,0:02:46.80,0:02:50.10,English,,0,0,0,, And so that's sort of at the core why everything we do
 Dialogue: 0,0:02:46.80,0:02:50.10,Chinese,,0,0,0,,这就是我们所做的一切的核心
-Dialogue: 0,0:02:50.10,0:02:54.40,English,,0,0,0,, And especially for storing information it turns out it's much easier to store
-Dialogue: 0,0:02:50.10,0:02:54.40,Chinese,,0,0,0,,特别是对于存储信息来说，它更容易存储
-Dialogue: 0,0:02:54.66,0:03:00.10,English,,0,0,0,,One bit of information or a digital value than it is to store an analog value
-Dialogue: 0,0:02:54.66,0:03:00.10,Chinese,,0,0,0,,一位信息或一个数字值，而不是存储模拟值
+Dialogue: 0,0:02:50.10,0:02:52.14,English,,0,0,0,, And especially for storing information 
+Dialogue: 0,0:02:50.10,0:02:52.14,Chinese,,0,0,0,,特别是对于信息存储来说，它更容易存储
+Dialogue: 0,0:02:52.18,0:03:00.10,English,,0,0,0,,It turns out it's much easier to store one bit of information or a digital value than it is to store an analog value
+Dialogue: 0,0:02:52.18,0:03:00.10,Chinese,,0,0,0,,事实证明，存储一位信息或一个数字值比存储一个模拟值要容易得多
 Dialogue: 0,0:03:02.10,0:03:09.28,English,,0,0,0,,And sorry this kind of slides went a little crazy on animations
 Dialogue: 0,0:03:02.10,0:03:09.28,Chinese,,0,0,0,,对不起，这种幻灯片在动画上有点疯狂
 Dialogue: 0,0:03:09.56,0:03:15.42,English,,0,0,0,,So the point is that we represent all the numbers in a computer as sets of bits
-Dialogue: 0,0:03:09.56,0:03:15.42,Chinese,,0,0,0,,所以重点是我们将计算机中的所有数字表示为位组
+Dialogue: 0,0:03:09.56,0:03:15.42,Chinese,,0,0,0,,重点是我们将计算机中使用比特位来表示所有数字
 Dialogue: 0,0:03:15.42,0:03:18.24,English,,0,0,0,,And I think you generally understand that fairly well
-Dialogue: 0,0:03:15.42,0:03:18.24,Chinese,,0,0,0,,我认为你一般都很了解
+Dialogue: 0,0:03:15.42,0:03:18.24,Chinese,,0,0,0,,我认为你们大多都了解
 Dialogue: 0,0:03:18.68,0:03:23.98,English,,0,0,0,,And so of course the familiar binary representation of integers which we'll go over today
-Dialogue: 0,0:03:18.68,0:03:23.98,Chinese,,0,0,0,,当然，我们今天将要讨论的整数的熟悉的二进制表示
-Dialogue: 0,0:03:24.34,0:03:28.54,English,,0,0,0,, Just uses a bit position for each power of two
-Dialogue: 0,0:03:24.34,0:03:28.54,Chinese,,0,0,0,,只需使用两个位的每个幂
-Dialogue: 0,0:03:29.04,0:03:32.87,English,,0,0,0,,We can also represent values that are fractional
-Dialogue: 0,0:03:29.04,0:03:32.87,Chinese,,0,0,0,,我们也可以表示分数的值
-Dialogue: 0,0:03:32.96,0:03:37.64,English,,0,0,0,,And we'll talk about that a week from today when we do floating-point numbers
-Dialogue: 0,0:03:32.96,0:03:37.64,Chinese,,0,0,0,,我们将从今天开始讨论这个问题，当时我们做了浮点数
-Dialogue: 0,0:03:37.98,0:03:41.04,English,,0,0,0,, Where what you do is to the right of the binary point
-Dialogue: 0,0:03:37.98,0:03:41.04,Chinese,,0,0,0,,你在哪里做的是在二进制的右边
+Dialogue: 0,0:03:18.68,0:03:23.98,Chinese,,0,0,0,,当然，我们今天将要讨论的整数，熟悉整数的二进制表示
+Dialogue: 0,0:03:24.34,0:03:32.87,English,,0,0,0,, Just uses a bit position for each power of two we can also represent values that are fractional
+Dialogue: 0,0:03:24.34,0:03:32.87,Chinese,,0,0,0,,使用比特位对应的2的幂我们可以表示分数
+Dialogue: 0,0:03:32.96,0:03:35.26,English,,0,0,0,,And we'll talk about that a week from today 
+Dialogue: 0,0:03:32.96,0:03:35.26,Chinese,,0,0,0,,我们将从今天开始讨论这个问题
+Dialogue: 0,0:03:35.26,0:03:41.04,English,,0,0,0,,When we do floating-point numbers where what you do is to the right of the binary point
+Dialogue: 0,0:03:35.26,0:03:41.04,Chinese,,0,0,0,,当我们处理浮点数时，我们要怎么处理小数点右边的数字
 Dialogue: 0,0:03:41.18,0:03:46.60,English,,0,0,0,,So this is no longer a decimal point it's a binary point
-Dialogue: 0,0:03:41.18,0:03:46.60,Chinese,,0,0,0,,所以这不再是一个小数点，它是一个二元点
-Dialogue: 0,0:03:47.20,0:03:52.44,English,,0,0,0,,And so something to the left of that would have a weight one two to the zero
-Dialogue: 0,0:03:47.20,0:03:52.44,Chinese,,0,0,0,,所以左边的东西会有一个重量为零的重量
-Dialogue: 0,0:03:53.84,0:03:56.62,English,,0,0,0,,And the next one over would have weight to the one
-Dialogue: 0,0:03:53.84,0:03:56.62,Chinese,,0,0,0,,接下来的一个会对这个人有影响
+Dialogue: 0,0:03:41.18,0:03:46.60,Chinese,,0,0,0,,所以这不再是一个十进制的小数点，它是一个二进制的小数点
+Dialogue: 0,0:03:47.20,0:03:52.44,English,,0,0,0,,And so something to the left of that would have a weight 2^0
+Dialogue: 0,0:03:47.20,0:03:52.44,Chinese,,0,0,0,,小数点左边第一位的权重是2^1
+Dialogue: 0,0:03:53.84,0:03:56.62,English,,0,0,0,,And the next one over would have weight 2^0
+Dialogue: 0,0:03:53.84,0:03:56.62,Chinese,,0,0,0,,再向左一位的权重是2^1
 Dialogue: 0,0:03:57.04,0:04:03.88,English,,0,0,0,,But what you do is as you go to the right that adds weight 2^-1,2^-2
-Dialogue: 0,0:03:57.04,0:04:03.88,Chinese,,0,0,0,,但是你做的是当你向右增加2 ^ -1,2 ^ -2的重量时
+Dialogue: 0,0:03:57.04,0:04:03.88,Chinese,,0,0,0,,但是当你处理小数点右边的数字时它们增加的权重是2^-1,2^-2
 Dialogue: 0,0:04:03.88,0:04:10.34,English,,0,0,0,, In other words this is 1,this is 2, this is 1/2 and this is 1/4
 Dialogue: 0,0:04:03.88,0:04:10.34,Chinese,,0,0,0,,换句话说，这是1，这是2，这是1/2，这是1/4
 Dialogue: 0,0:04:11.44,0:04:15.70,English,,0,0,0,,So we can represent just like you do the decimal representation of fractions
-Dialogue: 0,0:04:11.44,0:04:15.70,Chinese,,0,0,0,,所以我们可以像你做分数的十进制表示一样表示
+Dialogue: 0,0:04:11.44,0:04:15.70,Chinese,,0,0,0,,所以我们可以使用这样的方式表示分数，就像分数的十进制表示一样
 Dialogue: 0,0:04:16.06,0:04:18.44,English,,0,0,0,,We can do the binary representation of fractions
-Dialogue: 0,0:04:16.06,0:04:18.44,Chinese,,0,0,0,,我们可以做分数的二进制表示
+Dialogue: 0,0:04:16.06,0:04:18.44,Chinese,,0,0,0,,我们可以使用二进制表示分数
 Dialogue: 0,0:04:18.44,0:04:22.22,English,,0,0,0,, And that's the core of floating-point number of representations
-Dialogue: 0,0:04:18.44,0:04:22.22,Chinese,,0,0,0,,这是浮点数表示的核心
+Dialogue: 0,0:04:18.44,0:04:22.22,Chinese,,0,0,0,,这是二进制表示浮点数的核心思想
 Dialogue: 0,0:04:23.94,0:04:35.06,English,,0,0,0,,And so it gets very annoying if you have say 32 or even 64-bit numbers to be writing the strings of 1 and 0 out
-Dialogue: 0,0:04:23.94,0:04:35.06,Chinese,,0,0,0,,所以如果你有32位甚至64位的数字写入1和0的字符串，那么它会变得非常烦人
+Dialogue: 0,0:04:23.94,0:04:35.06,Chinese,,0,0,0,,所以如果你见过数字写成32位甚至64位的1和0的字符串，那么它会变得非常烦人
 Dialogue: 0,0:04:35.42,0:04:45.54,English,,0,0,0,,And so what we use,and what's become largely the most common is to group collections of 4bits at a time into
-Dialogue: 0,0:04:35.42,0:04:45.54,Chinese,,0,0,0,,所以我们使用的是什么，最常见的是将4bits的数据集合分组
+Dialogue: 0,0:04:35.42,0:04:45.54,Chinese,,0,0,0,,所以我们通常将4bit的数据集合分组
 Dialogue: 0,0:04:45.98,0:04:50.90,English,,0,0,0,,And then represent that in base 16 or what's known as hexadecimal representation
-Dialogue: 0,0:04:45.98,0:04:50.90,Chinese,,0,0,0,,然后用16进制表示或者称为十六进制表示
+Dialogue: 0,0:04:45.98,0:04:50.90,Chinese,,0,0,0,,然后用16进制表示
 Dialogue: 0,0:04:51.28,0:04:56.12,English,,0,0,0,, Using the letters A through F as values 10 through 15
 Dialogue: 0,0:04:51.28,0:04:56.12,Chinese,,0,0,0,,使用字母A到F作为值10到15
-Dialogue: 0,0:04:56.12,0:05:00.78,English,,0,0,0,,And you'll spend a lot of time staring at exa decimal numbers this year
-Dialogue: 0,0:04:56.12,0:05:00.78,Chinese,,0,0,0,,而今年你会花很多时间盯着十进制数字
+Dialogue: 0,0:04:56.12,0:05:00.78,English,,0,0,0,,And you'll spend a lot of time staring at hex decimal numbers this year
+Dialogue: 0,0:04:56.12,0:05:00.78,Chinese,,0,0,0,,而今年你会花很多时间盯着十六进制数
 Dialogue: 0,0:05:01.10,0:05:05.66,English,,0,0,0,,And you'll get pretty good at being able to look at a hex number and just write it out in binary
-Dialogue: 0,0:05:01.10,0:05:05.66,Chinese,,0,0,0,,而且你可以很好地看到一个十六进制数字，然后用二进制写出来
+Dialogue: 0,0:05:01.10,0:05:05.66,Chinese,,0,0,0,,而且当你看到一个十六进制数字你可以很快的写出它的二进制表示
 Dialogue: 0,0:05:06.20,0:05:09.90,English,,0,0,0,,The way I do it just to tell you is
 Dialogue: 0,0:05:06.20,0:05:09.90,Chinese,,0,0,0,,我这样做只是为了告诉你
 Dialogue: 0,0:05:10.48,0:05:22.86,English,,0,0,0,,I mean I've got the values from 0 to 9 wired down pretty well
