@@ -17,3 +17,10 @@
 ### 字幕制作相关
 
 该项目的英文字幕使用Youtube视频机器字幕为底稿，重新校对，调整时间轴而来。现在使用Google翻译来制作中文字幕，在Google翻译的基础上进行校对。如果你对这个项目感兴趣欢迎参与翻译和校对工作。
+
+### 版权相关
+
+![creative commons logo](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)  本作品采用[知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc-sa/4.0/)进行许可。
+
+
+
