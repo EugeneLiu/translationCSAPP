@@ -32,6 +32,11 @@
 * 使用[forking工作流](https://github.com/xirong/my-git/blob/master/git-workflow-tutorial.md#24-forking%E5%B7%A5%E4%BD%9C%E6%B5%81)
 * 参与者需要fork该[项目](https://github.com/EugeneLiu/translationCSAPP),并告知准备参与的制作的内容。修改完成之后，需要发起pull request将代码合并到主项目
 
+### 联系方式
+
+* 个人邮箱：eugene.liujing.zh@gmail.com
+* QQ交流群：818970413
+
 #### 具体分工
 
 > 1课时初步制作的[B站链接](https://www.bilibili.com/video/av24540152)
