@@ -1,0 +1,4540 @@
+﻿1
+00:00:00,030 --> 00:00:03,929
+okay so let's get started so today's
+
+2
+00:00:03,929 --> 00:00:06,660
+recitation is on virtual memory so we're
+
+3
+00:00:06,660 --> 00:00:09,840
+sort of between two labs here your shell
+
+4
+00:00:09,840 --> 00:00:15,480
+lab is due tomorrow 11:59 p.m. as normal
+
+5
+00:00:15,480 --> 00:00:17,190
+and the Mallik lab will come out
+
+6
+00:00:17,190 --> 00:00:19,380
+tomorrow but Malak lab is a longer lab
+
+7
+00:00:19,380 --> 00:00:22,650
+you get a couple weeks to do it and so
+
+8
+00:00:22,650 --> 00:00:23,910
+we're not going to talk about it much
+
+9
+00:00:23,910 --> 00:00:25,560
+today we're going to talk about Malak
+
+10
+00:00:25,560 --> 00:00:27,300
+lab more next week in two weeks from now
+
+11
+00:00:27,300 --> 00:00:29,130
+but today we're going to talk about
+
+12
+00:00:29,130 --> 00:00:33,649
+virtual memory instead in the meantime
+
+13
+00:00:33,649 --> 00:00:35,910
+so a couple things about malloc lab
+
+14
+00:00:35,910 --> 00:00:36,930
+though we're going to talk about mild
+
+15
+00:00:36,930 --> 00:00:38,730
+lab and she'll every flea before we get
+
+16
+00:00:38,730 --> 00:00:41,010
+to virtual memory malloc lab will then
+
+17
+00:00:41,010 --> 00:00:42,480
+be due November 19th
+
+18
+00:00:42,480 --> 00:00:44,280
+once it's out tomorrow but even though
+
+19
+00:00:44,280 --> 00:00:45,780
+that's a lot of time you should start
+
+20
+00:00:45,780 --> 00:00:49,430
+early because it is traditionally the
+
+21
+00:00:49,430 --> 00:00:52,940
+longest most involved lab for the course
+
+22
+00:00:52,940 --> 00:00:55,469
+as long as you start early it shouldn't
+
+23
+00:00:55,469 --> 00:00:57,239
+be too bad
+
+24
+00:00:57,239 --> 00:00:58,920
+but you will you know you will want to
+
+25
+00:00:58,920 --> 00:01:00,180
+spend a significant amount of time
+
+26
+00:01:00,180 --> 00:01:01,890
+designing it so that you don't make a
+
+27
+00:01:01,890 --> 00:01:03,300
+mess of everything once you could
+
+28
+00:01:03,300 --> 00:01:06,030
+implement it you will probably need to
+
+29
+00:01:06,030 --> 00:01:07,380
+do at least a little bit of debugging
+
+30
+00:01:07,380 --> 00:01:09,180
+and the debugging can be tricky because
+
+31
+00:01:09,180 --> 00:01:11,220
+you've got a lot of low-level stuff
+
+32
+00:01:11,220 --> 00:01:15,750
+going on so a couple things about shell
+
+33
+00:01:15,750 --> 00:01:20,340
+lab based on what we've heard so one of
+
+34
+00:01:20,340 --> 00:01:22,229
+the things about the traces in case you
+
+35
+00:01:22,229 --> 00:01:24,150
+haven't noticed is the way the traces
+
+36
+00:01:24,150 --> 00:01:27,869
+work is they run echo to print out what
+
+37
+00:01:27,869 --> 00:01:30,990
+it's about to actually run during the
+
+38
+00:01:30,990 --> 00:01:34,439
+trace file so if you are seeing echo in
+
+39
+00:01:34,439 --> 00:01:38,250
+your job list when you run a trace what
+
+40
+00:01:38,250 --> 00:01:42,780
+that means is that you didn't remove it
+
+41
+00:01:42,780 --> 00:01:45,119
+properly because the echo is a
+
+42
+00:01:45,119 --> 00:01:47,360
+foreground process and it should go away
+
+43
+00:01:47,360 --> 00:01:50,700
+before it actually runs the real process
+
+44
+00:01:50,700 --> 00:01:52,110
+so if you're seeing something with that
+
+45
+00:01:52,110 --> 00:01:53,460
+go there the reason that is there is
+
+46
+00:01:53,460 --> 00:01:55,040
+because that's how the trace file works
+
+47
+00:01:55,040 --> 00:01:57,299
+is the reason why I got put there and
+
+48
+00:01:57,299 --> 00:01:58,530
+the reason why it's still there is
+
+49
+00:01:58,530 --> 00:02:00,360
+because there's something wrong with
+
+50
+00:02:00,360 --> 00:02:05,100
+your removal on your job list so you
+
+51
+00:02:05,100 --> 00:02:06,570
+know make sure you're actually opening
+
+52
+00:02:06,570 --> 00:02:08,429
+the trace file to see what exactly what
+
+53
+00:02:08,429 --> 00:02:11,640
+it does if you're confused about what's
+
+54
+00:02:11,640 --> 00:02:12,709
+going on
+
+55
+00:02:12,709 --> 00:02:16,310
+six suspend so six to spend maybe a lot
+
+56
+00:02:16,310 --> 00:02:18,319
+of you have found is helpful for this
+
+57
+00:02:18,319 --> 00:02:22,370
+lab if you have not realized that yet I
+
+58
+00:02:22,370 --> 00:02:24,709
+will tell you now six suspend is helpful
+
+59
+00:02:24,709 --> 00:02:27,769
+for this lab so you might have noticed
+
+60
+00:02:27,769 --> 00:02:29,299
+that you know there's sort of two places
+
+61
+00:02:29,299 --> 00:02:30,859
+where you want to be able to use weight
+
+62
+00:02:30,859 --> 00:02:32,389
+pit because you know you have to handle
+
+63
+00:02:32,389 --> 00:02:34,579
+these background jobs and you also have
+
+64
+00:02:34,579 --> 00:02:36,560
+to be handling a foreground job and
+
+65
+00:02:36,560 --> 00:02:38,689
+maybe a background job is going to stop
+
+66
+00:02:38,689 --> 00:02:40,549
+while your foreground job is running and
+
+67
+00:02:40,549 --> 00:02:41,959
+you don't know you know what order these
+
+68
+00:02:41,959 --> 00:02:44,000
+things are going to happen in but you
+
+69
+00:02:44,000 --> 00:02:46,209
+can't have weight pigs in both places
+
+70
+00:02:46,209 --> 00:02:48,849
+because each weigh pit just sort of gets
+
+71
+00:02:48,849 --> 00:02:52,780
+whatever children happen to be
+
+72
+00:02:52,780 --> 00:02:55,760
+terminating and so you might have said
+
+73
+00:02:55,760 --> 00:02:57,019
+well I'll just use weight paid for the
+
+74
+00:02:57,019 --> 00:02:58,790
+background jobs and then just like to
+
+75
+00:02:58,790 --> 00:03:00,349
+make the foreground process not do
+
+76
+00:03:00,349 --> 00:03:01,790
+anything I'll just sort of sit there and
+
+77
+00:03:01,790 --> 00:03:02,689
+I'll sleep Earl
+
+78
+00:03:02,689 --> 00:03:04,519
+I'll just have a while loop that just
+
+79
+00:03:04,519 --> 00:03:07,489
+Waits and that's a bad idea yeah you
+
+80
+00:03:07,489 --> 00:03:09,859
+couldn't either you'll be wasting a lot
+
+81
+00:03:09,859 --> 00:03:11,810
+of CPU power we'll be introducing race
+
+82
+00:03:11,810 --> 00:03:14,290
+conditions or both if you do that and
+
+83
+00:03:14,290 --> 00:03:18,409
+those are undesirable so you should look
+
+84
+00:03:18,409 --> 00:03:20,329
+into how you can use six suspend because
+
+85
+00:03:20,329 --> 00:03:21,919
+with six to spend you can sort of get
+
+86
+00:03:21,919 --> 00:03:25,489
+your process to just only check and see
+
+87
+00:03:25,489 --> 00:03:26,989
+what's happened every time a new signal
+
+88
+00:03:26,989 --> 00:03:28,430
+arrives and you do get a signal when
+
+89
+00:03:28,430 --> 00:03:30,949
+children die so that's good and you can
+
+90
+00:03:30,949 --> 00:03:32,239
+sort of just every time a signal arrives
+
+91
+00:03:32,239 --> 00:03:33,439
+you check and see if there's something
+
+92
+00:03:33,439 --> 00:03:36,680
+you need to do too and you know the
+
+93
+00:03:36,680 --> 00:03:38,359
+foreground job being blocked and if not
+
+94
+00:03:38,359 --> 00:03:40,310
+you can just go back and sick suspending
+
+95
+00:03:40,310 --> 00:03:43,639
+it so you should think about how exactly
+
+96
+00:03:43,639 --> 00:03:44,870
+to implement that if you haven't gotten
+
+97
+00:03:44,870 --> 00:03:47,419
+that already there's some details about
+
+98
+00:03:47,419 --> 00:03:50,419
+how sick suspend works there you can
+
+99
+00:03:50,419 --> 00:03:53,750
+also read the man page and then we even
+
+100
+00:03:53,750 --> 00:03:55,489
+have a great example of it for you
+
+101
+00:03:55,489 --> 00:03:57,530
+and so these you know this will be
+
+102
+00:03:57,530 --> 00:03:58,819
+online and you can look at that in
+
+103
+00:03:58,819 --> 00:04:01,370
+detail by the I mean are there any
+
+104
+00:04:01,370 --> 00:04:06,650
+questions about it from here it's it's
+
+105
+00:04:06,650 --> 00:04:09,859
+not too complicated system calls an
+
+106
+00:04:09,859 --> 00:04:12,859
+error handling so you should always
+
+107
+00:04:12,859 --> 00:04:15,829
+handle the errors from any system call
+
+108
+00:04:15,829 --> 00:04:18,620
+that you might be making so anytime you
+
+109
+00:04:18,620 --> 00:04:21,079
+know if it's a fork if it's an exact if
+
+110
+00:04:21,079 --> 00:04:25,099
+it's an open file whatever it is you
+
+111
+00:04:25,099 --> 00:04:26,210
+should be prepared for
+
+112
+00:04:26,210 --> 00:04:29,360
+fact that maybe there will be a error in
+
+113
+00:04:29,360 --> 00:04:31,819
+that system call and you should be doing
+
+114
+00:04:31,819 --> 00:04:33,470
+something reasonable to handle it if
+
+115
+00:04:33,470 --> 00:04:36,710
+that occurs so the reasonable thing you
+
+116
+00:04:36,710 --> 00:04:38,870
+know it's different depending on what it
+
+117
+00:04:38,870 --> 00:04:42,710
+is for some things maybe the reasonable
+
+118
+00:04:42,710 --> 00:04:44,900
+thing to do is to just print out an
+
+119
+00:04:44,900 --> 00:04:46,520
+error message by your shell keeps going
+
+120
+00:04:46,520 --> 00:04:49,970
+so for instance maybe maybe I try to
+
+121
+00:04:49,970 --> 00:04:53,080
+exact a process that doesn't exist
+
+122
+00:04:53,080 --> 00:04:55,580
+because the user typed in something bad
+
+123
+00:04:55,580 --> 00:04:56,720
+on the command line
+
+124
+00:04:56,720 --> 00:04:58,460
+well you shouldn't just shut down the
+
+125
+00:04:58,460 --> 00:05:00,860
+host shell because of that it would be
+
+126
+00:05:00,860 --> 00:05:02,750
+much better to handle that error by
+
+127
+00:05:02,750 --> 00:05:04,610
+printing out an error message but keep
+
+128
+00:05:04,610 --> 00:05:12,410
+going yes you need to handle errors for
+
+129
+00:05:12,410 --> 00:05:14,630
+that or should be so okay yeah so we've
+
+130
+00:05:14,630 --> 00:05:16,070
+got wrappers for you and what these
+
+131
+00:05:16,070 --> 00:05:18,139
+wrappers do is they handle errors by
+
+132
+00:05:18,139 --> 00:05:20,960
+exiting in some cases that's what you
+
+133
+00:05:20,960 --> 00:05:23,449
+want in other cases that might not be
+
+134
+00:05:23,449 --> 00:05:27,039
+what you want it these wrappers will be
+
+135
+00:05:27,039 --> 00:05:30,740
+too aggressive about just terminating
+
+136
+00:05:30,740 --> 00:05:33,530
+the program in some cases where you
+
+137
+00:05:33,530 --> 00:05:36,590
+could have kept going and so you should
+
+138
+00:05:36,590 --> 00:05:38,330
+think about you know in any particular
+
+139
+00:05:38,330 --> 00:05:40,699
+case if the correct behavior is to
+
+140
+00:05:40,699 --> 00:05:41,990
+terminate the process if this is
+
+141
+00:05:41,990 --> 00:05:43,099
+something that what we can't recover
+
+142
+00:05:43,099 --> 00:05:45,050
+from it or if there's a way that we can
+
+143
+00:05:45,050 --> 00:05:47,889
+keep going and you can of course modify
+
+144
+00:05:47,889 --> 00:05:51,409
+a copy of the wrapper to do something
+
+145
+00:05:51,409 --> 00:05:53,210
+else that you want if you sort of just
+
+146
+00:05:53,210 --> 00:05:54,949
+want to have the wrapper function there
+
+147
+00:05:54,949 --> 00:05:56,180
+but have a different error handling
+
+148
+00:05:56,180 --> 00:06:01,009
+behavior inside it okay and of course
+
+149
+00:06:01,009 --> 00:06:03,889
+you know you've many of you have seen
+
+150
+00:06:03,889 --> 00:06:06,440
+from cache lab that yes we do take off
+
+151
+00:06:06,440 --> 00:06:08,870
+style points for things this is one of
+
+152
+00:06:08,870 --> 00:06:10,580
+the things that we would take style
+
+153
+00:06:10,580 --> 00:06:12,680
+points off if you didn't handle these
+
+154
+00:06:12,680 --> 00:06:17,480
+errors so make sure you do that
+
+155
+00:06:17,480 --> 00:06:21,110
+when you go the app ever do function
+
+156
+00:06:21,110 --> 00:06:22,670
+that I've given you in the hand of
+
+157
+00:06:22,670 --> 00:06:28,300
+Coachella this function called add a
+
+158
+00:06:28,300 --> 00:06:42,230
+pair not a PP app I'm not sure what that
+
+159
+00:06:42,230 --> 00:06:46,250
+function is for the UNIX era one is part
+
+160
+00:06:46,250 --> 00:06:50,210
+of the CSAP P wrappers that's what they
+
+161
+00:06:50,210 --> 00:06:52,880
+use to just print out the error message
+
+162
+00:06:52,880 --> 00:06:56,690
+in and then exit I'm not sure with the
+
+163
+00:06:56,690 --> 00:06:59,350
+AP Pierre does that would be different I
+
+164
+00:06:59,350 --> 00:07:01,250
+don't have a copy of the handout
+
+165
+00:07:01,250 --> 00:07:06,640
+download okay let's see
+
+166
+00:07:06,640 --> 00:07:09,260
+audio basics okay so one of the things
+
+167
+00:07:09,260 --> 00:07:12,110
+about shell lab that we did not talk
+
+168
+00:07:12,110 --> 00:07:16,700
+about last week was i/o so the very end
+
+169
+00:07:16,700 --> 00:07:18,110
+of shell lab you're doing a bit of i/o
+
+170
+00:07:18,110 --> 00:07:19,880
+redirection it's like the last two
+
+171
+00:07:19,880 --> 00:07:22,190
+traces if you haven't gotten there yet
+
+172
+00:07:22,190 --> 00:07:24,590
+so some things about i/o there's sort of
+
+173
+00:07:24,590 --> 00:07:27,320
+four basic operations so we've got you
+
+174
+00:07:27,320 --> 00:07:28,880
+know we've got these files and what do
+
+175
+00:07:28,880 --> 00:07:30,290
+we do with them well we can open files
+
+176
+00:07:30,290 --> 00:07:33,710
+we can close files we can read bytes out
+
+177
+00:07:33,710 --> 00:07:35,180
+of a file and we can write bytes to a
+
+178
+00:07:35,180 --> 00:07:40,760
+file and then the way that we reference
+
+179
+00:07:40,760 --> 00:07:42,290
+these files from our program is that we
+
+180
+00:07:42,290 --> 00:07:46,160
+have file descriptors so when you do an
+
+181
+00:07:46,160 --> 00:07:49,210
+open you get back a file descriptor to
+
+182
+00:07:49,210 --> 00:07:52,400
+the file that you opened and it's you
+
+183
+00:07:52,400 --> 00:07:55,190
+know some positive integer or negative
+
+184
+00:07:55,190 --> 00:07:56,780
+one in the case of the errors the error
+
+185
+00:07:56,780 --> 00:07:59,480
+code and so what happens is you start
+
+186
+00:07:59,480 --> 00:08:01,400
+with three file descriptors every
+
+187
+00:08:01,400 --> 00:08:02,840
+program starts by default with three
+
+188
+00:08:02,840 --> 00:08:04,790
+file descriptors and zero is standard in
+
+189
+00:08:04,790 --> 00:08:06,590
+so that's the things you type into your
+
+190
+00:08:06,590 --> 00:08:08,900
+terminal going into the program one is
+
+191
+00:08:08,900 --> 00:08:10,520
+standard out so that's the stuff being
+
+192
+00:08:10,520 --> 00:08:12,590
+printed out to terminal and to a
+
+193
+00:08:12,590 --> 00:08:15,140
+standard error which is a separate
+
+194
+00:08:15,140 --> 00:08:18,800
+output stream so that you can redirect a
+
+195
+00:08:18,800 --> 00:08:20,720
+separately from standard out which is
+
+196
+00:08:20,720 --> 00:08:22,670
+typically used for error messages and
+
+197
+00:08:22,670 --> 00:08:26,780
+stuff so the way it looks is every
+
+198
+00:08:26,780 --> 00:08:29,510
+process gets a file descriptor table
+
+199
+00:08:29,510 --> 00:08:31,670
+this is all of your file descriptors
+
+200
+00:08:31,670 --> 00:08:33,580
+which are just these integers mapping to
+
+201
+00:08:33,580 --> 00:08:37,669
+an Open File table so you've got a table
+
+202
+00:08:37,669 --> 00:08:39,500
+of all of the open files and it's shared
+
+203
+00:08:39,500 --> 00:08:42,080
+by all of the processes and what that
+
+204
+00:08:42,080 --> 00:08:43,760
+does is it keeps track of where in the
+
+205
+00:08:43,760 --> 00:08:45,200
+file you are and how many file
+
+206
+00:08:45,200 --> 00:08:46,640
+descriptors are pointing to it
+
+207
+00:08:46,640 --> 00:08:49,400
+so that position sort of is you know
+
+208
+00:08:49,400 --> 00:08:51,470
+when you do a read on a file you know
+
+209
+00:08:51,470 --> 00:08:52,970
+you want to be able to like read some
+
+210
+00:08:52,970 --> 00:08:54,410
+number of bytes and then the next read
+
+211
+00:08:54,410 --> 00:08:56,060
+you do should be the byte that comes
+
+212
+00:08:56,060 --> 00:08:57,440
+after what you just read it shouldn't it
+
+213
+00:08:57,440 --> 00:08:59,330
+start again at the beginning and so it
+
+214
+00:08:59,330 --> 00:09:00,680
+keeps track of where it is in the file
+
+215
+00:09:00,680 --> 00:09:03,470
+with position and then it keeps track of
+
+216
+00:09:03,470 --> 00:09:04,880
+how many file descriptors are pointing
+
+217
+00:09:04,880 --> 00:09:06,500
+to it because once there's no more file
+
+218
+00:09:06,500 --> 00:09:08,030
+descriptors pointing to it we can close
+
+219
+00:09:08,030 --> 00:09:11,210
+it and then those just point to actual
+
+220
+00:09:11,210 --> 00:09:15,320
+information that's pertaining to the
+
+221
+00:09:15,320 --> 00:09:19,490
+real file on the disk so stuff like it's
+
+222
+00:09:19,490 --> 00:09:23,390
+a its size what type of file it is and
+
+223
+00:09:23,390 --> 00:09:25,100
+the details of that are important we
+
+224
+00:09:25,100 --> 00:09:27,290
+shall lap that right hand side but if
+
+225
+00:09:27,290 --> 00:09:28,460
+you want to know more about that that's
+
+226
+00:09:28,460 --> 00:09:31,130
+in the textbook it's sort of the
+
+227
+00:09:31,130 --> 00:09:33,320
+descriptor table on the Open File table
+
+228
+00:09:33,320 --> 00:09:34,820
+that we care about here for shell lab
+
+229
+00:09:34,820 --> 00:09:36,700
+because we're going to be manipulating
+
+230
+00:09:36,700 --> 00:09:39,200
+the descriptor table and sort of the
+
+231
+00:09:39,200 --> 00:09:42,790
+arrows between them so in this example
+
+232
+00:09:42,790 --> 00:09:45,920
+we've got now we've got our standard out
+
+233
+00:09:45,920 --> 00:09:47,510
+is pointing to file a which we say is
+
+234
+00:09:47,510 --> 00:09:50,980
+the terminal which is what it points to
+
+235
+00:09:50,980 --> 00:09:53,990
+when you open it up by default and then
+
+236
+00:09:53,990 --> 00:09:56,090
+we've opened up some other file we
+
+237
+00:09:56,090 --> 00:09:58,940
+opened up one that's a file on disk and
+
+238
+00:09:58,940 --> 00:10:03,050
+it has file descriptor four so we can
+
+239
+00:10:03,050 --> 00:10:07,300
+have multiple and we can have multiple
+
+240
+00:10:07,300 --> 00:10:10,070
+files in the file table pointing to the
+
+241
+00:10:10,070 --> 00:10:12,200
+same file on disk so this is what
+
+242
+00:10:12,200 --> 00:10:13,760
+happens if you just open the same file
+
+243
+00:10:13,760 --> 00:10:16,970
+twice so on the disk it's actually the
+
+244
+00:10:16,970 --> 00:10:19,370
+same file if you you know if you're
+
+245
+00:10:19,370 --> 00:10:23,510
+writing to it then both copies know that
+
+246
+00:10:23,510 --> 00:10:25,010
+you're writing to it you can see those
+
+247
+00:10:25,010 --> 00:10:26,930
+changes across both but you can be
+
+248
+00:10:26,930 --> 00:10:29,210
+reading independently with two
+
+249
+00:10:29,210 --> 00:10:31,790
+independent positions through this same
+
+250
+00:10:31,790 --> 00:10:37,540
+file just by opening it twice and then
+
+251
+00:10:37,540 --> 00:10:42,980
+so yeah question
+
+252
+00:10:42,980 --> 00:10:45,450
+reference comfy too so we've got two
+
+253
+00:10:45,450 --> 00:10:47,340
+different files and each has one file
+
+254
+00:10:47,340 --> 00:10:50,370
+descriptor pointing to it so it's two
+
+255
+00:10:50,370 --> 00:10:52,350
+different entries in the file table but
+
+256
+00:10:52,350 --> 00:10:55,500
+both point to the same file on disk and
+
+257
+00:10:55,500 --> 00:10:57,780
+so what this means is that they can keep
+
+258
+00:10:57,780 --> 00:10:59,520
+separate positions in reference counts
+
+259
+00:10:59,520 --> 00:11:01,620
+but ultimately they are you know
+
+260
+00:11:01,620 --> 00:11:07,790
+referring to the same bytes on disk so
+
+261
+00:11:07,790 --> 00:11:10,140
+one of the question is okay what happens
+
+262
+00:11:10,140 --> 00:11:13,020
+when we fork so we have a process and
+
+263
+00:11:13,020 --> 00:11:16,650
+it's got a couple open files here file a
+
+264
+00:11:16,650 --> 00:11:18,900
+and B are open point to some things on
+
+265
+00:11:18,900 --> 00:11:21,180
+disk and we're going to do fork so what
+
+266
+00:11:21,180 --> 00:11:21,750
+happens
+
+267
+00:11:21,750 --> 00:11:24,180
+so the descriptor table is one per
+
+268
+00:11:24,180 --> 00:11:26,910
+process so obviously we're going to have
+
+269
+00:11:26,910 --> 00:11:28,800
+to get a new descriptor table because we
+
+270
+00:11:28,800 --> 00:11:30,930
+got a new process through the fork but
+
+271
+00:11:30,930 --> 00:11:32,700
+what does it point to is all going to
+
+272
+00:11:32,700 --> 00:11:35,370
+point to the same entries in the file
+
+273
+00:11:35,370 --> 00:11:38,100
+table that the parent did both the
+
+274
+00:11:38,100 --> 00:11:39,900
+parent and the child have the same thing
+
+275
+00:11:39,900 --> 00:11:41,820
+so we get an extra reference count on
+
+276
+00:11:41,820 --> 00:11:44,910
+all of those and it's at the same
+
+277
+00:11:44,910 --> 00:11:47,460
+position that the parent was at when it
+
+278
+00:11:47,460 --> 00:11:50,160
+did the fork but they're still the same
+
+279
+00:11:50,160 --> 00:11:51,840
+you know it's still only two files on
+
+280
+00:11:51,840 --> 00:11:52,200
+disk
+
+281
+00:11:52,200 --> 00:11:53,940
+we're not copying and pasting files on
+
+282
+00:11:53,940 --> 00:11:57,110
+disk by doing a fork that would be a
+
+283
+00:11:57,110 --> 00:12:01,040
+resource nightmare make it very easy to
+
+284
+00:12:01,040 --> 00:12:06,480
+use up a lot of dismiss so okay so any
+
+285
+00:12:06,480 --> 00:12:08,900
+any questions about that
+
+286
+00:12:08,900 --> 00:12:11,340
+if sort of just duplicated all of these
+
+287
+00:12:11,340 --> 00:12:16,190
+errors on the on this side over here
+
+288
+00:12:16,190 --> 00:12:18,840
+okay and so then the part that you're
+
+289
+00:12:18,840 --> 00:12:20,220
+actually doing so you know you'll do a
+
+290
+00:12:20,220 --> 00:12:21,810
+fork you do fork and sometimes this
+
+291
+00:12:21,810 --> 00:12:23,100
+happened so you need to know what this
+
+292
+00:12:23,100 --> 00:12:25,410
+picture looks like but what you actually
+
+293
+00:12:25,410 --> 00:12:27,210
+need to implement for the last couple of
+
+294
+00:12:27,210 --> 00:12:29,850
+traces is i/o redirection we asked you
+
+295
+00:12:29,850 --> 00:12:33,270
+to be able to handle the carrot and I'll
+
+296
+00:12:33,270 --> 00:12:35,340
+care at the sort of greater than and
+
+297
+00:12:35,340 --> 00:12:36,540
+less than symbols which do i/o
+
+298
+00:12:36,540 --> 00:12:38,670
+redirection so that you can output to
+
+299
+00:12:38,670 --> 00:12:40,350
+something other than the terminal or
+
+300
+00:12:40,350 --> 00:12:43,590
+take input from a file and so the
+
+301
+00:12:43,590 --> 00:12:44,940
+function you'll want to use to do that
+
+302
+00:12:44,940 --> 00:12:48,330
+is a function called dupe - so dupe - is
+
+303
+00:12:48,330 --> 00:12:50,910
+after Dupin before dupe 3 neither of
+
+304
+00:12:50,910 --> 00:12:54,610
+those are as useful as dupe 2
+
+305
+00:12:54,610 --> 00:12:58,550
+doop to what it does is it takes to file
+
+306
+00:12:58,550 --> 00:13:01,070
+descriptors and old file descriptor in a
+
+307
+00:13:01,070 --> 00:13:03,890
+new file descriptor and it takes the
+
+308
+00:13:03,890 --> 00:13:07,910
+entry for old file descriptor and it
+
+309
+00:13:07,910 --> 00:13:11,570
+sets it to be equal to the entry for new
+
+310
+00:13:11,570 --> 00:13:14,720
+file description which I personally
+
+311
+00:13:14,720 --> 00:13:17,150
+think is kind of backwards because you
+
+312
+00:13:17,150 --> 00:13:19,940
+end up with two copies of old file
+
+313
+00:13:19,940 --> 00:13:21,830
+descriptor and no copies of a new file
+
+314
+00:13:21,830 --> 00:13:24,230
+descriptive but that's the way it's
+
+315
+00:13:24,230 --> 00:13:25,460
+named and if you look at all of the man
+
+316
+00:13:25,460 --> 00:13:26,660
+pages that they're going to have the
+
+317
+00:13:26,660 --> 00:13:29,900
+same old menu so what happened is we
+
+318
+00:13:29,900 --> 00:13:32,990
+gave it we gave it 4 1 so 4 is our old
+
+319
+00:13:32,990 --> 00:13:34,640
+file descriptor and 1 is our new file
+
+320
+00:13:34,640 --> 00:13:37,250
+descriptor and after the dupe 2 what
+
+321
+00:13:37,250 --> 00:13:39,080
+happens is both file descriptors are
+
+322
+00:13:39,080 --> 00:13:41,330
+pointing to the same file so what this
+
+323
+00:13:41,330 --> 00:13:43,310
+is doing is it's taking that arrow in
+
+324
+00:13:43,310 --> 00:13:46,160
+the file descriptor table so we have
+
+325
+00:13:46,160 --> 00:13:48,260
+this error for is pointing to B and 1 is
+
+326
+00:13:48,260 --> 00:13:50,180
+pointing to a and now we're going to do
+
+327
+00:13:50,180 --> 00:13:53,030
+it dupe 2 and what happens is now one is
+
+328
+00:13:53,030 --> 00:13:56,510
+also pointing to B so we're just taking
+
+329
+00:13:56,510 --> 00:13:57,950
+that arrow from the file descriptor
+
+330
+00:13:57,950 --> 00:13:59,450
+table and sending it equal to the other
+
+331
+00:13:59,450 --> 00:14:01,940
+arrow it's sort of like a pointer
+
+332
+00:14:01,940 --> 00:14:04,940
+aliasing thing that we're doing here and
+
+333
+00:14:04,940 --> 00:14:07,370
+then of course the ref counts change so
+
+334
+00:14:07,370 --> 00:14:12,530
+you know the the because it's the old
+
+335
+00:14:12,530 --> 00:14:13,160
+file
+
+336
+00:14:13,160 --> 00:14:16,370
+yeah the old file gets an increment and
+
+337
+00:14:16,370 --> 00:14:17,960
+it's reference count because it's got
+
+338
+00:14:17,960 --> 00:14:19,280
+another arrow pointing to it now and
+
+339
+00:14:19,280 --> 00:14:21,530
+then the other one gets its reference
+
+340
+00:14:21,530 --> 00:14:23,210
+count decremented and so in this case
+
+341
+00:14:23,210 --> 00:14:25,340
+this actually becomes 0 so it can be
+
+342
+00:14:25,340 --> 00:14:28,670
+closed if there were other arrows still
+
+343
+00:14:28,670 --> 00:14:30,380
+pointing to it it would remain open with
+
+344
+00:14:30,380 --> 00:14:32,720
+whatever reference kind of had before
+
+345
+00:14:32,720 --> 00:14:36,740
+the dupe to by decremented by 1 and so
+
+346
+00:14:36,740 --> 00:14:37,970
+now we have two different file
+
+347
+00:14:37,970 --> 00:14:39,620
+descriptors and if we write to either of
+
+348
+00:14:39,620 --> 00:14:40,700
+these it's going to write to the same
+
+349
+00:14:40,700 --> 00:14:43,700
+file B and so this will be useful for
+
+350
+00:14:43,700 --> 00:14:49,640
+you to make make your shells write to or
+
+351
+00:14:49,640 --> 00:14:52,310
+read from files other than standard in
+
+352
+00:14:52,310 --> 00:14:55,850
+and standard out any questions about
+
+353
+00:14:55,850 --> 00:15:06,269
+that yeah
+
+354
+00:15:06,269 --> 00:15:10,689
+possible aliasing bugs so what do you
+
+355
+00:15:10,689 --> 00:15:18,549
+worried my alias yeah yeah so they have
+
+356
+00:15:18,549 --> 00:15:22,629
+the same they have the same file table
+
+357
+00:15:22,629 --> 00:15:24,579
+with the same position in it and stuff
+
+358
+00:15:24,579 --> 00:15:27,279
+so if we're reading from one it's
+
+359
+00:15:27,279 --> 00:15:29,980
+changing this position that the other is
+
+360
+00:15:29,980 --> 00:15:31,389
+going to see so if we read from the
+
+361
+00:15:31,389 --> 00:15:33,579
+child and then read from the parent we
+
+362
+00:15:33,579 --> 00:15:37,899
+can't get we won't get like by a if the
+
+363
+00:15:37,899 --> 00:15:39,129
+first fight is by day we don't get it
+
+364
+00:15:39,129 --> 00:15:40,299
+twice we get by day and then whatever
+
+365
+00:15:40,299 --> 00:15:44,199
+comes after it yeah so you do have to
+
+366
+00:15:44,199 --> 00:15:46,540
+watch out for that if that's something
+
+367
+00:15:46,540 --> 00:15:48,910
+that might be bad any other questions
+
+368
+00:15:48,910 --> 00:15:55,749
+okay so a quick sneak preview of MATLAB
+
+369
+00:15:55,749 --> 00:15:57,670
+before we move on to virtual memory so
+
+370
+00:15:57,670 --> 00:15:58,749
+malloc lab you're going to be writing
+
+371
+00:15:58,749 --> 00:16:00,790
+your own storage allocated so you're
+
+372
+00:16:00,790 --> 00:16:03,240
+going to be implementing malloc free
+
+373
+00:16:03,240 --> 00:16:07,749
+realloc and kalloch so those are sort of
+
+374
+00:16:07,749 --> 00:16:10,749
+the four main functions for memory
+
+375
+00:16:10,749 --> 00:16:13,929
+allocation and so in class you're going
+
+376
+00:16:13,929 --> 00:16:15,399
+to be learning about different ways to
+
+377
+00:16:15,399 --> 00:16:17,860
+keep track of free and allocated blocks
+
+378
+00:16:17,860 --> 00:16:19,389
+so the purpose of the memory allocator
+
+379
+00:16:19,389 --> 00:16:21,339
+so you know these are the ways you get
+
+380
+00:16:21,339 --> 00:16:23,649
+heap allocated memory and the heap is
+
+381
+00:16:23,649 --> 00:16:27,100
+just this huge chunk of memory that you
+
+382
+00:16:27,100 --> 00:16:29,980
+know can be shared by all different
+
+383
+00:16:29,980 --> 00:16:32,589
+parts of your program and you need some
+
+384
+00:16:32,589 --> 00:16:35,829
+way of keeping track of which bytes are
+
+385
+00:16:35,829 --> 00:16:38,379
+being used by the program and which
+
+386
+00:16:38,379 --> 00:16:39,939
+bytes you're allowed to give back when
+
+387
+00:16:39,939 --> 00:16:41,439
+someone asks for more bytes with a
+
+388
+00:16:41,439 --> 00:16:45,459
+malloc or a cowlick and so you know the
+
+389
+00:16:45,459 --> 00:16:46,869
+way you know the way a user asks for
+
+390
+00:16:46,869 --> 00:16:48,249
+more vices they do malloc is they do
+
+391
+00:16:48,249 --> 00:16:49,929
+cowlick and the way they say I'm done
+
+392
+00:16:49,929 --> 00:16:52,149
+with these vices they do free but your
+
+393
+00:16:52,149 --> 00:16:53,679
+memory allocator needs to keep track of
+
+394
+00:16:53,679 --> 00:16:56,619
+well when I do a free how many bytes
+
+395
+00:16:56,619 --> 00:16:59,619
+were allocated that address that I'm now
+
+396
+00:16:59,619 --> 00:17:01,379
+allowed to use for whatever else and
+
+397
+00:17:01,379 --> 00:17:03,610
+stuff like that so you need to sort of
+
+398
+00:17:03,610 --> 00:17:05,230
+keep track of what memory is free and
+
+399
+00:17:05,230 --> 00:17:08,799
+what memory is allocated so that when
+
+400
+00:17:08,799 --> 00:17:11,860
+these different function calls come in
+
+401
+00:17:11,860 --> 00:17:13,290
+you can
+
+402
+00:17:13,290 --> 00:17:17,280
+give back memory appropriately so
+
+403
+00:17:17,280 --> 00:17:18,630
+there's a couple couple different ways
+
+404
+00:17:18,630 --> 00:17:20,910
+of keeping track of these they're called
+
+405
+00:17:20,910 --> 00:17:22,949
+like implicit linked lists explicit
+
+406
+00:17:22,949 --> 00:17:27,000
+linked lists segregated lists of
+
+407
+00:17:27,000 --> 00:17:28,890
+different sizes so sort of it's
+
+408
+00:17:28,890 --> 00:17:31,620
+different ways of prioritizing well what
+
+409
+00:17:31,620 --> 00:17:33,090
+do we want to do quickly do we want to
+
+410
+00:17:33,090 --> 00:17:34,860
+be able to quickly find free blocks do
+
+411
+00:17:34,860 --> 00:17:40,830
+we want to be able to quickly you want
+
+412
+00:17:40,830 --> 00:17:43,350
+to be efficient in how much memory were
+
+413
+00:17:43,350 --> 00:17:46,020
+actually using because you know the
+
+414
+00:17:46,020 --> 00:17:50,970
+thing is if I if I say say I've got a
+
+415
+00:17:50,970 --> 00:17:52,650
+you know the memory is just a big long
+
+416
+00:17:52,650 --> 00:17:54,510
+sequence of bytes if someone asked for
+
+417
+00:17:54,510 --> 00:17:56,100
+some bikes and I say okay here you can
+
+418
+00:17:56,100 --> 00:17:57,240
+have these bytes these are in use now
+
+419
+00:17:57,240 --> 00:17:59,640
+and they ask for some more bytes and I
+
+420
+00:17:59,640 --> 00:18:01,140
+say okay can have these bytes these are
+
+421
+00:18:01,140 --> 00:18:03,180
+induced now if someone asks for a chunk
+
+422
+00:18:03,180 --> 00:18:05,340
+of memory that's bigger than this we
+
+423
+00:18:05,340 --> 00:18:07,740
+can't give them this so it just remains
+
+424
+00:18:07,740 --> 00:18:10,260
+empty and so one of the things we are
+
+425
+00:18:10,260 --> 00:18:12,240
+concerned about is you know given an
+
+426
+00:18:12,240 --> 00:18:15,780
+arbitrary sequence of allocations and
+
+427
+00:18:15,780 --> 00:18:17,760
+fries how do we make sure that we
+
+428
+00:18:17,760 --> 00:18:20,220
+minimize the amount of unused space at
+
+429
+00:18:20,220 --> 00:18:23,040
+the end of the run because this is sort
+
+430
+00:18:23,040 --> 00:18:24,990
+of spaced that but we can't use it for
+
+431
+00:18:24,990 --> 00:18:26,760
+anything unless someone asks for an
+
+432
+00:18:26,760 --> 00:18:30,330
+amount this small it's effectively used
+
+433
+00:18:30,330 --> 00:18:34,050
+its effectively wasted if we never are
+
+434
+00:18:34,050 --> 00:18:36,150
+able to allocate it so that's one of the
+
+435
+00:18:36,150 --> 00:18:38,340
+things you're dealing with you're
+
+436
+00:18:38,340 --> 00:18:40,820
+dealing with you know can I get back
+
+437
+00:18:40,820 --> 00:18:43,620
+memory quickly and can I can I get back
+
+438
+00:18:43,620 --> 00:18:45,990
+memory in a way that overall I've
+
+439
+00:18:45,990 --> 00:18:48,510
+efficiently used the memory and haven't
+
+440
+00:18:48,510 --> 00:18:50,310
+left a bunch of empty space on the heap
+
+441
+00:18:50,310 --> 00:18:54,150
+that's not allocated for anything and so
+
+442
+00:18:54,150 --> 00:18:55,440
+you know there's there's agreement
+
+443
+00:18:55,440 --> 00:18:56,160
+you're going to make a bunch of
+
+444
+00:18:56,160 --> 00:18:59,790
+different design decisions about how
+
+445
+00:18:59,790 --> 00:19:01,410
+you're going to look for free chunks of
+
+446
+00:19:01,410 --> 00:19:04,110
+memory the linked list that you're using
+
+447
+00:19:04,110 --> 00:19:05,670
+to keep track of this deal want them to
+
+448
+00:19:05,670 --> 00:19:08,810
+just be singly or doubly linked and
+
+449
+00:19:08,810 --> 00:19:12,780
+stuff like coalescing so sort of if is
+
+450
+00:19:12,780 --> 00:19:14,340
+another thing so I have a chunk of
+
+451
+00:19:14,340 --> 00:19:17,070
+memory and I've got some allocated bits
+
+452
+00:19:17,070 --> 00:19:19,530
+and say this gets freed and then this
+
+453
+00:19:19,530 --> 00:19:22,380
+one gets freed now I actually have this
+
+454
+00:19:22,380 --> 00:19:24,510
+much free space so at some point it
+
+455
+00:19:24,510 --> 00:19:25,950
+would be nice to go along and say this
+
+456
+00:19:25,950 --> 00:19:26,610
+isn't true
+
+457
+00:19:26,610 --> 00:19:28,230
+all blocks this is one big block because
+
+458
+00:19:28,230 --> 00:19:30,299
+they're right next to each other and so
+
+459
+00:19:30,299 --> 00:19:33,720
+you'll have to be able to think about
+
+460
+00:19:33,720 --> 00:19:34,950
+things like that and make design
+
+461
+00:19:34,950 --> 00:19:36,750
+decisions about when and how that's
+
+462
+00:19:36,750 --> 00:19:39,990
+going to happen so pay attention in
+
+463
+00:19:39,990 --> 00:19:41,340
+class because the stuff that's talked
+
+464
+00:19:41,340 --> 00:19:45,510
+about in class will be very useful then
+
+465
+00:19:45,510 --> 00:19:46,980
+here's another thing about a version
+
+466
+00:19:46,980 --> 00:19:49,710
+control so if you're if you if you're
+
+467
+00:19:49,710 --> 00:19:51,090
+familiar with version control it might
+
+468
+00:19:51,090 --> 00:19:52,980
+be helpful for mallik lab if you're not
+
+469
+00:19:52,980 --> 00:19:54,360
+familiar with region control I wouldn't
+
+470
+00:19:54,360 --> 00:19:56,340
+recommend trying to learn it while doing
+
+471
+00:19:56,340 --> 00:19:58,559
+Malick lab I would instead recommend
+
+472
+00:19:58,559 --> 00:20:00,150
+just you know copying and pasting your
+
+473
+00:20:00,150 --> 00:20:02,760
+file every now and then and we're
+
+474
+00:20:02,760 --> 00:20:04,140
+submitting to OTO lab so that you have
+
+475
+00:20:04,140 --> 00:20:06,150
+backup copies of the different versions
+
+476
+00:20:06,150 --> 00:20:07,980
+in case you totally mess something up
+
+477
+00:20:07,980 --> 00:20:09,960
+and want to just say I want to undo my
+
+478
+00:20:09,960 --> 00:20:14,460
+last several hours of work it's it
+
+479
+00:20:14,460 --> 00:20:16,770
+happens sometimes or maybe you don't
+
+480
+00:20:16,770 --> 00:20:17,880
+want to undo it but you just want to
+
+481
+00:20:17,880 --> 00:20:19,049
+refer back to what it was because you
+
+482
+00:20:19,049 --> 00:20:20,850
+changed something you forgot how how it
+
+483
+00:20:20,850 --> 00:20:22,770
+was before and you knew that whatever
+
+484
+00:20:22,770 --> 00:20:24,299
+you did was wrong and you want to see
+
+485
+00:20:24,299 --> 00:20:28,110
+what it was before you doing it okay so
+
+486
+00:20:28,110 --> 00:20:29,460
+now we're going to talk about virtual
+
+487
+00:20:29,460 --> 00:20:31,590
+memory so there really isn't a lab on
+
+488
+00:20:31,590 --> 00:20:33,929
+virtual memory since this is sort of
+
+489
+00:20:33,929 --> 00:20:35,910
+between shell lab and Malak lab but this
+
+490
+00:20:35,910 --> 00:20:38,880
+is something that might be and really
+
+491
+00:20:38,880 --> 00:20:41,370
+probably will be on your final exam so
+
+492
+00:20:41,370 --> 00:20:42,809
+it's still something you need to know
+
+493
+00:20:42,809 --> 00:20:46,679
+and you know is also useful in terms of
+
+494
+00:20:46,679 --> 00:20:49,919
+understanding how computers work so so
+
+495
+00:20:49,919 --> 00:20:51,890
+far you know we've been talking about
+
+496
+00:20:51,890 --> 00:20:54,120
+memory and we just say you know we've
+
+497
+00:20:54,120 --> 00:20:56,750
+got this flat array of addresses and you
+
+498
+00:20:56,750 --> 00:20:59,100
+know the stack starts somewhere and
+
+499
+00:20:59,100 --> 00:21:00,330
+there's a heap somewhere and there's all
+
+500
+00:21:00,330 --> 00:21:03,419
+this other stuff on it but we're also
+
+501
+00:21:03,419 --> 00:21:05,520
+running multiple processes at one time
+
+502
+00:21:05,520 --> 00:21:07,350
+and you saw that in your shell lab you
+
+503
+00:21:07,350 --> 00:21:08,970
+know you've got a ton of processes you
+
+504
+00:21:08,970 --> 00:21:11,220
+know running all at the same time even
+
+505
+00:21:11,220 --> 00:21:13,500
+just that have been forked off by your
+
+506
+00:21:13,500 --> 00:21:15,330
+shell in addition to the other ones
+
+507
+00:21:15,330 --> 00:21:17,640
+running on the system and you know you
+
+508
+00:21:17,640 --> 00:21:19,740
+might open them up in gdb and notice
+
+509
+00:21:19,740 --> 00:21:22,080
+that sort of they're reading and writing
+
+510
+00:21:22,080 --> 00:21:26,010
+to addresses that are the same and so
+
+511
+00:21:26,010 --> 00:21:28,080
+the question is well how does that work
+
+512
+00:21:28,080 --> 00:21:30,360
+because they can't possibly be reading
+
+513
+00:21:30,360 --> 00:21:31,950
+and writing to the actual same addresses
+
+514
+00:21:31,950 --> 00:21:33,090
+otherwise they'd be constantly
+
+515
+00:21:33,090 --> 00:21:34,380
+corrupting each other and everything
+
+516
+00:21:34,380 --> 00:21:36,179
+would crash as soon as you opened a
+
+517
+00:21:36,179 --> 00:21:40,080
+second process and so the answer is
+
+518
+00:21:40,080 --> 00:21:42,149
+those aren't the actual addresses that
+
+519
+00:21:42,149 --> 00:21:44,730
+they're reading and writing - there's a
+
+520
+00:21:44,730 --> 00:21:48,659
+secret layer in between the process and
+
+521
+00:21:48,659 --> 00:21:50,760
+the actual hardware where the process is
+
+522
+00:21:50,760 --> 00:21:53,429
+writing to virtual addresses and then
+
+523
+00:21:53,429 --> 00:21:55,500
+the hardware is actually turning those
+
+524
+00:21:55,500 --> 00:21:58,980
+into real addresses in your RAM that are
+
+525
+00:21:58,980 --> 00:22:01,500
+distinct and disjoint so that nothing
+
+526
+00:22:01,500 --> 00:22:03,750
+conflicts with each other so the
+
+527
+00:22:03,750 --> 00:22:05,269
+question is how does it do this
+
+528
+00:22:05,269 --> 00:22:11,100
+because that sounds pretty fancy so you
+
+529
+00:22:11,100 --> 00:22:12,779
+have your program and it's got all of
+
+530
+00:22:12,779 --> 00:22:14,700
+its virtual addresses the ones that the
+
+531
+00:22:14,700 --> 00:22:16,710
+program sees that it gets to use and
+
+532
+00:22:16,710 --> 00:22:19,409
+then you've got some physical address
+
+533
+00:22:19,409 --> 00:22:22,769
+space and it actually turns out that the
+
+534
+00:22:22,769 --> 00:22:26,669
+physical address space is tends to be
+
+535
+00:22:26,669 --> 00:22:28,230
+smaller than the virtual address space
+
+536
+00:22:28,230 --> 00:22:30,299
+and this isn't too surprising because
+
+537
+00:22:30,299 --> 00:22:32,519
+the physical address space is actual
+
+538
+00:22:32,519 --> 00:22:34,230
+bytes that are addressable in your
+
+539
+00:22:34,230 --> 00:22:36,600
+computer in the actual hardware and your
+
+540
+00:22:36,600 --> 00:22:39,120
+computer probably has like somewhere
+
+541
+00:22:39,120 --> 00:22:43,139
+around a gigabytes of RAM no plus or
+
+542
+00:22:43,139 --> 00:22:44,970
+minus you know a factor of four you've
+
+543
+00:22:44,970 --> 00:22:46,139
+probably got somewhere between two and
+
+544
+00:22:46,139 --> 00:22:50,100
+thirty two gigabytes on any computer you
+
+545
+00:22:50,100 --> 00:22:53,130
+have and so you know that's a lot but
+
+546
+00:22:53,130 --> 00:22:54,899
+it's not nearly as much as can be
+
+547
+00:22:54,899 --> 00:23:00,990
+addressed with you know 64 bits and so
+
+548
+00:23:00,990 --> 00:23:03,240
+you know there's this you know there's
+
+549
+00:23:03,240 --> 00:23:06,120
+this physical space it's actually
+
+550
+00:23:06,120 --> 00:23:08,340
+smaller than the virtual space your
+
+551
+00:23:08,340 --> 00:23:09,899
+current current virtual addresses don't
+
+552
+00:23:09,899 --> 00:23:11,940
+even use the full 64 bits because that's
+
+553
+00:23:11,940 --> 00:23:14,730
+just way more than you ever need but
+
+554
+00:23:14,730 --> 00:23:16,019
+it's still more than what you get
+
+555
+00:23:16,019 --> 00:23:18,570
+physically and so what has to happen is
+
+556
+00:23:18,570 --> 00:23:20,940
+the virtual addresses that are used need
+
+557
+00:23:20,940 --> 00:23:23,850
+to map to real physical addresses so
+
+558
+00:23:23,850 --> 00:23:24,870
+sort of what we have here in this
+
+559
+00:23:24,870 --> 00:23:26,250
+diagram is we're saying well you know
+
+560
+00:23:26,250 --> 00:23:27,630
+because some virtual addresses up here
+
+561
+00:23:27,630 --> 00:23:28,620
+and it's going to map to this physical
+
+562
+00:23:28,620 --> 00:23:30,929
+address and this one to this one this
+
+563
+00:23:30,929 --> 00:23:33,120
+one to this one and then over here you
+
+564
+00:23:33,120 --> 00:23:34,860
+know these red ones you know there's
+
+565
+00:23:34,860 --> 00:23:36,450
+other processes and they also get
+
+566
+00:23:36,450 --> 00:23:39,299
+distinct physical addresses that this
+
+567
+00:23:39,299 --> 00:23:40,950
+process doesn't get to use they can't
+
+568
+00:23:40,950 --> 00:23:43,049
+share anything and over here we actually
+
+569
+00:23:43,049 --> 00:23:45,299
+even see that this virtual address maps
+
+570
+00:23:45,299 --> 00:23:47,220
+down to this physical address which is
+
+571
+00:23:47,220 --> 00:23:50,130
+in a totally different order than the
+
+572
+00:23:50,130 --> 00:23:52,380
+the virtual addresses are sort of these
+
+573
+00:23:52,380 --> 00:23:54,119
+these guys are below
+
+574
+00:23:54,119 --> 00:23:56,399
+in the virtual address space but above
+
+575
+00:23:56,399 --> 00:23:57,899
+it in the physical address space that's
+
+576
+00:23:57,899 --> 00:24:00,809
+perfectly fine the computer is just
+
+577
+00:24:00,809 --> 00:24:02,099
+going to translate from virtual
+
+578
+00:24:02,099 --> 00:24:03,629
+addresses to physical addresses in these
+
+579
+00:24:03,629 --> 00:24:06,479
+chunks and they don't need to maintain a
+
+580
+00:24:06,479 --> 00:24:10,039
+particular order they don't need to be
+
+581
+00:24:10,039 --> 00:24:12,809
+they don't need to be contiguous we can
+
+582
+00:24:12,809 --> 00:24:15,419
+interleave the physical spaces of the
+
+583
+00:24:15,419 --> 00:24:19,649
+different processes and that's fine so
+
+584
+00:24:19,649 --> 00:24:21,359
+this sort of this diagram makes sense
+
+585
+00:24:21,359 --> 00:24:22,739
+what we're doing here
+
+586
+00:24:22,739 --> 00:24:26,969
+yes virtual space then physical space
+
+587
+00:24:26,969 --> 00:24:29,669
+doesn't mean and some of the virtual
+
+588
+00:24:29,669 --> 00:24:33,179
+spaces they point to the same address in
+
+589
+00:24:33,179 --> 00:24:35,129
+a physical space or how to stuff so it
+
+590
+00:24:35,129 --> 00:24:37,109
+means that some of the virtual space is
+
+591
+00:24:37,109 --> 00:24:38,729
+not going to actually point to anything
+
+592
+00:24:38,729 --> 00:24:41,039
+in the physical space so we haven't used
+
+593
+00:24:41,039 --> 00:24:42,569
+the whole virtual space here there's
+
+594
+00:24:42,569 --> 00:24:44,939
+like big empty chunks and these aren't
+
+595
+00:24:44,939 --> 00:24:47,029
+going to map to any real memory and
+
+596
+00:24:47,029 --> 00:24:49,169
+we're not going to hopefully we're not
+
+597
+00:24:49,169 --> 00:24:50,849
+going to actually try to put anything in
+
+598
+00:24:50,849 --> 00:24:52,409
+them so it'll be okay that they don't
+
+599
+00:24:52,409 --> 00:24:54,779
+map to memory if eventually use more
+
+600
+00:24:54,779 --> 00:24:56,339
+virtual space than we have physical
+
+601
+00:24:56,339 --> 00:24:58,259
+space available our computer is going to
+
+602
+00:24:58,259 --> 00:24:59,999
+complain and it's either going to like
+
+603
+00:24:59,999 --> 00:25:04,229
+crash or just like refuse to run the
+
+604
+00:25:04,229 --> 00:25:06,299
+program or do something because it
+
+605
+00:25:06,299 --> 00:25:07,829
+literally doesn't have any more memory
+
+606
+00:25:07,829 --> 00:25:12,659
+left basic you can never use such a more
+
+607
+00:25:12,659 --> 00:25:15,750
+or is it where sometimes you
+
+608
+00:25:15,750 --> 00:25:18,090
+think about the virtual address space
+
+609
+00:25:18,090 --> 00:25:22,169
+with an engine so okay so there's a
+
+610
+00:25:22,169 --> 00:25:24,570
+couple a couple useful things about
+
+611
+00:25:24,570 --> 00:25:27,149
+having the big virtual space even with
+
+612
+00:25:27,149 --> 00:25:29,820
+the small physical space one is that we
+
+613
+00:25:29,820 --> 00:25:31,860
+want to be able to just compile our
+
+614
+00:25:31,860 --> 00:25:33,899
+programs and not care about how much RAM
+
+615
+00:25:33,899 --> 00:25:34,980
+is going to be on the computer that
+
+616
+00:25:34,980 --> 00:25:36,779
+they're going to run on so you know
+
+617
+00:25:36,779 --> 00:25:39,059
+theoretically we could quadruple our
+
+618
+00:25:39,059 --> 00:25:41,429
+physical space just by adding more RAM
+
+619
+00:25:41,429 --> 00:25:45,860
+and it would be nice if you know we had
+
+620
+00:25:45,860 --> 00:25:49,320
+a mapping like this where nothing about
+
+621
+00:25:49,320 --> 00:25:53,340
+the mapping had to change in terms of
+
+622
+00:25:53,340 --> 00:25:55,019
+like recompiling the program to now be
+
+623
+00:25:55,019 --> 00:25:59,039
+able to use more addresses so that's one
+
+624
+00:25:59,039 --> 00:26:04,049
+reason another reason to keep these sort
+
+625
+00:26:04,049 --> 00:26:06,960
+of separate concepts is that we want all
+
+626
+00:26:06,960 --> 00:26:08,700
+the processes to not be able to touch
+
+627
+00:26:08,700 --> 00:26:10,980
+each other's memory but theoretically
+
+628
+00:26:10,980 --> 00:26:14,549
+any one process could be using like most
+
+629
+00:26:14,549 --> 00:26:16,740
+or all of the memory depending on how
+
+630
+00:26:16,740 --> 00:26:19,019
+how many are running at a time we don't
+
+631
+00:26:19,019 --> 00:26:21,120
+know how much of the memory each process
+
+632
+00:26:21,120 --> 00:26:22,799
+is going to be allowed to have so we
+
+633
+00:26:22,799 --> 00:26:25,169
+want to sort of allow it to have you
+
+634
+00:26:25,169 --> 00:26:27,659
+know as much as as possible and then
+
+635
+00:26:27,659 --> 00:26:29,070
+only in the cases where we actually
+
+636
+00:26:29,070 --> 00:26:30,779
+don't have physical memory to support
+
+637
+00:26:30,779 --> 00:26:34,110
+more things deal with saying this is bad
+
+638
+00:26:34,110 --> 00:26:35,669
+rather than constricting it in the
+
+639
+00:26:35,669 --> 00:26:37,110
+virtual case and saying that we're not
+
+640
+00:26:37,110 --> 00:26:38,279
+going to allow you to write a program
+
+641
+00:26:38,279 --> 00:26:41,570
+that might use more memory that is a lot
+
+642
+00:26:41,570 --> 00:26:46,399
+yeah pointing to something at the disk
+
+643
+00:26:46,399 --> 00:26:49,769
+which is something on this yeah so these
+
+644
+00:26:49,769 --> 00:26:53,370
+will all point to things on in RAM is
+
+645
+00:26:53,370 --> 00:26:56,070
+what they do yeah not on the disk now
+
+646
+00:26:56,070 --> 00:26:59,899
+there's different mechanisms there's a
+
+647
+00:26:59,899 --> 00:27:04,950
+different thing called a page file these
+
+648
+00:27:04,950 --> 00:27:07,950
+are all called pages of memory and
+
+649
+00:27:07,950 --> 00:27:10,200
+there's a mechanism called page files
+
+650
+00:27:10,200 --> 00:27:12,210
+where what you can actually do is
+
+651
+00:27:12,210 --> 00:27:15,210
+reserved a chunk of dicks disk space
+
+652
+00:27:15,210 --> 00:27:20,820
+that ends up being like extra RAM and it
+
+653
+00:27:20,820 --> 00:27:22,799
+sort of just swaps between RAM and this
+
+654
+00:27:22,799 --> 00:27:26,220
+file on disk to treat it as this extra
+
+655
+00:27:26,220 --> 00:27:27,869
+chunk of memory that it can keep stuff
+
+656
+00:27:27,869 --> 00:27:29,030
+in
+
+657
+00:27:29,030 --> 00:27:31,100
+that's really slow because of the fact
+
+658
+00:27:31,100 --> 00:27:32,450
+that disk reads and writes are really
+
+659
+00:27:32,450 --> 00:27:35,300
+slow but in a way it makes it it makes
+
+660
+00:27:35,300 --> 00:27:37,730
+it almost as if you're pointing to
+
+661
+00:27:37,730 --> 00:27:39,170
+things on disk although it will load
+
+662
+00:27:39,170 --> 00:27:40,610
+them up into RAM before it can actually
+
+663
+00:27:40,610 --> 00:27:43,630
+use them every time does that make sense
+
+664
+00:27:43,630 --> 00:27:46,550
+okay any other questions about this
+
+665
+00:27:46,550 --> 00:27:51,560
+picture before we move on okay so yes
+
+666
+00:27:51,560 --> 00:27:52,730
+okay so here's a here's a different
+
+667
+00:27:52,730 --> 00:27:53,900
+picture of it so you know we've got
+
+668
+00:27:53,900 --> 00:27:56,000
+these virtual pages they're pointing to
+
+669
+00:27:56,000 --> 00:27:59,270
+physical pages we can actually in the
+
+670
+00:27:59,270 --> 00:28:02,440
+case of read-only code like a library
+
+671
+00:28:02,440 --> 00:28:05,230
+function so maybe we have our code for
+
+672
+00:28:05,230 --> 00:28:07,520
+printf for malloc or something and
+
+673
+00:28:07,520 --> 00:28:09,350
+everyone shares this and you can only
+
+674
+00:28:09,350 --> 00:28:11,420
+read it you can't write to it so in
+
+675
+00:28:11,420 --> 00:28:12,980
+those cases we can actually have a
+
+676
+00:28:12,980 --> 00:28:14,660
+couple different virtual pages pointing
+
+677
+00:28:14,660 --> 00:28:16,370
+to the same physical page which is nice
+
+678
+00:28:16,370 --> 00:28:18,620
+we've actually reduced the amount of RAM
+
+679
+00:28:18,620 --> 00:28:22,690
+we have to use but for the most part the
+
+680
+00:28:22,690 --> 00:28:27,650
+pages are distinct so okay so let's say
+
+681
+00:28:27,650 --> 00:28:29,030
+so we need a couple different things so
+
+682
+00:28:29,030 --> 00:28:32,240
+we need a page table so all of these you
+
+683
+00:28:32,240 --> 00:28:35,030
+know we block up memory into chunks we
+
+684
+00:28:35,030 --> 00:28:36,490
+don't want to do it one bite at a time
+
+685
+00:28:36,490 --> 00:28:38,720
+so we block it up into chunks and those
+
+686
+00:28:38,720 --> 00:28:41,570
+are called pages so we can look up in a
+
+687
+00:28:41,570 --> 00:28:46,280
+page table the translation from virtual
+
+688
+00:28:46,280 --> 00:28:48,860
+addresses to physical addresses so you
+
+689
+00:28:48,860 --> 00:28:50,390
+know you give it a virtual address and
+
+690
+00:28:50,390 --> 00:28:51,440
+it's going to tell you okay this is the
+
+691
+00:28:51,440 --> 00:28:52,610
+physical address that you need to go to
+
+692
+00:28:52,610 --> 00:28:55,160
+to get that we're going to have
+
+693
+00:28:55,160 --> 00:28:56,780
+something special called the translation
+
+694
+00:28:56,780 --> 00:28:59,210
+lookaside buffer so we'll get to the
+
+695
+00:28:59,210 --> 00:29:00,800
+details of that later but essentially
+
+696
+00:29:00,800 --> 00:29:02,900
+it's a special cache to make these
+
+697
+00:29:02,900 --> 00:29:05,270
+lookups to this table faster and it's
+
+698
+00:29:05,270 --> 00:29:06,980
+implemented the same way as the caches
+
+699
+00:29:06,980 --> 00:29:08,050
+that we've seen before
+
+700
+00:29:08,050 --> 00:29:13,430
+and of course we can sort of take this
+
+701
+00:29:13,430 --> 00:29:16,820
+idea and just iterate it a bit and
+
+702
+00:29:16,820 --> 00:29:20,450
+instead of just having you know one one
+
+703
+00:29:20,450 --> 00:29:22,370
+translation from virtual to physical we
+
+704
+00:29:22,370 --> 00:29:24,980
+can sort of put several layers and each
+
+705
+00:29:24,980 --> 00:29:27,020
+layer you know does a little bit more
+
+706
+00:29:27,020 --> 00:29:30,590
+and then you sort of get a hierarchy
+
+707
+00:29:30,590 --> 00:29:32,510
+where you can say all of these things
+
+708
+00:29:32,510 --> 00:29:36,110
+you know are and you know chunk it up
+
+709
+00:29:36,110 --> 00:29:38,750
+and say like all of these things are
+
+710
+00:29:38,750 --> 00:29:40,370
+unmapped and then you don't have to put
+
+711
+00:29:40,370 --> 00:29:42,880
+them in your page table
+
+712
+00:29:42,880 --> 00:29:47,630
+it's sort of like a it's almost like a
+
+713
+00:29:47,630 --> 00:29:51,080
+bounding volume hierarchy if you if
+
+714
+00:29:51,080 --> 00:29:53,330
+you've done any computer graphics it's
+
+715
+00:29:53,330 --> 00:29:57,920
+sort of a way of describing a whole
+
+716
+00:29:57,920 --> 00:30:00,110
+bunch of pages all at once in different
+
+717
+00:30:00,110 --> 00:30:03,200
+levels of this we'll look at a quick
+
+718
+00:30:03,200 --> 00:30:05,210
+example of that at the end so okay so
+
+719
+00:30:05,210 --> 00:30:06,740
+how does this address translation
+
+720
+00:30:06,740 --> 00:30:09,200
+actually work so you know we actually
+
+721
+00:30:09,200 --> 00:30:10,820
+you know we have a virtual address how
+
+722
+00:30:10,820 --> 00:30:11,960
+are we going to get into a physical
+
+723
+00:30:11,960 --> 00:30:14,030
+address so what we're going to say here
+
+724
+00:30:14,030 --> 00:30:16,280
+is that we're going to have a virtual
+
+725
+00:30:16,280 --> 00:30:18,410
+address space and there's going to be n
+
+726
+00:30:18,410 --> 00:30:20,990
+possible virtual addresses so that means
+
+727
+00:30:20,990 --> 00:30:25,240
+that each one is n bits long right and
+
+728
+00:30:25,240 --> 00:30:29,270
+bits gives you 2 to the n - 2 where n is
+
+729
+00:30:29,270 --> 00:30:34,100
+you know 2 to the n lower case n lower
+
+730
+00:30:34,100 --> 00:30:35,630
+case n bits gives you 2 to the N
+
+731
+00:30:35,630 --> 00:30:38,390
+possible addresses and similarly with
+
+732
+00:30:38,390 --> 00:30:40,070
+the physical address space there's going
+
+733
+00:30:40,070 --> 00:30:43,190
+to be M physical addresses so lower case
+
+734
+00:30:43,190 --> 00:30:47,150
+M is going to be the log of uppercase M
+
+735
+00:30:47,150 --> 00:30:48,880
+so that we get 2 to the M equals M
+
+736
+00:30:48,880 --> 00:30:52,010
+uppercase M okay and then we're going to
+
+737
+00:30:52,010 --> 00:30:55,100
+have pages with size P so what that
+
+738
+00:30:55,100 --> 00:30:59,110
+means is that the address offset is
+
+739
+00:30:59,110 --> 00:31:05,510
+going to be lowercase P and what the
+
+740
+00:31:05,510 --> 00:31:08,240
+address offset is is you know how far
+
+741
+00:31:08,240 --> 00:31:09,710
+into the page we need to go to get a
+
+742
+00:31:09,710 --> 00:31:12,170
+particular byte of memory this is very
+
+743
+00:31:12,170 --> 00:31:13,700
+similar to like how we had block offset
+
+744
+00:31:13,700 --> 00:31:16,340
+in caches if we had that number where we
+
+745
+00:31:16,340 --> 00:31:18,140
+said ok we've got this chunk of memory
+
+746
+00:31:18,140 --> 00:31:20,180
+we've looked it up how far into it do we
+
+747
+00:31:20,180 --> 00:31:21,170
+have to go to get the one we're looking
+
+748
+00:31:21,170 --> 00:31:24,050
+at that's what this address offset is
+
+749
+00:31:24,050 --> 00:31:25,580
+we've got a page of memory how far into
+
+750
+00:31:25,580 --> 00:31:26,810
+it do we have to go to get the byte we
+
+751
+00:31:26,810 --> 00:31:29,720
+actually want and we're going to make
+
+752
+00:31:29,720 --> 00:31:31,490
+these two the same we're going to make
+
+753
+00:31:31,490 --> 00:31:33,080
+the offset for virtual pages and
+
+754
+00:31:33,080 --> 00:31:34,820
+physical pages the same so that the
+
+755
+00:31:34,820 --> 00:31:37,250
+translation between them is just the
+
+756
+00:31:37,250 --> 00:31:39,260
+identity function we just copy it over
+
+757
+00:31:39,260 --> 00:31:41,780
+we don't have to change it at all that
+
+758
+00:31:41,780 --> 00:31:45,410
+makes things faster so ok so here's a
+
+759
+00:31:45,410 --> 00:31:49,010
+diagram maybe a little bit confusing
+
+760
+00:31:49,010 --> 00:31:50,240
+with all of these arrows but here's
+
+761
+00:31:50,240 --> 00:31:52,130
+what's happening so we've got a virtual
+
+762
+00:31:52,130 --> 00:31:54,560
+address that we want to look up so we
+
+763
+00:31:54,560 --> 00:31:55,590
+split it up we've got
+
+764
+00:31:55,590 --> 00:31:57,419
+the offset based on how big our pages
+
+765
+00:31:57,419 --> 00:31:59,159
+are the lower bits of it are going to be
+
+766
+00:31:59,159 --> 00:32:00,899
+the offset and the upper bits are going
+
+767
+00:32:00,899 --> 00:32:02,850
+to index into a virtual page number this
+
+768
+00:32:02,850 --> 00:32:04,799
+is very much like how we had sort of a
+
+769
+00:32:04,799 --> 00:32:07,440
+set index in a and a block offset in our
+
+770
+00:32:07,440 --> 00:32:10,230
+caches and so we've got our page table
+
+771
+00:32:10,230 --> 00:32:12,029
+which starts at some page table based
+
+772
+00:32:12,029 --> 00:32:14,759
+registered which is you know just stored
+
+773
+00:32:14,759 --> 00:32:17,759
+somewhere else for the process and each
+
+774
+00:32:17,759 --> 00:32:19,200
+entry in the page table was a
+
+775
+00:32:19,200 --> 00:32:21,720
+combination of a valid bit and then the
+
+776
+00:32:21,720 --> 00:32:24,269
+physical page number that this address
+
+777
+00:32:24,269 --> 00:32:26,990
+this virtual page should actually go to
+
+778
+00:32:26,990 --> 00:32:29,940
+so we look up our virtual address we're
+
+779
+00:32:29,940 --> 00:32:32,879
+going to do a couple things so if it
+
+780
+00:32:32,879 --> 00:32:37,110
+happens that the valid bit is zero then
+
+781
+00:32:37,110 --> 00:32:38,940
+what that means is that we don't have
+
+782
+00:32:38,940 --> 00:32:41,700
+the page in our memory right now it's a
+
+783
+00:32:41,700 --> 00:32:45,450
+page fault and so we talked about faults
+
+784
+00:32:45,450 --> 00:32:47,549
+last week you know what we can do is we
+
+785
+00:32:47,549 --> 00:32:48,779
+can go and handle this fault
+
+786
+00:32:48,779 --> 00:32:51,440
+and hopefully the kernel will be able to
+
+787
+00:32:51,440 --> 00:32:53,730
+load up some memory and put it in our
+
+788
+00:32:53,730 --> 00:32:56,789
+page table for us and then it'll reacts
+
+789
+00:32:56,789 --> 00:32:58,320
+accute that instruction and try to get
+
+790
+00:32:58,320 --> 00:33:02,519
+this memory again and so that's what
+
+791
+00:33:02,519 --> 00:33:04,230
+happens if the velebit is 0 if the valid
+
+792
+00:33:04,230 --> 00:33:06,539
+bit is 1 then we know that we actually
+
+793
+00:33:06,539 --> 00:33:08,100
+have a physical page corresponding to
+
+794
+00:33:08,100 --> 00:33:11,070
+this virtual address and so you know ok
+
+795
+00:33:11,070 --> 00:33:13,499
+so this page fault thing is to continue
+
+796
+00:33:13,499 --> 00:33:15,419
+the analogy with caches is similar to
+
+797
+00:33:15,419 --> 00:33:16,889
+when you do a cache miss and you have to
+
+798
+00:33:16,889 --> 00:33:18,779
+go load something up and now you know
+
+799
+00:33:18,779 --> 00:33:21,659
+you can do it again it'll work so then
+
+800
+00:33:21,659 --> 00:33:24,450
+we put in this virtual page number index
+
+801
+00:33:24,450 --> 00:33:26,249
+into the table say the valid bit is 1
+
+802
+00:33:26,249 --> 00:33:29,639
+now it maps to a physical page number so
+
+803
+00:33:29,639 --> 00:33:31,080
+in order to actually construct our
+
+804
+00:33:31,080 --> 00:33:33,210
+physical address we just copy over the
+
+805
+00:33:33,210 --> 00:33:35,519
+page offset because we've said let's
+
+806
+00:33:35,519 --> 00:33:36,990
+make them the same size so that they're
+
+807
+00:33:36,990 --> 00:33:39,029
+always the same and then we take the
+
+808
+00:33:39,029 --> 00:33:41,249
+physical page number that we got based
+
+809
+00:33:41,249 --> 00:33:42,659
+on the lookup in the virtual page number
+
+810
+00:33:42,659 --> 00:33:44,940
+and we smash them together and now we've
+
+811
+00:33:44,940 --> 00:33:46,889
+got a real physical address and if we go
+
+812
+00:33:46,889 --> 00:33:48,600
+there and Ram will get the address that
+
+813
+00:33:48,600 --> 00:33:50,460
+we were looking for it will get the the
+
+814
+00:33:50,460 --> 00:33:53,309
+bytes that we were requested to get by
+
+815
+00:33:53,309 --> 00:33:55,799
+the program with its virtual address so
+
+816
+00:33:55,799 --> 00:33:58,169
+does that sort of make sense what's
+
+817
+00:33:58,169 --> 00:34:02,700
+going on here cut it in half use the
+
+818
+00:34:02,700 --> 00:34:04,559
+page number to look up a physical page
+
+819
+00:34:04,559 --> 00:34:07,049
+number and then put them together if it
+
+820
+00:34:07,049 --> 00:34:09,280
+fails then the operating system
+
+821
+00:34:09,280 --> 00:34:11,440
+handles loading up a new page for us
+
+822
+00:34:11,440 --> 00:34:15,520
+okay so here we have okay an example so
+
+823
+00:34:15,520 --> 00:34:17,050
+we've got fourteen bits for a virtual
+
+824
+00:34:17,050 --> 00:34:19,510
+address is 12 for a physical and we said
+
+825
+00:34:19,510 --> 00:34:23,980
+the page size is 64 bytes so what that
+
+826
+00:34:23,980 --> 00:34:27,040
+means you know thirteen or fourteen bits
+
+827
+00:34:27,040 --> 00:34:31,179
+of virtual 12 bits of physical and then
+
+828
+00:34:31,179 --> 00:34:33,730
+since we have 64 byte page sizes that
+
+829
+00:34:33,730 --> 00:34:36,130
+means we need six bits to index into
+
+830
+00:34:36,130 --> 00:34:38,530
+them because two to the sixth is 64 so
+
+831
+00:34:38,530 --> 00:34:40,870
+our offsets are going to be six six of
+
+832
+00:34:40,870 --> 00:34:42,400
+these bits and then the rest are for the
+
+833
+00:34:42,400 --> 00:34:45,990
+page numbers okay so here's an example
+
+834
+00:34:45,990 --> 00:34:48,250
+now so I just told you the answer the
+
+835
+00:34:48,250 --> 00:34:49,990
+first part pages are 64 bytes how many
+
+836
+00:34:49,990 --> 00:34:54,250
+bits is the offset it's six because two
+
+837
+00:34:54,250 --> 00:34:58,830
+to the six is 64 so do two six equals 64
+
+838
+00:34:58,830 --> 00:35:03,070
+64 because what we know is that is that
+
+839
+00:35:03,070 --> 00:35:05,710
+the number of bits we have the page size
+
+840
+00:35:05,710 --> 00:35:08,320
+is equal to two to the number of bits in
+
+841
+00:35:08,320 --> 00:35:10,930
+the offset plus the formula from before
+
+842
+00:35:10,930 --> 00:35:13,750
+so this is 64 so that means lower case P
+
+843
+00:35:13,750 --> 00:35:16,510
+is 6 ok so here's an example that we're
+
+844
+00:35:16,510 --> 00:35:19,050
+going to do so why don't we want to find
+
+845
+00:35:19,050 --> 00:35:24,340
+0 3 d 4 and we've been given this page
+
+846
+00:35:24,340 --> 00:35:26,650
+table and so we're going to fill out
+
+847
+00:35:26,650 --> 00:35:28,180
+we're going to first find out you know
+
+848
+00:35:28,180 --> 00:35:29,470
+the virtual page number and then the
+
+849
+00:35:29,470 --> 00:35:30,940
+physical page number and then construct
+
+850
+00:35:30,940 --> 00:35:33,700
+the actual address ok so let's start
+
+851
+00:35:33,700 --> 00:35:38,620
+with the virtual page number so okay so
+
+852
+00:35:38,620 --> 00:35:49,210
+we've got fits 13 12 11 10 9 8 7 6 5 ok
+
+853
+00:35:49,210 --> 00:35:52,480
+so what is our address or address is 0 3
+
+854
+00:35:52,480 --> 00:35:56,260
+d 4 so how do we fill in if just we've
+
+855
+00:35:56,260 --> 00:36:01,680
+realized that this is the VPO and the V
+
+856
+00:36:01,680 --> 00:36:05,860
+and ok so I want to fill in the bits of
+
+857
+00:36:05,860 --> 00:36:07,390
+this address what are the bits of this
+
+858
+00:36:07,390 --> 00:36:11,020
+address let's uh let's go from low to
+
+859
+00:36:11,020 --> 00:36:13,780
+high what are the first what are the
+
+860
+00:36:13,780 --> 00:36:20,600
+first four bits
+
+861
+00:36:20,600 --> 00:36:23,400
+we're doing a hex to binary conversion
+
+862
+00:36:23,400 --> 00:36:33,000
+here 0 0 1 both plus 1 0
+
+863
+00:36:33,000 --> 00:36:36,510
+okay okay so this gives us this gives us
+
+864
+00:36:36,510 --> 00:36:41,250
+a 4 yeah this gives us 4 right so 2 to
+
+865
+00:36:41,250 --> 00:36:42,120
+the 2 is 4
+
+866
+00:36:42,120 --> 00:36:45,060
+okay and so what's the next byte the
+
+867
+00:36:45,060 --> 00:36:48,030
+next byte is d so what's D D is equal to
+
+868
+00:36:48,030 --> 00:36:52,170
+let's see a is 10 B is 11 C is 12 D is
+
+869
+00:36:52,170 --> 00:36:56,340
+13 so we want to somehow get to 13 so
+
+870
+00:36:56,340 --> 00:37:04,740
+what's that that's about 8 12 13 right 2
+
+871
+00:37:04,740 --> 00:37:07,590
+to 3 plus 2 to the 4 plus another one ok
+
+872
+00:37:07,590 --> 00:37:12,200
+so the next byte is 3 so how do we get 3
+
+873
+00:37:12,200 --> 00:37:16,530
+thanks someone knows 3 what's 3 what I
+
+874
+00:37:16,530 --> 00:37:18,840
+know I have a byte there's 4 bits in it
+
+875
+00:37:18,840 --> 00:37:21,960
+how do I get the number 3 there was 0 1
+
+876
+00:37:21,960 --> 00:37:25,680
+1 ok here 0 1 1 and then the last one is
+
+877
+00:37:25,680 --> 00:37:27,930
+0 how do I get 0 hopefully well no this
+
+878
+00:37:27,930 --> 00:37:31,560
+yeah just zeros okay very good so ok so
+
+879
+00:37:31,560 --> 00:37:33,390
+now we have we have the bits
+
+880
+00:37:33,390 --> 00:37:36,840
+corresponding to this address so we
+
+881
+00:37:36,840 --> 00:37:39,210
+determined before that there's 6 bits
+
+882
+00:37:39,210 --> 00:37:41,670
+for the virtual page offset and then the
+
+883
+00:37:41,670 --> 00:37:43,620
+remainder are the virtual page number so
+
+884
+00:37:43,620 --> 00:37:46,140
+this is our virtual page number so what
+
+885
+00:37:46,140 --> 00:37:51,870
+number is this in hex because it looks
+
+886
+00:37:51,870 --> 00:37:55,170
+like our table is indexed by hacks what
+
+887
+00:37:55,170 --> 00:37:57,020
+is it
+
+888
+00:37:57,020 --> 00:38:00,119
+okay so this is zero X F we've
+
+889
+00:38:00,119 --> 00:38:09,240
+translated this part into 0 X F x0 F ok
+
+890
+00:38:09,240 --> 00:38:12,119
+so what do we do so we've got the
+
+891
+00:38:12,119 --> 00:38:14,700
+virtual page number right that's what we
+
+892
+00:38:14,700 --> 00:38:16,079
+just figured out here virtual page
+
+893
+00:38:16,079 --> 00:38:18,599
+number now we want the physical page
+
+894
+00:38:18,599 --> 00:38:21,119
+number so how do we get the physical
+
+895
+00:38:21,119 --> 00:38:26,010
+page number yeah we just look at the
+
+896
+00:38:26,010 --> 00:38:28,230
+table so the table says virtual page
+
+897
+00:38:28,230 --> 00:38:30,299
+number is F what is the physical page
+
+898
+00:38:30,299 --> 00:38:32,819
+number it's D okay and look the valid
+
+899
+00:38:32,819 --> 00:38:35,130
+bit is 1 if it weren't 1 we want to be
+
+900
+00:38:35,130 --> 00:38:37,079
+able to use that entry same as caches
+
+901
+00:38:37,079 --> 00:38:39,329
+but the valid bit is 1 so that means our
+
+902
+00:38:39,329 --> 00:38:42,750
+physical page number is D ok so what's D
+
+903
+00:38:42,750 --> 00:38:45,450
+in binary let's write this out again we
+
+904
+00:38:45,450 --> 00:38:49,290
+get let's see 1 2 3 4 5 ok so D we
+
+905
+00:38:49,290 --> 00:38:51,420
+already figured out D D was over here
+
+906
+00:38:51,420 --> 00:39:02,990
+right 1 1 0 1 and we've got 2 6 of these
+
+907
+00:39:02,990 --> 00:39:05,280
+ok so what's in our physical page offset
+
+908
+00:39:05,280 --> 00:39:10,410
+then it's the same right we just copied
+
+909
+00:39:10,410 --> 00:39:11,849
+this over they're the same size and that
+
+910
+00:39:11,849 --> 00:39:12,990
+makes it convenient because we can just
+
+911
+00:39:12,990 --> 00:39:14,549
+copy it over they're going to be the
+
+912
+00:39:14,549 --> 00:39:15,780
+same offset because we're keeping these
+
+913
+00:39:15,780 --> 00:39:18,660
+pages the same size ok so now we just
+
+914
+00:39:18,660 --> 00:39:21,150
+have to translate this back into hex so
+
+915
+00:39:21,150 --> 00:39:23,849
+what was that that was a for that one
+
+916
+00:39:23,849 --> 00:39:28,349
+what's that that looks like 1 plus 4 is
+
+917
+00:39:28,349 --> 00:39:32,760
+like what 5 like doing that right and
+
+918
+00:39:32,760 --> 00:39:40,380
+then we use that it 0 X 3 5 4 yep okay
+
+919
+00:39:40,380 --> 00:39:42,390
+so what did we do so we figured out that
+
+920
+00:39:42,390 --> 00:39:46,049
+the page offset was 6 because we knew 64
+
+921
+00:39:46,049 --> 00:39:48,690
+bytes so we just took the log we filled
+
+922
+00:39:48,690 --> 00:39:50,549
+out the bits here by doing hex to binary
+
+923
+00:39:50,549 --> 00:39:53,490
+which was quite the struggle so maybe
+
+924
+00:39:53,490 --> 00:39:56,730
+you should practice that and then we you
+
+925
+00:39:56,730 --> 00:39:58,049
+know we just took this upper half and
+
+926
+00:39:58,049 --> 00:39:59,730
+looked it up in the table to get the
+
+927
+00:39:59,730 --> 00:40:02,040
+physical page number and then we copied
+
+928
+00:40:02,040 --> 00:40:03,660
+that down there and now this becomes a
+
+929
+00:40:03,660 --> 00:40:05,400
+new hex number that's our physical
+
+930
+00:40:05,400 --> 00:40:10,770
+address yes
+
+931
+00:40:10,770 --> 00:40:15,369
+first our en+ video so people um plus
+
+932
+00:40:15,369 --> 00:40:17,470
+BPO we knew because what we said at the
+
+933
+00:40:17,470 --> 00:40:19,840
+beginning was the addresses are 14 bits
+
+934
+00:40:19,840 --> 00:40:23,520
+so then it's just going to be VPN is the
+
+935
+00:40:23,520 --> 00:40:25,750
+number of bits in the address minus the
+
+936
+00:40:25,750 --> 00:40:32,050
+number of bits in the offset you'll be
+
+937
+00:40:32,050 --> 00:40:34,840
+you'll be given some numbers that
+
+938
+00:40:34,840 --> 00:40:36,369
+correspond you'll be given enough
+
+939
+00:40:36,369 --> 00:40:38,230
+numbers that you can figure out the
+
+940
+00:40:38,230 --> 00:40:41,260
+remaining ones the standard 464 I think
+
+941
+00:40:41,260 --> 00:40:44,349
+is a 40 bits but that would be a bit one
+
+942
+00:40:44,349 --> 00:40:46,660
+yes or like we're not going to do that
+
+943
+00:40:46,660 --> 00:40:49,359
+the this that's used right now by Intel
+
+944
+00:40:49,359 --> 00:40:52,060
+machines is 40 I mean ideally in the
+
+945
+00:40:52,060 --> 00:40:53,890
+future they would scale all the way up
+
+946
+00:40:53,890 --> 00:40:56,080
+to the full 64 because that's how many
+
+947
+00:40:56,080 --> 00:40:58,119
+is supported but right now we don't need
+
+948
+00:40:58,119 --> 00:40:59,440
+that much RAM and so you might as well
+
+949
+00:40:59,440 --> 00:41:02,140
+not spend time translating that rest is
+
+950
+00:41:02,140 --> 00:41:07,349
+that big okay so that's that one okay so
+
+951
+00:41:07,349 --> 00:41:09,250
+then there's the whole translation
+
+952
+00:41:09,250 --> 00:41:11,859
+lookaside buffer thing so right now you
+
+953
+00:41:11,859 --> 00:41:14,170
+know we just did this one and we didn't
+
+954
+00:41:14,170 --> 00:41:16,060
+have a translation lookaside buffer
+
+955
+00:41:16,060 --> 00:41:19,210
+implemented and what that means is that
+
+956
+00:41:19,210 --> 00:41:22,180
+you're going to do twice the number of
+
+957
+00:41:22,180 --> 00:41:26,800
+memory accesses you know that we have in
+
+958
+00:41:26,800 --> 00:41:28,510
+our code because what we have to do is
+
+959
+00:41:28,510 --> 00:41:30,220
+first we have to go to memory to get
+
+960
+00:41:30,220 --> 00:41:32,080
+this page table and and do this
+
+961
+00:41:32,080 --> 00:41:33,339
+translation and then we have to go to
+
+962
+00:41:33,339 --> 00:41:34,960
+memory again to get the actual thing
+
+963
+00:41:34,960 --> 00:41:39,070
+there so you know it would be nice if we
+
+964
+00:41:39,070 --> 00:41:42,280
+could when we're accessing addresses
+
+965
+00:41:42,280 --> 00:41:44,260
+repeatedly because we know you know
+
+966
+00:41:44,260 --> 00:41:46,180
+locality we tend to do that we tend to
+
+967
+00:41:46,180 --> 00:41:48,010
+access the same addresses over and over
+
+968
+00:41:48,010 --> 00:41:50,080
+it'd be great if we didn't have to go to
+
+969
+00:41:50,080 --> 00:41:53,109
+memory to do this translation especially
+
+970
+00:41:53,109 --> 00:41:56,040
+if we've just done it and so the
+
+971
+00:41:56,040 --> 00:41:58,540
+solution to that is the translation
+
+972
+00:41:58,540 --> 00:42:00,460
+lookaside buffer so this is a special
+
+973
+00:42:00,460 --> 00:42:04,180
+cache that is used by this memory
+
+974
+00:42:04,180 --> 00:42:09,690
+mapping device in order to keep track of
+
+975
+00:42:09,690 --> 00:42:13,089
+some of the information that I might be
+
+976
+00:42:13,089 --> 00:42:16,930
+reusing over and over so what we're
+
+977
+00:42:16,930 --> 00:42:19,870
+going to do is we're going to take
+
+978
+00:42:19,870 --> 00:42:23,990
+the VPN part just the VPN part not the
+
+979
+00:42:23,990 --> 00:42:25,910
+whole thing you don't care about the
+
+980
+00:42:25,910 --> 00:42:28,010
+offset that's just being copied over
+
+981
+00:42:28,010 --> 00:42:29,570
+we're going to take this and this is
+
+982
+00:42:29,570 --> 00:42:32,300
+going to become something that gets
+
+983
+00:42:32,300 --> 00:42:34,790
+split up into an index in a tag and goes
+
+984
+00:42:34,790 --> 00:42:38,210
+into a cache so now we're going to
+
+985
+00:42:38,210 --> 00:42:42,200
+repeat the cache recitation so what do
+
+986
+00:42:42,200 --> 00:42:45,080
+we have so we said okay this in this
+
+987
+00:42:45,080 --> 00:42:50,240
+case this is a new example I don't know
+
+988
+00:42:50,240 --> 00:42:53,420
+if I should I guess I'm going to erase
+
+989
+00:42:53,420 --> 00:42:56,810
+this one so to leave the top of it up
+
+990
+00:42:56,810 --> 00:43:00,080
+for now what we're doing so we're going
+
+991
+00:43:00,080 --> 00:43:03,490
+to have one megabyte of virtual memory
+
+992
+00:43:03,490 --> 00:43:06,500
+we're going to have 256 kilobytes of
+
+993
+00:43:06,500 --> 00:43:08,930
+physical memory four kilobyte pages and
+
+994
+00:43:08,930 --> 00:43:11,360
+in our translation lookaside buffer has
+
+995
+00:43:11,360 --> 00:43:13,460
+eight entries in its 2-way
+
+996
+00:43:13,460 --> 00:43:15,770
+set-associative so now we've got a
+
+997
+00:43:15,770 --> 00:43:17,810
+couple questions that we have to answer
+
+998
+00:43:17,810 --> 00:43:19,790
+you should be good at this sort of stuff
+
+999
+00:43:19,790 --> 00:43:21,740
+because this is the sort of stuff
+
+1000
+00:43:21,740 --> 00:43:24,800
+they'll be expected to do efficiently on
+
+1001
+00:43:24,800 --> 00:43:27,350
+the final exam for instance so how many
+
+1002
+00:43:27,350 --> 00:43:29,060
+bits are needed to represent the virtual
+
+1003
+00:43:29,060 --> 00:43:37,580
+address space got one megabyte
+
+1004
+00:43:37,580 --> 00:43:40,890
+20 ok so we're going to say 20 so we
+
+1005
+00:43:40,890 --> 00:43:45,590
+want to do log base 2 of 2 to the 20
+
+1006
+00:43:45,590 --> 00:43:51,030
+Evil's 1 okay cool it works ok and we
+
+1007
+00:43:51,030 --> 00:43:54,030
+have so this is how many bits
+
+1008
+00:43:54,030 --> 00:43:57,300
+I guess we'll label them 1 2 3 4 5 and 6
+
+1009
+00:43:57,300 --> 00:43:59,760
+so that's that's part 1 how many bits
+
+1010
+00:43:59,760 --> 00:44:01,080
+are needed for the virtual address space
+
+1011
+00:44:01,080 --> 00:44:03,720
+so we took 1 megabyte that's 2 to the 20
+
+1012
+00:44:03,720 --> 00:44:06,030
+bikes how many bits do you need it take
+
+1013
+00:44:06,030 --> 00:44:08,850
+log base 2 you need 20 ok how many bits
+
+1014
+00:44:08,850 --> 00:44:10,140
+are needed to represent the physical
+
+1015
+00:44:10,140 --> 00:44:15,180
+address space we've got 256 kilobytes so
+
+1016
+00:44:15,180 --> 00:44:19,470
+what's 256 kilobytes the kilobyte is 2
+
+1017
+00:44:19,470 --> 00:44:23,040
+to the 10 so we're doing log or 2 of 2
+
+1018
+00:44:23,040 --> 00:44:27,240
+to the 10 times 256 that's what 2 to the
+
+1019
+00:44:27,240 --> 00:44:33,840
+8 times 2 to the 8 equals 18 does that
+
+1020
+00:44:33,840 --> 00:44:37,040
+work out that seems to work out because
+
+1021
+00:44:37,040 --> 00:44:40,950
+that's 2 less than this and their factor
+
+1022
+00:44:40,950 --> 00:44:44,540
+for different so that seems believable
+
+1023
+00:44:44,540 --> 00:44:47,480
+ok how many bits are needed to represent
+
+1024
+00:44:47,480 --> 00:44:51,869
+the offset someone else answered this
+
+1025
+00:44:51,869 --> 00:44:54,390
+one so we've got 4 kilobyte page size
+
+1026
+00:44:54,390 --> 00:44:55,560
+how many bits do we need to represent
+
+1027
+00:44:55,560 --> 00:45:06,250
+the offset
+
+1028
+00:45:06,250 --> 00:45:08,920
+twelve okay yeah so how did we get that
+
+1029
+00:45:08,920 --> 00:45:12,190
+we want to take log base two of the page
+
+1030
+00:45:12,190 --> 00:45:15,099
+size so what's the page size it's well a
+
+1031
+00:45:15,099 --> 00:45:16,960
+kilobyte is two to the ten and then four
+
+1032
+00:45:16,960 --> 00:45:19,810
+is two to the two so then the log base
+
+1033
+00:45:19,810 --> 00:45:21,810
+two of that is just twelve
+
+1034
+00:45:21,810 --> 00:45:24,220
+okay so twelve bits for the page size
+
+1035
+00:45:24,220 --> 00:45:26,380
+okay now what do we know we say that the
+
+1036
+00:45:26,380 --> 00:45:28,119
+translation lookaside buffer is eight
+
+1037
+00:45:28,119 --> 00:45:31,390
+entries 2-way set-associative and we
+
+1038
+00:45:31,390 --> 00:45:35,349
+want to know how many bits are needed to
+
+1039
+00:45:35,349 --> 00:45:37,660
+represent the virtual page number and
+
+1040
+00:45:37,660 --> 00:45:40,869
+then how many bits how many bits are in
+
+1041
+00:45:40,869 --> 00:45:42,700
+the TLB indexed and how many bits are in
+
+1042
+00:45:42,700 --> 00:45:47,410
+the tag okay so part four how big is the
+
+1043
+00:45:47,410 --> 00:45:49,840
+virtual page number we know that this is
+
+1044
+00:45:49,840 --> 00:45:56,020
+our virtual address space sighs this is
+
+1045
+00:45:56,020 --> 00:45:58,780
+our physical address space size and this
+
+1046
+00:45:58,780 --> 00:46:06,099
+is our offset size our page offset so
+
+1047
+00:46:06,099 --> 00:46:08,740
+okay so how many how many bits do we
+
+1048
+00:46:08,740 --> 00:46:10,510
+need to represent just the virtual page
+
+1049
+00:46:10,510 --> 00:46:15,609
+number part of our addresses eight yeah
+
+1050
+00:46:15,609 --> 00:46:20,050
+okay so how did we get eight so eight
+
+1051
+00:46:20,050 --> 00:46:23,109
+bits how did we get it from these
+
+1052
+00:46:23,109 --> 00:46:30,280
+numbers I only see one reasonable way to
+
+1053
+00:46:30,280 --> 00:46:34,060
+combine these to get a we took the
+
+1054
+00:46:34,060 --> 00:46:35,440
+number of bits in our virtual address
+
+1055
+00:46:35,440 --> 00:46:37,000
+space and subtracted out the number of
+
+1056
+00:46:37,000 --> 00:46:39,040
+bits used for the offset because the
+
+1057
+00:46:39,040 --> 00:46:40,720
+virtual address space the bits are just
+
+1058
+00:46:40,720 --> 00:46:42,220
+split into the page number and the
+
+1059
+00:46:42,220 --> 00:46:44,200
+offset we've got the patient over here
+
+1060
+00:46:44,200 --> 00:46:47,320
+and we've got the offset here so if we
+
+1061
+00:46:47,320 --> 00:46:49,359
+have 20 bits total and this is 12 of
+
+1062
+00:46:49,359 --> 00:46:51,460
+them then the remaining ones have eight
+
+1063
+00:46:51,460 --> 00:46:54,099
+okay so we've got eight bits for a
+
+1064
+00:46:54,099 --> 00:46:57,520
+virtual page number and now we're going
+
+1065
+00:46:57,520 --> 00:47:00,040
+to use these Inc bits so that's all
+
+1066
+00:47:00,040 --> 00:47:02,320
+great this happens to be eight okay so
+
+1067
+00:47:02,320 --> 00:47:07,359
+we have eight bits and we want to use
+
+1068
+00:47:07,359 --> 00:47:11,020
+them as an index as a entry that we're
+
+1069
+00:47:11,020 --> 00:47:14,920
+going to cache so we're only using the
+
+1070
+00:47:14,920 --> 00:47:16,359
+virtual page number part of it we don't
+
+1071
+00:47:16,359 --> 00:47:19,799
+care about the offset so how do we know
+
+1072
+00:47:19,799 --> 00:47:21,880
+so we want to know how many bits are in
+
+1073
+00:47:21,880 --> 00:47:23,170
+the index and how many bits are in the
+
+1074
+00:47:23,170 --> 00:47:25,809
+tag and we know that it's 8 entries
+
+1075
+00:47:25,809 --> 00:47:28,809
+2-way set-associative okay so the
+
+1076
+00:47:28,809 --> 00:47:32,229
+question is how many sets are there
+
+1077
+00:47:32,229 --> 00:47:34,569
+total it's the first question we're
+
+1078
+00:47:34,569 --> 00:47:36,489
+going to ask how many sets are there in
+
+1079
+00:47:36,489 --> 00:47:46,109
+this cache 16 so there's 8 lines and
+
+1080
+00:47:46,109 --> 00:47:50,440
+2-way associative so force that's right
+
+1081
+00:47:50,440 --> 00:47:51,999
+so there's 4 sets and each one has two
+
+1082
+00:47:51,999 --> 00:47:53,890
+lines in it okay
+
+1083
+00:47:53,890 --> 00:47:56,979
+so the index is used the set index is
+
+1084
+00:47:56,979 --> 00:47:59,680
+used to get the set how many bits do we
+
+1085
+00:47:59,680 --> 00:48:02,440
+need for the set index if we have four
+
+1086
+00:48:02,440 --> 00:48:06,999
+sets - yeah two bins two bits for the
+
+1087
+00:48:06,999 --> 00:48:11,469
+set index this is the TLB index he'll be
+
+1088
+00:48:11,469 --> 00:48:14,949
+indexed and then how many bits do we
+
+1089
+00:48:14,949 --> 00:48:25,039
+need for the tag
+
+1090
+00:48:25,039 --> 00:48:29,179
+what was the answer just the rest yeah
+
+1091
+00:48:29,179 --> 00:48:31,429
+yeah so this is the same cache stuff
+
+1092
+00:48:31,429 --> 00:48:33,619
+we've used before you know you have your
+
+1093
+00:48:33,619 --> 00:48:37,069
+address so your caching and so sort of
+
+1094
+00:48:37,069 --> 00:48:39,079
+have your set index and you've got your
+
+1095
+00:48:39,079 --> 00:48:40,339
+tag and in this case we don't have a
+
+1096
+00:48:40,339 --> 00:48:44,390
+block offset because that's not what
+
+1097
+00:48:44,390 --> 00:48:45,829
+we're doing so we've just got the
+
+1098
+00:48:45,829 --> 00:48:52,999
+remaining six bits as your TLB tag so
+
+1099
+00:48:52,999 --> 00:48:54,439
+then when we want to look something up
+
+1100
+00:48:54,439 --> 00:48:56,989
+in the translation lookaside buffer we
+
+1101
+00:48:56,989 --> 00:48:59,359
+first cut off this virtual page number
+
+1102
+00:48:59,359 --> 00:49:03,919
+and then we can cut off two bits check
+
+1103
+00:49:03,919 --> 00:49:07,309
+and see if there's an entry at that set
+
+1104
+00:49:07,309 --> 00:49:09,349
+number so this would be set three
+
+1105
+00:49:09,349 --> 00:49:11,209
+because we've got one one and we check
+
+1106
+00:49:11,209 --> 00:49:13,969
+well is there tag that matches this so
+
+1107
+00:49:13,969 --> 00:49:16,729
+this is three again is there something
+
+1108
+00:49:16,729 --> 00:49:18,650
+in one of those two lines that has
+
+1109
+00:49:18,650 --> 00:49:21,619
+tagged three and if there is well then
+
+1110
+00:49:21,619 --> 00:49:24,109
+what that can do is that can just give
+
+1111
+00:49:24,109 --> 00:49:26,419
+us back the correct physical page number
+
+1112
+00:49:26,419 --> 00:49:28,819
+right away and we didn't have to go all
+
+1113
+00:49:28,819 --> 00:49:32,809
+the way down to main memory to the page
+
+1114
+00:49:32,809 --> 00:49:35,630
+table to look it up we sort of bypassed
+
+1115
+00:49:35,630 --> 00:49:37,609
+the page table and just got it straight
+
+1116
+00:49:37,609 --> 00:49:40,819
+out of the lookaside buffer okay so now
+
+1117
+00:49:40,819 --> 00:49:42,499
+you know sort of out of time so I'm just
+
+1118
+00:49:42,499 --> 00:49:44,239
+going to skip through this quickly but
+
+1119
+00:49:44,239 --> 00:49:47,390
+you can check the slides online if you
+
+1120
+00:49:47,390 --> 00:49:49,669
+want to see it in more detail so sort of
+
+1121
+00:49:49,669 --> 00:49:53,059
+what we did but actually maybe maybe I
+
+1122
+00:49:53,059 --> 00:49:55,549
+won't go through quickly because I don't
+
+1123
+00:49:55,549 --> 00:49:56,809
+want you to see the answers if you want
+
+1124
+00:49:56,809 --> 00:49:58,880
+to go through yourself but what we do
+
+1125
+00:49:58,880 --> 00:50:00,709
+you know we we have the translation
+
+1126
+00:50:00,709 --> 00:50:01,909
+lookaside buffer so we're going to do
+
+1127
+00:50:01,909 --> 00:50:03,349
+the same thing where we fill in the bits
+
+1128
+00:50:03,349 --> 00:50:05,599
+but now we can check and see if it's in
+
+1129
+00:50:05,599 --> 00:50:08,239
+the buffer or not if it's in this buffer
+
+1130
+00:50:08,239 --> 00:50:09,679
+then we can just give back the physical
+
+1131
+00:50:09,679 --> 00:50:11,539
+page number that we had before if it's
+
+1132
+00:50:11,539 --> 00:50:12,739
+not then we have to go all the way to
+
+1133
+00:50:12,739 --> 00:50:16,959
+the page table which is in the memory
+
+1134
+00:50:16,959 --> 00:50:23,560
+any questions
+
+1135
+00:50:23,560 --> 00:50:26,560
+okay
+

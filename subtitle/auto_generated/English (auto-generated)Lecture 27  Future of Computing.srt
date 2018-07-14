@@ -1,0 +1,5449 @@
+﻿1
+00:00:00,600 --> 00:00:03,620
+okay so this is the last lecture for the class
+
+2
+00:00:04,520 --> 00:00:10,460
+ and I'm sure that you've got a lot of other things going on as well 
+
+3
+00:00:10,580 --> 00:00:11,780
+so thanks for showing up 
+
+4
+00:00:12,380 --> 00:00:18,700
+today this is as I said last time these two lectures are not part of the course syllabus 
+
+5
+00:00:18,840 --> 00:00:21,880
+they're not on the final exam they're more looking to the future 
+
+6
+00:00:22,420 --> 00:00:27,119
+and in particular what I want to talk about today is some kind of studying I did over the past year 
+
+7
+00:00:27,119 --> 00:00:27,860
+about how the electronics industry
+and in particular what I want to talk about today is some kind of studying I did over the past year 
+
+8
+00:00:27,860 --> 00:00:31,470
+about how the electronics industry
+
+9
+00:00:31,470 --> 00:00:33,660
+what we now call the semiconductor
+
+10
+00:00:33,660 --> 00:00:35,010
+industry but it might be something
+
+11
+00:00:35,010 --> 00:00:37,530
+different in the future as new
+
+12
+00:00:37,530 --> 00:00:42,930
+technology comes along but what what
+
+13
+00:00:42,930 --> 00:00:44,940
+directions it's going to head and will
+
+14
+00:00:44,940 --> 00:00:46,320
+we be able to assume the kind of
+
+15
+00:00:46,320 --> 00:00:48,780
+progress that we've come to know and
+
+16
+00:00:48,780 --> 00:00:51,480
+expect over the past several decades
+
+17
+00:00:51,480 --> 00:00:55,050
+so in particular and this is important
+
+18
+00:00:55,050 --> 00:00:58,230
+for obviously for people involved in ECE
+
+19
+00:00:58,230 --> 00:01:00,600
+but also for people involved in computer
+
+20
+00:01:00,600 --> 00:01:03,180
+science and software because the fact
+
+21
+00:01:03,180 --> 00:01:07,920
+that we have this massive collection of
+
+22
+00:01:07,920 --> 00:01:12,180
+computers data centers powerful cell
+
+23
+00:01:12,180 --> 00:01:14,970
+phones and things obviously the software
+
+24
+00:01:14,970 --> 00:01:17,460
+people are important to that but the
+
+25
+00:01:17,460 --> 00:01:20,040
+reality is it's the hardware base that
+
+26
+00:01:20,040 --> 00:01:23,460
+makes it possible so it's really an
+
+27
+00:01:23,460 --> 00:01:25,409
+important thing even for software people
+
+28
+00:01:25,409 --> 00:01:28,380
+to have a fairly decent understanding of
+
+29
+00:01:28,380 --> 00:01:31,829
+how the actual systems work what their
+
+30
+00:01:31,829 --> 00:01:34,409
+technology is and what set could look
+
+31
+00:01:34,409 --> 00:01:35,810
+like in the future
+
+32
+00:01:35,810 --> 00:01:38,570
+so in particular we've been riding
+
+33
+00:01:38,570 --> 00:01:41,100
+enjoying the benefits of what's commonly
+
+34
+00:01:41,100 --> 00:01:44,939
+referred to as Moore's law and Gordon
+
+35
+00:01:44,939 --> 00:01:48,930
+Moore is he's still alive and was one of
+
+36
+00:01:48,930 --> 00:01:50,159
+the earlier pioneers in the
+
+37
+00:01:50,159 --> 00:01:53,220
+semiconductor industry he worked for
+
+38
+00:01:53,220 --> 00:01:55,200
+William Shockley who's one of the
+
+39
+00:01:55,200 --> 00:01:59,159
+inventors of the transistor and set up
+
+40
+00:01:59,159 --> 00:02:01,350
+there's a company called Shockley
+
+41
+00:02:01,350 --> 00:02:03,689
+semiconductor that Shockley set up in
+
+42
+00:02:03,689 --> 00:02:07,290
+the Bay Area in Palo Alto and the wait
+
+43
+00:02:07,290 --> 00:02:10,200
+in the early nineteen know in the 1950s
+
+44
+00:02:10,200 --> 00:02:13,150
+somewhere and then he
+
+45
+00:02:13,150 --> 00:02:15,849
+and a group of them left because
+
+46
+00:02:15,849 --> 00:02:18,610
+Shockley was such a jerk and found and
+
+47
+00:02:18,610 --> 00:02:21,610
+found a home at an existing company
+
+48
+00:02:21,610 --> 00:02:24,989
+called Fairchild that did things like
+
+49
+00:02:24,989 --> 00:02:28,599
+aviation electronics and set up
+
+50
+00:02:28,599 --> 00:02:32,049
+Fairchild Semiconductor and so that was
+
+51
+00:02:32,049 --> 00:02:34,470
+really the start of Silicon Valley from
+
+52
+00:02:34,470 --> 00:02:37,780
+the silicon perspective actually they
+
+53
+00:02:37,780 --> 00:02:39,720
+were using germanium at the time but
+
+54
+00:02:39,720 --> 00:02:42,549
+what we think of a Silicon Valley really
+
+55
+00:02:42,549 --> 00:02:48,750
+got its start there so he was the the
+
+56
+00:02:48,750 --> 00:02:51,430
+the head of the research part of
+
+57
+00:02:51,430 --> 00:02:54,730
+Fairchild Semiconductor when he wrote an
+
+58
+00:02:54,730 --> 00:02:59,200
+article for a what's really just a trade
+
+59
+00:02:59,200 --> 00:03:01,480
+press magazine electronics magazine we
+
+60
+00:03:01,480 --> 00:03:04,150
+wouldn't consider it a very important
+
+61
+00:03:04,150 --> 00:03:07,720
+publication these days but back then it
+
+62
+00:03:07,720 --> 00:03:10,540
+had some fairly leading articles and so
+
+63
+00:03:10,540 --> 00:03:14,829
+he wrote an article and this is in 1965
+
+64
+00:03:14,829 --> 00:03:19,930
+so almost exactly 50 years ago and what
+
+65
+00:03:19,930 --> 00:03:22,470
+he done was he just sort of eyeballed
+
+66
+00:03:22,470 --> 00:03:25,569
+what his company was able to do in terms
+
+67
+00:03:25,569 --> 00:03:30,060
+of of building the very new of
+
+68
+00:03:30,060 --> 00:03:32,049
+semiconductors and it was the very very
+
+69
+00:03:32,049 --> 00:03:34,239
+early days of integrated circuits when
+
+70
+00:03:34,239 --> 00:03:36,760
+you could put multiple transistors on a
+
+71
+00:03:36,760 --> 00:03:40,930
+single chip and what he recognized was
+
+72
+00:03:40,930 --> 00:03:45,760
+there is sort of a curve of met that on
+
+73
+00:03:45,760 --> 00:03:49,419
+this axis it's how much does it cost to
+
+74
+00:03:49,419 --> 00:03:55,359
+per transistor to manufacture a system
+
+75
+00:03:55,359 --> 00:03:58,900
+and on the right hand side it's how many
+
+76
+00:03:58,900 --> 00:04:01,120
+transistors there were on a single chip
+
+77
+00:04:01,120 --> 00:04:03,459
+and what he observed was through sort of
+
+78
+00:04:03,459 --> 00:04:06,389
+a sweet spot and if you're to the left
+
+79
+00:04:06,389 --> 00:04:08,799
+you're basically you're not putting
+
+80
+00:04:08,799 --> 00:04:10,599
+enough things on the chip and so you
+
+81
+00:04:10,599 --> 00:04:14,169
+have too many chips and they cost a lot
+
+82
+00:04:14,169 --> 00:04:16,030
+to connect them together and you're not
+
+83
+00:04:16,030 --> 00:04:18,579
+making use of the technology and if you
+
+84
+00:04:18,579 --> 00:04:20,289
+go too far to the right then you're
+
+85
+00:04:20,289 --> 00:04:22,389
+trying to squeeze more on that chip than
+
+86
+00:04:22,389 --> 00:04:24,250
+it was economically feasible at the time
+
+87
+00:04:24,250 --> 00:04:27,130
+and what he also observed was and this
+
+88
+00:04:27,130 --> 00:04:30,610
+is 65 remember so he was basically
+
+89
+00:04:30,610 --> 00:04:32,789
+projecting from 3 years worth of data
+
+90
+00:04:32,789 --> 00:04:37,539
+that that curve was dropping that and so
+
+91
+00:04:37,539 --> 00:04:42,130
+this sweet spot was shifting to telling
+
+92
+00:04:42,130 --> 00:04:44,260
+you what's the optimum number of devices
+
+93
+00:04:44,260 --> 00:04:49,510
+to put on a single chip from like 20
+
+94
+00:04:49,510 --> 00:04:52,450
+here 250 there too and then he projected
+
+95
+00:04:52,450 --> 00:04:55,810
+out and said well gee by 1970 we should
+
+96
+00:04:55,810 --> 00:04:57,490
+be able to get a thousand devices on a
+
+97
+00:04:57,490 --> 00:05:01,479
+chip and that was sort of just a
+
+98
+00:05:01,479 --> 00:05:04,060
+prediction he made and then that became
+
+99
+00:05:04,060 --> 00:05:07,570
+known as Moore's law and that name was
+
+100
+00:05:07,570 --> 00:05:10,690
+not made up by Moore but by actually a
+
+101
+00:05:10,690 --> 00:05:14,889
+professor at Caltech so what we now know
+
+102
+00:05:14,889 --> 00:05:16,900
+of is Moore's law was really started
+
+103
+00:05:16,900 --> 00:05:19,960
+with this prediction and two things are
+
+104
+00:05:19,960 --> 00:05:21,639
+worth noting one is it's a technology
+
+105
+00:05:21,639 --> 00:05:25,090
+prediction it's based on what this
+
+106
+00:05:25,090 --> 00:05:27,250
+company and other companies were able to
+
+107
+00:05:27,250 --> 00:05:30,669
+do but the other was an economic one it
+
+108
+00:05:30,669 --> 00:05:33,400
+was saying if you want to make the best
+
+109
+00:05:33,400 --> 00:05:35,380
+use of this technology and get the most
+
+110
+00:05:35,380 --> 00:05:38,740
+sort of electronics for your dollar then
+
+111
+00:05:38,740 --> 00:05:40,180
+you should be following these principles
+
+112
+00:05:40,180 --> 00:05:42,789
+so and that that combination is actually
+
+113
+00:05:42,789 --> 00:05:44,460
+quite important
+
+114
+00:05:44,460 --> 00:05:48,099
+so I went off and found a Wikipedia page
+
+115
+00:05:48,099 --> 00:05:51,159
+that lists a bunch of different chips
+
+116
+00:05:51,159 --> 00:05:53,889
+for microprocessors and other types of
+
+117
+00:05:53,889 --> 00:05:59,979
+processors that has the both the chip
+
+118
+00:05:59,979 --> 00:06:03,400
+area and how many transistors who were
+
+119
+00:06:03,400 --> 00:06:06,520
+on that and I mapped it out so it starts
+
+120
+00:06:06,520 --> 00:06:10,060
+the first microprocessor was the called
+
+121
+00:06:10,060 --> 00:06:16,719
+the 4004 made by Intel in 1971 and up
+
+122
+00:06:16,719 --> 00:06:18,789
+through here you see that I sort of
+
+123
+00:06:18,789 --> 00:06:20,919
+partitioned these into different types
+
+124
+00:06:20,919 --> 00:06:24,130
+of processors so a desktop processor
+
+125
+00:06:24,130 --> 00:06:25,930
+would be like what you'd have in a PC
+
+126
+00:06:25,930 --> 00:06:28,690
+and they sort of drove the industry for
+
+127
+00:06:28,690 --> 00:06:31,120
+this middle part of the time embedded
+
+128
+00:06:31,120 --> 00:06:33,159
+systems are chips that aren't designed
+
+129
+00:06:33,159 --> 00:06:35,050
+to be computers that you're using as
+
+130
+00:06:35,050 --> 00:06:37,360
+computers but they're inside of
+
+131
+00:06:37,360 --> 00:06:38,040
+something for
+
+132
+00:06:38,040 --> 00:06:39,810
+example the earliest micro processors
+
+133
+00:06:39,810 --> 00:06:48,180
+the 4004 was created by Intel to to run
+
+134
+00:06:48,180 --> 00:06:51,060
+a calculus cop calculator built by a
+
+135
+00:06:51,060 --> 00:06:53,190
+Japanese company they came to Intel and
+
+136
+00:06:53,190 --> 00:06:56,070
+said could you make us some electronics
+
+137
+00:06:56,070 --> 00:06:58,500
+to implement this and somebody within
+
+138
+00:06:58,500 --> 00:07:00,360
+Intel I had the inspiration to say well
+
+139
+00:07:00,360 --> 00:07:02,160
+if we just implement this as a
+
+140
+00:07:02,160 --> 00:07:03,990
+microprocessor then we can write the
+
+141
+00:07:03,990 --> 00:07:06,180
+code to implement a desktop calculator
+
+142
+00:07:06,180 --> 00:07:08,130
+and it's what they call 4-bit
+
+143
+00:07:08,130 --> 00:07:11,510
+microprocessor so you're used to 32
+
+144
+00:07:11,510 --> 00:07:15,540
+mentioned 4 so the word size is 4 and
+
+145
+00:07:15,540 --> 00:07:17,490
+how do you do that it's actually you
+
+146
+00:07:17,490 --> 00:07:20,460
+have to think about how you even do that
+
+147
+00:07:20,460 --> 00:07:22,410
+but that's what it was a 4-bit
+
+148
+00:07:22,410 --> 00:07:24,720
+microprocessor so anyways embedded
+
+149
+00:07:24,720 --> 00:07:27,000
+systems sort of some of these were
+
+150
+00:07:27,000 --> 00:07:30,740
+really a pre PC era and then these
+
+151
+00:07:30,740 --> 00:07:34,290
+diamonds are ones that sort of drove the
+
+152
+00:07:34,290 --> 00:07:38,010
+PC era and then the yellow are more
+
+153
+00:07:38,010 --> 00:07:41,340
+recent graphic processor units which are
+
+154
+00:07:41,340 --> 00:07:43,470
+some of the biggest fastest chips out
+
+155
+00:07:43,470 --> 00:07:46,320
+there the x's are ones that are really
+
+156
+00:07:46,320 --> 00:07:48,510
+server class machines for example the
+
+157
+00:07:48,510 --> 00:07:51,600
+sharp machines and are designed to be
+
+158
+00:07:51,600 --> 00:07:56,730
+inside of a big computer room and down
+
+159
+00:07:56,730 --> 00:07:58,500
+here for exempt these blue ones are
+
+160
+00:07:58,500 --> 00:08:01,320
+actually for cell phones but this is
+
+161
+00:08:01,320 --> 00:08:03,420
+just this is not a scientific sample
+
+162
+00:08:03,420 --> 00:08:05,610
+it's just a ones for which I could find
+
+163
+00:08:05,610 --> 00:08:09,030
+the appropriate data oh and you might
+
+164
+00:08:09,030 --> 00:08:13,140
+ask why did you start in 1971 if this
+
+165
+00:08:13,140 --> 00:08:17,460
+paper came out in 65 well back in 65 the
+
+166
+00:08:17,460 --> 00:08:19,730
+technology was what they called bipolar
+
+167
+00:08:19,730 --> 00:08:22,260
+technology which is not a mental
+
+168
+00:08:22,260 --> 00:08:27,540
+condition here and the it's very
+
+169
+00:08:27,540 --> 00:08:28,050
+different
+
+170
+00:08:28,050 --> 00:08:31,980
+so the first microprocessor and all the
+
+171
+00:08:31,980 --> 00:08:33,990
+successor ones are done in a technology
+
+172
+00:08:33,990 --> 00:08:37,440
+called MOS which stands for metal oxide
+
+173
+00:08:37,440 --> 00:08:40,520
+semiconductor which isn't a very useful
+
+174
+00:08:40,520 --> 00:08:45,000
+name but basically chips since the early
+
+175
+00:08:45,000 --> 00:08:47,580
+70s have dominantly been using this
+
+176
+00:08:47,580 --> 00:08:49,260
+technology and the current one is called
+
+177
+00:08:49,260 --> 00:08:51,140
+CMOS
+
+178
+00:08:51,140 --> 00:08:53,450
+so anyways the interesting thing you'll
+
+179
+00:08:53,450 --> 00:08:56,300
+see here is on this vlog scale you'll
+
+180
+00:08:56,300 --> 00:08:58,100
+see that this doubling every two years
+
+181
+00:08:58,100 --> 00:09:01,370
+has almost exactly matched what's
+
+182
+00:09:01,370 --> 00:09:05,050
+happened so the gray line is if I just
+
+183
+00:09:05,050 --> 00:09:11,410
+extrapolated from from 50 transistors in
+
+184
+00:09:11,410 --> 00:09:14,120
+1965 and predicted they would double
+
+185
+00:09:14,120 --> 00:09:16,610
+every two years you get the gray line
+
+186
+00:09:16,610 --> 00:09:20,269
+and the black line is what I get running
+
+187
+00:09:20,269 --> 00:09:22,910
+a regression on this data and you'll see
+
+188
+00:09:22,910 --> 00:09:24,740
+that their scopes are exactly the same
+
+189
+00:09:24,740 --> 00:09:27,079
+and what that means is the doubling
+
+190
+00:09:27,079 --> 00:09:29,149
+every two years is absolutely true and
+
+191
+00:09:29,149 --> 00:09:32,000
+the black line what it says is well
+
+192
+00:09:32,000 --> 00:09:34,190
+actually they in the early days they got
+
+193
+00:09:34,190 --> 00:09:36,800
+ahead of a curve somewhat so that the
+
+194
+00:09:36,800 --> 00:09:39,339
+first microprocessor for example the
+
+195
+00:09:39,339 --> 00:09:44,390
+four thousand four had around well
+
+196
+00:09:44,390 --> 00:09:47,120
+actually I have the numbers actually add
+
+197
+00:09:47,120 --> 00:09:50,959
+1700 transistors so not too far off of
+
+198
+00:09:50,959 --> 00:09:56,060
+what word predicted for 1970 so anyways
+
+199
+00:09:56,060 --> 00:09:58,820
+that's the point it's an amazing thing
+
+200
+00:09:58,820 --> 00:10:00,920
+this is held and you might ask why was
+
+201
+00:10:00,920 --> 00:10:04,600
+like Gordon Moore the the best a
+
+202
+00:10:04,600 --> 00:10:07,370
+forecaster of the future ever to be able
+
+203
+00:10:07,370 --> 00:10:09,670
+to nail this number so precisely and
+
+204
+00:10:09,670 --> 00:10:12,620
+also why do you call it a law so there's
+
+205
+00:10:12,620 --> 00:10:14,329
+two things going there's a few things
+
+206
+00:10:14,329 --> 00:10:16,579
+going on here first of all this is not a
+
+207
+00:10:16,579 --> 00:10:20,060
+law it's not a law of nature it's not a
+
+208
+00:10:20,060 --> 00:10:23,209
+law of our country it's not a law of of
+
+209
+00:10:23,209 --> 00:10:26,180
+anything it's just a statement that he
+
+210
+00:10:26,180 --> 00:10:30,589
+made but also it's become a
+
+211
+00:10:30,589 --> 00:10:33,470
+self-fulfilling aw meaning that because
+
+212
+00:10:33,470 --> 00:10:34,940
+Gordon Moore who was a very prominent
+
+213
+00:10:34,940 --> 00:10:37,880
+tourist at that time said this and said
+
+214
+00:10:37,880 --> 00:10:39,860
+his company in that direction and he
+
+215
+00:10:39,860 --> 00:10:44,140
+then went on to found in tell by the way
+
+216
+00:10:44,140 --> 00:10:49,220
+he and and all of his colleagues and his
+
+217
+00:10:49,220 --> 00:10:51,860
+sort of burgeoning business have just
+
+218
+00:10:51,860 --> 00:10:53,690
+been dedicated to the task of making
+
+219
+00:10:53,690 --> 00:10:56,899
+this a law so it was a prediction but
+
+220
+00:10:56,899 --> 00:10:59,209
+not in a sort of objective sense it was
+
+221
+00:10:59,209 --> 00:11:02,140
+a prediction by somebody who then
+
+222
+00:11:02,140 --> 00:11:04,989
+motivated other people to fulfill it
+
+223
+00:11:04,989 --> 00:11:08,029
+so anyways it's pretty interesting that
+
+224
+00:11:08,029 --> 00:11:10,489
+just collect and if you can collect all
+
+225
+00:11:10,489 --> 00:11:12,499
+kinds of data and you'll find this this
+
+226
+00:11:12,499 --> 00:11:15,980
+this doubling pretty much holds by the
+
+227
+00:11:15,980 --> 00:11:18,110
+way in general you should whenever
+
+228
+00:11:18,110 --> 00:11:20,720
+you're looking at a semi-log pot if you
+
+229
+00:11:20,720 --> 00:11:22,189
+have a straight line that's a sign of
+
+230
+00:11:22,189 --> 00:11:27,019
+exponential growth so what does this
+
+231
+00:11:27,019 --> 00:11:29,360
+really mean then it's hard for you to
+
+232
+00:11:29,360 --> 00:11:32,959
+appreciate how much different the world
+
+233
+00:11:32,959 --> 00:11:36,579
+of computing is today than it was even
+
+234
+00:11:36,579 --> 00:11:40,600
+20 30 40 years ago so for example in
+
+235
+00:11:40,600 --> 00:11:43,579
+1976 if you had a lot of money in other
+
+236
+00:11:43,579 --> 00:11:45,079
+words your Los Alamos National
+
+237
+00:11:45,079 --> 00:11:48,529
+Laboratory and you really wanted a big
+
+238
+00:11:48,529 --> 00:11:52,040
+computer you could buy it by basically
+
+239
+00:11:52,040 --> 00:11:55,779
+getting a hand-built machine from a
+
+240
+00:11:55,779 --> 00:11:59,029
+company called Cray headed by Seymour
+
+241
+00:11:59,029 --> 00:12:01,279
+Cray who is one of the legendary people
+
+242
+00:12:01,279 --> 00:12:03,699
+in the world of computing at the time
+
+243
+00:12:03,699 --> 00:12:06,410
+but this machine is you see all the
+
+244
+00:12:06,410 --> 00:12:10,819
+numbers for it are way off what even
+
+245
+00:12:10,819 --> 00:12:15,559
+I've got on my phone and what you have
+
+246
+00:12:15,559 --> 00:12:18,110
+on your phone to write in terms of
+
+247
+00:12:18,110 --> 00:12:22,040
+performance in terms of density this
+
+248
+00:12:22,040 --> 00:12:25,639
+thing weighed 5,000 kilograms and used
+
+249
+00:12:25,639 --> 00:12:30,649
+115 kilowatts where is now we have these
+
+250
+00:12:30,649 --> 00:12:32,360
+ones that are powered by batteries and
+
+251
+00:12:32,360 --> 00:12:34,279
+fit in your pocket and the other is
+
+252
+00:12:34,279 --> 00:12:37,220
+numbers that the whole life of the crane
+
+253
+00:12:37,220 --> 00:12:38,660
+this was considered an incredibly
+
+254
+00:12:38,660 --> 00:12:42,079
+successful supercomputer the first real
+
+255
+00:12:42,079 --> 00:12:44,779
+supercomputer in the whole lifetime they
+
+256
+00:12:44,779 --> 00:12:47,749
+manufactured 80 of them and as you know
+
+257
+00:12:47,749 --> 00:12:51,439
+phones sell in the millions so it's
+
+258
+00:12:51,439 --> 00:12:54,169
+really very very different world we live
+
+259
+00:12:54,169 --> 00:12:58,459
+in because of of the progress of
+
+260
+00:12:58,459 --> 00:13:02,869
+integration and so again to put yourself
+
+261
+00:13:02,869 --> 00:13:07,669
+back back in 65 what I can like I'll
+
+262
+00:13:07,669 --> 00:13:12,410
+date myself I was a young person at that
+
+263
+00:13:12,410 --> 00:13:15,919
+time and for me the coolest thing to get
+
+264
+00:13:15,919 --> 00:13:18,350
+was a portable transistor radio
+
+265
+00:13:18,350 --> 00:13:21,230
+like this one that would play am
+
+266
+00:13:21,230 --> 00:13:22,510
+stations
+
+267
+00:13:22,510 --> 00:13:27,100
+okay now today what young teenagers
+
+268
+00:13:27,100 --> 00:13:30,080
+crave for is a sort of waitest a
+
+269
+00:13:30,080 --> 00:13:34,760
+consumer product of a high-end phone so
+
+270
+00:13:34,760 --> 00:13:38,000
+part of it is if you look at this they
+
+271
+00:13:38,000 --> 00:13:39,980
+even advertise that this transistor
+
+272
+00:13:39,980 --> 00:13:44,870
+radio had nine transistors on it whereas
+
+273
+00:13:44,870 --> 00:13:49,040
+the chip inside of a this is last year's
+
+274
+00:13:49,040 --> 00:13:56,210
+the the iPhone six had has if you still
+
+275
+00:13:56,210 --> 00:13:58,730
+have one a chip with two billion
+
+276
+00:13:58,730 --> 00:14:02,810
+transistors on it and that's the main
+
+277
+00:14:02,810 --> 00:14:04,490
+chip there's about eleven chips in an
+
+278
+00:14:04,490 --> 00:14:06,410
+iPhone in a phone by the way but that's
+
+279
+00:14:06,410 --> 00:14:10,280
+the main processor chip so that's really
+
+280
+00:14:10,280 --> 00:14:13,610
+the fundamental difference of why what
+
+281
+00:14:13,610 --> 00:14:15,860
+you've got today is so different than
+
+282
+00:14:15,860 --> 00:14:21,800
+what you could get in sixty five so it's
+
+283
+00:14:21,800 --> 00:14:24,560
+hard to even think about two billion
+
+284
+00:14:24,560 --> 00:14:26,900
+transistors and what that really means
+
+285
+00:14:26,900 --> 00:14:28,760
+so here's an analogy imagine a
+
+286
+00:14:28,760 --> 00:14:30,650
+transistor where the size of a grain of
+
+287
+00:14:30,650 --> 00:14:33,320
+sand they're actually a lot smaller than
+
+288
+00:14:33,320 --> 00:14:35,780
+that but just that's about the smallest
+
+289
+00:14:35,780 --> 00:14:37,370
+thing you can think of sort of picking
+
+290
+00:14:37,370 --> 00:14:39,590
+up and feeling then if you look at
+
+291
+00:14:39,590 --> 00:14:42,770
+here's this original four thousand four
+
+292
+00:14:42,770 --> 00:14:44,420
+had twenty three hundred transistors I
+
+293
+00:14:44,420 --> 00:14:46,610
+didn't have my numbers quite right so
+
+294
+00:14:46,610 --> 00:14:49,430
+that's if you think in sand grains it's
+
+295
+00:14:49,430 --> 00:14:51,890
+um actually I calculated this out it's
+
+296
+00:14:51,890 --> 00:14:55,670
+170th of a teaspoon so just a very very
+
+297
+00:14:55,670 --> 00:14:59,600
+small pinch of sand is about 2,300
+
+298
+00:14:59,600 --> 00:15:03,230
+grains of sand and nowadays if you think
+
+299
+00:15:03,230 --> 00:15:06,170
+of two billion transistors in in terms
+
+300
+00:15:06,170 --> 00:15:09,020
+of sand that's about a 200 pounds of
+
+301
+00:15:09,020 --> 00:15:13,160
+sand so if you go to Home Depot and you
+
+302
+00:15:13,160 --> 00:15:15,110
+buy a bag of sand for your children's
+
+303
+00:15:15,110 --> 00:15:18,650
+for somebody's a sandbox or whatever
+
+304
+00:15:18,650 --> 00:15:22,040
+it's about 50 pounds so about four four
+
+305
+00:15:22,040 --> 00:15:27,850
+bags of sand is 2 billion two billion
+
+306
+00:15:27,850 --> 00:15:31,280
+grains so that sort of where we are
+
+307
+00:15:31,280 --> 00:15:32,089
+today where
+
+308
+00:15:32,089 --> 00:15:37,189
+sort of a it's the same as if you filled
+
+309
+00:15:37,189 --> 00:15:40,279
+up big Paint Bucket three of them sort
+
+310
+00:15:40,279 --> 00:15:46,100
+of that level we're at so just to give
+
+311
+00:15:46,100 --> 00:15:49,459
+you a sense where we are and so what I
+
+312
+00:15:49,459 --> 00:15:51,589
+claim is and this isn't just my claim
+
+313
+00:15:51,589 --> 00:15:55,160
+it's sort of self-evident that there's a
+
+314
+00:15:55,160 --> 00:15:58,670
+sort of virtuous cycle that's driven
+
+315
+00:15:58,670 --> 00:16:00,620
+that drives the technology and the
+
+316
+00:16:00,620 --> 00:16:03,589
+economics together so in particular the
+
+317
+00:16:03,589 --> 00:16:06,439
+more things they can sell that they have
+
+318
+00:16:06,439 --> 00:16:09,889
+chips in them the more money that gives
+
+319
+00:16:09,889 --> 00:16:12,050
+for companies and more incentive that
+
+320
+00:16:12,050 --> 00:16:14,209
+gives them to invest in research and
+
+321
+00:16:14,209 --> 00:16:17,180
+development to improve the technology to
+
+322
+00:16:17,180 --> 00:16:19,220
+buy it's a very expensive capital
+
+323
+00:16:19,220 --> 00:16:21,139
+equipment to run a semiconductor
+
+324
+00:16:21,139 --> 00:16:24,170
+fabrication facility and so that money
+
+325
+00:16:24,170 --> 00:16:26,420
+comes from ultimately because they're
+
+326
+00:16:26,420 --> 00:16:28,699
+selling this stuff and because of that
+
+327
+00:16:28,699 --> 00:16:30,589
+they're then able to improve the
+
+328
+00:16:30,589 --> 00:16:34,129
+technology pack more transistors on a
+
+329
+00:16:34,129 --> 00:16:36,319
+chip make them run faster reduce the
+
+330
+00:16:36,319 --> 00:16:38,990
+power all those good things and then
+
+331
+00:16:38,990 --> 00:16:41,029
+that's coupled with people who are good
+
+332
+00:16:41,029 --> 00:16:43,100
+at a product design and of course the
+
+333
+00:16:43,100 --> 00:16:45,679
+software designers as well to improve
+
+334
+00:16:45,679 --> 00:16:48,800
+the product so that you want to buy more
+
+335
+00:16:48,800 --> 00:16:52,279
+stuff right and that causes more sales
+
+336
+00:16:52,279 --> 00:16:54,949
+so this cycle is very important that if
+
+337
+00:16:54,949 --> 00:16:58,009
+it weren't for that looping around then
+
+338
+00:16:58,009 --> 00:17:00,100
+these improvements wouldn't be happening
+
+339
+00:17:00,100 --> 00:17:02,629
+so right now the semiconductor industry
+
+340
+00:17:02,629 --> 00:17:05,089
+is worldwide and it's very much a
+
+341
+00:17:05,089 --> 00:17:07,909
+international industry is about three
+
+342
+00:17:07,909 --> 00:17:09,409
+hundred billion dollars a year so it's
+
+343
+00:17:09,409 --> 00:17:12,529
+pretty big and so what does that meant
+
+344
+00:17:12,529 --> 00:17:14,990
+well one is simply let's just take the
+
+345
+00:17:14,990 --> 00:17:17,929
+example of phones that the iPhone the
+
+346
+00:17:17,929 --> 00:17:22,000
+first iPhone was on 2007 or so and
+
+347
+00:17:22,000 --> 00:17:25,130
+there's been nine generations of them
+
+348
+00:17:25,130 --> 00:17:26,720
+including the most recent which isn't
+
+349
+00:17:26,720 --> 00:17:29,960
+shown this picture and so more or less
+
+350
+00:17:29,960 --> 00:17:32,450
+every year they come out with a new
+
+351
+00:17:32,450 --> 00:17:34,850
+phone and for example this phone I'm
+
+352
+00:17:34,850 --> 00:17:36,980
+carrying around is one I bought this
+
+353
+00:17:36,980 --> 00:17:41,120
+fall even though I had a phone of from
+
+354
+00:17:41,120 --> 00:17:45,920
+two years ago that was really okay but
+
+355
+00:17:45,920 --> 00:17:47,930
+I was sufficiently motivated to shell
+
+356
+00:17:47,930 --> 00:17:50,060
+out the money and now it's not hidden in
+
+357
+00:17:50,060 --> 00:17:51,740
+our plans anymore so I know this
+
+358
+00:17:51,740 --> 00:17:57,110
+actually cost me $750 but I and many of
+
+359
+00:17:57,110 --> 00:18:00,470
+my friends and people around the world
+
+360
+00:18:00,470 --> 00:18:02,870
+did exactly that and created a huge pile
+
+361
+00:18:02,870 --> 00:18:06,350
+of of cash that infused Apple and part
+
+362
+00:18:06,350 --> 00:18:08,900
+of the reason Apple now is the largest
+
+363
+00:18:08,900 --> 00:18:11,150
+company in the world in terms of market
+
+364
+00:18:11,150 --> 00:18:15,850
+capitalization so that cycle you can see
+
+365
+00:18:15,850 --> 00:18:18,980
+here you know better products more sales
+
+366
+00:18:18,980 --> 00:18:21,550
+you you see that happening all the time
+
+367
+00:18:21,550 --> 00:18:24,650
+but underneath it all what's driving
+
+368
+00:18:24,650 --> 00:18:26,420
+that then is the ability to improve
+
+369
+00:18:26,420 --> 00:18:31,040
+these products so you've probably heard
+
+370
+00:18:31,040 --> 00:18:34,310
+the other kind of stuff people are
+
+371
+00:18:34,310 --> 00:18:36,260
+talking about is artificial intelligence
+
+372
+00:18:36,260 --> 00:18:40,370
+and will it basically eliminate all your
+
+373
+00:18:40,370 --> 00:18:44,780
+jobs and the famous sort of person
+
+374
+00:18:44,780 --> 00:18:45,830
+behind that it's a guy named Ray
+
+375
+00:18:45,830 --> 00:18:51,410
+Kurzweil and so he proposed this idea
+
+376
+00:18:51,410 --> 00:18:53,960
+they call the singularity which is the
+
+377
+00:18:53,960 --> 00:18:56,990
+the day this is I'll just describe it to
+
+378
+00:18:56,990 --> 00:18:59,630
+you can tell I'm a skeptic on this the
+
+379
+00:18:59,630 --> 00:19:03,740
+day that computers become more powerful
+
+380
+00:19:03,740 --> 00:19:06,650
+than humans actually that he's not the
+
+381
+00:19:06,650 --> 00:19:09,380
+one who invented that term then it's all
+
+382
+00:19:09,380 --> 00:19:12,520
+of a sudden going to create this massive
+
+383
+00:19:12,520 --> 00:19:14,690
+switchover where the computers are going
+
+384
+00:19:14,690 --> 00:19:17,990
+to get smarter by teaching themselves to
+
+385
+00:19:17,990 --> 00:19:22,640
+be smarter and so off into infinity
+
+386
+00:19:22,640 --> 00:19:25,760
+of and making humans obsolete that's the
+
+387
+00:19:25,760 --> 00:19:29,120
+idea of the singularity and part of the
+
+388
+00:19:29,120 --> 00:19:32,060
+argument behind this is basically from
+
+389
+00:19:32,060 --> 00:19:32,900
+Moore's Law
+
+390
+00:19:32,900 --> 00:19:35,960
+so what Kurt's while did in this picture
+
+391
+00:19:35,960 --> 00:19:38,810
+and it actually started with some work
+
+392
+00:19:38,810 --> 00:19:41,600
+by a person who used to be the robotics
+
+393
+00:19:41,600 --> 00:19:46,070
+Institute here was he plotted based on
+
+394
+00:19:46,070 --> 00:19:48,740
+this his measure was calculations per
+
+395
+00:19:48,740 --> 00:19:50,780
+second per thousand dollars so how much
+
+396
+00:19:50,780 --> 00:19:52,700
+computation could you buy for a thousand
+
+397
+00:19:52,700 --> 00:19:56,320
+dollars and he started back at 1900 with
+
+398
+00:19:56,320 --> 00:19:58,640
+mechanical adding machines and stuff
+
+399
+00:19:58,640 --> 00:19:59,600
+like that
+
+400
+00:19:59,600 --> 00:20:02,660
+and added these plots you see this was
+
+401
+00:20:02,660 --> 00:20:06,860
+around 2000 and somehow this is an
+
+402
+00:20:06,860 --> 00:20:11,990
+article of amazing a potting he figured
+
+403
+00:20:11,990 --> 00:20:13,700
+that this wasn't even a straight line it
+
+404
+00:20:13,700 --> 00:20:17,090
+was an upward curve so an upward curve
+
+405
+00:20:17,090 --> 00:20:21,050
+on a semi-log paper is more than
+
+406
+00:20:21,050 --> 00:20:24,140
+exponential it's like e to the x squared
+
+407
+00:20:24,140 --> 00:20:28,190
+or something like that right so but
+
+408
+00:20:28,190 --> 00:20:30,440
+anyways based on that projection and
+
+409
+00:20:30,440 --> 00:20:34,070
+based on some notion of the relative
+
+410
+00:20:34,070 --> 00:20:36,890
+power of human versus mouse versus
+
+411
+00:20:36,890 --> 00:20:40,400
+insect brains he came out with this
+
+412
+00:20:40,400 --> 00:20:43,030
+projection that in 2030 roughly
+
+413
+00:20:43,030 --> 00:20:45,170
+computers would become smarter than
+
+414
+00:20:45,170 --> 00:20:49,460
+humans and if you just keep that on Kim
+
+415
+00:20:49,460 --> 00:20:51,500
+eight computers would become smarter
+
+416
+00:20:51,500 --> 00:20:56,060
+than all humans combined so that we can
+
+417
+00:20:56,060 --> 00:20:58,940
+talk about this projection and I'm sure
+
+418
+00:20:58,940 --> 00:21:02,960
+you guys do at times too but my point of
+
+419
+00:21:02,960 --> 00:21:05,270
+it is this argument is fundamentally a
+
+420
+00:21:05,270 --> 00:21:07,910
+Moore's Law argument right that the
+
+421
+00:21:07,910 --> 00:21:10,100
+argument is basically as computational
+
+422
+00:21:10,100 --> 00:21:12,410
+power increases because of this
+
+423
+00:21:12,410 --> 00:21:16,070
+continuing progress of technology it's
+
+424
+00:21:16,070 --> 00:21:18,170
+inevitable that because humans aren't
+
+425
+00:21:18,170 --> 00:21:20,000
+really getting smarter much of a very
+
+426
+00:21:20,000 --> 00:21:23,780
+fast rate that it's inevitable that
+
+427
+00:21:23,780 --> 00:21:25,460
+computers will become smarter than
+
+428
+00:21:25,460 --> 00:21:27,410
+humans it's sort of the argument but
+
+429
+00:21:27,410 --> 00:21:29,120
+it's very much based on this assumption
+
+430
+00:21:29,120 --> 00:21:31,250
+that computer technology is going to
+
+431
+00:21:31,250 --> 00:21:33,800
+continue to progress at an exponential
+
+432
+00:21:33,800 --> 00:21:35,800
+pace
+
+433
+00:21:35,800 --> 00:21:40,160
+so let's now imagine and this is
+
+434
+00:21:40,160 --> 00:21:42,920
+something that you know you could be
+
+435
+00:21:42,920 --> 00:21:45,140
+thinking about is is what will this mean
+
+436
+00:21:45,140 --> 00:21:48,110
+50 years from now so if Moore's law
+
+437
+00:21:48,110 --> 00:21:51,350
+looks back over the past 50 years now
+
+438
+00:21:51,350 --> 00:21:53,480
+let's look forward for another 50 years
+
+439
+00:21:53,480 --> 00:21:57,260
+and see what that would mean and what
+
+440
+00:21:57,260 --> 00:22:01,790
+would possibly be so here's a one claim
+
+441
+00:22:01,790 --> 00:22:05,660
+I'll make is that whatever is the most
+
+442
+00:22:05,660 --> 00:22:07,370
+important thing it will be something
+
+443
+00:22:07,370 --> 00:22:10,360
+that is in the hands of everyone or is
+
+444
+00:22:10,360 --> 00:22:13,130
+even more ubiquitous than there are here
+
+445
+00:22:13,130 --> 00:22:15,620
+on the planet right in other words that
+
+446
+00:22:15,620 --> 00:22:17,510
+what I claim is the thing that will be
+
+447
+00:22:17,510 --> 00:22:20,120
+the most important technology-wise will
+
+448
+00:22:20,120 --> 00:22:25,400
+be what's the largest volume product so
+
+449
+00:22:25,400 --> 00:22:28,400
+I'm not sure what that will be in 2065
+
+450
+00:22:28,400 --> 00:22:30,290
+it certainly will not be called a cell
+
+451
+00:22:30,290 --> 00:22:33,350
+phone it won't look like what we think
+
+452
+00:22:33,350 --> 00:22:37,100
+of as a phone after all of all the
+
+453
+00:22:37,100 --> 00:22:40,130
+things people own cell phones for what
+
+454
+00:22:40,130 --> 00:22:44,480
+do you use it for the least making calls
+
+455
+00:22:44,480 --> 00:22:48,650
+right at least for me so who knows what
+
+456
+00:22:48,650 --> 00:22:52,310
+it will be but I claim that and this is
+
+457
+00:22:52,310 --> 00:22:54,260
+a key part of this argument that claim
+
+458
+00:22:54,260 --> 00:22:57,440
+it's got to be a portable low power
+
+459
+00:22:57,440 --> 00:22:59,410
+system so it has to be powerful
+
+460
+00:22:59,410 --> 00:23:02,180
+computation but as to be physically
+
+461
+00:23:02,180 --> 00:23:06,880
+small and it can't draw much power and
+
+462
+00:23:06,880 --> 00:23:10,100
+that will be and so it might be you know
+
+463
+00:23:10,100 --> 00:23:12,470
+the Internet of Things where everything
+
+464
+00:23:12,470 --> 00:23:14,000
+is networked together and there's
+
+465
+00:23:14,000 --> 00:23:16,580
+computer chips or various chips and
+
+466
+00:23:16,580 --> 00:23:19,430
+everything that those kind of things
+
+467
+00:23:19,430 --> 00:23:21,230
+would also have the kind of volumes
+
+468
+00:23:21,230 --> 00:23:25,720
+needed to drive the market forward so
+
+469
+00:23:25,720 --> 00:23:28,970
+based on that sort of let's make that
+
+470
+00:23:28,970 --> 00:23:31,130
+one part of assumption is whatever
+
+471
+00:23:31,130 --> 00:23:33,740
+drives the future it's going to be
+
+472
+00:23:33,740 --> 00:23:36,980
+something that is portable low power and
+
+473
+00:23:36,980 --> 00:23:40,010
+low cost you know consumer grade or
+
+474
+00:23:40,010 --> 00:23:42,020
+something that you can afford to just
+
+475
+00:23:42,020 --> 00:23:44,510
+sprinkle across the whole planet or
+
+476
+00:23:44,510 --> 00:23:46,820
+across the whole galaxy if we're beyond
+
+477
+00:23:46,820 --> 00:23:49,760
+Earth at that point so that means for
+
+478
+00:23:49,760 --> 00:23:51,080
+example that it's not going to be a
+
+479
+00:23:51,080 --> 00:23:53,770
+quantum computer right quantum
+
+480
+00:23:53,770 --> 00:23:56,210
+cholesterol so make breakthroughs in
+
+481
+00:23:56,210 --> 00:24:00,230
+superconducting something that you have
+
+482
+00:24:00,230 --> 00:24:02,800
+to cool down to near absolute zero
+
+483
+00:24:02,800 --> 00:24:06,230
+requires a big room a lot of equipment
+
+484
+00:24:06,230 --> 00:24:10,370
+and a lot of power and a lot of things
+
+485
+00:24:10,370 --> 00:24:12,110
+to manage it so you're not going to
+
+486
+00:24:12,110 --> 00:24:13,790
+carry that around in your pocket I can
+
+487
+00:24:13,790 --> 00:24:16,520
+promise you that so all the people
+
+488
+00:24:16,520 --> 00:24:18,590
+talking about a quantum computer well we
+
+489
+00:24:18,590 --> 00:24:20,240
+can just rule that out that's not going
+
+490
+00:24:20,240 --> 00:24:22,820
+to be the the most important thing out
+
+491
+00:24:22,820 --> 00:24:26,070
+there but it
+
+492
+00:24:26,070 --> 00:24:29,910
+and it also you know if you could
+
+493
+00:24:29,910 --> 00:24:31,770
+imagine building this huge machine
+
+494
+00:24:31,770 --> 00:24:36,720
+that's occupies many acres of buildings
+
+495
+00:24:36,720 --> 00:24:38,340
+that's not going to be the most exciting
+
+496
+00:24:38,340 --> 00:24:41,160
+thing out there because it's it there's
+
+497
+00:24:41,160 --> 00:24:43,020
+not enough of those to sort of drive the
+
+498
+00:24:43,020 --> 00:24:45,480
+market and without that market there
+
+499
+00:24:45,480 --> 00:24:47,250
+won't be in the investment in the
+
+500
+00:24:47,250 --> 00:24:50,640
+technology so it has to be inexpensive
+
+501
+00:24:50,640 --> 00:24:52,890
+and what if we think of it in computer
+
+502
+00:24:52,890 --> 00:24:56,220
+science terms big o-notation it can't be
+
+503
+00:24:56,220 --> 00:24:58,620
+you know the cost to produce these
+
+504
+00:24:58,620 --> 00:25:01,770
+things can't be very much so for example
+
+505
+00:25:01,770 --> 00:25:04,410
+the chip that's in the cellphone that
+
+506
+00:25:04,410 --> 00:25:07,740
+Apple AAA costs somewhere between ten
+
+507
+00:25:07,740 --> 00:25:11,040
+and twenty dollars for Apple to procure
+
+508
+00:25:11,040 --> 00:25:13,890
+that from its suppliers which are in
+
+509
+00:25:13,890 --> 00:25:16,950
+Taiwan and in Korea so they're not very
+
+510
+00:25:16,950 --> 00:25:18,170
+expensive
+
+511
+00:25:18,170 --> 00:25:21,330
+that said it need not be anything based
+
+512
+00:25:21,330 --> 00:25:23,460
+on the technology we use today as I
+
+513
+00:25:23,460 --> 00:25:25,560
+mentioned currently things are CMOS and
+
+514
+00:25:25,560 --> 00:25:29,820
+it's been some kind of moss MOS since
+
+515
+00:25:29,820 --> 00:25:33,090
+the 1970s so for a long time but
+
+516
+00:25:33,090 --> 00:25:35,220
+probably won't continue to be that way
+
+517
+00:25:35,220 --> 00:25:36,900
+at least not the way we know it and
+
+518
+00:25:36,900 --> 00:25:39,360
+there's various other ideas people have
+
+519
+00:25:39,360 --> 00:25:41,840
+had for future computer technology that
+
+520
+00:25:41,840 --> 00:25:44,310
+beyond this and some of it's being
+
+521
+00:25:44,310 --> 00:25:48,990
+worked on here at CMU and I will predict
+
+522
+00:25:48,990 --> 00:25:51,960
+what those could be but they have to
+
+523
+00:25:51,960 --> 00:25:53,640
+have these characteristics s being
+
+524
+00:25:53,640 --> 00:25:58,010
+expensive has being low-power has to be
+
+525
+00:25:58,010 --> 00:26:03,930
+scalable so that's my one assumption
+
+526
+00:26:03,930 --> 00:26:06,510
+then I'm going to add is whatever it is
+
+527
+00:26:06,510 --> 00:26:08,250
+we're going to want a lot of them a lot
+
+528
+00:26:08,250 --> 00:26:11,720
+of transistors or devices of some sort
+
+529
+00:26:11,720 --> 00:26:14,370
+so what does that mean if we project
+
+530
+00:26:14,370 --> 00:26:16,800
+that out in terms of how many devices
+
+531
+00:26:16,800 --> 00:26:19,110
+are on a chip not not how many
+
+532
+00:26:19,110 --> 00:26:21,930
+transistors but devices so one great
+
+533
+00:26:21,930 --> 00:26:23,970
+thing about semi-log pots is you can
+
+534
+00:26:23,970 --> 00:26:25,940
+just extrapolate to your heart's content
+
+535
+00:26:25,940 --> 00:26:29,010
+so if we just run those two curves that
+
+536
+00:26:29,010 --> 00:26:31,770
+I showed you before out ah you get
+
+537
+00:26:31,770 --> 00:26:34,500
+somewhere we'll just you know pick a
+
+538
+00:26:34,500 --> 00:26:36,570
+number that's sort of roughly in the
+
+539
+00:26:36,570 --> 00:26:38,880
+middle of those two projections of ten
+
+540
+00:26:38,880 --> 00:26:41,390
+to the seventh
+
+541
+00:26:41,390 --> 00:26:47,309
+so 10 to the 17th things devices in a
+
+542
+00:26:47,309 --> 00:26:50,250
+single integrated system of some kind
+
+543
+00:26:50,250 --> 00:26:54,510
+that would be what we'd be looking at so
+
+544
+00:26:54,510 --> 00:26:57,030
+how big is 10 to the 17th well if we go
+
+545
+00:26:57,030 --> 00:26:59,610
+back to our sand analogy this is a
+
+546
+00:26:59,610 --> 00:27:02,070
+picture I found on the internet of some
+
+547
+00:27:02,070 --> 00:27:04,679
+young man in Brazil on the beach
+
+548
+00:27:04,679 --> 00:27:07,890
+making a scale model of the Empire State
+
+549
+00:27:07,890 --> 00:27:12,659
+Building out of sand so my estimate is
+
+550
+00:27:12,659 --> 00:27:16,559
+this is roughly something like 3 billion
+
+551
+00:27:16,559 --> 00:27:19,409
+grains of sand in that thing I didn't
+
+552
+00:27:19,409 --> 00:27:23,010
+count them I have to admit but so so
+
+553
+00:27:23,010 --> 00:27:24,840
+think in terms so something you know
+
+554
+00:27:24,840 --> 00:27:27,240
+roughly the same scale I showed you of
+
+555
+00:27:27,240 --> 00:27:28,919
+those four bags of sand from Home Depot
+
+556
+00:27:28,919 --> 00:27:31,770
+something that's roughly comparable to
+
+557
+00:27:31,770 --> 00:27:34,500
+what we'd get on a chip today if if
+
+558
+00:27:34,500 --> 00:27:36,450
+transistors were the size of a grain of
+
+559
+00:27:36,450 --> 00:27:39,299
+sand so what does 10 to the 17th mean
+
+560
+00:27:39,299 --> 00:27:42,330
+well if you actually built a sand model
+
+561
+00:27:42,330 --> 00:27:45,000
+of the Empire State Building at one to
+
+562
+00:27:45,000 --> 00:27:49,200
+one scale right then that's a million
+
+563
+00:27:49,200 --> 00:27:52,500
+cubic meters and then if you made two
+
+564
+00:27:52,500 --> 00:27:56,039
+replicas of that then and some of those
+
+565
+00:27:56,039 --> 00:27:58,110
+three together then you'd get about 10
+
+566
+00:27:58,110 --> 00:28:02,400
+to the 17th grains of sand so of course
+
+567
+00:28:02,400 --> 00:28:04,230
+we're assuming this is going to be
+
+568
+00:28:04,230 --> 00:28:05,700
+something a lot smaller than a grain of
+
+569
+00:28:05,700 --> 00:28:07,470
+sand but just to give you a sense of
+
+570
+00:28:07,470 --> 00:28:10,350
+scale of how big a change that would be
+
+571
+00:28:10,350 --> 00:28:14,280
+going from a few billion to 10 to the
+
+572
+00:28:14,280 --> 00:28:17,280
+17th is a pretty big jump in terms of
+
+573
+00:28:17,280 --> 00:28:23,450
+how many devices are involved so let's
+
+574
+00:28:23,450 --> 00:28:26,429
+figure out how could we make things you
+
+575
+00:28:26,429 --> 00:28:29,460
+know let's just say well let's just try
+
+576
+00:28:29,460 --> 00:28:32,340
+running the numbers and seeing what
+
+577
+00:28:32,340 --> 00:28:34,080
+would happen if we just took our current
+
+578
+00:28:34,080 --> 00:28:36,330
+technology which is more or less what
+
+579
+00:28:36,330 --> 00:28:39,840
+we've been using since 1970 of putting a
+
+580
+00:28:39,840 --> 00:28:42,110
+lot of transistors on a single chip
+
+581
+00:28:42,110 --> 00:28:44,940
+actually I happen to bring some toys
+
+582
+00:28:44,940 --> 00:28:50,000
+with me today this is a wafer
+
+583
+00:28:50,000 --> 00:28:52,610
+so this is what comes through a
+
+584
+00:28:52,610 --> 00:28:56,300
+fabrication plant and it's got typically
+
+585
+00:28:56,300 --> 00:28:59,570
+about 700 individual whether they called
+
+586
+00:28:59,570 --> 00:29:00,800
+dye on them
+
+587
+00:29:00,800 --> 00:29:03,620
+the then they slice up and they put in
+
+588
+00:29:03,620 --> 00:29:05,840
+packages so these are some old packages
+
+589
+00:29:05,840 --> 00:29:09,380
+but now on your phone or your laptops
+
+590
+00:29:09,380 --> 00:29:11,570
+whose packaging in there so they package
+
+591
+00:29:11,570 --> 00:29:15,100
+the the chips inside of there so
+
+592
+00:29:15,100 --> 00:29:17,750
+typically then this is the current size
+
+593
+00:29:17,750 --> 00:29:21,530
+that a company manufactures a diet it's
+
+594
+00:29:21,530 --> 00:29:24,350
+30 centimeters so about 1 foot in
+
+595
+00:29:24,350 --> 00:29:28,520
+diameter and you get about 700 chips on
+
+596
+00:29:28,520 --> 00:29:28,700
+it
+
+597
+00:29:28,700 --> 00:29:31,130
+chips are typically around one square
+
+598
+00:29:31,130 --> 00:29:34,820
+centimeter so let's just say well let's
+
+599
+00:29:34,820 --> 00:29:38,180
+just take that technology which over the
+
+600
+00:29:38,180 --> 00:29:40,940
+years these these die of
+
+601
+00:29:40,940 --> 00:29:43,790
+these chips have gotten the wafers have
+
+602
+00:29:43,790 --> 00:29:45,890
+gotten bigger the dive gotten a little
+
+603
+00:29:45,890 --> 00:29:48,350
+bit bigger and we've also been able to
+
+604
+00:29:48,350 --> 00:29:51,260
+make much finer geometries on these
+
+605
+00:29:51,260 --> 00:29:54,580
+chips so let's sort of see how we've got
+
+606
+00:29:54,580 --> 00:29:57,890
+this over history and what the
+
+607
+00:29:57,890 --> 00:30:01,670
+projections that would mean and what the
+
+608
+00:30:01,670 --> 00:30:04,790
+data show is that the way we've achieved
+
+609
+00:30:04,790 --> 00:30:07,670
+is sort of doubling every two years in
+
+610
+00:30:07,670 --> 00:30:10,850
+how many transistors were on a chip is
+
+611
+00:30:10,850 --> 00:30:12,800
+one the trips have gotten bigger they've
+
+612
+00:30:12,800 --> 00:30:16,040
+doubled in size at a rate of once every
+
+613
+00:30:16,040 --> 00:30:18,950
+10 years and also the geometries have
+
+614
+00:30:18,950 --> 00:30:21,680
+gotten finer that we've they've doubled
+
+615
+00:30:21,680 --> 00:30:25,250
+in size or halved in size well the
+
+616
+00:30:25,250 --> 00:30:28,670
+density we can get as a result has gone
+
+617
+00:30:28,670 --> 00:30:33,770
+by a factor to every about four times in
+
+618
+00:30:33,770 --> 00:30:35,720
+ten years and so you sum those up you
+
+619
+00:30:35,720 --> 00:30:38,450
+get five doublings every ten years and
+
+620
+00:30:38,450 --> 00:30:42,770
+that's how you get more squat so in
+
+621
+00:30:42,770 --> 00:30:45,830
+particular if you look at the earliest
+
+622
+00:30:45,830 --> 00:30:48,440
+chip the four thousand four was about
+
+623
+00:30:48,440 --> 00:30:50,690
+twelve square millimeters so that it's
+
+624
+00:30:50,690 --> 00:30:54,290
+pretty small and a modern chip is
+
+625
+00:30:54,290 --> 00:30:57,700
+typically around a square centimeter so
+
+626
+00:30:57,700 --> 00:31:03,010
+and this is actually to scale to a
+
+627
+00:31:03,010 --> 00:31:05,360
+there are some bigger chips out there
+
+628
+00:31:05,360 --> 00:31:07,100
+and they're not really blue they just
+
+629
+00:31:07,100 --> 00:31:10,550
+did this to make it look nice but IBM
+
+630
+00:31:10,550 --> 00:31:13,520
+for example makes a server where the
+
+631
+00:31:13,520 --> 00:31:18,790
+chip size is almost 10 times larger than
+
+632
+00:31:18,790 --> 00:31:22,010
+than this processor so you can get some
+
+633
+00:31:22,010 --> 00:31:25,010
+pretty big dye out there but those are
+
+634
+00:31:25,010 --> 00:31:28,160
+typically only and also some GPUs can be
+
+635
+00:31:28,160 --> 00:31:30,440
+pretty big dice so those are used either
+
+636
+00:31:30,440 --> 00:31:32,570
+in servers or in places where they're
+
+637
+00:31:32,570 --> 00:31:35,390
+pretty specialized for more portable
+
+638
+00:31:35,390 --> 00:31:37,250
+battery-powered things you have to go
+
+639
+00:31:37,250 --> 00:31:42,140
+with smaller chips so this is the data
+
+640
+00:31:42,140 --> 00:31:45,110
+showing the area for these different
+
+641
+00:31:45,110 --> 00:31:47,930
+microprocessors for time and you can see
+
+642
+00:31:47,930 --> 00:31:49,550
+that you're kind of all over the map so
+
+643
+00:31:49,550 --> 00:31:52,780
+it's a little risky to do any kind of
+
+644
+00:31:52,780 --> 00:31:55,670
+extrapolation here but this is where I
+
+645
+00:31:55,670 --> 00:31:57,980
+got the number that it's doubled roughly
+
+646
+00:31:57,980 --> 00:32:02,600
+every 10 years the area of the chip so
+
+647
+00:32:02,600 --> 00:32:05,870
+if we project that out then then we get
+
+648
+00:32:05,870 --> 00:32:09,350
+something of 173 square centimeters so
+
+649
+00:32:09,350 --> 00:32:11,180
+those of you metrically challenge that
+
+650
+00:32:11,180 --> 00:32:13,010
+number probably doesn't mean much to you
+
+651
+00:32:13,010 --> 00:32:16,340
+but just to give you a sense like if I
+
+652
+00:32:16,340 --> 00:32:20,000
+just extrapolated then by the Year 2065
+
+653
+00:32:20,000 --> 00:32:25,150
+I should be up to the Apple model a 59
+
+654
+00:32:25,150 --> 00:32:26,750
+because right
+
+655
+00:32:26,750 --> 00:32:32,510
+today's the a6 of s and so anyways and
+
+656
+00:32:32,510 --> 00:32:35,690
+well as we said 10 to the 17 transistors
+
+657
+00:32:35,690 --> 00:32:38,840
+it will be 173 square centimeters the
+
+658
+00:32:38,840 --> 00:32:40,940
+problem with that is it's actually
+
+659
+00:32:40,940 --> 00:32:43,370
+bigger than a dollar bill it's about two
+
+660
+00:32:43,370 --> 00:32:46,430
+dollar bills in size 173 square
+
+661
+00:32:46,430 --> 00:32:48,380
+centimeters and you're not going to fit
+
+662
+00:32:48,380 --> 00:32:51,350
+that in your pocket unless you have
+
+663
+00:32:51,350 --> 00:32:54,860
+really big pocket so that is not the way
+
+664
+00:32:54,860 --> 00:32:57,050
+things are going to work we can't just
+
+665
+00:32:57,050 --> 00:32:59,390
+keep scaling up area and expect that to
+
+666
+00:32:59,390 --> 00:33:03,320
+happen well the other factor which is we
+
+667
+00:33:03,320 --> 00:33:05,360
+showed is more critical as things have
+
+668
+00:33:05,360 --> 00:33:08,210
+gotten smaller and so the way I'll I'll
+
+669
+00:33:08,210 --> 00:33:11,120
+measure that is I'll take this measure I
+
+670
+00:33:11,120 --> 00:33:14,720
+call L this linear metric
+
+671
+00:33:14,720 --> 00:33:17,600
+of chip density I'll say the area of
+
+672
+00:33:17,600 --> 00:33:20,870
+that chip divided by the number of
+
+673
+00:33:20,870 --> 00:33:23,030
+transistors and so one way to think
+
+674
+00:33:23,030 --> 00:33:24,980
+about it is if the transistors were
+
+675
+00:33:24,980 --> 00:33:27,920
+spread in a sort of uniform grid across
+
+676
+00:33:27,920 --> 00:33:31,250
+a chip then their spacing would be this
+
+677
+00:33:31,250 --> 00:33:33,530
+number L of course they're not there
+
+678
+00:33:33,530 --> 00:33:35,540
+they're denser in some places and more
+
+679
+00:33:35,540 --> 00:33:37,310
+spread out and others but sort of if you
+
+680
+00:33:37,310 --> 00:33:39,770
+think of this as a way to look overall
+
+681
+00:33:39,770 --> 00:33:42,110
+how close we packed our transistors to
+
+682
+00:33:42,110 --> 00:33:46,490
+each other oh and this is the curve you
+
+683
+00:33:46,490 --> 00:33:50,420
+get from our existing set of processors
+
+684
+00:33:50,420 --> 00:33:52,400
+and you see this one really is a pretty
+
+685
+00:33:52,400 --> 00:33:55,370
+strong trend of getting a finer and
+
+686
+00:33:55,370 --> 00:34:02,390
+finer geometries over time and it's so
+
+687
+00:34:02,390 --> 00:34:06,170
+the linear scale it drops by a factor of
+
+688
+00:34:06,170 --> 00:34:09,140
+two every five years but if you think
+
+689
+00:34:09,140 --> 00:34:12,680
+about the number of things the density
+
+690
+00:34:12,680 --> 00:34:16,520
+therefore goes by a factor of four every
+
+691
+00:34:16,520 --> 00:34:22,610
+five years and so that's or equivalent
+
+692
+00:34:22,610 --> 00:34:24,080
+we have gotten twice as many transistors
+
+693
+00:34:24,080 --> 00:34:27,290
+in a given area every two and a half
+
+694
+00:34:27,290 --> 00:34:32,860
+years
+
+695
+00:34:32,860 --> 00:34:34,780
+and we can see that again in practice
+
+696
+00:34:34,780 --> 00:34:40,270
+that if you measure out for the Intel
+
+697
+00:34:40,270 --> 00:34:45,360
+4004 it comes out to 72,000 nanometers
+
+698
+00:34:45,360 --> 00:34:48,250
+10 to the ninth meters is this measure
+
+699
+00:34:48,250 --> 00:34:52,420
+and where's EPEL a 8 is 211 nanometers
+
+700
+00:34:52,420 --> 00:34:54,940
+so those you know about chip technology
+
+701
+00:34:54,940 --> 00:34:56,770
+might know that the AAA
+
+702
+00:34:56,770 --> 00:35:02,500
+was manufactured with what's called a 22
+
+703
+00:35:02,500 --> 00:35:06,340
+nanometer process so when they measure
+
+704
+00:35:06,340 --> 00:35:08,590
+when you hear people talking about a
+
+705
+00:35:08,590 --> 00:35:10,600
+process you know the the actual
+
+706
+00:35:10,600 --> 00:35:12,130
+fabrication process and they give a
+
+707
+00:35:12,130 --> 00:35:15,160
+number of nowadays and nanometers what I
+
+708
+00:35:15,160 --> 00:35:17,770
+mean is the sort of closest spacing you
+
+709
+00:35:17,770 --> 00:35:19,990
+can make two wires on a chip the sort of
+
+710
+00:35:19,990 --> 00:35:23,410
+finest geometry there but this measure L
+
+711
+00:35:23,410 --> 00:35:26,440
+is bigger because it counts for not just
+
+712
+00:35:26,440 --> 00:35:28,840
+out what how closely you can pack wires
+
+713
+00:35:28,840 --> 00:35:32,110
+but all the other stuff you have to put
+
+714
+00:35:32,110 --> 00:35:33,940
+transistors there you have to route
+
+715
+00:35:33,940 --> 00:35:35,980
+power and ground and signal wires to
+
+716
+00:35:35,980 --> 00:35:38,110
+them and they have to be isolated from
+
+717
+00:35:38,110 --> 00:35:39,850
+each other so this is actually a more
+
+718
+00:35:39,850 --> 00:35:42,160
+useful measure of of the effect of
+
+719
+00:35:42,160 --> 00:35:48,340
+spacing on a chip um so just to again if
+
+720
+00:35:48,340 --> 00:35:50,620
+you're not so familiar with this kind of
+
+721
+00:35:50,620 --> 00:35:54,010
+geometry let's just give you some idea
+
+722
+00:35:54,010 --> 00:35:58,800
+of it so this range in nanometers then
+
+723
+00:35:58,800 --> 00:36:01,720
+between a thousand and a million then is
+
+724
+00:36:01,720 --> 00:36:03,730
+is sort of something smaller than a
+
+725
+00:36:03,730 --> 00:36:06,760
+millimeter right a million nanometers is
+
+726
+00:36:06,760 --> 00:36:09,880
+a millimeter so a thousand nanometers is
+
+727
+00:36:09,880 --> 00:36:13,120
+a micron or a micrometer and so this
+
+728
+00:36:13,120 --> 00:36:16,750
+range which is where semiconductor
+
+729
+00:36:16,750 --> 00:36:20,880
+processing was up till ten years ago
+
+730
+00:36:20,880 --> 00:36:23,380
+you'd call it the submillimetre range
+
+731
+00:36:23,380 --> 00:36:26,740
+and in this it's in the sub micrometer
+
+732
+00:36:26,740 --> 00:36:29,410
+range so just to give you some sense of
+
+733
+00:36:29,410 --> 00:36:32,500
+what those scales mean and I'll point
+
+734
+00:36:32,500 --> 00:36:34,300
+out that it's pretty incredible to talk
+
+735
+00:36:34,300 --> 00:36:36,580
+about something over six orders of
+
+736
+00:36:36,580 --> 00:36:39,400
+magnitude in scale right that's in the
+
+737
+00:36:39,400 --> 00:36:41,350
+physical world six orders of magnitude
+
+738
+00:36:41,350 --> 00:36:45,349
+is a lot so again if you look at here's
+
+739
+00:36:45,349 --> 00:36:48,289
+examples of things of how big is a
+
+740
+00:36:48,289 --> 00:36:53,029
+micrometer often called a micron so you
+
+741
+00:36:53,029 --> 00:36:57,079
+know things at the are almost visible at
+
+742
+00:36:57,079 --> 00:37:00,619
+this scale a human cell how thick a
+
+743
+00:37:00,619 --> 00:37:05,809
+piece of plastic saran wrap is how thick
+
+744
+00:37:05,809 --> 00:37:11,180
+a a strand of spider silk is gives you
+
+745
+00:37:11,180 --> 00:37:14,569
+some rough number and so this Intel chip
+
+746
+00:37:14,569 --> 00:37:17,049
+from the seventies was somewhere in that
+
+747
+00:37:17,049 --> 00:37:22,099
+range and now if we look somewhere
+
+748
+00:37:22,099 --> 00:37:26,299
+between a nanometer and a micrometer and
+
+749
+00:37:26,299 --> 00:37:29,119
+again this is a log pot or so these
+
+750
+00:37:29,119 --> 00:37:32,239
+things go pretty fast so for example all
+
+751
+00:37:32,239 --> 00:37:35,420
+a visible light is in this range between
+
+752
+00:37:35,420 --> 00:37:39,499
+400 and 700 nanometers and the the
+
+753
+00:37:39,499 --> 00:37:42,049
+spacing of transistors on an Apple chip
+
+754
+00:37:42,049 --> 00:37:45,019
+are therefore closer than then the
+
+755
+00:37:45,019 --> 00:37:48,229
+wavelength of visible light by the way
+
+756
+00:37:48,229 --> 00:37:50,180
+which makes for kind of a challenge for
+
+757
+00:37:50,180 --> 00:37:54,259
+manufacturing something like how thick
+
+758
+00:37:54,259 --> 00:37:56,779
+is a cell membrane or how what's the
+
+759
+00:37:56,779 --> 00:38:00,200
+diameter of a strand of DNA are down in
+
+760
+00:38:00,200 --> 00:38:03,140
+just a few nanometer range what they
+
+761
+00:38:03,140 --> 00:38:05,390
+call carbon nanotubes which people
+
+762
+00:38:05,390 --> 00:38:08,210
+predict will be possibly a successor to
+
+763
+00:38:08,210 --> 00:38:10,400
+transistors their diameter not their
+
+764
+00:38:10,400 --> 00:38:14,869
+length is one nanometer so those are
+
+765
+00:38:14,869 --> 00:38:17,180
+pretty small when you're getting down
+
+766
+00:38:17,180 --> 00:38:20,989
+here and nowadays modern processes
+
+767
+00:38:20,989 --> 00:38:22,789
+they're trying to create features down
+
+768
+00:38:22,789 --> 00:38:26,089
+in this range of 14 nanometers for
+
+769
+00:38:26,089 --> 00:38:30,529
+example okay but we can do our our plots
+
+770
+00:38:30,529 --> 00:38:33,529
+and if you just project out you'll get
+
+771
+00:38:33,529 --> 00:38:38,059
+down to this linear spacing of 230 Pico
+
+772
+00:38:38,059 --> 00:38:41,029
+meters in 50 years so what does that
+
+773
+00:38:41,029 --> 00:38:45,049
+mean how big is a Pico meter well Pico
+
+774
+00:38:45,049 --> 00:38:46,940
+meter is really small in fact if you
+
+775
+00:38:46,940 --> 00:38:49,609
+look at the spacing between two atoms in
+
+776
+00:38:49,609 --> 00:38:55,549
+a silicon crystal they're about 1/2 of a
+
+777
+00:38:55,549 --> 00:38:59,030
+nanometer and if you look at the space
+
+778
+00:38:59,030 --> 00:39:01,030
+thing between the two atoms in a
+
+779
+00:39:01,030 --> 00:39:04,580
+hydrogen molecule there are 74
+
+780
+00:39:04,580 --> 00:39:08,180
+picometers so what the main thing to
+
+781
+00:39:08,180 --> 00:39:10,280
+realize is this ain't going to happen
+
+782
+00:39:10,280 --> 00:39:13,430
+there is absolutely no way that we'll be
+
+783
+00:39:13,430 --> 00:39:15,320
+able to create systems where things are
+
+784
+00:39:15,320 --> 00:39:19,460
+spaced only 230 Pico meters apart
+
+785
+00:39:19,460 --> 00:39:21,350
+right because presumably whatever we
+
+786
+00:39:21,350 --> 00:39:22,790
+build is going to be bigger than a
+
+787
+00:39:22,790 --> 00:39:28,580
+hydrogen atom or molecule so or you know
+
+788
+00:39:28,580 --> 00:39:33,770
+so this really is not in the range of
+
+789
+00:39:33,770 --> 00:39:35,630
+physically possible and that's one of
+
+790
+00:39:35,630 --> 00:39:38,180
+the annoying things that physics has
+
+791
+00:39:38,180 --> 00:39:40,460
+sort of gotten in the way of progress
+
+792
+00:39:40,460 --> 00:39:45,230
+recently so in particular you know could
+
+793
+00:39:45,230 --> 00:39:48,830
+we imagine then let's just suppose we'll
+
+794
+00:39:48,830 --> 00:39:51,860
+allow a chip we'll say let's let a chip
+
+795
+00:39:51,860 --> 00:39:55,360
+be as big as 400 square millimeters just
+
+796
+00:39:55,360 --> 00:39:58,790
+about twice as big on a side as a
+
+797
+00:39:58,790 --> 00:40:02,480
+current chip current standard chip that
+
+798
+00:40:02,480 --> 00:40:05,630
+would still require this spacing metric
+
+799
+00:40:05,630 --> 00:40:09,410
+of 63 Pico meters wait a minute is that
+
+800
+00:40:09,410 --> 00:40:14,690
+right yes because I'm not allowed to
+
+801
+00:40:14,690 --> 00:40:17,560
+make chips the size of $2 bills
+
+802
+00:40:17,560 --> 00:40:22,640
+so it requires even finer spacing here
+
+803
+00:40:22,640 --> 00:40:27,140
+and we saw that's just 63 Pico meters is
+
+804
+00:40:27,140 --> 00:40:30,410
+actually closer than the two atoms in a
+
+805
+00:40:30,410 --> 00:40:32,630
+hydrogen molecule the two nuclei in a
+
+806
+00:40:32,630 --> 00:40:37,730
+hydrogen molecule so the answer is no
+
+807
+00:40:37,730 --> 00:40:39,650
+this isn't going to happen this just
+
+808
+00:40:39,650 --> 00:40:43,130
+point is not possible at least not you
+
+809
+00:40:43,130 --> 00:40:45,020
+know so we have to back off and say well
+
+810
+00:40:45,020 --> 00:40:47,360
+what's our defect on our thinking one is
+
+811
+00:40:47,360 --> 00:40:48,920
+to assume that we're going to just take
+
+812
+00:40:48,920 --> 00:40:52,070
+this current technology of two
+
+813
+00:40:52,070 --> 00:40:55,390
+dimensional things and just shrink it
+
+814
+00:40:55,390 --> 00:40:58,340
+and one reason we look at that way
+
+815
+00:40:58,340 --> 00:40:59,870
+because that's exactly what's happened
+
+816
+00:40:59,870 --> 00:41:03,800
+over the past 50 years but we have three
+
+817
+00:41:03,800 --> 00:41:05,720
+dimensions in this world and so maybe
+
+818
+00:41:05,720 --> 00:41:09,020
+there's some prospect there so let's say
+
+819
+00:41:09,020 --> 00:41:12,430
+instead okay let's imagine
+
+820
+00:41:12,430 --> 00:41:16,390
+a little brick of stuff and I'll just
+
+821
+00:41:16,390 --> 00:41:18,100
+make up some numbers I'll say it's 2
+
+822
+00:41:18,100 --> 00:41:20,590
+centimeters on a side and 5 millimeters
+
+823
+00:41:20,590 --> 00:41:23,920
+high it's almost exactly the same shape
+
+824
+00:41:23,920 --> 00:41:29,160
+and volume as a stack of five nickels
+
+825
+00:41:29,160 --> 00:41:33,870
+and so and now let's just imagine okay
+
+826
+00:41:33,870 --> 00:41:37,450
+how are we going to integrate a bunch of
+
+827
+00:41:37,450 --> 00:41:38,950
+things well presumably we're going to
+
+828
+00:41:38,950 --> 00:41:43,240
+build it out of layers and so let's just
+
+829
+00:41:43,240 --> 00:41:45,520
+assume that there's about a hundred
+
+830
+00:41:45,520 --> 00:41:48,700
+thousand layers worth of stuff and those
+
+831
+00:41:48,700 --> 00:41:50,230
+are what I'll call logical layers
+
+832
+00:41:50,230 --> 00:41:55,420
+meaning that they'll be about a million
+
+833
+00:41:55,420 --> 00:41:57,490
+physical layers because we have to have
+
+834
+00:41:57,490 --> 00:42:00,580
+wires and these whatever we're building
+
+835
+00:42:00,580 --> 00:42:03,160
+will be just these totally flat things
+
+836
+00:42:03,160 --> 00:42:07,330
+nowadays there's a modern chip has more
+
+837
+00:42:07,330 --> 00:42:16,630
+like 20 physical layers on it so but the
+
+838
+00:42:16,630 --> 00:42:18,160
+point is that we'll have to have about a
+
+839
+00:42:18,160 --> 00:42:20,230
+million physical layers worth of stuff
+
+840
+00:42:20,230 --> 00:42:23,220
+to get a hundred thousand logical wires
+
+841
+00:42:23,220 --> 00:42:27,180
+but that would allow us a spacing on the
+
+842
+00:42:27,180 --> 00:42:30,750
+linear spacing of about 20 nanometers so
+
+843
+00:42:30,750 --> 00:42:34,960
+20 nanometers is a lot better than a 63
+
+844
+00:42:34,960 --> 00:42:39,100
+picometers right if we go back 20
+
+845
+00:42:39,100 --> 00:42:43,900
+nanometers is up in here so it's really
+
+846
+00:42:43,900 --> 00:42:47,860
+really small but it's not it's not
+
+847
+00:42:47,860 --> 00:42:50,620
+beyond a physical possibility let's just
+
+848
+00:42:50,620 --> 00:42:53,310
+put it that way so you can imagine some
+
+849
+00:42:53,310 --> 00:42:56,140
+technology that would give you that so
+
+850
+00:42:56,140 --> 00:43:00,420
+at least at some level it's it's vaguely
+
+851
+00:43:00,420 --> 00:43:02,980
+you know it's aggressive but but
+
+852
+00:43:02,980 --> 00:43:08,380
+possible to imagine in 50 years be able
+
+853
+00:43:08,380 --> 00:43:10,840
+to manufacture in a shape like that
+
+854
+00:43:10,840 --> 00:43:14,250
+something with 10 to the 17th devices
+
+855
+00:43:14,250 --> 00:43:19,680
+but there's a few problems one is
+
+856
+00:43:19,680 --> 00:43:22,120
+actually the manufacturing how we do
+
+857
+00:43:22,120 --> 00:43:23,640
+actually do this is no small thing
+
+858
+00:43:23,640 --> 00:43:26,170
+another I'll talk about some is
+
+859
+00:43:26,170 --> 00:43:28,420
+do we do this and not spend a whole lot
+
+860
+00:43:28,420 --> 00:43:30,220
+an exorbitant amount of money doing it
+
+861
+00:43:30,220 --> 00:43:33,100
+and the other is a huge huge problem of
+
+862
+00:43:33,100 --> 00:43:36,060
+power consumption how can we actually
+
+863
+00:43:36,060 --> 00:43:39,700
+have a system that complicated and keep
+
+864
+00:43:39,700 --> 00:43:42,070
+it at the limited energy level we have
+
+865
+00:43:42,070 --> 00:43:44,890
+available so let me go into that some
+
+866
+00:43:44,890 --> 00:43:48,130
+more so just is a sort of tutorial the
+
+867
+00:43:48,130 --> 00:43:50,260
+way these chips are made and part of the
+
+868
+00:43:50,260 --> 00:43:52,030
+reason they're so cheap is it's it's
+
+869
+00:43:52,030 --> 00:43:55,170
+sort of a photo process meaning that
+
+870
+00:43:55,170 --> 00:43:59,230
+every step of the way is done by putting
+
+871
+00:43:59,230 --> 00:44:02,290
+a some kind of material down and
+
+872
+00:44:02,290 --> 00:44:06,690
+exposing it to a light a laser light and
+
+873
+00:44:06,690 --> 00:44:09,940
+then that's this material that you put
+
+874
+00:44:09,940 --> 00:44:13,210
+down as light-sensitive and so there's a
+
+875
+00:44:13,210 --> 00:44:15,400
+mask that defines how things should be
+
+876
+00:44:15,400 --> 00:44:18,880
+patterned and the light only hits where
+
+877
+00:44:18,880 --> 00:44:21,610
+the mask is allows it to and that's how
+
+878
+00:44:21,610 --> 00:44:24,220
+you get different shapes and things and
+
+879
+00:44:24,220 --> 00:44:26,800
+you can either add material or you can
+
+880
+00:44:26,800 --> 00:44:29,110
+remove material by these masking steps
+
+881
+00:44:29,110 --> 00:44:32,560
+so nowadays a modern chip takes about 60
+
+882
+00:44:32,560 --> 00:44:35,920
+of these steps we're involving a mask
+
+883
+00:44:35,920 --> 00:44:38,590
+and some type of either depositing
+
+884
+00:44:38,590 --> 00:44:40,600
+something or removing something or
+
+885
+00:44:40,600 --> 00:44:44,650
+shining light on it or a beam of ions or
+
+886
+00:44:44,650 --> 00:44:48,760
+some other process step to do it so it's
+
+887
+00:44:48,760 --> 00:44:51,630
+very complicated than the technology is
+
+888
+00:44:51,630 --> 00:44:54,190
+quite remarkable but what you could say
+
+889
+00:44:54,190 --> 00:44:59,830
+is that the even though there's a couple
+
+890
+00:44:59,830 --> 00:45:01,900
+billion transistors on a chip
+
+891
+00:45:01,900 --> 00:45:05,050
+it still is a constant time process some
+
+892
+00:45:05,050 --> 00:45:07,980
+fixed number of steps and it's done and
+
+893
+00:45:07,980 --> 00:45:11,560
+each successive generation maybe the
+
+894
+00:45:11,560 --> 00:45:13,420
+number of masking steps is increased a
+
+895
+00:45:13,420 --> 00:45:15,700
+little bit over time but roughly
+
+896
+00:45:15,700 --> 00:45:18,250
+speaking it's always a constant time
+
+897
+00:45:18,250 --> 00:45:22,050
+operation and it turns out that the
+
+898
+00:45:22,050 --> 00:45:25,300
+bottleneck in this and the performance
+
+899
+00:45:25,300 --> 00:45:27,840
+one is actually this photolithography
+
+900
+00:45:27,840 --> 00:45:32,760
+exposing the chip the the the wafer
+
+901
+00:45:32,760 --> 00:45:35,740
+using a mask and the way that's done
+
+902
+00:45:35,740 --> 00:45:38,710
+nowadays is a machine called a stepper
+
+903
+00:45:38,710 --> 00:45:39,820
+that
+
+904
+00:45:39,820 --> 00:45:42,790
+basically is used to scan over the wafer
+
+905
+00:45:42,790 --> 00:45:46,810
+and expose with a laser sort of flashing
+
+906
+00:45:46,810 --> 00:45:52,060
+as it goes to expose the wafer to this
+
+907
+00:45:52,060 --> 00:45:56,170
+mask and so current-day that's done it a
+
+908
+00:45:56,170 --> 00:46:03,790
+on a size of about eight hundred nine
+
+909
+00:46:03,790 --> 00:46:05,860
+hundred square millimeters so you know
+
+910
+00:46:05,860 --> 00:46:09,850
+about this bigger size how much they can
+
+911
+00:46:09,850 --> 00:46:11,020
+expose at a time
+
+912
+00:46:11,020 --> 00:46:13,510
+and the the fastest steppers out there
+
+913
+00:46:13,510 --> 00:46:15,430
+can do a whole way for in 18 seconds
+
+914
+00:46:15,430 --> 00:46:18,690
+which is pretty good if you think of
+
+915
+00:46:18,690 --> 00:46:22,660
+waving over this whole area flashing and
+
+916
+00:46:22,660 --> 00:46:24,460
+exposing it with extremely high
+
+917
+00:46:24,460 --> 00:46:28,440
+resolution and very high alignment of
+
+918
+00:46:28,440 --> 00:46:32,830
+reliability well but that's sort of the
+
+919
+00:46:32,830 --> 00:46:35,590
+thing that sort of limits how many chips
+
+920
+00:46:35,590 --> 00:46:38,080
+you can run through a fabrication
+
+921
+00:46:38,080 --> 00:46:41,830
+facility per day is this stepper and the
+
+922
+00:46:41,830 --> 00:46:43,540
+stepper is the most expensive piece of
+
+923
+00:46:43,540 --> 00:46:46,510
+machinery in the building so you don't
+
+924
+00:46:46,510 --> 00:46:48,730
+want to buy a whole lot of them so
+
+925
+00:46:48,730 --> 00:46:51,330
+that's sort of my point is that
+
+926
+00:46:51,330 --> 00:46:53,860
+lithography is the expensive thing so
+
+927
+00:46:53,860 --> 00:46:56,020
+every layer we have to do if we have to
+
+928
+00:46:56,020 --> 00:46:58,140
+expose it using this technique is
+
+929
+00:46:58,140 --> 00:47:02,380
+expensive and so there's no way you
+
+930
+00:47:02,380 --> 00:47:06,100
+could do a million layer system using
+
+931
+00:47:06,100 --> 00:47:08,650
+photolithography and keep the expense
+
+932
+00:47:08,650 --> 00:47:12,010
+down to the range where it would be
+
+933
+00:47:12,010 --> 00:47:13,780
+something you or I would would be able
+
+934
+00:47:13,780 --> 00:47:16,870
+to afford as a consumer device as I said
+
+935
+00:47:16,870 --> 00:47:18,820
+a modern chip is somewhere between ten
+
+936
+00:47:18,820 --> 00:47:21,940
+and twenty dollars so we're not talking
+
+937
+00:47:21,940 --> 00:47:25,960
+a lot of money right if you increase
+
+938
+00:47:25,960 --> 00:47:28,300
+that cost by a hundred then people
+
+939
+00:47:28,300 --> 00:47:29,950
+aren't going to buy it because if you
+
+940
+00:47:29,950 --> 00:47:32,350
+think if a ten dollar chip powers at
+
+941
+00:47:32,350 --> 00:47:36,850
+$700 phone then there's a big multiplier
+
+942
+00:47:36,850 --> 00:47:40,150
+there so there's various options you can
+
+943
+00:47:40,150 --> 00:47:42,190
+imagine one is what they call chemical
+
+944
+00:47:42,190 --> 00:47:44,920
+self-assembly where basically whatever
+
+945
+00:47:44,920 --> 00:47:48,280
+you're having sort of patterns itself
+
+946
+00:47:48,280 --> 00:47:51,670
+just like the crystals would in a you
+
+947
+00:47:51,670 --> 00:47:53,200
+know in a block of
+
+948
+00:47:53,200 --> 00:47:54,760
+or something like that if you can
+
+949
+00:47:54,760 --> 00:47:57,130
+imagine various chemical processes where
+
+950
+00:47:57,130 --> 00:47:59,890
+things just form into the particular
+
+951
+00:47:59,890 --> 00:48:02,109
+shapes so this is an area that's been
+
+952
+00:48:02,109 --> 00:48:05,769
+tried and worked on for electronics for
+
+953
+00:48:05,769 --> 00:48:07,690
+several decades and never really
+
+954
+00:48:07,690 --> 00:48:09,990
+succeeded yet but maybe that's possible
+
+955
+00:48:09,990 --> 00:48:14,349
+and another possibility would be some
+
+956
+00:48:14,349 --> 00:48:19,119
+interesting ideas in in multiple working
+
+957
+00:48:19,119 --> 00:48:21,549
+with multiple layers at once so in
+
+958
+00:48:21,549 --> 00:48:25,660
+particular one technology that's really
+
+959
+00:48:25,660 --> 00:48:27,910
+been able to scale into three dimensions
+
+960
+00:48:27,910 --> 00:48:30,700
+are flash chips and that's part of the
+
+961
+00:48:30,700 --> 00:48:34,539
+reason why my phone has 64 gigabytes I'm
+
+962
+00:48:34,539 --> 00:48:37,029
+not bragging I'm just telling you my
+
+963
+00:48:37,029 --> 00:48:39,369
+phone has 64 gigabytes of memory you
+
+964
+00:48:39,369 --> 00:48:42,250
+know why is there so much memory a flash
+
+965
+00:48:42,250 --> 00:48:45,130
+memory available on it flash as you know
+
+966
+00:48:45,130 --> 00:48:48,369
+is sort of the the storage of choice in
+
+967
+00:48:48,369 --> 00:48:51,849
+a solid-state disk on cell phones
+
+968
+00:48:51,849 --> 00:48:57,390
+nowadays and so it's a it's based on
+
+969
+00:48:57,390 --> 00:49:01,150
+semiconductor devices so for example
+
+970
+00:49:01,150 --> 00:49:05,529
+this is a electron micrograph of a chip
+
+971
+00:49:05,529 --> 00:49:08,619
+from Samsung showing how they are able
+
+972
+00:49:08,619 --> 00:49:13,500
+to create a sort of three-dimensional
+
+973
+00:49:13,500 --> 00:49:18,009
+layering of of memory cells so basically
+
+974
+00:49:18,009 --> 00:49:24,369
+every spot in x y&z here is a 1 bits
+
+975
+00:49:24,369 --> 00:49:27,880
+worth actually 2 bits worth of memory
+
+976
+00:49:27,880 --> 00:49:31,299
+cell and there's some device there that
+
+977
+00:49:31,299 --> 00:49:34,119
+can store it and then there's ways that
+
+978
+00:49:34,119 --> 00:49:36,460
+you can access it to either read it or
+
+979
+00:49:36,460 --> 00:49:40,900
+write it and they're able to do it this
+
+980
+00:49:40,900 --> 00:49:44,829
+whole layering but by using only a fixed
+
+981
+00:49:44,829 --> 00:49:47,710
+number of masking steps so basically
+
+982
+00:49:47,710 --> 00:49:50,140
+what they start off with is they build
+
+983
+00:49:50,140 --> 00:49:53,740
+up layers without any masking and then
+
+984
+00:49:53,740 --> 00:49:56,440
+they put some masks there and then they
+
+985
+00:49:56,440 --> 00:49:58,690
+zap down and they can sort of carve away
+
+986
+00:49:58,690 --> 00:50:04,269
+up using basically ion beams to carve
+
+987
+00:50:04,269 --> 00:50:07,059
+down wherever the mask is and pattern
+
+988
+00:50:07,059 --> 00:50:09,579
+then they can pour various types of goop
+
+989
+00:50:09,579 --> 00:50:12,489
+in there that will fill up these spaces
+
+990
+00:50:12,489 --> 00:50:17,710
+and so by some patterning only at the
+
+991
+00:50:17,710 --> 00:50:20,019
+very top layer they can actually create
+
+992
+00:50:20,019 --> 00:50:23,739
+this three-dimensional matrix of memory
+
+993
+00:50:23,739 --> 00:50:29,200
+cells and they can now the most recent
+
+994
+00:50:29,200 --> 00:50:31,180
+technology gets about 48 layers and
+
+995
+00:50:31,180 --> 00:50:33,279
+there's projections that they'll be able
+
+996
+00:50:33,279 --> 00:50:34,690
+to keep doing that at least through
+
+997
+00:50:34,690 --> 00:50:37,029
+several hundred layers so my point is
+
+998
+00:50:37,029 --> 00:50:39,700
+that you can actually do you don't
+
+999
+00:50:39,700 --> 00:50:42,309
+necessarily need to do masking at every
+
+1000
+00:50:42,309 --> 00:50:45,730
+single layer to create a 3-dimensional
+
+1001
+00:50:45,730 --> 00:50:49,960
+structure now this doesn't scale in an
+
+1002
+00:50:49,960 --> 00:50:52,930
+obvious way to computers or
+
+1003
+00:50:52,930 --> 00:50:54,670
+microprocessors or anything with
+
+1004
+00:50:54,670 --> 00:50:57,609
+computation it relies very heavily on
+
+1005
+00:50:57,609 --> 00:51:00,900
+the fact that the particular circuit of
+
+1006
+00:51:00,900 --> 00:51:07,180
+flash memory is very simple and fairly
+
+1007
+00:51:07,180 --> 00:51:09,999
+easy to build in this 3-dimensional
+
+1008
+00:51:09,999 --> 00:51:12,670
+structure but at least this is the kind
+
+1009
+00:51:12,670 --> 00:51:14,799
+of idea of what will have to happen if
+
+1010
+00:51:14,799 --> 00:51:15,970
+we're going to get this kind of
+
+1011
+00:51:15,970 --> 00:51:19,930
+integration
+
+1012
+00:51:19,930 --> 00:51:23,000
+but here's the harder one and this is a
+
+1013
+00:51:23,000 --> 00:51:26,060
+problem just in general we're already up
+
+1014
+00:51:26,060 --> 00:51:29,810
+against a serious power issues now so if
+
+1015
+00:51:29,810 --> 00:51:36,250
+I look at a modern phone it only draws
+
+1016
+00:51:36,250 --> 00:51:38,990
+even when it's sort of working hardest a
+
+1017
+00:51:38,990 --> 00:51:41,570
+couple of watts typically when it's just
+
+1018
+00:51:41,570 --> 00:51:44,030
+if you want to walk around if you want
+
+1019
+00:51:44,030 --> 00:51:47,990
+to have the battery be good for a day at
+
+1020
+00:51:47,990 --> 00:51:50,420
+a time it has to draw a lot less power
+
+1021
+00:51:50,420 --> 00:51:55,130
+than that so typically when your phones
+
+1022
+00:51:55,130 --> 00:51:59,690
+in standby it's only drawing a few a few
+
+1023
+00:51:59,690 --> 00:52:01,970
+milliwatts so maybe a hundredth of a
+
+1024
+00:52:01,970 --> 00:52:05,540
+watt but when it needs to like you've
+
+1025
+00:52:05,540 --> 00:52:08,510
+just taken a picture and it wants to do
+
+1026
+00:52:08,510 --> 00:52:10,280
+some image processing on it or you're
+
+1027
+00:52:10,280 --> 00:52:13,160
+taking a video or something like that it
+
+1028
+00:52:13,160 --> 00:52:16,960
+can crank up to a couple watts of power
+
+1029
+00:52:16,960 --> 00:52:20,119
+so why can't it go more than that one is
+
+1030
+00:52:20,119 --> 00:52:21,770
+as I mentioned is the battery but the
+
+1031
+00:52:21,770 --> 00:52:25,099
+other is if your phone draws more than a
+
+1032
+00:52:25,099 --> 00:52:27,140
+few watts then you won't really want to
+
+1033
+00:52:27,140 --> 00:52:28,490
+walk around with it in your pocket
+
+1034
+00:52:28,490 --> 00:52:30,530
+because it'll be too hot so you know
+
+1035
+00:52:30,530 --> 00:52:33,020
+just imagine a 25 watt light bulb if you
+
+1036
+00:52:33,020 --> 00:52:34,490
+put that in your pocket and walked
+
+1037
+00:52:34,490 --> 00:52:37,730
+around as far as the extension cord
+
+1038
+00:52:37,730 --> 00:52:40,040
+would let you that wouldn't feel too
+
+1039
+00:52:40,040 --> 00:52:44,810
+good so that limits the power isn't just
+
+1040
+00:52:44,810 --> 00:52:47,420
+battery or so even if we come up with
+
+1041
+00:52:47,420 --> 00:52:49,250
+better battery sources the other thing
+
+1042
+00:52:49,250 --> 00:52:52,730
+is cooling so contrast that to the human
+
+1043
+00:52:52,730 --> 00:52:56,359
+brain is actually pretty amazing as a
+
+1044
+00:52:56,359 --> 00:52:59,839
+low power system so a human brain
+
+1045
+00:52:59,839 --> 00:53:03,880
+contains roughly 64 billion neurons up
+
+1046
+00:53:03,880 --> 00:53:08,210
+but it and it draws a few tens of watts
+
+1047
+00:53:08,210 --> 00:53:14,180
+so more there's reasons then that so
+
+1048
+00:53:14,180 --> 00:53:15,920
+it's a higher powered thing than a phone
+
+1049
+00:53:15,920 --> 00:53:18,050
+but it's still a very low power system
+
+1050
+00:53:18,050 --> 00:53:20,660
+so high power it's partly that it's a
+
+1051
+00:53:20,660 --> 00:53:22,250
+liquid-cooled system your brains
+
+1052
+00:53:22,250 --> 00:53:25,329
+circular your body circulation system
+
+1053
+00:53:25,329 --> 00:53:27,980
+puts a lot of its work into keeping your
+
+1054
+00:53:27,980 --> 00:53:30,710
+brain from overheating and your body's
+
+1055
+00:53:30,710 --> 00:53:33,520
+metabolism are you
+
+1056
+00:53:33,520 --> 00:53:35,619
+for example you guys sitting here each
+
+1057
+00:53:35,619 --> 00:53:38,100
+of you are drawing about sixty watts so
+
+1058
+00:53:38,100 --> 00:53:41,320
+you like a 60 watt light bulb but about
+
+1059
+00:53:41,320 --> 00:53:43,540
+a quarter of that power is is powering
+
+1060
+00:53:43,540 --> 00:53:45,970
+the neurons in your brain so it's a
+
+1061
+00:53:45,970 --> 00:53:48,760
+fairly big chunk of the human energy
+
+1062
+00:53:48,760 --> 00:53:51,540
+budget is the brain which makes sense
+
+1063
+00:53:51,540 --> 00:53:53,980
+but it's still more power than we're
+
+1064
+00:53:53,980 --> 00:53:56,200
+really going to allow in our portable
+
+1065
+00:53:56,200 --> 00:54:00,430
+devices if we don't want to our pits to
+
+1066
+00:54:00,430 --> 00:54:06,990
+catch on fire and now the crazy thing is
+
+1067
+00:54:06,990 --> 00:54:11,050
+but wait a minute I wanted to go up to
+
+1068
+00:54:11,050 --> 00:54:14,290
+10 to the 17th of these devices five
+
+1069
+00:54:14,290 --> 00:54:17,020
+hundred thousand times more and I don't
+
+1070
+00:54:17,020 --> 00:54:19,750
+want to add any more power to this so
+
+1071
+00:54:19,750 --> 00:54:21,820
+how is that going to happen well it's
+
+1072
+00:54:21,820 --> 00:54:23,380
+certainly not going to happen with the
+
+1073
+00:54:23,380 --> 00:54:25,150
+technology we have today that's just
+
+1074
+00:54:25,150 --> 00:54:28,030
+can't possibly meet those so we'll have
+
+1075
+00:54:28,030 --> 00:54:30,900
+to have some fairly radically different
+
+1076
+00:54:30,900 --> 00:54:33,280
+technology from a power perspective as
+
+1077
+00:54:33,280 --> 00:54:36,430
+well and this goes also not just for
+
+1078
+00:54:36,430 --> 00:54:39,060
+portable devices but even room size
+
+1079
+00:54:39,060 --> 00:54:42,160
+building size computers for example
+
+1080
+00:54:42,160 --> 00:54:44,920
+right now the fastest computer in the
+
+1081
+00:54:44,920 --> 00:54:47,290
+u.s. is at Oak Ridge National Labs
+
+1082
+00:54:47,290 --> 00:54:50,230
+it's called Titan the fastest in the
+
+1083
+00:54:50,230 --> 00:54:53,140
+world it's in China and both of them
+
+1084
+00:54:53,140 --> 00:54:58,789
+draw
+
+1085
+00:54:58,789 --> 00:55:04,519
+roughly 10 megawatts okay of power so
+
+1086
+00:55:04,519 --> 00:55:07,849
+the high-end supercomputers and one of
+
+1087
+00:55:07,849 --> 00:55:12,469
+the goals that the supercomputing people
+
+1088
+00:55:12,469 --> 00:55:14,209
+talk about is to scale up to what they
+
+1089
+00:55:14,209 --> 00:55:16,880
+call exascale meaning the ability to do
+
+1090
+00:55:16,880 --> 00:55:20,299
+10 to the 18th operations per second
+
+1091
+00:55:20,299 --> 00:55:22,130
+whether they call flops floating-point
+
+1092
+00:55:22,130 --> 00:55:24,380
+operations per second so if you just
+
+1093
+00:55:24,380 --> 00:55:26,779
+took Titan and said okay we want to make
+
+1094
+00:55:26,779 --> 00:55:29,150
+it go a hundred times faster we'll just
+
+1095
+00:55:29,150 --> 00:55:34,400
+put more so for example Titan is built
+
+1096
+00:55:34,400 --> 00:55:37,759
+out of 28,000 micro processors and
+
+1097
+00:55:37,759 --> 00:55:41,869
+28,000 GPUs so if we just go crank all
+
+1098
+00:55:41,869 --> 00:55:45,319
+that up by a factor of 100 then you're
+
+1099
+00:55:45,319 --> 00:55:50,719
+talking Costa gigawatt of power so and
+
+1100
+00:55:50,719 --> 00:55:53,929
+just roughly in rough terms the entire
+
+1101
+00:55:53,929 --> 00:55:57,319
+output of the Hoover Dam is is would be
+
+1102
+00:55:57,319 --> 00:56:00,019
+enough to power a one gigawatt system so
+
+1103
+00:56:00,019 --> 00:56:03,559
+a a small nuclear power plant could do
+
+1104
+00:56:03,559 --> 00:56:06,529
+it too but the point is power is going
+
+1105
+00:56:06,529 --> 00:56:09,469
+to be a big issue for both portable
+
+1106
+00:56:09,469 --> 00:56:12,919
+things and for all of computing as we go
+
+1107
+00:56:12,919 --> 00:56:16,880
+forward okay so that's sort of some of
+
+1108
+00:56:16,880 --> 00:56:21,109
+the technical challenges accommodation
+
+1109
+00:56:21,109 --> 00:56:24,049
+but another is an economic challenge is
+
+1110
+00:56:24,049 --> 00:56:27,679
+that it turns out that semiconductor
+
+1111
+00:56:27,679 --> 00:56:31,579
+business has become more capital
+
+1112
+00:56:31,579 --> 00:56:35,359
+intensive and harder to to sustain and
+
+1113
+00:56:35,359 --> 00:56:38,359
+so this is a example of all the
+
+1114
+00:56:38,359 --> 00:56:41,630
+companies that we're able to manufacture
+
+1115
+00:56:41,630 --> 00:56:45,529
+chips at different physical sizes so
+
+1116
+00:56:45,529 --> 00:56:47,769
+that it's a little bit out of date the
+
+1117
+00:56:47,769 --> 00:56:52,130
+the latest chips are are 14 nanometers
+
+1118
+00:56:52,130 --> 00:56:55,459
+but you see that we're basically down to
+
+1119
+00:56:55,459 --> 00:56:58,489
+four companies in the world who have the
+
+1120
+00:56:58,489 --> 00:57:01,569
+wherewithal to manufacture Stevi our
+
+1121
+00:57:01,569 --> 00:57:06,919
+semiconductor systems and and so and
+
+1122
+00:57:06,919 --> 00:57:09,380
+these are just to let you know TSMC is
+
+1123
+00:57:09,380 --> 00:57:12,210
+Taiwan semiconductor manufacturer
+
+1124
+00:57:12,210 --> 00:57:16,440
+they're huge in producing chips for
+
+1125
+00:57:16,440 --> 00:57:19,380
+other customers basically what they call
+
+1126
+00:57:19,380 --> 00:57:21,960
+a foundry so other designs come in so
+
+1127
+00:57:21,960 --> 00:57:27,720
+for example TSMC historically has been
+
+1128
+00:57:27,720 --> 00:57:30,630
+the main vendor for Apple for almost all
+
+1129
+00:57:30,630 --> 00:57:33,800
+Android phones are manufactured by GSM C
+
+1130
+00:57:33,800 --> 00:57:37,050
+Intel you know Intel but they very much
+
+1131
+00:57:37,050 --> 00:57:40,700
+rely completely for their business on on
+
+1132
+00:57:40,700 --> 00:57:43,589
+microprocessors and other things they
+
+1133
+00:57:43,589 --> 00:57:50,130
+are that and they only with a small
+
+1134
+00:57:50,130 --> 00:57:51,960
+exception only manufactured chips for
+
+1135
+00:57:51,960 --> 00:57:55,770
+their own use their own company Samsung
+
+1136
+00:57:55,770 --> 00:57:59,280
+as you know is in Korea is a leading
+
+1137
+00:57:59,280 --> 00:58:02,099
+manufacturer and a lot of what they do
+
+1138
+00:58:02,099 --> 00:58:05,060
+is produce chips for Samsung products
+
+1139
+00:58:05,060 --> 00:58:08,970
+but they also are one of the biggest
+
+1140
+00:58:08,970 --> 00:58:12,390
+vendors of memory they also actually
+
+1141
+00:58:12,390 --> 00:58:14,700
+interestingly manufacture some of the
+
+1142
+00:58:14,700 --> 00:58:16,410
+chips for Apple so if you think about
+
+1143
+00:58:16,410 --> 00:58:18,630
+the phone business who are the big
+
+1144
+00:58:18,630 --> 00:58:23,880
+competitors Samsung Apple but Samsung
+
+1145
+00:58:23,880 --> 00:58:25,950
+actually builds Apple's chips Apple has
+
+1146
+00:58:25,950 --> 00:58:28,080
+no manufacturing capabilities whatsoever
+
+1147
+00:58:28,080 --> 00:58:30,150
+and then the fourth one is the one
+
+1148
+00:58:30,150 --> 00:58:32,460
+called Global Foundries which is a
+
+1149
+00:58:32,460 --> 00:58:35,630
+company that sort of swept up all the
+
+1150
+00:58:35,630 --> 00:58:40,950
+second string players and it's actually
+
+1151
+00:58:40,950 --> 00:58:44,570
+owned by the sovereign wealth fund of
+
+1152
+00:58:44,570 --> 00:58:48,900
+the Abu Dhabi so one of the United Arab
+
+1153
+00:58:48,900 --> 00:58:53,640
+Emirates so really if you're you can
+
+1154
+00:58:53,640 --> 00:58:56,540
+sync then there's two companies in Asia
+
+1155
+00:58:56,540 --> 00:58:59,910
+one that's headquartered in Abu Dhabi
+
+1156
+00:58:59,910 --> 00:59:02,640
+but it's actually physically other
+
+1157
+00:59:02,640 --> 00:59:04,859
+manufacturing facilities are in the u.s.
+
+1158
+00:59:04,859 --> 00:59:10,680
+in Germany and in Singapore Intel all of
+
+1159
+00:59:10,680 --> 00:59:12,810
+its manufacturing is in the u.s. Taiwan
+
+1160
+00:59:12,810 --> 00:59:15,240
+is at least for the leading-edge all in
+
+1161
+00:59:15,240 --> 00:59:19,369
+Taiwan and Samsung they have a fab in
+
+1162
+00:59:19,369 --> 00:59:23,490
+Texas and in Korea so anyways my point
+
+1163
+00:59:23,490 --> 00:59:24,930
+is
+
+1164
+00:59:24,930 --> 00:59:27,030
+isn't very many if you think of a 300
+
+1165
+00:59:27,030 --> 00:59:29,010
+billion dollar industry and sort of
+
+1166
+00:59:29,010 --> 00:59:31,530
+where we're betting our future on you
+
+1167
+00:59:31,530 --> 00:59:33,330
+only have four companies really that are
+
+1168
+00:59:33,330 --> 00:59:34,740
+in the business right now is a little
+
+1169
+00:59:34,740 --> 00:59:37,830
+bit scary and as you see if this trend
+
+1170
+00:59:37,830 --> 00:59:40,490
+continues things wouldn't go well in
+
+1171
+00:59:40,490 --> 00:59:44,070
+particularly if we want innovation and
+
+1172
+00:59:44,070 --> 00:59:46,290
+progress to happen we need competition
+
+1173
+00:59:46,290 --> 00:59:49,620
+and if the number of companies drops too
+
+1174
+00:59:49,620 --> 00:59:52,130
+small then the competition won't be as
+
+1175
+00:59:52,130 --> 00:59:54,650
+significant either so these are
+
+1176
+00:59:54,650 --> 01:00:00,760
+interesting questions
+
+1177
+01:00:00,760 --> 01:00:03,950
+another thing that's making life
+
+1178
+01:00:03,950 --> 01:00:05,930
+difficult and it's been making life
+
+1179
+01:00:05,930 --> 01:00:07,820
+difficult for the last 10 years is
+
+1180
+01:00:07,820 --> 01:00:10,370
+what's sometimes referred to as Dennard
+
+1181
+01:00:10,370 --> 01:00:12,890
+scaling and this is a term that you'll
+
+1182
+01:00:12,890 --> 01:00:16,580
+hear said nowadays and just a few years
+
+1183
+01:00:16,580 --> 01:00:19,130
+ago if you mention that term people
+
+1184
+01:00:19,130 --> 01:00:20,420
+would have no idea what you're talking
+
+1185
+01:00:20,420 --> 01:00:20,990
+about
+
+1186
+01:00:20,990 --> 01:00:23,440
+unless you were pretty heavy into chips
+
+1187
+01:00:23,440 --> 01:00:26,270
+but there's a fellow named Robert Denard
+
+1188
+01:00:26,270 --> 01:00:29,780
+who has had a long career at IBM he
+
+1189
+01:00:29,780 --> 01:00:32,180
+actually got his PhD here from Carnegie
+
+1190
+01:00:32,180 --> 01:00:35,930
+Tech in the 1950s and among other things
+
+1191
+01:00:35,930 --> 01:00:39,470
+he invented the dynamic RAM so d Ram you
+
+1192
+01:00:39,470 --> 01:00:43,220
+know he's the guy but he wrote a very
+
+1193
+01:00:43,220 --> 01:00:46,940
+interesting paper in in 1974 that sort
+
+1194
+01:00:46,940 --> 01:00:50,210
+of sketched out why it is that by
+
+1195
+01:00:50,210 --> 01:00:52,700
+shrinking chips we a life gets better
+
+1196
+01:00:52,700 --> 01:00:55,900
+and it's a very simple model sort of
+
+1197
+01:00:55,900 --> 01:01:00,200
+simple area geometry basics of Ohm's law
+
+1198
+01:01:00,200 --> 01:01:05,150
+kind of stuff that that tells you what
+
+1199
+01:01:05,150 --> 01:01:08,360
+it's doing but he said imagine we can
+
+1200
+01:01:08,360 --> 01:01:12,410
+shrink a chip all the features on a chip
+
+1201
+01:01:12,410 --> 01:01:16,490
+by a factor of some number K typically
+
+1202
+01:01:16,490 --> 01:01:20,060
+we say 2 or the square root of 2 so if
+
+1203
+01:01:20,060 --> 01:01:23,780
+you can shrink in both of x and y
+
+1204
+01:01:23,780 --> 01:01:27,320
+directions by a factor of K and this is
+
+1205
+01:01:27,320 --> 01:01:30,500
+a big important hand and we also reduce
+
+1206
+01:01:30,500 --> 01:01:32,540
+the supply voltage to the chip by that
+
+1207
+01:01:32,540 --> 01:01:35,900
+same factor then obviously we're going
+
+1208
+01:01:35,900 --> 01:01:38,300
+to increase the number of devices by a
+
+1209
+01:01:38,300 --> 01:01:43,910
+factor of K squared right but also we'll
+
+1210
+01:01:43,910 --> 01:01:46,030
+be able to make these run faster and
+
+1211
+01:01:46,030 --> 01:01:49,430
+we'll be able to do it without requiring
+
+1212
+01:01:49,430 --> 01:01:52,160
+more power per chip so if all this
+
+1213
+01:01:52,160 --> 01:01:55,730
+scaling holds then we can get more stuff
+
+1214
+01:01:55,730 --> 01:01:59,510
+on a chip run it faster and not use more
+
+1215
+01:01:59,510 --> 01:02:02,360
+power so that's sort of the principle of
+
+1216
+01:02:02,360 --> 01:02:06,050
+Dennard scaling and that's really what
+
+1217
+01:02:06,050 --> 01:02:11,270
+was followed by the industry for from
+
+1218
+01:02:11,270 --> 01:02:14,610
+about 75 to about
+
+1219
+01:02:14,610 --> 01:02:19,950
+2004 this is a chart that shows how
+
+1220
+01:02:19,950 --> 01:02:22,270
+technology progressed so the top curve
+
+1221
+01:02:22,270 --> 01:02:25,050
+here is Moore's law how many transistors
+
+1222
+01:02:25,050 --> 01:02:28,060
+were on a chip
+
+1223
+01:02:28,060 --> 01:02:32,140
+this next curve down was how fast could
+
+1224
+01:02:32,140 --> 01:02:35,530
+a microprocessor go running a single
+
+1225
+01:02:35,530 --> 01:02:37,990
+thread of execution and you see it was
+
+1226
+01:02:37,990 --> 01:02:42,010
+following a sort of nice steady growth
+
+1227
+01:02:42,010 --> 01:02:45,100
+curve what was the frequency the clock
+
+1228
+01:02:45,100 --> 01:02:47,710
+frequency of the chip you saw also
+
+1229
+01:02:47,710 --> 01:02:50,620
+followed this nice growth curve until it
+
+1230
+01:02:50,620 --> 01:02:54,070
+hit about 2 gigahertz how many watts per
+
+1231
+01:02:54,070 --> 01:02:56,290
+chip well it's kind of variable but it
+
+1232
+01:02:56,290 --> 01:03:03,130
+was more or less it was scaling faster
+
+1233
+01:03:03,130 --> 01:03:05,470
+than Dennard scaling predicted but still
+
+1234
+01:03:05,470 --> 01:03:08,980
+pretty reasonable and how many cores
+
+1235
+01:03:08,980 --> 01:03:11,890
+would we put on a chip well it was one
+
+1236
+01:03:11,890 --> 01:03:13,540
+for a really long time and then they
+
+1237
+01:03:13,540 --> 01:03:16,390
+started adding more so that the main
+
+1238
+01:03:16,390 --> 01:03:18,750
+point to notice is
+
+1239
+01:03:18,750 --> 01:03:22,780
+somewhere actually it was a right around
+
+1240
+01:03:22,780 --> 01:03:27,340
+2005 things stopped progressing Moore's
+
+1241
+01:03:27,340 --> 01:03:29,800
+law continues it continues today we can
+
+1242
+01:03:29,800 --> 01:03:33,250
+get more stuff on a chip than before but
+
+1243
+01:03:33,250 --> 01:03:35,860
+how fast are given thread goes has not
+
+1244
+01:03:35,860 --> 01:03:38,590
+really improved much in the past of 10
+
+1245
+01:03:38,590 --> 01:03:41,260
+years and that's why the shark machines
+
+1246
+01:03:41,260 --> 01:03:43,750
+which are already 5 years old are
+
+1247
+01:03:43,750 --> 01:03:49,290
+actually pretty viable computers which
+
+1248
+01:03:49,290 --> 01:03:54,220
+and the number of watts has went leveled
+
+1249
+01:03:54,220 --> 01:03:57,760
+off not because that's the best thing
+
+1250
+01:03:57,760 --> 01:04:00,190
+computing wise but that's because you
+
+1251
+01:04:00,190 --> 01:04:06,760
+just can't afford to the cost the actual
+
+1252
+01:04:06,760 --> 01:04:10,380
+electricity cost as well as all the
+
+1253
+01:04:10,380 --> 01:04:12,810
+requirements for cooling and things that
+
+1254
+01:04:12,810 --> 01:04:16,360
+comes with increased power and so that
+
+1255
+01:04:16,360 --> 01:04:18,250
+combination is the reason why we've gone
+
+1256
+01:04:18,250 --> 01:04:22,120
+multi-core that we couldn't get improved
+
+1257
+01:04:22,120 --> 01:04:24,790
+single-threaded performance but we could
+
+1258
+01:04:24,790 --> 01:04:27,340
+improve the number of transition
+
+1259
+01:04:27,340 --> 01:04:29,320
+per chip so what do we do we just make
+
+1260
+01:04:29,320 --> 01:04:37,660
+more cores and so my so so some will
+
+1261
+01:04:37,660 --> 01:04:39,460
+tell you that Moore's law is already
+
+1262
+01:04:39,460 --> 01:04:42,940
+dead in the sense that for a while there
+
+1263
+01:04:42,940 --> 01:04:44,830
+is this sort of miraculous things just
+
+1264
+01:04:44,830 --> 01:04:46,090
+kept getting better and better every
+
+1265
+01:04:46,090 --> 01:04:49,510
+year because of Moore's law and now
+
+1266
+01:04:49,510 --> 01:04:51,520
+we're already in an era that even though
+
+1267
+01:04:51,520 --> 01:04:53,470
+the transistor density part of Moore's
+
+1268
+01:04:53,470 --> 01:04:55,420
+law holds some of these other
+
+1269
+01:04:55,420 --> 01:04:58,960
+performance factors have not improved so
+
+1270
+01:04:58,960 --> 01:05:01,900
+it's in all ready getting difficult to
+
+1271
+01:05:01,900 --> 01:05:05,440
+sort of out use this technology to make
+
+1272
+01:05:05,440 --> 01:05:10,060
+things faster and more powerful and so
+
+1273
+01:05:10,060 --> 01:05:11,560
+I'll mention for example part of the
+
+1274
+01:05:11,560 --> 01:05:14,230
+reason why this phone actually I don't
+
+1275
+01:05:14,230 --> 01:05:15,760
+know how many transistors are in this
+
+1276
+01:05:15,760 --> 01:05:18,310
+phone but if you think at two billion
+
+1277
+01:05:18,310 --> 01:05:20,740
+transistors the model before that had 1
+
+1278
+01:05:20,740 --> 01:05:23,440
+billion you say well what's what all
+
+1279
+01:05:23,440 --> 01:05:25,840
+these transistors doing part of what
+
+1280
+01:05:25,840 --> 01:05:27,490
+they've done is and part of the reason
+
+1281
+01:05:27,490 --> 01:05:30,790
+they're able to keep the power down is a
+
+1282
+01:05:30,790 --> 01:05:33,940
+lot of what's on a they call the the
+
+1283
+01:05:33,940 --> 01:05:35,460
+chip now it's not called a
+
+1284
+01:05:35,460 --> 01:05:37,720
+microprocessor it's called a system on a
+
+1285
+01:05:37,720 --> 01:05:38,080
+chip
+
+1286
+01:05:38,080 --> 01:05:41,350
+because embedded on it will be a couple
+
+1287
+01:05:41,350 --> 01:05:45,700
+of arm microprocessors several graphic
+
+1288
+01:05:45,700 --> 01:05:49,150
+processing units to handle the video the
+
+1289
+01:05:49,150 --> 01:05:51,700
+image processing and other specialized
+
+1290
+01:05:51,700 --> 01:05:53,710
+pieces of hardware that are only used
+
+1291
+01:05:53,710 --> 01:05:56,290
+for very specific things so for example
+
+1292
+01:05:56,290 --> 01:06:01,570
+there's a JPEG encoding and decoding is
+
+1293
+01:06:01,570 --> 01:06:03,640
+directly integrated into Hardware on
+
+1294
+01:06:03,640 --> 01:06:07,000
+this chip there's a actually some
+
+1295
+01:06:07,000 --> 01:06:09,270
+special logic for when you take
+
+1296
+01:06:09,270 --> 01:06:12,850
+panoramic shots and then you merge those
+
+1297
+01:06:12,850 --> 01:06:15,490
+all together which I don't know about
+
+1298
+01:06:15,490 --> 01:06:17,110
+you but I don't do that very often
+
+1299
+01:06:17,110 --> 01:06:19,780
+but there's still some special dedicated
+
+1300
+01:06:19,780 --> 01:06:21,640
+Hardware on those chips to do that
+
+1301
+01:06:21,640 --> 01:06:23,050
+because it takes a lot of power
+
+1302
+01:06:23,050 --> 01:06:25,750
+otherwise so in general if you can take
+
+1303
+01:06:25,750 --> 01:06:29,560
+a some compute computing and turn it
+
+1304
+01:06:29,560 --> 01:06:32,560
+from software and migrate it to hardware
+
+1305
+01:06:32,560 --> 01:06:35,380
+you get a big performance increase and a
+
+1306
+01:06:35,380 --> 01:06:37,960
+major power reduction so they're putting
+
+1307
+01:06:37,960 --> 01:06:39,700
+more stuff on a chip not to give you
+
+1308
+01:06:39,700 --> 01:06:40,910
+more possible
+
+1309
+01:06:40,910 --> 01:06:44,630
+full processor but to be able to do more
+
+1310
+01:06:44,630 --> 01:06:48,230
+stuff at lower power so that's why these
+
+1311
+01:06:48,230 --> 01:06:51,590
+chips get more so my point is that
+
+1312
+01:06:51,590 --> 01:06:53,240
+they're already sort of we're already in
+
+1313
+01:06:53,240 --> 01:06:57,410
+an era when the driving reason for
+
+1314
+01:06:57,410 --> 01:06:59,990
+Moore's Law isn't so much to get raw
+
+1315
+01:06:59,990 --> 01:07:02,120
+performance out of these systems but to
+
+1316
+01:07:02,120 --> 01:07:05,710
+give you more features of various sorts
+
+1317
+01:07:05,710 --> 01:07:13,880
+okay so looking to the future then as I
+
+1318
+01:07:13,880 --> 01:07:16,820
+said if you can look at since 65 it's
+
+1319
+01:07:16,820 --> 01:07:21,560
+been a very long set of incremental
+
+1320
+01:07:21,560 --> 01:07:24,380
+improvements to get from the chips of
+
+1321
+01:07:24,380 --> 01:07:27,920
+Gordon Moore's early career to where we
+
+1322
+01:07:27,920 --> 01:07:30,640
+are today we got more stuff on a chip
+
+1323
+01:07:30,640 --> 01:07:33,920
+vastly more capable much more affordable
+
+1324
+01:07:33,920 --> 01:07:36,380
+huge impact on it but from a technology
+
+1325
+01:07:36,380 --> 01:07:38,330
+point of view has been a fairly
+
+1326
+01:07:38,330 --> 01:07:40,940
+incremental road to travel we can see
+
+1327
+01:07:40,940 --> 01:07:42,380
+that that's not going to work in the
+
+1328
+01:07:42,380 --> 01:07:43,670
+future we're not going to be able to
+
+1329
+01:07:43,670 --> 01:07:48,800
+scale transistor logic to the level that
+
+1330
+01:07:48,800 --> 01:07:53,960
+you'd need to keep this going so at
+
+1331
+01:07:53,960 --> 01:07:57,980
+least two-dimensional semiconductor
+
+1332
+01:07:57,980 --> 01:08:01,390
+chips aren't going to carry the way so
+
+1333
+01:08:01,390 --> 01:08:04,190
+they're sort of issues then and you and
+
+1334
+01:08:04,190 --> 01:08:05,990
+your careers will be dealing with these
+
+1335
+01:08:05,990 --> 01:08:10,010
+is will we be able to build systems of
+
+1336
+01:08:10,010 --> 01:08:12,440
+this complexity in a way that's
+
+1337
+01:08:12,440 --> 01:08:14,650
+commercially viable because if it's not
+
+1338
+01:08:14,650 --> 01:08:16,820
+economically viable it's just not going
+
+1339
+01:08:16,820 --> 01:08:19,460
+to happen and power is going to be a
+
+1340
+01:08:19,460 --> 01:08:23,090
+huge problem as we go along and then you
+
+1341
+01:08:23,090 --> 01:08:24,770
+know what would it mean if you actually
+
+1342
+01:08:24,770 --> 01:08:28,430
+had 10 to the 17th I can't think of what
+
+1343
+01:08:28,430 --> 01:08:31,400
+possible capabilities this would give us
+
+1344
+01:08:31,400 --> 01:08:35,390
+that we'd actually want use but again if
+
+1345
+01:08:35,390 --> 01:08:38,300
+I don't think Gordon Moore would have
+
+1346
+01:08:38,300 --> 01:08:40,310
+thought back in 64 actually if you look
+
+1347
+01:08:40,310 --> 01:08:42,710
+at the 65 paper I recommend you do he
+
+1348
+01:08:42,710 --> 01:08:44,120
+actually did predict things like
+
+1349
+01:08:44,120 --> 01:08:45,500
+personal computers and cell phones
+
+1350
+01:08:45,500 --> 01:08:49,370
+believe it or not it's really true um so
+
+1351
+01:08:49,370 --> 01:08:52,340
+he was definitely pretty good but for me
+
+1352
+01:08:52,340 --> 01:08:54,460
+I can't predict what I
+
+1353
+01:08:54,460 --> 01:08:56,830
+have in 50 years what I do with it and
+
+1354
+01:08:56,830 --> 01:09:00,010
+then for more the software people you
+
+1355
+01:09:00,010 --> 01:09:01,780
+know what what mean will there be
+
+1356
+01:09:01,780 --> 01:09:05,910
+programming we certainly won't be
+
+1357
+01:09:05,910 --> 01:09:09,130
+writing lines of code in C in order to
+
+1358
+01:09:09,130 --> 01:09:11,920
+power systems like this so what will
+
+1359
+01:09:11,920 --> 01:09:14,170
+that mean for the future those are all
+
+1360
+01:09:14,170 --> 01:09:19,780
+big questions that you and this point of
+
+1361
+01:09:19,780 --> 01:09:21,790
+your careers get to look forward to so I
+
+1362
+01:09:21,790 --> 01:09:26,400
+I wish you the best in doing that
+

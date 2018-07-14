@@ -1,0 +1,6000 @@
+﻿1
+00:00:00,030 --> 00:00:05,100
+welcome good to see you today we're
+
+2
+00:00:05,100 --> 00:00:10,410
+going to begin a transitioning from how
+
+3
+00:00:10,410 --> 00:00:13,620
+our programs interact with hardware to
+
+4
+00:00:13,620 --> 00:00:15,210
+how they interact with software in
+
+5
+00:00:15,210 --> 00:00:17,910
+particular system software and we're
+
+6
+00:00:17,910 --> 00:00:20,609
+going to start that investigation by by
+
+7
+00:00:20,609 --> 00:00:22,529
+studying and learning about a process
+
+8
+00:00:22,529 --> 00:00:27,960
+called linking which is how the system
+
+9
+00:00:27,960 --> 00:00:33,540
+builds builds your programs ok so we're
+
+10
+00:00:33,540 --> 00:00:35,520
+going to study the the process of
+
+11
+00:00:35,520 --> 00:00:37,430
+linking and then I'm going to show you a
+
+12
+00:00:37,430 --> 00:00:39,840
+really cool technique called library
+
+13
+00:00:39,840 --> 00:00:43,230
+inter positioning which it which allows
+
+14
+00:00:43,230 --> 00:00:45,480
+you to use linking to actually intercept
+
+15
+00:00:45,480 --> 00:00:49,710
+on function calls in in libraries like
+
+16
+00:00:49,710 --> 00:00:52,110
+the standard c library so it's a very
+
+17
+00:00:52,110 --> 00:00:53,820
+very powerful and interesting technique
+
+18
+00:00:53,820 --> 00:00:58,289
+and it's all enabled by by linking so
+
+19
+00:00:58,289 --> 00:01:02,879
+let's start with a simple program this
+
+20
+00:01:02,879 --> 00:01:05,850
+program consists of two modules a main
+
+21
+00:01:05,850 --> 00:01:11,760
+dot C and some dot C some dot C takes as
+
+22
+00:01:11,760 --> 00:01:14,310
+an array as an argument and a length N
+
+23
+00:01:14,310 --> 00:01:17,189
+and then it sums up the elements of that
+
+24
+00:01:17,189 --> 00:01:21,030
+array and returns the sum back to the
+
+25
+00:01:21,030 --> 00:01:26,210
+caller main dot C calls the sum function
+
+26
+00:01:26,210 --> 00:01:28,770
+using and passes it a two element array
+
+27
+00:01:28,770 --> 00:01:33,810
+of intz and then returns that and then
+
+28
+00:01:33,810 --> 00:01:36,890
+returns the value received from some
+
+29
+00:01:36,890 --> 00:01:39,270
+yeah we that that's kind of an odd thing
+
+30
+00:01:39,270 --> 00:01:42,229
+to do to return your your exit status
+
+31
+00:01:42,229 --> 00:01:45,030
+like that but we just did it so that the
+
+32
+00:01:45,030 --> 00:01:47,159
+compiler wouldn't optimize away all of
+
+33
+00:01:47,159 --> 00:01:50,100
+our code I know let's look at what
+
+34
+00:01:50,100 --> 00:01:51,840
+happens if when we want to compile those
+
+35
+00:01:51,840 --> 00:01:57,060
+those two modules for each of main dot C
+
+36
+00:01:57,060 --> 00:02:03,210
+and some dot C the GCC calls a series of
+
+37
+00:02:03,210 --> 00:02:07,649
+translators on that on those modules on
+
+38
+00:02:07,649 --> 00:02:10,080
+those dot C files first calls the C
+
+39
+00:02:10,080 --> 00:02:13,440
+preprocessor CPP
+
+40
+00:02:13,440 --> 00:02:16,090
+then it calls the the compiler the
+
+41
+00:02:16,090 --> 00:02:20,980
+actual compiler which is cc1 the
+
+42
+00:02:20,980 --> 00:02:23,770
+compiler generates assembly which is
+
+43
+00:02:23,770 --> 00:02:28,180
+then translated by the assembler AS and
+
+44
+00:02:28,180 --> 00:02:31,900
+resulting in a dot o file called main
+
+45
+00:02:31,900 --> 00:02:35,200
+dot o similar things happens first for
+
+46
+00:02:35,200 --> 00:02:41,350
+some dot C so after after the after
+
+47
+00:02:41,350 --> 00:02:43,630
+these three translators work on the code
+
+48
+00:02:43,630 --> 00:02:47,940
+we have two object files two dot o files
+
+49
+00:02:47,940 --> 00:02:51,540
+the linker takes those those dot o files
+
+50
+00:02:51,540 --> 00:02:57,489
+and put some links them together sort of
+
+51
+00:02:57,489 --> 00:03:00,310
+smashes them together to form a single
+
+52
+00:03:00,310 --> 00:03:02,650
+executable called
+
+53
+00:03:02,650 --> 00:03:07,750
+that we can then run then we can then
+
+54
+00:03:07,750 --> 00:03:12,940
+load and run on the system so the main
+
+55
+00:03:12,940 --> 00:03:14,530
+dot C and some dots they are called
+
+56
+00:03:14,530 --> 00:03:17,940
+source files these dot o files are our
+
+57
+00:03:17,940 --> 00:03:21,549
+object files that we are separately
+
+58
+00:03:21,549 --> 00:03:24,340
+compiled but and we call them
+
+59
+00:03:24,340 --> 00:03:26,049
+relocatable object files because they
+
+60
+00:03:26,049 --> 00:03:30,090
+can be combined together to form the
+
+61
+00:03:30,090 --> 00:03:36,130
+fully linked executable object file so
+
+62
+00:03:36,130 --> 00:03:37,630
+why do we do it like this you know why
+
+63
+00:03:37,630 --> 00:03:41,530
+why do we allow this so-called separate
+
+64
+00:03:41,530 --> 00:03:43,900
+compilation you know why don't we just
+
+65
+00:03:43,900 --> 00:03:46,510
+have like one big you know one big file
+
+66
+00:03:46,510 --> 00:03:49,180
+that with all of our code in it well
+
+67
+00:03:49,180 --> 00:03:50,950
+there's a couple reasons the first is is
+
+68
+00:03:50,950 --> 00:03:53,680
+modularity so by by allowing you to
+
+69
+00:03:53,680 --> 00:03:55,570
+break your code into smaller pieces you
+
+70
+00:03:55,570 --> 00:03:58,120
+can put related functions into separate
+
+71
+00:03:58,120 --> 00:04:00,670
+source files you can define libraries of
+
+72
+00:04:00,670 --> 00:04:04,090
+functions so it's just it's just good
+
+73
+00:04:04,090 --> 00:04:06,180
+technique and it allows you to kind of
+
+74
+00:04:06,180 --> 00:04:10,180
+break your code up into nice to nice
+
+75
+00:04:10,180 --> 00:04:14,319
+modular pieces the other reason is
+
+76
+00:04:14,319 --> 00:04:20,139
+efficiency so if if we if we've broken
+
+77
+00:04:20,139 --> 00:04:23,620
+up our program into multiple chunks if
+
+78
+00:04:23,620 --> 00:04:26,680
+we change and if we if
+
+79
+00:04:26,680 --> 00:04:28,919
+we only need to change one of the chunks
+
+80
+00:04:28,919 --> 00:04:31,630
+we don't have to recompile the all the
+
+81
+00:04:31,630 --> 00:04:33,699
+other all the other modules right we can
+
+82
+00:04:33,699 --> 00:04:36,310
+just recompile the one module that we
+
+83
+00:04:36,310 --> 00:04:37,870
+changed and then link them all together
+
+84
+00:04:37,870 --> 00:04:41,850
+again right so it's it's efficient in
+
+85
+00:04:41,850 --> 00:04:44,139
+time it's also efficient in space
+
+86
+00:04:44,139 --> 00:04:47,919
+because you can take all of say all of
+
+87
+00:04:47,919 --> 00:04:49,900
+the functions in the standard c library
+
+88
+00:04:49,900 --> 00:04:52,960
+you could put them all together but then
+
+89
+00:04:52,960 --> 00:04:54,729
+the only functions that you actually get
+
+90
+00:04:54,729 --> 00:04:56,350
+compiled and linked into your program
+
+91
+00:04:56,350 --> 00:04:58,810
+are the ones that you actually call ok
+
+92
+00:04:58,810 --> 00:05:01,840
+so you can you can save space you don't
+
+93
+00:05:01,840 --> 00:05:04,180
+you know normally you use only a small
+
+94
+00:05:04,180 --> 00:05:07,889
+subset of the standard C functions and
+
+95
+00:05:07,889 --> 00:05:10,210
+so you there's no there's no point in
+
+96
+00:05:10,210 --> 00:05:12,039
+linking all of those functions into your
+
+97
+00:05:12,039 --> 00:05:14,220
+code if you don't need them
+
+98
+00:05:14,220 --> 00:05:18,160
+alright so what do linkers do well
+
+99
+00:05:18,160 --> 00:05:20,380
+there's two main there's two main tasks
+
+100
+00:05:20,380 --> 00:05:24,009
+that a linker performs the first is
+
+101
+00:05:24,009 --> 00:05:27,849
+called simple resolution so programs
+
+102
+00:05:27,849 --> 00:05:30,940
+define and reference symbols okay that
+
+103
+00:05:30,940 --> 00:05:33,789
+what the linker refers to as symbols and
+
+104
+00:05:33,789 --> 00:05:36,729
+these are global variables and functions
+
+105
+00:05:36,729 --> 00:05:40,690
+okay in the names and those those
+
+106
+00:05:40,690 --> 00:05:44,289
+objects they're referred to as a symbol
+
+107
+00:05:44,289 --> 00:05:51,010
+so here we're declaring we're defining a
+
+108
+00:05:51,010 --> 00:05:55,060
+symbol called swap here we're referring
+
+109
+00:05:55,060 --> 00:05:57,720
+when we call swap we're referring to
+
+110
+00:05:57,720 --> 00:06:00,400
+that symbol okay that's a reference to
+
+111
+00:06:00,400 --> 00:06:04,470
+the symbol and here we're defining a
+
+112
+00:06:04,470 --> 00:06:06,460
+pointer to an int called
+
+113
+00:06:06,460 --> 00:06:10,870
+XP so we're defining XP and we're
+
+114
+00:06:10,870 --> 00:06:13,180
+initializing it to the address of X so
+
+115
+00:06:13,180 --> 00:06:16,320
+we're referring that's a reference to X
+
+116
+00:06:16,320 --> 00:06:20,229
+okay so the symbol definitions are
+
+117
+00:06:20,229 --> 00:06:23,440
+stored in the object file by the
+
+118
+00:06:23,440 --> 00:06:27,070
+assembler in a symbol table which is an
+
+119
+00:06:27,070 --> 00:06:29,860
+array of structs where each truck
+
+120
+00:06:29,860 --> 00:06:32,190
+contains information about the symbol
+
+121
+00:06:32,190 --> 00:06:35,639
+like the name of the symbol its size and
+
+122
+00:06:35,639 --> 00:06:39,669
+where it's located
+
+123
+00:06:39,669 --> 00:06:43,610
+now what we mean by symbol resolution is
+
+124
+00:06:43,610 --> 00:06:46,699
+that during the linker plinking process
+
+125
+00:06:46,699 --> 00:06:51,110
+the linker associates each symbol
+
+126
+00:06:51,110 --> 00:06:53,990
+reference with exactly one symbol
+
+127
+00:06:53,990 --> 00:06:58,699
+definition okay so it's possible in
+
+128
+00:06:58,699 --> 00:07:01,580
+multiple you know why is this an issue
+
+129
+00:07:01,580 --> 00:07:03,650
+well it's possible like in multiple
+
+130
+00:07:03,650 --> 00:07:05,120
+modules you may declare a global
+
+131
+00:07:05,120 --> 00:07:08,240
+variable with the same name the linker
+
+132
+00:07:08,240 --> 00:07:09,620
+has to decide which one of those
+
+133
+00:07:09,620 --> 00:07:12,919
+definitions to use for all subsequent
+
+134
+00:07:12,919 --> 00:07:15,879
+references
+
+135
+00:07:15,879 --> 00:07:20,169
+now once once the linker is associated a
+
+136
+00:07:20,169 --> 00:07:23,539
+unique object with each a unique symbol
+
+137
+00:07:23,539 --> 00:07:27,110
+definition with each reference then it
+
+138
+00:07:27,110 --> 00:07:29,060
+does the second step which is relocation
+
+139
+00:07:29,060 --> 00:07:32,150
+and during relocation it merges all of
+
+140
+00:07:32,150 --> 00:07:36,050
+the modules together into a single into
+
+141
+00:07:36,050 --> 00:07:39,499
+a single executable object module that
+
+142
+00:07:39,499 --> 00:07:42,199
+can be directly loaded and executed on
+
+143
+00:07:42,199 --> 00:07:46,099
+the system so when it when it when it
+
+144
+00:07:46,099 --> 00:07:51,409
+does this merging it has to it has to
+
+145
+00:07:51,409 --> 00:07:54,319
+figure out where each each symbol each
+
+146
+00:07:54,319 --> 00:07:56,330
+function and each variable is going to
+
+147
+00:07:56,330 --> 00:07:58,550
+be stored okay and this is called
+
+148
+00:07:58,550 --> 00:08:02,689
+relocation because initially functions
+
+149
+00:08:02,689 --> 00:08:04,819
+are just stored at some offset in their
+
+150
+00:08:04,819 --> 00:08:07,699
+in their object module right because
+
+151
+00:08:07,699 --> 00:08:09,259
+that the linker doesn't know where those
+
+152
+00:08:09,259 --> 00:08:10,879
+functions are actually going to be
+
+153
+00:08:10,879 --> 00:08:14,120
+eventually a loaded into memory so
+
+154
+00:08:14,120 --> 00:08:18,110
+before before relocation the address of
+
+155
+00:08:18,110 --> 00:08:21,110
+a function in the object module is just
+
+156
+00:08:21,110 --> 00:08:24,319
+its offset in the in the module and
+
+157
+00:08:24,319 --> 00:08:27,830
+similarly for data during the relocation
+
+158
+00:08:27,830 --> 00:08:31,759
+step the the linker decides on where
+
+159
+00:08:31,759 --> 00:08:35,110
+each symbol is going to be ultimately
+
+160
+00:08:35,110 --> 00:08:37,789
+located in memory one at X when the
+
+161
+00:08:37,789 --> 00:08:41,510
+program executes and it binds that that
+
+162
+00:08:41,510 --> 00:08:44,449
+those absolute memory locations to the
+
+163
+00:08:44,449 --> 00:08:47,660
+to the symbol and then and then it goes
+
+164
+00:08:47,660 --> 00:08:49,220
+and looks at all the references to those
+
+165
+00:08:49,220 --> 00:08:52,130
+symbols and it updates those references
+
+166
+00:08:52,130 --> 00:08:52,730
+so that they
+
+167
+00:08:52,730 --> 00:08:54,740
+now they point to the correct address
+
+168
+00:08:54,740 --> 00:08:57,230
+okay so figure out where stuff is going
+
+169
+00:08:57,230 --> 00:09:00,620
+to go for each definition figure out
+
+170
+00:09:00,620 --> 00:09:01,940
+where it's going to go and for each
+
+171
+00:09:01,940 --> 00:09:03,890
+reference then update that reference so
+
+172
+00:09:03,890 --> 00:09:10,250
+it now points to the right spot so let's
+
+173
+00:09:10,250 --> 00:09:13,310
+look at what what these how these steps
+
+174
+00:09:13,310 --> 00:09:15,860
+work in more detail before that we need
+
+175
+00:09:15,860 --> 00:09:19,880
+to we need to define a few things so
+
+176
+00:09:19,880 --> 00:09:21,620
+there's there's three kinds of object
+
+177
+00:09:21,620 --> 00:09:24,890
+modules that I've alluded to there's the
+
+178
+00:09:24,890 --> 00:09:27,290
+dot o file which is a relocatable object
+
+179
+00:09:27,290 --> 00:09:28,790
+module this is the output of the
+
+180
+00:09:28,790 --> 00:09:32,420
+assembler okay and it's it's not it's a
+
+181
+00:09:32,420 --> 00:09:35,360
+binary file but it's it's not in any
+
+182
+00:09:35,360 --> 00:09:38,870
+form that can be directly loaded into
+
+183
+00:09:38,870 --> 00:09:41,630
+memory it needs to be manipulated by the
+
+184
+00:09:41,630 --> 00:09:43,780
+linker before it can be actually used
+
+185
+00:09:43,780 --> 00:09:46,670
+there's the executable object file which
+
+186
+00:09:46,670 --> 00:09:50,420
+is generated by the linker these are
+
+187
+00:09:50,420 --> 00:09:52,780
+called a dot out files sometimes
+
+188
+00:09:52,780 --> 00:09:54,800
+historically the very first Linux
+
+189
+00:09:54,800 --> 00:09:57,680
+systems the executable this sort of the
+
+190
+00:09:57,680 --> 00:10:00,110
+default name that they the developers of
+
+191
+00:10:00,110 --> 00:10:02,870
+UNIX used the default name for their
+
+192
+00:10:02,870 --> 00:10:06,230
+executables was a dot out so that's just
+
+193
+00:10:06,230 --> 00:10:08,840
+sort of a historical reason that it's
+
+194
+00:10:08,840 --> 00:10:11,120
+it's it's called a dot out and then
+
+195
+00:10:11,120 --> 00:10:13,730
+there's another type of object file
+
+196
+00:10:13,730 --> 00:10:16,100
+called a shared object file or dot iso
+
+197
+00:10:16,100 --> 00:10:21,470
+file which is a sort of modern a modern
+
+198
+00:10:21,470 --> 00:10:24,410
+technique for creating shared libraries
+
+199
+00:10:24,410 --> 00:10:26,660
+and we'll look at those we'll look at
+
+200
+00:10:26,660 --> 00:10:28,330
+those later today
+
+201
+00:10:28,330 --> 00:10:32,480
+now object modules come in a standard
+
+202
+00:10:32,480 --> 00:10:36,590
+format called elf format and it's it's a
+
+203
+00:10:36,590 --> 00:10:39,050
+unified format for dot o files for
+
+204
+00:10:39,050 --> 00:10:41,240
+executables and for dot iso files they
+
+205
+00:10:41,240 --> 00:10:44,720
+all use the same format the same general
+
+206
+00:10:44,720 --> 00:10:50,240
+format so this while these these elf
+
+207
+00:10:50,240 --> 00:10:54,980
+binaries are their binaries they're very
+
+208
+00:10:54,980 --> 00:10:57,470
+structured ok and they're broken up into
+
+209
+00:10:57,470 --> 00:11:02,150
+sections the at the beginning is the is
+
+210
+00:11:02,150 --> 00:11:05,720
+a header that defines things like the
+
+211
+00:11:05,720 --> 00:11:06,710
+size of the word
+
+212
+00:11:06,710 --> 00:11:10,550
+the byte ordering whether it's a dot o n
+
+213
+00:11:10,550 --> 00:11:13,220
+a dot out or a dot s o so it just
+
+214
+00:11:13,220 --> 00:11:16,100
+provides some sort of general
+
+215
+00:11:16,100 --> 00:11:19,120
+information about this about this binary
+
+216
+00:11:19,120 --> 00:11:21,200
+and then there's what's a so called
+
+217
+00:11:21,200 --> 00:11:25,160
+segment header table which is it only
+
+218
+00:11:25,160 --> 00:11:27,440
+it's only defined for the executable
+
+219
+00:11:27,440 --> 00:11:30,860
+object files and it indicates where all
+
+220
+00:11:30,860 --> 00:11:32,720
+the different segments of the code are
+
+221
+00:11:32,720 --> 00:11:35,089
+going to go in in memory so where does
+
+222
+00:11:35,089 --> 00:11:37,880
+your stack go where do your shared
+
+223
+00:11:37,880 --> 00:11:38,870
+libraries go
+
+224
+00:11:38,870 --> 00:11:41,480
+where does your that you're initialized
+
+225
+00:11:41,480 --> 00:11:44,240
+and uninitialized data where does your
+
+226
+00:11:44,240 --> 00:11:46,100
+code go right so all these all these
+
+227
+00:11:46,100 --> 00:11:50,450
+various sections are defined in the
+
+228
+00:11:50,450 --> 00:11:53,060
+segment header table and then there's
+
+229
+00:11:53,060 --> 00:11:55,760
+the code itself which is is called the
+
+230
+00:11:55,760 --> 00:11:58,399
+dot text section for sort of arcane
+
+231
+00:11:58,399 --> 00:12:01,130
+historical reasons so dot text is always
+
+232
+00:12:01,130 --> 00:12:06,430
+code and then that's followed by
+
+233
+00:12:06,430 --> 00:12:09,860
+read-only data such as the jump tables
+
+234
+00:12:09,860 --> 00:12:13,730
+in switch statements so text and read
+
+235
+00:12:13,730 --> 00:12:16,700
+only the dot text and dot ro data have
+
+236
+00:12:16,700 --> 00:12:18,320
+the property that they're they're both
+
+237
+00:12:18,320 --> 00:12:22,070
+read-only you don't write to them then
+
+238
+00:12:22,070 --> 00:12:24,260
+that's followed by the data section
+
+239
+00:12:24,260 --> 00:12:28,370
+which is contains space for all of your
+
+240
+00:12:28,370 --> 00:12:31,310
+initialized global variables and then
+
+241
+00:12:31,310 --> 00:12:36,490
+there's a section called BSS which
+
+242
+00:12:36,490 --> 00:12:40,370
+contain which defines the uninitialized
+
+243
+00:12:40,370 --> 00:12:43,370
+global variables now this doesn't
+
+244
+00:12:43,370 --> 00:12:45,110
+actually take up any space because
+
+245
+00:12:45,110 --> 00:12:48,440
+they're uninitialized droids ok but
+
+246
+00:12:48,440 --> 00:12:49,880
+there there are entries in the symbol
+
+247
+00:12:49,880 --> 00:12:54,860
+table for them and in it at when this
+
+248
+00:12:54,860 --> 00:12:56,660
+program gets loaded these variables are
+
+249
+00:12:56,660 --> 00:12:59,089
+going to need they're actually going to
+
+250
+00:12:59,089 --> 00:13:01,700
+have to have space allocated for them
+
+251
+00:13:01,700 --> 00:13:05,060
+BSS is another one of those sort of
+
+252
+00:13:05,060 --> 00:13:07,130
+arcane names that cope goes all the way
+
+253
+00:13:07,130 --> 00:13:09,649
+back to the 60s for there was an idea of
+
+254
+00:13:09,649 --> 00:13:11,329
+instruction called the block started by
+
+255
+00:13:11,329 --> 00:13:14,300
+symbol I think a better way to remember
+
+256
+00:13:14,300 --> 00:13:16,850
+what it means is better safe space ok so
+
+257
+00:13:16,850 --> 00:13:18,890
+you can if you have a separate section
+
+258
+00:13:18,890 --> 00:13:20,640
+for the uninitialized variable since
+
+259
+00:13:20,640 --> 00:13:23,790
+uninitialized you don't have to you know
+
+260
+00:13:23,790 --> 00:13:26,700
+they don't have to consume any room in
+
+261
+00:13:26,700 --> 00:13:33,540
+the in the dot o file ok there's also a
+
+262
+00:13:33,540 --> 00:13:37,770
+section for the symbol table this
+
+263
+00:13:37,770 --> 00:13:39,120
+contained like I said it's an array of
+
+264
+00:13:39,120 --> 00:13:45,320
+structs for procedures global variables
+
+265
+00:13:45,320 --> 00:13:49,950
+and anything defined with the static
+
+266
+00:13:49,950 --> 00:13:55,170
+attribute and each one of these each one
+
+267
+00:13:55,170 --> 00:13:56,730
+of these symbols gets an entry in the
+
+268
+00:13:56,730 --> 00:14:00,450
+symbol table and then there's two two
+
+269
+00:14:00,450 --> 00:14:02,220
+sections called them that contain
+
+270
+00:14:02,220 --> 00:14:05,780
+relocation info so this is the notes
+
+271
+00:14:05,780 --> 00:14:07,980
+when that when the linker went and
+
+272
+00:14:07,980 --> 00:14:10,530
+identified all the references to symbols
+
+273
+00:14:10,530 --> 00:14:12,630
+it put a little note to say I'm going to
+
+274
+00:14:12,630 --> 00:14:14,700
+have to remember to fix this the
+
+275
+00:14:14,700 --> 00:14:17,070
+reference to this symbol up when I when
+
+276
+00:14:17,070 --> 00:14:21,900
+I actually create the the executable so
+
+277
+00:14:21,900 --> 00:14:24,030
+a relocation entry is just like a note
+
+278
+00:14:24,030 --> 00:14:26,340
+that the linker or that it's a note that
+
+279
+00:14:26,340 --> 00:14:28,320
+the assembler makes to the linker to say
+
+280
+00:14:28,320 --> 00:14:30,510
+hey you're going to have to fix up this
+
+281
+00:14:30,510 --> 00:14:32,810
+this reference because I don't know I
+
+282
+00:14:32,810 --> 00:14:35,310
+don't know where this symbol is actually
+
+283
+00:14:35,310 --> 00:14:37,050
+going to be stored in memory when it's
+
+284
+00:14:37,050 --> 00:14:42,180
+when it's loaded okay and then there's a
+
+285
+00:14:42,180 --> 00:14:46,880
+debug section that contains information
+
+286
+00:14:46,880 --> 00:14:51,540
+that relates line numbers to in the
+
+287
+00:14:51,540 --> 00:14:53,520
+source code to line numbers in the
+
+288
+00:14:53,520 --> 00:14:56,160
+machine code okay and so this is called
+
+289
+00:14:56,160 --> 00:14:57,960
+debug and this is what you get when you
+
+290
+00:14:57,960 --> 00:15:00,690
+compile with dash G and then there's a
+
+291
+00:15:00,690 --> 00:15:03,390
+header table that that tells you where
+
+292
+00:15:03,390 --> 00:15:08,340
+all these different sections start now
+
+293
+00:15:08,340 --> 00:15:10,170
+to a linker there's there's three
+
+294
+00:15:10,170 --> 00:15:13,500
+different kinds of symbols global
+
+295
+00:15:13,500 --> 00:15:17,000
+symbols are defined in some module m and
+
+296
+00:15:17,000 --> 00:15:20,130
+they can and they can be used by other
+
+297
+00:15:20,130 --> 00:15:22,980
+modules right so I mean did you notice
+
+298
+00:15:22,980 --> 00:15:25,230
+when we if we have a program that
+
+299
+00:15:25,230 --> 00:15:27,780
+consists of multiple modules and we
+
+300
+00:15:27,780 --> 00:15:29,640
+compile each one of those modules into a
+
+301
+00:15:29,640 --> 00:15:33,390
+dot o file will be calling functions
+
+302
+00:15:33,390 --> 00:15:34,650
+that
+
+303
+00:15:34,650 --> 00:15:36,750
+aren't defined that are defined by other
+
+304
+00:15:36,750 --> 00:15:40,890
+modules right okay so those but there's
+
+305
+00:15:40,890 --> 00:15:43,020
+no error though that the compiler
+
+306
+00:15:43,020 --> 00:15:44,820
+doesn't doesn't throw an error because
+
+307
+00:15:44,820 --> 00:15:47,040
+it's assuming that those are defined in
+
+308
+00:15:47,040 --> 00:15:50,040
+other modules and it assumes the linker
+
+309
+00:15:50,040 --> 00:15:51,590
+will be able to find them in and
+
+310
+00:15:51,590 --> 00:15:56,130
+determine the address so anything that's
+
+311
+00:15:56,130 --> 00:15:59,130
+defined with that any global either
+
+312
+00:15:59,130 --> 00:16:03,810
+either global variable or function name
+
+313
+00:16:03,810 --> 00:16:05,820
+that's defined without the static
+
+314
+00:16:05,820 --> 00:16:10,010
+attribute is a is a global symbol okay
+
+315
+00:16:10,010 --> 00:16:13,860
+now and then external symbols are kind
+
+316
+00:16:13,860 --> 00:16:15,750
+of the flip side of that external
+
+317
+00:16:15,750 --> 00:16:18,150
+symbols are symbols that are referenced
+
+318
+00:16:18,150 --> 00:16:20,820
+by some module but defined in some other
+
+319
+00:16:20,820 --> 00:16:25,020
+module okay so in our in our in our
+
+320
+00:16:25,020 --> 00:16:27,420
+little running example when when main
+
+321
+00:16:27,420 --> 00:16:30,720
+dot C called the function some it was
+
+322
+00:16:30,720 --> 00:16:34,020
+referencing an external symbol okay and
+
+323
+00:16:34,020 --> 00:16:36,030
+then there's there's local symbols and
+
+324
+00:16:36,030 --> 00:16:39,170
+these are symbols that are defined and
+
+325
+00:16:39,170 --> 00:16:43,860
+referenced within a module okay and
+
+326
+00:16:43,860 --> 00:16:46,230
+those you create that this is not this
+
+327
+00:16:46,230 --> 00:16:48,120
+is different from local variables
+
+328
+00:16:48,120 --> 00:16:51,030
+okay the linker you know local see
+
+329
+00:16:51,030 --> 00:16:55,980
+variables are managed by the compiler on
+
+330
+00:16:55,980 --> 00:17:00,180
+the stack linker has no idea about local
+
+331
+00:17:00,180 --> 00:17:02,820
+local see variables okay in this context
+
+332
+00:17:02,820 --> 00:17:05,040
+when we talk about a local symbol what
+
+333
+00:17:05,040 --> 00:17:07,500
+we're talking about is is either is a
+
+334
+00:17:07,500 --> 00:17:10,920
+global a global variable or function
+
+335
+00:17:10,920 --> 00:17:14,190
+declared with the static attribute whose
+
+336
+00:17:14,190 --> 00:17:16,410
+that can only be referenced from within
+
+337
+00:17:16,410 --> 00:17:18,890
+that module so we say that the scope the
+
+338
+00:17:18,890 --> 00:17:22,380
+scope of the a function or global
+
+339
+00:17:22,380 --> 00:17:24,020
+variable defined with the static
+
+340
+00:17:24,020 --> 00:17:26,760
+attribute is limited to the module that
+
+341
+00:17:26,760 --> 00:17:31,110
+it was defined in okay so this is in C
+
+342
+00:17:31,110 --> 00:17:35,190
+this is how we do abstraction and this
+
+343
+00:17:35,190 --> 00:17:37,320
+is how we can create sort of private
+
+344
+00:17:37,320 --> 00:17:40,920
+functions that and pup private functions
+
+345
+00:17:40,920 --> 00:17:43,560
+that can't be called from from outside
+
+346
+00:17:43,560 --> 00:17:47,520
+that module okay so for instance if we
+
+347
+00:17:47,520 --> 00:17:48,630
+want to make a library
+
+348
+00:17:48,630 --> 00:17:51,660
+and see of functions we want to make a
+
+349
+00:17:51,660 --> 00:17:53,610
+collection of functions that other
+
+350
+00:17:53,610 --> 00:17:56,760
+programs can then call it link into
+
+351
+00:17:56,760 --> 00:18:00,450
+their program and call the functions
+
+352
+00:18:00,450 --> 00:18:03,990
+that we want to make visible to to other
+
+353
+00:18:03,990 --> 00:18:06,840
+programs are defined without the static
+
+354
+00:18:06,840 --> 00:18:09,570
+attribute and the functions that we want
+
+355
+00:18:09,570 --> 00:18:13,230
+to have private and just be internal we
+
+356
+00:18:13,230 --> 00:18:15,360
+declare what the static attribute okay
+
+357
+00:18:15,360 --> 00:18:17,880
+and that way we get abstraction and we
+
+358
+00:18:17,880 --> 00:18:21,240
+get hiding information hiding and we're
+
+359
+00:18:21,240 --> 00:18:24,390
+only exposing data and functions that
+
+360
+00:18:24,390 --> 00:18:29,700
+that we want that we want to expose all
+
+361
+00:18:29,700 --> 00:18:30,929
+right so let's look in detail how the
+
+362
+00:18:30,929 --> 00:18:35,130
+symbol resolution step works we recall
+
+363
+00:18:35,130 --> 00:18:41,970
+our example our example program so here
+
+364
+00:18:41,970 --> 00:18:45,169
+we're referencing a global called array
+
+365
+00:18:45,169 --> 00:18:54,450
+that's defined within main dot see here
+
+366
+00:18:54,450 --> 00:18:57,780
+when we here we're defining main a
+
+367
+00:18:57,780 --> 00:19:04,770
+global called main here we're
+
+368
+00:19:04,770 --> 00:19:06,960
+referencing a global called sum that's
+
+369
+00:19:06,960 --> 00:19:13,650
+defined in some dot c and val is a local
+
+370
+00:19:13,650 --> 00:19:15,809
+c variable on the stack and linker knows
+
+371
+00:19:15,809 --> 00:19:16,650
+nothing about that
+
+372
+00:19:16,650 --> 00:19:21,000
+okay now an or doesn't know anything
+
+373
+00:19:21,000 --> 00:19:24,890
+about IRS which are also local variables
+
+374
+00:19:24,890 --> 00:19:29,520
+now let's just let's make sure that we
+
+375
+00:19:29,520 --> 00:19:31,970
+understand the difference between local
+
+376
+00:19:31,970 --> 00:19:35,250
+static c variables versus local non
+
+377
+00:19:35,250 --> 00:19:40,140
+static c variables so here we're
+
+378
+00:19:40,140 --> 00:19:43,679
+defining a local static variable called
+
+379
+00:19:43,679 --> 00:19:49,530
+int within this function f now because
+
+380
+00:19:49,530 --> 00:19:52,830
+it's local its scope is limited to this
+
+381
+00:19:52,830 --> 00:19:56,790
+function so this variable X can only be
+
+382
+00:19:56,790 --> 00:20:00,679
+referenced within function f and
+
+383
+00:20:00,679 --> 00:20:02,550
+similarly for
+
+384
+00:20:02,550 --> 00:20:08,100
+this definition of X and function G can
+
+385
+00:20:08,100 --> 00:20:11,700
+only be referenced by by function G now
+
+386
+00:20:11,700 --> 00:20:14,640
+what's but because it's declared with
+
+387
+00:20:14,640 --> 00:20:16,530
+the static attribute it's not stored on
+
+388
+00:20:16,530 --> 00:20:19,350
+the stack it's actually stored in in the
+
+389
+00:20:19,350 --> 00:20:22,020
+in dot data just like a global would be
+
+390
+00:20:22,020 --> 00:20:24,930
+so it's it's like a global in the sense
+
+391
+00:20:24,930 --> 00:20:27,230
+that it's actually stored in dot data
+
+392
+00:20:27,230 --> 00:20:30,330
+rather than the stack but it's like a
+
+393
+00:20:30,330 --> 00:20:32,010
+local see variable in the sense that its
+
+394
+00:20:32,010 --> 00:20:34,560
+scope is limited just to the function
+
+395
+00:20:34,560 --> 00:20:39,480
+that it's defined in okay so what what
+
+396
+00:20:39,480 --> 00:20:41,250
+the compiler will do it'll allocate
+
+397
+00:20:41,250 --> 00:20:43,830
+space for each definition of X so this
+
+398
+00:20:43,830 --> 00:20:45,860
+and it'll give it some name to
+
+399
+00:20:45,860 --> 00:20:48,240
+disambiguate it so maybe it will call
+
+400
+00:20:48,240 --> 00:20:51,090
+this one X dot one and maybe this one X
+
+401
+00:20:51,090 --> 00:20:55,230
+dot two so these symbols are allocated
+
+402
+00:20:55,230 --> 00:20:58,320
+in dot data because because they're
+
+403
+00:20:58,320 --> 00:21:00,030
+initialized and they get symbol table
+
+404
+00:21:00,030 --> 00:21:03,570
+entries just like just like any other
+
+405
+00:21:03,570 --> 00:21:07,650
+symbol
+
+406
+00:21:07,650 --> 00:21:10,380
+okay so I said that during symbol
+
+407
+00:21:10,380 --> 00:21:12,960
+resolution the linker associates each
+
+408
+00:21:12,960 --> 00:21:15,600
+reference each symbol reference to
+
+409
+00:21:15,600 --> 00:21:21,690
+exactly one unique symbol definition now
+
+410
+00:21:21,690 --> 00:21:23,190
+how does it do that if there's multiple
+
+411
+00:21:23,190 --> 00:21:25,230
+symbol definitions across all the
+
+412
+00:21:25,230 --> 00:21:30,870
+modules so to understand this well will
+
+413
+00:21:30,870 --> 00:21:34,080
+will will define symbols as being either
+
+414
+00:21:34,080 --> 00:21:36,900
+strong or weak so strong symbols are
+
+415
+00:21:36,900 --> 00:21:41,429
+either procedures or function function
+
+416
+00:21:41,429 --> 00:21:44,090
+names or initialize global variables
+
+417
+00:21:44,090 --> 00:21:46,770
+weak symbols or uninitialized global
+
+418
+00:21:46,770 --> 00:21:48,260
+variables
+
+419
+00:21:48,260 --> 00:21:54,420
+okay so int foo here is a strong symbol
+
+420
+00:21:54,420 --> 00:21:56,280
+because it's initialized we're
+
+421
+00:21:56,280 --> 00:21:58,950
+initializing it p1 is strong by
+
+422
+00:21:58,950 --> 00:22:05,510
+definition foo is is weak in p2 see this
+
+423
+00:22:05,510 --> 00:22:09,179
+this definition of foo is weak because
+
+424
+00:22:09,179 --> 00:22:11,760
+it's uninitialized and the definition of
+
+425
+00:22:11,760 --> 00:22:15,059
+p2 is strong okay so that the rules that
+
+426
+00:22:15,059 --> 00:22:18,710
+the the linker uses are the following
+
+427
+00:22:18,710 --> 00:22:21,600
+multiple strong symbols not allowed so
+
+428
+00:22:21,600 --> 00:22:25,679
+that's an error okay so that means that
+
+429
+00:22:25,679 --> 00:22:28,620
+if we if across multiple modules we
+
+430
+00:22:28,620 --> 00:22:29,940
+declare a function with the same name
+
+431
+00:22:29,940 --> 00:22:32,070
+the linker will throw an error that's
+
+432
+00:22:32,070 --> 00:22:37,350
+not allowed given a strong symbol and
+
+433
+00:22:37,350 --> 00:22:39,720
+multiple weak symbols if the linker will
+
+434
+00:22:39,720 --> 00:22:44,160
+always choose the the strong symbol now
+
+435
+00:22:44,160 --> 00:22:46,650
+remember if we initialize a global
+
+436
+00:22:46,650 --> 00:22:53,130
+variable and we if we declare a an
+
+437
+00:22:53,130 --> 00:22:54,750
+initialized global variable across
+
+438
+00:22:54,750 --> 00:22:56,280
+multiple modules that's an error because
+
+439
+00:22:56,280 --> 00:22:58,200
+those are strong symbols okay by rule
+
+440
+00:22:58,200 --> 00:23:01,590
+one but if we have one strong symbol and
+
+441
+00:23:01,590 --> 00:23:03,390
+multiple weak symbols all with the same
+
+442
+00:23:03,390 --> 00:23:05,790
+name then the compiler will choose the
+
+443
+00:23:05,790 --> 00:23:09,270
+strong symbol okay and it will associate
+
+444
+00:23:09,270 --> 00:23:11,970
+all references to that symbol will go to
+
+445
+00:23:11,970 --> 00:23:14,910
+that strong symbol and if there's
+
+446
+00:23:14,910 --> 00:23:16,590
+multiple weak symbols then it just picks
+
+447
+00:23:16,590 --> 00:23:18,900
+an arbitrary one and this this is we'll
+
+448
+00:23:18,900 --> 00:23:20,220
+see can be problematic
+
+449
+00:23:20,220 --> 00:23:21,480
+now you can override
+
+450
+00:23:21,480 --> 00:23:25,070
+with this GCC flag called no common and
+
+451
+00:23:25,070 --> 00:23:28,230
+if you if you declare your function with
+
+452
+00:23:28,230 --> 00:23:32,429
+this no common argument then multiple
+
+453
+00:23:32,429 --> 00:23:35,010
+weak symbols will throw an error in a
+
+454
+00:23:35,010 --> 00:23:37,409
+linker all right so why do we care about
+
+455
+00:23:37,409 --> 00:23:39,240
+all this stuff well it turns out if
+
+456
+00:23:39,240 --> 00:23:41,279
+you're not aware of this stuff you can
+
+457
+00:23:41,279 --> 00:23:43,350
+you can run into some really serious
+
+458
+00:23:43,350 --> 00:23:45,990
+problems that are just perplexing and
+
+459
+00:23:45,990 --> 00:23:49,139
+confounding right so linker linker
+
+460
+00:23:49,139 --> 00:23:51,240
+errors are like the worst kind they're
+
+461
+00:23:51,240 --> 00:23:53,070
+the hardest kind of debug because people
+
+462
+00:23:53,070 --> 00:23:54,510
+aren't usually aware of what's going on
+
+463
+00:23:54,510 --> 00:23:58,260
+inside their linkers and usually it's
+
+464
+00:23:58,260 --> 00:24:00,200
+only like the very best programmers that
+
+465
+00:24:00,200 --> 00:24:03,929
+really understand you know how these
+
+466
+00:24:03,929 --> 00:24:05,789
+linkers work and what kind of errors
+
+467
+00:24:05,789 --> 00:24:08,490
+they can throw and how to debug them so
+
+468
+00:24:08,490 --> 00:24:11,549
+let me show you some examples of of
+
+469
+00:24:11,549 --> 00:24:15,899
+these these kind of errors all right so
+
+470
+00:24:15,899 --> 00:24:18,809
+we have a program we've word we have two
+
+471
+00:24:18,809 --> 00:24:21,110
+modules so each of these rectangles
+
+472
+00:24:21,110 --> 00:24:24,120
+corresponds to a module and we're
+
+473
+00:24:24,120 --> 00:24:28,919
+defining p1 in each module so that's too
+
+474
+00:24:28,919 --> 00:24:34,820
+strong symbols that's an error okay
+
+475
+00:24:34,820 --> 00:24:39,289
+now here we've we're defining p1 and p2
+
+476
+00:24:39,289 --> 00:24:42,500
+so we're okay but now we've got two week
+
+477
+00:24:42,500 --> 00:24:45,639
+symbols both are integers variables
+
+478
+00:24:45,639 --> 00:24:51,200
+called X so and if these modules are
+
+479
+00:24:51,200 --> 00:24:53,539
+referencing X the linker will just pick
+
+480
+00:24:53,539 --> 00:24:55,880
+it will just pick one of these to serve
+
+481
+00:24:55,880 --> 00:25:01,340
+as the definition but is is this really
+
+482
+00:25:01,340 --> 00:25:04,970
+what you want now in this case it
+
+483
+00:25:04,970 --> 00:25:06,889
+doesn't really hurt anything because X
+
+484
+00:25:06,889 --> 00:25:09,289
+is declared in both modules as an int
+
+485
+00:25:09,289 --> 00:25:12,649
+all right so it'll just be it'll just be
+
+486
+00:25:12,649 --> 00:25:17,210
+some integer sized variable that and
+
+487
+00:25:17,210 --> 00:25:21,110
+it'll be it'll be somewhere and but it
+
+488
+00:25:21,110 --> 00:25:23,149
+doesn't really matter which which one
+
+489
+00:25:23,149 --> 00:25:26,480
+the linker chooses but we start to get
+
+490
+00:25:26,480 --> 00:25:28,820
+into trouble if if we declare these weak
+
+491
+00:25:28,820 --> 00:25:34,309
+symbols with different types so here
+
+492
+00:25:34,309 --> 00:25:36,769
+we've declared an int X in one module
+
+493
+00:25:36,769 --> 00:25:42,529
+and a double X in another module so if
+
+494
+00:25:42,529 --> 00:25:45,529
+we write to X if the linker just
+
+495
+00:25:45,529 --> 00:25:49,130
+arbitrarily chooses this this symbol
+
+496
+00:25:49,130 --> 00:25:52,519
+definition to use now this is a symbol
+
+497
+00:25:52,519 --> 00:26:00,740
+that of length 8 of size 8 if we
+
+498
+00:26:00,740 --> 00:26:03,200
+anywhere in this program if we if the
+
+499
+00:26:03,200 --> 00:26:05,120
+linker chooses that then anywhere in the
+
+500
+00:26:05,120 --> 00:26:09,169
+program those references to those
+
+501
+00:26:09,169 --> 00:26:11,480
+references to X will be to this double
+
+502
+00:26:11,480 --> 00:26:17,510
+word this double word even even in this
+
+503
+00:26:17,510 --> 00:26:20,059
+module if we reference X it'll be an
+
+504
+00:26:20,059 --> 00:26:24,590
+8-byte right so it will overwrite Y with
+
+505
+00:26:24,590 --> 00:26:28,320
+the
+
+506
+00:26:28,320 --> 00:26:40,710
+hi order excuse me oh no it's completely
+
+507
+00:26:40,710 --> 00:26:43,200
+it's just committal just pick one
+
+508
+00:26:43,200 --> 00:26:52,620
+arbitrarily and you don't know I mean it
+
+509
+00:26:52,620 --> 00:26:56,590
+alright here's now this is here's a
+
+510
+00:26:56,590 --> 00:26:59,190
+problem we've defined a strong symbol X
+
+511
+00:26:59,190 --> 00:27:02,410
+because we've initializes so the linker
+
+512
+00:27:02,410 --> 00:27:05,740
+will always will associate all
+
+513
+00:27:05,740 --> 00:27:09,780
+references to X to this integer sized
+
+514
+00:27:09,780 --> 00:27:28,130
+this integer sized symbol so if we write
+
+515
+00:27:28,130 --> 00:27:35,260
+oh yeah right so so rights to X here
+
+516
+00:27:35,260 --> 00:27:37,940
+this will be a double in this module but
+
+517
+00:27:37,940 --> 00:27:40,970
+it will overwrite Y in this module so
+
+518
+00:27:40,970 --> 00:27:48,360
+that's really nasty
+
+519
+00:27:48,360 --> 00:27:50,850
+and here we were defining a strong
+
+520
+00:27:50,850 --> 00:27:54,120
+symbol X so references to X in the
+
+521
+00:27:54,120 --> 00:27:58,590
+second module will always get it will
+
+522
+00:27:58,590 --> 00:28:00,330
+refer to this initialized variable which
+
+523
+00:28:00,330 --> 00:28:03,990
+might not so it might not be what you
+
+524
+00:28:03,990 --> 00:28:07,529
+want right you may you may be assuming
+
+525
+00:28:07,529 --> 00:28:11,390
+that it's uninitialized in your code
+
+526
+00:28:11,390 --> 00:28:14,580
+okay and then you get the the ultimate
+
+527
+00:28:14,580 --> 00:28:17,309
+nightmare scenario is suppose you know
+
+528
+00:28:17,309 --> 00:28:19,169
+because we're following a standard ABI
+
+529
+00:28:19,169 --> 00:28:20,940
+we can compile our code with multiple
+
+530
+00:28:20,940 --> 00:28:23,370
+compilers and this actually happens in
+
+531
+00:28:23,370 --> 00:28:35,610
+some oh yes questions oh yeah actually
+
+532
+00:28:35,610 --> 00:28:38,399
+you're right it will it will still take
+
+533
+00:28:38,399 --> 00:28:40,590
+preference and and you'll be writing a
+
+534
+00:28:40,590 --> 00:28:42,539
+for by quantity which is is what you
+
+535
+00:28:42,539 --> 00:28:49,620
+want so that slides not quite right so
+
+536
+00:28:49,620 --> 00:28:53,310
+oh yeah what is the point of doing the
+
+537
+00:28:53,310 --> 00:28:56,430
+static versus non static if it's always
+
+538
+00:28:56,430 --> 00:28:58,140
+being referenced just locally in
+
+539
+00:28:58,140 --> 00:28:59,160
+constantly
+
+540
+00:28:59,160 --> 00:29:01,580
+what is the point of declaring it's time
+
+541
+00:29:01,580 --> 00:29:05,930
+is it it stores it in like no no no it's
+
+542
+00:29:05,930 --> 00:29:10,130
+if you reference up if you reference a a
+
+543
+00:29:10,130 --> 00:29:14,100
+variable that's you mean so a variable
+
+544
+00:29:14,100 --> 00:29:18,530
+is defined in your module and then you
+
+545
+00:29:18,530 --> 00:29:25,230
+with the static right oh they're both
+
+546
+00:29:25,230 --> 00:29:28,890
+they're both local so you do this if you
+
+547
+00:29:28,890 --> 00:29:32,910
+want to value two to retain from if you
+
+548
+00:29:32,910 --> 00:29:34,590
+want if you want that variable to retain
+
+549
+00:29:34,590 --> 00:29:38,430
+value from invocation to invocation so
+
+550
+00:29:38,430 --> 00:29:41,250
+suppose you it's usually a bad idea as
+
+551
+00:29:41,250 --> 00:29:42,720
+we'll see when we study threads because
+
+552
+00:29:42,720 --> 00:29:46,050
+it makes your code non thread safe but
+
+553
+00:29:46,050 --> 00:29:49,400
+like early like random number generators
+
+554
+00:29:49,400 --> 00:29:52,500
+would it would compute a pseudo-random
+
+555
+00:29:52,500 --> 00:29:54,870
+number and then it would store it in a
+
+556
+00:29:54,870 --> 00:29:57,390
+static variable and then use that as the
+
+557
+00:29:57,390 --> 00:29:59,790
+the starting value for the next the next
+
+558
+00:29:59,790 --> 00:30:01,980
+time you call that function so whenever
+
+559
+00:30:01,980 --> 00:30:04,650
+you want values to to persist across
+
+560
+00:30:04,650 --> 00:30:12,400
+function invocation to reduce static yes
+
+561
+00:30:12,400 --> 00:30:15,320
+something
+
+562
+00:30:15,320 --> 00:30:24,650
+really crash
+
+563
+00:30:24,650 --> 00:30:27,890
+well wait a minute let me let me get
+
+564
+00:30:27,890 --> 00:30:31,280
+this straight rights to X and P 2 will
+
+565
+00:30:31,280 --> 00:30:34,010
+actually correspond to the memory look
+
+566
+00:30:34,010 --> 00:30:36,350
+that it will actually go to the memory
+
+567
+00:30:36,350 --> 00:30:40,400
+location I'm sorry I I need to amend
+
+568
+00:30:40,400 --> 00:30:40,780
+that
+
+569
+00:30:40,780 --> 00:30:47,420
+so rights to X in P 2 will be 8 bytes
+
+570
+00:30:47,420 --> 00:30:49,850
+because the compiler you know the
+
+571
+00:30:49,850 --> 00:30:52,790
+compiler knows that it's a double but
+
+572
+00:30:52,790 --> 00:30:57,880
+it'll go to a memory location that's I
+
+573
+00:30:57,880 --> 00:31:01,670
+that's only 4 bytes because X because
+
+574
+00:31:01,670 --> 00:31:04,580
+the linker chose the strong symbol okay
+
+575
+00:31:04,580 --> 00:31:07,100
+so so the rights to X and P 2 will
+
+576
+00:31:07,100 --> 00:31:12,460
+actually overwrite Y ok
+
+577
+00:31:12,460 --> 00:31:22,340
+I'm sorry yes question
+
+578
+00:31:22,340 --> 00:31:24,830
+that's just usually the way it happens
+
+579
+00:31:24,830 --> 00:31:34,950
+you know no no no global variables go in
+
+580
+00:31:34,950 --> 00:31:39,419
+in data they don't go on the stack but
+
+581
+00:31:39,419 --> 00:31:41,159
+usually if you define local variables in
+
+582
+00:31:41,159 --> 00:31:43,529
+a function it will put them it will
+
+583
+00:31:43,529 --> 00:31:45,000
+allocate them one after the other on
+
+584
+00:31:45,000 --> 00:31:53,669
+them on the stack okay all right so all
+
+585
+00:31:53,669 --> 00:31:58,260
+this discussion about these these weird
+
+586
+00:31:58,260 --> 00:32:00,899
+strong weak symbol rules that the linker
+
+587
+00:32:00,899 --> 00:32:03,600
+have it's another reason to avoid global
+
+588
+00:32:03,600 --> 00:32:08,130
+variables if you can now if if you if
+
+589
+00:32:08,130 --> 00:32:11,340
+you need to declare a global see if you
+
+590
+00:32:11,340 --> 00:32:12,899
+can declare it static because that'll
+
+591
+00:32:12,899 --> 00:32:15,120
+limited scope to the the module that
+
+592
+00:32:15,120 --> 00:32:17,159
+it's declared in so that's a good idea
+
+593
+00:32:17,159 --> 00:32:19,649
+if you can do it and if you define a
+
+594
+00:32:19,649 --> 00:32:23,159
+global variable initialize it so that
+
+595
+00:32:23,159 --> 00:32:25,200
+you'll you'll you'll find you'll
+
+596
+00:32:25,200 --> 00:32:28,950
+discover if you have multiple initialize
+
+597
+00:32:28,950 --> 00:32:30,600
+global symbols with the same name in
+
+598
+00:32:30,600 --> 00:32:35,010
+your code and then if you want to it's
+
+599
+00:32:35,010 --> 00:32:36,179
+always good practice if you're
+
+600
+00:32:36,179 --> 00:32:38,850
+referencing an external variable to tell
+
+601
+00:32:38,850 --> 00:32:40,529
+the compiler about it by using the X
+
+602
+00:32:40,529 --> 00:32:46,299
+turn attribute all right
+
+603
+00:32:46,299 --> 00:32:48,759
+so now at this point the linker has
+
+604
+00:32:48,759 --> 00:32:51,549
+associated every symbol reference with
+
+605
+00:32:51,549 --> 00:32:55,389
+some simple definition now it has to
+
+606
+00:32:55,389 --> 00:32:58,059
+take all those object relocatable object
+
+607
+00:32:58,059 --> 00:33:00,369
+files and smush them together and create
+
+608
+00:33:00,369 --> 00:33:05,709
+like one one big executable so suppose
+
+609
+00:33:05,709 --> 00:33:07,839
+with our example a little running
+
+610
+00:33:07,839 --> 00:33:13,139
+example each main dot o and some dot o
+
+611
+00:33:13,139 --> 00:33:19,570
+contain a code and initialize data some
+
+612
+00:33:19,570 --> 00:33:21,429
+dough doesn't have any initialize data
+
+613
+00:33:21,429 --> 00:33:24,909
+it just has code and then there's their
+
+614
+00:33:24,909 --> 00:33:26,769
+system code that actually runs before
+
+615
+00:33:26,769 --> 00:33:30,579
+and after your program so when when your
+
+616
+00:33:30,579 --> 00:33:32,469
+program run it actually starts executing
+
+617
+00:33:32,469 --> 00:33:36,549
+a startup code from from lib see that
+
+618
+00:33:36,549 --> 00:33:38,559
+that sort of initializes things and then
+
+619
+00:33:38,559 --> 00:33:40,179
+the last thing that it does is it calls
+
+620
+00:33:40,179 --> 00:33:45,669
+main and passes it arcs RC and RV okay
+
+621
+00:33:45,669 --> 00:33:47,529
+and then when you're when your program
+
+622
+00:33:47,529 --> 00:33:51,459
+exits well that's a cyst call but if
+
+623
+00:33:51,459 --> 00:33:53,079
+your program if your main function
+
+624
+00:33:53,079 --> 00:33:56,019
+routine does a return then it returns
+
+625
+00:33:56,019 --> 00:33:57,940
+back to that startup code which then
+
+626
+00:33:57,940 --> 00:34:02,619
+doesn't exit okay so so this is just and
+
+627
+00:34:02,619 --> 00:34:06,639
+so this this consists of of text and
+
+628
+00:34:06,639 --> 00:34:10,389
+data as well and so when we when the
+
+629
+00:34:10,389 --> 00:34:12,549
+linker relocates these these object
+
+630
+00:34:12,549 --> 00:34:18,309
+files it takes all of the the code the
+
+631
+00:34:18,309 --> 00:34:20,470
+text sections from each of the modules
+
+632
+00:34:20,470 --> 00:34:26,950
+and puts them together contiguously init
+
+633
+00:34:26,950 --> 00:34:28,629
+in the dot text section for the
+
+634
+00:34:28,629 --> 00:34:31,289
+executable object file ok so it just
+
+635
+00:34:31,289 --> 00:34:33,789
+puts them together in some order that it
+
+636
+00:34:33,789 --> 00:34:38,440
+determines and it creates a combined dot
+
+637
+00:34:38,440 --> 00:34:40,409
+text section in the executable that
+
+638
+00:34:40,409 --> 00:34:43,059
+contains all of the system code and the
+
+639
+00:34:43,059 --> 00:34:45,639
+all of the all of the code defined in
+
+640
+00:34:45,639 --> 00:34:47,679
+the modules and then it does the same
+
+641
+00:34:47,679 --> 00:34:50,049
+thing with the data takes all the all
+
+642
+00:34:50,049 --> 00:34:53,319
+the dot data sections from the various
+
+643
+00:34:53,319 --> 00:34:55,929
+object files and puts them together in
+
+644
+00:34:55,929 --> 00:34:59,450
+in one combined data section
+
+645
+00:34:59,450 --> 00:35:03,470
+in the executable and it also emerges
+
+646
+00:35:03,470 --> 00:35:06,230
+the symbol tables and in the debug
+
+647
+00:35:06,230 --> 00:35:12,109
+information as well now when it just the
+
+648
+00:35:12,109 --> 00:35:16,730
+act the act of sort of relocating these
+
+649
+00:35:16,730 --> 00:35:19,849
+these object files requires the linker
+
+650
+00:35:19,849 --> 00:35:22,190
+to figure out where it's going to
+
+651
+00:35:22,190 --> 00:35:25,250
+actually store these these these
+
+652
+00:35:25,250 --> 00:35:28,520
+different these different symbols when
+
+653
+00:35:28,520 --> 00:35:30,800
+the system gets when this program gets
+
+654
+00:35:30,800 --> 00:35:34,730
+loaded so it it has to pick an address
+
+655
+00:35:34,730 --> 00:35:38,420
+for main that that function will start
+
+656
+00:35:38,420 --> 00:35:41,630
+at some absolute address it's going to
+
+657
+00:35:41,630 --> 00:35:43,430
+have it's going to do the same for swap
+
+658
+00:35:43,430 --> 00:35:49,970
+so for all the all the data arrays right
+
+659
+00:35:49,970 --> 00:35:54,299
+and but the problem is is that when this
+
+660
+00:35:54,299 --> 00:35:57,510
+code is is is compiled the compiler
+
+661
+00:35:57,510 --> 00:35:59,549
+doesn't know what addresses the linker
+
+662
+00:35:59,549 --> 00:36:04,529
+is going to pick so the so the compiler
+
+663
+00:36:04,529 --> 00:36:07,319
+creates these these reminders to the
+
+664
+00:36:07,319 --> 00:36:09,270
+linker called relocation entries which
+
+665
+00:36:09,270 --> 00:36:11,069
+which are then stored in the relocation
+
+666
+00:36:11,069 --> 00:36:14,180
+sections of the the object file and
+
+667
+00:36:14,180 --> 00:36:17,609
+these these relocation entries are
+
+668
+00:36:17,609 --> 00:36:19,470
+instructions to the linker that's
+
+669
+00:36:19,470 --> 00:36:22,770
+something that there's a reference to a
+
+670
+00:36:22,770 --> 00:36:24,150
+symbol that's going to have to be
+
+671
+00:36:24,150 --> 00:36:27,059
+patched up when the the code is actually
+
+672
+00:36:27,059 --> 00:36:31,549
+relocated and merged into the executable
+
+673
+00:36:31,549 --> 00:36:34,619
+so let's look at a couple of these a
+
+674
+00:36:34,619 --> 00:36:37,500
+couple of examples so in our in our main
+
+675
+00:36:37,500 --> 00:36:39,480
+dot c module there was a reference to
+
+676
+00:36:39,480 --> 00:36:45,020
+this to this global symbol called array
+
+677
+00:36:45,020 --> 00:36:47,910
+okay and then there was also a reference
+
+678
+00:36:47,910 --> 00:36:50,880
+to this this this global symbol sum
+
+679
+00:36:50,880 --> 00:36:54,960
+which is the function so the the
+
+680
+00:36:54,960 --> 00:36:57,180
+compiler creates two relocation entries
+
+681
+00:36:57,180 --> 00:37:00,000
+the first one for the reference to the
+
+682
+00:37:00,000 --> 00:37:04,109
+array a so here we're moving remember
+
+683
+00:37:04,109 --> 00:37:07,950
+EDI is the first argument so remember
+
+684
+00:37:07,950 --> 00:37:10,650
+our sum function takes the address of
+
+685
+00:37:10,650 --> 00:37:13,859
+the of array of the input array as its
+
+686
+00:37:13,859 --> 00:37:20,880
+it's argument so this move we're moving
+
+687
+00:37:20,880 --> 00:37:26,099
+the address of the array into EDI for
+
+688
+00:37:26,099 --> 00:37:28,559
+the first argument but the compiler
+
+689
+00:37:28,559 --> 00:37:29,880
+doesn't know what that address is going
+
+690
+00:37:29,880 --> 00:37:34,910
+to be right so it just it just it just
+
+691
+00:37:34,910 --> 00:37:37,890
+it just moves in it an immediate value
+
+692
+00:37:37,890 --> 00:37:41,130
+of 0 into EDI temporarily right so you
+
+693
+00:37:41,130 --> 00:37:45,390
+can see this is all zeros the bf is the
+
+694
+00:37:45,390 --> 00:37:48,180
+move instruction and then there's allsey
+
+695
+00:37:48,180 --> 00:37:52,920
+rows in for now and then it places this
+
+696
+00:37:52,920 --> 00:37:55,740
+relocation entry in the in the
+
+697
+00:37:55,740 --> 00:37:59,270
+relocation section of Maemo and it it
+
+698
+00:37:59,270 --> 00:38:02,250
+says it says to the linker at addre at
+
+699
+00:38:02,250 --> 00:38:03,089
+offset
+
+700
+00:38:03,089 --> 00:38:07,190
+a so these let me remind you these are
+
+701
+00:38:07,190 --> 00:38:12,229
+our main zero module only contains one
+
+702
+00:38:12,229 --> 00:38:16,140
+one function so that function starts
+
+703
+00:38:16,140 --> 00:38:19,109
+that offsets zero in the in the code
+
+704
+00:38:19,109 --> 00:38:21,269
+section of the module in the dot text
+
+705
+00:38:21,269 --> 00:38:24,269
+section of the module if there were
+
+706
+00:38:24,269 --> 00:38:26,549
+other functions in this module they
+
+707
+00:38:26,549 --> 00:38:28,019
+would they would follow immediately
+
+708
+00:38:28,019 --> 00:38:32,009
+after ok and it so you can see what what
+
+709
+00:38:32,009 --> 00:38:34,499
+the compiler is it's just all it's just
+
+710
+00:38:34,499 --> 00:38:36,779
+generating offsets of these instructions
+
+711
+00:38:36,779 --> 00:38:39,239
+from the beginning of the dot text
+
+712
+00:38:39,239 --> 00:38:42,630
+section and it it includes this
+
+713
+00:38:42,630 --> 00:38:45,239
+relocation entry which says to the
+
+714
+00:38:45,239 --> 00:38:49,640
+linker hey when you're relocating main 0
+
+715
+00:38:49,640 --> 00:38:54,650
+add offset a in this dot text section
+
+716
+00:38:54,650 --> 00:39:00,359
+you've got a reference a 32 a reference
+
+717
+00:39:00,359 --> 00:39:02,819
+to an array in the form of a 32-bit
+
+718
+00:39:02,819 --> 00:39:09,359
+address ok so that so eventually the
+
+719
+00:39:09,359 --> 00:39:10,499
+linker is going to have to patch up
+
+720
+00:39:10,499 --> 00:39:14,099
+these so this is address 9 this is
+
+721
+00:39:14,099 --> 00:39:15,779
+address a it's going to have to patch up
+
+722
+00:39:15,779 --> 00:39:19,069
+the four bytes starting at address a
+
+723
+00:39:19,069 --> 00:39:24,359
+with the absolute address of the symbol
+
+724
+00:39:24,359 --> 00:39:28,170
+array
+
+725
+00:39:28,170 --> 00:39:32,010
+and then similarly the reference to the
+
+726
+00:39:32,010 --> 00:39:37,200
+reference to this the reference to this
+
+727
+00:39:37,200 --> 00:39:41,160
+function some the compiler has no idea
+
+728
+00:39:41,160 --> 00:39:44,430
+where some actually will end up it
+
+729
+00:39:44,430 --> 00:39:46,170
+doesn't even know what module it's in or
+
+730
+00:39:46,170 --> 00:39:48,600
+even if it's even if it is defined in a
+
+731
+00:39:48,600 --> 00:39:54,030
+module so in this case it just it does a
+
+732
+00:39:54,030 --> 00:39:58,830
+call with all zeros and then it adds
+
+733
+00:39:58,830 --> 00:40:01,110
+this relocation entry that says to the
+
+734
+00:40:01,110 --> 00:40:08,880
+linker at offset F you've got a four
+
+735
+00:40:08,880 --> 00:40:13,880
+byte pc-relative reference to a function
+
+736
+00:40:13,880 --> 00:40:19,950
+to assemble called sum and then it this
+
+737
+00:40:19,950 --> 00:40:22,980
+is sort of a arcane detail that but and
+
+738
+00:40:22,980 --> 00:40:25,320
+it includes there's an option to include
+
+739
+00:40:25,320 --> 00:40:29,130
+a bias in the in the offset and since
+
+740
+00:40:29,130 --> 00:40:33,210
+we're using since calls are since calls
+
+741
+00:40:33,210 --> 00:40:35,100
+are always resolved using pc-relative
+
+742
+00:40:35,100 --> 00:40:38,730
+addressing the value that's going to be
+
+743
+00:40:38,730 --> 00:40:42,450
+placed here at these four bytes that
+
+744
+00:40:42,450 --> 00:40:45,180
+offset F is going to be an offset from
+
+745
+00:40:45,180 --> 00:40:47,700
+the current or I p value or program or
+
+746
+00:40:47,700 --> 00:40:50,580
+counter value and since the program
+
+747
+00:40:50,580 --> 00:40:52,500
+counter always points to the nest get
+
+748
+00:40:52,500 --> 00:40:57,270
+next instruction it includes this which
+
+749
+00:40:57,270 --> 00:40:59,640
+is four bytes away it includes this this
+
+750
+00:40:59,640 --> 00:41:07,200
+offset of minus four so if it sits I I
+
+751
+00:41:07,200 --> 00:41:09,210
+talked about it in detail in the book if
+
+752
+00:41:09,210 --> 00:41:11,160
+you really want to know how this works
+
+753
+00:41:11,160 --> 00:41:14,100
+but just the point here is that there's
+
+754
+00:41:14,100 --> 00:41:15,810
+enough information for the linker to
+
+755
+00:41:15,810 --> 00:41:19,110
+actually fill in the right address so
+
+756
+00:41:19,110 --> 00:41:20,910
+now if we look at the relocated text
+
+757
+00:41:20,910 --> 00:41:23,100
+section so if we if we compile this code
+
+758
+00:41:23,100 --> 00:41:25,110
+into an executable and then we use
+
+759
+00:41:25,110 --> 00:41:31,260
+object on to to disassemble it then what
+
+760
+00:41:31,260 --> 00:41:34,290
+you see is this this reference here
+
+761
+00:41:34,290 --> 00:41:36,930
+where we move the address of the address
+
+762
+00:41:36,930 --> 00:41:41,040
+of a into EDI those four bytes which
+
+763
+00:41:41,040 --> 00:41:41,910
+were original
+
+764
+00:41:41,910 --> 00:41:44,819
+zéro have now been updated with the the
+
+765
+00:41:44,819 --> 00:41:49,680
+actual address of array in in memory at
+
+766
+00:41:49,680 --> 00:41:52,289
+runtime okay so the linkers decided that
+
+767
+00:41:52,289 --> 00:41:55,470
+the array is going to go at address zero
+
+768
+00:41:55,470 --> 00:41:58,829
+x six zero one zero one eight and then
+
+769
+00:41:58,829 --> 00:42:01,410
+it's it's actually patched that the four
+
+770
+00:42:01,410 --> 00:42:03,720
+bytes in the cup in the in the move
+
+771
+00:42:03,720 --> 00:42:07,430
+instruction with that absolute address
+
+772
+00:42:07,430 --> 00:42:11,430
+and the call to sum is is it's also been
+
+773
+00:42:11,430 --> 00:42:14,549
+updated but this one's interesting right
+
+774
+00:42:14,549 --> 00:42:18,630
+that so the the address it's been
+
+775
+00:42:18,630 --> 00:42:20,789
+updated with the PC relative address of
+
+776
+00:42:20,789 --> 00:42:27,539
+five okay so when this program runs this
+
+777
+00:42:27,539 --> 00:42:32,359
+call instruction what it will do when it
+
+778
+00:42:32,359 --> 00:42:35,190
+when it determines when it computes the
+
+779
+00:42:35,190 --> 00:42:39,950
+absolute address of of the function some
+
+780
+00:42:39,950 --> 00:42:48,310
+it will take
+
+781
+00:42:48,310 --> 00:42:54,710
+it will take the the current value of
+
+782
+00:42:54,710 --> 00:42:56,720
+the program counter which is the next
+
+783
+00:42:56,720 --> 00:43:00,040
+instruction so four zero zero four III
+
+784
+00:43:00,040 --> 00:43:05,150
+and it will add to it whatever whatever
+
+785
+00:43:05,150 --> 00:43:08,330
+value is in this immediate field okay
+
+786
+00:43:08,330 --> 00:43:11,150
+which is a two scomp you interpret it as
+
+787
+00:43:11,150 --> 00:43:13,840
+a two's complement integer so it can go
+
+788
+00:43:13,840 --> 00:43:18,050
+it can be relative you can go - or or +
+
+789
+00:43:18,050 --> 00:43:20,420
+in this case it's saying that the
+
+790
+00:43:20,420 --> 00:43:23,150
+function that you want to call is that
+
+791
+00:43:23,150 --> 00:43:28,870
+is is at four zero zero four III plus 5
+
+792
+00:43:28,870 --> 00:43:33,560
+which is 4 0 0 4 e 8 which is the
+
+793
+00:43:33,560 --> 00:43:36,910
+address of some okay and so the linker
+
+794
+00:43:36,910 --> 00:43:39,470
+the linker does that the compiler has
+
+795
+00:43:39,470 --> 00:43:42,020
+all the smarts the compiler computed the
+
+796
+00:43:42,020 --> 00:43:44,480
+relocation entry the linker is just
+
+797
+00:43:44,480 --> 00:43:45,980
+blindly going through each of those
+
+798
+00:43:45,980 --> 00:43:48,440
+relocation entries and just doing what
+
+799
+00:43:48,440 --> 00:43:51,620
+it's told okay but the net result is
+
+800
+00:43:51,620 --> 00:43:54,380
+that now all of these these references
+
+801
+00:43:54,380 --> 00:43:57,470
+have been patched up with with valid
+
+802
+00:43:57,470 --> 00:44:04,450
+absolute addresses
+
+803
+00:44:04,450 --> 00:44:07,840
+now once the linkers created a an object
+
+804
+00:44:07,840 --> 00:44:13,030
+file that object file can be loaded the
+
+805
+00:44:13,030 --> 00:44:14,890
+code and data and that object file can
+
+806
+00:44:14,890 --> 00:44:17,440
+be loaded directly into memory with with
+
+807
+00:44:17,440 --> 00:44:23,950
+no further modification ok so the if you
+
+808
+00:44:23,950 --> 00:44:28,600
+look at all of the read-only sections in
+
+809
+00:44:28,600 --> 00:44:32,830
+the executable so there's this init
+
+810
+00:44:32,830 --> 00:44:36,070
+section which we're not to worry about
+
+811
+00:44:36,070 --> 00:44:38,410
+that that all the code is in the dot
+
+812
+00:44:38,410 --> 00:44:40,510
+text and things like jump tables are in
+
+813
+00:44:40,510 --> 00:44:45,730
+our Oh data all of this data can be
+
+814
+00:44:45,730 --> 00:44:49,810
+loaded directly into memory as is okay
+
+815
+00:44:49,810 --> 00:44:51,430
+so these bytes can just be copied
+
+816
+00:44:51,430 --> 00:44:55,750
+directly into into memory and that that
+
+817
+00:44:55,750 --> 00:44:58,210
+forms the so called a read-only code
+
+818
+00:44:58,210 --> 00:45:05,050
+segment the the data in the dot data and
+
+819
+00:45:05,050 --> 00:45:07,750
+BSS X sections can also be copied
+
+820
+00:45:07,750 --> 00:45:13,840
+directly into into memory and in the
+
+821
+00:45:13,840 --> 00:45:16,300
+case of the variables and data they'll
+
+822
+00:45:16,300 --> 00:45:18,310
+be initialized to a value that's stored
+
+823
+00:45:18,310 --> 00:45:26,140
+in the symbol table so we're drawing our
+
+824
+00:45:26,140 --> 00:45:30,390
+our memory here this is the this is the
+
+825
+00:45:30,390 --> 00:45:34,660
+the memory address space that every
+
+826
+00:45:34,660 --> 00:45:39,660
+Linux program sees and we're drawing
+
+827
+00:45:39,660 --> 00:45:43,740
+addresses starting from 0 and going up
+
+828
+00:45:43,740 --> 00:45:48,160
+increasing as we grow up and every
+
+829
+00:45:48,160 --> 00:45:50,980
+program is loaded at this the same
+
+830
+00:45:50,980 --> 00:46:01,690
+address 0 X 4 0 0 0 0 0 and so the the
+
+831
+00:46:01,690 --> 00:46:03,640
+code comes directly from the object file
+
+832
+00:46:03,640 --> 00:46:05,950
+the data comes directly from the object
+
+833
+00:46:05,950 --> 00:46:08,130
+file and then that's followed by a
+
+834
+00:46:08,130 --> 00:46:11,560
+runtime heap which is created and
+
+835
+00:46:11,560 --> 00:46:13,660
+managed by malloc so when you need
+
+836
+00:46:13,660 --> 00:46:15,940
+dynamic dynamically need to allocate
+
+837
+00:46:15,940 --> 00:46:17,710
+memory like
+
+838
+00:46:17,710 --> 00:46:21,740
+using malloc that memory comes out of
+
+839
+00:46:21,740 --> 00:46:24,350
+this heap which starts immediately
+
+840
+00:46:24,350 --> 00:46:26,270
+following the the data segment and grows
+
+841
+00:46:26,270 --> 00:46:31,790
+upwards the stack is at the very top of
+
+842
+00:46:31,790 --> 00:46:37,220
+the the visible memory that's available
+
+843
+00:46:37,220 --> 00:46:40,850
+to application programs the memory above
+
+844
+00:46:40,850 --> 00:46:47,780
+that is is restricted to the kernel okay
+
+845
+00:46:47,780 --> 00:46:49,520
+so if you try to access those memory
+
+846
+00:46:49,520 --> 00:46:53,320
+locations you'll get a seg fault and
+
+847
+00:46:53,320 --> 00:46:56,660
+then the stack as we know grows down so
+
+848
+00:46:56,660 --> 00:46:58,490
+this is managed and created a run time
+
+849
+00:46:58,490 --> 00:47:01,280
+and then there's this region somewhere
+
+850
+00:47:01,280 --> 00:47:03,440
+in this huge gap between the stack and
+
+851
+00:47:03,440 --> 00:47:07,070
+the heap there's a region for shared
+
+852
+00:47:07,070 --> 00:47:09,370
+libraries so the dot Esso files all get
+
+853
+00:47:09,370 --> 00:47:13,220
+loaded into this this memory mapped
+
+854
+00:47:13,220 --> 00:47:18,350
+region for shared libraries now that the
+
+855
+00:47:18,350 --> 00:47:20,750
+top of the heap is indicated by this
+
+856
+00:47:20,750 --> 00:47:24,170
+global variable maintained by the kernel
+
+857
+00:47:24,170 --> 00:47:28,550
+called break BRK and the the top of the
+
+858
+00:47:28,550 --> 00:47:31,760
+stack as we know is is maintained by the
+
+859
+00:47:31,760 --> 00:47:34,970
+general purpose register RSP now there's
+
+860
+00:47:34,970 --> 00:47:36,950
+a little bit of a this is a little bit
+
+861
+00:47:36,950 --> 00:47:38,840
+of a simplification if you actually look
+
+862
+00:47:38,840 --> 00:47:42,640
+at the addresses returned by malloc
+
+863
+00:47:42,640 --> 00:47:45,920
+there's actually a there's actually two
+
+864
+00:47:45,920 --> 00:47:48,650
+heaps there's a heap up here and in the
+
+865
+00:47:48,650 --> 00:47:51,620
+high memory that grows down that's used
+
+866
+00:47:51,620 --> 00:47:54,890
+for large objects very large you know if
+
+867
+00:47:54,890 --> 00:47:56,060
+you mount like a whole bunch of space
+
+868
+00:47:56,060 --> 00:47:59,330
+and then the heap that grows up is is
+
+869
+00:47:59,330 --> 00:48:03,260
+reserved for smaller smaller objects so
+
+870
+00:48:03,260 --> 00:48:04,670
+I'm not really sure why they do this I
+
+871
+00:48:04,670 --> 00:48:07,660
+think it allows them to have separate
+
+872
+00:48:07,660 --> 00:48:10,040
+allocation algorithms for large objects
+
+873
+00:48:10,040 --> 00:48:18,950
+and small objects
+
+874
+00:48:18,950 --> 00:48:21,049
+okay so one of the one of the real
+
+875
+00:48:21,049 --> 00:48:23,270
+advantages of linking is that allows us
+
+876
+00:48:23,270 --> 00:48:26,660
+to create libraries of things so it's
+
+877
+00:48:26,660 --> 00:48:27,770
+always something we want to do as
+
+878
+00:48:27,770 --> 00:48:31,579
+programmers we always we always want to
+
+879
+00:48:31,579 --> 00:48:34,730
+create abstractions and then present
+
+880
+00:48:34,730 --> 00:48:37,730
+those abstractions to to users right and
+
+881
+00:48:37,730 --> 00:48:38,960
+we do that by creating libraries
+
+882
+00:48:38,960 --> 00:48:54,460
+defining an API yes I think it just is
+
+883
+00:48:54,460 --> 00:49:00,020
+no no it actually that's a good question
+
+884
+00:49:00,020 --> 00:49:02,960
+I the things I've done it just grows
+
+885
+00:49:02,960 --> 00:49:05,319
+until it runs out of memory right there
+
+886
+00:49:05,319 --> 00:49:08,720
+so I don't think actually that's a
+
+887
+00:49:08,720 --> 00:49:10,790
+really good question I mean I've I've
+
+888
+00:49:10,790 --> 00:49:12,680
+done those experiments and it it
+
+889
+00:49:12,680 --> 00:49:21,619
+eventually reaches some limit yeah I
+
+890
+00:49:21,619 --> 00:49:24,290
+don't I don't know it's a very large
+
+891
+00:49:24,290 --> 00:49:33,559
+number but I so you know as programmers
+
+892
+00:49:33,559 --> 00:49:36,010
+we always want to abstract define api's
+
+893
+00:49:36,010 --> 00:49:39,230
+implement package up those api's and
+
+894
+00:49:39,230 --> 00:49:41,540
+make them available to to other
+
+895
+00:49:41,540 --> 00:49:46,250
+programmers so how can we actually do
+
+896
+00:49:46,250 --> 00:49:48,440
+that how can we make commonly used
+
+897
+00:49:48,440 --> 00:49:50,030
+functions available to other programmers
+
+898
+00:49:50,030 --> 00:49:53,000
+well one thing given what we've learned
+
+899
+00:49:53,000 --> 00:49:55,339
+so far you could just take all the
+
+900
+00:49:55,339 --> 00:49:57,440
+functions and put them all in a single
+
+901
+00:49:57,440 --> 00:50:02,510
+big C file right and then programmers
+
+902
+00:50:02,510 --> 00:50:05,030
+would just link that C file into their
+
+903
+00:50:05,030 --> 00:50:06,859
+into their programs if they want to use
+
+904
+00:50:06,859 --> 00:50:09,740
+them right another option would be to
+
+905
+00:50:09,740 --> 00:50:11,990
+take that might get kind of unwieldy if
+
+906
+00:50:11,990 --> 00:50:14,000
+it's a big library right lipsi has
+
+907
+00:50:14,000 --> 00:50:17,510
+hundreds and hundreds of functions so
+
+908
+00:50:17,510 --> 00:50:19,099
+another option would might be to just
+
+909
+00:50:19,099 --> 00:50:21,020
+take each function put it in a separate
+
+910
+00:50:21,020 --> 00:50:23,420
+file and then compile them all together
+
+911
+00:50:23,420 --> 00:50:25,569
+and compile and link them all together
+
+912
+00:50:25,569 --> 00:50:31,369
+so this is more space and time efficient
+
+913
+00:50:31,369 --> 00:50:35,390
+than then our first option but it seems
+
+914
+00:50:35,390 --> 00:50:36,440
+like it would be burdensome on the
+
+915
+00:50:36,440 --> 00:50:39,319
+programmer because the program would
+
+916
+00:50:39,319 --> 00:50:40,490
+have to know where all the all these
+
+917
+00:50:40,490 --> 00:50:42,230
+functions were and put them in make
+
+918
+00:50:42,230 --> 00:50:44,450
+files it'd just be a lot of you know
+
+919
+00:50:44,450 --> 00:50:45,920
+this you could end up with a
+
+920
+00:50:45,920 --> 00:50:52,430
+ridiculously large command line to GCC
+
+921
+00:50:52,430 --> 00:50:57,150
+so that the one solution to this problem
+
+922
+00:50:57,150 --> 00:51:00,450
+is that the first solution that the
+
+923
+00:51:00,450 --> 00:51:02,880
+developers of Unix
+
+924
+00:51:02,880 --> 00:51:04,590
+came up with us something called a
+
+925
+00:51:04,590 --> 00:51:07,530
+static library so the the idea where the
+
+926
+00:51:07,530 --> 00:51:09,180
+static library is that you create this
+
+927
+00:51:09,180 --> 00:51:13,620
+archive called a dot a file which is
+
+928
+00:51:13,620 --> 00:51:16,050
+it's just a collection of dot o files
+
+929
+00:51:16,050 --> 00:51:18,210
+where each dot o file contains a
+
+930
+00:51:18,210 --> 00:51:20,340
+function ok so you take all the
+
+931
+00:51:20,340 --> 00:51:22,800
+functions in your library you use option
+
+932
+00:51:22,800 --> 00:51:25,650
+two to create a bunch of dot o files and
+
+933
+00:51:25,650 --> 00:51:28,500
+then you use a program called an archive
+
+934
+00:51:28,500 --> 00:51:32,010
+or AR to take those dot o files put them
+
+935
+00:51:32,010 --> 00:51:35,760
+together in a all together in a big file
+
+936
+00:51:35,760 --> 00:51:39,420
+called an archive out with a with a
+
+937
+00:51:39,420 --> 00:51:41,520
+table of contents at the beginning that
+
+938
+00:51:41,520 --> 00:51:43,350
+tells you the offset of each one of the
+
+939
+00:51:43,350 --> 00:51:46,560
+dot o files ok so an archive is just
+
+940
+00:51:46,560 --> 00:51:49,200
+this concatenated collection of dot o
+
+941
+00:51:49,200 --> 00:51:54,030
+files and then and then you link you
+
+942
+00:51:54,030 --> 00:51:57,450
+pass that archive to the to the linker
+
+943
+00:51:57,450 --> 00:52:00,900
+and it only takes the dot o files that
+
+944
+00:52:00,900 --> 00:52:02,970
+are actually referenced and links them
+
+945
+00:52:02,970 --> 00:52:04,590
+into the code right so it's a more
+
+946
+00:52:04,590 --> 00:52:06,570
+efficient way you can have a huge
+
+947
+00:52:06,570 --> 00:52:09,450
+archive but like Lib C but if you only
+
+948
+00:52:09,450 --> 00:52:12,810
+call printf the only dot o file you get
+
+949
+00:52:12,810 --> 00:52:16,530
+is printf 0 okay so the way this works
+
+950
+00:52:16,530 --> 00:52:24,310
+is as before we take
+
+951
+00:52:24,310 --> 00:52:26,770
+now we take all the functions we want to
+
+952
+00:52:26,770 --> 00:52:30,100
+put in our library we run them through
+
+953
+00:52:30,100 --> 00:52:33,370
+our translators to get dot o files we
+
+954
+00:52:33,370 --> 00:52:36,520
+pass those to the archiver to get a the
+
+955
+00:52:36,520 --> 00:52:42,490
+archive so in this case Lib CA and which
+
+956
+00:52:42,490 --> 00:52:45,520
+has this code for printf that we might
+
+957
+00:52:45,520 --> 00:52:50,080
+want to use right and so we can we can
+
+958
+00:52:50,080 --> 00:52:52,210
+we can recreate that archive anytime we
+
+959
+00:52:52,210 --> 00:52:53,710
+want so if one of these functions
+
+960
+00:52:53,710 --> 00:52:56,650
+changes like say printf changes you just
+
+961
+00:52:56,650 --> 00:52:59,530
+re archive the dot recompile printf and
+
+962
+00:52:59,530 --> 00:53:03,510
+then re archive all of the dot o files
+
+963
+00:53:03,510 --> 00:53:06,820
+so in Lib C it's it's about 1500 object
+
+964
+00:53:06,820 --> 00:53:09,790
+files and it's archived things like
+
+965
+00:53:09,790 --> 00:53:13,000
+printf scanf simple integer math and
+
+966
+00:53:13,000 --> 00:53:16,680
+there's also a math library which has
+
+967
+00:53:16,680 --> 00:53:19,480
+you know several hundred common
+
+968
+00:53:19,480 --> 00:53:22,570
+functions for things like floating point
+
+969
+00:53:22,570 --> 00:53:28,270
+math sine cosine tangent etc these
+
+970
+00:53:28,270 --> 00:53:30,100
+libraries the convention is that a
+
+971
+00:53:30,100 --> 00:53:32,710
+library always is prefixed with Lib with
+
+972
+00:53:32,710 --> 00:53:36,400
+Li B and then and then sort of new some
+
+973
+00:53:36,400 --> 00:53:41,790
+indication of what it what it does
+
+974
+00:53:41,790 --> 00:53:44,230
+so now let's see how linking with these
+
+975
+00:53:44,230 --> 00:53:45,970
+static libraries would work so I've
+
+976
+00:53:45,970 --> 00:53:50,230
+created a little example here I've
+
+977
+00:53:50,230 --> 00:53:53,190
+created a library called Lib vector a
+
+978
+00:53:53,190 --> 00:53:56,320
+and it consists of functions that
+
+979
+00:53:56,320 --> 00:53:58,720
+manipulate vectors and this is a real
+
+980
+00:53:58,720 --> 00:54:01,060
+simple library it just adds there's a
+
+981
+00:54:01,060 --> 00:54:04,390
+function to add two vectors x and y
+
+982
+00:54:04,390 --> 00:54:08,670
+together and and return the result in Z
+
+983
+00:54:08,670 --> 00:54:11,860
+and then another similar function that
+
+984
+00:54:11,860 --> 00:54:15,280
+will do pairwise multiplication of two
+
+985
+00:54:15,280 --> 00:54:21,910
+vectors so X I times y I equals Z I and
+
+986
+00:54:21,910 --> 00:54:24,760
+now I compile these two programs and
+
+987
+00:54:24,760 --> 00:54:26,980
+pack I want to package them into an
+
+988
+00:54:26,980 --> 00:54:30,160
+archive called lib vector a and then in
+
+989
+00:54:30,160 --> 00:54:32,710
+my in my main program I'm going to call
+
+990
+00:54:32,710 --> 00:54:36,010
+one of those functions advic to add
+
+991
+00:54:36,010 --> 00:54:42,710
+these two vectors x and y together
+
+992
+00:54:42,710 --> 00:54:45,110
+so now what happens when we compile this
+
+993
+00:54:45,110 --> 00:54:49,130
+this program we've already we've
+
+994
+00:54:49,130 --> 00:54:53,540
+constructed the archive lib dr. a from
+
+995
+00:54:53,540 --> 00:54:58,660
+add vector and multi and we pass that
+
+996
+00:54:58,660 --> 00:55:02,300
+archive to the linker along with our
+
+997
+00:55:02,300 --> 00:55:08,360
+main 2.0 relocatable object file and we
+
+998
+00:55:08,360 --> 00:55:11,450
+also pass it lib CA which has the
+
+999
+00:55:11,450 --> 00:55:13,850
+definition of which contains printf 0
+
+1000
+00:55:13,850 --> 00:55:18,190
+and anything else that printf 0 my call
+
+1001
+00:55:18,190 --> 00:55:22,760
+so these three the linker detects the
+
+1002
+00:55:22,760 --> 00:55:26,990
+reference to advic the function add vac
+
+1003
+00:55:26,990 --> 00:55:30,560
+and so it just pulls advocaat o out and
+
+1004
+00:55:30,560 --> 00:55:32,110
+and ignores the rest
+
+1005
+00:55:32,110 --> 00:55:35,510
+similarly for printf 0 and then it
+
+1006
+00:55:35,510 --> 00:55:38,390
+compiles all those main main to 0
+
+1007
+00:55:38,390 --> 00:55:40,730
+Advocaat o and printf dot o all together
+
+1008
+00:55:40,730 --> 00:55:44,300
+into this fully linked executable called
+
+1009
+00:55:44,300 --> 00:55:49,100
+prog to see for compiled time so we're
+
+1010
+00:55:49,100 --> 00:55:51,290
+doing this we're doing this link we're
+
+1011
+00:55:51,290 --> 00:55:54,790
+doing this this linking at compile time
+
+1012
+00:55:54,790 --> 00:55:59,810
+when we call a GCC now what the linker
+
+1013
+00:55:59,810 --> 00:56:04,460
+does when it's when it's using static
+
+1014
+00:56:04,460 --> 00:56:09,470
+libraries it scans all the dot o files
+
+1015
+00:56:09,470 --> 00:56:11,990
+and dot a files in order on the command
+
+1016
+00:56:11,990 --> 00:56:15,770
+line so you're just typing GCC and then
+
+1017
+00:56:15,770 --> 00:56:19,430
+a list of dot o files and davay files in
+
+1018
+00:56:19,430 --> 00:56:25,940
+some order so so during the scan it
+
+1019
+00:56:25,940 --> 00:56:27,710
+keeps a list of the current unresolved
+
+1020
+00:56:27,710 --> 00:56:31,910
+references right so if let's say let's
+
+1021
+00:56:31,910 --> 00:56:33,800
+say it looks at main dot o first and
+
+1022
+00:56:33,800 --> 00:56:36,920
+there's a reference to printf that's an
+
+1023
+00:56:36,920 --> 00:56:38,360
+unresolved reference because print is
+
+1024
+00:56:38,360 --> 00:56:41,360
+not not defined in main dot o so that
+
+1025
+00:56:41,360 --> 00:56:43,040
+goes in a list of undefined references
+
+1026
+00:56:43,040 --> 00:56:47,690
+and at some point or another as as each
+
+1027
+00:56:47,690 --> 00:56:50,560
+new dot o file or dot a file is
+
+1028
+00:56:50,560 --> 00:56:55,190
+encountered the linker tries to resolve
+
+1029
+00:56:55,190 --> 00:56:56,180
+its list of Unruh
+
+1030
+00:56:56,180 --> 00:56:58,069
+of references with the symbols that are
+
+1031
+00:56:58,069 --> 00:57:02,410
+defined in that dot o file or a file and
+
+1032
+00:57:02,410 --> 00:57:04,940
+then if there's any entries in the list
+
+1033
+00:57:04,940 --> 00:57:06,500
+at the end of the scan then there's an
+
+1034
+00:57:06,500 --> 00:57:09,319
+error okay so that the key here is that
+
+1035
+00:57:09,319 --> 00:57:10,910
+the linker will try to resolve these
+
+1036
+00:57:10,910 --> 00:57:12,710
+references from left to right on the
+
+1037
+00:57:12,710 --> 00:57:16,849
+command line and so this is another sort
+
+1038
+00:57:16,849 --> 00:57:18,140
+of important thing for you to know as
+
+1039
+00:57:18,140 --> 00:57:20,530
+programmers because the order that you
+
+1040
+00:57:20,530 --> 00:57:23,270
+that you put your files on the command
+
+1041
+00:57:23,270 --> 00:57:25,790
+line actually makes a difference okay so
+
+1042
+00:57:25,790 --> 00:57:27,770
+you can get sort of weird baffling
+
+1043
+00:57:27,770 --> 00:57:30,380
+linker errors if you if you use the
+
+1044
+00:57:30,380 --> 00:57:33,109
+wrong order so for instance suppose
+
+1045
+00:57:33,109 --> 00:57:39,290
+we've got a function an object module
+
+1046
+00:57:39,290 --> 00:57:43,670
+called Lib test that calls a function
+
+1047
+00:57:43,670 --> 00:57:49,339
+that's defined in in Lib mine a okay so
+
+1048
+00:57:49,339 --> 00:57:53,660
+these - else - big L period that that
+
+1049
+00:57:53,660 --> 00:58:00,079
+says to look for to look for a library
+
+1050
+00:58:00,079 --> 00:58:03,049
+files in the current directory that's
+
+1051
+00:58:03,049 --> 00:58:05,240
+what the dot look there first and then
+
+1052
+00:58:05,240 --> 00:58:07,809
+look in the normal places that you look
+
+1053
+00:58:07,809 --> 00:58:13,579
+and the the - lowercase L that's a it's
+
+1054
+00:58:13,579 --> 00:58:16,099
+like an abbreviation we could replace
+
+1055
+00:58:16,099 --> 00:58:19,190
+this with just the fully spelled out lib
+
+1056
+00:58:19,190 --> 00:58:22,130
+mind ed okay but you'll see this this
+
+1057
+00:58:22,130 --> 00:58:26,630
+lowercase L used a lot so so Lib test
+
+1058
+00:58:26,630 --> 00:58:28,930
+calls a function that's declared in in
+
+1059
+00:58:28,930 --> 00:58:34,609
+Lib mind a so the linker looks at it
+
+1060
+00:58:34,609 --> 00:58:36,170
+looks at the unresolved symbols in
+
+1061
+00:58:36,170 --> 00:58:39,079
+libtech zero and it detects that there's
+
+1062
+00:58:39,079 --> 00:58:40,609
+this unresolved function let's say it's
+
+1063
+00:58:40,609 --> 00:58:44,299
+called foo I know it's it's called Lib
+
+1064
+00:58:44,299 --> 00:58:49,309
+fun so and it puts it on the list and
+
+1065
+00:58:49,309 --> 00:58:51,650
+then it goes on to the next command line
+
+1066
+00:58:51,650 --> 00:58:55,069
+entry and that's live mine dot a and in
+
+1067
+00:58:55,069 --> 00:58:57,859
+there it finds it finds this symbol of
+
+1068
+00:58:57,859 --> 00:59:02,119
+lip fun and it it resolves the reference
+
+1069
+00:59:02,119 --> 00:59:05,980
+to that - Lib phone - the actual address
+
+1070
+00:59:05,980 --> 00:59:09,140
+the relocated address
+
+1071
+00:59:09,140 --> 00:59:11,720
+now if we switch the order and we put
+
+1072
+00:59:11,720 --> 00:59:14,240
+lib mind on a first followed by lib toss
+
+1073
+00:59:14,240 --> 00:59:17,029
+zero well there's there's no unresolved
+
+1074
+00:59:17,029 --> 00:59:18,920
+references in this library right it's
+
+1075
+00:59:18,920 --> 00:59:20,779
+just the collection of function
+
+1076
+00:59:20,779 --> 00:59:24,980
+definitions so it there's no unresolved
+
+1077
+00:59:24,980 --> 00:59:26,869
+references so the linker looks at that
+
+1078
+00:59:26,869 --> 00:59:29,119
+that's all good and then it looks at lib
+
+1079
+00:59:29,119 --> 00:59:31,039
+toss zero and now there's an unresolved
+
+1080
+00:59:31,039 --> 00:59:34,430
+reference to two lib fun but we're out
+
+1081
+00:59:34,430 --> 00:59:36,279
+of we're at the end of the command line
+
+1082
+00:59:36,279 --> 00:59:40,359
+so that's a linker error so you get this
+
+1083
+00:59:40,359 --> 00:59:43,789
+you get this really cryptic error
+
+1084
+00:59:43,789 --> 00:59:46,339
+message and if you didn't know about
+
+1085
+00:59:46,339 --> 00:59:48,380
+this ordering rule you wouldn't have any
+
+1086
+00:59:48,380 --> 00:59:54,799
+idea how to debug it okay so the static
+
+1087
+00:59:54,799 --> 00:59:56,210
+libraries are kind of the old fashioned
+
+1088
+00:59:56,210 --> 00:59:57,980
+solution that the modern solution is to
+
+1089
+00:59:57,980 --> 01:00:01,279
+use dynamic libraries or shared shared
+
+1090
+01:00:01,279 --> 01:00:05,329
+libraries so the reason the reason
+
+1091
+01:00:05,329 --> 01:00:07,430
+there's this sort of newer form of
+
+1092
+01:00:07,430 --> 01:00:10,279
+libraries that static libraries have
+
+1093
+01:00:10,279 --> 01:00:15,740
+some some disadvantages so every if you
+
+1094
+01:00:15,740 --> 01:00:17,710
+compile with static libraries then every
+
+1095
+01:00:17,710 --> 01:00:21,200
+every function that uses printf which or
+
+1096
+01:00:21,200 --> 01:00:23,299
+every program that uses printf has to
+
+1097
+01:00:23,299 --> 01:00:26,480
+have a copy of printf okay but almost
+
+1098
+01:00:26,480 --> 01:00:29,240
+every every program uses printf right so
+
+1099
+01:00:29,240 --> 01:00:32,170
+there's a shared shared libraries allow
+
+1100
+01:00:32,170 --> 01:00:34,430
+provide a mechanism where there can just
+
+1101
+01:00:34,430 --> 01:00:37,009
+be one wherever there's just one
+
+1102
+01:00:37,009 --> 01:00:42,289
+instance of a shared library member like
+
+1103
+01:00:42,289 --> 01:00:45,890
+like printf and every program running on
+
+1104
+01:00:45,890 --> 01:00:54,270
+the system will share that one copy
+
+1105
+01:00:54,270 --> 01:00:57,240
+so that's the that's sort of the big big
+
+1106
+01:00:57,240 --> 01:00:59,010
+disadvantage is this potential
+
+1107
+01:00:59,010 --> 01:01:05,930
+duplication so shared libraries are
+
+1108
+01:01:05,930 --> 01:01:10,790
+different in the sense that they contain
+
+1109
+01:01:10,790 --> 01:01:14,040
+code and data that are linked and loaded
+
+1110
+01:01:14,040 --> 01:01:16,200
+into the program not when it's not when
+
+1111
+01:01:16,200 --> 01:01:19,700
+it's compiled and linked and into a
+
+1112
+01:01:19,700 --> 01:01:22,500
+executable object file but actually when
+
+1113
+01:01:22,500 --> 01:01:26,100
+the program is loaded into the system so
+
+1114
+01:01:26,100 --> 01:01:30,210
+linking of references to shared library
+
+1115
+01:01:30,210 --> 01:01:33,210
+objects is deferred until the program is
+
+1116
+01:01:33,210 --> 01:01:35,850
+actually loaded into into memory until
+
+1117
+01:01:35,850 --> 01:01:38,190
+the executable object file is actually
+
+1118
+01:01:38,190 --> 01:01:40,830
+loaded into memory and this can either
+
+1119
+01:01:40,830 --> 01:01:43,680
+and it can even happen it can happen
+
+1120
+01:01:43,680 --> 01:01:45,570
+when the program is actually loaded into
+
+1121
+01:01:45,570 --> 01:01:47,990
+memory but it can also happen at runtime
+
+1122
+01:01:47,990 --> 01:01:51,330
+anytime at runtime so you can be you can
+
+1123
+01:01:51,330 --> 01:01:53,730
+be running a program and that program
+
+1124
+01:01:53,730 --> 01:01:56,790
+can arbitrarily decide to load a
+
+1125
+01:01:56,790 --> 01:01:59,250
+function that's declared in a shared
+
+1126
+01:01:59,250 --> 01:02:01,170
+library okay and I'll show you that it's
+
+1127
+01:02:01,170 --> 01:02:05,010
+really cool now these things are often
+
+1128
+01:02:05,010 --> 01:02:06,660
+called they're called shared libraries
+
+1129
+01:02:06,660 --> 01:02:08,820
+they're called dynamic link libraries
+
+1130
+01:02:08,820 --> 01:02:12,000
+like in Windows they're called DLLs dot
+
+1131
+01:02:12,000 --> 01:02:13,710
+iso files they're all referenced the
+
+1132
+01:02:13,710 --> 01:02:20,830
+same thing
+
+1133
+01:02:20,830 --> 01:02:23,380
+okay so that this like I said you can
+
+1134
+01:02:23,380 --> 01:02:25,840
+the the dynamic linking can occur when
+
+1135
+01:02:25,840 --> 01:02:28,510
+the program's loaded or after it's
+
+1136
+01:02:28,510 --> 01:02:33,490
+loaded and actually running and there's
+
+1137
+01:02:33,490 --> 01:02:34,840
+this sort of big deal that shared
+
+1138
+01:02:34,840 --> 01:02:36,400
+library routines can be shared by
+
+1139
+01:02:36,400 --> 01:02:38,350
+multiple processes and we'll look at
+
+1140
+01:02:38,350 --> 01:02:39,580
+this this will make sense when we look
+
+1141
+01:02:39,580 --> 01:02:41,500
+at virtual memories so don't don't worry
+
+1142
+01:02:41,500 --> 01:02:44,230
+about that now but but here's how the
+
+1143
+01:02:44,230 --> 01:02:48,780
+process works
+
+1144
+01:02:48,780 --> 01:02:52,810
+so we've first we have to create instead
+
+1145
+01:02:52,810 --> 01:02:55,270
+of creating an archive we create a
+
+1146
+01:02:55,270 --> 01:02:59,230
+shared library so our live vector
+
+1147
+01:02:59,230 --> 01:03:05,710
+routines instead of creating an archive
+
+1148
+01:03:05,710 --> 01:03:08,880
+a file we create a shared a dot SOF file
+
+1149
+01:03:08,880 --> 01:03:12,130
+using the using the shared argument to
+
+1150
+01:03:12,130 --> 01:03:16,300
+GCC so we take our two input functions a
+
+1151
+01:03:16,300 --> 01:03:19,780
+Drac and molbeck and share it says to
+
+1152
+01:03:19,780 --> 01:03:22,090
+create and we're telling GCC to create a
+
+1153
+01:03:22,090 --> 01:03:24,640
+shared library and place it in live
+
+1154
+01:03:24,640 --> 01:03:28,030
+vector D so okay and so and there's also
+
+1155
+01:03:28,030 --> 01:03:32,800
+that the the C the C developers have
+
+1156
+01:03:32,800 --> 01:03:35,830
+created a punctured library called Lib C
+
+1157
+01:03:35,830 --> 01:03:38,830
+so that contains printf and on it and
+
+1158
+01:03:38,830 --> 01:03:43,750
+other standard library functions so we
+
+1159
+01:03:43,750 --> 01:03:46,030
+take our program main - this is the same
+
+1160
+01:03:46,030 --> 01:03:49,480
+program that calls advic and we compile
+
+1161
+01:03:49,480 --> 01:03:52,840
+it into main to zero and we pass main to
+
+1162
+01:03:52,840 --> 01:03:56,620
+zero and these dot iso files - the
+
+1163
+01:03:56,620 --> 01:04:02,020
+linker now the linker doesn't at this
+
+1164
+01:04:02,020 --> 01:04:05,350
+point it doesn't actually copy let's say
+
+1165
+01:04:05,350 --> 01:04:08,890
+we're using advic or printf it doesn't
+
+1166
+01:04:08,890 --> 01:04:10,660
+actually copy those functions or do
+
+1167
+01:04:10,660 --> 01:04:14,140
+anything with them in the executable it
+
+1168
+01:04:14,140 --> 01:04:16,420
+just makes a note in the symbol table
+
+1169
+01:04:16,420 --> 01:04:20,350
+that those functions will need to be the
+
+1170
+01:04:20,350 --> 01:04:22,030
+references to those functions will need
+
+1171
+01:04:22,030 --> 01:04:24,070
+to be resolved when the program is
+
+1172
+01:04:24,070 --> 01:04:27,100
+loaded okay so it it puts in a
+
+1173
+01:04:27,100 --> 01:04:29,710
+relocation entry that says fix this up
+
+1174
+01:04:29,710 --> 01:04:33,220
+when you load the program so it's
+
+1175
+01:04:33,220 --> 01:04:34,330
+partially linked but
+
+1176
+01:04:34,330 --> 01:04:35,980
+it's not fully linked you can't take
+
+1177
+01:04:35,980 --> 01:04:38,470
+that you can't take a program
+
+1178
+01:04:38,470 --> 01:04:42,430
+you can't take a executable file that
+
+1179
+01:04:42,430 --> 01:04:44,890
+was dynamically linked and loaded
+
+1180
+01:04:44,890 --> 01:04:51,310
+directly what you what you do is the
+
+1181
+01:04:51,310 --> 01:04:53,800
+loader which is the X X ee system call
+
+1182
+01:04:53,800 --> 01:04:56,020
+and we'll learn more about that but just
+
+1183
+01:04:56,020 --> 01:04:58,500
+this is just a cyst call that loads
+
+1184
+01:04:58,500 --> 01:05:01,720
+loads executables into memory and runs
+
+1185
+01:05:01,720 --> 01:05:06,460
+them the loader takes the executable and
+
+1186
+01:05:06,460 --> 01:05:12,420
+then it takes the the shared iso files
+
+1187
+01:05:12,420 --> 01:05:16,120
+that this this program needs k it also
+
+1188
+01:05:16,120 --> 01:05:18,010
+made when the linker also made a note of
+
+1189
+01:05:18,010 --> 01:05:22,890
+which dos o files it needs so the loader
+
+1190
+01:05:22,890 --> 01:05:26,080
+calls the dynamic linker which takes
+
+1191
+01:05:26,080 --> 01:05:28,540
+those dos o files and then actually
+
+1192
+01:05:28,540 --> 01:05:31,750
+resolves all the references to any on
+
+1193
+01:05:31,750 --> 01:05:35,140
+any unresolved reference okay so the the
+
+1194
+01:05:35,140 --> 01:05:38,890
+address of advic the ad vac and printf
+
+1195
+01:05:38,890 --> 01:05:42,790
+functions isn't determined until the
+
+1196
+01:05:42,790 --> 01:05:46,120
+program is loaded and by that and it
+
+1197
+01:05:46,120 --> 01:05:48,040
+isn't determined by the dynamic linker
+
+1198
+01:05:48,040 --> 01:05:51,040
+until the program is loaded so that the
+
+1199
+01:05:51,040 --> 01:05:52,690
+dynamic linker does it goes through a
+
+1200
+01:05:52,690 --> 01:05:54,610
+similar process that the static linker
+
+1201
+01:05:54,610 --> 01:05:57,130
+did sort of fixing up references to add
+
+1202
+01:05:57,130 --> 01:06:00,730
+back at references to to printf and then
+
+1203
+01:06:00,730 --> 01:06:04,300
+at that point the binary the binary is
+
+1204
+01:06:04,300 --> 01:06:07,660
+in it is in a form that can be executed
+
+1205
+01:06:07,660 --> 01:06:14,730
+directly so question
+
+1206
+01:06:14,730 --> 01:06:16,890
+yes what if you look the part where did
+
+1207
+01:06:16,890 --> 01:06:19,920
+like where is that like if you include
+
+1208
+01:06:19,920 --> 01:06:21,960
+violence and use anger and greed zero
+
+1209
+01:06:21,960 --> 01:06:25,069
+actually
+
+1210
+01:06:25,069 --> 01:06:28,789
+if okay the question is what happens if
+
+1211
+01:06:28,789 --> 01:06:32,179
+you include a file so includes are
+
+1212
+01:06:32,179 --> 01:06:35,209
+handled by the C preprocessor so they're
+
+1213
+01:06:35,209 --> 01:06:38,119
+gone they're long gone by the time the
+
+1214
+01:06:38,119 --> 01:06:40,549
+by the time the linker gets around to it
+
+1215
+01:06:40,549 --> 01:06:42,979
+okay so the C preprocessor just takes
+
+1216
+01:06:42,979 --> 01:06:46,449
+sharp sign define sharp sign include and
+
+1217
+01:06:46,449 --> 01:06:50,719
+and interprets those and outputs another
+
+1218
+01:06:50,719 --> 01:06:53,390
+C program so if you if you include a
+
+1219
+01:06:53,390 --> 01:06:57,140
+file the C preprocessor just takes that
+
+1220
+01:06:57,140 --> 01:07:01,640
+file and just expands it and the output
+
+1221
+01:07:01,640 --> 01:07:03,650
+C program contains an expanded version
+
+1222
+01:07:03,650 --> 01:07:05,209
+of all the files that you include it
+
+1223
+01:07:05,209 --> 01:07:10,710
+okay
+
+1224
+01:07:10,710 --> 01:07:14,490
+now what's really cool is that you can
+
+1225
+01:07:14,490 --> 01:07:16,470
+also do this dynamic linking at runtime
+
+1226
+01:07:16,470 --> 01:07:19,890
+so what I showed you before we're doing
+
+1227
+01:07:19,890 --> 01:07:22,320
+it at load time but you can also
+
+1228
+01:07:22,320 --> 01:07:27,390
+arbitrarily decide to to load link and
+
+1229
+01:07:27,390 --> 01:07:30,950
+call a function from a shared from a
+
+1230
+01:07:30,950 --> 01:07:34,230
+from any function defined in a dot iso
+
+1231
+01:07:34,230 --> 01:07:37,800
+file and the way you do it is there's a
+
+1232
+01:07:37,800 --> 01:07:41,360
+there's an interface called the dl open
+
+1233
+01:07:41,360 --> 01:07:44,550
+that's in Lib C that allows you to do
+
+1234
+01:07:44,550 --> 01:07:47,790
+this and so let's say we want to this is
+
+1235
+01:07:47,790 --> 01:07:50,970
+this is our main program and just like
+
+1236
+01:07:50,970 --> 01:07:53,610
+before we want to call advic okay but
+
+1237
+01:07:53,610 --> 01:07:56,760
+advic now is defined in it in a dot iso
+
+1238
+01:07:56,760 --> 01:07:59,970
+file the exact same dot SL file that we
+
+1239
+01:07:59,970 --> 01:08:04,470
+generated before when we compile so
+
+1240
+01:08:04,470 --> 01:08:06,330
+we'll call this DLL dot C when we
+
+1241
+01:08:06,330 --> 01:08:10,770
+compile this program DLL dot C we have
+
+1242
+01:08:10,770 --> 01:08:13,200
+no we have no idea that it's going to
+
+1243
+01:08:13,200 --> 01:08:18,690
+call a function from from Lib dr. D so
+
+1244
+01:08:18,690 --> 01:08:20,790
+we just compile it as though a
+
+1245
+01:08:20,790 --> 01:08:25,230
+standalone C C program within this
+
+1246
+01:08:25,230 --> 01:08:27,390
+program though we declare a pointer a
+
+1247
+01:08:27,390 --> 01:08:30,300
+function pointer called advic and we
+
+1248
+01:08:30,300 --> 01:08:32,670
+give the prototype for this function
+
+1249
+01:08:32,670 --> 01:08:36,450
+it's pointers city so it's a two input
+
+1250
+01:08:36,450 --> 01:08:40,520
+arrays the output array on the size and
+
+1251
+01:08:40,520 --> 01:08:43,470
+then first we dynamically load the
+
+1252
+01:08:43,470 --> 01:08:44,970
+shared library that contains the
+
+1253
+01:08:44,970 --> 01:08:48,750
+function we want so we call DL open and
+
+1254
+01:08:48,750 --> 01:08:53,660
+we say load up this this dot SL file
+
+1255
+01:08:53,660 --> 01:08:56,460
+into memory so that I can call a
+
+1256
+01:08:56,460 --> 01:09:00,750
+function but don't resolve you know
+
+1257
+01:09:00,750 --> 01:09:02,340
+don't worry don't worry about the
+
+1258
+01:09:02,340 --> 01:09:04,260
+resolving the references to it functions
+
+1259
+01:09:04,260 --> 01:09:07,680
+until I actually tell you - that's the
+
+1260
+01:09:07,680 --> 01:09:12,360
+lazy part and so what what this deal
+
+1261
+01:09:12,360 --> 01:09:16,050
+open returns a handle that that then you
+
+1262
+01:09:16,050 --> 01:09:19,590
+use in subsequent calls okay so if we
+
+1263
+01:09:19,590 --> 01:09:21,180
+don't if the handle is null there was
+
+1264
+01:09:21,180 --> 01:09:23,220
+some kind of error like maybe maybe this
+
+1265
+01:09:23,220 --> 01:09:24,570
+data so file does
+
+1266
+01:09:24,570 --> 01:09:29,310
+exist so once we've opened that dot Esso
+
+1267
+01:09:29,310 --> 01:09:33,450
+file then we use DL SIM with the handle
+
+1268
+01:09:33,450 --> 01:09:37,080
+so this and then we we give it as we
+
+1269
+01:09:37,080 --> 01:09:38,670
+pass as a string the name of the
+
+1270
+01:09:38,670 --> 01:09:43,830
+function that we want to invoke and we
+
+1271
+01:09:43,830 --> 01:09:45,990
+get what we get back from DL sim as a
+
+1272
+01:09:45,990 --> 01:09:49,500
+pointer to that function and then we can
+
+1273
+01:09:49,500 --> 01:09:51,570
+we can use that function just like any
+
+1274
+01:09:51,570 --> 01:09:52,890
+other function so we can use that
+
+1275
+01:09:52,890 --> 01:09:55,320
+function pointer and we call it just as
+
+1276
+01:09:55,320 --> 01:09:56,550
+though it were a statically defined
+
+1277
+01:09:56,550 --> 01:10:00,000
+function so you can see this is real
+
+1278
+01:10:00,000 --> 01:10:07,850
+very powerful technique
+
+1279
+01:10:07,850 --> 01:10:13,290
+okay so looks let's finish the the last
+
+1280
+01:10:13,290 --> 01:10:15,330
+little bits of the class I want to show
+
+1281
+01:10:15,330 --> 01:10:17,340
+you it to try to convince you that
+
+1282
+01:10:17,340 --> 01:10:19,530
+linking is is actually interesting which
+
+1283
+01:10:19,530 --> 01:10:21,330
+is kind of a hard sell sometime yes
+
+1284
+01:10:21,330 --> 01:10:34,350
+question yes no it's that's how you know
+
+1285
+01:10:34,350 --> 01:10:36,870
+you just it's it's declared as a
+
+1286
+01:10:36,870 --> 01:10:38,780
+function pointer and you then you just
+
+1287
+01:10:38,780 --> 01:10:41,790
+you just you just use the name of the
+
+1288
+01:10:41,790 --> 01:10:43,170
+function you don't have to dereference
+
+1289
+01:10:43,170 --> 01:10:47,100
+it or you just you call it you call the
+
+1290
+01:10:47,100 --> 01:10:51,570
+function by just using that that that
+
+1291
+01:10:51,570 --> 01:10:53,970
+function pointer name okay just like I
+
+1292
+01:10:53,970 --> 01:10:59,510
+did
+
+1293
+01:10:59,510 --> 01:11:02,000
+if you dereference it I just get back a
+
+1294
+01:11:02,000 --> 01:11:05,180
+pointer value you get back the address
+
+1295
+01:11:05,180 --> 01:11:10,400
+of that function all right so it's kind
+
+1296
+01:11:10,400 --> 01:11:13,880
+of a hard sell to that to convince you
+
+1297
+01:11:13,880 --> 01:11:15,860
+that linking is is interesting but I'm
+
+1298
+01:11:15,860 --> 01:11:19,010
+going to try ok so there's there's this
+
+1299
+01:11:19,010 --> 01:11:20,540
+powerful technique called
+
+1300
+01:11:20,540 --> 01:11:23,900
+inner library inter positioning and the
+
+1301
+01:11:23,900 --> 01:11:26,840
+goal is to intercept function calls from
+
+1302
+01:11:26,840 --> 01:11:30,160
+from libraries and do something
+
+1303
+01:11:30,160 --> 01:11:33,440
+intercept them for for some reason right
+
+1304
+01:11:33,440 --> 01:11:35,780
+so what we typically want to do is
+
+1305
+01:11:35,780 --> 01:11:39,470
+intercept a function call maybe record
+
+1306
+01:11:39,470 --> 01:11:41,510
+some to some statistics or do some error
+
+1307
+01:11:41,510 --> 01:11:44,140
+checking and then call the real function
+
+1308
+01:11:44,140 --> 01:11:47,630
+as intended right so so the idea is
+
+1309
+01:11:47,630 --> 01:11:54,200
+we're going to create wrappers and when
+
+1310
+01:11:54,200 --> 01:11:55,760
+the program when a program calls a
+
+1311
+01:11:55,760 --> 01:11:57,980
+function what we're going to do is we're
+
+1312
+01:11:57,980 --> 01:12:00,970
+going to execute its wrapper instead
+
+1313
+01:12:00,970 --> 01:12:02,870
+okay and we're going to do it without
+
+1314
+01:12:02,870 --> 01:12:08,940
+changing any of the source
+
+1315
+01:12:08,940 --> 01:12:11,830
+now there's a lot of reasons there's a
+
+1316
+01:12:11,830 --> 01:12:14,650
+lot of applications for this that the
+
+1317
+01:12:14,650 --> 01:12:18,750
+neatest one that that I know is that
+
+1318
+01:12:18,750 --> 01:12:22,000
+these Facebook engineers so we're trying
+
+1319
+01:12:22,000 --> 01:12:24,070
+to deal with this year-long bug in the
+
+1320
+01:12:24,070 --> 01:12:26,710
+Facebook iPhone app and nobody could
+
+1321
+01:12:26,710 --> 01:12:29,500
+figure out what was going on and they
+
+1322
+01:12:29,500 --> 01:12:31,090
+figured it out using library inter
+
+1323
+01:12:31,090 --> 01:12:34,300
+positioning they figured out that there
+
+1324
+01:12:34,300 --> 01:12:35,560
+was something in the network stack
+
+1325
+01:12:35,560 --> 01:12:37,540
+writing to the wrong location they
+
+1326
+01:12:37,540 --> 01:12:39,730
+figured it out by intercepting all the
+
+1327
+01:12:39,730 --> 01:12:42,850
+calls from their Facebook app that did
+
+1328
+01:12:42,850 --> 01:12:46,240
+rights so things like write write to the
+
+1329
+01:12:46,240 --> 01:12:49,240
+EP right so they just they intercepted
+
+1330
+01:12:49,240 --> 01:12:50,590
+all those calls and then they were able
+
+1331
+01:12:50,590 --> 01:12:52,480
+to when they looked at the arguments and
+
+1332
+01:12:52,480 --> 01:12:53,800
+how those functions were being called
+
+1333
+01:12:53,800 --> 01:13:00,730
+they determine the air you can also use
+
+1334
+01:13:00,730 --> 01:13:02,650
+it for monitoring and profiling like so
+
+1335
+01:13:02,650 --> 01:13:04,030
+if you want to know like how many times
+
+1336
+01:13:04,030 --> 01:13:05,920
+different functions get called you can
+
+1337
+01:13:05,920 --> 01:13:09,730
+you can do you can interpose we use it
+
+1338
+01:13:09,730 --> 01:13:12,880
+for for generating address traces so
+
+1339
+01:13:12,880 --> 01:13:15,240
+you're malloc when you do your malloc
+
+1340
+01:13:15,240 --> 01:13:18,040
+lab later in the semester you're going
+
+1341
+01:13:18,040 --> 01:13:21,750
+to be evaluating your malloc using a
+
+1342
+01:13:21,750 --> 01:13:24,460
+traces that we generated from real
+
+1343
+01:13:24,460 --> 01:13:26,890
+programs using this inter positioning
+
+1344
+01:13:26,890 --> 01:13:29,500
+technique right so we we enter post on
+
+1345
+01:13:29,500 --> 01:13:31,650
+all the malloc and free calls in like
+
+1346
+01:13:31,650 --> 01:13:36,910
+Netscape and then we just recorded what
+
+1347
+01:13:36,910 --> 01:13:41,200
+addresses and and sizes Malik was was
+
+1348
+01:13:41,200 --> 01:13:44,170
+returning and what what blocks free was
+
+1349
+01:13:44,170 --> 01:13:46,330
+freeing up and we just created a trace
+
+1350
+01:13:46,330 --> 01:13:50,890
+of those and and then so let me show you
+
+1351
+01:13:50,890 --> 01:13:54,760
+how you would do this so the idea let's
+
+1352
+01:13:54,760 --> 01:13:56,500
+say we have this main program and the
+
+1353
+01:13:56,500 --> 01:13:59,080
+idea is to trace all the malloc and free
+
+1354
+01:13:59,080 --> 01:14:00,850
+calls so there's one malloc call and
+
+1355
+01:14:00,850 --> 01:14:03,580
+there's one free call and we want to
+
+1356
+01:14:03,580 --> 01:14:05,620
+know what these addresses are and we
+
+1357
+01:14:05,620 --> 01:14:08,710
+want to know what these sizes are so we
+
+1358
+01:14:08,710 --> 01:14:10,690
+can do this at either compile time link
+
+1359
+01:14:10,690 --> 01:14:14,650
+time or run time to do it at compile
+
+1360
+01:14:14,650 --> 01:14:17,920
+time we first write wrapper functions
+
+1361
+01:14:17,920 --> 01:14:20,830
+called my malloc and my free where my
+
+1362
+01:14:20,830 --> 01:14:22,000
+malloc call
+
+1363
+01:14:22,000 --> 01:14:24,370
+most the real malloc function and then
+
+1364
+01:14:24,370 --> 01:14:27,730
+it prints out the the size that it was
+
+1365
+01:14:27,730 --> 01:14:30,280
+called and the the address that malloc
+
+1366
+01:14:30,280 --> 01:14:33,100
+returned okay so this when we run our
+
+1367
+01:14:33,100 --> 01:14:34,600
+program it will it will print out these
+
+1368
+01:14:34,600 --> 01:14:36,280
+all these addresses and it does the same
+
+1369
+01:14:36,280 --> 01:14:39,070
+thing for free and then here's the trick
+
+1370
+01:14:39,070 --> 01:14:45,070
+in malloc dot H we we define malloc to
+
+1371
+01:14:45,070 --> 01:14:49,150
+be my malloc okay and free to be my free
+
+1372
+01:14:49,150 --> 01:14:51,700
+and then we give the prototype for it so
+
+1373
+01:14:51,700 --> 01:14:53,340
+the compiler doesn't get confused and
+
+1374
+01:14:53,340 --> 01:14:55,630
+then we can PI might we compile my
+
+1375
+01:14:55,630 --> 01:14:59,620
+malloc C into a dot o file and then we
+
+1376
+01:14:59,620 --> 01:15:03,010
+call week then we complete we call our
+
+1377
+01:15:03,010 --> 01:15:08,200
+program which is is our main program int
+
+1378
+01:15:08,200 --> 01:15:12,280
+dot C for inner positioning and we call
+
+1379
+01:15:12,280 --> 01:15:15,100
+that and here's the trick we call it
+
+1380
+01:15:15,100 --> 01:15:19,120
+with the - cap I argument and we say
+
+1381
+01:15:19,120 --> 01:15:21,430
+look for any include files in the
+
+1382
+01:15:21,430 --> 01:15:23,080
+current directory okay so this was
+
+1383
+01:15:23,080 --> 01:15:31,030
+similar to that el - cap el argument but
+
+1384
+01:15:31,030 --> 01:15:33,910
+because we tell GCC to look in the
+
+1385
+01:15:33,910 --> 01:15:36,340
+current directory first so this is sort
+
+1386
+01:15:36,340 --> 01:15:37,750
+of where the inner positioning happens
+
+1387
+01:15:37,750 --> 01:15:42,220
+this because when it does that it's
+
+1388
+01:15:42,220 --> 01:15:46,150
+going to it's going to find a it's going
+
+1389
+01:15:46,150 --> 01:15:48,280
+to find a library called malloc H
+
+1390
+01:15:48,280 --> 01:15:51,340
+I mean o dot H file called malloc dot H
+
+1391
+01:15:51,340 --> 01:15:54,390
+and so all the calls to malloc will be
+
+1392
+01:15:54,390 --> 01:15:56,830
+translated by the C preprocessor to my
+
+1393
+01:15:56,830 --> 01:16:02,770
+malloc so when we run this it prints out
+
+1394
+01:16:02,770 --> 01:16:07,960
+the the trip malloc and free trace now
+
+1395
+01:16:07,960 --> 01:16:09,820
+we can also do this at link time so we
+
+1396
+01:16:09,820 --> 01:16:12,880
+can tell C in order to do this we had to
+
+1397
+01:16:12,880 --> 01:16:16,210
+get access to the we had to compile the
+
+1398
+01:16:16,210 --> 01:16:18,310
+program we didn't have to change it but
+
+1399
+01:16:18,310 --> 01:16:20,710
+we had to compile it we can use link
+
+1400
+01:16:20,710 --> 01:16:25,180
+time at our positioning if to avoid that
+
+1401
+01:16:25,180 --> 01:16:29,230
+that that compilation so the way this
+
+1402
+01:16:29,230 --> 01:16:31,150
+works we define our wrapper functions
+
+1403
+01:16:31,150 --> 01:16:32,740
+with this special name underscore
+
+1404
+01:16:32,740 --> 01:16:35,050
+underscore wrap malloc
+
+1405
+01:16:35,050 --> 01:16:36,730
+and this calls the real malloc function
+
+1406
+01:16:36,730 --> 01:16:40,320
+and then prints out the information and
+
+1407
+01:16:40,320 --> 01:16:43,599
+then at link time then we do the inter
+
+1408
+01:16:43,599 --> 01:16:46,780
+positioning by calling the linker with
+
+1409
+01:16:46,780 --> 01:16:48,309
+this special
+
+1410
+01:16:48,309 --> 01:16:53,230
+- WL argument and so what this does the
+
+1411
+01:16:53,230 --> 01:16:59,230
+the - WL flag to GCC says hey take what
+
+1412
+01:16:59,230 --> 01:17:01,300
+follows the argument that follows
+
+1413
+01:17:01,300 --> 01:17:05,139
+replace all the commas with spaces and
+
+1414
+01:17:05,139 --> 01:17:06,940
+then invoke the linker with this
+
+1415
+01:17:06,940 --> 01:17:08,590
+argument okay so what we're doing is
+
+1416
+01:17:08,590 --> 01:17:11,290
+passing a linker arguments to the linker
+
+1417
+01:17:11,290 --> 01:17:15,540
+and this - - wrap argument to the linker
+
+1418
+01:17:15,540 --> 01:17:20,590
+it tells the linker to resolve all
+
+1419
+01:17:20,590 --> 01:17:22,480
+references to Malik as underscore
+
+1420
+01:17:22,480 --> 01:17:25,420
+underscore wrap Malik and all references
+
+1421
+01:17:25,420 --> 01:17:29,710
+to underscore real Malik - should be
+
+1422
+01:17:29,710 --> 01:17:33,489
+resolved as Malik okay so anywhere in
+
+1423
+01:17:33,489 --> 01:17:35,469
+the program what we call Malik it'll be
+
+1424
+01:17:35,469 --> 01:17:37,300
+resolved to underscore underscore wrap
+
+1425
+01:17:37,300 --> 01:17:39,639
+Malik and it will invoke our wrapper and
+
+1426
+01:17:39,639 --> 01:17:43,739
+then the wrapper calls real Malik which
+
+1427
+01:17:43,739 --> 01:17:46,599
+which by because of this flag resolves
+
+1428
+01:17:46,599 --> 01:17:53,500
+to the the actual Malik routine now here
+
+1429
+01:17:53,500 --> 01:17:55,300
+you can also in the really the really
+
+1430
+01:17:55,300 --> 01:17:56,770
+amazing thing is you can also do this
+
+1431
+01:17:56,770 --> 01:17:59,050
+inter positioning it load timer and run
+
+1432
+01:17:59,050 --> 01:18:01,239
+time when the program is loaded so you
+
+1433
+01:18:01,239 --> 01:18:02,710
+don't even need access to the dot o
+
+1434
+01:18:02,710 --> 01:18:04,840
+files all you need is access to the
+
+1435
+01:18:04,840 --> 01:18:07,690
+executable right and for every program
+
+1436
+01:18:07,690 --> 01:18:10,179
+we have access to the executable so
+
+1437
+01:18:10,179 --> 01:18:12,130
+think about that we can take any program
+
+1438
+01:18:12,130 --> 01:18:14,739
+and we can interpose on its library
+
+1439
+01:18:14,739 --> 01:18:19,480
+calls at runtime so the way we do this
+
+1440
+01:18:19,480 --> 01:18:22,170
+is we write the wrapper function now
+
+1441
+01:18:22,170 --> 01:18:26,159
+uses the DL sim call that we saw before
+
+1442
+01:18:26,159 --> 01:18:28,719
+and we call it with this special
+
+1443
+01:18:28,719 --> 01:18:31,300
+function the special argument called
+
+1444
+01:18:31,300 --> 01:18:36,429
+next and we silver and what this is
+
+1445
+01:18:36,429 --> 01:18:38,500
+saying is get the address of the real
+
+1446
+01:18:38,500 --> 01:18:42,010
+Malik okay so and we're going to we're
+
+1447
+01:18:42,010 --> 01:18:43,480
+going to trick the linker into looking
+
+1448
+01:18:43,480 --> 01:18:47,440
+first to our our implementation of
+
+1449
+01:18:47,440 --> 01:18:48,460
+malloc
+
+1450
+01:18:48,460 --> 01:18:50,650
+but here we want the real one so we're
+
+1451
+01:18:50,650 --> 01:18:52,390
+telling it to get to look in the next
+
+1452
+01:18:52,390 --> 01:18:54,400
+place its next place that it would
+
+1453
+01:18:54,400 --> 01:18:58,540
+normally look and and and fetch the the
+
+1454
+01:18:58,540 --> 01:19:00,430
+address of Malik so the result is a
+
+1455
+01:19:00,430 --> 01:19:03,489
+pointer a function pointer called Malik
+
+1456
+01:19:03,489 --> 01:19:05,760
+P and then we can just call that
+
+1457
+01:19:05,760 --> 01:19:09,489
+function to get to call the Lipsy Malik
+
+1458
+01:19:09,489 --> 01:19:13,180
+and then print out the the data okay we
+
+1459
+01:19:13,180 --> 01:19:17,110
+do the same thing for free st. we use DL
+
+1460
+01:19:17,110 --> 01:19:19,980
+sim in exactly the same way for free and
+
+1461
+01:19:19,980 --> 01:19:23,130
+then the inter positioning now happens
+
+1462
+01:19:23,130 --> 01:19:27,430
+when the program is loaded so notice we
+
+1463
+01:19:27,430 --> 01:19:30,430
+built this our main program now in tar
+
+1464
+01:19:30,430 --> 01:19:33,190
+for run time inter positioning we built
+
+1465
+01:19:33,190 --> 01:19:36,670
+it I'm sorry we created our dot SL file
+
+1466
+01:19:36,670 --> 01:19:40,239
+my Malachi so using the shared argument
+
+1467
+01:19:40,239 --> 01:19:45,130
+and then and then we we compiled int int
+
+1468
+01:19:45,130 --> 01:19:48,070
+dot C into this executable called int R
+
+1469
+01:19:48,070 --> 01:19:50,290
+but notice there's no mention of my
+
+1470
+01:19:50,290 --> 01:19:54,790
+malloc dot s o anywhere and now the
+
+1471
+01:19:54,790 --> 01:19:56,380
+inner positioning happens when we
+
+1472
+01:19:56,380 --> 01:20:00,420
+actually run the program and we do it we
+
+1473
+01:20:00,420 --> 01:20:04,960
+we affect the the inner positioning by
+
+1474
+01:20:04,960 --> 01:20:07,600
+setting an environment variable called
+
+1475
+01:20:07,600 --> 01:20:13,900
+LD preload to my Malachi so and so what
+
+1476
+01:20:13,900 --> 01:20:16,450
+this is a environment variable that
+
+1477
+01:20:16,450 --> 01:20:19,300
+tells the dynamic linker to look first
+
+1478
+01:20:19,300 --> 01:20:22,630
+in the the value it looked first in the
+
+1479
+01:20:22,630 --> 01:20:24,810
+the value of LD preload is a list of
+
+1480
+01:20:24,810 --> 01:20:27,910
+locations look first in those locations
+
+1481
+01:20:27,910 --> 01:20:30,940
+when to resolve references and only only
+
+1482
+01:20:30,940 --> 01:20:33,900
+later look in the normal system places
+
+1483
+01:20:33,900 --> 01:20:36,580
+so we're saying to look in my malloc dot
+
+1484
+01:20:36,580 --> 01:20:38,950
+s o4 unresolved references first and
+
+1485
+01:20:38,950 --> 01:20:41,080
+then and then we're invoking so this is
+
+1486
+01:20:41,080 --> 01:20:43,540
+in bash this is how you initialize an
+
+1487
+01:20:43,540 --> 01:20:44,920
+environment variable so we're
+
+1488
+01:20:44,920 --> 01:20:46,989
+initializing it to my malloc do so and
+
+1489
+01:20:46,989 --> 01:20:49,989
+then we're loading and running the
+
+1490
+01:20:49,989 --> 01:20:55,290
+program and so the LD so all the
+
+1491
+01:20:55,290 --> 01:20:58,000
+references to malloc get turned into the
+
+1492
+01:20:58,000 --> 01:21:01,340
+references to the wrapper function
+
+1493
+01:21:01,340 --> 01:21:03,550
+the malloc function that we defined in
+
+1494
+01:21:03,550 --> 01:21:09,590
+in our program okay so that's uh so
+
+1495
+01:21:09,590 --> 01:21:11,390
+that's it so that that inter positioning
+
+1496
+01:21:11,390 --> 01:21:13,580
+is a really cool technique and it's only
+
+1497
+01:21:13,580 --> 01:21:16,600
+it's only possible because of linkers so
+
+1498
+01:21:16,600 --> 01:21:18,200
+alright so good
+
+1499
+01:21:18,200 --> 01:21:20,720
+we'll see you on on Thursday and good
+
+1500
+01:21:20,720 --> 01:21:23,860
+luck with your cash labs
+

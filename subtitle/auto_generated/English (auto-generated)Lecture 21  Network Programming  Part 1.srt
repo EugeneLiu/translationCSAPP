@@ -1,0 +1,5632 @@
+﻿1
+00:00:00,030 --> 00:00:04,740
+good afternoon everyone so today we're
+
+2
+00:00:04,740 --> 00:00:08,160
+going to transition into a topic that to
+
+3
+00:00:08,160 --> 00:00:11,280
+me is sort of the reward for having
+
+4
+00:00:11,280 --> 00:00:15,450
+slugged through all the low-level stuff
+
+5
+00:00:15,450 --> 00:00:18,119
+you've done up to this point to be able
+
+6
+00:00:18,119 --> 00:00:21,260
+to really understand and become adept at
+
+7
+00:00:21,260 --> 00:00:25,140
+programming network software not there's
+
+8
+00:00:25,140 --> 00:00:26,699
+a lot to networking that we're not going
+
+9
+00:00:26,699 --> 00:00:28,680
+to cover but at least to have some
+
+10
+00:00:28,680 --> 00:00:31,650
+familiarity with it so I know that a lot
+
+11
+00:00:31,650 --> 00:00:34,110
+of you are sort of in the midst of
+
+12
+00:00:34,110 --> 00:00:35,700
+trying to figure out how to make Melek
+
+13
+00:00:35,700 --> 00:00:38,790
+run and make it run fast and so this
+
+14
+00:00:38,790 --> 00:00:42,629
+this uh topic is really more pointing
+
+15
+00:00:42,629 --> 00:00:44,489
+toward the future but it's very relevant
+
+16
+00:00:44,489 --> 00:00:46,379
+to the final web you'll do for the
+
+17
+00:00:46,379 --> 00:00:49,620
+course and so we're starting to to get
+
+18
+00:00:49,620 --> 00:00:55,970
+ready for that
+
+19
+00:00:55,970 --> 00:00:59,280
+so like I said this course is not really
+
+20
+00:00:59,280 --> 00:01:01,050
+a full course in networking there's many
+
+21
+00:01:01,050 --> 00:01:03,150
+other courses at the university that are
+
+22
+00:01:03,150 --> 00:01:05,550
+and so what we're going to try and do is
+
+23
+00:01:05,550 --> 00:01:07,380
+give you just a little flavor of it and
+
+24
+00:01:07,380 --> 00:01:09,479
+particularly as everything in the course
+
+25
+00:01:09,479 --> 00:01:11,880
+of programmers perspective so how you as
+
+26
+00:01:11,880 --> 00:01:14,220
+a software developer would make use of
+
+27
+00:01:14,220 --> 00:01:19,890
+the c-level api's that are relevant to
+
+28
+00:01:19,890 --> 00:01:25,920
+network programming and why isn't this
+
+29
+00:01:25,920 --> 00:01:29,540
+working
+
+30
+00:01:29,540 --> 00:01:36,590
+okay so the idea behind most networking
+
+31
+00:01:36,590 --> 00:01:38,750
+systems is what's called the
+
+32
+00:01:38,750 --> 00:01:41,120
+client-server model and the idea is that
+
+33
+00:01:41,120 --> 00:01:43,070
+there's a service out there that you
+
+34
+00:01:43,070 --> 00:01:46,400
+want access to and you as a customer or
+
+35
+00:01:46,400 --> 00:01:48,830
+a client are making a request to that
+
+36
+00:01:48,830 --> 00:01:51,729
+server so an example would be when you
+
+37
+00:01:51,729 --> 00:01:55,160
+order something on Amazon Amazon has a
+
+38
+00:01:55,160 --> 00:01:57,979
+bunch of servers and you go to your web
+
+39
+00:01:57,979 --> 00:02:01,160
+browser and canta it contacts the Amazon
+
+40
+00:02:01,160 --> 00:02:06,170
+a web server and you make transactions
+
+41
+00:02:06,170 --> 00:02:07,880
+you request something you provide
+
+42
+00:02:07,880 --> 00:02:12,320
+information and it gives you back pretty
+
+43
+00:02:12,320 --> 00:02:14,120
+pictures of things you might want to buy
+
+44
+00:02:14,120 --> 00:02:16,190
+it acknowledges your credit card
+
+45
+00:02:16,190 --> 00:02:18,680
+transactions those are all very classic
+
+46
+00:02:18,680 --> 00:02:21,739
+client-server types of interactions you
+
+47
+00:02:21,739 --> 00:02:24,340
+as the client Amazon is the server
+
+48
+00:02:24,340 --> 00:02:26,540
+another interesting example is a
+
+49
+00:02:26,540 --> 00:02:29,540
+telephone so if you think about it a
+
+50
+00:02:29,540 --> 00:02:31,489
+telephone is both a client and a server
+
+51
+00:02:31,489 --> 00:02:35,180
+in that when I'm making a placing a call
+
+52
+00:02:35,180 --> 00:02:38,720
+to somebody else I'm the client and that
+
+53
+00:02:38,720 --> 00:02:42,080
+person's phone is the server right it's
+
+54
+00:02:42,080 --> 00:02:45,560
+sitting there waiting for calls to come
+
+55
+00:02:45,560 --> 00:02:48,440
+in and when that call comes in it makes
+
+56
+00:02:48,440 --> 00:02:52,010
+a connection we talk over the phone and
+
+57
+00:02:52,010 --> 00:02:55,070
+then I hang up either side hangs up so
+
+58
+00:02:55,070 --> 00:02:57,230
+there's a lot of instances out there of
+
+59
+00:02:57,230 --> 00:02:59,630
+of some variation of client and server
+
+60
+00:02:59,630 --> 00:03:03,019
+and it's a much richer idea in that you
+
+61
+00:03:03,019 --> 00:03:05,239
+can often switch back and forth the
+
+62
+00:03:05,239 --> 00:03:07,250
+roles of those two parties but it's a
+
+63
+00:03:07,250 --> 00:03:11,840
+pretty universal and a ubiquitous way of
+
+64
+00:03:11,840 --> 00:03:14,390
+thinking about how to set up a network
+
+65
+00:03:14,390 --> 00:03:18,500
+system so in general then the idea is
+
+66
+00:03:18,500 --> 00:03:24,080
+that there's a system working the client
+
+67
+00:03:24,080 --> 00:03:26,420
+is making some requests to the server
+
+68
+00:03:26,420 --> 00:03:29,930
+the server does something locally to
+
+69
+00:03:29,930 --> 00:03:32,120
+deal with it it receive it gets
+
+70
+00:03:32,120 --> 00:03:35,150
+information that retrieves from its
+
+71
+00:03:35,150 --> 00:03:36,799
+database the things you might want to
+
+72
+00:03:36,799 --> 00:03:39,709
+buy and then it sends back information
+
+73
+00:03:39,709 --> 00:03:42,680
+say a nicely formatted a web page with
+
+74
+00:03:42,680 --> 00:03:42,900
+all
+
+75
+00:03:42,900 --> 00:03:45,569
+kinds of shopping suggestions and then
+
+76
+00:03:45,569 --> 00:03:48,980
+the client decides what to do next so
+
+77
+00:03:48,980 --> 00:03:52,349
+from a hardware perspective the
+
+78
+00:03:52,349 --> 00:03:56,750
+interface to a between the network and
+
+79
+00:03:56,750 --> 00:03:59,370
+your computer is called the NIC or
+
+80
+00:03:59,370 --> 00:04:01,709
+network interface card even though it's
+
+81
+00:04:01,709 --> 00:04:07,049
+not always on a card and we really won't
+
+82
+00:04:07,049 --> 00:04:10,739
+talk about hardware at all but what's
+
+83
+00:04:10,739 --> 00:04:14,489
+most interesting from it is that it
+
+84
+00:04:14,489 --> 00:04:17,760
+looks to your computer like an i/o
+
+85
+00:04:17,760 --> 00:04:22,770
+device and in fact the UNIX of API for
+
+86
+00:04:22,770 --> 00:04:25,050
+dealing with networks makes it look like
+
+87
+00:04:25,050 --> 00:04:28,800
+a file so in particular just as a disc
+
+88
+00:04:28,800 --> 00:04:33,870
+sits off of a bus and you write data to
+
+89
+00:04:33,870 --> 00:04:36,690
+a disk or you read it from a disk
+
+90
+00:04:36,690 --> 00:04:39,360
+similarly the network sits off of a
+
+91
+00:04:39,360 --> 00:04:42,389
+similar bus and when you want to send a
+
+92
+00:04:42,389 --> 00:04:45,000
+message you actually do it by writing to
+
+93
+00:04:45,000 --> 00:04:47,520
+a sort of virtual file that's called the
+
+94
+00:04:47,520 --> 00:04:49,740
+network and if you want when you're
+
+95
+00:04:49,740 --> 00:04:52,050
+receiving data you do it by reading and
+
+96
+00:04:52,050 --> 00:04:55,199
+so just as several weeks ago I gave the
+
+97
+00:04:55,199 --> 00:04:56,270
+lecture on Io
+
+98
+00:04:56,270 --> 00:04:58,470
+it turns out that it's extremely
+
+99
+00:04:58,470 --> 00:05:00,810
+relevant to network programming and
+
+100
+00:05:00,810 --> 00:05:03,630
+that's the basic model that that was
+
+101
+00:05:03,630 --> 00:05:07,289
+created by the early developers of the
+
+102
+00:05:07,289 --> 00:05:09,510
+sort of standard UNIX and now that's
+
+103
+00:05:09,510 --> 00:05:11,430
+carried over not just to UNIX but it's
+
+104
+00:05:11,430 --> 00:05:13,050
+the same model for Windows and other
+
+105
+00:05:13,050 --> 00:05:20,760
+operating systems so and now let's just
+
+106
+00:05:20,760 --> 00:05:23,039
+talk a little about what computer
+
+107
+00:05:23,039 --> 00:05:26,099
+networking means the idea of a network
+
+108
+00:05:26,099 --> 00:05:30,090
+is it's a collection of systems that are
+
+109
+00:05:30,090 --> 00:05:33,199
+referred to as hosts that are able to
+
+110
+00:05:33,199 --> 00:05:35,880
+communicate with each other over some
+
+111
+00:05:35,880 --> 00:05:40,080
+kind of communication fabric let's call
+
+112
+00:05:40,080 --> 00:05:42,599
+it communications system and they're
+
+113
+00:05:42,599 --> 00:05:46,470
+sort of partitioned into mostly referred
+
+114
+00:05:46,470 --> 00:05:48,870
+to as lands or local area networks that
+
+115
+00:05:48,870 --> 00:05:51,960
+you establish within a small region and
+
+116
+00:05:51,960 --> 00:05:54,419
+then a wide area network which would be
+
+117
+00:05:54,419 --> 00:05:55,000
+over
+
+118
+00:05:55,000 --> 00:05:57,490
+or something the size of a city or
+
+119
+00:05:57,490 --> 00:06:02,980
+perhaps more and over a enterprise such
+
+120
+00:06:02,980 --> 00:06:06,250
+as CMU it's a very complex set of for
+
+121
+00:06:06,250 --> 00:06:10,140
+example there's wireless base stations
+
+122
+00:06:10,140 --> 00:06:13,480
+that right in this room that you're
+
+123
+00:06:13,480 --> 00:06:15,040
+interacting with when you're using a
+
+124
+00:06:15,040 --> 00:06:17,490
+wireless system or your your phone and
+
+125
+00:06:17,490 --> 00:06:19,600
+then there's a whole networking
+
+126
+00:06:19,600 --> 00:06:22,000
+infrastructure within the university the
+
+127
+00:06:22,000 --> 00:06:24,780
+then goes to some commercial providers
+
+128
+00:06:24,780 --> 00:06:27,820
+AT&T in particular that give it access
+
+129
+00:06:27,820 --> 00:06:31,840
+to the the commercial Internet and then
+
+130
+00:06:31,840 --> 00:06:33,310
+there's another set of network
+
+131
+00:06:33,310 --> 00:06:35,800
+connections hosted by the supercomputing
+
+132
+00:06:35,800 --> 00:06:37,990
+Center that give you access to what's
+
+133
+00:06:37,990 --> 00:06:40,210
+called Internet 2 which is the resource
+
+134
+00:06:40,210 --> 00:06:42,150
+that's used for communicating among
+
+135
+00:06:42,150 --> 00:06:46,900
+universities so underneath you know when
+
+136
+00:06:46,900 --> 00:06:48,610
+you're doing your networking stuff
+
+137
+00:06:48,610 --> 00:06:50,169
+there's this amazingly complex
+
+138
+00:06:50,169 --> 00:06:53,830
+combination of things going on the idea
+
+139
+00:06:53,830 --> 00:06:56,919
+of an internet is supposed is refers to
+
+140
+00:06:56,919 --> 00:07:00,669
+the idea the general idea of a network
+
+141
+00:07:00,669 --> 00:07:03,340
+of networks taking for example the local
+
+142
+00:07:03,340 --> 00:07:05,470
+area network that this base station
+
+143
+00:07:05,470 --> 00:07:08,290
+provides and connecting it up to other
+
+144
+00:07:08,290 --> 00:07:10,570
+networks on campus and across the world
+
+145
+00:07:10,570 --> 00:07:13,600
+and when we refer to the capital I
+
+146
+00:07:13,600 --> 00:07:16,870
+internet that refers to the one instance
+
+147
+00:07:16,870 --> 00:07:19,720
+the the most significant instance of an
+
+148
+00:07:19,720 --> 00:07:20,320
+Internet
+
+149
+00:07:20,320 --> 00:07:23,620
+so lowercase I means the sort of general
+
+150
+00:07:23,620 --> 00:07:25,680
+idea of creating a network of networks
+
+151
+00:07:25,680 --> 00:07:29,530
+uppercase I is the specific example that
+
+152
+00:07:29,530 --> 00:07:31,740
+we all know and use all the time
+
+153
+00:07:31,740 --> 00:07:34,270
+that's organized by a certain set of
+
+154
+00:07:34,270 --> 00:07:36,220
+principles that uses a particular set of
+
+155
+00:07:36,220 --> 00:07:38,950
+protocols and so forth and of course we
+
+156
+00:07:38,950 --> 00:07:41,950
+tend to just talk the internet and most
+
+157
+00:07:41,950 --> 00:07:43,900
+people know that what that really
+
+158
+00:07:43,900 --> 00:07:47,790
+implies is the sort of existing network
+
+159
+00:07:47,790 --> 00:07:52,000
+structure that there is and that's good
+
+160
+00:07:52,000 --> 00:07:53,770
+enough for the purpose of this course
+
+161
+00:07:53,770 --> 00:07:55,270
+we're not going to talk much about other
+
+162
+00:07:55,270 --> 00:07:57,190
+possible designs one might have for a
+
+163
+00:07:57,190 --> 00:08:00,310
+network so most of the low level
+
+164
+00:08:00,310 --> 00:08:03,610
+networking is supported by something
+
+165
+00:08:03,610 --> 00:08:06,220
+called Ethernet and the term Ethernet
+
+166
+00:08:06,220 --> 00:08:08,169
+actually has evolved tremendously over
+
+167
+00:08:08,169 --> 00:08:09,159
+time
+
+168
+00:08:09,159 --> 00:08:11,680
+so that it's almost more like a brand
+
+169
+00:08:11,680 --> 00:08:13,720
+name that it is in specific technology
+
+170
+00:08:13,720 --> 00:08:17,289
+and the version you're familiar with the
+
+171
+00:08:17,289 --> 00:08:19,810
+wired version of it you have a wire to
+
+172
+00:08:19,810 --> 00:08:26,289
+some sort of a box like that you plug
+
+173
+00:08:26,289 --> 00:08:28,330
+the your ethernet jacks into and
+
+174
+00:08:28,330 --> 00:08:30,669
+historically those were called hubs and
+
+175
+00:08:30,669 --> 00:08:33,640
+the idea of a hub was it was just a
+
+176
+00:08:33,640 --> 00:08:35,919
+repeater that whatever came into it from
+
+177
+00:08:35,919 --> 00:08:37,899
+one computer it would broadcast to all
+
+178
+00:08:37,899 --> 00:08:40,510
+the connected machines and so you only
+
+179
+00:08:40,510 --> 00:08:43,750
+want to do this for maybe a a dozen or
+
+180
+00:08:43,750 --> 00:08:47,140
+so machines that it's like a party-line
+
+181
+00:08:47,140 --> 00:08:49,029
+they're all hearing what everybody else
+
+182
+00:08:49,029 --> 00:08:52,120
+is saying and in fact the original first
+
+183
+00:08:52,120 --> 00:08:54,089
+version the ethernet did that by
+
+184
+00:08:54,089 --> 00:08:59,200
+everyone interacting over a single cable
+
+185
+00:08:59,200 --> 00:09:02,170
+carrying essentially radio signals and
+
+186
+00:09:02,170 --> 00:09:05,019
+similarly when you're in this room using
+
+187
+00:09:05,019 --> 00:09:07,690
+a wireless internet a wireless internet
+
+188
+00:09:07,690 --> 00:09:10,839
+is sort of like a hub and that all the
+
+189
+00:09:10,839 --> 00:09:15,490
+packets that you're sending all across
+
+190
+00:09:15,490 --> 00:09:17,200
+the room they're all sort of making use
+
+191
+00:09:17,200 --> 00:09:19,620
+of the same radio frequencies the same
+
+192
+00:09:19,620 --> 00:09:21,970
+communication channel and there's a
+
+193
+00:09:21,970 --> 00:09:24,899
+protocol for how they detect when two
+
+194
+00:09:24,899 --> 00:09:27,279
+messages get set at the same time and
+
+195
+00:09:27,279 --> 00:09:29,500
+therefore interfere with each other so
+
+196
+00:09:29,500 --> 00:09:32,860
+that can only sort of scale up to maybe
+
+197
+00:09:32,860 --> 00:09:37,350
+at most a hundred different hosts
+
+198
+00:09:37,350 --> 00:09:38,950
+communicating because they're all
+
+199
+00:09:38,950 --> 00:09:40,920
+sharing a single communication channel
+
+200
+00:09:40,920 --> 00:09:44,680
+now in the wired world what's evolved is
+
+201
+00:09:44,680 --> 00:09:47,920
+usually when you buy a box or you get
+
+202
+00:09:47,920 --> 00:09:50,200
+one from your cable company with all
+
+203
+00:09:50,200 --> 00:09:51,910
+those ports in it it's actually called a
+
+204
+00:09:51,910 --> 00:09:58,230
+router or sometimes a switch in that it
+
+205
+00:09:58,230 --> 00:10:02,170
+it doesn't broadcast to everyone it it
+
+206
+00:10:02,170 --> 00:10:05,440
+selectively tries to guess is this
+
+207
+00:10:05,440 --> 00:10:07,329
+particular message bound for this
+
+208
+00:10:07,329 --> 00:10:11,320
+particular host and only send to that
+
+209
+00:10:11,320 --> 00:10:13,959
+one and as you know you can take these
+
+210
+00:10:13,959 --> 00:10:17,020
+and wire up I think about up to six
+
+211
+00:10:17,020 --> 00:10:20,140
+levels deep in and hops and basically
+
+212
+00:10:20,140 --> 00:10:22,120
+create a network
+
+213
+00:10:22,120 --> 00:10:25,990
+of wired connections and they'll all get
+
+214
+00:10:25,990 --> 00:10:29,050
+from one to the other somehow and then
+
+215
+00:10:29,050 --> 00:10:31,270
+after that it gets more complicated you
+
+216
+00:10:31,270 --> 00:10:34,029
+can add more sophisticated types of
+
+217
+00:10:34,029 --> 00:10:35,230
+switching on top of it
+
+218
+00:10:35,230 --> 00:10:38,290
+but so the general idea of even an
+
+219
+00:10:38,290 --> 00:10:40,029
+Ethernet is actually a fairly complex
+
+220
+00:10:40,029 --> 00:10:42,760
+thing but it's some sort of conceptual
+
+221
+00:10:42,760 --> 00:10:44,470
+level we can just think of it as a bunch
+
+222
+00:10:44,470 --> 00:10:46,839
+of hosts that can talk directly to one
+
+223
+00:10:46,839 --> 00:10:51,580
+another and then an internet then refers
+
+224
+00:10:51,580 --> 00:10:54,220
+to the idea of taking those local area
+
+225
+00:10:54,220 --> 00:10:56,250
+networks and connecting them together
+
+226
+00:10:56,250 --> 00:10:59,260
+via routers and routers obey a
+
+227
+00:10:59,260 --> 00:11:02,290
+particular protocol based on the address
+
+228
+00:11:02,290 --> 00:11:06,420
+that you're trying to send data to and
+
+229
+00:11:06,420 --> 00:11:11,740
+and so what you end up with conceptually
+
+230
+00:11:11,740 --> 00:11:14,680
+is a whole bunch of hosts spread
+
+231
+00:11:14,680 --> 00:11:16,720
+potentially all across the world and
+
+232
+00:11:16,720 --> 00:11:20,529
+then some magical system of routers that
+
+233
+00:11:20,529 --> 00:11:22,450
+will get a message from one place to the
+
+234
+00:11:22,450 --> 00:11:25,750
+other based on a mode of addressing
+
+235
+00:11:25,750 --> 00:11:28,779
+where there's some known address of the
+
+236
+00:11:28,779 --> 00:11:30,550
+hosts that you're trying to send to and
+
+237
+00:11:30,550 --> 00:11:35,260
+it will hop through multiple routers to
+
+238
+00:11:35,260 --> 00:11:37,060
+get from one place to the other and
+
+239
+00:11:37,060 --> 00:11:39,270
+that's true whether it's on campus
+
+240
+00:11:39,270 --> 00:11:43,510
+or whether it's hopping all the way
+
+241
+00:11:43,510 --> 00:11:44,350
+around the world
+
+242
+00:11:44,350 --> 00:11:48,070
+and so again there's this huge body of
+
+243
+00:11:48,070 --> 00:11:49,930
+information and knowledge about how that
+
+244
+00:11:49,930 --> 00:11:52,209
+routing works and how its reliable and
+
+245
+00:11:52,209 --> 00:11:54,670
+all that but we're going to just assume
+
+246
+00:11:54,670 --> 00:11:56,350
+that somebody else has figured that out
+
+247
+00:11:56,350 --> 00:11:58,870
+and our job as programmers is just to be
+
+248
+00:11:58,870 --> 00:12:01,360
+able to communicate from one host to
+
+249
+00:12:01,360 --> 00:12:05,450
+another
+
+250
+00:12:05,450 --> 00:12:08,630
+and so how could you design a system
+
+251
+00:12:08,630 --> 00:12:11,140
+where all these diverse systems made by
+
+252
+00:12:11,140 --> 00:12:12,950
+computers made by different
+
+253
+00:12:12,950 --> 00:12:15,050
+manufacturers operating under different
+
+254
+00:12:15,050 --> 00:12:16,960
+countries with different
+
+255
+00:12:16,960 --> 00:12:20,870
+telecommunications bodies governing
+
+256
+00:12:20,870 --> 00:12:22,580
+bodies and so forth how can they all
+
+257
+00:12:22,580 --> 00:12:25,730
+work with each other and the requirement
+
+258
+00:12:25,730 --> 00:12:27,080
+is you have to have a protocol you have
+
+259
+00:12:27,080 --> 00:12:29,210
+to have some common set of conventions
+
+260
+00:12:29,210 --> 00:12:32,660
+for what messages look like how they get
+
+261
+00:12:32,660 --> 00:12:36,140
+sent what happens if one of them doesn't
+
+262
+00:12:36,140 --> 00:12:38,810
+make it how do you recover from that and
+
+263
+00:12:38,810 --> 00:12:46,010
+so forth and so what does a protocol
+
+264
+00:12:46,010 --> 00:12:47,930
+include well it has to include some way
+
+265
+00:12:47,930 --> 00:12:50,600
+of naming things so that if I want to
+
+266
+00:12:50,600 --> 00:12:52,160
+send to some host I have some way of
+
+267
+00:12:52,160 --> 00:12:55,670
+designating who that host is and then
+
+268
+00:12:55,670 --> 00:12:57,800
+there's the routing system has to have
+
+269
+00:12:57,800 --> 00:13:00,200
+some reliable way of getting my data to
+
+270
+00:13:00,200 --> 00:13:03,980
+that named host and that's the delivery
+
+271
+00:13:03,980 --> 00:13:07,250
+mechanism and that's usually done and
+
+272
+00:13:07,250 --> 00:13:10,100
+one of the things that we now accept as
+
+273
+00:13:10,100 --> 00:13:12,830
+as universal but it really wasn't when
+
+274
+00:13:12,830 --> 00:13:15,140
+it first came out was idea of you take
+
+275
+00:13:15,140 --> 00:13:17,060
+all your data and you divide it into
+
+276
+00:13:17,060 --> 00:13:19,220
+packets and packets are typically about
+
+277
+00:13:19,220 --> 00:13:21,850
+a thousand to two thousand bytes and so
+
+278
+00:13:21,850 --> 00:13:24,590
+if you have a longer message it chops it
+
+279
+00:13:24,590 --> 00:13:27,260
+up into individual packets and sends it
+
+280
+00:13:27,260 --> 00:13:29,480
+across and all the communication occurs
+
+281
+00:13:29,480 --> 00:13:31,850
+at the packet level that's different
+
+282
+00:13:31,850 --> 00:13:35,450
+than the historic phone system I was a
+
+283
+00:13:35,450 --> 00:13:37,850
+connection based system meaning that if
+
+284
+00:13:37,850 --> 00:13:41,030
+I was calling somebody there is a
+
+285
+00:13:41,030 --> 00:13:44,180
+dedicated wire set of wires maintained
+
+286
+00:13:44,180 --> 00:13:46,250
+by the phone company that would be
+
+287
+00:13:46,250 --> 00:13:48,980
+reserved and locked down for our own use
+
+288
+00:13:48,980 --> 00:13:51,080
+during the entire duration of that phone
+
+289
+00:13:51,080 --> 00:13:55,810
+call
+
+290
+00:13:55,810 --> 00:14:03,230
+so to get them from one host say a to B
+
+291
+00:14:03,230 --> 00:14:05,839
+what happens is we want to send a packet
+
+292
+00:14:05,839 --> 00:14:08,480
+and that packet will contain some amount
+
+293
+00:14:08,480 --> 00:14:12,410
+of data and the idea of a packet
+
+294
+00:14:12,410 --> 00:14:14,000
+communication then is you put little
+
+295
+00:14:14,000 --> 00:14:16,670
+headers on that contain certain routing
+
+296
+00:14:16,670 --> 00:14:18,350
+information the equivalent of what you'd
+
+297
+00:14:18,350 --> 00:14:20,060
+see on the front of an envelope of a
+
+298
+00:14:20,060 --> 00:14:23,449
+letter perhaps and so and at different
+
+299
+00:14:23,449 --> 00:14:25,089
+points in the way they'll have different
+
+300
+00:14:25,089 --> 00:14:27,519
+numbers of headers and different
+
+301
+00:14:27,519 --> 00:14:29,990
+protocols or formats for what those
+
+302
+00:14:29,990 --> 00:14:32,329
+headers look like so in particular
+
+303
+00:14:32,329 --> 00:14:36,949
+within I want to send a message and I'll
+
+304
+00:14:36,949 --> 00:14:40,009
+I'll do that and then the software that
+
+305
+00:14:40,009 --> 00:14:42,110
+runs on my machine that handles this
+
+306
+00:14:42,110 --> 00:14:47,170
+will put a header in front of that that
+
+307
+00:14:47,170 --> 00:14:50,690
+describes the internet routing and then
+
+308
+00:14:50,690 --> 00:14:52,370
+it will tack a header in front of that
+
+309
+00:14:52,370 --> 00:14:54,410
+that talks about the local area network
+
+310
+00:14:54,410 --> 00:14:56,899
+routing that gets used and that's what's
+
+311
+00:14:56,899 --> 00:15:00,470
+referred to as the a P hat H the packet
+
+312
+00:15:00,470 --> 00:15:03,050
+header for the Internet Protocol and f
+
+313
+00:15:03,050 --> 00:15:05,569
+h1 the frame header for this particular
+
+314
+00:15:05,569 --> 00:15:07,790
+message being sent within this local
+
+315
+00:15:07,790 --> 00:15:12,589
+network and then the network interface
+
+316
+00:15:12,589 --> 00:15:16,399
+card or the adapter here is then
+
+317
+00:15:16,399 --> 00:15:19,730
+responsible for putting that out over
+
+318
+00:15:19,730 --> 00:15:23,269
+this local communication of capability
+
+319
+00:15:23,269 --> 00:15:25,970
+and then that gets received at the other
+
+320
+00:15:25,970 --> 00:15:29,199
+end by the network adapter at the
+
+321
+00:15:29,199 --> 00:15:33,649
+receivers direction it will put up its
+
+322
+00:15:33,649 --> 00:15:40,329
+own frame header on it to pass it in and
+
+323
+00:15:40,329 --> 00:15:44,240
+that then gets tripped off so that all
+
+324
+00:15:44,240 --> 00:15:48,079
+hosts be set sees is the the data that
+
+325
+00:15:48,079 --> 00:15:50,180
+gets sent but this idea of putting
+
+326
+00:15:50,180 --> 00:15:53,420
+headers in front and at times sort of
+
+327
+00:15:53,420 --> 00:15:55,939
+what they call encapsulation that I'll
+
+328
+00:15:55,939 --> 00:15:58,339
+take this big packet and I'll just tack
+
+329
+00:15:58,339 --> 00:16:00,439
+some more information on top to the
+
+330
+00:16:00,439 --> 00:16:01,189
+front of it
+
+331
+00:16:01,189 --> 00:16:03,709
+header information and I'll send through
+
+332
+00:16:03,709 --> 00:16:13,720
+the rest of it just as a set of bytes
+
+333
+00:16:13,720 --> 00:16:17,050
+so the internet that we know and love
+
+334
+00:16:17,050 --> 00:16:19,660
+the capital I internet then has a
+
+335
+00:16:19,660 --> 00:16:21,640
+particular set of protocols that are
+
+336
+00:16:21,640 --> 00:16:24,160
+you've probably heard the terms one is
+
+337
+00:16:24,160 --> 00:16:26,350
+called the IP the Internet Protocol
+
+338
+00:16:26,350 --> 00:16:29,380
+which is the one that defines ideas
+
+339
+00:16:29,380 --> 00:16:31,690
+about how do you get how do you name
+
+340
+00:16:31,690 --> 00:16:35,050
+hosts on the Internet and how do you
+
+341
+00:16:35,050 --> 00:16:37,600
+send packets and they're referred to
+
+342
+00:16:37,600 --> 00:16:41,950
+sometimes is datagrams meaning that a
+
+343
+00:16:41,950 --> 00:16:44,650
+packet is just a single entity that gets
+
+344
+00:16:44,650 --> 00:16:49,690
+sent from point A to point B and the
+
+345
+00:16:49,690 --> 00:16:52,450
+underlying IP doesn't guarantee delivery
+
+346
+00:16:52,450 --> 00:16:56,080
+so it's based on what they call best
+
+347
+00:16:56,080 --> 00:17:00,220
+effort communication meaning that at
+
+348
+00:17:00,220 --> 00:17:01,600
+each step along the way
+
+349
+00:17:01,600 --> 00:17:05,560
+if for example things are good then it
+
+350
+00:17:05,560 --> 00:17:07,060
+will just send this packet along if
+
+351
+00:17:07,060 --> 00:17:09,760
+there's too much congestion there's been
+
+352
+00:17:09,760 --> 00:17:12,220
+a you know somebody's turned on their
+
+353
+00:17:12,220 --> 00:17:14,860
+microwave oven and it's set up some
+
+354
+00:17:14,860 --> 00:17:17,740
+radiofrequency interface interference
+
+355
+00:17:17,740 --> 00:17:20,740
+then at the IP level it just drops that
+
+356
+00:17:20,740 --> 00:17:23,410
+packet and says whoops I screwed up
+
+357
+00:17:23,410 --> 00:17:25,780
+sorry it doesn't even say sorry it just
+
+358
+00:17:25,780 --> 00:17:27,960
+does it silently
+
+359
+00:17:27,960 --> 00:17:30,670
+and then you can as a programmer make
+
+360
+00:17:30,670 --> 00:17:32,500
+use of that very global level so
+
+361
+00:17:32,500 --> 00:17:35,110
+normally as a programmer you don't
+
+362
+00:17:35,110 --> 00:17:36,640
+really want to program at that level
+
+363
+00:17:36,640 --> 00:17:38,860
+because you'll send packets and they
+
+364
+00:17:38,860 --> 00:17:41,200
+will get there but you can if you want
+
+365
+00:17:41,200 --> 00:17:44,860
+to and it's called UDP a protocol it's
+
+366
+00:17:44,860 --> 00:17:47,890
+just a small software layer over IP and
+
+367
+00:17:47,890 --> 00:17:49,990
+there's some applications that you'll
+
+368
+00:17:49,990 --> 00:17:51,550
+see for example in the computer game
+
+369
+00:17:51,550 --> 00:17:54,490
+world where you want to send information
+
+370
+00:17:54,490 --> 00:17:57,010
+really fast and if some information gets
+
+371
+00:17:57,010 --> 00:17:59,020
+dropped it's not a big deal that people
+
+372
+00:17:59,020 --> 00:18:01,630
+actually program at that level we won't
+
+373
+00:18:01,630 --> 00:18:03,840
+really talk about that the more common
+
+374
+00:18:03,840 --> 00:18:07,690
+protocol that gets used and carries 99%
+
+375
+00:18:07,690 --> 00:18:09,910
+of Internet traffic is what's called TCP
+
+376
+00:18:09,910 --> 00:18:11,920
+or transmission control protocol and
+
+377
+00:18:11,920 --> 00:18:15,460
+that provides a reliable the equivalent
+
+378
+00:18:15,460 --> 00:18:18,430
+of telephone connection that I can
+
+379
+00:18:18,430 --> 00:18:22,270
+reliably send data from point A to point
+
+380
+00:18:22,270 --> 00:18:26,860
+B as many bytes as I like it's a
+
+381
+00:18:26,860 --> 00:18:27,700
+guaranteed
+
+382
+00:18:27,700 --> 00:18:30,730
+every it's sometimes fast and sometimes
+
+383
+00:18:30,730 --> 00:18:33,580
+not but it's there and it's built on top
+
+384
+00:18:33,580 --> 00:18:37,570
+of the IPO of this datagram meaning that
+
+385
+00:18:37,570 --> 00:18:39,100
+it has to take whatever you're sending
+
+386
+00:18:39,100 --> 00:18:40,990
+and slice it up into these single
+
+387
+00:18:40,990 --> 00:18:43,570
+packets if one of them doesn't get sent
+
+388
+00:18:43,570 --> 00:18:46,260
+it will resend it until it gets there
+
+389
+00:18:46,260 --> 00:18:48,370
+they have to deal with the fact that
+
+390
+00:18:48,370 --> 00:18:50,679
+packets can travel different paths and
+
+391
+00:18:50,679 --> 00:18:53,049
+one can get ahead of the other in
+
+392
+00:18:53,049 --> 00:18:55,090
+transmission and so it has to reorder
+
+393
+00:18:55,090 --> 00:18:57,519
+them in the correct sequence and so
+
+394
+00:18:57,519 --> 00:18:59,340
+there's a lot of stuff under it but
+
+395
+00:18:59,340 --> 00:19:01,659
+we'll just assume that it kind of works
+
+396
+00:19:01,659 --> 00:19:04,630
+and so you can just rely think about it
+
+397
+00:19:04,630 --> 00:19:07,360
+is I have a stream connection I can send
+
+398
+00:19:07,360 --> 00:19:09,820
+from A to B and B can send a stream of
+
+399
+00:19:09,820 --> 00:19:14,549
+data back to me and we're all happy and
+
+400
+00:19:14,549 --> 00:19:17,110
+so that's the version that looks like
+
+401
+00:19:17,110 --> 00:19:19,899
+file IO I just keep writing to a file
+
+402
+00:19:19,899 --> 00:19:22,059
+and it's sending packets over the
+
+403
+00:19:22,059 --> 00:19:25,630
+network to the other end and then the
+
+404
+00:19:25,630 --> 00:19:27,940
+other side can be sending stuff to me
+
+405
+00:19:27,940 --> 00:19:29,889
+and I'm just reading it and I'm just
+
+406
+00:19:29,889 --> 00:19:32,679
+reading bytes of data not worrying about
+
+407
+00:19:32,679 --> 00:19:34,659
+how that got broken up into individual
+
+408
+00:19:34,659 --> 00:19:38,080
+packets and so that's referred to as the
+
+409
+00:19:38,080 --> 00:19:40,330
+sockets interface and you'll hear the
+
+410
+00:19:40,330 --> 00:19:41,860
+term socket programming and that's
+
+411
+00:19:41,860 --> 00:19:47,850
+exactly what we're talking about
+
+412
+00:19:47,850 --> 00:19:55,779
+and so from a sort of software system
+
+413
+00:19:55,779 --> 00:19:58,960
+than software hardware system then the
+
+414
+00:19:58,960 --> 00:20:00,880
+client and the server are both
+
+415
+00:20:00,880 --> 00:20:03,580
+implemented as application programs at
+
+416
+00:20:03,580 --> 00:20:07,269
+the respective endpoints on their hosts
+
+417
+00:20:07,269 --> 00:20:11,889
+and they make use of of software and
+
+418
+00:20:11,889 --> 00:20:15,730
+libraries that run at some combination
+
+419
+00:20:15,730 --> 00:20:17,350
+of the user level and at the kernel
+
+420
+00:20:17,350 --> 00:20:19,960
+level and therefore I have access to
+
+421
+00:20:19,960 --> 00:20:26,139
+direct resources and so I is a program
+
+422
+00:20:26,139 --> 00:20:27,940
+or an application programmer then make
+
+423
+00:20:27,940 --> 00:20:32,590
+use of this software API that lets me do
+
+424
+00:20:32,590 --> 00:20:35,320
+socket programming and it's based on
+
+425
+00:20:35,320 --> 00:20:42,430
+gives directly supports tcp/ip
+
+426
+00:20:42,430 --> 00:20:45,680
+so first of all we're going to talk most
+
+427
+00:20:45,680 --> 00:20:48,200
+of the time about what's called ipv4 a
+
+428
+00:20:48,200 --> 00:20:50,720
+version 4 which is the one that's been
+
+429
+00:20:50,720 --> 00:20:54,500
+running for since the 1980s I think
+
+430
+00:20:54,500 --> 00:20:58,730
+early 1980s and is this the standard and
+
+431
+00:20:58,730 --> 00:21:01,490
+we'll talk very only mentioned very
+
+432
+00:21:01,490 --> 00:21:04,040
+briefly the idea of what's called ipv6
+
+433
+00:21:04,040 --> 00:21:06,100
+which is sort of a next-generation
+
+434
+00:21:06,100 --> 00:21:11,120
+version so the idea of a ipv4 and this
+
+435
+00:21:11,120 --> 00:21:13,640
+is now we're talking about IP and and
+
+436
+00:21:13,640 --> 00:21:15,860
+this is true of TCP as well is that an
+
+437
+00:21:15,860 --> 00:21:21,320
+address is actually just 32 bits but
+
+438
+00:21:21,320 --> 00:21:22,820
+it's usually expressed in what they call
+
+439
+00:21:22,820 --> 00:21:25,040
+dotted decimal form and you've seen
+
+440
+00:21:25,040 --> 00:21:28,330
+these addresses before that it's four
+
+441
+00:21:28,330 --> 00:21:31,670
+decimal numbers and they can only range
+
+442
+00:21:31,670 --> 00:21:35,240
+between 0 and 255 because each one of
+
+443
+00:21:35,240 --> 00:21:37,010
+them is a single bytes worth of
+
+444
+00:21:37,010 --> 00:21:38,780
+information so we're used to writing
+
+445
+00:21:38,780 --> 00:21:40,970
+things in hex now in this course but
+
+446
+00:21:40,970 --> 00:21:43,310
+we're going to write it as each byte is
+
+447
+00:21:43,310 --> 00:21:46,010
+written as a decimal digit and they're
+
+448
+00:21:46,010 --> 00:21:49,970
+actually passed and stored in what's
+
+449
+00:21:49,970 --> 00:21:52,190
+called network byte order which is big
+
+450
+00:21:52,190 --> 00:21:55,190
+endian byte order and so we have to
+
+451
+00:21:55,190 --> 00:21:56,990
+worry about the whole big endian vs.
+
+452
+00:21:56,990 --> 00:21:59,090
+Goodell Indian thing when we're doing
+
+453
+00:21:59,090 --> 00:22:02,450
+network programming and you can actually
+
+454
+00:22:02,450 --> 00:22:05,270
+learn a lot there's a whole levels of
+
+455
+00:22:05,270 --> 00:22:07,280
+how the different bytes mean but for
+
+456
+00:22:07,280 --> 00:22:10,250
+example any IP address it starts with
+
+457
+00:22:10,250 --> 00:22:18,560
+128 dot 2 is at CMU I think and then and
+
+458
+00:22:18,560 --> 00:22:22,850
+so essentially CMU owns that part of the
+
+459
+00:22:22,850 --> 00:22:26,570
+IP address space which if you think
+
+460
+00:22:26,570 --> 00:22:30,160
+about that's approximately 2 to the 64th
+
+461
+00:22:30,160 --> 00:22:34,340
+2 to the
+
+462
+00:22:34,340 --> 00:22:37,480
+no not to the 64th - to the sixteenth
+
+463
+00:22:37,480 --> 00:22:40,669
+different IP addresses available for use
+
+464
+00:22:40,669 --> 00:22:47,900
+by campus alma and as i mentioned
+
+465
+00:22:47,900 --> 00:22:51,020
+there's a newer version called ipv6 that
+
+466
+00:22:51,020 --> 00:22:55,700
+gives you a 128-bit addresses you can
+
+467
+00:22:55,700 --> 00:22:57,740
+imagine actually that if you think about
+
+468
+00:22:57,740 --> 00:23:01,159
+how many nodes are there in the Internet
+
+469
+00:23:01,159 --> 00:23:04,940
+if a four byte address is only to the 32
+
+470
+00:23:04,940 --> 00:23:09,679
+so that's four billion and I don't know
+
+471
+00:23:09,679 --> 00:23:11,750
+about you but I have a lot of different
+
+472
+00:23:11,750 --> 00:23:15,440
+things that use IP I have a phone I have
+
+473
+00:23:15,440 --> 00:23:19,130
+two laptops I have a couple desktops so
+
+474
+00:23:19,130 --> 00:23:22,669
+if all if every one of us used multiple
+
+475
+00:23:22,669 --> 00:23:25,070
+IP addresses then actually the world
+
+476
+00:23:25,070 --> 00:23:26,570
+would be out of them right there's seven
+
+477
+00:23:26,570 --> 00:23:28,730
+billion people in the world not all of
+
+478
+00:23:28,730 --> 00:23:30,350
+whom have access to the Internet but a
+
+479
+00:23:30,350 --> 00:23:33,020
+large fraction of them do and so there's
+
+480
+00:23:33,020 --> 00:23:35,299
+a whole kind of crazy way of dealing
+
+481
+00:23:35,299 --> 00:23:38,929
+with the the multitude of possible IP
+
+482
+00:23:38,929 --> 00:23:41,390
+addresses so the obvious thing would be
+
+483
+00:23:41,390 --> 00:23:43,399
+well let's just allocate a lot more
+
+484
+00:23:43,399 --> 00:23:46,429
+addresses and jump let's just skip 64
+
+485
+00:23:46,429 --> 00:23:48,440
+bits and go right to 128 and that's the
+
+486
+00:23:48,440 --> 00:23:51,470
+idea behind ipv6 but quite honestly this
+
+487
+00:23:51,470 --> 00:23:52,820
+has been one of those technologies
+
+488
+00:23:52,820 --> 00:23:56,419
+that's been out there for over 15 years
+
+489
+00:23:56,419 --> 00:24:00,289
+and still has a very low level of
+
+490
+00:24:00,289 --> 00:24:04,010
+adoption so it's it's still a future
+
+491
+00:24:04,010 --> 00:24:07,520
+technology people have basically figured
+
+492
+00:24:07,520 --> 00:24:09,409
+out all these crazy schemes to make use
+
+493
+00:24:09,409 --> 00:24:11,990
+of of just stick within the four byte
+
+494
+00:24:11,990 --> 00:24:19,340
+limit um
+
+495
+00:24:19,340 --> 00:24:24,050
+okay so let's start talking the program
+
+496
+00:24:24,050 --> 00:24:26,580
+the sort of programmer perspective on
+
+497
+00:24:26,580 --> 00:24:32,430
+this and this is one area where you'll
+
+498
+00:24:32,430 --> 00:24:34,980
+wish you weren't programming in C but
+
+499
+00:24:34,980 --> 00:24:37,800
+you are so there's a lot of really
+
+500
+00:24:37,800 --> 00:24:40,550
+crufty stuff and it was all developed
+
+501
+00:24:40,550 --> 00:24:42,990
+most of the software protocols were
+
+502
+00:24:42,990 --> 00:24:46,200
+conceived before C even was what it is
+
+503
+00:24:46,200 --> 00:24:46,830
+today
+
+504
+00:24:46,830 --> 00:24:49,350
+so like the Kernighan and Ritchie book
+
+505
+00:24:49,350 --> 00:24:51,390
+you have is called the second edition
+
+506
+00:24:51,390 --> 00:24:53,910
+and it's based on what was called ANSI C
+
+507
+00:24:53,910 --> 00:24:57,810
+or ISO C but these all date before that
+
+508
+00:24:57,810 --> 00:24:59,940
+they date back to the original Kernighan
+
+509
+00:24:59,940 --> 00:25:02,070
+and Ritchie so for example void star did
+
+510
+00:25:02,070 --> 00:25:05,580
+not exist in that era and so you use
+
+511
+00:25:05,580 --> 00:25:09,240
+care star as a generic pointer and so
+
+512
+00:25:09,240 --> 00:25:10,620
+there's just a lot of stuff in this
+
+513
+00:25:10,620 --> 00:25:13,230
+programming interface where you go wow
+
+514
+00:25:13,230 --> 00:25:15,210
+that is really crufty and that that
+
+515
+00:25:15,210 --> 00:25:18,000
+truth is yes you're right so in
+
+516
+00:25:18,000 --> 00:25:19,500
+particular there's a lot of different
+
+517
+00:25:19,500 --> 00:25:21,210
+structures that are defined and one of
+
+518
+00:25:21,210 --> 00:25:22,920
+them is called an in adder which means
+
+519
+00:25:22,920 --> 00:25:25,650
+internet address and it's just defined
+
+520
+00:25:25,650 --> 00:25:30,210
+to be a 32-bit unsigned number and in
+
+521
+00:25:30,210 --> 00:25:33,390
+general as I mentioned there the so
+
+522
+00:25:33,390 --> 00:25:35,040
+called network byte order whoever
+
+523
+00:25:35,040 --> 00:25:37,380
+designed the original protocols was a
+
+524
+00:25:37,380 --> 00:25:40,440
+fan of big endian addressing and so
+
+525
+00:25:40,440 --> 00:25:43,230
+that's what it is even though actually
+
+526
+00:25:43,230 --> 00:25:44,970
+most of the machines that are out there
+
+527
+00:25:44,970 --> 00:25:47,250
+in this world are little endian and so
+
+528
+00:25:47,250 --> 00:25:50,190
+there's a set of standard library
+
+529
+00:25:50,190 --> 00:25:52,020
+functions that you use to convert
+
+530
+00:25:52,020 --> 00:25:54,450
+between network order and host order and
+
+531
+00:25:54,450 --> 00:25:57,410
+the idea of it is now if I run my
+
+532
+00:25:57,410 --> 00:26:00,600
+software on a little Indian or a big
+
+533
+00:26:00,600 --> 00:26:03,570
+endian machine these functions will do
+
+534
+00:26:03,570 --> 00:26:05,670
+the right thing so if I just use these
+
+535
+00:26:05,670 --> 00:26:08,280
+standard libraries then I don't have to
+
+536
+00:26:08,280 --> 00:26:10,800
+worry about porting it every time I
+
+537
+00:26:10,800 --> 00:26:12,620
+change the word ordering of a machine
+
+538
+00:26:12,620 --> 00:26:15,990
+one of the things you'll notice here is
+
+539
+00:26:15,990 --> 00:26:20,220
+there is no function to convert 64-bit
+
+540
+00:26:20,220 --> 00:26:24,330
+data between a network order and host
+
+541
+00:26:24,330 --> 00:26:27,600
+order so I don't know what people do
+
+542
+00:26:27,600 --> 00:26:30,420
+when I do it I just write my own saw my
+
+543
+00:26:30,420 --> 00:26:30,870
+own
+
+544
+00:26:30,870 --> 00:26:34,350
+to do it or I don't because I know my
+
+545
+00:26:34,350 --> 00:26:37,590
+other end is a little endian machine
+
+546
+00:26:37,590 --> 00:26:40,580
+so anyways these are already some
+
+547
+00:26:40,580 --> 00:26:44,700
+functions you'll start seeing for that
+
+548
+00:26:44,700 --> 00:26:47,590
+look like network conversion software
+
+549
+00:26:47,590 --> 00:26:49,430
+[Music]
+
+550
+00:26:49,430 --> 00:26:52,830
+and as I mentioned the addresses are
+
+551
+00:26:52,830 --> 00:26:54,990
+written in a dotted decimal form and
+
+552
+00:26:54,990 --> 00:26:59,820
+it's also big endian so if I were to
+
+553
+00:26:59,820 --> 00:27:03,809
+write in hex 128 is of course 8 0 so
+
+554
+00:27:03,809 --> 00:27:06,240
+that's the most significant byte of the
+
+555
+00:27:06,240 --> 00:27:12,450
+IP address and then there is a set of
+
+556
+00:27:12,450 --> 00:27:15,540
+functions API calls you can use to
+
+557
+00:27:15,540 --> 00:27:17,490
+convert between this dotted decimal
+
+558
+00:27:17,490 --> 00:27:22,500
+format and the actual just a 32-bit
+
+559
+00:27:22,500 --> 00:27:26,640
+unsigned int and actually it used to be
+
+560
+00:27:26,640 --> 00:27:29,340
+there is you might see some older
+
+561
+00:27:29,340 --> 00:27:30,840
+presentations where they use different
+
+562
+00:27:30,840 --> 00:27:33,330
+names for this but the most recent
+
+563
+00:27:33,330 --> 00:27:38,100
+version API calls this the the
+
+564
+00:27:38,100 --> 00:27:40,230
+presentation version the dotted decimal
+
+565
+00:27:40,230 --> 00:27:44,480
+they referred to it as a presentation
+
+566
+00:27:44,480 --> 00:27:47,490
+then you can look up the and it's in the
+
+567
+00:27:47,490 --> 00:27:50,610
+book to what the the calls to these look
+
+568
+00:27:50,610 --> 00:27:55,679
+like but you probably don't or very
+
+569
+00:27:55,679 --> 00:27:59,220
+seldom when you're thinking about I want
+
+570
+00:27:59,220 --> 00:28:00,870
+to go to Google you don't think about
+
+571
+00:28:00,870 --> 00:28:03,620
+what its IP address is you just go to
+
+572
+00:28:03,620 --> 00:28:08,340
+WGAL calm and for everything you do you
+
+573
+00:28:08,340 --> 00:28:11,429
+refer to it by this I it would have
+
+574
+00:28:11,429 --> 00:28:13,559
+referred called Internet domain names
+
+575
+00:28:13,559 --> 00:28:15,830
+which is a hierarchical naming system
+
+576
+00:28:15,830 --> 00:28:18,840
+whereas you know there's dot e-d-u is
+
+577
+00:28:18,840 --> 00:28:22,890
+for educational institutions dot-com is
+
+578
+00:28:22,890 --> 00:28:26,910
+for commercial net is general networking
+
+579
+00:28:26,910 --> 00:28:30,570
+of many countries have their own suffix
+
+580
+00:28:30,570 --> 00:28:34,679
+so you know dot de is for Germany and so
+
+581
+00:28:34,679 --> 00:28:37,350
+forth and so those are called the first
+
+582
+00:28:37,350 --> 00:28:39,390
+level domain names and then there's a
+
+583
+00:28:39,390 --> 00:28:41,340
+hierarchical naming structure under that
+
+584
+00:28:41,340 --> 00:28:45,159
+and up
+
+585
+00:28:45,159 --> 00:28:48,289
+there's actually an interesting question
+
+586
+00:28:48,289 --> 00:28:52,570
+of okay how do I then map from those
+
+587
+00:28:52,570 --> 00:28:54,799
+hierarchical names those domain names
+
+588
+00:28:54,799 --> 00:28:57,889
+into this dotted decimal or the 32 bit
+
+589
+00:28:57,889 --> 00:29:01,929
+IP address and the job of that is by a
+
+590
+00:29:01,929 --> 00:29:05,899
+very large distributed system called the
+
+591
+00:29:05,899 --> 00:29:09,110
+DNS the domain name system where the
+
+592
+00:29:09,110 --> 00:29:13,009
+only sort of centrally managed part of
+
+593
+00:29:13,009 --> 00:29:15,799
+it is at the top level so for each of
+
+594
+00:29:15,799 --> 00:29:18,610
+these first level domain names there's
+
+595
+00:29:18,610 --> 00:29:22,250
+there's a collection a very large
+
+596
+00:29:22,250 --> 00:29:24,440
+collection of machines that keep track
+
+597
+00:29:24,440 --> 00:29:29,990
+of all the all the IP addresses that map
+
+598
+00:29:29,990 --> 00:29:32,450
+to one of those first level domain names
+
+599
+00:29:32,450 --> 00:29:35,149
+and then for example CMU maintains its
+
+600
+00:29:35,149 --> 00:29:37,730
+own naming Authority so anything that
+
+601
+00:29:37,730 --> 00:29:42,379
+says something dot CMU edu there's local
+
+602
+00:29:42,379 --> 00:29:46,250
+DNS servers within CMU that are picking
+
+603
+00:29:46,250 --> 00:29:51,740
+apart ok where should you know if I say
+
+604
+00:29:51,740 --> 00:29:57,019
+CS CMU edu what would be the the IP
+
+605
+00:29:57,019 --> 00:30:01,490
+address for that well and it's actually
+
+606
+00:30:01,490 --> 00:30:03,259
+pretty interesting how this is managed
+
+607
+00:30:03,259 --> 00:30:04,669
+because it's all it's totally
+
+608
+00:30:04,669 --> 00:30:09,740
+decentralized there's a whole set of
+
+609
+00:30:09,740 --> 00:30:15,460
+protocols that govern how naming is done
+
+610
+00:30:15,460 --> 00:30:17,929
+but conceptually we can think of it as
+
+611
+00:30:17,929 --> 00:30:20,029
+just this big database that gives me a
+
+612
+00:30:20,029 --> 00:30:23,419
+mapping where I can give a domain name
+
+613
+00:30:23,419 --> 00:30:26,049
+and it will get back to me a one or more
+
+614
+00:30:26,049 --> 00:30:29,360
+IP addresses I can give an IP address
+
+615
+00:30:29,360 --> 00:30:31,159
+and it will come back with one or more
+
+616
+00:30:31,159 --> 00:30:34,650
+domain names
+
+617
+00:30:34,650 --> 00:30:39,330
+oh and so there's actually an
+
+618
+00:30:39,330 --> 00:30:42,270
+application you can run on most machines
+
+619
+00:30:42,270 --> 00:30:44,520
+called nslookup and there's another one
+
+620
+00:30:44,520 --> 00:30:47,630
+called dig that you can use to find
+
+621
+00:30:47,630 --> 00:30:51,600
+basically probe the DNS and find in
+
+622
+00:30:51,600 --> 00:30:53,490
+either direction you can look at the
+
+623
+00:30:53,490 --> 00:30:56,070
+given a domain name you can find its IP
+
+624
+00:30:56,070 --> 00:30:58,710
+address given an IP address you can find
+
+625
+00:30:58,710 --> 00:31:03,030
+its domain name and we also I'll show
+
+626
+00:31:03,030 --> 00:31:06,960
+you some code that just as an example of
+
+627
+00:31:06,960 --> 00:31:10,920
+how you do the programming I'll just
+
+628
+00:31:10,920 --> 00:31:14,720
+show that momentarily called hostname so
+
+629
+00:31:14,720 --> 00:31:29,280
+just some examples
+
+630
+00:31:29,280 --> 00:31:33,000
+you know if I look up some address like
+
+631
+00:31:33,000 --> 00:31:36,090
+the the website for the computer science
+
+632
+00:31:36,090 --> 00:31:39,740
+school computer science using nslookup
+
+633
+00:31:39,740 --> 00:31:43,370
+it comes back can people see this okay
+
+634
+00:31:43,370 --> 00:31:46,920
+doing it bigger it's okay so this is
+
+635
+00:31:46,920 --> 00:31:49,290
+what NSF looks like and this stuff here
+
+636
+00:31:49,290 --> 00:31:53,190
+just tells you you know who where was
+
+637
+00:31:53,190 --> 00:31:56,880
+the actual directory entry in the which
+
+638
+00:31:56,880 --> 00:31:58,530
+DNS server actually gave this
+
+639
+00:31:58,530 --> 00:32:04,470
+information back and it says that WCS
+
+640
+00:32:04,470 --> 00:32:09,750
+CMU is actually a synonym for a weirder
+
+641
+00:32:09,750 --> 00:32:15,030
+one called w web - l-bfgs CMU dot edu
+
+642
+00:32:15,030 --> 00:32:18,750
+and its IP address is 128 - like you'd
+
+643
+00:32:18,750 --> 00:32:19,380
+expect
+
+644
+00:32:19,380 --> 00:32:24,180
+- 1713 and of course that works not just
+
+645
+00:32:24,180 --> 00:32:31,410
+at CMU but I can you know go ask about
+
+646
+00:32:31,410 --> 00:32:36,870
+what Stanford is up to and it will come
+
+647
+00:32:36,870 --> 00:32:40,530
+back and its IP addresses of something
+
+648
+00:32:40,530 --> 00:32:48,630
+170 1.64 and that's been managed by that
+
+649
+00:32:48,630 --> 00:32:51,140
+and you'll see again it's I asked for
+
+650
+00:32:51,140 --> 00:32:54,570
+WCS stanford.edu it said well the real
+
+651
+00:32:54,570 --> 00:32:57,030
+name of that is CS dot stanford.edu and
+
+652
+00:32:57,030 --> 00:33:01,590
+this actually is a point that the the
+
+653
+00:33:01,590 --> 00:33:05,420
+mapping between domain names and
+
+654
+00:33:05,420 --> 00:33:08,310
+internet addresses is not one-to-one you
+
+655
+00:33:08,310 --> 00:33:10,260
+can have multiple domain names that
+
+656
+00:33:10,260 --> 00:33:14,160
+refer to the same Internet address but
+
+657
+00:33:14,160 --> 00:33:17,850
+you can also have multiple internet
+
+658
+00:33:17,850 --> 00:33:22,010
+addresses
+
+659
+00:33:22,010 --> 00:33:29,770
+excuse me
+
+660
+00:33:29,770 --> 00:33:36,450
+that's weird
+
+661
+00:33:36,450 --> 00:33:39,809
+so like twitter.com when I ask for it it
+
+662
+00:33:39,809 --> 00:33:44,179
+comes back with four different addresses
+
+663
+00:33:44,179 --> 00:33:51,080
+and if I do the exact same thing again
+
+664
+00:33:51,080 --> 00:33:54,539
+mmm Kim but yeah you see it came back
+
+665
+00:33:54,539 --> 00:33:59,519
+with the same no not even the same
+
+666
+00:33:59,519 --> 00:34:03,869
+addresses it came back for example here
+
+667
+00:34:03,869 --> 00:34:07,499
+the one that ends with dot six that
+
+668
+00:34:07,499 --> 00:34:09,750
+wasn't in that first was so it came back
+
+669
+00:34:09,750 --> 00:34:11,760
+with a slightly different set of
+
+670
+00:34:11,760 --> 00:34:13,770
+addresses and a somewhat different order
+
+671
+00:34:13,770 --> 00:34:16,589
+and the idea of that is that actually
+
+672
+00:34:16,589 --> 00:34:18,899
+has multiple servers so when I send to
+
+673
+00:34:18,899 --> 00:34:20,879
+twitter.com or Google or any of these
+
+674
+00:34:20,879 --> 00:34:23,669
+major servers there's not just one place
+
+675
+00:34:23,669 --> 00:34:25,139
+in the internet that's handling
+
+676
+00:34:25,139 --> 00:34:26,990
+everybody's Google traffic through
+
+677
+00:34:26,990 --> 00:34:29,159
+thousands of places spread around the
+
+678
+00:34:29,159 --> 00:34:29,609
+world
+
+679
+00:34:29,609 --> 00:34:34,020
+and the way they get you there is by
+
+680
+00:34:34,020 --> 00:34:37,349
+playing tricks with the DNS that Google
+
+681
+00:34:37,349 --> 00:34:39,740
+is constantly sending updates to the it
+
+682
+00:34:39,740 --> 00:34:42,629
+maintains its own DNS servers so it's
+
+683
+00:34:42,629 --> 00:34:44,309
+constantly changing them and it will
+
+684
+00:34:44,309 --> 00:34:45,780
+actually give you different addresses
+
+685
+00:34:45,780 --> 00:34:47,190
+depending on where in the world you're
+
+686
+00:34:47,190 --> 00:34:49,619
+located as well to try and provide a
+
+687
+00:34:49,619 --> 00:34:52,169
+server that's sort of reasonably close
+
+688
+00:34:52,169 --> 00:34:55,829
+to you geographically so there's all
+
+689
+00:34:55,829 --> 00:34:57,780
+just all kinds of tricks that happen
+
+690
+00:34:57,780 --> 00:35:00,240
+through DNS that is part of the way they
+
+691
+00:35:00,240 --> 00:35:04,020
+can sort of manage this huge set of
+
+692
+00:35:04,020 --> 00:35:07,690
+addresses
+
+693
+00:35:07,690 --> 00:35:09,940
+and then there's some other domain names
+
+694
+00:35:09,940 --> 00:35:13,599
+that don't have any IP address that
+
+695
+00:35:13,599 --> 00:35:15,579
+they're somewhere in the hierarchy that
+
+696
+00:35:15,579 --> 00:35:17,349
+hierarchical naming system but they're
+
+697
+00:35:17,349 --> 00:35:19,210
+not actually referring to a particular
+
+698
+00:35:19,210 --> 00:35:27,130
+host so it's a Multi multi mapping in
+
+699
+00:35:27,130 --> 00:35:39,240
+the the API city reflects it
+
+700
+00:35:39,240 --> 00:35:42,460
+so this is just going what I told you
+
+701
+00:35:42,460 --> 00:35:45,250
+they sometimes one-to-one sometimes many
+
+702
+00:35:45,250 --> 00:35:47,610
+domain names refer to the same address
+
+703
+00:35:47,610 --> 00:35:51,340
+sometimes of one name maps to multiple
+
+704
+00:35:51,340 --> 00:35:54,220
+addresses that change over time and then
+
+705
+00:35:54,220 --> 00:35:57,490
+there's some where it's a valid name but
+
+706
+00:35:57,490 --> 00:35:59,320
+it doesn't have an IP address it doesn't
+
+707
+00:35:59,320 --> 00:36:04,470
+have a host associated with a question
+
+708
+00:36:04,470 --> 00:36:06,670
+for example let's say I create my own
+
+709
+00:36:06,670 --> 00:36:10,690
+servers how does that generate it oh how
+
+710
+00:36:10,690 --> 00:36:12,280
+do I get how do you get your own IP
+
+711
+00:36:12,280 --> 00:36:14,860
+address well all you have to beg borrow
+
+712
+00:36:14,860 --> 00:36:17,350
+or you have to either borrow or buy them
+
+713
+00:36:17,350 --> 00:36:21,220
+so for example at CMU there is some
+
+714
+00:36:21,220 --> 00:36:22,840
+number of what they call statically
+
+715
+00:36:22,840 --> 00:36:25,090
+allocated IP addresses where it's just
+
+716
+00:36:25,090 --> 00:36:27,310
+fixed assigned to that machine and you
+
+717
+00:36:27,310 --> 00:36:29,050
+can register form and request them
+
+718
+00:36:29,050 --> 00:36:34,720
+through computing services but most you
+
+719
+00:36:34,720 --> 00:36:37,210
+don't have that most you get one that's
+
+720
+00:36:37,210 --> 00:36:39,250
+I signed dynamically so there's a pool
+
+721
+00:36:39,250 --> 00:36:42,640
+of addresses that you basically they
+
+722
+00:36:42,640 --> 00:36:44,500
+call them leasing that you are assigned
+
+723
+00:36:44,500 --> 00:36:47,590
+with for a while and then but it could
+
+724
+00:36:47,590 --> 00:36:52,200
+possibly be reassigned to someone else
+
+725
+00:36:52,200 --> 00:36:54,580
+and that's part of the way it can manage
+
+726
+00:36:54,580 --> 00:36:57,070
+you know somewhat limited set of IP
+
+727
+00:36:57,070 --> 00:37:03,340
+addresses
+
+728
+00:37:03,340 --> 00:37:14,010
+so the idea of like I said that the main
+
+729
+00:37:14,010 --> 00:37:17,920
+a way we'll think about it is in terms
+
+730
+00:37:17,920 --> 00:37:20,740
+of what's called TCP and it says
+
+731
+00:37:20,740 --> 00:37:22,540
+connection oriented protocol where I
+
+732
+00:37:22,540 --> 00:37:25,330
+establish a connection from one one host
+
+733
+00:37:25,330 --> 00:37:27,250
+establishes a connection to another host
+
+734
+00:37:27,250 --> 00:37:30,220
+and they they can communicate to each
+
+735
+00:37:30,220 --> 00:37:33,460
+other sending arbitrarily long streams
+
+736
+00:37:33,460 --> 00:37:36,040
+of bytes to each other and so the
+
+737
+00:37:36,040 --> 00:37:38,530
+connection is then two hosts that can
+
+738
+00:37:38,530 --> 00:37:40,780
+talk to each other and each of those
+
+739
+00:37:40,780 --> 00:37:45,870
+endpoints is referred to as a socket and
+
+740
+00:37:45,870 --> 00:37:49,510
+so I can and a socket is both an IP
+
+741
+00:37:49,510 --> 00:37:52,750
+address and what's called a port number
+
+742
+00:37:52,750 --> 00:37:56,860
+so there's a 16 by 16 bit number for
+
+743
+00:37:56,860 --> 00:37:59,680
+every connection that's referred to as
+
+744
+00:37:59,680 --> 00:38:02,260
+its port and the reason for that is just
+
+745
+00:38:02,260 --> 00:38:04,360
+because I'm talking to a particular
+
+746
+00:38:04,360 --> 00:38:07,030
+machine that that machine can support
+
+747
+00:38:07,030 --> 00:38:10,180
+different services it can provide SSH
+
+748
+00:38:10,180 --> 00:38:13,480
+connections it can provide FTP
+
+749
+00:38:13,480 --> 00:38:16,210
+connections it can host a mail server it
+
+750
+00:38:16,210 --> 00:38:19,480
+can host a web server so a particular
+
+751
+00:38:19,480 --> 00:38:21,640
+machine might have a multitude of
+
+752
+00:38:21,640 --> 00:38:23,860
+different services and so those are
+
+753
+00:38:23,860 --> 00:38:25,990
+differentiated from each other with what
+
+754
+00:38:25,990 --> 00:38:27,910
+are called port numbers and similarly
+
+755
+00:38:27,910 --> 00:38:30,100
+Isaac client might have connections to
+
+756
+00:38:30,100 --> 00:38:32,770
+dozens of hosts going at any given time
+
+757
+00:38:32,770 --> 00:38:36,520
+I'm cruising the web I'm you know doing
+
+758
+00:38:36,520 --> 00:38:39,460
+all that different stuff and that's all
+
+759
+00:38:39,460 --> 00:38:41,140
+differentiated the client end that
+
+760
+00:38:41,140 --> 00:38:44,160
+there's different ports associated with
+
+761
+00:38:44,160 --> 00:38:46,600
+your different programs that are running
+
+762
+00:38:46,600 --> 00:38:51,340
+and so a port then is a 16-bit integer
+
+763
+00:38:51,340 --> 00:38:54,990
+that identifies which particular
+
+764
+00:38:54,990 --> 00:38:58,180
+endpoint is being communicated with it
+
+765
+00:38:58,180 --> 00:39:00,010
+either the client side of the server
+
+766
+00:39:00,010 --> 00:39:02,440
+side and typically at the client side
+
+767
+00:39:02,440 --> 00:39:04,780
+these are assigned dynamically and the
+
+768
+00:39:04,780 --> 00:39:06,820
+referred to as ephemeral ports meaning
+
+769
+00:39:06,820 --> 00:39:09,970
+they only are assigned for the limited
+
+770
+00:39:09,970 --> 00:39:11,650
+duration that you have a connection with
+
+771
+00:39:11,650 --> 00:39:14,110
+that that you're maintaining that
+
+772
+00:39:14,110 --> 00:39:15,870
+connection and then
+
+773
+00:39:15,870 --> 00:39:18,250
+there has to be some way if I'm going to
+
+774
+00:39:18,250 --> 00:39:22,540
+contact and I want to know the DNS will
+
+775
+00:39:22,540 --> 00:39:25,300
+tell me what the IP address is of say
+
+776
+00:39:25,300 --> 00:39:28,690
+google.com but I have to know that
+
+777
+00:39:28,690 --> 00:39:31,900
+am i communicating with its web service
+
+778
+00:39:31,900 --> 00:39:36,700
+which is port 80 or HTTP secure socket
+
+779
+00:39:36,700 --> 00:39:39,070
+is a different report number so which
+
+780
+00:39:39,070 --> 00:39:41,680
+service I'm asking for and there's a
+
+781
+00:39:41,680 --> 00:39:43,900
+standard list what are called well-known
+
+782
+00:39:43,900 --> 00:39:49,030
+ports that are that I can contact at the
+
+783
+00:39:49,030 --> 00:39:51,790
+server end to get the particular service
+
+784
+00:39:51,790 --> 00:39:54,940
+I'm looking for and those are assigned
+
+785
+00:39:54,940 --> 00:39:59,400
+there's a big waste of port assignments
+
+786
+00:39:59,400 --> 00:40:04,690
+and so the again that's part of the sort
+
+787
+00:40:04,690 --> 00:40:08,500
+of a whole set of internet standards is
+
+788
+00:40:08,500 --> 00:40:10,960
+the the identifiers for the different
+
+789
+00:40:10,960 --> 00:40:14,050
+ports what services those are and how
+
+790
+00:40:14,050 --> 00:40:19,670
+those particular protocols work
+
+791
+00:40:19,670 --> 00:40:28,640
+so when I have a connection then as I
+
+792
+00:40:28,640 --> 00:40:30,230
+mentioned I'll think of it as a
+
+793
+00:40:30,230 --> 00:40:33,740
+connection then is as a link between two
+
+794
+00:40:33,740 --> 00:40:37,640
+machines based on some known port
+
+795
+00:40:37,640 --> 00:40:40,390
+typically at the server end and a
+
+796
+00:40:40,390 --> 00:40:42,830
+dynamically assigned or ephemeral port
+
+797
+00:40:42,830 --> 00:40:45,980
+assigned at the client in and I can
+
+798
+00:40:45,980 --> 00:40:47,690
+refer to then that connection then is
+
+799
+00:40:47,690 --> 00:40:49,610
+identified by the combination of the
+
+800
+00:40:49,610 --> 00:40:52,070
+hosts at the two ends and the ports that
+
+801
+00:40:52,070 --> 00:40:58,080
+they're using
+
+802
+00:40:58,080 --> 00:41:02,280
+and in general then it's the job of the
+
+803
+00:41:02,280 --> 00:41:05,610
+colonel to differentiate the different
+
+804
+00:41:05,610 --> 00:41:07,460
+connections that are coming into a
+
+805
+00:41:07,460 --> 00:41:11,250
+machine and figure out which software
+
+806
+00:41:11,250 --> 00:41:16,020
+which process to wake up when a data you
+
+807
+00:41:16,020 --> 00:41:19,290
+know when some data arrives from another
+
+808
+00:41:19,290 --> 00:41:23,940
+machine in which actual program running
+
+809
+00:41:23,940 --> 00:41:25,860
+on that machine will make use of that
+
+810
+00:41:25,860 --> 00:41:30,480
+data and that's done by associating for
+
+811
+00:41:30,480 --> 00:41:33,920
+each of the ports a particular process
+
+812
+00:41:33,920 --> 00:41:36,870
+executing program that's going to handle
+
+813
+00:41:36,870 --> 00:41:42,000
+those particular requests and it's
+
+814
+00:41:42,000 --> 00:41:45,600
+totally possible for a client to be
+
+815
+00:41:45,600 --> 00:41:49,830
+interacting with a single server over
+
+816
+00:41:49,830 --> 00:41:52,020
+different ports but those are considered
+
+817
+00:41:52,020 --> 00:41:56,400
+to be different connections and and so
+
+818
+00:41:56,400 --> 00:41:58,800
+they don't really interfere with each
+
+819
+00:41:58,800 --> 00:42:04,170
+other
+
+820
+00:42:04,170 --> 00:42:07,180
+so that's what I mentioned is this is
+
+821
+00:42:07,180 --> 00:42:09,220
+what we refer to as sockets programming
+
+822
+00:42:09,220 --> 00:42:12,490
+or the sockets interface it was
+
+823
+00:42:12,490 --> 00:42:14,650
+developed sort of as the internet was
+
+824
+00:42:14,650 --> 00:42:19,590
+evolving in the late 70s and early 80s
+
+825
+00:42:19,590 --> 00:42:23,020
+so socket then as I said is certain
+
+826
+00:42:23,020 --> 00:42:25,540
+logically one end one of the two ends of
+
+827
+00:42:25,540 --> 00:42:28,420
+a connection and from an application
+
+828
+00:42:28,420 --> 00:42:31,090
+point of view you'll see it as a file
+
+829
+00:42:31,090 --> 00:42:34,510
+descriptor just the low-level file stuff
+
+830
+00:42:34,510 --> 00:42:35,980
+that you've already seen that you can do
+
+831
+00:42:35,980 --> 00:42:41,440
+reading and writing from um and and so
+
+832
+00:42:41,440 --> 00:42:44,410
+that that's the sort of mental model
+
+833
+00:42:44,410 --> 00:42:49,800
+that is provided by the socket interface
+
+834
+00:42:49,800 --> 00:42:52,570
+but it's a very different you know the
+
+835
+00:42:52,570 --> 00:42:55,570
+actual implementation of network when
+
+836
+00:42:55,570 --> 00:42:58,690
+you write to a socket it's firing up all
+
+837
+00:42:58,690 --> 00:43:00,520
+kinds of network stuff whereas you write
+
+838
+00:43:00,520 --> 00:43:03,220
+to a disk it's operating a disk
+
+839
+00:43:03,220 --> 00:43:05,320
+controller so at the hardware level and
+
+840
+00:43:05,320 --> 00:43:06,970
+even at the lower levels of software
+
+841
+00:43:06,970 --> 00:43:09,190
+they're very different beasts but you as
+
+842
+00:43:09,190 --> 00:43:10,810
+an application programmer see some
+
+843
+00:43:10,810 --> 00:43:12,120
+commonality there
+
+844
+00:43:12,120 --> 00:43:15,460
+okay so let's jump right into the API
+
+845
+00:43:15,460 --> 00:43:18,550
+and again this is a place where you
+
+846
+00:43:18,550 --> 00:43:20,260
+you'll wish you were programming in a
+
+847
+00:43:20,260 --> 00:43:24,700
+language that had a type hierarchy but
+
+848
+00:43:24,700 --> 00:43:28,440
+you aren't you're programming in C so
+
+849
+00:43:28,440 --> 00:43:31,570
+there's a type there's a zillion
+
+850
+00:43:31,570 --> 00:43:33,520
+Struck's that you kind of have to get
+
+851
+00:43:33,520 --> 00:43:35,260
+familiar with but one's called a sock
+
+852
+00:43:35,260 --> 00:43:38,950
+adder and basically it's just a 16 bytes
+
+853
+00:43:38,950 --> 00:43:41,860
+worth of stuff where the the only thing
+
+854
+00:43:41,860 --> 00:43:44,320
+that's special here is that the leading
+
+855
+00:43:44,320 --> 00:43:47,230
+two bytes a designate what type of
+
+856
+00:43:47,230 --> 00:43:49,540
+socket this is and particularly be
+
+857
+00:43:49,540 --> 00:43:51,970
+different whether it's a TCP socket an
+
+858
+00:43:51,970 --> 00:43:57,490
+ipv6 socket a UDP socket and all those
+
+859
+00:43:57,490 --> 00:44:00,250
+will have different numbers a different
+
+860
+00:44:00,250 --> 00:44:02,860
+constant in there that tells you which
+
+861
+00:44:02,860 --> 00:44:05,170
+type of socket it is and then the high
+
+862
+00:44:05,170 --> 00:44:08,710
+level the sockets in a lot of the
+
+863
+00:44:08,710 --> 00:44:10,630
+programs don't need to know you know
+
+864
+00:44:10,630 --> 00:44:12,850
+which type of connection this is they
+
+865
+00:44:12,850 --> 00:44:15,070
+can just deal with they basically call
+
+866
+00:44:15,070 --> 00:44:17,080
+other software to deal with that
+
+867
+00:44:17,080 --> 00:44:19,090
+so that's why it's referred to as being
+
+868
+00:44:19,090 --> 00:44:23,560
+families specific and then the socket
+
+869
+00:44:23,560 --> 00:44:26,380
+stuff isn't even necessarily referred to
+
+870
+00:44:26,380 --> 00:44:28,720
+the internet the capital I internet and
+
+871
+00:44:28,720 --> 00:44:32,320
+so there's a more specific one called a
+
+872
+00:44:32,320 --> 00:44:36,870
+socket or underscore in that is used for
+
+873
+00:44:36,870 --> 00:44:40,560
+ipv4 sockets
+
+874
+00:44:40,560 --> 00:44:44,920
+well not ipv6 and so in particular it
+
+875
+00:44:44,920 --> 00:44:47,350
+fills in fields one is called the port
+
+876
+00:44:47,350 --> 00:44:50,260
+which as I mentioned is 16 bits and then
+
+877
+00:44:50,260 --> 00:44:54,310
+the IP address the four byte IP address
+
+878
+00:44:54,310 --> 00:44:57,610
+both of which are in even if you're
+
+879
+00:44:57,610 --> 00:45:00,400
+running the software on a x86 machine
+
+880
+00:45:00,400 --> 00:45:04,560
+these should be in big endian order up
+
+881
+00:45:04,560 --> 00:45:07,540
+and you'll see that this is what I mean
+
+882
+00:45:07,540 --> 00:45:10,210
+that this is sort of a C's version of
+
+883
+00:45:10,210 --> 00:45:12,550
+subtyping if you know something like C++
+
+884
+00:45:12,550 --> 00:45:15,850
+or Java or you know a language with type
+
+885
+00:45:15,850 --> 00:45:19,000
+inheritance that you can think of it as
+
+886
+00:45:19,000 --> 00:45:23,310
+a sock adder in a sort of a subclass of
+
+887
+00:45:23,310 --> 00:45:26,830
+a sock adder right it has more
+
+888
+00:45:26,830 --> 00:45:28,990
+information it's compatible with but has
+
+889
+00:45:28,990 --> 00:45:33,760
+more information than a socket and then
+
+890
+00:45:33,760 --> 00:45:37,090
+there's another type of for ipv6 has a
+
+891
+00:45:37,090 --> 00:45:39,490
+different kind of struck that they fill
+
+892
+00:45:39,490 --> 00:45:42,760
+in for its information and then they
+
+893
+00:45:42,760 --> 00:45:45,310
+they Pat it out with eight bytes of
+
+894
+00:45:45,310 --> 00:45:48,040
+zeros just because this particular
+
+895
+00:45:48,040 --> 00:45:50,200
+protocol doesn't require the full 16
+
+896
+00:45:50,200 --> 00:45:55,780
+bytes okay so this is sort of what it
+
+897
+00:45:55,780 --> 00:45:59,040
+looks like to operate a full-blown
+
+898
+00:45:59,040 --> 00:46:02,560
+client-server system from a programmers
+
+899
+00:46:02,560 --> 00:46:06,010
+perspective and we're going to for the
+
+900
+00:46:06,010 --> 00:46:09,040
+rest of today and all of Thursday go
+
+901
+00:46:09,040 --> 00:46:11,170
+through all these steps and you as a
+
+902
+00:46:11,170 --> 00:46:14,440
+programmer are actually going to have to
+
+903
+00:46:14,440 --> 00:46:16,390
+understand each of these steps what they
+
+904
+00:46:16,390 --> 00:46:19,390
+do what they mean and how to use them
+
+905
+00:46:19,390 --> 00:46:22,030
+the good news is there's some pretty
+
+906
+00:46:22,030 --> 00:46:23,830
+standard patterns here and so you can
+
+907
+00:46:23,830 --> 00:46:26,170
+often grab some existing code say out of
+
+908
+00:46:26,170 --> 00:46:30,820
+the book to use that will make this not
+
+909
+00:46:30,820 --> 00:46:34,570
+as painful as it might look so but the
+
+910
+00:46:34,570 --> 00:46:36,850
+overall idea of this this picture then
+
+911
+00:46:36,850 --> 00:46:41,080
+is sorry kick it used to fit my remote
+
+912
+00:46:41,080 --> 00:46:46,630
+doesn't work on the the right hand side
+
+913
+00:46:46,630 --> 00:46:48,880
+refers to the steps that the server has
+
+914
+00:46:48,880 --> 00:46:51,400
+to go through and the left hand side is
+
+915
+00:46:51,400 --> 00:46:54,070
+what the client does so the upper right
+
+916
+00:46:54,070 --> 00:46:58,090
+is what it takes to set up a server that
+
+917
+00:46:58,090 --> 00:47:01,390
+is then a program that's running there
+
+918
+00:47:01,390 --> 00:47:04,960
+ready to receive connections from a
+
+919
+00:47:04,960 --> 00:47:09,850
+client and perform various services and
+
+920
+00:47:09,850 --> 00:47:13,960
+so obviously before the client can do
+
+921
+00:47:13,960 --> 00:47:15,970
+anything the server has to exist so that
+
+922
+00:47:15,970 --> 00:47:17,620
+has to be the first step in setting
+
+923
+00:47:17,620 --> 00:47:21,130
+things up and then we have to we'll fire
+
+924
+00:47:21,130 --> 00:47:24,730
+up a cert a client that will make use of
+
+925
+00:47:24,730 --> 00:47:27,700
+this service and then there'll be what's
+
+926
+00:47:27,700 --> 00:47:29,890
+referred to as a session meaning a kind
+
+927
+00:47:29,890 --> 00:47:32,350
+of back and forth communication between
+
+928
+00:47:32,350 --> 00:47:34,120
+the client and server doing whatever
+
+929
+00:47:34,120 --> 00:47:36,580
+they're going to do this is not specific
+
+930
+00:47:36,580 --> 00:47:39,700
+to any particular application and like I
+
+931
+00:47:39,700 --> 00:47:41,740
+said it will involve you'll see Rio
+
+932
+00:47:41,740 --> 00:47:43,420
+underscore remember those who are
+
+933
+00:47:43,420 --> 00:47:46,450
+reliable i/o functions we talked about
+
+934
+00:47:46,450 --> 00:47:50,790
+as part of the UNIX i/o so it's a way to
+
+935
+00:47:50,790 --> 00:47:57,400
+read and write in a room and and handle
+
+936
+00:47:57,400 --> 00:47:59,860
+some of the quirks of low-level i/o but
+
+937
+00:47:59,860 --> 00:48:01,360
+basically this is sending and receiving
+
+938
+00:48:01,360 --> 00:48:03,250
+messages over the Internet
+
+939
+00:48:03,250 --> 00:48:08,200
+and then once that's done typically then
+
+940
+00:48:08,200 --> 00:48:10,030
+the client will close its connection
+
+941
+00:48:10,030 --> 00:48:11,710
+sort of equivalent of hanging up its
+
+942
+00:48:11,710 --> 00:48:15,520
+phone and say ok I'm done and then
+
+943
+00:48:15,520 --> 00:48:18,970
+sometime later or maybe never depending
+
+944
+00:48:18,970 --> 00:48:21,010
+on what kind of web you know service
+
+945
+00:48:21,010 --> 00:48:24,220
+this is if the the server wants to shut
+
+946
+00:48:24,220 --> 00:48:27,430
+down it has its own a collection of
+
+947
+00:48:27,430 --> 00:48:30,240
+calls that it makes to stop that service
+
+948
+00:48:30,240 --> 00:48:34,420
+so anyways just to kind of give you the
+
+949
+00:48:34,420 --> 00:48:40,320
+landscape of what this picture means
+
+950
+00:48:40,320 --> 00:48:45,210
+so we're going to sort of jump into the
+
+951
+00:48:45,210 --> 00:48:47,790
+middle this the top level up and we'll
+
+952
+00:48:47,790 --> 00:48:53,610
+focus actually which will we focus on
+
+953
+00:48:53,610 --> 00:48:56,310
+well we'll talk to some level in
+
+954
+00:48:56,310 --> 00:48:58,890
+parallel because there's a lot of
+
+955
+00:48:58,890 --> 00:49:00,720
+commonality as you can see between what
+
+956
+00:49:00,720 --> 00:49:02,520
+goes on with the server and what goes on
+
+957
+00:49:02,520 --> 00:49:09,030
+with the client yeah and so actually the
+
+958
+00:49:09,030 --> 00:49:11,070
+top level call this one called get adder
+
+959
+00:49:11,070 --> 00:49:19,110
+info is the way that it sort of initiate
+
+960
+00:49:19,110 --> 00:49:22,340
+things and actually does the the lookup
+
+961
+00:49:22,340 --> 00:49:25,380
+to map from a domain name to a IP
+
+962
+00:49:25,380 --> 00:49:27,810
+address so we'll cover that later
+
+963
+00:49:27,810 --> 00:49:30,570
+so the first step in on either side then
+
+964
+00:49:30,570 --> 00:49:33,630
+and creating a connection is a call to a
+
+965
+00:49:33,630 --> 00:49:39,270
+function called socket and the reason I
+
+966
+00:49:39,270 --> 00:49:41,910
+wanted to Blackboard was to help you
+
+967
+00:49:41,910 --> 00:50:04,850
+keep track of this
+
+968
+00:50:04,850 --> 00:50:08,850
+so the first call is a doesn't do much
+
+969
+00:50:08,850 --> 00:50:12,090
+oh and that's why the the function call
+
+970
+00:50:12,090 --> 00:50:18,600
+is socket but the it only happens within
+
+971
+00:50:18,600 --> 00:50:20,640
+the application it doesn't make a use of
+
+972
+00:50:20,640 --> 00:50:23,280
+any part of the operating system doesn't
+
+973
+00:50:23,280 --> 00:50:25,290
+send anything over the network and the
+
+974
+00:50:25,290 --> 00:50:27,720
+idea is to basically say hey I want to
+
+975
+00:50:27,720 --> 00:50:33,060
+create a socket and it's given three
+
+976
+00:50:33,060 --> 00:50:36,060
+arguments the first two which is AF
+
+977
+00:50:36,060 --> 00:50:38,400
+underscore I net all these upper case on
+
+978
+00:50:38,400 --> 00:50:42,480
+names are constants that are built in or
+
+979
+00:50:42,480 --> 00:50:45,300
+included in the various uh dot H files
+
+980
+00:50:45,300 --> 00:50:46,890
+that you include in writing this code
+
+981
+00:50:46,890 --> 00:50:49,710
+and AF underscore I nut just means it's
+
+982
+00:50:49,710 --> 00:50:53,930
+a I P V four so 32-bit addresses and
+
+983
+00:50:53,930 --> 00:50:57,150
+then the second parameter is says you
+
+984
+00:50:57,150 --> 00:50:59,760
+want a sock stream and that refers to a
+
+985
+00:50:59,760 --> 00:51:01,830
+TCP connection it's referred to as a
+
+986
+00:51:01,830 --> 00:51:03,570
+stream connection because like I said
+
+987
+00:51:03,570 --> 00:51:06,120
+you get to send as many bytes as you
+
+988
+00:51:06,120 --> 00:51:09,270
+like a stream of bytes to in either
+
+989
+00:51:09,270 --> 00:51:15,650
+direction and then
+
+990
+00:51:15,650 --> 00:51:19,800
+zero protocol well I guess it must not
+
+991
+00:51:19,800 --> 00:51:21,240
+be very interesting because I set it to
+
+992
+00:51:21,240 --> 00:51:24,990
+zero so we don't need to do anything in
+
+993
+00:51:24,990 --> 00:51:27,990
+this particular case there are man pages
+
+994
+00:51:27,990 --> 00:51:30,119
+on this by the way which if you just
+
+995
+00:51:30,119 --> 00:51:31,770
+tried to learn all sockets programming
+
+996
+00:51:31,770 --> 00:51:33,780
+by reading men pages you'd go crazy but
+
+997
+00:51:33,780 --> 00:51:35,850
+once you kind of have the idea of it the
+
+998
+00:51:35,850 --> 00:51:40,680
+man pages are pretty useful and then the
+
+999
+00:51:40,680 --> 00:51:44,730
+next part you'll see we're looking only
+
+1000
+00:51:44,730 --> 00:51:48,020
+now on the server side is called bind
+
+1001
+00:51:48,020 --> 00:51:58,260
+and
+
+1002
+00:51:58,260 --> 00:52:01,390
+what bind does then is that specific
+
+1003
+00:52:01,390 --> 00:52:04,900
+then to a server and now this is a make
+
+1004
+00:52:04,900 --> 00:52:08,130
+this interfaces to the kernel it says I
+
+1005
+00:52:08,130 --> 00:52:20,650
+want to
+
+1006
+00:52:20,650 --> 00:52:27,640
+designate which IP address and let me
+
+1007
+00:52:27,640 --> 00:52:30,460
+just so I'm going to cheat a little bit
+
+1008
+00:52:30,460 --> 00:52:31,990
+by making sure I don't say anything
+
+1009
+00:52:31,990 --> 00:52:33,930
+that's not true
+
+1010
+00:52:33,930 --> 00:52:37,869
+yeah I'm right sorry I just want to make
+
+1011
+00:52:37,869 --> 00:52:48,099
+sure bind actually tells you oh excuse
+
+1012
+00:52:48,099 --> 00:52:51,460
+me you'll see that a socket the call to
+
+1013
+00:52:51,460 --> 00:52:53,890
+socket returns an int but it's what it's
+
+1014
+00:52:53,890 --> 00:52:55,990
+returning is a file descriptor remember
+
+1015
+00:52:55,990 --> 00:52:59,020
+we said that if you refer to a file a
+
+1016
+00:52:59,020 --> 00:53:02,040
+low-level file just by an integer ID
+
+1017
+00:53:02,040 --> 00:53:05,440
+typically a small integer value there's
+
+1018
+00:53:05,440 --> 00:53:07,060
+some standard ones for standard in
+
+1019
+00:53:07,060 --> 00:53:09,280
+standard out standard error and then
+
+1020
+00:53:09,280 --> 00:53:10,599
+beyond that they're just assigned
+
+1021
+00:53:10,599 --> 00:53:13,420
+incrementally so socket will return a
+
+1022
+00:53:13,420 --> 00:53:17,050
+number that you then refer used to refer
+
+1023
+00:53:17,050 --> 00:53:22,869
+to this as a file so bind then you've
+
+1024
+00:53:22,869 --> 00:53:26,170
+pass in that the name of your socket
+
+1025
+00:53:26,170 --> 00:53:30,060
+file descriptor and you provide a
+
+1026
+00:53:30,060 --> 00:53:37,660
+whether is a socket adder ends
+
+1027
+00:53:37,660 --> 00:53:43,270
+ah and si I'm using the the notation si
+
+1028
+00:53:43,270 --> 00:53:46,180
+as a shortcut for sock adder struct sock
+
+1029
+00:53:46,180 --> 00:53:51,010
+header and then you have to also say
+
+1030
+00:53:51,010 --> 00:53:52,900
+what the length of the address is so in
+
+1031
+00:53:52,900 --> 00:53:56,650
+the case of ipv4 that would be four but
+
+1032
+00:53:56,650 --> 00:53:58,030
+you don't usually use that number
+
+1033
+00:53:58,030 --> 00:54:01,180
+directly there's a we'll talk about it
+
+1034
+00:54:01,180 --> 00:54:03,220
+but that top-level call called gedit or
+
+1035
+00:54:03,220 --> 00:54:05,740
+adder info as a relatively new API that
+
+1036
+00:54:05,740 --> 00:54:09,339
+was created and is in this addition to
+
+1037
+00:54:09,339 --> 00:54:11,140
+the book but not in previous ones is
+
+1038
+00:54:11,140 --> 00:54:13,240
+that become the now the standard way
+
+1039
+00:54:13,240 --> 00:54:14,829
+that you get all the parameters that
+
+1040
+00:54:14,829 --> 00:54:16,569
+you're supposed to pass into all these
+
+1041
+00:54:16,569 --> 00:54:19,270
+different calls and the idea of it then
+
+1042
+00:54:19,270 --> 00:54:21,369
+is it's a pretty small adjustment to
+
+1043
+00:54:21,369 --> 00:54:22,960
+then write code that's good for either
+
+1044
+00:54:22,960 --> 00:54:29,829
+ipv4 or ipv6 so you don't normally give
+
+1045
+00:54:29,829 --> 00:54:31,900
+the actual number from that you get it
+
+1046
+00:54:31,900 --> 00:54:37,790
+from another place and passage it
+
+1047
+00:54:37,790 --> 00:55:01,180
+so binding then is it's a kernel call
+
+1048
+00:55:01,180 --> 00:55:05,930
+that designates which particular service
+
+1049
+00:55:05,930 --> 00:55:10,430
+this program is going to be hosting but
+
+1050
+00:55:10,430 --> 00:55:12,380
+which will be the server for and that's
+
+1051
+00:55:12,380 --> 00:55:22,319
+given by its port number
+
+1052
+00:55:22,319 --> 00:55:27,989
+and then the next step is to to listen
+
+1053
+00:55:27,989 --> 00:55:36,330
+and that's just a call that says
+
+1054
+00:55:36,330 --> 00:55:44,550
+ah that will now convert this socket to
+
+1055
+00:55:44,550 --> 00:55:46,770
+a listening socket which you need as a
+
+1056
+00:55:46,770 --> 00:55:56,460
+server so it's a way of telling the
+
+1057
+00:55:56,460 --> 00:56:00,780
+kernel that this will be it will be a
+
+1058
+00:56:00,780 --> 00:56:09,330
+server SAR so obviously bind and listen
+
+1059
+00:56:09,330 --> 00:56:12,690
+are related ideas but you have to do
+
+1060
+00:56:12,690 --> 00:56:14,880
+both steps and in that particular order
+
+1061
+00:56:14,880 --> 00:56:18,390
+to create a listening socket or one for
+
+1062
+00:56:18,390 --> 00:56:24,210
+a server and then the final part of that
+
+1063
+00:56:24,210 --> 00:56:32,200
+to operate us is to say except
+
+1064
+00:56:32,200 --> 00:56:38,020
+and
+
+1065
+00:56:38,020 --> 00:56:42,310
+oh that means okay now we've established
+
+1066
+00:56:42,310 --> 00:56:45,040
+this now I'm actually ready to receive
+
+1067
+00:56:45,040 --> 00:56:47,410
+phone calls is essentially what it says
+
+1068
+00:56:47,410 --> 00:56:50,710
+is this is the final step to say okay
+
+1069
+00:56:50,710 --> 00:56:53,320
+this one's ready to accept connection
+
+1070
+00:56:53,320 --> 00:57:03,220
+requests it has a similar set of
+
+1071
+00:57:03,220 --> 00:57:05,490
+arguments to sock it is sock it but
+
+1072
+00:57:05,490 --> 00:57:07,570
+slight difference and now the
+
+1073
+00:57:07,570 --> 00:57:09,570
+interesting thing is acceptable return
+
+1074
+00:57:09,570 --> 00:57:15,370
+yet another file descriptor I'll so the
+
+1075
+00:57:15,370 --> 00:57:17,860
+first file descriptor is the sort of
+
+1076
+00:57:17,860 --> 00:57:23,440
+generic accept and base basically except
+
+1077
+00:57:23,440 --> 00:57:26,290
+we'll just hang there and wait until
+
+1078
+00:57:26,290 --> 00:57:30,730
+some client makes a connection and when
+
+1079
+00:57:30,730 --> 00:57:34,710
+it does then it will set up a new socket
+
+1080
+00:57:34,710 --> 00:57:38,350
+and a new with a new file descriptor
+
+1081
+00:57:38,350 --> 00:57:41,020
+that then the server communicates to the
+
+1082
+00:57:41,020 --> 00:57:43,390
+client via that one and I'll talk about
+
+1083
+00:57:43,390 --> 00:57:45,490
+why it's a different file descriptor in
+
+1084
+00:57:45,490 --> 00:57:50,350
+just a second okay over on the client
+
+1085
+00:57:50,350 --> 00:57:53,650
+side goes through similar steps of
+
+1086
+00:57:53,650 --> 00:57:55,630
+socket but it doesn't have to bind or
+
+1087
+00:57:55,630 --> 00:57:57,670
+listen or accept because this is a
+
+1088
+00:57:57,670 --> 00:58:00,370
+client and instead what it does is it it
+
+1089
+00:58:00,370 --> 00:58:05,650
+makes a call to connect
+
+1090
+00:58:05,650 --> 00:58:22,990
+so let me finish this off so these are
+
+1091
+00:58:22,990 --> 00:58:32,829
+all on this the server side and on the
+
+1092
+00:58:32,829 --> 00:58:38,890
+client side it will make a call to
+
+1093
+00:58:38,890 --> 00:58:46,329
+connect and that's its job of that is
+
+1094
+00:58:46,329 --> 00:58:47,890
+from a client side is to set up a
+
+1095
+00:58:47,890 --> 00:59:04,029
+connection to server
+
+1096
+00:59:04,029 --> 00:59:15,600
+and so
+
+1097
+00:59:15,600 --> 00:59:18,690
+it's arguments it's a little easier to
+
+1098
+00:59:18,690 --> 00:59:21,990
+understand how kynect works so in
+
+1099
+00:59:21,990 --> 00:59:26,220
+particular the call to socket that was
+
+1100
+00:59:26,220 --> 00:59:27,960
+made beforehand returns a file
+
+1101
+00:59:27,960 --> 00:59:31,410
+descriptor and what this says is I want
+
+1102
+00:59:31,410 --> 00:59:33,150
+to on that particular using that
+
+1103
+00:59:33,150 --> 00:59:36,240
+particular socket connect to this gives
+
+1104
+00:59:36,240 --> 00:59:39,119
+a combination of an address and a port
+
+1105
+00:59:39,119 --> 00:59:41,910
+number and it has to give this address
+
+1106
+00:59:41,910 --> 00:59:44,100
+length which I said like I said as
+
+1107
+00:59:44,100 --> 00:59:45,690
+before it's usually that number is
+
+1108
+00:59:45,690 --> 00:59:48,690
+filled in using the return value of of
+
+1109
+00:59:48,690 --> 00:59:54,420
+get adder info but that's sort of the
+
+1110
+00:59:54,420 --> 00:59:56,730
+equivalent of poisoning the Coleman and
+
+1111
+00:59:56,730 --> 01:00:01,200
+it returns just a code which is whether
+
+1112
+01:00:01,200 --> 01:00:05,480
+the connection was successful or not
+
+1113
+01:00:05,480 --> 01:00:09,270
+so let me just talk about these
+
+1114
+01:00:09,270 --> 01:00:11,430
+different ports and what it all means
+
+1115
+01:00:11,430 --> 01:00:15,170
+when you setup a connection so when the
+
+1116
+01:00:15,170 --> 01:00:18,770
+the server went through bind and listen
+
+1117
+01:00:18,770 --> 01:00:22,730
+it created a listening port from that
+
+1118
+01:00:22,730 --> 01:00:25,320
+which is the one that it's listening for
+
+1119
+01:00:25,320 --> 01:00:28,350
+connection requests on and then the
+
+1120
+01:00:28,350 --> 01:00:31,260
+client when it called socket it was
+
+1121
+01:00:31,260 --> 01:00:33,810
+given a particular file descriptor for
+
+1122
+01:00:33,810 --> 01:00:38,730
+that that socket and it sends out a
+
+1123
+01:00:38,730 --> 01:00:41,550
+connection request that goes out over
+
+1124
+01:00:41,550 --> 01:00:45,960
+the network and lands at the server and
+
+1125
+01:00:45,960 --> 01:00:48,090
+then the kernel hands that off to the
+
+1126
+01:00:48,090 --> 01:00:52,050
+the the program that's running on that
+
+1127
+01:00:52,050 --> 01:00:58,130
+particular port and hands it off to the
+
+1128
+01:00:58,130 --> 01:01:01,160
+that call will be handled by the accept
+
+1129
+01:01:01,160 --> 01:01:06,960
+call to accept by the server and then as
+
+1130
+01:01:06,960 --> 01:01:10,950
+I mentioned except actually returns a
+
+1131
+01:01:10,950 --> 01:01:14,609
+new file descriptor which the server
+
+1132
+01:01:14,609 --> 01:01:17,550
+will then use as its connection point to
+
+1133
+01:01:17,550 --> 01:01:20,220
+this particular client and the theory of
+
+1134
+01:01:20,220 --> 01:01:22,710
+that is you want to be able to in
+
+1135
+01:01:22,710 --> 01:01:26,130
+general as a server be handling multiple
+
+1136
+01:01:26,130 --> 01:01:27,490
+clients at the same
+
+1137
+01:01:27,490 --> 01:01:33,090
+time but if I'm communicating with with
+
+1138
+01:01:33,090 --> 01:01:37,480
+Google or Amazon you should be able to
+
+1139
+01:01:37,480 --> 01:01:39,580
+do so at the same time so you want a
+
+1140
+01:01:39,580 --> 01:01:42,460
+possibility of from a single host to be
+
+1141
+01:01:42,460 --> 01:01:44,170
+able to serve multiple clients and
+
+1142
+01:01:44,170 --> 01:01:45,910
+that's why they're all assigned
+
+1143
+01:01:45,910 --> 01:01:49,420
+different file descriptors at the server
+
+1144
+01:01:49,420 --> 01:01:52,270
+end for that particular connection so
+
+1145
+01:01:52,270 --> 01:01:53,920
+you can think of it as the listening
+
+1146
+01:01:53,920 --> 01:01:55,600
+file descriptor is just listening for
+
+1147
+01:01:55,600 --> 01:01:58,540
+incoming requests for connections but
+
+1148
+01:01:58,540 --> 01:02:00,250
+once it sets up a session and
+
+1149
+01:02:00,250 --> 01:02:02,650
+communicates back and forth those are
+
+1150
+01:02:02,650 --> 01:02:04,720
+going through different ports on the
+
+1151
+01:02:04,720 --> 01:02:07,030
+server side of things or different file
+
+1152
+01:02:07,030 --> 01:02:09,400
+descriptors I'm sorry same port
+
+1153
+01:02:09,400 --> 01:02:12,330
+different file descriptors from the
+
+1154
+01:02:12,330 --> 01:02:21,720
+software that's running on the server
+
+1155
+01:02:21,720 --> 01:02:24,790
+okay and then during the actual
+
+1156
+01:02:24,790 --> 01:02:26,650
+communication then as I mentioned it
+
+1157
+01:02:26,650 --> 01:02:29,650
+uses reads and writes as a way to send
+
+1158
+01:02:29,650 --> 01:02:31,990
+and receive messages and that goes on
+
+1159
+01:02:31,990 --> 01:02:36,130
+for as long as you know and according to
+
+1160
+01:02:36,130 --> 01:02:39,100
+whatever lo-ove particular protocol is
+
+1161
+01:02:39,100 --> 01:02:45,420
+being supported by this application and
+
+1162
+01:02:45,420 --> 01:02:51,510
+then in the end then when the client the
+
+1163
+01:02:51,510 --> 01:02:55,110
+client is done it causes a request and
+
+1164
+01:02:55,110 --> 01:02:59,470
+what that looks like from the server end
+
+1165
+01:02:59,470 --> 01:03:02,110
+is it tries to read from a file and it
+
+1166
+01:03:02,110 --> 01:03:05,220
+receives an end of file a signal instead
+
+1167
+01:03:05,220 --> 01:03:09,220
+and that tells the server okay this
+
+1168
+01:03:09,220 --> 01:03:13,530
+particular connection is is gone and so
+
+1169
+01:03:13,530 --> 01:03:18,700
+now it will close that particular one as
+
+1170
+01:03:18,700 --> 01:03:23,200
+this picture shows here potentially the
+
+1171
+01:03:23,200 --> 01:03:27,550
+server could loop back around and accept
+
+1172
+01:03:27,550 --> 01:03:29,860
+a connection from another program and in
+
+1173
+01:03:29,860 --> 01:03:33,070
+fact this can be done this is what we
+
+1174
+01:03:33,070 --> 01:03:39,100
+call a serial or a knitter aware it can
+
+1175
+01:03:39,100 --> 01:03:41,740
+only manage one connection request at a
+
+1176
+01:03:41,740 --> 01:03:44,260
+time and when we get later in the course
+
+1177
+01:03:44,260 --> 01:03:47,440
+and we stock talk about multi-threading
+
+1178
+01:03:47,440 --> 01:03:50,170
+we'll be able to set it up so this thing
+
+1179
+01:03:50,170 --> 01:03:52,450
+can start accepting requests for another
+
+1180
+01:03:52,450 --> 01:03:55,720
+connection even while it's handling one
+
+1181
+01:03:55,720 --> 01:03:59,620
+particular client but anyways what it
+
+1182
+01:03:59,620 --> 01:04:01,810
+will look like is the server will read
+
+1183
+01:04:01,810 --> 01:04:03,790
+the attempt to read that we'll get an
+
+1184
+01:04:03,790 --> 01:04:05,020
+end of file it will close that
+
+1185
+01:04:05,020 --> 01:04:07,510
+particular connection and it will go
+
+1186
+01:04:07,510 --> 01:04:09,460
+back and it will accept a new connection
+
+1187
+01:04:09,460 --> 01:04:12,790
+from a new client
+
+1188
+01:04:12,790 --> 01:04:16,490
+okay I'm going to jump ahead and
+
+1189
+01:04:16,490 --> 01:04:18,650
+actually start talking about some slides
+
+1190
+01:04:18,650 --> 01:04:22,430
+from that we're if you look online
+
+1191
+01:04:22,430 --> 01:04:24,830
+they're actually from a Thursday's
+
+1192
+01:04:24,830 --> 01:04:26,720
+lecture because there's a lot of ground
+
+1193
+01:04:26,720 --> 01:04:28,310
+to cover in that lecture and I'd like to
+
+1194
+01:04:28,310 --> 01:04:32,690
+get a little head start so I mentioned
+
+1195
+01:04:32,690 --> 01:04:36,320
+this up this function called get a door
+
+1196
+01:04:36,320 --> 01:04:39,950
+info which is sort of the modern way in
+
+1197
+01:04:39,950 --> 01:04:43,100
+C at least to find information about
+
+1198
+01:04:43,100 --> 01:04:45,770
+that deals with all the funkiness of
+
+1199
+01:04:45,770 --> 01:04:48,380
+host names host addresses all the
+
+1200
+01:04:48,380 --> 01:04:50,840
+conventions about ports and some of
+
+1201
+01:04:50,840 --> 01:04:52,430
+these various structures and things like
+
+1202
+01:04:52,430 --> 01:04:55,610
+that and the advantage of doing it this
+
+1203
+01:04:55,610 --> 01:04:58,280
+way instead of the old way is first of
+
+1204
+01:04:58,280 --> 01:05:01,820
+all now it sort of unifies ipv4 and ipv6
+
+1205
+01:05:01,820 --> 01:05:04,820
+have very similar looking interfaces and
+
+1206
+01:05:04,820 --> 01:05:07,250
+it's fairly easy to write code that can
+
+1207
+01:05:07,250 --> 01:05:09,590
+handle either and the other was there is
+
+1208
+01:05:09,590 --> 01:05:11,600
+problems with these old ones that they
+
+1209
+01:05:11,600 --> 01:05:13,210
+were designed in an era before
+
+1210
+01:05:13,210 --> 01:05:16,730
+multi-threading and so they have various
+
+1211
+01:05:16,730 --> 01:05:20,240
+statically allocated buffers which gave
+
+1212
+01:05:20,240 --> 01:05:22,850
+a lot of bad conditions that you had to
+
+1213
+01:05:22,850 --> 01:05:25,280
+watch out for in writing code and we're
+
+1214
+01:05:25,280 --> 01:05:28,870
+prone to errors of various sorts and so
+
+1215
+01:05:28,870 --> 01:05:32,240
+this new new format it's actually harder
+
+1216
+01:05:32,240 --> 01:05:36,710
+to use in many levels because it can't
+
+1217
+01:05:36,710 --> 01:05:38,960
+hide away as many details as it used to
+
+1218
+01:05:38,960 --> 01:05:40,670
+but it has the advantage it works better
+
+1219
+01:05:40,670 --> 01:05:43,400
+in a multi-threaded environment the
+
+1220
+01:05:43,400 --> 01:05:44,870
+other thing that makes it hard is it's
+
+1221
+01:05:44,870 --> 01:05:47,060
+trying to be sort of the kitchen sink of
+
+1222
+01:05:47,060 --> 01:05:50,990
+of protocol managers and that makes it a
+
+1223
+01:05:50,990 --> 01:05:54,770
+little bit nasty and messy and so we're
+
+1224
+01:05:54,770 --> 01:05:56,330
+only going to sort of focus in on the
+
+1225
+01:05:56,330 --> 01:05:58,370
+parts that we really need to make use of
+
+1226
+01:05:58,370 --> 01:06:02,000
+for this course
+
+1227
+01:06:02,000 --> 01:06:04,560
+so in particular there's this function
+
+1228
+01:06:04,560 --> 01:06:08,700
+called get adder info where the
+
+1229
+01:06:08,700 --> 01:06:11,060
+information you're passing is a host
+
+1230
+01:06:11,060 --> 01:06:14,610
+which can be either a it's a string as
+
+1231
+01:06:14,610 --> 01:06:17,010
+it shows most these are care stars are
+
+1232
+01:06:17,010 --> 01:06:19,520
+actual real strings not fake strings oh
+
+1233
+01:06:19,520 --> 01:06:23,460
+it used to be back in the old days you
+
+1234
+01:06:23,460 --> 01:06:25,290
+use care stars of generic pointer
+
+1235
+01:06:25,290 --> 01:06:26,970
+because there weren't void stars but
+
+1236
+01:06:26,970 --> 01:06:29,430
+these are actual strings so you give the
+
+1237
+01:06:29,430 --> 01:06:31,950
+name like the the domain name of a host
+
+1238
+01:06:31,950 --> 01:06:34,200
+or you can give the dotted decimal name
+
+1239
+01:06:34,200 --> 01:06:38,280
+but written as you know sequence of
+
+1240
+01:06:38,280 --> 01:06:42,020
+characters one to eight dot so forth a
+
+1241
+01:06:42,020 --> 01:06:46,460
+service for example that this is ipv4 T
+
+1242
+01:06:46,460 --> 01:06:50,010
+TCP service some other information that
+
+1243
+01:06:50,010 --> 01:06:51,990
+that's associated with this particular
+
+1244
+01:06:51,990 --> 01:06:54,210
+connection they refer to as hints
+
+1245
+01:06:54,210 --> 01:06:56,100
+because again this is trying to be a
+
+1246
+01:06:56,100 --> 01:06:58,560
+very generic looking call and then you
+
+1247
+01:06:58,560 --> 01:07:01,110
+pass it in a pointer and it will fill in
+
+1248
+01:07:01,110 --> 01:07:04,890
+and return back a pointer to a data
+
+1249
+01:07:04,890 --> 01:07:07,590
+structure which is essentially the way
+
+1250
+01:07:07,590 --> 01:07:10,050
+it's returning results back to you and
+
+1251
+01:07:10,050 --> 01:07:13,200
+then associated with that is a call
+
+1252
+01:07:13,200 --> 01:07:15,600
+called free adder info that will then
+
+1253
+01:07:15,600 --> 01:07:19,710
+deallocate this space that's used by
+
+1254
+01:07:19,710 --> 01:07:21,960
+this data structure from the result and
+
+1255
+01:07:21,960 --> 01:07:25,800
+then there's one called get adder info
+
+1256
+01:07:25,800 --> 01:07:29,190
+string error which lets you interpret
+
+1257
+01:07:29,190 --> 01:07:31,050
+the various error codes that get created
+
+1258
+01:07:31,050 --> 01:07:33,900
+by this routine of the value that it
+
+1259
+01:07:33,900 --> 01:07:39,210
+returns so let's just look a little
+
+1260
+01:07:39,210 --> 01:07:43,080
+about this and so the result that's
+
+1261
+01:07:43,080 --> 01:07:46,050
+returned by get a door info is a link
+
+1262
+01:07:46,050 --> 01:07:51,119
+twist oh that is null terminated just
+
+1263
+01:07:51,119 --> 01:07:55,560
+like most wink lists are where it gives
+
+1264
+01:07:55,560 --> 01:08:00,900
+some combination of the name of this
+
+1265
+01:08:00,900 --> 01:08:07,680
+particular some naming information for
+
+1266
+01:08:07,680 --> 01:08:10,500
+the the first top-level one is the what
+
+1267
+01:08:10,500 --> 01:08:12,270
+I showed you the canonical name for this
+
+1268
+01:08:12,270 --> 01:08:14,360
+particular
+
+1269
+01:08:14,360 --> 01:08:17,750
+IP address and then it gives some
+
+1270
+01:08:17,750 --> 01:08:22,520
+address information which is you know an
+
+1271
+01:08:22,520 --> 01:08:27,230
+ipv4 them that will encode the IP
+
+1272
+01:08:27,230 --> 01:08:29,960
+address and as a next pointer to change
+
+1273
+01:08:29,960 --> 01:08:32,390
+this link voice together and so this is
+
+1274
+01:08:32,390 --> 01:08:33,830
+actually one interesting thing about
+
+1275
+01:08:33,830 --> 01:08:36,710
+this is it sort of takes care of that
+
+1276
+01:08:36,710 --> 01:08:42,370
+many too many mapping potentially of of
+
+1277
+01:08:42,370 --> 01:08:44,770
+names so if I give for example
+
+1278
+01:08:44,770 --> 01:08:48,170
+google.com it will return a link twist
+
+1279
+01:08:48,170 --> 01:08:52,010
+of all however many or you saw with
+
+1280
+01:08:52,010 --> 01:08:53,450
+Twitter it was returning about four
+
+1281
+01:08:53,450 --> 01:08:55,190
+different addresses so this will return
+
+1282
+01:08:55,190 --> 01:08:58,160
+actually five missed entries the first
+
+1283
+01:08:58,160 --> 01:09:00,350
+will be the canonical name and then it
+
+1284
+01:09:00,350 --> 01:09:03,580
+will give each of the four IP addresses
+
+1285
+01:09:03,580 --> 01:09:07,010
+that's relevant at this particular time
+
+1286
+01:09:07,010 --> 01:09:12,020
+and then you as a programmer then sort
+
+1287
+01:09:12,020 --> 01:09:13,850
+of walk this list you step down this
+
+1288
+01:09:13,850 --> 01:09:16,760
+list and typically try to use each
+
+1289
+01:09:16,760 --> 01:09:19,760
+address one after the other and if you
+
+1290
+01:09:19,760 --> 01:09:21,650
+fail on one then you try the next and
+
+1291
+01:09:21,650 --> 01:09:23,210
+try the next until you hit the end of
+
+1292
+01:09:23,210 --> 01:09:24,980
+the list and then you say whoops
+
+1293
+01:09:24,980 --> 01:09:29,780
+can't do it and that goes whether you're
+
+1294
+01:09:29,780 --> 01:09:33,589
+writing a client or a server so that
+
+1295
+01:09:33,589 --> 01:09:38,120
+adder info let's look back at what that
+
+1296
+01:09:38,120 --> 01:09:40,239
+is
+
+1297
+01:09:40,239 --> 01:09:45,910
+oh so a door info then is what gets
+
+1298
+01:09:45,910 --> 01:09:49,029
+returned is a list of a door info
+
+1299
+01:09:49,029 --> 01:09:52,359
+strokes and so the adder info struck
+
+1300
+01:09:52,359 --> 01:09:57,219
+contains various fields which talks
+
+1301
+01:09:57,219 --> 01:10:06,010
+about what type of data is here what
+
+1302
+01:10:06,010 --> 01:10:10,390
+type of socket is it what its canonical
+
+1303
+01:10:10,390 --> 01:10:13,210
+name is how long are its addresses you
+
+1304
+01:10:13,210 --> 01:10:14,800
+saw that it's an argument to some of the
+
+1305
+01:10:14,800 --> 01:10:19,570
+calls a pointer to a sock adder struct
+
+1306
+01:10:19,570 --> 01:10:24,160
+that's the way that is encoded for IPV
+
+1307
+01:10:24,160 --> 01:10:26,920
+what we've already seen sock adders is a
+
+1308
+01:10:26,920 --> 01:10:28,780
+sort of low-level data structure that
+
+1309
+01:10:28,780 --> 01:10:31,750
+gets used and then an X pointer to chain
+
+1310
+01:10:31,750 --> 01:10:33,790
+the link twist together and so you'll
+
+1311
+01:10:33,790 --> 01:10:36,250
+see some of these are the arguments that
+
+1312
+01:10:36,250 --> 01:10:38,560
+then you will use to pass into the other
+
+1313
+01:10:38,560 --> 01:10:40,810
+functions like bind and with Simmons and
+
+1314
+01:10:40,810 --> 01:10:46,829
+connect
+
+1315
+01:10:46,829 --> 01:10:49,199
+and then there's another version called
+
+1316
+01:10:49,199 --> 01:10:52,320
+get name info which you use when you've
+
+1317
+01:10:52,320 --> 01:10:54,570
+got an IP address and you want to find
+
+1318
+01:10:54,570 --> 01:10:58,139
+what is its domain name and because you
+
+1319
+01:10:58,139 --> 01:10:59,849
+remember that mapping is also
+
+1320
+01:10:59,849 --> 01:11:01,650
+potentially a one-to-many there can be
+
+1321
+01:11:01,650 --> 01:11:03,960
+multiple domain names associated with it
+
+1322
+01:11:03,960 --> 01:11:11,520
+and so it has a similar general thing
+
+1323
+01:11:11,520 --> 01:11:13,559
+we'll just look right now it get added
+
+1324
+01:11:13,559 --> 01:11:19,020
+info so just as an example of how you'd
+
+1325
+01:11:19,020 --> 01:11:22,079
+write code to make use of this and
+
+1326
+01:11:22,079 --> 01:11:25,290
+essentially just as a way of probing the
+
+1327
+01:11:25,290 --> 01:11:29,040
+DNS server is I want to set up an
+
+1328
+01:11:29,040 --> 01:11:32,550
+argument a call to get adder info where
+
+1329
+01:11:32,550 --> 01:11:36,000
+the string I'm going to pass the name is
+
+1330
+01:11:36,000 --> 01:11:39,869
+whatever I type in at the to this
+
+1331
+01:11:39,869 --> 01:11:48,059
+application to main and it just for
+
+1332
+01:11:48,059 --> 01:11:53,900
+hints just passes a a bunch of zeros and
+
+1333
+01:11:53,900 --> 01:11:57,179
+lists P again these are this will just
+
+1334
+01:11:57,179 --> 01:12:08,690
+be a pointers that I haven't actually
+
+1335
+01:12:08,690 --> 01:12:11,300
+oh okay so you'll notice hints is
+
+1336
+01:12:11,300 --> 01:12:14,360
+actually a struct itself whereas list P
+
+1337
+01:12:14,360 --> 01:12:17,090
+and star P are just lists P and P are
+
+1338
+01:12:17,090 --> 01:12:18,800
+just pointers to structs they don't have
+
+1339
+01:12:18,800 --> 01:12:21,380
+any allocated data so the hints I'm just
+
+1340
+01:12:21,380 --> 01:12:23,030
+going to fill in that struct with all
+
+1341
+01:12:23,030 --> 01:12:25,160
+zeros because I don't really need to
+
+1342
+01:12:25,160 --> 01:12:28,580
+provide any hints I am telling it that I
+
+1343
+01:12:28,580 --> 01:12:34,719
+want a an ipv6 TCP connection here and
+
+1344
+01:12:34,719 --> 01:12:37,790
+then so what it will do is it will
+
+1345
+01:12:37,790 --> 01:12:39,010
+return back
+
+1346
+01:12:39,010 --> 01:12:42,380
+what returns an error code but it will
+
+1347
+01:12:42,380 --> 01:12:46,280
+fill in returned to me a pointer to a
+
+1348
+01:12:46,280 --> 01:12:49,130
+this link twist data structure I showed
+
+1349
+01:12:49,130 --> 01:12:50,110
+before
+
+1350
+01:12:50,110 --> 01:12:55,150
+and now I can step through that list
+
+1351
+01:12:55,150 --> 01:12:58,250
+using standard linked list code and make
+
+1352
+01:12:58,250 --> 01:13:01,190
+calls to the get name info function
+
+1353
+01:13:01,190 --> 01:13:06,900
+which will return back domain names
+
+1354
+01:13:06,900 --> 01:13:08,760
+and then when it's all done I have to
+
+1355
+01:13:08,760 --> 01:13:10,350
+free up that whisk that got returned
+
+1356
+01:13:10,350 --> 01:13:14,850
+otherwise all great memory stuff so just
+
+1357
+01:13:14,850 --> 01:13:26,490
+as a demo
+
+1358
+01:13:26,490 --> 01:13:30,720
+what I'm on
+
+1359
+01:13:30,720 --> 01:13:39,030
+Oh host info sorry ah so you can think
+
+1360
+01:13:39,030 --> 01:13:44,340
+of it this is like a not very fancy
+
+1361
+01:13:44,340 --> 01:13:52,020
+implementation of nslookup so the kind
+
+1362
+01:13:52,020 --> 01:13:57,830
+of stuff we already saw before but let's
+
+1363
+01:13:57,830 --> 01:14:00,180
+all it's returning are the different
+
+1364
+01:14:00,180 --> 01:14:01,770
+addresses and one of the things that I
+
+1365
+01:14:01,770 --> 01:14:05,250
+found curious is it returns them in the
+
+1366
+01:14:05,250 --> 01:14:10,260
+same order all the time instead of
+
+1367
+01:14:10,260 --> 01:14:12,720
+within a slow cup it kept changing it
+
+1368
+01:14:12,720 --> 01:14:24,000
+and I think that has to do with caching
+
+1369
+01:14:24,000 --> 01:14:29,580
+no that changed I know it's kind of
+
+1370
+01:14:29,580 --> 01:14:33,150
+interesting if it's it you might want to
+
+1371
+01:14:33,150 --> 01:14:35,040
+play with this code it's kind of you can
+
+1372
+01:14:35,040 --> 01:14:43,250
+see what's going on in different places
+
+1373
+01:14:43,250 --> 01:14:46,980
+and so you can see though that it's it's
+
+1374
+01:14:46,980 --> 01:14:49,530
+basically getting the same kind of
+
+1375
+01:14:49,530 --> 01:14:52,620
+information that you would from nslookup
+
+1376
+01:14:52,620 --> 01:14:54,600
+it's really just creating the DNS server
+
+1377
+01:14:54,600 --> 01:14:58,050
+to do this but that's the start of what
+
+1378
+01:14:58,050 --> 01:15:10,389
+some of this code looks like and
+
+1379
+01:15:10,389 --> 01:15:13,030
+one of the things you by the way when
+
+1380
+01:15:13,030 --> 01:15:14,440
+you're writing your own code you often
+
+1381
+01:15:14,440 --> 01:15:17,020
+make use of what's called localhost and
+
+1382
+01:15:17,020 --> 01:15:19,449
+that always just refers to the machine
+
+1383
+01:15:19,449 --> 01:15:21,039
+that you're running on it always has
+
+1384
+01:15:21,039 --> 01:15:23,320
+this particular IP address so that
+
+1385
+01:15:23,320 --> 01:15:25,900
+address just refers to the machine and
+
+1386
+01:15:25,900 --> 01:15:28,539
+as a programmer you do all your testing
+
+1387
+01:15:28,539 --> 01:15:30,940
+on one machine you just set up both the
+
+1388
+01:15:30,940 --> 01:15:32,230
+client and the server on the same
+
+1389
+01:15:32,230 --> 01:15:36,460
+machine and play with it so localhost is
+
+1390
+01:15:36,460 --> 01:15:39,489
+a very useful way of doing code
+
+1391
+01:15:39,489 --> 01:15:44,650
+development and if this shows you can
+
+1392
+01:15:44,650 --> 01:15:50,800
+request host info for others thanksgivin
+
+1393
+01:15:50,800 --> 01:15:58,309
+and you can also by the way
+
+1394
+01:15:58,309 --> 01:16:07,860
+always give a dotted decimal address
+
+1395
+01:16:07,860 --> 01:16:11,830
+and I'm just making it up here what and
+
+1396
+01:16:11,830 --> 01:16:13,060
+it's not very interesting because it
+
+1397
+01:16:13,060 --> 01:16:18,040
+returns back the same address it's more
+
+1398
+01:16:18,040 --> 01:16:27,410
+interesting to run nslookup on that
+
+1399
+01:16:27,410 --> 01:16:32,210
+so that just gives you a sense and as
+
+1400
+01:16:32,210 --> 01:16:34,370
+you've seen this code is pretty messy
+
+1401
+01:16:34,370 --> 01:16:36,050
+stuff to work with there's a lot of
+
+1402
+01:16:36,050 --> 01:16:38,300
+struck so you have to initialize you
+
+1403
+01:16:38,300 --> 01:16:40,310
+don't initialize you pass pointers and
+
+1404
+01:16:40,310 --> 01:16:42,560
+so the code always looks a bit crufty
+
+1405
+01:16:42,560 --> 01:16:45,980
+but that sort of the the interfaces it
+
+1406
+01:16:45,980 --> 01:16:47,990
+exists and you'll just have to get
+
+1407
+01:16:47,990 --> 01:16:49,970
+somewhat comfortable with it so that
+
+1408
+01:16:49,970 --> 01:16:53,320
+will do us for today then thanks
+
