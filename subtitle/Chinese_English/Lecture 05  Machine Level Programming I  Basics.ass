@@ -36,7 +36,7 @@ Dialogue: 0,0:00:10.40,0:00:14.32,Chinese,,0,0,0,,我们进入机器级编程的
 Dialogue: 0,0:00:14.32,0:00:17.18,English,,0,0,0,,And by the term machine level programming I mean
 Dialogue: 0,0:00:14.32,0:00:17.18,Chinese,,0,0,0,,我的意思是术语机器级编程
 Dialogue: 0,0:00:17.70,0:00:26.24,English,,0,0,0,,When you're actually considering the individual instructions to get executed by the machine in response to your program
-Dialogue: 0,0:00:17.70,0:00:26.24,Chinese,,0,0,0,,当您实际考虑单个指令由机器执行以响应您的程序时
+Dialogue: 0,0:00:17.70,0:00:26.24,Chinese,,0,0,0,,当你实际考虑单个指令由机器执行以响应你的程序时
 Dialogue: 0,0:00:26.54,0:00:29.64,English,,0,0,0,,And there's really two forms of machine programs
 Dialogue: 0,0:00:26.54,0:00:29.64,Chinese,,0,0,0,,实际上有两种形式的机器程序
 Dialogue: 0,0:00:29.64,0:00:33.44,English,,0,0,0,,One is the actual object code that runs on the computer
@@ -70,7 +70,7 @@ Dialogue: 0,0:01:35.50,0:01:38.72,Chinese,,0,0,0,,这与其他地方的做法截
 Dialogue: 0,0:01:39.18,0:01:41.54,English,,0,0,0,,In the bad old days of computing
 Dialogue: 0,0:01:39.18,0:01:41.54,Chinese,,0,0,0,,在计算机的糟糕时期
 Dialogue: 0,0:01:42.02,0:01:46.74,English,,0,0,0,,You would be required to take a course it was typically called assembly level programming
-Dialogue: 0,0:01:42.02,0:01:46.74,Chinese,,0,0,0,,您将需要参加一个通常称为汇编级编程的课程
+Dialogue: 0,0:01:42.02,0:01:46.74,Chinese,,0,0,0,,你将需要参加一个通常称为汇编级编程的课程
 Dialogue: 0,0:01:47.34,0:01:50.26,English,,0,0,0,,The way you actually learn to write programs in assembler
 Dialogue: 0,0:01:47.34,0:01:50.26,Chinese,,0,0,0,,你实际学习用汇编语言编写程序的方式
 Dialogue: 0,0:01:50.74,0:01:58.52,English,,0,0,0,,And your assignments would be to do things like to sort a array of numbers
@@ -134,7 +134,7 @@ Dialogue: 0,0:03:42.38,0:03:43.56,Chinese,,0,0,0,,因为它真的很有点
 Dialogue: 0,0:03:44.42,0:03:50.52,English,,0,0,0,,But I think this is sort of the core of where this course is
 Dialogue: 0,0:03:44.42,0:03:50.52,Chinese,,0,0,0,,但我认为这是本课程的核心内容
 Dialogue: 0,0:03:52.78,0:04:00.72,English,,0,0,0,,And as you know in this course we only look at one particular class of machines
-Dialogue: 0,0:03:52.78,0:04:00.72,Chinese,,0,0,0,,正如您在本课程中所知，我们只关注一类特定的机器
+Dialogue: 0,0:03:52.78,0:04:00.72,Chinese,,0,0,0,,正如你在本课程中所知，我们只关注一类特定的机器
 Dialogue: 0,0:04:00.72,0:04:07.12,English,,0,0,0,,Even though there's many more different machine level programming possibilities out there
 Dialogue: 0,0:04:00.72,0:04:07.12,Chinese,,0,0,0,,即使有更多不同的机器级编程可能性
 Dialogue: 0,0:04:07.12,0:04:12.72,English,,0,0,0,,And we've chosen the intel the 64-bit version of the intel instruction set
@@ -144,7 +144,7 @@ Dialogue: 0,0:04:13.46,0:04:18.50,Chinese,,0,0,0,,所以我将介绍一下英特
 Dialogue: 0,0:04:19.74,0:04:25.56,English,,0,0,0,,We'll look at through this idea of how does C code relate to assembly code machine code and so forth
 Dialogue: 0,0:04:19.74,0:04:25.56,Chinese,,0,0,0,,我们将通过这个想法来了解C代码如何与汇编代码机器代码相关联等等
 Dialogue: 0,0:04:26.36,0:04:33.94,English,,0,0,0,,We'll go through set of low-level basics that you need to understand the of what assembly code,machine code looks like
-Dialogue: 0,0:04:26.36,0:04:33.94,Chinese,,0,0,0,,我们将介绍一组低级基础知识，您需要了解哪些汇编代码，机器代码看起来像什么
+Dialogue: 0,0:04:26.36,0:04:33.94,Chinese,,0,0,0,,我们将介绍一组低级基础知识，你需要了解哪些汇编代码，机器代码看起来像什么
 Dialogue: 0,0:04:34.28,0:04:40.48,English,,0,0,0,,And then we'll actually take on and look at some real code ,focusing specifically on arithmetic operations
 Dialogue: 0,0:04:34.28,0:04:40.48,Chinese,,0,0,0,,然后我们将实际接受并查看一些真正的代码，特别关注算术运算
 Dialogue: 0,0:04:42.86,0:04:48.66,English,,0,0,0,,So x86 is sort of a colloquial term for intel processors
@@ -220,7 +220,7 @@ Dialogue: 0,0:07:13.38,0:07:17.24,Chinese,,0,0,0,,但事实证明，你可以很
 Dialogue: 0,0:07:17.24,0:07:20.84,English,,0,0,0,,By focusing more on just what does the code look like that
 Dialogue: 0,0:07:17.24,0:07:20.84,Chinese,,0,0,0,,通过更多地关注代码看起来是什么样的
 Dialogue: 0,0:07:21.08,0:07:25.46,English,,0,0,0,,GCC is generating for the kind of programs that you typically write
-Dialogue: 0,0:07:21.08,0:07:25.46,Chinese,,0,0,0,,GCC正在为您通常编写的程序生成
+Dialogue: 0,0:07:21.08,0:07:25.46,Chinese,,0,0,0,,GCC正在为你通常编写的程序生成
 Dialogue: 0,0:07:27.62,0:07:30.06,English,,0,0,0,,And it should also realize it
 Dialogue: 0,0:07:27.62,0:07:30.06,Chinese,,0,0,0,,它也应该意识到这一点
 Dialogue: 0,0:07:30.70,0:07:40.36,English,,0,0,0,,It many levels of this should not have been the successful design
@@ -290,7 +290,7 @@ Dialogue: 0,0:10:11.20,0:10:20.62,Chinese,,0,0,0,,并且花费了大量时间使
 Dialogue: 0,0:10:22.66,0:10:28.60,English,,0,0,0,,And then for actually fairly interesting reasons
 Dialogue: 0,0:10:22.66,0:10:28.60,Chinese,,0,0,0,,然后是实际上相当有趣的原因
 Dialogue: 0,0:10:28.92,0:10:32.98,English,,0,0,0,,You could map how fast a single processor would run
-Dialogue: 0,0:10:28.92,0:10:32.98,Chinese,,0,0,0,,您可以映射单个处理器的运行速度
+Dialogue: 0,0:10:28.92,0:10:32.98,Chinese,,0,0,0,,你可以映射单个处理器的运行速度
 Dialogue: 0,0:10:33.38,0:10:39.26,English,,0,0,0,,And it was climbing up at a pretty steady pace until around 2004
 Dialogue: 0,0:10:33.38,0:10:39.26,Chinese,,0,0,0,,直到2004年左右，它才以稳定的速度攀升
 Dialogue: 0,0:10:39.72,0:10:44.98,English,,0,0,0,,And then intel got and all the companies got into serious trouble with the power consumption of their chips
@@ -460,7 +460,7 @@ Dialogue: 0,0:17:13.04,0:17:16.82,Chinese,,0,0,0,,所以我们使用的是x86-64
 Dialogue: 0,0:17:16.82,0:17:21.46,English,,0,0,0,,There's various ways this is named,but this is sort of the linux way of naming it
 Dialogue: 0,0:17:16.82,0:17:21.46,Chinese,,0,0,0,,这有多种方式命名，但这是linux命名方式
 Dialogue: 0,0:17:22.60,0:17:27.64,English,,0,0,0,,If you're interested in IA32 there's a document on the web associated with the book
-Dialogue: 0,0:17:22.60,0:17:27.64,Chinese,,0,0,0,,如果您对IA32感兴趣，那么与该书相关的网络上有一份文档
+Dialogue: 0,0:17:22.60,0:17:27.64,Chinese,,0,0,0,,如果你对IA32感兴趣，那么与该书相关的网络上有一份文档
 Dialogue: 0,0:17:27.78,0:17:31.50,English,,0,0,0,,Called a web aside that goes through at least some of the basics of
 Dialogue: 0,0:17:27.78,0:17:31.50,Chinese,,0,0,0,,称为网络，至少经历了一些基础知识
 Dialogue: 0,0:17:31.94,0:17:37.34,English,,0,0,0,,But to really read that you need to learn the 64 bit,because it assumes you kind of already know that
@@ -520,11 +520,11 @@ Dialogue: 0,0:19:39.32,0:19:44.16,Chinese,,0,0,0,,但就是你知道那里有两
 Dialogue: 0,0:19:44.16,0:19:46.06,English,,0,0,0,,ARM are the dominant players right now
 Dialogue: 0,0:19:44.16,0:19:46.06,Chinese,,0,0,0,,ARM现在是主要的参与者
 Dialogue: 0,0:19:49.46,0:19:54.36,English,,0,0,0,,So let's talk some terminology,if you've probably heard some of these terms before but let's make it clear
-Dialogue: 0,0:19:49.46,0:19:54.36,Chinese,,0,0,0,,所以，让我们谈谈一些术语，如果您之前可能已经听过其中的一些术语，那么让我们说清楚
+Dialogue: 0,0:19:49.46,0:19:54.36,Chinese,,0,0,0,,所以，让我们谈谈一些术语，如果你之前可能已经听过其中的一些术语，那么让我们说清楚
 Dialogue: 0,0:19:54.91,0:19:58.40,English,,0,0,0,,So when we talk about the instructions the instruction set
 Dialogue: 0,0:19:54.91,0:19:58.40,Chinese,,0,0,0,,所以当我们谈论指令集时
 Dialogue: 0,0:19:58.96,0:20:06.76,English,,0,0,0,,That's the the target of a compiler to give you a series of instructions that tell the machine exactly what to do
-Dialogue: 0,0:19:58.96,0:20:06.76,Chinese,,0,0,0,,这是编译器的目标，它为您提供一系列指令，告诉机器确切地做什么
+Dialogue: 0,0:19:58.96,0:20:06.76,Chinese,,0,0,0,,这是编译器的目标，它为你提供一系列指令，告诉机器确切地做什么
 Dialogue: 0,0:20:08.92,0:20:11.50,English,,0,0,0,,But it turns out that the hardware people have figured out
 Dialogue: 0,0:20:08.92,0:20:11.50,Chinese,,0,0,0,,但事实证明，硬件人已经想到了
 Dialogue: 0,0:20:11.50,0:20:14.60,English,,0,0,0,,All kinds of clever ways to implement instructions
@@ -574,19 +574,19 @@ Dialogue: 0,0:21:51.74,0:21:55.00,Chinese,,0,0,0,,与编写C代码时的情况�
 Dialogue: 0,0:21:56.24,0:22:01.38,English,,0,0,0,,First of all there is some very visible parts of the instruction the machine state
 Dialogue: 0,0:21:56.24,0:22:01.38,Chinese,,0,0,0,,首先，机器状态指令中有一些非常明显的部分
 Dialogue: 0,0:22:02.12,0:22:06.32,English,,0,0,0,,That you can examine and test and operate on and you must in fact
-Dialogue: 0,0:22:02.12,0:22:06.32,Chinese,,0,0,0,,您可以检查，测试和操作，事实上您必须这样做
+Dialogue: 0,0:22:02.12,0:22:06.32,Chinese,,0,0,0,,你可以检查，测试和操作，事实上你必须这样做
 Dialogue: 0,0:22:06.82,0:22:10.92,English,,0,0,0,,You would never understand what those are if you're just thinking in terms of C
 Dialogue: 0,0:22:06.82,0:22:10.92,Chinese,,0,0,0,,如果你只是用C来思考，你永远不会明白那些是什么
 Dialogue: 0,0:22:11.88,0:22:17.50,English,,0,0,0,,So in particular there's some sort of a program counter to tells you what
 Dialogue: 0,0:22:11.88,0:22:17.50,Chinese,,0,0,0,,所以特别是有某种程序计数器可以告诉你什么
 Dialogue: 0,0:22:17.66,0:22:22.62,English,,0,0,0,,What address is the instruction that you're going to execute next
-Dialogue: 0,0:22:17.66,0:22:22.62,Chinese,,0,0,0,,您接下来要执行的指令是什么地址
+Dialogue: 0,0:22:17.66,0:22:22.62,Chinese,,0,0,0,,你接下来要执行的指令是什么地址
 Dialogue: 0,0:22:22.66,0:22:24.38,English,,0,0,0,,Where is that located in memory
 Dialogue: 0,0:22:22.66,0:22:24.38,Chinese,,0,0,0,,它位于记忆中的哪个位置
 Dialogue: 0,0:22:25.40,0:22:33.38,English,,0,0,0,,And then there's a set of registers which are part of that the programmer actually makes use of
 Dialogue: 0,0:22:25.40,0:22:33.38,Chinese,,0,0,0,,然后有一组寄存器，它们是程序员实际使用的一部分
 Dialogue: 0,0:22:33.38,0:22:38.14,English,,0,0,0,,You can think of them as as a very small number of memory locations
-Dialogue: 0,0:22:33.38,0:22:38.14,Chinese,,0,0,0,,您可以将它们视为极少数的内存位置
+Dialogue: 0,0:22:33.38,0:22:38.14,Chinese,,0,0,0,,你可以将它们视为极少数的内存位置
 Dialogue: 0,0:22:38.14,0:22:43.28,English,,0,0,0,,But rather than giving an address from 0 up to n-1 or something
 Dialogue: 0,0:22:38.14,0:22:43.28,Chinese,,0,0,0,,但不是给出从0到n-1或其他地址的地址
 Dialogue: 0,0:22:43.50,0:22:47.38,English,,0,0,0,,You actually give them by name as specifically
@@ -674,7 +674,7 @@ Dialogue: 0,0:25:45.06,0:25:46.66,Chinese,,0,0,0,,我们很快就会看到这一
 Dialogue: 0,0:25:47.56,0:25:50.98,English,,0,0,0,,And then there's a program called a linker
 Dialogue: 0,0:25:47.56,0:25:50.98,Chinese,,0,0,0,,然后有一个叫做链接器的程序
 Dialogue: 0,0:25:51.28,0:25:57.28,English,,0,0,0,,Which merges together all the different files for both your individual file
-Dialogue: 0,0:25:51.28,0:25:57.28,Chinese,,0,0,0,,它将您的单个文件的所有不同文件合并在一起
+Dialogue: 0,0:25:51.28,0:25:57.28,Chinese,,0,0,0,,它将你的单个文件的所有不同文件合并在一起
 Dialogue: 0,0:25:57.72,0:26:01.99,English,,0,0,0,,Their compiled versions and for the library code
 Dialogue: 0,0:25:57.72,0:26:01.99,Chinese,,0,0,0,,他们的编译版本和库代码
 Dialogue: 0,0:26:02.78,0:26:06.28,English,,0,0,0,,And then finally there's a even once you run a program
@@ -782,7 +782,7 @@ Dialogue: 0,0:30:44.38,0:30:47.92,Chinese,,0,0,0,,它的工作方式非常繁琐
 Dialogue: 0,0:30:48.56,0:30:51.56,English,,0,0,0,,You say -o1
 Dialogue: 0,0:30:48.56,0:30:51.56,Chinese,,0,0,0,,你说-o1
 Dialogue: 0,0:30:51.56,0:30:55.76,English,,0,0,0,,Which is what you used to do to turn on the optimizer
-Dialogue: 0,0:30:51.56,0:30:55.76,Chinese,,0,0,0,,这是您过去打开优化器的过程
+Dialogue: 0,0:30:51.56,0:30:55.76,Chinese,,0,0,0,,这是你过去打开优化器的过程
 Dialogue: 0,0:30:55.96,0:30:59.44,English,,0,0,0,,It turns out that as GCC as they've gotten more advanced
 Dialogue: 0,0:30:55.96,0:30:59.44,Chinese,,0,0,0,,事实证明，作为海湾合作委员会，他们已经变得更先进了
 Dialogue: 0,0:30:59.90,0:31:02.22,English,,0,0,0,,It does a lot of optimizations now
@@ -886,7 +886,7 @@ Dialogue: 0,0:35:16.68,0:35:18.48,Chinese,,0,0,0,,我会告诉你一些这方面
 Dialogue: 0,0:35:19.30,0:35:21.88,English,,0,0,0,,And things like arrays and structs
 Dialogue: 0,0:35:19.30,0:35:21.88,Chinese,,0,0,0,,像数组和结构这样的东西
 Dialogue: 0,0:35:22.32,0:35:25.34,English,,0,0,0,,And things that you think of as fundamental datatypes
-Dialogue: 0,0:35:22.32,0:35:25.34,Chinese,,0,0,0,,您认为是基本数据类型的东西
+Dialogue: 0,0:35:22.32,0:35:25.34,Chinese,,0,0,0,,你认为是基本数据类型的东西
 Dialogue: 0,0:35:26.00,0:35:27.82,English,,0,0,0,,Don't exist at the machine level
 Dialogue: 0,0:35:26.00,0:35:27.82,Chinese,,0,0,0,,不存在于机器级别
 Dialogue: 0,0:35:27.82,0:35:31.74,English,,0,0,0,,They're sort of constructed artificially by the compiler
@@ -936,7 +936,7 @@ Dialogue: 0,0:37:34.22,0:37:38.64,Chinese,,0,0,0,,正如你在C中所知，如�
 Dialogue: 0,0:37:39.04,0:37:40.62,English,,0,0,0,,And if that reference is on the left
 Dialogue: 0,0:37:39.04,0:37:40.62,Chinese,,0,0,0,,如果那个参考在左边
 Dialogue: 0,0:37:41.06,0:37:47.24,English,,0,0,0,,You want to store a number of value at that place where you're pointing to
-Dialogue: 0,0:37:41.06,0:37:47.24,Chinese,,0,0,0,,您希望在指向的位置存储多个值
+Dialogue: 0,0:37:41.06,0:37:47.24,Chinese,,0,0,0,,你希望在指向的位置存储多个值
 Dialogue: 0,0:37:47.90,0:37:50.64,English,,0,0,0,,So what would typically happen is
 Dialogue: 0,0:37:47.90,0:37:50.64,Chinese,,0,0,0,,那么通常会发生什么
 Dialogue: 0,0:37:51.04,0:37:57.40,English,,0,0,0,,Dest the the actual pointer value would also be stored in a register here it's in register %rbx
@@ -970,7 +970,7 @@ Dialogue: 0,0:38:53.26,0:38:57.64,Chinese,,0,0,0,,那么我们怎么能知道那
 Dialogue: 0,0:38:58.02,0:39:02.70,English,,0,0,0,,Well there's some really useful tools that let you examine machine code
 Dialogue: 0,0:38:58.02,0:39:02.70,Chinese,,0,0,0,,那么有一些非常有用的工具可以让你检查机器代码
 Dialogue: 0,0:39:03.10,0:39:09.74,English,,0,0,0,,Even if you don't have a copy of the original C file or even the assembly code file ahead of time
-Dialogue: 0,0:39:03.10,0:39:09.74,Chinese,,0,0,0,,即使您没有提供原始C文件的副本，甚至没有提前的汇编代码文件
+Dialogue: 0,0:39:03.10,0:39:09.74,Chinese,,0,0,0,,即使你没有提供原始C文件的副本，甚至没有提前的汇编代码文件
 Dialogue: 0,0:39:10.14,0:39:12.02,English,,0,0,0,,And there's one called a disassembler
 Dialogue: 0,0:39:10.14,0:39:12.02,Chinese,,0,0,0,,还有一个叫做反汇编程序
 Dialogue: 0,0:39:12.46,0:39:20.36,English,,0,0,0,,So an assembler goes from this text version of instructions to a byte level representation
@@ -996,7 +996,7 @@ Dialogue: 0,0:40:05.14,0:40:12.08,Chinese,,0,0,0,,变量的所有名称在汇编
 Dialogue: 0,0:40:12.16,0:40:15.10,English,,0,0,0,,Things are just during registers they're somewhere in memory
 Dialogue: 0,0:40:12.16,0:40:15.10,Chinese,,0,0,0,,事情只是在寄存器中，它们在记忆中的某个地方
 Dialogue: 0,0:40:15.50,0:40:20.16,English,,0,0,0,,The program has no understanding of your original source code at that level
-Dialogue: 0,0:40:15.50,0:40:20.16,Chinese,,0,0,0,,该程序不了解您在该级别的原始源代码
+Dialogue: 0,0:40:15.50,0:40:20.16,Chinese,,0,0,0,,该程序不了解你在该级别的原始源代码
 Dialogue: 0,0:40:21.72,0:40:24.92,English,,0,0,0,,And so the disassembled is just a way to go backward
 Dialogue: 0,0:40:21.72,0:40:24.92,Chinese,,0,0,0,,因此拆解只是一种倒退的方式
 Dialogue: 0,0:40:25.40,0:40:26.90,English,,0,0,0,,And you can do that yourself
@@ -1018,7 +1018,7 @@ Dialogue: 0,0:41:16.22,0:41:19.42,Chinese,,0,0,0,,而且我非常聪明，我称
 Dialogue: 0,0:41:20.22,0:41:22.08,English,,0,0,0,,And so sum is a binary file
 Dialogue: 0,0:41:20.22,0:41:22.08,Chinese,,0,0,0,,所以sum是一个二进制文件
 Dialogue: 0,0:41:25.74,0:41:32.36,English,,0,0,0,,Of 8663 bytes, you see off on the left its mark is executable
-Dialogue: 0,0:41:25.74,0:41:32.36,Chinese,,0,0,0,,在8663个字节中，您在左侧看到它的标记是可执行的
+Dialogue: 0,0:41:25.74,0:41:32.36,Chinese,,0,0,0,,在8663个字节中，你在左侧看到它的标记是可执行的
 Dialogue: 0,0:41:33.04,0:41:34.80,English,,0,0,0,,And it actually works
 Dialogue: 0,0:41:33.04,0:41:34.80,Chinese,,0,0,0,,它确实有效
 Dialogue: 0,0:41:35.34,0:41:37.24,English,,0,0,0,,I can add numbers together with it
@@ -1056,7 +1056,7 @@ Dialogue: 0,0:43:09.22,0:43:14.57,Chinese,,0,0,0,,然后它选择那些分开并
 Dialogue: 0,0:43:14.88,0:43:18.18,English,,0,0,0,,So for example the push instruction only takes a single byte
 Dialogue: 0,0:43:14.88,0:43:18.18,Chinese,,0,0,0,,因此，例如推送指令仅占用一个字节
 Dialogue: 0,0:43:19.06,0:43:21.92,English,,0,0,0,,The move as you saw before takes three bytes
-Dialogue: 0,0:43:19.06,0:43:21.92,Chinese,,0,0,0,,您之前看到的移动需要三个字节
+Dialogue: 0,0:43:19.06,0:43:21.92,Chinese,,0,0,0,,你之前看到的移动需要三个字节
 Dialogue: 0,0:43:22.88,0:43:31.64,English,,0,0,0,,This call because it has to give the location of where to call is a five byte instruction and so forth
 Dialogue: 0,0:43:22.88,0:43:31.64,Chinese,,0,0,0,,这个调用因为它必须给出调用位置的位置是一个五字节指令，依此类推
 Dialogue: 0,0:43:34.28,0:43:37.54,English,,0,0,0,,But again the disassembler didn't have access to the source code
@@ -1066,7 +1066,7 @@ Dialogue: 0,0:43:37.54,0:43:39.46,Chinese,,0,0,0,,它甚至无法访问汇编代
 Dialogue: 0,0:43:39.46,0:43:43.92,English,,0,0,0,,It figured this out just by the bytes in the actual object code file
 Dialogue: 0,0:43:39.46,0:43:43.92,Chinese,,0,0,0,,它只是通过实际目标代码文件中的字节来计算出来的
 Dialogue: 0,0:43:45.78,0:43:51.02,English,,0,0,0,,So this is the way if you ever want to know actually the byte level encoding
-Dialogue: 0,0:43:45.78,0:43:51.02,Chinese,,0,0,0,,因此，如果您想要实际知道字节级编码，这就是这种方式
+Dialogue: 0,0:43:45.78,0:43:51.02,Chinese,,0,0,0,,因此，如果你想要实际知道字节级编码，这就是这种方式
 Dialogue: 0,0:43:51.40,0:43:52.80,English,,0,0,0,,This is how you figure it out
 Dialogue: 0,0:43:51.40,0:43:52.80,Chinese,,0,0,0,,这就是你如何弄明白的
 Dialogue: 0,0:43:53.58,0:44:02.09,English,,0,0,0,,Is to run a program,run it through an assembler get object code and then come back out with
@@ -1074,13 +1074,13 @@ Dialogue: 0,0:43:53.58,0:44:02.09,Chinese,,0,0,0,,是运行程序，通过汇编
 Dialogue: 0,0:44:03.64,0:44:05.12,English,,0,0,0,,It there's another way you can do it
 Dialogue: 0,0:44:03.64,0:44:05.12,Chinese,,0,0,0,,它还有另一种方法可以做到
 Dialogue: 0,0:44:07.50,0:44:13.28,English,,0,0,0,,Using the debugging program which you'll get to know very well in the next lab you're going to do
-Dialogue: 0,0:44:07.50,0:44:13.28,Chinese,,0,0,0,,使用您将在下一个实验室中完成的调试程序，您将要做的事情
+Dialogue: 0,0:44:07.50,0:44:13.28,Chinese,,0,0,0,,使用你将在下一个实验室中完成的调试程序，你将要做的事情
 Dialogue: 0,0:44:15.66,0:44:17.09,English,,0,0,0,,And it's called GDB
 Dialogue: 0,0:44:15.66,0:44:17.09,Chinese,,0,0,0,,它被称为GDB
 Dialogue: 0,0:44:20.26,0:44:24.86,English,,0,0,0,,And GDB is a very powerful debugging program that
 Dialogue: 0,0:44:20.26,0:44:24.86,Chinese,,0,0,0,,而GDB是一个非常强大的调试程序
 Dialogue: 0,0:44:25.10,0:44:29.83,English,,0,0,0,,You can examine step through and operate on programs in
-Dialogue: 0,0:44:25.10,0:44:29.83,Chinese,,0,0,0,,您可以检查步骤并对其中的程序进行操作
+Dialogue: 0,0:44:25.10,0:44:29.83,Chinese,,0,0,0,,你可以检查步骤并对其中的程序进行操作
 Dialogue: 0,0:44:30.04,0:44:36.72,English,,0,0,0,,And again you can,if the source code for it's available it will make use of it
 Dialogue: 0,0:44:30.04,0:44:36.72,Chinese,,0,0,0,,你可以再次，如果它的源代码可用，它将使用它
 Dialogue: 0,0:44:37.24,0:44:40.92,English,,0,0,0,,But it also can be used on programs for which there's no source available
@@ -1098,7 +1098,7 @@ Dialogue: 0,0:45:02.56,0:45:07.36,Chinese,,0,0,0,,这些不同指令的地址是
 Dialogue: 0,0:45:08.80,0:45:16.34,English,,0,0,0,,So there's my point here is there's various tools that let you look at a program
 Dialogue: 0,0:45:08.80,0:45:16.34,Chinese,,0,0,0,,所以我的观点是，有各种工具可以让你看一个程序
 Dialogue: 0,0:45:16.82,0:45:21.98,English,,0,0,0,,Even if it's actual representation is a binary file that you don't want to examine directly
-Dialogue: 0,0:45:16.82,0:45:21.98,Chinese,,0,0,0,,即使它的实际表示是一个您不想直接检查的二进制文件
+Dialogue: 0,0:45:16.82,0:45:21.98,Chinese,,0,0,0,,即使它的实际表示是一个你不想直接检查的二进制文件
 Dialogue: 0,0:45:34.84,0:45:36.36,English,,0,0,0,,I just put this in
 Dialogue: 0,0:45:34.84,0:45:36.36,Chinese,,0,0,0,,我把它放进去了
 Dialogue: 0,0:45:43.42,0:45:47.28,English,,0,0,0,,So what this slide shows is what I just showed you on the screen
@@ -1106,9 +1106,9 @@ Dialogue: 0,0:45:43.42,0:45:47.28,Chinese,,0,0,0,,所以这张幻灯片显示的
 Dialogue: 0,0:45:47.28,0:45:51.08,English,,0,0,0,,Which is what the object dump program produces for this function
 Dialogue: 0,0:45:47.28,0:45:51.08,Chinese,,0,0,0,,这是对象转储程序为此函数生成的内容
 Dialogue: 0,0:45:53.36,0:45:57.09,English,,0,0,0,,And this is a version showing what GDB would show you for it
-Dialogue: 0,0:45:53.36,0:45:57.09,Chinese,,0,0,0,,这是一个显示GDB将为您展示的版本
+Dialogue: 0,0:45:53.36,0:45:57.09,Chinese,,0,0,0,,这是一个显示GDB将为你展示的版本
 Dialogue: 0,0:45:57.70,0:46:01.06,English,,0,0,0,,And with GDB if you want to actually get the bytes out
-Dialogue: 0,0:45:57.70,0:46:01.06,Chinese,,0,0,0,,如果您想实际获取字节数，请使用GDB
+Dialogue: 0,0:45:57.70,0:46:01.06,Chinese,,0,0,0,,如果你想实际获取字节数，请使用GDB
 Dialogue: 0,0:46:01.30,0:46:06.08,English,,0,0,0,,You can do that, you can basically for any address
 Dialogue: 0,0:46:01.30,0:46:06.08,Chinese,,0,0,0,,你可以这样做，基本上可以用于任何地址
 Dialogue: 0,0:46:06.08,0:46:10.68,English,,0,0,0,,You can just give an address and tell it to display some number of bytes
@@ -1128,7 +1128,7 @@ Dialogue: 0,0:46:46.70,0:46:49.94,Chinese,,0,0,0,,我有一台电脑，然后不
 Dialogue: 0,0:46:49.94,0:46:57.94,English,,0,0,0,,But some people and you know our slides are online and so we got some nasty grams from people saying
 Dialogue: 0,0:46:49.94,0:46:57.94,Chinese,,0,0,0,,但是有些人和你知道我们的幻灯片在线，所以我们从人们那里得到了一些讨厌的克
 Dialogue: 0,0:46:58.28,0:47:02.42,English,,0,0,0,,You know you're violating the Microsoft end-user license agreement when you do that
-Dialogue: 0,0:46:58.28,0:47:02.42,Chinese,,0,0,0,,您知道在执行此操作时违反了Microsoft最终用户许可协议
+Dialogue: 0,0:46:58.28,0:47:02.42,Chinese,,0,0,0,,你知道在执行此操作时违反了Microsoft最终用户许可协议
 Dialogue: 0,0:47:02.42,0:47:05.78,English,,0,0,0,,Because you're supposed to you don't know this
 Dialogue: 0,0:47:02.42,0:47:05.78,Chinese,,0,0,0,,因为你应该不知道这一点
 Dialogue: 0,0:47:05.92,0:47:08.38,English,,0,0,0,,But remember all those click through I agree things
@@ -1148,7 +1148,7 @@ Dialogue: 0,0:47:29.50,0:47:32.82,Chinese,,0,0,0,,模糊应用程序的实际可
 Dialogue: 0,0:47:33.90,0:47:36.84,English,,0,0,0,,My point is that word like any other
 Dialogue: 0,0:47:33.90,0:47:36.84,Chinese,,0,0,0,,我的意思是这个词跟其他任何一样
 Dialogue: 0,0:47:39.42,0:47:42.30,English,,0,0,0,,Application you run is just a executable file
-Dialogue: 0,0:47:39.42,0:47:42.30,Chinese,,0,0,0,,您运行的应用程序只是一个可执行文件
+Dialogue: 0,0:47:39.42,0:47:42.30,Chinese,,0,0,0,,你运行的应用程序只是一个可执行文件
 Dialogue: 0,0:47:42.30,0:47:46.54,English,,0,0,0,,And that executable file is just a bunch of bytes that encode instructions
 Dialogue: 0,0:47:42.30,0:47:46.54,Chinese,,0,0,0,,而那个可执行文件只是一堆编码指令的字节
 Dialogue: 0,0:47:48.82,0:47:53.80,English,,0,0,0,,Okay so let's go a little bit further into this assembly level programming business
@@ -1162,7 +1162,7 @@ Dialogue: 0,0:48:03.58,0:48:07.42,Chinese,,0,0,0,,这再次反映了这种进化
 Dialogue: 0,0:48:08.18,0:48:12.82,English,,0,0,0,,But you'll see that there's sixteen registers that
 Dialogue: 0,0:48:08.18,0:48:12.82,Chinese,,0,0,0,,但是你会看到有十六个寄存器
 Dialogue: 0,0:48:12.82,0:48:15.52,English,,0,0,0,,You can use to hold integers and pointers
-Dialogue: 0,0:48:12.82,0:48:15.52,Chinese,,0,0,0,,您可以使用来保存整数和指针
+Dialogue: 0,0:48:12.82,0:48:15.52,Chinese,,0,0,0,,你可以使用来保存整数和指针
 Dialogue: 0,0:48:16.44,0:48:22.34,English,,0,0,0,,And some of them have these sort of alphabetic names and some of them have numeric names
 Dialogue: 0,0:48:16.44,0:48:22.34,Chinese,,0,0,0,,其中一些有这些字母名称，其中一些有数字名称
 Dialogue: 0,0:48:23.18,0:48:24.38,English,,0,0,0,,I'll show you why in a minute
@@ -1192,17 +1192,17 @@ Dialogue: 0,0:49:12.72,0:49:17.70,Chinese,,0,0,0,,这些寄存器中的每个寄
 Dialogue: 0,0:49:19.48,0:49:22.28,English,,0,0,0,,But again think of these as like named
 Dialogue: 0,0:49:19.48,0:49:22.28,Chinese,,0,0,0,,但再次想到这些就像命名一样
 Dialogue: 0,0:49:23.20,0:49:28.46,English,,0,0,0,,Locations where you can store values and you can retrieve values from them
-Dialogue: 0,0:49:23.20,0:49:28.46,Chinese,,0,0,0,,您可以存储值的位置，您可以从中检索值
+Dialogue: 0,0:49:23.20,0:49:28.46,Chinese,,0,0,0,,你可以存储值的位置，你可以从中检索值
 Dialogue: 0,0:49:29.32,0:49:35.84,English,,0,0,0,,And you have to you the I'm sort of personifying machine level programming here
 Dialogue: 0,0:49:29.32,0:49:35.84,Chinese,,0,0,0,,而且你必须要我在这里对机器级编程进行个性化
 Dialogue: 0,0:49:36.08,0:49:43.94,English,,0,0,0,,You personally will actually have to explicitly name those registers for the most part
-Dialogue: 0,0:49:36.08,0:49:43.94,Chinese,,0,0,0,,您个人实际上必须在大多数情况下明确地命名这些寄存器
+Dialogue: 0,0:49:36.08,0:49:43.94,Chinese,,0,0,0,,你个人实际上必须在大多数情况下明确地命名这些寄存器
 Dialogue: 0,0:49:44.48,0:49:47.02,English,,0,0,0,,To say where things should go where they should come out of
 Dialogue: 0,0:49:44.48,0:49:47.02,Chinese,,0,0,0,,说出应该从哪里出来的东西
 Dialogue: 0,0:49:47.08,0:49:53.02,English,,0,0,0,,It's not like a memory where you just give a number to tell where to look for
 Dialogue: 0,0:49:47.08,0:49:53.02,Chinese,,0,0,0,,这不像是一个记忆，你只需要给出一个数字来告诉在哪里寻找
 Dialogue: 0,0:49:53.04,0:49:57.04,English,,0,0,0,,You could compute a number there actually each one is identified separately
-Dialogue: 0,0:49:53.04,0:49:57.04,Chinese,,0,0,0,,您可以计算一个数字，实际上每个数字都是单独识别的
+Dialogue: 0,0:49:53.04,0:49:57.04,Chinese,,0,0,0,,你可以计算一个数字，实际上每个数字都是单独识别的
 Dialogue: 0,0:49:58.30,0:50:05.18,English,,0,0,0,,So just as a little bit of history with IA32 so back
 Dialogue: 0,0:49:58.30,0:50:05.18,Chinese,,0,0,0,,所以就像IA32的历史一样
 Dialogue: 0,0:50:05.98,0:50:11.92,English,,0,0,0,,We just talked about other being 8 registers all the %e versions
@@ -1220,7 +1220,7 @@ Dialogue: 0,0:50:37.50,0:50:44.86,Chinese,,0,0,0,,实际上，旧机器可以参
 Dialogue: 0,0:50:44.86,0:50:48.50,English,,0,0,0,,And that was a legacy from the 8086 days
 Dialogue: 0,0:50:44.86,0:50:48.50,Chinese,,0,0,0,,这是8086天的遗产
 Dialogue: 0,0:50:49.82,0:50:57.66,English,,0,0,0,,And within the first four you could even refer to the individual to lower order or bytes in those
-Dialogue: 0,0:50:49.82,0:50:57.66,Chinese,,0,0,0,,在前四个中，您甚至可以将个体引用到较低的顺序或字节
+Dialogue: 0,0:50:49.82,0:50:57.66,Chinese,,0,0,0,,在前四个中，你甚至可以将个体引用到较低的顺序或字节
 Dialogue: 0,0:50:58.52,0:51:03.18,English,,0,0,0,,So nowadays you can actually get to the low order byte of all of them
 Dialogue: 0,0:50:58.52,0:51:03.18,Chinese,,0,0,0,,所以现在你可以实际到达所有这些的低位字节
 Dialogue: 0,0:51:03.48,0:51:08.12,English,,0,0,0,,And we just sort of got...that's covered in the book actually
@@ -1280,13 +1280,13 @@ Dialogue: 0,0:53:31.02,0:53:35.30,Chinese,,0,0,0,,x86中的mov指令实际上可
 Dialogue: 0,0:53:38.20,0:53:43.22,English,,0,0,0,,Because it can take different types of information or what they call operands
 Dialogue: 0,0:53:38.20,0:53:43.22,Chinese,,0,0,0,,因为它可以采用不同类型的信息或他们称之为操作数的信息
 Dialogue: 0,0:53:43.98,0:53:49.46,English,,0,0,0,,So the source is some where you're copying from the source to the destination
-Dialogue: 0,0:53:43.98,0:53:49.46,Chinese,,0,0,0,,因此，源是您从源复制到目标的位置
+Dialogue: 0,0:53:43.98,0:53:49.46,Chinese,,0,0,0,,因此，源是你从源复制到目标的位置
 Dialogue: 0,0:53:51.04,0:53:53.42,English,,0,0,0,,The source can be some what's called an immediate
 Dialogue: 0,0:53:51.04,0:53:53.42,Chinese,,0,0,0,,源可以是一些所谓的立即
 Dialogue: 0,0:53:53.42,0:53:56.28,English,,0,0,0,,It's actually a number that's baked into the program
 Dialogue: 0,0:53:53.42,0:53:56.28,Chinese,,0,0,0,,它实际上是一个被编入程序的数字
 Dialogue: 0,0:53:56.78,0:53:59.82,English,,0,0,0,,That you want to copy into some other location
-Dialogue: 0,0:53:56.78,0:53:59.82,Chinese,,0,0,0,,您要复制到其他位置
+Dialogue: 0,0:53:56.78,0:53:59.82,Chinese,,0,0,0,,你要复制到其他位置
 Dialogue: 0,0:54:00.74,0:54:06.76,English,,0,0,0,,A register we've talked about is one a specially named memory of locations
 Dialogue: 0,0:54:00.74,0:54:06.76,Chinese,,0,0,0,,我们谈到的一个寄存器是一个特别命名的位置记忆
 Dialogue: 0,0:54:07.10,0:54:12.38,English,,0,0,0,,And memory is the array of bytes that you typically you have to specify what's the address
@@ -1294,7 +1294,7 @@ Dialogue: 0,0:54:07.10,0:54:12.38,Chinese,,0,0,0,,内存是一个字节数组，
 Dialogue: 0,0:54:12.94,0:54:19.96,English,,0,0,0,,That you're either reading from if it's the source are you writing to if it's the destination
 Dialogue: 0,0:54:12.94,0:54:19.96,Chinese,,0,0,0,,如果它是目的地，那么如果它是源，那么你要么是在读它
 Dialogue: 0,0:54:22.62,0:54:25.96,English,,0,0,0,,And so the mov instruction gives you all these possibilities
-Dialogue: 0,0:54:22.62,0:54:25.96,Chinese,,0,0,0,,因此mov指令为您提供了所有这些可能性
+Dialogue: 0,0:54:22.62,0:54:25.96,Chinese,,0,0,0,,因此mov指令为你提供了所有这些可能性
 Dialogue: 0,0:54:26.90,0:54:33.30,English,,0,0,0,,An immediate value can be written to a register or directly to memory
 Dialogue: 0,0:54:26.90,0:54:33.30,Chinese,,0,0,0,,立即值可以写入寄存器或直接写入存储器
 Dialogue: 0,0:54:34.18,0:54:38.26,English,,0,0,0,,A register value can be copied to another register or written to memory
@@ -1310,7 +1310,7 @@ Dialogue: 0,0:54:51.44,0:54:56.52,Chinese,,0,0,0,,因为将立即值作为目的
 Dialogue: 0,0:54:57.16,0:55:02.38,English,,0,0,0,,And also just for sort of the sake of convenience for the hardware designers
 Dialogue: 0,0:54:57.16,0:55:02.38,Chinese,,0,0,0,,而且只是为了方便硬件设计人员
 Dialogue: 0,0:55:02.84,0:55:06.54,English,,0,0,0,,It doesn't let you directly copy from one memory location to another
-Dialogue: 0,0:55:02.84,0:55:06.54,Chinese,,0,0,0,,它不允许您直接从一个内存位置复制到另一个内存位置
+Dialogue: 0,0:55:02.84,0:55:06.54,Chinese,,0,0,0,,它不允许你直接从一个内存位置复制到另一个内存位置
 Dialogue: 0,0:55:07.00,0:55:09.20,English,,0,0,0,,What you have to do is use two instructions
 Dialogue: 0,0:55:07.00,0:55:09.20,Chinese,,0,0,0,,你要做的是使用两个指令
 Dialogue: 0,0:55:09.40,0:55:13.82,English,,0,0,0,,One to copy from memory to read it from memory copy it to a register
@@ -1324,7 +1324,7 @@ Dialogue: 0,0:55:26.40,0:55:31.84,Chinese,,0,0,0,,所以这些实际的五种组
 Dialogue: 0,0:55:32.64,0:55:37.00,English,,0,0,0,,So for example if I take a constant value and copy it to a register
 Dialogue: 0,0:55:32.64,0:55:37.00,Chinese,,0,0,0,,因此，例如，如果我取一个常量值并将其复制到寄存器
 Dialogue: 0,0:55:37.72,0:55:43.56,English,,0,0,0,,It's a little like you can think of register as a sort of the temporary data that You're operating on right now
-Dialogue: 0,0:55:37.72,0:55:43.56,Chinese,,0,0,0,,这有点像您可以将注册视为您正在运行的临时数据
+Dialogue: 0,0:55:37.72,0:55:43.56,Chinese,,0,0,0,,这有点像你可以将注册视为你正在运行的临时数据
 Dialogue: 0,0:55:44.38,0:55:48.30,English,,0,0,0,,So it's a way of sort of of assigning a constant value to a temporary
 Dialogue: 0,0:55:44.38,0:55:48.30,Chinese,,0,0,0,,所以这是一种为临时值分配常量值的方法
 Dialogue: 0,0:55:50.08,0:55:54.04,English,,0,0,0,,Similarly if you're have a memory as your destination
@@ -1332,7 +1332,7 @@ Dialogue: 0,0:55:50.08,0:55:54.04,Chinese,,0,0,0,,同样，如果你有一个记
 Dialogue: 0,0:55:54.04,0:55:58.04,English,,0,0,0,,It's like storing a constant value in memory somewhere
 Dialogue: 0,0:55:54.04,0:55:58.04,Chinese,,0,0,0,,这就像在某个地方存储一个常量值
 Dialogue: 0,0:55:59.80,0:56:02.54,English,,0,0,0,,If you're copying from one register to another
-Dialogue: 0,0:55:59.80,0:56:02.54,Chinese,,0,0,0,,如果您从一个寄存器复制到另一个寄存器
+Dialogue: 0,0:55:59.80,0:56:02.54,Chinese,,0,0,0,,如果你从一个寄存器复制到另一个寄存器
 Dialogue: 0,0:56:02.54,0:56:08.44,English,,0,0,0,,It's sort of like copying one temporary value to another one  register to memory
 Dialogue: 0,0:56:02.54,0:56:08.44,Chinese,,0,0,0,,这有点像将一个临时值复制到另一个寄存器到内存
 Dialogue: 0,0:56:08.56,0:56:13.64,English,,0,0,0,,It's as if you it's sort of like storing to an address
@@ -1352,7 +1352,7 @@ Dialogue: 0,0:56:40.78,0:56:46.55,Chinese,,0,0,0,,我们如何指定内存引用
 Dialogue: 0,0:56:47.41,0:56:51.82,English,,0,0,0,,And you already saw one version of this in fact in some of the code
 Dialogue: 0,0:56:47.41,0:56:51.82,Chinese,,0,0,0,,而且你已经在一些代码中看到过这个版本
 Dialogue: 0,0:56:52.06,0:56:54.80,English,,0,0,0,,When you put the name of a register in parentheses
-Dialogue: 0,0:56:52.06,0:56:54.80,Chinese,,0,0,0,,当您将寄存器的名称放在括号中时
+Dialogue: 0,0:56:52.06,0:56:54.80,Chinese,,0,0,0,,当你将寄存器的名称放在括号中时
 Dialogue: 0,0:56:55.64,0:57:00.32,English,,0,0,0,,That's just saying use this register whatever is in that that's an address
 Dialogue: 0,0:56:55.64,0:57:00.32,Chinese,,0,0,0,,那就是说使用这个寄存器，不管那是什么地址
 Dialogue: 0,0:57:00.88,0:57:03.92,English,,0,0,0,,And use that address to reference some memory location
@@ -1508,7 +1508,7 @@ Dialogue: 0,1:03:30.58,1:03:35.68,Chinese,,0,0,0,,而它的一般想法是采用
 Dialogue: 0,1:03:35.98,1:03:40.42,English,,0,0,0,,That I'm referring to S sub, that's known as an index register
 Dialogue: 0,1:03:35.98,1:03:40.42,Chinese,,0,0,0,,我指的是S sub，它被称为索引寄存器
 Dialogue: 0,1:03:40.84,1:03:43.14,English,,0,0,0,,You multiply it by the scale factor
-Dialogue: 0,1:03:40.84,1:03:43.14,Chinese,,0,0,0,,您将它乘以比例因子
+Dialogue: 0,1:03:40.84,1:03:43.14,Chinese,,0,0,0,,你将它乘以比例因子
 Dialogue: 0,1:03:45.16,1:03:50.12,English,,0,0,0,,I'll you add the value of Rb register Rb
 Dialogue: 0,1:03:45.16,1:03:50.12,Chinese,,0,0,0,,我要添加Rb寄存器Rb的值
 Dialogue: 0,1:03:50.64,1:03:53.30,English,,0,0,0,,And you also add the constant displacement
@@ -1578,7 +1578,7 @@ Dialogue: 0,1:06:19.02,1:06:21.40,Chinese,,0,0,0,,我会经历一些算术
 Dialogue: 0,1:06:22.40,1:06:26.50,English,,0,0,0,,And one of the things that will be sure to confuse you and drive you crazy
 Dialogue: 0,1:06:22.40,1:06:26.50,Chinese,,0,0,0,,其中一件事肯定会让你感到困惑并让你发疯
 Dialogue: 0,1:06:26.56,1:06:30.36,English,,0,0,0,,Make you be sending email to the staff for explanation
-Dialogue: 0,1:06:26.56,1:06:30.36,Chinese,,0,0,0,,让您向工作人员发送电子邮件以获得解释
+Dialogue: 0,1:06:26.56,1:06:30.36,Chinese,,0,0,0,,让你向工作人员发送电子邮件以获得解释
 Dialogue: 0,1:06:30.88,1:06:33.22,English,,0,0,0,,Is an instruction called load effective address
 Dialogue: 0,1:06:30.88,1:06:33.22,Chinese,,0,0,0,,是一个称为加载有效地址的指令
 Dialogue: 0,1:06:34.84,1:06:37.56,English,,0,0,0,,And the reason is its purpose in life is to do
@@ -1682,7 +1682,7 @@ Dialogue: 0,1:10:40.80,1:10:46.64,Chinese,,0,0,0,,在这里我有各种各样的
 Dialogue: 0,1:10:46.64,1:10:52.26,English,,0,0,0,,So the compiler is sort of scrambling things around trying to find clever ways to implement
 Dialogue: 0,1:10:46.64,1:10:52.26,Chinese,,0,0,0,,所以编译器在试图找到聪明的方法来实现时会有所扰乱
 Dialogue: 0,1:10:52.70,1:10:59.94,English,,0,0,0,,What you're asking for using less complex expensive less time-consuming instructions
-Dialogue: 0,1:10:52.70,1:10:59.94,Chinese,,0,0,0,,您要求使用不那么复杂的昂贵且耗时较少的指令
+Dialogue: 0,1:10:52.70,1:10:59.94,Chinese,,0,0,0,,你要求使用不那么复杂的昂贵且耗时较少的指令
 Dialogue: 0,1:11:03.12,1:11:08.00,English,,0,0,0,,And if you sort of go through this code carefully what you'll find is
 Dialogue: 0,1:11:03.12,1:11:08.00,Chinese,,0,0,0,,如果你仔细阅读这些代码，你会发现它是什么
 Dialogue: 0,1:11:09.64,1:11:14.74,English,,0,0,0,,That this instruction here corresponds to this computation of t1
@@ -1722,11 +1722,11 @@ Dialogue: 0,1:12:20.92,1:12:24.18,Chinese,,0,0,0,,但是你找出这个lea指令
 Dialogue: 0,1:12:24.26,1:12:26.70,English,,0,0,0,,Otherwise you're just going to be hopelessly confused
 Dialogue: 0,1:12:24.26,1:12:26.70,Chinese,,0,0,0,,否则你只会毫无希望地混淆
 Dialogue: 0,1:12:27.48,1:12:34.82,English,,0,0,0,,And it's also important to understand that the code that gets generated will correctly implement your function
-Dialogue: 0,1:12:27.48,1:12:34.82,Chinese,,0,0,0,,并且了解生成的代码将正确实现您的功能也很重要
+Dialogue: 0,1:12:27.48,1:12:34.82,Chinese,,0,0,0,,并且了解生成的代码将正确实现你的功能也很重要
 Dialogue: 0,1:12:35.14,1:12:41.34,English,,0,0,0,,But it might not exactly replicate at a low level the the exact sequence of operations
 Dialogue: 0,1:12:35.14,1:12:41.34,Chinese,,0,0,0,,但它可能无法在较低级别完全复制操作的确切顺序
 Dialogue: 0,1:12:41.34,1:12:42.70,English,,0,0,0,,You specified at a high level
-Dialogue: 0,1:12:41.34,1:12:42.70,Chinese,,0,0,0,,您指定的是高级别
+Dialogue: 0,1:12:41.34,1:12:42.70,Chinese,,0,0,0,,你指定的是高级别
 Dialogue: 0,1:12:45.08,1:12:53.46,English,,0,0,0,,So that will just to summarize then you've already gotten a glimpse then of what this very odd a world of machine programming is
 Dialogue: 0,1:12:45.08,1:12:53.46,Chinese,,0,0,0,,那么这只是总结那么你已经看到了这个奇怪的机器编程世界是什么
 Dialogue: 0,1:12:53.46,1:12:56.08,English,,0,0,0,,And how different it is from C code already

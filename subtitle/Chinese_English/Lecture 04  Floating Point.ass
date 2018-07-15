@@ -173,7 +173,7 @@ Dialogue: 0,0:07:06.48,0:07:11.18,Chinese,,0,0,0,,每个计算机制造商都有
 Dialogue: 0,0:07:12.40,0:07:16.22,English,,0,0,0,,You couldn't...and it was just terrible,because you couldn't predict
 Dialogue: 0,0:07:12.40,0:07:16.22,Chinese,,0,0,0,,你不能......而且它太可怕了，因为你无法预测
 Dialogue: 0,0:07:16.90,0:07:21.46,English,,0,0,0,,What would happen if you moved your program from one machine to another
-Dialogue: 0,0:07:16.90,0:07:21.46,Chinese,,0,0,0,,如果您将程序从一台机器移动到另一台机器，会发生什么
+Dialogue: 0,0:07:16.90,0:07:21.46,Chinese,,0,0,0,,如果你将程序从一台机器移动到另一台机器，会发生什么
 Dialogue: 0,0:07:21.84,0:07:24.66,English,,0,0,0,,The behavior would be different the rounding would be different
 Dialogue: 0,0:07:21.84,0:07:24.66,Chinese,,0,0,0,,行为会有所不同，舍入会有所不同
 Dialogue: 0,0:07:25.86,0:07:35.13,English,,0,0,0,,It was a very difficult situation and people really computer scientists in particular really disliked floating point
@@ -245,7 +245,7 @@ Dialogue: 0,0:10:27.82,0:10:30.30,Chinese,,0,0,0,,你有一个符号位，总是
 Dialogue: 0,0:10:30.30,0:10:34.68,English,,0,0,0,,You have 8 exp bits and you have 23 frac bits
 Dialogue: 0,0:10:30.30,0:10:34.68,Chinese,,0,0,0,,你有8个exp位，你有23个压缩位
 Dialogue: 0,0:10:35.34,0:10:40.20,English,,0,0,0,,In double precision you have 11 exp and 52 frac bits
-Dialogue: 0,0:10:35.34,0:10:40.20,Chinese,,0,0,0,,在双精度中，您有11个exp和52个压缩位
+Dialogue: 0,0:10:35.34,0:10:40.20,Chinese,,0,0,0,,在双精度中，你有11个exp和52个压缩位
 Dialogue: 0,0:10:42.58,0:10:47.60,English,,0,0,0,,Now there's a number of different kinds of floating-point representations
 Dialogue: 0,0:10:42.58,0:10:47.60,Chinese,,0,0,0,,现在有许多不同类型的浮点表示
 Dialogue: 0,0:10:48.12,0:10:54.22,English,,0,0,0,,The sort of the default and sort of the common representation is called normalized
@@ -803,7 +803,7 @@ Dialogue: 0,0:37:10.04,0:37:13.16,Chinese,,0,0,0,,那么回到我的手指图
 Dialogue: 0,0:37:13.78,0:37:18.46,English,,0,0,0,, so this is the range of exp fields that you want to
 Dialogue: 0,0:37:13.78,0:37:18.46,Chinese,,0,0,0,,所以这是你想要的exp字段范围
 Dialogue: 0,0:37:18.82,0:37:22.14,English,,0,0,0,,This is the range of E that you want to represent with 0 in the middle
-Dialogue: 0,0:37:18.82,0:37:22.14,Chinese,,0,0,0,,这是您希望在中间用0表示的E范围
+Dialogue: 0,0:37:18.82,0:37:22.14,Chinese,,0,0,0,,这是你希望在中间用0表示的E范围
 Dialogue: 0,0:37:23.54,0:37:26.96,English,,0,0,0,,Okay and so you want to bias
 Dialogue: 0,0:37:23.54,0:37:26.96,Chinese,,0,0,0,,好的，所以你想要偏见
 Dialogue: 0,0:37:26.96,0:37:32.62,English,,0,0,0,,So that this is halfway 0 the smallest exponent is halfway to 0
@@ -825,7 +825,7 @@ Dialogue: 0,0:38:10.74,0:38:14.20,Chinese,,0,0,0,,exp和frac中只有不同的�
 Dialogue: 0,0:38:14.84,0:38:18.66,English,,0,0,0,,And then we plot these on the number line
 Dialogue: 0,0:38:14.84,0:38:18.66,Chinese,,0,0,0,,然后我们在数字线上绘制这些图
 Dialogue: 0,0:38:18.66,0:38:24.74,English,,0,0,0,,You can see that the values are very dense around zero
-Dialogue: 0,0:38:18.66,0:38:24.74,Chinese,,0,0,0,,您可以看到值在零附近非常密集
+Dialogue: 0,0:38:18.66,0:38:24.74,Chinese,,0,0,0,,你可以看到值在零附近非常密集
 Dialogue: 0,0:38:24.74,0:38:27.50,English,,0,0,0,,So they're very spaced very closely together
 Dialogue: 0,0:38:24.74,0:38:27.50,Chinese,,0,0,0,,所以他们非常紧密地在一起
 Dialogue: 0,0:38:28.12,0:38:33.32,English,,0,0,0,,And then every time you increase the exponent by one
@@ -861,7 +861,7 @@ Dialogue: 0,0:39:55.82,0:40:02.66,Chinese,,0,0,0,,浮点零被编码为整数零
 Dialogue: 0,0:40:04.50,0:40:14.48,English,,0,0,0,,And with the exception of not a number,with the exception of not a number
 Dialogue: 0,0:40:04.50,0:40:14.48,Chinese,,0,0,0,,除了不是数字之外，除了不是数字之外
 Dialogue: 0,0:40:14.78,0:40:16.98,English,,0,0,0,,You can compare any floating-point numbers
-Dialogue: 0,0:40:14.78,0:40:16.98,Chinese,,0,0,0,,您可以比较任何浮点数
+Dialogue: 0,0:40:14.78,0:40:16.98,Chinese,,0,0,0,,你可以比较任何浮点数
 Dialogue: 0,0:40:17.28,0:40:22.60,English,,0,0,0,,Including infinity by just treating it as doing an unsigned comparison
 Dialogue: 0,0:40:17.28,0:40:22.60,Chinese,,0,0,0,,通过将其视为无符号比较来包括无穷大
 Dialogue: 0,0:40:23.16,0:40:24.78,English,,0,0,0,,So that's really nice too
@@ -881,13 +881,13 @@ Dialogue: 0,0:40:52.64,0:40:55.74,Chinese,,0,0,0,,我们无法保证我们能够
 Dialogue: 0,0:40:56.64,0:40:59.84,English,,0,0,0,,So what we do in this case is
 Dialogue: 0,0:40:56.64,0:40:59.84,Chinese,,0,0,0,,所以我们在这种情况下做的是
 Dialogue: 0,0:41:00.14,0:41:06.58,English,,0,0,0,,You can imagine the model you want to have a floating-point operations addition to multiplication
-Dialogue: 0,0:41:00.14,0:41:06.58,Chinese,,0,0,0,,您可以想象您想要在乘法中添加浮点运算的模型
+Dialogue: 0,0:41:00.14,0:41:06.58,Chinese,,0,0,0,,你可以想象你想要在乘法中添加浮点运算的模型
 Dialogue: 0,0:41:06.58,0:41:12.42,English,,0,0,0,,It's that you add or multiply you do the addition or multiplication
 Dialogue: 0,0:41:06.58,0:41:12.42,Chinese,,0,0,0,,这是你添加或乘法你做加法或乘法
 Dialogue: 0,0:41:12.78,0:41:14.34,English,,0,0,0,,And you compute the exact result
 Dialogue: 0,0:41:12.78,0:41:14.34,Chinese,,0,0,0,,然后你计算出确切的结果
 Dialogue: 0,0:41:14.34,0:41:18.12,English,,0,0,0,, You just assume that you have an infinite amount of number of bits
-Dialogue: 0,0:41:14.34,0:41:18.12,Chinese,,0,0,0,,您只是假设您拥有无限数量的位数
+Dialogue: 0,0:41:14.34,0:41:18.12,Chinese,,0,0,0,,你只是假设你拥有无限数量的位数
 Dialogue: 0,0:41:19.02,0:41:25.24,English,,0,0,0,,And then you round use the technique called rounding to get it to fit into the of the available bits
 Dialogue: 0,0:41:19.02,0:41:25.24,Chinese,,0,0,0,,然后你使用称为舍入的技术使其适合可用位
 Dialogue: 0,0:41:25.64,0:41:27.48,English,,0,0,0,,So the the effect
@@ -899,7 +899,7 @@ Dialogue: 0,0:41:35.22,0:41:38.60,Chinese,,0,0,0,,然后四舍五入到可用位
 Dialogue: 0,0:41:39.74,0:41:42.54,English,,0,0,0,,So let's look at this idea of rounding
 Dialogue: 0,0:41:39.74,0:41:42.54,Chinese,,0,0,0,,那么让我们来看看这种舍入的想法
 Dialogue: 0,0:41:42.54,0:41:47.46,English,,0,0,0,,This can be confusing the first you see it requires
-Dialogue: 0,0:41:42.54,0:41:47.46,Chinese,,0,0,0,,这可能会让您首先看到它需要的混乱
+Dialogue: 0,0:41:42.54,0:41:47.46,Chinese,,0,0,0,,这可能会让你首先看到它需要的混乱
 Dialogue: 0,0:41:48.02,0:41:52.62,English,,0,0,0,,You need to think about it carefully to get it right
 Dialogue: 0,0:41:48.02,0:41:52.62,Chinese,,0,0,0,,你需要仔细考虑才能做到正确
 Dialogue: 0,0:41:52.76,0:41:55.54,English,,0,0,0,, Now in IEEE there's four different kinds of rounding
@@ -987,7 +987,7 @@ Dialogue: 0,0:44:25.24,0:44:29.58,Chinese,,0,0,0,,有趣的是因为它是IEEE�
 Dialogue: 0,0:44:30.22,0:44:37.66,English,,0,0,0,,So the idea here if you have a value that's less than half  then you round down
 Dialogue: 0,0:44:30.22,0:44:37.66,Chinese,,0,0,0,,所以这里的想法是，如果你的值小于一半，那么你向下舍入
 Dialogue: 0,0:44:37.94,0:44:43.61,English,,0,0,0,,If you have a value that's more than halfway between two dollar amounts you round up
-Dialogue: 0,0:44:37.94,0:44:43.61,Chinese,,0,0,0,,如果您的价值超过两美元金额的一半，那么您就会向上舍入
+Dialogue: 0,0:44:37.94,0:44:43.61,Chinese,,0,0,0,,如果你的价值超过两美元金额的一半，那么你就会向上舍入
 Dialogue: 0,0:44:44.38,0:44:50.60,English,,0,0,0,,The route that nearest even part comes when you have something that's exactly halfway
 Dialogue: 0,0:44:44.38,0:44:50.60,Chinese,,0,0,0,,当你有一些正好在中途的东西时，距离最近的路线就到了
 Dialogue: 0,0:44:51.50,0:44:54.28,English,,0,0,0,, Then what you do is you round towards the nearest even number
@@ -1021,7 +1021,7 @@ Dialogue: 0,0:45:53.78,0:45:57.78,Chinese,,0,0,0,,因此，不存在以某种方
 Dialogue: 0,0:45:57.96,0:46:00.72,English,,0,0,0,,So that's the reason they did that
 Dialogue: 0,0:45:57.96,0:46:00.72,Chinese,,0,0,0,,所以这就是他们这样做的原因
 Dialogue: 0,0:46:03.62,0:46:10.72,English,,0,0,0,,Now you can apply this you can do this rounding to any value
-Dialogue: 0,0:46:03.62,0:46:10.72,Chinese,,0,0,0,,现在您可以应用此功能，您可以将此四舍五入到任何值
+Dialogue: 0,0:46:03.62,0:46:10.72,Chinese,,0,0,0,,现在你可以应用此功能，你可以将此四舍五入到任何值
 Dialogue: 0,0:46:11.38,0:46:15.00,English,,0,0,0,,So in the last example we did it to the nearest dollar
 Dialogue: 0,0:46:11.38,0:46:15.00,Chinese,,0,0,0,,所以在最后一个例子中，我们做到了最接近的美元
 Dialogue: 0,0:46:15.00,0:46:19.80,English,,0,0,0,,But let's suppose we wanted to round to the nearest hundredth using round two even
@@ -1071,7 +1071,7 @@ Dialogue: 0,0:48:16.28,0:48:18.44,Chinese,,0,0,0,,当你围捕时，有一种非
 Dialogue: 0,0:48:18.44,0:48:20.56,English,,0,0,0,, It's always it's a very mechanical like that
 Dialogue: 0,0:48:18.44,0:48:20.56,Chinese,,0,0,0,,它始终是一个非常机械化的东西
 Dialogue: 0,0:48:20.56,0:48:24.68,English,,0,0,0,,You always just add the half-way number in this case five
-Dialogue: 0,0:48:20.56,0:48:24.68,Chinese,,0,0,0,,在这种情况下，您只需添加中间数字五
+Dialogue: 0,0:48:20.56,0:48:24.68,Chinese,,0,0,0,,在这种情况下，你只需添加中间数字五
 Dialogue: 0,0:48:25.66,0:48:29.34,English,,0,0,0,,And then just propagate it out just do the addition and that will give you the nearest
 Dialogue: 0,0:48:25.66,0:48:29.34,Chinese,,0,0,0,,然后只是将其传播出来，只需进行添加，这将给你最近的
 Dialogue: 0,0:48:30.44,0:48:35.28,English,,0,0,0,,The nearest that will round you up to the nearest hundredth in this case
@@ -1245,9 +1245,9 @@ Dialogue: 0,0:55:48.34,0:55:51.52,Chinese,,0,0,0,,使其适合可用的片段
 Dialogue: 0,0:55:54.48,0:55:59.80,English,,0,0,0,,Ok addition,so suppose we're trying to add two floating point numbers
 Dialogue: 0,0:55:54.48,0:55:59.80,Chinese,,0,0,0,,好的，另外，假设我们正在尝试添加两个浮点数
 Dialogue: 0,0:56:01.02,0:56:05.34,English,,0,0,0,,Conceptually what you do is think of those numbers as fractional binary numbers
-Dialogue: 0,0:56:01.02,0:56:05.34,Chinese,,0,0,0,,从概念上讲，您所做的就是将这些数字视为小数二进制数
+Dialogue: 0,0:56:01.02,0:56:05.34,Chinese,,0,0,0,,从概念上讲，你所做的就是将这些数字视为小数二进制数
 Dialogue: 0,0:56:05.34,0:56:19.68,English,,0,0,0,,You want to line up the binary points and then do the addition and then normalize the number
-Dialogue: 0,0:56:05.34,0:56:19.68,Chinese,,0,0,0,,您想要排列二进制点，然后执行添加，然后对数字进行标准化
+Dialogue: 0,0:56:05.34,0:56:19.68,Chinese,,0,0,0,,你想要排列二进制点，然后执行添加，然后对数字进行标准化
 Dialogue: 0,0:56:20.20,0:56:23.70,English,,0,0,0,,So that the normalized the significant so it's between 1 & 2
 Dialogue: 0,0:56:20.20,0:56:23.70,Chinese,,0,0,0,,因此，将重要值标准化，使其在1和2之间
 Dialogue: 0,0:56:28.34,0:56:32.24,English,,0,0,0,,And either do that by shifting right or left
@@ -1407,7 +1407,7 @@ Dialogue: 0,1:02:26.14,1:02:29.34,Chinese,,0,0,0,,你必须对你的数字的动
 Dialogue: 0,1:02:29.74,1:02:33.76,English,,0,0,0,,And you have to keep in mind that if you reassociate or change the order of things
 Dialogue: 0,1:02:29.74,1:02:33.76,Chinese,,0,0,0,,而且你必须记住，如果你重新关联或改变事物的顺序
 Dialogue: 0,1:02:34.16,1:02:38.10,English,,0,0,0,,You may not get exactly the same exactly the same answer
-Dialogue: 0,1:02:34.16,1:02:38.10,Chinese,,0,0,0,,您可能无法得到完全相同的答案
+Dialogue: 0,1:02:34.16,1:02:38.10,Chinese,,0,0,0,,你可能无法得到完全相同的答案
 Dialogue: 0,1:02:42.44,1:02:47.60,English,,0,0,0,,Okay now see gives us two different kinds of floating points
 Dialogue: 0,1:02:42.44,1:02:47.60,Chinese,,0,0,0,,好的，现在看到给我们两种不同的浮点
 Dialogue: 0,1:02:47.60,1:02:54.14,English,,0,0,0,,So they the float is the IEEE single precision and double is the IEEE double precision
@@ -1423,7 +1423,7 @@ Dialogue: 0,1:03:11.52,1:03:14.24,Chinese,,0,0,0,,a或你如何操纵这些位
 Dialogue: 0,1:03:14.36,1:03:19.32,English,,0,0,0,,It's really just a how were interpreting and how we're viewing those those values
 Dialogue: 0,1:03:14.36,1:03:19.32,Chinese,,0,0,0,,这真的只是一个解释方式以及我们如何看待那些价值观
 Dialogue: 0,1:03:19.58,1:03:24.14,English,,0,0,0,,However when you do cast between floats and ints and doubles
-Dialogue: 0,1:03:19.58,1:03:24.14,Chinese,,0,0,0,,但是，当您在浮点数和整数和双打之间进行投射时
+Dialogue: 0,1:03:19.58,1:03:24.14,Chinese,,0,0,0,,但是，当你在浮点数和整数和双打之间进行投射时
 Dialogue: 0,1:03:24.52,1:03:26.05,English,,0,0,0,,The bit representation changes
 Dialogue: 0,1:03:24.52,1:03:26.05,Chinese,,0,0,0,,位表示发生变化
 Dialogue: 0,1:03:26.80,1:03:31.18,English,,0,0,0,,Right so a cast here has a dramatic effect on the actual bits themselves
@@ -1469,7 +1469,7 @@ Dialogue: 0,1:06:44.58,1:06:47.14,Chinese,,0,0,0,,所以我们必须做一些正
 Dialogue: 0,1:06:47.50,1:06:50.24,English,,0,0,0,,So casting works the same way as any other operation
 Dialogue: 0,1:06:47.50,1:06:50.24,Chinese,,0,0,0,,因此，铸造的工作方式与任何其他操作相同
 Dialogue: 0,1:06:50.36,1:06:55.97,English,,0,0,0,,You can think of it as just taking the assume you have an infinite number of bits
-Dialogue: 0,1:06:50.36,1:06:55.97,Chinese,,0,0,0,,您可以将其视为假设您拥有无限数量的位
+Dialogue: 0,1:06:50.36,1:06:55.97,Chinese,,0,0,0,,你可以将其视为假设你拥有无限数量的位
 Dialogue: 0,1:06:55.97,1:06:58.94,English,,0,0,0,,Get the exact result and then round it to fit into the available bits
 Dialogue: 0,1:06:55.97,1:06:58.94,Chinese,,0,0,0,,获得确切的结果，然后将其四舍五入以适应可用位
 Dialogue: 0,1:07:01.20,1:07:12.36,English,,0,0,0,,All right so let's the final thing I want to do today is Sort of test your understanding do solve some puzzles to test
