@@ -11,815 +11,813 @@ PlayResY: 720
 
 [Aegisub Project Garbage]
 Last Style Storage: Default
-Audio File: ../../../Desktop/csapp/Lecture 07  Machine Level Programming III  Procedures.mp4
-Video File: ../../../Desktop/csapp/Lecture 07  Machine Level Programming III  Procedures.mp4
+Audio File: ../../../../Desktop/csapp/Lecture 07  Machine Level Programming III  Procedures.mp4
+Video File: ../../../../Desktop/csapp/Lecture 07  Machine Level Programming III  Procedures.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
-Video Zoom Percent: 1.000000
-Scroll Position: 793
-Active Line: 795
-Video Position: 119863
+Video Zoom Percent: 1.062500
+Active Line: 3
+Video Position: 442
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
-Style: csapp,Source Han Sans CN,34,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+Style: English,Source Han Sans CN,30,&H00FFFFFF,&H00412A2C,&H00412A2C,&H00412A2C,0,0,0,0,100,100,0,0,1,2.2,1,2,10,10,10,1
+Style: Chinese,Source Han Sans CN,34,&H00FBFD00,&H00FFFFFF,&H00362A28,&H00FFFFFF,0,0,0,0,100,100,0,0,1,2,0.2,2,10,10,10,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.00,0:00:06.02,csapp,,0,0,0,,we're still slogging through the material on machine level programming
-Dialogue: 0,0:00:06.02,0:00:07.96,csapp,,0,0,0,,which is I talked to you earlier
-Dialogue: 0,0:00:07.96,0:00:14.18,csapp,,0,0,0,,I think is in some ways the core of this course that much of the rest of material builds upon
-Dialogue: 0,0:00:14.72,0:00:20.14,csapp,,0,0,0,,and hopefully you've all had a chance to check out lab2 and
-Dialogue: 0,0:00:20.14,0:00:23.38,csapp,,0,0,0,,your bomb lab and you've gotten started on that
-Dialogue: 0,0:00:23.76,0:00:27.96,csapp,,0,0,0,,and certainly by the time you're finished with the material from today
-Dialogue: 0,0:00:28.34,0:00:34.12,csapp,,0,0,0,,you will be well on the way to solving all but the last one or two stages of the bomb lab
-Dialogue: 0,0:00:34.16,0:00:39.76,csapp,,0,0,0,,so I highly recommend you get going on that not put it off to the last minute
-Dialogue: 0,0:00:40.80,0:00:44.90,csapp,,0,0,0,,so and what we're talking about today is
-Dialogue: 0,0:00:45.36,0:00:50.86,csapp,,0,0,0,,is how procedures I'm going to use the same terminology here
-Dialogue: 0,0:00:51.44,0:00:56.96,csapp,,0,0,0,,whether it's a function a procedure or an object-oriented programming a method
-Dialogue: 0,0:00:57.24,0:01:02.12,csapp,,0,0,0,,those are all roughly the same thing and what we'll talk about covers them overall
-Dialogue: 0,0:01:08.66,0:01:16.32,csapp,,0,0,0,,I'll also mention at the outset that the way this is handled in the procedures
-Dialogue: 0,0:01:16.32,0:01:23.94,csapp,,0,0,0,,that we'll be talking about today is a combination of the actual x86 hardware and how it supports it
-Dialogue: 0,0:01:24.34,0:01:30.11,csapp,,0,0,0,,but also in some ways more importantly a set of conventions that were developed that
-Dialogue: 0,0:01:30.64,0:01:34.64,csapp,,0,0,0,,basically everyone agreed to and it's known as an ABI
-Dialogue: 0,0:01:34.96,0:01:40.18,csapp,,0,0,0,,but I want...who stands for application binary interface
-Dialogue: 0,0:01:49.64,0:01:53.94,csapp,,0,0,0,,so the idea is a document you can get it online
-Dialogue: 0,0:01:54.26,0:01:57.12,csapp,,0,0,0,,it's and it's cited in the book
-Dialogue: 0,0:01:57.80,0:02:01.78,csapp,,0,0,0,,it's a document that people put together the initial version
-Dialogue: 0,0:02:02.02,0:02:06.27,csapp,,0,0,0,,when the first x86-64 machines were first being developed
-Dialogue: 0,0:02:06.92,0:02:08.90,csapp,,0,0,0,,and specifically for Linux
-Dialogue: 0,0:02:09.42,0:02:18.40,csapp,,0,0,0,, they said okay all Linux programs, all compilers,all the operating system,all the different parts of a system
-Dialogue: 0,0:02:18.40,0:02:24.58,csapp,,0,0,0,,that need to have some common understanding of how to manage the resources on the machine
-Dialogue: 0,0:02:24.98,0:02:27.36,csapp,,0,0,0,,will agree to adhere to this set of rules
-Dialogue: 0,0:02:28.16,0:02:35.16,csapp,,0,0,0,,and so it's a it goes beyond the actual what the hardware does to a set of software standards
-Dialogue: 0,0:02:35.92,0:02:38.32,csapp,,0,0,0,,and it's called application binary interface
-Dialogue: 0,0:02:38.38,0:02:45.58,csapp,,0,0,0,,because it's particularly the interface at the machine program level
-Dialogue: 0,0:02:46.30,0:02:48.22,csapp,,0,0,0,,and so that's what we'll be covering today
-Dialogue: 0,0:02:48.22,0:02:52.66,csapp,,0,0,0,,so people asked sort of well you know who makes up these rules and things
-Dialogue: 0,0:02:52.66,0:02:55.34,csapp,,0,0,0,,and the point was there was a working group that did this
-Dialogue: 0,0:02:55.80,0:02:58.12,csapp,,0,0,0,,and there's a separate ABI for Windows
-Dialogue: 0,0:02:58.60,0:03:04.46,csapp,,0,0,0,,it's similar but not quite the same there's a separate ABI for OSX for Apple
-Dialogue: 0,0:03:05.00,0:03:10.74,csapp,,0,0,0,,and even FreeBSD a different variant of a unix-like operating system
-Dialogue: 0,0:03:11.14,0:03:16.96,csapp,,0,0,0,,has its own ABI that they all share a lot in common but some of the details differ
-Dialogue: 0,0:03:19.76,0:03:24.22,csapp,,0,0,0,,um so if you think about what goes on in a procedure even in C
-Dialogue: 0,0:03:24.22,0:03:28.08,csapp,,0,0,0,,which is a relatively unsophisticated language in many ways
-Dialogue: 0,0:03:28.60,0:03:33.74,csapp,,0,0,0,,there's a lot going on and so it's worth breaking down those and thinking about it
-Dialogue: 0,0:03:34.20,0:03:36.34,csapp,,0,0,0,,one is there's a notion of control
-Dialogue: 0,0:03:36.68,0:03:40.96,csapp,,0,0,0,,so in my example I show a procedure P calling a procedure Q
-Dialogue: 0,0:03:41.58,0:03:47.24,csapp,,0,0,0,,and so when P calls Q then somehow the program has to
-Dialogue: 0,0:03:47.24,0:03:52.32,csapp,,0,0,0,,jump down and begin executing the the lines of code for Q
-Dialogue: 0,0:03:52.70,0:03:59.36,csapp,,0,0,0,,and then when Q hits its exit point its return point  somehow is to get back to P
-Dialogue: 0,0:03:59.62,0:04:06.80,csapp,,0,0,0,,and not just to any old place in P but specifically to whatever comes in P right after the call to Q
-Dialogue: 0,0:04:07.72,0:04:15.00,csapp,,0,0,0,,so somehow we have to record the information about where the return should be to return to the correct place
-Dialogue: 0,0:04:15.62,0:04:23.30,csapp,,0,0,0,,so that's first of all - for passing control to a function and having that function return back to where it should get back to
-Dialogue: 0,0:04:24.54,0:04:30.86,csapp,,0,0,0,,our second lose data how do we get operands to it so in this particular case
-Dialogue: 0,0:04:31.38,0:04:36.18,csapp,,0,0,0,,Q is a function that takes a single argument that it calls internally it calls i
-Dialogue: 0,0:04:36.90,0:04:42.12,csapp,,0,0,0,,and up here where P is calling it.it's passing some value within P called X
-Dialogue: 0,0:04:42.82,0:04:48.00,csapp,,0,0,0,,so hum somehow that data value of X has to be recorded in a form
-Dialogue: 0,0:04:48.36,0:04:51.92,csapp,,0,0,0,,that within Q it will have access to that information
-Dialogue: 0,0:04:52.24,0:04:58.06,csapp,,0,0,0,,and similarly when Q wants to return a value back
-Dialogue: 0,0:04:58.70,0:05:00.78,csapp,,0,0,0,,and then P will make use of that value
-Dialogue: 0,0:05:00.78,0:05:05.46,csapp,,0,0,0,,there has to be some convention of how that data gets communicated back
-Dialogue: 0,0:05:07.34,0:05:11.68,csapp,,0,0,0,,and then finally in a function might have some local data
-Dialogue: 0,0:05:12.15,0:05:16.42,csapp,,0,0,0,,that requires allocation of some amount of space
-Dialogue: 0,0:05:16.96,0:05:21.64,csapp,,0,0,0,,and so where does that space get allocated.how do we make sure it gets allocated properly?
-Dialogue: 0,0:05:22.18,0:05:25.56,csapp,,0,0,0,,in particular in C as you know when a function returns
-Dialogue: 0,0:05:26.32,0:05:31.62,csapp,,0,0,0,,any local data that it allocated should get Deallocated should be freed up
-Dialogue: 0,0:05:31.74,0:05:36.44,csapp,,0,0,0,,so that we don't sort of start consuming an unbounded amount of storage
-Dialogue: 0,0:05:37.08,0:05:38.00,csapp,,0,0,0,,so how do we do that
-Dialogue: 0,0:05:38.02,0:05:43.02,csapp,,0,0,0,,those are all the sort of different aspects that a procedure call in return
-Dialogue: 0,0:05:43.32,0:05:44.80,csapp,,0,0,0,,I have to deal with somehow
-Dialogue: 0,0:05:45.52,0:05:50.18,csapp,,0,0,0,,and part of the reason for breaking it down into those little segments is
-Dialogue: 0,0:05:50.62,0:05:59.50,csapp,,0,0,0,,in x86-64 one of the clever things they did was to try and reduce the overhead of procedure calls as much as possible
-Dialogue: 0,0:05:59.50,0:06:02.72,csapp,,0,0,0,,because as you know in good programming style
-Dialogue: 0,0:06:02.72,0:06:09.12,csapp,,0,0,0,,you often write these functions that do a fairly small amount of actual useful stuff
-Dialogue: 0,0:06:09.80,0:06:13.78,csapp,,0,0,0,,and it's sort of good programming style to do that
-Dialogue: 0,0:06:13.78,0:06:16.40,csapp,,0,0,0,,especially in a more object-oriented programming style
-Dialogue: 0,0:06:17.06,0:06:20.74,csapp,,0,0,0,,and so you don't want the overhead the extra number of steps taken to
-Dialogue: 0,0:06:20.74,0:06:25.70,csapp,,0,0,0,,invoke a procedure and deal with all those aspects to take any more time
-Dialogue: 0,0:06:26.10,0:06:30.42,csapp,,0,0,0,,than it needs to because it's a fairly critical overhead
-Dialogue: 0,0:06:31.44,0:06:37.46,csapp,,0,0,0,,so one of the things they do in in this is they only do whatever is absolutely needed
-Dialogue: 0,0:06:37.94,0:06:43.16,csapp,,0,0,0,,so hurt in particular if no local storage is needed on this for data
-Dialogue: 0,0:06:43.42,0:06:45.94,csapp,,0,0,0,,then don't allocate it therefore don't free it
-Dialogue: 0,0:06:46.38,0:06:49.54,csapp,,0,0,0,,if you're not passing any values don't pass them
-Dialogue: 0,0:06:49.96,0:06:54.12,csapp,,0,0,0,,and in general sort of how little can you get away with
-Dialogue: 0,0:06:54.32,0:06:58.38,csapp,,0,0,0,,and that makes it a little bit confusing from a teaching point of view
-Dialogue: 0,0:06:58.38,0:07:01.87,csapp,,0,0,0,,and that there is no set template that it follows every time
-Dialogue: 0,0:07:01.94,0:07:08.34,csapp,,0,0,0,, it sort of you have to each case is a special case for how a particular procedure gets implemented
-Dialogue: 0,0:07:11.28,0:07:15.02,csapp,,0,0,0,,so we'll go through all these parts and see how they happen
-Dialogue: 0,0:07:15.02,0:07:17.58,csapp,,0,0,0,,and you've already seen little glimpses of them
-Dialogue: 0,0:07:17.96,0:07:20.66,csapp,,0,0,0,,we'll hit the little fragments of code that we've shown already
-Dialogue: 0,0:07:22.38,0:07:29.08,csapp,,0,0,0,,so the first one and sort of the most critical is how do we pass control to a function
-Dialogue: 0,0:07:29.30,0:07:32.52,csapp,,0,0,0,,but before we can even talk about that we have to talk about the stack
-Dialogue: 0,0:07:34.06,0:07:37.08,csapp,,0,0,0,,so and you've heard that term the stack in various ways
-Dialogue: 0,0:07:37.56,0:07:41.08,csapp,,0,0,0,,the stack is really not a special memory
-Dialogue: 0,0:07:41.30,0:07:47.54,csapp,,0,0,0,,it's just a region of the normal memory remember to the programmers perspective
-Dialogue: 0,0:07:47.78,0:07:52.74,csapp,,0,0,0,,assembly level programmers perspective is memory is just a big array of bytes
-Dialogue: 0,0:07:53.84,0:07:58.24,csapp,,0,0,0,,and somewhere within that bunch of bytes,we're going to call it the stack
-Dialogue: 0,0:07:59.02,0:08:02.10,csapp,,0,0,0,,and the stack is used by the program to manage
-Dialogue: 0,0:08:02.66,0:08:09.44,csapp,,0,0,0,,the state associated with the procedures that it calls and as they return so it's where it passes
-Dialogue: 0,0:08:10.32,0:08:18.90,csapp,,0,0,0,,all these potential information the the control information data and allocates local data
-Dialogue: 0,0:08:19.32,0:08:21.62,csapp,,0,0,0,,and the reason why it can be managed is a stack
-Dialogue: 0,0:08:21.66,0:08:26.74,csapp,,0,0,0,,because of the nature of the whole idea of procedure calls and returns
-Dialogue: 0,0:08:26.74,0:08:30.42,csapp,,0,0,0,,that you make a call and you might need some information
-Dialogue: 0,0:08:30.80,0:08:35.01,csapp,,0,0,0,,but when you return from a call,all that information can be discarded
-Dialogue: 0,0:08:36.38,0:08:41.62,csapp,,0,0,0,,and so it makes use of that sort of last in first out allocation principle
-Dialogue: 0,0:08:41.94,0:08:45.22,csapp,,0,0,0,,meshes very well with this idea of procedure call and return
-Dialogue: 0,0:08:46.30,0:08:49.36,csapp,,0,0,0,,so in x86 stacks
-Dialogue: 0,0:08:50.20,0:08:53.28,csapp,,0,0,0,,actually start with a very high numbered address
-Dialogue: 0,0:08:54.10,0:08:59.60,csapp,,0,0,0,,and when they grow when more data are allocated for the stack
-Dialogue: 0,0:08:59.60,0:09:03.20,csapp,,0,0,0,,it's done by decrementing the stack pointer
-Dialogue: 0,0:09:03.20,0:09:08.02,csapp,,0,0,0,,so the stack pointer as you know is just a regular register %rsp
-Dialogue: 0,0:09:08.68,0:09:12.64,csapp,,0,0,0,,and its value is the address of the current top of the stack
-Dialogue: 0,0:09:13.30,0:09:18.10,csapp,,0,0,0,,and every time you allocate more space on the stack.it does it by decrementing that pointer
-Dialogue: 0,0:09:18.80,0:09:21.22,csapp,,0,0,0,,now just for convention
-Dialogue: 0,0:09:23.44,0:09:26.67,csapp,,0,0,0,,and I'm not sure why this happens but this is the way we do it
-Dialogue: 0,0:09:27.30,0:09:29.70,csapp,,0,0,0,, is we draw stacks upside down
-Dialogue: 0,0:09:30.10,0:09:35.94,csapp,,0,0,0,,so that the term the top of the stack is actually shown at the bottom
-Dialogue: 0,0:09:38.52,0:09:42.10,csapp,,0,0,0,,and just to add to that confusion
-Dialogue: 0,0:09:42.10,0:09:48.80,csapp,,0,0,0,,and also remember that the addresses go from bottom to top not from top to bottom
-Dialogue: 0,0:09:48.80,0:09:52.44,csapp,,0,0,0,,so when you add to the stack you decrement the stack pointer
-Dialogue: 0,0:09:53.04,0:09:56.46,csapp,,0,0,0,,neither of those kind of meshes with your intuition perhaps
-Dialogue: 0,0:09:56.46,0:10:01.14,csapp,,0,0,0,,but you just have to get used to it,because we're not going to redraw out all the slides
-Dialogue: 0,0:10:04.70,0:10:09.62,csapp,,0,0,0,,so anyway sets just remember that over and over again
-Dialogue: 0,0:10:09.62,0:10:11.70,csapp,,0,0,0,,that's why this arrow show that
-Dialogue: 0,0:10:12.20,0:10:16.06,csapp,,0,0,0,,if we were to enumerate the addresses of these different bytes in the data
-Dialogue: 0,0:10:16.06,0:10:20.80,csapp,,0,0,0,,they'd be increasing in this direction and when we add to the stack
-Dialogue: 0,0:10:21.32,0:10:26.54,csapp,,0,0,0,,the stack top is at the bottom of the picture and we do it by decrementing the stack pointer
-Dialogue: 0,0:10:28.42,0:10:37.08,csapp,,0,0,0,,so in particular there is explicit instructions push and pop that make use of the stack
-Dialogue: 0,0:10:37.62,0:10:41.28,csapp,,0,0,0,,and it's often written pushq and popq
-Dialogue: 0,0:10:41.62,0:10:47.56,csapp,,0,0,0,,but that q is actually a an optional suffix on the instruction
-Dialogue: 0,0:10:48.69,0:10:51.94,csapp,,0,0,0,,so the idea of pushing something onto the stack
-Dialogue: 0,0:10:52.02,0:11:00.66,csapp,,0,0,0,,then is,there is some source operand it could be from register or from memory or an immediate
-Dialogue: 0,0:11:01.16,0:11:03.22,csapp,,0,0,0,,so this is sort of like a move instruction
-Dialogue: 0,0:11:03.22,0:11:07.80,csapp,,0,0,0,,but the destination of the move will be toward memory
-Dialogue: 0,0:11:08.26,0:11:14.86,csapp,,0,0,0,,and that address of the memory is determined by first decrementing the stack pointer  and then doing a write
-Dialogue: 0,0:11:20.02,0:11:24.68,csapp,,0,0,0,, and similarly the pop instruction takes reads data from the stack
-Dialogue: 0,0:11:24.68,0:11:30.48,csapp,,0,0,0,,and stores it in the destination which must be a register for this particular instruction
-Dialogue: 0,0:11:31.24,0:11:33.92,csapp,,0,0,0,,I think push must be a register too
-Dialogue: 0,0:11:34.06,0:11:38.88,csapp,,0,0,0,,now that I think of it or immediate you can't push from memory to
-Dialogue: 0,0:11:40.56,0:11:43.50,csapp,,0,0,0,,so pop reads from memory
-Dialogue: 0,0:11:43.80,0:11:47.70,csapp,,0,0,0,,the address it reads from is given by the current stack pointer
-Dialogue: 0,0:11:48.82,0:11:52.14,csapp,,0,0,0,, it and then it increments the stack pointer by 8
-Dialogue: 0,0:11:52.40,0:11:56.48,csapp,,0,0,0,,these both work only on 8 byte operands I'll get to you in a second and
-Dialogue: 0,0:11:57.02,0:12:01.42,csapp,,0,0,0,,then the result of that is stored in a register
-Dialogue: 0,0:12:02.02,0:12:02.42,csapp,,0,0,0,,question
-Dialogue: 0,0:12:03.54,0:12:14.70,csapp,,0,0,0,,...pop and push or just like doing the the three things like is there a difference between like using the like the top
-Dialogue: 0,0:12:14.74,0:12:17.12,csapp,,0,0,0,,Oh could you write it as a set of instructions
-Dialogue: 0,0:12:17.66,0:12:25.14,csapp,,0,0,0,,yeah you could actually except for some weird corner cases write it out as a set of separate instructions
-Dialogue: 0,0:12:25.80,0:12:31.92,csapp,,0,0,0,,but it's a common enough thing that it's sort of built in as a as an operation
-Dialogue: 0,0:12:32.66,0:12:36.80,csapp,,0,0,0,,where as call and returner are special they can't be simulated
-Dialogue: 0,0:12:37.22,0:12:40.58,csapp,,0,0,0,,so one thing do you remember too,it's important that
-Dialogue: 0,0:12:41.18,0:12:47.10,csapp,,0,0,0,,in one case you decrement you do the arithmetic on the stack pointer before you write
-Dialogue: 0,0:12:47.78,0:12:49.72,csapp,,0,0,0,,because when you first start it out
-Dialogue: 0,0:12:49.72,0:12:53.30,csapp,,0,0,0,,the stack pointer is pointing to whatever was the top element of the stack
-Dialogue: 0,0:12:54.00,0:12:59.47,csapp,,0,0,0,,we want to create a new top element so we're going to decrement first  and then do the right
-Dialogue: 0,0:13:00.10,0:13:05.60,csapp,,0,0,0,,whereas going the other direction you want to read off the current top of stack element
-Dialogue: 0,0:13:05.96,0:13:10.72,csapp,,0,0,0,,and then you want to increment the stack pointer to sort of deallocate it
-Dialogue: 0,0:13:11.10,0:13:13.76,csapp,,0,0,0,,and one thing you'll notice here is when I say deallocate
-Dialogue: 0,0:13:13.76,0:13:17.16,csapp,,0,0,0,,it's not like I magically erase this or...
-Dialogue: 0,0:13:17.50,0:13:20.08,csapp,,0,0,0,,or something all I'm doing is just moving a stack pointer
-Dialogue: 0,0:13:20.08,0:13:24.60,csapp,,0,0,0,,whatever it was there at the top of the stack is still in memory
-Dialogue: 0,0:13:24.90,0:13:27.22,csapp,,0,0,0,,it's just no longer considered part of this deck
-Dialogue: 0,0:13:32.10,0:13:34.72,csapp,,0,0,0,,okay so that's the idea of the stack
-Dialogue: 0,0:13:35.22,0:13:41.74,csapp,,0,0,0,,and the instructions push and pop are our two a put data on the stack or take it off
-Dialogue: 0,0:13:41.80,0:13:45.66,csapp,,0,0,0,,but we use the same basic idea for a call and return
-Dialogue: 0,0:13:49.58,0:13:52.80,csapp,,0,0,0,,so let's look at some examples and there's a lot of stuff up here
-Dialogue: 0,0:13:53.22,0:13:56.56,csapp,,0,0,0,,but this is a C function called multstore
-Dialogue: 0,0:13:57.08,0:14:05.00,csapp,,0,0,0,,and then this is the output slightly cleaned up output from the disassembler of that exact function
-Dialogue: 0,0:14:05.74,0:14:08.20,csapp,,0,0,0,,and similarly this is a function called mult2
-Dialogue: 0,0:14:08.88,0:14:10.90,csapp,,0,0,0,,and this is it's disassembled version
-Dialogue: 0,0:14:11.32,0:14:16.22,csapp,,0,0,0,,and the reason I'm showing this is,because I want to make use of the addresses
-Dialogue: 0,0:14:16.78,0:14:20.90,csapp,,0,0,0,,that these instructions are app that you don't see when you write it in assembly code
-Dialogue: 0,0:14:20.94,0:14:23.92,csapp,,0,0,0,,so I'm showing it the disassembled version
-Dialogue: 0,0:14:25.16,0:14:32.10,csapp,,0,0,0,,and the reason all this is up here is because you'll see the function multstore calls mult2
-Dialogue: 0,0:14:32.14,0:14:33.84,csapp,,0,0,0,,so I want to show how that works
-Dialogue: 0,0:14:36.10,0:14:41.18,csapp,,0,0,0,,so and there's two instructions and you've seen these in some form
-Dialogue: 0,0:14:41.72,0:14:45.78,csapp,,0,0,0,,to call a function you just call it where you give a label
-Dialogue: 0,0:14:46.24,0:14:49.30,csapp,,0,0,0,,but keep in mind that this these two instructions
-Dialogue: 0,0:14:49.30,0:14:54.00,csapp,,0,0,0,,and the other is when you're ready to return you just execute the RET instruction
-Dialogue: 0,0:14:54.76,0:15:00.94,csapp,,0,0,0,,and keep in mind though that these functions don't do the whole business of procedure call and return
-Dialogue: 0,0:15:00.94,0:15:03.84,csapp,,0,0,0,,they just do the control part of it which as we saw is
-Dialogue: 0,0:15:04.40,0:15:06.76,csapp,,0,0,0,, only one of three aspects of a procedure
-Dialogue: 0,0:15:08.36,0:15:12.88,csapp,,0,0,0,,also mention you'll see especially in sometimes
-Dialogue: 0,0:15:12.88,0:15:16.14,csapp,,0,0,0,, it will say rap semicolon rat q
-Dialogue: 0,0:15:17.68,0:15:20.06,csapp,,0,0,0,,and you can pretty much just ignore that
-Dialogue: 0,0:15:21.16,0:15:23.42,csapp,,0,0,0,,and it's a bit obscure why it's even there
-Dialogue: 0,0:15:23.42,0:15:26.40,csapp,,0,0,0,,so it's really the same idea
-Dialogue: 0,0:15:30.46,0:15:35.66,csapp,,0,0,0,,okay so what's so to break this down into its simplest part
-Dialogue: 0,0:15:35.74,0:15:37.68,csapp,,0,0,0,,so let's imagine a scenario
-Dialogue: 0,0:15:38.52,0:15:43.60,csapp,,0,0,0,,in which the top of stack is at 0x120
-Dialogue: 0,0:15:43.94,0:15:45.86,csapp,,0,0,0,,which is not realistic by the way
-Dialogue: 0,0:15:46.86,0:15:52.02,csapp,,0,0,0,,and the program counter which is called %rip which is not anything to do with death
-Dialogue: 0,0:15:54.04,0:16:00.14,csapp,,0,0,0,, is is indicating that the current instruction is this at (0x)544
-Dialogue: 0,0:16:01.86,0:16:03.22,csapp,,0,0,0,,which is this call instruction
-Dialogue: 0,0:16:04.68,0:16:10.34,csapp,,0,0,0,,and so what would happen with the call instruction is it would do two things
-Dialogue: 0,0:16:11.36,0:16:14.28,csapp,,0,0,0,,it would actually three things
-Dialogue: 0,0:16:14.28,0:16:17.06,csapp,,0,0,0,,it would decrement the stack pointer and so
-Dialogue: 0,0:16:16.46,0:16:21.40,csapp,,0,0,0,,so subtracting 8 from (0x)120 and hex gives you (0x)118
-Dialogue: 0,0:16:22.08,0:16:31.32,csapp,,0,0,0,,and it would write the address of the instruction following the call  onto the top of the stack
-Dialogue: 0,0:16:32.16,0:16:36.68,csapp,,0,0,0,,and it's important that it does it the one following the call to fit
-Dialogue: 0,0:16:36.94,0:16:42.04,csapp,,0,0,0,,that's instruction I'm going to return a use for my return address
-Dialogue: 0,0:16:42.60,0:16:46.32,csapp,,0,0,0,,and I want to resume execution in this function
-Dialogue: 0,0:16:46.90,0:16:51.82,csapp,,0,0,0,, at the instruction after the call not the call itself otherwise you'd have an infinite loop
-Dialogue: 0,0:16:54.52,0:17:01.70,csapp,,0,0,0,,and it also this call instruction also embedded in the encoding of the instruction
-Dialogue: 0,0:17:02.88,0:17:06.64,csapp,,0,0,0,,is the destination address of it
-Dialogue: 0,0:17:07.88,0:17:12.62,csapp,,0,0,0,,and which happens to be the of it  starting address of this particular function
-Dialogue: 0,0:17:13.02,0:17:16.44,csapp,,0,0,0,,so the program counter will be set to that value
-Dialogue: 0,0:17:16.54,0:17:22.76,csapp,,0,0,0,,and now the processor starts just executing along these instructions
-Dialogue: 0,0:17:22.78,0:17:28.28,csapp,,0,0,0,,so it did a combination of a jump and a push and that's why the question was raised earlier
-Dialogue: 0,0:17:28.56,0:17:34.32,csapp,,0,0,0,,is a push instruction could you assemble that out of existing instructions
-Dialogue: 0,0:17:34.32,0:17:36.70,csapp,,0,0,0,,the answer is yes for push but not for call
-Dialogue: 0,0:17:36.96,0:17:38.04,csapp,,0,0,0,,question back there
-Dialogue: 0,0:17:38.42,0:17:47.18,csapp,,0,0,0,,- before you actually go to the function in like bolt store you would let me address some multi it alright
-Dialogue: 0,0:17:47.24,0:17:52.30,csapp,,0,0,0,,no no it did that %rip you never explicitly
-Dialogue: 0,0:17:52.54,0:17:55.22,csapp,,0,0,0,,there aren't instructions that manipulate that directly
-Dialogue: 0,0:17:55.50,0:17:58.28,csapp,,0,0,0,,it's implicitly part of the call instruction
-Dialogue: 0,0:17:59.14,0:18:00.82,csapp,,0,0,0,,the call instruction will take
-Dialogue: 0,0:18:01.46,0:18:04.40,csapp,,0,0,0,,I don't have the actual encoding
-Dialogue: 0,0:18:04.40,0:18:09.96,csapp,,0,0,0,,but embedded in this call instruction you see that it's five bytes long.
-Dialogue: 0,0:18:09.96,0:18:11.72,csapp,,0,0,0,,I don't show you the byte coding.
-Dialogue: 0,0:18:12.14,0:18:14.30,csapp,,0,0,0,,but embedded in it is the target address
-Dialogue: 0,0:18:14.96,0:18:20.00,csapp,,0,0,0,,and so it will take that address and use it for the new value of the program counter
-Dialogue: 0,0:18:21.38,0:18:25.62,csapp,,0,0,0,,so the call does both the pushing of the old the return pointer
-Dialogue: 0,0:18:25.62,0:18:32.24,csapp,,0,0,0,,and setting the program counter to the new the new target for it
-Dialogue: 0,0:18:33.06,0:18:34.74,csapp,,0,0,0,,so it does both of those things
-Dialogue: 0,0:18:38.16,0:18:38.96,csapp,,0,0,0,,question
-Dialogue: 0,0:18:39.72,0:18:46.06,csapp,,0,0,0,,
-Dialogue: 0,0:18:46.14,0:18:47.06,csapp,,0,0,0,,I don't think so
-Dialogue: 0,0:18:48.06,0:18:49.62,csapp,,0,0,0,,with either call or return
-Dialogue: 0,0:18:52.34,0:18:57.84,csapp,,0,0,0,,if so it would be really obscure,no I don't think so
-Dialogue: 0,0:18:58.68,0:19:03.24,csapp,,0,0,0,,no so call and return are the there might be some weird system instructions that
-Dialogue: 0,0:19:03.24,0:19:06.46,csapp,,0,0,0,,let you do that but not in you'd see in any normal program
-Dialogue: 0,0:19:07.88,0:19:10.80,csapp,,0,0,0,,other questions you're good questions
-Dialogue: 0,0:19:10.80,0:19:12.06,csapp,,0,0,0,,so
-Dialogue: 0,0:19:15.66,0:19:18.64,csapp,,0,0,0,,okay so that shows you the control how the call works
-Dialogue: 0,0:19:20.84,0:19:25.04,csapp,,0,0,0,,and then so now imagine this mult2 chugs along
-Dialogue: 0,0:19:25.72,0:19:29.30,csapp,,0,0,0,,and it hits its return point and it hits this ret instruction
-Dialogue: 0,0:19:29.44,0:19:32.54,csapp,,0,0,0,,by the way again ret q and red are the same instruction
-Dialogue: 0,0:19:33.48,0:19:36.54,csapp,,0,0,0,,and ret will
-Dialogue: 0,0:19:37.42,0:19:40.48,csapp,,0,0,0,,its purpose is to sort of reverse the effect of a call
-Dialogue: 0,0:19:41.08,0:19:45.64,csapp,,0,0,0,,it assumes that the top of the stack has an address
-Dialogue: 0,0:19:46.66,0:19:48.46,csapp,,0,0,0,, that you want to jump to
-Dialogue: 0,0:19:49.54,0:19:52.60,csapp,,0,0,0,,so it will pop that address off the stack
-Dialogue: 0,0:19:52.82,0:19:54.78,csapp,,0,0,0,,meaning it will increment the stack pointer
-Dialogue: 0,0:19:54.96,0:19:58.50,csapp,,0,0,0,, like I said the value doesn't really disappear from the memory
-Dialogue: 0,0:19:58.50,0:20:01.22,csapp,,0,0,0,,just is no consider part of the stack
-Dialogue: 0,0:20:02.00,0:20:06.58,csapp,,0,0,0,,and then it will set the program counter to what it just popped off the stack
-Dialogue: 0,0:20:07.72,0:20:12.34,csapp,,0,0,0,,and that will cause the program to resume back to where it came from
-Dialogue: 0,0:20:12.88,0:20:18.92,csapp,,0,0,0,,so you see that sort of clever idea of pushing the address of the next instruction
-Dialogue: 0,0:20:18.92,0:20:23.82,csapp,,0,0,0,,so when the return comes it will get it to the point where it should resume execution
-Dialogue: 0,0:20:27.40,0:20:29.04,csapp,,0,0,0,,okay so that's passing control
-Dialogue: 0,0:20:29.10,0:20:33.76,csapp,,0,0,0,,it's pretty simple all these things by the way is just the nature machine code
-Dialogue: 0,0:20:34.12,0:20:36.18,csapp,,0,0,0,,every single part of it is pretty simple
-Dialogue: 0,0:20:36.18,0:20:42.54,csapp,,0,0,0,,because it's designed to be executed by the original hardware is fairly simple
-Dialogue: 0,0:20:43.00,0:20:46.80,csapp,,0,0,0,,it's not any more but it's really the basic ideas are
-Dialogue: 0,0:20:47.40,0:20:52.20,csapp,,0,0,0,,and that we use kind of combinations of instructions to build up all the layers
-Dialogue: 0,0:20:52.50,0:20:56.32,csapp,,0,0,0,,associated with operations like procedure call and return
-Dialogue: 0,0:20:57.14,0:20:58.74,csapp,,0,0,0,,ok so passing data
-Dialogue: 0,0:20:59.36,0:21:03.62,csapp,,0,0,0,,now we've already seen a few small examples of passing data
-Dialogue: 0,0:21:04.92,0:21:10.53,csapp,,0,0,0,,we've seen a couple registers that get used when you're passing arguments to a function
-Dialogue: 0,0:21:11.04,0:21:15.82,csapp,,0,0,0,,and we've seen the register %rax getting used to return values from a function
-Dialogue: 0,0:21:16.26,0:21:18.30,csapp,,0,0,0,,and so those that's the basic idea
-Dialogue: 0,0:21:19.38,0:21:22.10,csapp,,0,0,0,,and again this is all built into this ABI
-Dialogue: 0,0:21:23.06,0:21:26.94,csapp,,0,0,0,,you know defined as the set of conventions not particularly part of the hardware
-Dialogue: 0,0:21:27.70,0:21:32.08,csapp,,0,0,0,,so in particular the rule is that the first six arguments get passed
-Dialogue: 0,0:21:34.64,0:21:36.98,csapp,,0,0,0,,within these particular registers
-Dialogue: 0,0:21:38.26,0:21:45.36,csapp,,0,0,0,,and you just have to memorize  the order of them or have a table handy to look at
-Dialogue: 0,0:21:45.36,0:21:48.60,csapp,,0,0,0,,or something like that because there's no particular logic to it
-Dialogue: 0,0:21:52.38,0:21:57.34,csapp,,0,0,0,,and the return value is returned in register %rax
-Dialogue: 0,0:21:57.48,0:22:02.94,csapp,,0,0,0,,and by the way this is all four arguments that are either integers or pointers
-Dialogue: 0,0:22:03.40,0:22:08.94,csapp,,0,0,0,,well I think I've got a little bit unfolding point those are passed in a separate set of registers
-Dialogue: 0,0:22:09.00,0:22:14.08,csapp,,0,0,0,,so these are just for assumed now we just are dealing with integer data pointer data
-Dialogue: 0,0:22:15.26,0:22:19.88,csapp,,0,0,0,,and then you ask well what happens if you have more than 6 arguments to a function
-Dialogue: 0,0:22:19.88,0:22:22.12,csapp,,0,0,0,,which isn't very common but it happens
-Dialogue: 0,0:22:22.60,0:22:26.20,csapp,,0,0,0,,well the rule on that is those get put in memory on the stack
-Dialogue: 0,0:22:26.24,0:22:28.98,csapp,,0,0,0,,and I'll show straight what I mean by that
-Dialogue: 0,0:22:29.56,0:22:31.48,csapp,,0,0,0,,so they're passed to the function
-Dialogue: 0,0:22:31.92,0:22:34.80,csapp,,0,0,0,,and then the function has to retrieve those values off the stack
-Dialogue: 0,0:22:36.92,0:22:41.74,csapp,,0,0,0,,back in the bad old days of IA-32 by the way all arguments got passed on the stack
-Dialogue: 0,0:22:42.14,0:22:46.18,csapp,,0,0,0,,but now for the most part you pass arguments and registers
-Dialogue: 0,0:22:46.94,0:22:51.38,csapp,,0,0,0,,and the reason for that is register access is way faster than memory access
-Dialogue: 0,0:22:52.84,0:22:56.72,csapp,,0,0,0,,okay so here is a kind of a messy bunch of code
-Dialogue: 0,0:22:56.72,0:23:00.98,csapp,,0,0,0,,but just to show you how they show up all the time
-Dialogue: 0,0:23:03.00,0:23:07.17,csapp,,0,0,0,, in the function multstore as three arguments X,Y and dest
-Dialogue: 0,0:23:08.00,0:23:09.98,csapp,,0,0,0,,and you can just see within this code
-Dialogue: 0,0:23:10.52,0:23:15.24,csapp,,0,0,0,,that it's making use of of registers like %rdi
-Dialogue: 0,0:23:16.10,0:23:19.26,csapp,,0,0,0,,and doesn't show where
-Dialogue: 0,0:23:19.50,0:23:23.32,csapp,,0,0,0,,and in other places like mult2 as two arguments
-Dialogue: 0,0:23:23.90,0:23:28.00,csapp,,0,0,0,,and you can see how it's making use of %rdi and %rsi and the code
-Dialogue: 0,0:23:28.08,0:23:34.32,csapp,,0,0,0,,so basically the code is generated under the assumptions that whatever arguments is being passed to
-Dialogue: 0,0:23:34.66,0:23:39.36,csapp,,0,0,0,,it will be passed in that particular set of registers in the particular order they're listed
-Dialogue: 0,0:23:39.70,0:23:42.68,csapp,,0,0,0,,and the code is sort of makes those assumptions
-Dialogue: 0,0:23:42.96,0:23:48.50,csapp,,0,0,0,,and then similarly when you have a return value from the function
-Dialogue: 0,0:23:51.20,0:23:53.88,csapp,,0,0,0,,let's see multstore does not have a return value
-Dialogue: 0,0:23:54.30,0:23:56.88,csapp,,0,0,0,,but of mult2 does
-Dialogue: 0,0:23:58.02,0:24:01.98,csapp,,0,0,0,,and the way it does is it deposits the value into %rax
-Dialogue: 0,0:24:02.78,0:24:08.96,csapp,,0,0,0,,and then when the return from %rax occurs a multstore
-Dialogue: 0,0:24:09.54,0:24:12.96,csapp,,0,0,0,,you see that it assumes
-Dialogue: 0,0:24:13.58,0:24:22.64,csapp,,0,0,0,,now that the multstore code can assume that register %rax holds the value of the return value
-Dialogue: 0,0:24:22.90,0:24:26.02,csapp,,0,0,0,,and it can store it in its destination register
-Dialogue: 0,0:24:26.56,0:24:29.48,csapp,,0,0,0,,and we'll look in a minute why %rbx gets used here
-Dialogue: 0,0:24:30.66,0:24:32.82,csapp,,0,0,0,,we'll cover that in just a little waiter
-Dialogue: 0,0:24:33.48,0:24:38.88,csapp,,0,0,0,,but up that's the point that as long as everyone sticks to this common interface standard
-Dialogue: 0,0:24:39.30,0:24:43.78,csapp,,0,0,0,,then you can even use different compilers to compile code
-Dialogue: 0,0:24:44.06,0:24:50.88,csapp,,0,0,0,,and have them be able to cooperate with each other in terms of passing arguments returning data
-Dialogue: 0,0:24:51.58,0:24:54.52,csapp,,0,0,0,,and that's the reason why you want that convention
-Dialogue: 0,0:24:54.54,0:24:55.08,csapp,,0,0,0,, yes
-Dialogue: 0,0:24:59.18,0:25:03.74,csapp,,0,0,0,,8 bytes because the well first of all for call and return
-Dialogue: 0,0:25:04.12,0:25:09.10,csapp,,0,0,0,,it's a 64-bit machine so all addresses are 64 bits or 8 bytes
-Dialogue: 0,0:25:09.80,0:25:14.72,csapp,,0,0,0,,but also even the push in the pop instruction only work on 8 byte values
-Dialogue: 0,0:25:15.44,0:25:20.54,csapp,,0,0,0,,if you said push L ,if you tried to write that in X in 64-bit code
-Dialogue: 0,0:25:20.54,0:25:22.37,csapp,,0,0,0,,it would come back with a syntax error
-Dialogue: 0,0:25:23.06,0:25:24.88,csapp,,0,0,0,,if you add it in this somewhere
-Dialogue: 0,0:25:28.82,0:25:33.46,csapp,,0,0,0,,so oh that and that's different IA-32 there'd be four byte values
-Dialogue: 0,0:25:37.00,0:25:43.56,csapp,,0,0,0,,okay so like I said you've sort of seen that implicitly in some of the code you've already been looking at
-Dialogue: 0,0:25:43.56,0:25:45.56,csapp,,0,0,0,,and it's pretty straightforward
-Dialogue: 0,0:25:46.00,0:25:50.56,csapp,,0,0,0,,to get an example that shows passing arguments
-Dialogue: 0,0:25:50.56,0:25:54.80,csapp,,0,0,0,,you have to have a function with at least 7 arguments which is pretty messy to do
-Dialogue: 0,0:25:54.80,0:25:57.08,csapp,,0,0,0,,so I won't do it but there's examples in the book
-Dialogue: 0,0:25:59.74,0:26:02.54,csapp,,0,0,0,,but now and we'll sort of pick it up
-Dialogue: 0,0:26:02.54,0:26:05.70,csapp,,0,0,0,,I'll show you,also in this later part
-Dialogue: 0,0:26:06.84,0:26:11.00,csapp,,0,0,0,,um and now the third part of it is again
-Dialogue: 0,0:26:11.00,0:26:14.08,csapp,,0,0,0,,what if there's some local data that we need to make use of
-Dialogue: 0,0:26:14.76,0:26:19.76,csapp,,0,0,0,,and so to get that idea across I have two illest in another
-Dialogue: 0,0:26:19.76,0:26:22.84,csapp,,0,0,0,,concept which is called the stack frame
-Dialogue: 0,0:26:23.58,0:26:29.88,csapp,,0,0,0,,and so this is a particularly pattern that's used in memory and as I mentioned
-Dialogue: 0,0:26:30.34,0:26:34.00,csapp,,0,0,0,,earlier one of the features of calling and returning
-Dialogue: 0,0:26:34.92,0:26:40.94,csapp,,0,0,0,,is you can imagine when you have a nested series of calls to a function
-Dialogue: 0,0:26:41.64,0:26:44.02,csapp,,0,0,0,,when a particular function is executing
-Dialogue: 0,0:26:46.32,0:26:54.20,csapp,,0,0,0,,it only needs to reference the data within that function or values that have been passed to it
-Dialogue: 0,0:26:54.90,0:26:59.22,csapp,,0,0,0,,some which might be pointers and therefore pointing to other locations in memory
-Dialogue: 0,0:26:59.24,0:27:03.12,csapp,,0,0,0,,but the point is sort of the rest of the functions
-Dialogue: 0,0:27:03.50,0:27:05.88,csapp,,0,0,0,,in your code over many they are
-Dialogue: 0,0:27:06.18,0:27:11.62,csapp,,0,0,0,,are sort of frozen at that moment really there's only one function executing at any given time
-Dialogue: 0,0:27:12.08,0:27:17.20,csapp,,0,0,0,,I'm assuming a sort of what you'd call single threaded model here
-Dialogue: 0,0:27:18.20,0:27:22.20,csapp,,0,0,0,,and so we can just allocate on this stack
-Dialogue: 0,0:27:22.60,0:27:26.12,csapp,,0,0,0,,whatever space is required for this particular function
-Dialogue: 0,0:27:26.82,0:27:29.04,csapp,,0,0,0,,and then when we return from that function
-Dialogue: 0,0:27:29.46,0:27:35.70,csapp,,0,0,0,,we shouldn't if it's correctly written need any of the information associated with that function
-Dialogue: 0,0:27:35.70,0:27:37.50,csapp,,0,0,0,,it can just sort of disappear forever
-Dialogue: 0,0:27:37.82,0:27:39.78,csapp,,0,0,0,,and that's why this idea of a stack
-Dialogue: 0,0:27:40.26,0:27:45.58,csapp,,0,0,0,,you allocate something if you make more calls you keep allocating more stuff
-Dialogue: 0,0:27:45.72,0:27:50.60,csapp,,0,0,0,,but as they return you kind of back out of the stack and and free things up
-Dialogue: 0,0:27:51.36,0:27:54.16,csapp,,0,0,0,,so the stack discipline is is exactly the right
-Dialogue: 0,0:27:54.84,0:27:58.06,csapp,,0,0,0,,a matches well this whole idea of procedure call and return
-Dialogue: 0,0:27:58.70,0:28:04.06,csapp,,0,0,0,,so each block we use for a particular call then is called the stack frame
-Dialogue: 0,0:28:07.44,0:28:11.02,csapp,,0,0,0,,and to be sort of more technical we'll say
-Dialogue: 0,0:28:11.52,0:28:17.48,csapp,,0,0,0,,that it's a frame for a particular instance of a procedure a particular call to a procedure
-Dialogue: 0,0:28:19.16,0:28:24.28,csapp,,0,0,0,,so just imagine we had a set of functions one called yoo
-Dialogue: 0,0:28:24.86,0:28:26.72,csapp,,0,0,0,,which calls a function called who
-Dialogue: 0,0:28:27.30,0:28:32.42,csapp,,0,0,0,,and who has multiple calls to another function called amI
-Dialogue: 0,0:28:32.90,0:28:36.40,csapp,,0,0,0,,and amI is itself is recursive it calls itself
-Dialogue: 0,0:28:37.44,0:28:42.86,csapp,,0,0,0,,and so an imagine we had a chain of calls
-Dialogue: 0,0:28:42.98,0:28:46.04,csapp,,0,0,0,,where yoo calls who calls amI
-Dialogue: 0,0:28:46.44,0:28:48.82,csapp,,0,0,0,,which calls itself recursively twice
-Dialogue: 0,0:28:49.56,0:28:54.00,csapp,,0,0,0,,and then we'll exit out of amI and get back to who
-Dialogue: 0,0:28:54.34,0:28:57.06,csapp,,0,0,0,,and then who will hit it second call to amI`
-Dialogue: 0,0:28:57.28,0:29:00.36,csapp,,0,0,0,,which won't go any further and that will be it
-Dialogue: 0,0:29:00.54,0:29:07.16,csapp,,0,0,0,,so this picture here shows this whole history of all these calls that get made
-Dialogue: 0,0:29:09.52,0:29:11.16,csapp,,0,0,0,,but in terms of the stack
-Dialogue: 0,0:29:14.42,0:29:19.28,csapp,,0,0,0,,all we need what will keep a frame for every sort of procedure
-Dialogue: 0,0:29:19.28,0:29:25.26,csapp,,0,0,0,,that has been called but not yet returned on the stack
-Dialogue: 0,0:29:25.72,0:29:31.12,csapp,,0,0,0,,and in general this stack of is delimited by delimited by two pointers
-Dialogue: 0,0:29:31.12,0:29:33.74,csapp,,0,0,0,, one is the stack pointer which we're familiar with
-Dialogue: 0,0:29:34.30,0:29:40.04,csapp,,0,0,0,,and then there's another called the base pointer which register %rbp indicates
-Dialogue: 0,0:29:40.56,0:29:47.24,csapp,,0,0,0,,but one a feature of actually it's now become a feature of IA32 as well
-Dialogue: 0,0:29:47.98,0:29:50.80,csapp,,0,0,0,,is that this is an optional pointer
-Dialogue: 0,0:29:51.68,0:29:56.46,csapp,,0,0,0,,and in particular the code that we'll see does not use a base pointer
-Dialogue: 0,0:29:56.80,0:29:59.56,csapp,,0,0,0,,except in some very special cases
-Dialogue: 0,0:30:00.36,0:30:07.08,csapp,,0,0,0,,so this register doesn't really won't show up in your programs
-Dialogue: 0,0:30:07.44,0:30:09.92,csapp,,0,0,0,,being used in a special way as a frame pointer
-Dialogue: 0,0:30:10.34,0:30:13.20,csapp,,0,0,0,,it will be used instead just as a regular register
-Dialogue: 0,0:30:14.48,0:30:17.94,csapp,,0,0,0,,so typically then the only thing you'll know about the stack pointer
-Dialogue: 0,0:30:17.94,0:30:22.78,csapp,,0,0,0,,you won't even be able to figure out where the frame is exactly
-Dialogue: 0,0:30:22.78,0:30:29.96,csapp,,0,0,0,,you'll just know that the top part of the stack  is the top frame for the topmost function
-Dialogue: 0,0:30:31.06,0:30:34.66,csapp,,0,0,0,,and this is all managed by the code itself
-Dialogue: 0,0:30:37.04,0:30:42.30,csapp,,0,0,0,,and this is the same stack by the way in which you're pushing and popping addresses -
-Dialogue: 0,0:30:42.30,0:30:44.30,csapp,,0,0,0,,and they all kind of get mixed together
-Dialogue: 0,0:30:47.40,0:30:54.51,csapp,,0,0,0,,so we haven't actually seen any code up til now that makes you ask to do any explicit management of the stack
-Dialogue: 0,0:30:54.51,0:30:57.11,csapp,,0,0,0,,because all our examples were very simple
-Dialogue: 0,0:30:57.24,0:31:02.32,csapp,,0,0,0,,and just did a made use of the stack only for return addresses
-Dialogue: 0,0:31:03.74,0:31:05.46,csapp,,0,0,0,,but we'll see some that uses more
-Dialogue: 0,0:31:06.20,0:31:17.02,csapp,,0,0,0,,but so in general then imagine that each time you begin a function some space gets allocated potentially on the stack  for its frame
-Dialogue: 0,0:31:17.64,0:31:25.91,csapp,,0,0,0,,and then and that frame is indicated by either one pointer only or two pointers
-Dialogue: 0,0:31:27.66,0:31:33.45,csapp,,0,0,0,,and so now as yoo calls who then that will create a new stack frame for who
-Dialogue: 0,0:31:33.96,0:31:37.94,csapp,,0,0,0,, in some way when mi gets called that creates a new stack frame
-Dialogue: 0,0:31:38.64,0:31:41.20,csapp,,0,0,0,,and as we continue with these recursive calls
-Dialogue: 0,0:31:41.20,0:31:44.70,csapp,,0,0,0,,we're just adding more stuff to the stack getting deeper and deeper
-Dialogue: 0,0:31:45.38,0:31:50.52,csapp,,0,0,0,, and that will keep happening that's one of the reasons why recursion is a little bit of a risky thing
-Dialogue: 0,0:31:51.04,0:31:53.54,csapp,,0,0,0,,is that it compared to iteration
-Dialogue: 0,0:31:54.12,0:31:58.40,csapp,,0,0,0,,it keeps requiring more space as you go deeper in the recursion
-Dialogue: 0,0:31:58.84,0:32:04.78,csapp,,0,0,0,, and in particular most systems limit the total depth of the stack
-Dialogue: 0,0:32:06.54,0:32:08.30,csapp,,0,0,0,,and you can have what
-Dialogue: 0,0:32:08.56,0:32:12.68,csapp,,0,0,0,,because they're afraid of the sort of infinite loop version of recursion is
-Dialogue: 0,0:32:12.98,0:32:16.98,csapp,,0,0,0,,runaway recursion where it just keeps trying to push more and more stuff onto the stack
-Dialogue: 0,0:32:17.66,0:32:18.96,csapp,,0,0,0,,that's an aside
-Dialogue: 0,0:32:21.22,0:32:29.26,csapp,,0,0,0,,and then as these begin to return they those frames get de-allocated removed from the stack
-Dialogue: 0,0:32:29.86,0:32:34.22,csapp,,0,0,0,,so part of it the nice thing about this is it means that
-Dialogue: 0,0:32:34.94,0:32:38.18,csapp,,0,0,0,,every time I if I have multiple calls to amI
-Dialogue: 0,0:32:38.52,0:32:46.34,csapp,,0,0,0,,because I've gone deep recursively each one of them will have its own local state  that it needs to manage
-Dialogue: 0,0:32:46.72,0:32:51.62,csapp,,0,0,0,,and again the whole stack dissapoint is what makes it work
-Dialogue: 0,0:32:53.30,0:32:57.10,csapp,,0,0,0,,and what we'll find out in particular is because of the way this is set up
-Dialogue: 0,0:32:57.92,0:33:01.82,csapp,,0,0,0,,recursive calls are handled the same way that regular calls are
-Dialogue: 0,0:33:01.82,0:33:03.62,csapp,,0,0,0,,there's nothing special about them
-Dialogue: 0,0:33:03.62,0:33:10.80,csapp,,0,0,0,,all the sort of infrastructure required to support recursion is built into this whole stack discipline
-Dialogue: 0,0:33:13.56,0:33:18.64,csapp,,0,0,0,,so anyways imagine that all these calls are returned back to who
-Dialogue: 0,0:33:18.96,0:33:21.76,csapp,,0,0,0,,and then who would call amI again
-Dialogue: 0,0:33:22.36,0:33:27.18,csapp,,0,0,0,,and then again as we exit we were sort of deallocating these stack frames
-Dialogue: 0,0:33:27.64,0:33:30.04,csapp,,0,0,0,,and getting back to the the starting point
-Dialogue: 0,0:33:31.18,0:33:31.90,csapp,,0,0,0,,yes question
-Dialogue: 0,0:33:32.72,0:33:37.42,csapp,,0,0,0,,[student question]
-Dialogue: 0,0:33:37.42,0:33:40.66,csapp,,0,0,0,,Oh so the question was if %rbp is optional
-Dialogue: 0,0:33:41.26,0:33:44.66,csapp,,0,0,0,,then how does the program know how to do the D allocation
-Dialogue: 0,0:33:44.66,0:33:47.48,csapp,,0,0,0,,how can it reset the stack back to the right place
-Dialogue: 0,0:33:48.10,0:33:53.42,csapp,,0,0,0,,and the answer is and we'll see examples that the code is compiled
-Dialogue: 0,0:33:53.90,0:33:59.90,csapp,,0,0,0,,so it knows for example when it does the allocation it's going to allocate 16 bytes
-Dialogue: 0,0:34:00.52,0:34:04.14,csapp,,0,0,0,,and then it knows at the end that it can D allocated 16 bytes
-Dialogue: 0,0:34:04.78,0:34:06.32,csapp,,0,0,0,,and it actually brings up a good point
-Dialogue: 0,0:34:06.32,0:34:10.30,csapp,,0,0,0,,there is sort of an obscure part of the book that goes over this
-Dialogue: 0,0:34:10.74,0:34:13.74,csapp,,0,0,0,,there's a few special cases where it can't know in advance
-Dialogue: 0,0:34:14.28,0:34:16.02,csapp,,0,0,0,,how much space will be allocated
-Dialogue: 0,0:34:18.34,0:34:23.42,csapp,,0,0,0,,when it has to allocate a an array or a memory buffer of variable size
-Dialogue: 0,0:34:23.92,0:34:29.28,csapp,,0,0,0,,and then it will actually use the the %rbp in those cases for exactly that purpose
-Dialogue: 0,0:34:34.34,0:34:43.14,csapp,,0,0,0,,okay and so in general that what the stack frame will look like in one of these machines
-Dialogue: 0,0:34:44.14,0:34:46.20,csapp,,0,0,0,,will be something like this that
-Dialogue: 0,0:34:47.16,0:34:50.46,csapp,,0,0,0,,the and you'll see this is the caller
-Dialogue: 0,0:34:52.00,0:34:57.56,csapp,,0,0,0,,and then this is the the stack frame of the the function that got called
-Dialogue: 0,0:34:58.54,0:35:00.98,csapp,,0,0,0,,so working our way back
-Dialogue: 0,0:35:01.56,0:35:04.94,csapp,,0,0,0,, if we have to pass more than six arguments
-Dialogue: 0,0:35:05.52,0:35:13.10,csapp,,0,0,0,,the caller will actually use its own stack frame to store those arguments
-Dialogue: 0,0:35:15.06,0:35:17.32,csapp,,0,0,0,,and so that they'd be available
-Dialogue: 0,0:35:17.84,0:35:20.32,csapp,,0,0,0,,and we already saw when you do a call
-Dialogue: 0,0:35:20.76,0:35:23.60,csapp,,0,0,0,,it will push the return address onto the stack
-Dialogue: 0,0:35:24.30,0:35:29.72,csapp,,0,0,0,,so before our function even starts all this information would be on the stack
-Dialogue: 0,0:35:30.96,0:35:37.40,csapp,,0,0,0,,now if there's a if this particular if we're making use of a base pointer
-Dialogue: 0,0:35:37.68,0:35:41.26,csapp,,0,0,0,, then we have to have some way where to store the old value of the base pointer
-Dialogue: 0,0:35:41.26,0:35:44.34,csapp,,0,0,0,,so that we could fix it back when we return
-Dialogue: 0,0:35:45.04,0:35:48.40,csapp,,0,0,0,,we won't show any code doing that here so this is optional
-Dialogue: 0,0:35:49.06,0:35:51.58,csapp,,0,0,0,, but in general if there's some local state
-Dialogue: 0,0:35:52.52,0:35:56.40,csapp,,0,0,0,,like some registers that need to be saved and we'll see examples of that
-Dialogue: 0,0:35:56.84,0:35:59.60,csapp,,0,0,0,,or an array that needs to be allocated locally
-Dialogue: 0,0:36:00.06,0:36:03.32,csapp,,0,0,0,,that will be stored within the stack frame
-Dialogue: 0,0:36:03.84,0:36:08.90,csapp,,0,0,0,,and there might be some requirement for some extra space in the stack frame for other stuff
-Dialogue: 0,0:36:09.48,0:36:13.80,csapp,,0,0,0,,in particular if it we're going to pass more than seven arguments it needs space
-Dialogue: 0,0:36:14.22,0:36:15.86,csapp,,0,0,0,,somewhere in the stack frame to do it
-Dialogue: 0,0:36:16.56,0:36:19.50,csapp,,0,0,0,,and what we'll see in typical a code is
-Dialogue: 0,0:36:19.98,0:36:26.56,csapp,,0,0,0,,this stack pointer gets decremented pretty soon after the procedure begins
-Dialogue: 0,0:36:26.88,0:36:29.88,csapp,,0,0,0,,and it gets incremented back just before it returns
-Dialogue: 0,0:36:30.62,0:36:32.38,csapp,,0,0,0,,that's how it manages this deck
-Dialogue: 0,0:36:34.50,0:36:36.38,csapp,,0,0,0,,so let's do some examples
-Dialogue: 0,0:36:41.68,0:36:48.42,csapp,,0,0,0,,um let's see look at this before
-Dialogue: 0,0:36:48.58,0:36:49.98,csapp,,0,0,0,,but this is a function
-Dialogue: 0,0:36:50.06,0:36:55.20,csapp,,0,0,0,,oh I think the interesting thing about this function is that it has a pointer being passed to it
-Dialogue: 0,0:36:56.08,0:36:58.20,csapp,,0,0,0,,so this function takes an argument
-Dialogue: 0,0:36:58.22,0:37:02.38,csapp,,0,0,0,,one argument is a point or another is a an integer value
-Dialogue: 0,0:37:03.26,0:37:06.68,csapp,,0,0,0,,and you can see what it does is
-Dialogue: 0,0:37:07.14,0:37:09.88,csapp,,0,0,0,,it dereferences that pointer to get a value code X
-Dialogue: 0,0:37:11.20,0:37:17.94,csapp,,0,0,0,, it computes a value Y by summing X and the value passed to it
-Dialogue: 0,0:37:18.56,0:37:20.84,csapp,,0,0,0,,it stores Y back at P
-Dialogue: 0,0:37:21.36,0:37:27.63,csapp,,0,0,0,, but it returns X the original value of the pointer not the updated version of the pointer
-Dialogue: 0,0:37:28.16,0:37:30.04,csapp,,0,0,0,,and you can see that in the code here
-Dialogue: 0,0:37:30.16,0:37:37.48,csapp,,0,0,0,, its codes pretty short remember that in general %rdi will hold the first argument in this case it's a pointer
-Dialogue: 0,0:37:38.12,0:37:40.08,csapp,,0,0,0,,so we'll do a read from that pointer
-Dialogue: 0,0:37:40.88,0:37:46.44,csapp,,0,0,0,,and it will put the value in our a X which is where the return value should be  anyhow
-Dialogue: 0,0:37:47.48,0:37:53.04,csapp,,0,0,0,,and then it will increment %rsi which has the value called Val here
-Dialogue: 0,0:37:53.30,0:37:56.76,csapp,,0,0,0,,initially and now it has the value of x + Val
-Dialogue: 0,0:37:58.08,0:38:07.48,csapp,,0,0,0,,and then it will store that in the value pointed to by P
-Dialogue: 0,0:38:08.14,0:38:12.76,csapp,,0,0,0,,and it will do a return so you see these three instructions do all the different parts of this
-Dialogue: 0,0:38:13.54,0:38:18.06,csapp,,0,0,0,,and as this shows in general also you know register usage it's handy
-Dialogue: 0,0:38:18.32,0:38:21.02,csapp,,0,0,0,,by the way to document this when you're looking at code
-Dialogue: 0,0:38:21.94,0:38:27.02,csapp,,0,0,0,,%rdi is the first argument %rsi gets used initially it's Val
-Dialogue: 0,0:38:27.34,0:38:31.14,csapp,,0,0,0,,but now it will be set to Y during the call
-Dialogue: 0,0:38:31.68,0:38:36.52,csapp,,0,0,0,,and similarly %rax is initially the value
-Dialogue: 0,0:38:36.68,0:38:41.02,csapp,,0,0,0,,well it's it's both what X is here and it's used as the return value
-Dialogue: 0,0:38:42.50,0:38:49.20,csapp,,0,0,0,,okay so what's up the reason to go through all that is to actually show you examples of calling this
-Dialogue: 0,0:38:49.28,0:38:54.70,csapp,,0,0,0,,and how arguments get passed to the function and how it makes use of the stack frame
-Dialogue: 0,0:38:56.74,0:38:59.66,csapp,,0,0,0,,so now there's a function called call incr
-Dialogue: 0,0:39:00.68,0:39:04.56,csapp,,0,0,0,,and it's going to create a value called vet v1
-Dialogue: 0,0:39:05.56,0:39:08.18,csapp,,0,0,0,,and have to generate a pointer to that
-Dialogue: 0,0:39:08.98,0:39:13.12,csapp,,0,0,0,,so what that means is v1 can't just stay in a register
-Dialogue: 0,0:39:13.12,0:39:18.32,csapp,,0,0,0,,because you can't create an address of a register it has to be stored in memory somewhere
-Dialogue: 0,0:39:18.72,0:39:20.98,csapp,,0,0,0,,so that you can create a pointer an address of it
-Dialogue: 0,0:39:21.58,0:39:25.58,csapp,,0,0,0,,and where does it store it well it puts it in the stack
-Dialogue: 0,0:39:26.54,0:39:29.78,csapp,,0,0,0,,so how does it find space on the stack while allocates it
-Dialogue: 0,0:39:30.08,0:39:34.62,csapp,,0,0,0,,so the function call_incr then and we'll go through all the different parts of it
-Dialogue: 0,0:39:34.62,0:39:41.84,csapp,,0,0,0,,but you see that this red code here is generated generates
-Dialogue: 0,0:39:41.94,0:39:45.98,csapp,,0,0,0,,these two instructions one is to allocate 16 bytes on the stack
-Dialogue: 0,0:39:46.78,0:39:50.78,csapp,,0,0,0,,and the other is to store $15213
-Dialogue: 0,0:39:51.50,0:39:53.76,csapp,,0,0,0,,at offset eight from the stack pointer
-Dialogue: 0,0:39:54.46,0:40:02.32,csapp,,0,0,0,,and as will often see the the program often allocates more space on the stack than it really needs to
-Dialogue: 0,0:40:02.82,0:40:05.54,csapp,,0,0,0,,and there's some conventions about trying to keep
-Dialogue: 0,0:40:07.58,0:40:11.38,csapp,,0,0,0,,addresses on aligned in various ways
-Dialogue: 0,0:40:11.56,0:40:18.10,csapp,,0,0,0,,that are sort of obscure and we you should just kind of not worry about the fact there's unused space and functions
-Dialogue: 0,0:40:18.10,0:40:24.58,csapp,,0,0,0,,because they do it the reasons for doing it are are
-Dialogue: 0,0:40:26.16,0:40:31.12,csapp,,0,0,0,,maybe interesting to some but not really ones you need to understand at this point
-Dialogue: 0,0:40:32.60,0:40:40.50,csapp,,0,0,0,, so the point being that the way we got space on the stack was to just add to the stack pointer decrement the stack pointer
-Dialogue: 0,0:40:42.36,0:40:48.08,csapp,,0,0,0,,so now we have a number 15213 that's sitting in memory
-Dialogue: 0,0:40:48.64,0:40:51.42,csapp,,0,0,0,,and we can create a pointer to it
-Dialogue: 0,0:40:54.72,0:41:03.72,csapp,,0,0,0,,and so now to set up this call we need to create a pointer v1
-Dialogue: 0,0:41:03.98,0:41:08.40,csapp,,0,0,0,,to v1 and we have to pass the number 3000
-Dialogue: 0,0:41:09.12,0:41:13.46,csapp,,0,0,0,,so we'll see that will copy 3000 to register %esi
-Dialogue: 0,0:41:14.26,0:41:17.42,csapp,,0,0,0,,and let me just double check here
-Dialogue: 0,0:41:24.68,0:41:25.96,csapp,,0,0,0,,just looking up
-Dialogue: 0,0:41:26.22,0:41:28.42,csapp,,0,0,0,,so one of the annoying features is
-Dialogue: 0,0:41:28.66,0:41:32.06,csapp,,0,0,0,,you see all the data type here are long so there's no incr
-Dialogue: 0,0:41:33.06,0:41:37.80,csapp,,0,0,0,, and yet it's copying 3,000 just to register %esi and not %esi
-Dialogue: 0,0:41:38.34,0:41:40.46,csapp,,0,0,0,,and it's using a movel and not a moveq
-Dialogue: 0,0:41:41.16,0:41:42.94,csapp,,0,0,0,,I think we might have covered that last time
-Dialogue: 0,0:41:42.94,0:41:47.36,csapp,,0,0,0,,but 3,000 is a small enough number it will fit in 32 bits
-Dialogue: 0,0:41:47.78,0:41:50.86,csapp,,0,0,0,,it's a positive number so we don't have to worry about sign bits
-Dialogue: 0,0:41:51.34,0:41:57.58,csapp,,0,0,0,,so the thing can sort of get away with a trick here of using just a movel instruction
-Dialogue: 0,0:41:58.10,0:42:05.56,csapp,,0,0,0,,because when any instruction has a one of the eregistry ziz its destination
-Dialogue: 0,0:42:05.96,0:42:12.46,csapp,,0,0,0,, it will set the upper 32 bits of that register to zeros
-Dialogue: 0,0:42:13.16,0:42:17.44,csapp,,0,0,0,,so this will have the effect of copying the number 3000
-Dialogue: 0,0:42:18.18,0:42:21.06,csapp,,0,0,0,,and during out the upper bytes to register %rsi
-Dialogue: 0,0:42:21.66,0:42:25.80,csapp,,0,0,0,,and the reason the compiler likes this is it takes one less bite to encode
-Dialogue: 0,0:42:26.10,0:42:28.44,csapp,,0,0,0,,a movel than it does to encode a moveq
-Dialogue: 0,0:42:30.04,0:42:33.96,csapp,,0,0,0,,um so just you have to get used to these kind of things
-Dialogue: 0,0:42:34.46,0:42:38.40,csapp,,0,0,0,,so that's setting up argument the the second argument to the call
-Dialogue: 0,0:42:39.88,0:42:45.68,csapp,,0,0,0,,but the first argument it's using this instruction lea or leaq
-Dialogue: 0,0:42:46.22,0:42:49.61,csapp,,0,0,0,,for what it's supposed to be used for which is to create pointers
-Dialogue: 0,0:42:50.22,0:42:54.82,csapp,,0,0,0,,remember we talked about this instruction often getting used just to add two numbers
-Dialogue: 0,0:42:55.78,0:42:58.84,csapp,,0,0,0,,but it's actually designed exactly for this purpose
-Dialogue: 0,0:42:59.54,0:43:04.66,csapp,,0,0,0,,that it looks like a memory reference  8 relative to the stack pointer
-Dialogue: 0,0:43:06.38,0:43:07.48,csapp,,0,0,0,,but instead of
-Dialogue: 0,0:43:08.18,0:43:14.24,csapp,,0,0,0,, now reading from that memory reference the instruction will just copy the computed address to %rdi
-Dialogue: 0,0:43:17.78,0:43:25.72,csapp,,0,0,0,,and so %rdi will now be equal to whatever the stack pointer plus 8 is
-Dialogue: 0,0:43:28.10,0:43:32.40,csapp,,0,0,0,,okay so that creates the two arguments that I'm passing to this function
-Dialogue: 0,0:43:33.56,0:43:36.94,csapp,,0,0,0,,and now the call instruction will happen
-Dialogue: 0,0:43:37.60,0:43:45.30,csapp,,0,0,0,,and you'll recall that the call instruction adds(3000) two numbers and stores the result back in the pointer
-Dialogue: 0,0:43:46.00,0:43:53.18,csapp,,0,0,0,,so its effect will be to set the of this memory location to 18 to 13
-Dialogue: 0,0:43:53.74,0:43:55.72,csapp,,0,0,0,,you'll notice the clever trick here
-Dialogue: 0,0:43:56.24,0:44:00.90,csapp,,0,0,0,,and also return a particular value
-Dialogue: 0,0:44:01.14,0:44:03.50,csapp,,0,0,0,,which we won't make use of the return value
-Dialogue: 0,0:44:04.18,0:44:06.82,csapp,,0,0,0,,no we do make use of the return value
-Dialogue: 0,0:44:09.92,0:44:11.24,csapp,,0,0,0,,and now the...
-Dialogue: 0,0:44:16.90,0:44:18.74,csapp,,0,0,0,,now when we return back
-Dialogue: 0,0:44:20.12,0:44:24.26,csapp,,0,0,0,, what we want to do is add the value in v1
-Dialogue: 0,0:44:24.86,0:44:29.92,csapp,,0,0,0,, to the value we just computed the value we just computed is in v2
-Dialogue: 0,0:44:30.70,0:44:38.24,csapp,,0,0,0,,and we know that the v1 is designated by this memory location that %rsp+8
-Dialogue: 0,0:44:38.62,0:44:43.00,csapp,,0,0,0,,and so we'll just read from memory to include that to %rax
-Dialogue: 0,0:44:44.90,0:44:48.92,csapp,,0,0,0,,and then the final step is to deallocate so you see the match here
-Dialogue: 0,0:44:49.68,0:44:52.30,csapp,,0,0,0,,and this was to answer the question earlier how does it know
-Dialogue: 0,0:44:52.66,0:44:56.66,csapp,,0,0,0,, how to restore the the stack back to its original place
-Dialogue: 0,0:44:57.18,0:45:02.90,csapp,,0,0,0,,well the compiler you know built into it figured out how much space it would need for this particular function
-Dialogue: 0,0:45:03.52,0:45:07.54,csapp,,0,0,0,, and it allocates that when it comes in and it D allocates it when it goes out
-Dialogue: 0,0:45:09.94,0:45:13.76,csapp,,0,0,0,, so and this you know this is a very simple example
-Dialogue: 0,0:45:13.76,0:45:17.94,csapp,,0,0,0,,but even more elaborate examples are still based on that same set of ideas
-Dialogue: 0,0:45:19.80,0:45:25.02,csapp,,0,0,0,,so that shows you in 1 then the data management the stack management
-Dialogue: 0,0:45:25.02,0:45:27.02,csapp,,0,0,0,,the idea of using a stack frame
-Dialogue: 0,0:45:30.64,0:45:33.54,csapp,,0,0,0,,and now the return by this point the
-Dialogue: 0,0:45:34.60,0:45:37.14,csapp,,0,0,0,,the only thing that's left is
-Dialogue: 0,0:45:38.26,0:45:42.84,csapp,,0,0,0,,after I increment the stack pointer it will be pointing back to this return address
-Dialogue: 0,0:45:44.28,0:45:46.22,csapp,,0,0,0,,whoops wrong direction here
-Dialogue: 0,0:45:46.78,0:45:50.16,csapp,,0,0,0,,so now if I do a rep the RET instruction will always take
-Dialogue: 0,0:45:50.20,0:45:54.48,csapp,,0,0,0,,whatever is pointed to by the stack pointer and use that as the return address
-Dialogue: 0,0:45:56.16,0:46:01.94,csapp,,0,0,0,,so it's very important that %rsp get set back to where it should be before you it does a rep
-Dialogue: 0,0:46:05.50,0:46:08.20,csapp,,0,0,0,,okay so that's sort of the the basic principles
-Dialogue: 0,0:46:08.20,0:46:12.18,csapp,,0,0,0,, now now let's get a little bit more refined
-Dialogue: 0,0:46:12.72,0:46:17.12,csapp,,0,0,0,, an important idea is well what about these registers
-Dialogue: 0,0:46:17.12,0:46:23.50,csapp,,0,0,0,,what can be assumed about particularly jesters and how they get changed  and so forth
-Dialogue: 0,0:46:23.98,0:46:29.98,csapp,,0,0,0,,and so again it's built into this idea of an ABI  is a set of conventions about the register
-Dialogue: 0,0:46:29.98,0:46:33.10,csapp,,0,0,0,,obviously %rsp is a very important register
-Dialogue: 0,0:46:33.56,0:46:39.32,csapp,,0,0,0,,and you don't want programs just to randomly change its value without them knowing what to do
-Dialogue: 0,0:46:39.82,0:46:43.62,csapp,,0,0,0,, but it turns out we'll also be careful with some of the other registers too
-Dialogue: 0,0:46:44.72,0:46:48.72,csapp,,0,0,0,,and so here's sort of a thought experiment imagine we had a function
-Dialogue: 0,0:46:50.82,0:46:52.68,csapp,,0,0,0,,called yoo that's going to call who
-Dialogue: 0,0:46:53.68,0:46:55.40,csapp,,0,0,0,,and it has some data
-Dialogue: 0,0:46:56.06,0:47:01.56,csapp,,0,0,0,,that it it wants to put somewhere
-Dialogue: 0,0:47:02.70,0:47:06.44,csapp,,0,0,0,,and then when who's going to get called
-Dialogue: 0,0:47:06.92,0:47:15.20,csapp,,0,0,0,,and then the question is can I rely on the fact that register %rdx will still hold the number 15213
-Dialogue: 0,0:47:16.02,0:47:17.96,csapp,,0,0,0,,and the answer is not in general
-Dialogue: 0,0:47:18.16,0:47:23.08,csapp,,0,0,0,,because who might have overwritten %rdx and put something else there
-Dialogue: 0,0:47:25.46,0:47:30.58,csapp,,0,0,0,,so in particular if who did some operation involving register %rdx
-Dialogue: 0,0:47:31.20,0:47:33.74,csapp,,0,0,0,,it could have messed up the value that was there before
-Dialogue: 0,0:47:36.42,0:47:42.38,csapp,,0,0,0,,so the obvious answer is while you should not have used %rdx for that purpose right
-Dialogue: 0,0:47:43.38,0:47:48.22,csapp,,0,0,0,,and that's why we will come up with a set of conventions
-Dialogue: 0,0:47:49.12,0:47:51.72,csapp,,0,0,0,, so just some terminology
-Dialogue: 0,0:47:52.18,0:47:54.82,csapp,,0,0,0,,when we're talking about one function calling another
-Dialogue: 0,0:47:54.94,0:48:01.12,csapp,,0,0,0,, it's useful to have used the following words will call  the calling function the caller
-Dialogue: 0,0:48:01.56,0:48:03.86,csapp,,0,0,0,,and the function that gets called the Kaali
-Dialogue: 0,0:48:06.44,0:48:12.80,csapp,,0,0,0,,and now there's basically two ways we can manage register it can be what's called caller saved
-Dialogue: 0,0:48:13.56,0:48:15.74,csapp,,0,0,0,,which means if the caller really cares
-Dialogue: 0,0:48:16.88,0:48:24.24,csapp,,0,0,0,,if you really want to value that will be there when it returns
-Dialogue: 0,0:48:25.26,0:48:27.72,csapp,,0,0,0,,when control returns back to it
-Dialogue: 0,0:48:28.32,0:48:35.78,csapp,,0,0,0,,then it should store it away first it shouldn't assume that the register will be....
-Dialogue: 0,0:48:36.76,0:48:39.68,csapp,,0,0,0,,it should assume that the register might get altered by it
-Dialogue: 0,0:48:42.18,0:48:46.96,csapp,,0,0,0,,but there's another class we can define it called collie save
-Dialogue: 0,0:48:47.52,0:48:52.34,csapp,,0,0,0,,which is sort of a contract between all the functions and it's built into the ABI that says
-Dialogue: 0,0:48:53.06,0:48:56.92,csapp,,0,0,0,, if a particular function wants to alter date alter this register
-Dialogue: 0,0:48:57.48,0:49:02.02,csapp,,0,0,0,,what it needs to do is first store it away and it will do it by putting the value in the stack
-Dialogue: 0,0:49:02.52,0:49:06.04,csapp,,0,0,0,,and then before we return from that procedure
-Dialogue: 0,0:49:06.28,0:49:09.18,csapp,,0,0,0,,we should restore it back to whatever it was before
-Dialogue: 0,0:49:09.78,0:49:12.38,csapp,,0,0,0,,so that's a convention called call me save
-Dialogue: 0,0:49:13.02,0:49:16.84,csapp,,0,0,0,, and it's a little less intuitive and it takes a while to get the hang of this
-Dialogue: 0,0:49:16.86,0:49:18.90,csapp,,0,0,0,,but you'll begin to see its value
-Dialogue: 0,0:49:21.70,0:49:23.86,csapp,,0,0,0,,so in particular with this ABI
-Dialogue: 0,0:49:25.28,0:49:31.06,csapp,,0,0,0,, we've already seen %rax used for the return value
-Dialogue: 0,0:49:31.46,0:49:36.98,csapp,,0,0,0,, and we've seen these six registers that get used for passing arguments
-Dialogue: 0,0:49:38.06,0:49:43.96,csapp,,0,0,0,,and will also designate registers %r10 in %r11
-Dialogue: 0,0:49:44.46,0:49:49.01,csapp,,0,0,0,, to be just temporary values that can be altered by any function
-Dialogue: 0,0:49:49.18,0:49:50.80,csapp,,0,0,0,,that's meaning of color saved
-Dialogue: 0,0:49:51.26,0:49:56.96,csapp,,0,0,0,,we've already seen actually within code  often them overriding these registers
-Dialogue: 0,0:49:56.96,0:49:59.70,csapp,,0,0,0,,because whatever gets passed to a function
-Dialogue: 0,0:50:00.68,0:50:03.38,csapp,,0,0,0,, the function can do whatever it wants to that data
-Dialogue: 0,0:50:04.48,0:50:07.28,csapp,,0,0,0,,as long as it's not somehow corrupting other data
-Dialogue: 0,0:50:07.28,0:50:10.84,csapp,,0,0,0,,so those often get used as temporary storage as well
-Dialogue: 0,0:50:12.92,0:50:19.00,csapp,,0,0,0,,and %rax gets often overwritten multiple times before it gets set to a final return value
-Dialogue: 0,0:50:21.08,0:50:25.68,csapp,,0,0,0,,but we're going to say that these four registers and most commonly %rbx
-Dialogue: 0,0:50:28.14,0:50:30.20,csapp,,0,0,0,,are our what are called callee-save registers
-Dialogue: 0,0:50:30.20,0:50:34.74,csapp,,0,0,0,,meaning they'll only get used in this special way that if a function wants to alter it
-Dialogue: 0,0:50:35.10,0:50:40.02,csapp,,0,0,0,,one of these registers has to push it will push the value on the stack
-Dialogue: 0,0:50:40.52,0:50:44.02,csapp,,0,0,0,,and then just before returning it will pop that value back off the stack
-Dialogue: 0,0:50:44.92,0:50:50.94,csapp,,0,0,0,,so register %rbp as I told you about is special  if you're using frame pointers
-Dialogue: 0,0:50:51.36,0:50:53.18,csapp,,0,0,0,,if you're not using frame pointers
-Dialogue: 0,0:50:54.02,0:50:58.06,csapp,,0,0,0,,then it can be treated as a Callee-save register
-Dialogue: 0,0:50:58.06,0:50:59.98,csapp,,0,0,0,,so I'll get back to that in a minute
-Dialogue: 0,0:50:59.98,0:51:05.84,csapp,,0,0,0,,the fact you can combine those two and it works fine is actually a little bit subtle
-Dialogue: 0,0:51:06.38,0:51:11.44,csapp,,0,0,0,,and then as I mentioned %rsp is special you don't mess with that unless you know what you're doing
-Dialogue: 0,0:51:12.86,0:51:20.30,csapp,,0,0,0,,so let's look at an example of this use of callee-save registers and why how it works
-Dialogue: 0,0:51:20.84,0:51:28.56,csapp,,0,0,0,, and I'll do it by a version of this similar function to what we did before
-Dialogue: 0,0:51:32.24,0:51:38.40,csapp,,0,0,0,,but now what I'm going to do is my return value
-Dialogue: 0,0:51:39.62,0:51:45.28,csapp,,0,0,0,, is to add X which is an argument of being passed to this function
-Dialogue: 0,0:51:45.28,0:51:47.30,csapp,,0,0,0,,there were no arguments in the earlier version
-Dialogue: 0,0:51:47.96,0:51:54.60,csapp,,0,0,0,,so somehow I have to have X it gets passed originally in register %rdi as you know
-Dialogue: 0,0:51:56.56,0:51:58.62,csapp,,0,0,0,,but %rdi might
-Dialogue: 0,0:51:59.06,0:52:03.34,csapp,,0,0,0,,well I'm going to have to reuse register %rdi to pass value to incr
-Dialogue: 0,0:52:03.82,0:52:05.90,csapp,,0,0,0,,so somehow I have to do something with X
-Dialogue: 0,0:52:06.42,0:52:11.12,csapp,,0,0,0,,because I'm going to need X when I return back to here after the call
-Dialogue: 0,0:52:11.76,0:52:15.62,csapp,,0,0,0,,so where am I going to put it well that's why I have callee-save registers
-Dialogue: 0,0:52:16.68,0:52:18.82,csapp,,0,0,0,,and so you see that the code here
-Dialogue: 0,0:52:19.70,0:52:22.98,csapp,,0,0,0,,at the outset of this function
-Dialogue: 0,0:52:22.98,0:52:27.94,csapp,,0,0,0,, then it will store away whatever is in %rbx currently it will put it on the stack
-Dialogue: 0,0:52:28.70,0:52:33.98,csapp,,0,0,0,,and so now the the stack frame for this function looks like there's a return address
-Dialogue: 0,0:52:35.32,0:52:38.08,csapp,,0,0,0,,from before but I'm going to save the value of %rbx
-Dialogue: 0,0:52:38.74,0:52:43.02,csapp,,0,0,0,,and then I'm going to decrement the stack pointer by 16 as I did before
-Dialogue: 0,0:52:43.80,0:52:48.76,csapp,,0,0,0,,but that will be on top of the eight bytes I've already allocated to store %rbx
-Dialogue: 0,0:52:51.84,0:52:54.44,csapp,,0,0,0,, and then you'll see within the code
-Dialogue: 0,0:52:55.46,0:52:58.90,csapp,,0,0,0,,for example when it wants to compute this return value
-Dialogue: 0,0:52:59.38,0:53:07.40,csapp,,0,0,0,, it can assume that %rbx when whatever this call does  inker
-Dialogue: 0,0:53:08.30,0:53:12.56,csapp,,0,0,0,,we assume inker is well behaved that if it makes use of register %rbx
-Dialogue: 0,0:53:12.78,0:53:14.78,csapp,,0,0,0,, it will fix it up before it returns
-Dialogue: 0,0:53:15.44,0:53:22.58,csapp,,0,0,0,,and then this function well in its exit code will not only increment the stack pointer
-Dialogue: 0,0:53:22.58,0:53:25.84,csapp,,0,0,0,,but it will then pop the value of %rbx back
-Dialogue: 0,0:53:25.84,0:53:31.60,csapp,,0,0,0,,and so again you see this sort of bracketing push/pop a sub tract
-Dialogue: 0,0:53:32.12,0:53:33.74,csapp,,0,0,0,,ad and you'll notice that things
-Dialogue: 0,0:53:34.52,0:53:39.10,csapp,,0,0,0,,on the clean-up part of it the end you sort of do things in the reverse order that they were done
-Dialogue: 0,0:53:39.32,0:53:42.58,csapp,,0,0,0,,coming in again because of the stack discipline
-Dialogue: 0,0:53:44.06,0:53:48.66,csapp,,0,0,0,, so that's sort of a demonstration of this eight idea of an ABI that
-Dialogue: 0,0:53:49.28,0:53:53.60,csapp,,0,0,0,, everyone will treat %rbx this way it will save it on the stack
-Dialogue: 0,0:53:53.88,0:53:58.52,csapp,,0,0,0,,if it's going to alter it if it's not going to alter it it doesn't have to save anything
-Dialogue: 0,0:53:58.72,0:54:01.28,csapp,,0,0,0,,whose question I saw No
-Dialogue: 0,0:54:02.68,0:54:04.76,csapp,,0,0,0,, so we haven't seen that in other code
-Dialogue: 0,0:54:04.76,0:54:11.58,csapp,,0,0,0,,because we didn't typically need it that's again an example in  this particular machine code
-Dialogue: 0,0:54:11.58,0:54:13.18,csapp,,0,0,0,,we only do what we have to do
-Dialogue: 0,0:54:16.38,0:54:16.94,csapp,,0,0,0,,okay
-Dialogue: 0,0:54:19.84,0:54:22.58,csapp,,0,0,0,,okay so now we can kind of put this all together
-Dialogue: 0,0:54:23.26,0:54:29.04,csapp,,0,0,0,,and look at some examples of recursion and the important thing to keep in mind is
-Dialogue: 0,0:54:29.66,0:54:36.32,csapp,,0,0,0,,you know recursion is one of those sort of magical parts of computer science it seems like some black art
-Dialogue: 0,0:54:37.08,0:54:38.42,csapp,,0,0,0,,that it actually works
-Dialogue: 0,0:54:39.90,0:54:43.54,csapp,,0,0,0,,but when you look at these low-level mechanisms it all works out
-Dialogue: 0,0:54:43.88,0:54:50.90,csapp,,0,0,0,,and the C compiler doesn't have to make any special consideration for
-Dialogue: 0,0:54:51.54,0:54:54.34,csapp,,0,0,0,,a recursive function versus a normal function
-Dialogue: 0,0:54:54.50,0:54:56.64,csapp,,0,0,0,,because this whole stack discipline makes it work
-Dialogue: 0,0:54:59.64,0:55:05.18,csapp,,0,0,0,,so I'm going to illustrate that then with a version of this function I called pcount
-Dialogue: 0,0:55:05.68,0:55:07.14,csapp,,0,0,0,,I've had various instance of it
-Dialogue: 0,0:55:07.16,0:55:12.24,csapp,,0,0,0,,where you remember it's the the role of this is to count the number of ones
-Dialogue: 0,0:55:12.80,0:55:14.54,csapp,,0,0,0,,in an initial word
-Dialogue: 0,0:55:15.04,0:55:17.10,csapp,,0,0,0,,so the recursive version of this says
-Dialogue: 0,0:55:17.66,0:55:21.00,csapp,,0,0,0,,if the argument is zero then it has no ones in it
-Dialogue: 0,0:55:21.64,0:55:29.32,csapp,,0,0,0,,otherwise I take the leading bit  the least significant bit
-Dialogue: 0,0:55:30.56,0:55:35.02,csapp,,0,0,0,,and I'll which is either going to be a one or a zero of course
-Dialogue: 0,0:55:35.60,0:55:40.76,csapp,,0,0,0,,and add that to what you get by shifting right X right by one position
-Dialogue: 0,0:55:41.14,0:55:43.86,csapp,,0,0,0,,and recursively counting the number of one bits in that
-Dialogue: 0,0:55:44.22,0:55:46.26,csapp,,0,0,0,,so pretty natural kind of recursion and
-Dialogue: 0,0:55:47.86,0:55:52.12,csapp,,0,0,0,, and keep in mind these are all unsigned numbers  the argument is
-Dialogue: 0,0:55:52.54,0:55:55.52,csapp,,0,0,0,,so the right shifts are logical
-Dialogue: 0,0:55:56.24,0:56:01.26,csapp,,0,0,0,, this would really be a bad idea with arithmetic right
-Dialogue: 0,0:56:02.66,0:56:06.70,csapp,,0,0,0,,and this is a code generated in general recursive code
-Dialogue: 0,0:56:06.70,0:56:12.54,csapp,,0,0,0,,it's going to always generate a bigger blob of code than the iterative version
-Dialogue: 0,0:56:12.84,0:56:14.84,csapp,,0,0,0,,because it has to do all the stack stuff
-Dialogue: 0,0:56:17.42,0:56:20.42,csapp,,0,0,0,,so this is about as simple as it gets in recursive calls
-Dialogue: 0,0:56:20.88,0:56:24.41,csapp,,0,0,0,,so let's just sort of pick it apart
-Dialogue: 0,0:56:24.92,0:56:28.94,csapp,,0,0,0,,well if easy case is if X is zero you'll see what happens is
-Dialogue: 0,0:56:30.50,0:56:35.32,csapp,,0,0,0,,it first of all assumes X is going to be zero in fact
-Dialogue: 0,0:56:35.15,0:56:40.98,csapp,,0,0,0,,and sets up the return value of zero  to the register
-Dialogue: 0,0:56:41.56,0:56:45.52,csapp,,0,0,0,,and then it will test now while is X zero
-Dialogue: 0,0:56:45.96,0:56:49.28,csapp,,0,0,0,,you remember the test instruction has two operands that get ended
-Dialogue: 0,0:56:49.28,0:56:54.02,csapp,,0,0,0,,so when they're the same it just is testing the value of x here
-Dialogue: 0,0:56:54.92,0:57:00.52,csapp,,0,0,0,, and if that's equal je is means jump equal to 0 in this case
-Dialogue: 0,0:57:01.10,0:57:03.86,csapp,,0,0,0,,or might say jz is the same instruction
-Dialogue: 0,0:57:04.36,0:57:11.62,csapp,,0,0,0,,so if the value equals zero we'll jump to the end of the function and hit the return instruction
-Dialogue: 0,0:57:12.02,0:57:15.38,csapp,,0,0,0,, like I said before the %rap semicolon you can ignore that
-Dialogue: 0,0:57:17.02,0:57:18.16,csapp,,0,0,0,,so that handles that one
-Dialogue: 0,0:57:19.68,0:57:23.00,csapp,,0,0,0,,and now the rest of the code is to handle this lower part
-Dialogue: 0,0:57:23.00,0:57:29.30,csapp,,0,0,0,,where I have to set up the arguments to recursive call I have to keep track of
-Dialogue: 0,0:57:29.30,0:57:35.38,csapp,,0,0,0,,what at least the least significant bit of X is and handle all that stuff
-Dialogue: 0,0:57:37.58,0:57:42.40,csapp,,0,0,0,,so here's the code and it doesn't need any other thing anything on the stack
-Dialogue: 0,0:57:42.40,0:57:48.72,csapp,,0,0,0,,other than a space to store %rbx which is whatever again
-Dialogue: 0,0:57:48.98,0:57:51.22,csapp,,0,0,0,,whatever was in %rbx when you enter
-Dialogue: 0,0:57:51.66,0:57:55.24,csapp,,0,0,0,,I'm just going to put it on the stack I won't look at it I won't make use of it
-Dialogue: 0,0:57:55.98,0:58:02.18,csapp,,0,0,0,,but I'll I'll have it there so I can restore the register when I return
-Dialogue: 0,0:58:02.82,0:58:05.36,csapp,,0,0,0,,so it will push the value under the stack
-Dialogue: 0,0:58:07.32,0:58:16.92,csapp,,0,0,0,,and now the real meat of the the body of it is it will copy X into %rbx
-Dialogue: 0,0:58:17.02,0:58:20.74,csapp,,0,0,0,,which we've just put on the stack so we can safely do it
-Dialogue: 0,0:58:21.08,0:58:29.14,csapp,,0,0,0,, and we'll just set only will clear out at all but the least significant bit of that particular register
-Dialogue: 0,0:58:29.52,0:58:34.44,csapp,,0,0,0,,and again this is one of these weird ones where I can use EBX as a destination
-Dialogue: 0,0:58:34.44,0:58:36.92,csapp,,0,0,0,,knowing that all 0 all the high order bits
-Dialogue: 0,0:58:38.16,0:58:43.40,csapp,,0,0,0,,and then I'm going to take X and I'm just going to shift it right by one position
-Dialogue: 0,0:58:43.94,0:58:46.59,csapp,,0,0,0,, which sets me up for this recursive call so
-Dialogue: 0,0:58:47.04,0:58:51.04,csapp,,0,0,0,,so this red code does both of these parts of it here
-Dialogue: 0,0:58:52.48,0:58:56.14,csapp,,0,0,0,,and now I'm ready to call P count recursively
-Dialogue: 0,0:58:56.18,0:59:00.70,csapp,,0,0,0,,because I have the shifted value in %rdi
-Dialogue: 0,0:59:03.92,0:59:09.30,csapp,,0,0,0,,and I know because this is a well behaved function
-Dialogue: 0,0:59:09.62,0:59:15.70,csapp,,0,0,0,,that when P count returns it can assume that %rax holds  the recursive result
-Dialogue: 0,0:59:16.98,0:59:22.28,csapp,,0,0,0,,and I also know even though P count actually does modify %rbx
-Dialogue: 0,0:59:22.42,0:59:26.62,csapp,,0,0,0,,but I know because I the code is well behaved
-Dialogue: 0,0:59:27.08,0:59:31.24,csapp,,0,0,0,,the %rbx will get restored to whatever was there before
-Dialogue: 0,0:59:32.18,0:59:40.62,csapp,,0,0,0,, and %rbx in this case just before making the call i set it to the value of this we significant bit right
-Dialogue: 0,0:59:41.16,0:59:47.44,csapp,,0,0,0,,so when I return back I can assume that %rbx holds the least significant bit of x  my original argument
-Dialogue: 0,0:59:47.82,0:59:50.68,csapp,,0,0,0,,and %rax call holds the recursive result
-Dialogue: 0,0:59:51.18,0:59:53.78,csapp,,0,0,0,, so I can just add those two numbers together
-Dialogue: 0,0:59:54.66,0:59:59.62,csapp,,0,0,0,,call that the return value and I've correctly computed the result
-Dialogue: 0,1:00:00.28,1:00:06.44,csapp,,0,0,0,,and then the final queen up is to pop %rbx to restore whatever was in there
-Dialogue: 0,1:00:06.90,1:00:08.46,csapp,,0,0,0,, and then to do the return
-Dialogue: 0,1:00:08.98,1:00:13.90,csapp,,0,0,0,,so again you see that the piece is all kind of it's a puzzle that all fits together
-Dialogue: 0,1:00:14.22,1:00:19.96,csapp,,0,0,0,,because all the functions are using this common set of conventions about 
-Dialogue: 0,1:00:20.48,1:00:21.92,csapp,,0,0,0,,where arguments get past 
-Dialogue: 0,1:00:22.54,1:00:25.48,csapp,,0,0,0,,what registers can be used how registers
-Dialogue: 0,1:00:26.50,1:00:32.42,csapp,,0,0,0,, if some registers have to be restored back if they get used and all that stuff works together 
-Dialogue: 0,1:00:35.44,1:00:39.64,csapp,,0,0,0,,which gets me back to just the point I was making before 
-Dialogue: 0,1:00:41.90,1:00:48.66,csapp,,0,0,0,,if you're using register %rbp for a frame pointer 
-Dialogue: 0,1:00:52.68,1:00:56.08,csapp,,0,0,0,,so typically point to the beginning of a frame like that 
-Dialogue: 0,1:00:57.20,1:01:00.48,csapp,,0,0,0,,so imagine you have a function that needs a base pointer 
-Dialogue: 0,1:01:00.48,1:01:08.46,csapp,,0,0,0,,because as I mentioned the  case is that if it has to within that function allocate some amount of space
-Dialogue: 0,1:01:08.46,1:01:10.66,csapp,,0,0,0,,it's unknown at compile time
-Dialogue: 0,1:01:14.10,1:01:22.54,csapp,,0,0,0,,well imagine now that some other code gets called deep recursive calls
-Dialogue: 0,1:01:22.54,1:01:28.52,csapp,,0,0,0,, or whatever that might do other things 
-Dialogue: 0,1:01:28.90,1:01:33.06,csapp,,0,0,0,,well if you treat %rbp as a Kali save register
-Dialogue: 0,1:01:33.72,1:01:36.18,csapp,,0,0,0,,then when these other functions return
-Dialogue: 0,1:01:36.64,1:01:40.82,csapp,,0,0,0,,if they've altered if they made use of rbp for one reason or another
-Dialogue: 0,1:01:41.50,1:01:44.86,csapp,,0,0,0,, it's guaranteed that they will restore it back to 
-Dialogue: 0,1:01:44.96,1:01:49.06,csapp,,0,0,0,,whatever condition it was in originally before 
-Dialogue: 0,1:01:49.66,1:01:53.54,csapp,,0,0,0,,so now this function will have a reliable value of %rbp 
-Dialogue: 0,1:01:54.27,1:01:59.04,csapp,,0,0,0,,so again it shows as long as all the code obeys these conventions on
-Dialogue: 0,1:01:59.14,1:02:03.62,csapp,,0,0,0,, how it they use registers then sort of life is good
-Dialogue: 0,1:02:03.62,1:02:08.12,csapp,,0,0,0,,you can make use of these...
-Dialogue: 0,1:02:08.18,1:02:12.78,csapp,,0,0,0,,so to have a trust that the things will be the way they are 
-Dialogue: 0,1:02:13.44,1:02:19.22,csapp,,0,0,0,,and so again that's why there's this sort of very careful process for creating an ABI 
-Dialogue: 0,1:02:20.38,1:02:24.36,csapp,,0,0,0,,of early on in the life time of a new processor 
-Dialogue: 0,1:02:24.78,1:02:28.34,csapp,,0,0,0,,so that all the compiler writers operating systems people 
-Dialogue: 0,1:02:29.16,1:02:33.74,csapp,,0,0,0,,and the ones who implement tools like gdb debugging tools
-Dialogue: 0,1:02:34.28,1:02:38.78,csapp,,0,0,0,, kind of all I have the right set of standards by which they can work from
-Dialogue: 0,1:02:42.24,1:02:45.50,csapp,,0,0,0,,okay so just to sort of wrap things up
-Dialogue: 0,1:02:49.40,1:02:53.12,csapp,,0,0,0,,and I would say by the way this is the kind of thing you can 
-Dialogue: 0,1:02:56.52,1:03:00.38,csapp,,0,0,0,,I could lecture to you for weeks but to really get it in your mind 
-Dialogue: 0,1:03:00.68,1:03:06.22,csapp,,0,0,0,,the best way is to almost to hand execute some very simple examples
-Dialogue: 0,1:03:06.82,1:03:10.32,csapp,,0,0,0,,or use a debugging tool and and run through them yourself 
-Dialogue: 0,1:03:10.90,1:03:14.32,csapp,,0,0,0,,just to make sure you really are convinced that this is all going to work 
-Dialogue: 0,1:03:14.36,1:03:19.98,csapp,,0,0,0,,because all these pieces just fit together and the way they fit together is what makes it work
-Dialogue: 0,1:03:20.92,1:03:25.24,csapp,,0,0,0,,so as I mentioned before and I'll say it again
-Dialogue: 0,1:03:25.86,1:03:30.80,csapp,,0,0,0,,that this this discipline is what makes recursion work 
-Dialogue: 0,1:03:32.42,1:03:37.24,csapp,,0,0,0,,so the idea of having a stack frame for every call to a function means that 
-Dialogue: 0,1:03:38.00,1:03:41.52,csapp,,0,0,0,,I can call a function call a function call a function call function
-Dialogue: 0,1:03:42.58,1:03:49.58,csapp,,0,0,0,,when I'm deep in that recursion I still have data associated with the other outstanding calls to that function 
-Dialogue: 0,1:03:50.06,1:03:52.52,csapp,,0,0,0,,but each of them will have their own stack frames 
-Dialogue: 0,1:03:52.52,1:03:54.92,csapp,,0,0,0,,and so it has a place to store that sort of 
-Dialogue: 0,1:03:55.32,1:03:59.92,csapp,,0,0,0,,information that's associated with one particular instantiation of a function 
-Dialogue: 0,1:04:03.28,1:04:05.76,csapp,,0,0,0,,the register saving conventions we saw 
-Dialogue: 0,1:04:05.76,1:04:09.52,csapp,,0,0,0,,a way that functions avoid sort of trashing each other's data 
-Dialogue: 0,1:04:10.08,1:04:12.82,csapp,,0,0,0,,if I'm using a call we save register 
-Dialogue: 0,1:04:14.16,1:04:18.28,csapp,,0,0,0,,it's my obligation to save it and restore it properly 
-Dialogue: 0,1:04:18.68,1:04:25.20,csapp,,0,0,0,,it's the obligation of any function that gets called further down to also do that save and restore 
-Dialogue: 0,1:04:26.80,1:04:29.02,csapp,,0,0,0,,and then this sort of...
-Dialogue: 0,1:04:32.40,1:04:38.46,csapp,,0,0,0,,notion of a stack being the right match of how procedure call and return works
-Dialogue: 0,1:04:39.32,1:04:40.78,csapp,,0,0,0,, it if P calls Q 
-Dialogue: 0,1:04:41.44,1:04:43.10,csapp,,0,0,0,,then before I go back to P
-Dialogue: 0,1:04:43.26,1:04:47.40,csapp,,0,0,0,, Q of returned and so I won't need that storage for Q anymore
-Dialogue: 0,1:04:48.10,1:04:52.34,csapp,,0,0,0,,those you've taken 150 or other wet
-Dialogue: 0,1:04:52.38,1:04:55.50,csapp,,0,0,0,,places where you look at fancier languages 
-Dialogue: 0,1:04:55.96,1:04:59.70,csapp,,0,0,0,,don't have that status can trust that stack discipline 
-Dialogue: 0,1:05:00.06,1:05:02.80,csapp,,0,0,0,,and they have to use some other mechanism though actually
-Dialogue: 0,1:05:03.58,1:05:06.92,csapp,,0,0,0,, if required use heap allocation of
-Dialogue: 0,1:05:07.38,1:05:10.08,csapp,,0,0,0,, of the stack of the frames than all your stack frames 
-Dialogue: 0,1:05:10.30,1:05:14.08,csapp,,0,0,0,,to keep data around after a function returns 
-Dialogue: 0,1:05:14.14,1:05:19.18,csapp,,0,0,0,,but for C and instead of all the standard commonplace languages 
-Dialogue: 0,1:05:19.66,1:05:22.04,csapp,,0,0,0,,the stacked is what is exactly what's needed 
-Dialogue: 0,1:05:22.40,1:05:25.74,csapp,,0,0,0,,and that's not next the designers of C knew this well 
-Dialogue: 0,1:05:26.34,1:05:29.08,csapp,,0,0,0,,this matching of a stack to their language
-Dialogue: 0,1:05:30.68,1:05:35.04,csapp,,0,0,0,,and I'll mention also this we I was talking about simple recursion before
-Dialogue: 0,1:05:35.04,1:05:37.66,csapp,,0,0,0,,but there's also mutual recursion where
-Dialogue: 0,1:05:37.66,1:05:40.92,csapp,,0,0,0,,a function say P calls Q and then Q might call P 
-Dialogue: 0,1:05:41.54,1:05:45.68,csapp,,0,0,0,,and it looks very exotic and  it's a quite clever 
-Dialogue: 0,1:05:46.06,1:05:49.38,csapp,,0,0,0,,but again how it's implemented is exactly what we've seen here 
-Dialogue: 0,1:05:50.10,1:05:54.06,csapp,,0,0,0,, doesn't take any special special kind of code 
-Dialogue: 0,1:05:57.10,1:06:00.20,csapp,,0,0,0,,so
-Dialogue: 0,1:06:00.50,1:06:08.80,csapp,,0,0,0,, then to finish up this is sort of what you need to remember about  procedure calls 
-Dialogue: 0,1:06:12.00,1:06:13.95,csapp,,0,0,0,,that it's all about the stack discipline 
-Dialogue: 0,1:06:13.95,1:06:19.08,csapp,,0,0,0,, and you'll get as you're working throughyour lab 
-Dialogue: 0,1:06:19.08,1:06:24.20,csapp,,0,0,0,,you'll just get much more ingrained to this idea of of the stack
-Dialogue: 0,1:06:24.22,1:06:26.72,csapp,,0,0,0,,and what's on there and be able to examine
-Dialogue: 0,1:06:28.70,1:06:31.04,csapp,,0,0,0,, it okay so that's all I've got for today 
-Dialogue: 0,1:06:31.04,1:06:35.45,csapp,,0,0,0,,so give you a little extra time in your calendar
+Dialogue: 0,0:00:00.00,0:00:06.02,English,,0,0,0,,We're still slogging through the material on machine level programming
+Dialogue: 0,0:00:06.02,0:00:07.96,English,,0,0,0,,Which is I talked to you earlier
+Dialogue: 0,0:00:07.96,0:00:14.18,English,,0,0,0,,I think is in some ways the core of this course that much of the rest of material builds upon
+Dialogue: 0,0:00:14.72,0:00:20.14,English,,0,0,0,,And hopefully you've all had a chance to check out lab2 and
+Dialogue: 0,0:00:20.14,0:00:23.38,English,,0,0,0,,Your bomb lab and you've gotten started on that
+Dialogue: 0,0:00:23.76,0:00:27.96,English,,0,0,0,,And certainly by the time you're finished with the material from today
+Dialogue: 0,0:00:28.34,0:00:34.12,English,,0,0,0,,You will be well on the way to solving all but the last one or two stages of the bomb lab
+Dialogue: 0,0:00:34.16,0:00:39.76,English,,0,0,0,,So I highly recommend you get going on that not put it off to the last minute
+Dialogue: 0,0:00:40.80,0:00:44.90,English,,0,0,0,,So and what we're talking about today is
+Dialogue: 0,0:00:45.36,0:00:50.86,English,,0,0,0,,Is how procedures I'm going to use the same terminology here
+Dialogue: 0,0:00:51.44,0:00:56.96,English,,0,0,0,,Whether it's a function a procedure or an object-oriented programming a method
+Dialogue: 0,0:00:57.24,0:01:02.12,English,,0,0,0,,Those are all roughly the same thing and what we'll talk about covers them overall
+Dialogue: 0,0:01:08.66,0:01:16.32,English,,0,0,0,,I'll also mention at the outset that the way this is handled in the procedures
+Dialogue: 0,0:01:16.32,0:01:23.94,English,,0,0,0,,That we'll be talking about today is a combination of the actual x86 hardware and how it supports it
+Dialogue: 0,0:01:24.34,0:01:30.11,English,,0,0,0,,But also in some ways more importantly a set of conventions that were developed that
+Dialogue: 0,0:01:30.64,0:01:34.64,English,,0,0,0,,Basically everyone agreed to and it's known as an abi
+Dialogue: 0,0:01:34.96,0:01:40.18,English,,0,0,0,,But I want...who stands for application binary interface
+Dialogue: 0,0:01:49.64,0:01:53.94,English,,0,0,0,,So the idea is a document you can get it online
+Dialogue: 0,0:01:54.26,0:01:57.12,English,,0,0,0,,It's and it's cited in the book
+Dialogue: 0,0:01:57.80,0:02:01.78,English,,0,0,0,,It's a document that people put together the initial version
+Dialogue: 0,0:02:02.02,0:02:06.27,English,,0,0,0,,When the first x86-64 machines were first being developed
+Dialogue: 0,0:02:06.92,0:02:08.90,English,,0,0,0,,And specifically for linux
+Dialogue: 0,0:02:09.42,0:02:18.40,English,,0,0,0,,They said okay all linux programs, all compilers,all the operating system,all the different parts of a system
+Dialogue: 0,0:02:18.40,0:02:24.58,English,,0,0,0,,That need to have some common understanding of how to manage the resources on the machine
+Dialogue: 0,0:02:24.98,0:02:27.36,English,,0,0,0,,Will agree to adhere to this set of rules
+Dialogue: 0,0:02:28.16,0:02:35.16,English,,0,0,0,,And so it's a it goes beyond the actual what the hardware does to a set of software standards
+Dialogue: 0,0:02:35.92,0:02:38.32,English,,0,0,0,,And it's called application binary interface
+Dialogue: 0,0:02:38.38,0:02:45.58,English,,0,0,0,,Because it's particularly the interface at the machine program level
+Dialogue: 0,0:02:46.30,0:02:48.22,English,,0,0,0,,And so that's what we'll be covering today
+Dialogue: 0,0:02:48.22,0:02:52.66,English,,0,0,0,,So people asked sort of well you know who makes up these rules and things
+Dialogue: 0,0:02:52.66,0:02:55.34,English,,0,0,0,,And the point was there was a working group that did this
+Dialogue: 0,0:02:55.80,0:02:58.12,English,,0,0,0,,And there's a separate abi for windows
+Dialogue: 0,0:02:58.60,0:03:04.46,English,,0,0,0,,It's similar but not quite the same there's a separate abi for osx for apple
+Dialogue: 0,0:03:05.00,0:03:10.74,English,,0,0,0,,And even freebsd a different variant of a unix-like operating system
+Dialogue: 0,0:03:11.14,0:03:16.96,English,,0,0,0,,Has its own abi that they all share a lot in common but some of the details differ
+Dialogue: 0,0:03:19.76,0:03:24.22,English,,0,0,0,,Um so if you think about what goes on in a procedure even in c
+Dialogue: 0,0:03:24.22,0:03:28.08,English,,0,0,0,,Which is a relatively unsophisticated language in many ways
+Dialogue: 0,0:03:28.60,0:03:33.74,English,,0,0,0,,There's a lot going on and so it's worth breaking down those and thinking about it
+Dialogue: 0,0:03:34.20,0:03:36.34,English,,0,0,0,,One is there's a notion of control
+Dialogue: 0,0:03:36.68,0:03:40.96,English,,0,0,0,,So in my example I show a procedure p calling a procedure q
+Dialogue: 0,0:03:41.58,0:03:47.24,English,,0,0,0,,And so when p calls q then somehow the program has to
+Dialogue: 0,0:03:47.24,0:03:52.32,English,,0,0,0,,Jump down and begin executing the the lines of code for q
+Dialogue: 0,0:03:52.70,0:03:59.36,English,,0,0,0,,And then when q hits its exit point its return point  somehow is to get back to p
+Dialogue: 0,0:03:59.62,0:04:06.80,English,,0,0,0,,And not just to any old place in p but specifically to whatever comes in p right after the call to q
+Dialogue: 0,0:04:07.72,0:04:15.00,English,,0,0,0,,So somehow we have to record the information about where the return should be to return to the correct place
+Dialogue: 0,0:04:15.62,0:04:23.30,English,,0,0,0,,So that's first of all - for passing control to a function and having that function return back to where it should get back to
+Dialogue: 0,0:04:24.54,0:04:30.86,English,,0,0,0,,Our second lose data how do we get operands to it so in this particular case
+Dialogue: 0,0:04:31.38,0:04:36.18,English,,0,0,0,,Q is a function that takes a single argument that it calls internally it calls i
+Dialogue: 0,0:04:36.90,0:04:42.12,English,,0,0,0,,And up here where p is calling it.it's passing some value within p called x
+Dialogue: 0,0:04:42.82,0:04:48.00,English,,0,0,0,,So hum somehow that data value of x has to be recorded in a form
+Dialogue: 0,0:04:48.36,0:04:51.92,English,,0,0,0,,That within q it will have access to that information
+Dialogue: 0,0:04:52.24,0:04:58.06,English,,0,0,0,,And similarly when q wants to return a value back
+Dialogue: 0,0:04:58.70,0:05:00.78,English,,0,0,0,,And then p will make use of that value
+Dialogue: 0,0:05:00.78,0:05:05.46,English,,0,0,0,,There has to be some convention of how that data gets communicated back
+Dialogue: 0,0:05:07.34,0:05:11.68,English,,0,0,0,,And then finally in a function might have some local data
+Dialogue: 0,0:05:12.15,0:05:16.42,English,,0,0,0,,That requires allocation of some amount of space
+Dialogue: 0,0:05:16.96,0:05:21.64,English,,0,0,0,,And so where does that space get allocated.how do we make sure it gets allocated properly?
+Dialogue: 0,0:05:22.18,0:05:25.56,English,,0,0,0,,In particular in C as you know when a function returns
+Dialogue: 0,0:05:26.32,0:05:31.62,English,,0,0,0,,Any local data that it allocated should get deallocated should be freed up
+Dialogue: 0,0:05:31.74,0:05:36.44,English,,0,0,0,,So that we don't sort of start consuming an unbounded amount of storage
+Dialogue: 0,0:05:37.08,0:05:38.00,English,,0,0,0,,So how do we do that
+Dialogue: 0,0:05:38.02,0:05:43.02,English,,0,0,0,,Those are all the sort of different aspects that a procedure call in return
+Dialogue: 0,0:05:43.32,0:05:44.80,English,,0,0,0,,I have to deal with somehow
+Dialogue: 0,0:05:45.52,0:05:50.18,English,,0,0,0,,And part of the reason for breaking it down into those little segments is
+Dialogue: 0,0:05:50.62,0:05:59.50,English,,0,0,0,,In x86-64 one of the clever things they did was to try and reduce the overhead of procedure calls as much as possible
+Dialogue: 0,0:05:59.50,0:06:02.72,English,,0,0,0,,Because as you know in good programming style
+Dialogue: 0,0:06:02.72,0:06:09.12,English,,0,0,0,,You often write these functions that do a fairly small amount of actual useful stuff
+Dialogue: 0,0:06:09.80,0:06:13.78,English,,0,0,0,,And it's sort of good programming style to do that
+Dialogue: 0,0:06:13.78,0:06:16.40,English,,0,0,0,,Especially in a more object-oriented programming style
+Dialogue: 0,0:06:17.06,0:06:20.74,English,,0,0,0,,And so you don't want the overhead the extra number of steps taken to
+Dialogue: 0,0:06:20.74,0:06:25.70,English,,0,0,0,,Invoke a procedure and deal with all those aspects to take any more time
+Dialogue: 0,0:06:26.10,0:06:30.42,English,,0,0,0,,Than it needs to because it's a fairly critical overhead
+Dialogue: 0,0:06:31.44,0:06:37.46,English,,0,0,0,,So one of the things they do in in this is they only do whatever is absolutely needed
+Dialogue: 0,0:06:37.94,0:06:43.16,English,,0,0,0,,So hurt in particular if no local storage is needed on this for data
+Dialogue: 0,0:06:43.42,0:06:45.94,English,,0,0,0,,Then don't allocate it therefore don't free it
+Dialogue: 0,0:06:46.38,0:06:49.54,English,,0,0,0,,If you're not passing any values don't pass them
+Dialogue: 0,0:06:49.96,0:06:54.12,English,,0,0,0,,And in general sort of how little can you get away with
+Dialogue: 0,0:06:54.32,0:06:58.38,English,,0,0,0,,And that makes it a little bit confusing from a teaching point of view
+Dialogue: 0,0:06:58.38,0:07:01.87,English,,0,0,0,,And that there is no set template that it follows every time
+Dialogue: 0,0:07:01.94,0:07:08.34,English,,0,0,0,,It sort of you have to each case is a special case for how a particular procedure gets implemented
+Dialogue: 0,0:07:11.28,0:07:15.02,English,,0,0,0,,So we'll go through all these parts and see how they happen
+Dialogue: 0,0:07:15.02,0:07:17.58,English,,0,0,0,,And you've already seen little glimpses of them
+Dialogue: 0,0:07:17.96,0:07:20.66,English,,0,0,0,,We'll hit the little fragments of code that we've shown already
+Dialogue: 0,0:07:22.38,0:07:29.08,English,,0,0,0,,So the first one and sort of the most critical is how do we pass control to a function
+Dialogue: 0,0:07:29.30,0:07:32.52,English,,0,0,0,,But before we can even talk about that we have to talk about the stack
+Dialogue: 0,0:07:34.06,0:07:37.08,English,,0,0,0,,So and you've heard that term the stack in various ways
+Dialogue: 0,0:07:37.56,0:07:41.08,English,,0,0,0,,The stack is really not a special memory
+Dialogue: 0,0:07:41.30,0:07:47.54,English,,0,0,0,,It's just a region of the normal memory remember to the programmers perspective
+Dialogue: 0,0:07:47.78,0:07:52.74,English,,0,0,0,,Assembly level programmers perspective is memory is just a big array of bytes
+Dialogue: 0,0:07:53.84,0:07:58.24,English,,0,0,0,,And somewhere within that bunch of bytes,we're going to call it the stack
+Dialogue: 0,0:07:59.02,0:08:02.10,English,,0,0,0,,And the stack is used by the program to manage
+Dialogue: 0,0:08:02.66,0:08:09.44,English,,0,0,0,,The state associated with the procedures that it calls and as they return so it's where it passes
+Dialogue: 0,0:08:10.32,0:08:18.90,English,,0,0,0,,All these potential information the the control information data and allocates local data
+Dialogue: 0,0:08:19.32,0:08:21.62,English,,0,0,0,,And the reason why it can be managed is a stack
+Dialogue: 0,0:08:21.66,0:08:26.74,English,,0,0,0,,Because of the nature of the whole idea of procedure calls and returns
+Dialogue: 0,0:08:26.74,0:08:30.42,English,,0,0,0,,That you make a call and you might need some information
+Dialogue: 0,0:08:30.80,0:08:35.01,English,,0,0,0,,But when you return from a call,all that information can be discarded
+Dialogue: 0,0:08:36.38,0:08:41.62,English,,0,0,0,,And so it makes use of that sort of last in first out allocation principle
+Dialogue: 0,0:08:41.94,0:08:45.22,English,,0,0,0,,Meshes very well with this idea of procedure call and return
+Dialogue: 0,0:08:46.30,0:08:49.36,English,,0,0,0,,So in x86 stacks
+Dialogue: 0,0:08:50.20,0:08:53.28,English,,0,0,0,,Actually start with a very high numbered address
+Dialogue: 0,0:08:54.10,0:08:59.60,English,,0,0,0,,And when they grow when more data are allocated for the stack
+Dialogue: 0,0:08:59.60,0:09:03.20,English,,0,0,0,,It's done by decrementing the stack pointer
+Dialogue: 0,0:09:03.20,0:09:08.02,English,,0,0,0,,So the stack pointer as you know is just a regular register %rsp
+Dialogue: 0,0:09:08.68,0:09:12.64,English,,0,0,0,,And its value is the address of the current top of the stack
+Dialogue: 0,0:09:13.30,0:09:18.10,English,,0,0,0,,And every time you allocate more space on the stack.it does it by decrementing that pointer
+Dialogue: 0,0:09:18.80,0:09:21.22,English,,0,0,0,,Now just for convention
+Dialogue: 0,0:09:23.44,0:09:26.67,English,,0,0,0,,And I'm not sure why this happens but this is the way we do it
+Dialogue: 0,0:09:27.30,0:09:29.70,English,,0,0,0,,Is we draw stacks upside down
+Dialogue: 0,0:09:30.10,0:09:35.94,English,,0,0,0,,So that the term the top of the stack is actually shown at the bottom
+Dialogue: 0,0:09:38.52,0:09:42.10,English,,0,0,0,,And just to add to that confusion
+Dialogue: 0,0:09:42.10,0:09:48.80,English,,0,0,0,,And also remember that the addresses go from bottom to top not from top to bottom
+Dialogue: 0,0:09:48.80,0:09:52.44,English,,0,0,0,,So when you add to the stack you decrement the stack pointer
+Dialogue: 0,0:09:53.04,0:09:56.46,English,,0,0,0,,Neither of those kind of meshes with your intuition perhaps
+Dialogue: 0,0:09:56.46,0:10:01.14,English,,0,0,0,,But you just have to get used to it,because we're not going to redraw out all the slides
+Dialogue: 0,0:10:04.70,0:10:09.62,English,,0,0,0,,So anyway sets just remember that over and over again
+Dialogue: 0,0:10:09.62,0:10:11.70,English,,0,0,0,,That's why this arrow show that
+Dialogue: 0,0:10:12.20,0:10:16.06,English,,0,0,0,,If we were to enumerate the addresses of these different bytes in the data
+Dialogue: 0,0:10:16.06,0:10:20.80,English,,0,0,0,,They'd be increasing in this direction and when we add to the stack
+Dialogue: 0,0:10:21.32,0:10:26.54,English,,0,0,0,,The stack top is at the bottom of the picture and we do it by decrementing the stack pointer
+Dialogue: 0,0:10:28.42,0:10:37.08,English,,0,0,0,,So in particular there is explicit instructions push and pop that make use of the stack
+Dialogue: 0,0:10:37.62,0:10:41.28,English,,0,0,0,,And it's often written pushq and popq
+Dialogue: 0,0:10:41.62,0:10:47.56,English,,0,0,0,,But that q is actually a an optional suffix on the instruction
+Dialogue: 0,0:10:48.69,0:10:51.94,English,,0,0,0,,So the idea of pushing something onto the stack
+Dialogue: 0,0:10:52.02,0:11:00.66,English,,0,0,0,,Then is,there is some source operand it could be from register or from memory or an immediate
+Dialogue: 0,0:11:01.16,0:11:03.22,English,,0,0,0,,So this is sort of like a move instruction
+Dialogue: 0,0:11:03.22,0:11:07.80,English,,0,0,0,,But the destination of the move will be toward memory
+Dialogue: 0,0:11:08.26,0:11:14.86,English,,0,0,0,,And that address of the memory is determined by first decrementing the stack pointer  and then doing a write
+Dialogue: 0,0:11:20.02,0:11:24.68,English,,0,0,0,,And similarly the pop instruction takes reads data from the stack
+Dialogue: 0,0:11:24.68,0:11:30.48,English,,0,0,0,,And stores it in the destination which must be a register for this particular instruction
+Dialogue: 0,0:11:31.24,0:11:33.92,English,,0,0,0,,I think push must be a register too
+Dialogue: 0,0:11:34.06,0:11:38.88,English,,0,0,0,,Now that I think of it or immediate you can't push from memory to
+Dialogue: 0,0:11:40.56,0:11:43.50,English,,0,0,0,,So pop reads from memory
+Dialogue: 0,0:11:43.80,0:11:47.70,English,,0,0,0,,The address it reads from is given by the current stack pointer
+Dialogue: 0,0:11:48.82,0:11:52.14,English,,0,0,0,,It and then it increments the stack pointer by 8
+Dialogue: 0,0:11:52.40,0:11:56.48,English,,0,0,0,,These both work only on 8 byte operands I'll get to you in a second and
+Dialogue: 0,0:11:57.02,0:12:01.42,English,,0,0,0,,Then the result of that is stored in a register
+Dialogue: 0,0:12:02.02,0:12:02.42,English,,0,0,0,,Question
+Dialogue: 0,0:12:03.54,0:12:14.70,English,,0,0,0,,...pop and push or just like doing the the three things like is there a difference between like using the like the top
+Dialogue: 0,0:12:14.74,0:12:17.12,English,,0,0,0,,Oh could you write it as a set of instructions
+Dialogue: 0,0:12:17.66,0:12:25.14,English,,0,0,0,,Yeah you could actually except for some weird corner cases write it out as a set of separate instructions
+Dialogue: 0,0:12:25.80,0:12:31.92,English,,0,0,0,,But it's a common enough thing that it's sort of built in as a as an operation
+Dialogue: 0,0:12:32.66,0:12:36.80,English,,0,0,0,,Where as call and returner are special they can't be simulated
+Dialogue: 0,0:12:37.22,0:12:40.58,English,,0,0,0,,So one thing do you remember too,it's important that
+Dialogue: 0,0:12:41.18,0:12:47.10,English,,0,0,0,,In one case you decrement you do the arithmetic on the stack pointer before you write
+Dialogue: 0,0:12:47.78,0:12:49.72,English,,0,0,0,,Because when you first start it out
+Dialogue: 0,0:12:49.72,0:12:53.30,English,,0,0,0,,The stack pointer is pointing to whatever was the top element of the stack
+Dialogue: 0,0:12:54.00,0:12:59.47,English,,0,0,0,,We want to create a new top element so we're going to decrement first  and then do the right
+Dialogue: 0,0:13:00.10,0:13:05.60,English,,0,0,0,,Whereas going the other direction you want to read off the current top of stack element
+Dialogue: 0,0:13:05.96,0:13:10.72,English,,0,0,0,,And then you want to increment the stack pointer to sort of deallocate it
+Dialogue: 0,0:13:11.10,0:13:13.76,English,,0,0,0,,And one thing you'll notice here is when I say deallocate
+Dialogue: 0,0:13:13.76,0:13:17.16,English,,0,0,0,,It's not like I magically erase this or...
+Dialogue: 0,0:13:17.50,0:13:20.08,English,,0,0,0,,Or something all I'm doing is just moving a stack pointer
+Dialogue: 0,0:13:20.08,0:13:24.60,English,,0,0,0,,Whatever it was there at the top of the stack is still in memory
+Dialogue: 0,0:13:24.90,0:13:27.22,English,,0,0,0,,It's just no longer considered part of this deck
+Dialogue: 0,0:13:32.10,0:13:34.72,English,,0,0,0,,Okay so that's the idea of the stack
+Dialogue: 0,0:13:35.22,0:13:41.74,English,,0,0,0,,And the instructions push and pop are our two a put data on the stack or take it off
+Dialogue: 0,0:13:41.80,0:13:45.66,English,,0,0,0,,But we use the same basic idea for a call and return
+Dialogue: 0,0:13:49.58,0:13:52.80,English,,0,0,0,,So let's look at some examples and there's a lot of stuff up here
+Dialogue: 0,0:13:53.22,0:13:56.56,English,,0,0,0,,But this is a C function called multstore
+Dialogue: 0,0:13:57.08,0:14:05.00,English,,0,0,0,,And then this is the output slightly cleaned up output from the disassembler of that exact function
+Dialogue: 0,0:14:05.74,0:14:08.20,English,,0,0,0,,And similarly this is a function called mult2
+Dialogue: 0,0:14:08.88,0:14:10.90,English,,0,0,0,,And this is it's disassembled version
+Dialogue: 0,0:14:11.32,0:14:16.22,English,,0,0,0,,And the reason I'm showing this is,because I want to make use of the addresses
+Dialogue: 0,0:14:16.78,0:14:20.90,English,,0,0,0,,That these instructions are app that you don't see when you write it in assembly code
+Dialogue: 0,0:14:20.94,0:14:23.92,English,,0,0,0,,So I'm showing it the disassembled version
+Dialogue: 0,0:14:25.16,0:14:32.10,English,,0,0,0,,And the reason all this is up here is because you'll see the function multstore calls mult2
+Dialogue: 0,0:14:32.14,0:14:33.84,English,,0,0,0,,So I want to show how that works
+Dialogue: 0,0:14:36.10,0:14:41.18,English,,0,0,0,,So and there's two instructions and you've seen these in some form
+Dialogue: 0,0:14:41.72,0:14:45.78,English,,0,0,0,,To call a function you just call it where you give a label
+Dialogue: 0,0:14:46.24,0:14:49.30,English,,0,0,0,,But keep in mind that this these two instructions
+Dialogue: 0,0:14:49.30,0:14:54.00,English,,0,0,0,,And the other is when you're ready to return you just execute the ret instruction
+Dialogue: 0,0:14:54.76,0:15:00.94,English,,0,0,0,,And keep in mind though that these functions don't do the whole business of procedure call and return
+Dialogue: 0,0:15:00.94,0:15:03.84,English,,0,0,0,,They just do the control part of it which as we saw is
+Dialogue: 0,0:15:04.40,0:15:06.76,English,,0,0,0,,Only one of three aspects of a procedure
+Dialogue: 0,0:15:08.36,0:15:12.88,English,,0,0,0,,Also mention you'll see especially in sometimes
+Dialogue: 0,0:15:12.88,0:15:16.14,English,,0,0,0,,It will say rap semicolon rat q
+Dialogue: 0,0:15:17.68,0:15:20.06,English,,0,0,0,,And you can pretty much just ignore that
+Dialogue: 0,0:15:21.16,0:15:23.42,English,,0,0,0,,And it's a bit obscure why it's even there
+Dialogue: 0,0:15:23.42,0:15:26.40,English,,0,0,0,,So it's really the same idea
+Dialogue: 0,0:15:30.46,0:15:35.66,English,,0,0,0,,Okay so what's so to break this down into its simplest part
+Dialogue: 0,0:15:35.74,0:15:37.68,English,,0,0,0,,So let's imagine a scenario
+Dialogue: 0,0:15:38.52,0:15:43.60,English,,0,0,0,,In which the top of stack is at 0x120
+Dialogue: 0,0:15:43.94,0:15:45.86,English,,0,0,0,,Which is not realistic by the way
+Dialogue: 0,0:15:46.86,0:15:52.02,English,,0,0,0,,And the program counter which is called %rip which is not anything to do with death
+Dialogue: 0,0:15:54.04,0:16:00.14,English,,0,0,0,,Is is indicating that the current instruction is this at (0x)544
+Dialogue: 0,0:16:01.86,0:16:03.22,English,,0,0,0,,Which is this call instruction
+Dialogue: 0,0:16:04.68,0:16:10.34,English,,0,0,0,,And so what would happen with the call instruction is it would do two things
+Dialogue: 0,0:16:11.36,0:16:14.28,English,,0,0,0,,It would actually three things
+Dialogue: 0,0:16:14.28,0:16:17.06,English,,0,0,0,,It would decrement the stack pointer and so
+Dialogue: 0,0:16:16.46,0:16:21.40,English,,0,0,0,,So subtracting 8 from (0x)120 and hex gives you (0x)118
+Dialogue: 0,0:16:22.08,0:16:31.32,English,,0,0,0,,And it would write the address of the instruction following the call  onto the top of the stack
+Dialogue: 0,0:16:32.16,0:16:36.68,English,,0,0,0,,And it's important that it does it the one following the call to fit
+Dialogue: 0,0:16:36.94,0:16:42.04,English,,0,0,0,,That's instruction I'm going to return a use for my return address
+Dialogue: 0,0:16:42.60,0:16:46.32,English,,0,0,0,,And I want to resume execution in this function
+Dialogue: 0,0:16:46.90,0:16:51.82,English,,0,0,0,,At the instruction after the call not the call itself otherwise you'd have an infinite loop
+Dialogue: 0,0:16:54.52,0:17:01.70,English,,0,0,0,,And it also this call instruction also embedded in the encoding of the instruction
+Dialogue: 0,0:17:02.88,0:17:06.64,English,,0,0,0,,Is the destination address of it
+Dialogue: 0,0:17:07.88,0:17:12.62,English,,0,0,0,,And which happens to be the of it  starting address of this particular function
+Dialogue: 0,0:17:13.02,0:17:16.44,English,,0,0,0,,So the program counter will be set to that value
+Dialogue: 0,0:17:16.54,0:17:22.76,English,,0,0,0,,And now the processor starts just executing along these instructions
+Dialogue: 0,0:17:22.78,0:17:28.28,English,,0,0,0,,So it did a combination of a jump and a push and that's why the question was raised earlier
+Dialogue: 0,0:17:28.56,0:17:34.32,English,,0,0,0,,Is a push instruction could you assemble that out of existing instructions
+Dialogue: 0,0:17:34.32,0:17:36.70,English,,0,0,0,,The answer is yes for push but not for call
+Dialogue: 0,0:17:36.96,0:17:38.04,English,,0,0,0,,Question back there
+Dialogue: 0,0:17:38.42,0:17:47.18,English,,0,0,0,,- before you actually go to the function in like bolt store you would let me address some multi it alright
+Dialogue: 0,0:17:47.24,0:17:52.30,English,,0,0,0,,No no it did that %rip you never explicitly
+Dialogue: 0,0:17:52.54,0:17:55.22,English,,0,0,0,,There aren't instructions that manipulate that directly
+Dialogue: 0,0:17:55.50,0:17:58.28,English,,0,0,0,,It's implicitly part of the call instruction
+Dialogue: 0,0:17:59.14,0:18:00.82,English,,0,0,0,,The call instruction will take
+Dialogue: 0,0:18:01.46,0:18:04.40,English,,0,0,0,,I don't have the actual encoding
+Dialogue: 0,0:18:04.40,0:18:09.96,English,,0,0,0,,But embedded in this call instruction you see that it's five bytes long.
+Dialogue: 0,0:18:09.96,0:18:11.72,English,,0,0,0,,I don't show you the byte coding.
+Dialogue: 0,0:18:12.14,0:18:14.30,English,,0,0,0,,But embedded in it is the target address
+Dialogue: 0,0:18:14.96,0:18:20.00,English,,0,0,0,,And so it will take that address and use it for the new value of the program counter
+Dialogue: 0,0:18:21.38,0:18:25.62,English,,0,0,0,,So the call does both the pushing of the old the return pointer
+Dialogue: 0,0:18:25.62,0:18:32.24,English,,0,0,0,,And setting the program counter to the new the new target for it
+Dialogue: 0,0:18:33.06,0:18:34.74,English,,0,0,0,,So it does both of those things
+Dialogue: 0,0:18:38.16,0:18:38.96,English,,0,0,0,,Question
+Dialogue: 0,0:18:39.72,0:18:46.06,English,,0,0,0,,Dialogue: 0,0:18:46.14,0:18:47.06,csapp,,0,0,0,,I don't think so
+Dialogue: 0,0:18:48.06,0:18:49.62,English,,0,0,0,,With either call or return
+Dialogue: 0,0:18:52.34,0:18:57.84,English,,0,0,0,,If so it would be really obscure,no I don't think so
+Dialogue: 0,0:18:58.68,0:19:03.24,English,,0,0,0,,No so call and return are the there might be some weird system instructions that
+Dialogue: 0,0:19:03.24,0:19:06.46,English,,0,0,0,,Let you do that but not in you'd see in any normal program
+Dialogue: 0,0:19:07.88,0:19:10.80,English,,0,0,0,,Other questions you're good questions
+Dialogue: 0,0:19:10.80,0:19:12.06,English,,0,0,0,,So
+Dialogue: 0,0:19:15.66,0:19:18.64,English,,0,0,0,,Okay so that shows you the control how the call works
+Dialogue: 0,0:19:20.84,0:19:25.04,English,,0,0,0,,And then so now imagine this mult2 chugs along
+Dialogue: 0,0:19:25.72,0:19:29.30,English,,0,0,0,,And it hits its return point and it hits this ret instruction
+Dialogue: 0,0:19:29.44,0:19:32.54,English,,0,0,0,,By the way again ret q and red are the same instruction
+Dialogue: 0,0:19:33.48,0:19:36.54,English,,0,0,0,,And ret will
+Dialogue: 0,0:19:37.42,0:19:40.48,English,,0,0,0,,Its purpose is to sort of reverse the effect of a call
+Dialogue: 0,0:19:41.08,0:19:45.64,English,,0,0,0,,It assumes that the top of the stack has an address
+Dialogue: 0,0:19:46.66,0:19:48.46,English,,0,0,0,,That you want to jump to
+Dialogue: 0,0:19:49.54,0:19:52.60,English,,0,0,0,,So it will pop that address off the stack
+Dialogue: 0,0:19:52.82,0:19:54.78,English,,0,0,0,,Meaning it will increment the stack pointer
+Dialogue: 0,0:19:54.96,0:19:58.50,English,,0,0,0,,Like I said the value doesn't really disappear from the memory
+Dialogue: 0,0:19:58.50,0:20:01.22,English,,0,0,0,,Just is no consider part of the stack
+Dialogue: 0,0:20:02.00,0:20:06.58,English,,0,0,0,,And then it will set the program counter to what it just popped off the stack
+Dialogue: 0,0:20:07.72,0:20:12.34,English,,0,0,0,,And that will cause the program to resume back to where it came from
+Dialogue: 0,0:20:12.88,0:20:18.92,English,,0,0,0,,So you see that sort of clever idea of pushing the address of the next instruction
+Dialogue: 0,0:20:18.92,0:20:23.82,English,,0,0,0,,So when the return comes it will get it to the point where it should resume execution
+Dialogue: 0,0:20:27.40,0:20:29.04,English,,0,0,0,,Okay so that's passing control
+Dialogue: 0,0:20:29.10,0:20:33.76,English,,0,0,0,,It's pretty simple all these things by the way is just the nature machine code
+Dialogue: 0,0:20:34.12,0:20:36.18,English,,0,0,0,,Every single part of it is pretty simple
+Dialogue: 0,0:20:36.18,0:20:42.54,English,,0,0,0,,Because it's designed to be executed by the original hardware is fairly simple
+Dialogue: 0,0:20:43.00,0:20:46.80,English,,0,0,0,,It's not any more but it's really the basic ideas are
+Dialogue: 0,0:20:47.40,0:20:52.20,English,,0,0,0,,And that we use kind of combinations of instructions to build up all the layers
+Dialogue: 0,0:20:52.50,0:20:56.32,English,,0,0,0,,Associated with operations like procedure call and return
+Dialogue: 0,0:20:57.14,0:20:58.74,English,,0,0,0,,Ok so passing data
+Dialogue: 0,0:20:59.36,0:21:03.62,English,,0,0,0,,Now we've already seen a few small examples of passing data
+Dialogue: 0,0:21:04.92,0:21:10.53,English,,0,0,0,,We've seen a couple registers that get used when you're passing arguments to a function
+Dialogue: 0,0:21:11.04,0:21:15.82,English,,0,0,0,,And we've seen the register %rax getting used to return values from a function
+Dialogue: 0,0:21:16.26,0:21:18.30,English,,0,0,0,,And so those that's the basic idea
+Dialogue: 0,0:21:19.38,0:21:22.10,English,,0,0,0,,And again this is all built into this abi
+Dialogue: 0,0:21:23.06,0:21:26.94,English,,0,0,0,,You know defined as the set of conventions not particularly part of the hardware
+Dialogue: 0,0:21:27.70,0:21:32.08,English,,0,0,0,,So in particular the rule is that the first six arguments get passed
+Dialogue: 0,0:21:34.64,0:21:36.98,English,,0,0,0,,Within these particular registers
+Dialogue: 0,0:21:38.26,0:21:45.36,English,,0,0,0,,And you just have to memorize  the order of them or have a table handy to look at
+Dialogue: 0,0:21:45.36,0:21:48.60,English,,0,0,0,,Or something like that because there's no particular logic to it
+Dialogue: 0,0:21:52.38,0:21:57.34,English,,0,0,0,,And the return value is returned in register %rax
+Dialogue: 0,0:21:57.48,0:22:02.94,English,,0,0,0,,And by the way this is all four arguments that are either integers or pointers
+Dialogue: 0,0:22:03.40,0:22:08.94,English,,0,0,0,,Well I think I've got a little bit unfolding point those are passed in a separate set of registers
+Dialogue: 0,0:22:09.00,0:22:14.08,English,,0,0,0,,So these are just for assumed now we just are dealing with integer data pointer data
+Dialogue: 0,0:22:15.26,0:22:19.88,English,,0,0,0,,And then you ask well what happens if you have more than 6 arguments to a function
+Dialogue: 0,0:22:19.88,0:22:22.12,English,,0,0,0,,Which isn't very common but it happens
+Dialogue: 0,0:22:22.60,0:22:26.20,English,,0,0,0,,Well the rule on that is those get put in memory on the stack
+Dialogue: 0,0:22:26.24,0:22:28.98,English,,0,0,0,,And I'll show straight what I mean by that
+Dialogue: 0,0:22:29.56,0:22:31.48,English,,0,0,0,,So they're passed to the function
+Dialogue: 0,0:22:31.92,0:22:34.80,English,,0,0,0,,And then the function has to retrieve those values off the stack
+Dialogue: 0,0:22:36.92,0:22:41.74,English,,0,0,0,,Back in the bad old days of ia-32 by the way all arguments got passed on the stack
+Dialogue: 0,0:22:42.14,0:22:46.18,English,,0,0,0,,But now for the most part you pass arguments and registers
+Dialogue: 0,0:22:46.94,0:22:51.38,English,,0,0,0,,And the reason for that is register access is way faster than memory access
+Dialogue: 0,0:22:52.84,0:22:56.72,English,,0,0,0,,Okay so here is a kind of a messy bunch of code
+Dialogue: 0,0:22:56.72,0:23:00.98,English,,0,0,0,,But just to show you how they show up all the time
+Dialogue: 0,0:23:03.00,0:23:07.17,English,,0,0,0,,In the function multstore as three arguments x,y and dest
+Dialogue: 0,0:23:08.00,0:23:09.98,English,,0,0,0,,And you can just see within this code
+Dialogue: 0,0:23:10.52,0:23:15.24,English,,0,0,0,,That it's making use of of registers like %rdi
+Dialogue: 0,0:23:16.10,0:23:19.26,English,,0,0,0,,And doesn't show where
+Dialogue: 0,0:23:19.50,0:23:23.32,English,,0,0,0,,And in other places like mult2 as two arguments
+Dialogue: 0,0:23:23.90,0:23:28.00,English,,0,0,0,,And you can see how it's making use of %rdi and %rsi and the code
+Dialogue: 0,0:23:28.08,0:23:34.32,English,,0,0,0,,So basically the code is generated under the assumptions that whatever arguments is being passed to
+Dialogue: 0,0:23:34.66,0:23:39.36,English,,0,0,0,,It will be passed in that particular set of registers in the particular order they're listed
+Dialogue: 0,0:23:39.70,0:23:42.68,English,,0,0,0,,And the code is sort of makes those assumptions
+Dialogue: 0,0:23:42.96,0:23:48.50,English,,0,0,0,,And then similarly when you have a return value from the function
+Dialogue: 0,0:23:51.20,0:23:53.88,English,,0,0,0,,Let's see multstore does not have a return value
+Dialogue: 0,0:23:54.30,0:23:56.88,English,,0,0,0,,But of mult2 does
+Dialogue: 0,0:23:58.02,0:24:01.98,English,,0,0,0,,And the way it does is it deposits the value into %rax
+Dialogue: 0,0:24:02.78,0:24:08.96,English,,0,0,0,,And then when the return from %rax occurs a multstore
+Dialogue: 0,0:24:09.54,0:24:12.96,English,,0,0,0,,You see that it assumes
+Dialogue: 0,0:24:13.58,0:24:22.64,English,,0,0,0,,Now that the multstore code can assume that register %rax holds the value of the return value
+Dialogue: 0,0:24:22.90,0:24:26.02,English,,0,0,0,,And it can store it in its destination register
+Dialogue: 0,0:24:26.56,0:24:29.48,English,,0,0,0,,And we'll look in a minute why %rbx gets used here
+Dialogue: 0,0:24:30.66,0:24:32.82,English,,0,0,0,,We'll cover that in just a little waiter
+Dialogue: 0,0:24:33.48,0:24:38.88,English,,0,0,0,,But up that's the point that as long as everyone sticks to this common interface standard
+Dialogue: 0,0:24:39.30,0:24:43.78,English,,0,0,0,,Then you can even use different compilers to compile code
+Dialogue: 0,0:24:44.06,0:24:50.88,English,,0,0,0,,And have them be able to cooperate with each other in terms of passing arguments returning data
+Dialogue: 0,0:24:51.58,0:24:54.52,English,,0,0,0,,And that's the reason why you want that convention
+Dialogue: 0,0:24:54.54,0:24:55.08,English,,0,0,0,,Yes
+Dialogue: 0,0:24:59.18,0:25:03.74,English,,0,0,0,,8 bytes because the well first of all for call and return
+Dialogue: 0,0:25:04.12,0:25:09.10,English,,0,0,0,,It's a 64-bit machine so all addresses are 64 bits or 8 bytes
+Dialogue: 0,0:25:09.80,0:25:14.72,English,,0,0,0,,But also even the push in the pop instruction only work on 8 byte values
+Dialogue: 0,0:25:15.44,0:25:20.54,English,,0,0,0,,If you said push l ,if you tried to write that in x in 64-bit code
+Dialogue: 0,0:25:20.54,0:25:22.37,English,,0,0,0,,It would come back with a syntax error
+Dialogue: 0,0:25:23.06,0:25:24.88,English,,0,0,0,,If you add it in this somewhere
+Dialogue: 0,0:25:28.82,0:25:33.46,English,,0,0,0,,So oh that and that's different ia-32 there'd be four byte values
+Dialogue: 0,0:25:37.00,0:25:43.56,English,,0,0,0,,Okay so like I said you've sort of seen that implicitly in some of the code you've already been looking at
+Dialogue: 0,0:25:43.56,0:25:45.56,English,,0,0,0,,And it's pretty straightforward
+Dialogue: 0,0:25:46.00,0:25:50.56,English,,0,0,0,,To get an example that shows passing arguments
+Dialogue: 0,0:25:50.56,0:25:54.80,English,,0,0,0,,You have to have a function with at least 7 arguments which is pretty messy to do
+Dialogue: 0,0:25:54.80,0:25:57.08,English,,0,0,0,,So I won't do it but there's examples in the book
+Dialogue: 0,0:25:59.74,0:26:02.54,English,,0,0,0,,But now and we'll sort of pick it up
+Dialogue: 0,0:26:02.54,0:26:05.70,English,,0,0,0,,I'll show you,also in this later part
+Dialogue: 0,0:26:06.84,0:26:11.00,English,,0,0,0,,Um and now the third part of it is again
+Dialogue: 0,0:26:11.00,0:26:14.08,English,,0,0,0,,What if there's some local data that we need to make use of
+Dialogue: 0,0:26:14.76,0:26:19.76,English,,0,0,0,,And so to get that idea across I have two illest in another
+Dialogue: 0,0:26:19.76,0:26:22.84,English,,0,0,0,,Concept which is called the stack frame
+Dialogue: 0,0:26:23.58,0:26:29.88,English,,0,0,0,,And so this is a particularly pattern that's used in memory and as I mentioned
+Dialogue: 0,0:26:30.34,0:26:34.00,English,,0,0,0,,Earlier one of the features of calling and returning
+Dialogue: 0,0:26:34.92,0:26:40.94,English,,0,0,0,,Is you can imagine when you have a nested series of calls to a function
+Dialogue: 0,0:26:41.64,0:26:44.02,English,,0,0,0,,When a particular function is executing
+Dialogue: 0,0:26:46.32,0:26:54.20,English,,0,0,0,,It only needs to reference the data within that function or values that have been passed to it
+Dialogue: 0,0:26:54.90,0:26:59.22,English,,0,0,0,,Some which might be pointers and therefore pointing to other locations in memory
+Dialogue: 0,0:26:59.24,0:27:03.12,English,,0,0,0,,But the point is sort of the rest of the functions
+Dialogue: 0,0:27:03.50,0:27:05.88,English,,0,0,0,,In your code over many they are
+Dialogue: 0,0:27:06.18,0:27:11.62,English,,0,0,0,,Are sort of frozen at that moment really there's only one function executing at any given time
+Dialogue: 0,0:27:12.08,0:27:17.20,English,,0,0,0,,I'm assuming a sort of what you'd call single threaded model here
+Dialogue: 0,0:27:18.20,0:27:22.20,English,,0,0,0,,And so we can just allocate on this stack
+Dialogue: 0,0:27:22.60,0:27:26.12,English,,0,0,0,,Whatever space is required for this particular function
+Dialogue: 0,0:27:26.82,0:27:29.04,English,,0,0,0,,And then when we return from that function
+Dialogue: 0,0:27:29.46,0:27:35.70,English,,0,0,0,,We shouldn't if it's correctly written need any of the information associated with that function
+Dialogue: 0,0:27:35.70,0:27:37.50,English,,0,0,0,,It can just sort of disappear forever
+Dialogue: 0,0:27:37.82,0:27:39.78,English,,0,0,0,,And that's why this idea of a stack
+Dialogue: 0,0:27:40.26,0:27:45.58,English,,0,0,0,,You allocate something if you make more calls you keep allocating more stuff
+Dialogue: 0,0:27:45.72,0:27:50.60,English,,0,0,0,,But as they return you kind of back out of the stack and and free things up
+Dialogue: 0,0:27:51.36,0:27:54.16,English,,0,0,0,,So the stack discipline is is exactly the right
+Dialogue: 0,0:27:54.84,0:27:58.06,English,,0,0,0,,A matches well this whole idea of procedure call and return
+Dialogue: 0,0:27:58.70,0:28:04.06,English,,0,0,0,,So each block we use for a particular call then is called the stack frame
+Dialogue: 0,0:28:07.44,0:28:11.02,English,,0,0,0,,And to be sort of more technical we'll say
+Dialogue: 0,0:28:11.52,0:28:17.48,English,,0,0,0,,That it's a frame for a particular instance of a procedure a particular call to a procedure
+Dialogue: 0,0:28:19.16,0:28:24.28,English,,0,0,0,,So just imagine we had a set of functions one called yoo
+Dialogue: 0,0:28:24.86,0:28:26.72,English,,0,0,0,,Which calls a function called who
+Dialogue: 0,0:28:27.30,0:28:32.42,English,,0,0,0,,And who has multiple calls to another function called ami
+Dialogue: 0,0:28:32.90,0:28:36.40,English,,0,0,0,,And ami is itself is recursive it calls itself
+Dialogue: 0,0:28:37.44,0:28:42.86,English,,0,0,0,,And so an imagine we had a chain of calls
+Dialogue: 0,0:28:42.98,0:28:46.04,English,,0,0,0,,Where yoo calls who calls ami
+Dialogue: 0,0:28:46.44,0:28:48.82,English,,0,0,0,,Which calls itself recursively twice
+Dialogue: 0,0:28:49.56,0:28:54.00,English,,0,0,0,,And then we'll exit out of ami and get back to who
+Dialogue: 0,0:28:54.34,0:28:57.06,English,,0,0,0,,And then who will hit it second call to ami`
+Dialogue: 0,0:28:57.28,0:29:00.36,English,,0,0,0,,Which won't go any further and that will be it
+Dialogue: 0,0:29:00.54,0:29:07.16,English,,0,0,0,,So this picture here shows this whole history of all these calls that get made
+Dialogue: 0,0:29:09.52,0:29:11.16,English,,0,0,0,,But in terms of the stack
+Dialogue: 0,0:29:14.42,0:29:19.28,English,,0,0,0,,All we need what will keep a frame for every sort of procedure
+Dialogue: 0,0:29:19.28,0:29:25.26,English,,0,0,0,,That has been called but not yet returned on the stack
+Dialogue: 0,0:29:25.72,0:29:31.12,English,,0,0,0,,And in general this stack of is delimited by delimited by two pointers
+Dialogue: 0,0:29:31.12,0:29:33.74,English,,0,0,0,,One is the stack pointer which we're familiar with
+Dialogue: 0,0:29:34.30,0:29:40.04,English,,0,0,0,,And then there's another called the base pointer which register %rbp indicates
+Dialogue: 0,0:29:40.56,0:29:47.24,English,,0,0,0,,But one a feature of actually it's now become a feature of ia32 as well
+Dialogue: 0,0:29:47.98,0:29:50.80,English,,0,0,0,,Is that this is an optional pointer
+Dialogue: 0,0:29:51.68,0:29:56.46,English,,0,0,0,,And in particular the code that we'll see does not use a base pointer
+Dialogue: 0,0:29:56.80,0:29:59.56,English,,0,0,0,,Except in some very special cases
+Dialogue: 0,0:30:00.36,0:30:07.08,English,,0,0,0,,So this register doesn't really won't show up in your programs
+Dialogue: 0,0:30:07.44,0:30:09.92,English,,0,0,0,,Being used in a special way as a frame pointer
+Dialogue: 0,0:30:10.34,0:30:13.20,English,,0,0,0,,It will be used instead just as a regular register
+Dialogue: 0,0:30:14.48,0:30:17.94,English,,0,0,0,,So typically then the only thing you'll know about the stack pointer
+Dialogue: 0,0:30:17.94,0:30:22.78,English,,0,0,0,,You won't even be able to figure out where the frame is exactly
+Dialogue: 0,0:30:22.78,0:30:29.96,English,,0,0,0,,You'll just know that the top part of the stack  is the top frame for the topmost function
+Dialogue: 0,0:30:31.06,0:30:34.66,English,,0,0,0,,And this is all managed by the code itself
+Dialogue: 0,0:30:37.04,0:30:42.30,English,,0,0,0,,And this is the same stack by the way in which you're pushing and popping addresses -
+Dialogue: 0,0:30:42.30,0:30:44.30,English,,0,0,0,,And they all kind of get mixed together
+Dialogue: 0,0:30:47.40,0:30:54.51,English,,0,0,0,,So we haven't actually seen any code up til now that makes you ask to do any explicit management of the stack
+Dialogue: 0,0:30:54.51,0:30:57.11,English,,0,0,0,,Because all our examples were very simple
+Dialogue: 0,0:30:57.24,0:31:02.32,English,,0,0,0,,And just did a made use of the stack only for return addresses
+Dialogue: 0,0:31:03.74,0:31:05.46,English,,0,0,0,,But we'll see some that uses more
+Dialogue: 0,0:31:06.20,0:31:17.02,English,,0,0,0,,But so in general then imagine that each time you begin a function some space gets allocated potentially on the stack  for its frame
+Dialogue: 0,0:31:17.64,0:31:25.91,English,,0,0,0,,And then and that frame is indicated by either one pointer only or two pointers
+Dialogue: 0,0:31:27.66,0:31:33.45,English,,0,0,0,,And so now as yoo calls who then that will create a new stack frame for who
+Dialogue: 0,0:31:33.96,0:31:37.94,English,,0,0,0,,In some way when mi gets called that creates a new stack frame
+Dialogue: 0,0:31:38.64,0:31:41.20,English,,0,0,0,,And as we continue with these recursive calls
+Dialogue: 0,0:31:41.20,0:31:44.70,English,,0,0,0,,We're just adding more stuff to the stack getting deeper and deeper
+Dialogue: 0,0:31:45.38,0:31:50.52,English,,0,0,0,,And that will keep happening that's one of the reasons why recursion is a little bit of a risky thing
+Dialogue: 0,0:31:51.04,0:31:53.54,English,,0,0,0,,Is that it compared to iteration
+Dialogue: 0,0:31:54.12,0:31:58.40,English,,0,0,0,,It keeps requiring more space as you go deeper in the recursion
+Dialogue: 0,0:31:58.84,0:32:04.78,English,,0,0,0,,And in particular most systems limit the total depth of the stack
+Dialogue: 0,0:32:06.54,0:32:08.30,English,,0,0,0,,And you can have what
+Dialogue: 0,0:32:08.56,0:32:12.68,English,,0,0,0,,Because they're afraid of the sort of infinite loop version of recursion is
+Dialogue: 0,0:32:12.98,0:32:16.98,English,,0,0,0,,Runaway recursion where it just keeps trying to push more and more stuff onto the stack
+Dialogue: 0,0:32:17.66,0:32:18.96,English,,0,0,0,,That's an aside
+Dialogue: 0,0:32:21.22,0:32:29.26,English,,0,0,0,,And then as these begin to return they those frames get de-allocated removed from the stack
+Dialogue: 0,0:32:29.86,0:32:34.22,English,,0,0,0,,So part of it the nice thing about this is it means that
+Dialogue: 0,0:32:34.94,0:32:38.18,English,,0,0,0,,Every time I if I have multiple calls to ami
+Dialogue: 0,0:32:38.52,0:32:46.34,English,,0,0,0,,Because I've gone deep recursively each one of them will have its own local state  that it needs to manage
+Dialogue: 0,0:32:46.72,0:32:51.62,English,,0,0,0,,And again the whole stack dissapoint is what makes it work
+Dialogue: 0,0:32:53.30,0:32:57.10,English,,0,0,0,,And what we'll find out in particular is because of the way this is set up
+Dialogue: 0,0:32:57.92,0:33:01.82,English,,0,0,0,,Recursive calls are handled the same way that regular calls are
+Dialogue: 0,0:33:01.82,0:33:03.62,English,,0,0,0,,There's nothing special about them
+Dialogue: 0,0:33:03.62,0:33:10.80,English,,0,0,0,,All the sort of infrastructure required to support recursion is built into this whole stack discipline
+Dialogue: 0,0:33:13.56,0:33:18.64,English,,0,0,0,,So anyways imagine that all these calls are returned back to who
+Dialogue: 0,0:33:18.96,0:33:21.76,English,,0,0,0,,And then who would call ami again
+Dialogue: 0,0:33:22.36,0:33:27.18,English,,0,0,0,,And then again as we exit we were sort of deallocating these stack frames
+Dialogue: 0,0:33:27.64,0:33:30.04,English,,0,0,0,,And getting back to the the starting point
+Dialogue: 0,0:33:31.18,0:33:31.90,English,,0,0,0,,Yes question
+Dialogue: 0,0:33:32.72,0:33:37.42,English,,0,0,0,,[student question]
+Dialogue: 0,0:33:37.42,0:33:40.66,English,,0,0,0,,Oh so the question was if %rbp is optional
+Dialogue: 0,0:33:41.26,0:33:44.66,English,,0,0,0,,Then how does the program know how to do the d allocation
+Dialogue: 0,0:33:44.66,0:33:47.48,English,,0,0,0,,How can it reset the stack back to the right place
+Dialogue: 0,0:33:48.10,0:33:53.42,English,,0,0,0,,And the answer is and we'll see examples that the code is compiled
+Dialogue: 0,0:33:53.90,0:33:59.90,English,,0,0,0,,So it knows for example when it does the allocation it's going to allocate 16 bytes
+Dialogue: 0,0:34:00.52,0:34:04.14,English,,0,0,0,,And then it knows at the end that it can d allocated 16 bytes
+Dialogue: 0,0:34:04.78,0:34:06.32,English,,0,0,0,,And it actually brings up a good point
+Dialogue: 0,0:34:06.32,0:34:10.30,English,,0,0,0,,There is sort of an obscure part of the book that goes over this
+Dialogue: 0,0:34:10.74,0:34:13.74,English,,0,0,0,,There's a few special cases where it can't know in advance
+Dialogue: 0,0:34:14.28,0:34:16.02,English,,0,0,0,,How much space will be allocated
+Dialogue: 0,0:34:18.34,0:34:23.42,English,,0,0,0,,When it has to allocate a an array or a memory buffer of variable size
+Dialogue: 0,0:34:23.92,0:34:29.28,English,,0,0,0,,And then it will actually use the the %rbp in those cases for exactly that purpose
+Dialogue: 0,0:34:34.34,0:34:43.14,English,,0,0,0,,Okay and so in general that what the stack frame will look like in one of these machines
+Dialogue: 0,0:34:44.14,0:34:46.20,English,,0,0,0,,Will be something like this that
+Dialogue: 0,0:34:47.16,0:34:50.46,English,,0,0,0,,The and you'll see this is the caller
+Dialogue: 0,0:34:52.00,0:34:57.56,English,,0,0,0,,And then this is the the stack frame of the the function that got called
+Dialogue: 0,0:34:58.54,0:35:00.98,English,,0,0,0,,So working our way back
+Dialogue: 0,0:35:01.56,0:35:04.94,English,,0,0,0,,If we have to pass more than six arguments
+Dialogue: 0,0:35:05.52,0:35:13.10,English,,0,0,0,,The caller will actually use its own stack frame to store those arguments
+Dialogue: 0,0:35:15.06,0:35:17.32,English,,0,0,0,,And so that they'd be available
+Dialogue: 0,0:35:17.84,0:35:20.32,English,,0,0,0,,And we already saw when you do a call
+Dialogue: 0,0:35:20.76,0:35:23.60,English,,0,0,0,,It will push the return address onto the stack
+Dialogue: 0,0:35:24.30,0:35:29.72,English,,0,0,0,,So before our function even starts all this information would be on the stack
+Dialogue: 0,0:35:30.96,0:35:37.40,English,,0,0,0,,Now if there's a if this particular if we're making use of a base pointer
+Dialogue: 0,0:35:37.68,0:35:41.26,English,,0,0,0,,Then we have to have some way where to store the old value of the base pointer
+Dialogue: 0,0:35:41.26,0:35:44.34,English,,0,0,0,,So that we could fix it back when we return
+Dialogue: 0,0:35:45.04,0:35:48.40,English,,0,0,0,,We won't show any code doing that here so this is optional
+Dialogue: 0,0:35:49.06,0:35:51.58,English,,0,0,0,,But in general if there's some local state
+Dialogue: 0,0:35:52.52,0:35:56.40,English,,0,0,0,,Like some registers that need to be saved and we'll see examples of that
+Dialogue: 0,0:35:56.84,0:35:59.60,English,,0,0,0,,Or an array that needs to be allocated locally
+Dialogue: 0,0:36:00.06,0:36:03.32,English,,0,0,0,,That will be stored within the stack frame
+Dialogue: 0,0:36:03.84,0:36:08.90,English,,0,0,0,,And there might be some requirement for some extra space in the stack frame for other stuff
+Dialogue: 0,0:36:09.48,0:36:13.80,English,,0,0,0,,In particular if it we're going to pass more than seven arguments it needs space
+Dialogue: 0,0:36:14.22,0:36:15.86,English,,0,0,0,,Somewhere in the stack frame to do it
+Dialogue: 0,0:36:16.56,0:36:19.50,English,,0,0,0,,And what we'll see in typical a code is
+Dialogue: 0,0:36:19.98,0:36:26.56,English,,0,0,0,,This stack pointer gets decremented pretty soon after the procedure begins
+Dialogue: 0,0:36:26.88,0:36:29.88,English,,0,0,0,,And it gets incremented back just before it returns
+Dialogue: 0,0:36:30.62,0:36:32.38,English,,0,0,0,,That's how it manages this deck
+Dialogue: 0,0:36:34.50,0:36:36.38,English,,0,0,0,,So let's do some examples
+Dialogue: 0,0:36:41.68,0:36:48.42,English,,0,0,0,,Um let's see look at this before
+Dialogue: 0,0:36:48.58,0:36:49.98,English,,0,0,0,,But this is a function
+Dialogue: 0,0:36:50.06,0:36:55.20,English,,0,0,0,,Oh I think the interesting thing about this function is that it has a pointer being passed to it
+Dialogue: 0,0:36:56.08,0:36:58.20,English,,0,0,0,,So this function takes an argument
+Dialogue: 0,0:36:58.22,0:37:02.38,English,,0,0,0,,One argument is a point or another is a an integer value
+Dialogue: 0,0:37:03.26,0:37:06.68,English,,0,0,0,,And you can see what it does is
+Dialogue: 0,0:37:07.14,0:37:09.88,English,,0,0,0,,It dereferences that pointer to get a value code x
+Dialogue: 0,0:37:11.20,0:37:17.94,English,,0,0,0,,It computes a value y by summing x and the value passed to it
+Dialogue: 0,0:37:18.56,0:37:20.84,English,,0,0,0,,It stores y back at p
+Dialogue: 0,0:37:21.36,0:37:27.63,English,,0,0,0,,But it returns x the original value of the pointer not the updated version of the pointer
+Dialogue: 0,0:37:28.16,0:37:30.04,English,,0,0,0,,And you can see that in the code here
+Dialogue: 0,0:37:30.16,0:37:37.48,English,,0,0,0,,Its codes pretty short remember that in general %rdi will hold the first argument in this case it's a pointer
+Dialogue: 0,0:37:38.12,0:37:40.08,English,,0,0,0,,So we'll do a read from that pointer
+Dialogue: 0,0:37:40.88,0:37:46.44,English,,0,0,0,,And it will put the value in our a x which is where the return value should be  anyhow
+Dialogue: 0,0:37:47.48,0:37:53.04,English,,0,0,0,,And then it will increment %rsi which has the value called val here
+Dialogue: 0,0:37:53.30,0:37:56.76,English,,0,0,0,,Initially and now it has the value of x + val
+Dialogue: 0,0:37:58.08,0:38:07.48,English,,0,0,0,,And then it will store that in the value pointed to by p
+Dialogue: 0,0:38:08.14,0:38:12.76,English,,0,0,0,,And it will do a return so you see these three instructions do all the different parts of this
+Dialogue: 0,0:38:13.54,0:38:18.06,English,,0,0,0,,And as this shows in general also you know register usage it's handy
+Dialogue: 0,0:38:18.32,0:38:21.02,English,,0,0,0,,By the way to document this when you're looking at code
+Dialogue: 0,0:38:21.94,0:38:27.02,English,,0,0,0,,%rdi is the first argument %rsi gets used initially it's val
+Dialogue: 0,0:38:27.34,0:38:31.14,English,,0,0,0,,But now it will be set to y during the call
+Dialogue: 0,0:38:31.68,0:38:36.52,English,,0,0,0,,And similarly %rax is initially the value
+Dialogue: 0,0:38:36.68,0:38:41.02,English,,0,0,0,,Well it's it's both what x is here and it's used as the return value
+Dialogue: 0,0:38:42.50,0:38:49.20,English,,0,0,0,,Okay so what's up the reason to go through all that is to actually show you examples of calling this
+Dialogue: 0,0:38:49.28,0:38:54.70,English,,0,0,0,,And how arguments get passed to the function and how it makes use of the stack frame
+Dialogue: 0,0:38:56.74,0:38:59.66,English,,0,0,0,,So now there's a function called call incr
+Dialogue: 0,0:39:00.68,0:39:04.56,English,,0,0,0,,And it's going to create a value called vet v1
+Dialogue: 0,0:39:05.56,0:39:08.18,English,,0,0,0,,And have to generate a pointer to that
+Dialogue: 0,0:39:08.98,0:39:13.12,English,,0,0,0,,So what that means is v1 can't just stay in a register
+Dialogue: 0,0:39:13.12,0:39:18.32,English,,0,0,0,,Because you can't create an address of a register it has to be stored in memory somewhere
+Dialogue: 0,0:39:18.72,0:39:20.98,English,,0,0,0,,So that you can create a pointer an address of it
+Dialogue: 0,0:39:21.58,0:39:25.58,English,,0,0,0,,And where does it store it well it puts it in the stack
+Dialogue: 0,0:39:26.54,0:39:29.78,English,,0,0,0,,So how does it find space on the stack while allocates it
+Dialogue: 0,0:39:30.08,0:39:34.62,English,,0,0,0,,So the function call_incr then and we'll go through all the different parts of it
+Dialogue: 0,0:39:34.62,0:39:41.84,English,,0,0,0,,But you see that this red code here is generated generates
+Dialogue: 0,0:39:41.94,0:39:45.98,English,,0,0,0,,These two instructions one is to allocate 16 bytes on the stack
+Dialogue: 0,0:39:46.78,0:39:50.78,English,,0,0,0,,And the other is to store $15213
+Dialogue: 0,0:39:51.50,0:39:53.76,English,,0,0,0,,At offset eight from the stack pointer
+Dialogue: 0,0:39:54.46,0:40:02.32,English,,0,0,0,,And as will often see the the program often allocates more space on the stack than it really needs to
+Dialogue: 0,0:40:02.82,0:40:05.54,English,,0,0,0,,And there's some conventions about trying to keep
+Dialogue: 0,0:40:07.58,0:40:11.38,English,,0,0,0,,Addresses on aligned in various ways
+Dialogue: 0,0:40:11.56,0:40:18.10,English,,0,0,0,,That are sort of obscure and we you should just kind of not worry about the fact there's unused space and functions
+Dialogue: 0,0:40:18.10,0:40:24.58,English,,0,0,0,,Because they do it the reasons for doing it are are
+Dialogue: 0,0:40:26.16,0:40:31.12,English,,0,0,0,,Maybe interesting to some but not really ones you need to understand at this point
+Dialogue: 0,0:40:32.60,0:40:40.50,English,,0,0,0,,So the point being that the way we got space on the stack was to just add to the stack pointer decrement the stack pointer
+Dialogue: 0,0:40:42.36,0:40:48.08,English,,0,0,0,,So now we have a number 15213 that's sitting in memory
+Dialogue: 0,0:40:48.64,0:40:51.42,English,,0,0,0,,And we can create a pointer to it
+Dialogue: 0,0:40:54.72,0:41:03.72,English,,0,0,0,,And so now to set up this call we need to create a pointer v1
+Dialogue: 0,0:41:03.98,0:41:08.40,English,,0,0,0,,To v1 and we have to pass the number 3000
+Dialogue: 0,0:41:09.12,0:41:13.46,English,,0,0,0,,So we'll see that will copy 3000 to register %esi
+Dialogue: 0,0:41:14.26,0:41:17.42,English,,0,0,0,,And let me just double check here
+Dialogue: 0,0:41:24.68,0:41:25.96,English,,0,0,0,,Just looking up
+Dialogue: 0,0:41:26.22,0:41:28.42,English,,0,0,0,,So one of the annoying features is
+Dialogue: 0,0:41:28.66,0:41:32.06,English,,0,0,0,,You see all the data type here are long so there's no incr
+Dialogue: 0,0:41:33.06,0:41:37.80,English,,0,0,0,,And yet it's copying 3,000 just to register %esi and not %esi
+Dialogue: 0,0:41:38.34,0:41:40.46,English,,0,0,0,,And it's using a movel and not a moveq
+Dialogue: 0,0:41:41.16,0:41:42.94,English,,0,0,0,,I think we might have covered that last time
+Dialogue: 0,0:41:42.94,0:41:47.36,English,,0,0,0,,But 3,000 is a small enough number it will fit in 32 bits
+Dialogue: 0,0:41:47.78,0:41:50.86,English,,0,0,0,,It's a positive number so we don't have to worry about sign bits
+Dialogue: 0,0:41:51.34,0:41:57.58,English,,0,0,0,,So the thing can sort of get away with a trick here of using just a movel instruction
+Dialogue: 0,0:41:58.10,0:42:05.56,English,,0,0,0,,Because when any instruction has a one of the eregistry ziz its destination
+Dialogue: 0,0:42:05.96,0:42:12.46,English,,0,0,0,,It will set the upper 32 bits of that register to zeros
+Dialogue: 0,0:42:13.16,0:42:17.44,English,,0,0,0,,So this will have the effect of copying the number 3000
+Dialogue: 0,0:42:18.18,0:42:21.06,English,,0,0,0,,And during out the upper bytes to register %rsi
+Dialogue: 0,0:42:21.66,0:42:25.80,English,,0,0,0,,And the reason the compiler likes this is it takes one less bite to encode
+Dialogue: 0,0:42:26.10,0:42:28.44,English,,0,0,0,,A movel than it does to encode a moveq
+Dialogue: 0,0:42:30.04,0:42:33.96,English,,0,0,0,,Um so just you have to get used to these kind of things
+Dialogue: 0,0:42:34.46,0:42:38.40,English,,0,0,0,,So that's setting up argument the the second argument to the call
+Dialogue: 0,0:42:39.88,0:42:45.68,English,,0,0,0,,But the first argument it's using this instruction lea or leaq
+Dialogue: 0,0:42:46.22,0:42:49.61,English,,0,0,0,,For what it's supposed to be used for which is to create pointers
+Dialogue: 0,0:42:50.22,0:42:54.82,English,,0,0,0,,Remember we talked about this instruction often getting used just to add two numbers
+Dialogue: 0,0:42:55.78,0:42:58.84,English,,0,0,0,,But it's actually designed exactly for this purpose
+Dialogue: 0,0:42:59.54,0:43:04.66,English,,0,0,0,,That it looks like a memory reference  8 relative to the stack pointer
+Dialogue: 0,0:43:06.38,0:43:07.48,English,,0,0,0,,But instead of
+Dialogue: 0,0:43:08.18,0:43:14.24,English,,0,0,0,,Now reading from that memory reference the instruction will just copy the computed address to %rdi
+Dialogue: 0,0:43:17.78,0:43:25.72,English,,0,0,0,,And so %rdi will now be equal to whatever the stack pointer plus 8 is
+Dialogue: 0,0:43:28.10,0:43:32.40,English,,0,0,0,,Okay so that creates the two arguments that I'm passing to this function
+Dialogue: 0,0:43:33.56,0:43:36.94,English,,0,0,0,,And now the call instruction will happen
+Dialogue: 0,0:43:37.60,0:43:45.30,English,,0,0,0,,And you'll recall that the call instruction adds(3000) two numbers and stores the result back in the pointer
+Dialogue: 0,0:43:46.00,0:43:53.18,English,,0,0,0,,So its effect will be to set the of this memory location to 18 to 13
+Dialogue: 0,0:43:53.74,0:43:55.72,English,,0,0,0,,You'll notice the clever trick here
+Dialogue: 0,0:43:56.24,0:44:00.90,English,,0,0,0,,And also return a particular value
+Dialogue: 0,0:44:01.14,0:44:03.50,English,,0,0,0,,Which we won't make use of the return value
+Dialogue: 0,0:44:04.18,0:44:06.82,English,,0,0,0,,No we do make use of the return value
+Dialogue: 0,0:44:09.92,0:44:11.24,English,,0,0,0,,And now the...
+Dialogue: 0,0:44:16.90,0:44:18.74,English,,0,0,0,,Now when we return back
+Dialogue: 0,0:44:20.12,0:44:24.26,English,,0,0,0,,What we want to do is add the value in v1
+Dialogue: 0,0:44:24.86,0:44:29.92,English,,0,0,0,,To the value we just computed the value we just computed is in v2
+Dialogue: 0,0:44:30.70,0:44:38.24,English,,0,0,0,,And we know that the v1 is designated by this memory location that %rsp+8
+Dialogue: 0,0:44:38.62,0:44:43.00,English,,0,0,0,,And so we'll just read from memory to include that to %rax
+Dialogue: 0,0:44:44.90,0:44:48.92,English,,0,0,0,,And then the final step is to deallocate so you see the match here
+Dialogue: 0,0:44:49.68,0:44:52.30,English,,0,0,0,,And this was to answer the question earlier how does it know
+Dialogue: 0,0:44:52.66,0:44:56.66,English,,0,0,0,,How to restore the the stack back to its original place
+Dialogue: 0,0:44:57.18,0:45:02.90,English,,0,0,0,,Well the compiler you know built into it figured out how much space it would need for this particular function
+Dialogue: 0,0:45:03.52,0:45:07.54,English,,0,0,0,,And it allocates that when it comes in and it d allocates it when it goes out
+Dialogue: 0,0:45:09.94,0:45:13.76,English,,0,0,0,,So and this you know this is a very simple example
+Dialogue: 0,0:45:13.76,0:45:17.94,English,,0,0,0,,But even more elaborate examples are still based on that same set of ideas
+Dialogue: 0,0:45:19.80,0:45:25.02,English,,0,0,0,,So that shows you in 1 then the data management the stack management
+Dialogue: 0,0:45:25.02,0:45:27.02,English,,0,0,0,,The idea of using a stack frame
+Dialogue: 0,0:45:30.64,0:45:33.54,English,,0,0,0,,And now the return by this point the
+Dialogue: 0,0:45:34.60,0:45:37.14,English,,0,0,0,,The only thing that's left is
+Dialogue: 0,0:45:38.26,0:45:42.84,English,,0,0,0,,After I increment the stack pointer it will be pointing back to this return address
+Dialogue: 0,0:45:44.28,0:45:46.22,English,,0,0,0,,Whoops wrong direction here
+Dialogue: 0,0:45:46.78,0:45:50.16,English,,0,0,0,,So now if I do a rep the ret instruction will always take
+Dialogue: 0,0:45:50.20,0:45:54.48,English,,0,0,0,,Whatever is pointed to by the stack pointer and use that as the return address
+Dialogue: 0,0:45:56.16,0:46:01.94,English,,0,0,0,,So it's very important that %rsp get set back to where it should be before you it does a rep
+Dialogue: 0,0:46:05.50,0:46:08.20,English,,0,0,0,,Okay so that's sort of the the basic principles
+Dialogue: 0,0:46:08.20,0:46:12.18,English,,0,0,0,,Now now let's get a little bit more refined
+Dialogue: 0,0:46:12.72,0:46:17.12,English,,0,0,0,,An important idea is well what about these registers
+Dialogue: 0,0:46:17.12,0:46:23.50,English,,0,0,0,,What can be assumed about particularly jesters and how they get changed  and so forth
+Dialogue: 0,0:46:23.98,0:46:29.98,English,,0,0,0,,And so again it's built into this idea of an abi  is a set of conventions about the register
+Dialogue: 0,0:46:29.98,0:46:33.10,English,,0,0,0,,Obviously %rsp is a very important register
+Dialogue: 0,0:46:33.56,0:46:39.32,English,,0,0,0,,And you don't want programs just to randomly change its value without them knowing what to do
+Dialogue: 0,0:46:39.82,0:46:43.62,English,,0,0,0,,But it turns out we'll also be careful with some of the other registers too
+Dialogue: 0,0:46:44.72,0:46:48.72,English,,0,0,0,,And so here's sort of a thought experiment imagine we had a function
+Dialogue: 0,0:46:50.82,0:46:52.68,English,,0,0,0,,Called yoo that's going to call who
+Dialogue: 0,0:46:53.68,0:46:55.40,English,,0,0,0,,And it has some data
+Dialogue: 0,0:46:56.06,0:47:01.56,English,,0,0,0,,That it it wants to put somewhere
+Dialogue: 0,0:47:02.70,0:47:06.44,English,,0,0,0,,And then when who's going to get called
+Dialogue: 0,0:47:06.92,0:47:15.20,English,,0,0,0,,And then the question is can I rely on the fact that register %rdx will still hold the number 15213
+Dialogue: 0,0:47:16.02,0:47:17.96,English,,0,0,0,,And the answer is not in general
+Dialogue: 0,0:47:18.16,0:47:23.08,English,,0,0,0,,Because who might have overwritten %rdx and put something else there
+Dialogue: 0,0:47:25.46,0:47:30.58,English,,0,0,0,,So in particular if who did some operation involving register %rdx
+Dialogue: 0,0:47:31.20,0:47:33.74,English,,0,0,0,,It could have messed up the value that was there before
+Dialogue: 0,0:47:36.42,0:47:42.38,English,,0,0,0,,So the obvious answer is while you should not have used %rdx for that purpose right
+Dialogue: 0,0:47:43.38,0:47:48.22,English,,0,0,0,,And that's why we will come up with a set of conventions
+Dialogue: 0,0:47:49.12,0:47:51.72,English,,0,0,0,,So just some terminology
+Dialogue: 0,0:47:52.18,0:47:54.82,English,,0,0,0,,When we're talking about one function calling another
+Dialogue: 0,0:47:54.94,0:48:01.12,English,,0,0,0,,It's useful to have used the following words will call  the calling function the caller
+Dialogue: 0,0:48:01.56,0:48:03.86,English,,0,0,0,,And the function that gets called the kaali
+Dialogue: 0,0:48:06.44,0:48:12.80,English,,0,0,0,,And now there's basically two ways we can manage register it can be what's called caller saved
+Dialogue: 0,0:48:13.56,0:48:15.74,English,,0,0,0,,Which means if the caller really cares
+Dialogue: 0,0:48:16.88,0:48:24.24,English,,0,0,0,,If you really want to value that will be there when it returns
+Dialogue: 0,0:48:25.26,0:48:27.72,English,,0,0,0,,When control returns back to it
+Dialogue: 0,0:48:28.32,0:48:35.78,English,,0,0,0,,Then it should store it away first it shouldn't assume that the register will be....
+Dialogue: 0,0:48:36.76,0:48:39.68,English,,0,0,0,,It should assume that the register might get altered by it
+Dialogue: 0,0:48:42.18,0:48:46.96,English,,0,0,0,,But there's another class we can define it called collie save
+Dialogue: 0,0:48:47.52,0:48:52.34,English,,0,0,0,,Which is sort of a contract between all the functions and it's built into the abi that says
+Dialogue: 0,0:48:53.06,0:48:56.92,English,,0,0,0,,If a particular function wants to alter date alter this register
+Dialogue: 0,0:48:57.48,0:49:02.02,English,,0,0,0,,What it needs to do is first store it away and it will do it by putting the value in the stack
+Dialogue: 0,0:49:02.52,0:49:06.04,English,,0,0,0,,And then before we return from that procedure
+Dialogue: 0,0:49:06.28,0:49:09.18,English,,0,0,0,,We should restore it back to whatever it was before
+Dialogue: 0,0:49:09.78,0:49:12.38,English,,0,0,0,,So that's a convention called call me save
+Dialogue: 0,0:49:13.02,0:49:16.84,English,,0,0,0,,And it's a little less intuitive and it takes a while to get the hang of this
+Dialogue: 0,0:49:16.86,0:49:18.90,English,,0,0,0,,But you'll begin to see its value
+Dialogue: 0,0:49:21.70,0:49:23.86,English,,0,0,0,,So in particular with this abi
+Dialogue: 0,0:49:25.28,0:49:31.06,English,,0,0,0,,We've already seen %rax used for the return value
+Dialogue: 0,0:49:31.46,0:49:36.98,English,,0,0,0,,And we've seen these six registers that get used for passing arguments
+Dialogue: 0,0:49:38.06,0:49:43.96,English,,0,0,0,,And will also designate registers %r10 in %r11
+Dialogue: 0,0:49:44.46,0:49:49.01,English,,0,0,0,,To be just temporary values that can be altered by any function
+Dialogue: 0,0:49:49.18,0:49:50.80,English,,0,0,0,,That's meaning of color saved
+Dialogue: 0,0:49:51.26,0:49:56.96,English,,0,0,0,,We've already seen actually within code  often them overriding these registers
+Dialogue: 0,0:49:56.96,0:49:59.70,English,,0,0,0,,Because whatever gets passed to a function
+Dialogue: 0,0:50:00.68,0:50:03.38,English,,0,0,0,,The function can do whatever it wants to that data
+Dialogue: 0,0:50:04.48,0:50:07.28,English,,0,0,0,,As long as it's not somehow corrupting other data
+Dialogue: 0,0:50:07.28,0:50:10.84,English,,0,0,0,,So those often get used as temporary storage as well
+Dialogue: 0,0:50:12.92,0:50:19.00,English,,0,0,0,,And %rax gets often overwritten multiple times before it gets set to a final return value
+Dialogue: 0,0:50:21.08,0:50:25.68,English,,0,0,0,,But we're going to say that these four registers and most commonly %rbx
+Dialogue: 0,0:50:28.14,0:50:30.20,English,,0,0,0,,Are our what are called callee-save registers
+Dialogue: 0,0:50:30.20,0:50:34.74,English,,0,0,0,,Meaning they'll only get used in this special way that if a function wants to alter it
+Dialogue: 0,0:50:35.10,0:50:40.02,English,,0,0,0,,One of these registers has to push it will push the value on the stack
+Dialogue: 0,0:50:40.52,0:50:44.02,English,,0,0,0,,And then just before returning it will pop that value back off the stack
+Dialogue: 0,0:50:44.92,0:50:50.94,English,,0,0,0,,So register %rbp as I told you about is special  if you're using frame pointers
+Dialogue: 0,0:50:51.36,0:50:53.18,English,,0,0,0,,If you're not using frame pointers
+Dialogue: 0,0:50:54.02,0:50:58.06,English,,0,0,0,,Then it can be treated as a callee-save register
+Dialogue: 0,0:50:58.06,0:50:59.98,English,,0,0,0,,So I'll get back to that in a minute
+Dialogue: 0,0:50:59.98,0:51:05.84,English,,0,0,0,,The fact you can combine those two and it works fine is actually a little bit subtle
+Dialogue: 0,0:51:06.38,0:51:11.44,English,,0,0,0,,And then as I mentioned %rsp is special you don't mess with that unless you know what you're doing
+Dialogue: 0,0:51:12.86,0:51:20.30,English,,0,0,0,,So let's look at an example of this use of callee-save registers and why how it works
+Dialogue: 0,0:51:20.84,0:51:28.56,English,,0,0,0,,And I'll do it by a version of this similar function to what we did before
+Dialogue: 0,0:51:32.24,0:51:38.40,English,,0,0,0,,But now what I'm going to do is my return value
+Dialogue: 0,0:51:39.62,0:51:45.28,English,,0,0,0,,Is to add x which is an argument of being passed to this function
+Dialogue: 0,0:51:45.28,0:51:47.30,English,,0,0,0,,There were no arguments in the earlier version
+Dialogue: 0,0:51:47.96,0:51:54.60,English,,0,0,0,,So somehow I have to have x it gets passed originally in register %rdi as you know
+Dialogue: 0,0:51:56.56,0:51:58.62,English,,0,0,0,,But %rdi might
+Dialogue: 0,0:51:59.06,0:52:03.34,English,,0,0,0,,Well I'm going to have to reuse register %rdi to pass value to incr
+Dialogue: 0,0:52:03.82,0:52:05.90,English,,0,0,0,,So somehow I have to do something with x
+Dialogue: 0,0:52:06.42,0:52:11.12,English,,0,0,0,,Because I'm going to need x when I return back to here after the call
+Dialogue: 0,0:52:11.76,0:52:15.62,English,,0,0,0,,So where am I going to put it well that's why I have callee-save registers
+Dialogue: 0,0:52:16.68,0:52:18.82,English,,0,0,0,,And so you see that the code here
+Dialogue: 0,0:52:19.70,0:52:22.98,English,,0,0,0,,At the outset of this function
+Dialogue: 0,0:52:22.98,0:52:27.94,English,,0,0,0,,Then it will store away whatever is in %rbx currently it will put it on the stack
+Dialogue: 0,0:52:28.70,0:52:33.98,English,,0,0,0,,And so now the the stack frame for this function looks like there's a return address
+Dialogue: 0,0:52:35.32,0:52:38.08,English,,0,0,0,,From before but I'm going to save the value of %rbx
+Dialogue: 0,0:52:38.74,0:52:43.02,English,,0,0,0,,And then I'm going to decrement the stack pointer by 16 as I did before
+Dialogue: 0,0:52:43.80,0:52:48.76,English,,0,0,0,,But that will be on top of the eight bytes I've already allocated to store %rbx
+Dialogue: 0,0:52:51.84,0:52:54.44,English,,0,0,0,,And then you'll see within the code
+Dialogue: 0,0:52:55.46,0:52:58.90,English,,0,0,0,,For example when it wants to compute this return value
+Dialogue: 0,0:52:59.38,0:53:07.40,English,,0,0,0,,It can assume that %rbx when whatever this call does  inker
+Dialogue: 0,0:53:08.30,0:53:12.56,English,,0,0,0,,We assume inker is well behaved that if it makes use of register %rbx
+Dialogue: 0,0:53:12.78,0:53:14.78,English,,0,0,0,,It will fix it up before it returns
+Dialogue: 0,0:53:15.44,0:53:22.58,English,,0,0,0,,And then this function well in its exit code will not only increment the stack pointer
+Dialogue: 0,0:53:22.58,0:53:25.84,English,,0,0,0,,But it will then pop the value of %rbx back
+Dialogue: 0,0:53:25.84,0:53:31.60,English,,0,0,0,,And so again you see this sort of bracketing push/pop a sub tract
+Dialogue: 0,0:53:32.12,0:53:33.74,English,,0,0,0,,Ad and you'll notice that things
+Dialogue: 0,0:53:34.52,0:53:39.10,English,,0,0,0,,On the clean-up part of it the end you sort of do things in the reverse order that they were done
+Dialogue: 0,0:53:39.32,0:53:42.58,English,,0,0,0,,Coming in again because of the stack discipline
+Dialogue: 0,0:53:44.06,0:53:48.66,English,,0,0,0,,So that's sort of a demonstration of this eight idea of an abi that
+Dialogue: 0,0:53:49.28,0:53:53.60,English,,0,0,0,,Everyone will treat %rbx this way it will save it on the stack
+Dialogue: 0,0:53:53.88,0:53:58.52,English,,0,0,0,,If it's going to alter it if it's not going to alter it it doesn't have to save anything
+Dialogue: 0,0:53:58.72,0:54:01.28,English,,0,0,0,,Whose question I saw no
+Dialogue: 0,0:54:02.68,0:54:04.76,English,,0,0,0,,So we haven't seen that in other code
+Dialogue: 0,0:54:04.76,0:54:11.58,English,,0,0,0,,Because we didn't typically need it that's again an example in  this particular machine code
+Dialogue: 0,0:54:11.58,0:54:13.18,English,,0,0,0,,We only do what we have to do
+Dialogue: 0,0:54:16.38,0:54:16.94,English,,0,0,0,,Okay
+Dialogue: 0,0:54:19.84,0:54:22.58,English,,0,0,0,,Okay so now we can kind of put this all together
+Dialogue: 0,0:54:23.26,0:54:29.04,English,,0,0,0,,And look at some examples of recursion and the important thing to keep in mind is
+Dialogue: 0,0:54:29.66,0:54:36.32,English,,0,0,0,,You know recursion is one of those sort of magical parts of computer science it seems like some black art
+Dialogue: 0,0:54:37.08,0:54:38.42,English,,0,0,0,,That it actually works
+Dialogue: 0,0:54:39.90,0:54:43.54,English,,0,0,0,,But when you look at these low-level mechanisms it all works out
+Dialogue: 0,0:54:43.88,0:54:50.90,English,,0,0,0,,And the C compiler doesn't have to make any special consideration for
+Dialogue: 0,0:54:51.54,0:54:54.34,English,,0,0,0,,A recursive function versus a normal function
+Dialogue: 0,0:54:54.50,0:54:56.64,English,,0,0,0,,Because this whole stack discipline makes it work
+Dialogue: 0,0:54:59.64,0:55:05.18,English,,0,0,0,,So I'm going to illustrate that then with a version of this function I called pcount
+Dialogue: 0,0:55:05.68,0:55:07.14,English,,0,0,0,,I've had various instance of it
+Dialogue: 0,0:55:07.16,0:55:12.24,English,,0,0,0,,Where you remember it's the the role of this is to count the number of ones
+Dialogue: 0,0:55:12.80,0:55:14.54,English,,0,0,0,,In an initial word
+Dialogue: 0,0:55:15.04,0:55:17.10,English,,0,0,0,,So the recursive version of this says
+Dialogue: 0,0:55:17.66,0:55:21.00,English,,0,0,0,,If the argument is zero then it has no ones in it
+Dialogue: 0,0:55:21.64,0:55:29.32,English,,0,0,0,,Otherwise I take the leading bit  the least significant bit
+Dialogue: 0,0:55:30.56,0:55:35.02,English,,0,0,0,,And I'll which is either going to be a one or a zero of course
+Dialogue: 0,0:55:35.60,0:55:40.76,English,,0,0,0,,And add that to what you get by shifting right x right by one position
+Dialogue: 0,0:55:41.14,0:55:43.86,English,,0,0,0,,And recursively counting the number of one bits in that
+Dialogue: 0,0:55:44.22,0:55:46.26,English,,0,0,0,,So pretty natural kind of recursion and
+Dialogue: 0,0:55:47.86,0:55:52.12,English,,0,0,0,,And keep in mind these are all unsigned numbers  the argument is
+Dialogue: 0,0:55:52.54,0:55:55.52,English,,0,0,0,,So the right shifts are logical
+Dialogue: 0,0:55:56.24,0:56:01.26,English,,0,0,0,,This would really be a bad idea with arithmetic right
+Dialogue: 0,0:56:02.66,0:56:06.70,English,,0,0,0,,And this is a code generated in general recursive code
+Dialogue: 0,0:56:06.70,0:56:12.54,English,,0,0,0,,It's going to always generate a bigger blob of code than the iterative version
+Dialogue: 0,0:56:12.84,0:56:14.84,English,,0,0,0,,Because it has to do all the stack stuff
+Dialogue: 0,0:56:17.42,0:56:20.42,English,,0,0,0,,So this is about as simple as it gets in recursive calls
+Dialogue: 0,0:56:20.88,0:56:24.41,English,,0,0,0,,So let's just sort of pick it apart
+Dialogue: 0,0:56:24.92,0:56:28.94,English,,0,0,0,,Well if easy case is if x is zero you'll see what happens is
+Dialogue: 0,0:56:30.50,0:56:35.32,English,,0,0,0,,It first of all assumes x is going to be zero in fact
+Dialogue: 0,0:56:35.15,0:56:40.98,English,,0,0,0,,And sets up the return value of zero  to the register
+Dialogue: 0,0:56:41.56,0:56:45.52,English,,0,0,0,,And then it will test now while is x zero
+Dialogue: 0,0:56:45.96,0:56:49.28,English,,0,0,0,,You remember the test instruction has two operands that get ended
+Dialogue: 0,0:56:49.28,0:56:54.02,English,,0,0,0,,So when they're the same it just is testing the value of x here
+Dialogue: 0,0:56:54.92,0:57:00.52,English,,0,0,0,,And if that's equal je is means jump equal to 0 in this case
+Dialogue: 0,0:57:01.10,0:57:03.86,English,,0,0,0,,Or might say jz is the same instruction
+Dialogue: 0,0:57:04.36,0:57:11.62,English,,0,0,0,,So if the value equals zero we'll jump to the end of the function and hit the return instruction
+Dialogue: 0,0:57:12.02,0:57:15.38,English,,0,0,0,,Like I said before the %rap semicolon you can ignore that
+Dialogue: 0,0:57:17.02,0:57:18.16,English,,0,0,0,,So that handles that one
+Dialogue: 0,0:57:19.68,0:57:23.00,English,,0,0,0,,And now the rest of the code is to handle this lower part
+Dialogue: 0,0:57:23.00,0:57:29.30,English,,0,0,0,,Where I have to set up the arguments to recursive call I have to keep track of
+Dialogue: 0,0:57:29.30,0:57:35.38,English,,0,0,0,,What at least the least significant bit of x is and handle all that stuff
+Dialogue: 0,0:57:37.58,0:57:42.40,English,,0,0,0,,So here's the code and it doesn't need any other thing anything on the stack
+Dialogue: 0,0:57:42.40,0:57:48.72,English,,0,0,0,,Other than a space to store %rbx which is whatever again
+Dialogue: 0,0:57:48.98,0:57:51.22,English,,0,0,0,,Whatever was in %rbx when you enter
+Dialogue: 0,0:57:51.66,0:57:55.24,English,,0,0,0,,I'm just going to put it on the stack I won't look at it I won't make use of it
+Dialogue: 0,0:57:55.98,0:58:02.18,English,,0,0,0,,But I'll I'll have it there so I can restore the register when I return
+Dialogue: 0,0:58:02.82,0:58:05.36,English,,0,0,0,,So it will push the value under the stack
+Dialogue: 0,0:58:07.32,0:58:16.92,English,,0,0,0,,And now the real meat of the the body of it is it will copy x into %rbx
+Dialogue: 0,0:58:17.02,0:58:20.74,English,,0,0,0,,Which we've just put on the stack so we can safely do it
+Dialogue: 0,0:58:21.08,0:58:29.14,English,,0,0,0,,And we'll just set only will clear out at all but the least significant bit of that particular register
+Dialogue: 0,0:58:29.52,0:58:34.44,English,,0,0,0,,And again this is one of these weird ones where I can use ebx as a destination
+Dialogue: 0,0:58:34.44,0:58:36.92,English,,0,0,0,,Knowing that all 0 all the high order bits
+Dialogue: 0,0:58:38.16,0:58:43.40,English,,0,0,0,,And then I'm going to take x and I'm just going to shift it right by one position
+Dialogue: 0,0:58:43.94,0:58:46.59,English,,0,0,0,,Which sets me up for this recursive call so
+Dialogue: 0,0:58:47.04,0:58:51.04,English,,0,0,0,,So this red code does both of these parts of it here
+Dialogue: 0,0:58:52.48,0:58:56.14,English,,0,0,0,,And now I'm ready to call p count recursively
+Dialogue: 0,0:58:56.18,0:59:00.70,English,,0,0,0,,Because I have the shifted value in %rdi
+Dialogue: 0,0:59:03.92,0:59:09.30,English,,0,0,0,,And I know because this is a well behaved function
+Dialogue: 0,0:59:09.62,0:59:15.70,English,,0,0,0,,That when p count returns it can assume that %rax holds  the recursive result
+Dialogue: 0,0:59:16.98,0:59:22.28,English,,0,0,0,,And I also know even though p count actually does modify %rbx
+Dialogue: 0,0:59:22.42,0:59:26.62,English,,0,0,0,,But I know because I the code is well behaved
+Dialogue: 0,0:59:27.08,0:59:31.24,English,,0,0,0,,The %rbx will get restored to whatever was there before
+Dialogue: 0,0:59:32.18,0:59:40.62,English,,0,0,0,,And %rbx in this case just before making the call I set it to the value of this we significant bit right
+Dialogue: 0,0:59:41.16,0:59:47.44,English,,0,0,0,,So when I return back I can assume that %rbx holds the least significant bit of x  my original argument
+Dialogue: 0,0:59:47.82,0:59:50.68,English,,0,0,0,,And %rax call holds the recursive result
+Dialogue: 0,0:59:51.18,0:59:53.78,English,,0,0,0,,So I can just add those two numbers together
+Dialogue: 0,0:59:54.66,0:59:59.62,English,,0,0,0,,Call that the return value and I've correctly computed the result
+Dialogue: 0,1:00:00.28,1:00:06.44,English,,0,0,0,,And then the final queen up is to pop %rbx to restore whatever was in there
+Dialogue: 0,1:00:06.90,1:00:08.46,English,,0,0,0,,And then to do the return
+Dialogue: 0,1:00:08.98,1:00:13.90,English,,0,0,0,,So again you see that the piece is all kind of it's a puzzle that all fits together
+Dialogue: 0,1:00:14.22,1:00:19.96,English,,0,0,0,,Because all the functions are using this common set of conventions about
+Dialogue: 0,1:00:20.48,1:00:21.92,English,,0,0,0,,Where arguments get past
+Dialogue: 0,1:00:22.54,1:00:25.48,English,,0,0,0,,What registers can be used how registers
+Dialogue: 0,1:00:26.50,1:00:32.42,English,,0,0,0,,If some registers have to be restored back if they get used and all that stuff works together
+Dialogue: 0,1:00:35.44,1:00:39.64,English,,0,0,0,,Which gets me back to just the point I was making before
+Dialogue: 0,1:00:41.90,1:00:48.66,English,,0,0,0,,If you're using register %rbp for a frame pointer
+Dialogue: 0,1:00:52.68,1:00:56.08,English,,0,0,0,,So typically point to the beginning of a frame like that
+Dialogue: 0,1:00:57.20,1:01:00.48,English,,0,0,0,,So imagine you have a function that needs a base pointer
+Dialogue: 0,1:01:00.48,1:01:08.46,English,,0,0,0,,Because as I mentioned the  case is that if it has to within that function allocate some amount of space
+Dialogue: 0,1:01:08.46,1:01:10.66,English,,0,0,0,,It's unknown at compile time
+Dialogue: 0,1:01:14.10,1:01:22.54,English,,0,0,0,,Well imagine now that some other code gets called deep recursive calls
+Dialogue: 0,1:01:22.54,1:01:28.52,English,,0,0,0,,Or whatever that might do other things
+Dialogue: 0,1:01:28.90,1:01:33.06,English,,0,0,0,,Well if you treat %rbp as a kali save register
+Dialogue: 0,1:01:33.72,1:01:36.18,English,,0,0,0,,Then when these other functions return
+Dialogue: 0,1:01:36.64,1:01:40.82,English,,0,0,0,,If they've altered if they made use of rbp for one reason or another
+Dialogue: 0,1:01:41.50,1:01:44.86,English,,0,0,0,,It's guaranteed that they will restore it back to
+Dialogue: 0,1:01:44.96,1:01:49.06,English,,0,0,0,,Whatever condition it was in originally before
+Dialogue: 0,1:01:49.66,1:01:53.54,English,,0,0,0,,So now this function will have a reliable value of %rbp
+Dialogue: 0,1:01:54.27,1:01:59.04,English,,0,0,0,,So again it shows as long as all the code obeys these conventions on
+Dialogue: 0,1:01:59.14,1:02:03.62,English,,0,0,0,,How it they use registers then sort of life is good
+Dialogue: 0,1:02:03.62,1:02:08.12,English,,0,0,0,,You can make use of these...
+Dialogue: 0,1:02:08.18,1:02:12.78,English,,0,0,0,,So to have a trust that the things will be the way they are
+Dialogue: 0,1:02:13.44,1:02:19.22,English,,0,0,0,,And so again that's why there's this sort of very careful process for creating an abi
+Dialogue: 0,1:02:20.38,1:02:24.36,English,,0,0,0,,Of early on in the life time of a new processor
+Dialogue: 0,1:02:24.78,1:02:28.34,English,,0,0,0,,So that all the compiler writers operating systems people
+Dialogue: 0,1:02:29.16,1:02:33.74,English,,0,0,0,,And the ones who implement tools like gdb debugging tools
+Dialogue: 0,1:02:34.28,1:02:38.78,English,,0,0,0,,Kind of all I have the right set of standards by which they can work from
+Dialogue: 0,1:02:42.24,1:02:45.50,English,,0,0,0,,Okay so just to sort of wrap things up
+Dialogue: 0,1:02:49.40,1:02:53.12,English,,0,0,0,,And I would say by the way this is the kind of thing you can
+Dialogue: 0,1:02:56.52,1:03:00.38,English,,0,0,0,,I could lecture to you for weeks but to really get it in your mind
+Dialogue: 0,1:03:00.68,1:03:06.22,English,,0,0,0,,The best way is to almost to hand execute some very simple examples
+Dialogue: 0,1:03:06.82,1:03:10.32,English,,0,0,0,,Or use a debugging tool and and run through them yourself
+Dialogue: 0,1:03:10.90,1:03:14.32,English,,0,0,0,,Just to make sure you really are convinced that this is all going to work
+Dialogue: 0,1:03:14.36,1:03:19.98,English,,0,0,0,,Because all these pieces just fit together and the way they fit together is what makes it work
+Dialogue: 0,1:03:20.92,1:03:25.24,English,,0,0,0,,So as I mentioned before and I'll say it again
+Dialogue: 0,1:03:25.86,1:03:30.80,English,,0,0,0,,That this this discipline is what makes recursion work
+Dialogue: 0,1:03:32.42,1:03:37.24,English,,0,0,0,,So the idea of having a stack frame for every call to a function means that
+Dialogue: 0,1:03:38.00,1:03:41.52,English,,0,0,0,,I can call a function call a function call a function call function
+Dialogue: 0,1:03:42.58,1:03:49.58,English,,0,0,0,,When I'm deep in that recursion I still have data associated with the other outstanding calls to that function
+Dialogue: 0,1:03:50.06,1:03:52.52,English,,0,0,0,,But each of them will have their own stack frames
+Dialogue: 0,1:03:52.52,1:03:54.92,English,,0,0,0,,And so it has a place to store that sort of
+Dialogue: 0,1:03:55.32,1:03:59.92,English,,0,0,0,,Information that's associated with one particular instantiation of a function
+Dialogue: 0,1:04:03.28,1:04:05.76,English,,0,0,0,,The register saving conventions we saw
+Dialogue: 0,1:04:05.76,1:04:09.52,English,,0,0,0,,A way that functions avoid sort of trashing each other's data
+Dialogue: 0,1:04:10.08,1:04:12.82,English,,0,0,0,,If I'm using a call we save register
+Dialogue: 0,1:04:14.16,1:04:18.28,English,,0,0,0,,It's my obligation to save it and restore it properly
+Dialogue: 0,1:04:18.68,1:04:25.20,English,,0,0,0,,It's the obligation of any function that gets called further down to also do that save and restore
+Dialogue: 0,1:04:26.80,1:04:29.02,English,,0,0,0,,And then this sort of...
+Dialogue: 0,1:04:32.40,1:04:38.46,English,,0,0,0,,Notion of a stack being the right match of how procedure call and return works
+Dialogue: 0,1:04:39.32,1:04:40.78,English,,0,0,0,,It if p calls q
+Dialogue: 0,1:04:41.44,1:04:43.10,English,,0,0,0,,Then before I go back to p
+Dialogue: 0,1:04:43.26,1:04:47.40,English,,0,0,0,,Q of returned and so I won't need that storage for q anymore
+Dialogue: 0,1:04:48.10,1:04:52.34,English,,0,0,0,,Those you've taken 150 or other wet
+Dialogue: 0,1:04:52.38,1:04:55.50,English,,0,0,0,,Places where you look at fancier languages
+Dialogue: 0,1:04:55.96,1:04:59.70,English,,0,0,0,,Don't have that status can trust that stack discipline
+Dialogue: 0,1:05:00.06,1:05:02.80,English,,0,0,0,,And they have to use some other mechanism though actually
+Dialogue: 0,1:05:03.58,1:05:06.92,English,,0,0,0,,If required use heap allocation of
+Dialogue: 0,1:05:07.38,1:05:10.08,English,,0,0,0,,Of the stack of the frames than all your stack frames
+Dialogue: 0,1:05:10.30,1:05:14.08,English,,0,0,0,,To keep data around after a function returns
+Dialogue: 0,1:05:14.14,1:05:19.18,English,,0,0,0,,But for C and instead of all the standard commonplace languages
+Dialogue: 0,1:05:19.66,1:05:22.04,English,,0,0,0,,The stacked is what is exactly what's needed
+Dialogue: 0,1:05:22.40,1:05:25.74,English,,0,0,0,,And that's not next the designers of C knew this well
+Dialogue: 0,1:05:26.34,1:05:29.08,English,,0,0,0,,This matching of a stack to their language
+Dialogue: 0,1:05:30.68,1:05:35.04,English,,0,0,0,,And I'll mention also this we I was talking about simple recursion before
+Dialogue: 0,1:05:35.04,1:05:37.66,English,,0,0,0,,But there's also mutual recursion where
+Dialogue: 0,1:05:37.66,1:05:40.92,English,,0,0,0,,A function say p calls q and then q might call p
+Dialogue: 0,1:05:41.54,1:05:45.68,English,,0,0,0,,And it looks very exotic and  it's a quite clever
+Dialogue: 0,1:05:46.06,1:05:49.38,English,,0,0,0,,But again how it's implemented is exactly what we've seen here
+Dialogue: 0,1:05:50.10,1:05:54.06,English,,0,0,0,,Doesn't take any special special kind of code
+Dialogue: 0,1:05:57.10,1:06:00.20,English,,0,0,0,,So
+Dialogue: 0,1:06:00.50,1:06:08.80,English,,0,0,0,,Then to finish up this is sort of what you need to remember about  procedure calls
+Dialogue: 0,1:06:12.00,1:06:13.95,English,,0,0,0,,That it's all about the stack discipline
+Dialogue: 0,1:06:13.95,1:06:19.08,English,,0,0,0,,And you'll get as you're working throughyour lab
+Dialogue: 0,1:06:19.08,1:06:24.20,English,,0,0,0,,You'll just get much more ingrained to this idea of of the stack
+Dialogue: 0,1:06:24.22,1:06:26.72,English,,0,0,0,,And what's on there and be able to examine
+Dialogue: 0,1:06:28.70,1:06:31.04,English,,0,0,0,,It okay so that's all I've got for today
+Dialogue: 0,1:06:31.04,1:06:35.45,English,,0,0,0,,So give you a little extra time in your calendar
