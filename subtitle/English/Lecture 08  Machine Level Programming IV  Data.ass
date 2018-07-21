@@ -15,9 +15,10 @@ Audio File: ../../../../Desktop/csapp/Lecture 08  Machine Level Programming IV  
 Video File: ../../../../Desktop/csapp/Lecture 08  Machine Level Programming IV  Data.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
-Video Zoom Percent: 0.906250
-Active Line: 2
-Video Position: 427
+Video Zoom Percent: 1.031250
+Scroll Position: 847
+Active Line: 859
+Video Position: 143251
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -28,9 +29,9 @@ Style: Chinese,Source Han Sans CN,34,&H00FBFD00,&H00FFFFFF,&H00362A28,&H00FFFFFF
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 0,0:00:00.03,0:00:06.86,English,,0,0,0,,Okay so continuing on with the saga of machine level programming
 Dialogue: 0,0:00:07.28,0:00:10.12,English,,0,0,0,,When NO.4 of our series of this
-Dialogue: 0,0:00:11.24,0:00:14.24,English,,0,0,0,,And I think that the total will be five
-Dialogue: 0,0:00:14.24,0:00:19.68,English,,0,0,0,,So we're almost through and I've always it this is a lot of material for the course
-Dialogue: 0,0:00:19.70,0:00:21.46,English,,0,0,0,,It's essentially a third of the course
+Dialogue: 0,0:00:11.24,0:00:15.52,English,,0,0,0,,And I think that the total will be five so we're almost through 
+Dialogue: 0,0:00:15.94,0:00:19.78,English,,0,0,0,,and I've always it this is a lot of material for the course
+Dialogue: 0,0:00:19.78,0:00:21.46,English,,0,0,0,,It's essentially a third of the course
 Dialogue: 0,0:00:21.46,0:00:25.64,English,,0,0,0,,If you think about well no not that much but it's a lot of the course
 Dialogue: 0,0:00:26.28,0:00:29.86,English,,0,0,0,,And a part that we consider very central to it
 Dialogue: 0,0:00:29.86,0:00:38.54,English,,0,0,0,,So a lot of this involves since we're talking about a particular machine the intel x86-64 machines
@@ -41,12 +42,12 @@ Dialogue: 0,0:00:53.72,0:00:58.80,English,,0,0,0,,Sort of learning your first as
 Dialogue: 0,0:01:01.58,0:01:04.84,English,,0,0,0,,So today we're going to talk about data representations
 Dialogue: 0,0:01:05.10,0:01:07.06,English,,0,0,0,,So far all the programs we've looked at
 Dialogue: 0,0:01:07.50,0:01:14.46,English,,0,0,0,,Have been either just manipulating integers or long integers and pointers
-Dialogue: 0,0:01:14.46,0:01:19.44,English,,0,0,0,,So that's all what we'd call scaler data.data that's not in any aggregated form.
+Dialogue: 0,0:01:14.46,0:01:19.44,English,,0,0,0,,So that's all what we'd call scaler data,data that's not in any aggregated form
 Dialogue: 0,0:01:19.88,0:01:26.74,English,,0,0,0,,Today we'll look at places where data gets collected into you put together multiple data elements
 Dialogue: 0,0:01:27.22,0:01:29.64,English,,0,0,0,,And then see there's really two ways to do that
 Dialogue: 0,0:01:29.64,0:01:34.96,English,,0,0,0,,One is with arrays where you can create many copies
 Dialogue: 0,0:01:34.96,0:01:40.26,English,,0,0,0,,Or many copies of an identical data type you can have an array of intz and array of pointers
-Dialogue: 0,0:01:41.26,0:01:44.76,English,,0,0,0,,A second is where you have struck's
+Dialogue: 0,0:01:41.26,0:01:44.76,English,,0,0,0,,A second is where you have structs
 Dialogue: 0,0:01:44.86,0:01:50.90,English,,0,0,0,,So you create a small collection of values that can be of different data types
 Dialogue: 0,0:01:51.50,0:01:54.62,English,,0,0,0,,And each one you access by its name or a tag
 Dialogue: 0,0:01:55.40,0:01:59.98,English,,0,0,0,,And it turns out those definitions can be recursive
@@ -54,8 +55,7 @@ Dialogue: 0,0:01:59.98,0:02:06.08,English,,0,0,0,,So you can have arrays of stru
 Dialogue: 0,0:02:07.56,0:02:11.54,English,,0,0,0,,And what we'll see is both how it's represented in the machine memory
 Dialogue: 0,0:02:11.54,0:02:16.88,English,,0,0,0,,And also then what the code looks like that will manipulate these different data structures
 Dialogue: 0,0:02:17.26,0:02:19.16,English,,0,0,0,,And the main thing to see is
-Dialogue: 0,0:02:20.10,0:02:24.76,English,,0,0,0,,That there's no the at the machine code level
-Dialogue: 0,0:02:24.76,0:02:27.22,English,,0,0,0,,There is no notion of an array
+Dialogue: 0,0:02:20.10,0:02:27.22,English,,0,0,0,,That there's no...at the machine code level there is no notion of an array
 Dialogue: 0,0:02:27.62,0:02:33.46,English,,0,0,0,,That you'd have at a high level except to think of it as a collection of bytes
 Dialogue: 0,0:02:33.46,0:02:37.02,English,,0,0,0,,That you can are in contiguous part of storage
 Dialogue: 0,0:02:37.04,0:02:41.64,English,,0,0,0,,And same with a struct is just allocated as a collection of bytes
@@ -64,36 +64,36 @@ Dialogue: 0,0:02:48.08,0:02:54.56,English,,0,0,0,,To get the right value when yo
 Dialogue: 0,0:02:55.92,0:03:04.34,English,,0,0,0,,But the good news is this is such a commonplace type of requirement for a programming language
 Dialogue: 0,0:03:04.38,0:03:08.22,English,,0,0,0,,That the machine gives you sort of instructions that
 Dialogue: 0,0:03:08.58,0:03:13.84,English,,0,0,0,,You'll see now they make perfect sense.they're exactly designed for this particular class of applications
-Dialogue: 0,0:03:16.70,0:03:21.50,English,,0,0,0,,So we'll talk about structure...array first and then structures or struck
+Dialogue: 0,0:03:16.70,0:03:21.50,English,,0,0,0,,So we'll talk about structure...array first and then structures or structs
 Dialogue: 0,0:03:21.74,0:03:26.36,English,,0,0,0,,And I'll also mention we'll do a little bit I'll give you a glimpse of floating point today too
 Dialogue: 0,0:03:26.36,0:03:31.54,English,,0,0,0,,Because it's worth knowing how floating point arithmetic is implemented as well on a machine
 Dialogue: 0,0:03:32.80,0:03:36.16,English,,0,0,0,,So the basic idea of array allocation is fairly straightforward
-Dialogue: 0,0:03:36.66,0:03:39.58,English,,0,0,0,,If you have n an array with n elements
+Dialogue: 0,0:03:36.66,0:03:39.58,English,,0,0,0,,If you have n and an array with n elements
 Dialogue: 0,0:03:40.10,0:03:50.24,English,,0,0,0,,Then that's represented by enough bytes in memory all in one span to hold that much data
-Dialogue: 0,0:03:50.62,0:03:57.90,English,,0,0,0,,So if the underlying data types a it's an int  or a care is a single byte data type
-Dialogue: 0,0:03:58.46,0:04:01.98,English,,0,0,0,,So to have a array of 12 cares takes 12 bytes
+Dialogue: 0,0:03:50.62,0:03:57.90,English,,0,0,0,,So if the underlying data types save an int or a char is a single byte data type
+Dialogue: 0,0:03:58.46,0:04:01.98,English,,0,0,0,,So to have a array of 12 chars takes 12 bytes
 Dialogue: 0,0:04:02.90,0:04:08.06,English,,0,0,0,,And int takes four bytes so to have an array of five ints takes 20 bytes
 Dialogue: 0,0:04:08.76,0:04:14.09,English,,0,0,0,,You get the idea you just multiply the size of the underlying data type by the number of elements
 Dialogue: 0,0:04:14.09,0:04:16.84,English,,0,0,0,,And that's how big the array has to be in terms of bytes
 Dialogue: 0,0:04:17.84,0:04:21.98,English,,0,0,0,,And we've already seen that in the care is one byte
-Dialogue: 0,0:04:22.08,0:04:26.40,English,,0,0,0,,And it is for a double or a long would be eight bytes
-Dialogue: 0,0:04:26.52,0:04:32.32,English,,0,0,0,,And so would be a pointer those are all different amounts of storage
+Dialogue: 0,0:04:22.08,0:04:27.72,English,,0,0,0,,And it is for a double or a long would be eight bytes and so would be a pointer
+Dialogue: 0,0:04:27.78,0:04:32.32,English,,0,0,0,,So those are all different amounts of storage
 Dialogue: 0,0:04:32.72,0:04:35.82,English,,0,0,0,,And you see in this diagram we use the x
 Dialogue: 0,0:04:36.98,0:04:41.30,English,,0,0,0,,Denotes the starting address of the beginning of this region of memory
 Dialogue: 0,0:04:41.82,0:04:52.36,English,,0,0,0,,And so we can use address computation to compute offsets by adding numbers to x
 Dialogue: 0,0:04:52.38,0:04:55.04,English,,0,0,0,,To get the address of particular elements of this array
 Dialogue: 0,0:04:55.30,0:04:56.94,English,,0,0,0,,And that's exactly what the code does
-Dialogue: 0,0:04:59.30,0:05:05.64,English,,0,0,0,,Oh so in general then if you imagine array a has some underlying type t
-Dialogue: 0,0:05:05.64,0:05:07.54,English,,0,0,0,,What the elements of the array are and
-Dialogue: 0,0:05:08.04,0:05:11.46,English,,0,0,0,,Some number of elements in that array in the declaration l
+Dialogue: 0,0:04:59.30,0:05:05.64,English,,0,0,0,,Oh so in general then if you imagine array A has some underlying type T
+Dialogue: 0,0:05:05.64,0:05:07.54,English,,0,0,0,,What the elements of the array are 
+Dialogue: 0,0:05:08.04,0:05:11.46,English,,0,0,0,,And some number of elements in that array in the declaration L
 Dialogue: 0,0:05:12.30,0:05:19.64,English,,0,0,0,,Then we will that declaration actually does two things
 Dialogue: 0,0:05:20.74,0:05:25.80,English,,0,0,0,,One is it allocates enough bytes of storage to hold the entire array
 Dialogue: 0,0:05:26.38,0:05:29.12,English,,0,0,0,,And the second from a programming language perspective
-Dialogue: 0,0:05:29.94,0:05:34.66,English,,0,0,0,,It is the identifier of the array a can in some ways be treated like a pointer
+Dialogue: 0,0:05:29.94,0:05:34.66,English,,0,0,0,,It is the identifier of the array A can in some ways be treated like a pointer
 Dialogue: 0,0:05:34.92,0:05:37.24,English,,0,0,0,,That you can do pointer arithmetic off of it
 Dialogue: 0,0:05:37.26,0:05:43.04,English,,0,0,0,,And that's one of the features of C that is was a fairly unique to see
 Dialogue: 0,0:05:43.04,0:05:46.18,English,,0,0,0,,When it was created and is still unique to this day
-Dialogue: 0,0:05:46.66,0:05:53.76,English,,0,0,0,,This idea of the sort of interchangeability of pointers and arrays  array identifiers
+Dialogue: 0,0:05:46.66,0:05:53.76,English,,0,0,0,,This idea of the sort of interchangeability of pointers and arrays, array identifiers
 Dialogue: 0,0:05:54.34,0:06:01.60,English,,0,0,0,,So for example I can use an array notation to say val[4] is element four of this array
 Dialogue: 0,0:06:01.72,0:06:06.74,English,,0,0,0,,And it's a five element array so that would just be this final element
 Dialogue: 0,0:06:07.56,0:06:11.26,English,,0,0,0,,But I can also just refer to val
@@ -101,100 +101,99 @@ Dialogue: 0,0:06:11.26,0:06:16.30,English,,0,0,0,,And its underlying data type i
 Dialogue: 0,0:06:17.24,0:06:22.40,English,,0,0,0,,And its value would be x it's just a pointer a pointer is remember an address
 Dialogue: 0,0:06:22.68,0:06:25.12,English,,0,0,0,,And it's just the address at the beginning of the array
 Dialogue: 0,0:06:25.92,0:06:29.46,English,,0,0,0,,And I can do pointer arithmetic on val
-Dialogue: 0,0:06:29.72,0:06:36.28,English,,0,0,0,,Which as you know in in C and this is a little confusing we'll have to we'll go back and forth
+Dialogue: 0,0:06:29.72,0:06:36.28,English,,0,0,0,,Which as you know in C and this is a little confusing we'll go back and forth
 Dialogue: 0,0:06:36.30,0:06:39.34,English,,0,0,0,,Because in C when you do pointer arithmetic
 Dialogue: 0,0:06:40.16,0:06:44.10,English,,0,0,0,,Like you say you know p++ for a pointer
 Dialogue: 0,0:06:44.84,0:06:46.52,English,,0,0,0,,We just give you an example
 Dialogue: 0,0:06:48.98,0:06:53.30,English,,0,0,0,,So if you had something like care * p  as a declaration
 Dialogue: 0,0:06:53.88,0:06:56.62,English,,0,0,0,,And you said p is equal to some string s
 Dialogue: 0,0:06:58.62,0:07:00.50,English,,0,0,0,,And then you say p++
-Dialogue: 0,0:07:01.34,0:07:08.86,English,,0,0,0,,So you're incrementing that pointer 1 in this case you're incrementing it by 1
-Dialogue: 0,0:07:08.86,0:07:16.36,English,,0,0,0,,Because the underlying data type is a care
+Dialogue: 0,0:07:01.34,0:07:08.86,English,,0,0,0,,So you're incrementing that pointer, in this case you're incrementing it by 1
+Dialogue: 0,0:07:08.86,0:07:16.36,English,,0,0,0,,Because the underlying data type is a char
 Dialogue: 0,0:07:16.70,0:07:21.30,English,,0,0,0,,But if you said something like int *
 Dialogue: 0,0:07:22.38,0:07:36.36,English,,0,0,0,,I'll call it ip and I different pen
 Dialogue: 0,0:07:36.36,0:07:42.22,English,,0,0,0,,And I said you know ip++
-Dialogue: 0,0:07:43.44,0:07:47.48,English,,0,0,0,,Then ip would get ip+. what does anyone know?
+Dialogue: 0,0:07:43.44,0:07:47.48,English,,0,0,0,,Then ip would get ip+ what, does anyone know?
 Dialogue: 0,0:07:49.20,0:07:50.28,English,,0,0,0,,4! yes!
-Dialogue: 0,0:07:53.70,0:07:59.70,English,,0,0,0,,So it's a confusion in see this remember is the same as saying ip plus equals one
+Dialogue: 0,0:07:53.70,0:07:59.70,English,,0,0,0,,So it's a confusion in see this remember is the same as saying ip+=1
 Dialogue: 0,0:08:01.52,0:08:07.28,English,,0,0,0,,But what you're actually doing is incrementing that the number of the value of p by four
 Dialogue: 0,0:08:08.08,0:08:14.00,English,,0,0,0,,Because you want a pointer when you jump from one place to another
-Dialogue: 0,0:08:14.48,0:08:22.98,English,,0,0,0,,You want it to increment by enough bytes to point to the next integer in this case  for ip
-Dialogue: 0,0:08:26.06,0:08:28.62,English,,0,0,0,,And so similarly val+1
-Dialogue: 0,0:08:29.40,0:08:33.20,English,,0,0,0,,Denotes this value x+4
+Dialogue: 0,0:08:14.48,0:08:22.98,English,,0,0,0,,You want it to increment by enough bytes to point to the next integer in this case for ip
+Dialogue: 0,0:08:26.06,0:08:33.20,English,,0,0,0,,And so similarly val+1 denotes this value x+4
 Dialogue: 0,0:08:33.76,0:08:39.06,English,,0,0,0,,Because it's a the address of the next integer in the array
 Dialogue: 0,0:08:40.78,0:08:47.84,English,,0,0,0,,By the way the one thing different between an array and a pointer is I can't say val++ right
-Dialogue: 0,0:08:48.00,0:08:50.22,English,,0,0,0,,I can't change the value of val.it's fixed
-Dialogue: 0,0:08:51.40,0:08:56.98,English,,0,0,0,,By the declaration whereas a pointer I can increment it I can change it in various ways
-Dialogue: 0,0:08:57.92,0:09:00.68,English,,0,0,0,,And similarly ampersand val of 2
-Dialogue: 0,0:09:01.28,0:09:09.04,English,,0,0,0,,Says give me the address of the second element of the array so that would be at x+8
-Dialogue: 0,0:09:10.22,0:09:15.00,English,,0,0,0,,And this is again one of the fundamental properties of see
-Dialogue: 0,0:09:16.08,0:09:37.77,English,,0,0,0,,That basically in nc if you take a pointer
+Dialogue: 0,0:08:48.00,0:08:50.22,English,,0,0,0,,I can't change the value of val,it's fixed
+Dialogue: 0,0:08:51.40,0:08:56.98,English,,0,0,0,,By the declaration whereas a pointer I can increment it,I can change it in various ways
+Dialogue: 0,0:08:57.92,0:09:07.32,English,,0,0,0,,And similarly &val[2] Says give me the address of the second element of the array 
+Dialogue: 0,0:09:07.44,0:09:09.06,English,,0,0,0,,So that would be at x+8
+Dialogue: 0,0:09:10.22,0:09:15.00,English,,0,0,0,,And this is again one of the fundamental properties of C
+Dialogue: 0,0:09:16.08,0:09:37.77,English,,0,0,0,,That basically in C if you take a pointer
 Dialogue: 0,0:09:38.50,0:09:39.24,English,,0,0,0,,That's weird
 Dialogue: 0,0:09:44.36,0:09:46.00,English,,0,0,0,,This is an eye not very well written
 Dialogue: 0,0:09:46.32,0:09:47.76,English,,0,0,0,,These are equivalent statements
 Dialogue: 0,0:09:51.56,0:09:54.16,English,,0,0,0,,Right there just two notations for the same thing
-Dialogue: 0,0:09:54.26,0:09:58.18,English,,0,0,0,,So on the upper part it says ip plus two meaning
+Dialogue: 0,0:09:54.26,0:09:58.18,English,,0,0,0,,So on the upper part it says ip+2 meaning
 Dialogue: 0,0:09:58.72,0:10:02.16,English,,0,0,0,,Actually add 8 to ip
 Dialogue: 0,0:10:02.92,0:10:05.02,English,,0,0,0,,And then dereference that
 Dialogue: 0,0:10:05.32,0:10:10.16,English,,0,0,0,,It's the same as finding the second element of a array an imaginary array
 Dialogue: 0,0:10:10.44,0:10:14.72,English,,0,0,0,,Where ip is indicates the beginning of the array
-Dialogue: 0,0:10:15.24,0:10:18.26,English,,0,0,0,,So that's a very fundamental principle of see that
-Dialogue: 0,0:10:18.64,0:10:22.42,English,,0,0,0,,Again this whole idea of pointer arithmetic is fairly unique to see
+Dialogue: 0,0:10:15.24,0:10:18.26,English,,0,0,0,,So that's a very fundamental principle of C that
+Dialogue: 0,0:10:18.64,0:10:22.42,English,,0,0,0,,Again this whole idea of pointer arithmetic is fairly unique to C
 Dialogue: 0,0:10:22.46,0:10:22.86,English,,0,0,0,,Question
-Dialogue: 0,0:10:22.86,0:10:25.84,English,,0,0,0,,[student question]
+Dialogue: 0,0:10:22.86,0:10:25.84,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:10:25.86,0:10:27.06,English,,0,0,0,,Pardon?yes!
 Dialogue: 0,0:10:27.70,0:10:35.42,English,,0,0,0,,The compiler will happily let you use negative values for array indices
 Dialogue: 0,0:10:36.60,0:10:40.12,English,,0,0,0,,And it will give you a potentially undefined value
 Dialogue: 0,0:10:41.56,0:10:45.60,English,,0,0,0,,But there's nothing in C that prevents you from giving out of bounds either
 Dialogue: 0,0:10:45.98,0:10:49.00,English,,0,0,0,,Numbers that are too big for an array or too small for an array
 Dialogue: 0,0:10:49.06,0:10:50.94,English,,0,0,0,,There's no bounds checking it
-Dialogue: 0,0:10:51.38,0:10:58.20,English,,0,0,0,,Yes if we have to
+Dialogue: 0,0:10:51.38,0:10:58.20,English,,0,0,0,,Yes
 Dialogue: 0,0:10:58.20,0:11:02.80,English,,0,0,0,,Yes so the question is becoming what about negative indices
 Dialogue: 0,0:11:03.32,0:11:04.96,English,,0,0,0,,And the answer is very simple
-Dialogue: 0,0:11:06.02,0:11:14.00,English,,0,0,0,,Because in other words in general something like ip plus x
+Dialogue: 0,0:11:06.02,0:11:14.00,English,,0,0,0,,Because in other words in general something like ip+x
 Dialogue: 0,0:11:16.38,0:11:18.26,English,,0,0,0,,Maybe can you see this
 Dialogue: 0,0:11:18.84,0:11:23.20,English,,0,0,0,,Should I turn it kind of bright
-Dialogue: 0,0:11:24.68,0:11:31.26,English,,0,0,0,,Is really equivalent to ip plus 4x
+Dialogue: 0,0:11:24.68,0:11:31.26,English,,0,0,0,,Is really equivalent to ip+4
 Dialogue: 0,0:11:35.42,0:11:37.30,English,,0,0,0,,So this is the notation
 Dialogue: 0,0:11:41.74,0:11:45.54,English,,0,0,0,,And it's really hard to read isn't it
 Dialogue: 0,0:11:45.60,0:11:48.04,English,,0,0,0,,And the right-hand side is the computation
-Dialogue: 0,0:11:48.06,0:11:55.30,English,,0,0,0,,So you and see you write it using you don't have to give scaling factors for your data types
+Dialogue: 0,0:11:48.06,0:11:55.30,English,,0,0,0,,So in C you write it using...you don't have to give scaling factors for your data types
 Dialogue: 0,0:11:55.36,0:11:57.06,English,,0,0,0,,Otherwise would drive you out of your mind
 Dialogue: 0,0:11:59.08,0:12:05.20,English,,0,0,0,,But you secretly underneath when the compiler generates the code we'll see examples of this
 Dialogue: 0,0:12:05.64,0:12:06.98,English,,0,0,0,,It's scaling everything
 Dialogue: 0,0:12:07.76,0:12:11.34,English,,0,0,0,,So now the question that is being asked is what if x is a negative number
 Dialogue: 0,0:12:12.14,0:12:13.64,English,,0,0,0,,Well the rule still applies
 Dialogue: 0,0:12:13.66,0:12:18.28,English,,0,0,0,,It's just that the final result will be less than ip instead of greater than ip
-Dialogue: 0,0:12:19.24,0:12:20.96,English,,0,0,0,,But it's totally valid see
+Dialogue: 0,0:12:19.24,0:12:20.96,English,,0,0,0,,But it's totally valid 
 Dialogue: 0,0:12:21.62,0:12:25.10,English,,0,0,0,,And there's actually times you will use it in this term I can promise you
 Dialogue: 0,0:12:25.54,0:12:26.44,English,,0,0,0,,Yes question
-Dialogue: 0,0:12:26.44,0:12:32.14,English,,0,0,0,,How did you
-Dialogue: 0,0:12:32.16,0:12:34.34,English,,0,0,0,,No! you can't write 2 plus ip
+Dialogue: 0,0:12:26.44,0:12:32.14,English,,0,0,0,,[student spaeking]
+Dialogue: 0,0:12:32.16,0:12:34.34,English,,0,0,0,,No! you can't write 2+ip
 Dialogue: 0,0:12:36.24,0:12:40.96,English,,0,0,0,,Try it I'm pretty sure you can't do that and with pointer arithmetic
-Dialogue: 0,0:12:41.94,0:12:45.66,English,,0,0,0,,Try if somebody wants to type in some code and do it.i don't think you can do that.
+Dialogue: 0,0:12:41.94,0:12:45.66,English,,0,0,0,,Try if somebody wants to type in some code and do it.I don't think you can do that
 Dialogue: 0,0:12:45.94,0:12:48.86,English,,0,0,0,,But if you did it would have to figure it out that
 Dialogue: 0,0:12:49.20,0:12:52.06,English,,0,0,0,,You know the parser knows the data types of it's two arguments
 Dialogue: 0,0:12:53.38,0:12:55.64,English,,0,0,0,,So yeah you could probably do it I've never seen this
-Dialogue: 0,0:12:56.02,0:12:59.72,English,,0,0,0,,You could do it but the compiler would know that one of the arguments is a pointer and
-Dialogue: 0,0:12:59.72,0:13:03.56,English,,0,0,0,,Therefore scale the other what you can't do is add two pointers
+Dialogue: 0,0:12:56.02,0:13:01.48,English,,0,0,0,,You could do it but the compiler would know that one of the arguments is a pointer and therefore scale the other 
+Dialogue: 0,0:13:01.52,0:13:03.56,English,,0,0,0,,What you can't do is add two pointers
 Dialogue: 0,0:13:04.90,0:13:07.12,English,,0,0,0,,You can take the difference of two pointers
 Dialogue: 0,0:13:08.10,0:13:11.64,English,,0,0,0,,This is obscure I'm not even taking about this
-Dialogue: 0,0:13:11.64,0:13:14.66,English,,0,0,0,,Woke it up in knr but you can do arithmetic
+Dialogue: 0,0:13:11.64,0:13:14.66,English,,0,0,0,,Woke it up in k and r but you can do arithmetic
 Dialogue: 0,0:13:14.66,0:13:21.44,English,,0,0,0,,But you can only for addition it can only be one pointer in one and then the other has to be a regular integer value
 Dialogue: 0,0:13:21.72,0:13:23.38,English,,0,0,0,,And it will scale it appropriately
 Dialogue: 0,0:13:23.58,0:13:25.18,English,,0,0,0,,So I believe you can do it
-Dialogue: 0,0:13:25.50,0:13:30.56,English,,0,0,0,,It's just somebody will smack you on the back of the hand if you actually write coded up
+Dialogue: 0,0:13:25.50,0:13:30.56,English,,0,0,0,,It's just somebody will smack you on the back of the hand, if you actually write coded up
 Dialogue: 0,0:13:31.60,0:13:32.72,English,,0,0,0,,But not the compiler
 Dialogue: 0,0:13:34.36,0:13:37.22,English,,0,0,0,,So in particular you know you can...
 Dialogue: 0,0:13:38.30,0:13:45.50,English,,0,0,0,,If you go beyond the bounds of an array of this you'll get whatever is beyond the bounds of that array
 Dialogue: 0,0:13:45.94,0:13:50.04,English,,0,0,0,,And it might be an invalid or it might not even be a valid address
 Dialogue: 0,0:13:50.04,0:13:57.20,English,,0,0,0,,And you get a segmentation fault but more typically you'll get some whatever it happens to be there
-Dialogue: 0,0:13:57.30,0:14:02.88,English,,0,0,0,,And that's not so bad when you read it but you can also potentially write it as we saw before
+Dialogue: 0,0:13:57.30,0:14:02.88,English,,0,0,0,,And that's not so bad when you read it,but you can also potentially write it as we saw before
 Dialogue: 0,0:14:03.24,0:14:05.20,English,,0,0,0,,And corrupt data that's already in memory
 Dialogue: 0,0:14:06.40,0:14:10.10,English,,0,0,0,,So here's again the same statement I was making before that
-Dialogue: 0,0:14:10.76,0:14:19.16,English,,0,0,0,,Ip val + I just get scaled the value computed would be the starting address plus four times whatever I is
+Dialogue: 0,0:14:10.76,0:14:19.16,English,,0,0,0,,Ip,val + i just get scaled the value computed would be the starting address plus 4 times whatever i is
 Dialogue: 0,0:14:24.86,0:14:26.78,English,,0,0,0,,So let's look at...
-Dialogue: 0,0:14:26.78,0:14:32.98,English,,0,0,0,,So that's sort of that's all see everything I said before is just basic C of stuff
+Dialogue: 0,0:14:26.78,0:14:32.98,English,,0,0,0,,So that's sort of that's all C, everything I said before is just basic C of stuff
 Dialogue: 0,0:14:32.98,0:14:36.12,English,,0,0,0,,Now let's start looking at the actual machine code involved
 Dialogue: 0,0:14:36.74,0:14:39.44,English,,0,0,0,,And so I made up this example here
 Dialogue: 0,0:14:39.98,0:14:45.44,English,,0,0,0,,Where I declare a three arrays each with five ends
@@ -202,27 +201,27 @@ Dialogue: 0,0:14:46.06,0:14:49.78,English,,0,0,0,,And I go through what is consi
 Dialogue: 0,0:14:50.04,0:14:55.94,English,,0,0,0,,When you're building up data that instead of having arbitrary constants sprinkled
 Dialogue: 0,0:14:55.94,0:14:59.06,English,,0,0,0,,Through your program often called magic numbers
 Dialogue: 0,0:14:59.62,0:15:05.20,English,,0,0,0,,That you instead use a pound define and you give it some meaningful name and some documentation
-Dialogue: 0,0:15:05.54,0:15:09.00,English,,0,0,0,,Usually at the top of a file or a dot h file
-Dialogue: 0,0:15:09.90,0:15:15.14,English,,0,0,0,,And then the type def is a very handy way if you're going to create complex data structures
+Dialogue: 0,0:15:05.54,0:15:09.00,English,,0,0,0,,Usually at the top of a file or a .h file
+Dialogue: 0,0:15:09.90,0:15:15.14,English,,0,0,0,,And then the typedef is a very handy way if you're going to create complex data structures
 Dialogue: 0,0:15:15.14,0:15:18.72,English,,0,0,0,,I highly recommend you sort of break that into type deaths
 Dialogue: 0,0:15:18.72,0:15:24.66,English,,0,0,0,,Because the declaration notation in C gets fairly obscure fairly quickly
-Dialogue: 0,0:15:25.20,0:15:30.98,English,,0,0,0,,But all this is saying is the the data type I'm going to call a zip_dig
-Dialogue: 0,0:15:31.62,0:15:35.80,English,,0,0,0,,Is defined to be five an array of five int
+Dialogue: 0,0:15:25.20,0:15:30.98,English,,0,0,0,,But all this is saying is the data type I'm going to call a zip_dig
+Dialogue: 0,0:15:31.62,0:15:35.80,English,,0,0,0,,Is defined to be five an array of five ints
 Dialogue: 0,0:15:36.26,0:15:39.12,English,,0,0,0,,And now whenever I say zip_dig something
-Dialogue: 0,0:15:39.42,0:15:42.72,English,,0,0,0,,I'm just popping down I'm saying this is an array of five events
-Dialogue: 0,0:15:44.42,0:15:50.18,English,,0,0,0,,And so I created three of them with the appropriate support us kools represented here
-Dialogue: 0,0:15:52.38,0:15:59.54,English,,0,0,0,,And now I'm just making up for sake of presentation  actual addresses for these
+Dialogue: 0,0:15:39.42,0:15:42.72,English,,0,0,0,,I'm just popping down I'm saying this is an array of five ints
+Dialogue: 0,0:15:44.42,0:15:50.18,English,,0,0,0,,And so I created three of them with the appropriate zip code school represented here
+Dialogue: 0,0:15:52.38,0:15:59.54,English,,0,0,0,,And now I'm just making up for sake of presentation actual addresses for these
 Dialogue: 0,0:15:59.82,0:16:02.22,English,,0,0,0,,In general you don't have any control over that
 Dialogue: 0,0:16:02.98,0:16:07.24,English,,0,0,0,,And I made it up so that they all happen to be in contiguous part of memory
 Dialogue: 0,0:16:07.36,0:16:10.68,English,,0,0,0,,And again there's no fundamental reason that should be true
 Dialogue: 0,0:16:10.68,0:16:15.58,English,,0,0,0,,So you can never trust what particular I dress anything is ever going to be allocated at
 Dialogue: 0,0:16:16.08,0:16:21.02,English,,0,0,0,,But you are certain that each of these blocks will be a contiguous collection of 20 bytes
 Dialogue: 0,0:16:23.86,0:16:27.96,English,,0,0,0,,So here's some example code then to say
-Dialogue: 0,0:16:28.10,0:16:37.18,English,,0,0,0,,I want to retrieve for one of these arrays I want to retrieve a element whose index is digit
+Dialogue: 0,0:16:28.10,0:16:37.18,English,,0,0,0,,I want to retrieve for one of these arrays,I want to retrieve a element whose index is digit
 Dialogue: 0,0:16:38.34,0:16:40.58,English,,0,0,0,,And this gets turned into the following code
 Dialogue: 0,0:16:40.58,0:16:44.40,English,,0,0,0,,So remember the first argument which will be a pointer now
 Dialogue: 0,0:16:45.22,0:16:47.82,English,,0,0,0,,Will be passed in register %rdi
-Dialogue: 0,0:16:48.34,0:16:52.86,English,,0,0,0,,And the second will it will be an int will be passed in register %rsi
+Dialogue: 0,0:16:48.34,0:16:52.86,English,,0,0,0,,And the second it will be an int,will be passed in register %rsi
 Dialogue: 0,0:16:53.94,0:16:56.30,English,,0,0,0,,And what I want to get out of this is an int
 Dialogue: 0,0:16:57.44,0:17:01.42,English,,0,0,0,,And so you see that it here's where that scaled addressing
 Dialogue: 0,0:17:01.42,0:17:04.38,English,,0,0,0,,This is exactly what it was designed for and why
@@ -235,61 +234,61 @@ Dialogue: 0,0:17:26.28,0:17:31.68,English,,0,0,0,,If we compare it to you know t
 Dialogue: 0,0:17:32.32,0:17:39.72,English,,0,0,0,,It's exactly this computation here
 Dialogue: 0,0:17:43.64,0:17:47.28,English,,0,0,0,,And that gives us an address and then we're reading from that address
 Dialogue: 0,0:17:48.74,0:17:50.93,English,,0,0,0,,And we're going to copy it in %eax
-Dialogue: 0,0:17:50.93,0:17:56.64,English,,0,0,0,,Remember this is an int so it will be in the erosion the lower four bytes of register %rax
+Dialogue: 0,0:17:50.93,0:17:56.64,English,,0,0,0,,Remember this is an int,so it will be in the erosion the lower four bytes of register %rax
 Dialogue: 0,0:17:57.54,0:18:01.16,English,,0,0,0,,And that's all the code it takes to implement this particular operation
 Dialogue: 0,0:18:01.26,0:18:01.58,English,,0,0,0,,Yes
-Dialogue: 0,0:18:01.58,0:18:11.12,English,,0,0,0,,So %rdi is the base address of the array yeah ah si on the right side yeah
-Dialogue: 0,0:18:11.12,0:18:15.60,English,,0,0,0,,This is a typo thank you thanks for pointing it out I'll make a note of that
+Dialogue: 0,0:18:01.58,0:18:11.12,English,,0,0,0,,So %rdi is the base address of the array yeah ah %rsi on the right side yeah
+Dialogue: 0,0:18:11.12,0:18:15.60,English,,0,0,0,,This is a typo, thank you thanks for pointing it out, I'll make a note of that
 Dialogue: 0,0:18:18.18,0:18:22.60,English,,0,0,0,,Right so this slide is incorrect and I'll fix that
-Dialogue: 0,0:18:23.14,0:18:28.48,English,,0,0,0,,So this should be %rdi+%rsi right thanks for
-Dialogue: 0,0:18:29.52,0:18:31.68,English,,0,0,0,,Noting that let me make it
-Dialogue: 0,0:18:37.14,0:18:41.38,English,,0,0,0,,Okay
+Dialogue: 0,0:18:23.14,0:18:28.48,English,,0,0,0,,So this should be %rdi plus %rsi right thanks 
+Dialogue: 0,0:18:29.52,0:18:31.68,English,,0,0,0,,Noting that, let me make it
+Dialogue: 0,0:18:37.14,0:18:37.58,English,,0,0,0,,Okay
 Dialogue: 0,0:18:42.56,0:18:49.02,English,,0,0,0,,And so now let's just look at a another just some code
 Dialogue: 0,0:18:49.96,0:18:54.48,English,,0,0,0,,In particular what if I wanted to go through one of these arrays
-Dialogue: 0,0:18:55.08,0:19:00.26,English,,0,0,0,,And for every element of the array add one to it so increment every single element by one
+Dialogue: 0,0:18:55.08,0:19:00.26,English,,0,0,0,,And for every element of the array add one to it, so increment every single element by one
 Dialogue: 0,0:19:00.96,0:19:03.56,English,,0,0,0,,Well first of all you can see that we're setting up a loop
-Dialogue: 0,0:19:04.22,0:19:11.70,English,,0,0,0,,And it uses the jump to middle of business with where  the initial part is to jump to the test
-Dialogue: 0,0:19:12.48,0:19:19.18,English,,0,0,0,,And all the testing involves we're increment we're using our a x's 4i here
+Dialogue: 0,0:19:04.22,0:19:11.70,English,,0,0,0,,And it uses the jump to middle of business with where the initial part is to jump to the test
+Dialogue: 0,0:19:12.48,0:19:19.18,English,,0,0,0,,And all the testing involves...we're increment...we're using %rax for i here
 Dialogue: 0,0:19:19.50,0:19:22.50,English,,0,0,0,,And we're incrementing it and comparing it at various places
 Dialogue: 0,0:19:26.52,0:19:33.72,English,,0,0,0,,But um here's the line of code that does all the real work
-Dialogue: 0,0:19:34.22,0:19:42.92,English,,0,0,0,,Again it's taking up the ithe element which is in our a x scale 8x4
+Dialogue: 0,0:19:34.22,0:19:42.92,English,,0,0,0,,Again it's taking... the i the element which is in %rax scale by 4
 Dialogue: 0,0:19:43.32,0:19:48.16,English,,0,0,0,,Adding it to the base of the array and that gives us an address
 Dialogue: 0,0:19:48.84,0:19:52.62,English,,0,0,0,,And now remember you can have an arithmetic instruction
 Dialogue: 0,0:19:52.62,0:19:57.05,English,,0,0,0,,Where the second operand the destination is a memory reference
-Dialogue: 0,0:19:57.56,0:20:04.45,English,,0,0,0,,And what this actually requires is to first read  the original value from the memory
+Dialogue: 0,0:19:57.56,0:20:04.45,English,,0,0,0,,And what this actually requires is to first read the original value from the memory
 Dialogue: 0,0:20:05.12,0:20:08.40,English,,0,0,0,,Do the addition and then store the result back in memory
 Dialogue: 0,0:20:08.48,0:20:18.26,English,,0,0,0,,So this one instruction is exactly inc doing this plus plus operation on this stored data in the array
-Dialogue: 0,0:20:23.10,0:20:30.68,English,,0,0,0,,By the way I should mention the whole idea pointer arithmetic  and and c
+Dialogue: 0,0:20:23.10,0:20:30.68,English,,0,0,0,,By the way I should mention the whole idea pointer arithmetic and C was
 Dialogue: 0,0:20:31.36,0:20:36.70,English,,0,0,0,,C was really people who had programmed an assembly code for most of their lives
 Dialogue: 0,0:20:37.40,0:20:40.90,English,,0,0,0,,Thinking about how could I make this look like a high-level language
-Dialogue: 0,0:20:41.06,0:20:47.62,English,,0,0,0,,But keep all the flexibility all the tricks I learned to play  at assembly code in a programming language
+Dialogue: 0,0:20:41.06,0:20:47.62,English,,0,0,0,,But keep all the flexibility,all the tricks I learned to play at assembly code in a programming language
 Dialogue: 0,0:20:48.12,0:20:51.70,English,,0,0,0,,Because it was designed it was originally designed to implement an operating system
-Dialogue: 0,0:20:51.70,0:20:53.20,English,,0,0,0,,The unix operating system
+Dialogue: 0,0:20:51.70,0:20:53.20,English,,0,0,0,,The UNIX operating system
 Dialogue: 0,0:20:53.64,0:20:57.74,English,,0,0,0,,And historically operating systems were written directly in assembly code
-Dialogue: 0,0:20:58.44,0:21:02.80,English,,0,0,0,,And these people kernighan ritchie dennis ritchie
+Dialogue: 0,0:20:58.44,0:21:02.80,English,,0,0,0,,And these people Kernighan Dennis Ritchie
 Dialogue: 0,0:21:04.00,0:21:12.56,English,,0,0,0,,And realized that the way to do this is to sort of build point arithmetic into a programming language
 Dialogue: 0,0:21:13.46,0:21:16.42,English,,0,0,0,,So anyways the reason I'm saying this is
 Dialogue: 0,0:21:16.68,0:21:22.68,English,,0,0,0,,You see a pretty close correspondence here between instructions and machine code
 Dialogue: 0,0:21:23.02,0:21:26.88,English,,0,0,0,,And constructs in a program in the C programming language
 Dialogue: 0,0:21:27.40,0:21:34.12,English,,0,0,0,,And that whole ++ operator and += is sort of something you see a variations of in suggests and way code
 Dialogue: 0,0:21:35.58,0:21:38.75,English,,0,0,0,,Okay so that's a sort of single dimension array
-Dialogue: 0,0:21:39.70,0:21:49.94,English,,0,0,0,,And I'd like to just change things up a little bit  by having us look at
-Dialogue: 0,0:21:50.96,0:21:59.12,English,,0,0,0,,What the real difference is between a arrays and pointers in a programming language in c
+Dialogue: 0,0:21:39.70,0:21:49.94,English,,0,0,0,,And I'd like to just change things up a little bit by having us look at
+Dialogue: 0,0:21:50.96,0:21:59.12,English,,0,0,0,,What the real difference is between a arrays and pointers in a programming language in C
 Dialogue: 0,0:21:59.98,0:22:03.30,English,,0,0,0,,And so I have a couple of these examples
 Dialogue: 0,0:22:04.00,0:22:06.12,English,,0,0,0,,That I'll bring out one by one
 Dialogue: 0,0:22:07.06,0:22:11.24,English,,0,0,0,,But the idea of this is you see the declaration on the left
 Dialogue: 0,0:22:11.36,0:22:15.64,English,,0,0,0,,There's something called a1 and something called a2
 Dialogue: 0,0:22:16.18,0:22:18.40,English,,0,0,0,,So call those a sub n
 Dialogue: 0,0:22:19.34,0:22:22.54,English,,0,0,0,,And now what I want to know for each of these
-Dialogue: 0,0:22:23.72,0:22:27.56,English,,0,0,0,,Is doesn't compile is this a valid statement in c
+Dialogue: 0,0:22:23.72,0:22:27.56,English,,0,0,0,,It doesn't compile is this a valid statement in C
 Dialogue: 0,0:22:28.36,0:22:34.14,English,,0,0,0,,Second with this potentially give me a null pointer reference because I'm referencing a pointer
 Dialogue: 0,0:22:35.44,0:22:42.96,English,,0,0,0,,For which the I haven't actually allocated space for them that pointer is indicating
 Dialogue: 0,0:22:42.98,0:22:47.38,English,,0,0,0,,I haven't initialized the pointer to a valid memory reference
 Dialogue: 0,0:22:48.48,0:22:58.84,English,,0,0,0,,And then finally if I were to use the sizeof operator on that particular  value with that
-Dialogue: 0,0:22:58.96,0:23:02.86,English,,0,0,0,,And including for the case where there's a star in front of it
+Dialogue: 0,0:22:58.96,0:23:02.86,English,,0,0,0,,And including for the case where there's a * in front of it
 Dialogue: 0,0:23:11.28,0:23:16.68,English,,0,0,0,,And part of this is to understand the difference then between an array and a pointer
 Dialogue: 0,0:23:16.76,0:23:20.26,English,,0,0,0,,And the main reason this the main factor is an array
-Dialogue: 0,0:23:21.10,0:23:26.96,English,,0,0,0,,When you declare an array in C you're both you're actually allocating space
+Dialogue: 0,0:23:21.10,0:23:26.96,English,,0,0,0,,When you declare an array in C,you're both you're actually allocating space
 Dialogue: 0,0:23:28.30,0:23:30.40,English,,0,0,0,,Space is being allocated somewhere for it
 Dialogue: 0,0:23:31.12,0:23:38.36,English,,0,0,0,,And you're creating a using allowed to now use the array name of in pointer arithmetic
 Dialogue: 0,0:23:39.20,0:23:41.84,English,,0,0,0,,Whereas when you just declare it a ret a pointer
@@ -297,16 +296,16 @@ Dialogue: 0,0:23:42.34,0:23:45.18,English,,0,0,0,,All you're allocating is the s
 Dialogue: 0,0:23:45.72,0:23:48.62,English,,0,0,0,,And not for anything that it's you're pointing to
 Dialogue: 0,0:23:50.68,0:23:51.82,English,,0,0,0,,So
 Dialogue: 0,0:23:54.56,0:23:58.30,English,,0,0,0,,Just to you probably figured out that these both compile
-Dialogue: 0,0:24:01.50,0:24:03.04,English,,0,0,0,,Let me get my cheat sheet andy
-Dialogue: 0,0:24:04.04,0:24:07.86,English,,0,0,0,,Well but what would be the size of a1 here
+Dialogue: 0,0:24:01.50,0:24:03.04,English,,0,0,0,,Let me get my cheat sheet Andy
+Dialogue: 0,0:24:04.04,0:24:07.86,English,,0,0,0,,Well but what would be the size of A[1] here
 Dialogue: 0,0:24:12.66,0:24:14.44,English,,0,0,0,,If I ran the size of operator on
-Dialogue: 0,0:24:24.50,0:24:27.24,English,,0,0,0,,Let's do the easier one what's the size of a2
+Dialogue: 0,0:24:24.50,0:24:27.24,English,,0,0,0,,Let's do the easier one what's the size of A[2]
 Dialogue: 0,0:24:29.52,0:24:32.34,English,,0,0,0,,Hmm 8
 Dialogue: 0,0:24:33.50,0:24:34.36,English,,0,0,0,,Because it's a pointer
-Dialogue: 0,0:24:36.14,0:24:40.50,English,,0,0,0,,What's the size of a1? a1 is an array of 3 ints
+Dialogue: 0,0:24:36.14,0:24:40.50,English,,0,0,0,,What's the size of A[1]? A[1] is an array of 3 ints
 Dialogue: 0,0:24:41.80,0:24:43.24,English,,0,0,0,,12 right
-Dialogue: 0,0:24:47.64,0:24:51.70,English,,0,0,0,,Oh and those those aren't no oops
-Dialogue: 0,0:24:57.26,0:25:02.94,English,,0,0,0,,And now if I said * a1 or * a2
+Dialogue: 0,0:24:47.64,0:24:51.70,English,,0,0,0,,Oh and those those aren't no,oops
+Dialogue: 0,0:24:57.26,0:25:02.94,English,,0,0,0,,And now if I said * A[1] or * A[2]
 Dialogue: 0,0:25:04.36,0:25:07.06,English,,0,0,0,,Those would both compile
 Dialogue: 0,0:25:12.64,0:25:16.52,English,,0,0,0,,Could either of them possibly give you a null dereference
 Dialogue: 0,0:25:19.64,0:25:25.62,English,,0,0,0,,[student speak]
@@ -314,27 +313,27 @@ Dialogue: 0,0:25:25.62,0:25:29.68,English,,0,0,0,,Yeah oh yes the pointer itself
 Dialogue: 0,0:25:31.46,0:25:34.16,English,,0,0,0,,I haven't dereferenced it yet it's a null pointer
 Dialogue: 0,0:25:34.16,0:25:37.78,English,,0,0,0,,But I haven't...it's not a bad potentially bad reference
 Dialogue: 0,0:25:38.82,0:25:42.32,English,,0,0,0,,Right it's not a runtime I won't create a runtime error
-Dialogue: 0,0:25:42.32,0:25:44.94,English,,0,0,0,,If I just say a to in my code okay
+Dialogue: 0,0:25:42.32,0:25:44.94,English,,0,0,0,,If I just say A2 in my code okay
 Dialogue: 0,0:25:45.40,0:25:47.46,English,,0,0,0,,So you're a step ahead of me basically
 Dialogue: 0,0:25:48.36,0:25:51.18,English,,0,0,0,,So in it you kind of answered the second question though
 Dialogue: 0,0:25:51.60,0:25:54.66,English,,0,0,0,,This one could give you a null pointer error
 Dialogue: 0,0:25:54.66,0:25:57.52,English,,0,0,0,,If you try to dereference a pointer that hasn't been initialized
 Dialogue: 0,0:25:57.94,0:25:59.40,English,,0,0,0,,It doesn't point to anything
 Dialogue: 0,0:26:00.00,0:26:01.32,English,,0,0,0,,Whereas this one is fine
-Dialogue: 0,0:26:02.74,0:26:07.36,English,,0,0,0,,And now what's the size of a1 of of * a1
-Dialogue: 0,0:26:08.74,0:26:11.58,English,,0,0,0,,4 and what about * a2
+Dialogue: 0,0:26:02.74,0:26:07.36,English,,0,0,0,,And now what's the size of A1 of * A1
+Dialogue: 0,0:26:08.74,0:26:11.58,English,,0,0,0,,4 and what about * A2
 Dialogue: 0,0:26:13.74,0:26:14.56,English,,0,0,0,,4 yeah
 Dialogue: 0,0:26:15.94,0:26:17.80,English,,0,0,0,,Because they're both pointers to ends
 Dialogue: 0,0:26:18.22,0:26:21.46,English,,0,0,0,,So one way to think about that is as a picture
-Dialogue: 0,0:26:22.30,0:26:30.44,English,,0,0,0,,A1  is like we've been showing here
-Dialogue: 0,0:26:30.70,0:26:33.40,English,,0,0,0,,It's an array of for ints
-Dialogue: 0,0:26:34.76,0:26:40.58,English,,0,0,0,,And when I declare a1 I'm allocating all so the program is allocating
+Dialogue: 0,0:26:22.30,0:26:30.44,English,,0,0,0,,A1 is like we've been showing here
+Dialogue: 0,0:26:30.70,0:26:33.40,English,,0,0,0,,It's an array of 4 ints
+Dialogue: 0,0:26:34.76,0:26:40.58,English,,0,0,0,,And when I declare A1 I'm allocating all so the program is allocating
 Dialogue: 0,0:26:40.86,0:26:43.70,English,,0,0,0,,12 bytes of storage that's able to hold that
 Dialogue: 0,0:26:44.86,0:26:48.08,English,,0,0,0,,A2 on the other hand is just a pointer
 Dialogue: 0,0:26:51.60,0:26:53.18,English,,0,0,0,,Which I'll show there
 Dialogue: 0,0:26:55.40,0:26:57.10,English,,0,0,0,,Until it's 8 bytes long
 Dialogue: 0,0:26:57.24,0:26:59.50,English,,0,0,0,,But it doesn't point to anything
-Dialogue: 0,0:26:59.62,0:27:03.20,English,,0,0,0,,So that's what I meant that if you tried to say * a2
+Dialogue: 0,0:26:59.62,0:27:03.20,English,,0,0,0,,So that's what I meant that if you tried to say * A2
 Dialogue: 0,0:27:03.84,0:27:08.34,English,,0,0,0,,You'd potentially have a null pointer reference dereference out there
 Dialogue: 0,0:27:09.42,0:27:11.54,English,,0,0,0,,And so that's why this is 8 and this is 12
 Dialogue: 0,0:27:13.10,0:27:28.18,English,,0,0,0,,So those who are the warm-up 1 so let's make it a little more interesting
@@ -351,118 +350,119 @@ Dialogue: 0,0:28:15.32,0:28:31.58,English,,0,0,0,,And then we're going to have t
 Dialogue: 0,0:28:32.08,0:28:32.84,English,,0,0,0,,Okay
 Dialogue: 0,0:28:36.52,0:28:39.52,English,,0,0,0,,So let's try and understand what's happening here
 Dialogue: 0,0:28:39.88,0:28:44.78,English,,0,0,0,,And you see that all of these declarations involve some combination of pointer and array
-Dialogue: 0,0:28:45.40,0:28:51.00,English,,0,0,0,,And the question is is it a pointer to an array is it an array of pointers
+Dialogue: 0,0:28:45.40,0:28:51.00,English,,0,0,0,,And the question is it a pointer to an array is it an array of pointers
 Dialogue: 0,0:28:53.30,0:28:57.66,English,,0,0,0,,And the answer to those will depend on the particular syntax
 Dialogue: 0,0:28:58.60,0:29:01.50,English,,0,0,0,,So of course the first one is one you've already seen before
 Dialogue: 0,0:29:03.38,0:29:09.08,English,,0,0,0,,And so you know that compiles and it's not null and you can dereference it and it's not null
-Dialogue: 0,0:29:09.92,0:29:12.66,English,,0,0,0,,But if you tried to say **a1
-Dialogue: 0,0:29:14.92,0:29:17.10,English,,0,0,0,,That's not valid it won't even compile
-Dialogue: 0,0:29:17.10,0:29:23.72,English,,0,0,0,,Because you're trying to here take the data type of *a is int
+Dialogue: 0,0:29:09.92,0:29:12.66,English,,0,0,0,,But if you tried to say **A1
+Dialogue: 0,0:29:14.92,0:29:17.10,English,,0,0,0,,That's not valid,it won't even compile
+Dialogue: 0,0:29:17.10,0:29:23.72,English,,0,0,0,,Because you're trying to here take the data type of *A is int
 Dialogue: 0,0:29:24.26,0:29:26.80,English,,0,0,0,,And then you're trying to take a dereference an int
 Dialogue: 0,0:29:27.84,0:29:31.70,English,,0,0,0,,So that will compile and therefore you can't even test it
 Dialogue: 0,0:29:33.70,0:29:37.68,English,,0,0,0,,Okay the question is for these other three you can see that
 Dialogue: 0,0:29:40.32,0:29:43.82,English,,0,0,0,,Somehow one is a well let's look at the bottom two first
 Dialogue: 0,0:29:46.46,0:29:49.44,English,,0,0,0,,So the one on the bottom says that
-Dialogue: 0,0:29:50.50,0:29:56.60,English,,0,0,0,,And this is part of and there's actually a really great section in kernighan ritchie that I highly encourage you
-Dialogue: 0,0:29:56.60,0:30:00.66,English,,0,0,0,,Which is how to read pointers how to read declarations in c
+Dialogue: 0,0:29:50.50,0:29:56.60,English,,0,0,0,,And this is part of and there's actually a really great section in Kernighan Ritchie that I highly encourage you
+Dialogue: 0,0:29:56.60,0:30:00.66,English,,0,0,0,,Which is how to read pointers how to read declarations in C
 Dialogue: 0,0:30:00.98,0:30:03.79,English,,0,0,0,,And the basic rule is you start from the inside
 Dialogue: 0,0:30:04.18,0:30:06.22,English,,0,0,0,,And you work your way outward
-Dialogue: 0,0:30:07.00,0:30:11.84,English,,0,0,0,,So that declaration of of a3 says that
-Dialogue: 0,0:30:15.98,0:30:20.64,English,,0,0,0,,With that parentheses says a3 is a
-Dialogue: 0,0:30:25.26,0:30:32.67,English,,0,0,0,,What is a3
+Dialogue: 0,0:30:07.00,0:30:11.84,English,,0,0,0,,So that declaration of of A3 says that
+Dialogue: 0,0:30:15.98,0:30:20.64,English,,0,0,0,,With that parentheses says A3 is a
+Dialogue: 0,0:30:25.26,0:30:32.67,English,,0,0,0,,What is A3
 Dialogue: 0,0:30:33.52,0:30:34.72,English,,0,0,0,,A3 is a pointer
 Dialogue: 0,0:30:35.92,0:30:38.20,English,,0,0,0,,That to parentheses around it
 Dialogue: 0,0:30:38.58,0:30:40.20,English,,0,0,0,,What does it point to
-Dialogue: 0,0:30:40.74,0:30:43.18,English,,0,0,0,,It points to an array of three-inch
-Dialogue: 0,0:30:46.32,0:30:49.76,English,,0,0,0,,So we can diagram a3 then
-Dialogue: 0,0:30:55.44,0:31:12.09,English,,0,0,0,,To be something like this
-Dialogue: 0,0:31:12.38,0:31:18.20,English,,0,0,0,,A3 is a pointer like I said read it from the inside out a3 is a pointer
-Dialogue: 0,0:31:21.34,0:31:25.12,English,,0,0,0,,And what does it point to it points to an array of three elements
+Dialogue: 0,0:30:40.74,0:30:43.18,English,,0,0,0,,It points to an array of three ints
+Dialogue: 0,0:30:46.32,0:30:49.76,English,,0,0,0,,So we can diagram A3 then
+Dialogue: 0,0:30:55.44,0:31:12.09,English,,0,0,0,,To be...something like this
+Dialogue: 0,0:31:12.38,0:31:18.20,English,,0,0,0,,A3 is a pointer like I said read it from the inside out A3 is a pointer
+Dialogue: 0,0:31:21.34,0:31:25.12,English,,0,0,0,,And what does it point to,it points to an array of three elements
 Dialogue: 0,0:31:25.52,0:31:27.66,English,,0,0,0,,And what type of elements are they there in
 Dialogue: 0,0:31:28.66,0:31:36.12,English,,0,0,0,,So you're sort of reading outward and picking up pizzas from the right and from the left as you do this
 Dialogue: 0,0:31:37.52,0:31:40.46,English,,0,0,0,,And so when you know that this all makes sense
-Dialogue: 0,0:31:40.46,0:31:44.68,English,,0,0,0,,That these numbers the size of a3 itself is eight
-Dialogue: 0,0:31:46.18,0:31:53.94,English,,0,0,0,,But since it points to an array of three ints the size of *a3 is twelve
-Dialogue: 0,0:31:55.22,0:32:01.14,English,,0,0,0,,And then a **a3 would indicate this particular element of the array
+Dialogue: 0,0:31:40.46,0:31:44.68,English,,0,0,0,,That these numbers the size of A3 itself is eight
+Dialogue: 0,0:31:46.18,0:31:53.94,English,,0,0,0,,But since it points to an array of three ints the size of *A3 is 12
+Dialogue: 0,0:31:55.22,0:32:01.14,English,,0,0,0,,And then **A3 would indicate this particular element of the array
 Dialogue: 0,0:32:01.42,0:32:02.96,English,,0,0,0,,And so it sizes four
-Dialogue: 0,0:32:04.74,0:32:11.84,English,,0,0,0,,So these all compile but which of them could cause a null pointer dereferences  which of the less two
+Dialogue: 0,0:32:04.74,0:32:11.84,English,,0,0,0,,So these all compile,but which of them could cause a null pointer dereferences which of the less two
 Dialogue: 0,0:32:17.52,0:32:20.68,English,,0,0,0,,Guess you can flip coins
 Dialogue: 0,0:32:22.68,0:32:23.06,English,,0,0,0,,Yes
-Dialogue: 0,0:32:27.28,0:32:29.92,English,,0,0,0,,Well I'm only looking at it I'm trying to fill in a3 right now
-Dialogue: 0,0:32:30.82,0:32:32.58,English,,0,0,0,,So a3 is fine
-Dialogue: 0,0:32:33.32,0:32:36.96,English,,0,0,0,,But if I said *a3 could that have a null pointer
+Dialogue: 0,0:32:27.28,0:32:29.92,English,,0,0,0,,Well I'm only looking at it I'm trying to fill in A3 right now
+Dialogue: 0,0:32:30.82,0:32:32.58,English,,0,0,0,,So A3 is fine
+Dialogue: 0,0:32:33.32,0:32:36.96,English,,0,0,0,,But if I said *A3 could that have a null pointer
 Dialogue: 0,0:32:37.32,0:32:39.26,English,,0,0,0,,Problem yes
-Dialogue: 0,0:32:42.10,0:32:48.66,English,,0,0,0,,Why because when I declare a3 here all I'm declaring is this particular
+Dialogue: 0,0:32:42.10,0:32:48.66,English,,0,0,0,,Why because when I declare A3 here all I'm declaring is this particular
 Dialogue: 0,0:32:48.66,0:32:51.30,English,,0,0,0,,I'm only allocating enough storage for that pointer
-Dialogue: 0,0:32:52.02,0:32:58.40,English,,0,0,0,,I have an initial I i haven't allocated the space for an array I haven't initialized a3 to actually point to an array
+Dialogue: 0,0:32:52.02,0:32:58.40,English,,0,0,0,,I have an initial...I haven't allocated the space for an array I haven't initialized A3 to actually point to an array
 Dialogue: 0,0:32:59.02,0:33:01.72,English,,0,0,0,,So it could be a null pointer it could be arbitrary junk
 Dialogue: 0,0:33:01.72,0:33:06.22,English,,0,0,0,,But it the chances of it actually pointing to an array of three ends is highly unlikely
 Dialogue: 0,0:33:07.58,0:33:12.80,English,,0,0,0,,So this would be a potentially bad in there for double stars doubly bad right
-Dialogue: 0,0:33:15.16,0:33:17.54,English,,0,0,0,,Okay so now let's look at a4
-Dialogue: 0,0:33:19.72,0:33:30.74,English,,0,0,0,,So a4 to understand that you actually have to look at the charts in c
-Dialogue: 0,0:33:31.20,0:33:32.36,English,,0,0,0,,The precedent chart
+Dialogue: 0,0:33:15.16,0:33:17.54,English,,0,0,0,,Okay so now let's look at A4
+Dialogue: 0,0:33:19.72,0:33:30.74,English,,0,0,0,,So A4 to understand that you actually have to look at the char in C
+Dialogue: 0,0:33:31.20,0:33:32.36,English,,0,0,0,,The precedent char
 Dialogue: 0,0:33:32.48,0:33:36.26,English,,0,0,0,,Which if you're like me your book falls open to that
-Dialogue: 0,0:33:36.30,0:33:40.36,English,,0,0,0,,Precedence chart the different operators and what levels they are
+Dialogue: 0,0:33:36.30,0:33:40.36,English,,0,0,0,,Precedence char the different operators and what levels they are
 Dialogue: 0,0:33:41.12,0:33:43.14,English,,0,0,0,,And one thing you'll see is that
-Dialogue: 0,0:33:43.70,0:33:48.60,English,,0,0,0,,A level one of precedence the highest precedence includes square brackets
-Dialogue: 0,0:33:49.40,0:33:53.02,English,,0,0,0,,And level2 include star
+Dialogue: 0,0:33:43.70,0:33:48.60,English,,0,0,0,,A level 1 of precedence the highest precedence includes square brackets
+Dialogue: 0,0:33:49.40,0:33:53.02,English,,0,0,0,,And level 2 include star
 Dialogue: 0,0:33:54.62,0:33:59.00,English,,0,0,0,,In other words bracket is higher precedence and star
 Dialogue: 0,0:33:59.88,0:34:02.18,English,,0,0,0,,So this particular statement here
 Dialogue: 0,0:34:03.92,0:34:06.94,English,,0,0,0,,The binding is actually like this
-Dialogue: 0,0:34:12.38,0:34:18.34,English,,0,0,0,,It says that a4 is an array of three elements
+Dialogue: 0,0:34:12.38,0:34:18.34,English,,0,0,0,,It says that A4 is an array of three elements
 Dialogue: 0,0:34:20.20,0:34:24.52,English,,0,0,0,,And those elements are pointers and they point to int
-Dialogue: 0,0:34:30.42,0:34:37.26,English,,0,0,0,,So a4 is an array
-Dialogue: 0,0:34:39.48,0:34:40.44,English,,0,0,0,,Can you see this
-Dialogue: 0,0:34:41.56,0:34:51.16,English,,0,0,0,,But each of those elements is pointing to an int  somewhere  hopefully
+Dialogue: 0,0:34:30.42,0:34:37.26,English,,0,0,0,,So A4 is an array
+Dialogue: 0,0:34:39.48,0:34:40.44,English,,0,0,0,,Can you see this?
+Dialogue: 0,0:34:41.56,0:34:51.16,English,,0,0,0,,But each of those elements is pointing to an int somewhere hopefully
 Dialogue: 0,0:34:55.20,0:34:57.88,English,,0,0,0,,And so let's see if that matches the numbers we got
-Dialogue: 0,0:34:58.56,0:35:02.20,English,,0,0,0,,So the size of a4 is 24 because it's 8 times 3
-Dialogue: 0,0:35:03.44,0:35:06.96,English,,0,0,0,,If I were to dereference a4
+Dialogue: 0,0:34:58.56,0:35:02.20,English,,0,0,0,,So the size of A4 is 24 because it's 8 times 3
+Dialogue: 0,0:35:03.44,0:35:06.96,English,,0,0,0,,If I were to dereference A4
 Dialogue: 0,0:35:07.54,0:35:13.46,English,,0,0,0,,It would just indicate this particular pointer
-Dialogue: 0,0:35:14.18,0:35:16.06,English,,0,0,0,,Right a4 is an array of pointers
+Dialogue: 0,0:35:14.18,0:35:16.06,English,,0,0,0,,Right A4 is an array of pointers
 Dialogue: 0,0:35:16.68,0:35:22.30,English,,0,0,0,,So when I get an element out of that array what I'll get is a pointer
-Dialogue: 0,0:35:24.14,0:35:28.72,English,,0,0,0,,And so a4 is a pointer and so it's also 8
+Dialogue: 0,0:35:24.14,0:35:28.72,English,,0,0,0,,And so A4 is a pointer and so it's also 8
 Dialogue: 0,0:35:29.94,0:35:31.98,English,,0,0,0,,But if I now do a second dereference
 Dialogue: 0,0:35:32.92,0:35:36.66,English,,0,0,0,,Then I'll get an int and it's size is 4
 Dialogue: 0,0:35:38.30,0:35:38.96,English,,0,0,0,,Okay
 Dialogue: 0,0:35:43.18,0:35:44.84,English,,0,0,0,,These all compile
-Dialogue: 0,0:35:48.18,0:35:56.98,English,,0,0,0,,So could I have a it could start a for them cause problems
-Dialogue: 0,0:35:57.24,0:35:59.64,English,,0,0,0,,As far as a null pointer or bed pointer
+Dialogue: 0,0:35:48.18,0:35:56.98,English,,0,0,0,,So could I have a...could *A4 them cause problems
+Dialogue: 0,0:35:57.24,0:35:59.64,English,,0,0,0,,As far as a null pointer or bed pointer?
 Dialogue: 0,0:36:02.44,0:36:04.92,English,,0,0,0,,No that's right
-Dialogue: 0,0:36:05.78,0:36:08.74,English,,0,0,0,,No is the correct answer no is yes
-Dialogue: 0,0:36:09.78,0:36:17.38,English,,0,0,0,,Because you've a4 this you're a four is an array you've you've defined an array
+Dialogue: 0,0:36:05.78,0:36:08.74,English,,0,0,0,,No is the correct answer,no is yes
+Dialogue: 0,0:36:09.78,0:36:17.38,English,,0,0,0,,Because you've A4 this you're A4 is an array you've defined an array
 Dialogue: 0,0:36:18.06,0:36:21.92,English,,0,0,0,,And it arrays get allocated by their declaration
-Dialogue: 0,0:36:21.94,0:36:23.92,English,,0,0,0,,As a4m of three element array
+Dialogue: 0,0:36:21.94,0:36:23.92,English,,0,0,0,,As three element array
 Dialogue: 0,0:36:24.68,0:36:28.30,English,,0,0,0,,On the other hand this could give you a null pointer
 Dialogue: 0,0:36:28.30,0:36:31.20,English,,0,0,0,,Because I haven't initialized the array to anything
 Dialogue: 0,0:36:31.78,0:36:39.12,English,,0,0,0,,So for example if it were initialized all zeros it would just be three not null pointers in that array
-Dialogue: 0,0:36:41.20,0:36:46.78,English,,0,0,0,,So this is sort of the stuff the nitty gritties of c. question yes!
+Dialogue: 0,0:36:41.20,0:36:46.78,English,,0,0,0,,So this is sort of the stuff the nitty gritties of C. question yes!
 Dialogue: 0,0:36:47.64,0:36:56.84,English,,0,0,0,,How does it know that the size 12 like I thought see they don't really know how many things are in an array
-Dialogue: 0,0:36:56.90,0:37:02.02,English,,0,0,0,,The compiler question is how the compiler
-Dialogue: 0,0:37:02.32,0:37:07.62,English,,0,0,0,,That what I'm...i'll answer your question by saying remember the compiler knows a lot
+Dialogue: 0,0:36:56.90,0:37:02.02,English,,0,0,0,,The compiler...question is how...the compiler
+Dialogue: 0,0:37:02.32,0:37:07.62,English,,0,0,0,,That what I'm...I'll answer your question by saying remember the compiler knows a lot
 Dialogue: 0,0:37:08.52,0:37:12.86,English,,0,0,0,,So that in particularly I've declared this to be an array of three pointers
 Dialogue: 0,0:37:13.24,0:37:15.90,English,,0,0,0,,I'm compiling for a machine where pointers are eight bytes
 Dialogue: 0,0:37:16.46,0:37:19.04,English,,0,0,0,,And so the compiler knows that sp 24 bytes
-Dialogue: 0,0:37:20.48,0:37:24.06,English,,0,0,0,,In general when you're referencing in c
+Dialogue: 0,0:37:20.48,0:37:24.06,English,,0,0,0,,In general when you're referencing in C
 Dialogue: 0,0:37:24.62,0:37:28.78,English,,0,0,0,,There's no you know the machine doesn't have built into it any bounds
 Dialogue: 0,0:37:28.86,0:37:30.88,English,,0,0,0,,And doesn't do bounds checking for you
 Dialogue: 0,0:37:31.28,0:37:34.32,English,,0,0,0,,But that's in the runtime execution
-Dialogue: 0,0:37:34.66,0:37:37.08,English,,0,0,0,,If but in C if i...
+Dialogue: 0,0:37:34.66,0:37:37.08,English,,0,0,0,,But in C if I...
 Dialogue: 0,0:37:39.06,0:37:44.66,English,,0,0,0,,When I declare something it's known it has to be known at that point when the declaration occurs
 Dialogue: 0,0:37:46.22,0:37:47.14,English,,0,0,0,,Question
 Dialogue: 0,0:37:48.12,0:37:48.80,English,,0,0,0,,Go back there
 Dialogue: 0,0:37:48.84,0:37:55.94,English,,0,0,0,,So instead of doing three I just need a one that just...empty bracket?
 Dialogue: 0,0:37:56.60,0:38:01.28,English,,0,0,0,,Yeah I think empty bracket is it just another name for a pointer
 Dialogue: 0,0:38:02.36,0:38:07.30,English,,0,0,0,,Usually it's just given as argument some restrictions on it
-Dialogue: 0,0:38:07.30,0:38:10.08,English,,0,0,0,,But when you use the empty bracket notation in c
+Dialogue: 0,0:38:07.30,0:38:10.08,English,,0,0,0,,But when you use the empty bracket notation in C
 Dialogue: 0,0:38:10.38,0:38:14.66,English,,0,0,0,,It's equivalent to doing a pointer declaration you're not allocating any space for
-Dialogue: 0,0:38:14.72,0:38:21.04,English,,0,0,0,,It by saying one graphically necessary...
+Dialogue: 0,0:38:14.72,0:38:21.04,English,,0,0,0,,[student speaking]It by saying one graphically necessary...
 Dialogue: 0,0:38:25.78,0:38:31.00,English,,0,0,0,,And you give a number the size of that array it really allocates that memories
 Dialogue: 0,0:38:31.84,0:38:32.66,English,,0,0,0,,Question
-Dialogue: 0,0:38:35.68,0:38:37.62,English,,0,0,0,,Yes oh yes and that's the final one
-Dialogue: 0,0:38:37.62,0:38:43.41,English,,0,0,0,,You'll notice that the numbers for a2 and a4 the same and the reason is it's the same thing
-Dialogue: 0,0:38:43.82,0:38:47.16,English,,0,0,0,,And that again goes by the precedence rules of c
-Dialogue: 0,0:38:48.00,0:38:54.46,English,,0,0,0,,That a2 first binds this way  and then this way
-Dialogue: 0,0:38:55.40,0:39:00.06,English,,0,0,0,,And so a 2 and a 4 are synonymous just with west parentheses
+Dialogue: 0,0:38:32.66,0:38:35.70,English,,0,0,0,,[student speaking]
+Dialogue: 0,0:38:35.70,0:38:37.62,English,,0,0,0,,Yes oh yes and that's the final one
+Dialogue: 0,0:38:37.62,0:38:43.41,English,,0,0,0,,You'll notice that the numbers for A2 and A4 the same and the reason is the same thing
+Dialogue: 0,0:38:43.82,0:38:47.16,English,,0,0,0,,And that again goes by the precedence rules of C
+Dialogue: 0,0:38:48.00,0:38:54.46,English,,0,0,0,,That A2 first binds this way and then this way
+Dialogue: 0,0:38:55.40,0:39:00.06,English,,0,0,0,,And so A2 and A4 are synonymous just with west parentheses
 Dialogue: 0,0:39:03.48,0:39:06.08,English,,0,0,0,,Okay so that was a bit of an aside
 Dialogue: 0,0:39:06.12,0:39:11.32,English,,0,0,0,,But as you can see I think this is the kind of thing that will really probe your
 Dialogue: 0,0:39:11.94,0:39:12.88,English,,0,0,0,,Your understanding
@@ -478,39 +478,37 @@ Dialogue: 0,0:39:53.72,0:39:58.28,English,,0,0,0,,You do it by a sequence of bra
 Dialogue: 0,0:39:59.32,0:40:01.70,English,,0,0,0,,And the reason for that is actually there
 Dialogue: 0,0:40:07.02,0:40:09.90,English,,0,0,0,,It will see that it has to do with
 Dialogue: 0,0:40:11.50,0:40:31.26,English,,0,0,0,,This notation that we just went through so if I say int
-Dialogue: 0,0:40:32.24,0:40:35.96,English,,0,0,0,,It turns out that I can read it like
-Dialogue: 0,0:40:38.86,0:40:42.24,English,,0,0,0,,This that a is an array of three elements
+Dialogue: 0,0:40:32.24,0:40:35.96,English,,0,0,0,,It turns out that I can read it like this
+Dialogue: 0,0:40:38.86,0:40:42.24,English,,0,0,0,,This that A is an array of three elements
 Dialogue: 0,0:40:44.80,0:40:49.72,English,,0,0,0,,And each of those elements is in itself an array of five elements of type int
-Dialogue: 0,0:40:52.08,0:40:59.68,English,,0,0,0,,And we'll get back to that but that kind of explains everything I'm about to tell you  in this picture
-Dialogue: 0,0:41:00.70,0:41:07.08,English,,0,0,0,,So in particular if I declare an array with our rows and C columns
+Dialogue: 0,0:40:52.08,0:40:59.68,English,,0,0,0,,And we'll get back to that but that kind of explains everything I'm about to tell you in this picture
+Dialogue: 0,0:41:00.70,0:41:07.08,English,,0,0,0,,So in particular if I declare an array with R rows and C columns
 Dialogue: 0,0:41:08.04,0:41:13.22,English,,0,0,0,,And you think of it mathematically as sort of a matrix two-dimensional matrix
 Dialogue: 0,0:41:14.66,0:41:21.12,English,,0,0,0,,What it really does is it says we'll see eyes on the
 Dialogue: 0,0:41:25.18,0:41:26.70,English,,0,0,0,,Yeah I'm sorry
-Dialogue: 0,0:41:26.86,0:41:32.10,English,,0,0,0,,C a actually ends up being the inner element it says first ofc all I want
-Dialogue: 0,0:41:32.82,0:41:37.00,English,,0,0,0,,Row 0 will be an array of C intz
+Dialogue: 0,0:41:26.86,0:41:32.10,English,,0,0,0,,C a actually ends up being the inner element it says first of all I want
+Dialogue: 0,0:41:32.82,0:41:37.00,English,,0,0,0,,Row 0 will be an array of C ints
 Dialogue: 0,0:41:39.08,0:41:40.63,English,,0,0,0,,C being the number of columns
 Dialogue: 0,0:41:40.63,0:41:43.74,English,,0,0,0,,I'll put so all the elements of row 0 will come first
-Dialogue: 0,0:41:44.46,0:41:46.46,English,,0,0,0,,All the elements of row 1 come next
-Dialogue: 0,0:41:47.00,0:41:48.94,English,,0,0,0,,And so forth up to the end
-Dialogue: 0,0:41:49.90,0:41:52.44,English,,0,0,0,,Of it all and so the total allocation will be
-Dialogue: 0,0:41:53.08,0:41:57.70,English,,0,0,0,,4 times the data size times the number of rows times the number of columns bytes
+Dialogue: 0,0:41:44.46,0:41:48.94,English,,0,0,0,,All the elements of row 1 come next And so forth up to the end
+Dialogue: 0,0:41:49.90,0:41:57.70,English,,0,0,0,,And so the total allocation will be (4 times) the data size times the number of rows times the number of columns bytes
 Dialogue: 0,0:41:59.02,0:42:01.02,English,,0,0,0,,But the reason why they're in that order
 Dialogue: 0,0:42:01.18,0:42:03.36,English,,0,0,0,,Which is called row major order
 Dialogue: 0,0:42:03.36,0:42:08.50,English,,0,0,0,,Because if we thought of it these terms we go through the first row and then the second row and the third row
 Dialogue: 0,0:42:09.30,0:42:19.76,English,,0,0,0,,Is precisely because of this notation
 Dialogue: 0,0:42:20.58,0:42:22.30,English,,0,0,0,,Let me write it down like this
-Dialogue: 0,0:42:23.02,0:42:28.20,English,,0,0,0,,Int of a of well
+Dialogue: 0,0:42:23.02,0:42:28.20,English,,0,0,0,,Int of A...of well
 Dialogue: 0,0:42:28.74,0:42:30.88,English,,0,0,0,,Let me just use the the one I said
-Dialogue: 0,0:42:31.98,0:42:35.16,English,,0,0,0,,We can write this out as a is a array
-Dialogue: 0,0:42:36.38,0:42:38.78,English,,0,0,0,,A free element
-Dialogue: 0,0:42:49.62,0:42:59.62,English,,0,0,0,,It's over half it's one two three I'll just put it over here
-Dialogue: 0,0:43:01.02,0:43:03.09,English,,0,0,0,,Okay so a is a three element array and
-Dialogue: 0,0:43:03.09,0:43:08.94,English,,0,0,0,,And or generalizing to this picture a is an array of our elements
-Dialogue: 0,0:43:10.16,0:43:15.26,English,,0,0,0,,This is the first element this is the second element and this is the earth element
+Dialogue: 0,0:42:31.98,0:42:35.16,English,,0,0,0,,We can write this out as A is a int array
+Dialogue: 0,0:42:36.38,0:42:38.78,English,,0,0,0,,A three element of array
+Dialogue: 0,0:42:49.62,0:42:59.62,English,,0,0,0,,It's over half it's one two three...I'll just put it over here
+Dialogue: 0,0:43:01.02,0:43:03.09,English,,0,0,0,,Okay so a is A three element array
+Dialogue: 0,0:43:03.09,0:43:08.94,English,,0,0,0,,And or generalizing to this picture A is an array of R elements
+Dialogue: 0,0:43:10.16,0:43:15.26,English,,0,0,0,,This is the first element, this is the second element and this is the earth element
 Dialogue: 0,0:43:16.14,0:43:18.70,English,,0,0,0,,But what kind of elements are those
-Dialogue: 0,0:43:21.04,0:43:36.03,English,,0,0,0,,Each is an array of five minutes
+Dialogue: 0,0:43:21.04,0:43:36.03,English,,0,0,0,,Each is an array of five ints
 Dialogue: 0,0:43:36.52,0:43:43.00,English,,0,0,0,,Alright so within array a here each subpart of a then
-Dialogue: 0,0:43:43.36,0:43:45.74,English,,0,0,0,,Is an array of C int
+Dialogue: 0,0:43:43.36,0:43:45.74,English,,0,0,0,,Is an array of c int
 Dialogue: 0,0:43:46.84,0:43:51.04,English,,0,0,0,,And so that's why logically the way these are organized
 Dialogue: 0,0:43:51.56,0:43:55.90,English,,0,0,0,,Actually comes from this declaration notation directly
 Dialogue: 0,0:43:58.44,0:44:00.16,English,,0,0,0,,And what's the examples of that
@@ -518,38 +516,38 @@ Dialogue: 0,0:44:02.00,0:44:06.44,English,,0,0,0,,So for example if I wanted to
 Dialogue: 0,0:44:07.08,0:44:12.66,English,,0,0,0,,Extend my zip_dig idea and introduce an array of four of these
 Dialogue: 0,0:44:13.02,0:44:22.12,English,,0,0,0,,I could declare it this way and again with remember I used a type def to declare zip_dig
 Dialogue: 0,0:44:22.66,0:44:24.52,English,,0,0,0,,But if I were to expand this out
-Dialogue: 0,0:44:25.44,0:44:32.12,English,,0,0,0,,It was would be as if I was declaring this array pgh to be a four rows and five columns
+Dialogue: 0,0:44:25.44,0:44:32.12,English,,0,0,0,,It was would be...if I was declaring this array pgh to be a four rows and five columns
 Dialogue: 0,0:44:32.18,0:44:35.32,English,,0,0,0,,But what it really is is array of four elements
 Dialogue: 0,0:44:35.48,0:44:40.18,English,,0,0,0,,One two three four each of which is an array of five ints
 Dialogue: 0,0:44:41.32,0:44:44.46,English,,0,0,0,,Okay so think of that nesting
 Dialogue: 0,0:44:45.06,0:44:49.02,English,,0,0,0,,When you read declarations you start from the name of the element
 Dialogue: 0,0:44:50.12,0:44:54.92,English,,0,0,0,,And you work your way outward through these brackets and stars in some order
 Dialogue: 0,0:45:01.66,0:45:06.48,English,,0,0,0,,And so in particular if I want to reference a particular element of an array
-Dialogue: 0,0:45:07.22,0:45:13.72,English,,0,0,0,,Uh the general rule is wrong here
+Dialogue: 0,0:45:07.22,0:45:13.72,English,,0,0,0,,The general rule is wrong here
 Dialogue: 0,0:45:14.12,0:45:19.02,English,,0,0,0,,Oh uh the general rule is this one
-Dialogue: 0,0:45:19.02,0:45:27.92,English,,0,0,0,,If I want to reference literally oh I'm building up to it
-Dialogue: 0,0:45:33.84,0:45:36.70,English,,0,0,0,,Uh so yes this shows that a[i]
-Dialogue: 0,0:45:37.06,0:45:44.32,English,,0,0,0,,I can actually just do the reference a[i]n't have to give a[i][j] in C
+Dialogue: 0,0:45:19.02,0:45:27.92,English,,0,0,0,,If I want to reference...literally, oh I'm building up to it
+Dialogue: 0,0:45:33.84,0:45:36.70,English,,0,0,0,,Uh so yes this shows that A[i]
+Dialogue: 0,0:45:37.06,0:45:44.32,English,,0,0,0,,I can actually just do the reference A[i],I don't have to give A[i][j] in C
 Dialogue: 0,0:45:44.64,0:45:49.60,English,,0,0,0,,And what that denotes is one of these are rows of the array
 Dialogue: 0,0:45:50.56,0:45:54.32,English,,0,0,0,,And each of which is an array of C elements of type int
 Dialogue: 0,0:45:55.92,0:46:00.64,English,,0,0,0,,And so imagine that in general we have k bytes for data type t
 Dialogue: 0,0:46:00.64,0:46:05.50,English,,0,0,0,,The underlying data type in this case of t is an int and k equals four
-Dialogue: 0,0:46:06.00,0:46:09.78,English,,0,0,0,,But in general the starting address then of row I
+Dialogue: 0,0:46:06.00,0:46:09.78,English,,0,0,0,,But in general the starting address then of row i
 Dialogue: 0,0:46:10.34,0:46:15.78,English,,0,0,0,,Would be gotten by multiplying the number of columns by k
 Dialogue: 0,0:46:16.24,0:46:23.37,English,,0,0,0,,And then multiplying that by the row number
-Dialogue: 0,0:46:23.84,0:46:28.64,English,,0,0,0,,And now if within the array I want to reference a ray element a sub ij
+Dialogue: 0,0:46:23.84,0:46:28.64,English,,0,0,0,,And now if within the array I want to reference a ray element A[i][j]
 Dialogue: 0,0:46:29.82,0:46:34.66,English,,0,0,0,,Then it comes out to this computation you take the starting address
 Dialogue: 0,0:46:35.58,0:46:38.18,English,,0,0,0,,You scale the row number by the number of columns
 Dialogue: 0,0:46:38.96,0:46:40.94,English,,0,0,0,,Add to it which column you want
 Dialogue: 0,0:46:41.28,0:46:43.82,English,,0,0,0,,And then multiply that all by k
-Dialogue: 0,0:46:44.42,0:46:50.02,English,,0,0,0,,So the way to see that is here I can get to row number I
-Dialogue: 0,0:46:50.72,0:46:57.84,English,,0,0,0,,By just scaling a I by the number of columns times the size of the elements are four
-Dialogue: 0,0:46:58.74,0:47:04.14,English,,0,0,0,,And now I want to get to the jeth element of this sub array here
+Dialogue: 0,0:46:44.42,0:46:50.02,English,,0,0,0,,So the way to see that is here,I can get to row number i
+Dialogue: 0,0:46:50.72,0:46:57.84,English,,0,0,0,,By just scaling i by the number of columns times the size of the elements are four
+Dialogue: 0,0:46:58.74,0:47:04.14,English,,0,0,0,,And now I want to get to the j element of this sub array here
 Dialogue: 0,0:47:04.76,0:47:07.49,English,,0,0,0,,And I can do that by scaling j by four
 Dialogue: 0,0:47:07.98,0:47:11.24,English,,0,0,0,,And adding it to the beginning of this sub array
 Dialogue: 0,0:47:11.92,0:47:15.18,English,,0,0,0,,And now I can just collect the force together
 Dialogue: 0,0:47:15.42,0:47:19.26,English,,0,0,0,,And that's what and pull it outside here that's what gives you this formula
-Dialogue: 0,0:47:20.96,0:47:25.14,English,,0,0,0,,So again the the point of this is that
+Dialogue: 0,0:47:20.96,0:47:25.14,English,,0,0,0,,So again the point of this is that
 Dialogue: 0,0:47:25.30,0:47:28.74,English,,0,0,0,,This all kind of is a natural outcome of the declaration
 Dialogue: 0,0:47:29.24,0:47:34.34,English,,0,0,0,,And it's easy to think of it in terms of this storage model here
 Dialogue: 0,0:47:35.36,0:47:41.80,English,,0,0,0,,Of how the actual array is allocated
@@ -559,10 +557,10 @@ Dialogue: 0,0:47:52.70,0:47:55.16,English,,0,0,0,,And now I want to create an ar
 Dialogue: 0,0:47:58.78,0:48:02.68,English,,0,0,0,,That contains that appoints to these
 Dialogue: 0,0:48:03.58,0:48:07.78,English,,0,0,0,,So this is a different data structure you'll observe from before
 Dialogue: 0,0:48:07.78,0:48:10.98,English,,0,0,0,,What univ now is an array of three pointers
-Dialogue: 0,0:48:11.92,0:48:18.16,English,,0,0,0,,And each of those pointers points to a one of these arrays of five ends
+Dialogue: 0,0:48:11.92,0:48:18.16,English,,0,0,0,,And each of those pointers points to a one of these arrays of five ints
 Dialogue: 0,0:48:24.36,0:48:30.68,English,,0,0,0,,And their underlying data type by the way of these elements are in stars right
-Dialogue: 0,0:48:32.42,0:48:34.88,English,,0,0,0,,And C does not differentiate
-Dialogue: 0,0:48:35.02,0:48:38.14,English,,0,0,0,,When you want to declare a ring like this you just say it's an int star
+Dialogue: 0,0:48:32.42,0:48:34.88,English,,0,0,0,,And c does not differentiate
+Dialogue: 0,0:48:35.02,0:48:38.14,English,,0,0,0,,When you want to declare array like this you just say it's an int star
 Dialogue: 0,0:48:38.14,0:48:43.42,English,,0,0,0,,You don't say how many elements are the underlying array is
 Dialogue: 0,0:48:44.46,0:48:48.35,English,,0,0,0,,So you'll see by these picture that these are different data structures
 Dialogue: 0,0:48:49.24,0:48:55.44,English,,0,0,0,,So now let's go through the what the assembly code looks like to reference these two data structures
@@ -570,13 +568,13 @@ Dialogue: 0,0:49:00.35,0:49:09.12,English,,0,0,0,,We didn't did we do the I'm so
 Dialogue: 0,0:49:12.10,0:49:14.42,English,,0,0,0,,Victor might be a missing slide you
 Dialogue: 0,0:49:15.02,0:49:19.20,English,,0,0,0,,So we'll see...so imagine I wanted to reference
 Dialogue: 0,0:49:24.63,0:49:28.50,English,,0,0,0,,I'm sorry I'm confused why there is no
-Dialogue: 0,0:49:47.24,0:49:51.64,English,,0,0,0,,Ah the shipping I'm sorry this is uh I'm pausing here because I think
+Dialogue: 0,0:49:47.24,0:49:51.64,English,,0,0,0,,Ah the shipping...I'm sorry this is uh I'm pausing here,because I think
 Dialogue: 0,0:49:51.98,0:49:56.08,English,,0,0,0,,I meant to have a slide that would show
 Dialogue: 0,0:49:58.38,0:50:01.16,English,,0,0,0,,What the code looks like and I don't
-Dialogue: 0,0:50:02.96,0:50:04.94,English,,0,0,0,,Okay well we're going to have to wing  it
+Dialogue: 0,0:50:02.96,0:50:04.94,English,,0,0,0,,Okay well we're going to have to wing it
 Dialogue: 0,0:50:09.66,0:50:17.40,English,,0,0,0,,So if you wanted to in assembly code then reference an element of an array
 Dialogue: 0,0:50:18.00,0:50:19.96,English,,0,0,0,,Like this a multi-dimensional array
-Dialogue: 0,0:50:19.96,0:50:26.55,English,,0,0,0,,What you'll see is that the code kind of builds up  a computation like this
+Dialogue: 0,0:50:19.96,0:50:26.55,English,,0,0,0,,What you'll see is that the code kind of builds up a computation like this
 Dialogue: 0,0:50:26.55,0:50:29.58,English,,0,0,0,,And typically in the compiled code
 Dialogue: 0,0:50:30.04,0:50:34.39,English,,0,0,0,,The value of k is a kind of a constant value
 Dialogue: 0,0:50:34.76,0:50:38.50,English,,0,0,0,,And if it's a array that's been declared with a constant bounds
@@ -585,12 +583,11 @@ Dialogue: 0,0:50:42.68,0:50:48.24,English,,0,0,0,,And so a piece of code for thi
 Dialogue: 0,0:50:48.24,0:50:54.22,English,,0,0,0,,Will basically take this value and use some combination of the memory referencing
 Dialogue: 0,0:50:54.22,0:50:57.88,English,,0,0,0,,And shifting and lea instructions and so forth
 Dialogue: 0,0:50:58.40,0:51:01.96,English,,0,0,0,,To implement this computation and then do a dereference
-Dialogue: 0,0:51:03.90,0:51:06.36,English,,0,0,0,,So let's look at this second example and
-Dialogue: 0,0:51:06.40,0:51:09.34,English,,0,0,0,,There is code for this and it's actually a little bit more complex
+Dialogue: 0,0:51:03.90,0:51:09.34,English,,0,0,0,,So let's look at this second example and there is code for this and it's actually a little bit more complex
 Dialogue: 0,0:51:09.46,0:51:12.58,English,,0,0,0,,Because this is going through two levels of indirection
 Dialogue: 0,0:51:13.82,0:51:20.62,English,,0,0,0,,So you'll see that to get the digit
 Dialogue: 0,0:51:21.18,0:51:27.66,English,,0,0,0,,A a particular digit from a particular one of these of universities then
-Dialogue: 0,0:51:29.20,0:51:32.66,English,,0,0,0,,It has to first of all figure out i
+Dialogue: 0,0:51:29.20,0:51:32.66,English,,0,0,0,,It has to first of all figure out 
 Dialogue: 0,0:51:33.22,0:51:38.66,English,,0,0,0,,Do this dereference is get the a pointer to the beginning of the array
 Dialogue: 0,0:51:39.32,0:51:41.70,English,,0,0,0,,And that's what this reference is doing here
 Dialogue: 0,0:51:48.78,0:51:53.14,English,,0,0,0,,Oh okay but first of all what it's doing is shifting %rsi
@@ -598,7 +595,7 @@ Dialogue: 0,0:51:53.86,0:51:59.68,English,,0,0,0,,I left by two which is equival
 Dialogue: 0,0:52:00.20,0:52:06.62,English,,0,0,0,,Because it's getting ready to take that digit of parameter and scale it appropriately
 Dialogue: 0,0:52:09.02,0:52:14.22,English,,0,0,0,,And then it takes that number and it adds to it
 Dialogue: 0,0:52:17.18,0:52:24.64,English,,0,0,0,,The value I get by reading from there the array univ
-Dialogue: 0,0:52:25.52,0:52:32.90,English,,0,0,0,,But using a the index scaling it by eight  to actually do a memory reference
+Dialogue: 0,0:52:25.52,0:52:32.90,English,,0,0,0,,But using a the index scaling it by eight to actually do a memory reference
 Dialogue: 0,0:52:33.30,0:52:35.22,English,,0,0,0,,So remember this instruction then
 Dialogue: 0,0:52:35.50,0:52:38.70,English,,0,0,0,,And it looks a little weird is actually doing a memory reference here
 Dialogue: 0,0:52:39.28,0:52:42.44,English,,0,0,0,,Of this three element array of called univ
@@ -606,9 +603,9 @@ Dialogue: 0,0:52:43.38,0:52:48.58,English,,0,0,0,,So it's reading from memory an
 Dialogue: 0,0:52:49.02,0:52:50.82,English,,0,0,0,,And now getting from that a pointer
 Dialogue: 0,0:52:52.00,0:52:57.06,English,,0,0,0,,Adding to that the the scaled value of of the digit
 Dialogue: 0,0:52:58.38,0:53:01.98,English,,0,0,0,,And so that gives me a pointer now as this notation shows
-Dialogue: 0,0:53:05.96,0:53:11.60,English,,0,0,0,,To to the particular element I want and now it does a dereference
+Dialogue: 0,0:53:05.96,0:53:11.60,English,,0,0,0,,To the particular element I want and now it does a dereference
 Dialogue: 0,0:53:12.84,0:53:17.60,English,,0,0,0,,So that's a pretty tough example to get as you're one of your first array ones
-Dialogue: 0,0:53:22.76,0:53:30.60,English,,0,0,0,,And as I said I apologize for missing the  reference to a particular element of this array
+Dialogue: 0,0:53:22.76,0:53:30.60,English,,0,0,0,,And as I said I apologize for missing the reference to a particular element of this array
 Dialogue: 0,0:53:30.98,0:53:35.90,English,,0,0,0,,Is done entirely by computing scaling indices in appropriate ways
 Dialogue: 0,0:53:35.90,0:53:44.10,English,,0,0,0,,You want to take the array and scale the first index by 20
 Dialogue: 0,0:53:44.10,0:53:47.84,English,,0,0,0,,Because each row is 20 elements it's 5 times 4
@@ -617,48 +614,48 @@ Dialogue: 0,0:53:55.74,0:54:02.04,English,,0,0,0,,And so you all this address co
 Dialogue: 0,0:54:02.84,0:54:06.16,English,,0,0,0,,Whereas in this data structure you have to go through to memory references
 Dialogue: 0,0:54:06.32,0:54:10.46,English,,0,0,0,,First of all to you have to index and get the appropriate element here
 Dialogue: 0,0:54:10.92,0:54:12.50,English,,0,0,0,,But that's just a pointer
-Dialogue: 0,0:54:12.82,0:54:20.72,English,,0,0,0,,Now and then we add an offset to that pointer to get the appropriate element in this array here  and then we read from that
-Dialogue: 0,0:54:21.22,0:54:26.50,English,,0,0,0,,So that's what this notation means is that I'm doing two memory references here  and just one there
+Dialogue: 0,0:54:12.82,0:54:20.72,English,,0,0,0,,Now and then we add an offset to that pointer to get the appropriate element in this array here and then we read from that
+Dialogue: 0,0:54:21.22,0:54:26.50,English,,0,0,0,,So that's what this notation means is that I'm doing two memory references here and just one there
 Dialogue: 0,0:54:26.96,0:54:31.56,English,,0,0,0,,And it's a little bit curious because if you look at the C code  it looks the same
 Dialogue: 0,0:54:32.30,0:54:36.20,English,,0,0,0,,But the underlying data types are different and so the references are different
 Dialogue: 0,0:54:40.70,0:54:45.56,English,,0,0,0,,Okay so let's look at some other variations on this code
 Dialogue: 0,0:54:45.64,0:54:50.80,English,,0,0,0,,And these are all will sort of fall out from these general principles I've described
 Dialogue: 0,0:54:51.90,0:54:56.56,English,,0,0,0,,So first of all let's introduce an array a two by two
-Dialogue: 0,0:54:56.88,0:54:59.82,English,,0,0,0,,I'm sorry sixteen by sixteen array of intz
+Dialogue: 0,0:54:56.88,0:54:59.82,English,,0,0,0,,I'm sorry sixteen by sixteen array of ints
 Dialogue: 0,0:55:01.00,0:55:06.70,English,,0,0,0,,And it used to be and see if you wanted to do multi-dimensional arrays
 Dialogue: 0,0:55:06.72,0:55:09.85,English,,0,0,0,,Where the size of the array was not fixed at compile time
 Dialogue: 0,0:55:10.28,0:55:14.24,English,,0,0,0,,You basically had to implement your own version of that computation
-Dialogue: 0,0:55:14.26,0:55:24.99,English,,0,0,0,,I showed before of scaling the the row number by the number of columns  and adding to it j
+Dialogue: 0,0:55:14.26,0:55:24.99,English,,0,0,0,,I showed before of scaling the row number by the number of columns and adding to j
 Dialogue: 0,0:55:25.86,0:55:29.92,English,,0,0,0,,So this is sort of classic C I've written it as a macro here but you can see it
 Dialogue: 0,0:55:30.46,0:55:35.88,English,,0,0,0,,It's just doing the row major scaling directly here is address arithmetic
 Dialogue: 0,0:55:36.58,0:55:40.94,English,,0,0,0,,Now since a more recent generation of the C compiler
-Dialogue: 0,0:55:41.38,0:55:46.24,English,,0,0,0,,What they call c99 it was introduced in 1999
+Dialogue: 0,0:55:41.38,0:55:46.24,English,,0,0,0,,What they call C99 it was introduced in 1999
 Dialogue: 0,0:55:47.44,0:55:54.84,English,,0,0,0,,Um you can actually pass as a parameter an array
-Dialogue: 0,0:55:55.34,0:56:00.30,English,,0,0,0,,Where the number of elements in the array  is also a parameter
+Dialogue: 0,0:55:55.34,0:56:00.30,English,,0,0,0,,Where the number of elements in the array is also a parameter
 Dialogue: 0,0:56:00.62,0:56:03.91,English,,0,0,0,,That's being passed to the the function
 Dialogue: 0,0:56:04.34,0:56:07.92,English,,0,0,0,,And similarly you can declare an array to be of n elements
 Dialogue: 0,0:56:07.92,0:56:12.06,English,,0,0,0,,As long as n has been computed before it hit set array declaration
 Dialogue: 0,0:56:12.42,0:56:16.74,English,,0,0,0,,And the compiler will do the right thing it will allocate the proper number of elements
-Dialogue: 0,0:56:24.36,0:56:28.80,English,,0,0,0,,Um so let's just look at some of this code examples
+Dialogue: 0,0:56:24.36,0:56:28.80,English,,0,0,0,,Let's just look at some of this code examples
 Dialogue: 0,0:56:33.34,0:56:35.54,English,,0,0,0,,And again what we'll see here and
 Dialogue: 0,0:56:35.58,0:56:42.06,English,,0,0,0,,This will show you an example of the tutor the the kind of address computation that takes place with a two-dimensional array
-Dialogue: 0,0:56:43.24,0:56:46.28,English,,0,0,0,,In this case I know C is 16 and k is 4
-Dialogue: 0,0:56:46.72,0:56:52.23,English,,0,0,0,,So if I want to get element I sub j ij out of this array
-Dialogue: 0,0:56:53.04,0:56:58.56,English,,0,0,0,,Then first of all scale I by 64
+Dialogue: 0,0:56:43.24,0:56:46.28,English,,0,0,0,,In this case I know C is 16 and K is 4
+Dialogue: 0,0:56:46.72,0:56:52.23,English,,0,0,0,,So if I want to get element i sub j,i j out of this array
+Dialogue: 0,0:56:53.04,0:56:58.56,English,,0,0,0,,Then first of all scale i by 64
 Dialogue: 0,0:56:59.84,0:57:05.55,English,,0,0,0,,Because that's and I'll add that to the base
-Dialogue: 0,0:57:06.32,0:57:13.52,English,,0,0,0,,And then I'll scale our dx by 4 that's j and and add it to this array
+Dialogue: 0,0:57:06.32,0:57:13.52,English,,0,0,0,,And then I'll scale %rdx by 4 that's j and and add it to this array
 Dialogue: 0,0:57:13.78,0:57:16.08,English,,0,0,0,,And so and then do a memory reference there
 Dialogue: 0,0:57:16.16,0:57:21.94,English,,0,0,0,,So in the end I'm doing you see these two instructions have done the appropriate
-Dialogue: 0,0:57:23.22,0:57:27.24,English,,0,0,0,,The three instructions have done the appropriate scaling of I and j
+Dialogue: 0,0:57:23.22,0:57:27.24,English,,0,0,0,,The three instructions have done the appropriate scaling of i and j
 Dialogue: 0,0:57:27.70,0:57:32.06,English,,0,0,0,,Added them to the beginning address of a and done the computation
-Dialogue: 0,0:57:33.84,0:57:37.98,English,,0,0,0,,On the other hand if it's a
+Dialogue: 0,0:57:33.84,0:57:37.98,English,,0,0,0,,On the other hand if it's a...
 Dialogue: 0,0:57:39.78,0:57:44.10,English,,0,0,0,,1 the third example I showed where n is a parameter
 Dialogue: 0,0:57:44.20,0:57:47.06,English,,0,0,0,,That's passed to the function so it's not known at compile time
 Dialogue: 0,0:57:47.76,0:57:50.28,English,,0,0,0,,How big a scaling factor to use
 Dialogue: 0,0:57:50.74,0:57:54.12,English,,0,0,0,,You'll see that it has to use a multiply instruction to do that
 Dialogue: 0,0:57:54.68,0:57:59.28,English,,0,0,0,,Which is a relatively expensive instruction in terms of performance
 Dialogue: 0,0:58:00.00,0:58:03.70,English,,0,0,0,,Well and then once it has that that's just n times I
-Dialogue: 0,0:58:04.10,0:58:07.94,English,,0,0,0,,And then it uses various combinations of lea's
+Dialogue: 0,0:58:04.10,0:58:07.94,English,,0,0,0,,And then it uses various combinations of lea
 Dialogue: 0,0:58:07.94,0:58:10.44,English,,0,0,0,,And the scaling notation from before
 Dialogue: 0,0:58:11.06,0:58:15.26,English,,0,0,0,,To compute an appropriate offset into the array to do the reference
 Dialogue: 0,0:58:17.26,0:58:19.74,English,,0,0,0,,So here I could do it with a shift
@@ -668,10 +665,10 @@ Dialogue: 0,0:58:43.14,0:58:55.78,English,,0,0,0,,Here's an example I was going 
 Dialogue: 0,0:59:00.44,0:59:02.74,English,,0,0,0,,But let's move on to pointers oh it just drugs
 Dialogue: 0,0:59:05.88,0:59:09.08,English,,0,0,0,,So the idea of a struct is actually quite simple
 Dialogue: 0,0:59:09.48,0:59:12.86,English,,0,0,0,,Oh well the base idea is simple and it gets more complicated
-Dialogue: 0,0:59:13.58,0:59:21.00,English,,0,0,0,,Oh the idea of it is I want to I declare a struct to have some number of fields
-Dialogue: 0,0:59:21.00,0:59:28.74,English,,0,0,0,,Each of which can be an int or it could be in this case a pointer  or it could be an array itself
+Dialogue: 0,0:59:13.58,0:59:21.00,English,,0,0,0,,Oh the idea of it is I want to...I declare a struct to have some number of fields
+Dialogue: 0,0:59:21.00,0:59:28.74,English,,0,0,0,,Each of which can be an int or could be in this case a pointer or could be an array itself
 Dialogue: 0,0:59:29.44,0:59:33.00,English,,0,0,0,,But the rule is basically what I'll do is allocate enough space
-Dialogue: 0,0:59:34.30,0:59:41.98,English,,0,0,0,,If I introduce one of these trucks for all the different array elements fields and that our struct
+Dialogue: 0,0:59:34.30,0:59:41.98,English,,0,0,0,,If I introduce one of these structs for all the different array elements fields that struct
 Dialogue: 0,0:59:42.68,0:59:49.58,English,,0,0,0,,And then I'll basically keep track the compiler will keep track of where each of these fields starts
 Dialogue: 0,0:59:50.42,0:59:54.22,English,,0,0,0,,And generate the appropriate code to offset from the beginning
 Dialogue: 0,0:59:54.50,0:59:59.20,English,,0,0,0,,So the structure itself the reference to it will be the beginning address of the struct
@@ -679,39 +676,39 @@ Dialogue: 0,0:59:59.46,1:00:03.20,English,,0,0,0,,And then I'll use appropriate 
 Dialogue: 0,1:00:06.58,1:00:10.98,English,,0,0,0,,So here's an example of some code
 Dialogue: 0,1:00:10.98,1:00:18.14,English,,0,0,0,,Imagine I have a struct a pointer to one of these structures
 Dialogue: 0,1:00:19.22,1:00:23.32,English,,0,0,0,,And I have an index and what I want to do is get to the that
-Dialogue: 0,1:00:24.04,1:00:30.50,English,,0,0,0,,Appropriate part of array a  within this struct
+Dialogue: 0,1:00:24.04,1:00:30.50,English,,0,0,0,,Appropriate part of array a within this struct
 Dialogue: 0,1:00:30.94,1:00:33.66,English,,0,0,0,,Well array a is right at the beginning of the structure
 Dialogue: 0,1:00:33.70,1:00:36.96,English,,0,0,0,,So I can treat this just like I would any array reference
 Dialogue: 0,1:00:37.52,1:00:43.26,English,,0,0,0,,Of scaling id x by 4 and adding it to the base  to get the appropriate element
 Dialogue: 0,1:00:43.30,1:00:46.48,English,,0,0,0,,So I don't really have to do anything special for this one
-Dialogue: 0,1:00:47.76,1:00:54.82,English,,0,0,0,,Let's look at some other code that you'll typically see  actually this example is pretty involved
+Dialogue: 0,1:00:47.76,1:00:54.82,English,,0,0,0,,Let's look at some other code that you'll typically see actually this example is pretty involved
 Dialogue: 0,1:00:57.12,1:01:01.46,English,,0,0,0,,So I'm actually doing a whole bunch of stuff here with this one struct
-Dialogue: 0,1:01:01.74,1:01:06.34,English,,0,0,0,,First of all I'm trying to retrieve element I from the structure
+Dialogue: 0,1:01:01.74,1:01:06.34,English,,0,0,0,,First of all I'm trying to retrieve element i from the structure
 Dialogue: 0,1:01:07.30,1:01:13.70,English,,0,0,0,,Then I'm using that to index into array a
 Dialogue: 0,1:01:13.72,1:01:16.70,English,,0,0,0,,And and insert a value into there
 Dialogue: 0,1:01:18.06,1:01:23.28,English,,0,0,0,,And then I'm updating this pointer to point to the next
-Dialogue: 0,1:01:27.04,1:01:32.72,English,,0,0,0,,I'm I'm I'm if this were a link twist what I want to do is step to the next over the list
+Dialogue: 0,1:01:27.04,1:01:32.72,English,,0,0,0,,I'm...if this were a link twist what I want to do is step to the next over the list
 Dialogue: 0,1:01:33.34,1:01:38.18,English,,0,0,0,,So I need to retrieve the next field from here
 Dialogue: 0,1:01:38.72,1:01:42.94,English,,0,0,0,,And so these in so I'm actually making three references to this structure
 Dialogue: 0,1:01:42.96,1:01:46.98,English,,0,0,0,,In this one rather small function so let's try and figure it all out
-Dialogue: 0,1:01:49.70,1:01:53.22,English,,0,0,0,,So first of all I have to retrieve element I from it
-Dialogue: 0,1:01:53.22,1:01:57.40,English,,0,0,0,,And here you see that we know that element I is it offset 16
+Dialogue: 0,1:01:49.70,1:01:53.22,English,,0,0,0,,So first of all I have to retrieve element i from it
+Dialogue: 0,1:01:53.22,1:01:57.40,English,,0,0,0,,And here you see that we know that element i is it offset 16
 Dialogue: 0,1:01:58.32,1:02:03.54,English,,0,0,0,,And so if and here's where you see that displacement field being used in the memory reference
-Dialogue: 0,1:02:03.66,1:02:10.22,English,,0,0,0,,Exactly for this purpose I want to take r but add 16 to it to get a memory address
-Dialogue: 0,1:02:10.78,1:02:15.90,English,,0,0,0,,That I can use for for i
-Dialogue: 0,1:02:19.42,1:02:22.70,English,,0,0,0,,And you see it actually uses move
-Dialogue: 0,1:02:22.70,1:02:25.30,English,,0,0,0,,Because I itself is an int
+Dialogue: 0,1:02:03.66,1:02:10.22,English,,0,0,0,,Exactly for this purpose I want to take r, but add 16 to it to get a memory address
+Dialogue: 0,1:02:10.78,1:02:15.90,English,,0,0,0,,That I can use for i
+Dialogue: 0,1:02:19.42,1:02:22.70,English,,0,0,0,,And you see it actually uses movq
+Dialogue: 0,1:02:22.70,1:02:25.30,English,,0,0,0,,Because i itself is an int
 Dialogue: 0,1:02:26.94,1:02:28.80,English,,0,0,0,,But I'm going to use it as an array index
 Dialogue: 0,1:02:29.20,1:02:32.42,English,,0,0,0,,In which case I have to scale it
 Dialogue: 0,1:02:33.00,1:02:36.68,English,,0,0,0,,I have to do a just arithmetic using 8 byte quantities
 Dialogue: 0,1:02:37.20,1:02:42.04,English,,0,0,0,,So this actually retrieves the four byte value and does a sign extension on it
 Dialogue: 0,1:02:45.48,1:02:53.48,English,,0,0,0,,And now what I want to do is store at a val at a element i
-Dialogue: 0,1:02:53.84,1:03:05.00,English,,0,0,0,,And so here you'll see that it's using %rax is the value of just computed for  I scaling by 4
-Dialogue: 0,1:03:05.92,1:03:13.58,English,,0,0,0,,And using the starting address of the r which happens to be the starting address of a as well  and doing a store
+Dialogue: 0,1:02:53.84,1:03:05.00,English,,0,0,0,,And so here you'll see that it's using %rax is the value of just computed for i scaling by 4
+Dialogue: 0,1:03:05.92,1:03:13.58,English,,0,0,0,,And using the starting address of the r which happens to be the starting address of a as well and doing a store
 Dialogue: 0,1:03:13.64,1:03:16.52,English,,0,0,0,,So that's sort of an array operation there
-Dialogue: 0,1:03:18.00,1:03:28.14,English,,0,0,0,,And then the next part is I'm going to offset 24  which is the position of next
+Dialogue: 0,1:03:18.00,1:03:28.14,English,,0,0,0,,And then the next part is I'm going to offset 24 which is the position of next
 Dialogue: 0,1:03:29.08,1:03:35.40,English,,0,0,0,,Read from that location and store that in %rdi which is a r
-Dialogue: 0,1:03:36.04,1:03:39.08,English,,0,0,0,,So this is the operation argit's our arrow next
+Dialogue: 0,1:03:36.04,1:03:39.08,English,,0,0,0,,So this is the operation r->next
 Dialogue: 0,1:03:39.96,1:03:44.42,English,,0,0,0,,And then the loop is I'm testing until r is null so that's going on here
 Dialogue: 0,1:03:45.24,1:03:52.86,English,,0,0,0,,So you see that those three references to the struct were implemented using three instructions here
 Dialogue: 0,1:03:52.92,1:03:58.86,English,,0,0,0,,So it's a very direct mapping between the the code here and the x86 instructions
@@ -719,16 +716,16 @@ Dialogue: 0,1:03:59.32,1:04:05.10,English,,0,0,0,,And part of the x86 instructio
 Dialogue: 0,1:04:05.50,1:04:10.18,English,,0,0,0,,They kind of made the instructions map very directly toward these operations
 Dialogue: 0,1:04:11.46,1:04:19.04,English,,0,0,0,,And now you should probably see why all the bells and whistles are there for these address references
 Dialogue: 0,1:04:19.18,1:04:19.70,English,,0,0,0,,Question
-Dialogue: 0,1:04:20.02,1:04:27.70,English,,0,0,0,,What if I was three
+Dialogue: 0,1:04:20.02,1:04:27.70,English,,0,0,0,,What if i was three
 Dialogue: 0,1:04:27.72,1:04:31.92,English,,0,0,0,,I'm sorry
-Dialogue: 0,1:04:31.94,1:04:36.28,English,,0,0,0,,Oh a had a eyes three elements
+Dialogue: 0,1:04:31.94,1:04:36.28,English,,0,0,0,,Oh a had three elements
 Dialogue: 0,1:04:36.28,1:04:38.86,English,,0,0,0,,Yes it will access...
-Dialogue: 0,1:04:42.20,1:04:46.90,English,,0,0,0,,Make sure I think that's a typo hey is supposed to be for
-Dialogue: 0,1:04:47.40,1:04:49.48,English,,0,0,0,,Its it with
-Dialogue: 0,1:04:49.82,1:04:53.66,English,,0,0,0,,Them so if I is for it would access itself yeah  and it would mess things up
-Dialogue: 0,1:04:54.20,1:04:58.20,English,,0,0,0,,Question this is a typo by the way it should be air for
+Dialogue: 0,1:04:42.20,1:04:46.90,English,,0,0,0,,Make sure I think that's a typo,hey is supposed to be for
+Dialogue: 0,1:04:47.40,1:04:49.48,English,,0,0,0,,[student speaking]
+Dialogue: 0,1:04:49.82,1:04:53.66,English,,0,0,0,,So if i is four, it would access itself yeah and it would mess things up
+Dialogue: 0,1:04:54.20,1:04:58.20,English,,0,0,0,,Question this is a typo by the way it should be air four
 Dialogue: 0,1:04:58.66,1:05:05.27,English,,0,0,0,,Yes a null pointer i
-Dialogue: 0,1:05:05.27,1:05:08.90,English,,0,0,0,,Know is a zero
+Dialogue: 0,1:05:05.27,1:05:08.90,English,,0,0,0,,Null is a zero
 Dialogue: 0,1:05:13.18,1:05:17.88,English,,0,0,0,,Um so that's sort of the easy version of structs now let's make them a little harder
 Dialogue: 0,1:05:18.60,1:05:21.74,English,,0,0,0,,One is for reasons that are a bit obscure
 Dialogue: 0,1:05:23.82,1:05:30.12,English,,0,0,0,,The machine generally prefers that if you have a data type and underlying data type of k bytes
@@ -737,7 +734,7 @@ Dialogue: 0,1:05:35.98,1:05:41.12,English,,0,0,0,,And so that introduces a prope
 Dialogue: 0,1:05:41.86,1:05:45.72,English,,0,0,0,,Which well actually when a structure gets allocated
 Dialogue: 0,1:05:46.00,1:05:52.56,English,,0,0,0,,Well the the compiler will actually insert some blank unused bytes in the data structure
 Dialogue: 0,1:05:53.30,1:05:57.20,English,,0,0,0,,In its allocation just so that it can maintain this alignment
-Dialogue: 0,1:05:57.78,1:06:02.20,English,,0,0,0,,So for example here I is a as an int
+Dialogue: 0,1:05:57.78,1:06:02.20,English,,0,0,0,,So for example here i is an int
 Dialogue: 0,1:06:03.04,1:06:05.94,English,,0,0,0,,And I want its address to be a multiple of four
 Dialogue: 0,1:06:06.36,1:06:09.90,English,,0,0,0,,I'll give you a minute why that's true
 Dialogue: 0,1:06:11.06,1:06:12.74,English,,0,0,0,,I just so trust me for a minute
@@ -750,30 +747,30 @@ Dialogue: 0,1:06:31.14,1:06:37.20,English,,0,0,0,,And it should reside on a boun
 Dialogue: 0,1:06:38.12,1:06:41.54,English,,0,0,0,,And you'll see as long as this is eight a multiple of 8
 Dialogue: 0,1:06:42.00,1:06:44.34,English,,0,0,0,,And this offset here is a multiple of 8
 Dialogue: 0,1:06:44.90,1:06:46.76,English,,0,0,0,,Then this address will be a multiple of eight
-Dialogue: 0,1:06:47.66,1:06:49.60,English,,0,0,0,,So that's an idea of alignment
+Dialogue: 0,1:06:47.66,1:06:49.60,English,,0,0,0,,That's an idea of alignment
 Dialogue: 0,1:06:51.68,1:06:55.68,English,,0,0,0,,And so why is that true well it's really a hardware issue that
 Dialogue: 0,1:06:56.10,1:07:02.82,English,,0,0,0,,The memory system instead of the actual hardware memory does not reference
 Dialogue: 0,1:07:02.82,1:07:10.28,English,,0,0,0,,One byte at a time it references actually in most machines nowadays about 64 bytes at a time
-Dialogue: 0,1:07:10.66,1:07:14.20,English,,0,0,0,,Or depending on various widths within the the hardware
+Dialogue: 0,1:07:10.66,1:07:14.20,English,,0,0,0,,Or depending on various widths within the hardware
 Dialogue: 0,1:07:14.72,1:07:18.74,English,,0,0,0,,And in general with if a particular piece of data across
-Dialogue: 0,1:07:19.16,1:07:22.76,English,,0,0,0,,--is the boundaries between two blocks that are
+Dialogue: 0,1:07:19.16,1:07:22.76,English,,0,0,0,,The boundaries between two blocks that are
 Dialogue: 0,1:07:23.24,1:07:27.88,English,,0,0,0,,Because of a misaligned address that will take x your steps by the hardware
-Dialogue: 0,1:07:27.88,1:07:29.84,English,,0,0,0,,And potentially even the operating system
-Dialogue: 0,1:07:30.08,1:07:35.88,English,,0,0,0,,To deal with so just for efficiency reason they say  do this alignment trust me
+Dialogue: 0,1:07:27.88,1:07:30.90,English,,0,0,0,,And potentially even the operating system to deal with 
+Dialogue: 0,1:07:31.02,1:07:35.88,English,,0,0,0,,So just for efficiency reason they say do this alignment trust me
 Dialogue: 0,1:07:36.37,1:07:41.88,English,,0,0,0,,In x86 machines if you have unaligned data it will execute just fine
 Dialogue: 0,1:07:41.90,1:07:43.98,English,,0,0,0,,It just might run a little bit more slowly
 Dialogue: 0,1:07:44.28,1:07:50.62,English,,0,0,0,,On some other machines if you try to do an unwind access it will actually cause a memory fault
 Dialogue: 0,1:07:51.52,1:07:57.08,English,,0,0,0,,Question yes the
-Dialogue: 0,1:08:02.56,1:08:06.00,English,,0,0,0,,Cecum the question was how could you force it to generate unaligned data
+Dialogue: 0,1:08:02.56,1:08:06.00,English,,0,0,0,,The question was how could you force it to generate unaligned data
 Dialogue: 0,1:08:06.62,1:08:09.26,English,,0,0,0,,I don't know if you could
 Dialogue: 0,1:08:09.94,1:08:19.08,English,,0,0,0,,And we'll talk about ways you can sort of be more clever in how you do your allocation to avoid wasting space
 Dialogue: 0,1:08:21.26,1:08:23.54,English,,0,0,0,,So in general then we have
-Dialogue: 0,1:08:23.92,1:08:30.16,English,,0,0,0,,We're mostly looking here at data types that are either 1 2 or 4 8 bytes long
+Dialogue: 0,1:08:23.92,1:08:30.16,English,,0,0,0,,We're mostly looking here at data types that are either 1,2 or 4,8 bytes long
 Dialogue: 0,1:08:30.66,1:08:33.66,English,,0,0,0,,There are some 16 byte data types
 Dialogue: 0,1:08:34.08,1:08:35.94,English,,0,0,0,,But we won't be looking at those
 Dialogue: 0,1:08:36.54,1:08:42.46,English,,0,0,0,,And in general with the address then you can tell the alignment of an address by how many zeros
 Dialogue: 0,1:08:43.10,1:08:49.08,English,,0,0,0,,If it's a power of 2 alignment how many zeros are at the end of a bit level representation of that address
-Dialogue: 0,1:08:50.92,1:08:58.14,English,,0,0,0,,And so as we showed in general the C compiler when it's creating the layout for a structure  a struct
+Dialogue: 0,1:08:50.92,1:08:58.14,English,,0,0,0,,And so as we showed in general the C compiler when it's creating the layout for a structure a struct
 Dialogue: 0,1:08:58.42,1:09:03.80,English,,0,0,0,,Will put in padding bytes in there to make the alignment work
 Dialogue: 0,1:09:05.64,1:09:08.60,English,,0,0,0,,Oh the other thing it will do is if it need be
 Dialogue: 0,1:09:09.34,1:09:14.70,English,,0,0,0,,It will add bytes to the end to make sure that the overall size of the data structure meets
@@ -784,12 +781,12 @@ Dialogue: 0,1:09:36.48,1:09:43.74,English,,0,0,0,,Then if I can assume that if I
 Dialogue: 0,1:09:44.54,1:09:51.38,English,,0,0,0,,Then you can see that each successive element of this array of these trucks  is a multiple of eight
 Dialogue: 0,1:09:51.84,1:09:57.08,English,,0,0,0,,And then within that struct I've ensured that each field that requires an alignment by eight
 Dialogue: 0,1:09:57.76,1:10:01.78,English,,0,0,0,,Is a positioned with an offset that's a multiple of eight
-Dialogue: 0,1:10:02.20,1:10:07.42,English,,0,0,0,,And so it all works out but if you try to tinker with this  by making this too short
+Dialogue: 0,1:10:02.20,1:10:07.42,English,,0,0,0,,And so it all works out but if you try to tinker with this by making this too short
 Dialogue: 0,1:10:08.00,1:10:10.40,English,,0,0,0,,Then you start getting misaligned references
-Dialogue: 0,1:10:19.18,1:10:25.48,English,,0,0,0,,And so one thing you'll see is for every struck the actual alignment requirement depends on
+Dialogue: 0,1:10:19.18,1:10:25.48,English,,0,0,0,,And so one thing you'll see is for every struct the actual alignment requirement depends on
 Dialogue: 0,1:10:26.02,1:10:30.90,English,,0,0,0,,What's the sort of worst-case alignment the the maximum alignment of any element
 Dialogue: 0,1:10:31.44,1:10:33.78,English,,0,0,0,,So this particular structure for example
-Dialogue: 0,1:10:34.28,1:10:41.90,English,,0,0,0,,Contains a float v which has a size of four  and so this would be an alignment of four
+Dialogue: 0,1:10:34.28,1:10:41.90,English,,0,0,0,,Contains a float v which has a size of four and so this would be an alignment of four
 Dialogue: 0,1:10:44.40,1:10:46.18,English,,0,0,0,,And you'll see in the code
 Dialogue: 0,1:10:46.76,1:10:52.34,English,,0,0,0,,In general when it has two this all this address arithmetic
 Dialogue: 0,1:10:52.34,1:10:59.96,English,,0,0,0,,We've seen gets used in various different ways to scale values compute offsets and so forth to get the appropriate elements
@@ -798,17 +795,17 @@ Dialogue: 0,1:11:07.82,1:11:12.94,English,,0,0,0,,And the better way is to decla
 Dialogue: 0,1:11:12.98,1:11:16.04,English,,0,0,0,,In a way that minimizes the amount of wasted space
 Dialogue: 0,1:11:17.00,1:11:20.24,English,,0,0,0,,So for example here
 Dialogue: 0,1:11:20.46,1:11:24.93,English,,0,0,0,,I wasted three bytes here and three bytes here to meet the alignment requirements
-Dialogue: 0,1:11:25.50,1:11:29.04,English,,0,0,0,,But if I just put I at the beginning and then C and d
+Dialogue: 0,1:11:25.50,1:11:29.04,English,,0,0,0,,But if I just put i at the beginning and then c and d
 Dialogue: 0,1:11:29.46,1:11:31.42,English,,0,0,0,,I would have only wasted two bytes total
 Dialogue: 0,1:11:32.48,1:11:37.54,English,,0,0,0,,And in general because all the alignment requirements are powers of two
 Dialogue: 0,1:11:38.08,1:11:42.94,English,,0,0,0,,The sort of greedy algorithm works it says if I just take put the biggest stuff at the beginning
 Dialogue: 0,1:11:43.34,1:11:45.51,English,,0,0,0,,And then successfully smaller elements
 Dialogue: 0,1:11:45.84,1:11:48.94,English,,0,0,0,,I will be able to minimize any wasted space
 Dialogue: 0,1:11:50.88,1:11:54.58,English,,0,0,0,,And that's a general property but
-Dialogue: 0,1:11:54.64,1:11:59.62,English,,0,0,0,,This is a case where you is the writer of C code  have that effect
+Dialogue: 0,1:11:54.64,1:11:59.62,English,,0,0,0,,This is a case where you is the writer of C code have that effect
 Dialogue: 0,1:11:59.86,1:12:02.62,English,,0,0,0,,If the compiler will not do this for you automatically
 Dialogue: 0,1:12:02.62,1:12:09.20,English,,0,0,0,,-question -what about the case of having in under ray -what's that
-Dialogue: 0,1:12:10.12,1:12:15.32,English,,0,0,0,,Oh but remember an array I don't care about the array I care about the elements of the array
+Dialogue: 0,1:12:10.12,1:12:15.32,English,,0,0,0,,Oh but remember an array I don't care about the array, I care about the elements of the array
 Dialogue: 0,1:12:15.86,1:12:22.94,English,,0,0,0,,Because this is only down at the lowest level where I'm accessing either a single int a single double or a pointer
 Dialogue: 0,1:12:23.38,1:12:28.50,English,,0,0,0,,And not all the rest of this stuff remember I never read an entire array from memory
 Dialogue: 0,1:12:29.06,1:12:34.80,English,,0,0,0,,So alignment only refers down to the most the primitive types not the aggregate types
@@ -817,46 +814,45 @@ Dialogue: 0,1:12:44.12,1:12:46.88,English,,0,0,0,,So let me just finish up with 
 Dialogue: 0,1:12:49.68,1:12:56.39,English,,0,0,0,,A floating point is a complicated history in x86 how back in the really ancient days
 Dialogue: 0,1:12:56.39,1:13:01.82,English,,0,0,0,,There was a chip that went with the 8086 processor called the 8087
 Dialogue: 0,1:13:02.76,1:13:10.62,English,,0,0,0,,And at the time it was a masterpiece of engineering to be able to complete all the hardware necessary to implement
-Dialogue: 0,1:13:11.12,1:13:14.06,English,,0,0,0,,For ieee floating point on a single chip
+Dialogue: 0,1:13:11.12,1:13:14.06,English,,0,0,0,,For IEEE floating point on a single chip
 Dialogue: 0,1:13:15.60,1:13:18.22,English,,0,0,0,,And it was the first one of its type
-Dialogue: 0,1:13:18.60,1:13:23.90,English,,0,0,0,,In fact it was a sort of co-developed with the ieee floating point standard itself
+Dialogue: 0,1:13:18.60,1:13:23.90,English,,0,0,0,,In fact it was a sort of co-developed with the IEEE floating point standard itself
 Dialogue: 0,1:13:24.80,1:13:28.90,English,,0,0,0,,But the programming model for it is horrendously awful and ugly
 Dialogue: 0,1:13:29.28,1:13:32.96,English,,0,0,0,,I used to in older editions of the book there were
 Dialogue: 0,1:13:33.34,1:13:37.20,English,,0,0,0,,It was in the first edition it was in a web aside in the second edition
 Dialogue: 0,1:13:37.46,1:13:41.50,English,,0,0,0,,And now it's been expunged completely because it's so awful
 Dialogue: 0,1:13:42.22,1:13:46.64,English,,0,0,0,,But more recently in the world of x86
 Dialogue: 0,1:13:47.46,1:13:53.62,English,,0,0,0,,They realized that to support things like video and all the stuff people actually do with their machines
-Dialogue: 0,1:13:54.12,1:13:59.24,English,,0,0,0,,They needed some more horsepower in numeric processing
-Dialogue: 0,1:13:59.24,1:14:04.04,English,,0,0,0,,And they implemented a class of instructions called sse
-Dialogue: 0,1:14:05.02,1:14:13.70,English,,0,0,0,,Which stands for sim d something cindy execution
+Dialogue: 0,1:13:54.12,1:13:59.50,English,,0,0,0,,They needed some more horsepower in numeric processing
+Dialogue: 0,1:13:59.52,1:14:04.04,English,,0,0,0,,They implemented a class of instructions called SSE
+Dialogue: 0,1:14:05.02,1:14:13.70,English,,0,0,0,,Which stands for SIMD something SIMD execution
 Dialogue: 0,1:14:13.84,1:14:16.20,English,,0,0,0,,Anyways and I'll show you in a minute what that means
 Dialogue: 0,1:14:16.91,1:14:21.05,English,,0,0,0,,And that's now in the more recent versions of x86
 Dialogue: 0,1:14:21.05,1:14:23.34,English,,0,0,0,,Has been juiced up to something called a vx
-Dialogue: 0,1:14:25.60,1:14:33.19,English,,0,0,0,,Which but the shark machines support this version of what's called sse so let me just give you a feeling for that
-Dialogue: 0,1:14:33.78,1:14:38.15,English,,0,0,0,,And in particularly the shark machine support what's called soc version 3
-Dialogue: 0,1:14:38.58,1:14:41.88,English,,0,0,0,,And what it is is that there are 16 special registers
+Dialogue: 0,1:14:25.60,1:14:33.19,English,,0,0,0,,Which but the shark machines support this version of what's called SSE so let me just give you a feeling for that
+Dialogue: 0,1:14:33.78,1:14:38.15,English,,0,0,0,,And in particularly the shark machine support what's called SSE version 3
+Dialogue: 0,1:14:38.58,1:14:41.88,English,,0,0,0,,And what it is that there are 16 special registers
 Dialogue: 0,1:14:42.30,1:14:45.32,English,,0,0,0,,Distinct from the other registries we've talked about before
 Dialogue: 0,1:14:45.76,1:14:47.50,English,,0,0,0,,Each of which has 16 bytes
 Dialogue: 0,1:14:48.34,1:14:53.26,English,,0,0,0,,And then there's operations that can operate on those and treat them in different ways
 Dialogue: 0,1:14:53.26,1:14:59.24,English,,0,0,0,,So one is to treat this such an a register as an array of 16 cares
-Dialogue: 0,1:14:59.68,1:15:11.94,English,,0,0,0,,Or as a short or for its or and also to support a double floating-point arithmetic
+Dialogue: 0,1:14:59.68,1:15:11.94,English,,0,0,0,,Or as a short or four ints or...and also to support a double floating-point arithmetic
 Dialogue: 0,1:15:12.28,1:15:14.46,English,,0,0,0,,So this stuff was certainly going on
-Dialogue: 0,1:15:14.80,1:15:18.56,English,,0,0,0,,And somebody had the observation that said well I could just then
-Dialogue: 0,1:15:18.88,1:15:22.54,English,,0,0,0,,Sort of subset all this and implement the floating-point operations
-Dialogue: 0,1:15:22.90,1:15:29.28,English,,0,0,0,,Directly using this sse stuff and skip the old x87 stuff
-Dialogue: 0,1:15:29.70,1:15:32.88,English,,0,0,0,,And so that's the way floating point is now generated
-Dialogue: 0,1:15:33.06,1:15:35.38,English,,0,0,0,,On say the sharp machines and most recent machines
-Dialogue: 0,1:15:36.48,1:15:43.60,English,,0,0,0,,This is a this is again an example of where the world is more complicated than it should have to be
-Dialogue: 0,1:15:44.20,1:15:48.96,English,,0,0,0,,So for example there is an instruction that says add ss
-Dialogue: 0,1:15:48.98,1:15:54.50,English,,0,0,0,,So add a single scalar is what that notation add a single precision scalar
+Dialogue: 0,1:15:14.80,1:15:17.38,English,,0,0,0,,And somebody had the observation that said well 
+Dialogue: 0,1:15:17.50,1:15:22.54,English,,0,0,0,,I could just then sort of subset all this and implement the floating-point operations
+Dialogue: 0,1:15:22.90,1:15:29.28,English,,0,0,0,,Directly using this SSE stuff and skip the old x87 stuff
+Dialogue: 0,1:15:29.70,1:15:35.38,English,,0,0,0,,And so that's the way floating point is now generated on say the shark machines and most recent machines
+Dialogue: 0,1:15:36.48,1:15:43.60,English,,0,0,0,,This is again an example of where the world is more complicated than it should have to be
+Dialogue: 0,1:15:44.20,1:15:48.96,English,,0,0,0,,So for example there is an instruction that says addss
+Dialogue: 0,1:15:48.98,1:15:54.50,English,,0,0,0,,So add a single scalar is what that notation,add a single precision scalar
 Dialogue: 0,1:15:58.26,1:16:00.78,English,,0,0,0,,Add a scaler single-precision
-Dialogue: 0,1:16:01.18,1:16:07.44,English,,0,0,0,,And it looks a little like the ad instructions the ad cute instructions you've seen that
+Dialogue: 0,1:16:01.18,1:16:07.44,English,,0,0,0,,And it looks a little like the ad instructions the addq instructions you've seen that
 Dialogue: 0,1:16:08.02,1:16:12.80,English,,0,0,0,,It it increments it adds the source to the destination
-Dialogue: 0,1:16:14.00,1:16:18.48,English,,0,0,0,,There's ways I can do for ads and at the same time
-Dialogue: 0,1:16:18.74,1:16:21.88,English,,0,0,0,,Using this is what they call sim d execution
+Dialogue: 0,1:16:14.00,1:16:18.48,English,,0,0,0,,There's ways I can do for adds and at the same time
+Dialogue: 0,1:16:18.74,1:16:21.88,English,,0,0,0,,Using this is what they call SIMD execution
 Dialogue: 0,1:16:22.14,1:16:24.98,English,,0,0,0,,Which stands for single instruction multiple data
-Dialogue: 0,1:16:25.44,1:16:29.60,English,,0,0,0,,One instruction the ad psp stands for pact
-Dialogue: 0,1:16:30.34,1:16:37.96,English,,0,0,0,,Will do well will perform that one instruction will do ad with four different numbers
+Dialogue: 0,1:16:25.44,1:16:29.60,English,,0,0,0,,One instruction the addps stands for pact
+Dialogue: 0,1:16:30.34,1:16:37.96,English,,0,0,0,,Will do well will perform that one instruction will do add with four different numbers
 Dialogue: 0,1:16:39.58,1:16:45.80,English,,0,0,0,,And similar you can do it with double precision you can do one of them you can do pet
 Dialogue: 0,1:16:46.86,1:16:51.88,English,,0,0,0,,And so actually the underlying and we'll see this when we look at code optimization
 Dialogue: 0,1:16:52.30,1:16:57.68,English,,0,0,0,,If you write code to make use of these instructions you can really boost the performance of the computer
@@ -864,24 +860,24 @@ Dialogue: 0,1:16:58.86,1:17:02.86,English,,0,0,0,,But this just gives you a flav
 Dialogue: 0,1:17:03.18,1:17:06.42,English,,0,0,0,,And the rules are pretty simple that just as we saw before that
 Dialogue: 0,1:17:07.04,1:17:09.84,English,,0,0,0,,That arguments get passed in in registers
 Dialogue: 0,1:17:09.84,1:17:14.22,English,,0,0,0,,While 14-point arguments get passed in these xmm registers
-Dialogue: 0,1:17:14.74,1:17:19.64,English,,0,0,0,,Xmm zero you don't have to memorize rdi rsi rdx
-Dialogue: 0,1:17:20.22,1:17:23.98,English,,0,0,0,,There in ex mmm zero one two it's all very logical
-Dialogue: 0,1:17:24.40,1:17:26.80,English,,0,0,0,,And the return value is in ex mmm zero
-Dialogue: 0,1:17:27.22,1:17:30.82,English,,0,0,0,,And all the registers are called color safe there's no kali safe
+Dialogue: 0,1:17:14.74,1:17:19.64,English,,0,0,0,,%xmm0 you don't have to memorize %rdi,%rsi,%rdx
+Dialogue: 0,1:17:20.22,1:17:23.98,English,,0,0,0,,There in %xmm0 one two it's all very logical
+Dialogue: 0,1:17:24.40,1:17:26.80,English,,0,0,0,,And the return value is in %xmm0
+Dialogue: 0,1:17:27.22,1:17:30.82,English,,0,0,0,,And all the registers are called caller-saved there's no callee-saved
 Dialogue: 0,1:17:31.42,1:17:40.18,English,,0,0,0,,So something like adding two floating point numbers will just look like a single floating point addition instruction
 Dialogue: 0,1:17:41.04,1:17:42.28,English,,0,0,0,,Same with double
 Dialogue: 0,1:17:43.60,1:17:50.46,English,,0,0,0,,And if you mix together code that has a pointer and a floating point operator
-Dialogue: 0,1:17:50.60,1:17:54.08,English,,0,0,0,,The pointer will be passed in a regular register rdi
-Dialogue: 0,1:17:54.78,1:17:57.56,English,,0,0,0,,And this double will be passed in xmm zero
+Dialogue: 0,1:17:50.60,1:17:54.08,English,,0,0,0,,The pointer will be passed in a regular register %rdi
+Dialogue: 0,1:17:54.78,1:17:57.56,English,,0,0,0,,And this double will be passed in %xmm0
 Dialogue: 0,1:17:57.56,1:18:02.04,English,,0,0,0,,So it's sort of as it goes through the argument list you sort of
-Dialogue: 0,1:18:02.68,1:18:08.34,English,,0,0,0,,In the particular order if it's an integer or a pointer it's in one of the our registers
-Dialogue: 0,1:18:09.00,1:18:15.32,English,,0,0,0,,And if it's a floating point value it's in one of the xmm registers and potentially interleaved
-Dialogue: 0,1:18:18.14,1:18:22.48,English,,0,0,0,,Almost done oh and so this is a code that
+Dialogue: 0,1:18:02.68,1:18:08.34,English,,0,0,0,,In the particular order if it's an integer or a pointer,it's in one of the r registers
+Dialogue: 0,1:18:09.00,1:18:18.56,English,,0,0,0,,And if it's a floating point value it's in one of the xmm registers and potentially interleaved Almost done
+Dialogue: 0,1:18:19.74,1:18:22.48,English,,0,0,0,,And so this is a code that
 Dialogue: 0,1:18:22.78,1:18:27.28,English,,0,0,0,,Does this particular operation and it's interesting because it's returning a
 Dialogue: 0,1:18:27.84,1:18:29.94,English,,0,0,0,,It's doing memory referencing so
-Dialogue: 0,1:18:30.70,1:18:35.76,English,,0,0,0,,Again there's instructions that will read from memory and copy into an x mm register
-Dialogue: 0,1:18:36.60,1:18:45.02,English,,0,0,0,,You can add registers you can make a copy of from one x mm register to another  and you can store results
-Dialogue: 0,1:18:45.54,1:18:54.04,English,,0,0,0,,So this code looks a lot like what you do in integer arithmetic except it's using x mm and special floating-point instructions
+Dialogue: 0,1:18:30.70,1:18:35.76,English,,0,0,0,,Again there's instructions that will read from memory and copy into an xmm register
+Dialogue: 0,1:18:36.60,1:18:45.02,English,,0,0,0,,You can add registers you can make a copy of from one xmm register to another and you can store results
+Dialogue: 0,1:18:45.54,1:18:54.04,English,,0,0,0,,So this code looks a lot like what you do in integer arithmetic except it's using xmm and special floating-point instructions
 Dialogue: 0,1:18:54.44,1:18:56.16,English,,0,0,0,,Rather than the ones you've seen before
 Dialogue: 0,1:18:56.86,1:18:59.52,English,,0,0,0,,So the basic idea of it is fairly simple
 Dialogue: 0,1:18:59.94,1:19:04.48,English,,0,0,0,,It gets way more complicated because there are lots of instructions
@@ -891,4 +887,3 @@ Dialogue: 0,1:19:17.68,1:19:22.64,English,,0,0,0,,And then uh you'll see various
 Dialogue: 0,1:19:22.64,1:19:26.42,English,,0,0,0,,So that's covered in the book we're not going to really talk about it much in this course
 Dialogue: 0,1:19:27.02,1:19:30.98,English,,0,0,0,,But the underlying the the basic principle of zovut are fairly straightforward
 Dialogue: 0,1:19:31.74,1:19:35.04,English,,0,0,0,,Ok that'll do us for today
-Dialogue: 0,1:19:31.74,1:19:35.04,English,,0,0,0,, ok that'll do us for today
