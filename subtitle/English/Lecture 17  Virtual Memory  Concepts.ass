@@ -15,10 +15,10 @@ Audio File: ../../../../Desktop/csapp/Lecture 17  Virtual Memory  Concepts.mp4
 Video File: ../../../../Desktop/csapp/Lecture 17  Virtual Memory  Concepts.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
-Video Zoom Percent: 0.250000
-Scroll Position: 731
-Active Line: 732
-Video Position: 126519
+Video Zoom Percent: 1.000000
+Scroll Position: 742
+Active Line: 751
+Video Position: 127862
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -27,275 +27,275 @@ Style: Chinese,Source Han Sans CN,34,&H00FBFD00,&H00FFFFFF,&H00362A28,&H00FFFFFF
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.06,0:00:01.44,English,,0,0,0,,大家下午好\ngood afternoon everybody
+Dialogue: 0,0:00:00.06,0:00:01.44,English,,0,0,0,,Good afternoon everybody
 Dialogue: 0,0:00:02.24,0:00:03.90,English,,0,0,0,,Welcome good to see you as always
 Dialogue: 0,0:00:06.08,0:00:12.46,English,,0,0,0,,Today we're going to learn about a important concept in computer science called virtual memory
 Dialogue: 0,0:00:18.86,0:00:23.43,English,,0,0,0,,So consider a system that uses physical addressing
-Dialogue: 0,0:00:23.43,0:00:27.08,English,,0,0,0,,Right we've always our idea about memory so far has been that it's a a
-Dialogue: 0,0:00:27.62,0:00:31.34,English,,0,0,0,,Contiguous array of physical physical bytes
+Dialogue: 0,0:00:23.43,0:00:31.34,English,,0,0,0,,Right we've always idea about memory so far has been that it's a contiguous array of physical bytes
 Dialogue: 0,0:00:31.90,0:00:37.08,English,,0,0,0,,That we can access just by giving some an offset called an address
 Dialogue: 0,0:00:38.38,0:00:41.12,English,,0,0,0,,So in a system that uses physical addressing
-Dialogue: 0,0:00:43.34,0:00:46.91,English,,0,0,0,,The cpu executes like say a move instruction
-Dialogue: 0,0:00:47.54,0:00:50.74,English,,0,0,0,,Which generates an effective address the physical address
-Dialogue: 0,0:00:51.12,0:00:55.42,English,,0,0,0,,And this address is actually the offset of a byte in in main memory so
-Dialogue: 0,0:00:56.22,0:01:00.22,English,,0,0,0,,You know here the cpu has generated a physical address of 4
-Dialogue: 0,0:01:01.86,0:01:04.06,English,,0,0,0,,Since that address to the to the memory
-Dialogue: 0,0:01:05.72,0:01:13.20,English,,0,0,0,,And then the memory fetches the the word from at that address and then sends it back to the to the cpu
+Dialogue: 0,0:00:43.34,0:00:46.91,English,,0,0,0,,The CPU executes like say a move instruction
+Dialogue: 0,0:00:47.54,0:00:50.74,English,,0,0,0,,Which generates an effective address,the physical address
+Dialogue: 0,0:00:51.12,0:00:55.42,English,,0,0,0,,And this address is actually the offset of a byte in main memory so
+Dialogue: 0,0:00:56.22,0:01:00.22,English,,0,0,0,,You know here the CPU has generated a physical address of 4
+Dialogue: 0,0:01:01.86,0:01:04.06,English,,0,0,0,,Since that address to the memory
+Dialogue: 0,0:01:05.72,0:01:13.20,English,,0,0,0,,And then the memory fetches the word from at that address and then sends it back to the CPU
 Dialogue: 0,0:01:15.84,0:01:20.40,English,,0,0,0,,Now this is in fact the way that very simple microcontrollers work
-Dialogue: 0,0:01:20.96,0:01:27.56,English,,0,0,0,,But it's not the way most systems work including your your phones, your desktops,your servers
-Dialogue: 0,0:01:28.60,0:01:33.44,English,,0,0,0,,These systems instead virtualize this this main memory
-Dialogue: 0,0:01:34.88,0:01:39.90,English,,0,0,0,,Now the idea of virtualization is a very important one in computer science and it
-Dialogue: 0,0:01:40.48,0:01:45.24,English,,0,0,0,,And it expands a lot of it applies to a lot of areas of computer systems
+Dialogue: 0,0:01:20.96,0:01:27.56,English,,0,0,0,,But it's not the way most systems work including your phones, your desktops,your servers
+Dialogue: 0,0:01:28.60,0:01:33.44,English,,0,0,0,,These systems instead virtualize this main memory
+Dialogue: 0,0:01:34.88,0:01:39.90,English,,0,0,0,,Now the idea of virtualization is a very important one in computer science
+Dialogue: 0,0:01:40.48,0:01:45.24,English,,0,0,0,,And it expands a lot of it applies to, a lot of areas of computer systems
 Dialogue: 0,0:01:46.10,0:01:48.48,English,,0,0,0,,Now when you virtualize a resource
-Dialogue: 0,0:01:49.26,0:01:54.76,English,,0,0,0,,You you present the user of that resource with some different kind of view of that resource
+Dialogue: 0,0:01:49.26,0:01:54.76,English,,0,0,0,,You present the user of that resource with some different kind of view of that resource
 Dialogue: 0,0:01:56.30,0:02:01.42,English,,0,0,0,,You present typically some kind of an abstraction or some kind of a different view of the resource
 Dialogue: 0,0:02:03.20,0:02:07.16,English,,0,0,0,,And you do it by interposing on accesses to that resource
 Dialogue: 0,0:02:08.46,0:02:11.64,English,,0,0,0,,So in all cases there's some resource and you want to virtualize it
-Dialogue: 0,0:02:12.48,0:02:17.58,English,,0,0,0,,And you do that by cepting or interposing on the accesses to that resource
-Dialogue: 0,0:02:18.94,0:02:25.00,English,,0,0,0,,Okay and then once you we saw this when we created wrapper functions for like malloc
+Dialogue: 0,0:02:12.48,0:02:17.58,English,,0,0,0,,And you do that by interpting or interposing on the accesses to that resource
+Dialogue: 0,0:02:18.94,0:02:25.00,English,,0,0,0,,Okay and then once you...we saw this when we created wrapper functions for like malloc
 Dialogue: 0,0:02:25.00,0:02:26.62,English,,0,0,0,,I will showing you inter positioning
 Dialogue: 0,0:02:27.14,0:02:30.44,English,,0,0,0,,The same technique is used to virtualize a resource
-Dialogue: 0,0:02:31.18,0:02:35.94,English,,0,0,0,,And and once you've intercepted that access then you can deal with it any way you want
+Dialogue: 0,0:02:31.18,0:02:35.94,English,,0,0,0,,And once you've intercePTEd that access then you can deal with it any way you want
 Dialogue: 0,0:02:35.94,0:02:42.70,English,,0,0,0,,So that's how you have sort of full power to change a person to change the view of that resource okay
 Dialogue: 0,0:02:43.86,0:02:46.62,English,,0,0,0,,So a good example you saw this when we looked at disks
 Dialogue: 0,0:02:48.28,0:02:54.10,English,,0,0,0,,And you know physically disk consists of cylinders tracks sectors platters surfaces
-Dialogue: 0,0:02:55.38,0:02:59.58,English,,0,0,0,,And and to access a particular sector on one of those disks
+Dialogue: 0,0:02:55.38,0:02:59.58,English,,0,0,0,,And to access a particular sector on of those disks
 Dialogue: 0,0:02:59.58,0:03:03.40,English,,0,0,0,,You have to specify the cylinder and the track and the surface
 Dialogue: 0,0:03:04.98,0:03:09.06,English,,0,0,0,,Okay but we saw that the view that disk controller is present is actually different
 Dialogue: 0,0:03:09.06,0:03:11.96,English,,0,0,0,,It's a virtualized view of the disk
 Dialogue: 0,0:03:12.54,0:03:18.68,English,,0,0,0,,And the controller instead presents to the kernel a view of the disk as a series of a sequence of logical blocks
-Dialogue: 0,0:03:21.04,0:03:27.48,English,,0,0,0,,And it presents that view by intercepting the requests from the seat from the kernel for i/o
-Dialogue: 0,0:03:28.24,0:03:34.58,English,,0,0,0,,And changing those logical block numbers that that that the kernel sends into the actual physical address
-Dialogue: 0,0:03:34.76,0:03:43.72,English,,0,0,0,,Ok so that's a very very important example of virtualization in a system
-Dialogue: 0,0:03:44.08,0:03:52.96,English,,0,0,0,,Now the the memory is is that is a very is it is a crucial resource in the system
-Dialogue: 0,0:03:52.96,0:03:57.94,English,,0,0,0,,And what we found is that it's it's useful to virtualize that that memory resource
+Dialogue: 0,0:03:21.04,0:03:27.48,English,,0,0,0,,And it presents that view by intercepting the requests from the kernel for I/O
+Dialogue: 0,0:03:28.24,0:03:34.58,English,,0,0,0,,And changing those logical block numbers that the kernel sends into the actual physical address
+Dialogue: 0,0:03:34.76,0:03:43.72,English,,0,0,0,,Ok so that's a very important example of virtualization in a system
+Dialogue: 0,0:03:44.08,0:03:52.96,English,,0,0,0,,Now the memory is that is a very....is a crucial resource in the system
+Dialogue: 0,0:03:52.96,0:03:57.94,English,,0,0,0,,And what we found is that it's useful to virtualize that memory resource
 Dialogue: 0,0:03:59.76,0:04:01.14,English,,0,0,0,,Okay and the way this is done
 Dialogue: 0,0:04:02.40,0:04:08.50,English,,0,0,0,,Remember before we virtually the disk by having the disk controller intercept request
-Dialogue: 0,0:04:09.44,0:04:12.00,English,,0,0,0,,In the case of the the main memory resource
-Dialogue: 0,0:04:13.26,0:04:18.90,English,,0,0,0,,The requests are actually intercepted by a piece of hardware called the mmu the memory management unit
-Dialogue: 0,0:04:19.98,0:04:24.16,English,,0,0,0,,So the way this works is that the cpu executes an instruction
+Dialogue: 0,0:04:09.44,0:04:12.00,English,,0,0,0,,In the case of the main memory resource
+Dialogue: 0,0:04:13.26,0:04:18.90,English,,0,0,0,,The requests are actually intercePTEd by a piece of hardware called the MMU the memory management unit
+Dialogue: 0,0:04:19.98,0:04:24.16,English,,0,0,0,,So the way this works is that the CPU executes an instruction
 Dialogue: 0,0:04:24.86,0:04:28.26,English,,0,0,0,,Say it's a move instruction that generates some effect of address
 Dialogue: 0,0:04:29.30,0:04:31.04,English,,0,0,0,,So this is actually a virtual address
-Dialogue: 0,0:04:32.36,0:04:36.53,English,,0,0,0,,It's the cpu sends that address to the mmu
-Dialogue: 0,0:04:37.38,0:04:42.10,English,,0,0,0,,Which goes through a process called address translation which will will study later today
-Dialogue: 0,0:04:42.92,0:04:48.86,English,,0,0,0,,And it converts that virtual address in this case 4100 into a physical address
-Dialogue: 0,0:04:49.52,0:04:55.82,English,,0,0,0,,4 which actually corresponds to the address of that the data object that we want
-Dialogue: 0,0:04:56.74,0:05:01.28,English,,0,0,0,,Ok so once the mmu translates the virtual address to a physical address
-Dialogue: 0,0:05:02.94,0:05:06.16,English,,0,0,0,,Then the memory will return the the word at that at that address
-Dialogue: 0,0:05:08.90,0:05:11.14,English,,0,0,0,,So this
-Dialogue: 0,0:05:12.24,0:05:14.24,English,,0,0,0,,Might wonder why in the world would you want to do this
-Dialogue: 0,0:05:14.24,0:05:19.36,English,,0,0,0,,Well it turns out there's all kinds of good reasons to virtualize the the address space
-Dialogue: 0,0:05:20.14,0:05:22.74,English,,0,0,0,,And so before I can explain those to you i
-Dialogue: 0,0:05:22.86,0:05:27.66,English,,0,0,0,,Let me just define a few a few toff you terms
+Dialogue: 0,0:04:32.36,0:04:36.53,English,,0,0,0,,It's the CPU sends that address to the MMU
+Dialogue: 0,0:04:37.38,0:04:42.10,English,,0,0,0,,Which goes through a process called address translation which will study later today
+Dialogue: 0,0:04:42.92,0:04:49.96,English,,0,0,0,,And it converts that virtual address in this case 4100 into a physical address 4
+Dialogue: 0,0:04:50.22,0:04:55.82,English,,0,0,0,,Which actually corresponds to the address of that the data object that we want
+Dialogue: 0,0:04:56.74,0:05:01.28,English,,0,0,0,,Ok so once the MMU translates the virtual address to a physical address
+Dialogue: 0,0:05:02.94,0:05:06.16,English,,0,0,0,,Then the memory will return the word at that address
+Dialogue: 0,0:05:08.90,0:05:11.14,English,,0,0,0,,So this...
+Dialogue: 0,0:05:12.24,0:05:14.24,English,,0,0,0,,My wonder why in the world would you want to do this
+Dialogue: 0,0:05:14.24,0:05:19.36,English,,0,0,0,,Well it turns out there's all kinds of good reasons to virtualize the address space
+Dialogue: 0,0:05:20.14,0:05:22.74,English,,0,0,0,,And so before I can explain those to you
+Dialogue: 0,0:05:22.86,0:05:27.66,English,,0,0,0,,Let me just define a few terms
 Dialogue: 0,0:05:28.90,0:05:32.26,English,,0,0,0,,So an address space is a set of addresses
 Dialogue: 0,0:05:32.50,0:05:34.56,English,,0,0,0,,Ok so an address spaces is a set
-Dialogue: 0,0:05:35.58,0:05:39.74,English,,0,0,0,,Not of not of data bytes but of the addresses of those bytes
+Dialogue: 0,0:05:35.58,0:05:39.74,English,,0,0,0,,Not of data bytes but of the addresses of those bytes
 Dialogue: 0,0:05:40.64,0:05:48.88,English,,0,0,0,,And a linear address space is a content is a contiguous set of contiguous non-negative integers
 Dialogue: 0,0:05:49.68,0:05:53.28,English,,0,0,0,,Okay so just 0,1,2,3,4 and so on
-Dialogue: 0,0:05:54.60,0:06:01.52,English,,0,0,0,,The virtual address space is a set of n=2^n virtual addresses a linear it's a linear address space
-Dialogue: 0,0:06:02.48,0:06:07.70,English,,0,0,0,,And the physical address space is a set of m=2^m physical addresses ok
-Dialogue: 0,0:06:10.22,0:06:19.36,English,,0,0,0,,And so typically the virtual address space is is is usually much larger than the physical address space
-Dialogue: 0,0:06:19.54,0:06:24.68,English,,0,0,0,,Okay the physical address space corresponds to the amount of dram that you actually have in the system
-Dialogue: 0,0:06:25.34,0:06:31.52,English,,0,0,0,,The virtual address space is the same for all all processes running on that system
-Dialogue: 0,0:06:35.30,0:06:38.14,English,,0,0,0,,Okay now why why do we want to implement virtual memory
-Dialogue: 0,0:06:38.14,0:06:43.48,English,,0,0,0,,Why do this why do I do this level of indirection with the mmu
+Dialogue: 0,0:05:54.60,0:06:01.52,English,,0,0,0,,The virtual address space is a set of N=2^n virtual addresses a linear it's a linear address space
+Dialogue: 0,0:06:02.48,0:06:07.70,English,,0,0,0,,And the physical address space is a set of M=2^m physical addresses ok
+Dialogue: 0,0:06:10.22,0:06:19.36,English,,0,0,0,,And so typically the virtual address space is usually much larger than the physical address space
+Dialogue: 0,0:06:19.54,0:06:24.68,English,,0,0,0,,Okay the physical address space corresponds to the amount of DRAM that you actually have in the system
+Dialogue: 0,0:06:25.34,0:06:31.52,English,,0,0,0,,The virtual address space is the same for all processes running on that system
+Dialogue: 0,0:06:35.30,0:06:38.14,English,,0,0,0,,Okay why do we want to implement virtual memory
+Dialogue: 0,0:06:38.14,0:06:43.48,English,,0,0,0,,Why do this,why do this level of indirection with the MMU
 Dialogue: 0,0:06:44.54,0:06:46.68,English,,0,0,0,,Well there's really three big reasons so
-Dialogue: 0,0:06:47.02,0:06:56.00,English,,0,0,0,,The first is that virtual memory uses the uses the dram as a cache for the actual data stored on disk
-Dialogue: 0,0:06:56.82,0:07:03.14,English,,0,0,0,,Okay so you can think of virtual memory as it as a dram cache for data stored on the disk
-Dialogue: 0,0:07:03.66,0:07:08.58,English,,0,0,0,,And this allows us to to use the memory much more efficiently
+Dialogue: 0,0:06:47.02,0:06:56.00,English,,0,0,0,,The first is that virtual memory uses the DRAM as a cache for the actual data stored on disk
+Dialogue: 0,0:06:56.82,0:07:03.14,English,,0,0,0,,Okay so you can think of virtual memory as it as a DRAM cache for data stored on the disk
+Dialogue: 0,0:07:03.66,0:07:08.58,English,,0,0,0,,And this allows us to use the memory much more efficiently
 Dialogue: 0,0:07:09.04,0:07:12.20,English,,0,0,0,,Because we only need to cache items that are frequently used
-Dialogue: 0,0:07:12.20,0:07:17.02,English,,0,0,0,,Right just the same idea that we learned when we we talked about caches and locality
-Dialogue: 0,0:07:19.06,0:07:23.46,English,,0,0,0,,So that's one thing we can use we can use the memory much more efficiently by only using
-Dialogue: 0,0:07:24.04,0:07:30.50,English,,0,0,0,,The portions of the virtual address space by only actually storing the portions of the virtual address space in the physical memory
+Dialogue: 0,0:07:12.20,0:07:17.02,English,,0,0,0,,Right just the same idea that we learned when we talked about caches and locality
+Dialogue: 0,0:07:19.06,0:07:25.86,English,,0,0,0,,So that's one thing we can use the memory much more efficiently by only using the portions of the virtual address space
+Dialogue: 0,0:07:25.94,0:07:30.50,English,,0,0,0,,By only actually storing the portions of the virtual address space in the physical memory
 Dialogue: 0,0:07:32.26,0:07:35.16,English,,0,0,0,,Okay the second thing is it greatly simplifies memory management
-Dialogue: 0,0:07:35.96,0:07:40.48,English,,0,0,0,,So we saw it every process has the same the same view right
+Dialogue: 0,0:07:35.96,0:07:40.48,English,,0,0,0,,So we saw it every process has the same view right
 Dialogue: 0,0:07:40.48,0:07:44.18,English,,0,0,0,,There's code loaded at code and data are always loaded at the same address
 Dialogue: 0,0:07:44.78,0:07:48.44,English,,0,0,0,,The stack is at the top of the user visible address space
 Dialogue: 0,0:07:49.50,0:07:54.62,English,,0,0,0,,So every process has the same similar-looking virtual address space
-Dialogue: 0,0:07:56.00,0:08:02.10,English,,0,0,0,,But in actual in actuality that the the memory that corresponds to those
+Dialogue: 0,0:07:56.00,0:08:02.10,English,,0,0,0,,But in actual in actuality that the memory that corresponds to those
 Dialogue: 0,0:08:02.12,0:08:06.16,English,,0,0,0,,Those addresses is actually scattered all over main memory
-Dialogue: 0,0:08:06.90,0:08:14.46,English,,0,0,0,,Okay so that's a really important important benefit of virtual memory and
-Dialogue: 0,0:08:15.88,0:08:18.56,English,,0,0,0,,Then finally it allows us to protect accesses
-Dialogue: 0,0:08:18.66,0:08:23.28,English,,0,0,0,,So remember we had to
-Dialogue: 0,0:08:24.02,0:08:28.24,English,,0,0,0,,A process we saw that a process provides the separate address space that's
+Dialogue: 0,0:08:06.90,0:08:14.46,English,,0,0,0,,Okay so that's a really important benefit of virtual memory
+Dialogue: 0,0:08:15.88,0:08:18.56,English,,0,0,0,,And then finally it allows us to protect accesses
+Dialogue: 0,0:08:18.66,0:08:23.28,English,,0,0,0,,So remember we had to...
+Dialogue: 0,0:08:24.02,0:08:28.24,English,,0,0,0,,A process we saw that a process provides the separate address space
 Dialogue: 0,0:08:28.92,0:08:32.06,English,,0,0,0,,That's protected from accesses by other processes
-Dialogue: 0,0:08:32.54,0:08:39.02,English,,0,0,0,,Okay so virtual memory allows us to create these these separate protected private address spaces
+Dialogue: 0,0:08:32.54,0:08:39.02,English,,0,0,0,,Okay so virtual memory allows us to create these separate protected private address spaces
 Dialogue: 0,0:08:40.02,0:08:43.68,English,,0,0,0,,Okay and so what we'll do today we'll look in more detail at these three ideas
-Dialogue: 0,0:08:44.40,0:08:49.36,English,,0,0,0,,And then we'll and then we'll go into the specifics of address translation
-Dialogue: 0,0:08:49.36,0:08:54.02,English,,0,0,0,,So I'm going to for the first the first part of this lecture
+Dialogue: 0,0:08:44.40,0:08:49.36,English,,0,0,0,,And then we'll go into the specifics of address translation
+Dialogue: 0,0:08:49.36,0:08:54.02,English,,0,0,0,,So I'm going to...for the first part of this lecture
 Dialogue: 0,0:08:54.02,0:08:57.88,English,,0,0,0,,We're going to talk about address translation just in kind of high-level terms
-Dialogue: 0,0:08:58.40,0:09:02.46,English,,0,0,0,,But then we'll go into the details at the end you can see how it how it really works
-Dialogue: 0,0:09:03.24,0:09:05.78,English,,0,0,0,,Okay so let's look at vm as a tool for caching
-Dialogue: 0,0:09:07.00,0:09:13.28,English,,0,0,0,,So conceptually you can think of the your virtual memory  as a sequence of bytes stored on disk
-Dialogue: 0,0:09:15.82,0:09:24.54,English,,0,0,0,,And then the contents of that of the the contents of that virtual memory stored on disk are cached in dram
-Dialogue: 0,0:09:25.28,0:09:33.70,English,,0,0,0,,Okay so think of the the dram is a cache for this array of contiguous bytes stored on the disk
+Dialogue: 0,0:08:58.40,0:09:02.46,English,,0,0,0,,But then we'll go into the details at the end you can see how it really works
+Dialogue: 0,0:09:03.24,0:09:05.78,English,,0,0,0,,Okay so let's look at VM as a tool for caching
+Dialogue: 0,0:09:07.00,0:09:13.28,English,,0,0,0,,So conceptually you can think of your virtual memory as a sequence of bytes stored on disk
+Dialogue: 0,0:09:15.82,0:09:24.54,English,,0,0,0,,And then the contents of that virtual memory stored on disk are cached in DRAM
+Dialogue: 0,0:09:25.28,0:09:33.70,English,,0,0,0,,Okay so think of the the DRAM is a cache for this array of contiguous bytes stored on the disk
 Dialogue: 0,0:09:35.18,0:09:38.44,English,,0,0,0,,And just like any cache the data is broken up into blocks
-Dialogue: 0,0:09:40.62,0:09:46.22,English,,0,0,0,,Okay and then we have so here we have the and those blocks for virtual memory systems are called pages
-Dialogue: 0,0:09:47.30,0:09:52.10,English,,0,0,0,,They're typically typically larger than much larger than the cache blocks
+Dialogue: 0,0:09:40.62,0:09:42.72,English,,0,0,0,,Okay and then we have so... so here we have the...
+Dialogue: 0,0:09:43.32,0:09:46.16,English,,0,0,0,,And those blocks for virtual memory systems are called pages
+Dialogue: 0,0:09:47.30,0:09:52.10,English,,0,0,0,,They're typically larger than much larger than the cache blocks
 Dialogue: 0,0:09:52.64,0:09:53.64,English,,0,0,0,,That we that we study done
 Dialogue: 0,0:09:54.46,0:09:58.28,English,,0,0,0,,So for k bytes typically instead of the 64 bytes
-Dialogue: 0,0:09:58.58,0:10:01.36,English,,0,0,0,,Like that we that we learned about in when we studied cache memories
-Dialogue: 0,0:10:02.64,0:10:08.30,English,,0,0,0,,So this virtual memory conceptually you can think of it as as being a sequence of pages stored on the disk
+Dialogue: 0,0:09:58.58,0:10:01.36,English,,0,0,0,,Like that we learned about in when we studied cache memories
+Dialogue: 0,0:10:02.64,0:10:08.30,English,,0,0,0,,So this virtual memory conceptually you can think of it as being a sequence of pages stored on the disk
 Dialogue: 0,0:10:09.44,0:10:10.88,English,,0,0,0,,So called virtual pages
-Dialogue: 0,0:10:11.66,0:10:18.86,English,,0,0,0,,And each of these pages will identify with a number so here's virtual page 0 virtual page 1
-Dialogue: 0,0:10:20.00,0:10:25.66,English,,0,0,0,,And then a subset of those pages are stored in in the physical memory in the physical dram memory
+Dialogue: 0,0:10:11.66,0:10:18.86,English,,0,0,0,,And each of these pages will identify with a number so here's virtual page 0,virtual page 1
+Dialogue: 0,0:10:20.00,0:10:25.66,English,,0,0,0,,And then a subset of those pages are stored in the physical memory, in the physical DRAM memory
 Dialogue: 0,0:10:27.08,0:10:29.46,English,,0,0,0,,And then there's some mapping function
 Dialogue: 0,0:10:30.00,0:10:33.20,English,,0,0,0,,That tells us which pages have been cached
 Dialogue: 0,0:10:33.90,0:10:36.38,English,,0,0,0,,Ok so in this case I've just shown a snapshot
-Dialogue: 0,0:10:36.88,0:10:41.44,English,,0,0,0,,Where we have three virtual pages cached somewhere in dram
+Dialogue: 0,0:10:36.88,0:10:41.44,English,,0,0,0,,Where we have three virtual pages cached somewhere in DRAM
 Dialogue: 0,0:10:42.50,0:10:49.60,English,,0,0,0,,Okay and there's no relation between the virtual page number and the the physical page number that it's mapped to
-Dialogue: 0,0:10:51.44,0:10:55.52,English,,0,0,0,,Some of these pages are are not cached so they're at they're still stored on disk
-Dialogue: 0,0:10:56.54,0:11:00.62,English,,0,0,0,,So in this case vp2 is still stored on disk
-Dialogue: 0,0:11:00.94,0:11:05.08,English,,0,0,0,,And there's some pages which aren't even allocated so they're they don't exist on the disk
-Dialogue: 0,0:11:05.36,0:11:06.42,English,,0,0,0,,Yet it's a way to think of that
-Dialogue: 0,0:11:06.94,0:11:08.56,English,,0,0,0,,Right because we really wouldn't want to store
+Dialogue: 0,0:10:51.44,0:10:55.52,English,,0,0,0,,Some of these pages are not cached so they're still stored on disk
+Dialogue: 0,0:10:56.54,0:11:00.62,English,,0,0,0,,So in this case VP2 is still stored on disk
+Dialogue: 0,0:11:00.94,0:11:05.08,English,,0,0,0,,And there's some pages which aren't even allocated,so they don't exist on the disk
+Dialogue: 0,0:11:05.36,0:11:06.42,English,,0,0,0,,It's a way to think of that
+Dialogue: 0,0:11:06.94,0:11:08.56,English,,0,0,0,,Right we really wouldn't want to store
 Dialogue: 0,0:11:09.06,0:11:13.24,English,,0,0,0,,Every single page in address space with that's to the size to the 48th
-Dialogue: 0,0:11:13.68,0:11:17.00,English,,0,0,0,,We really wouldn't want to store all those those on disk
+Dialogue: 0,0:11:13.68,0:11:17.00,English,,0,0,0,,We really wouldn't want to store all those on disk
 Dialogue: 0,0:11:18.50,0:11:21.60,English,,0,0,0,,So most of the address space is unallocated
-Dialogue: 0,0:11:28.44,0:11:32.98,English,,0,0,0,,Ok so we can just think of this so this this dram is just a cache
+Dialogue: 0,0:11:28.44,0:11:32.98,English,,0,0,0,,Ok so we can just think of this,so this DRAM is just a cache
 Dialogue: 0,0:11:33.62,0:11:36.22,English,,0,0,0,,But it has a much different organization
 Dialogue: 0,0:11:36.44,0:11:38.34,English,,0,0,0,,Than the cache memories we studied earlier
-Dialogue: 0,0:11:38.72,0:11:43.80,English,,0,0,0,,And the difference is driven by that the enormous miss penalty  when you go from
-Dialogue: 0,0:11:44.62,0:11:52.26,English,,0,0,0,,If you have a cache and dram the the miss penalty would to fetch a data item from the disk is huge
-Dialogue: 0,0:11:53.90,0:12:00.08,English,,0,0,0,,So the the design of this virtual memory cache is totally driven by this enormous miss penalty
+Dialogue: 0,0:11:38.72,0:11:43.80,English,,0,0,0,,And the difference is driven by that the enormous miss penalty when you go from
+Dialogue: 0,0:11:44.62,0:11:52.26,English,,0,0,0,,If you have a cache and DRAM the miss penalty would to fetch a data item from the disk is huge
+Dialogue: 0,0:11:53.90,0:12:00.08,English,,0,0,0,,So the design of this virtual memory cache is totally driven by this enormous miss penalty
 Dialogue: 0,0:12:01.48,0:12:04.14,English,,0,0,0,,And so as a result that blocks are larger
 Dialogue: 0,0:12:04.16,0:12:07.46,English,,0,0,0,,So remember we talked about that the block size is kind of a trade-off
 Dialogue: 0,0:12:08.18,0:12:16.50,English,,0,0,0,,Between sort of useful getting used being able to usefully amortize the cost of fetching that block
 Dialogue: 0,0:12:17.12,0:12:22.38,English,,0,0,0,,Versus sort of consuming too much of this scarce cache space right
 Dialogue: 0,0:12:22.40,0:12:27.54,English,,0,0,0,,So in this case our cache memories were 64 byte blocks
-Dialogue: 0,0:12:28.94,0:12:36.12,English,,0,0,0,,Virtual most virtual memory systems have like 4k byte blocks with with an option to increase to 4 megabytes
+Dialogue: 0,0:12:28.94,0:12:36.12,English,,0,0,0,,Virtual most virtual memory systems have like 4k byte blocks with an option to increase to 4 megabytes
 Dialogue: 0,0:12:36.66,0:12:38.56,English,,0,0,0,,In the case of x86
 Dialogue: 0,0:12:40.86,0:12:44.40,English,,0,0,0,,And now this cash and other consequence of the enormous missed penalty is that
 Dialogue: 0,0:12:46.48,0:12:49.68,English,,0,0,0,,You really want to have as large associativity as you can
-Dialogue: 0,0:12:49.78,0:12:54.60,English,,0,0,0,,Remember we saw with direct mapped cache --is that were subject to to these conflict misses
-Dialogue: 0,0:12:54.98,0:12:58.16,English,,0,0,0,,And and if you if you increase the associativity of the cache
-Dialogue: 0,0:12:58.16,0:13:01.32,English,,0,0,0,,You reduce the the probability of those conflict misses
+Dialogue: 0,0:12:49.78,0:12:54.60,English,,0,0,0,,Remember we saw with direct mapped cache is that were subject to these conflict misses
+Dialogue: 0,0:12:54.98,0:12:58.16,English,,0,0,0,,And and if you increase the associativity of the cache
+Dialogue: 0,0:12:58.16,0:13:01.32,English,,0,0,0,,You reduce the probability of those conflict misses
 Dialogue: 0,0:13:01.84,0:13:07.44,English,,0,0,0,,But you never completely eliminate them until you have a fully associative cache with just one set
-Dialogue: 0,0:13:08.04,0:13:12.12,English,,0,0,0,,Okay so in a virtual memory in a virtual memory cache
+Dialogue: 0,0:13:08.04,0:13:12.12,English,,0,0,0,,Okay so in a virtual memory,in a virtual memory cache
 Dialogue: 0,0:13:14.08,0:13:19.28,English,,0,0,0,,It's fully associative there's one set and each virtual page can go anywhere in the cache
 Dialogue: 0,0:13:22.14,0:13:25.52,English,,0,0,0,,Okay so this requires a really complicated mapping function
 Dialogue: 0,0:13:25.52,0:13:30.46,English,,0,0,0,,Somehow we're going to have to keep track of where all these cached pages are
-Dialogue: 0,0:13:32.24,0:13:36.48,English,,0,0,0,,And we can't really do a search that would be that would be way too inexpensive
+Dialogue: 0,0:13:32.24,0:13:36.48,English,,0,0,0,,And we can't really do a search that would be way too inexpensive
 Dialogue: 0,0:13:36.52,0:13:41.68,English,,0,0,0,,So you remember when we with a cache memory the hardware actually did a search within the set
-Dialogue: 0,0:13:42.32,0:13:47.30,English,,0,0,0,,A parallel search to to to find try to find a cache line
+Dialogue: 0,0:13:42.32,0:13:47.30,English,,0,0,0,,A parallel search to find try to find a cache line
 Dialogue: 0,0:13:48.26,0:13:51.70,English,,0,0,0,,But with a software cache like this that that's not feasible
 Dialogue: 0,0:13:52.40,0:13:57.38,English,,0,0,0,,All right so somehow we're going to have to remember where these cached blocks are in this very large set
 Dialogue: 0,0:13:59.68,0:14:02.88,English,,0,0,0,,And again because it's so expensive if you make a mistake
-Dialogue: 0,0:14:03.84,0:14:07.86,English,,0,0,0,,When you're trying to identify a victim victim page
+Dialogue: 0,0:14:03.84,0:14:07.86,English,,0,0,0,,When you're trying to identify a victim page
 Dialogue: 0,0:14:08.68,0:14:13.92,English,,0,0,0,,If you make a mistake and you evict a page that then is referenced again in the near future
 Dialogue: 0,0:14:14.30,0:14:16.42,English,,0,0,0,,You pay a big price for it okay
 Dialogue: 0,0:14:17.10,0:14:22.88,English,,0,0,0,,So virtual memory caches have much more sophisticated replacement algorithms than like simple lru that
 Dialogue: 0,0:14:22.94,0:14:24.44,English,,0,0,0,,That we saw with cache memories
 Dialogue: 0,0:14:25.30,0:14:28.88,English,,0,0,0,,Now they're these replacement algorithms are outside of the scope of this course
-Dialogue: 0,0:14:29.06,0:14:31.00,English,,0,0,0,,You'll you'll you'll learn about them and when you take os
-Dialogue: 0,0:14:32.34,0:14:37.68,English,,0,0,0,,But because it's in software we can we can afford to do very expensive replacement algorithms
+Dialogue: 0,0:14:29.06,0:14:31.00,English,,0,0,0,,You'll learn about them and when you take OS
+Dialogue: 0,0:14:32.34,0:14:37.68,English,,0,0,0,,But because it's in software we can afford to do very expensive replacement algorithms
 Dialogue: 0,0:14:39.64,0:14:46.67,English,,0,0,0,,And we can take a long fairly relatively long time to execute the code for those algorithms
 Dialogue: 0,0:14:47.32,0:14:57.06,English,,0,0,0,,Because any time we spend figuring out a victim block will be much less than the cost of making a mistake
-Dialogue: 0,0:14:57.44,0:15:02.58,English,,0,0,0,,And paying the the access time the miss time the miss penalty to to disk
+Dialogue: 0,0:14:57.44,0:15:02.58,English,,0,0,0,,And paying the access time,the miss time,the miss penalty to to disk
 Dialogue: 0,0:15:03.54,0:15:09.92,English,,0,0,0,,And then also as a result of virtual memory systems never use right through  just  it takes to one
 Dialogue: 0,0:15:10.62,0:15:17.12,English,,0,0,0,,Right so they always use right back and they try to defer writing anything back to the disk as long as possible
 Dialogue: 0,0:15:19.74,0:15:21.64,English,,0,0,0,,Alright now how do we keep track
-Dialogue: 0,0:15:21.64,0:15:26.36,English,,0,0,0,,Somehow we have to keep track of this complicated cache and dram
-Dialogue: 0,0:15:27.02,0:15:32.52,English,,0,0,0,,And the the data structure that keeps track of the location of the virtual pages
-Dialogue: 0,0:15:33.06,0:15:35.82,English,,0,0,0,,In in memory is called the page table
+Dialogue: 0,0:15:21.64,0:15:26.36,English,,0,0,0,,Somehow we have to keep track of this complicated cache and DRAM
+Dialogue: 0,0:15:27.02,0:15:32.52,English,,0,0,0,,And the data structure that keeps track of the location of the virtual pages
+Dialogue: 0,0:15:33.06,0:15:35.82,English,,0,0,0,,In memory is called the page table
 Dialogue: 0,0:15:37.14,0:15:40.26,English,,0,0,0,,Now a page table is just a data structure in memory
 Dialogue: 0,0:15:41.02,0:15:44.92,English,,0,0,0,,That the kernel maintains for as part of each process context
 Dialogue: 0,0:15:45.26,0:15:47.42,English,,0,0,0,,Okay so every process has its own page table
-Dialogue: 0,0:15:48.48,0:15:54.70,English,,0,0,0,,And it's just a it's an array of so called page table entries or ptes
-Dialogue: 0,0:15:57.32,0:16:04.80,English,,0,0,0,,Where ptek contains the physical address of physical page k in dram okay
-Dialogue: 0,0:16:09.60,0:16:13.70,English,,0,0,0,,So here's how it works there's there's this page table in dram
+Dialogue: 0,0:15:48.48,0:15:54.70,English,,0,0,0,,And it's just a...it's an array of so called page table entries or PTEs
+Dialogue: 0,0:15:57.32,0:16:04.80,English,,0,0,0,,Where PTE k contains the physical address of physical page k in DRAM okay
+Dialogue: 0,0:16:09.60,0:16:13.70,English,,0,0,0,,So here's how it works there's this page table in DRAM
 Dialogue: 0,0:16:14.90,0:16:18.04,English,,0,0,0,,There's virtual pages stored on disk
-Dialogue: 0,0:16:22.08,0:16:26.38,English,,0,0,0,,And then there's their stuff and then there's physical
-Dialogue: 0,0:16:26.38,0:16:30.60,English,,0,0,0,,There's virtual pages stored in various physical pages in dram
+Dialogue: 0,0:16:22.08,0:16:26.38,English,,0,0,0,,And then there's....and then there's physical
+Dialogue: 0,0:16:26.38,0:16:30.60,English,,0,0,0,,There's virtual pages stored in various physical pages in DRAM
 Dialogue: 0,0:16:31.76,0:16:35.00,English,,0,0,0,,And then the page table keeps track of where those are stored
-Dialogue: 0,0:16:35.48,0:16:41.86,English,,0,0,0,,So here we have a case this pte 1 corresponds to virtual page 1
+Dialogue: 0,0:16:35.48,0:16:41.86,English,,0,0,0,,So here we have a case this PTE 1 corresponds to virtual page 1
 Dialogue: 0,0:16:43.18,0:16:48.60,English,,0,0,0,,And in this case it says that virtual page 1 is mapped into physical page 0
 Dialogue: 0,0:16:50.12,0:16:55.30,English,,0,0,0,,Virtual page 2 is mapped into physical page 1 and so on
 Dialogue: 0,0:16:57.30,0:17:05.72,English,,0,0,0,,Ok now some of these the pages that aren't in memory are stored on disks the allocated pages
 Dialogue: 0,0:17:06.72,0:17:12.80,English,,0,0,0,,And so for those pages the page table entry contains a pointer to the location of that that page on disk
 Dialogue: 0,0:17:13.26,0:17:17.94,English,,0,0,0,,So think of it as a logical block number where that page can be found on the disk
 Dialogue: 0,0:17:18.44,0:17:20.22,English,,0,0,0,,And then some of the pages are
-Dialogue: 0,0:17:21.48,0:17:27.14,English,,0,0,0,,Not allocated so there's there's a null null entry in the page table
-Dialogue: 0,0:17:31.38,0:17:35.68,English,,0,0,0,,Now a page hit so this is just a cache right so we have hits and misses
-Dialogue: 0,0:17:36.46,0:17:42.20,English,,0,0,0,,So a page hit occurs when there's a reference to a word and vert in the virtual address space
-Dialogue: 0,0:17:42.90,0:17:46.70,English,,0,0,0,,That's contained in a page that's cached in the dram
-Dialogue: 0,0:17:48.94,0:17:55.20,English,,0,0,0,,Okay so let's say that we have you know the cpu execute this and move instruction it generates a virtual address
-Dialogue: 0,0:17:56.78,0:17:57.96,English,,0,0,0,,The mmu
-Dialogue: 0,0:17:59.44,0:18:07.08,English,,0,0,0,,Looks up in the page table and let's say this virtual address is somewhere within virtual page two okay
-Dialogue: 0,0:18:09.32,0:18:14.94,English,,0,0,0,,Okay so that the mmu looks up the page table entry number two
-Dialogue: 0,0:18:16.06,0:18:23.52,English,,0,0,0,,And it fought it extracts the physical address of that of that virtual page 2
-Dialogue: 0,0:18:25.68,0:18:27.26,English,,0,0,0,,Okay so that's a here so in this case
-Dialogue: 0,0:18:30.16,0:18:35.24,English,,0,0,0,,In this case the the page is in memory it's cached in memory
+Dialogue: 0,0:17:21.48,0:17:27.14,English,,0,0,0,,Not allocated so there's a null entry in the page table
+Dialogue: 0,0:17:31.52,0:17:32.40,English,,0,0,0,,Now a page hit
+Dialogue: 0,0:17:32.94,0:17:35.68,English,,0,0,0,,So this is just a cache right,so we have hits and misses
+Dialogue: 0,0:17:36.46,0:17:42.20,English,,0,0,0,,So a page hit occurs when there's a reference to a word in the virtual address space
+Dialogue: 0,0:17:42.90,0:17:46.70,English,,0,0,0,,That's contained in a page that's cached in the DRAM
+Dialogue: 0,0:17:48.94,0:17:55.20,English,,0,0,0,,Okay so let's say that we have you know the CPU execute this and move instruction it generates a virtual address
+Dialogue: 0,0:17:56.78,0:17:57.96,English,,0,0,0,,The MMU
+Dialogue: 0,0:17:59.44,0:18:07.08,English,,0,0,0,,Looks up in the page table and let's say this virtual address is somewhere within virtual page 2
+Dialogue: 0,0:18:09.32,0:18:14.94,English,,0,0,0,,Okay so that the MMU looks up the page table entry number 2
+Dialogue: 0,0:18:16.06,0:18:23.52,English,,0,0,0,,And it extracts the physical address of that of that virtual page 2
+Dialogue: 0,0:18:25.68,0:18:27.26,English,,0,0,0,,Okay so that's a, so in this case
+Dialogue: 0,0:18:30.16,0:18:35.24,English,,0,0,0,,In this case the page is in memory it's cached in memory
 Dialogue: 0,0:18:35.70,0:18:37.08,English,,0,0,0,,And so we have a hit
-Dialogue: 0,0:18:37.54,0:18:48.12,English,,0,0,0,,And now the the memory can can return that can return that physical address to the mmu
-Dialogue: 0,0:18:52.46,0:19:00.94,English,,0,0,0,,Now a miss is a reference to a word that's not cashed in in in physical memory
-Dialogue: 0,0:19:00.94,0:19:08.42,English,,0,0,0,,So in this case virtual page 0 1 2 3 is not cached in dram
-Dialogue: 0,0:19:08.42,0:19:10.40,English,,0,0,0,,It's stored it's stored on the disk
-Dialogue: 0,0:19:13.58,0:19:18.40,English,,0,0,0,,So now that triggers a an exception ok page fault exception
+Dialogue: 0,0:18:37.54,0:18:48.12,English,,0,0,0,,And now the memory can return that,can return that physical address to the MMU
+Dialogue: 0,0:18:52.46,0:19:00.94,English,,0,0,0,,Now a miss is a reference to a word that's not cashed in physical memory
+Dialogue: 0,0:19:00.94,0:19:08.42,English,,0,0,0,,So in this case virtual page 0,1,2,3 is not cached in DRAM
+Dialogue: 0,0:19:08.42,0:19:10.40,English,,0,0,0,,It's stored on the disk
+Dialogue: 0,0:19:13.58,0:19:18.40,English,,0,0,0,,So now that triggers an exception ok page fault exception
 Dialogue: 0,0:19:19.12,0:19:21.34,English,,0,0,0,,In the hardware the hardware triggers the exception
 Dialogue: 0,0:19:21.66,0:19:27.66,English,,0,0,0,,And that causes the transfer of control to a chunk of code in the kernel called the page fault handler
-Dialogue: 0,0:19:28.84,0:19:35.54,English,,0,0,0,,Which then selects a victim to be evicted in this case  virtual page 4
+Dialogue: 0,0:19:28.84,0:19:35.54,English,,0,0,0,,Which then selects a victim to be evicted,in this case virtual page 4
 Dialogue: 0,0:19:37.20,0:19:41.12,English,,0,0,0,,And it fetches virtual page 3 from the disk
-Dialogue: 0,0:19:43.46,0:19:47.68,English,,0,0,0,,Loads it up into memory and if and then changes
-Dialogue: 0,0:19:47.96,0:19:54.80,English,,0,0,0,,And and then updates this page table entry to reflect the fact that virtual page 4 is now stored on disk
+Dialogue: 0,0:19:43.46,0:19:45.00,English,,0,0,0,,Loads it up into memory
+Dialogue: 0,0:19:45.72,0:19:54.80,English,,0,0,0,,And if and then changes,and then updates this page table entry to reflect the fact that virtual page 4 is now stored on disk
 Dialogue: 0,0:19:55.72,0:20:01.64,English,,0,0,0,,And if virtual page 4 had been modified at any time it would have to write the contents of it that to disk as well
-Dialogue: 0,0:20:06.04,0:20:12.52,English,,0,0,0,,So once the once the handler is copied virtual page three into memory
-Dialogue: 0,0:20:13.40,0:20:17.95,English,,0,0,0,,The instruction that caused the page fault now can be re executed
-Dialogue: 0,0:20:18.82,0:20:25.30,English,,0,0,0,,Okay so once the so when the page fault handler in the kernel returns it returns to the faulting instruction
+Dialogue: 0,0:20:06.04,0:20:12.52,English,,0,0,0,,So once the handler is copied virtual page 3 into memory
+Dialogue: 0,0:20:13.40,0:20:17.95,English,,0,0,0,,The instruction that caused the page fault now can be re-executed
+Dialogue: 0,0:20:18.82,0:20:25.30,English,,0,0,0,,Okay so once the...so when the page fault handler in the kernel returns it returns to the faulting instruction
 Dialogue: 0,0:20:25.72,0:20:26.90,English,,0,0,0,,Which then reacts acutes
-Dialogue: 0,0:20:28.20,0:20:35.84,English,,0,0,0,,And now that page is when the mmu checks that the pte corresponding to that page
+Dialogue: 0,0:20:28.20,0:20:35.84,English,,0,0,0,,And now that page is when the MMU checks that the PTE corresponding to that page
 Dialogue: 0,0:20:36.38,0:20:38.26,English,,0,0,0,,It finds that it's indeed cache so
 Dialogue: 0,0:20:38.56,0:20:43.04,English,,0,0,0,,So now the instruction can continue and we can fetch that
-Dialogue: 0,0:20:44.80,0:20:49.30,English,,0,0,0,,Whatever whatever word at that virtual address from from the dram
-Dialogue: 0,0:20:54.58,0:20:57.08,English,,0,0,0,,Okay now we can we can allocate a new page of memories
-Dialogue: 0,0:20:57.08,0:21:03.98,English,,0,0,0,,So in this example virtual page 0,1,2,3,4,5  is not allocated
+Dialogue: 0,0:20:44.80,0:20:49.30,English,,0,0,0,,Whatever word at that virtual address from the DRAM
+Dialogue: 0,0:20:54.58,0:20:57.08,English,,0,0,0,,Okay now we can allocate a new page of memories
+Dialogue: 0,0:20:57.08,0:21:03.98,English,,0,0,0,,So in this example virtual page 0,1,2,3,4,5 is not allocated
 Dialogue: 0,0:21:06.48,0:21:12.04,English,,0,0,0,,So if you need to let's say you do malloc of a very large chunk of virtual address space
-Dialogue: 0,0:21:12.62,0:21:17.54,English,,0,0,0,,If if those pages if one of those pages hasn't been allocated yet then the kernel actually
+Dialogue: 0,0:21:12.62,0:21:17.54,English,,0,0,0,,If those pages,if one of those pages hasn't been allocated yet then the kernel actually
 Dialogue: 0,0:21:18.26,0:21:24.16,English,,0,0,0,,Or the malloc function actually has to create allocate that memory by calling a function called s break
 Dialogue: 0,0:21:25.38,0:21:29.26,English,,0,0,0,,Okay and then what s break does is actually allocates
-Dialogue: 0,0:21:29.74,0:21:37.92,English,,0,0,0,,This this page and records where it's loaded now would probably actually put it up into
-Dialogue: 0,0:21:40.30,0:21:45.87,English,,0,0,0,,Now I guess it wouldn't actually show up in that in the dram cache until it was that page was touched
+Dialogue: 0,0:21:29.74,0:21:37.92,English,,0,0,0,,This page and records where it's loaded now would probably actually put it up into
+Dialogue: 0,0:21:40.30,0:21:45.87,English,,0,0,0,,Now I guess it wouldn't actually show up in the DRAM cache until it was that page was touched
 Dialogue: 0,0:21:46.48,0:21:51.22,English,,0,0,0,,Okay so just allocating space just changes this page table entry
 Dialogue: 0,0:21:51.74,0:21:56.22,English,,0,0,0,,And then when that page is actually touched then it'll be brought into the cache
 Dialogue: 0,0:21:58.18,0:22:02.72,English,,0,0,0,,So I don't know about you but the first time I learned about this I was
 Dialogue: 0,0:22:02.82,0:22:08.52,English,,0,0,0,,I was pretty appalled it just seemed like the most inefficient terrible idea right
-Dialogue: 0,0:22:09.00,0:22:17.94,English,,0,0,0,,How in the world can you afford to on every single every single instruction  that that uses memory
+Dialogue: 0,0:22:09.00,0:22:17.94,English,,0,0,0,,How in the world can you afford to on every single instruction that uses memory
 Dialogue: 0,0:22:18.48,0:22:22.22,English,,0,0,0,,Do all this copying back and forth and looking up in tables
 Dialogue: 0,0:22:22.64,0:22:24.08,English,,0,0,0,,And it just seems like an awful idea
 Dialogue: 0,0:22:24.64,0:22:26.52,English,,0,0,0,,But once again locality saves us
-Dialogue: 0,0:22:27.02,0:22:31.48,English,,0,0,0,,Okay and it it actually works because programs have locality
-Dialogue: 0,0:22:32.44,0:22:35.70,English,,0,0,0,,Okay and it it's actually fairly efficient
+Dialogue: 0,0:22:27.02,0:22:31.48,English,,0,0,0,,Okay and it actually works because programs have locality
+Dialogue: 0,0:22:32.44,0:22:35.70,English,,0,0,0,,Okay and it's actually fairly efficient
 Dialogue: 0,0:22:36.92,0:22:43.34,English,,0,0,0,,And the reason is that at any point of time programs tend to access a set of pages called the working set
-Dialogue: 0,0:22:43.88,0:22:51.04,English,,0,0,0,,Okay just by locality right by by temporal locality by the principle of temporal locality and spatial locality
+Dialogue: 0,0:22:43.88,0:22:51.04,English,,0,0,0,,Okay just by locality right by temporal locality,by the principle of temporal locality and spatial locality
 Dialogue: 0,0:22:51.74,0:22:56.88,English,,0,0,0,,You tend to sort of reuse the same things reuse nearby things okay
 Dialogue: 0,0:22:57.14,0:23:02.42,English,,0,0,0,,And so if that working set is less than the main memory size
 Dialogue: 0,0:23:02.42,0:23:06.70,English,,0,0,0,,Then all of the pages in the current were that will fit in memory and then things will be great
 Dialogue: 0,0:23:09.50,0:23:14.92,English,,0,0,0,,Okay but if the some of the working set sizes for for every process right our systems running multiple processes
 Dialogue: 0,0:23:15.40,0:23:17.20,English,,0,0,0,,If it exceeds the main memory size
-Dialogue: 0,0:23:18.10,0:23:21.30,English,,0,0,0,,Then you have this this meltdown where processes are
-Dialogue: 0,0:23:22.32,0:23:25.56,English,,0,0,0,,Thrashing each other and causing pages to be copied back and forth
-Dialogue: 0,0:23:26.26,0:23:31.08,English,,0,0,0,,So you never ever know process ever gets it's working set fully into into memory okay
+Dialogue: 0,0:23:18.10,0:23:25.56,English,,0,0,0,,Then you have this meltdown where processes are thrashing each other and causing pages to be copied back and forth
+Dialogue: 0,0:23:26.26,0:23:31.08,English,,0,0,0,,So you never ever know process ever gets it's working set fully into memory
 Dialogue: 0,0:23:33.58,0:23:36.50,English,,0,0,0,,Okay and we'll look at a technique when we look at address translation
-Dialogue: 0,0:23:36.50,0:23:40.62,English,,0,0,0,,We'll look at a little hardware cache called a translation lookaside buffer
-Dialogue: 0,0:23:41.00,0:23:44.92,English,,0,0,0,,That that further exploits the locality property of programs
+Dialogue: 0,0:23:36.50,0:23:40.62,English,,0,0,0,,We'll look at a little hardware cache called a translation look aside buffer
+Dialogue: 0,0:23:41.00,0:23:44.92,English,,0,0,0,,That further exploits the locality property of programs
 Dialogue: 0,0:23:46.58,0:23:49.34,English,,0,0,0,,Okay so that's virtual memory is a tool for caching
-Dialogue: 0,0:23:49.84,0:23:53.00,English,,0,0,0,,It's also a member of tool for memory management and
-Dialogue: 0,0:23:53.20,0:23:57.32,English,,0,0,0,,It greatly simplifies all kinds of aspects of memory management for the kernel
+Dialogue: 0,0:23:49.84,0:23:53.00,English,,0,0,0,,It's also a member of tool for memory management
+Dialogue: 0,0:23:53.20,0:23:57.32,English,,0,0,0,,And it greatly simplifies all kinds of aspects of memory management for the kernel
 Dialogue: 0,0:23:59.72,0:24:04.38,English,,0,0,0,,So the key idea is that each process has its own virtual address space
-Dialogue: 0,0:24:05.60,0:24:11.30,English,,0,0,0,,The kernel the kernel implements this by giving each process its own separate page table
-Dialogue: 0,0:24:11.92,0:24:15.62,English,,0,0,0,,In the context of that process so it's it's just a data structure in the kernel
-Dialogue: 0,0:24:15.96,0:24:18.74,English,,0,0,0,,That the process key that the kernel keeps for that process
-Dialogue: 0,0:24:22.54,0:24:29.84,English,,0,0,0,,And the the page table for each process maps the virtual address space for that process
-Dialogue: 0,0:24:32.40,0:24:39.18,English,,0,0,0,,Now what's interesting so you have that these these pages contiguous pages in the virtual address space
-Dialogue: 0,0:24:39.54,0:24:44.08,English,,0,0,0,,Can be mapped anywhere in the in the in the dram in the physical address space
+Dialogue: 0,0:24:05.60,0:24:11.30,English,,0,0,0,,The kernel implements this by giving each process its own separate page table
+Dialogue: 0,0:24:11.92,0:24:15.62,English,,0,0,0,,In the context of that process so it's just a data structure in the kernel
+Dialogue: 0,0:24:15.96,0:24:18.74,English,,0,0,0,,That the process key...that the kernel keeps for that process
+Dialogue: 0,0:24:22.54,0:24:29.84,English,,0,0,0,,And the page table for each process maps the virtual address space for that process
+Dialogue: 0,0:24:32.40,0:24:39.18,English,,0,0,0,,Now what's interesting so you have that these pages contiguous pages in the virtual address space
+Dialogue: 0,0:24:39.54,0:24:44.08,English,,0,0,0,,Can be mapped anywhere in the DRAM,in the physical address space
 Dialogue: 0,0:24:44.78,0:24:47.62,English,,0,0,0,,So and they can be scattered all over the place
 Dialogue: 0,0:24:48.48,0:24:55.30,English,,0,0,0,,And different virtual pages and different processes can be mapped to different physical pages
 Dialogue: 0,0:24:55.30,0:24:59.38,English,,0,0,0,,So here we have virtual page one which is mapped to physical page two
-Dialogue: 0,0:25:00.44,0:25:06.02,English,,0,0,0,,In process one but in process two virtual page one is mapped to physical page eight
-Dialogue: 0,0:25:06.92,0:25:14.50,English,,0,0,0,,Okay so in this way we can present a view to two each to the programmer and to the tools
+Dialogue: 0,0:25:00.44,0:25:06.02,English,,0,0,0,,In process 1 but in process 2 virtual page one is mapped to physical page 8
+Dialogue: 0,0:25:06.92,0:25:14.50,English,,0,0,0,,Okay so in this way we can present a view to each,to the programmer and to the tools
 Dialogue: 0,0:25:15.66,0:25:20.54,English,,0,0,0,,That each process has a very similar address space virtual address space
 Dialogue: 0,0:25:20.54,0:25:23.46,English,,0,0,0,,Same size address space code and data start at the same place
-Dialogue: 0,0:25:24.42,0:25:28.48,English,,0,0,0,,But then the actual pages that that process used can be scattered in memory
+Dialogue: 0,0:25:24.42,0:25:28.48,English,,0,0,0,,But then the actual pages that process used can be scattered in memory
 Dialogue: 0,0:25:30.30,0:25:33.48,English,,0,0,0,,Okay and then it gives us the most efficient way to use the memory
 Dialogue: 0,0:25:35.74,0:25:41.52,English,,0,0,0,,If we didn't have this mechanism think about how would you keep track let's say you had 50 processes running
 Dialogue: 0,0:25:41.82,0:25:43.68,English,,0,0,0,,On the machine at any point in time
@@ -303,7 +303,7 @@ Dialogue: 0,0:25:43.84,0:25:50.36,English,,0,0,0,,How in the world would you kee
 Dialogue: 0,0:25:51.58,0:25:57.92,English,,0,0,0,,Well one technique that you could imagine in fact it was used in the in the bad old days but before virtual memory
 Dialogue: 0,0:25:58.52,0:26:03.46,English,,0,0,0,,One thing you can imagine is that just give every process its own chunk of the physical address space
 Dialogue: 0,0:26:03.98,0:26:06.46,English,,0,0,0,,Just take your physical address space partition it
-Dialogue: 0,0:26:07.08,0:26:11.18,English,,0,0,0,,And then each process gets loads and runs and it's its own part of the address space
+Dialogue: 0,0:26:07.08,0:26:11.18,English,,0,0,0,,And then each process gets loads and runs and it's own part of the address space
 Dialogue: 0,0:26:12.42,0:26:14.84,English,,0,0,0,,Well this has all kinds of problems right I mean you could
 Dialogue: 0,0:26:15.56,0:26:17.88,English,,0,0,0,,If you what do you do if you add a process
 Dialogue: 0,0:26:19.66,0:26:23.20,English,,0,0,0,,So you really can't partition the address space you really have to sort of say well
@@ -312,118 +312,121 @@ Dialogue: 0,0:26:25.88,0:26:30.14,English,,0,0,0,,And I'm going to reserve some 
 Dialogue: 0,0:26:31.94,0:26:34.38,English,,0,0,0,,Another problem is that now you have to write your programs
 Dialogue: 0,0:26:35.14,0:26:37.56,English,,0,0,0,,You can't just link your program ahead of time
 Dialogue: 0,0:26:38.40,0:26:42.06,English,,0,0,0,,Because it has to be relocated when it's loaded right
-Dialogue: 0,0:26:42.06,0:26:48.06,English,,0,0,0,,Because you don't you know a process you don't know where in the memory it's going to go it's going to get some chunk
+Dialogue: 0,0:26:42.06,0:26:48.06,English,,0,0,0,,Because you don't...you know a process, you don't know where in the memory it's going to go, it's going to get some chunk
 Dialogue: 0,0:26:49.12,0:26:52.28,English,,0,0,0,,So you have to either relocate all the the references
 Dialogue: 0,0:26:53.52,0:26:57.10,English,,0,0,0,,That the references to global symbols at when it's actually loaded
 Dialogue: 0,0:26:58.42,0:27:03.20,English,,0,0,0,,Or you have to create a system where all of the instructions are relative
-Dialogue: 0,0:27:03.46,0:27:10.78,English,,0,0,0,,So there's there's no absolute addresses all addresses are relative to say the start of the program something like that
+Dialogue: 0,0:27:03.50,0:27:06.22,English,,0,0,0,,So there's no absolute addresses
+Dialogue: 0,0:27:06.86,0:27:10.78,English,,0,0,0,,All addresses are relative to say the start of the program something like that
 Dialogue: 0,0:27:11.79,0:27:14.22,English,,0,0,0,,So anyway all of these things are just terribly complicated
 Dialogue: 0,0:27:15.24,0:27:20.04,English,,0,0,0,,And they're all solved beautifully by virtual memory
 Dialogue: 0,0:27:26.14,0:27:31.78,English,,0,0,0,,So the each virtual page can be mapped to any physical page so that really helps simplify things
 Dialogue: 0,0:27:32.56,0:27:38.48,English,,0,0,0,,And even at different times the same virtual page can be stored in different physical pages at different times
-Dialogue: 0,0:27:38.90,0:27:42.58,English,,0,0,0,,All right so if a page for it for a while it might be cached in one physical page
-Dialogue: 0,0:27:43.00,0:27:48.48,English,,0,0,0,,Then it gets swapped out and the next time it's referenced it can get cached in a different physical page if
-Dialogue: 0,0:27:49.12,0:27:51.48,English,,0,0,0,,That if it's no longer available right so it provides
-Dialogue: 0,0:27:51.88,0:27:56.12,English,,0,0,0,,So the most flexible scheduling freedom
-Dialogue: 0,0:27:58.56,0:28:01.82,English,,0,0,0,,In the way that we in the way that we manage the memory
+Dialogue: 0,0:27:38.90,0:27:42.58,English,,0,0,0,,All right so if a page for it,for a while it might be cached in one physical page
+Dialogue: 0,0:27:42.94,0:27:45.12,English,,0,0,0,,Then it gets swapped out and the next time it's referenced
+Dialogue: 0,0:27:45.56,0:27:50.36,English,,0,0,0,,It can get cached in a different physical page that if it's no longer available
+Dialogue: 0,0:27:50.50,0:27:56.12,English,,0,0,0,,Right so it provides so the most flexible scheduling freedom
+Dialogue: 0,0:27:58.56,0:28:01.82,English,,0,0,0,,In the way that we in...the way that we manage the memory
 Dialogue: 0,0:28:03.04,0:28:05.54,English,,0,0,0,,And it also provides this really neat capability
 Dialogue: 0,0:28:05.96,0:28:08.90,English,,0,0,0,,Where you can map virtual pages to the same physical page
 Dialogue: 0,0:28:09.72,0:28:18.40,English,,0,0,0,,So there's this is a very simple straightforward way for multiple processes to share certain code or data
-Dialogue: 0,0:28:19.64,0:28:27.48,English,,0,0,0,,Okay and what what you do is you just that the page table entry in these different processes
+Dialogue: 0,0:28:19.64,0:28:27.48,English,,0,0,0,,Okay and what you do is you just that the page table entry in these different processes
 Dialogue: 0,0:28:27.52,0:28:29.56,English,,0,0,0,,Just points to the same physical page
 Dialogue: 0,0:28:29.56,0:28:34.52,English,,0,0,0,,So in this case virtual page 2 points to physical page 6
-Dialogue: 0,0:28:34.58,0:28:39.74,English,,0,0,0,,In each of in each of the page tables for process 1 and process 2
+Dialogue: 0,0:28:34.58,0:28:39.74,English,,0,0,0,,In each of the page tables for process 1 and process 2
 Dialogue: 0,0:28:41.04,0:28:44.02,English,,0,0,0,,So this is how shared libraries are implemented
-Dialogue: 0,0:28:44.62,0:28:48.70,English,,0,0,0,,Right so lipsy is the same code for every process running on the system
-Dialogue: 0,0:28:49.66,0:28:54.26,English,,0,0,0,,So lipsy just needs to be loaded once into physical into physical memory
-Dialogue: 0,0:28:54.96,0:28:59.76,English,,0,0,0,,And then processes that want to access functions and data in lib C just map
-Dialogue: 0,0:29:00.42,0:29:05.28,English,,0,0,0,,The pages in their virtual address space to the physical pages where lib C is actually loaded
-Dialogue: 0,0:29:06.34,0:29:09.44,English,,0,0,0,,Ok so now there's only one copy of lib C everywhere in the system
+Dialogue: 0,0:28:44.62,0:28:48.70,English,,0,0,0,,Right so lib.c is the same code for every process running on the system
+Dialogue: 0,0:28:49.66,0:28:54.26,English,,0,0,0,,So lib.c just needs to be loaded once into physical into physical memory
+Dialogue: 0,0:28:54.96,0:28:59.76,English,,0,0,0,,And then processes that want to access functions and data in lib.c just map
+Dialogue: 0,0:29:00.42,0:29:05.28,English,,0,0,0,,The pages in their virtual address space to the physical pages where lib.c is actually loaded
+Dialogue: 0,0:29:06.34,0:29:09.44,English,,0,0,0,,Ok so now there's only one copy of lib.c everywhere in the system
 Dialogue: 0,0:29:09.92,0:29:12.10,English,,0,0,0,,But every process thinks it's got its own copy
-Dialogue: 0,0:29:16.88,0:29:23.12,English,,0,0,0,,Now this this virtual memory for met
+Dialogue: 0,0:29:16.88,0:29:23.12,English,,0,0,0,,Now this virtual memory for...
 Dialogue: 0,0:29:23.40,0:29:29.04,English,,0,0,0,,Using virtual memory to help simplify memory management greatly simplifies linking and loading
-Dialogue: 0,0:29:30.16,0:29:33.84,English,,0,0,0,,Ok for the reasons I mentioned before linkers now can assume that every
-Dialogue: 0,0:29:34.66,0:29:37.70,English,,0,0,0,,Every program is going to be loaded at exactly the same place
+Dialogue: 0,0:29:30.16,0:29:31.94,English,,0,0,0,,Ok for the reasons I mentioned before
+Dialogue: 0,0:29:31.94,0:29:37.70,English,,0,0,0,,Linkers now can assume that every program is going to be loaded at exactly the same place
 Dialogue: 0,0:29:37.88,0:29:40.40,English,,0,0,0,,So the linker knows ahead of time where everything is going to be
 Dialogue: 0,0:29:41.28,0:29:45.72,English,,0,0,0,,And then it can resolve it can relocate all those references accordingly
 Dialogue: 0,0:29:49.46,0:29:53.60,English,,0,0,0,,Now it really makes loading as simple
-Dialogue: 0,0:29:55.90,0:29:58.08,English,,0,0,0,,So what so execve the loader
+Dialogue: 0,0:29:55.90,0:29:58.08,English,,0,0,0,,So what...so execve the loader
 Dialogue: 0,0:30:00.62,0:30:05.40,English,,0,0,0,,If you want to load a program now execve looks at the elf binary the executable binary
 Dialogue: 0,0:30:06.50,0:30:12.80,English,,0,0,0,,Ok it sees how it identifies how big the code and the data sections in that binary are
-Dialogue: 0,0:30:14.04,0:30:18.70,English,,0,0,0,,It allocates virtual memory starting at a fixed address for the code and data ok
-Dialogue: 0,0:30:21.04,0:30:24.38,English,,0,0,0,,It creates ptes for them and marks each of them is invalid
-Dialogue: 0,0:30:26.14,0:30:31.62,English,,0,0,0,,Ok so each each pte contains a valid mapping
-Dialogue: 0,0:30:31.62,0:30:37.06,English,,0,0,0,,So each pte that's mapped to code and data contains a valid physical page number
+Dialogue: 0,0:30:14.04,0:30:18.70,English,,0,0,0,,It allocates virtual memory starting at a fixed address for the code and data
+Dialogue: 0,0:30:21.04,0:30:24.38,English,,0,0,0,,It creates PTEs for them and marks each of them is invalid
+Dialogue: 0,0:30:26.14,0:30:31.62,English,,0,0,0,,Ok so each PTE contains a valid mapping
+Dialogue: 0,0:30:31.62,0:30:37.06,English,,0,0,0,,So each PTE that's mapped to code and data contains a valid physical page number
 Dialogue: 0,0:30:38.04,0:30:42.88,English,,0,0,0,,But then the it does this trick of setting the valid bit to 0
-Dialogue: 0,0:30:45.46,0:30:50.70,English,,0,0,0,,So when the when the mmu x encounters a pte whose valid bit is 0
+Dialogue: 0,0:30:45.46,0:30:50.70,English,,0,0,0,,So when the MMU x encounters a PTE whose valid bit is 0
 Dialogue: 0,0:30:51.66,0:30:52.96,English,,0,0,0,,It triggers a page fault
-Dialogue: 0,0:30:53.30,0:30:57.36,English,,0,0,0,,Right it looks as though that page is not has not been initialized yet
-Dialogue: 0,0:30:57.50,0:31:03.88,English,,0,0,0,,So it's kind of a trick right and then that triggers a page fault  to the kernel
-Dialogue: 0,0:31:06.02,0:31:16.32,English,,0,0,0,,And then the kernel will then can then copy that that page into into physical memory
-Dialogue: 0,0:31:17.14,0:31:23.86,English,,0,0,0,,Ok so this the the loading actually programs and data aren't actually they're not low loaded
+Dialogue: 0,0:30:53.30,0:30:57.36,English,,0,0,0,,Right it looks as though that page is not been initialized yet
+Dialogue: 0,0:30:57.54,0:30:58.36,English,,0,0,0,,So it's kind of a trick
+Dialogue: 0,0:30:59.72,0:31:03.88,English,,0,0,0,,Right and then that triggers a page fault to the kernel
+Dialogue: 0,0:31:06.02,0:31:16.32,English,,0,0,0,,And then the kernel will then can then copy that that page into physical memory
+Dialogue: 0,0:31:17.14,0:31:23.86,English,,0,0,0,,Ok so this the loading actually programs and data aren't actually they're not low loaded
 Dialogue: 0,0:31:24.40,0:31:26.36,English,,0,0,0,,You know they're not just like copied into memory
-Dialogue: 0,0:31:27.16,0:31:32.52,English,,0,0,0,,It happens as a result of of page faults it happens as a result of misses
-Dialogue: 0,0:31:34.76,0:31:39.44,English,,0,0,0,,When and it's deferred to until a bite in that page is accessed
+Dialogue: 0,0:31:27.16,0:31:32.52,English,,0,0,0,,It happens as a result of of page faults,it happens as a result of misses
+Dialogue: 0,0:31:34.76,0:31:39.44,English,,0,0,0,,When and it's deferred to until a byte in that page is accessed
 Dialogue: 0,0:31:40.26,0:31:42.02,English,,0,0,0,,Okay so this is called demand paging okay
-Dialogue: 0,0:31:43.26,0:31:46.30,English,,0,0,0,,But it's really just like any any of the other caches we've looked at right
-Dialogue: 0,0:31:46.30,0:31:53.36,English,,0,0,0,,You don't you don't load a block into the cache until a word within that block is is accessed okay
-Dialogue: 0,0:31:55.98,0:32:00.96,English,,0,0,0,,So so loading actually so loading is actually this is a very efficient mechanism right because
-Dialogue: 0,0:32:01.54,0:32:08.42,English,,0,0,0,,You may have a program that contains a huge say a huge array a large array
+Dialogue: 0,0:31:43.26,0:31:46.30,English,,0,0,0,,But it's really just like any of the other caches we've looked at right
+Dialogue: 0,0:31:46.30,0:31:53.36,English,,0,0,0,,You don't load a block into the cache until a word within that block is accessed okay
+Dialogue: 0,0:31:55.98,0:32:00.96,English,,0,0,0,,So loading actually...so loading is actually this is a very efficient mechanism right because
+Dialogue: 0,0:32:01.54,0:32:08.42,English,,0,0,0,,You may have a program that contains a huge,say a huge array,a large array
 Dialogue: 0,0:32:08.90,0:32:11.32,English,,0,0,0,,But you're only accessing a portion of that array
-Dialogue: 0,0:32:12.70,0:32:18.90,English,,0,0,0,,So that that entire array won't actually be be allocated the pages will only come into dram
-Dialogue: 0,0:32:19.60,0:32:22.04,English,,0,0,0,,When they're when a word within that page is touched
+Dialogue: 0,0:32:12.70,0:32:18.90,English,,0,0,0,,So that entire array won't actually be be allocated the pages will only come into DRAM
+Dialogue: 0,0:32:19.60,0:32:22.04,English,,0,0,0,,When they're...when a word within that page is touched
 Dialogue: 0,0:32:23.02,0:32:26.20,English,,0,0,0,,So if you're only accessing a portion of this extremely large array
-Dialogue: 0,0:32:27.24,0:32:31.60,English,,0,0,0,,Only the data that you access gets gets loaded and used
-Dialogue: 0,0:32:32.02,0:32:38.44,English,,0,0,0,,So it's a it's a very very smart mechanism and extremely helpful for
+Dialogue: 0,0:32:27.24,0:32:31.60,English,,0,0,0,,Only the data that you access gets loaded and used
+Dialogue: 0,0:32:32.02,0:32:38.44,English,,0,0,0,,So it's a very very smart mechanism and extremely helpful for
 Dialogue: 0,0:32:38.60,0:32:41.54,English,,0,0,0,,For allowing us to use this precious memory resource
-Dialogue: 0,0:32:43.58,0:32:54.66,English,,0,0,0,,Okay so the third the third motivation for virtual memory  is that it helps us protect portions of memory
+Dialogue: 0,0:32:43.58,0:32:54.66,English,,0,0,0,,Okay so the third motivation for virtual memory is that it helps us protect portions of memory
 Dialogue: 0,0:32:55.84,0:32:58.72,English,,0,0,0,,So you recall that our processes
-Dialogue: 0,0:32:59.32,0:33:04.56,English,,0,0,0,,You know portions of our virtual address space or read-only like the the code section
+Dialogue: 0,0:32:59.32,0:33:04.56,English,,0,0,0,,You know portions of our virtual address space or read-only like the code section
 Dialogue: 0,0:33:06.60,0:33:10.86,English,,0,0,0,,Okay and there are other portions of the address space that can only be executed by the kernel
-Dialogue: 0,0:33:13.38,0:33:14.30,English,,0,0,0,,Okay so on
-Dialogue: 0,0:33:17.96,0:33:24.34,English,,0,0,0,,On systems like x86-64,it's it's a 64-bit system
+Dialogue: 0,0:33:13.38,0:33:14.30,English,,0,0,0,,So on...
+Dialogue: 0,0:33:17.96,0:33:20.98,English,,0,0,0,,On systems like x86-64
+Dialogue: 0,0:33:21.68,0:33:24.34,English,,0,0,0,,It's a 64-bit system
 Dialogue: 0,0:33:24.46,0:33:27.46,English,,0,0,0,,So the pointers and addresses or 64 bits
 Dialogue: 0,0:33:28.56,0:33:32.16,English,,0,0,0,,But in actuality the real virtual address space is 48 bits
-Dialogue: 0,0:33:33.28,0:33:35.40,English,,0,0,0,,Okay so it's it's only it's 2^48
-Dialogue: 0,0:33:36.44,0:33:42.85,English,,0,0,0,,And then the the high-order bits after bit 48 are either all zeros or all ones
-Dialogue: 0,0:33:43.70,0:33:51.14,English,,0,0,0,,Okay so and that's so that's just the that's the that sort of intel's rule
-Dialogue: 0,0:33:51.40,0:33:58.58,English,,0,0,0,,Okay for and so the the addresses where the high order bits are all ones are reserved for the kernel
+Dialogue: 0,0:33:33.28,0:33:35.40,English,,0,0,0,,Okay so it's only..it's 2^48
+Dialogue: 0,0:33:36.44,0:33:42.85,English,,0,0,0,,And then the high-order bits after bit 48 are either all zeros or all ones
+Dialogue: 0,0:33:43.74,0:33:44.40,English,,0,0,0,,Okay so
+Dialogue: 0,0:33:46.22,0:33:51.14,English,,0,0,0,,And that's the that sort of intel's rule
+Dialogue: 0,0:33:53.16,0:33:58.58,English,,0,0,0,,And so the addresses where the high order bits are all ones are reserved for the kernel
 Dialogue: 0,0:33:58.80,0:34:01.18,English,,0,0,0,,The kernels code and the kernels data
 Dialogue: 0,0:34:02.58,0:34:05.78,English,,0,0,0,,Okay the addresses were all the bits are zero or reserved for user code
-Dialogue: 0,0:34:06.66,0:34:11.98,English,,0,0,0,,Okay so so any reference any address that contains all ones in those higher order bits
+Dialogue: 0,0:34:06.66,0:34:11.98,English,,0,0,0,,Okay so any reference,any address that contains all ones in those higher order bits
 Dialogue: 0,0:34:12.62,0:34:16.38,English,,0,0,0,,Is by definition either code or data in the kernel
-Dialogue: 0,0:34:17.24,0:34:22.48,English,,0,0,0,,And so you can you can add bits to the pte
+Dialogue: 0,0:34:17.24,0:34:22.48,English,,0,0,0,,And so you can add bits to the PTE
 Dialogue: 0,0:34:23.20,0:34:28.66,English,,0,0,0,,That specify whether certain virtual pages can be accessed by user code
-Dialogue: 0,0:34:28.66,0:34:33.18,English,,0,0,0,,Or if they have to be accessed by the by the kernel so this so-called supervisor mode
-Dialogue: 0,0:34:33.62,0:34:41.38,English,,0,0,0,,And you can also add bits that control whether that that page can be read written or executed
-Dialogue: 0,0:34:42.12,0:34:49.44,English,,0,0,0,,Okay so this this executes bit is new with x86-64 it didn't exist in 32-bit x86 systems
-Dialogue: 0,0:34:50.50,0:34:57.04,English,,0,0,0,,And this is the technique that's used now to try to prevent against
-Dialogue: 0,0:34:58.04,0:35:00.48,English,,0,0,0,,Attack lab code injection style attacks
+Dialogue: 0,0:34:28.66,0:34:33.18,English,,0,0,0,,Or if they have to be accessed by the kernel,so this so-called supervisor mode
+Dialogue: 0,0:34:33.62,0:34:41.38,English,,0,0,0,,And you can also add bits that control whether that page can be read written or executed
+Dialogue: 0,0:34:42.12,0:34:49.44,English,,0,0,0,,Okay so this executes bit is new with x86-64,it didn't exist in 32-bit x86 systems
+Dialogue: 0,0:34:50.50,0:35:00.48,English,,0,0,0,,And this is the technique that's used now to try to prevent against attack lab code injection style attacks
 Dialogue: 0,0:35:01.00,0:35:02.30,English,,0,0,0,,Because it makes it impossible
-Dialogue: 0,0:35:02.64,0:35:09.30,English,,0,0,0,,If this bit is set you can't load instructions from from any any byte within that page
-Dialogue: 0,0:35:10.86,0:35:14.92,English,,0,0,0,,And so in fact it was it was this the introduction of this execute bit
+Dialogue: 0,0:35:02.64,0:35:09.30,English,,0,0,0,,If this bit is set you can't load instructions from any byte within that page
+Dialogue: 0,0:35:10.86,0:35:14.92,English,,0,0,0,,And so in fact it was this the introduction of this execute bit
 Dialogue: 0,0:35:14.92,0:35:20.12,English,,0,0,0,,That's or led to things like return-oriented programming attacks like you did in your attack lab
-Dialogue: 0,0:35:22.88,0:35:30.12,English,,0,0,0,,Okay so this by just the simple technique of adding adding bits to the pte
-Dialogue: 0,0:35:30.72,0:35:33.82,English,,0,0,0,,We provide a way attic way to to protect
+Dialogue: 0,0:35:22.88,0:35:30.12,English,,0,0,0,,Okay so this by just the simple technique of adding bits to the PTE
+Dialogue: 0,0:35:30.72,0:35:33.82,English,,0,0,0,,We provide a way attic way to protect
 Dialogue: 0,0:35:34.36,0:35:40.70,English,,0,0,0,,Different parts of our virtual address space from unauthorized accesses
-Dialogue: 0,0:35:41.60,0:35:44.84,English,,0,0,0,,And then the the mmu actually checks these bits on each access
-Dialogue: 0,0:35:44.88,0:35:49.50,English,,0,0,0,,And if there's if there's a problem you know if if you're trying to do a right and the right
+Dialogue: 0,0:35:41.60,0:35:44.84,English,,0,0,0,,And then the the MMU actually checks these bits on each access
+Dialogue: 0,0:35:44.88,0:35:49.50,English,,0,0,0,,And if there's a problem you know if you're trying to do a right and the right
 Dialogue: 0,0:35:50.84,0:35:56.48,English,,0,0,0,,The right that's not enabled then it throws an exception which then the kernel the colonel deals with
-Dialogue: 0,0:36:00.42,0:36:05.44,English,,0,0,0,,Ok so so far I've been talking about address translation it kind of high-level high-level terms
-Dialogue: 0,0:36:05.44,0:36:08.66,English,,0,0,0,,So let's let's get down to details and see how it really works
-Dialogue: 0,0:36:10.86,0:36:17.88,English,,0,0,0,,Okay so we're given a virtual address of n elements physical address of m elements
-Dialogue: 0,0:36:19.70,0:36:23.93,English,,0,0,0,,Like I said before n is usually larger than m but it doesn't have to be
-Dialogue: 0,0:36:25.64,0:36:29.62,English,,0,0,0,,Okay it's perfectly there's no reason m m could be much larger than n
-Dialogue: 0,0:36:30.76,0:36:34.06,English,,0,0,0,,And there it's typically not but but it could be
-Dialogue: 0,0:36:35.52,0:36:40.84,English,,0,0,0,,And so given these two address spaces we have a map function that takes that maps from v to p
+Dialogue: 0,0:36:00.42,0:36:05.44,English,,0,0,0,,Ok so so far I've been talking about address translation it kind of high-level terms
+Dialogue: 0,0:36:05.44,0:36:08.66,English,,0,0,0,,So let's get down to details and see how it really works
+Dialogue: 0,0:36:10.86,0:36:17.88,English,,0,0,0,,Okay so we're given a virtual address of N elements physical address of M elements
+Dialogue: 0,0:36:19.70,0:36:23.93,English,,0,0,0,,Like I said before N is usually larger than M but it doesn't have to be
+Dialogue: 0,0:36:25.64,0:36:29.62,English,,0,0,0,,Okay it's perfectly there's no reason M could be much larger than N
+Dialogue: 0,0:36:30.76,0:36:34.06,English,,0,0,0,,And there it's typically not but it could be
+Dialogue: 0,0:36:35.52,0:36:40.84,English,,0,0,0,,And so given these two address spaces we have a map function that takes that maps from V to P
 Dialogue: 0,0:36:41.30,0:36:45.78,English,,0,0,0,,With an optional empty set or with an additional empty set
-Dialogue: 0,0:36:46.80,0:36:51.28,English,,0,0,0,,And so for virtual address a map a is equal to a prime
-Dialogue: 0,0:36:51.72,0:36:55.76,English,,0,0,0,,If the data at virtual address a is a physical address a prime
-Dialogue: 0,0:36:55.78,0:36:59.70,English,,0,0,0,,Okay so I mean that's just what we it's just a little more formal way to say
+Dialogue: 0,0:36:46.80,0:36:51.28,English,,0,0,0,,And so for virtual address a,MAP(a)=a'
+Dialogue: 0,0:36:51.72,0:36:55.76,English,,0,0,0,,If the data at virtual address a is a physical address a'
+Dialogue: 0,0:36:55.78,0:36:59.70,English,,0,0,0,,Okay so I mean that's just what we...it's just a little more formal way to say
 Dialogue: 0,0:36:59.84,0:37:03.48,English,,0,0,0,,What we've been talking about before with our diagrams
 Dialogue: 0,0:37:04.60,0:37:09.96,English,,0,0,0,,And then map a is the empty set if the data at virtual address a is not in physical memory
 Dialogue: 0,0:37:13.92,0:37:20.12,English,,0,0,0,,Okay so just for a summary I'm going to put up a list of all the symbols we're going to be using in address translation
-Dialogue: 0,0:37:20.48,0:37:25.32,English,,0,0,0,,But this is just for summary this is just for reference if you're using the slides later on
+Dialogue: 0,0:37:20.48,0:37:25.32,English,,0,0,0,,But this is just for summary,this is just for reference if you're using the slides later on
 Dialogue: 0,0:37:28.76,0:37:31.62,English,,0,0,0,,Okay so here's how address translation where the page table works
 Dialogue: 0,0:37:34.84,0:37:36.44,English,,0,0,0,,So we're given some virtual address
 Dialogue: 0,0:37:38.48,0:37:40.10,English,,0,0,0,,That consists of n bits
@@ -432,338 +435,347 @@ Dialogue: 0,0:37:53.42,0:37:55.02,English,,0,0,0,,Okay so think about this now t
 Dialogue: 0,0:37:56.48,0:38:01.32,English,,0,0,0,,So this is very similar to what we looked at when we did caching you know the address bits for a cache
 Dialogue: 0,0:38:02.46,0:38:06.82,English,,0,0,0,,So these first p bits correspond to the page offset
 Dialogue: 0,0:38:06.82,0:38:10.42,English,,0,0,0,,So this is analogous to the blocks offsets that we saw with caches
-Dialogue: 0,0:38:13.92,0:38:18.12,English,,0,0,0,,And then the remaining bits correspond to the the virtual page number
+Dialogue: 0,0:38:13.92,0:38:18.12,English,,0,0,0,,And then the remaining bits correspond to the virtual page number
 Dialogue: 0,0:38:19.06,0:38:23.62,English,,0,0,0,,This is so member this is fully associative right so there's only one set
 Dialogue: 0,0:38:24.20,0:38:28.86,English,,0,0,0,,So in a fully associative cache everything after the block offset is tagged
-Dialogue: 0,0:38:29.30,0:38:34.68,English,,0,0,0,,So think of this as like a tag this is the this is what uniquely identifies this block
+Dialogue: 0,0:38:29.30,0:38:30.78,English,,0,0,0,,So think of this as like a tag
+Dialogue: 0,0:38:30.96,0:38:34.60,English,,0,0,0,,This is the...this is what uniquely identifies this block
 Dialogue: 0,0:38:36.88,0:38:41.00,English,,0,0,0,,And we in virtual memory parlance we refer to it as a virtual page number
 Dialogue: 0,0:38:43.16,0:38:49.34,English,,0,0,0,,Now the page table the beginning of the page table is pointed to by this page table based register
-Dialogue: 0,0:38:49.36,0:38:53.70,English,,0,0,0,,On intel systems  that's it's called cr3 control register 3
-Dialogue: 0,0:38:54.60,0:39:00.43,English,,0,0,0,,But this reg this register contains the physical address of the page table in memory ok
-Dialogue: 0,0:39:01.34,0:39:02.44,English,,0,0,0,,The beginning of that
-Dialogue: 0,0:39:04.50,0:39:10.62,English,,0,0,0,,And so when the when the cpu presents a virtual page a virtual address to the mmu
-Dialogue: 0,0:39:11.98,0:39:14.28,English,,0,0,0,,It it takes the virtual page number
+Dialogue: 0,0:38:49.36,0:38:53.70,English,,0,0,0,,On intel systems  that's it's called CR3 control register 3
+Dialogue: 0,0:38:54.60,0:39:00.43,English,,0,0,0,,But this register contains the physical address of the page table in memory
+Dialogue: 0,0:39:01.34,0:39:02.44,English,,0,0,0,,The beginning of that...
+Dialogue: 0,0:39:04.50,0:39:10.62,English,,0,0,0,,And so when the when the CPU presents a virtual page,a virtual address to the MMU
+Dialogue: 0,0:39:11.98,0:39:14.28,English,,0,0,0,,It takes the virtual page number
 Dialogue: 0,0:39:15.16,0:39:18.38,English,,0,0,0,,And uses that as an index into the page table
-Dialogue: 0,0:39:20.98,0:39:28.68,English,,0,0,0,,Ok and then it and then it into and that identifies a page table entry which contains if this is mapped into memory
-Dialogue: 0,0:39:29.02,0:39:33.24,English,,0,0,0,,I contains the physical address of the of the corresponding physical page
+Dialogue: 0,0:39:20.98,0:39:28.68,English,,0,0,0,,Ok and then it...and that identifies a page table entry which contains if this is mapped into memory
+Dialogue: 0,0:39:29.02,0:39:33.24,English,,0,0,0,,I contains the physical address of the corresponding physical page
 Dialogue: 0,0:39:36.48,0:39:40.60,English,,0,0,0,,Ok so the whole purpose of address translation is to come up you're given a virtual address
 Dialogue: 0,0:39:41.44,0:39:43.86,English,,0,0,0,,And you want to come up with a corresponding physical address
-Dialogue: 0,0:39:46.42,0:39:54.00,English,,0,0,0,,Ok so the physical address the physical the physical page number portion of the physical address comes out of the page table entry
-Dialogue: 0,0:39:55.52,0:39:59.54,English,,0,0,0,,And this is interesting the the physical page offset portion of the physical address
-Dialogue: 0,0:40:00.36,0:40:04.58,English,,0,0,0,,Comes out of the virtual page offset and it those bits are identical
-Dialogue: 0,0:40:06.44,0:40:11.94,English,,0,0,0,,Okay so now you should you should convince yourself that this is true right the
-Dialogue: 0,0:40:12.94,0:40:18.80,English,,0,0,0,,The the offset in a virtual block is going to be the same as the offset in a physical block
+Dialogue: 0,0:39:46.42,0:39:54.00,English,,0,0,0,,Ok so the physical address,the physical page number portion of the physical address comes out of the page table entry
+Dialogue: 0,0:39:55.52,0:40:02.96,English,,0,0,0,,And this is interesting the the physical page offset portion of the physical address comes out of the virtual page offset
+Dialogue: 0,0:40:03.02,0:40:04.58,English,,0,0,0,,And it those bits are identical
+Dialogue: 0,0:40:06.44,0:40:11.94,English,,0,0,0,,Okay so now you should convince yourself that this is true right
+Dialogue: 0,0:40:13.96,0:40:18.80,English,,0,0,0,,The offset in a virtual block is going to be the same as the offset in a physical block
 Dialogue: 0,0:40:19.26,0:40:20.66,English,,0,0,0,,They're the same size blocks
-Dialogue: 0,0:40:26.00,0:40:28.50,English,,0,0,0,,And and you can also see why this virtual page number
-Dialogue: 0,0:40:29.74,0:40:35.66,English,,0,0,0,,It identifies the the that the page number in the in the page table
-Dialogue: 0,0:40:36.56,0:40:40.78,English,,0,0,0,,So imagine so imagine a virtual address that's all zeros
-Dialogue: 0,0:40:42.60,0:40:46.40,English,,0,0,0,,Okay all zeros so it's virtual address zero
-Dialogue: 0,0:40:47.84,0:40:52.10,English,,0,0,0,,And now that that will have a virtual page number of zero
+Dialogue: 0,0:40:26.00,0:40:28.50,English,,0,0,0,,And you can also see why this virtual page number
+Dialogue: 0,0:40:29.74,0:40:35.66,English,,0,0,0,,It identifies the page number in the page table
+Dialogue: 0,0:40:36.56,0:40:40.78,English,,0,0,0,,So imagine a virtual address that's all zeros
+Dialogue: 0,0:40:42.60,0:40:43.60,English,,0,0,0,,Okay all zeros
+Dialogue: 0,0:40:44.70,0:40:46.16,English,,0,0,0,,So it's virtual address zero
+Dialogue: 0,0:40:47.84,0:40:52.10,English,,0,0,0,,And now that will have a virtual page number of zero
 Dialogue: 0,0:40:53.76,0:40:56.40,English,,0,0,0,,And the byte at that address will be at offset zero
 Dialogue: 0,0:40:58.80,0:41:01.32,English,,0,0,0,,Okay now increment by one virtual address one
 Dialogue: 0,0:41:02.58,0:41:07.54,English,,0,0,0,,So that will be in an offset of 1 and it will be in the same virtual page of zero
-Dialogue: 0,0:41:08.12,0:41:13.18,English,,0,0,0,,Right now keep incrementing until all of the all of the bits in the virtual page offset are ones
+Dialogue: 0,0:41:08.12,0:41:13.18,English,,0,0,0,,Right now keep incrementing until all of the bits in the virtual page offset are ones
 Dialogue: 0,0:41:14.22,0:41:16.38,English,,0,0,0,,And the virtual page numbers is zero
-Dialogue: 0,0:41:16.50,0:41:20.88,English,,0,0,0,,Okay so this is the last byte in in that virtual page zero
+Dialogue: 0,0:41:16.50,0:41:20.88,English,,0,0,0,,Okay so this is the last byte in that virtual page zero
 Dialogue: 0,0:41:21.84,0:41:23.42,English,,0,0,0,,Now increment one more time
-Dialogue: 0,0:41:26.16,0:41:30.90,English,,0,0,0,,The one bit carries over to the virtual page number so now now we go to the next virtual page
+Dialogue: 0,0:41:26.16,0:41:30.90,English,,0,0,0,,The one bit carries over to the virtual page number so now we go to the next virtual page
 Dialogue: 0,0:41:31.86,0:41:34.24,English,,0,0,0,,And it's at an offset of zero okay so
-Dialogue: 0,0:41:35.30,0:41:39.38,English,,0,0,0,,So can you see it's it's it's sort of sort of obvious when you think about it like that
-Dialogue: 0,0:41:40.30,0:41:46.86,English,,0,0,0,,You know why we can just take these these bits after the virtual page offset and use them to uniquely identify
+Dialogue: 0,0:41:35.30,0:41:39.38,English,,0,0,0,,So can you see it's sort of sort of obvious when you think about it like that
+Dialogue: 0,0:41:40.30,0:41:46.86,English,,0,0,0,,You know why we can just take these bits after the virtual page offset and use them to uniquely identify
 Dialogue: 0,0:41:47.14,0:41:50.20,English,,0,0,0,,What virtual page were we're working with
-Dialogue: 0,0:41:51.44,0:41:56.32,English,,0,0,0,,Okay so let's see how I let's see how it works in this system in more detail
-Dialogue: 0,0:41:57.48,0:42:02.40,English,,0,0,0,,So our system our cpu sends a virtual address to the mmu as a result of executing
+Dialogue: 0,0:41:51.46,0:41:53.66,English,,0,0,0,,Okay so let's see how I
+Dialogue: 0,0:41:53.78,0:41:56.32,English,,0,0,0,,Let's see how it works in this system in more detail
+Dialogue: 0,0:41:57.48,0:42:02.40,English,,0,0,0,,So our system our CPU sends a virtual address to the MMU as a result of executing
 Dialogue: 0,0:42:02.64,0:42:08.78,English,,0,0,0,,A move instruction or call or return or any kind of control transfer
-Dialogue: 0,0:42:09.50,0:42:10.70,English,,0,0,0,,The mmu
-Dialogue: 0,0:42:13.62,0:42:19.64,English,,0,0,0,,Looks up the the pte so it fetches the pte from the page cable stored in memory
-Dialogue: 0,0:42:20.04,0:42:25.52,English,,0,0,0,,So this is actually going off the chip onto memory into this pte stored in memory
-Dialogue: 0,0:42:26.50,0:42:34.50,English,,0,0,0,,It gets the it fetches the pte extracts the and uses that pte to construct the physical address
-Dialogue: 0,0:42:35.90,0:42:40.88,English,,0,0,0,,Okay and then it it sends that physical address to the cache and memory system
-Dialogue: 0,0:42:41.34,0:42:44.98,English,,0,0,0,,Which eventually results in the data being returned back to the cpu
-Dialogue: 0,0:42:46.10,0:42:50.30,English,,0,0,0,,Okay so even for a hit we still have memory references
-Dialogue: 0,0:42:50.72,0:42:53.58,English,,0,0,0,,Right because we have to fetch that that page table entry
+Dialogue: 0,0:42:09.50,0:42:10.70,English,,0,0,0,,The MMU
+Dialogue: 0,0:42:13.62,0:42:19.64,English,,0,0,0,,Looks up the PTE, so it fetches the PTE from the page cable stored in memory
+Dialogue: 0,0:42:20.04,0:42:25.52,English,,0,0,0,,So this is actually going off the chip onto memory into this PTE stored in memory
+Dialogue: 0,0:42:26.50,0:42:34.50,English,,0,0,0,,It gets the it fetches the PTE extracts the and uses that PTE to construct the physical address
+Dialogue: 0,0:42:35.90,0:42:40.88,English,,0,0,0,,Okay and then it sends that physical address to the cache and memory system
+Dialogue: 0,0:42:41.34,0:42:44.98,English,,0,0,0,,Which eventually results in the data being returned back to the CPU
+Dialogue: 0,0:42:46.10,0:42:50.30,English,,0,0,0,,Okay so even for a hit,we still have memory references
+Dialogue: 0,0:42:50.72,0:42:53.58,English,,0,0,0,,Right because we have to fetch that page table entry
 Dialogue: 0,0:42:57.86,0:43:02.22,English,,0,0,0,,Now miss is in this parlance is called a page fault
-Dialogue: 0,0:43:02.96,0:43:08.94,English,,0,0,0,,So in this case the same thing happens as before that the cpu sends the virtual address to the mmu
-Dialogue: 0,0:43:09.44,0:43:12.86,English,,0,0,0,,The mmu fetches that the pte for memory
-Dialogue: 0,0:43:13.40,0:43:16.54,English,,0,0,0,,But then when it looks then when the mmu looks at the pte
+Dialogue: 0,0:43:02.96,0:43:08.94,English,,0,0,0,,So in this case the same thing happens as before that the CPU sends the virtual address to the MMU
+Dialogue: 0,0:43:09.44,0:43:12.86,English,,0,0,0,,The MMU fetches that the PTE for memory
+Dialogue: 0,0:43:13.40,0:43:16.54,English,,0,0,0,,But then when it looks then when the MMU looks at the PTE
 Dialogue: 0,0:43:16.78,0:43:22.14,English,,0,0,0,,It sees that there's either an invalid valid bit or a zero valid bit or the
 Dialogue: 0,0:43:23.54,0:43:26.56,English,,0,0,0,,The it's indicated that the data stored on disk
-Dialogue: 0,0:43:30.10,0:43:35.90,English,,0,0,0,,And so in that case it the mmu triggers a page fault exception
+Dialogue: 0,0:43:30.10,0:43:35.90,English,,0,0,0,,And so in that case it the MMU triggers a page fault exception
 Dialogue: 0,0:43:36.62,0:43:39.14,English,,0,0,0,,Which transfers control to this page fault handler
 Dialogue: 0,0:43:40.94,0:43:43.40,English,,0,0,0,,The handler identifies a victim and
 Dialogue: 0,0:43:44.66,0:43:47.80,English,,0,0,0,,If it's been modified copies it out to disk
-Dialogue: 0,0:43:50.12,0:43:55.94,English,,0,0,0,,Then it fetches the new page from disk into into memory and up through the cache hierarchy
-Dialogue: 0,0:43:57.54,0:44:00.96,English,,0,0,0,,Ok and then it did
+Dialogue: 0,0:43:50.12,0:43:55.94,English,,0,0,0,,Then it fetches the new page from disk into memory and up through the cache hierarchy
+Dialogue: 0,0:43:57.42,0:43:57.90,English,,0,0,0,,OK
+Dialogue: 0,0:43:59.42,0:44:00.96,English,,0,0,0,,And then it did...
 Dialogue: 0,0:44:01.42,0:44:07.00,English,,0,0,0,,And then it causes that the then the handler returns to the to the process
 Dialogue: 0,0:44:08.80,0:44:11.32,English,,0,0,0,,And when a handler for a fault returns
-Dialogue: 0,0:44:11.70,0:44:14.96,English,,0,0,0,,It causes the the faulting instruction to re execute
-Dialogue: 0,0:44:15.00,0:44:21.56,English,,0,0,0,,So now the  the move instruction that that faulted is re-execute but this time there's a page hit
-Dialogue: 0,0:44:27.78,0:44:32.46,English,,0,0,0,,Now you may you may be interested how how the cash is integrated into all of this
-Dialogue: 0,0:44:34.00,0:44:39.66,English,,0,0,0,,So the mmu send fetches page table entries
+Dialogue: 0,0:44:11.70,0:44:14.96,English,,0,0,0,,It causes the faulting instruction to re-execute
+Dialogue: 0,0:44:15.00,0:44:21.56,English,,0,0,0,,So now the move instruction that faulted is re-execute,but this time there's a page hit
+Dialogue: 0,0:44:27.78,0:44:32.46,English,,0,0,0,,Now you may be interested how the cash is integrated into all of this
+Dialogue: 0,0:44:34.00,0:44:39.66,English,,0,0,0,,So the MMU send fetches page table entries
 Dialogue: 0,0:44:40.20,0:44:43.14,English,,0,0,0,,So it passes page table addresses to the cash
 Dialogue: 0,0:44:44.08,0:44:46.24,English,,0,0,0,,If those missed those go to memory
 Dialogue: 0,0:44:48.16,0:44:51.92,English,,0,0,0,,The memory returns those page table entries to the cache
-Dialogue: 0,0:44:52.80,0:44:55.88,English,,0,0,0,,And then ultimately to the to the mmu
-Dialogue: 0,0:44:56.66,0:45:02.26,English,,0,0,0,,The mmu constructs that physical address and then its sense that physical address to the cache
-Dialogue: 0,0:45:02.36,0:45:07.66,English,,0,0,0,,Right so so with caching the way we've been caching is done using physical addresses
+Dialogue: 0,0:44:52.80,0:44:55.88,English,,0,0,0,,And then ultimately to the MMU
+Dialogue: 0,0:44:56.66,0:45:02.26,English,,0,0,0,,The MMU constructs that physical address and then its sense that physical address to the cache
+Dialogue: 0,0:45:02.36,0:45:07.66,English,,0,0,0,,Right so with caching the way we've been caching is done using physical addresses
 Dialogue: 0,0:45:10.52,0:45:15.70,English,,0,0,0,,Okay in this case it's also possible to construct caches that work with virtual addresses but yes
 Dialogue: 0,0:45:15.70,0:45:25.08,English,,0,0,0,,[student speaking]
-Dialogue: 0,0:45:25.18,0:45:27.30,English,,0,0,0,,Yeah so it will get into that
-Dialogue: 0,0:45:27.30,0:45:32.24,English,,0,0,0,,Okay so the question is how is how is the virtual address space implemented on disk
-Dialogue: 0,0:45:33.16,0:45:39.86,English,,0,0,0,,And it when it actually does a much more efficient thing than the the sort of a abstract model that I described
+Dialogue: 0,0:45:25.18,0:45:27.30,English,,0,0,0,,Yeah so, it will get into that...
+Dialogue: 0,0:45:27.30,0:45:32.24,English,,0,0,0,,Okay so the question is how is the virtual address space implemented on disk
+Dialogue: 0,0:45:33.16,0:45:39.86,English,,0,0,0,,And it when it actually does a much more efficient thing than the sort of a abstract model that I described
 Dialogue: 0,0:45:40.38,0:45:44.92,English,,0,0,0,,So most pages there's an option when you allocate a new virtual memory page
-Dialogue: 0,0:45:45.44,0:45:47.94,English,,0,0,0,,You can allocate it so that it's all zeros
+Dialogue: 0,0:45:45.44,0:45:47.94,English,,0,0,0,,You can allocate it,so that it's all zeros
 Dialogue: 0,0:45:49.58,0:45:54.32,English,,0,0,0,,Okay so there's a special you can say I want this I want to allocate a page of all zeros
 Dialogue: 0,0:45:54.82,0:45:57.50,English,,0,0,0,,In that case you know that page doesn't need to ever get stored on disk
 Dialogue: 0,0:45:57.94,0:46:02.58,English,,0,0,0,,Right it's just the memory it's as though it was created on disk and then loaded into memory
-Dialogue: 0,0:46:03.28,0:46:07.57,English,,0,0,0,,So those pages that are all zeros don't don't exist on disk
+Dialogue: 0,0:46:03.28,0:46:07.57,English,,0,0,0,,So those pages that are all zeros don't exist on disk
 Dialogue: 0,0:46:08.50,0:46:10.80,English,,0,0,0,,You know when pages are modified
-Dialogue: 0,0:46:13.72,0:46:21.70,English,,0,0,0,,It's a little more pages can be mapped to particular files for example when we load  an elf binary
-Dialogue: 0,0:46:22.64,0:46:27.70,English,,0,0,0,,The pages that correspond to the code are actually mapped to the to the bytes in the binary
+Dialogue: 0,0:46:13.72,0:46:21.70,English,,0,0,0,,It's a little more pages can be mapped to particular files for example when we load an elf binary
+Dialogue: 0,0:46:22.64,0:46:27.70,English,,0,0,0,,The pages that correspond to the code are actually mapped to the bytes in the binary
 Dialogue: 0,0:46:28.73,0:46:30.60,English,,0,0,0,,That contain the code
 Dialogue: 0,0:46:31.66,0:46:35.36,English,,0,0,0,,So that when you miss on that page it fed it brings in those code pages
-Dialogue: 0,0:46:35.86,0:46:41.58,English,,0,0,0,,Okay so so pages can be mapped to user level files on disk
+Dialogue: 0,0:46:35.86,0:46:41.58,English,,0,0,0,,Okay so pages can be mapped to user level files on disk
 Dialogue: 0,0:46:42.64,0:46:45.53,English,,0,0,0,,Or not they can be anonymous and not mapped
-Dialogue: 0,0:46:46.50,0:46:53.70,English,,0,0,0,,So if if they're mapped to user level if they're mapped to user level files and you write to a page
-Dialogue: 0,0:46:54.02,0:47:00.04,English,,0,0,0,,Then it will get written back to that to the page that it's mapped to
-Dialogue: 0,0:47:00.58,0:47:07.70,English,,0,0,0,,If it's not mapped to any page it's stored in this area called the swap area or the swap file okay yes
-Dialogue: 0,0:47:07.70,0:47:18.98,English,,0,0,0,,[student speaking] rage from this
+Dialogue: 0,0:46:46.50,0:46:48.82,English,,0,0,0,,So if they're mapped to user level
+Dialogue: 0,0:46:50.70,0:46:53.68,English,,0,0,0,,If they're mapped to user level files and you write to a page
+Dialogue: 0,0:46:54.02,0:47:00.04,English,,0,0,0,,Then it will get written back to the page that it's mapped to
+Dialogue: 0,0:47:00.58,0:47:06.90,English,,0,0,0,,If it's not mapped to any page it's stored in this area called the swap area or the swap file okay
+Dialogue: 0,0:47:07.30,0:47:07.70,English,,0,0,0,,yes
+Dialogue: 0,0:47:07.70,0:47:18.98,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:47:18.98,0:47:23.28,English,,0,0,0,,Oh yeah so the question is when you load a page from disk into memory
 Dialogue: 0,0:47:23.28,0:47:26.92,English,,0,0,0,,Does it also get cached in the cache memory hierarchy and the answer is yes
 Dialogue: 0,0:47:27.66,0:47:29.18,English,,0,0,0,,So if you load an entire page
 Dialogue: 0,0:47:29.92,0:47:33.68,English,,0,0,0,,That page will be broken up into blocks 64 byte blocks
-Dialogue: 0,0:47:34.28,0:47:37.32,English,,0,0,0,,And and and load it into the cache
-Dialogue: 0,0:47:37.94,0:47:41.90,English,,0,0,0,,So everything everything everything that you fetch from the cache goes through
-Dialogue: 0,0:47:42.40,0:47:45.64,English,,0,0,0,,The from the memory goes through the cache the cache hierarchy
+Dialogue: 0,0:47:34.28,0:47:37.32,English,,0,0,0,,And and load it into the cache
+Dialogue: 0,0:47:37.94,0:47:41.90,English,,0,0,0,,So everything that you fetch from the cache goes through
+Dialogue: 0,0:47:42.40,0:47:45.64,English,,0,0,0,,The from the memory goes through the cache hierarchy
 Dialogue: 0,0:47:52.92,0:48:01.02,English,,0,0,0,,Okay so I claim that virtual memory works
 Dialogue: 0,0:48:01.94,0:48:05.48,English,,0,0,0,,Because of locality and that's true but if we still had to fetch
-Dialogue: 0,0:48:06.46,0:48:08.92,English,,0,0,0,,If every time we had a myth we still had to go to memory
+Dialogue: 0,0:48:06.46,0:48:08.92,English,,0,0,0,,If every time we had a miss we still had to go to memory
 Dialogue: 0,0:48:09.22,0:48:10.66,English,,0,0,0,,It would be too inefficient
-Dialogue: 0,0:48:11.74,0:48:20.20,English,,0,0,0,,Okay so the the mmu speeds up this translation process by caching page table entries
-Dialogue: 0,0:48:21.18,0:48:27.02,English,,0,0,0,,In a in a hardware cache within the mmu called the translation lookaside buffer or tlb
-Dialogue: 0,0:48:28.34,0:48:35.08,English,,0,0,0,,So the tlb is a hardware cache that caches is ptes page table entries
+Dialogue: 0,0:48:11.74,0:48:20.20,English,,0,0,0,,Okay so the the MMU speeds up this translation process by caching page table entries
+Dialogue: 0,0:48:21.18,0:48:27.02,English,,0,0,0,,In a hardware cache within the MMU called the translation look aside buffer or TLB
+Dialogue: 0,0:48:28.34,0:48:35.08,English,,0,0,0,,So the TLB is a hardware cache that caches is PTEs page table entries
 Dialogue: 0,0:48:37.06,0:48:40.90,English,,0,0,0,,And it contains like it contains a cache of the most recently
 Dialogue: 0,0:48:41.58,0:48:47.22,English,,0,0,0,,You know it's just like any other cache so it contains a cache of the most recently used page table entries
-Dialogue: 0,0:48:49.20,0:48:57.74,English,,0,0,0,,And so the the mmu remember the the unique part of a virtual address that defines a virtual page  is the virtual page number bits
-Dialogue: 0,0:48:58.86,0:49:09.10,English,,0,0,0,,Okay so the the the tlb uses the the vpn portion of the virtual address  to to to access it
+Dialogue: 0,0:48:49.20,0:48:57.74,English,,0,0,0,,And so the the MMU remember the the unique part of a virtual address that defines a virtual page is the virtual page number bits
+Dialogue: 0,0:48:58.86,0:49:09.10,English,,0,0,0,,Okay so the the the TLB uses the the VPN portion of the virtual address  to access it
 Dialogue: 0,0:49:09.54,0:49:15.98,English,,0,0,0,,And so that just like any other set it has a set index a set of set index bits which are just determined by how many
-Dialogue: 0,0:49:16.28,0:49:19.98,English,,0,0,0,,How many entries that or how many sets that the tlb has
-Dialogue: 0,0:49:21.62,0:49:30.26,English,,0,0,0,,And it has a tag with for the remaining bits to disambiguate any and to disambiguate any cash lines or ptes
+Dialogue: 0,0:49:16.28,0:49:19.98,English,,0,0,0,,How many entries that or how many sets that the TLB has
+Dialogue: 0,0:49:21.62,0:49:30.26,English,,0,0,0,,And it has a tag with for the remaining bits to disambiguate any and to disambiguate any cash lines or PTEs
 Dialogue: 0,0:49:30.82,0:49:32.18,English,,0,0,0,,The map to the same set
-Dialogue: 0,0:49:33.78,0:49:40.64,English,,0,0,0,,Okay so the the vpn or the tlb I tlb index maps to this particular set
-Dialogue: 0,0:49:42.18,0:49:50.38,English,,0,0,0,,And then and then it uses the the tlb uses the tlb lbt bits to
-Dialogue: 0,0:49:52.12,0:49:59.20,English,,0,0,0,,To disambiguate and determine if the the pt ii that it's looking for is it is really stored in the cache
+Dialogue: 0,0:49:33.78,0:49:40.64,English,,0,0,0,,Okay so the the VON or the TLBI(TLB index) maps to this particular set
+Dialogue: 0,0:49:42.18,0:49:45.12,English,,0,0,0,,And then it uses the...
+Dialogue: 0,0:49:45.44,0:49:59.20,English,,0,0,0,,The TLB uses the TLBT bits to disambiguate and determine if the PTE that it's looking for is,it is really stored in the cache
 Dialogue: 0,0:50:00.90,0:50:02.50,English,,0,0,0,,Okay so the way this works is
-Dialogue: 0,0:50:03.68,0:50:06.74,English,,0,0,0,,Cpu generates a virtual address it goes through the mmu
-Dialogue: 0,0:50:07.06,0:50:12.66,English,,0,0,0,,The mmu instead of looking in memory and directly going to the page table entry
-Dialogue: 0,0:50:13.56,0:50:17.24,English,,0,0,0,,It first asks the tlb if it has that it sends it the vpn
-Dialogue: 0,0:50:17.44,0:50:21.38,English,,0,0,0,,And so do you have this virtual page the pte for this virtual page
-Dialogue: 0,0:50:22.76,0:50:25.08,English,,0,0,0,,And if it does the tlb returns a hit
-Dialogue: 0,0:50:25.32,0:50:30.72,English,,0,0,0,,And it returns that page table entry which the mmu can then use to construct the physical address
-Dialogue: 0,0:50:31.26,0:50:34.24,English,,0,0,0,,To send to the the cache and memory system
+Dialogue: 0,0:50:03.68,0:50:06.74,English,,0,0,0,,CPU generates a virtual address it goes through the MMU
+Dialogue: 0,0:50:07.06,0:50:12.66,English,,0,0,0,,The MMU instead of looking in memory and directly going to the page table entry
+Dialogue: 0,0:50:13.56,0:50:17.24,English,,0,0,0,,It first asks the TLB if it has that it sends it the VPN
+Dialogue: 0,0:50:17.44,0:50:21.38,English,,0,0,0,,And so do you have this virtual page the PTE for this virtual page
+Dialogue: 0,0:50:22.76,0:50:25.08,English,,0,0,0,,And if it does the TLB returns a hit
+Dialogue: 0,0:50:25.32,0:50:30.72,English,,0,0,0,,And it returns that page table entry which the MMU can then use to construct the physical address
+Dialogue: 0,0:50:31.26,0:50:34.24,English,,0,0,0,,To send to the cache and memory system
 Dialogue: 0,0:50:35.10,0:50:37.66,English,,0,0,0,,Eventually I result in that the data being sent back
-Dialogue: 0,0:50:39.82,0:50:46.00,English,,0,0,0,,Now when you have a miss then there's this one the mmu checks with the tlb for the pte
-Dialogue: 0,0:50:46.64,0:50:50.88,English,,0,0,0,,It misses so then the mmu has to go to memory just like before okay so this is
-Dialogue: 0,0:50:51.92,0:50:59.66,English,,0,0,0,,And then everything is the same the memory returns the pte to the mmu which stashes it in the tlb
-Dialogue: 0,0:51:00.88,0:51:04.04,English,,0,0,0,,And just like before if there's if there's no room in the
-Dialogue: 0,0:51:07.14,0:51:13.98,English,,0,0,0,,If yeah if a pte has been modified then it has to be written back out okay just just like any other cache
-Dialogue: 0,0:51:15.78,0:51:20.58,English,,0,0,0,,And eventually the mmu uses that to construct a physical address and then the data gets sent back
+Dialogue: 0,0:50:39.82,0:50:46.00,English,,0,0,0,,Now when you have a miss then there's this one the MMU checks with the TLB for the PTE
+Dialogue: 0,0:50:46.64,0:50:50.88,English,,0,0,0,,It misses so then the MMU has to go to memory just like before okay so this is
+Dialogue: 0,0:50:51.92,0:50:59.66,English,,0,0,0,,And then everything is the same the memory returns the PTE to the MMU which stashes it in the TLB
+Dialogue: 0,0:51:00.88,0:51:04.04,English,,0,0,0,,And just like before if there's no room in the
+Dialogue: 0,0:51:07.14,0:51:13.98,English,,0,0,0,,If yeah if a PTE has been modified then it has to be written back out okay just like any other cache
+Dialogue: 0,0:51:15.78,0:51:20.58,English,,0,0,0,,And eventually the MMU uses that to construct a physical address and then the data gets sent back
 Dialogue: 0,0:51:24.16,0:51:28.44,English,,0,0,0,,Okay if you've been paying attention unlike a couple people
 Dialogue: 0,0:51:31.76,0:51:33.12,English,,0,0,0,,If you've been paying attention
 Dialogue: 0,0:51:34.14,0:51:37.60,English,,0,0,0,,You're going to be very concerned about the size of these page tables
 Dialogue: 0,0:51:38.20,0:51:40.68,English,,0,0,0,,Right that I mean
-Dialogue: 0,0:51:41.90,0:51:46.76,English,,0,0,0,,We've got 4kbytes suppose we have 4k by pages
+Dialogue: 0,0:51:41.90,0:51:46.76,English,,0,0,0,,We've got 4kbytes suppose we have 4kbytes pages
 Dialogue: 0,0:51:47.58,0:51:52.76,English,,0,0,0,,And our effective address space is 48 bits like it is with an x86-64 system
-Dialogue: 0,0:51:54.38,0:51:58.36,English,,0,0,0,,Then and we have an 8 byte page table entry
+Dialogue: 0,0:51:54.38,0:51:58.36,English,,0,0,0,,Then and we have an 8-byte page table entry
 Dialogue: 0,0:51:59.70,0:52:03.60,English,,0,0,0,,We need a page table 512 gigabytes
 Dialogue: 0,0:52:04.84,0:52:08.54,English,,0,0,0,,Okay the address space 2^48 bytes
-Dialogue: 0,0:52:10.48,0:52:13.94,English,,0,0,0,,Divided by 2^-12 bytes per page
+Dialogue: 0,0:52:10.48,0:52:13.94,English,,0,0,0,,Divided by 2^12 bytes per page
 Dialogue: 0,0:52:14.22,0:52:17.00,English,,0,0,0,,Okay so that's the number of page table entries that we need
 Dialogue: 0,0:52:17.42,0:52:20.00,English,,0,0,0,,And then the size of each page table entry is 8 bytes
-Dialogue: 0,0:52:21.67,0:52:27.66,English,,0,0,0,,So we need almost a terabyte of of dram just to hold the page table right so
+Dialogue: 0,0:52:21.67,0:52:27.66,English,,0,0,0,,So we need almost a terabyte of of DRAM just to hold the page table right so
 Dialogue: 0,0:52:28.56,0:52:29.92,English,,0,0,0,,So then obviously it's not going to work
 Dialogue: 0,0:52:31.32,0:52:34.98,English,,0,0,0,,And it's obviously not how their page tables are really implemented
 Dialogue: 0,0:52:35.82,0:52:39.54,English,,0,0,0,,So the solution is to to use a hierarchy of page tables
-Dialogue: 0,0:52:41.26,0:52:44.92,English,,0,0,0,,So in it so we if we have a two level page table
+Dialogue: 0,0:52:41.24,0:52:44.92,English,,0,0,0,,So in it so we if we have a two level page table
 Dialogue: 0,0:52:46.12,0:52:50.64,English,,0,0,0,,The there's a top of first level page table called the level 1 table
 Dialogue: 0,0:52:51.00,0:52:54.12,English,,0,0,0,,Which is always in memory ok it's never never page down
-Dialogue: 0,0:52:55.00,0:53:00.54,English,,0,0,0,,And then and then there's a suit a sequence of level 2 page tables and they're all the same size
-Dialogue: 0,0:53:03.66,0:53:09.18,English,,0,0,0,,Right and the the first level 1 table points to the beginning of the first level 2 table
+Dialogue: 0,0:52:55.00,0:53:00.54,English,,0,0,0,,And then there's a suit a sequence of level 2 page tables and they're all the same size
+Dialogue: 0,0:53:03.66,0:53:09.18,English,,0,0,0,,Right and the first level 1 table points to the beginning of the first level 2 table
 Dialogue: 0,0:53:09.68,0:53:12.86,English,,0,0,0,,So it contains a physical address that points to the base
 Dialogue: 0,0:53:14.18,0:53:20.32,English,,0,0,0,,The second level 1 table points to the second level 2 table and so on okay
 Dialogue: 0,0:53:23.82,0:53:28.76,English,,0,0,0,,So if we have this kind of system remember most of the virtual address space is unused
-Dialogue: 0,0:53:30.60,0:53:36.28,English,,0,0,0,,Right so if we have this kind of system we can we can avoid creating many unnecessary page tables
+Dialogue: 0,0:53:30.60,0:53:36.28,English,,0,0,0,,Right so if we have this kind of system we can avoid creating many unnecessary page tables
 Dialogue: 0,0:53:38.24,0:53:40.38,English,,0,0,0,,Okay so imagine if we have a two level hierarchy
 Dialogue: 0,0:53:42.30,0:53:46.92,English,,0,0,0,,So let's look at our virtual address space in this example
 Dialogue: 0,0:53:47.64,0:53:52.48,English,,0,0,0,,And what I've allocated two k pages for code and data for this program
 Dialogue: 0,0:53:53.74,0:53:57.32,English,,0,0,0,,And then there's their 6k unallocated pages
 Dialogue: 0,0:53:58.66,0:54:02.64,English,,0,0,0,,And then the stack then there's a page that's allocated for the stack
-Dialogue: 0,0:54:05.08,0:54:11.00,English,,0,0,0,,I'm sorry there's there's a thousand 24 pages allocated for the stack
-Dialogue: 0,0:54:11.56,0:54:18.00,English,,0,0,0,,Most of which are I'm sorry there's a region of memory that
+Dialogue: 0,0:54:05.08,0:54:11.00,English,,0,0,0,,I'm sorry there's a thousand 24 pages allocated for the stack
+Dialogue: 0,0:54:11.56,0:54:18.00,English,,0,0,0,,Most of which are...I'm sorry...there's a region of memory that
 Dialogue: 0,0:54:18.88,0:54:22.86,English,,0,0,0,,That's the size of a thousand 24 pages
-Dialogue: 0,0:54:22.86,0:54:28.90,English,,0,0,0,,But most of them are unallocated and I've only allocated one for the top of this for the top of the stack
-Dialogue: 0,0:54:30.46,0:54:33.62,English,,0,0,0,,Okay so given this layout for my my process
-Dialogue: 0,0:54:35.48,0:54:38.50,English,,0,0,0,,I only only need three level to page tables
-Dialogue: 0,0:54:39.36,0:54:44.92,English,,0,0,0,,Okay the first the the first page table covers this region of my code and data
+Dialogue: 0,0:54:22.86,0:54:28.90,English,,0,0,0,,But most of them are unallocated and I've only allocated one for the top of the stack
+Dialogue: 0,0:54:30.46,0:54:33.62,English,,0,0,0,,Okay so given this layout for my process
+Dialogue: 0,0:54:35.48,0:54:38.50,English,,0,0,0,,I only need three level to page tables
+Dialogue: 0,0:54:39.36,0:54:44.92,English,,0,0,0,,Okay the first page table covers this region of my code and data
 Dialogue: 0,0:54:45.86,0:54:47.94,English,,0,0,0,,The first thousand 24 pages
 Dialogue: 0,0:54:48.86,0:54:53.54,English,,0,0,0,,The next page table covers the remaining thousand 24 pages
-Dialogue: 0,0:54:54.38,0:54:59.66,English,,0,0,0,,Okay so these two these two level two page tables cover all of the code and data
+Dialogue: 0,0:54:54.38,0:54:59.66,English,,0,0,0,,Okay so these two level two page tables cover all of the code and data
 Dialogue: 0,0:55:02.06,0:55:05.98,English,,0,0,0,,Okay and similarly the what I need for my stack I just need one page table
-Dialogue: 0,0:55:06.76,0:55:11.27,English,,0,0,0,,And it only has one one valid pte it's the very last one
+Dialogue: 0,0:55:06.76,0:55:11.27,English,,0,0,0,,And it only has one valid PTE it's the very last one
 Dialogue: 0,0:55:12.10,0:55:17.12,English,,0,0,0,,Okay and then I have a single level one table that points to the three level two tables
-Dialogue: 0,0:55:18.18,0:55:22.80,English,,0,0,0,,Okay so I've with with four page tables I've covered the entire virtual address space
-Dialogue: 0,0:55:24.80,0:55:34.22,English,,0,0,0,,Now the way that the way that the mmu uses these multiple page tables to do address translation  is as follows
-Dialogue: 0,0:55:35.38,0:55:40.42,English,,0,0,0,,We again we have a virtual page offset which consists of the first p beds
-Dialogue: 0,0:55:41.98,0:55:47.52,English,,0,0,0,,And then the vpn the remaining bits give the vpn
+Dialogue: 0,0:55:18.18,0:55:22.80,English,,0,0,0,,Okay so I've...with four page tables I've covered the entire virtual address space
+Dialogue: 0,0:55:24.80,0:55:34.22,English,,0,0,0,,Now the way that the MMU uses these multiple page tables to do address translation is as follows
+Dialogue: 0,0:55:35.38,0:55:40.42,English,,0,0,0,,Again we have a virtual page offset which consists of the first p bit
+Dialogue: 0,0:55:41.98,0:55:47.52,English,,0,0,0,,And then the VPN the remaining bits give the VPN
 Dialogue: 0,0:55:48.68,0:55:53.73,English,,0,0,0,,For a k level page table are broken up into k sub vpns
-Dialogue: 0,0:55:55.40,0:55:57.88,English,,0,0,0,,Okay and each each is the same size
-Dialogue: 0,0:56:00.28,0:56:06.72,English,,0,0,0,,And so now in this system the upper vpn one which consists of the uppermost bits of the vpn
-Dialogue: 0,0:56:07.82,0:56:11.02,English,,0,0,0,,Are an offset into the the level 1 table
+Dialogue: 0,0:55:55.40,0:55:57.88,English,,0,0,0,,Okay and each is the same size
+Dialogue: 0,0:56:00.28,0:56:06.72,English,,0,0,0,,And so now in this system the upper VPN one which consists of the uppermost bits of the VPN
+Dialogue: 0,0:56:07.82,0:56:11.02,English,,0,0,0,,Are an offset into the level 1 table
 Dialogue: 0,0:56:11.58,0:56:15.56,English,,0,0,0,,Which is as before is pointed to by the page table base register
-Dialogue: 0,0:56:16.44,0:56:21.58,English,,0,0,0,,Okay so vp you want vp 1 is the index into the level 1 page table
+Dialogue: 0,0:56:16.44,0:56:21.58,English,,0,0,0,,Okay so VPN1 is the index into the level 1 page table
 Dialogue: 0,0:56:22.56,0:56:25.92,English,,0,0,0,,Remember the level 1 page table points to the address of the level 2
-Dialogue: 0,0:56:26.66,0:56:29.58,English,,0,0,0,,That are an entry a pte in the level 1 table
+Dialogue: 0,0:56:26.66,0:56:29.58,English,,0,0,0,,That are an entry a PTE in the level 1 table
 Dialogue: 0,0:56:30.04,0:56:33.62,English,,0,0,0,,Points to the address of some level 2 page table
 Dialogue: 0,0:56:34.04,0:56:37.40,English,,0,0,0,,Or it contains the address of some level 2 page table
 Dialogue: 0,0:56:39.26,0:56:42.34,English,,0,0,0,,So that points to the base of this level 2 page table
 Dialogue: 0,0:56:42.34,0:56:49.06,English,,0,0,0,,And then the vpn 2 bits are used as an index into that level 2 table right and so on
-Dialogue: 0,0:56:50.64,0:56:58.06,English,,0,0,0,,Ok so eventually you get at the a pte and the level k-1  table
+Dialogue: 0,0:56:50.64,0:56:58.06,English,,0,0,0,,Ok so eventually you get at the a PTE and the level k-1 table
 Dialogue: 0,0:56:58.38,0:57:01.08,English,,0,0,0,,Points to the beginning of the level k page table
-Dialogue: 0,0:57:01.72,0:57:06.58,English,,0,0,0,,And vpn k points to an offset within that table
+Dialogue: 0,0:57:01.72,0:57:06.58,English,,0,0,0,,And VPN k points to an offset within that table
 Dialogue: 0,0:57:07.32,0:57:12.06,English,,0,0,0,,Which finally contains the physical address of the page that we want to access
-Dialogue: 0,0:57:13.06,0:57:19.80,English,,0,0,0,,Okay and then that physical address is used to form the the ppn portion of the physical address
+Dialogue: 0,0:57:13.06,0:57:19.80,English,,0,0,0,,Okay and then that physical address is used to form the PPN portion of the physical address
 Dialogue: 0,0:57:20.30,0:57:26.44,English,,0,0,0,,And just like before the virtual page offset is just copied directly unchanged to the physical page offset
 Dialogue: 0,0:57:29.36,0:57:30.46,English,,0,0,0,,So is that clear to everybody
 Dialogue: 0,0:57:31.08,0:57:31.78,English,,0,0,0,,Yes question
 Dialogue: 0,0:57:31.78,0:57:41.66,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:57:41.66,0:57:44.36,English,,0,0,0,,Let's see is it always a power of two yes
-Dialogue: 0,0:57:44.72,0:57:49.02,English,,0,0,0,,At least and it's defined by the the architecture so for intel it's a four level system
-Dialogue: 0,0:57:50.06,0:57:55.64,English,,0,0,0,,Now why would it be and then the quick could it will it always be less than six
+Dialogue: 0,0:57:44.72,0:57:49.02,English,,0,0,0,,At least and it's defined by the architecture,so for intel it's a four level system
+Dialogue: 0,0:57:50.06,0:57:55.64,English,,0,0,0,,Now why would it be and then the quick could it will...it always be less than 6
 Dialogue: 0,0:58:03.94,0:58:06.42,English,,0,0,0,,Oh give us a 64-bit system yeah
-Dialogue: 0,0:58:06.74,0:58:11.58,English,,0,0,0,,Yeah there's only the the block size is fixed
+Dialogue: 0,0:58:06.74,0:58:11.58,English,,0,0,0,,Yeah there's only the block size is fixed
 Dialogue: 0,0:58:12.40,0:58:16.46,English,,0,0,0,,Right so that there's 12 bits here 2^12 is 4k
 Dialogue: 0,0:58:17.34,0:58:22.08,English,,0,0,0,,So the remaining it's that you actually have 48 bits to play with
 Dialogue: 0,0:58:24.74,0:58:32.66,English,,0,0,0,,So the remaining 48 bits could that's right so if it was 4 if it was 8  it would be 6 so you're right
-Dialogue: 0,0:58:34.06,0:58:38.60,English,,0,0,0,,In this scheme it could be at most 6 turns out in practice it's it's set at 4
+Dialogue: 0,0:58:34.06,0:58:38.60,English,,0,0,0,,In this scheme it could be at most 6 turns out in practice it's set at 4
 Dialogue: 0,0:58:40.12,0:58:41.48,English,,0,0,0,,And there was a question over here
-Dialogue: 0,0:58:41.50,0:58:50.42,English,,0,0,0,,The head of the cua having the one
-Dialogue: 0,0:58:50.44,0:58:52.34,English,,0,0,0,,Have it like this multi-level system oh
-Dialogue: 0,0:58:52.88,0:58:54.86,English,,0,0,0,,Okay so the question
+Dialogue: 0,0:58:41.50,0:58:50.42,English,,0,0,0,,[student speaking]
+Dialogue: 0,0:58:50.44,0:58:52.34,English,,0,0,0,,Have it like this multi-level system
+Dialogue: 0,0:58:52.88,0:58:54.86,English,,0,0,0,,Oh okay so the question
 Dialogue: 0,0:58:59.08,0:59:00.86,English,,0,0,0,,Is yeah the question is how does it save you space
 Dialogue: 0,0:59:01.30,0:59:07.70,English,,0,0,0,,So the reason it saves you space is you go back to this other figure maybe I didn't explain this well enough
 Dialogue: 0,0:59:16.96,0:59:20.18,English,,0,0,0,,So you see this
-Dialogue: 0,0:59:25.64,0:59:31.04,English,,0,0,0,,If we okay so let's say we wanted to map this virtual address space with a single page table
-Dialogue: 0,0:59:32.36,0:59:35.54,English,,0,0,0,,We would need a pte for every page within that address
+Dialogue: 0,0:59:25.64,0:59:31.04,English,,0,0,0,,If we...okay so let's say we wanted to map this virtual address space with a single page table
+Dialogue: 0,0:59:32.36,0:59:35.54,English,,0,0,0,,We would need a PTE for every page within that address
 Dialogue: 0,0:59:36.34,0:59:37.62,English,,0,0,0,,Whether it was used or not
 Dialogue: 0,0:59:39.76,0:59:47.56,English,,0,0,0,,Okay it goes back if we had a 48-bit address space
-Dialogue: 0,0:59:49.12,0:59:57.08,English,,0,0,0,,We'd need enough we need a page table entry  for each each page virtual page in that address space
-Dialogue: 0,1:00:00.82,1:00:08.50,English,,0,0,0,,Okay whether that page was used or not so let me think about it 2^48 is a x several several exabytes
+Dialogue: 0,0:59:49.12,0:59:57.08,English,,0,0,0,,We'd need enough,we need a page table entry for each page virtual page in that address space
+Dialogue: 0,1:00:00.82,1:00:08.50,English,,0,0,0,,Okay whether that page was used or not,so let me think about it 2^48 is a x several exabytes
 Dialogue: 0,1:00:10.44,1:00:14.72,English,,0,0,0,,We need a page table that would have an entry for each virtual page
 Dialogue: 0,1:00:15.28,1:00:17.20,English,,0,0,0,,In that to the 48th bit address space
 Dialogue: 0,1:00:18.48,1:00:22.36,English,,0,0,0,,And most of those pages by far the vast majority would never ever be used
 Dialogue: 0,1:00:23.58,1:00:25.16,English,,0,0,0,,Okay so that's where the waste comes in
 Dialogue: 0,1:00:26.40,1:00:32.22,English,,0,0,0,,Okay so here with a multi-level page system with this multi-level scheme
-Dialogue: 0,1:00:32.96,1:00:37.92,English,,0,0,0,,You only need to generate in this case these level two  if it's a two-level system
-Dialogue: 0,1:00:38.36,1:00:45.76,English,,0,0,0,,You only need to generate level two page tables enough level two pages to cover the portion of the virtual address space that you're actually using
+Dialogue: 0,1:00:32.96,1:00:37.92,English,,0,0,0,,You only need to generate in this case these level two if it's a two-level system
+Dialogue: 0,1:00:38.36,1:00:40.82,English,,0,0,0,,You only need to generate level two page tables
+Dialogue: 0,1:00:40.90,1:00:45.78,English,,0,0,0,,Enough level two pages to cover the portion of the virtual address space that you're actually using
 Dialogue: 0,1:00:46.34,1:00:50.96,English,,0,0,0,,Okay and that portion of the virtual address space that you're not using at this gap right here
-Dialogue: 0,1:00:51.96,1:00:53.92,English,,0,0,0,,There's there's no need to have a page table is
-Dialogue: 0,1:00:57.65,1:01:04.04,English,,0,0,0,,Is that clear?that that's a really good important question but you look unconvinced
+Dialogue: 0,1:00:51.96,1:00:53.92,English,,0,0,0,,There's no need to have a page table is
+Dialogue: 0,1:00:57.65,1:01:04.04,English,,0,0,0,,Is that clear?that that's a really good important question,but you look unconvinced
 Dialogue: 0,1:01:04.08,1:01:14.00,English,,0,0,0,,[student speaking]
 Dialogue: 0,1:01:14.02,1:01:17.82,English,,0,0,0,,Well yeah yeah you still need you still need a page table that has
-Dialogue: 0,1:01:22.70,1:01:27.22,English,,0,0,0,,Let's see in this case there's four k bite pages for bite pte
-Dialogue: 0,1:01:27.24,1:01:31.86,English,,0,0,0,,So there's 1k you have 1k ptes
-Dialogue: 0,1:01:32.44,1:01:39.62,English,,0,0,0,,In this so you still need you still need a level 1 page table that has 1k ptes
+Dialogue: 0,1:01:22.70,1:01:27.22,English,,0,0,0,,Let's see in this case there's 4k bite pages 4 bit PTE
+Dialogue: 0,1:01:27.24,1:01:31.86,English,,0,0,0,,So there's 1k you have 1k PTEs
+Dialogue: 0,1:01:32.44,1:01:39.62,English,,0,0,0,,So you still need you still need a level 1 page table that has 1k PTEs
 Dialogue: 0,1:01:40.18,1:01:42.16,English,,0,0,0,,But those are only 8 bytes right I mean
 Dialogue: 0,1:01:43.92,1:01:46.28,English,,0,0,0,,So you still need to you still need to have space
 Dialogue: 0,1:01:46.38,1:01:51.94,English,,0,0,0,,Because you don't know you know you're not sure which of these which reason of the address space you're going to need to cover
 Dialogue: 0,1:01:53.02,1:01:54.52,English,,0,0,0,,Ok and it's the same thing for
-Dialogue: 0,1:01:55.78,1:02:00.00,English,,0,0,0,,Here in this case in these first two ptes these first two level 2 page tables
-Dialogue: 0,1:02:02.06,1:02:05.40,English,,0,0,0,,They're their portion of the address space was actually all being used
-Dialogue: 0,1:02:06.02,1:02:13.44,English,,0,0,0,,Right so each one of these ptes at level 2 had to be allocated had to be initialized and used
-Dialogue: 0,1:02:14.22,1:02:18.78,English,,0,0,0,,Right but in this in this portion of the address space that contain the stack
-Dialogue: 0,1:02:19.80,1:02:25.48,English,,0,0,0,,This third this third level 2 page table has most most of its ptes or no
+Dialogue: 0,1:01:55.78,1:02:00.00,English,,0,0,0,,Here in this case, in these first two PTEs these first two level 2 page tables
+Dialogue: 0,1:02:02.06,1:02:05.40,English,,0,0,0,,They're portion of the address space was actually all being used
+Dialogue: 0,1:02:06.02,1:02:13.44,English,,0,0,0,,Right so each one of these PTEs at level 2 had to be allocated had to be initialized and used
+Dialogue: 0,1:02:14.22,1:02:18.78,English,,0,0,0,,Right but in this portion of the address space that contain the stack
+Dialogue: 0,1:02:19.80,1:02:25.48,English,,0,0,0,,This third level 2 page table has most of its PTEs or no
 Dialogue: 0,1:02:28.62,1:02:31.08,English,,0,0,0,,You still have to allocate space for them but they're there no
 Dialogue: 0,1:02:35.68,1:02:40.24,English,,0,0,0,,Ok that's a really good question it's important that I hope that's clear
 Dialogue: 0,1:02:44.10,1:02:47.74,English,,0,0,0,,Any other questions will we go on
 Dialogue: 0,1:02:51.38,1:02:52.76,English,,0,0,0,,Sorry oh okay question
-Dialogue: 0,1:02:52.86,1:03:06.46,English,,0,0,0,,Page entry level the page table it just looked at part of the address
+Dialogue: 0,1:02:52.86,1:03:06.46,English,,0,0,0,,[student speaking]
 Dialogue: 0,1:03:06.46,1:03:07.28,English,,0,0,0,,Exactly just
-Dialogue: 0,1:03:08.32,1:03:12.16,English,,0,0,0,,Just like here the mmu members doing all of this this is all hardware logic
-Dialogue: 0,1:03:13.76,1:03:20.16,English,,0,0,0,,So it and and the art the the number of page tables levels is defined by the architecture okay
-Dialogue: 0,1:03:21.98,1:03:27.74,English,,0,0,0,,So the mmu takes the virtual address that's presented to it
-Dialogue: 0,1:03:29.12,1:03:37.02,English,,0,0,0,,And it it uses a portion a subset of those bits to access each each page table okay
-Dialogue: 0,1:03:38.88,1:03:43.52,English,,0,0,0,,So it's just like did I answer your question okay so it's just like before that
-Dialogue: 0,1:03:44.54,1:03:53.80,English,,0,0,0,,The level k vpn k is used to compute an index into the level k page table yes
+Dialogue: 0,1:03:08.32,1:03:12.16,English,,0,0,0,,Just like here the MMU members doing all of this this is all hardware logic
+Dialogue: 0,1:03:13.76,1:03:20.16,English,,0,0,0,,So it and the art the number of page tables levels is defined by the architecture okay
+Dialogue: 0,1:03:21.98,1:03:27.74,English,,0,0,0,,So the MMU takes the virtual address that's presented to it
+Dialogue: 0,1:03:29.12,1:03:37.02,English,,0,0,0,,And it uses a portion a subset of those bits to access each page table okay
+Dialogue: 0,1:03:38.88,1:03:40.74,English,,0,0,0,,So it's just like...did I answer your question?okay
+Dialogue: 0,1:03:42.04,1:03:43.48,English,,0,0,0,,So it's just like before that
+Dialogue: 0,1:03:44.54,1:03:53.80,English,,0,0,0,,The level k,VPN k is used to compute an index into the level k page table yes
 Dialogue: 0,1:03:53.80,1:04:04.40,English,,0,0,0,,[student speaking]
 Dialogue: 0,1:04:04.40,1:04:08.28,English,,0,0,0,,Okay the question is why are the indices arranged right to left on which diagram
 Dialogue: 0,1:04:08.28,1:04:13.16,English,,0,0,0,,[student speaking]
-Dialogue: 0,1:04:13.18,1:04:16.66,English,,0,0,0,,Oh these are the bits this is the least significant bit it's always bit zero
-Dialogue: 0,1:04:17.84,1:04:20.08,English,,0,0,0,,Yeah that's a good question so the question was why do these
+Dialogue: 0,1:04:13.18,1:04:16.66,English,,0,0,0,,Oh these are the bits,this is the least significant bit it's always bit zero
+Dialogue: 0,1:04:17.84,1:04:20.08,English,,0,0,0,,Yeah that's a good question,so the question was why do these
 Dialogue: 0,1:04:20.94,1:04:25.52,English,,0,0,0,,In this diagram why are these these bits labeled right to left starting at zero
-Dialogue: 0,1:04:26.10,1:04:29.82,English,,0,0,0,,And the answer is is that we're indicating the bit position
+Dialogue: 0,1:04:26.10,1:04:29.82,English,,0,0,0,,And the answer is that we're indicating the bit position
 Dialogue: 0,1:04:30.42,1:04:35.88,English,,0,0,0,,So zero is the least significant bit and n-1 is the most significant bit
-Dialogue: 0,1:04:37.98,1:04:47.58,English,,0,0,0,,Yes question
+Dialogue: 0,1:04:38.04,1:04:38.64,English,,0,0,0,,Yes question
+Dialogue: 0,1:04:38.66,1:04:47.58,English,,0,0,0,,[student speaking]
 Dialogue: 0,1:04:47.58,1:04:51.98,English,,0,0,0,,Yeah so the question is what's the overhead involved in these when you have these multiple levels
-Dialogue: 0,1:04:52.38,1:04:54.94,English,,0,0,0,,Now are you talking about overhead -
+Dialogue: 0,1:04:52.38,1:04:54.94,English,,0,0,0,,Now are you talking about overhead to
 Dialogue: 0,1:04:54.96,1:05:03.58,English,,0,0,0,,[student speaking]
-Dialogue: 0,1:05:03.58,1:05:09.06,English,,0,0,0,,Yeah well so there's clearly if you don't get tlb hits
+Dialogue: 0,1:05:03.58,1:05:09.06,English,,0,0,0,,Yeah well so there's clearly if you don't get TLB hits
 Dialogue: 0,1:05:10.52,1:05:11.93,English,,0,0,0,,It would be a lot of overhead
-Dialogue: 0,1:05:12.60,1:05:17.88,English,,0,0,0,,Because it would be you would be fetching ptes from multiple page tables for memory
-Dialogue: 0,1:05:19.22,1:05:24.06,English,,0,0,0,,So that but because of locality the chances are almost the
+Dialogue: 0,1:05:12.60,1:05:17.88,English,,0,0,0,,Because it would be you would be fetching PTEs from multiple page tables for memory
+Dialogue: 0,1:05:19.22,1:05:24.06,English,,0,0,0,,So that but because of locality the chances are almost the...
 Dialogue: 0,1:05:24.38,1:05:27.52,English,,0,0,0,,The chances this level one table covers the entire address space
-Dialogue: 0,1:05:28.08,1:05:31.84,English,,0,0,0,,So it's always going to be in the in the pte in the in the tlb
-Dialogue: 0,1:05:32.64,1:05:38.88,English,,0,0,0,,These the level these the these level two tables are covering a huge swath of the address space
-Dialogue: 0,1:05:39.66,1:05:43.70,English,,0,0,0,,So chances are they're going to be in the tlb - right so
+Dialogue: 0,1:05:28.08,1:05:31.84,English,,0,0,0,,So it's always going to be in the in the PTE, in the TLB
+Dialogue: 0,1:05:32.64,1:05:38.88,English,,0,0,0,,These level two tables are covering a huge swath of the address space
+Dialogue: 0,1:05:39.66,1:05:43.70,English,,0,0,0,,So chances are they're going to be in the TLB too right so
 Dialogue: 0,1:05:44.42,1:05:49.24,English,,0,0,0,,So as long as your program has reasonable locality
-Dialogue: 0,1:05:49.70,1:05:55.24,English,,0,0,0,,Most of the most of these most of these lookups are going to hit in the tlb
-Dialogue: 0,1:05:56.30,1:06:03.16,English,,0,0,0,,Okay so it turns out that the overhead with reasonably written programs is  is it's it's negligible
-Dialogue: 0,1:06:03.86,1:06:09.72,English,,0,0,0,,In but that's a very it's a very important consideration and
+Dialogue: 0,1:05:49.70,1:05:55.24,English,,0,0,0,,Most of these lookups are going to hit in the TLB
+Dialogue: 0,1:05:56.30,1:06:03.16,English,,0,0,0,,Okay so it turns out that the overhead with reasonably written programs is negligible
+Dialogue: 0,1:06:06.74,1:06:09.72,English,,0,0,0,,But that's a very it's a very important consideration
 Dialogue: 0,1:06:10.62,1:06:16.10,English,,0,0,0,,You know maybe that's maybe that speaks against increasing at some point if you had too many page tables
-Dialogue: 0,1:06:16.94,1:06:20.62,English,,0,0,0,,You might you might increase the probability of misses in the tlb
-Dialogue: 0,1:06:20.62,1:06:24.42,English,,0,0,0,,So it's probably something they very carefully considered
+Dialogue: 0,1:06:16.94,1:06:20.26,English,,0,0,0,,You might increase the probability of misses in the TLB
+Dialogue: 0,1:06:20.26,1:06:24.42,English,,0,0,0,,So it's probably something they very carefully considered
 Dialogue: 0,1:06:27.78,1:06:29.78,English,,0,0,0,,Okay any other questions yeah
-Dialogue: 0,1:06:29.90,1:06:39.94,English,,0,0,0,,Yeah so if we use segmentation plus paging so it is the addresses page table the recommended linear address of our real
-Dialogue: 0,1:06:39.96,1:06:45.24,English,,0,0,0,,Homeboy the question was how does segmentation fit into this and
+Dialogue: 0,1:06:29.90,1:06:39.94,English,,0,0,0,,[student speaking]Yeah so if we use segmentation plus paging,so it is the addresses page table the recommended linear address of our real
+Dialogue: 0,1:06:39.96,1:06:45.24,English,,0,0,0,,Ho boy the question was how does segmentation fit into this and
 Dialogue: 0,1:06:46.56,1:06:50.08,English,,0,0,0,,We're not going to go there
-Dialogue: 0,1:06:50.48,1:06:53.20,English,,0,0,0,,So in in earlier intel systems
+Dialogue: 0,1:06:50.48,1:06:53.20,English,,0,0,0,,So in earlier intel systems
 Dialogue: 0,1:06:56.08,1:07:01.60,English,,0,0,0,,Such as the actually the first intel system I programs it was a 286
 Dialogue: 0,1:07:03.00,1:07:06.65,English,,0,0,0,,So the 286 no is neat it was the 8086
-Dialogue: 0,1:07:07.28,1:07:11.00,English,,0,0,0,,Anyway earlier in earlier intel systems had 16-bit addresses
+Dialogue: 0,1:07:07.28,1:07:11.00,English,,0,0,0,,Anyway in earlier intel systems had 16-bit addresses
 Dialogue: 0,1:07:11.82,1:07:13.02,English,,0,0,0,,Which is tiny right
 Dialogue: 0,1:07:13.04,1:07:16.38,English,,0,0,0,,It's only 2^16 for your address space
-Dialogue: 0,1:07:17.12,1:07:22.41,English,,0,0,0,,And so as a hack to try to increase the effective size of the of
-Dialogue: 0,1:07:23.10,1:07:26.74,English,,0,0,0,,This address space the introduced the notion of segmentation
+Dialogue: 0,1:07:17.12,1:07:22.41,English,,0,0,0,,And so as a hack to try to increase the effective size of the
+Dialogue: 0,1:07:23.10,1:07:26.74,English,,0,0,0,,Of this address space the introduced the notion of segmentation
 Dialogue: 0,1:07:27.90,1:07:31.78,English,,0,0,0,,And so there were four segments 4-bit
-Dialogue: 0,1:07:32.64,1:07:38.40,English,,0,0,0,,There was a register segment registers that contain four four bits that could be applied to the address
-Dialogue: 0,1:07:39.36,1:07:45.64,English,,0,0,0,,So an address was the the combination of the segment knows more than
+Dialogue: 0,1:07:32.64,1:07:38.40,English,,0,0,0,,There was a register segment registers that contain 4 bits that could be applied to the address
+Dialogue: 0,1:07:39.36,1:07:45.64,English,,0,0,0,,So an address was the combination of the segment knows more than
 Dialogue: 0,1:07:49.16,1:07:51.56,English,,0,0,0,,Yeah you need the segment formed
-Dialogue: 0,1:07:52.46,1:07:56.76,English,,0,0,0,,The address then was a combination of the the segment bits plus the address
+Dialogue: 0,1:07:52.46,1:07:56.76,English,,0,0,0,,The address then was a combination of the segment bits plus the address
 Dialogue: 0,1:07:57.48,1:08:00.70,English,,0,0,0,,So you could use the segment bits to create an offset
-Dialogue: 0,1:08:01.12,1:08:05.62,English,,0,0,0,,So it was a - it wasn't effectively a - 2 xx xx bit address space
-Dialogue: 0,1:08:06.22,1:08:11.56,English,,0,0,0,,But you can only address you can only access it in 2^16 chunks right so the
-Dialogue: 0,1:08:12.74,1:08:22.50,English,,0,0,0,,The segment would would determine an offset into into the sum and offset into the  that this 20-bit address space
+Dialogue: 0,1:08:01.12,1:08:05.62,English,,0,0,0,,So it was a - it wasn't effectively a 20 bit address space
+Dialogue: 0,1:08:06.22,1:08:11.56,English,,0,0,0,,But you can only address,you can only access it in 2^16 chunks right so the
+Dialogue: 0,1:08:12.74,1:08:22.50,English,,0,0,0,,The segment would determine an offset into the that this 20-bit address space
 Dialogue: 0,1:08:22.50,1:08:25.98,English,,0,0,0,,And then from that you could address 16 bits
-Dialogue: 0,1:08:27.20,1:08:33.16,English,,0,0,0,,So it was this very unsatisfying devilishly hard to program  thing because
+Dialogue: 0,1:08:27.20,1:08:33.16,English,,0,0,0,,So it was this very unsatisfying devilishly hard to program thing because
 Dialogue: 0,1:08:33.82,1:08:36.50,English,,0,0,0,,You can only access 16 bit chunks at a time
-Dialogue: 0,1:08:37.94,1:08:46.72,English,,0,0,0,,So anyway we're not going to a few years later they came to their senses and just created a real virtual memory system with with linear drill spaces
+Dialogue: 0,1:08:37.94,1:08:46.72,English,,0,0,0,,So anyway we're not going to a few years later they came to their senses and just created a real virtual memory system with linear drill spaces
 Dialogue: 0,1:08:50.54,1:08:54.30,English,,0,0,0,,But you know really there
 Dialogue: 0,1:09:02.20,1:09:03.62,English,,0,0,0,,Yeah I don't know we're just did
-Dialogue: 0,1:09:06.66,1:09:11.40,English,,0,0,0,,I'm not even sure if if they do address translation on those actually
+Dialogue: 0,1:09:06.66,1:09:11.40,English,,0,0,0,,I'm not even sure if they do address translation on those actually
 Dialogue: 0,1:09:11.58,1:09:14.08,English,,0,0,0,,So I'm not sure but you really don't want to go there
 Dialogue: 0,1:09:14.88,1:09:17.98,English,,0,0,0,,[student speaking]
 Dialogue: 0,1:09:18.02,1:09:21.71,English,,0,0,0,,Yeah oh it does it does so the question is it doesn't exist anymore
 Dialogue: 0,1:09:22.08,1:09:28.88,English,,0,0,0,,Everything intel's been incredibly good about maintaining backward compatibility
-Dialogue: 0,1:09:29.74,1:09:31.90,English,,0,0,0,,So so that stuff's all in there
-Dialogue: 0,1:09:33.88,1:09:39.14,English,,0,0,0,,But there's a mode bit when you when you boot your system up you set a bit that says I want a linear address space
+Dialogue: 0,1:09:29.74,1:09:31.90,English,,0,0,0,,So that stuff's all in there
+Dialogue: 0,1:09:33.88,1:09:39.14,English,,0,0,0,,But there's a mode bit when you boot your system up you set a bit that says I want a linear address space
 Dialogue: 0,1:09:43.38,1:09:56.28,English,,0,0,0,,Okay any other question
-Dialogue: 0,1:09:56.46,1:09:58.52,English,,0,0,0,,Oh no vpn to is the offset
-Dialogue: 0,1:10:01.54,1:10:07.48,English,,0,0,0,,Okay so the question is why do we care about vpn2 since that it points to the level 2 table
-Dialogue: 0,1:10:08.00,1:10:15.68,English,,0,0,0,,So what what what gives you the beginning of the level 2 table is the pte entry in the level 1 table
-Dialogue: 0,1:10:17.28,1:10:22.06,English,,0,0,0,,Okay so the the level 1 table points to the beginning of that level to pay table
-Dialogue: 0,1:10:22.68,1:10:27.58,English,,0,0,0,,And vpn to gives you the offset into that the level 2 table
-Dialogue: 0,1:10:28.58,1:10:32.34,English,,0,0,0,,So the it finds the address by taking the the base address
-Dialogue: 0,1:10:33.10,1:10:35.64,English,,0,0,0,,And then vpn 2 times the pte sighs
+Dialogue: 0,1:09:56.46,1:09:58.52,English,,0,0,0,,Oh no VPN to is the offset
+Dialogue: 0,1:10:01.54,1:10:07.48,English,,0,0,0,,Okay so the question is why do we care about VPN2 since that it points to the level 2 table
+Dialogue: 0,1:10:08.00,1:10:15.68,English,,0,0,0,,So what gives you the beginning of the level 2 table is the PTE entry in the level 1 table
+Dialogue: 0,1:10:17.28,1:10:22.06,English,,0,0,0,,Okay so the level 1 table points to the beginning of that level 2 table
+Dialogue: 0,1:10:22.68,1:10:27.58,English,,0,0,0,,And VPN to gives you the offset into that the level 2 table
+Dialogue: 0,1:10:28.58,1:10:32.34,English,,0,0,0,,So the it finds the address by taking the base address
+Dialogue: 0,1:10:33.10,1:10:35.64,English,,0,0,0,,And then VPN2 times the PTE sighs
 Dialogue: 0,1:10:39.28,1:10:41.80,English,,0,0,0,,Okay good good any other questions
 Dialogue: 0,1:10:49.82,1:10:52.96,English,,0,0,0,,Okay well that'll do it for today
-Dialogue: 0,1:10:54.02,1:10:57.16,English,,0,0,0,,Next week or on thursday we'll look at
-Dialogue: 0,1:10:57.94,1:11:03.78,English,,0,0,0,,How how virtual memory is implemented in real systems and and in Linux
+Dialogue: 0,1:10:54.02,1:10:57.16,English,,0,0,0,,Next week or on Thursday we'll look at
+Dialogue: 0,1:10:57.94,1:11:03.78,English,,0,0,0,,How how virtual memory is implemented in real systems and in Linux
