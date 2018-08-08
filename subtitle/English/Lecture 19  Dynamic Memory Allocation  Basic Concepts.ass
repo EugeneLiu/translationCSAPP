@@ -16,8 +16,9 @@ Video File: ../../../../Desktop/csapp/Lecture 19  Dynamic Memory Allocation  Bas
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 1.000000
-Active Line: 2
-Video Position: 453
+Scroll Position: 775
+Active Line: 784
+Video Position: 119215
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -31,185 +32,194 @@ Dialogue: 0,0:00:04.56,0:00:09.10,English,,0,0,0,,Welcome good to see you all, w
 Dialogue: 0,0:00:10.56,0:00:15.12,English,,0,0,0,,So last week we looked at this virtual memory mechanism
 Dialogue: 0,0:00:17.44,0:00:21.40,English,,0,0,0,,And how it provides so many different useful functionalities to the system
 Dialogue: 0,0:00:22.94,0:00:30.40,English,,0,0,0,,Along with this sort of abstraction of having this large contiguous array of bytes
-Dialogue: 0,0:00:32.54,0:00:35.00,English,,0,0,0,,Now once we're given that that large array of bytes
+Dialogue: 0,0:00:32.54,0:00:35.00,English,,0,0,0,,Now once we're given that large array of bytes
 Dialogue: 0,0:00:36.64,0:00:37.86,English,,0,0,0,,Now we have to manage it
-Dialogue: 0,0:00:39.48,0:00:46.72,English,,0,0,0,,And we have to we have to have some mechanism to to manage and use that that resource
-Dialogue: 0,0:00:47.14,0:00:54.46,English,,0,0,0,,Okay so that's the topic of our our lectures this week is a storage allocation
+Dialogue: 0,0:00:39.48,0:00:46.72,English,,0,0,0,,And we have to have some mechanism to manage and use that resource
+Dialogue: 0,0:00:47.20,0:00:47.50,English,,0,0,0,,Okay so
+Dialogue: 0,0:00:48.36,0:00:54.46,English,,0,0,0,,That's the topic of a lectures this week is a storage allocation
 Dialogue: 0,0:00:54.80,0:00:57.04,English,,0,0,0,,And how storage allocators work
 Dialogue: 0,0:00:57.12,0:01:02.28,English,,0,0,0,,And how you use them to manage the matter the virtual memory in your system
-Dialogue: 0,0:01:06.30,0:01:10.48,English,,0,0,0,,So the the basic idea of a dynamic memory allocator
-Dialogue: 0,0:01:10.60,0:01:21.48,English,,0,0,0,,Is that applications use it to to manipulate virtual memory to create to to allocate and free chunks of virtual memory
+Dialogue: 0,0:01:06.30,0:01:10.48,English,,0,0,0,,So the basic idea of a dynamic memory allocator
+Dialogue: 0,0:01:10.60,0:01:21.48,English,,0,0,0,,Is that applications use it to to manipulate virtual memory to create to allocate and free chunks of virtual memory
 Dialogue: 0,0:01:21.72,0:01:22.94,English,,0,0,0,,That you need in your program
-Dialogue: 0,0:01:23.94,0:01:28.46,English,,0,0,0,,And it's this this memory is maintained in it in an area of virtual memory called the heap
-Dialogue: 0,0:01:30.52,0:01:37.20,English,,0,0,0,,Okay and although all all languages have some ask some mechanism for we're acquiring and manipulating
-Dialogue: 0,0:01:40.38,0:01:42.36,English,,0,0,0,,This this this dynamic memory
-Dialogue: 0,0:01:44.08,0:01:53.36,English,,0,0,0,,So in nc it's a phone it's the malloc package languages like java  have the new the new method
-Dialogue: 0,0:01:56.26,0:02:00.96,English,,0,0,0,,Now the allocator the allocator maintains the heap as a contiguous collection of blocks
-Dialogue: 0,0:02:02.56,0:02:05.22,English,,0,0,0,,Where and it blocks can be allocated or free
-Dialogue: 0,0:02:05.96,0:02:11.34,English,,0,0,0,,Ok allocated meaning that they're they're being used by some program application
+Dialogue: 0,0:01:23.94,0:01:28.46,English,,0,0,0,,And it's this memory is maintained in an area of virtual memory called the heap
+Dialogue: 0,0:01:30.52,0:01:37.20,English,,0,0,0,,Okay and although all languages have some ask some mechanism for we're acquiring and manipulating
+Dialogue: 0,0:01:40.38,0:01:42.36,English,,0,0,0,,This dynamic memory
+Dialogue: 0,0:01:44.04,0:01:45.64,English,,0,0,0,,So in C
+Dialogue: 0,0:01:46.62,0:01:53.36,English,,0,0,0,,It's the malloc package languages like java have the new method
+Dialogue: 0,0:01:56.26,0:02:01.00,English,,0,0,0,,Now the allocator maintains the heap as a contiguous collection of blocks
+Dialogue: 0,0:02:03.20,0:02:05.24,English,,0,0,0,,And blocks can be allocated or free
+Dialogue: 0,0:02:05.96,0:02:11.34,English,,0,0,0,,Ok allocated meaning that they're being used by some program application
 Dialogue: 0,0:02:13.08,0:02:17.86,English,,0,0,0,,Free meaning that there available to be for use by an application
-Dialogue: 0,0:02:19.46,0:02:25.34,English,,0,0,0,,And there's there's two types of allocators the kind of allocator that you find in C such as the malloc package
-Dialogue: 0,0:02:25.92,0:02:31.20,English,,0,0,0,,It's up to the application to both explicitly allocate the the memory
-Dialogue: 0,0:02:31.58,0:02:35.46,English,,0,0,0,,And explicitly free it when when the when the application is finished with it
-Dialogue: 0,0:02:35.62,0:02:40.50,English,,0,0,0,,Okay so the system won't won't free up any memory that you allocate unless you do it
-Dialogue: 0,0:02:40.96,0:02:45.34,English,,0,0,0,,Explicitly by calling the by calling the free function
-Dialogue: 0,0:02:46.40,0:02:51.62,English,,0,0,0,,But there's other languages that that support implicit allocators
-Dialogue: 0,0:02:51.94,0:02:58.90,English,,0,0,0,,And in these in these implicit allocators the programmer al explicitly allocates memory
+Dialogue: 0,0:02:19.46,0:02:25.34,English,,0,0,0,,And there's two types of allocators the kind of allocator that you find in C such as the malloc package
+Dialogue: 0,0:02:25.92,0:02:31.20,English,,0,0,0,,It's up to the application to both explicitly allocate the memory
+Dialogue: 0,0:02:31.58,0:02:35.46,English,,0,0,0,,And explicitly free it when the application is finished with it
+Dialogue: 0,0:02:35.62,0:02:40.50,English,,0,0,0,,Okay so the system won't free up any memory that you allocate unless you do it
+Dialogue: 0,0:02:40.96,0:02:43.64,English,,0,0,0,,Explicitly by calling the
+Dialogue: 0,0:02:43.86,0:02:45.54,English,,0,0,0,,By calling the free function
+Dialogue: 0,0:02:46.40,0:02:51.62,English,,0,0,0,,But there's other languages that support implicit allocators
+Dialogue: 0,0:02:51.94,0:02:58.90,English,,0,0,0,,And in these implicit allocators the programmer explicitly allocates memory
 Dialogue: 0,0:02:59.62,0:03:02.40,English,,0,0,0,,But then the system takes care of freeing the memory
-Dialogue: 0,0:03:02.82,0:03:11.42,English,,0,0,0,,Okay so it's that the burden of freeing the memory is shifted from the application program to the to the system
-Dialogue: 0,0:03:12.04,0:03:16.86,English,,0,0,0,,And it it frees this memory implicitly sort of behind the scenes using a process called garbage collection
-Dialogue: 0,0:03:18.24,0:03:26.18,English,,0,0,0,,Okay so languages like java,ml,lisp um they all do implicit implicit they all support in close at allocators
-Dialogue: 0,0:03:26.78,0:03:30.82,English,,0,0,0,,Now today we're going to just we're going to discuss explicit memory alligators
-Dialogue: 0,0:03:31.24,0:03:35.38,English,,0,0,0,,On thursday we'll get into implicit alligators and how they work
-Dialogue: 0,0:03:37.50,0:03:41.64,English,,0,0,0,,Now the alligator and C is provided it by the standard C library
-Dialogue: 0,0:03:43.54,0:03:46.02,English,,0,0,0,,In a set of function called malloc package
-Dialogue: 0,0:03:48.34,0:03:51.34,English,,0,0,0,,The the malloc function is used to to allocate memory
+Dialogue: 0,0:03:02.82,0:03:03.28,English,,0,0,0,,Okay so it's
+Dialogue: 0,0:03:03.92,0:03:11.42,English,,0,0,0,,That the burden of freeing the memory is shifted from the application program to the system
+Dialogue: 0,0:03:12.04,0:03:16.86,English,,0,0,0,,And it frees this memory implicitly sort of behind the scenes using a process called garbage collection
+Dialogue: 0,0:03:18.24,0:03:26.18,English,,0,0,0,,Okay so languages like java,ML,Lisp um they all do implicit implicit they all support in close at allocators
+Dialogue: 0,0:03:26.78,0:03:28.08,English,,0,0,0,,Now today we're going to just...
+Dialogue: 0,0:03:28.30,0:03:30.82,English,,0,0,0,,We're going to discuss explicit memory alligators
+Dialogue: 0,0:03:31.24,0:03:35.38,English,,0,0,0,,On Thursday we'll get into implicit alligators and how they work
+Dialogue: 0,0:03:37.50,0:03:46.02,English,,0,0,0,,Now the alligator and C is provided it by the standard C library in a set of function called malloc package
+Dialogue: 0,0:03:48.34,0:03:51.34,English,,0,0,0,,The malloc function is used to allocate memory
 Dialogue: 0,0:03:52.08,0:03:55.38,English,,0,0,0,,And it takes as input a size argument which is in bytes
-Dialogue: 0,0:03:57.44,0:04:04.16,English,,0,0,0,,Okay and then it returns a pointer to a to a memory block that contains at least size bytes
-Dialogue: 0,0:04:05.22,0:04:12.06,English,,0,0,0,,And that block is aligned to on x86 systems to 8-bytes on x86-64 systems to 16-bytes
-Dialogue: 0,0:04:13.02,0:04:16.74,English,,0,0,0,,If size is 0 it returns null
-Dialogue: 0,0:04:18.50,0:04:24.34,English,,0,0,0,,And then it returns -1 like like most typical system calls
+Dialogue: 0,0:03:57.44,0:04:04.16,English,,0,0,0,,Okay and then it returns a pointer to a memory block that contains at least size bytes
+Dialogue: 0,0:04:05.22,0:04:12.06,English,,0,0,0,,And that block is aligned to on x86 systems to 8-byte on x86-64 systems to 16-byte
+Dialogue: 0,0:04:13.02,0:04:16.74,English,,0,0,0,,If size is 0,it returns null
+Dialogue: 0,0:04:18.50,0:04:24.34,English,,0,0,0,,And then it returns -1 like most typical system calls
 Dialogue: 0,0:04:25.68,0:04:30.02,English,,0,0,0,,The programmer frees memory by calling the free function
-Dialogue: 0,0:04:30.80,0:04:36.57,English,,0,0,0,,It takes as an argument a pointer that was returned from some prior invocation of malloc
+Dialogue: 0,0:04:30.80,0:04:36.57,English,,0,0,0,,It takes an argument a pointer that was returned from some prior invocation of malloc
 Dialogue: 0,0:04:37.06,0:04:38.92,English,,0,0,0,,And it returns nothing
 Dialogue: 0,0:04:40.38,0:04:41.78,English,,0,0,0,,And it frees that
-Dialogue: 0,0:04:43.34,0:04:49.24,English,,0,0,0,,I've given this pointer that was returned by the prior indication of malloc it  frees the block at that address
+Dialogue: 0,0:04:43.34,0:04:46.86,English,,0,0,0,,I've given this pointer that was returned by the prior indication of malloc
+Dialogue: 0,0:04:47.60,0:04:49.28,English,,0,0,0,,It frees the block at that address
 Dialogue: 0,0:04:51.46,0:04:54.36,English,,0,0,0,,And then returns that block to the pool of available memory
-Dialogue: 0,0:04:55.50,0:04:57.72,English,,0,0,0,,Now there's some there's some other functions
-Dialogue: 0,0:04:59.60,0:05:05.88,English,,0,0,0,,So sialic is a version of malloc that gives you an initialized block of memory that's initialized to 0
-Dialogue: 0,0:05:06.78,0:05:13.48,English,,0,0,0,,And realloc you can malloc a block and then call realloc to change the size of that  previously allocated block
-Dialogue: 0,0:05:14.86,0:05:20.52,English,,0,0,0,,And then there's a function called s break which is used internally by allocators to grow and shrink the heap
+Dialogue: 0,0:04:55.50,0:04:57.72,English,,0,0,0,,Now there's some other functions
+Dialogue: 0,0:04:59.60,0:05:05.88,English,,0,0,0,,So calloc is a version of malloc that gives you an initialized block of memory that's initialized to 0
+Dialogue: 0,0:05:06.78,0:05:13.48,English,,0,0,0,,And realloc you can malloc a block and then call realloc to change the size of that previously allocated block
+Dialogue: 0,0:05:14.86,0:05:20.52,English,,0,0,0,,And then there's a function called 'sbrk' which is used internally by allocators to grow and shrink the heap
 Dialogue: 0,0:05:20.88,0:05:22.62,English,,0,0,0,,So when an allocator needs more memory
-Dialogue: 0,0:05:23.04,0:05:27.26,English,,0,0,0,,It calls s break to to get that additional virtual memory
-Dialogue: 0,0:05:27.54,0:05:30.60,English,,0,0,0,,And then that that's added to the heap that the portion
-Dialogue: 0,0:05:31.16,0:05:36.52,English,,0,0,0,,That grows the heap and then it adds it to the memory that the the allocator is is manipulating
-Dialogue: 0,0:05:40.24,0:05:44.24,English,,0,0,0,,So here's an example of how we would use malik and it's in a simple program
-Dialogue: 0,0:05:45.02,0:05:51.90,English,,0,0,0,,We have a pointer to an int  *p  and we call malloc
-Dialogue: 0,0:05:52.56,0:05:54.92,English,,0,0,0,,And we we want to allocate an array of n in
-Dialogue: 0,0:05:55.66,0:05:58.66,English,,0,0,0,,So this is that this is sort of the standard way you call it
-Dialogue: 0,0:05:59.24,0:06:03.70,English,,0,0,0,,We want n int and so we we call it with n times the size of int
+Dialogue: 0,0:05:23.04,0:05:27.26,English,,0,0,0,,It calls 'sbrk' to get that additional virtual memory
+Dialogue: 0,0:05:27.54,0:05:30.60,English,,0,0,0,,And then that's added to the heap that the portion
+Dialogue: 0,0:05:31.16,0:05:36.52,English,,0,0,0,,That grows the heap and then it adds it to the memory that the allocator is manipulating
+Dialogue: 0,0:05:40.24,0:05:44.24,English,,0,0,0,,So here's an example of how we would use malloc in a simple program
+Dialogue: 0,0:05:45.02,0:05:48.16,English,,0,0,0,,We have a pointer to an int *p
+Dialogue: 0,0:05:50.04,0:05:51.82,English,,0,0,0,,And we call malloc
+Dialogue: 0,0:05:52.56,0:05:54.92,English,,0,0,0,,And we want to allocate an array of n in
+Dialogue: 0,0:05:55.66,0:05:58.66,English,,0,0,0,,So this is sort of the standard way you call it
+Dialogue: 0,0:05:59.24,0:06:03.70,English,,0,0,0,,We want n ints and so we call it with n*sizeof(int)
 Dialogue: 0,0:06:04.48,0:06:06.38,English,,0,0,0,,Because remember the argument is in bytes
 Dialogue: 0,0:06:08.00,0:06:09.58,English,,0,0,0,,Malloc returns a pointer
 Dialogue: 0,0:06:10.94,0:06:13.64,English,,0,0,0,,It returns that generic pointer void* pointer so
-Dialogue: 0,0:06:14.86,0:06:19.66,English,,0,0,0,,So we cast it to a pointer to an int to keep keep the compiler happy
-Dialogue: 0,0:06:20.20,0:06:21.86,English,,0,0,0,,And then assign it to to p
-Dialogue: 0,0:06:24.32,0:06:28.10,English,,0,0,0,,We check for a we check for a null return value
-Dialogue: 0,0:06:30.56,0:06:35.56,English,,0,0,0,,So I should I should point out the it returns 0 on error
-Dialogue: 0,0:06:35.56,0:06:40.76,English,,0,0,0,,So we check we recheck recheck for this null, the no pointer which is 0
+Dialogue: 0,0:06:14.86,0:06:19.66,English,,0,0,0,,We cast it to a pointer to an int to keep the compiler happy
+Dialogue: 0,0:06:20.20,0:06:21.86,English,,0,0,0,,And then assign it to p
+Dialogue: 0,0:06:24.36,0:06:25.80,English,,0,0,0,,We check for a...
+Dialogue: 0,0:06:26.46,0:06:28.10,English,,0,0,0,,We check for a null return value
+Dialogue: 0,0:06:30.56,0:06:35.56,English,,0,0,0,,So I should point out the it returns 0 on error
+Dialogue: 0,0:06:35.56,0:06:40.76,English,,0,0,0,,So we recheck for this null, the null pointer which is 0
 Dialogue: 0,0:06:43.02,0:06:44.36,English,,0,0,0,,In print an error if it's null
 Dialogue: 0,0:06:45.68,0:06:49.46,English,,0,0,0,,Now once we've got that pointer now p we can treat it just like an array
-Dialogue: 0,0:06:50.22,0:06:54.52,English,,0,0,0,,So we can so inside the loop if we want to initialize it we loop
+Dialogue: 0,0:06:50.22,0:06:54.52,English,,0,0,0,,So we can...so inside the loop if we want to initialize it we loop
 Dialogue: 0,0:06:55.98,0:07:00.20,English,,0,0,0,,Across the elements of the array initializing each one to some value
-Dialogue: 0,0:07:01.10,0:07:09.56,English,,0,0,0,,Now when we're finished when we're finished with this chunk of memory that we've allocated then we free it by calling free with the pointer p
-Dialogue: 0,0:07:12.54,0:07:18.44,English,,0,0,0,,Okay now the so we're going to look today at how functions like malloc and free are implemented
+Dialogue: 0,0:07:01.10,0:07:01.92,English,,0,0,0,,Now when we're finished
+Dialogue: 0,0:07:02.46,0:07:09.56,English,,0,0,0,,When we're finished with this chunk of memory that we've allocated, then we free it by calling free with the pointer p
+Dialogue: 0,0:07:12.62,0:07:13.24,English,,0,0,0,,Okay now the
+Dialogue: 0,0:07:14.26,0:07:18.44,English,,0,0,0,,So we're going to look today at how functions like malloc and free are implemented
 Dialogue: 0,0:07:19.68,0:07:22.68,English,,0,0,0,,So we're going to make a few simplifying assumptions
-Dialogue: 0,0:07:23.93,0:07:28.52,English,,0,0,0,,So I'm going to memory it is byte address
-Dialogue: 0,0:07:28.62,0:07:32.82,English,,0,0,0,,We know that but for the purposes of this lecture we're going to assume that it's it's word address
+Dialogue: 0,0:07:23.86,0:07:24.34,English,,0,0,0,,So I'm going to
+Dialogue: 0,0:07:25.32,0:07:29.14,English,,0,0,0,,Memory it is byte address we know that
+Dialogue: 0,0:07:29.26,0:07:32.78,English,,0,0,0,,But for the purposes of this lecture we're going to assume that it's word address
 Dialogue: 0,0:07:32.96,0:07:35.00,English,,0,0,0,,Okay so we're just going to look at word size units
 Dialogue: 0,0:07:38.76,0:07:42.02,English,,0,0,0,,And I'm going to assume that words are 4 bytes
 Dialogue: 0,0:07:44.60,0:07:47.82,English,,0,0,0,,So they basically the size of an int
-Dialogue: 0,0:07:50.86,0:07:53.98,English,,0,0,0,,So this isn't actually this this isn't true I need to fix that
-Dialogue: 0,0:07:56.26,0:08:02.78,English,,0,0,0,,So basically we're going to we're going to think of words as four byte quantity sort of integer size quantities
-Dialogue: 0,0:08:05.10,0:08:09.66,English,,0,0,0,,And then our blocks or contiguous chunks of those words that can be either allocated or free
+Dialogue: 0,0:07:50.86,0:07:53.98,English,,0,0,0,,So this isn't actually,this isn't true,I need to fix that
+Dialogue: 0,0:07:56.26,0:08:02.78,English,,0,0,0,,So basically we're going to think of words as four byte quantity sort of integer size quantities
+Dialogue: 0,0:08:05.10,0:08:09.66,English,,0,0,0,,And then a blocks or contiguous chunks of those words that can be either allocated or free
 Dialogue: 0,0:08:10.50,0:08:13.18,English,,0,0,0,,So here we have a portion of the heap
-Dialogue: 0,0:08:13.76,0:08:18.94,English,,0,0,0,,Which consists of a four word allocated block followed by a two word free block
-Dialogue: 0,0:08:20.06,0:08:24.80,English,,0,0,0,,Followed by another for word allocated block followed by a three word free blocking
+Dialogue: 0,0:08:13.76,0:08:18.94,English,,0,0,0,,Which consists of a 4 words allocated block followed by a 2 words free block
+Dialogue: 0,0:08:20.06,0:08:24.80,English,,0,0,0,,Followed by another a 4 word allocated block, followed by a 3 word free block
 Dialogue: 0,0:08:25.50,0:08:33.34,English,,0,0,0,,And we'll indicate these free blocks by white and will indicate allocated blocks with some shade of color
-Dialogue: 0,0:08:36.42,0:08:41.10,English,,0,0,0,,So let's look now how a sequence of of allocations and freeze would work
-Dialogue: 0,0:08:42.28,0:08:46.02,English,,0,0,0,,And now notice I'm calling malloc with the size of in words
-Dialogue: 0,0:08:46.68,0:08:51.14,English,,0,0,0,,Not bytes just to keep just to keep things keep these pictures simpler
-Dialogue: 0,0:08:55.04,0:09:00.88,English,,0,0,0,,So in this first we call malloc  and allocate of a forward block
-Dialogue: 0,0:09:03.88,0:09:06.14,English,,0,0,0,,Then we can that and that gives us a pointer p1
-Dialogue: 0,0:09:06.14,0:09:09.32,English,,0,0,0,,Then we call malloc again to get a five-word block
+Dialogue: 0,0:08:36.42,0:08:41.10,English,,0,0,0,,So let's look now how a sequence of allocations and freeze would work
+Dialogue: 0,0:08:42.28,0:08:46.02,English,,0,0,0,,And now notice I'm calling malloc with the size of words
+Dialogue: 0,0:08:46.72,0:08:47.26,English,,0,0,0,,Not bytes
+Dialogue: 0,0:08:47.42,0:08:51.14,English,,0,0,0,, Just to keep,just to keep things, keep these pictures simpler
+Dialogue: 0,0:08:55.04,0:09:00.88,English,,0,0,0,,So in this first we call malloc and allocate of a 4 word block
+Dialogue: 0,0:09:03.88,0:09:06.14,English,,0,0,0,,Then we...and that gives us a pointer p1
+Dialogue: 0,0:09:06.14,0:09:09.32,English,,0,0,0,,Then we call malloc again to get a 5 word block
 Dialogue: 0,0:09:09.44,0:09:14.40,English,,0,0,0,,So it just takes it one of the free words and allocates it
-Dialogue: 0,0:09:15.58,0:09:17.94,English,,0,0,0,,We call malloc again to get a six word block
-Dialogue: 0,0:09:19.76,0:09:24.28,English,,0,0,0,,And then we free the block that's pointed at by p to this purple block
-Dialogue: 0,0:09:26.24,0:09:28.56,English,,0,0,0,,Okay so now we that frees up that block
-Dialogue: 0,0:09:29.12,0:09:32.80,English,,0,0,0,,And then we do another allocation for a two word block
-Dialogue: 0,0:09:33.10,0:09:39.96,English,,0,0,0,,And so the the allocator looks to see if it can find a free block that has enough enough room and
-Dialogue: 0,0:09:40.28,0:09:45.34,English,,0,0,0,,It finds that it finds this free block here that has five free words and then it
-Dialogue: 0,0:09:46.26,0:09:52.00,English,,0,0,0,,Allocates the the requested block inside of that that free block
-Dialogue: 0,0:09:55.62,0:10:00.74,English,,0,0,0,,Now allocators work under a lot of a lot of different constraints
+Dialogue: 0,0:09:15.58,0:09:17.94,English,,0,0,0,,We call malloc again to get a 6 word block
+Dialogue: 0,0:09:19.76,0:09:24.28,English,,0,0,0,,And then we free the block that's pointed at by p2 this purple block
+Dialogue: 0,0:09:26.24,0:09:28.56,English,,0,0,0,,Okay so now we...that frees up that block
+Dialogue: 0,0:09:29.12,0:09:32.80,English,,0,0,0,,And then we do another allocation for a 2 word block
+Dialogue: 0,0:09:33.10,0:09:39.96,English,,0,0,0,,And so the the allocator looks to see if it can find a free block that has enough room and
+Dialogue: 0,0:09:40.28,0:09:45.34,English,,0,0,0,,It finds this free block here that has 5 free words and then it
+Dialogue: 0,0:09:46.26,0:09:52.00,English,,0,0,0,,Allocates the the requested block inside of that free block
+Dialogue: 0,0:09:55.62,0:10:00.74,English,,0,0,0,,Now allocators work under a lot of different constraints
 Dialogue: 0,0:10:01.30,0:10:04.00,English,,0,0,0,,Okay so it's hard to write an allocator because of all these constraints
 Dialogue: 0,0:10:05.88,0:10:10.80,English,,0,0,0,,Applications can choose any combination of allocated and free blocks
-Dialogue: 0,0:10:10.88,0:10:14.12,English,,0,0,0,,So you can't predict what what an application is going to request
+Dialogue: 0,0:10:10.88,0:10:14.12,English,,0,0,0,,So you can't predict what an application is going to request
 Dialogue: 0,0:10:15.54,0:10:22.06,English,,0,0,0,,And and the application is required to free a block by when it frees a block to pass a pointer
 Dialogue: 0,0:10:22.64,0:10:25.80,English,,0,0,0,,That was returned from a previous invocation of malloc
-Dialogue: 0,0:10:26.82,0:10:29.50,English,,0,0,0,,Okay so the the application has a few constraints
-Dialogue: 0,0:10:31.08,0:10:34.50,English,,0,0,0,,But but really the only one that it has is that the fact that the
+Dialogue: 0,0:10:26.82,0:10:29.50,English,,0,0,0,,Okay so the application has a few constraints,but
+Dialogue: 0,0:10:31.08,0:10:34.50,English,,0,0,0,,But really the only one that it has is that the fact that the
 Dialogue: 0,0:10:35.18,0:10:39.23,English,,0,0,0,,When it frees something it has to be a pointer from a previous invocation of malloc
 Dialogue: 0,0:10:39.68,0:10:45.66,English,,0,0,0,,Now the malloc operates or allocators like malloc operate under a lot of different constraints
 Dialogue: 0,0:10:46.36,0:10:49.56,English,,0,0,0,,They can't control the size or the number of the allocated blocks
 Dialogue: 0,0:10:50.32,0:10:53.40,English,,0,0,0,,Because they have no control over the what the application is doing
-Dialogue: 0,0:10:54.92,0:10:58.66,English,,0,0,0,,If an application calls malik malik has to respond right away
+Dialogue: 0,0:10:54.92,0:10:58.66,English,,0,0,0,,If an application calls malloc, malloc has to respond right away
 Dialogue: 0,0:10:59.18,0:11:03.98,English,,0,0,0,,It might you might be able to do a better more efficient version by batching up requests
 Dialogue: 0,0:11:04.78,0:11:06.76,English,,0,0,0,,And then responding to all those requests at once
-Dialogue: 0,0:11:07.45,0:11:12.98,English,,0,0,0,,Which the allocator can't do it when it gets called it has to process the request and then return right away
+Dialogue: 0,0:11:07.45,0:11:12.98,English,,0,0,0,,Which the allocator can't do it,when it gets called it has to process the request and then return right away
 Dialogue: 0,0:11:14.80,0:11:17.32,English,,0,0,0,,It has to of course it has to allocate blocks from free memory
-Dialogue: 0,0:11:17.34,0:11:20.84,English,,0,0,0,,So it can't in general I can't touch any allocated block
-Dialogue: 0,0:11:21.46,0:11:25.74,English,,0,0,0,,Right once it allocates a block that block belongs to the application and the
-Dialogue: 0,0:11:26.36,0:11:29.06,English,,0,0,0,,The malloc package can't touch it
-Dialogue: 0,0:11:29.34,0:11:31.30,English,,0,0,0,,Now this this has a number of implications
-Dialogue: 0,0:11:31.92,0:11:38.94,English,,0,0,0,,So this means that the allocator can't it can't move blocks around like it
-Dialogue: 0,0:11:38.94,0:11:44.26,English,,0,0,0,,Can't compress blocks like an alligator might want to take allocated blocks and smoosh them all together
+Dialogue: 0,0:11:17.32,0:11:17.92,English,,0,0,0,,So it can't...
+Dialogue: 0,0:11:18.58,0:11:20.84,English,,0,0,0,,In general I can't touch any allocated block
+Dialogue: 0,0:11:21.46,0:11:29.06,English,,0,0,0,,Right once it allocates a block,that block belongs to the application and the malloc package can't touch it
+Dialogue: 0,0:11:29.34,0:11:31.30,English,,0,0,0,,Now this has a number of implications
+Dialogue: 0,0:11:31.92,0:11:38.94,English,,0,0,0,,So this means that the allocator can't...it can't move blocks around like it
+Dialogue: 0,0:11:38.94,0:11:44.26,English,,0,0,0,,It can't compress blocks like an allocated might want to take allocated blocks and smoosh them all together
 Dialogue: 0,0:11:44.70,0:11:47.64,English,,0,0,0,,To create larger free blocks hey but it can't do that
-Dialogue: 0,0:11:48.42,0:11:52.86,English,,0,0,0,,Okay so once you know in a language like C once once an alligator
-Dialogue: 0,0:11:53.90,0:11:57.42,English,,0,0,0,,Gives a block to a an application it can't touch it
-Dialogue: 0,0:11:58.68,0:12:03.98,English,,0,0,0,,Okay now blocks like blocked because blocks are holding data structures like strux
-Dialogue: 0,0:12:04.76,0:12:12.80,English,,0,0,0,,Or you know scalar scalar objects it has to be aligned to the size of the largest object that that can occur
+Dialogue: 0,0:11:48.42,0:11:52.86,English,,0,0,0,,Okay so once you know in a language like C once an malloc
+Dialogue: 0,0:11:53.90,0:11:57.42,English,,0,0,0,,Gives a block to an application it can't touch it
+Dialogue: 0,0:11:58.68,0:12:03.98,English,,0,0,0,,Okay now blocks like...because blocks are holding data structures like structs
+Dialogue: 0,0:12:04.76,0:12:12.80,English,,0,0,0,,Or you know scalar objects it has to be aligned to the size of the largest object that can occur
 Dialogue: 0,0:12:13.46,0:12:19.54,English,,0,0,0,,Okay so for 64-bit systems that's 16 byte alignment for 32-bit systems it's 8 byte alignment
-Dialogue: 0,0:12:24.06,0:12:27.90,English,,0,0,0,,Now alligators are really interesting objects
-Dialogue: 0,0:12:27.90,0:12:30.72,English,,0,0,0,,Because they they combine a trade-off of both
-Dialogue: 0,0:12:32.48,0:12:35.50,English,,0,0,0,,So running time sort of speed and space
-Dialogue: 0,0:12:35.90,0:12:38.64,English,,0,0,0,,So it's kind of a space and performance trade-off
-Dialogue: 0,0:12:38.64,0:12:42.04,English,,0,0,0,,You're trying to optimize both you want it to run as quickly as possible
-Dialogue: 0,0:12:42.50,0:12:47.72,English,,0,0,0,,But you want to you wanted to use the virtual memory in the heap as efficiently as possible
-Dialogue: 0,0:12:48.14,0:12:48.74,English,,0,0,0,,Okay so let's and
-Dialogue: 0,0:12:50.28,0:12:58.76,English,,0,0,0,,We define these these sort of speed and and efficiency memory efficiency
-Dialogue: 0,0:12:59.10,0:13:02.40,English,,0,0,0,,Metrics  we have we have two metrics that we use one is called throughput
-Dialogue: 0,0:13:03.44,0:13:10.52,English,,0,0,0,,So given some sequence of malloc and free requests  r[0] through r[n-1]
-Dialogue: 0,0:13:10.72,0:13:13.96,English,,0,0,0,,So just some where r is either a malloc or free
+Dialogue: 0,0:12:24.06,0:12:27.90,English,,0,0,0,,Now allocator are really interesting objects
+Dialogue: 0,0:12:27.90,0:12:35.50,English,,0,0,0,,Because they combine a trade-off of both running time sort of speed and space
+Dialogue: 0,0:12:35.90,0:12:38.50,English,,0,0,0,,So it's kind of a space and performance trade-off
+Dialogue: 0,0:12:38.52,0:12:42.04,English,,0,0,0,,You're trying to optimize both you want it to run as quickly as possible
+Dialogue: 0,0:12:42.50,0:12:47.72,English,,0,0,0,,But you wanted to use the virtual memory in the heap as efficiently as possible
+Dialogue: 0,0:12:48.14,0:12:48.74,English,,0,0,0,,Okay so let's...
+Dialogue: 0,0:12:50.28,0:12:59.50,English,,0,0,0,,We define these sort of speed and (efficiency) memory efficiency metrics
+Dialogue: 0,0:12:59.58,0:13:02.40,English,,0,0,0,,We have two metrics that we use,one is called throughput
+Dialogue: 0,0:13:03.44,0:13:10.52,English,,0,0,0,,So given some sequence of malloc and free requests  R0 through R(n-1)
+Dialogue: 0,0:13:10.72,0:13:13.96,English,,0,0,0,,So just some where R is either a malloc or free
 Dialogue: 0,0:13:15.88,0:13:18.08,English,,0,0,0,,Our goal is to maximize throughput
-Dialogue: 0,0:13:19.14,0:13:21.28,English,,0,0,0,,And the peak memory utilization
-Dialogue: 0,0:13:22.40,0:13:28.46,English,,0,0,0,,And what makes malloc such a fascinating and interesting study is that these often conflict like
-Dialogue: 0,0:13:29.12,0:13:34.50,English,,0,0,0,,It's very easy to make a really fast malloc that that has terrible memory utilization
+Dialogue: 0,0:13:19.10,0:13:21.28,English,,0,0,0,,And the peak memory utilization
+Dialogue: 0,0:13:22.40,0:13:27.72,English,,0,0,0,,And what makes malloc such a fascinating and interesting study is that these often conflict
+Dialogue: 0,0:13:29.12,0:13:34.50,English,,0,0,0,,It's very easy to make a really fast malloc that has terrible memory utilization
 Dialogue: 0,0:13:36.56,0:13:41.02,English,,0,0,0,,So throughput is just the number of recomputed requests per unit time
 Dialogue: 0,0:13:41.12,0:13:46.04,English,,0,0,0,,So if we have 5,000 malloc calls and 5,000 free calls in 10 seconds
-Dialogue: 0,0:13:46.78,0:13:49.70,English,,0,0,0,,Then our throughput is a thousand operations per second
-Dialogue: 0,0:13:51.66,0:13:57.62,English,,0,0,0,,So it's just measuring sort of how efficiently are our malloc can can process these requests from an application
+Dialogue: 0,0:13:46.78,0:13:49.70,English,,0,0,0,,Then a throughput is 1,000 operations/second
+Dialogue: 0,0:13:51.66,0:13:57.62,English,,0,0,0,,So it's just measuring sort of how efficiently are a malloc can process these requests from an application
 Dialogue: 0,0:14:00.56,0:14:02.20,English,,0,0,0,,Now peak memory utilization
-Dialogue: 0,0:14:05.42,0:14:10.44,English,,0,0,0,,Is a measure sort of how how much useful space
+Dialogue: 0,0:14:05.42,0:14:10.44,English,,0,0,0,,Is a measure sort of how much useful space
 Dialogue: 0,0:14:11.20,0:14:16.02,English,,0,0,0,,So how much it measured how efficiently the allocator uses the heat
-Dialogue: 0,0:14:16.50,0:14:20.34,English,,0,0,0,,Sort of how much is wasted on sort of overheads in the data structures
-Dialogue: 0,0:14:20.34,0:14:25.00,English,,0,0,0,,That the allocator has to uses to in its implementation
+Dialogue: 0,0:14:16.50,0:14:25.00,English,,0,0,0,,Sort of how much is wasted on sort of overheads in the data structures that the allocator has to uses to in the implementation
 Dialogue: 0,0:14:26.16,0:14:27.68,English,,0,0,0,,So we'll define a payload
-Dialogue: 0,0:14:29.02,0:14:31.16,English,,0,0,0,,When when malloc returns a block
-Dialogue: 0,0:14:31.66,0:14:38.14,English,,0,0,0,,What when it I'm sorry what an application makes a call to malloc it's requesting a certain size block
-Dialogue: 0,0:14:39.10,0:14:40.96,English,,0,0,0,,And that that block is called the payload
+Dialogue: 0,0:14:29.02,0:14:31.16,English,,0,0,0,,When malloc returns a block
+Dialogue: 0,0:14:31.66,0:14:38.14,English,,0,0,0,,What... I'm sorry,what an application makes a call to malloc it's requesting a certain size block
+Dialogue: 0,0:14:39.10,0:14:40.96,English,,0,0,0,,And that block is called the payload
 Dialogue: 0,0:14:40.98,0:14:44.50,English,,0,0,0,,So if we call malloc with an argument of 10 bytes
-Dialogue: 0,0:14:45.12,0:14:50.10,English,,0,0,0,,We're requesting a block that has a payload of it that's at least size 10
+Dialogue: 0,0:14:45.12,0:14:50.10,English,,0,0,0,,We're requesting a block that has a payload of it, that's at least size 10
 Dialogue: 0,0:14:50.98,0:14:53.76,English,,0,0,0,,Okay and the 10 bytes that we request that are called the payload
-Dialogue: 0,0:14:54.18,0:14:57.06,English,,0,0,0,,Everything else in that block is is overhead
-Dialogue: 0,0:15:00.74,0:15:04.66,English,,0,0,0,,Okay so after after we've run a sequence of requests
+Dialogue: 0,0:14:54.18,0:14:57.06,English,,0,0,0,,Everything else in that block is overhead
+Dialogue: 0,0:15:00.74,0:15:04.66,English,,0,0,0,,Okay so after we've run a sequence of requests
 Dialogue: 0,0:15:06.12,0:15:11.72,English,,0,0,0,,The aggregate payload is the sum of all the the payloads in the currently allocated blocks
 Dialogue: 0,0:15:13.26,0:15:14.84,English,,0,0,0,,Okay so in a perfect allocator
-Dialogue: 0,0:15:15.80,0:15:21.46,English,,0,0,0,,The the aggregate payload would would would equal the amount of memory
+Dialogue: 0,0:15:15.80,0:15:21.46,English,,0,0,0,,The aggregate payload would equal the amount of memory
 Dialogue: 0,0:15:21.88,0:15:25.22,English,,0,0,0,,The total size of all the allocated blocks right because there'd be no overhead
-Dialogue: 0,0:15:25.54,0:15:29.00,English,,0,0,0,,Would just be we just be pure every block would be pure payload
-Dialogue: 0,0:15:33.62,0:15:39.44,English,,0,0,0,,Now we're going to assume that the heap is is monotonically non-decreasing so it always gets bigger
-Dialogue: 0,0:15:39.98,0:15:45.00,English,,0,0,0,,Okay so are this is a simplifying assumption it's not  it's not true in a real malak package
+Dialogue: 0,0:15:25.54,0:15:29.00,English,,0,0,0,,Just be...we just be pure every block would be pure payload
+Dialogue: 0,0:15:33.62,0:15:39.44,English,,0,0,0,,Now we're going to assume that the heap is monotonically non-decreasing so it always gets bigger
+Dialogue: 0,0:15:39.98,0:15:45.00,English,,0,0,0,,Okay so are this is a simplifying assumption,it's not true in a real malloc package
 Dialogue: 0,0:15:45.44,0:15:49.98,English,,0,0,0,,But we'll just assume that the allocator never decreases the size of the heap
 Dialogue: 0,0:15:50.04,0:15:52.40,English,,0,0,0,,It only increases the size of the heap okay
-Dialogue: 0,0:15:57.06,0:16:02.90,English,,0,0,0,,So the peak given those given those notions of aggregate payload and heap size
+Dialogue: 0,0:15:57.06,0:16:02.90,English,,0,0,0,,So the peak given those notions of aggregate payload and heap size
 Dialogue: 0,0:16:03.78,0:16:07.94,English,,0,0,0,,The peak memory utilization after k+1 requests
-Dialogue: 0,0:16:08.90,0:16:17.10,English,,0,0,0,,It's the sum of all the is the sum of all the payloads  divided by the total size of the heap
+Dialogue: 0,0:16:08.90,0:16:17.10,English,,0,0,0,,It's the sum of all the payloads divided by the total size of the heap
 Dialogue: 0,0:16:19.98,0:16:21.40,English,,0,0,0,,So the in the best case
-Dialogue: 0,0:16:22.64,0:16:27.28,English,,0,0,0,,Each each block in the heap consists of pure payload
+Dialogue: 0,0:16:22.64,0:16:27.28,English,,0,0,0,,Each block in the heap consists of pure payload
 Dialogue: 0,0:16:27.92,0:16:29.72,English,,0,0,0,,So the utilization would be 1
 Dialogue: 0,0:16:30.16,0:16:32.24,English,,0,0,0,,That's the best we can do
 Dialogue: 0,0:16:32.26,0:16:39.86,English,,0,0,0,,But in practice each block the allocator is going to place have data structures and padding inside of each block
-Dialogue: 0,0:16:40.44,0:16:45.78,English,,0,0,0,,That that that keep it from getting a perfect utilization
-Dialogue: 0,0:16:46.22,0:16:49.64,English,,0,0,0,,Now one one obvious thing is that since blocks have to be aligned
+Dialogue: 0,0:16:40.44,0:16:45.78,English,,0,0,0,,That keep it from getting a perfect utilization
+Dialogue: 0,0:16:46.22,0:16:49.64,English,,0,0,0,,Now one obvious thing is that since blocks have to be aligned
 Dialogue: 0,0:16:50.78,0:16:56.14,English,,0,0,0,,To some you know if they're 16-byte aligned then blocks have to start on 16 byte boundaries
 Dialogue: 0,0:16:56.14,0:16:58.32,English,,0,0,0,,And they have to be at least 16 bytes
 Dialogue: 0,0:16:58.96,0:17:01.64,English,,0,0,0,,So if you were to request a payload of 2 bytes
@@ -217,88 +227,88 @@ Dialogue: 0,0:17:01.76,0:17:06.78,English,,0,0,0,,You'd have a lot of wasted byt
 Dialogue: 0,0:17:07.56,0:17:11.90,English,,0,0,0,,So this is some of this some of this overhead is unavoidable
 Dialogue: 0,0:17:11.90,0:17:18.46,English,,0,0,0,,But your job as a someone who writes them implements malloc is to try to keep that as small as possible
 Dialogue: 0,0:17:22.40,0:17:29.82,English,,0,0,0,,So poor memory utilization is this example that we just talked about is an example of what we call fragmentation
-Dialogue: 0,0:17:30.54,0:17:32.88,English,,0,0,0,,And there's there's two types of fragmentation
+Dialogue: 0,0:17:30.54,0:17:32.88,English,,0,0,0,,And there's two types of fragmentation
 Dialogue: 0,0:17:34.36,0:17:38.08,English,,0,0,0,,Internal fragmentation occurs if the payload is smaller than the block size
 Dialogue: 0,0:17:38.10,0:17:40.20,English,,0,0,0,,So it's just what we're talking about
 Dialogue: 0,0:17:40.70,0:17:48.02,English,,0,0,0,,And this can be caused by either padding in the block or some kind of data structure in the block that the allocator needs
 Dialogue: 0,0:17:50.82,0:17:54.06,English,,0,0,0,,Sometimes to it you might make a policy decision
-Dialogue: 0,0:17:54.06,0:17:59.80,English,,0,0,0,,That if at if application requests a small block you might return a larger block just to keep
+Dialogue: 0,0:17:54.06,0:17:59.80,English,,0,0,0,,That if application requests a small block you might return a larger block just to keep
 Dialogue: 0,0:18:00.50,0:18:07.24,English,,0,0,0,,So the blocks don't get sort of splintered up into little chunks you might want to keep blocks at some minimum size
 Dialogue: 0,0:18:12.60,0:18:17.56,English,,0,0,0,,Now internal fragmentation you know given a series of requests
-Dialogue: 0,0:18:19.54,0:18:21.68,English,,0,0,0,,We can we can just stop and freeze the heap
+Dialogue: 0,0:18:19.54,0:18:21.68,English,,0,0,0,,We can just stop and freeze the heap
 Dialogue: 0,0:18:21.84,0:18:26.06,English,,0,0,0,,And it's very easy to sort of compute the amount of internal fragmentation
-Dialogue: 0,0:18:26.06,0:18:32.14,English,,0,0,0,,We can at any point in time we can just look at all the previous requests that  we we've made
-Dialogue: 0,0:18:32.62,0:18:35.78,English,,0,0,0,,And and look at the size of the payload for each one of those requests
+Dialogue: 0,0:18:26.06,0:18:32.14,English,,0,0,0,,We can...at any point in time we can just look at all the previous requests that we've made
+Dialogue: 0,0:18:32.62,0:18:35.78,English,,0,0,0,,And look at the size of the payload for each one of those requests
 Dialogue: 0,0:18:36.86,0:18:39.22,English,,0,0,0,,And so we can
-Dialogue: 0,0:18:41.76,0:18:44.30,English,,0,0,0,,So we can determine the level you know get at a point in time
-Dialogue: 0,0:18:44.30,0:18:49.38,English,,0,0,0,,We can determine the level of internal fragmentation just by looking at the previous request
+Dialogue: 0,0:18:41.76,0:18:47.04,English,,0,0,0,,So we can determine the level you know get at a point in time,we can determine the level of internal fragmentation
+Dialogue: 0,0:18:47.66,0:18:49.34,English,,0,0,0,,Just by looking at the previous request
 Dialogue: 0,0:18:50.26,0:18:50.62,English,,0,0,0,,So
-Dialogue: 0,0:18:52.22,0:18:58.62,English,,0,0,0,,There's another form of fragmentation called external fragmentation which is a little more difficult to to deal with
+Dialogue: 0,0:18:52.22,0:18:58.62,English,,0,0,0,,There's another form of fragmentation called external fragmentation which is a little more difficult to deal with
 Dialogue: 0,0:18:59.50,0:19:04.20,English,,0,0,0,,So external fragmentation occurs when there's enough memory in the heap
-Dialogue: 0,0:19:05.12,0:19:09.42,English,,0,0,0,,But there's there's no single free block that can satisfy a particular request
+Dialogue: 0,0:19:05.12,0:19:09.42,English,,0,0,0,,But there's no single free block that can satisfy a particular request
 Dialogue: 0,0:19:10.22,0:19:15.36,English,,0,0,0,,Ok so external fragmentation occurs when the application makes a request for a block
-Dialogue: 0,0:19:16.70,0:19:23.02,English,,0,0,0,,But nowhere in the heap is there a free block a free block that's large enough to satisfy that request
+Dialogue: 0,0:19:16.70,0:19:23.02,English,,0,0,0,,But nowhere in the heap is a free block that's large enough to satisfy that request
 Dialogue: 0,0:19:26.22,0:19:28.46,English,,0,0,0,,So an example of this like suppose
 Dialogue: 0,0:19:28.72,0:19:30.58,English,,0,0,0,,Here's the previous example we looked at
 Dialogue: 0,0:19:30.58,0:19:35.38,English,,0,0,0,,Now where we have after a series of malloc and free calls
 Dialogue: 0,0:19:36.40,0:19:38.10,English,,0,0,0,,We have two free blocks in the heap
-Dialogue: 0,0:19:38.98,0:19:41.86,English,,0,0,0,,One containing five words and the other containing two words
-Dialogue: 0,0:19:41.96,0:19:47.02,English,,0,0,0,,So the total the total number of free words in our heap is seven seven words
-Dialogue: 0,0:19:47.90,0:19:51.10,English,,0,0,0,,And now we get a request for six words
-Dialogue: 0,0:19:52.34,0:19:56.22,English,,0,0,0,,Hey we have enough free blocks we have enough free words in the heap
+Dialogue: 0,0:19:38.98,0:19:41.86,English,,0,0,0,,One containing 5 words and the other containing 2 words
+Dialogue: 0,0:19:41.96,0:19:47.02,English,,0,0,0,,So the total number of free words in our heap is 7 words
+Dialogue: 0,0:19:47.90,0:19:51.10,English,,0,0,0,,And now we get a request for 6 words
+Dialogue: 0,0:19:52.34,0:19:56.22,English,,0,0,0,,Hey we have enough free blocks, we have enough free words in the heap
 Dialogue: 0,0:19:57.42,0:19:59.30,English,,0,0,0,,But we can't satisfy that request
-Dialogue: 0,0:20:00.76,0:20:05.92,English,,0,0,0,,And it's it's because of it's because of this phenomenon called external fragmentation
-Dialogue: 0,0:20:06.26,0:20:11.42,English,,0,0,0,,For example if we'd have if we'd have somehow allocated
+Dialogue: 0,0:20:00.76,0:20:05.92,English,,0,0,0,,And it's because of...it's because of this phenomenon called external fragmentation
+Dialogue: 0,0:20:06.26,0:20:11.42,English,,0,0,0,,For example if we'd have...if we'd have somehow allocated
 Dialogue: 0,0:20:15.27,0:20:16.54,English,,0,0,0,,Oh
 Dialogue: 0,0:20:18.52,0:20:22.34,English,,0,0,0,,Yeah I don't know in this case I don't think we could have avoided the external fragmentation
-Dialogue: 0,0:20:22.98,0:20:29.78,English,,0,0,0,,But nonetheless there's enough memory here we just just the way that our blocks are configured in the
-Dialogue: 0,0:20:29.78,0:20:31.30,English,,0,0,0,,Heap we can't satisfy the request
-Dialogue: 0,0:20:31.78,0:20:37.24,English,,0,0,0,,So in this in this in this case that the allocator has to go and get more more virtual memory
-Dialogue: 0,0:20:37.58,0:20:42.80,English,,0,0,0,,Would have to go and it would have to get more virtual memory and extend the heap out this way
+Dialogue: 0,0:20:22.98,0:20:29.78,English,,0,0,0,,But nonetheless there's enough memory here we just the way that a blocks are configured in the heap
+Dialogue: 0,0:20:29.78,0:20:31.30,English,,0,0,0,,We can't satisfy the request
+Dialogue: 0,0:20:31.78,0:20:38.62,English,,0,0,0,,So in this case that the allocator has to go and get more virtual memory would have to go
+Dialogue: 0,0:20:39.62,0:20:42.80,English,,0,0,0,,It would have to get more virtual memory and extend the heap out this way
 Dialogue: 0,0:20:44.10,0:20:45.64,English,,0,0,0,,And to get a large enough free block
 Dialogue: 0,0:20:47.26,0:20:53.00,English,,0,0,0,,So you know assessing and sort of understanding external fragmentation is difficult
 Dialogue: 0,0:20:53.88,0:20:58.58,English,,0,0,0,,Because unlike internal fragmentation which depended on the previous requests
 Dialogue: 0,0:20:59.08,0:21:01.92,English,,0,0,0,,External fragmentation depends on future requests
 Dialogue: 0,0:21:03.00,0:21:04.44,English,,0,0,0,,So if we look back at this point
-Dialogue: 0,0:21:04.78,0:21:07.92,English,,0,0,0,,We say is is our is our heap externally fragmented
+Dialogue: 0,0:21:04.78,0:21:07.92,English,,0,0,0,,We see is a heap externally fragmented
 Dialogue: 0,0:21:08.72,0:21:10.84,English,,0,0,0,,Well we it depends right we can't say
-Dialogue: 0,0:21:11.80,0:21:16.40,English,,0,0,0,,It turns out it is because the next request is is for a block of size six
+Dialogue: 0,0:21:11.80,0:21:16.40,English,,0,0,0,,It turns out it is because the next request is for a block of size six
 Dialogue: 0,0:21:16.84,0:21:18.22,English,,0,0,0,,But if all of the future blocks
-Dialogue: 0,0:21:18.70,0:21:22.88,English,,0,0,0,,Or future requests were for bullet we're for blocks of you know say small blocks
-Dialogue: 0,0:21:23.44,0:21:28.86,English,,0,0,0,,Then we be able to satisfy those than and we wouldn't we wouldn't suffer from external fragmentation
-Dialogue: 0,0:21:33.48,0:21:36.16,English,,0,0,0,,Okay now when we build an alligator
+Dialogue: 0,0:21:18.70,0:21:22.88,English,,0,0,0,,Or future requests we're for blocks of you know say small blocks
+Dialogue: 0,0:21:23.44,0:21:28.86,English,,0,0,0,,Then we be able to satisfy those than and we wouldn't suffer from external fragmentation
+Dialogue: 0,0:21:33.48,0:21:36.16,English,,0,0,0,,Okay now when we build an allocated
 Dialogue: 0,0:21:37.90,0:21:39.42,English,,0,0,0,,All kinds of issues come up
 Dialogue: 0,0:21:42.36,0:21:45.04,English,,0,0,0,,And that I've glossed over with my simple examples right
 Dialogue: 0,0:21:46.32,0:21:47.36,English,,0,0,0,,You know how do we know
-Dialogue: 0,0:21:49.04,0:21:52.88,English,,0,0,0,,If we call free how does free know how much memory to free up
+Dialogue: 0,0:21:49.04,0:21:52.88,English,,0,0,0,,If we call free,how does free know how much memory to free up
 Dialogue: 0,0:21:53.14,0:21:56.64,English,,0,0,0,,Right we don't call free with a block size we call it with a pointer
 Dialogue: 0,0:21:57.36,0:22:00.02,English,,0,0,0,,So how does free know how big that block is
 Dialogue: 0,0:22:01.96,0:22:03.64,English,,0,0,0,,How do we keep track of all the free blocks
 Dialogue: 0,0:22:07.54,0:22:11.64,English,,0,0,0,,When we have you know when we're satisfying an allocation request
 Dialogue: 0,0:22:12.94,0:22:14.72,English,,0,0,0,,We're going to fight we're going to look for a free block
-Dialogue: 0,0:22:14.88,0:22:18.10,English,,0,0,0,,That is larger than the the requested size
-Dialogue: 0,0:22:19.02,0:22:22.08,English,,0,0,0,,On that that case what do we do with the extra space in the block
+Dialogue: 0,0:22:14.88,0:22:18.10,English,,0,0,0,,That is larger than the requested size
+Dialogue: 0,0:22:19.02,0:22:22.08,English,,0,0,0,,On that case what do we do with the extra space in the block
 Dialogue: 0,0:22:22.52,0:22:24.04,English,,0,0,0,,We do we just keep it in the block
 Dialogue: 0,0:22:25.14,0:22:27.56,English,,0,0,0,,You know and and suffer some internal fragmentation
 Dialogue: 0,0:22:27.96,0:22:30.76,English,,0,0,0,,Do we split that block into a smaller block
-Dialogue: 0,0:22:33.68,0:22:36.72,English,,0,0,0,,There's a lot of free blocks  in the in the heap
-Dialogue: 0,0:22:36.72,0:22:41.72,English,,0,0,0,,How do we when we make an out when the allocator gets a allocation request
-Dialogue: 0,0:22:42.20,0:22:46.72,English,,0,0,0,,How does it pick from all among all of those different free blocks  make as many choices
+Dialogue: 0,0:22:33.68,0:22:36.72,English,,0,0,0,,There's a lot of free blocks in the heap
+Dialogue: 0,0:22:36.72,0:22:41.72,English,,0,0,0,,How do we...when we make an out...when the allocator gets a allocation request
+Dialogue: 0,0:22:42.20,0:22:46.72,English,,0,0,0,,How does it pick from all of those different free blocks make as many choices
 Dialogue: 0,0:22:49.04,0:22:53.90,English,,0,0,0,,And then once when free tries to insert a free block we're in the heap
 Dialogue: 0,0:22:55.52,0:22:56.72,English,,0,0,0,,You know where does it insert
-Dialogue: 0,0:22:57.68,0:22:59.00,English,,0,0,0,,It okay when it's when it's freed
+Dialogue: 0,0:22:57.68,0:22:59.00,English,,0,0,0,,It okay when it's freed
 Dialogue: 0,0:22:59.38,0:23:02.12,English,,0,0,0,,And how do we reinsert a free block what does that mean
-Dialogue: 0,0:23:02.96,0:23:05.74,English,,0,0,0,,Okay so today we're going to look at at all of these issues
+Dialogue: 0,0:23:02.96,0:23:05.74,English,,0,0,0,,Okay so today we're going to look at all of these issues
 Dialogue: 0,0:23:07.60,0:23:10.38,English,,0,0,0,,Starting with knowing how much to free
 Dialogue: 0,0:23:10.68,0:23:12.08,English,,0,0,0,,So how big our block sizes
 Dialogue: 0,0:23:13.38,0:23:15.60,English,,0,0,0,,So the typical the standard method
 Dialogue: 0,0:23:17.52,0:23:21.98,English,,0,0,0,,Is to keep sort of a word sized quantity at the beginning of each block
-Dialogue: 0,0:23:22.28,0:23:26.84,English,,0,0,0,,That gives the size of that block in in some units
+Dialogue: 0,0:23:22.28,0:23:26.84,English,,0,0,0,,That gives the size of that block in some units
 Dialogue: 0,0:23:27.62,0:23:29.68,English,,0,0,0,,I'm showing them here in word size units
-Dialogue: 0,0:23:30.74,0:23:39.16,English,,0,0,0,,Okay so that if if the application malick's a payload of size wants to wants to now like a payload of size four
-Dialogue: 0,0:23:41.12,0:23:46.62,English,,0,0,0,,Then the allocator needs to find a block of size five
-Dialogue: 0,0:23:47.96,0:23:52.10,English,,0,0,0,,So consisting of four payload words at least four payload words
-Dialogue: 0,0:23:52.84,0:24:01.28,English,,0,0,0,,And then a header block a header word at the beginning that that indicates the size the total size of that block
+Dialogue: 0,0:23:30.74,0:23:39.16,English,,0,0,0,,Okay so that if the application malloc a payload of size wants to malloc a payload of size 4
+Dialogue: 0,0:23:41.12,0:23:46.62,English,,0,0,0,,Then the allocator needs to find a block of size 5
+Dialogue: 0,0:23:47.96,0:23:52.10,English,,0,0,0,,So consisting of 4 payload words at least 4 payload words
+Dialogue: 0,0:23:52.84,0:24:01.28,English,,0,0,0,,And then a header block,a header word at the beginning that indicates the size,the total size of that block
 Dialogue: 0,0:24:02.76,0:24:06.90,English,,0,0,0,,And then it returns a pointer p0 in this case to the beginning of the payload
 Dialogue: 0,0:24:12.60,0:24:15.48,English,,0,0,0,,Okay so now we know how big each block is that's pretty simple
 Dialogue: 0,0:24:15.82,0:24:19.40,English,,0,0,0,,And how we keep track of the free blocks and this is where it gets interesting
@@ -306,17 +316,17 @@ Dialogue: 0,0:24:20.58,0:24:25.38,English,,0,0,0,,The simplest method is to use 
 Dialogue: 0,0:24:25.86,0:24:27.48,English,,0,0,0,,An implicit list of free blocks
 Dialogue: 0,0:24:28.74,0:24:34.26,English,,0,0,0,,And the idea here is to just put a header in the front of every block in the heap
 Dialogue: 0,0:24:34.26,0:24:36.10,English,,0,0,0,,Whether allocated or free
-Dialogue: 0,0:24:38.86,0:24:44.76,English,,0,0,0,,And then we can use that starting at the beginning of the heap we can use that size to walk the heat
-Dialogue: 0,0:24:47.14,0:24:50.20,English,,0,0,0,,Okay so here's a block of size five so we can we can jump
-Dialogue: 0,0:24:50.60,0:24:53.86,English,,0,0,0,,We know that the next block starts at an offset of five
-Dialogue: 0,0:24:56.06,0:25:01.96,English,,0,0,0,,With the second block we know the then the next block starts at an offset of four  and so on
+Dialogue: 0,0:24:38.86,0:24:44.76,English,,0,0,0,,And then we can use that starting at the beginning of the heap, we can use that size to walk the heat
+Dialogue: 0,0:24:47.14,0:24:50.20,English,,0,0,0,,Okay so here's a block of size 5 so we can we can jump
+Dialogue: 0,0:24:50.60,0:24:53.86,English,,0,0,0,,We know that the next block starts at an offset of 5
+Dialogue: 0,0:24:56.06,0:25:01.96,English,,0,0,0,,With the second block we know the next block starts at an offset of 4  and so on
 Dialogue: 0,0:25:02.58,0:25:05.00,English,,0,0,0,,Okay so we call it an implicit free list
-Dialogue: 0,0:25:06.32,0:25:08.38,English,,0,0,0,,Because there's there's no real list of free blocks
+Dialogue: 0,0:25:06.32,0:25:08.38,English,,0,0,0,,Because there's no real list of free blocks
 Dialogue: 0,0:25:09.06,0:25:13.26,English,,0,0,0,,But we can trick an traverse that all of the free blocks in the heap
 Dialogue: 0,0:25:14.04,0:25:18.46,English,,0,0,0,,By traversing all of the blocks in the heat
-Dialogue: 0,0:25:18.56,0:25:21.74,English,,0,0,0,,And then just ignoring the the allocated blocks okay so
+Dialogue: 0,0:25:18.56,0:25:21.74,English,,0,0,0,,And then just ignoring the allocated blocks okay so
 Dialogue: 0,0:25:25.84,0:25:27.10,English,,0,0,0,,Now another thing we could do is
-Dialogue: 0,0:25:27.10,0:25:31.38,English,,0,0,0,,We could actually use some of the some of the words in the block
+Dialogue: 0,0:25:27.10,0:25:31.38,English,,0,0,0,,We could actually use some of the words in the block
 Dialogue: 0,0:25:31.70,0:25:34.30,English,,0,0,0,,To create a linked list of some kind either us
 Dialogue: 0,0:25:35.44,0:25:36.96,English,,0,0,0,,Singly or doubly linked lists
 Dialogue: 0,0:25:38.48,0:25:43.56,English,,0,0,0,,And in this case we it's an explicit list of the free blocks
@@ -325,7 +335,7 @@ Dialogue: 0,0:25:48.56,0:25:50.50,English,,0,0,0,,So we here we visit the first 
 Dialogue: 0,0:25:51.50,0:25:55.26,English,,0,0,0,,And then there's a pointer to the next free block and so on
 Dialogue: 0,0:25:55.28,0:25:58.26,English,,0,0,0,,So this you can see this might be a little more efficient because
 Dialogue: 0,0:25:59.14,0:26:00.62,English,,0,0,0,,If we want to traverse the free list
-Dialogue: 0,0:26:01.86,0:26:07.54,English,,0,0,0,,In this case it's a it's going to be ordered the number of blocks in the list
+Dialogue: 0,0:26:01.86,0:26:07.54,English,,0,0,0,,In this case it's going to be ordered the number of blocks in the list
 Dialogue: 0,0:26:08.06,0:26:10.84,English,,0,0,0,,Okay it's going to be linear in the total number of blocks in the heap
 Dialogue: 0,0:26:11.24,0:26:14.84,English,,0,0,0,,Which might be quite large there could be lots of allocated blocks
 Dialogue: 0,0:26:15.88,0:26:17.76,English,,0,0,0,,In this case with an explicit list
@@ -337,124 +347,123 @@ Dialogue: 0,0:26:33.62,0:26:35.96,English,,0,0,0,,And I'll we have that's the ne
 Dialogue: 0,0:26:45.68,0:26:49.66,English,,0,0,0,,Now another method a more sophisticated method instead of having one free list
 Dialogue: 0,0:26:50.38,0:26:51.74,English,,0,0,0,,We can have multiple free lists
 Dialogue: 0,0:26:52.52,0:26:58.88,English,,0,0,0,,Where each free list contains blocks of a certain size or certain range of sizes
-Dialogue: 0,0:27:03.42,0:27:08.20,English,,0,0,0,,Or we can get really fancy and use some kind of some kind of a balance tree
+Dialogue: 0,0:27:03.42,0:27:08.20,English,,0,0,0,,Or we can get really fancy and use some kind of a balance tree
 Dialogue: 0,0:27:09.76,0:27:13.76,English,,0,0,0,,To sort the blocks to use the tree to sort them by size order
 Dialogue: 0,0:27:16.32,0:27:18.78,English,,0,0,0,,Now today we're going to look at the implicit list
 Dialogue: 0,0:27:19.56,0:27:21.22,English,,0,0,0,,The simplest kind of free list
 Dialogue: 0,0:27:21.90,0:27:27.72,English,,0,0,0,,And this will identify a lot of basic concepts that are used in the more sophisticated free list
 Dialogue: 0,0:27:28.54,0:27:29.04,English,,0,0,0,,Question
+Dialogue: 0,0:27:29.42,0:27:33.42,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:27:33.42,0:27:38.06,English,,0,0,0,,Okay the question is what do you what do we mean by different free lists for different size classes
-Dialogue: 0,0:27:39.32,0:27:44.80,English,,0,0,0,,So what what I mean is that you identify a range of sizes
-Dialogue: 0,0:27:45.96,0:27:50.10,English,,0,0,0,,And you associate that range with with each of these individual free lists
+Dialogue: 0,0:27:39.32,0:27:44.80,English,,0,0,0,,So what I mean is that you identify a range of sizes
+Dialogue: 0,0:27:45.96,0:27:50.10,English,,0,0,0,,And you associate that range with each of these individual free lists
 Dialogue: 0,0:27:50.88,0:27:54.40,English,,0,0,0,,Okay so one free list might hold blocks of size 0 to 8
 Dialogue: 0,0:27:55.42,0:27:58.64,English,,0,0,0,,And another free list might hold blocks of size 9 to 16
 Dialogue: 0,0:27:59.72,0:28:04.06,English,,0,0,0,,And the other another free list may be 17 to 32 you know some
 Dialogue: 0,0:28:06.12,0:28:08.02,English,,0,0,0,,And so you're guaranteed you now know
 Dialogue: 0,0:28:10.44,0:28:15.50,English,,0,0,0,,When you're traversing a certain list you know the range of sizes of the blocks in that list
-Dialogue: 0,0:28:18.50,0:28:20.58,English,,0,0,0,,The the reason you might want to do that
-Dialogue: 0,0:28:20.88,0:28:27.26,English,,0,0,0,,By the way is that imagine you had an infinite number of of these  lists
+Dialogue: 0,0:28:18.50,0:28:20.58,English,,0,0,0,,The reason you might want to do that
+Dialogue: 0,0:28:20.88,0:28:27.26,English,,0,0,0,,By the way is that imagine you had an infinite number of these lists
 Dialogue: 0,0:28:28.06,0:28:29.70,English,,0,0,0,,One for each possible size
 Dialogue: 0,0:28:31.54,0:28:33.64,English,,0,0,0,,Then every time you allocated a block
 Dialogue: 0,0:28:34.12,0:28:36.26,English,,0,0,0,,You'd get a block of exactly the size you needed
-Dialogue: 0,0:28:37.52,0:28:43.86,English,,0,0,0,,So there'd be a minimum amount of fragmentation if you had an infinite number of these of these size classes
+Dialogue: 0,0:28:37.52,0:28:43.86,English,,0,0,0,,So there'd be a minimum amount of fragmentation if you had an infinite number of these size classes
 Dialogue: 0,0:28:44.78,0:28:47.42,English,,0,0,0,,Now if we of course we can't have an infinite number but
 Dialogue: 0,0:28:48.14,0:28:52.26,English,,0,0,0,,The more of these size classes we have the closer we get to that ideal
-Dialogue: 0,0:28:55.56,0:28:59.80,English,,0,0,0,,All right so let's look at how we would build imprint implicit free lists
+Dialogue: 0,0:28:55.56,0:28:59.80,English,,0,0,0,,All right so let's look at how we would build implicit free lists
 Dialogue: 0,0:29:01.20,0:29:03.54,English,,0,0,0,,So as you correctly point it out for each
-Dialogue: 0,0:29:04.42,0:29:08.08,English,,0,0,0,,Each block we need we need both size and the allocation status
+Dialogue: 0,0:29:04.42,0:29:08.08,English,,0,0,0,,Each block we need both size and the allocation status
 Dialogue: 0,0:29:08.96,0:29:09.54,English,,0,0,0,,Question
 Dialogue: 0,0:29:09.84,0:29:17.00,English,,0,0,0,,[student speaking]
-Dialogue: 0,0:29:17.42,0:29:19.40,English,,0,0,0,,Why can't we map every size class
+Dialogue: 0,0:29:17.42,0:29:19.40,English,,0,0,0,,Why can't?we map every size class
 Dialogue: 0,0:29:19.56,0:29:32.40,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:29:32.40,0:29:35.44,English,,0,0,0,,Yeah that's so why can't we have an infinite number of size classes
-Dialogue: 0,0:29:43.62,0:29:48.40,English,,0,0,0,,I suppose you know that'd be an interesting strategy to to think about
+Dialogue: 0,0:29:43.62,0:29:48.40,English,,0,0,0,,I suppose you know that'd be an interesting strategy to think about
 Dialogue: 0,0:29:48.92,0:29:51.24,English,,0,0,0,,So you can't have an infinite number of size classes
 Dialogue: 0,0:29:51.50,0:29:56.10,English,,0,0,0,,But you could create a new size class for every new size that you get
-Dialogue: 0,0:29:57.04,0:30:02.64,English,,0,0,0,,And that that might work but it just depends on the the range of these size classes
-Dialogue: 0,0:30:03.40,0:30:09.00,English,,0,0,0,,And the frequency and one problem you might have is that you you would get
+Dialogue: 0,0:29:57.04,0:30:02.64,English,,0,0,0,,And that might work but it just depends on the range of these size classes
+Dialogue: 0,0:30:03.40,0:30:09.00,English,,0,0,0,,And the frequency and one problem you might have is that you would get
 Dialogue: 0,0:30:10.76,0:30:15.60,English,,0,0,0,,Maybe if you only get it depends on the distribution of your sizes that you get
-Dialogue: 0,0:30:15.60,0:30:20.58,English,,0,0,0,,If you're getting an equal number if your distribution of sizes is is fairly uniform
+Dialogue: 0,0:30:15.60,0:30:20.58,English,,0,0,0,,If you're getting an equal number, if your distribution of sizes is fairly uniform
 Dialogue: 0,0:30:20.94,0:30:22.20,English,,0,0,0,,That would probably work pretty well
-Dialogue: 0,0:30:22.90,0:30:26.10,English,,0,0,0,,If you're getting if you have requests
-Dialogue: 0,0:30:27.16,0:30:33.40,English,,0,0,0,,If if you have a lot of requests for different size classes you'd have a lot of sort of wasted free lists I think
-Dialogue: 0,0:30:35.28,0:30:39.06,English,,0,0,0,,So it's a good question it depends on it depends on your workload
-Dialogue: 0,0:30:39.90,0:30:46.56,English,,0,0,0,,And there and that is for that and that is a really useful strategy for
+Dialogue: 0,0:30:22.90,0:30:26.10,English,,0,0,0,,If you're getting,if you have requests
+Dialogue: 0,0:30:27.16,0:30:33.40,English,,0,0,0,,If you have a lot of requests for different size classes,you'd have a lot of sort of wasted free lists I think
+Dialogue: 0,0:30:35.28,0:30:39.06,English,,0,0,0,,So it's a good question,it depends on your workload
+Dialogue: 0,0:30:39.90,0:30:46.56,English,,0,0,0,,And there and that is for that...and that is a really useful strategy for
 Dialogue: 0,0:30:47.48,0:30:51.44,English,,0,0,0,,So you if you have really popular size classes in your request
-Dialogue: 0,0:30:52.38,0:30:58.46,English,,0,0,0,,Then you could just make you know special case special case free lists to handle those requests
-Dialogue: 0,0:30:59.68,0:31:03.26,English,,0,0,0,,And then and then let the other free list sort of handle a wider range
+Dialogue: 0,0:30:52.38,0:30:58.46,English,,0,0,0,,Then you could just make you know special case free lists to handle those requests
+Dialogue: 0,0:30:59.68,0:31:03.26,English,,0,0,0,,And then let the other free list sort of handle a wider range
 Dialogue: 0,0:31:04.26,0:31:07.24,English,,0,0,0,,And imagine if you had a free list where all the blocks were the same
 Dialogue: 0,0:31:07.72,0:31:09.70,English,,0,0,0,,It could be a lot more efficient right because
 Dialogue: 0,0:31:10.60,0:31:12.80,English,,0,0,0,,You won't make you only need like a bit vector
-Dialogue: 0,0:31:13.68,0:31:17.62,English,,0,0,0,,1 1 bit for each potential block to tell you whether it's allocated or free
-Dialogue: 0,0:31:18.66,0:31:23.16,English,,0,0,0,,So it could be very efficient you wouldn't you wouldn't need to walk any any lists or anything
-Dialogue: 0,0:31:26.88,0:31:32.04,English,,0,0,0,,That's a good question and that's the kind of thing you'll be thinking about when you do your mallik lab it's one of
+Dialogue: 0,0:31:13.68,0:31:17.62,English,,0,0,0,,1 bit for each potential block to tell you whether it's allocated or free
+Dialogue: 0,0:31:18.66,0:31:23.16,English,,0,0,0,,So it could be very efficient you wouldn't need to walk any any lists or anything
+Dialogue: 0,0:31:26.88,0:31:32.04,English,,0,0,0,,That's a good question and that's the kind of thing you'll be thinking about when you do your malloc lab,it's one of...
 Dialogue: 0,0:31:34.22,0:31:38.50,English,,0,0,0,,The there's a huge design space in implementing malloc function
-Dialogue: 0,0:31:39.16,0:31:42.14,English,,0,0,0,,And we just we just explored a one tiny part of it just now
+Dialogue: 0,0:31:39.16,0:31:42.14,English,,0,0,0,,And we just explored a one tiny part of it just now
 Dialogue: 0,0:31:44.68,0:31:50.82,English,,0,0,0,,So with this implicit list we're going to need both the size of the block
 Dialogue: 0,0:31:50.82,0:31:53.66,English,,0,0,0,,And then its allocation status whether it's allocated or free
-Dialogue: 0,0:31:54.28,0:31:57.24,English,,0,0,0,,Now we could do this in two words right but that would be wasteful
+Dialogue: 0,0:31:54.28,0:31:57.24,English,,0,0,0,,Now we could do this in 2 words right but that would be wasteful
 Dialogue: 0,0:31:58.10,0:32:02.80,English,,0,0,0,,So the standard trick is to take advantage of the fact that blocks have to be aligned
 Dialogue: 0,0:32:04.42,0:32:08.02,English,,0,0,0,,Okay so this is actually it's kind of a pain in the neck to always have to align these blocks
 Dialogue: 0,0:32:08.72,0:32:10.58,English,,0,0,0,,But we can take advantage of it in this case
-Dialogue: 0,0:32:11.84,0:32:17.32,English,,0,0,0,,And the reason is is that if a block is aligned to some  say 8 by 8 or 16 byte boundary
+Dialogue: 0,0:32:11.84,0:32:17.32,English,,0,0,0,,And the reason is that if a block is aligned to some say 8 byte or 16 byte boundary
 Dialogue: 0,0:32:17.96,0:32:20.10,English,,0,0,0,,Then the lower order bits are always going to be 0
 Dialogue: 0,0:32:20.80,0:32:22.56,English,,0,0,0,,So if it's aligned to an 8 byte boundary
-Dialogue: 0,0:32:23.30,0:32:27.48,English,,0,0,0,,The lower order 3 the 3 low order bits will always be 0
-Dialogue: 0,0:32:28.08,0:32:30.78,English,,0,0,0,,Right 8 is 1000.
-Dialogue: 0,0:32:31.62,0:32:34.14,English,,0,0,0,,16 10000
+Dialogue: 0,0:32:23.30,0:32:27.48,English,,0,0,0,,The lower order 3...the 3 low order bits will always be 0
+Dialogue: 0,0:32:28.08,0:32:30.78,English,,0,0,0,,Right 8 is 1000
+Dialogue: 0,0:32:31.62,0:32:34.14,English,,0,0,0,,16(=)10000
 Dialogue: 0,0:32:35.72,0:32:38.50,English,,0,0,0,,24(=)11000
-Dialogue: 0,0:32:38.64,0:32:40.58,English,,0,0,0,,Right so there any any 8 byte
-Dialogue: 0,0:32:42.80,0:32:51.92,English,,0,0,0,,Any 8 byte aligned block has to be size 8 and it has to start on address that's a multiple of 8  all right
-Dialogue: 0,0:32:52.78,0:32:57.00,English,,0,0,0,,So those the the size will always the size of that block will always have
-Dialogue: 0,0:32:59.20,0:33:02.96,English,,0,0,0,,0 the 3 3 or 4 a low-order bits set to 0
-Dialogue: 0,0:33:03.88,0:33:05.85,English,,0,0,0,,So we can take it we can take advantage of that
-Dialogue: 0,0:33:06.42,0:33:11.84,English,,0,0,0,,And we'll just make will just have 1 I will just have one header word
+Dialogue: 0,0:32:38.64,0:32:40.58,English,,0,0,0,,Right so there any 8 byte
+Dialogue: 0,0:32:42.80,0:32:50.38,English,,0,0,0,,Any 8 byte aligned block has to be size 8 and it has to start on address that's a multiple of 8 all right
+Dialogue: 0,0:32:51.28,0:32:57.00,English,,0,0,0,,So those the size will always the size of that block will always have
+Dialogue: 0,0:32:59.20,0:33:02.96,English,,0,0,0,,3 or 4 a low-order bits set to 0
+Dialogue: 0,0:33:03.88,0:33:05.85,English,,0,0,0,,So we can take advantage of that
+Dialogue: 0,0:33:06.42,0:33:11.84,English,,0,0,0,,And we'll just make...will just have 1...I will just have one header word
 Dialogue: 0,0:33:13.20,0:33:17.18,English,,0,0,0,,And we'll use the lower order bit to store the allocation status
 Dialogue: 0,0:33:18.34,0:33:21.48,English,,0,0,0,,Okay and we can do that because we know it's always zero
 Dialogue: 0,0:33:21.96,0:33:26.92,English,,0,0,0,,So when we so we use that low order bit to store the allocation status
 Dialogue: 0,0:33:26.98,0:33:30.54,English,,0,0,0,,And then the remaining bits correspond to the size
 Dialogue: 0,0:33:31.24,0:33:37.22,English,,0,0,0,,And then whenever we want to extract the size we just mask out this allocation status and always set it to zero
 Dialogue: 0,0:33:37.76,0:33:38.64,English,,0,0,0,,Because we know that it's zero
-Dialogue: 0,0:33:48.88,0:33:53.76,English,,0,0,0,,So let's look in detail what given this given this form of implicit list
+Dialogue: 0,0:33:48.88,0:33:53.76,English,,0,0,0,,So let's look in detail what given this form of implicit list
 Dialogue: 0,0:33:54.62,0:33:56.08,English,,0,0,0,,How we might set things up
-Dialogue: 0,0:33:58.10,0:34:04.46,English,,0,0,0,,So in this case we're going to assume for bite words okay in sized words
-Dialogue: 0,0:34:05.66,0:34:07.78,English,,0,0,0,,And we're going to align on eight byte boundaries
-Dialogue: 0,0:34:10.46,0:34:15.56,English,,0,0,0,,Okay so remember the payload of our blocks always has to start on an eight eight byte boundary
+Dialogue: 0,0:33:58.10,0:34:04.46,English,,0,0,0,,So in this case we're going to assume for byte words okay in sized words
+Dialogue: 0,0:34:05.66,0:34:07.78,English,,0,0,0,,And we're going to align on 8 byte boundaries
+Dialogue: 0,0:34:10.46,0:34:15.56,English,,0,0,0,,Okay so remember the payload of a blocks always has to start on an 8 byte boundary
 Dialogue: 0,0:34:16.58,0:34:20.68,English,,0,0,0,,So the way we do that is we create this unused word at the beginning of the heap
-Dialogue: 0,0:34:21.08,0:34:24.02,English,,0,0,0,,That's aligned on this eight byte boundary
-Dialogue: 0,0:34:25.02,0:34:31.42,English,,0,0,0,,And then the the first block and the heap starts at an offset of four from that
-Dialogue: 0,0:34:32.24,0:34:33.28,English,,0,0,0,,From the beginning of the heap
+Dialogue: 0,0:34:21.08,0:34:24.02,English,,0,0,0,,That's aligned on this 8 byte boundary
+Dialogue: 0,0:34:25.02,0:34:33.28,English,,0,0,0,,And then the first block and the heap starts at an offset of 4 from the beginning of the heap
 Dialogue: 0,0:34:34.26,0:34:37.48,English,,0,0,0,,So we have the header which is is not aligned
 Dialogue: 0,0:34:39.40,0:34:41.56,English,,0,0,0,,And then we have the payload which follows
-Dialogue: 0,0:34:42.18,0:34:46.52,English,,0,0,0,,In this case it's a payload of one one word and that starts on this
-Dialogue: 0,0:34:48.46,0:34:50.74,English,,0,0,0,,That begins on this this eight word boundary
-Dialogue: 0,0:34:50.74,0:34:58.88,English,,0,0,0,,And then the next block and and here we're indicating a free block consisting of eight bytes
+Dialogue: 0,0:34:42.18,0:34:46.52,English,,0,0,0,,In this case it's a payload of one word and that starts on this
+Dialogue: 0,0:34:48.46,0:34:50.74,English,,0,0,0,,That begins on this 8 word boundary
+Dialogue: 0,0:34:50.74,0:34:58.88,English,,0,0,0,,And then the next block and and here we're indicating a free block consisting of 8 bytes
 Dialogue: 0,0:35:01.50,0:35:03.64,English,,0,0,0,,And then that's followed by an allocated block
-Dialogue: 0,0:35:04.24,0:35:08.28,English,,0,0,0,,The one here of sixteen bytes or four forwards
-Dialogue: 0,0:35:11.88,0:35:16.12,English,,0,0,0,,And now the payload is only two words so we have to pad
-Dialogue: 0,0:35:17.12,0:35:21.28,English,,0,0,0,,Right all of our blocks because we're assuming that they're aligned on eight byte boundary
-Dialogue: 0,0:35:21.74,0:35:25.40,English,,0,0,0,,All of our blocks have to be a multiple of size multiple of eight
+Dialogue: 0,0:35:04.24,0:35:08.28,English,,0,0,0,,The one here of 16 bytes or 4 forwards
+Dialogue: 0,0:35:11.88,0:35:18.02,English,,0,0,0,,And now the payload is only 2 words so we have to pad right all of a blocks
+Dialogue: 0,0:35:18.32,0:35:21.28,English,,0,0,0,,Because we're assuming that they're aligned on 8 byte boundary
+Dialogue: 0,0:35:21.74,0:35:25.40,English,,0,0,0,,All of a blocks have to be a multiple of size multiple of 8
 Dialogue: 0,0:35:26.38,0:35:29.56,English,,0,0,0,,Okay so here's the case of internal fragmentation where we have this extra
 Dialogue: 0,0:35:30.42,0:35:33.14,English,,0,0,0,,This extra block in order to maintain the alignment requirement
-Dialogue: 0,0:35:33.76,0:35:42.16,English,,0,0,0,,So that that ensures that the next block payload starts at a an eight byte aligned boundary and so on
+Dialogue: 0,0:35:33.76,0:35:42.16,English,,0,0,0,,So that ensures that the next block payload starts at an 8 byte aligned boundary and so on
 Dialogue: 0,0:35:43.70,0:35:48.24,English,,0,0,0,,And so we can walk this heap by just following these headers masking out the allocation bits
 Dialogue: 0,0:35:49.50,0:35:54.00,English,,0,0,0,,And then we have this special epilogue block
-Dialogue: 0,0:35:55.00,0:35:59.62,English,,0,0,0,,Which is a zero it's a block of with a zero sized payload
-Dialogue: 0,0:36:00.86,0:36:02.96,English,,0,0,0,,It's an allocated block of size zero
-Dialogue: 0,0:36:04.26,0:36:06.44,English,,0,0,0,,And this is a this is a trick
+Dialogue: 0,0:35:55.00,0:35:59.62,English,,0,0,0,,Which is a zero,it's a block of with a zero sized payload
+Dialogue: 0,0:36:00.86,0:36:02.96,English,,0,0,0,,It's an allocated block of size 0
+Dialogue: 0,0:36:04.26,0:36:06.44,English,,0,0,0,,And this is a trick
 Dialogue: 0,0:36:06.84,0:36:08.38,English,,0,0,0,,This is a trick you should use to
-Dialogue: 0,0:36:09.14,0:36:13.56,English,,0,0,0,,So this and we'll see when we look at coalescing why this is  why this helps
-Dialogue: 0,0:36:13.70,0:36:16.64,English,,0,0,0,,But this this allocated block at the very end
-Dialogue: 0,0:36:17.16,0:36:21.72,English,,0,0,0,,Eliminates some sort of special cases when we when we start to coalesce free blocks
+Dialogue: 0,0:36:09.14,0:36:13.56,English,,0,0,0,,So this and we'll see when we look at coalescing why this helps
+Dialogue: 0,0:36:13.70,0:36:16.64,English,,0,0,0,,But this allocated block at the very end
+Dialogue: 0,0:36:17.16,0:36:21.72,English,,0,0,0,,Eliminates some sort of special cases when we start to coalesce free blocks
 Dialogue: 0,0:36:22.52,0:36:25.16,English,,0,0,0,,We'll talk about that in just a just a moment
 Dialogue: 0,0:36:26.16,0:36:27.96,English,,0,0,0,,But you can finish your
-Dialogue: 0,0:36:28.64,0:36:34.22,English,,0,0,0,,Like this this this this allocated block of size zero is also helpful in terminating
+Dialogue: 0,0:36:28.64,0:36:34.22,English,,0,0,0,,Like this allocated block of size zero is also helpful in terminating
 Dialogue: 0,0:36:34.82,0:36:36.00,English,,0,0,0,,When you're walking this list
-Dialogue: 0,0:36:36.00,0:36:40.46,English,,0,0,0,,You can you can check for a size allocated block of size zero to terminate your search
+Dialogue: 0,0:36:36.00,0:36:40.46,English,,0,0,0,,You can check for a size allocated block of size zero to terminate your search
 Dialogue: 0,0:36:44.06,0:36:47.28,English,,0,0,0,,Okay so given this kind of structure then how do we find a free block
-Dialogue: 0,0:36:48.36,0:36:50.02,English,,0,0,0,,Okay there's a there's a number of different ways
-Dialogue: 0,0:36:50.74,0:36:53.82,English,,0,0,0,,The first the first way which is called first fit up
-Dialogue: 0,0:36:54.42,0:36:57.98,English,,0,0,0,,First fit is to search the free list from the beginning
+Dialogue: 0,0:36:48.36,0:36:50.02,English,,0,0,0,,Okay there's a number of different ways
+Dialogue: 0,0:36:50.74,0:36:57.98,English,,0,0,0,,The first way which is called first fit is to search the free list from the beginning
 Dialogue: 0,0:36:58.38,0:37:03.04,English,,0,0,0,,And just look for the first block we can find that satisfies the request
 Dialogue: 0,0:37:07.06,0:37:10.74,English,,0,0,0,,So we're allocating we're asking for a block of size 10
 Dialogue: 0,0:37:11.20,0:37:15.36,English,,0,0,0,,We start at the beginning of the heap and we walked a list we walk the heap
@@ -463,19 +472,19 @@ Dialogue: 0,0:37:23.08,0:37:26.88,English,,0,0,0,,And we needs to be actually it
 Dialogue: 0,0:37:29.68,0:37:30.04,English,,0,0,0,,So once
 Dialogue: 0,0:37:32.68,0:37:34.64,English,,0,0,0,,So that's a simple idea now
 Dialogue: 0,0:37:35.12,0:37:38.10,English,,0,0,0,,Some people have proposed an alternative called next fit
-Dialogue: 0,0:37:38.72,0:37:44.78,English,,0,0,0,,So the idea here is that instead of starting over each time from the beginning of the heap  to find a block that fits
+Dialogue: 0,0:37:38.72,0:37:44.78,English,,0,0,0,,So the idea here is that instead of starting over each time from the beginning of the heap to find a block that fits
 Dialogue: 0,0:37:45.62,0:37:47.90,English,,0,0,0,,We just pick up where we left off the last time
-Dialogue: 0,0:37:48.50,0:37:50.78,English,,0,0,0,,Okay so we look we scan the heap
-Dialogue: 0,0:37:51.72,0:37:55.08,English,,0,0,0,,And we find a block that's that's big enough to satisfy the request
-Dialogue: 0,0:37:55.16,0:37:57.48,English,,0,0,0,,And then we remember where that where we left off
+Dialogue: 0,0:37:48.50,0:37:50.78,English,,0,0,0,,Okay so we look,we scan the heap
+Dialogue: 0,0:37:51.72,0:37:55.08,English,,0,0,0,,And we find a block that's big enough to satisfy the request
+Dialogue: 0,0:37:55.16,0:37:57.48,English,,0,0,0,,And then we remember where that...where we left off
 Dialogue: 0,0:37:58.82,0:38:02.98,English,,0,0,0,,And the next time the request comes in we pick up the search starting where we left off
-Dialogue: 0,0:38:04.04,0:38:08.76,English,,0,0,0,,Now this seems like would be a good idea but but studies peer achill studies that people have done
+Dialogue: 0,0:38:04.04,0:38:08.76,English,,0,0,0,,Now this seems like would be a good idea but but studies peer studies that people have done
 Dialogue: 0,0:38:09.26,0:38:13.02,English,,0,0,0,,Have shown that this actually results in worse fragmentation
-Dialogue: 0,0:38:13.74,0:38:18.26,English,,0,0,0,,So you know you can you can consider it but it it generally
+Dialogue: 0,0:38:13.74,0:38:18.26,English,,0,0,0,,So you know you can consider it but it generally
 Dialogue: 0,0:38:19.06,0:38:21.14,English,,0,0,0,,It's generally probably not the best thing to do
 Dialogue: 0,0:38:22.86,0:38:29.52,English,,0,0,0,,Now another alternative is to find that the block in the heap
 Dialogue: 0,0:38:29.58,0:38:32.52,English,,0,0,0,,If a free block in the heap that's the best fit
-Dialogue: 0,0:38:33.30,0:38:40.40,English,,0,0,0,,So look at so in general look at all the blocks in the heap and find the block that fits the best
+Dialogue: 0,0:38:33.30,0:38:40.40,English,,0,0,0,,So look at...so in general look at all the blocks in the heap and find the block that fits the best
 Dialogue: 0,0:38:41.50,0:38:43.08,English,,0,0,0,,Ok so if we ask for 10 bytes
 Dialogue: 0,0:38:44.58,0:38:48.40,English,,0,0,0,,Try to scan the heap for the block that has the closest to 10 bytes in it
 Dialogue: 0,0:38:49.34,0:38:50.52,English,,0,0,0,,Okay so that's called best fit
@@ -483,320 +492,323 @@ Dialogue: 0,0:38:51.34,0:38:57.42,English,,0,0,0,,And best fit you can see it mi
 Dialogue: 0,0:38:57.74,0:39:00.54,English,,0,0,0,,Because you'd have to look instead of just looking until you find a fit
 Dialogue: 0,0:39:00.90,0:39:03.70,English,,0,0,0,,You'd have to scan all the free blocks and then pick the best one
 Dialogue: 0,0:39:04.82,0:39:08.02,English,,0,0,0,,Okay but it has a nice property that it improves memory utilization
-Dialogue: 0,0:39:09.48,0:39:12.72,English,,0,0,0,,Okay so if this isn't this is a classic example the space time trade-off
-Dialogue: 0,0:39:13.44,0:39:18.74,English,,0,0,0,,So it's slower but it improves it improves our use of the efficiency of the way we use memory
+Dialogue: 0,0:39:09.48,0:39:12.72,English,,0,0,0,,Okay so if isn't this is a classic example the space time trade-off
+Dialogue: 0,0:39:13.44,0:39:18.74,English,,0,0,0,,So it's slower but it improves a use of the efficiency of the way we use memory
 Dialogue: 0,0:39:24.04,0:39:24.82,English,,0,0,0,,And there's
-Dialogue: 0,0:39:26.68,0:39:33.46,English,,0,0,0,,Now we mentioned we mentioned an alternative way to organize the free list using multiple free lists for different size classes
+Dialogue: 0,0:39:26.68,0:39:33.46,English,,0,0,0,,Now we mentioned an alternative way to organize the free list using multiple free lists for different size classes
 Dialogue: 0,0:39:34.74,0:39:38.20,English,,0,0,0,,Now going back to that example again if we had an infinite number of size classes
 Dialogue: 0,0:39:38.22,0:39:42.16,English,,0,0,0,,One for each size that would implement best fit
-Dialogue: 0,0:39:42.66,0:39:47.56,English,,0,0,0,,With a constant time search we don't we'd know exactly which free list  to get the block from
-Dialogue: 0,0:39:49.58,0:39:54.02,English,,0,0,0,,The problem of course is how much memory such  a organization would use
+Dialogue: 0,0:39:42.66,0:39:47.56,English,,0,0,0,,With a constant time search we'd know exactly which free list to get the block from
+Dialogue: 0,0:39:49.58,0:39:54.02,English,,0,0,0,,The problem of course is how much memory such a organization would use
 Dialogue: 0,0:39:55.42,0:39:59.32,English,,0,0,0,,But the interesting thing about using multiple free lists
-Dialogue: 0,0:39:59.90,0:40:06.28,English,,0,0,0,,Is that the more the more of these free lists you have the closer you get to it to a true best fit
+Dialogue: 0,0:39:59.90,0:40:06.28,English,,0,0,0,,Is that the more of these free lists you have the closer you get to it to a true best fit
 Dialogue: 0,0:40:07.42,0:40:09.04,English,,0,0,0,,Okay so you can approach best fit
 Dialogue: 0,0:40:09.70,0:40:12.22,English,,0,0,0,,And then at some point you begin to get diminishing returns
-Dialogue: 0,0:40:12.78,0:40:18.26,English,,0,0,0,,So so that's another sort of design decision is how many of these multiple free lists do you need and what
-Dialogue: 0,0:40:18.48,0:40:22.00,English,,0,0,0,,What's sort of what what should be the size ranges associated with them
+Dialogue: 0,0:40:12.78,0:40:18.26,English,,0,0,0,,So that's another sort of design decision is how many of these multiple free lists do you need and what
+Dialogue: 0,0:40:18.48,0:40:22.00,English,,0,0,0,,What's sort of what should be the size ranges associated with them
 Dialogue: 0,0:40:25.50,0:40:27.98,English,,0,0,0,,Okay another question now once we found a block
 Dialogue: 0,0:40:28.06,0:40:30.60,English,,0,0,0,,So the application is made a call to malloc
 Dialogue: 0,0:40:32.86,0:40:36.98,English,,0,0,0,,The malloc package is look in the free list that somehow using some
 Dialogue: 0,0:40:37.50,0:40:40.80,English,,0,0,0,,Some policy it's identified a block that
 Dialogue: 0,0:40:41.08,0:40:44.34,English,,0,0,0,,In which the requested block a free block in which the requested block will fit
-Dialogue: 0,0:40:45.94,0:40:51.00,English,,0,0,0,,Okay so now what does it do it has to the malloc package has to allocate
+Dialogue: 0,0:40:45.94,0:40:51.00,English,,0,0,0,,Okay so now what does it do, it has to the malloc package has to allocate
 Dialogue: 0,0:40:52.48,0:40:53.64,English,,0,0,0,,It has to sort of take that
-Dialogue: 0,0:40:57.14,0:41:00.82,English,,0,0,0,,But so there's a question how does it it could allocate the whole block
-Dialogue: 0,0:41:02.28,0:41:06.98,English,,0,0,0,,And return that back to the programmer or it could it could choose to split out
+Dialogue: 0,0:40:57.14,0:41:00.82,English,,0,0,0,,But so there's a question how does...it could allocate the whole block
+Dialogue: 0,0:41:02.28,0:41:06.98,English,,0,0,0,,And return that back to the programmer or it could choose to split out
 Dialogue: 0,0:41:07.70,0:41:11.72,English,,0,0,0,,A portion just only the portion of block that's needed and then create a smaller free block
-Dialogue: 0,0:41:14.06,0:41:19.46,English,,0,0,0,,Okay so for example if if we if our
+Dialogue: 0,0:41:14.06,0:41:19.46,English,,0,0,0,,Okay so for example if we...
 Dialogue: 0,0:41:20.54,0:41:24.98,English,,0,0,0,,If our application is has requested a block of size 4
 Dialogue: 0,0:41:26.14,0:41:26.90,English,,0,0,0,,Or I'm sorry
-Dialogue: 0,0:41:27.64,0:41:32.87,English,,0,0,0,,It if the malloc package is determined that that it in order to satisfy the application request
+Dialogue: 0,0:41:27.64,0:41:32.87,English,,0,0,0,,If the malloc package is determined that it in order to satisfy the application request
 Dialogue: 0,0:41:32.87,0:41:34.50,English,,0,0,0,,It needs a block of size 4
 Dialogue: 0,0:41:36.16,0:41:37.58,English,,0,0,0,,Okay including the header
-Dialogue: 0,0:41:39.28,0:41:45.28,English,,0,0,0,,Then it would look and it would try to find a free block  of at least size forward
+Dialogue: 0,0:41:39.28,0:41:45.28,English,,0,0,0,,Then it would look and it would try to find a free block of at least size forward
 Dialogue: 0,0:41:45.36,0:41:50.20,English,,0,0,0,,So let's say it chooses this block for some reason
 Dialogue: 0,0:41:50.78,0:41:54.10,English,,0,0,0,,Maybe because it was a next fit picked up here
 Dialogue: 0,0:41:55.50,0:41:57.26,English,,0,0,0,,So this free block is actually six
 Dialogue: 0,0:42:00.25,0:42:01.98,English,,0,0,0,,Contains six words
-Dialogue: 0,0:42:04.38,0:42:07.36,English,,0,0,0,,So the allocator has to decide whether just to keep this block of size six
-Dialogue: 0,0:42:07.40,0:42:12.02,English,,0,0,0,,And just return that back to the to the application
-Dialogue: 0,0:42:12.98,0:42:18.06,English,,0,0,0,,Or whether to split that block into two blocks into an allocated block of size four
-Dialogue: 0,0:42:18.82,0:42:24.62,English,,0,0,0,,Which it then returns to the application  followed by a free block of of size two
-Dialogue: 0,0:42:30.96,0:42:34.38,English,,0,0,0,,Okay now another question  is  how to free a block
-Dialogue: 0,0:42:34.38,0:42:39.82,English,,0,0,0,,So the application is requested the elec is called free and it's asked the allocator to free up a particular block
+Dialogue: 0,0:42:04.38,0:42:08.00,English,,0,0,0,,So the allocator has to decide whether just to keep this block of size 6
+Dialogue: 0,0:42:08.06,0:42:12.02,English,,0,0,0,,And just return that back to the application
+Dialogue: 0,0:42:12.98,0:42:18.06,English,,0,0,0,,Or whether to split that block into 2 blocks into an allocated block of size 4
+Dialogue: 0,0:42:18.82,0:42:24.62,English,,0,0,0,,Which it then returns to the application followed by a free block of of size 2
+Dialogue: 0,0:42:30.96,0:42:34.38,English,,0,0,0,,Okay now another question is how to free a block
+Dialogue: 0,0:42:34.38,0:42:39.82,English,,0,0,0,,So the application is requested is called free and it's asked the allocator to free up a particular block
 Dialogue: 0,0:42:41.88,0:42:43.22,English,,0,0,0,,So this is pretty simple
 Dialogue: 0,0:42:48.06,0:42:51.32,English,,0,0,0,,So if we want to free up this block you just clear the allocated flag
 Dialogue: 0,0:42:52.92,0:42:54.94,English,,0,0,0,,So if we want to free up the block we just created
-Dialogue: 0,0:42:55.80,0:42:58.84,English,,0,0,0,,You just clear you just set the allocated bit to zero
-Dialogue: 0,0:42:59.64,0:43:01.08,English,,0,0,0,,And you're done it's really simple
-Dialogue: 0,0:43:01.76,0:43:05.68,English,,0,0,0,,But the problem now is this this creates external fragmentation
-Dialogue: 0,0:43:07.50,0:43:11.92,English,,0,0,0,,So here now if if we just free that block of size for
-Dialogue: 0,0:43:13.06,0:43:15.04,English,,0,0,0,,What used to be a block of size six
-Dialogue: 0,0:43:16.24,0:43:21.48,English,,0,0,0,,Now consists of two contiguous smaller blocks one of size four and one of size two
-Dialogue: 0,0:43:24.08,0:43:27.14,English,,0,0,0,,And so now if that's followed by a request for five blocks
+Dialogue: 0,0:42:55.80,0:42:58.84,English,,0,0,0,,You just clear, you just set the allocated bit to zero
+Dialogue: 0,0:42:59.64,0:43:01.08,English,,0,0,0,,And you're done, it's really simple
+Dialogue: 0,0:43:01.76,0:43:05.68,English,,0,0,0,,But the problem now is this creates external fragmentation
+Dialogue: 0,0:43:07.50,0:43:11.92,English,,0,0,0,,So here now if we just free that block of size 4
+Dialogue: 0,0:43:13.06,0:43:15.04,English,,0,0,0,,What used to be a block of size 6
+Dialogue: 0,0:43:16.24,0:43:21.48,English,,0,0,0,,Now consists of 2 contiguous smaller blocks one of size 4 and one of size 2
+Dialogue: 0,0:43:24.08,0:43:27.14,English,,0,0,0,,And so now if that's followed by a request for 5 blocks
 Dialogue: 0,0:43:27.90,0:43:29.32,English,,0,0,0,,Now we're stuck right so this
 Dialogue: 0,0:43:30.96,0:43:33.82,English,,0,0,0,,But we've got plenty of memory and it's even worse in this case
 Dialogue: 0,0:43:34.96,0:43:37.16,English,,0,0,0,,That memory is all contiguous just because
 Dialogue: 0,0:43:38.72,0:43:42.62,English,,0,0,0,,But just because we just oh we just cleared the free block
-Dialogue: 0,0:43:43.30,0:43:46.92,English,,0,0,0,,We didn't we didn't really notice that it was contiguous
+Dialogue: 0,0:43:43.30,0:43:46.92,English,,0,0,0,,We didn't really notice that it was contiguous
 Dialogue: 0,0:43:46.94,0:43:50.56,English,,0,0,0,,And so we ended up in with the situation where we have these two contiguous free blocks
-Dialogue: 0,0:43:54.82,0:43:56.62,English,,0,0,0,,So this this suggests that
+Dialogue: 0,0:43:54.82,0:43:56.62,English,,0,0,0,,So this suggests that
 Dialogue: 0,0:43:57.32,0:43:59.10,English,,0,0,0,,When we do when we free up blocks
 Dialogue: 0,0:44:00.04,0:44:03.66,English,,0,0,0,,That we somehow need to coalesce any neighboring blocks
 Dialogue: 0,0:44:04.28,0:44:06.74,English,,0,0,0,,To keep blocks as big as possible right so we cannot
 Dialogue: 0,0:44:08.00,0:44:11.62,English,,0,0,0,,One of the invariance of any decent allocator is that
-Dialogue: 0,0:44:12.94,0:44:15.86,English,,0,0,0,,They're never there never contiguous free blocks like this
+Dialogue: 0,0:44:12.94,0:44:15.86,English,,0,0,0,,They're never contiguous free blocks like this
 Dialogue: 0,0:44:16.32,0:44:19.82,English,,0,0,0,,It's always a free block followed by an allocated block
 Dialogue: 0,0:44:22.72,0:44:28.00,English,,0,0,0,,Okay so the idea is that if we free a particular so here we have this allocated block
 Dialogue: 0,0:44:29.78,0:44:34.22,English,,0,0,0,,And if we free that block and we somehow have to check
 Dialogue: 0,0:44:34.22,0:44:38.68,English,,0,0,0,,And see if there's any adjacent free blocks either following
-Dialogue: 0,0:44:39.64,0:44:43.20,English,,0,0,0,,Either neck either next in memory or previous in memory
+Dialogue: 0,0:44:39.64,0:44:43.20,English,,0,0,0,,Either next in memory or previous in memory
 Dialogue: 0,0:44:44.26,0:44:48.14,English,,0,0,0,,And if there are we need to as part of the freeing process
-Dialogue: 0,0:44:48.14,0:44:54.00,English,,0,0,0,,We need to coalesce those two blocks into a into a larger block the largest possible block possible
-Dialogue: 0,0:44:55.24,0:45:01.36,English,,0,0,0,,Now it's pretty easy if we're if we're asked to free this block this green block
-Dialogue: 0,0:45:02.78,0:45:05.80,English,,0,0,0,,It's pretty easy to check the the next block because you just
+Dialogue: 0,0:44:48.14,0:44:54.00,English,,0,0,0,,We need to coalesce those 2 blocks into a into the largest possible block possible
+Dialogue: 0,0:44:55.24,0:45:01.36,English,,0,0,0,,Now it's pretty easy if we're asked to free this block this green block
+Dialogue: 0,0:45:02.78,0:45:05.80,English,,0,0,0,,It's pretty easy to check the next block because you just
 Dialogue: 0,0:45:06.36,0:45:08.04,English,,0,0,0,,We have the size we have this header
-Dialogue: 0,0:45:08.94,0:45:11.66,English,,0,0,0,,So we know that the next block starts at an offset of four
-Dialogue: 0,0:45:13.06,0:45:16.08,English,,0,0,0,,So we just we just  we just check
-Dialogue: 0,0:45:16.84,0:45:19.72,English,,0,0,0,,We know and we know that the header for that block is at your offset of four
+Dialogue: 0,0:45:08.94,0:45:11.66,English,,0,0,0,,So we know that the next block starts at an offset of 4
+Dialogue: 0,0:45:13.06,0:45:16.08,English,,0,0,0,,So we just...we just...we just check
+Dialogue: 0,0:45:16.84,0:45:19.72,English,,0,0,0,,And we know that the header for that block is at your offset of 4
 Dialogue: 0,0:45:20.20,0:45:24.10,English,,0,0,0,,So we just check the allocated status of that next block using the
-Dialogue: 0,0:45:24.46,0:45:27.40,English,,0,0,0,,Using the size using the size field in our header
+Dialogue: 0,0:45:24.46,0:45:27.40,English,,0,0,0,,Using the size,using the size field in our header
 Dialogue: 0,0:45:27.94,0:45:29.16,English,,0,0,0,,But what about the previous block
 Dialogue: 0,0:45:30.86,0:45:32.64,English,,0,0,0,,What about this block how do we check that
-Dialogue: 0,0:45:34.86,0:45:37.40,English,,0,0,0,,Well given given all that we've talked about
-Dialogue: 0,0:45:37.40,0:45:41.14,English,,0,0,0,,Now the only thing the only way we could do it would be to start at the beginning of the heap
-Dialogue: 0,0:45:42.22,0:45:48.98,English,,0,0,0,,And now walk the free list until we get to this current block  remembering the previous block
-Dialogue: 0,0:45:49.35,0:45:53.54,English,,0,0,0,,So each time we each time we traverse we remember the previous block
-Dialogue: 0,0:45:54.66,0:45:57.76,English,,0,0,0,,Okay so that but that would be very inefficient right that would be
-Dialogue: 0,0:45:58.68,0:46:02.06,English,,0,0,0,,That what that would make free linear in the size of the heat
+Dialogue: 0,0:45:34.86,0:45:37.40,English,,0,0,0,,Well given all that we've talked about
+Dialogue: 0,0:45:37.40,0:45:41.14,English,,0,0,0,,Now the only thing,the only way we could do it would be to start at the beginning of the heap
+Dialogue: 0,0:45:42.22,0:45:48.98,English,,0,0,0,,And now walk the free list until we get to this current block remembering the previous block
+Dialogue: 0,0:45:49.35,0:45:53.54,English,,0,0,0,,So each time we traverse we remember the previous block
+Dialogue: 0,0:45:54.66,0:45:57.14,English,,0,0,0,,Okay so that...but that would be very inefficient right
+Dialogue: 0,0:45:57.16,0:46:02.06,English,,0,0,0,,That would be...that what that would make free linear in the size of the heat
 Dialogue: 0,0:46:02.62,0:46:07.06,English,,0,0,0,,Because we'd have to in order to check the previous block we'd have to walk starting at the very beginning
 Dialogue: 0,0:46:07.42,0:46:08.64,English,,0,0,0,,And walk the entire heap
-Dialogue: 0,0:46:10.72,0:46:17.44,English,,0,0,0,,So the solution for that is was proposed by a famous computer scientist don knuth in 1973
-Dialogue: 0,0:46:17.96,0:46:21.12,English,,0,0,0,,It's very clever it very simple like all really good ideas
-Dialogue: 0,0:46:21.76,0:46:29.24,English,,0,0,0,,It seems obvious that when you see it but it turns out to be very clever and a very very useful technique
+Dialogue: 0,0:46:10.72,0:46:17.44,English,,0,0,0,,So the solution for that is was proposed by a famous computer scientist Don Knuth in 1973
+Dialogue: 0,0:46:17.96,0:46:21.12,English,,0,0,0,,It's very clever,it very simple like all really good ideas
+Dialogue: 0,0:46:21.76,0:46:29.24,English,,0,0,0,,It seems obvious that when you see it but it turns out to be very clever and a very useful technique
 Dialogue: 0,0:46:29.76,0:46:33.58,English,,0,0,0,,And the idea is just to replicate for each block
 Dialogue: 0,0:46:33.62,0:46:37.96,English,,0,0,0,,Replicate the header block at the end of the block
 Dialogue: 0,0:46:38.70,0:46:43.90,English,,0,0,0,,Okay so each block now contains a header and a footer identical header and footer
 Dialogue: 0,0:46:45.70,0:46:49.96,English,,0,0,0,,And then this creates sort of an implicit backwards
 Dialogue: 0,0:46:51.88,0:46:53.18,English,,0,0,0,,Backwards link that we can use
-Dialogue: 0,0:46:55.22,0:46:58.46,English,,0,0,0,,So now given given some block
+Dialogue: 0,0:46:55.22,0:46:58.46,English,,0,0,0,,So now given some block
 Dialogue: 0,0:46:58.52,0:47:03.08,English,,0,0,0,,That we want to given some block that we want to free
-Dialogue: 0,0:47:04.62,0:47:11.96,English,,0,0,0,,We knew the size of that block will just be one one word previous in memory so
-Dialogue: 0,0:47:12.86,0:47:16.78,English,,0,0,0,,So we can just and it's always a fixed fixed offset of one word
+Dialogue: 0,0:47:04.62,0:47:11.96,English,,0,0,0,,We knew the size of that block will just be one word previous in memory so
+Dialogue: 0,0:47:12.86,0:47:16.78,English,,0,0,0,,So we can just...and it's always a fixed fixed offset of one word
 Dialogue: 0,0:47:18.64,0:47:22.60,English,,0,0,0,,So given you know given a pointer to the header of this block
-Dialogue: 0,0:47:22.70,0:47:27.84,English,,0,0,0,,We can look one word back to see the size and the allocated allocation status of the previous block
+Dialogue: 0,0:47:22.70,0:47:27.84,English,,0,0,0,,We can look one word back to see the size and the allocation status of the previous block
 Dialogue: 0,0:47:28.86,0:47:31.92,English,,0,0,0,,Okay so and so that allows us to do that in constant time
-Dialogue: 0,0:47:33.30,0:47:38.98,English,,0,0,0,,And so this footer is sometimes called the boundary tag  and knuth call that a boundary tag
-Dialogue: 0,0:47:38.98,0:47:46.62,English,,0,0,0,,But we'll just and we can call it a footer  to be sort of parallel with with with the notion of a header
-Dialogue: 0,0:47:47.26,0:47:51.88,English,,0,0,0,,But the the key thing is that it's just identical has the identical size and allocation status
+Dialogue: 0,0:47:33.30,0:47:38.98,English,,0,0,0,,And so this footer is sometimes called the boundary tag  and Knuth call that a boundary tag
+Dialogue: 0,0:47:38.98,0:47:46.62,English,,0,0,0,,But we'll just...and we can call it a footer to be sort of parallel with the notion of a header
+Dialogue: 0,0:47:47.26,0:47:51.88,English,,0,0,0,,But the key thing is that it's just identical has the identical size and allocation status
 Dialogue: 0,0:47:55.56,0:47:57.78,English,,0,0,0,,And also given yes question
 Dialogue: 0,0:48:02.50,0:48:06.68,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:48:06.68,0:48:08.58,English,,0,0,0,,So the question is if we want to have a boundary tag
 Dialogue: 0,0:48:08.58,0:48:12.26,English,,0,0,0,,When we allocate a block do we need to set aside space for it and the answer is yes
-Dialogue: 0,0:48:15.38,0:48:20.84,English,,0,0,0,,Most of the time I'll show you a one I'll show you one optimization in a bit
-Dialogue: 0,0:48:24.54,0:48:29.86,English,,0,0,0,,Okay so given given this idea of a over the boundary tag
-Dialogue: 0,0:48:34.36,0:48:38.31,English,,0,0,0,,And and and given that we have some allocated block that we want to free
+Dialogue: 0,0:48:15.38,0:48:20.84,English,,0,0,0,,Most of the time I'll show you a one, I'll show you one optimization in a bit
+Dialogue: 0,0:48:24.54,0:48:29.86,English,,0,0,0,,Okay so given this idea of a over the boundary tag
+Dialogue: 0,0:48:34.36,0:48:38.31,English,,0,0,0,,And given that we have some allocated block that we want to free
 Dialogue: 0,0:48:39.24,0:48:40.04,English,,0,0,0,,This yellow block
 Dialogue: 0,0:48:41.18,0:48:41.74,English,,0,0,0,,Yes question
 Dialogue: 0,0:48:41.74,0:48:52.24,English,,0,0,0,,[student speaking]
-Dialogue: 0,0:48:52.24,0:48:57.52,English,,0,0,0,,Yeah we so they quit yeah so just to summarize the question
-Dialogue: 0,0:48:59.60,0:49:02.76,English,,0,0,0,,You need to when you allocate when you're looking for blocks that fit
+Dialogue: 0,0:48:52.24,0:48:57.52,English,,0,0,0,,Yeah we...so the question...yeah so just to summarize the question
+Dialogue: 0,0:48:59.60,0:49:02.76,English,,0,0,0,,You need to when you allocate...when you're looking for blocks that fit
 Dialogue: 0,0:49:02.76,0:49:06.64,English,,0,0,0,,You have to include the the size of the header and the boundary tag
 Dialogue: 0,0:49:06.64,0:49:11.34,English,,0,0,0,,[student speaking]
-Dialogue: 0,0:49:11.34,0:49:17.60,English,,0,0,0,,It would you then you'd have and then you have to insert padding to get a size a total block size
-Dialogue: 0,0:49:17.72,0:49:22.44,English,,0,0,0,,That's a multiple of that set of multiple that satisfies your alignment requirement
+Dialogue: 0,0:49:11.34,0:49:17.60,English,,0,0,0,,It would you then you'd have to insert padding to get a size a total block size
+Dialogue: 0,0:49:17.72,0:49:22.44,English,,0,0,0,,That's a multiple of that set of...multiple that satisfies your alignment requirement
 Dialogue: 0,0:49:24.04,0:49:24.78,English,,0,0,0,,Sorry
 Dialogue: 0,0:49:28.26,0:49:30.08,English,,0,0,0,,Yeah I mean it can yeah
-Dialogue: 0,0:49:30.74,0:49:36.80,English,,0,0,0,,If you have it the question is wouldn't I use a lot of memory and it can if again it depends on the requests
-Dialogue: 0,0:49:37.70,0:49:41.60,English,,0,0,0,,The request pattern if if the application is requesting lots of small payloads then
-Dialogue: 0,0:49:42.38,0:49:44.20,English,,0,0,0,,Then it's going to it's going to waste a lot of memory
+Dialogue: 0,0:49:30.74,0:49:36.80,English,,0,0,0,,If you have...the question is wouldn't I use a lot of memory and it can again it depends on the requests
+Dialogue: 0,0:49:37.70,0:49:41.60,English,,0,0,0,,The request pattern if the application is requesting lots of small payloads then
+Dialogue: 0,0:49:42.38,0:49:44.20,English,,0,0,0,,Then it's going to waste a lot of memory
 Dialogue: 0,0:49:44.50,0:49:47.40,English,,0,0,0,,If it's requesting big payloads not so bad
 Dialogue: 0,0:49:52.44,0:49:55.34,English,,0,0,0,,Okay so given that we have some block that we want to free
-Dialogue: 0,0:49:55.88,0:49:59.94,English,,0,0,0,,There's four cases that we need to consider when when coalescing
-Dialogue: 0,0:50:00.86,0:50:05.86,English,,0,0,0,,The case where the the next block is allocated and the previous block is free is allocated
+Dialogue: 0,0:49:55.88,0:49:59.94,English,,0,0,0,,There's 4 cases that we need to consider when coalescing
+Dialogue: 0,0:50:00.86,0:50:05.86,English,,0,0,0,,The case where the next block is allocated and the previous block is free is allocated
 Dialogue: 0,0:50:08.66,0:50:11.84,English,,0,0,0,,A case where the next block is free and the previous block is allocated
-Dialogue: 0,0:50:13.26,0:50:19.76,English,,0,0,0,,A case where the the previous block is free and the next block is allocated in the case where both the previous and next block are free
-Dialogue: 0,0:50:22.56,0:50:25.54,English,,0,0,0,,Okay so in case one where we have our allocated block
+Dialogue: 0,0:50:13.26,0:50:15.26,English,,0,0,0,,A case where the previous block is free
+Dialogue: 0,0:50:15.28,0:50:19.76,English,,0,0,0,,And the next block is allocated in the case where both the previous and next block are free
+Dialogue: 0,0:50:22.56,0:50:25.54,English,,0,0,0,,Okay so in case one where we have an allocated block
 Dialogue: 0,0:50:26.70,0:50:29.86,English,,0,0,0,,That we want to free surrounded by two allocated blocks
 Dialogue: 0,0:50:30.68,0:50:33.32,English,,0,0,0,,We don't do anything right because we only call us free memory
 Dialogue: 0,0:50:35.34,0:50:41.46,English,,0,0,0,,So so in this case we just set keep the size of the header and footer stays the same
-Dialogue: 0,0:50:41.48,0:50:45.64,English,,0,0,0,,And we just set the allocation status to to shift free
-Dialogue: 0,0:50:49.84,0:50:55.16,English,,0,0,0,,Now if the if the next block is is free and the previous block is allocated
-Dialogue: 0,0:50:56.58,0:51:01.76,English,,0,0,0,,What we do is we we check the boundary tag of the the previous block
+Dialogue: 0,0:50:41.48,0:50:45.64,English,,0,0,0,,And we just set the allocation status to shift free
+Dialogue: 0,0:50:49.84,0:50:55.16,English,,0,0,0,,Now if the next block is free and the previous block is allocated
+Dialogue: 0,0:50:56.58,0:51:01.76,English,,0,0,0,,What we do is we check the boundary tag of the previous block
 Dialogue: 0,0:51:01.76,0:51:04.26,English,,0,0,0,,And we see that it's allocated so there's nothing to do there
 Dialogue: 0,0:51:06.12,0:51:09.72,English,,0,0,0,,We use the size to check the allocation status of the next block
 Dialogue: 0,0:51:10.72,0:51:13.70,English,,0,0,0,,We use n to jump to the header of the next block
 Dialogue: 0,0:51:14.62,0:51:17.84,English,,0,0,0,,We see that it's allocations status is free
 Dialogue: 0,0:51:18.86,0:51:21.28,English,,0,0,0,,So these two blocks need to be coalesced
-Dialogue: 0,0:51:23.06,0:51:30.08,English,,0,0,0,,So we do that by just adding adding the two sizes together to create this larger coalesce block
+Dialogue: 0,0:51:23.06,0:51:30.08,English,,0,0,0,,So we do that by just adding the two sizes together to create this larger coalesce block
 Dialogue: 0,0:51:30.12,0:51:32.68,English,,0,0,0,,And setting its allocation status to zero
-Dialogue: 0,0:51:35.30,0:51:38.56,English,,0,0,0,,Now in the case where the previous block is is free
-Dialogue: 0,0:51:39.82,0:51:45.26,English,,0,0,0,,Again we we check the boundary tech footer when we see that it's we see it it's free
+Dialogue: 0,0:51:35.30,0:51:38.56,English,,0,0,0,,Now in the case where the previous block is free
+Dialogue: 0,0:51:39.82,0:51:45.26,English,,0,0,0,,Again we check the boundary tech footer when we see that it's we see it it's free
 Dialogue: 0,0:51:46.66,0:51:49.34,English,,0,0,0,,So in this case we create
-Dialogue: 0,0:51:50.64,0:51:59.78,English,,0,0,0,,We have to update the size of the the old the header of the old previous block to create this now new larger coalesce block
-Dialogue: 0,0:52:00.16,0:52:03.84,English,,0,0,0,,Can we and we update the header and the boundary check footer accordingly
-Dialogue: 0,0:52:07.18,0:52:09.78,English,,0,0,0,,And then in the case where where both the previous
+Dialogue: 0,0:51:50.64,0:51:52.02,English,,0,0,0,,We have to update the size
+Dialogue: 0,0:51:53.56,0:51:59.78,English,,0,0,0,,The header of the old previous block to create this now new larger coalesce block
+Dialogue: 0,0:52:00.16,0:52:03.84,English,,0,0,0,,And we update the header and the boundary check footer accordingly
+Dialogue: 0,0:52:07.18,0:52:09.78,English,,0,0,0,,And then in the case where both the previous
 Dialogue: 0,0:52:10.48,0:52:12.42,English,,0,0,0,,And the next block are free
 Dialogue: 0,0:52:16.08,0:52:17.30,English,,0,0,0,,We create a single block
-Dialogue: 0,0:52:20.84,0:52:24.10,English,,0,0,0,,A single block that's the sum of all three of those sizes
-Dialogue: 0,0:52:27.92,0:52:29.54,English,,0,0,0,,Okay so is that is that clear to everybody
+Dialogue: 0,0:52:20.84,0:52:24.10,English,,0,0,0,,A single block that's the sum of all 3 of those sizes
+Dialogue: 0,0:52:27.92,0:52:29.54,English,,0,0,0,,Okay so is that ,is that clear to everybody?
 Dialogue: 0,0:52:36.54,0:52:38.78,English,,0,0,0,,Now as you pointed out correctly pointed out that
 Dialogue: 0,0:52:39.32,0:52:42.36,English,,0,0,0,,Boundary tags can create additional internal fragmentation
-Dialogue: 0,0:52:42.72,0:52:45.88,English,,0,0,0,,Because they're they're not part of payload so by definition
+Dialogue: 0,0:52:42.72,0:52:45.88,English,,0,0,0,,Because they're not part of payload so by definition
 Dialogue: 0,0:52:46.50,0:52:47.50,English,,0,0,0,,They're their overhead
-Dialogue: 0,0:52:48.84,0:52:55.24,English,,0,0,0,,And so you might you might ask yourself are there any cases where
+Dialogue: 0,0:52:48.84,0:52:55.24,English,,0,0,0,,And so you might ask yourself are there any cases where
 Dialogue: 0,0:52:56.94,0:52:58.38,English,,0,0,0,,You don't need a boundary tag
-Dialogue: 0,0:53:06.78,0:53:08.42,English,,0,0,0,,So which which blocks need
+Dialogue: 0,0:53:06.78,0:53:08.42,English,,0,0,0,,So which blocks need
 Dialogue: 0,0:53:10.64,0:53:12.40,English,,0,0,0,,Which blocks need a boundary tag
 Dialogue: 0,0:53:29.50,0:53:31.56,English,,0,0,0,,Could you get away with does an allocated block need one?
-Dialogue: 0,0:53:47.82,0:53:52.56,English,,0,0,0,,Yeah you're if you're not going to if you're not if you don't need to coalesce
+Dialogue: 0,0:53:37.36,0:53:47.72,English,,0,0,0,,[student speaking]
+Dialogue: 0,0:53:47.82,0:53:52.56,English,,0,0,0,,Yeah if you're not going to...if you're not...if you don't need to coalesce
 Dialogue: 0,0:53:54.08,0:53:57.62,English,,0,0,0,,And you don't need to that footer and what kind of blocks don't you call us
 Dialogue: 0,0:54:00.06,0:54:01.00,English,,0,0,0,,Allocated blocks
 Dialogue: 0,0:54:05.40,0:54:06.14,English,,0,0,0,,So what
-Dialogue: 0,0:54:09.18,0:54:14.76,English,,0,0,0,,So maybe we can maybe maybe we don't need those at those boundary tech footers on allocated blocks
+Dialogue: 0,0:54:09.18,0:54:14.76,English,,0,0,0,,So maybe we can... maybe we don't need those at those boundary tech footers on allocated blocks
 Dialogue: 0,0:54:15.30,0:54:16.48,English,,0,0,0,,Right just on free blocks
-Dialogue: 0,0:54:18.40,0:54:20.62,English,,0,0,0,,But then how are we going to determine that the previous
-Dialogue: 0,0:54:21.56,0:54:23.10,English,,0,0,0,,Block is allocated or free
+Dialogue: 0,0:54:18.40,0:54:23.10,English,,0,0,0,,But then how are we going to determine that the previous block is allocated or free
 Dialogue: 0,0:54:24.38,0:54:28.08,English,,0,0,0,,If an allocated block doesn't have a boundary tag footer
 Dialogue: 0,0:54:30.22,0:54:30.54,English,,0,0,0,,Yes
-Dialogue: 0,0:54:30.54,0:54:36.60,English,,0,0,0,,Sorry
+Dialogue: 0,0:54:30.54,0:54:36.60,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:54:36.60,0:54:38.64,English,,0,0,0,,Well yeah you would give it one when you free it
-Dialogue: 0,0:54:39.44,0:54:43.32,English,,0,0,0,,But somehow when we're doing coalescing we need to check somehow that that previous block
+Dialogue: 0,0:54:39.44,0:54:43.32,English,,0,0,0,,But somehow when we're doing coalescing we need to check somehow that previous block
 Dialogue: 0,0:54:44.00,0:54:46.08,English,,0,0,0,,Whether it's allocated or free okay
 Dialogue: 0,0:54:50.10,0:54:52.66,English,,0,0,0,,But how does it know it's whether it's a boundary tag
-Dialogue: 0,0:54:55.66,0:54:58.66,English,,0,0,0,,Or not not sure no that's okay
+Dialogue: 0,0:54:55.66,0:54:58.66,English,,0,0,0,,Or not sure no that's okay
 Dialogue: 0,0:54:59.28,0:55:06.14,English,,0,0,0,,Okay yes
-Dialogue: 0,0:55:06.26,0:55:11.22,English,,0,0,0,,Bingo you got it so remember this remember remember because of our alignment
-Dialogue: 0,0:55:13.06,0:55:18.44,English,,0,0,0,,We've got we've got multiple at least three bits in three or four bits that are always zero
+Dialogue: 0,0:55:06.20,0:55:11.22,English,,0,0,0,,Bingo you got it.So remember this remember because of our alignment
+Dialogue: 0,0:55:13.06,0:55:18.44,English,,0,0,0,,We've got multiple at least three bits in three or four bits that are always zero
 Dialogue: 0,0:55:19.96,0:55:21.08,English,,0,0,0,,We're only using one of them
 Dialogue: 0,0:55:22.32,0:55:26.96,English,,0,0,0,,So why not use another one to contain the allocation status of the previous block
 Dialogue: 0,0:55:28.50,0:55:32.02,English,,0,0,0,,Okay so very good that was
 Dialogue: 0,0:55:39.72,0:55:40.72,English,,0,0,0,,It's so the idea
 Dialogue: 0,0:55:45.08,0:55:46.70,English,,0,0,0,,So here's the block that we want to free
 Dialogue: 0,0:55:48.00,0:55:48.96,English,,0,0,0,,And here's its header
-Dialogue: 0,0:55:51.34,0:55:53.92,English,,0,0,0,,And we pass the p to it and we wonder if we want to free it
-Dialogue: 0,0:55:54.68,0:55:57.42,English,,0,0,0,,And we've got we've got one bit we know that
-Dialogue: 0,0:55:58.72,0:56:00.78,English,,0,0,0,,If we have a eight byte alignment
+Dialogue: 0,0:55:51.34,0:55:53.92,English,,0,0,0,,And we pass the p to it and we want to free it
+Dialogue: 0,0:55:54.68,0:55:57.42,English,,0,0,0,,And we've got one bit we know that
+Dialogue: 0,0:55:58.72,0:56:00.78,English,,0,0,0,,If we have a 8 byte alignment
 Dialogue: 0,0:56:01.56,0:56:03.54,English,,0,0,0,,We know that these are all implicitly zero
 Dialogue: 0,0:56:04.82,0:56:11.82,English,,0,0,0,,So we're using this is a allocated block that we want to free so it has an allocation status of 1
-Dialogue: 0,0:56:14.98,0:56:18.72,English,,0,0,0,,And let's use this let's use one of these spare bits
+Dialogue: 0,0:56:14.98,0:56:18.72,English,,0,0,0,,And let's use this,let's use one of these spare bits
 Dialogue: 0,0:56:19.92,0:56:22.96,English,,0,0,0,,To indicate the allocation status of the previous block
 Dialogue: 0,0:56:24.72,0:56:25.60,English,,0,0,0,,Okay so far
-Dialogue: 0,0:56:28.04,0:56:32.26,English,,0,0,0,,If the previous block is is allocated
+Dialogue: 0,0:56:28.04,0:56:32.26,English,,0,0,0,,If the previous block is allocated
 Dialogue: 0,0:56:34.36,0:56:35.44,English,,0,0,0,,And this would be a 1
 Dialogue: 0,0:56:37.54,0:56:40.20,English,,0,0,0,,And when we're checking to see whether we need to coalesce
 Dialogue: 0,0:56:40.70,0:56:43.14,English,,0,0,0,,We just check that we just check that
 Dialogue: 0,0:56:43.86,0:56:47.40,English,,0,0,0,,That that's 2nd allocated bit the allocated bit of the previous block
-Dialogue: 0,0:56:48.48,0:56:51.78,English,,0,0,0,,And if it's 1 we don't need to know  what its size is
+Dialogue: 0,0:56:48.48,0:56:51.78,English,,0,0,0,,And if it's 1 we don't need to know what its size is
 Dialogue: 0,0:56:52.42,0:56:55.28,English,,0,0,0,,Okay we don't need to know where that block is because we're not going to coalesce it
 Dialogue: 0,0:56:56.42,0:56:58.42,English,,0,0,0,,Okay so in that we don't need
 Dialogue: 0,0:56:59.08,0:57:02.82,English,,0,0,0,,So here we don't need a boundary tag for an allocated block
-Dialogue: 0,0:57:04.32,0:57:07.76,English,,0,0,0,,But now if that if that block is free
+Dialogue: 0,0:57:04.32,0:57:07.76,English,,0,0,0,,But now if that block is free
 Dialogue: 0,0:57:09.78,0:57:10.92,English,,0,0,0,,It'll have a boundary tag
 Dialogue: 0,0:57:13.58,0:57:15.58,English,,0,0,0,,So we'll check if that block is free
-Dialogue: 0,0:57:18.06,0:57:24.62,English,,0,0,0,,Then the the allocation status will be will indicate free
-Dialogue: 0,0:57:25.50,0:57:28.06,English,,0,0,0,,And then we know we need to we need to coalesce
+Dialogue: 0,0:57:18.06,0:57:24.62,English,,0,0,0,,Then the allocation status will indicate free
+Dialogue: 0,0:57:25.50,0:57:28.06,English,,0,0,0,,And then we know we need to, we need to coalesce
 Dialogue: 0,0:57:28.92,0:57:29.78,English,,0,0,0,,And we're going to need
-Dialogue: 0,0:57:31.66,0:57:36.24,English,,0,0,0,,We're going to need a boundary tag because we need to know where that block starts we need to know its size
+Dialogue: 0,0:57:31.66,0:57:36.24,English,,0,0,0,,We're going to need a boundary tag, because we need to know where that block starts we need to know its size
 Dialogue: 0,0:57:37.16,0:57:39.76,English,,0,0,0,,So that we can go back and
-Dialogue: 0,0:57:40.22,0:57:45.88,English,,0,0,0,,And update this size to include the  you know the total coalesce size of those two blocks
-Dialogue: 0,0:57:48.88,0:57:51.90,English,,0,0,0,,So is that that clear yes
-Dialogue: 0,0:57:55.54,0:57:58.24,English,,0,0,0,,Oh I just uh it's just the allocated bit so
+Dialogue: 0,0:57:40.22,0:57:45.88,English,,0,0,0,,And update this size to include the you know the total coalesce size of those two blocks
+Dialogue: 0,0:57:48.88,0:57:51.90,English,,0,0,0,,So is that clear yes
+Dialogue: 0,0:57:55.54,0:57:58.24,English,,0,0,0,,Oh I just...it's just the allocated bit so
 Dialogue: 0,0:57:58.66,0:58:01.16,English,,0,0,0,,Zero means not allocated one means allocated
+Dialogue: 0,0:58:01.28,0:58:09.80,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:58:09.80,0:58:13.22,English,,0,0,0,,Oh why are those bits that are why are the bits always zero why
-Dialogue: 0,0:58:14.38,0:58:19.66,English,,0,0,0,,Okay so blocks have to be aligned to eight byte boundaries
-Dialogue: 0,0:58:20.60,0:58:23.44,English,,0,0,0,,Okay oil payloads have to be aligned to eight byte boundaries
-Dialogue: 0,0:58:24.72,0:58:31.74,English,,0,0,0,,Okay that means that that blocks have to be the size of blocks has to be a multiple of eight
+Dialogue: 0,0:58:14.38,0:58:19.66,English,,0,0,0,,Okay so blocks have to be aligned to 8 byte boundaries
+Dialogue: 0,0:58:20.60,0:58:23.44,English,,0,0,0,,Okay oil payloads have to be aligned to 8 byte boundaries
+Dialogue: 0,0:58:24.72,0:58:31.74,English,,0,0,0,,Okay that means that blocks have to be the size of blocks has to be a multiple of 8
 Dialogue: 0,0:58:33.20,0:58:37.08,English,,0,0,0,,Because it's the same thing as when we were doing padding alignment instructs
 Dialogue: 0,0:58:37.82,0:58:42.40,English,,0,0,0,,The next each block has to be a size has to be a multiple of eight
-Dialogue: 0,0:58:42.80,0:58:48.08,English,,0,0,0,,So that the the block that follows that in memory is aligned properly
+Dialogue: 0,0:58:42.80,0:58:48.08,English,,0,0,0,,So that the block that follows that in memory is aligned properly
 Dialogue: 0,0:58:48.24,0:58:51.42,English,,0,0,0,,Okay so you're guaranteed because of the alignment requirement
-Dialogue: 0,0:58:51.42,0:58:58.74,English,,0,0,0,,You're guaranteed that of eight or sixteen you're guaranteed that the size of the blocks are always multiples of either 8 or 16
-Dialogue: 0,0:58:59.90,0:59:05.28,English,,0,0,0,,Okay and so that and that so that because that size is always a multiple of eight or sixteen
-Dialogue: 0,0:59:05.76,0:59:12.52,English,,0,0,0,,You're guaranteed that either three or four four bits are all zeros
+Dialogue: 0,0:58:51.42,0:58:58.74,English,,0,0,0,,You're guaranteed that of 8 or 16, you're guaranteed that the size of the blocks are always multiples of either 8 or 16
+Dialogue: 0,0:58:59.90,0:59:05.28,English,,0,0,0,,So that because that size is always a multiple of 8 or 16
+Dialogue: 0,0:59:05.76,0:59:12.52,English,,0,0,0,,You're guaranteed that either 3 or 4 bits are all zeros
 Dialogue: 0,0:59:17.22,0:59:18.14,English,,0,0,0,,Okay
 Dialogue: 0,0:59:23.18,0:59:24.10,English,,0,0,0,,Any other questions
 Dialogue: 0,0:59:32.50,0:59:35.22,English,,0,0,0,,Okay let me summarize then some key policies
-Dialogue: 0,0:59:37.48,0:59:39.28,English,,0,0,0,,When when implementing an allocator
+Dialogue: 0,0:59:37.48,0:59:39.28,English,,0,0,0,,When implementing an allocator
 Dialogue: 0,0:59:39.56,0:59:44.66,English,,0,0,0,,And I mentioned that there's the design spaces for these things is really large and really interesting
 Dialogue: 0,0:59:45.36,0:59:50.72,English,,0,0,0,,There's a lot of things that you a lot of decisions that you have to make about various policies
 Dialogue: 0,0:59:51.64,0:59:53.82,English,,0,0,0,,So the first is the placement policy where
-Dialogue: 0,0:59:54.70,0:59:59.12,English,,0,0,0,,When we when we're trying to find when we're trying to place a free block
+Dialogue: 0,0:59:54.70,0:59:59.12,English,,0,0,0,,When we're trying to find,when we're trying to place a free block
 Dialogue: 0,1:00:00.12,1:00:01.02,English,,0,0,0,,I mean and out
 Dialogue: 0,1:00:01.60,1:00:05.72,English,,0,0,0,,When we're trying to place an allocated block somewhere in a free block somewhere in the list
-Dialogue: 0,1:00:06.34,1:00:10.08,English,,0,0,0,,What what what policy do we use first fit next fit or best fit
+Dialogue: 0,1:00:06.34,1:00:10.08,English,,0,0,0,,What policy do we use first fit next fit or best fit
 Dialogue: 0,1:00:11.24,1:00:16.62,English,,0,0,0,,And generally these things they trade-off throughput for fragmentation
-Dialogue: 0,1:00:17.54,1:00:23.18,English,,0,0,0,,All right so the the faster faster versions like
-Dialogue: 0,1:00:27.68,1:00:32.06,English,,0,0,0,,If you're willing to if you're willing to deal with with lower throughput like in the case of best fit
+Dialogue: 0,1:00:17.54,1:00:23.18,English,,0,0,0,,All right so the faster versions like
+Dialogue: 0,1:00:27.68,1:00:32.06,English,,0,0,0,,If you're willing to...if you're willing to deal with lower throughput like in the case of best fit
 Dialogue: 0,1:00:33.42,1:00:35.28,English,,0,0,0,,Then you can get better memory utilization
-Dialogue: 0,1:00:38.46,1:00:43.94,English,,0,0,0,,Now there are interesting there are interesting ways to improve the performance of best fit
-Dialogue: 0,1:00:44.78,1:00:47.20,English,,0,0,0,,You might you might consider something like good fit
+Dialogue: 0,1:00:38.46,1:00:43.94,English,,0,0,0,,Now there are interesting,there are interesting ways to improve the performance of best fit
+Dialogue: 0,1:00:44.78,1:00:47.20,English,,0,0,0,,You might consider something like good fit
 Dialogue: 0,1:00:48.28,1:00:51.42,English,,0,0,0,,Which is sort of a mix of first fit and best fit so maybe
 Dialogue: 0,1:00:51.86,1:00:53.28,English,,0,0,0,,Maybe you only search the first
 Dialogue: 0,1:00:55.38,1:00:58.08,English,,0,0,0,,You know a portion of the heap and then identify the best fit
 Dialogue: 0,1:00:58.40,1:01:00.54,English,,0,0,0,,You know maybe instead of searching the entire heap
-Dialogue: 0,1:01:01.14,1:01:03.30,English,,0,0,0,,You just search some some portion of the heap
+Dialogue: 0,1:01:01.14,1:01:03.30,English,,0,0,0,,You just search some portion of the heap
 Dialogue: 0,1:01:03.70,1:01:08.72,English,,0,0,0,,And then cut off the search and then within that region that you search do you pick the best block
 Dialogue: 0,1:01:10.94,1:01:13.24,English,,0,0,0,,So that's something that called good fit
-Dialogue: 0,1:01:15.04,1:01:17.02,English,,0,0,0,,So that that kind of approximates best fit
+Dialogue: 0,1:01:15.04,1:01:17.02,English,,0,0,0,,So that kind of approximates best fit
 Dialogue: 0,1:01:18.88,1:01:22.22,English,,0,0,0,,Or you can use these multiple free lists to approximate best fit
-Dialogue: 0,1:01:22.88,1:01:28.82,English,,0,0,0,,And that's and then and there you the real advantage of using multiple free lists
+Dialogue: 0,1:01:22.88,1:01:28.82,English,,0,0,0,,And there you the real advantage of using multiple free lists
 Dialogue: 0,1:01:29.90,1:01:32.66,English,,0,0,0,,Is that it not only improves memory utilization
 Dialogue: 0,1:01:32.68,1:01:37.22,English,,0,0,0,,But it improves performance too because the individual lists that you're looking for
 Dialogue: 0,1:01:37.74,1:01:41.48,English,,0,0,0,,You know that they contain blocks that are close to what you're asking for
 Dialogue: 0,1:01:42.74,1:01:48.98,English,,0,0,0,,And since you're dividing all the free blocks up amongst multiple amongst multiple free lists
 Dialogue: 0,1:01:49.64,1:01:50.86,English,,0,0,0,,Those free lists will be shorter
 Dialogue: 0,1:01:51.84,1:01:53.68,English,,0,0,0,,Okay so your searches will take less time
-Dialogue: 0,1:01:54.40,1:01:58.26,English,,0,0,0,,And your your probability of finding a block that fits goes up
+Dialogue: 0,1:01:54.40,1:01:58.26,English,,0,0,0,,And your probability of finding a block that fits goes up
 Dialogue: 0,1:01:59.18,1:02:02.18,English,,0,0,0,,Because you're segregating these different size classes
-Dialogue: 0,1:02:05.34,1:02:09.84,English,,0,0,0,,Now there's a we also have to decide on some splitting policy so
-Dialogue: 0,1:02:10.82,1:02:13.40,English,,0,0,0,,When we find when we find a free block that's big enough
-Dialogue: 0,1:02:14.14,1:02:17.92,English,,0,0,0,,What do we do with the leftover the leftover part of that block
-Dialogue: 0,1:02:18.14,1:02:22.86,English,,0,0,0,,You know once we placed our allocated block into that into that free block
+Dialogue: 0,1:02:05.34,1:02:09.84,English,,0,0,0,,Now there's a...we also have to decide on some splitting policy so
+Dialogue: 0,1:02:10.82,1:02:13.40,English,,0,0,0,,When we find...when we find a free block that's big enough
+Dialogue: 0,1:02:14.14,1:02:17.92,English,,0,0,0,,What do we do with the leftover part of that block
+Dialogue: 0,1:02:18.14,1:02:22.86,English,,0,0,0,,You know once we placed an allocated block into that free block
 Dialogue: 0,1:02:23.38,1:02:26.12,English,,0,0,0,,What do we do with the leftovers do we just leave the leftover part
 Dialogue: 0,1:02:26.70,1:02:29.63,English,,0,0,0,,In the block itself and return that back to the application
-Dialogue: 0,1:02:30.18,1:02:34.38,English,,0,0,0,,You know avoiding so that  sort of keeping keeping larger blocks
-Dialogue: 0,1:02:35.28,1:02:38.40,English,,0,0,0,,Or do we go ahead and split it like like I showed before
+Dialogue: 0,1:02:30.18,1:02:34.38,English,,0,0,0,,You know avoiding so that  sort of keeping larger blocks
+Dialogue: 0,1:02:35.28,1:02:38.40,English,,0,0,0,,Or do we go ahead and split it like I showed before
 Dialogue: 0,1:02:38.96,1:02:46.42,English,,0,0,0,,And splitting we go ahead and splitting that block and creating the creating the original free block
 Dialogue: 0,1:02:47.32,1:02:50.66,English,,0,0,0,,Allocating a portion of it and then creating a smaller free block
 Dialogue: 0,1:02:51.58,1:02:55.22,English,,0,0,0,,So that's you know that's a policy we may you may want to
-Dialogue: 0,1:02:55.76,1:02:59.64,English,,0,0,0,,You may want to for small requests for small payloads y
-Dialogue: 0,1:02:59.64,1:03:06.92,English,,0,0,0,,You may up to a certain size you may not want to split so you may not you may decide not to split blocks smaller
-Dialogue: 0,1:03:08.08,1:03:13.86,English,,0,0,0,,You may not you may decide not to create free blocks that are smaller than some threshold
+Dialogue: 0,1:02:55.76,1:02:59.64,English,,0,0,0,,You may want to for small requests for small payloads
+Dialogue: 0,1:02:59.64,1:03:06.92,English,,0,0,0,,You may up to a certain size,you may not want to split,so you may not you may decide not to split blocks smaller
+Dialogue: 0,1:03:08.08,1:03:13.86,English,,0,0,0,,You may not...you may decide not to create free blocks that are smaller than some threshold
 Dialogue: 0,1:03:15.18,1:03:18.46,English,,0,0,0,,And only splitting for 4 requests for larger blocks
-Dialogue: 0,1:03:20.28,1:03:22.80,English,,0,0,0,,And then there's the there's a coalescing policy
-Dialogue: 0,1:03:25.02,1:03:31.52,English,,0,0,0,,Now we've seen freeing is pretty quick now  it's constant time because of the boundary tag footers
-Dialogue: 0,1:03:32.44,1:03:34.74,English,,0,0,0,,But you may you may want to
-Dialogue: 0,1:03:35.56,1:03:40.82,English,,0,0,0,,You may want to try to just speed that up even more by by deferring the coalescing
-Dialogue: 0,1:03:42.28,1:03:46.16,English,,0,0,0,,So you could you can do coalescing it
-Dialogue: 0,1:03:47.70,1:03:50.64,English,,0,0,0,,Every time the free is called like like we just looked at
+Dialogue: 0,1:03:20.28,1:03:22.80,English,,0,0,0,,And then the there's a coalescing policy
+Dialogue: 0,1:03:25.02,1:03:31.52,English,,0,0,0,,Now we've seen freeing is pretty quick now it's constant time because of the boundary tag footers
+Dialogue: 0,1:03:32.44,1:03:34.74,English,,0,0,0,,But you may,you may want to
+Dialogue: 0,1:03:35.56,1:03:40.82,English,,0,0,0,,You may want to try to just speed that up even more by deferring the coalescing
+Dialogue: 0,1:03:42.28,1:03:46.16,English,,0,0,0,,So you could,you can do coalescing it
+Dialogue: 0,1:03:47.70,1:03:50.64,English,,0,0,0,,Every time the free is called like we just looked at
 Dialogue: 0,1:03:51.92,1:03:54.86,English,,0,0,0,,Or you could defer coalescing to some later time
 Dialogue: 0,1:03:55.12,1:03:57.60,English,,0,0,0,,You know maybe when you're scanning the free list
 Dialogue: 0,1:03:58.52,1:04:00.04,English,,0,0,0,,When you're scanning the free list looking
-Dialogue: 0,1:04:00.88,1:04:05.34,English,,0,0,0,,Set try trying to find trying to place an allocated block in response to a malloc call
+Dialogue: 0,1:04:00.88,1:04:05.34,English,,0,0,0,,Set try trying to find,trying to place an allocated block in response to a malloc call
 Dialogue: 0,1:04:06.04,1:04:11.16,English,,0,0,0,,Maybe as you scan that free list you could go ahead and do the coalescing at that time
-Dialogue: 0,1:04:13.78,1:04:17.74,English,,0,0,0,,Right so I'm not saying which one is better it's hard to it's really hard to argue for
-Dialogue: 0,1:04:18.18,1:04:26.00,English,,0,0,0,,Deferred colas and giving the constant time performance of   a boundary tag-based coalescing
-Dialogue: 0,1:04:25.98,1:04:27.37,English,,0,0,0,,But it but it is an option
+Dialogue: 0,1:04:13.78,1:04:17.74,English,,0,0,0,,Right so I'm not saying which one is better it's really hard to argue for
+Dialogue: 0,1:04:18.18,1:04:26.22,English,,0,0,0,,Deferred colas and giving the constant time performance of a boundary tag-based coalescing
+Dialogue: 0,1:04:26.22,1:04:27.37,English,,0,0,0,,But it is an option
 Dialogue: 0,1:04:31.12,1:04:33.30,English,,0,0,0,,Okay so here's the summary then of implicit lists
 Dialogue: 0,1:04:34.62,1:04:36.52,English,,0,0,0,,This is the simplest well
-Dialogue: 0,1:04:38.06,1:04:40.26,English,,0,0,0,,It's a very simple kind of allocator i
-Dialogue: 0,1:04:41.02,1:04:44.14,English,,0,0,0,,It's it's
-Dialogue: 0,1:04:44.98,1:04:50.72,English,,0,0,0,,The cost to allocate is linear in the in the size of the heap  worst case
+Dialogue: 0,1:04:38.06,1:04:40.26,English,,0,0,0,,It's a very simple kind of allocator
+Dialogue: 0,1:04:41.02,1:04:44.14,English,,0,0,0,,It's...
+Dialogue: 0,1:04:44.98,1:04:50.72,English,,0,0,0,,The cost to allocate is linear in the size of the heap worst case
 Dialogue: 0,1:04:52.14,1:04:56.12,English,,0,0,0,,That the cost of free is constant time even with coalescing
-Dialogue: 0,1:04:57.24,1:05:02.18,English,,0,0,0,,Memory usage will be will depend on the placement policy first fit next fit or best fit
+Dialogue: 0,1:04:57.24,1:05:02.18,English,,0,0,0,,Memory usage will depend on the placement policy first fit ,next fit or best fit
 Dialogue: 0,1:05:03.28,1:05:05.46,English,,0,0,0,,Um it's not used in practice
-Dialogue: 0,1:05:06.54,1:05:11.10,English,,0,0,0,,Because of the linear time the linear time cost of allocation
-Dialogue: 0,1:05:12.18,1:05:15.90,English,,0,0,0,,Okay but it it can be used in sort of special-purpose
+Dialogue: 0,1:05:06.54,1:05:11.10,English,,0,0,0,,Because of the linear time, the linear time cost of allocation
+Dialogue: 0,1:05:12.18,1:05:15.90,English,,0,0,0,,Okay but it can be used in sort of special-purpose
 Dialogue: 0,1:05:16.18,1:05:20.14,English,,0,0,0,,Allocators where you have a small number of size classes maybe or
 Dialogue: 0,1:05:20.18,1:05:24.04,English,,0,0,0,,You have a very you know that you have a very small or a fairly small free list
 Dialogue: 0,1:05:25.86,1:05:31.08,English,,0,0,0,,But the ideas of splitting and coalescing that we looked at or general to all allocators
 Dialogue: 0,1:05:31.36,1:05:34.46,English,,0,0,0,,Okay so the idea of a boundary tag boundary tag-based coalescing
-Dialogue: 0,1:05:34.98,1:05:40.30,English,,0,0,0,,Is is u is used regardless of the structure of your free list
+Dialogue: 0,1:05:34.98,1:05:40.30,English,,0,0,0,,Is used regardless of the structure of your free list
 Dialogue: 0,1:05:41.58,1:05:43.60,English,,0,0,0,,So implicit lists are useful to study
 Dialogue: 0,1:05:44.86,1:05:47.52,English,,0,0,0,,Because they introduce some important concepts
-Dialogue: 0,1:05:47.58,1:05:52.42,English,,0,0,0,,But generally they're not they're not they're not that useful
-Dialogue: 0,1:05:53.80,1:06:00.46,English,,0,0,0,,So next next class we'll look at some more sophisticated organizations of free less
+Dialogue: 0,1:05:47.58,1:05:52.42,English,,0,0,0,,But generally they're not that useful
+Dialogue: 0,1:05:53.80,1:06:00.46,English,,0,0,0,,So next class we'll look at some more sophisticated organizations of free less
 Dialogue: 0,1:06:00.68,1:06:05.40,English,,0,0,0,,The explicit list and multiple free lists in particular
-Dialogue: 0,1:06:06.98,1:06:10.52,English,,0,0,0,,Alright so we'll see you then good luck on your shell lab due tonight
+Dialogue: 0,1:06:06.98,1:06:10.52,English,,0,0,0,,Alright so we'll see you then, good luck on your shell lab due tonight
 Dialogue: 0,1:06:11.52,1:06:13.86,English,,0,0,0,,And we'll see you on Thursday
