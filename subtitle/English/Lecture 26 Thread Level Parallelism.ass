@@ -16,8 +16,9 @@ Video File: ../../../../Desktop/csapp/Lecture 26 Thread Level Parallelism.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 1.000000
-Active Line: 4
-Video Position: 704
+Scroll Position: 785
+Active Line: 794
+Video Position: 117614
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -30,35 +31,36 @@ Dialogue: 0,0:00:00.00,0:00:01.12,English,,0,0,0,,Hello everyone
 Dialogue: 0,0:00:03.78,0:00:08.28,English,,0,0,0,,Interesting,how far fewer seats are filled than at the beginning of the course
 Dialogue: 0,0:00:09.70,0:00:14.56,English,,0,0,0,,So that of course we're in the final stretch of this course
 Dialogue: 0,0:00:15.14,0:00:16.72,English,,0,0,0,,You're working on the last lab
-Dialogue: 0,0:00:17.44,0:00:23.48,English,,0,0,0,,And the material that we're covering both this lecture and next lecture are not on the exam
-Dialogue: 0,0:00:23.48,0:00:28.50,English,,0,0,0,,And you don't need them for your web so at some level you could just tune out and skip it all
-Dialogue: 0,0:00:28.50,0:00:31.40,English,,0,0,0,,And if your only purpose in taking this course is to pass it
+Dialogue: 0,0:00:17.44,0:00:23.58,English,,0,0,0,,And the material that we're covering both this lecture and next lecture are not on the exam
+Dialogue: 0,0:00:23.58,0:00:25.02,English,,0,0,0,,And you don't need them for your lab
+Dialogue: 0,0:00:25.02,0:00:28.38,English,,0,0,0,,So at some level you could just to know and skip it all
+Dialogue: 0,0:00:28.38,0:00:31.40,English,,0,0,0,,And if your only purpose in taking this course is to pass it
 Dialogue: 0,0:00:33.14,0:00:37.52,English,,0,0,0,,Or to get some grade in it and that's it well go ahead to now
 Dialogue: 0,0:00:38.16,0:00:44.90,English,,0,0,0,,But on the other hand the material we're talking about is very relevant to where computers are today
 Dialogue: 0,0:00:44.90,0:00:46.38,English,,0,0,0,,And where they're going in the future
 Dialogue: 0,0:00:46.88,0:00:49.28,English,,0,0,0,,And so if you think about the longer term
 Dialogue: 0,0:00:49.28,0:00:54.02,English,,0,0,0,,And whatever your investment is in the computer industry and computer technology is
-Dialogue: 0,0:00:54.54,0:00:56.86,English,,0,0,0,,Then  think you'll find these very worthwhile
+Dialogue: 0,0:00:54.54,0:00:56.86,English,,0,0,0,,Then I think you'll find these very worthwhile
 Dialogue: 0,0:00:57.48,0:01:01.36,English,,0,0,0,,But so think of this more as the icing on the cake
-Dialogue: 0,0:01:01.40,0:01:05.28,English,,0,0,0,,You've learned the hard stuff you've you've done the grinding part
-Dialogue: 0,0:01:05.70,0:01:12.44,English,,0,0,0,,And now you get to think beyond the sort of narrow confines of the course material and and think bigger
-Dialogue: 0,0:01:12.50,0:01:18.00,English,,0,0,0,,But that's really the way you should be viewing this lecture in the last lecture which will be on thursday
+Dialogue: 0,0:01:01.40,0:01:05.28,English,,0,0,0,,You've learned the hard stuff you've done the grinding part
+Dialogue: 0,0:01:05.70,0:01:12.44,English,,0,0,0,,And now you get to think beyond the sort of narrow confines of the course material and think bigger
+Dialogue: 0,0:01:12.50,0:01:18.00,English,,0,0,0,,But that's really the way you should be viewing this lecture in the last lecture which will be on Thursday
 Dialogue: 0,0:01:18.68,0:01:21.30,English,,0,0,0,,So today what we're going to talk about is parallelism
-Dialogue: 0,0:01:22.98,0:01:24.20,English,,0,0,0,,And the issue is that
+Dialogue: 0,0:01:22.98,0:01:24.20,English,,0,0,0,,And the issue is that...
 Dialogue: 0,0:01:25.98,0:01:26.86,English,,0,0,0,,That
 Dialogue: 0,0:01:28.12,0:01:28.54,English,,0,0,0,,Wow
-Dialogue: 0,0:01:33.18,0:01:37.26,English,,0,0,0,,That powerpoint is a product made by a certain company in seattle that
+Dialogue: 0,0:01:33.18,0:01:37.26,English,,0,0,0,,That PowerPoint is a product made by a certain company in Seattle that
 Dialogue: 0,0:01:38.08,0:01:40.08,English,,0,0,0,,It's not always reliable but
-Dialogue: 0,0:01:41.04,0:01:49.30,English,,0,0,0,,The issue is as you know nowadays when you buy a computer you don't get just one cpu on the processor chip
+Dialogue: 0,0:01:41.04,0:01:49.30,English,,0,0,0,,The issue is as you know nowadays when you buy a computer you don't get just one CPU on the processor chip
 Dialogue: 0,0:01:49.38,0:01:52.42,English,,0,0,0,,You have at least two on a typical laptop
 Dialogue: 0,0:01:53.10,0:02:00.50,English,,0,0,0,,Even my phone has two cores in it and as well as for graphic processing units
-Dialogue: 0,0:02:01.34,0:02:07.80,English,,0,0,0,,And a typical the the next generation of ipad will be a six core processor
-Dialogue: 0,0:02:07.92,0:02:15.90,English,,0,0,0,,So these have become not just the the sort of specialized domain of of high-end machines
+Dialogue: 0,0:02:01.34,0:02:07.80,English,,0,0,0,,And a typical the next generation of iPad will be a six core processor
+Dialogue: 0,0:02:07.92,0:02:15.90,English,,0,0,0,,So these have become not just the sort of specialized domain of high machines
 Dialogue: 0,0:02:16.00,0:02:18.60,English,,0,0,0,,But actually there all the time
 Dialogue: 0,0:02:19.06,0:02:25.80,English,,0,0,0,,And actually we'll talk some next time why is it that instead of having one fast computer
 Dialogue: 0,0:02:25.80,0:02:31.20,English,,0,0,0,,You get to a medium size medium performance processors on a chip or more
-Dialogue: 0,0:02:31.68,0:02:35.24,English,,0,0,0,,And that that's actually a really interesting technology issue that I'll talk about next time
-Dialogue: 0,0:02:36.18,0:02:39.96,English,,0,0,0,,But it's the way it is so you can think of it when you write a program
+Dialogue: 0,0:02:31.68,0:02:35.60,English,,0,0,0,,And that that's actually a really interesting technology issue that I'll talk about next time
+Dialogue: 0,0:02:36.18,0:02:39.96,English,,0,0,0,,But it's the way it is,so you can think of it when you write a program
 Dialogue: 0,0:02:41.92,0:02:44.10,English,,0,0,0,,Ah and it runs as a single thread
 Dialogue: 0,0:02:44.50,0:02:50.40,English,,0,0,0,,Then you're basically not making use of the computing resources that you have available to you
 Dialogue: 0,0:02:51.10,0:02:56.98,English,,0,0,0,,So the natural thing is well could we make our programs run faster by doing multiple threads
@@ -66,21 +68,21 @@ Dialogue: 0,0:02:57.60,0:02:58.64,English,,0,0,0,,So you've already learned
 Dialogue: 0,0:02:59.16,0:03:04.52,English,,0,0,0,,Or you're in the process of applying a multi-threaded programming
 Dialogue: 0,0:03:05.00,0:03:06.10,English,,0,0,0,,As a way to
 Dialogue: 0,0:03:09.58,0:03:13.88,English,,0,0,0,,Deal with a concurrency of external events
-Dialogue: 0,0:03:14.08,0:03:17.82,English,,0,0,0,,There's multiple clients  who want to make use of a server
+Dialogue: 0,0:03:14.08,0:03:17.82,English,,0,0,0,,There's multiple clients who want to make use of a server
 Dialogue: 0,0:03:18.24,0:03:22.32,English,,0,0,0,,And instead of serving one and then another and then another if you can handle them all
 Dialogue: 0,0:03:23.00,0:03:25.80,English,,0,0,0,,It's sort of a an external use of concurrency
-Dialogue: 0,0:03:26.60,0:03:29.56,English,,0,0,0,,But what we'll talk about today is more in internal use
-Dialogue: 0,0:03:29.82,0:03:37.40,English,,0,0,0,,Can  make use of multiple threads running on multiple cores  to make a program run a single program run faster
+Dialogue: 0,0:03:26.60,0:03:29.56,English,,0,0,0,,But what we'll talk about today is more in Intel use
+Dialogue: 0,0:03:29.82,0:03:37.40,English,,0,0,0,,Can  make use of multiple threads running on multiple cores to make a program run a single program run faster
 Dialogue: 0,0:03:38.16,0:03:41.14,English,,0,0,0,,And the message behind that is yes but
-Dialogue: 0,0:03:41.86,0:03:50.02,English,,0,0,0,,And what  mean is it is truly possible and people spend a lot of time making programs run faster by using multiple threads
+Dialogue: 0,0:03:41.86,0:03:50.02,English,,0,0,0,,And what mean is it is truly possible and people spend a lot of time making programs run faster by using multiple threads
 Dialogue: 0,0:03:50.50,0:03:53.76,English,,0,0,0,,But it's harder than you'd think it should be and
 Dialogue: 0,0:03:53.98,0:03:57.92,English,,0,0,0,,It's fraught with as you probably already experienced programming bugs
-Dialogue: 0,0:03:58.40,0:04:03.88,English,,0,0,0,,But also it's just really darn hard to get the kind of performance out of a multi-core processor
-Dialogue: 0,0:04:03.88,0:04:06.34,English,,0,0,0,,That you should would think it'd be available
+Dialogue: 0,0:03:58.40,0:04:04.04,English,,0,0,0,,But also it's just really darn hard to get the kind of performance out of a multi-core processor
+Dialogue: 0,0:04:04.06,0:04:06.34,English,,0,0,0,,That you should would think it'd be available
 Dialogue: 0,0:04:06.86,0:04:08.12,English,,0,0,0,,So we'll talk about some of that
 Dialogue: 0,0:04:09.48,0:04:12.72,English,,0,0,0,,And then we'll finish it up a little bit understanding of
-Dialogue: 0,0:04:13.28,0:04:20.46,English,,0,0,0,,How how when you writing concurrent programs you want to think about the state of memory
-Dialogue: 0,0:04:20.92,0:04:27.62,English,,0,0,0,,And how that's a challenge for multi-core processors or in fact any concurrent concurrent system
+Dialogue: 0,0:04:13.28,0:04:20.46,English,,0,0,0,,How when you writing concurrent programs you want to think about the state of memory
+Dialogue: 0,0:04:20.92,0:04:27.78,English,,0,0,0,,And how that's a challenge for multi-core processors or in fact any concurrent system
 Dialogue: 0,0:04:30.58,0:04:37.90,English,,0,0,0,,So there's actually two sources of concurrency on a modern processor multiple cores
 Dialogue: 0,0:04:37.96,0:04:43.08,English,,0,0,0,,Which is you have actually a multiple cpus on a single chip
 Dialogue: 0,0:04:43.54,0:04:45.48,English,,0,0,0,,But there's also something called hyper-threading
@@ -88,7 +90,7 @@ Dialogue: 0,0:04:46.18,0:04:48.54,English,,0,0,0,,Which is in my experience less
 Dialogue: 0,0:04:48.98,0:04:50.02,English,,0,0,0,,But let me go through this
 Dialogue: 0,0:04:50.50,0:04:56.36,English,,0,0,0,,So this is what a typical modern processor looks like processor chip
 Dialogue: 0,0:04:57.04,0:04:58.96,English,,0,0,0,,Is that there's actually on a single chip
-Dialogue: 0,0:04:59.66,0:05:03.28,English,,0,0,0,,There's multiple independent cpus
+Dialogue: 0,0:04:59.66,0:05:03.28,English,,0,0,0,,There's multiple independent CPUs
 Dialogue: 0,0:05:04.72,0:05:09.32,English,,0,0,0,,And each of them has some part of the cache hierarchy
 Dialogue: 0,0:05:10.44,0:05:15.28,English,,0,0,0,,Which is private to that particular core
 Dialogue: 0,0:05:15.94,0:05:20.04,English,,0,0,0,,And then there is another part of the cache hierarchy that's shared across cores
@@ -110,27 +112,28 @@ Dialogue: 0,0:06:35.76,0:06:43.86,English,,0,0,0,,That a modern microprocessor l
 Dialogue: 0,0:06:44.00,0:06:47.20,English,,0,0,0,,The model of assembly code is you execute one instruction
 Dialogue: 0,0:06:47.78,0:06:50.65,English,,0,0,0,,Then you execute the next one then you execute the next one
 Dialogue: 0,0:06:51.02,0:06:52.86,English,,0,0,0,,Modern prostitutes don't do that at all
-Dialogue: 0,0:06:53.34,0:06:59.00,English,,0,0,0,,They haven't done it for well they haven't done it that way for 30 years
+Dialogue: 0,0:06:53.34,0:06:59.00,English,,0,0,0,,They haven't done it for...well they haven't done it that way for 30 years
 Dialogue: 0,0:06:59.60,0:07:04.06,English,,0,0,0,,And since 1995 so since 20 years
 Dialogue: 0,0:07:04.60,0:07:06.60,English,,0,0,0,,They do it in this totally different way
-Dialogue: 0,0:07:07.04,0:07:12.28,English,,0,0,0,,Which is sometimes referred to as out of order processing and  so just real quickly
-Dialogue: 0,0:07:13.14,0:07:20.74,English,,0,0,0,,But the basic idea is on the processor chip there's multiple functional units that are capable of doing different types of operation
-Dialogue: 0,0:07:21.24,0:07:26.76,English,,0,0,0,,There's ones for integer arithmetic these ones for floating-point arithmetic  and so forth
+Dialogue: 0,0:07:07.04,0:07:12.28,English,,0,0,0,,Which is sometimes referred to as out of order processing and so just real quickly
+Dialogue: 0,0:07:13.14,0:07:16.36,English,,0,0,0,,But the basic idea is on the processor chip
+Dialogue: 0,0:07:16.36,0:07:20.78,English,,0,0,0,,There's multiple functional units that are capable of doing different types of operation
+Dialogue: 0,0:07:21.24,0:07:26.76,English,,0,0,0,,There's ones for integer arithmetic these ones for floating-point arithmetic and so forth
 Dialogue: 0,0:07:27.14,0:07:32.76,English,,0,0,0,,And then there's separate blocks that interface to the memory actually to the cache memories
 Dialogue: 0,0:07:33.38,0:07:38.96,English,,0,0,0,,And they're both loading meaning reading from the memory and storing writing out to memory
 Dialogue: 0,0:07:39.76,0:07:43.14,English,,0,0,0,,But these units are sort of operate independently
 Dialogue: 0,0:07:43.60,0:07:50.88,English,,0,0,0,,And what happens is there's a block of logic which is actually enormous with huge block of logic in an x86 processor
 Dialogue: 0,0:07:51.44,0:07:54.40,English,,0,0,0,,That reads the instructions out of the instruction stream
 Dialogue: 0,0:07:54.86,0:08:01.16,English,,0,0,0,,Rips them apart into little pieces keeps track of data dependencies and control dependencies
-Dialogue: 0,0:08:01.66,0:08:07.92,English,,0,0,0,,And then schedules all the various operations in your program  on these different functional units
+Dialogue: 0,0:08:01.66,0:08:07.92,English,,0,0,0,,And then schedules all the various operations in your program on these different functional units
 Dialogue: 0,0:08:08.02,0:08:14.70,English,,0,0,0,,So we talked some about that of in the context of how can you write up program that will sort of maximize
-Dialogue: 0,0:08:15.78,0:08:21.64,English,,0,0,0,,How much is going on down here  by writing your code in a particular ways
+Dialogue: 0,0:08:15.78,0:08:21.64,English,,0,0,0,,How much is going on down here by writing your code in a particular ways
 Dialogue: 0,0:08:22.62,0:08:26.22,English,,0,0,0,,So all this is an introduction to say
 Dialogue: 0,0:08:26.60,0:08:29.26,English,,0,0,0,,This is how you have to understand what hyper threading is
 Dialogue: 0,0:08:30.82,0:08:35.46,English,,0,0,0,,So in a single execution mode there's basically one instruction decoder
 Dialogue: 0,0:08:36.54,0:08:40.76,English,,0,0,0,,And it has its own set of state here its own program counter
 Dialogue: 0,0:08:41.18,0:08:46.76,English,,0,0,0,,Its own queue of operations that it's already decoded and haven't completed yet
-Dialogue: 0,0:08:47.34,0:08:53.84,English,,0,0,0,,It has its own set of registers they're actually not registers like you'd expect they're they're highly virtualized registers
+Dialogue: 0,0:08:47.34,0:08:53.84,English,,0,0,0,,It has its own set of registers they're actually not registers like you'd expect they're highly virtualized registers
 Dialogue: 0,0:08:54.52,0:09:01.84,English,,0,0,0,,But all this state is there to help to service the execution of one thread of execution
 Dialogue: 0,0:09:02.82,0:09:05.26,English,,0,0,0,,With hyper threading basically what you do is
 Dialogue: 0,0:09:05.82,0:09:12.78,English,,0,0,0,,The idea that is to say 90% of all programs don't really make use of all these functional units
@@ -138,14 +141,14 @@ Dialogue: 0,0:09:12.94,0:09:16.86,English,,0,0,0,,Especially if you're blocking 
 Dialogue: 0,0:09:16.86,0:09:19.16,English,,0,0,0,,Because there's a miss in a cache
 Dialogue: 0,0:09:19.86,0:09:24.00,English,,0,0,0,,Then all these arithmetic units are sitting there without anything useful work to do
 Dialogue: 0,0:09:25.52,0:09:28.20,English,,0,0,0,,Oh and so why don't we just double up
-Dialogue: 0,0:09:29.06,0:09:32.46,English,,0,0,0,,Or quadruple upper k times up
+Dialogue: 0,0:09:29.06,0:09:32.46,English,,0,0,0,,Or quadruple upper K times up
 Dialogue: 0,0:09:33.04,0:09:39.54,English,,0,0,0,,The state associated with the decoding and control parts of the program
 Dialogue: 0,0:09:40.12,0:09:42.34,English,,0,0,0,,So that you can have multiple threads running
 Dialogue: 0,0:09:43.68,0:09:46.56,English,,0,0,0,,And sharing these functional units among each other
 Dialogue: 0,0:09:46.64,0:09:52.32,English,,0,0,0,,So they're operating really independently their states are not intertwined
 Dialogue: 0,0:09:52.90,0:09:59.24,English,,0,0,0,,But they're sort of making more use of the available hardware for performing functions
-Dialogue: 0,0:09:59.56,0:10:02.32,English,,0,0,0,,And so that's called hyper threading that's an intel term
-Dialogue: 0,0:10:02.90,0:10:06.78,English,,0,0,0,,You also sometimes hear call smt simultaneous multi-threading
+Dialogue: 0,0:09:59.56,0:10:02.32,English,,0,0,0,,And so that's called hyper threading that's an Intel term
+Dialogue: 0,0:10:02.90,0:10:06.78,English,,0,0,0,,You also sometimes hear call SMT simultaneous multi-threading
 Dialogue: 0,0:10:07.58,0:10:11.46,English,,0,0,0,,And in my experience and we'll see here the numbers
 Dialogue: 0,0:10:11.98,0:10:13.72,English,,0,0,0,,It doesn't really make that big a difference
 Dialogue: 0,0:10:14.00,0:10:19.72,English,,0,0,0,,But it turns out to be in the sort of large picture things
@@ -154,13 +157,13 @@ Dialogue: 0,0:10:25.28,0:10:32.30,English,,0,0,0,,And so nowadays at least with 
 Dialogue: 0,0:10:34.02,0:10:40.64,English,,0,0,0,,So given that if you look at our shark machines which are a little bit old there's sort of 2010 era machine
 Dialogue: 0,0:10:41.10,0:10:43.92,English,,0,0,0,,But they were high-end machines in their day
 Dialogue: 0,0:10:43.92,0:10:47.20,English,,0,0,0,,And so they still actually are more powerful than
-Dialogue: 0,0:10:47.72,0:10:53.56,English,,0,0,0,,What you'd buy as say a desktop and way more powerful than as a laptop  that you'd get today
+Dialogue: 0,0:10:47.72,0:10:53.56,English,,0,0,0,,What you'd buy as say a desktop and way more powerful than as a laptop that you'd get today
 Dialogue: 0,0:10:53.56,0:10:55.54,English,,0,0,0,,So they're actually pretty decent machines
 Dialogue: 0,0:10:55.92,0:11:02.00,English,,0,0,0,,And actually we'll talk next time about why computers aren't a lot faster than they were five years ago
 Dialogue: 0,0:11:02.00,0:11:04.10,English,,0,0,0,,That's actually an interesting technology thing
-Dialogue: 0,0:11:05.18,0:11:12.22,English,,0,0,0,,So that they their server class machines so they have multiple cores
+Dialogue: 0,0:11:05.18,0:11:12.22,English,,0,0,0,,So that their server class machines so they have multiple cores
 Dialogue: 0,0:11:12.80,0:11:23.54,English,,0,0,0,,And they have eight of them which is a lot you can buy ten core machines x86 machines on a single chip
-Dialogue: 0,0:11:23.60,0:11:25.14,English,,0,0,0,,But  don't think you can get more yet
+Dialogue: 0,0:11:23.60,0:11:25.14,English,,0,0,0,,But I don't think you can get more yet
 Dialogue: 0,0:11:25.36,0:11:29.16,English,,0,0,0,,So these were fairly advanced machine of their day
 Dialogue: 0,0:11:29.16,0:11:31.50,English,,0,0,0,,And they also have two-way hyper threading
 Dialogue: 0,0:11:32.64,0:11:33.52,English,,0,0,0,,So in theory
@@ -173,27 +176,27 @@ Dialogue: 0,0:12:07.74,0:12:12.38,English,,0,0,0,,Which is by the way a really s
 Dialogue: 0,0:12:13.28,0:12:15.58,English,,0,0,0,,Which is good in the sense it will let us check our work
 Dialogue: 0,0:12:15.76,0:12:18.36,English,,0,0,0,,But it's a completely stupid application
 Dialogue: 0,0:12:19.00,0:12:21.02,English,,0,0,0,,But it just shows you this idea
-Dialogue: 0,0:12:21.74,0:12:24.44,English,,0,0,0,,And so what we're just going to do is is block off
-Dialogue: 0,0:12:24.98,0:12:31.68,English,,0,0,0,,If we have n way parallelism we're just going to split our range of numbers n ways
+Dialogue: 0,0:12:21.74,0:12:24.44,English,,0,0,0,,And so what we're just going to do is block off
+Dialogue: 0,0:12:24.98,0:12:31.68,English,,0,0,0,,If we have n way parallelism we're just going to split a range of numbers n ways
 Dialogue: 0,0:12:32.58,0:12:37.60,English,,0,0,0,,And just have a single threads sum up one n of the numbers
-Dialogue: 0,0:12:38.20,0:12:43.50,English,,0,0,0,,And then they'll collectively sum together the result  in some way or another
+Dialogue: 0,0:12:38.20,0:12:43.50,English,,0,0,0,,And then they'll collectively sum together the result in some way or another
 Dialogue: 0,0:12:43.82,0:12:46.42,English,,0,0,0,,So this is about as easy a parallel program as you could imagine
-Dialogue: 0,0:12:47.84,0:12:53.54,English,,0,0,0,,So let's do a 1 version which is said well gee  understand how to use threads
-Dialogue: 0,0:12:54.20,0:12:58.90,English,,0,0,0,,P threads and  know about these things called semaphores or mutual exclusion
+Dialogue: 0,0:12:47.84,0:12:53.54,English,,0,0,0,,So let's do a 1 version which is said well gee understand how to use threads
+Dialogue: 0,0:12:54.20,0:12:58.90,English,,0,0,0,,Pthreads and  know about these things called semaphores or mutual exclusion
 Dialogue: 0,0:12:59.42,0:13:04.58,English,,0,0,0,,So what I'll do is just all I'll have one place in memory
 Dialogue: 0,0:13:04.58,0:13:08.14,English,,0,0,0,,Where I'm collecting the sum over all n values
 Dialogue: 0,0:13:08.88,0:13:11.86,English,,0,0,0,,And for a thread to be able to add to that
-Dialogue: 0,0:13:12.10,0:13:19.28,English,,0,0,0,,If it will lock it it will get a mutual exclusive access to it  increment it and then unlock it
+Dialogue: 0,0:13:12.10,0:13:19.28,English,,0,0,0,,If it will lock it it will get a mutual exclusive access to it increment it and then unlock it
 Dialogue: 0,0:13:19.40,0:13:24.66,English,,0,0,0,,And we'll just let all the threads go helter-skelter locking and unlocking this
 Dialogue: 0,0:13:25.72,0:13:27.52,English,,0,0,0,,So the code for that's pretty easy to write it
-Dialogue: 0,0:13:27.86,0:13:36.46,English,,0,0,0,,It's a here's the the code of course all threaded code looks a lot messier than you think it should but
+Dialogue: 0,0:13:27.86,0:13:36.46,English,,0,0,0,,It's a here's the code of course all threaded code looks a lot messier than you think it should but
 Dialogue: 0,0:13:37.12,0:13:39.32,English,,0,0,0,,In the end it's a fairly straightforward code
 Dialogue: 0,0:13:40.16,0:13:41.32,English,,0,0,0,,So in particular
 Dialogue: 0,0:13:42.96,0:13:44.46,English,,0,0,0,,This is the thread routine is
-Dialogue: 0,0:13:46.12,0:13:55.02,English,,0,0,0,,Passing through this weird varg pea structure that you do with with threads
+Dialogue: 0,0:13:46.12,0:13:55.02,English,,0,0,0,,Passing through this weird vargp structure that you do with threads
 Dialogue: 0,0:13:55.26,0:13:58.20,English,,0,0,0,,The way you pass arguments to a thread routine
 Dialogue: 0,0:13:58.60,0:14:02.84,English,,0,0,0,,But basically it's figuring out where is the start and end range of the numbers
-Dialogue: 0,0:14:03.56,0:14:09.52,English,,0,0,0,,Then adding for all  between the start before the end
+Dialogue: 0,0:14:03.56,0:14:09.52,English,,0,0,0,,Then adding for all i between the start before the end
 Dialogue: 0,0:14:10.10,0:14:14.88,English,,0,0,0,,I'll lock that acquire a semaphore lock
 Dialogue: 0,0:14:15.64,0:14:19.08,English,,0,0,0,,I'll increment this global sum and then I'll release the lock
 Dialogue: 0,0:14:20.66,0:14:23.56,English,,0,0,0,,Okay so pretty much the style of code that you've been working with
@@ -206,8 +209,9 @@ Dialogue: 0,0:14:41.30,0:14:44.02,English,,0,0,0,,And then you see as you add mo
 Dialogue: 0,0:14:44.80,0:14:47.60,English,,0,0,0,,And especially if you jump from one to two
 Dialogue: 0,0:14:48.12,0:14:51.32,English,,0,0,0,,You increase by a factor nine how much time  it takes
 Dialogue: 0,0:14:52.78,0:14:58.04,English,,0,0,0,,And it always starts to get better as you get up into eight threads and then it gets worse again
-Dialogue: 0,0:14:59.04,0:15:06.28,English,,0,0,0,,So the reason is that locking  unlocking is a very time-consuming task
-Dialogue: 0,0:15:06.30,0:15:15.38,English,,0,0,0,,And basically you can think of is that you if you have that map of the multi-core processors with all their private caches in one shared cache
+Dialogue: 0,0:14:59.04,0:15:06.28,English,,0,0,0,,So the reason is that locking unlocking is a very time-consuming task
+Dialogue: 0,0:15:06.30,0:15:07.88,English,,0,0,0,,And basically you can think of...
+Dialogue: 0,0:15:09.90,0:15:15.40,English,,0,0,0,,If you have that map of the multi-core processors with all their private caches in one shared cache
 Dialogue: 0,0:15:16.10,0:15:22.30,English,,0,0,0,,These threads are basically fighting with each other for control for that one memory address
 Dialogue: 0,0:15:22.48,0:15:25.90,English,,0,0,0,,That they that they're incrementing
 Dialogue: 0,0:15:26.48,0:15:31.14,English,,0,0,0,,And it has to grab the control away from one core to your the core
@@ -225,7 +229,7 @@ Dialogue: 0,0:16:09.24,0:16:12.20,English,,0,0,0,,Which is a way to avoid semaph
 Dialogue: 0,0:16:12.78,0:16:15.00,English,,0,0,0,,And they wouldn't work in this context either those
 Dialogue: 0,0:16:15.54,0:16:17.36,English,,0,0,0,,Just if you've ever heard that term
 Dialogue: 0,0:16:17.74,0:16:19.54,English,,0,0,0,,Those are generally designed for
-Dialogue: 0,0:16:20.30,0:16:25.80,English,,0,0,0,,Examples where you expect relatively little contention  between the threads
+Dialogue: 0,0:16:20.30,0:16:25.80,English,,0,0,0,,Examples where you expect relatively little contention between the threads
 Dialogue: 0,0:16:25.80,0:16:30.30,English,,0,0,0,,And so you try and be optimistic and then roll back if something bad happens
 Dialogue: 0,0:16:31.90,0:16:33.52,English,,0,0,0,,This is a case where nope
 Dialogue: 0,0:16:33.78,0:16:38.24,English,,0,0,0,,All those threads are going to be pounding that one memory location and they're really fighting for it
@@ -245,26 +249,26 @@ Dialogue: 0,0:17:30.56,0:17:33.38,English,,0,0,0,,So they're not fighting with e
 Dialogue: 0,0:17:33.58,0:17:38.96,English,,0,0,0,,But they are fighting for if you think about it for the same cache line
 Dialogue: 0,0:17:39.84,0:17:43.92,English,,0,0,0,,Because an array is typically stored and so it's not totally nice
 Dialogue: 0,0:17:45.70,0:17:48.68,English,,0,0,0,,Ah but this it gives you a pointer to this idea
-Dialogue: 0,0:17:48.80,0:17:52.14,English,,0,0,0,,If if we could sort of move into a private state
+Dialogue: 0,0:17:48.80,0:17:52.14,English,,0,0,0,,If we could sort of move into a private state
 Dialogue: 0,0:17:52.88,0:17:55.86,English,,0,0,0,,The stuff that we're making the most direct access to
 Dialogue: 0,0:17:56.68,0:17:58.40,English,,0,0,0,,Then we'll get better performance
 Dialogue: 0,0:17:59.68,0:18:01.44,English,,0,0,0,,So this is the thread routine
-Dialogue: 0,0:18:01.96,0:18:05.12,English,,0,0,0,,And that the point is that there's some global array called pesum
-Dialogue: 0,0:18:05.12,0:18:10.80,English,,0,0,0,,But it's only incrementing the the part of it that sort of assigned to this particular thread
+Dialogue: 0,0:18:01.96,0:18:05.12,English,,0,0,0,,And that the point is that there's some global array called psum
+Dialogue: 0,0:18:05.12,0:18:10.80,English,,0,0,0,,But it's only incrementing the part of it that sort of assigned to this particular thread
 Dialogue: 0,0:18:12.92,0:18:15.44,English,,0,0,0,,And here you do see a performance improvement right
 Dialogue: 0,0:18:15.56,0:18:19.78,English,,0,0,0,,So one thread takes 5 seconds remember before it was 58
-Dialogue: 0,0:18:19.92,0:18:25.16,English,,0,0,0,,So that shows you just the advantage of the cost of semaphores right
-Dialogue: 0,0:18:25.66,0:18:27.14,English,,0,0,0,,There is a factor of 10
+Dialogue: 0,0:18:19.92,0:18:25.16,English,,0,0,0,,So that shows you just the advantage of the cost of semaphores
+Dialogue: 0,0:18:25.66,0:18:27.14,English,,0,0,0,,Right there is a factor of 10
 Dialogue: 0,0:18:27.74,0:18:33.12,English,,0,0,0,,And you see you are actually getting an improvement all across the line including up to 16 threads
 Dialogue: 0,0:18:33.14,0:18:34.50,English,,0,0,0,,You're still getting an improvement
 Dialogue: 0,0:18:35.02,0:18:38.14,English,,0,0,0,,It would flatten out should have just shown the number 432
 Dialogue: 0,0:18:38.14,0:18:40.02,English,,0,0,0,,But it would flatten out at this point
 Dialogue: 0,0:18:40.56,0:18:43.78,English,,0,0,0,,But it actually is getting some advantage out of hyper-threading as well
 Dialogue: 0,0:18:45.34,0:18:48.14,English,,0,0,0,,So that's good it's not an amazing speed up
-Dialogue: 0,0:18:48.46,0:18:57.48,English,,0,0,0,,So you can think of what they call the speed up is the performance of it running on a single core  versus the performance on n cores
+Dialogue: 0,0:18:48.46,0:18:57.48,English,,0,0,0,,So you can think of what they call the speed up is the performance of it running on a single core versus the performance on n cores
 Dialogue: 0,0:18:57.48,0:19:00.30,English,,0,0,0,,And in the ideal case it goes n times faster
 Dialogue: 0,0:19:00.94,0:19:02.28,English,,0,0,0,,And we're not quite hitting that
-Dialogue: 0,0:19:05.90,0:19:12.04,English,,0,0,0,,Well but here's you've already learned that it's generally bad to be accumulating into a memory
+Dialogue: 0,0:19:05.90,0:19:12.04,English,,0,0,0,,Well but here's if you've already learned that it's generally bad to be accumulating into a memory
 Dialogue: 0,0:19:12.58,0:19:15.50,English,,0,0,0,,And so why not do the thing we learned before
 Dialogue: 0,0:19:15.90,0:19:20.50,English,,0,0,0,,Which is you accumulate in a register and you only update the memory when you're done with that
 Dialogue: 0,0:19:21.30,0:19:24.76,English,,0,0,0,,So let's just do that and I'll call that the local version
@@ -274,12 +278,12 @@ Dialogue: 0,0:19:31.24,0:19:35.30,English,,0,0,0,,Then I'll store it in the glob
 Dialogue: 0,0:19:37.14,0:19:40.52,English,,0,0,0,,Okay so it's functionally equivalent to the one we just showed
 Dialogue: 0,0:19:40.52,0:19:46.18,English,,0,0,0,,We're just moving instead of accumulating in a global array we're accumulating in a register
 Dialogue: 0,0:19:47.30,0:19:49.92,English,,0,0,0,,And here you see a pretty big performance improvement
-Dialogue: 0,0:19:51.18,0:20:00.04,English,,0,0,0,,So blue is what we showed with the the global array red or orange is  what's this local variable
+Dialogue: 0,0:19:51.18,0:20:00.04,English,,0,0,0,,So blue is what we showed with the global array,red or orange is what's this local variable
 Dialogue: 0,0:20:00.76,0:20:04.56,English,,0,0,0,,And so you see it's actually interesting we're getting a performance improvement
 Dialogue: 0,0:20:05.38,0:20:11.12,English,,0,0,0,,As well although it bottoms out at eight
 Dialogue: 0,0:20:11.28,0:20:13.89,English,,0,0,0,,And it actually gets worse when you go to sixteen
-Dialogue: 0,0:20:14.44,0:20:17.38,English,,0,0,0,,And this is showing that hyper-threading isn't really helping here
-Dialogue: 0,0:20:17.40,0:20:21.98,English,,0,0,0,,Because basically the the single thread is just accumulating
+Dialogue: 0,0:20:14.44,0:20:17.24,English,,0,0,0,,And this is showing that hyper-threading isn't really helping here
+Dialogue: 0,0:20:17.24,0:20:21.98,English,,0,0,0,,Because basically the single thread is just accumulating
 Dialogue: 0,0:20:22.68,0:20:27.22,English,,0,0,0,,As fast as it can and adding to a register
 Dialogue: 0,0:20:27.64,0:20:32.54,English,,0,0,0,,And so it's making pretty good use of what functional units it uses and putting multiple threads
 Dialogue: 0,0:20:33.02,0:20:34.50,English,,0,0,0,,Sharing it isn't really helping
@@ -289,34 +293,34 @@ Dialogue: 0,0:20:43.48,0:20:49.34,English,,0,0,0,,And actually if you recall fro
 Dialogue: 0,0:20:49.96,0:20:54.36,English,,0,0,0,,You can make use as associativity and get more accumulation in parallel
 Dialogue: 0,0:20:54.86,0:20:59.66,English,,0,0,0,,So you could actually speed up this program just the single threaded version of this program pretty well
 Dialogue: 0,0:21:00.24,0:21:04.66,English,,0,0,0,,But anyways it shows it okay this is starting to look like
-Dialogue: 0,0:21:05.14,0:21:09.76,English,,0,0,0,,Your your a your single threaded performance is pretty good and b
+Dialogue: 0,0:21:05.14,0:21:09.76,English,,0,0,0,,Your a your single threaded performance is pretty good and b
 Dialogue: 0,0:21:10.08,0:21:13.44,English,,0,0,0,,You're getting some useful speed-up out of parallelism
 Dialogue: 0,0:21:14.48,0:21:19.36,English,,0,0,0,,But as  said this is like the easiest example in the world to parallelize so if you can't do it here
-Dialogue: 0,0:21:19.90,0:21:24.52,English,,0,0,0,,Then then life is pretty hopeless as far as multi-threading
-Dialogue: 0,0:21:25.80,0:21:29.70,English,,0,0,0,,So let's talk about as  mentioned this idea of speed-up
+Dialogue: 0,0:21:19.90,0:21:24.52,English,,0,0,0,,Then life is pretty hopeless as far as multi-threading
+Dialogue: 0,0:21:25.80,0:21:29.70,English,,0,0,0,,So let's talk about as mentioned this idea of speed-up
 Dialogue: 0,0:21:30.70,0:21:35.14,English,,0,0,0,,So speed-up is just defined to be the time for a single-threaded program
-Dialogue: 0,0:21:35.82,0:21:40.86,English,,0,0,0,,Divided by the time for for p threads running
-Dialogue: 0,0:21:41.47,0:21:45.66,English,,0,0,0,,Or actually will use it p cores instead of p threads question
+Dialogue: 0,0:21:35.82,0:21:40.86,English,,0,0,0,,Divided by the time for pthreads running
+Dialogue: 0,0:21:41.47,0:21:45.66,English,,0,0,0,,Or actually will use it p cores instead of pthreads,question
 Dialogue: 0,0:21:45.72,0:21:51.64,English,,0,0,0,,[student speaking]
-Dialogue: 0,0:21:51.64,0:21:57.72,English,,0,0,0,,Yes generally the scheduler has some kind of go balancing built into it
+Dialogue: 0,0:21:51.64,0:21:57.72,English,,0,0,0,,Yes generally you know the scheduler has some kind of go balancing built into it
 Dialogue: 0,0:21:58.54,0:22:05.14,English,,0,0,0,,And it will tend to especially in a case like this where the threads are sort of grabbing and running
-Dialogue: 0,0:22:05.72,0:22:10.96,English,,0,0,0,,Making they will generally get spread across the the cores
+Dialogue: 0,0:22:05.72,0:22:10.96,English,,0,0,0,,Making they will generally get spread across the cores
 Dialogue: 0,0:22:11.92,0:22:14.60,English,,0,0,0,,So that's a pretty the linux scheduler is pretty good at
-Dialogue: 0,0:22:15.24,0:22:19.32,English,,0,0,0,,That when you have more threads than there are  cores
-Dialogue: 0,0:22:19.98,0:22:27.56,English,,0,0,0,,Then then it basically starts scheduling them  in some cyclic order
-Dialogue: 0,0:22:27.58,0:22:29.84,English,,0,0,0,,And you you won't you'll
+Dialogue: 0,0:22:15.24,0:22:19.32,English,,0,0,0,,That when you have more threads than there are cores
+Dialogue: 0,0:22:19.98,0:22:27.56,English,,0,0,0,,Then it basically starts scheduling them in some cyclic order
+Dialogue: 0,0:22:27.58,0:22:29.84,English,,0,0,0,,And you won't...you'll...
 Dialogue: 0,0:22:30.68,0:22:33.86,English,,0,0,0,,At best you will not get any advantage
 Dialogue: 0,0:22:34.00,0:22:39.00,English,,0,0,0,,And in a worst case you actually start slowing down from having more threads than are
 Dialogue: 0,0:22:39.94,0:22:40.80,English,,0,0,0,,There good question
 Dialogue: 0,0:22:41.24,0:22:43.00,English,,0,0,0,,So there's really two versions of speed-up
-Dialogue: 0,0:22:43.02,0:22:48.06,English,,0,0,0,,One is if  take my multi-threaded routine and run it with one thread
-Dialogue: 0,0:22:48.72,0:22:51.54,English,,0,0,0,,And then  met do it with p threads or cores
+Dialogue: 0,0:22:43.02,0:22:48.06,English,,0,0,0,,One is if I take my multi-threaded routine and run it with one thread
+Dialogue: 0,0:22:48.72,0:22:51.54,English,,0,0,0,,And then I met do it with pthreads or cores
 Dialogue: 0,0:22:52.16,0:22:53.18,English,,0,0,0,,I can get a speed-up
-Dialogue: 0,0:22:53.32,0:22:59.24,English,,0,0,0,,But actually the truer thing is if  take the best-known sequential algorithm for performing this task
+Dialogue: 0,0:22:53.32,0:22:59.24,English,,0,0,0,,But actually the true thing is if  take the best-known sequential algorithm for performing this task
 Dialogue: 0,0:23:00.18,0:23:02.12,English,,0,0,0,,With the best implementation of that
-Dialogue: 0,0:23:02.74,0:23:04.82,English,,0,0,0,,And then  compare it against my parallel one
+Dialogue: 0,0:23:02.74,0:23:04.82,English,,0,0,0,,And then compare it against my parallel one
 Dialogue: 0,0:23:04.84,0:23:07.10,English,,0,0,0,,And so that's referred to as absolute speed-up
-Dialogue: 0,0:23:08.50,0:23:15.46,English,,0,0,0,,Which is the the best measures you know you give both sides the opportunity to do the best implementation that
+Dialogue: 0,0:23:08.50,0:23:15.46,English,,0,0,0,,Which is the best measures you know you give both sides the opportunity to do the best implementation that
 Dialogue: 0,0:23:15.86,0:23:17.14,English,,0,0,0,,They can and then you compare it
 Dialogue: 0,0:23:18.08,0:23:20.54,English,,0,0,0,,And then what's referred to as the efficiency is
 Dialogue: 0,0:23:20.98,0:23:26.00,English,,0,0,0,,How close to the speed-up get to the ideal speed-up which is if I'm running on p cores
@@ -328,9 +332,9 @@ Dialogue: 0,0:23:40.08,0:23:43.32,English,,0,0,0,,You can play this game various
 Dialogue: 0,0:23:44.44,0:23:46.54,English,,0,0,0,,Whether hyper-threading should count
 Dialogue: 0,0:23:46.64,0:23:53.02,English,,0,0,0,,So for p is p the total number of possible threads or the total number of cores
 Dialogue: 0,0:23:53.14,0:23:58.40,English,,0,0,0,,It's really a something to argue back and forth about
-Dialogue: 0,0:24:00.24,0:24:06.84,English,,0,0,0,,So the point is the efficiency though is is measured as how much do we do relative to ideal
-Dialogue: 0,0:24:08.26,0:24:13.16,English,,0,0,0,,And so this is what you get for this code the local version of p some
-Dialogue: 0,0:24:13.86,0:24:19.22,English,,0,0,0,,You'll see that our efficiency numbers are   somewhere in the hi somebody range
+Dialogue: 0,0:24:00.24,0:24:08.74,English,,0,0,0,,So the point is the efficiency though is is measured as how much do we do relative to ideal
+Dialogue: 0,0:24:08.82,0:24:13.16,English,,0,0,0,,And so this is what you get for this code the local version of psum
+Dialogue: 0,0:24:13.86,0:24:19.22,English,,0,0,0,,You'll see that our efficiency numbers are somewhere in the hi somebody range
 Dialogue: 0,0:24:21.08,0:24:22.26,English,,0,0,0,,Which is good but not great
 Dialogue: 0,0:24:22.98,0:24:26.32,English,,0,0,0,,It's pretty good actually if you can get 75 percent efficiency
 Dialogue: 0,0:24:26.80,0:24:31.62,English,,0,0,0,,You're doing better than most but again that's because this should have been the world's easiest program to parallelize
@@ -338,34 +342,34 @@ Dialogue: 0,0:24:33.94,0:24:40.84,English,,0,0,0,,So and the best speed-up we're
 Dialogue: 0,0:24:41.32,0:24:45.58,English,,0,0,0,,Again that's pretty good but this really should be something you can do well
 Dialogue: 0,0:24:47.74,0:24:52.96,English,,0,0,0,,So that just gives you a flavor of what parallel computing can be
 Dialogue: 0,0:24:54.08,0:24:59.44,English,,0,0,0,,So now it's sort of back off and talk some general principles just like the speed-up
-Dialogue: 0,0:25:00.80,0:25:04.80,English,,0,0,0,,There's a fella named jean nom dahl who coincidentally just died a few weeks ago
+Dialogue: 0,0:25:00.80,0:25:04.80,English,,0,0,0,,There's a fella named Gene Amdahl who coincidentally just died a few weeks ago
 Dialogue: 0,0:25:04.84,0:25:06.28,English,,0,0,0,,He might have seen it in the news
-Dialogue: 0,0:25:06.72,0:25:11.42,English,,0,0,0,,He was one of the original pioneers at ibm in their mainframe computers
+Dialogue: 0,0:25:06.72,0:25:11.42,English,,0,0,0,,He was one of the original pioneers at IBM in their mainframe computers
 Dialogue: 0,0:25:12.36,0:25:16.48,English,,0,0,0,,Then then at some point he in the 60s
-Dialogue: 0,0:25:16.88,0:25:19.48,English,,0,0,0,,He started his own company called um dal computers
-Dialogue: 0,0:25:19.48,0:25:24.58,English,,0,0,0,,And they were like they were the the cool company in mainframe computers
+Dialogue: 0,0:25:16.88,0:25:19.48,English,,0,0,0,,He started his own company called Amdahl computers
+Dialogue: 0,0:25:19.48,0:25:24.58,English,,0,0,0,,And they were like they were the cool company in mainframe computers
 Dialogue: 0,0:25:24.58,0:25:27.36,English,,0,0,0,,If that could ever be considered cool right
-Dialogue: 0,0:25:28.28,0:25:33.04,English,,0,0,0,,And he built a competitor's to ibm that absolutely drove them crazy
+Dialogue: 0,0:25:28.28,0:25:33.04,English,,0,0,0,,And he built a competitor's to IBM that absolutely drove them crazy
 Dialogue: 0,0:25:33.06,0:25:38.79,English,,0,0,0,,Because they had a virtual monopoly they actually were subject to antitrust suit
-Dialogue: 0,0:25:38.88,0:25:45.80,English,,0,0,0,,So um dahl was a sort of the the rebel who broke away from the mother company and started a competitor
-Dialogue: 0,0:25:47.74,0:25:51.44,English,,0,0,0,,And he made this very simple observation that's called alma's dolls law
+Dialogue: 0,0:25:38.88,0:25:45.80,English,,0,0,0,,So Amdahl was a sort of the the rebel who broke away from the mother company and started a competitor
+Dialogue: 0,0:25:47.74,0:25:51.44,English,,0,0,0,,And he made this very simple observation that's called Amdahl law
 Dialogue: 0,0:25:51.44,0:25:56.80,English,,0,0,0,,Which is basically junior high level algebra to think of this
 Dialogue: 0,0:25:56.96,0:25:59.20,English,,0,0,0,,But it's actually a fairly perceptive point
 Dialogue: 0,0:26:00.02,0:26:03.74,English,,0,0,0,,About what's the possible benefit of speeding up something
 Dialogue: 0,0:26:04.14,0:26:05.72,English,,0,0,0,,And this is discussed in the book
 Dialogue: 0,0:26:06.16,0:26:09.78,English,,0,0,0,,You know this isn't just for computers it's any process that you want to speed up
 Dialogue: 0,0:26:10.40,0:26:16.22,English,,0,0,0,,And it's a very simple observation which is suppose there's some fraction of a system
-Dialogue: 0,0:26:16.22,0:26:19.90,English,,0,0,0,,That  can make go faster and I'll call that fraction p
-Dialogue: 0,0:26:20.44,0:26:26.72,English,,0,0,0,,P is some number between zero and one point zero right  100% 0%
+Dialogue: 0,0:26:16.22,0:26:19.90,English,,0,0,0,,That I can make go faster and I'll call that fraction P
+Dialogue: 0,0:26:20.44,0:26:26.72,English,,0,0,0,,P is some number between zero and one point zero right 100% 0%
 Dialogue: 0,0:26:27.96,0:26:31.46,English,,0,0,0,,And let's suppose we take that part that we're going to make run faster
-Dialogue: 0,0:26:31.86,0:26:34.24,English,,0,0,0,,And improve its performance by a factor okay
+Dialogue: 0,0:26:31.86,0:26:34.24,English,,0,0,0,,And improve its performance by a factor K
 Dialogue: 0,0:26:37.08,0:26:42.52,English,,0,0,0,,Then we can just very simply talk about what will be the benefit of that performance
-Dialogue: 0,0:26:42.70,0:26:44.04,English,,0,0,0,,So we'll call it t sub k
-Dialogue: 0,0:26:44.76,0:26:52.00,English,,0,0,0,,And what it says is the fraction p  of the time will be reduced by k
-Dialogue: 0,0:26:52.98,0:26:59.30,English,,0,0,0,,But the fraction that you can't change a one minus p will remain at its old time
-Dialogue: 0,0:27:00.07,0:27:03.56,English,,0,0,0,,And that's um dolls law that's it that's the whole thing
+Dialogue: 0,0:26:42.70,0:26:44.04,English,,0,0,0,,So we'll call it T(k)
+Dialogue: 0,0:26:44.76,0:26:52.00,English,,0,0,0,,And what it says is the fraction P of the time will be reduced by k
+Dialogue: 0,0:26:52.98,0:26:59.30,English,,0,0,0,,But the fraction that you can't change a 1-p will remain at its old time
+Dialogue: 0,0:27:00.07,0:27:03.56,English,,0,0,0,,And that's Amdahl law that's it,that's the whole thing
 Dialogue: 0,0:27:03.98,0:27:05.46,English,,0,0,0,,And one interesting measure
-Dialogue: 0,0:27:05.94,0:27:11.00,English,,0,0,0,,Is what if k were infinity what if we had unbounded resources to speed things up
+Dialogue: 0,0:27:05.94,0:27:11.00,English,,0,0,0,,What if k were infinity what if we had unbounded resources to speed things up
 Dialogue: 0,0:27:11.86,0:27:18.92,English,,0,0,0,,And what the observation is the best feed up you'll get is a 1-p
 Dialogue: 0,0:27:20.44,0:27:24.88,English,,0,0,0,,And so just think it this way if you have 10% of it that you can't change
 Dialogue: 0,0:27:26.02,0:27:29.56,English,,0,0,0,,The other 90% you make infinitely fast
@@ -385,7 +389,7 @@ Dialogue: 0,0:28:30.18,0:28:33.62,English,,0,0,0,,We can get so that's not reall
 Dialogue: 0,0:28:33.62,0:28:37.56,English,,0,0,0,,Because it really does divide into as many independent tasks
 Dialogue: 0,0:28:37.76,0:28:40.34,English,,0,0,0,,As as you have numbers and
 Dialogue: 0,0:28:40.88,0:28:42.60,English,,0,0,0,,As you can see you can make them run
-Dialogue: 0,0:28:42.60,0:28:46.64,English,,0,0,0,,But many other applications do some part of it that  can't really make know parallel
+Dialogue: 0,0:28:42.60,0:28:46.64,English,,0,0,0,,But many other applications do some part of it that I can't really make know parallel
 Dialogue: 0,0:28:49.42,0:28:54.10,English,,0,0,0,,So just as an example and just for the sake of this class
 Dialogue: 0,0:28:54.28,0:28:59.70,English,,0,0,0,,You know an example of a little bit more involved a problem in parallel programming and multi-threading
 Dialogue: 0,0:29:00.10,0:29:02.44,English,,0,0,0,,Let's think about sorting a bunch of numbers
@@ -397,37 +401,37 @@ Dialogue: 0,0:29:20.26,0:29:23.28,English,,0,0,0,,There's actually a vast litera
 Dialogue: 0,0:29:23.76,0:29:29.24,English,,0,0,0,,And those you've taken or won't take the class 210 will be exposed to a lot of this
 Dialogue: 0,0:29:29.76,0:29:32.80,English,,0,0,0,,But I'm just going to do a very simple version which is quicksort
 Dialogue: 0,0:29:34.16,0:29:36.68,English,,0,0,0,,So quicksort is for example the
-Dialogue: 0,0:29:40.78,0:29:50.72,English,,0,0,0,,The C library program q sort quicksort it was invented in the early 1960s or 1950s by a guy named tony hoare
+Dialogue: 0,0:29:40.78,0:29:50.72,English,,0,0,0,,The C library program qsort quicksort it was invented in the early 1960s or 1950s by a guy named Tony Hoare
 Dialogue: 0,0:29:51.58,0:29:55.12,English,,0,0,0,,Who also founded a lot of the fundamental logic of program
-Dialogue: 0,0:29:55.24,0:30:00.96,English,,0,0,0,,So he's like an amazing person still alive today lives in cambridge england
-Dialogue: 0,0:30:01.56,0:30:07.16,English,,0,0,0,,But if you ever have a chance to go to a talk by him do so he's amazing person
+Dialogue: 0,0:29:55.24,0:30:00.96,English,,0,0,0,,So he's like an amazing person still alive today lives in Cambridge England
+Dialogue: 0,0:30:01.56,0:30:07.42,English,,0,0,0,,But if you ever have a chance to go to a talk by him do so he's amazing person
 Dialogue: 0,0:30:08.14,0:30:13.82,English,,0,0,0,,Anyways the idea quicksort is very simple and this is sort of the basic sorting algorithm
 Dialogue: 0,0:30:13.84,0:30:18.24,English,,0,0,0,,You grab some element from the array that you're trying to sort
 Dialogue: 0,0:30:18.72,0:30:19.68,English,,0,0,0,,That's called the pivot
 Dialogue: 0,0:30:20.42,0:30:27.68,English,,0,0,0,,And then you split the data so that you look at the elements that are either greater or less than the pivot
 Dialogue: 0,0:30:28.10,0:30:32.02,English,,0,0,0,,And potentially also equal let's just assume all the elements are unique here
-Dialogue: 0,0:30:32.56,0:30:36.94,English,,0,0,0,,So you just split it into two piles one is the lesson once a greater
+Dialogue: 0,0:30:32.56,0:30:36.94,English,,0,0,0,,So you just split it into two piles one is the less, one is a greater
 Dialogue: 0,0:30:37.42,0:30:41.12,English,,0,0,0,,Now you creatively you recursively you sort those two piles
 Dialogue: 0,0:30:42.50,0:30:46.42,English,,0,0,0,,By the same method and when it's all done you end up with everything sorted
 Dialogue: 0,0:30:46.86,0:30:51.00,English,,0,0,0,,One nice thing about it is it can be done in place meaning if you have an array of data
 Dialogue: 0,0:30:51.44,0:30:57.36,English,,0,0,0,,You can do this all just by swapping elements around and not have to use any extra space
 Dialogue: 0,0:30:57.50,0:30:59.44,English,,0,0,0,,Which you would for example with merge sort
 Dialogue: 0,0:31:00.14,0:31:05.28,English,,0,0,0,,So this is a fairly simple algorithm and just to visualize it then
-Dialogue: 0,0:31:06.06,0:31:09.62,English,,0,0,0,,You have some block of data x array and you want to sort it
+Dialogue: 0,0:31:06.06,0:31:09.62,English,,0,0,0,,You have some block of data X array and you want to sort it
 Dialogue: 0,0:31:09.70,0:31:13.70,English,,0,0,0,,So you pick an element called the pivot and there's various strategies for doing that
-Dialogue: 0,0:31:14.88,0:31:19.42,English,,0,0,0,,And now you just subdivide x into three parts
-Dialogue: 0,0:31:19.56,0:31:24.52,English,,0,0,0,,L the left hand r the right hand meaning less and greater than p
+Dialogue: 0,0:31:14.88,0:31:19.42,English,,0,0,0,,And now you just subdivide X into three parts
+Dialogue: 0,0:31:19.56,0:31:24.52,English,,0,0,0,,L the left hand P the right hand meaning less and greater than p
 Dialogue: 0,0:31:25.06,0:31:26.82,English,,0,0,0,,And then you place p in the middle
 Dialogue: 0,0:31:27.78,0:31:33.48,English,,0,0,0,,And then you recursively when you're doing this for in a sequential code
 Dialogue: 0,0:31:33.48,0:31:39.03,English,,0,0,0,,You'll pick one of these two usually leftmost or rightmost whatever doesn't really matter
-Dialogue: 0,0:31:39.40,0:31:46.57,English,,0,0,0,,And you'll recursively you apply the same method to to the left side and
-Dialogue: 0,0:31:46.86,0:31:51.96,English,,0,0,0,,And ultimately after enough recursions you get to the point where l has been sorted
+Dialogue: 0,0:31:39.40,0:31:46.57,English,,0,0,0,,And you'll recursively you apply the same method to the left side and
+Dialogue: 0,0:31:46.86,0:31:51.96,English,,0,0,0,,And ultimately after enough recursions you get to the point where L has been sorted
 Dialogue: 0,0:31:52.24,0:31:55.22,English,,0,0,0,,And that's shown in this kind of a swishy color thing
-Dialogue: 0,0:31:55.76,0:31:57.04,English,,0,0,0,,And call that l
+Dialogue: 0,0:31:55.76,0:31:57.04,English,,0,0,0,,And call that L'
 Dialogue: 0,0:31:57.98,0:31:59.30,English,,0,0,0,,And same with
 Dialogue: 0,0:32:03.86,0:32:07.16,English,,0,0,0,,You'll do the same thing now with the right hand side
 Dialogue: 0,0:32:07.62,0:32:10.14,English,,0,0,0,,And when you're done this is usually done in place
-Dialogue: 0,0:32:10.28,0:32:16.52,English,,0,0,0,,So you just the l part works on one array part of the array and the are part on another
+Dialogue: 0,0:32:10.28,0:32:16.52,English,,0,0,0,,So you just the L part works on one array part of the array and the are part on another
 Dialogue: 0,0:32:16.94,0:32:18.38,English,,0,0,0,,And when you're done they're in sorted order
 Dialogue: 0,0:32:20.26,0:32:23.18,English,,0,0,0,,The very simple sort and generally has very good performance
 Dialogue: 0,0:32:24.64,0:32:30.54,English,,0,0,0,,So this is what the code for it looks like which is usually you have is a special case
@@ -439,17 +443,17 @@ Dialogue: 0,0:32:46.22,0:32:51.92,English,,0,0,0,,You sort that and if there's m
 Dialogue: 0,0:32:53.68,0:32:58.66,English,,0,0,0,,And then when all these recursions are done then the array is sorted
 Dialogue: 0,0:32:59.30,0:33:04.04,English,,0,0,0,,So pretty typical code and we won't go in the trickiest part writing the code is
 Dialogue: 0,0:33:04.12,0:33:06.96,English,,0,0,0,,How do you make this partitioning go fast
-Dialogue: 0,0:33:07.70,0:33:10.18,English,,0,0,0,,But  won't go into that just imagine it happens
+Dialogue: 0,0:33:07.70,0:33:10.18,English,,0,0,0,,But I won't go into that just imagine it happens
 Dialogue: 0,0:33:11.74,0:33:15.90,English,,0,0,0,,So this algorithm actually has a natural version of parallelism
-Dialogue: 0,0:33:16.28,0:33:20.58,English,,0,0,0,,Which is in my sequential version  was sorting both first the left
+Dialogue: 0,0:33:16.28,0:33:20.58,English,,0,0,0,,Which is in my sequential version I was sorting both first the left
 Dialogue: 0,0:33:20.72,0:33:24.98,English,,0,0,0,,And then the left of the left and the left of the left of the left and kind of working my way
-Dialogue: 0,0:33:25.40,0:33:27.50,English,,0,0,0,,Until  got that whole array sorted
-Dialogue: 0,0:33:27.78,0:33:30.44,English,,0,0,0,,And then  was coming back and  was working on the right
+Dialogue: 0,0:33:25.40,0:33:27.50,English,,0,0,0,,Until I got that whole array sorted
+Dialogue: 0,0:33:27.78,0:33:30.44,English,,0,0,0,,And then I was coming back and I was working on the right
 Dialogue: 0,0:33:30.44,0:33:33.82,English,,0,0,0,,And then the left part of the right and the left to the left to the right and blah blah blah
 Dialogue: 0,0:33:34.44,0:33:37.54,English,,0,0,0,,And doing these recursions because the way the codes written
-Dialogue: 0,0:33:40.18,0:33:44.50,English,,0,0,0,,Right  am doing the full sort of the left-hand part
+Dialogue: 0,0:33:40.18,0:33:44.50,English,,0,0,0,,Right I am doing the full sort of the left-hand part
 Dialogue: 0,0:33:45.16,0:33:49.60,English,,0,0,0,,And only after that is sorted then I'm doing the complete sort of the right-hand part
-Dialogue: 0,0:33:49.78,0:33:56.94,English,,0,0,0,,So the point is it's it's an algorithm where I'm working just on one part of the array of the time
+Dialogue: 0,0:33:49.78,0:33:56.94,English,,0,0,0,,So the point is it's an algorithm where I'm working just on one part of the array of the time
 Dialogue: 0,0:33:58.10,0:34:01.86,English,,0,0,0,,But there's a very natural recursion of parallelism here that says
 Dialogue: 0,0:34:02.30,0:34:05.84,English,,0,0,0,,Okay I've got two parts they each need to be sorted
 Dialogue: 0,0:34:06.28,0:34:10.76,English,,0,0,0,,Let me just fire off two threads and let them do with that
@@ -458,7 +462,7 @@ Dialogue: 0,0:34:16.60,0:34:20.38,English,,0,0,0,,It's a very natural kind of pa
 Dialogue: 0,0:34:23.40,0:34:26.68,English,,0,0,0,,So basically I'll do the same thing as before all at
 Dialogue: 0,0:34:26.90,0:34:31.44,English,,0,0,0,,The top level will be a purely sequential process of partitioning
 Dialogue: 0,0:34:32.60,0:34:38.50,English,,0,0,0,,And but then assuming a partition comes up with some non-trivial split
-Dialogue: 0,0:34:39.08,0:34:44.28,English,,0,0,0,,Then  will recursively begin fork off to threads
+Dialogue: 0,0:34:39.08,0:34:44.28,English,,0,0,0,,Then I will recursively begin fork off to threads
 Dialogue: 0,0:34:44.94,0:34:47.40,English,,0,0,0,,Each of which will be responsible for the other and
 Dialogue: 0,0:34:47.40,0:34:51.44,English,,0,0,0,,So we'll sort of look like I'm working on the two parts in parallel
 Dialogue: 0,0:34:52.26,0:34:54.68,English,,0,0,0,,And eventually both sides will end up
@@ -473,7 +477,7 @@ Dialogue: 0,0:35:33.60,0:35:35.36,English,,0,0,0,,I'm only going to show you a g
 Dialogue: 0,0:35:36.02,0:35:38.40,English,,0,0,0,,It's a non-trivial amount of code it takes to do it
 Dialogue: 0,0:35:38.88,0:35:43.36,English,,0,0,0,,But basically what I'm going to do is have a bunch of a pool of threads
 Dialogue: 0,0:35:43.98,0:35:48.86,English,,0,0,0,,That are ready to work and that's a pretty typical way you write threaded code
-Dialogue: 0,0:35:49.60,0:35:56.82,English,,0,0,0,,Because actually the the initiation of a thread is a non-trivial amount of computation
+Dialogue: 0,0:35:49.60,0:35:56.82,English,,0,0,0,,Because actually the initiation of a thread is a non-trivial amount of computation
 Dialogue: 0,0:35:56.88,0:35:58.16,English,,0,0,0,,So usually what you do is
 Dialogue: 0,0:35:58.56,0:36:01.18,English,,0,0,0,,You say I've got this many cores
 Dialogue: 0,0:36:01.68,0:36:05.76,English,,0,0,0,,I'm going to create a set of that many threads
@@ -483,47 +487,46 @@ Dialogue: 0,0:36:19.70,0:36:25.38,English,,0,0,0,,They will do the work assigned
 Dialogue: 0,0:36:25.68,0:36:27.02,English,,0,0,0,,And it will give them something new
 Dialogue: 0,0:36:27.16,0:36:34.54,English,,0,0,0,,So I've there's a little bit of code a very rudimentary code there of creating this task model and task scheduling
 Dialogue: 0,0:36:35.52,0:36:38.08,English,,0,0,0,,So the basic rule will be any given task
-Dialogue: 0,0:36:39.02,0:36:46.68,English,,0,0,0,,Any given thread then at any given time has been assigned sub sub range of this array  to be a sorting
+Dialogue: 0,0:36:39.02,0:36:46.68,English,,0,0,0,,Any given thread then at any given time has been assigned sub range of this array to be a sorting
 Dialogue: 0,0:36:47.28,0:36:55.66,English,,0,0,0,,And it will be specified by the base meaning the starting point of this particular range
 Dialogue: 0,0:36:56.26,0:37:01.26,English,,0,0,0,,And then the number of elements that it's a told it's sort
 Dialogue: 0,0:37:03.74,0:37:05.70,English,,0,0,0,,And one other thing I'll do is
-Dialogue: 0,0:37:06.04,0:37:10.32,English,,0,0,0,,Once  get down to this array being small enough
+Dialogue: 0,0:37:06.04,0:37:10.32,English,,0,0,0,,Once get down to this array being small enough
 Dialogue: 0,0:37:10.82,0:37:12.90,English,,0,0,0,,I'll just sort it sequentially
-Dialogue: 0,0:37:13.60,0:37:18.86,English,,0,0,0,,And and we'll see how big that block is or not is actually performance
-Dialogue: 0,0:37:19.00,0:37:20.96,English,,0,0,0,,Parameter that you can use for tuning the program
+Dialogue: 0,0:37:13.60,0:37:20.96,English,,0,0,0,,And and we'll see how big that block is or not is actually performance parameter that you can use for tuning the program
 Dialogue: 0,0:37:21.82,0:37:25.32,English,,0,0,0,,So the point is that you don't want to take this down too far
-Dialogue: 0,0:37:25.34,0:37:29.60,English,,0,0,0,,Because the the sort of overhead of threads is enough that
+Dialogue: 0,0:37:25.34,0:37:29.60,English,,0,0,0,,Because the sort of overhead of threads is enough that
 Dialogue: 0,0:37:29.98,0:37:33.00,English,,0,0,0,,When you get to fine-grained you're actually going to start losing performance
 Dialogue: 0,0:37:35.38,0:37:39.48,English,,0,0,0,,So assume that it's bigger than that I've been given some block there
 Dialogue: 0,0:37:40.04,0:37:43.78,English,,0,0,0,,What I'll do then is I'll run the partition step
 Dialogue: 0,0:37:44.12,0:37:50.50,English,,0,0,0,,This thread will run it a partition step just using the exact function   showed you or didn't show you
-Dialogue: 0,0:37:52.74,0:38:00.00,English,,0,0,0,,And then as long as and then  will us create and add to the task queue two new tasks
+Dialogue: 0,0:37:52.74,0:38:00.00,English,,0,0,0,,And then as long as and then I will create and add to the task queue two new tasks
 Dialogue: 0,0:38:00.84,0:38:05.06,English,,0,0,0,,A one de for the left part and one for the right part
 Dialogue: 0,0:38:05.78,0:38:13.50,English,,0,0,0,,And then the scheduler that will assign two threads to handle those two parts
 Dialogue: 0,0:38:13.68,0:38:16.52,English,,0,0,0,,And so that code will that's exactly how the code is going to work
 Dialogue: 0,0:38:16.66,0:38:21.78,English,,0,0,0,,It's going to keep reusing the same threads over and over again
 Dialogue: 0,0:38:22.56,0:38:27.02,English,,0,0,0,,To but at any given time they'll be given a range of places
 Dialogue: 0,0:38:27.86,0:38:30.88,English,,0,0,0,,What typically will happen is they'll run their partitioning step
-Dialogue: 0,0:38:32.42,0:38:38.50,English,,0,0,0,,And then say okay I've done my job now assigned to new to new threads to do this
-Dialogue: 0,0:38:38.68,0:38:42.40,English,,0,0,0,,And that's the general scheme of it or they'll say this is a small enough block
+Dialogue: 0,0:38:32.42,0:38:39.98,English,,0,0,0,,And then say okay I've done my job now assigned to new threads to do this and that's the general scheme of it
+Dialogue: 0,0:38:40.12,0:38:42.40,English,,0,0,0,,Or they'll say this is a small enough block
 Dialogue: 0,0:38:43.26,0:38:45.72,English,,0,0,0,,I'm just going to sort the darn thing
 Dialogue: 0,0:38:45.76,0:38:48.16,English,,0,0,0,,Okay so that's really all the code does it's online
-Dialogue: 0,0:38:48.68,0:38:54.94,English,,0,0,0,,If you're interested in this kind of stuff it's um  think it's pretty well written code because  wrote
+Dialogue: 0,0:38:48.68,0:38:54.94,English,,0,0,0,,If you're interested in this kind of stuff it's... I think it's pretty well written code because  wrote
 Dialogue: 0,0:38:57.62,0:39:00.52,English,,0,0,0,,It so this is sort of that the
 Dialogue: 0,0:39:01.50,0:39:04.66,English,,0,0,0,,Somewhat simplified version of the code say
 Dialogue: 0,0:39:05.20,0:39:09.42,English,,0,0,0,,Initialize my task queue scheduling system
 Dialogue: 0,0:39:10.88,0:39:20.30,English,,0,0,0,,Create global variables of describing the beginning and end of this array to be sorted create a new task queue
-Dialogue: 0,0:39:20.82,0:39:24.14,English,,0,0,0,,And then this is the main function the tq sort helper
-Dialogue: 0,0:39:25.00,0:39:31.68,English,,0,0,0,,Is given some range of  of addresses and a pointer to the task queue
+Dialogue: 0,0:39:20.82,0:39:24.14,English,,0,0,0,,And then this is the main function the tqsort helper
+Dialogue: 0,0:39:25.00,0:39:31.68,English,,0,0,0,,Is given some range of addresses and a pointer to the task queue
 Dialogue: 0,0:39:31.86,0:39:34.72,English,,0,0,0,,That's used to manage these tasks
 Dialogue: 0,0:39:35.64,0:39:36.82,English,,0,0,0,,And then uh
 Dialogue: 0,0:39:40.38,0:39:45.44,English,,0,0,0,,When it's all day we'll just wait till all the tasks have completed this is at the top level
 Dialogue: 0,0:39:46.04,0:39:49.70,English,,0,0,0,,This isn't part of any recursion this is the top level code
 Dialogue: 0,0:39:50.08,0:39:51.84,English,,0,0,0,,And then it will free up the data structures
-Dialogue: 0,0:39:54.24,0:39:58.06,English,,0,0,0,,And then this is the the part of it that actually does the real work
-Dialogue: 0,0:39:59.00,0:40:04.82,English,,0,0,0,,It will say so now the tq sort helper is the part
+Dialogue: 0,0:39:54.24,0:39:58.06,English,,0,0,0,,And then this is the part of it that actually does the real work
+Dialogue: 0,0:39:59.00,0:40:04.82,English,,0,0,0,,It will say so now the tqsort helper is the part
 Dialogue: 0,0:40:04.94,0:40:11.62,English,,0,0,0,,That's a scientists to sort some particulars poises from
-Dialogue: 0,0:40:12.36,0:40:17.16,English,,0,0,0,,The the starting address the base and some number of elements
+Dialogue: 0,0:40:12.36,0:40:17.16,English,,0,0,0,,The starting address the base and some number of elements
 Dialogue: 0,0:40:19.06,0:40:22.12,English,,0,0,0,,And so this is what each task will do
 Dialogue: 0,0:40:22.46,0:40:26.68,English,,0,0,0,,And it says okay if this is a small enough block of elements
 Dialogue: 0,0:40:27.16,0:40:30.42,English,,0,0,0,,I'm just going to call my serial quicksort to do it
@@ -535,50 +538,50 @@ Dialogue: 0,0:40:55.32,0:40:57.90,English,,0,0,0,,I was a little mixed up this i
 Dialogue: 0,0:40:57.90,0:41:04.22,English,,0,0,0,,So the actual splitting occurs in this thing which is where it
 Dialogue: 0,0:41:06.42,0:41:08.28,English,,0,0,0,,So this is the actual thread routine
 Dialogue: 0,0:41:09.68,0:41:14.20,English,,0,0,0,,And what it's saying is run the partition here
-Dialogue: 0,0:41:15.36,0:41:20.98,English,,0,0,0,,And then call this tq sort helper which you just saw on the left and the right parts
+Dialogue: 0,0:41:15.36,0:41:20.98,English,,0,0,0,,And then call this tqsort helper which you just saw on the left and the right parts
 Dialogue: 0,0:41:25.00,0:41:31.36,English,,0,0,0,,Of it so just to review then the actual spawning of a task is done by this helper routine
-Dialogue: 0,0:41:32.10,0:41:37.02,English,,0,0,0,,But then that what it calls is the the thread routine is
+Dialogue: 0,0:41:32.10,0:41:37.02,English,,0,0,0,,But then that what it calls is the thread routine is
 Dialogue: 0,0:41:38.18,0:41:40.70,English,,0,0,0,,What does the work here and what it will do is
 Dialogue: 0,0:41:41.00,0:41:43.16,English,,0,0,0,,It will do the partitioning within that thread
 Dialogue: 0,0:41:43.60,0:41:52.06,English,,0,0,0,,And then it will just throw back and add to the task queue two calls to this helper
 Dialogue: 0,0:41:53.82,0:42:00.16,English,,0,0,0,,But as that kind of so between these two routines you can see it's doing this idea of a divide and conquer parallelism
 Dialogue: 0,0:42:02.00,0:42:06.12,English,,0,0,0,,So this is a performance running on the shark machines
-Dialogue: 0,0:42:07.42,0:42:18.24,English,,0,0,0,,And this is a fairly straightforward I'm just taking some number of random value two to the thirty-seventh
+Dialogue: 0,0:42:07.42,0:42:18.24,English,,0,0,0,,And this is a fairly straightforward I'm just taking some number of random value 2^37
 Dialogue: 0,0:42:22.52,0:42:23.42,English,,0,0,0,,That can't be right
-Dialogue: 0,0:42:25.56,0:42:29.56,English,,0,0,0,,Finish this is numbers not to the thirty-seventh right you agree with me
-Dialogue: 0,0:42:31.04,0:42:34.28,English,,0,0,0,,To the 37th is 128 billion roughly
+Dialogue: 0,0:42:25.56,0:42:29.56,English,,0,0,0,,Finish this is numbers not 2^37 right you agree with me
+Dialogue: 0,0:42:31.04,0:42:34.28,English,,0,0,0,,2^37 is 128 billion roughly
 Dialogue: 0,0:42:34.52,0:42:37.46,English,,0,0,0,,So this number is not right I'll have to check it out
 Dialogue: 0,0:42:39.40,0:42:43.94,English,,0,0,0,,And now what this x axis
 Dialogue: 0,0:42:44.00,0:42:47.20,English,,0,0,0,,So the y axis just denotes how long does it take to complete
-Dialogue: 0,0:42:47.82,0:42:52.26,English,,0,0,0,,By the way one thing if you're used to measuring performance based on cpu time
+Dialogue: 0,0:42:47.82,0:42:52.26,English,,0,0,0,,By the way one thing if you're used to measuring performance based on CPU time
 Dialogue: 0,0:42:52.92,0:42:57.52,English,,0,0,0,,That's not useful when you're talking a parallel computing you really want to talk a elapsed time
 Dialogue: 0,0:42:57.56,0:43:04.52,English,,0,0,0,,The time that you'd get from looking at a clock  and measuring it and dealing with whatever inefficiency occurs
 Dialogue: 0,0:43:04.98,0:43:08.66,English,,0,0,0,,There so these are actually the elapsed run time of the entire program
 Dialogue: 0,0:43:11.04,0:43:14.78,English,,0,0,0,,And you'll see that it varies according to this thing called the serial fraction
-Dialogue: 0,0:43:15.54,0:43:24.64,English,,0,0,0,,The serial fraction is just at what point do  slide between a serial quicksort  or keep dividing
+Dialogue: 0,0:43:15.54,0:43:24.64,English,,0,0,0,,The serial fraction is just at what point do I slide between a serial quicksort  or keep dividing
 Dialogue: 0,0:43:24.80,0:43:26.80,English,,0,0,0,,So how big does the array need to be
 Dialogue: 0,0:43:27.20,0:43:30.22,English,,0,0,0,,As a fraction expressed as a fraction of the original array
-Dialogue: 0,0:43:31.52,0:43:36.04,English,,0,0,0,,Before  i will go into recursion
-Dialogue: 0,0:43:36.14,0:43:40.06,English,,0,0,0,,If  were actually to write this a real application  wouldn't do it based on a fraction
-Dialogue: 0,0:43:40.14,0:43:47.00,English,,0,0,0,,I'd do it based on a block size to say  anything smaller than a thousand elements or some number like that
+Dialogue: 0,0:43:31.52,0:43:36.04,English,,0,0,0,,Before I will go into recursion
+Dialogue: 0,0:43:36.14,0:43:40.06,English,,0,0,0,,If I were actually to write this a real application I wouldn't do it based on a fraction
+Dialogue: 0,0:43:40.14,0:43:47.00,English,,0,0,0,,I'd do it based on a block size to say anything smaller than a thousand elements or some number like that
 Dialogue: 0,0:43:47.18,0:43:51.08,English,,0,0,0,,But this code just happens to be expressed this way
 Dialogue: 0,0:43:51.32,0:43:54.64,English,,0,0,0,,But the thing to notice that's interesting is you'll see here
-Dialogue: 0,0:43:57.08,0:44:01.14,English,,0,0,0,,If the fraction is 1 it basically says  won't split this at all
+Dialogue: 0,0:43:57.08,0:44:01.14,English,,0,0,0,,If the fraction is 1 it basically says I won't split this at all
 Dialogue: 0,0:44:01.14,0:44:04.10,English,,0,0,0,,I'm just going to call a sequential quicksort
 Dialogue: 0,0:44:04.24,0:44:07.00,English,,0,0,0,,So this is a purely sequential version of it
-Dialogue: 0,0:44:07.56,0:44:10.80,English,,0,0,0,,And what it shows is if  once  start -
+Dialogue: 0,0:44:07.56,0:44:10.80,English,,0,0,0,,And what it shows is if I once I start 2
 Dialogue: 0,0:44:11.48,0:44:15.43,English,,0,0,0,,I'll be willing to sort of split this up and do parallelism
 Dialogue: 0,0:44:15.92,0:44:18.92,English,,0,0,0,,I start making run faster and faster and faster
-Dialogue: 0,0:44:20.14,0:44:22.24,English,,0,0,0,,I'll and then  get into this trough
-Dialogue: 0,0:44:22.94,0:44:27.76,English,,0,0,0,,And now if  start going finer and finer grain then I'm running into the problem
+Dialogue: 0,0:44:20.14,0:44:22.24,English,,0,0,0,,I'll and then I get into this trough
+Dialogue: 0,0:44:22.94,0:44:27.76,English,,0,0,0,,And now if I start going finer and finer grain then I'm running into the problem
 Dialogue: 0,0:44:27.76,0:44:34.12,English,,0,0,0,,Where the thread overhead is more than the advantage I'm getting by doing the parallelism
 Dialogue: 0,0:44:34.26,0:44:41.54,English,,0,0,0,,And I'm faster to run that block bigger sort just use a sequential algorithm rather than parallel
 Dialogue: 0,0:44:43.96,0:44:47.40,English,,0,0,0,,But the good news here is this is a pretty long trough here
 Dialogue: 0,0:44:47.64,0:44:50.72,English,,0,0,0,,So it means is if you're trying to tune this program
 Dialogue: 0,0:44:51.74,0:44:57.40,English,,0,0,0,,It's not that hard you're not going to pay a huge penalty if you don't know a parameter exactly
 Dialogue: 0,0:44:58.04,0:45:04.26,English,,0,0,0,,So as long as this is a huge range right 30 from a 32 to 4096
-Dialogue: 0,0:45:04.28,0:45:15.34,English,,0,0,0,,It's a factor of of a lot to the fifth and 2 to the 12th is 2 to the 7th fact 128
-Dialogue: 0,0:45:16.12,0:45:19.04,English,,0,0,0,,See how  do my arithmetic and powers at 2
+Dialogue: 0,0:45:04.28,0:45:15.34,English,,0,0,0,,It's a factor of of a lot...2^15 and 2^12,2^7 fact 128
+Dialogue: 0,0:45:16.12,0:45:19.04,English,,0,0,0,,See how I do my arithmetic and powers at 2
 Dialogue: 0,0:45:19.42,0:45:27.15,English,,0,0,0,,Anyways it's roughly at you know 128 so several orders of magnitude decimal orders of magnitude over which
 Dialogue: 0,0:45:27.70,0:45:29.38,English,,0,0,0,,You get pretty comparable performance
 Dialogue: 0,0:45:29.54,0:45:33.88,English,,0,0,0,,So that means from a performance tuning point of view it's not that hard to do
@@ -587,7 +590,7 @@ Dialogue: 0,0:45:38.72,0:45:41.74,English,,0,0,0,,On our eight core to a hyper-t
 Dialogue: 0,0:45:41.80,0:45:44.80,English,,0,0,0,,We're getting up basically out 7x performance
 Dialogue: 0,0:45:45.62,0:45:50.60,English,,0,0,0,,And hyper-threading really isn't helping us at all is part of the lesson here
 Dialogue: 0,0:45:51.24,0:45:53.86,English,,0,0,0,,But if you just think of it as eight cores then that's pretty good
-Dialogue: 0,0:45:59.28,0:46:05.78,English,,0,0,0,,So there is an obvious place here where there's  a nam dolls law issue going on
+Dialogue: 0,0:45:59.28,0:46:05.78,English,,0,0,0,,So there is an obvious place here where there's Amdahl law issue going on
 Dialogue: 0,0:46:05.80,0:46:08.26,English,,0,0,0,,If you think at that first top-level split
 Dialogue: 0,0:46:09.32,0:46:14.66,English,,0,0,0,,The first call to partition is being done over the entire ray by a serial sequential process
 Dialogue: 0,0:46:15.60,0:46:16.50,English,,0,0,0,,Right that
@@ -601,11 +604,11 @@ Dialogue: 0,0:46:45.06,0:46:49.22,English,,0,0,0,,It does and that's part of the
 Dialogue: 0,0:46:50.98,0:46:53.32,English,,0,0,0,,A factor of seven and not a factor of eight or more
 Dialogue: 0,0:46:59.10,0:47:09.30,English,,0,0,0,,So there's quite a bit of work as  mentioned on how to speed up performance including how to make quicksort go faster
 Dialogue: 0,0:47:12.00,0:47:15.62,English,,0,0,0,,So there's a vast body of literature on parallel sort
-Dialogue: 0,0:47:19.92,0:47:24.88,English,,0,0,0,,So one thing  tried was to say okay well let's try and do this partitioning
+Dialogue: 0,0:47:19.92,0:47:24.88,English,,0,0,0,,So one thing I tried was to say okay well let's try and do this partitioning
 Dialogue: 0,0:47:27.94,0:47:32.70,English,,0,0,0,,Step they least the top couple levels let's try and do a parallel version of that and
 Dialogue: 0,0:47:33.34,0:47:36.16,English,,0,0,0,,So the idea is you pick one pivot element
 Dialogue: 0,0:47:36.38,0:47:39.24,English,,0,0,0,,But now you fire in this example for threads
-Dialogue: 0,0:47:40.42,0:47:47.18,English,,0,0,0,,And each of those four threads runs a partition step on on one-fourth of the range
+Dialogue: 0,0:47:40.42,0:47:47.18,English,,0,0,0,,And each of those four threads runs a partition step on one-fourth of the range
 Dialogue: 0,0:47:48.26,0:47:51.12,English,,0,0,0,,And it don't generate their own versions of left and right
 Dialogue: 0,0:47:52.26,0:47:59.12,English,,0,0,0,,And then you globally figure out how many are in each of these sub ranges
 Dialogue: 0,0:48:00.46,0:48:07.00,English,,0,0,0,,And then you tell each thread okay now you copy your part of it over to the relevant section of the array
@@ -613,8 +616,8 @@ Dialogue: 0,0:48:09.60,0:48:13.78,English,,0,0,0,,But the good news so there's s
 Dialogue: 0,0:48:14.48,0:48:18.14,English,,0,0,0,,But you can imagine that this partitioning step
 Dialogue: 0,0:48:18.44,0:48:23.78,English,,0,0,0,,Once when you're running it is completely independent of across the different threads
 Dialogue: 0,0:48:23.82,0:48:26.52,English,,0,0,0,,So it's getting a almost ideal speed-up
-Dialogue: 0,0:48:27.62,0:48:32.90,English,,0,0,0,,So  implemented this and tried and  couldn't make it run faster than the original code
-Dialogue: 0,0:48:33.72,0:48:39.68,English,,0,0,0,,And  think the the problem with this was  the copying the cost of copying data
+Dialogue: 0,0:48:27.62,0:48:32.90,English,,0,0,0,,So I implemented this and tried and I couldn't make it run faster than the original code
+Dialogue: 0,0:48:33.72,0:48:39.68,English,,0,0,0,,And I think the the problem with this was the copying the cost of copying data
 Dialogue: 0,0:48:41.96,0:48:47.80,English,,0,0,0,,Here was even though it's being done by multiple threads
 Dialogue: 0,0:48:48.30,0:48:51.24,English,,0,0,0,,And getting pretty good performance out of the memory system
 Dialogue: 0,0:48:51.26,0:48:56.12,English,,0,0,0,,Because you're doing sequential you know all the cache issues are pretty good here
@@ -625,11 +628,11 @@ Dialogue: 0,0:49:05.82,0:49:08.96,English,,0,0,0,,Meaning not using any addition
 Dialogue: 0,0:49:09.34,0:49:13.12,English,,0,0,0,,And so that's just enough of a penalty on the parallel part
 Dialogue: 0,0:49:13.56,0:49:16.04,English,,0,0,0,,That it didn't really improve performance at all
 Dialogue: 0,0:49:16.56,0:49:20.54,English,,0,0,0,,So that code is shown as part of the code on the course website
-Dialogue: 0,0:49:20.68,0:49:25.70,English,,0,0,0,,But like  said  i banged on it quite a bit and trying to tune it
+Dialogue: 0,0:49:20.68,0:49:25.70,English,,0,0,0,,But like I said I banged on it quite a bit and trying to tune it
 Dialogue: 0,0:49:25.82,0:49:27.90,English,,0,0,0,,And squeak it in various ways and could never make it
-Dialogue: 0,0:49:28.46,0:49:31.54,English,,0,0,0,,So  got better overall performance out of this program
+Dialogue: 0,0:49:28.46,0:49:31.54,English,,0,0,0,,So I got better overall performance out of this program
 Dialogue: 0,0:49:33.34,0:49:38.70,English,,0,0,0,,And so that's again a lesson and that's one of the unfortunate lessons is you can spend a lot of time
-Dialogue: 0,0:49:40.16,0:49:43.64,English,,0,0,0,,Trying to make a program run faster  and get absolutely nowhere
+Dialogue: 0,0:49:40.16,0:49:43.64,English,,0,0,0,,Trying to make a program run faster and get absolutely nowhere
 Dialogue: 0,0:49:44.72,0:49:47.34,English,,0,0,0,,And it's frustrating because you put in a lot of work
 Dialogue: 0,0:49:47.90,0:49:52.72,English,,0,0,0,,And you know it's a pretty cool idea and you'd love to publish a paper about it or tell your friends about it
 Dialogue: 0,0:49:53.02,0:49:55.64,English,,0,0,0,,And it just goes nowhere and it just sits there
@@ -642,17 +645,17 @@ Dialogue: 0,0:50:15.64,0:50:21.78,English,,0,0,0,,Again other people have spent 
 Dialogue: 0,0:50:22.10,0:50:24.52,English,,0,0,0,,That people try to do parallel programming for
 Dialogue: 0,0:50:26.68,0:50:30.78,English,,0,0,0,,So some of the lessons from this is you need a good strategy
 Dialogue: 0,0:50:30.80,0:50:33.42,English,,0,0,0,,For how you're going to get parallelism out of your application
-Dialogue: 0,0:50:34.10,0:50:38.94,English,,0,0,0,,And  showed you two basic versions one is partitioned into k parts
+Dialogue: 0,0:50:34.10,0:50:38.94,English,,0,0,0,,And I showed you two basic versions one is partitioned into k parts
 Dialogue: 0,0:50:39.00,0:50:42.26,English,,0,0,0,,They're more or less completely independent of each other
 Dialogue: 0,0:50:42.78,0:50:46.78,English,,0,0,0,,Or something like a divide and conquer strategy where you can keep splitting it
 Dialogue: 0,0:50:46.90,0:50:50.92,English,,0,0,0,,But the two splits that you create out of that can go concurrently
-Dialogue: 0,0:50:51.78,0:50:54.98,English,,0,0,0,,These other different types of parallelism -
+Dialogue: 0,0:50:51.78,0:50:54.98,English,,0,0,0,,These other different types of parallelism to
 Dialogue: 0,0:50:55.60,0:51:00.06,English,,0,0,0,,In general you want to make the inner loops you can't have any synchronization primitives
 Dialogue: 0,0:51:00.60,0:51:02.56,English,,0,0,0,,In there it will just run too slow
-Dialogue: 0,0:51:03.28,0:51:07.90,English,,0,0,0,,Um dolls law as  mentioned is always sort of lurking in the background of
+Dialogue: 0,0:51:03.28,0:51:07.90,English,,0,0,0,,Amdahl as I mentioned is always sort of lurking in the background of
 Dialogue: 0,0:51:08.00,0:51:13.36,English,,0,0,0,,If you can always feed up a part of your program then the other part will become the bottleneck
-Dialogue: 0,0:51:14.26,0:51:17.81,English,,0,0,0,,But the other thing is like  said you can do it
-Dialogue: 0,0:51:17.81,0:51:22.50,English,,0,0,0,,You've got the tools you've learned with with p threads
+Dialogue: 0,0:51:14.26,0:51:17.81,English,,0,0,0,,But the other thing is like I said you can do it
+Dialogue: 0,0:51:17.81,0:51:22.50,English,,0,0,0,,You've got the tools you've learned with p threads
 Dialogue: 0,0:51:22.92,0:51:27.22,English,,0,0,0,,And your knowledge of programming and your understanding of cache memories and things like that
 Dialogue: 0,0:51:27.74,0:51:32.80,English,,0,0,0,,You've got the tools you need to be an effective programmer of this kind of thing
 Dialogue: 0,0:51:33.94,0:51:41.36,English,,0,0,0,,But you have to and there's nothing that beats sort of trial and error and testing and tuning experimenting
@@ -664,7 +667,7 @@ Dialogue: 0,0:51:55.16,0:52:01.50,English,,0,0,0,,Let me just finish this lectur
 Dialogue: 0,0:52:01.62,0:52:05.32,English,,0,0,0,,That that are critical when you're dealing with
 Dialogue: 0,0:52:06.50,0:52:11.14,English,,0,0,0,,These systems based on what you call a shared memory model of computation
 Dialogue: 0,0:52:11.76,0:52:18.00,English,,0,0,0,,So multi-core is an example of conceptually multi-threaded computation remember
-Dialogue: 0,0:52:18.02,0:52:21.38,English,,0,0,0,,You're you're working within a single virtual address space
+Dialogue: 0,0:52:18.02,0:52:21.38,English,,0,0,0,,You're working within a single virtual address space
 Dialogue: 0,0:52:22.48,0:52:24.68,English,,0,0,0,,And you have private stacks
 Dialogue: 0,0:52:25.18,0:52:30.26,English,,0,0,0,,But the more global the heap memory is completely shared across threads
 Dialogue: 0,0:52:31.04,0:52:35.06,English,,0,0,0,,And so that's what you call the shared memory programming model
@@ -680,11 +683,11 @@ Dialogue: 0,0:53:09.40,0:53:14.20,English,,0,0,0,,And so now the question is wha
 Dialogue: 0,0:53:15.52,0:53:21.12,English,,0,0,0,,And so there's a model that sort of the accepted standard called sequential consistency
 Dialogue: 0,0:53:21.64,0:53:24.22,English,,0,0,0,,Which means that these events can occur
 Dialogue: 0,0:53:24.68,0:53:33.56,English,,0,0,0,,Well that these that within a single thread things have to occur in the sequential order of that thread
-Dialogue: 0,0:53:34.52,0:53:40.98,English,,0,0,0,,But across threads whether write a a write b occurs first is completely arbitrary
+Dialogue: 0,0:53:34.52,0:53:40.98,English,,0,0,0,,But across threads whether write a write b occurs first is completely arbitrary
 Dialogue: 0,0:53:41.30,0:53:43.80,English,,0,0,0,,And similarly whether writing of b occurs
 Dialogue: 0,0:53:44.56,0:53:52.20,English,,0,0,0,,Between these two actions or before is all too arbitrary
-Dialogue: 0,0:53:52.28,0:53:56.68,English,,0,0,0,,So what what it means is you can take two different threads
-Dialogue: 0,0:53:56.70,0:54:01.56,English,,0,0,0,,And you can interleave there their events  in anyway
+Dialogue: 0,0:53:52.28,0:53:56.68,English,,0,0,0,,So what it means is you can take two different threads
+Dialogue: 0,0:53:56.70,0:54:01.56,English,,0,0,0,,And you can interleave their events in anyway
 Dialogue: 0,0:54:02.26,0:54:06.90,English,,0,0,0,,But you should be able to pull out of that interleaving
 Dialogue: 0,0:54:07.44,0:54:10.98,English,,0,0,0,,The sequential order of either of both of the two threads
 Dialogue: 0,0:54:12.48,0:54:16.54,English,,0,0,0,,So when you do that you end up you can enumerate in the example like this
@@ -692,27 +695,25 @@ Dialogue: 0,0:54:17.00,0:54:19.26,English,,0,0,0,,All the possibilities you can 
 Dialogue: 0,0:54:20.12,0:54:22.48,English,,0,0,0,,First is either going to be right a or right b
 Dialogue: 0,0:54:23.40,0:54:24.60,English,,0,0,0,,Let's pick right a
 Dialogue: 0,0:54:25.42,0:54:30.04,English,,0,0,0,,So now the next event will be either a read of b or write of b
-Dialogue: 0,0:54:31.86,0:54:36.10,English,,0,0,0,,And then if  if  do write a write read b
+Dialogue: 0,0:54:31.86,0:54:36.10,English,,0,0,0,,And then if I do write a write read b
 Dialogue: 0,0:54:36.78,0:54:38.42,English,,0,0,0,,Then I've completed this thread
 Dialogue: 0,0:54:39.04,0:54:44.44,English,,0,0,0,,And so now the only possibility is to write to b and read a and so forth
 Dialogue: 0,0:54:44.52,0:54:48.74,English,,0,0,0,,You work out all the possible things you get six different event orderings
-Dialogue: 0,0:54:49.52,0:54:55.46,English,,0,0,0,,And then what will be printed is well first of all whether you print beer before a
+Dialogue: 0,0:54:49.52,0:54:55.46,English,,0,0,0,,And then what will be printed is well first of all whether you print before a
 Dialogue: 0,0:54:56.02,0:54:59.42,English,,0,0,0,,Would depend on the relative ordering of those two threads
 Dialogue: 0,0:54:59.42,0:55:02.34,English,,0,0,0,,So that's shown I'm showing the b value in blue
-Dialogue: 0,0:55:03.06,0:55:05.52,English,,0,0,0,,And the red value in in red the
-Dialogue: 0,0:55:06.00,0:55:07.54,English,,0,0,0,,I'm sorry the a value in red
+Dialogue: 0,0:55:03.06,0:55:07.54,English,,0,0,0,,And the red value in red I'm sorry the a value in red
 Dialogue: 0,0:55:09.02,0:55:10.46,English,,0,0,0,,And you'll get these different
 Dialogue: 0,0:55:11.28,0:55:14.88,English,,0,0,0,,Possibilities these are all the six possible outputs of this program
-Dialogue: 0,0:55:15.54,0:55:22.88,English,,0,0,0,,But you'll see that there are two two other outputs one could imagine that won't arise
+Dialogue: 0,0:55:15.54,0:55:22.88,English,,0,0,0,,But you'll see that there are two other outputs one could imagine that won't arise
 Dialogue: 0,0:55:23.78,0:55:30.48,English,,0,0,0,,One is to print 101 in other words to have them both print
 Dialogue: 0,0:55:31.64,0:55:34.28,English,,0,0,0,,The original values of these two variables
 Dialogue: 0,0:55:34.88,0:55:36.62,English,,0,0,0,,And that's impossible because
 Dialogue: 0,0:55:37.74,0:55:39.86,English,,0,0,0,,I have to have done at least one right
-Dialogue: 0,0:55:42.26,0:55:45.84,English,,0,0,0,,Before  can reach either of these two print statements right
+Dialogue: 0,0:55:42.26,0:55:45.84,English,,0,0,0,,Before I can reach either of these two print statements right
 Dialogue: 0,0:55:46.28,0:55:50.44,English,,0,0,0,,So it's not possible for these to still be in their original values of
-Dialogue: 0,0:55:51.70,0:55:53.62,English,,0,0,0,,When  hit these print statements
-Dialogue: 0,0:55:56.14,0:55:59.10,English,,0,0,0,,And whichever order  hit these two
-Dialogue: 0,0:55:59.12,0:56:01.06,English,,0,0,0,,So those two are impossible
+Dialogue: 0,0:55:51.70,0:55:53.62,English,,0,0,0,,When I hit these print statements
+Dialogue: 0,0:55:56.14,0:56:01.06,English,,0,0,0,,And whichever order I hit these two,so those two are impossible
 Dialogue: 0,0:56:01.36,0:56:04.48,English,,0,0,0,,So that's the idea of sequential consistency that there's
 Dialogue: 0,0:56:05.16,0:56:10.96,English,,0,0,0,,Some very large number but of possible outputs of a program
 Dialogue: 0,0:56:11.42,0:56:14.40,English,,0,0,0,,But in any case they can't violate
@@ -722,26 +723,25 @@ Dialogue: 0,0:56:24.66,0:56:29.16,English,,0,0,0,,But actually if you think from
 Dialogue: 0,0:56:30.04,0:56:36.04,English,,0,0,0,,So let me just throw a show you a scenario of multi-core hardware
 Dialogue: 0,0:56:36.58,0:56:38.70,English,,0,0,0,,That would violate sequential consistency
 Dialogue: 0,0:56:39.72,0:56:42.98,English,,0,0,0,,Assume that each of our threads has its own private cache
-Dialogue: 0,0:56:44.68,0:56:49.74,English,,0,0,0,,And so if  execute this statement
-Dialogue: 0,0:56:50.14,0:56:53.94,English,,0,0,0,,What I'll do is  will grab a copy of a from
-Dialogue: 0,0:56:54.98,0:56:57.26,English,,0,0,0,,The main memory and bring it into my cache
-Dialogue: 0,0:56:57.82,0:56:59.92,English,,0,0,0,,And  will assign this new value to it
-Dialogue: 0,0:57:00.96,0:57:08.20,English,,0,0,0,,And similarly a thread to will grab a copy of its of b and and update that
-Dialogue: 0,0:57:09.68,0:57:13.98,English,,0,0,0,,And now if  do my two print statements
+Dialogue: 0,0:56:44.68,0:56:49.74,English,,0,0,0,,And so if I execute this statement
+Dialogue: 0,0:56:50.14,0:56:57.26,English,,0,0,0,,What I'll do is I will grab a copy of a from the main memory and bring it into my cache
+Dialogue: 0,0:56:57.82,0:56:59.92,English,,0,0,0,,And I will assign this new value to it
+Dialogue: 0,0:57:00.96,0:57:08.20,English,,0,0,0,,And similarly a thread to will grab a copy of its of b and update that
+Dialogue: 0,0:57:09.68,0:57:13.98,English,,0,0,0,,And now if I do my two print statements
 Dialogue: 0,0:57:14.54,0:57:18.02,English,,0,0,0,,If thread two picks up the value from the memory
 Dialogue: 0,0:57:18.54,0:57:24.10,English,,0,0,0,,Not knowing that thread one as a modified copy of that value  then it would naturally print one
-Dialogue: 0,0:57:24.96,0:57:30.44,English,,0,0,0,,And similarly if if thread one picked up a copy of b from main memory it would print 100
+Dialogue: 0,0:57:24.96,0:57:30.44,English,,0,0,0,,And similarly if thread one picked up a copy of b from main memory it would print 100
 Dialogue: 0,0:57:30.54,0:57:36.90,English,,0,0,0,,So we'd see exactly this unallowable execution and the reason is
 Dialogue: 0,0:57:37.48,0:57:42.36,English,,0,0,0,,Because each of these threads have their own private copies of these variables
 Dialogue: 0,0:57:42.84,0:57:45.40,English,,0,0,0,,And they're not properly synchronized
 Dialogue: 0,0:57:46.18,0:57:50.90,English,,0,0,0,,But you could see in a hardware scenario it would be easy to build this hardware and make that mistake
-Dialogue: 0,0:57:52.30,0:57:55.92,English,,0,0,0,,So how does it work in a in a multi-core processor well
+Dialogue: 0,0:57:52.30,0:57:55.92,English,,0,0,0,,So how does it work in a multi-core processor well
 Dialogue: 0,0:57:56.46,0:57:59.26,English,,0,0,0,,They have a trick they call it snoopy caches
 Dialogue: 0,0:58:00.34,0:58:05.72,English,,0,0,0,,And it's a little bit like the readers writers of synchronization that
 Dialogue: 0,0:58:05.72,0:58:07.94,English,,0,0,0,,You're working on for your proxies
 Dialogue: 0,0:58:08.56,0:58:13.28,English,,0,0,0,,That you want to make it so that if everyone's just reading some shared value
 Dialogue: 0,0:58:13.64,0:58:19.44,English,,0,0,0,,They should be able to get copies into their own caches  to optimize the performance of it
-Dialogue: 0,0:58:20.26,0:58:24.96,English,,0,0,0,,But if one of them wants to write to it it needs to get an exclusive copy of it
+Dialogue: 0,0:58:20.26,0:58:24.96,English,,0,0,0,,But if one of them wants to write to it,it needs to get an exclusive copy of it
 Dialogue: 0,0:58:25.62,0:58:27.58,English,,0,0,0,,And lock out any other thread
 Dialogue: 0,0:58:28.06,0:58:35.46,English,,0,0,0,,From accessing that either to read it or to write it from long enough to make the update
 Dialogue: 0,0:58:36.42,0:58:37.56,English,,0,0,0,,And so
@@ -753,7 +753,7 @@ Dialogue: 0,0:59:07.34,0:59:14.08,English,,0,0,0,,And exclusive meaning that it'
 Dialogue: 0,0:59:15.84,0:59:19.36,English,,0,0,0,,So this is built into them the hardware of a multi-core processor
 Dialogue: 0,0:59:20.10,0:59:30.18,English,,0,0,0,,So what will happen that is in order to do a write to a thread one will acquire an exclusive copy of this element
 Dialogue: 0,0:59:30.18,0:59:34.88,English,,0,0,0,,And that actually tagging happens down here at the main memory and in the cache both
-Dialogue: 0,0:59:37.86,0:59:44.22,English,,0,0,0,,Oh and similarly if if thread two wants a to write to b
+Dialogue: 0,0:59:37.86,0:59:44.22,English,,0,0,0,,Oh and similarly if thread two wants a to write to b
 Dialogue: 0,0:59:44.52,0:59:46.72,English,,0,0,0,,It must get an exclusive copy of that
 Dialogue: 0,0:59:48.44,0:59:52.88,English,,0,0,0,,And then when the read occurs what happens is actually this cache
 Dialogue: 0,0:59:53.96,0:59:59.60,English,,0,0,0,,Miss will send out a signal on a bus a shared communication medium saying
@@ -765,34 +765,34 @@ Dialogue: 0,1:00:18.74,1:00:23.20,English,,0,0,0,,Locally but you'll see that th
 Dialogue: 0,1:00:23.20,1:00:26.30,English,,0,0,0,,Goes through the whole right-back protocol you've already seen
 Dialogue: 0,1:00:26.82,1:00:29.50,English,,0,0,0,,And sometimes it will update that there's different implementations
 Dialogue: 0,1:00:30.16,1:00:31.88,English,,0,0,0,,But this is why it's called a snoopy cache is
-Dialogue: 0,1:00:32.04,1:00:38.76,English,,0,0,0,,That it basically thread two is is peeking into or getting it access to information
+Dialogue: 0,1:00:32.04,1:00:38.76,English,,0,0,0,,That it basically thread two is peeking into or getting it access to information
 Dialogue: 0,1:00:38.82,1:00:40.70,English,,0,0,0,,That's available in thread ones cache
 Dialogue: 0,1:00:43.10,1:00:48.96,English,,0,0,0,,And so now thread two will correctly get a copy of a
 Dialogue: 0,1:00:49.46,1:00:50.98,English,,0,0,0,,That's in this shared state
 Dialogue: 0,1:00:51.62,1:00:57.30,English,,0,0,0,,And the same goes would be it will snoop over and thread two will one will get a readable copy
 Dialogue: 0,1:00:57.88,1:00:59.92,English,,0,0,0,,These are now all marked as shared state
-Dialogue: 0,1:01:00.52,1:01:04.68,English,,0,0,0,,And so if if either of them want to write
+Dialogue: 0,1:01:00.52,1:01:04.68,English,,0,0,0,,And so if either of them want to write
 Dialogue: 0,1:01:04.68,1:01:08.74,English,,0,0,0,,They'd have to now basically get exclusive access to it
 Dialogue: 0,1:01:09.06,1:01:11.10,English,,0,0,0,,And that would have to then disable
 Dialogue: 0,1:01:11.82,1:01:16.04,English,,0,0,0,,The copy and the other in the other location
 Dialogue: 0,1:01:16.16,1:01:20.48,English,,0,0,0,,So you can imagine this protocol being non-trivial actually to get right and to implement
 Dialogue: 0,1:01:20.90,1:01:24.80,English,,0,0,0,,And it gets way more complicated than this with all the variations on it
-Dialogue: 0,1:01:26.10,1:01:31.10,English,,0,0,0,,So but it's become the norm in in multi-core hardware design
-Dialogue: 0,1:01:31.86,1:01:36.36,English,,0,0,0,,But it's actually part of the factor that limits  the core count on a processor
+Dialogue: 0,1:01:26.10,1:01:31.10,English,,0,0,0,,So but it's become the norm in multi-core hardware design
+Dialogue: 0,1:01:31.86,1:01:36.36,English,,0,0,0,,But it's actually part of the factor that limits the core count on a processor
 Dialogue: 0,1:01:37.08,1:01:43.32,English,,0,0,0,,Because just the hardware involved in keeping the consistency across the caches is non-trivial
 Dialogue: 0,1:01:43.32,1:01:49.12,English,,0,0,0,,It has to work very fast we're talking at the cash rate access speeds
 Dialogue: 0,1:01:49.88,1:01:52.30,English,,0,0,0,,So there's not a lot of time involved in there
 Dialogue: 0,1:01:52.42,1:01:54.96,English,,0,0,0,,So actually implementing this stuff making it run
-Dialogue: 0,1:01:55.42,1:02:01.70,English,,0,0,0,,Making it scale across say eight cores 10 cores 16 cores is not a not a trivial thing
+Dialogue: 0,1:01:55.42,1:02:01.70,English,,0,0,0,,Making it scale across say 8 cores,10 cores,16 cores is not a not a trivial thing
 Dialogue: 0,1:02:02.20,1:02:07.72,English,,0,0,0,,But that that goes on in the background and so you can for most systems nowadays you can assume that
 Dialogue: 0,1:02:09.88,1:02:15.84,English,,0,0,0,,There's some memory consistency model that you can program to that's supported by the hardware of the system
-Dialogue: 0,1:02:17.30,1:02:24.22,English,,0,0,0,,And that this serial serializability that's referred to as sort of the the easiest to understand
+Dialogue: 0,1:02:17.30,1:02:24.22,English,,0,0,0,,And that this serial serializability that's referred to as sort of the easiest to understand
 Dialogue: 0,1:02:24.34,1:02:26.28,English,,0,0,0,,There's others at a little bit more nuanced
 Dialogue: 0,1:02:29.04,1:02:33.40,English,,0,0,0,,Well guess that fell off the bottom here and doesn't seem right
 Dialogue: 0,1:02:42.30,1:02:42.98,English,,0,0,0,,That's it
 Dialogue: 0,1:02:43.88,1:02:46.80,English,,0,0,0,,Okay so just to wrap that up then
 Dialogue: 0,1:02:48.56,1:02:50.82,English,,0,0,0,,It gives you a flavor of and
-Dialogue: 0,1:02:52.10,1:02:57.62,English,,0,0,0,,You can see that getting programs to run fast through multi-threading is not not easy
+Dialogue: 0,1:02:52.10,1:02:57.62,English,,0,0,0,,You can see that getting programs to run fast through multi-threading is not easy
 Dialogue: 0,1:02:58.16,1:03:02.98,English,,0,0,0,,You often have to rewrite your application you have to think about the algorithm you have to worry about debugging
 Dialogue: 0,1:03:03.52,1:03:06.52,English,,0,0,0,,It as you've already discovered at both the
 Dialogue: 0,1:03:07.28,1:03:12.28,English,,0,0,0,,The shell web and the proxy lab that concurrency where you can't predict the order of events
@@ -802,24 +802,23 @@ Dialogue: 0,1:03:20.18,1:03:24.30,English,,0,0,0,,And you have to have some unde
 Dialogue: 0,1:03:24.98,1:03:27.02,English,,0,0,0,,And what their performance implications are
 Dialogue: 0,1:03:27.66,1:03:30.12,English,,0,0,0,,So in particular let me just observe here that
 Dialogue: 0,1:03:32.58,1:03:34.98,English,,0,0,0,,If I'm like doing synchronization
-Dialogue: 0,1:03:37.36,1:03:43.06,English,,0,0,0,,Across threads like you saw that original one where they are fighting over this global
-Dialogue: 0,1:03:43.58,1:03:44.98,English,,0,0,0,,Variable p 'some whatever it was called
+Dialogue: 0,1:03:37.36,1:03:43.06,English,,0,0,0,,Across threads like you saw that original one where they are fighting over this global variable
+Dialogue: 0,1:03:43.58,1:03:44.98,English,,0,0,0,, psum whatever it was called
 Dialogue: 0,1:03:46.12,1:03:48.24,English,,0,0,0,,You can imagine these the caches
 Dialogue: 0,1:03:48.66,1:03:57.48,English,,0,0,0,,In this battle with each other to try and get exclusive access to this single memory of value
 Dialogue: 0,1:03:58.34,1:04:04.04,English,,0,0,0,,And because each one is running as fast as it possibly can
-Dialogue: 0,1:04:04.20,1:04:11.20,English,,0,0,0,,But each one requires getting exclusive copy writing to it  and releasing it
+Dialogue: 0,1:04:04.20,1:04:11.20,English,,0,0,0,,But each one requires getting exclusive copy writing to it and releasing it
 Dialogue: 0,1:04:11.32,1:04:15.98,English,,0,0,0,,So that locking mechanism is flying back and forth between these caches
 Dialogue: 0,1:04:16.68,1:04:18.72,English,,0,0,0,,And it's really not very fast so
 Dialogue: 0,1:04:19.16,1:04:22.52,English,,0,0,0,,That's the kind of thing is why
-Dialogue: 0,1:04:24.02,1:04:31.10,English,,0,0,0,,And also you know as an application programmer you're making calls semaphore call
-Dialogue: 0,1:04:31.20,1:04:35.50,English,,0,0,0,,Bounces you up into the os kernel which is a cost involved
+Dialogue: 0,1:04:24.02,1:04:29.18,English,,0,0,0,,And also you know as an application programmer you're making calls 
+Dialogue: 0,1:04:30.18,1:04:35.50,English,,0,0,0,,Semaphore call bounces you up into the OS kernel which is a cost involved
 Dialogue: 0,1:04:36.20,1:04:43.04,English,,0,0,0,,So this thing has all the bad all the things that make programs not run the way you really like them to
 Dialogue: 0,1:04:43.52,1:04:48.48,English,,0,0,0,,So that's one of the challenges in parallel programming is how do you actually
 Dialogue: 0,1:04:49.16,1:04:51.52,English,,0,0,0,,Make use of the parallelism that's there
 Dialogue: 0,1:04:51.78,1:04:57.24,English,,0,0,0,,Without getting bogged down by the cost of the various mechanisms of control
 Dialogue: 0,1:04:58.86,1:05:03.54,English,,0,0,0,,Oh so anyways this is part of what you have to appreciate and understand as a programmer
-Dialogue: 0,1:05:04.00,1:05:11.52,English,,0,0,0,,Is how these things work at a level deep enough that you'll have some sense of what makes programs run faster or slower
-Dialogue: 0,1:05:11.52,1:05:13.32,English,,0,0,0,,Where the mistakes could want
-Dialogue: 0,1:05:14.98,1:05:18.62,English,,0,0,0,,So that's just a little little flavor of a much bigger topic
+Dialogue: 0,1:05:04.00,1:05:08.56,English,,0,0,0,,Is how these things work at a level deep enough that you'll have some sense of 
+Dialogue: 0,1:05:08.56,1:05:13.28,English,,0,0,0,,What makes programs run faster or slower where the mistakes could want
+Dialogue: 0,1:05:14.98,1:05:18.62,English,,0,0,0,,So that's just a little flavor of a much bigger topic
 Dialogue: 0,1:05:19.48,1:05:20.48,English,,0,0,0,,So that's it for today
-Dialogue: 0,1:05:19.48,1:05:20.48,English,,0,0,0,,so that's it for today
