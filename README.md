@@ -12,6 +12,7 @@
 
 ### 相关链接
 
+[bilibili视频地址](https://www.bilibili.com/video/av24540152)
 [Youtube视频地址](https://www.youtube.com/playlist?list=PLmBgoRqEQCWy58EIwLSWwMPfkwLOLRM5R)
 
 ### 字幕制作相关
