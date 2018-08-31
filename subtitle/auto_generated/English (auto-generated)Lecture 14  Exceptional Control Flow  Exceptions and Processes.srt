@@ -1,0 +1,5396 @@
+﻿1
+00:00:00,000 --> 00:00:01,380
+all right good afternoon everybody
+
+2
+00:00:01,380 --> 00:00:07,200
+welcome good to see you so today we're
+
+3
+00:00:07,200 --> 00:00:11,969
+going to look at an idea called
+
+4
+00:00:11,969 --> 00:00:14,790
+exceptional control flow that's a very
+
+5
+00:00:14,790 --> 00:00:18,560
+important part of making modern systems
+
+6
+00:00:18,560 --> 00:00:21,720
+and it exists at all levels of the
+
+7
+00:00:21,720 --> 00:00:23,640
+system from the lowest level Hardware
+
+8
+00:00:23,640 --> 00:00:31,140
+all the way up to software so the idea
+
+9
+00:00:31,140 --> 00:00:33,500
+is when when you turn on a computer
+
+10
+00:00:33,500 --> 00:00:37,380
+from the very from the very first time
+
+11
+00:00:37,380 --> 00:00:40,559
+you turn it on it just does execute one
+
+12
+00:00:40,559 --> 00:00:42,600
+instruction after another until that you
+
+13
+00:00:42,600 --> 00:00:45,930
+turn it off okay and if each core if you
+
+14
+00:00:45,930 --> 00:00:47,370
+have multiple cores then each of those
+
+15
+00:00:47,370 --> 00:00:49,230
+cores are executing instructions one
+
+16
+00:00:49,230 --> 00:00:50,660
+after the other
+
+17
+00:00:50,660 --> 00:00:54,899
+now the the sequence of instructions is
+
+18
+00:00:54,899 --> 00:00:58,230
+called the control flow okay and the the
+
+19
+00:00:58,230 --> 00:01:00,180
+actual sequence of instructions that the
+
+20
+00:01:00,180 --> 00:01:02,399
+hardware is executing is called the
+
+21
+00:01:02,399 --> 00:01:07,040
+physical control flow now normally
+
+22
+00:01:07,040 --> 00:01:11,220
+normally this control flow that executes
+
+23
+00:01:11,220 --> 00:01:13,680
+just one instruction after another just
+
+24
+00:01:13,680 --> 00:01:17,250
+sequentially in memory and we've so far
+
+25
+00:01:17,250 --> 00:01:20,009
+we've seen two two mechanisms for
+
+26
+00:01:20,009 --> 00:01:21,840
+altering the control flow so that it's
+
+27
+00:01:21,840 --> 00:01:23,580
+it's not so that we're not executing
+
+28
+00:01:23,580 --> 00:01:26,580
+just the next instruction so that's
+
+29
+00:01:26,580 --> 00:01:30,509
+branches and jumps and procedure call
+
+30
+00:01:30,509 --> 00:01:35,670
+and return okay now now jumps and call
+
+31
+00:01:35,670 --> 00:01:38,700
+it branches jumps call and return those
+
+32
+00:01:38,700 --> 00:01:41,040
+are reacting to changes in program State
+
+33
+00:01:41,040 --> 00:01:43,259
+so when you do a branch you check the
+
+34
+00:01:43,259 --> 00:01:46,649
+control condition codes and then based
+
+35
+00:01:46,649 --> 00:01:49,500
+on some the results of that comparison
+
+36
+00:01:49,500 --> 00:01:52,710
+then you then you do the branch okay put
+
+37
+00:01:52,710 --> 00:01:55,710
+it real system needs to be able to adapt
+
+38
+00:01:55,710 --> 00:01:59,369
+to changes in the system State okay so
+
+39
+00:01:59,369 --> 00:02:04,040
+for example data arrives from a disk F
+
+40
+00:02:04,040 --> 00:02:10,039
+or some ro network user types control C
+
+41
+00:02:10,039 --> 00:02:12,989
+okay the program executes an illegal
+
+42
+00:02:12,989 --> 00:02:13,900
+instruction
+
+43
+00:02:13,900 --> 00:02:17,440
+okay all of these represent some change
+
+44
+00:02:17,440 --> 00:02:19,870
+some kind of change in the in the system
+
+45
+00:02:19,870 --> 00:02:23,379
+State and we need some way to react to
+
+46
+00:02:23,379 --> 00:02:27,849
+that so this the so what we need is we
+
+47
+00:02:27,849 --> 00:02:29,470
+call this exceptional control flow
+
+48
+00:02:29,470 --> 00:02:31,569
+because it's sort of outside of the
+
+49
+00:02:31,569 --> 00:02:33,400
+normal control flow that we we see in
+
+50
+00:02:33,400 --> 00:02:35,310
+our programs
+
+51
+00:02:35,310 --> 00:02:38,790
+now exceptional control flow or ECF
+
+52
+00:02:38,790 --> 00:02:42,819
+exists at all levels in the system from
+
+53
+00:02:42,819 --> 00:02:48,790
+the very lowest level of hardware at the
+
+54
+00:02:48,790 --> 00:02:50,560
+very lowest level we have what are
+
+55
+00:02:50,560 --> 00:02:53,260
+called exceptions and these are changes
+
+56
+00:02:53,260 --> 00:02:55,870
+in the control flow in response to some
+
+57
+00:02:55,870 --> 00:03:01,870
+low level system event so this is a or
+
+58
+00:03:01,870 --> 00:03:03,760
+and by event we mean a change in the
+
+59
+00:03:03,760 --> 00:03:06,760
+state now exceptions are implemented
+
+60
+00:03:06,760 --> 00:03:09,370
+using a combination of hardware and os
+
+61
+00:03:09,370 --> 00:03:11,019
+software which we'll see in it in a
+
+62
+00:03:11,019 --> 00:03:14,140
+minute but these these exceptional
+
+63
+00:03:14,140 --> 00:03:17,250
+control flow exists at higher levels too
+
+64
+00:03:17,250 --> 00:03:21,220
+so in the a process context switch is an
+
+65
+00:03:21,220 --> 00:03:22,930
+example of exceptional control flow
+
+66
+00:03:22,930 --> 00:03:25,900
+that's also it's implemented by a
+
+67
+00:03:25,900 --> 00:03:28,450
+hardware and the operating system kernel
+
+68
+00:03:28,450 --> 00:03:31,870
+and it so a process context switches
+
+69
+00:03:31,870 --> 00:03:32,620
+we'll see later
+
+70
+00:03:32,620 --> 00:03:36,910
+later today you're executing you're
+
+71
+00:03:36,910 --> 00:03:39,639
+executing your code in the current in
+
+72
+00:03:39,639 --> 00:03:43,030
+your current process and then all of a
+
+73
+00:03:43,030 --> 00:03:46,629
+sudden this the system is executing code
+
+74
+00:03:46,629 --> 00:03:48,699
+from another process right so your
+
+75
+00:03:48,699 --> 00:03:51,639
+process gets like suspended and so
+
+76
+00:03:51,639 --> 00:03:54,519
+there's a so that's a form of
+
+77
+00:03:54,519 --> 00:03:56,889
+exceptional control flow where you're
+
+78
+00:03:56,889 --> 00:04:00,340
+executing statements instructions within
+
+79
+00:04:00,340 --> 00:04:03,010
+one one process and then all of a sudden
+
+80
+00:04:03,010 --> 00:04:05,590
+you're executing statements instructions
+
+81
+00:04:05,590 --> 00:04:09,040
+in another process um at a higher level
+
+82
+00:04:09,040 --> 00:04:12,430
+are totally in software we have the idea
+
+83
+00:04:12,430 --> 00:04:15,220
+of a signal and this is implemented by
+
+84
+00:04:15,220 --> 00:04:16,840
+operating system software and we'll
+
+85
+00:04:16,840 --> 00:04:19,829
+learn all about signals next lecture and
+
+86
+00:04:19,829 --> 00:04:23,110
+then even higher at an even higher level
+
+87
+00:04:23,110 --> 00:04:25,900
+you have non-local jumps in C which are
+
+88
+00:04:25,900 --> 00:04:27,670
+just implemented by the C run
+
+89
+00:04:27,670 --> 00:04:30,520
+library so this allows you non-local
+
+90
+00:04:30,520 --> 00:04:32,500
+jumps allow you to break the normal call
+
+91
+00:04:32,500 --> 00:04:35,290
+and return pattern so from one from
+
+92
+00:04:35,290 --> 00:04:37,150
+within a function normally you can only
+
+93
+00:04:37,150 --> 00:04:39,180
+return to the the function that calls
+
+94
+00:04:39,180 --> 00:04:42,910
+that called you non-local jumps allow
+
+95
+00:04:42,910 --> 00:04:45,970
+you to within a function break that and
+
+96
+00:04:45,970 --> 00:04:48,760
+return to some other some other function
+
+97
+00:04:48,760 --> 00:04:51,400
+or some other part of the code so we'll
+
+98
+00:04:51,400 --> 00:04:53,860
+look at signals and non-local jumps next
+
+99
+00:04:53,860 --> 00:04:55,780
+lecture today we're going to look at
+
+100
+00:04:55,780 --> 00:05:01,900
+exceptions and processes so an exception
+
+101
+00:05:01,900 --> 00:05:05,440
+is a transfer of control to the
+
+102
+00:05:05,440 --> 00:05:08,650
+operating systems kernel where the
+
+103
+00:05:08,650 --> 00:05:12,010
+kernel is the memory resident part of
+
+104
+00:05:12,010 --> 00:05:13,480
+the operating system you know so an
+
+105
+00:05:13,480 --> 00:05:15,010
+operating system provides all kinds of
+
+106
+00:05:15,010 --> 00:05:19,780
+programs like to list files to change
+
+107
+00:05:19,780 --> 00:05:23,050
+directories to list the current
+
+108
+00:05:23,050 --> 00:05:26,320
+processes so all of that stuff
+
+109
+00:05:26,320 --> 00:05:27,820
+constitutes the operating system the
+
+110
+00:05:27,820 --> 00:05:29,500
+kernel is the part of the operating
+
+111
+00:05:29,500 --> 00:05:34,080
+system that's always resident in memory
+
+112
+00:05:34,080 --> 00:05:37,980
+so an exception is this really low-level
+
+113
+00:05:37,980 --> 00:05:40,270
+transfer of control to the operating
+
+114
+00:05:40,270 --> 00:05:42,010
+system because something happened in the
+
+115
+00:05:42,010 --> 00:05:45,030
+system so you're executing your code
+
+116
+00:05:45,030 --> 00:05:49,090
+user code and then something happens
+
+117
+00:05:49,090 --> 00:05:51,460
+some event so by event we mean there's
+
+118
+00:05:51,460 --> 00:05:54,510
+some change in the system state in
+
+119
+00:05:54,510 --> 00:05:57,910
+response to that there the exception
+
+120
+00:05:57,910 --> 00:06:00,730
+transfers control from from your user
+
+121
+00:06:00,730 --> 00:06:04,990
+code to code in the kernel which is
+
+122
+00:06:04,990 --> 00:06:07,510
+called an exception Handler and then the
+
+123
+00:06:07,510 --> 00:06:10,120
+kernel responds to that change in some
+
+124
+00:06:10,120 --> 00:06:13,750
+way this is called the exception
+
+125
+00:06:13,750 --> 00:06:17,440
+processing and then there's three
+
+126
+00:06:17,440 --> 00:06:18,850
+there's three things that can happen
+
+127
+00:06:18,850 --> 00:06:21,790
+after the kernel handles the exception
+
+128
+00:06:21,790 --> 00:06:24,880
+it can return and re execute that the
+
+129
+00:06:24,880 --> 00:06:28,450
+current instruction okay and we'll see
+
+130
+00:06:28,450 --> 00:06:30,340
+this is this is useful for things like
+
+131
+00:06:30,340 --> 00:06:32,800
+page faults allows us to implement
+
+132
+00:06:32,800 --> 00:06:36,790
+virtual memory it could return to the
+
+133
+00:06:36,790 --> 00:06:41,220
+next instruction which I've shown here
+
+134
+00:06:41,220 --> 00:06:47,770
+or it could abort now exceptions are
+
+135
+00:06:47,770 --> 00:06:49,690
+implemented by hardware and software so
+
+136
+00:06:49,690 --> 00:06:54,789
+the the actual transfer of control you
+
+137
+00:06:54,789 --> 00:06:56,199
+know the change in the program counter
+
+138
+00:06:56,199 --> 00:07:01,360
+or IP is is is done by the hardware but
+
+139
+00:07:01,360 --> 00:07:05,020
+the code that executes as a result of
+
+140
+00:07:05,020 --> 00:07:08,169
+that exception is set up and determined
+
+141
+00:07:08,169 --> 00:07:11,830
+by the operating system kernel so every
+
+142
+00:07:11,830 --> 00:07:14,229
+every type of event has a unique
+
+143
+00:07:14,229 --> 00:07:16,599
+exception number which serves as an
+
+144
+00:07:16,599 --> 00:07:18,610
+index into a jump table called an
+
+145
+00:07:18,610 --> 00:07:22,960
+exception table okay and so when when
+
+146
+00:07:22,960 --> 00:07:26,830
+event K happens then the hardware looks
+
+147
+00:07:26,830 --> 00:07:30,280
+uses K as in as an index into this table
+
+148
+00:07:30,280 --> 00:07:32,889
+and gets the address of the exception
+
+149
+00:07:32,889 --> 00:07:35,349
+handler for that for that for that
+
+150
+00:07:35,349 --> 00:07:40,030
+exception and so every time that event K
+
+151
+00:07:40,030 --> 00:07:43,180
+happens that handler handler K is
+
+152
+00:07:43,180 --> 00:07:48,460
+invoked now there's a different kinds of
+
+153
+00:07:48,460 --> 00:07:51,099
+exceptions we distinguish them as being
+
+154
+00:07:51,099 --> 00:07:54,060
+asynchronous or synchronous asynchronous
+
+155
+00:07:54,060 --> 00:07:57,909
+exceptions happen as a result of changes
+
+156
+00:07:57,909 --> 00:08:01,020
+in state that are occurred outside the
+
+157
+00:08:01,020 --> 00:08:05,469
+outside of the processor so these are
+
+158
+00:08:05,469 --> 00:08:08,050
+called interrupts and those changes in
+
+159
+00:08:08,050 --> 00:08:12,279
+state are are the processor is notified
+
+160
+00:08:12,279 --> 00:08:14,770
+about those changes in state by setting
+
+161
+00:08:14,770 --> 00:08:17,139
+a pin on the on the processor an
+
+162
+00:08:17,139 --> 00:08:21,370
+external pin called the interrupt pin so
+
+163
+00:08:21,370 --> 00:08:24,219
+this is the kind of when say a disk
+
+164
+00:08:24,219 --> 00:08:27,370
+controller finishes doing a direct
+
+165
+00:08:27,370 --> 00:08:30,430
+memory access and copying data from the
+
+166
+00:08:30,430 --> 00:08:32,949
+disk into memory it notifies the
+
+167
+00:08:32,949 --> 00:08:36,370
+processor that it's finished that copy
+
+168
+00:08:36,370 --> 00:08:41,329
+by setting the interrupt pin hi okay
+
+169
+00:08:41,329 --> 00:08:46,559
+and so after an interrupt happens the
+
+170
+00:08:46,559 --> 00:08:48,209
+handler returns to the next instruction
+
+171
+00:08:48,209 --> 00:08:52,079
+so an interrupt typically it's the so
+
+172
+00:08:52,079 --> 00:08:53,670
+you're running your program you're
+
+173
+00:08:53,670 --> 00:08:54,749
+running your program and then there's
+
+174
+00:08:54,749 --> 00:08:57,689
+like this little there's like this
+
+175
+00:08:57,689 --> 00:08:59,519
+little pause while the interrupt handler
+
+176
+00:08:59,519 --> 00:09:00,689
+runs and then your program just
+
+177
+00:09:00,689 --> 00:09:03,029
+continues to run okay so it's it's
+
+178
+00:09:03,029 --> 00:09:05,249
+usually sort of done behind the scenes
+
+179
+00:09:05,249 --> 00:09:09,799
+and doesn't doesn't affect your
+
+180
+00:09:09,799 --> 00:09:12,689
+execution of your program now the most
+
+181
+00:09:12,689 --> 00:09:16,759
+common or a common example of a
+
+182
+00:09:16,759 --> 00:09:19,739
+interrupt is the timer interrupts so
+
+183
+00:09:19,739 --> 00:09:22,799
+you're all systems have a a built-in
+
+184
+00:09:22,799 --> 00:09:24,629
+timer that goes off every few
+
+185
+00:09:24,629 --> 00:09:27,420
+milliseconds and when it when the timer
+
+186
+00:09:27,420 --> 00:09:29,519
+goes off it sets the interrupts in high
+
+187
+00:09:29,519 --> 00:09:32,220
+and there's a special exception number
+
+188
+00:09:32,220 --> 00:09:35,489
+four for timer interrupts and this is we
+
+189
+00:09:35,489 --> 00:09:38,429
+need this in order for the this allows
+
+190
+00:09:38,429 --> 00:09:41,420
+we need this to allow the kernel to get
+
+191
+00:09:41,420 --> 00:09:43,860
+control of the system again otherwise a
+
+192
+00:09:43,860 --> 00:09:46,499
+user program could just run forever in
+
+193
+00:09:46,499 --> 00:09:49,379
+an infinite loop and no one would be no
+
+194
+00:09:49,379 --> 00:09:51,809
+way for the operating system to get to
+
+195
+00:09:51,809 --> 00:09:53,670
+get control so every few milliseconds
+
+196
+00:09:53,670 --> 00:09:57,019
+this timer goes off that causes a
+
+197
+00:09:57,019 --> 00:09:59,910
+transient exception into the into the
+
+198
+00:09:59,910 --> 00:10:03,600
+kernel and then the kernel can as we see
+
+199
+00:10:03,600 --> 00:10:05,999
+the kernel can decide what to do maybe
+
+200
+00:10:05,999 --> 00:10:08,249
+maybe schedule a new process or let the
+
+201
+00:10:08,249 --> 00:10:13,499
+current process run and then and then
+
+202
+00:10:13,499 --> 00:10:15,119
+this an i/o interrupt from an external
+
+203
+00:10:15,119 --> 00:10:18,569
+devices is also a common example now the
+
+204
+00:10:18,569 --> 00:10:19,949
+other class of exceptions are
+
+205
+00:10:19,949 --> 00:10:22,019
+synchronous exceptions and there are
+
+206
+00:10:22,019 --> 00:10:26,850
+three classes of those one is that one
+
+207
+00:10:26,850 --> 00:10:30,499
+class is called the trap a trap is a
+
+208
+00:10:30,499 --> 00:10:33,089
+intentional exception so this is an
+
+209
+00:10:33,089 --> 00:10:34,889
+exception that's caused intentionally by
+
+210
+00:10:34,889 --> 00:10:37,769
+the program and the most the most common
+
+211
+00:10:37,769 --> 00:10:41,790
+form of a trap is a system call so you
+
+212
+00:10:41,790 --> 00:10:43,439
+know the operating system kernel
+
+213
+00:10:43,439 --> 00:10:46,019
+provides all kinds of services to to a
+
+214
+00:10:46,019 --> 00:10:47,790
+program but your program doesn't have
+
+215
+00:10:47,790 --> 00:10:50,819
+direct access your program can't call
+
+216
+00:10:50,819 --> 00:10:52,529
+functions in the kernel it can't access
+
+217
+00:10:52,529 --> 00:10:54,250
+data directly in the kernel
+
+218
+00:10:54,250 --> 00:10:56,680
+because that memory is protected and and
+
+219
+00:10:56,680 --> 00:11:00,160
+unavailable to user programs so what the
+
+220
+00:11:00,160 --> 00:11:04,210
+kernel does is they provide a interface
+
+221
+00:11:04,210 --> 00:11:07,810
+that allows programs to make requests to
+
+222
+00:11:07,810 --> 00:11:10,150
+effectively call functions within the
+
+223
+00:11:10,150 --> 00:11:12,190
+kernel and to make requests for various
+
+224
+00:11:12,190 --> 00:11:14,590
+services and this this interface is
+
+225
+00:11:14,590 --> 00:11:17,800
+called a system call ok so a program
+
+226
+00:11:17,800 --> 00:11:23,410
+makes a system call and and and requests
+
+227
+00:11:23,410 --> 00:11:26,140
+various functions from the kernel the
+
+228
+00:11:26,140 --> 00:11:29,590
+kernel provides those sort of reacts to
+
+229
+00:11:29,590 --> 00:11:31,390
+that request and then returns control
+
+230
+00:11:31,390 --> 00:11:33,820
+back to the the function there the
+
+231
+00:11:33,820 --> 00:11:35,980
+calling program so you can think of a
+
+232
+00:11:35,980 --> 00:11:40,750
+system call as kind of it's a it looks
+
+233
+00:11:40,750 --> 00:11:42,130
+like a function call but it's really
+
+234
+00:11:42,130 --> 00:11:46,530
+transferring control into the kernel
+
+235
+00:11:46,530 --> 00:11:49,660
+okay then there's some so traps are
+
+236
+00:11:49,660 --> 00:11:52,450
+intentional faults are unintentional but
+
+237
+00:11:52,450 --> 00:11:55,810
+but may be recoverable okay so things
+
+238
+00:11:55,810 --> 00:12:02,200
+like page faults which when we will
+
+239
+00:12:02,200 --> 00:12:03,880
+learn more about these when we study
+
+240
+00:12:03,880 --> 00:12:06,100
+virtual memory but something like a page
+
+241
+00:12:06,100 --> 00:12:09,040
+fault it's actually recoverable it just
+
+242
+00:12:09,040 --> 00:12:11,530
+that the kernel has to it means that the
+
+243
+00:12:11,530 --> 00:12:13,630
+the data the portion of the address
+
+244
+00:12:13,630 --> 00:12:15,760
+space that your program referenced isn't
+
+245
+00:12:15,760 --> 00:12:18,870
+actually in memory it needs to be copied
+
+246
+00:12:18,870 --> 00:12:21,220
+from disk where it's stored into memory
+
+247
+00:12:21,220 --> 00:12:24,370
+and then the instruction that that that
+
+248
+00:12:24,370 --> 00:12:26,710
+caused a fault needs is just restarted
+
+249
+00:12:26,710 --> 00:12:29,890
+and then it works that the the memory is
+
+250
+00:12:29,890 --> 00:12:32,950
+is there and then the instruction works
+
+251
+00:12:32,950 --> 00:12:36,000
+properly but other faults are
+
+252
+00:12:36,000 --> 00:12:37,840
+unintentional unrecoverable like
+
+253
+00:12:37,840 --> 00:12:39,760
+protection fault so if you try to access
+
+254
+00:12:39,760 --> 00:12:43,030
+a portion of memory that's that's not
+
+255
+00:12:43,030 --> 00:12:47,200
+allocated or floating-point exceptions
+
+256
+00:12:47,200 --> 00:12:49,180
+often times those those can be
+
+257
+00:12:49,180 --> 00:12:54,910
+recoverable so eat in either case when
+
+258
+00:12:54,910 --> 00:12:56,680
+there's a fault it either re-execute the
+
+259
+00:12:56,680 --> 00:12:58,840
+current instruction or to boat or or the
+
+260
+00:12:58,840 --> 00:13:02,590
+boards and then there's unintentional
+
+261
+00:13:02,590 --> 00:13:05,320
+and unrecoverable exceptions which are
+
+262
+00:13:05,320 --> 00:13:07,810
+called the boards and those those always
+
+263
+00:13:07,810 --> 00:13:08,200
+abort
+
+264
+00:13:08,200 --> 00:13:10,600
+so if you execute an illegal instruction
+
+265
+00:13:10,600 --> 00:13:12,670
+if there's a problem with your memory
+
+266
+00:13:12,670 --> 00:13:16,090
+memory and it's it's corrupted or if
+
+267
+00:13:16,090 --> 00:13:17,730
+there's some problem with the machine
+
+268
+00:13:17,730 --> 00:13:21,840
+those creative warts that that always
+
+269
+00:13:21,840 --> 00:13:25,090
+that are unrecoverable and never return
+
+270
+00:13:25,090 --> 00:13:29,260
+back to the to the program now system
+
+271
+00:13:29,260 --> 00:13:32,980
+calls there's many different kinds of
+
+272
+00:13:32,980 --> 00:13:34,360
+system calls and they all have their own
+
+273
+00:13:34,360 --> 00:13:37,660
+unique number which is assigned by by
+
+274
+00:13:37,660 --> 00:13:44,290
+Linux so in a for example to read a file
+
+275
+00:13:44,290 --> 00:13:46,570
+there's a system call called read which
+
+276
+00:13:46,570 --> 00:13:50,470
+is number zero opening a file a system
+
+277
+00:13:50,470 --> 00:13:58,860
+call number two and so on and there's a
+
+278
+00:13:58,860 --> 00:14:01,390
+there's an instruction called syscall
+
+279
+00:14:01,390 --> 00:14:05,980
+which actually performs the the system
+
+280
+00:14:05,980 --> 00:14:09,010
+call now you usually don't use this
+
+281
+00:14:09,010 --> 00:14:10,480
+system call and strike the syscall
+
+282
+00:14:10,480 --> 00:14:12,960
+instruction directly in your program the
+
+283
+00:14:12,960 --> 00:14:15,460
+Linux wraps those in system level
+
+284
+00:14:15,460 --> 00:14:18,360
+functions which actually call it for you
+
+285
+00:14:18,360 --> 00:14:21,580
+but it it's interesting to see how it
+
+286
+00:14:21,580 --> 00:14:23,680
+actually works so opposed you want to
+
+287
+00:14:23,680 --> 00:14:26,230
+open a file you call the system level
+
+288
+00:14:26,230 --> 00:14:29,380
+function called open with a file name
+
+289
+00:14:29,380 --> 00:14:31,630
+and some options say read only write
+
+290
+00:14:31,630 --> 00:14:37,240
+only and so in at the syscall
+
+291
+00:14:37,240 --> 00:14:41,230
+instruction takes the first the syscall
+
+292
+00:14:41,230 --> 00:14:45,070
+number is in our ax and then other other
+
+293
+00:14:45,070 --> 00:14:48,040
+arguments are in our dir si
+
+294
+00:14:48,040 --> 00:14:51,940
+RDX our 10 r8 and r9 so you can see if
+
+295
+00:14:51,940 --> 00:14:54,220
+we look in the the open function calls
+
+296
+00:14:54,220 --> 00:14:55,870
+the underscore underscore open function
+
+297
+00:14:55,870 --> 00:14:59,290
+which actually invokes the syscall so if
+
+298
+00:14:59,290 --> 00:15:00,730
+you look at that code you see it moves
+
+299
+00:15:00,730 --> 00:15:03,250
+the two which is the sis call number for
+
+300
+00:15:03,250 --> 00:15:06,730
+read into into a a X and then it does
+
+301
+00:15:06,730 --> 00:15:11,590
+the sis call and then the the sis call
+
+302
+00:15:11,590 --> 00:15:16,840
+returns its status in our a X if it's a
+
+303
+00:15:16,840 --> 00:15:18,340
+negative number then that means
+
+304
+00:15:18,340 --> 00:15:21,200
+something some error occurred if it's a
+
+305
+00:15:21,200 --> 00:15:23,690
+positive number then that means
+
+306
+00:15:23,690 --> 00:15:26,510
+something that no error occurred so in
+
+307
+00:15:26,510 --> 00:15:28,640
+this case and I in it the open it's
+
+308
+00:15:28,640 --> 00:15:30,620
+returning a file descriptor a small
+
+309
+00:15:30,620 --> 00:15:32,240
+integer called the file descriptor which
+
+310
+00:15:32,240 --> 00:15:35,540
+then you you can use in subsequent calls
+
+311
+00:15:35,540 --> 00:15:38,090
+to read and write and then you can see
+
+312
+00:15:38,090 --> 00:15:39,650
+the code is checking for this negative
+
+313
+00:15:39,650 --> 00:15:42,020
+return value too and there's a whole
+
+314
+00:15:42,020 --> 00:15:50,630
+series of these compares so let's look
+
+315
+00:15:50,630 --> 00:15:54,770
+at an example of a fault so here suppose
+
+316
+00:15:54,770 --> 00:15:58,100
+we have this program that we're writing
+
+317
+00:15:58,100 --> 00:16:01,010
+into a valid region of memory but it's
+
+318
+00:16:01,010 --> 00:16:03,740
+it's not actually stored on it's not
+
+319
+00:16:03,740 --> 00:16:05,750
+actually in the memory it needs to be
+
+320
+00:16:05,750 --> 00:16:07,700
+loaded from disk into into memory so
+
+321
+00:16:07,700 --> 00:16:12,860
+this is a so-called page fault so this
+
+322
+00:16:12,860 --> 00:16:15,920
+this instruction this move L because
+
+323
+00:16:15,920 --> 00:16:18,190
+this because the memory at this address
+
+324
+00:16:18,190 --> 00:16:22,310
+isn't isn't available triggers a page
+
+325
+00:16:22,310 --> 00:16:26,810
+fault so that that creates an exception
+
+326
+00:16:26,810 --> 00:16:29,600
+a transfer of control into the the page
+
+327
+00:16:29,600 --> 00:16:32,300
+fault handler in the kernel which copies
+
+328
+00:16:32,300 --> 00:16:36,560
+that page from disk to memory and then
+
+329
+00:16:36,560 --> 00:16:39,290
+it returns and when it returns it reacts
+
+330
+00:16:39,290 --> 00:16:41,750
+Acutes the move l instruction so that's
+
+331
+00:16:41,750 --> 00:16:43,750
+kind of cool so now the memory is
+
+332
+00:16:43,750 --> 00:16:47,630
+available and now that the move l this
+
+333
+00:16:47,630 --> 00:16:49,130
+move l instruction when it's reacts
+
+334
+00:16:49,130 --> 00:16:54,080
+acute 'add completes and then we
+
+335
+00:16:54,080 --> 00:16:57,590
+continue now another type of fault is an
+
+336
+00:16:57,590 --> 00:16:59,540
+invalid memory reference so here we have
+
+337
+00:16:59,540 --> 00:17:03,590
+a we're accessing an element of a which
+
+338
+00:17:03,590 --> 00:17:06,260
+doesn't exist and it's an illegal it's
+
+339
+00:17:06,260 --> 00:17:10,280
+an invalid reference so in this case the
+
+340
+00:17:10,280 --> 00:17:14,150
+move l instruction it looks like a it
+
+341
+00:17:14,150 --> 00:17:17,570
+looks like a page fault but the kernel
+
+342
+00:17:17,570 --> 00:17:19,280
+detects that it's an invalid address
+
+343
+00:17:19,280 --> 00:17:20,959
+that there isn't anything that can be
+
+344
+00:17:20,959 --> 00:17:22,630
+loaded from disk this is an invalid
+
+345
+00:17:22,630 --> 00:17:25,660
+region of the the virtual address space
+
+346
+00:17:25,660 --> 00:17:30,440
+so it it sends a signal to the to the
+
+347
+00:17:30,440 --> 00:17:34,640
+process and then never never returns
+
+348
+00:17:34,640 --> 00:17:37,670
+yet so the the signal that sends is the
+
+349
+00:17:37,670 --> 00:17:40,790
+infamous segmentation the signal that
+
+350
+00:17:40,790 --> 00:17:45,170
+causes the infamous sauce segmentation
+
+351
+00:17:45,170 --> 00:17:48,470
+fault message to print out and we'll see
+
+352
+00:17:48,470 --> 00:17:50,360
+you next lecture we'll see we'll see how
+
+353
+00:17:50,360 --> 00:17:55,450
+these signals actually actually work
+
+354
+00:17:55,450 --> 00:17:58,880
+okay so I said we've seen exceptions or
+
+355
+00:17:58,880 --> 00:18:02,780
+very low-level transfers of control that
+
+356
+00:18:02,780 --> 00:18:04,429
+are implemented by both hardware and the
+
+357
+00:18:04,429 --> 00:18:07,540
+operating system software it could sue
+
+358
+00:18:07,540 --> 00:18:11,510
+at the higher level is another form of
+
+359
+00:18:11,510 --> 00:18:14,540
+exceptional control flow called and we
+
+360
+00:18:14,540 --> 00:18:16,900
+see it in the in the context of a
+
+361
+00:18:16,900 --> 00:18:21,710
+process context switch so let's look at
+
+362
+00:18:21,710 --> 00:18:25,660
+and let's look at what what a process is
+
+363
+00:18:25,660 --> 00:18:28,429
+so a process the idea of a process is
+
+364
+00:18:28,429 --> 00:18:30,200
+one of the most fundamental and
+
+365
+00:18:30,200 --> 00:18:33,340
+important ideas in computer science and
+
+366
+00:18:33,340 --> 00:18:36,410
+this classical definition of is that a
+
+367
+00:18:36,410 --> 00:18:38,690
+process is an instance of a running
+
+368
+00:18:38,690 --> 00:18:42,559
+program okay it's different from a
+
+369
+00:18:42,559 --> 00:18:45,950
+program a program exists can exist in
+
+370
+00:18:45,950 --> 00:18:47,600
+many different places right a program
+
+371
+00:18:47,600 --> 00:18:51,110
+exists in yourseif as text in a C file
+
+372
+00:18:51,110 --> 00:18:55,570
+it can exist as the dot text section of
+
+373
+00:18:55,570 --> 00:19:00,470
+a binary it can exist as bytes that have
+
+374
+00:19:00,470 --> 00:19:03,169
+been loaded into memory a process is an
+
+375
+00:19:03,169 --> 00:19:05,150
+instance of a program that's that's
+
+376
+00:19:05,150 --> 00:19:12,320
+running that's in execution and
+
+377
+00:19:12,320 --> 00:19:16,929
+a process provides two key abstractions
+
+378
+00:19:16,929 --> 00:19:20,840
+okay it's the first abstraction is that
+
+379
+00:19:20,840 --> 00:19:23,659
+it gives it gives you the illusion that
+
+380
+00:19:23,659 --> 00:19:28,159
+you have exclusive access to the CPU and
+
+381
+00:19:28,159 --> 00:19:30,950
+thus and the registers okay so when
+
+382
+00:19:30,950 --> 00:19:32,629
+you're running when you're running your
+
+383
+00:19:32,629 --> 00:19:35,299
+program in a process you never have to
+
+384
+00:19:35,299 --> 00:19:37,639
+worry about any other any other programs
+
+385
+00:19:37,639 --> 00:19:40,429
+modifying your registers and and you
+
+386
+00:19:40,429 --> 00:19:43,489
+can't even tell that there's even other
+
+387
+00:19:43,489 --> 00:19:46,009
+processes running on the system right it
+
+388
+00:19:46,009 --> 00:19:48,859
+looks except for occasional delays like
+
+389
+00:19:48,859 --> 00:19:50,869
+an instruction that just takes a little
+
+390
+00:19:50,869 --> 00:19:54,499
+longer to run except for that it looks
+
+391
+00:19:54,499 --> 00:19:57,349
+like you have unique exclusive exclusive
+
+392
+00:19:57,349 --> 00:20:00,320
+use of the of the processor and it's and
+
+393
+00:20:00,320 --> 00:20:03,559
+it's registers the the other abstraction
+
+394
+00:20:03,559 --> 00:20:04,999
+that it provides is the illusion that
+
+395
+00:20:04,999 --> 00:20:08,960
+you have your own address space okay so
+
+396
+00:20:08,960 --> 00:20:11,659
+you have and this is provided by a
+
+397
+00:20:11,659 --> 00:20:15,039
+mechanism called virtual memory so each
+
+398
+00:20:15,039 --> 00:20:18,499
+each running program has its own code
+
+399
+00:20:18,499 --> 00:20:22,330
+data heap stack and you never see that
+
+400
+00:20:22,330 --> 00:20:25,909
+the code and you never see the memory
+
+401
+00:20:25,909 --> 00:20:27,609
+that's being used by other processes
+
+402
+00:20:27,609 --> 00:20:31,279
+okay so it looks for all intents and
+
+403
+00:20:31,279 --> 00:20:33,499
+purposes process gives you this illusion
+
+404
+00:20:33,499 --> 00:20:36,109
+that you have access to the exclusive
+
+405
+00:20:36,109 --> 00:20:39,049
+access to all the the memory and the and
+
+406
+00:20:39,049 --> 00:20:44,269
+the processor now that the system runs
+
+407
+00:20:44,269 --> 00:20:48,159
+many of these processes simultaneously
+
+408
+00:20:48,159 --> 00:20:52,460
+even even on a system with a single core
+
+409
+00:20:52,460 --> 00:20:55,309
+many of these multiple processes are
+
+410
+00:20:55,309 --> 00:20:57,549
+actually running at the same time
+
+411
+00:20:57,549 --> 00:21:00,049
+concurrently and you can see this if you
+
+412
+00:21:00,049 --> 00:21:03,759
+look at this here I ran top on on my Mac
+
+413
+00:21:03,759 --> 00:21:08,779
+and you can see it's running 123 123
+
+414
+00:21:08,779 --> 00:21:10,849
+total processes five of which are
+
+415
+00:21:10,849 --> 00:21:14,929
+actually running and each one of these
+
+416
+00:21:14,929 --> 00:21:18,229
+processes has its own unique process ID
+
+417
+00:21:18,229 --> 00:21:23,180
+this is integer
+
+418
+00:21:23,180 --> 00:21:25,980
+now the way so it looks it looks like
+
+419
+00:21:25,980 --> 00:21:27,870
+you have unique access or exclusive
+
+420
+00:21:27,870 --> 00:21:32,190
+access to the to the system but in
+
+421
+00:21:32,190 --> 00:21:35,370
+reality on a suppose we have a single
+
+422
+00:21:35,370 --> 00:21:38,580
+core on a you're actually sharing the
+
+423
+00:21:38,580 --> 00:21:40,320
+system and the the operating the
+
+424
+00:21:40,320 --> 00:21:42,600
+operating system is is sort of managing
+
+425
+00:21:42,600 --> 00:21:49,410
+that sharing so what it does is it we
+
+426
+00:21:49,410 --> 00:21:53,100
+have a process that's running and it has
+
+427
+00:21:53,100 --> 00:21:58,010
+its own it has its own address space and
+
+428
+00:21:58,010 --> 00:22:01,679
+and it has it sits and it has its own
+
+429
+00:22:01,679 --> 00:22:05,550
+registers and at some point either
+
+430
+00:22:05,550 --> 00:22:08,340
+because be cut at some point an
+
+431
+00:22:08,340 --> 00:22:09,780
+exception occurs either because of a
+
+432
+00:22:09,780 --> 00:22:13,800
+timer interrupt or a fault of some kind
+
+433
+00:22:13,800 --> 00:22:15,750
+or a trap at some point the the
+
+434
+00:22:15,750 --> 00:22:18,330
+operating system gets control of the
+
+435
+00:22:18,330 --> 00:22:21,540
+system and and in this case let's say it
+
+436
+00:22:21,540 --> 00:22:23,160
+decides that it wants to run another
+
+437
+00:22:23,160 --> 00:22:28,050
+process so it copies the the registers
+
+438
+00:22:28,050 --> 00:22:30,120
+the current the current register values
+
+439
+00:22:30,120 --> 00:22:34,500
+into memory and saves them and then it
+
+440
+00:22:34,500 --> 00:22:36,809
+schedules the next process for execution
+
+441
+00:22:36,809 --> 00:22:41,940
+and it loads the the registers that were
+
+442
+00:22:41,940 --> 00:22:45,000
+saved from the last time that process
+
+443
+00:22:45,000 --> 00:22:47,010
+was was running it loads those into the
+
+444
+00:22:47,010 --> 00:22:49,590
+CPU registers and then it switches the
+
+445
+00:22:49,590 --> 00:22:52,730
+address space to the address space for
+
+446
+00:22:52,730 --> 00:22:57,179
+for this process so this this the
+
+447
+00:22:57,179 --> 00:22:59,070
+address space and the register values
+
+448
+00:22:59,070 --> 00:23:02,460
+are the context and so the context
+
+449
+00:23:02,460 --> 00:23:06,780
+switch is is what is the change in the
+
+450
+00:23:06,780 --> 00:23:08,910
+in the address space and the registers
+
+451
+00:23:08,910 --> 00:23:12,720
+ok so then at that point the that
+
+452
+00:23:12,720 --> 00:23:16,770
+process is running now in reality on
+
+453
+00:23:16,770 --> 00:23:21,330
+modern systems with multiple cores the
+
+454
+00:23:21,330 --> 00:23:23,850
+operating system will schedule processes
+
+455
+00:23:23,850 --> 00:23:27,090
+on those multiple cores and then if
+
+456
+00:23:27,090 --> 00:23:28,590
+there's no if there's not enough course
+
+457
+00:23:28,590 --> 00:23:30,240
+to handle the processes then it will do
+
+458
+00:23:30,240 --> 00:23:32,790
+the context switching just like we
+
+459
+00:23:32,790 --> 00:23:36,809
+showed before
+
+460
+00:23:36,809 --> 00:23:40,360
+now each process represents a what we
+
+461
+00:23:40,360 --> 00:23:43,090
+call a logical control flow so if you
+
+462
+00:23:43,090 --> 00:23:44,169
+were to you know there's a physical
+
+463
+00:23:44,169 --> 00:23:46,600
+control flow which if we just looked at
+
+464
+00:23:46,600 --> 00:23:51,539
+all the PC values we'd be executing
+
+465
+00:23:51,539 --> 00:23:53,770
+instructions from one process and then
+
+466
+00:23:53,770 --> 00:23:55,780
+all of a sudden we'd be executing from
+
+467
+00:23:55,780 --> 00:23:58,299
+another process but within a single
+
+468
+00:23:58,299 --> 00:24:00,190
+process there's a logical control flow
+
+469
+00:24:00,190 --> 00:24:01,570
+which are all the instructions for that
+
+470
+00:24:01,570 --> 00:24:06,070
+process now we say that two processes
+
+471
+00:24:06,070 --> 00:24:08,770
+run concurrently if their flows overlap
+
+472
+00:24:08,770 --> 00:24:11,500
+in time otherwise they're sequential so
+
+473
+00:24:11,500 --> 00:24:14,350
+let's look at let's look an example we
+
+474
+00:24:14,350 --> 00:24:16,870
+have three processes process a runs for
+
+475
+00:24:16,870 --> 00:24:20,440
+a while and then it's it's interrupted
+
+476
+00:24:20,440 --> 00:24:22,990
+by process B and process C and then
+
+477
+00:24:22,990 --> 00:24:25,270
+eventually it it continues running and
+
+478
+00:24:25,270 --> 00:24:29,470
+then it terminates process B interrupts
+
+479
+00:24:29,470 --> 00:24:31,390
+process a and then it runs for a while
+
+480
+00:24:31,390 --> 00:24:36,070
+and then it terminates process C once
+
+481
+00:24:36,070 --> 00:24:38,380
+when process B finishes then process C
+
+482
+00:24:38,380 --> 00:24:41,650
+gets to run for a while then process a
+
+483
+00:24:41,650 --> 00:24:43,630
+runs for a while and then process C
+
+484
+00:24:43,630 --> 00:24:46,270
+terminates okay so given given this
+
+485
+00:24:46,270 --> 00:24:52,840
+definition of concurrency which which of
+
+486
+00:24:52,840 --> 00:24:57,570
+these processes are running concurrently
+
+487
+00:24:57,570 --> 00:25:08,190
+what about a a and B yes so so a and B's
+
+488
+00:25:08,190 --> 00:25:11,940
+flows B B's flow overlaps with A's flow
+
+489
+00:25:11,940 --> 00:25:26,540
+right so B B finishes starts and finish
+
+490
+00:25:26,540 --> 00:25:29,580
+some portion this portion of Bees flow
+
+491
+00:25:29,580 --> 00:25:32,670
+overlaps with A's flow right because b
+
+492
+00:25:32,670 --> 00:25:35,220
+is still running hasn't finished ok so
+
+493
+00:25:35,220 --> 00:25:38,520
+so a and B are concurrent as and
+
+494
+00:25:38,520 --> 00:25:42,150
+similarly C and a overlap so they're
+
+495
+00:25:42,150 --> 00:25:45,420
+concurrent but B and C are not
+
+496
+00:25:45,420 --> 00:25:48,390
+concurrent right B finishes before C
+
+497
+00:25:48,390 --> 00:25:56,100
+starts now this idea of concurrency it
+
+498
+00:25:56,100 --> 00:25:58,800
+doesn't this this definition of
+
+499
+00:25:58,800 --> 00:26:01,140
+concurrency holds regardless of the
+
+500
+00:26:01,140 --> 00:26:03,450
+number of cores right if even if you
+
+501
+00:26:03,450 --> 00:26:05,310
+have one core this example that I showed
+
+502
+00:26:05,310 --> 00:26:08,700
+you was on one core but even if you have
+
+503
+00:26:08,700 --> 00:26:10,290
+multiple cores as long as the flows
+
+504
+00:26:10,290 --> 00:26:12,390
+overlap in time
+
+505
+00:26:12,390 --> 00:26:15,810
+they're concurrent but we can think of
+
+506
+00:26:15,810 --> 00:26:18,600
+these no matter what we can we can think
+
+507
+00:26:18,600 --> 00:26:20,040
+of these as running in parallel with
+
+508
+00:26:20,040 --> 00:26:21,540
+each other at least from the point of
+
+509
+00:26:21,540 --> 00:26:29,990
+view of these individual processes
+
+510
+00:26:29,990 --> 00:26:33,590
+now this this notion of a context which
+
+511
+00:26:33,590 --> 00:26:38,130
+is it's managed by its managed by the
+
+512
+00:26:38,130 --> 00:26:40,710
+kernel okay and it's important to
+
+513
+00:26:40,710 --> 00:26:42,360
+realize that the kernel is not like a
+
+514
+00:26:42,360 --> 00:26:43,919
+separate process that's running it
+
+515
+00:26:43,919 --> 00:26:45,450
+always runs in the context of some
+
+516
+00:26:45,450 --> 00:26:50,520
+existing process and it's it's it's it's
+
+517
+00:26:50,520 --> 00:26:52,980
+just code that's in the upper portion of
+
+518
+00:26:52,980 --> 00:26:55,740
+the address space that gets executed as
+
+519
+00:26:55,740 --> 00:26:59,730
+a result of an exception so what what
+
+520
+00:26:59,730 --> 00:27:01,409
+happens the way to think about this is
+
+521
+00:27:01,409 --> 00:27:03,990
+that you have this process a that runs
+
+522
+00:27:03,990 --> 00:27:05,909
+and then an exception occurs which
+
+523
+00:27:05,909 --> 00:27:08,610
+transfers control to the kernel the
+
+524
+00:27:08,610 --> 00:27:11,340
+kernel invokes its scheduler which
+
+525
+00:27:11,340 --> 00:27:13,500
+decides whether to let a continue to run
+
+526
+00:27:13,500 --> 00:27:16,799
+or to to do a context switch and run a
+
+527
+00:27:16,799 --> 00:27:19,770
+new process another process so in this
+
+528
+00:27:19,770 --> 00:27:24,210
+example the scheduler is decided to to
+
+529
+00:27:24,210 --> 00:27:26,880
+run process B so it executes code and
+
+530
+00:27:26,880 --> 00:27:31,289
+then sort of changes sort of once it
+
+531
+00:27:31,289 --> 00:27:34,860
+repoint s' the address space then it's
+
+532
+00:27:34,860 --> 00:27:36,990
+running in the context of process B and
+
+533
+00:27:36,990 --> 00:27:41,220
+it finishes loading the registers for
+
+534
+00:27:41,220 --> 00:27:43,140
+for process B general-purpose registers
+
+535
+00:27:43,140 --> 00:27:46,440
+and then transfers control to b and b
+
+536
+00:27:46,440 --> 00:27:51,779
+picks up where it left off okay and that
+
+537
+00:27:51,779 --> 00:27:53,809
+at some point another exception occurs
+
+538
+00:27:53,809 --> 00:27:57,059
+and in the kernel decides to transfer
+
+539
+00:27:57,059 --> 00:27:59,220
+control back to process a which picks up
+
+540
+00:27:59,220 --> 00:28:01,890
+where it left off right here so whatever
+
+541
+00:28:01,890 --> 00:28:04,880
+instruction it finishes executing
+
+542
+00:28:04,880 --> 00:28:07,350
+whatever instruction instruction was
+
+543
+00:28:07,350 --> 00:28:09,260
+executing at the time of the exception
+
+544
+00:28:09,260 --> 00:28:16,690
+execute the next instruction here
+
+545
+00:28:16,690 --> 00:28:20,149
+now Linux provides a number of functions
+
+546
+00:28:20,149 --> 00:28:22,549
+that you can you can call from a user
+
+547
+00:28:22,549 --> 00:28:25,130
+program to manipulate processes and this
+
+548
+00:28:25,130 --> 00:28:27,110
+this this process this act of
+
+549
+00:28:27,110 --> 00:28:29,389
+manipulating processes we refer to as
+
+550
+00:28:29,389 --> 00:28:33,019
+process control now all of these
+
+551
+00:28:33,019 --> 00:28:35,840
+functions most are I should say most of
+
+552
+00:28:35,840 --> 00:28:39,529
+these functions call invoke system make
+
+553
+00:28:39,529 --> 00:28:42,320
+system calls but they're they're they're
+
+554
+00:28:42,320 --> 00:28:44,480
+wrapped in higher levels what we call
+
+555
+00:28:44,480 --> 00:28:46,759
+system level functions that that are the
+
+556
+00:28:46,759 --> 00:28:48,049
+things you actually call from your user
+
+557
+00:28:48,049 --> 00:28:53,330
+program now system level the Linux
+
+558
+00:28:53,330 --> 00:28:55,129
+system level functions that will
+
+559
+00:28:55,129 --> 00:28:57,049
+typically return a minus one if there's
+
+560
+00:28:57,049 --> 00:28:59,090
+an error and then they'll set a global
+
+561
+00:28:59,090 --> 00:29:01,789
+variable called error no to indicate the
+
+562
+00:29:01,789 --> 00:29:05,299
+reason so there's a hard and fast rule
+
+563
+00:29:05,299 --> 00:29:08,799
+when you're doing when you're invoking
+
+564
+00:29:08,799 --> 00:29:12,679
+system level functions you must check
+
+565
+00:29:12,679 --> 00:29:15,220
+the return values from those functions
+
+566
+00:29:15,220 --> 00:29:18,649
+you should and this you never you'll get
+
+567
+00:29:18,649 --> 00:29:21,409
+it you'll get into huge trouble if you
+
+568
+00:29:21,409 --> 00:29:23,059
+if you neglect to check the return
+
+569
+00:29:23,059 --> 00:29:25,850
+values okay so you should never make a
+
+570
+00:29:25,850 --> 00:29:29,120
+system a system level function call
+
+571
+00:29:29,120 --> 00:29:32,059
+without checking the return value the
+
+572
+00:29:32,059 --> 00:29:33,379
+and the only exception there's some
+
+573
+00:29:33,379 --> 00:29:39,169
+functions that return void such as exit
+
+574
+00:29:39,169 --> 00:29:43,759
+or free don't return anything so the way
+
+575
+00:29:43,759 --> 00:29:45,470
+the typical way you would do this is
+
+576
+00:29:45,470 --> 00:29:47,629
+like the fork call which we use to
+
+577
+00:29:47,629 --> 00:29:50,330
+create processes returns the process
+
+578
+00:29:50,330 --> 00:29:53,210
+idea of the of the the process that it
+
+579
+00:29:53,210 --> 00:29:55,700
+created which is always positive if
+
+580
+00:29:55,700 --> 00:29:57,769
+there's an error returns minus 1 so we
+
+581
+00:29:57,769 --> 00:29:59,899
+check for the return value to be less
+
+582
+00:29:59,899 --> 00:30:00,620
+than 0
+
+583
+00:30:00,620 --> 00:30:03,470
+and then we we deal with that error
+
+584
+00:30:03,470 --> 00:30:06,919
+somehow ok in this case we're just
+
+585
+00:30:06,919 --> 00:30:10,970
+printing a message and exiting now this
+
+586
+00:30:10,970 --> 00:30:13,250
+gets although it's essential to do this
+
+587
+00:30:13,250 --> 00:30:18,230
+it gets sort of forked from from my
+
+588
+00:30:18,230 --> 00:30:19,639
+point of view we're trying to present
+
+589
+00:30:19,639 --> 00:30:21,350
+code to you
+
+590
+00:30:21,350 --> 00:30:24,409
+it gets really messy it takes up a lot
+
+591
+00:30:24,409 --> 00:30:30,510
+of space yes
+
+592
+00:30:30,510 --> 00:30:36,539
+I'm checking that it's less than zero oh
+
+593
+00:30:36,539 --> 00:30:39,570
+yeah that probably that should be
+
+594
+00:30:39,570 --> 00:30:42,010
+normally the convention is to return non
+
+595
+00:30:42,010 --> 00:30:45,669
+zero so you're right that it's it's not
+
+596
+00:30:45,669 --> 00:30:47,200
+a hard and fast rule but that's that's
+
+597
+00:30:47,200 --> 00:30:49,210
+typically the convention so I guess it
+
+598
+00:30:49,210 --> 00:30:54,850
+should be exit one so what we'll do to
+
+599
+00:30:54,850 --> 00:30:57,520
+simplify this in the code that we
+
+600
+00:30:57,520 --> 00:30:59,169
+present to you and in the code that we
+
+601
+00:30:59,169 --> 00:31:00,190
+present you in the book
+
+602
+00:31:00,190 --> 00:31:02,830
+well we'll define error reporting
+
+603
+00:31:02,830 --> 00:31:07,330
+functions so unix-style errors where the
+
+604
+00:31:07,330 --> 00:31:09,220
+function returns minus 1 and then sets
+
+605
+00:31:09,220 --> 00:31:14,409
+there are no will if we get that kind of
+
+606
+00:31:14,409 --> 00:31:17,559
+if we get that kind of error will will
+
+607
+00:31:17,559 --> 00:31:19,960
+print the will print a message and we'll
+
+608
+00:31:19,960 --> 00:31:22,510
+report what that error was before we
+
+609
+00:31:22,510 --> 00:31:25,270
+exit and so then in the code we can
+
+610
+00:31:25,270 --> 00:31:28,600
+replace that that that body of that if
+
+611
+00:31:28,600 --> 00:31:31,570
+statement with just a single line okay
+
+612
+00:31:31,570 --> 00:31:33,400
+so that that makes the code a little
+
+613
+00:31:33,400 --> 00:31:36,220
+tighter but we'll go even further than
+
+614
+00:31:36,220 --> 00:31:38,440
+that and we'll define these wrappers
+
+615
+00:31:38,440 --> 00:31:41,770
+which were pioneered by a great
+
+616
+00:31:41,770 --> 00:31:44,140
+technical writer named w richards of
+
+617
+00:31:44,140 --> 00:31:48,549
+stevens and what we do here is we we
+
+618
+00:31:48,549 --> 00:31:50,919
+replace each function with a an error at
+
+619
+00:31:50,919 --> 00:31:54,750
+a wrapper that has the identical
+
+620
+00:31:54,750 --> 00:31:57,100
+interface as the function the original
+
+621
+00:31:57,100 --> 00:32:00,370
+function and it has the first the first
+
+622
+00:32:00,370 --> 00:32:03,220
+letter uppercase and then what this
+
+623
+00:32:03,220 --> 00:32:05,890
+wrapper does is it calls it calls the
+
+624
+00:32:05,890 --> 00:32:08,919
+original function checks for the errors
+
+625
+00:32:08,919 --> 00:32:10,900
+and then and then if there's no error
+
+626
+00:32:10,900 --> 00:32:13,929
+returns what the original function would
+
+627
+00:32:13,929 --> 00:32:16,960
+have returned so the behavior of this
+
+628
+00:32:16,960 --> 00:32:19,990
+wrapper is identical to the wrapped
+
+629
+00:32:19,990 --> 00:32:22,990
+function if there's not an error okay
+
+630
+00:32:22,990 --> 00:32:25,390
+and if there is an error then it deals
+
+631
+00:32:25,390 --> 00:32:27,700
+with it somehow and prints a message and
+
+632
+00:32:27,700 --> 00:32:30,730
+so then this allows us to make our code
+
+633
+00:32:30,730 --> 00:32:32,830
+really compact without violating this
+
+634
+00:32:32,830 --> 00:32:35,200
+hard and fast rule that we have to we
+
+635
+00:32:35,200 --> 00:32:39,599
+have to check for errors
+
+636
+00:32:39,599 --> 00:32:43,330
+okay the simplest function process
+
+637
+00:32:43,330 --> 00:32:45,549
+control functions are functions that
+
+638
+00:32:45,549 --> 00:32:47,529
+allow you to get the pig for the current
+
+639
+00:32:47,529 --> 00:32:50,859
+process which is getpid or the the
+
+640
+00:32:50,859 --> 00:32:52,570
+processor idea of you if the parent
+
+641
+00:32:52,570 --> 00:32:54,460
+process that created the current process
+
+642
+00:32:54,460 --> 00:32:57,429
+okay so this these take no arguments and
+
+643
+00:32:57,429 --> 00:32:59,590
+they return an integer which is a
+
+644
+00:32:59,590 --> 00:33:07,359
+process ID now linux provides ways to
+
+645
+00:33:07,359 --> 00:33:11,229
+create and terminate processes and from
+
+646
+00:33:11,229 --> 00:33:12,940
+a programmers perspective we can think
+
+647
+00:33:12,940 --> 00:33:14,830
+of a process as being in one of three
+
+648
+00:33:14,830 --> 00:33:18,700
+states running so in this case the
+
+649
+00:33:18,700 --> 00:33:21,279
+process is actually running and executes
+
+650
+00:33:21,279 --> 00:33:25,719
+instructions or its it can be scheduled
+
+651
+00:33:25,719 --> 00:33:27,429
+maybe it's not running but it can be
+
+652
+00:33:27,429 --> 00:33:31,450
+scheduled at a later time right and it's
+
+653
+00:33:31,450 --> 00:33:34,299
+waiting is waiting to be scheduled it
+
+654
+00:33:34,299 --> 00:33:37,629
+can be stopped which means that
+
+655
+00:33:37,629 --> 00:33:41,320
+execution is suspended and won't be
+
+656
+00:33:41,320 --> 00:33:43,029
+scheduled until further notice so we'll
+
+657
+00:33:43,029 --> 00:33:44,979
+see how this works when we study signals
+
+658
+00:33:44,979 --> 00:33:46,719
+in the next lecture but usually a
+
+659
+00:33:46,719 --> 00:33:49,440
+process is stopped because it receives a
+
+660
+00:33:49,440 --> 00:33:52,570
+certain kind of signal and then that the
+
+661
+00:33:52,570 --> 00:33:54,789
+process becomes stopped in ways it won't
+
+662
+00:33:54,789 --> 00:33:58,960
+be executed it won't be scheduled until
+
+663
+00:33:58,960 --> 00:34:02,349
+you explicitly tell it to be scheduled
+
+664
+00:34:02,349 --> 00:34:05,019
+or process can be terminated which means
+
+665
+00:34:05,019 --> 00:34:07,269
+it stopped permanently okay so it'll
+
+666
+00:34:07,269 --> 00:34:11,679
+never be scheduled again it's done now a
+
+667
+00:34:11,679 --> 00:34:13,899
+process can be terminated for one of
+
+668
+00:34:13,899 --> 00:34:16,599
+three reasons so one it receives a
+
+669
+00:34:16,599 --> 00:34:19,179
+signal whose default action is to
+
+670
+00:34:19,179 --> 00:34:23,139
+terminate it or your your program
+
+671
+00:34:23,139 --> 00:34:25,270
+returns from the main routine so you
+
+672
+00:34:25,270 --> 00:34:27,369
+know you can if you know the definition
+
+673
+00:34:27,369 --> 00:34:31,029
+for main is int see main routines always
+
+674
+00:34:31,029 --> 00:34:33,639
+return an int so you can return from
+
+675
+00:34:33,639 --> 00:34:36,399
+main and that will terminate your event
+
+676
+00:34:36,399 --> 00:34:38,529
+it will terminate the process or you can
+
+677
+00:34:38,529 --> 00:34:42,520
+explicitly call the exit function the
+
+678
+00:34:42,520 --> 00:34:46,899
+exit function exits the program with an
+
+679
+00:34:46,899 --> 00:34:49,970
+exit status of the of its argument so
+
+680
+00:34:49,970 --> 00:34:52,070
+as as you pointed out that the
+
+681
+00:34:52,070 --> 00:34:55,040
+convention is that for normal return is
+
+682
+00:34:55,040 --> 00:34:57,290
+to return zero and then non zero on
+
+683
+00:34:57,290 --> 00:35:01,010
+error or you can another way to do this
+
+684
+00:35:01,010 --> 00:35:03,410
+is just return an integer value from the
+
+685
+00:35:03,410 --> 00:35:05,420
+main routine and that will that will set
+
+686
+00:35:05,420 --> 00:35:08,750
+the exit status now exit is kind of
+
+687
+00:35:08,750 --> 00:35:10,820
+unusual and you'll see this is typical
+
+688
+00:35:10,820 --> 00:35:13,849
+of all these process control functions
+
+689
+00:35:13,849 --> 00:35:16,190
+that they normally functions you call
+
+690
+00:35:16,190 --> 00:35:19,700
+them once and then they return once okay
+
+691
+00:35:19,700 --> 00:35:21,980
+but exit you call once and then it never
+
+692
+00:35:21,980 --> 00:35:26,660
+returns okay so that's so that's a
+
+693
+00:35:26,660 --> 00:35:30,619
+little unusual now a parent process can
+
+694
+00:35:30,619 --> 00:35:33,200
+create a child process by calling the
+
+695
+00:35:33,200 --> 00:35:39,020
+fork function so fork takes no arguments
+
+696
+00:35:39,020 --> 00:35:46,010
+and it returns an integer it it creates
+
+697
+00:35:46,010 --> 00:35:50,510
+a new child process and then it returns
+
+698
+00:35:50,510 --> 00:35:55,520
+in both the parent and the child so this
+
+699
+00:35:55,520 --> 00:35:56,869
+is a little hard to wrap your head
+
+700
+00:35:56,869 --> 00:35:59,690
+around at first it's called once by the
+
+701
+00:35:59,690 --> 00:36:04,550
+parent but it then it returns in both it
+
+702
+00:36:04,550 --> 00:36:05,960
+creates a new process and then it
+
+703
+00:36:05,960 --> 00:36:07,790
+returns in both the parent and the child
+
+704
+00:36:07,790 --> 00:36:13,369
+and to the child it returns zero to the
+
+705
+00:36:13,369 --> 00:36:15,560
+parent return it returns to the child's
+
+706
+00:36:15,560 --> 00:36:20,999
+process ID okay
+
+707
+00:36:20,999 --> 00:36:24,069
+the child gets an identical copy of the
+
+708
+00:36:24,069 --> 00:36:27,069
+parents virtual address space but
+
+709
+00:36:27,069 --> 00:36:29,999
+separate right there they're distinct
+
+710
+00:36:29,999 --> 00:36:34,059
+but immediately after the fork returns
+
+711
+00:36:34,059 --> 00:36:36,670
+the the addresses the address space is
+
+712
+00:36:36,670 --> 00:36:38,589
+identical so that means that all the
+
+713
+00:36:38,589 --> 00:36:41,470
+variables all the global variables the
+
+714
+00:36:41,470 --> 00:36:44,950
+stack the code everything is identical
+
+715
+00:36:44,950 --> 00:36:46,180
+and the child
+
+716
+00:36:46,180 --> 00:36:49,210
+it has the exact same values as it as it
+
+717
+00:36:49,210 --> 00:36:53,499
+does in the parent the the child gets
+
+718
+00:36:53,499 --> 00:36:55,569
+identical copies of the parents open
+
+719
+00:36:55,569 --> 00:36:59,680
+open file descriptors so the child has
+
+720
+00:36:59,680 --> 00:37:01,900
+access to any open files including like
+
+721
+00:37:01,900 --> 00:37:03,489
+standard in and standard out that the
+
+722
+00:37:03,489 --> 00:37:06,789
+parent had and the only difference is
+
+723
+00:37:06,789 --> 00:37:08,259
+that the child gets a different process
+
+724
+00:37:08,259 --> 00:37:12,249
+ID than the parent so fork is really
+
+725
+00:37:12,249 --> 00:37:16,329
+strange because it's called once but
+
+726
+00:37:16,329 --> 00:37:18,160
+returns twice once in the parent and
+
+727
+00:37:18,160 --> 00:37:22,299
+once in the child so here's an example
+
+728
+00:37:22,299 --> 00:37:27,219
+of this here's a this is an example
+
+729
+00:37:27,219 --> 00:37:31,390
+program that has a it has a local
+
+730
+00:37:31,390 --> 00:37:33,339
+variable called X on the stack
+
+731
+00:37:33,339 --> 00:37:37,719
+initialized to 1 and then it calls fork
+
+732
+00:37:37,719 --> 00:37:42,729
+and fork creates the child and returns
+
+733
+00:37:42,729 --> 00:37:47,440
+the it returns a value to that both the
+
+734
+00:37:47,440 --> 00:37:51,400
+parent and the child we the only way we
+
+735
+00:37:51,400 --> 00:37:52,960
+can distinguish whether we're executing
+
+736
+00:37:52,960 --> 00:37:54,819
+in the parent or the child is to check
+
+737
+00:37:54,819 --> 00:37:57,910
+that return value okay so here if the
+
+738
+00:37:57,910 --> 00:38:00,789
+process ID if pit is zero then we're
+
+739
+00:38:00,789 --> 00:38:03,190
+executing in the child now remember the
+
+740
+00:38:03,190 --> 00:38:06,880
+child got exactly the same has exactly
+
+741
+00:38:06,880 --> 00:38:11,060
+the same
+
+742
+00:38:11,060 --> 00:38:15,870
+memory and encode is the parent so X in
+
+743
+00:38:15,870 --> 00:38:20,220
+the child is is one so when we print we
+
+744
+00:38:20,220 --> 00:38:21,840
+print this message from the child we
+
+745
+00:38:21,840 --> 00:38:24,690
+increment X and then print this this
+
+746
+00:38:24,690 --> 00:38:29,840
+message so the child will print 1+1 2
+
+747
+00:38:29,840 --> 00:38:34,650
+and then exit in the parent when we
+
+748
+00:38:34,650 --> 00:38:36,780
+check that this process ID it's going to
+
+749
+00:38:36,780 --> 00:38:38,370
+be non zero because it's the process
+
+750
+00:38:38,370 --> 00:38:40,860
+idea of that of the child so in this
+
+751
+00:38:40,860 --> 00:38:44,400
+case so so the parent won't execute this
+
+752
+00:38:44,400 --> 00:38:47,490
+the body of this conditional so the
+
+753
+00:38:47,490 --> 00:38:50,490
+parent will execute this printf and in
+
+754
+00:38:50,490 --> 00:38:52,560
+the parent we decrement X before we
+
+755
+00:38:52,560 --> 00:38:56,010
+print it so the parent prints out 1
+
+756
+00:38:56,010 --> 00:39:01,770
+minus 1 is 0 now there's no guarantee we
+
+757
+00:39:01,770 --> 00:39:03,720
+have no guarantee whether the child or
+
+758
+00:39:03,720 --> 00:39:06,630
+the parent executes first it could at
+
+759
+00:39:06,630 --> 00:39:09,690
+with the fork when the fork returns the
+
+760
+00:39:09,690 --> 00:39:11,760
+the kernel may decide to schedule the
+
+761
+00:39:11,760 --> 00:39:15,060
+child first okay in which in which case
+
+762
+00:39:15,060 --> 00:39:17,910
+this code in the body of the conditional
+
+763
+00:39:17,910 --> 00:39:20,550
+would run or it may it may decide to run
+
+764
+00:39:20,550 --> 00:39:23,820
+the parent first okay and and there's no
+
+765
+00:39:23,820 --> 00:39:25,830
+way to predict and you it's is wrong
+
+766
+00:39:25,830 --> 00:39:27,930
+it's an error to make any assumption
+
+767
+00:39:27,930 --> 00:39:29,970
+like that about what's going to run
+
+768
+00:39:29,970 --> 00:39:32,480
+first the parent of the child and you
+
+769
+00:39:32,480 --> 00:39:34,950
+can see that they share the same open
+
+770
+00:39:34,950 --> 00:39:37,590
+files because both the parent and the
+
+771
+00:39:37,590 --> 00:39:40,800
+child print to standard out and it
+
+772
+00:39:40,800 --> 00:39:46,770
+prints on the terminal okay yes Oh what
+
+773
+00:39:46,770 --> 00:39:48,330
+if the question is what if you call fork
+
+774
+00:39:48,330 --> 00:39:49,650
+multiple times I'll show you some
+
+775
+00:39:49,650 --> 00:39:53,520
+examples of those it gets a little hairy
+
+776
+00:39:53,520 --> 00:39:55,830
+will have a will use a model called the
+
+777
+00:39:55,830 --> 00:39:59,100
+process graph to sort sort of understand
+
+778
+00:39:59,100 --> 00:40:04,060
+what happens
+
+779
+00:40:04,060 --> 00:40:06,160
+okay so like just like you said forks
+
+780
+00:40:06,160 --> 00:40:10,540
+forks are kind of can be kind of complex
+
+781
+00:40:10,540 --> 00:40:12,310
+and time to sin especially if they're
+
+782
+00:40:12,310 --> 00:40:14,520
+nested or you call them multiple times
+
+783
+00:40:14,520 --> 00:40:16,960
+so we use a tool called the process
+
+784
+00:40:16,960 --> 00:40:21,970
+graph to to capture sort of what what
+
+785
+00:40:21,970 --> 00:40:24,940
+could happen when we call Forks right we
+
+786
+00:40:24,940 --> 00:40:26,740
+can we can't we can't make any
+
+787
+00:40:26,740 --> 00:40:28,480
+assumption about the ordering of of
+
+788
+00:40:28,480 --> 00:40:31,720
+different processes but we can capture
+
+789
+00:40:31,720 --> 00:40:33,700
+the partial ordering of events using
+
+790
+00:40:33,700 --> 00:40:36,880
+this this tool called a process graph so
+
+791
+00:40:36,880 --> 00:40:38,320
+what we'll do is we'll let each vertex
+
+792
+00:40:38,320 --> 00:40:40,660
+correspond to the execution of a
+
+793
+00:40:40,660 --> 00:40:42,940
+statement and then an edge is that
+
+794
+00:40:42,940 --> 00:40:45,940
+happens before relation so a happens
+
+795
+00:40:45,940 --> 00:40:48,610
+before B and we will label edges with
+
+796
+00:40:48,610 --> 00:40:51,460
+current values of variables if we have a
+
+797
+00:40:51,460 --> 00:40:54,670
+printf vertices a printed X that
+
+798
+00:40:54,670 --> 00:40:56,620
+corresponds to a printf we can label
+
+799
+00:40:56,620 --> 00:40:59,950
+that with the output and then the every
+
+800
+00:40:59,950 --> 00:41:02,670
+graph starts with a vertex with no edges
+
+801
+00:41:02,670 --> 00:41:05,890
+so given this graph then any topological
+
+802
+00:41:05,890 --> 00:41:07,690
+sort of the graph represents some
+
+803
+00:41:07,690 --> 00:41:11,290
+feasible some feasible total ordering of
+
+804
+00:41:11,290 --> 00:41:15,160
+events and by topological sort we mean a
+
+805
+00:41:15,160 --> 00:41:17,740
+total ordering of the vertices where all
+
+806
+00:41:17,740 --> 00:41:22,420
+the edges go from left to right okay so
+
+807
+00:41:22,420 --> 00:41:23,620
+let's look at how this would work for
+
+808
+00:41:23,620 --> 00:41:28,600
+our example program here we have the
+
+809
+00:41:28,600 --> 00:41:32,680
+parent initially X is equal to 1 and
+
+810
+00:41:32,680 --> 00:41:36,100
+then the parent calls fork the fork
+
+811
+00:41:36,100 --> 00:41:40,290
+returns in both the parent and the child
+
+812
+00:41:40,290 --> 00:41:43,840
+the child prints and both the parent and
+
+813
+00:41:43,840 --> 00:41:47,230
+the child print the value of x after
+
+814
+00:41:47,230 --> 00:41:49,660
+incrementing or decrementing and then
+
+815
+00:41:49,660 --> 00:41:52,270
+they both exit ok so you can think of
+
+816
+00:41:52,270 --> 00:41:57,100
+these as as happening so these happen
+
+817
+00:41:57,100 --> 00:41:58,750
+concurrently right which means they can
+
+818
+00:41:58,750 --> 00:42:02,200
+be interleaved in in in any way so the
+
+819
+00:42:02,200 --> 00:42:04,510
+the topological sort of this graph will
+
+820
+00:42:04,510 --> 00:42:09,340
+tell us a feasible what's a feasible
+
+821
+00:42:09,340 --> 00:42:13,410
+water feasible interleavings
+
+822
+00:42:13,410 --> 00:42:17,050
+okay so we can so if we if we real able
+
+823
+00:42:17,050 --> 00:42:19,150
+the graph just to keep it simple so if
+
+824
+00:42:19,150 --> 00:42:22,000
+we if we real able these edges with just
+
+825
+00:42:22,000 --> 00:42:28,109
+single letters then this total ordering
+
+826
+00:42:28,109 --> 00:42:32,859
+ABEC FD represent is represents it's a
+
+827
+00:42:32,859 --> 00:42:35,230
+topological sort and thus a feasible
+
+828
+00:42:35,230 --> 00:42:38,460
+total ordering so here we have a
+
+829
+00:42:38,460 --> 00:42:42,819
+executing then B then I execute CIN the
+
+830
+00:42:42,819 --> 00:42:46,180
+child and then at this point the the
+
+831
+00:42:46,180 --> 00:42:52,390
+kernel decides to swap out swap out e
+
+832
+00:42:52,390 --> 00:42:54,880
+swap out the child and now let the
+
+833
+00:42:54,880 --> 00:42:58,210
+parent run so the parent picks up and
+
+834
+00:42:58,210 --> 00:43:02,680
+executes C and then and then it gets
+
+835
+00:43:02,680 --> 00:43:04,599
+rescheduled to chat then the child gets
+
+836
+00:43:04,599 --> 00:43:06,940
+scheduled and executes F and then the
+
+837
+00:43:06,940 --> 00:43:08,980
+parent the parent runs and finally
+
+838
+00:43:08,980 --> 00:43:11,530
+finishes right so this is this is very
+
+839
+00:43:11,530 --> 00:43:14,290
+unlikely that it you only execute one
+
+840
+00:43:14,290 --> 00:43:18,010
+instruction and then and then B and then
+
+841
+00:43:18,010 --> 00:43:19,540
+have a context switch but it's it's
+
+842
+00:43:19,540 --> 00:43:22,450
+feasible right because it represents
+
+843
+00:43:22,450 --> 00:43:25,390
+because the the total ordering is a is a
+
+844
+00:43:25,390 --> 00:43:29,799
+is a topological ordering on the other
+
+845
+00:43:29,799 --> 00:43:34,059
+hand this is this is infeasible because
+
+846
+00:43:34,059 --> 00:43:37,750
+F here in this total ordering we're
+
+847
+00:43:37,750 --> 00:43:40,930
+executing F before E and you can see
+
+848
+00:43:40,930 --> 00:43:42,819
+that this that just can't happen right
+
+849
+00:43:42,819 --> 00:43:46,240
+so the the edges on these the logical
+
+850
+00:43:46,240 --> 00:43:48,579
+flow represented by this child have to
+
+851
+00:43:48,579 --> 00:43:51,130
+occur in this order first E and then F
+
+852
+00:43:51,130 --> 00:43:57,579
+right by the just because F follows E in
+
+853
+00:43:57,579 --> 00:43:59,559
+the code right that the compilers not
+
+854
+00:43:59,559 --> 00:44:06,640
+going to it's not going to alter those
+
+855
+00:44:06,640 --> 00:44:08,499
+okay so what happens if now if we have
+
+856
+00:44:08,499 --> 00:44:14,019
+two consecutive Forks well let's draw
+
+857
+00:44:14,019 --> 00:44:16,839
+the the process graph will help us
+
+858
+00:44:16,839 --> 00:44:20,109
+understand this so in the parent we
+
+859
+00:44:20,109 --> 00:44:24,400
+print L 0 and then fork and that creates
+
+860
+00:44:24,400 --> 00:44:28,569
+a child and both and so the fork returns
+
+861
+00:44:28,569 --> 00:44:30,430
+to this printf in both the parent and
+
+862
+00:44:30,430 --> 00:44:32,529
+the child so they both the parent and
+
+863
+00:44:32,529 --> 00:44:37,720
+the child print L 1 and then both parent
+
+864
+00:44:37,720 --> 00:44:42,180
+and child execute a fork so that creates
+
+865
+00:44:42,180 --> 00:44:44,710
+that creates another child that creates
+
+866
+00:44:44,710 --> 00:44:48,099
+two more now two two children okay and
+
+867
+00:44:48,099 --> 00:44:52,019
+then and so that returns to the printf
+
+868
+00:44:52,019 --> 00:44:56,049
+which says bye so the result of this of
+
+869
+00:44:56,049 --> 00:44:58,269
+calling Fork twice like this is that it
+
+870
+00:44:58,269 --> 00:45:01,809
+creates four processes okay and you can
+
+871
+00:45:01,809 --> 00:45:04,150
+and if it's confusing you can always
+
+872
+00:45:04,150 --> 00:45:06,130
+work it out with the the process graph
+
+873
+00:45:06,130 --> 00:45:09,400
+like this okay so we can weaken us we
+
+874
+00:45:09,400 --> 00:45:11,140
+can see feasible and infeasible
+
+875
+00:45:11,140 --> 00:45:14,109
+orderings so this one's feasible take my
+
+876
+00:45:14,109 --> 00:45:16,869
+word for it this one is infeasible and
+
+877
+00:45:16,869 --> 00:45:22,809
+let's see why so L 0 and there's no way
+
+878
+00:45:22,809 --> 00:45:28,509
+to to print by before the first fork all
+
+879
+00:45:28,509 --> 00:45:30,579
+right so that's infeasible if we if we
+
+880
+00:45:30,579 --> 00:45:32,319
+drew out this process graph we'd have a
+
+881
+00:45:32,319 --> 00:45:39,519
+backward a backward edge okay now what
+
+882
+00:45:39,519 --> 00:45:41,470
+happens if we nest Forks in the parent
+
+883
+00:45:41,470 --> 00:45:43,180
+okay I'm not sure why you'd want to do
+
+884
+00:45:43,180 --> 00:45:45,130
+this except maybe to torture to 13
+
+885
+00:45:45,130 --> 00:45:50,250
+students but
+
+886
+00:45:50,250 --> 00:45:52,470
+so we can just work this out by drawing
+
+887
+00:45:52,470 --> 00:45:55,590
+the process graph so here we have the
+
+888
+00:45:55,590 --> 00:45:58,349
+parent it prints L 0 and then it does a
+
+889
+00:45:58,349 --> 00:46:04,320
+fork so that creates a child so the
+
+890
+00:46:04,320 --> 00:46:10,950
+child if fork is not equal to 0 then
+
+891
+00:46:10,950 --> 00:46:12,599
+we're in the parent right so this code
+
+892
+00:46:12,599 --> 00:46:16,880
+executes sin the parent if fork is 0
+
+893
+00:46:16,880 --> 00:46:19,530
+then we're executing the child and the
+
+894
+00:46:19,530 --> 00:46:23,340
+child just prints by and then and then
+
+895
+00:46:23,340 --> 00:46:25,800
+terminate it eventually terminates I
+
+896
+00:46:25,800 --> 00:46:29,760
+didn't show it here but calls exit think
+
+897
+00:46:29,760 --> 00:46:31,800
+the function that called this function
+
+898
+00:46:31,800 --> 00:46:36,750
+calls exit so the parent so fork not
+
+899
+00:46:36,750 --> 00:46:40,200
+equal to 0 indicates that this is the
+
+900
+00:46:40,200 --> 00:46:44,940
+parent so the parent prints l1 and then
+
+901
+00:46:44,940 --> 00:46:48,090
+it does another fork that fork creates a
+
+902
+00:46:48,090 --> 00:46:54,570
+child so if if fork is not equal to 0
+
+903
+00:46:54,570 --> 00:46:58,200
+then we're in the parent so the parent
+
+904
+00:46:58,200 --> 00:47:00,750
+prints l2 and then exits this
+
+905
+00:47:00,750 --> 00:47:06,150
+conditional and prints by if if fork
+
+906
+00:47:06,150 --> 00:47:07,740
+returns 0 then that means we're
+
+907
+00:47:07,740 --> 00:47:10,109
+executing the child so we don't execute
+
+908
+00:47:10,109 --> 00:47:11,970
+this code we jump out of this
+
+909
+00:47:11,970 --> 00:47:14,609
+conditional and then the child just
+
+910
+00:47:14,609 --> 00:47:24,420
+prints by okay and we can so this this
+
+911
+00:47:24,420 --> 00:47:26,580
+represents an infeasible output from
+
+912
+00:47:26,580 --> 00:47:33,690
+this program l0 Fork week so L 0
+
+913
+00:47:33,690 --> 00:47:37,410
+followed by by that's feasible and then
+
+914
+00:47:37,410 --> 00:47:43,020
+followed by L 1 that's okay and then the
+
+915
+00:47:43,020 --> 00:47:46,230
+next by is okay but it since we can't
+
+916
+00:47:46,230 --> 00:47:50,119
+have this we can't have this by
+
+917
+00:47:50,119 --> 00:47:55,050
+proceeding this L 2 because L 2 will
+
+918
+00:47:55,050 --> 00:47:57,630
+this printf will execute before this
+
+919
+00:47:57,630 --> 00:47:59,940
+printf
+
+920
+00:47:59,940 --> 00:48:03,910
+okay and I'll let you work out this one
+
+921
+00:48:03,910 --> 00:48:10,540
+as a as an exercise all right now when
+
+922
+00:48:10,540 --> 00:48:13,300
+up when a process terminates for
+
+923
+00:48:13,300 --> 00:48:15,370
+whatever reason the system actually
+
+924
+00:48:15,370 --> 00:48:17,950
+keeps it around for until it's reaped
+
+925
+00:48:17,950 --> 00:48:21,640
+and the reason until it's reaped by its
+
+926
+00:48:21,640 --> 00:48:24,490
+parent and the reason it does this is
+
+927
+00:48:24,490 --> 00:48:26,560
+that the parent may want to know about
+
+928
+00:48:26,560 --> 00:48:29,410
+the exit status of the child so but if a
+
+929
+00:48:29,410 --> 00:48:31,660
+parent creates a child it may want to
+
+930
+00:48:31,660 --> 00:48:34,270
+wait for that child to finish and and
+
+931
+00:48:34,270 --> 00:48:37,480
+check its exit status so when when any
+
+932
+00:48:37,480 --> 00:48:39,760
+process terminates the system leaves
+
+933
+00:48:39,760 --> 00:48:42,040
+that it doesn't it doesn't remove it
+
+934
+00:48:42,040 --> 00:48:44,290
+entirely from the system it it keeps it
+
+935
+00:48:44,290 --> 00:48:46,300
+a little bit of state associated with
+
+936
+00:48:46,300 --> 00:48:49,840
+that child in the form of a the exit
+
+937
+00:48:49,840 --> 00:48:53,440
+status of the child and the in some
+
+938
+00:48:53,440 --> 00:48:56,770
+other tables some other OS tables so
+
+939
+00:48:56,770 --> 00:48:58,630
+because this child that's terminated but
+
+940
+00:48:58,630 --> 00:49:01,840
+it's not gone it they're called zombies
+
+941
+00:49:01,840 --> 00:49:03,580
+so there's sort of half half-living
+
+942
+00:49:03,580 --> 00:49:10,890
+half-dead and so a process a zombie
+
+943
+00:49:10,890 --> 00:49:14,080
+remains a zombie until it's it's it's
+
+944
+00:49:14,080 --> 00:49:16,960
+reaped by its parent using a function
+
+945
+00:49:16,960 --> 00:49:19,810
+called weight or weight pit and as a
+
+946
+00:49:19,810 --> 00:49:22,330
+result of as a result of doing weight or
+
+947
+00:49:22,330 --> 00:49:24,460
+weight pit the parent is given the exit
+
+948
+00:49:24,460 --> 00:49:26,860
+status information and then the kernel
+
+949
+00:49:26,860 --> 00:49:32,500
+deletes the zombie process now what if
+
+950
+00:49:32,500 --> 00:49:35,080
+the parent doesn't reap it's one of its
+
+951
+00:49:35,080 --> 00:49:41,260
+child zombies so it if any parent if the
+
+952
+00:49:41,260 --> 00:49:43,990
+parent terminates then the system
+
+953
+00:49:43,990 --> 00:49:46,390
+arranges for the very first process that
+
+954
+00:49:46,390 --> 00:49:48,670
+existed in the system called the init
+
+955
+00:49:48,670 --> 00:49:51,250
+process which has a process ID of one it
+
+956
+00:49:51,250 --> 00:49:53,170
+arranges for the anit process to reap
+
+957
+00:49:53,170 --> 00:49:58,420
+that that child so there's so orphaned
+
+958
+00:49:58,420 --> 00:50:01,540
+orphaned children will always be reaped
+
+959
+00:50:01,540 --> 00:50:05,590
+by by the anit process so we only really
+
+960
+00:50:05,590 --> 00:50:09,430
+have to worry about about reaping
+
+961
+00:50:09,430 --> 00:50:11,869
+zombies in
+
+962
+00:50:11,869 --> 00:50:13,430
+in the case where we have long-running
+
+963
+00:50:13,430 --> 00:50:17,660
+parents like shells or servers because
+
+964
+00:50:17,660 --> 00:50:19,970
+in that case a server may create
+
+965
+00:50:19,970 --> 00:50:22,819
+millions of child processes each one of
+
+966
+00:50:22,819 --> 00:50:27,140
+those each one of those does each one of
+
+967
+00:50:27,140 --> 00:50:28,339
+those child processes when they
+
+968
+00:50:28,339 --> 00:50:30,680
+terminate become zombies and they they
+
+969
+00:50:30,680 --> 00:50:32,809
+have state that takes up room in the
+
+970
+00:50:32,809 --> 00:50:36,319
+kernel so you can get this it's a form
+
+971
+00:50:36,319 --> 00:50:39,019
+of memory leak if you don't if you don't
+
+972
+00:50:39,019 --> 00:50:40,670
+reap these zombie children that can
+
+973
+00:50:40,670 --> 00:50:42,470
+eventually fill up the memory space and
+
+974
+00:50:42,470 --> 00:50:51,079
+crash the kernel so for for cases where
+
+975
+00:50:51,079 --> 00:50:52,579
+you have long-running programs then we
+
+976
+00:50:52,579 --> 00:50:54,739
+have to we have to use wait or wait pit
+
+977
+00:50:54,739 --> 00:50:59,029
+to reap the children so let's look at an
+
+978
+00:50:59,029 --> 00:51:00,979
+example first let's let's look at an
+
+979
+00:51:00,979 --> 00:51:06,650
+example of this zombie phenomenon so
+
+980
+00:51:06,650 --> 00:51:09,369
+here we have a function we call fork and
+
+981
+00:51:09,369 --> 00:51:13,430
+then within the child we print a message
+
+982
+00:51:13,430 --> 00:51:15,890
+of the process idea of that child and
+
+983
+00:51:15,890 --> 00:51:19,089
+then we exit the child within the parent
+
+984
+00:51:19,089 --> 00:51:21,650
+we print a message and then we go into
+
+985
+00:51:21,650 --> 00:51:23,630
+an infinite loop okay so this is a
+
+986
+00:51:23,630 --> 00:51:27,410
+parent that's that never never reaps the
+
+987
+00:51:27,410 --> 00:51:30,769
+child that it created so if we run this
+
+988
+00:51:30,769 --> 00:51:36,979
+program called Forks you can see it
+
+989
+00:51:36,979 --> 00:51:40,369
+prints these two messages the parent
+
+990
+00:51:40,369 --> 00:51:42,619
+prints a message and the child prints a
+
+991
+00:51:42,619 --> 00:51:47,390
+message and then and we're running it in
+
+992
+00:51:47,390 --> 00:51:49,309
+the background with this ampersand okay
+
+993
+00:51:49,309 --> 00:51:51,079
+because we're going to otherwise it
+
+994
+00:51:51,079 --> 00:51:53,539
+would it would it's it's it's still
+
+995
+00:51:53,539 --> 00:51:55,450
+running and we wouldn't be able to
+
+996
+00:51:55,450 --> 00:51:58,489
+inspect it so after we run this program
+
+997
+00:51:58,489 --> 00:52:01,039
+in the background then we use PS to
+
+998
+00:52:01,039 --> 00:52:03,380
+print the current processes and we can
+
+999
+00:52:03,380 --> 00:52:05,779
+see that there's two we can see here at
+
+1000
+00:52:05,779 --> 00:52:08,690
+the parent which is process ID 6 6 3 9
+
+1001
+00:52:08,690 --> 00:52:12,440
+and then the child which is 6 6 4 0 and
+
+1002
+00:52:12,440 --> 00:52:16,309
+that the defunct indicates that it's a
+
+1003
+00:52:16,309 --> 00:52:18,430
+zombie
+
+1004
+00:52:18,430 --> 00:52:23,319
+okay now if we kill six 6:39 that's the
+
+1005
+00:52:23,319 --> 00:52:28,000
+parent and then do another PS you see
+
+1006
+00:52:28,000 --> 00:52:29,920
+that the zombies gone that the child is
+
+1007
+00:52:29,920 --> 00:52:31,990
+gone because it's been reaped by the
+
+1008
+00:52:31,990 --> 00:52:37,539
+init process one now what happens if the
+
+1009
+00:52:37,539 --> 00:52:39,160
+child doesn't terminate you might wonder
+
+1010
+00:52:39,160 --> 00:52:42,819
+like if if a parent creates a child and
+
+1011
+00:52:42,819 --> 00:52:48,849
+then the parent and then the chattin the
+
+1012
+00:52:48,849 --> 00:52:52,569
+the child never terminates and and the
+
+1013
+00:52:52,569 --> 00:52:53,950
+parent terminates then what would happen
+
+1014
+00:52:53,950 --> 00:52:55,650
+right mark
+
+1015
+00:52:55,650 --> 00:52:57,700
+so let's just let's look at an example
+
+1016
+00:52:57,700 --> 00:53:02,589
+of those in C so here we're we're
+
+1017
+00:53:02,589 --> 00:53:04,500
+calling Fork we're creating a child
+
+1018
+00:53:04,500 --> 00:53:07,630
+within the child we'd print a message
+
+1019
+00:53:07,630 --> 00:53:09,970
+and then the child goes into an infinite
+
+1020
+00:53:09,970 --> 00:53:14,859
+loop and the parent prints a message and
+
+1021
+00:53:14,859 --> 00:53:20,980
+then exits so if we run this program you
+
+1022
+00:53:20,980 --> 00:53:22,630
+can see that the two messages from
+
+1023
+00:53:22,630 --> 00:53:26,289
+parent and child and then if we look at
+
+1024
+00:53:26,289 --> 00:53:28,809
+the if we look at the processes we can
+
+1025
+00:53:28,809 --> 00:53:31,690
+see we can see that the child is still
+
+1026
+00:53:31,690 --> 00:53:38,740
+running
+
+1027
+00:53:38,740 --> 00:53:41,090
+okay so the channel process is still
+
+1028
+00:53:41,090 --> 00:53:42,770
+running even though the parents's has
+
+1029
+00:53:42,770 --> 00:53:46,840
+terminated and now if we kill this child
+
+1030
+00:53:46,840 --> 00:53:54,180
+six six seven six
+
+1031
+00:53:54,180 --> 00:53:56,190
+and then if we kill it then we can see
+
+1032
+00:53:56,190 --> 00:53:57,720
+that it's it's gone it's no longer in
+
+1033
+00:53:57,720 --> 00:54:00,900
+the system okay so that child when we
+
+1034
+00:54:00,900 --> 00:54:03,180
+when we killed it that terminated it it
+
+1035
+00:54:03,180 --> 00:54:05,220
+had no parents so the unit process
+
+1036
+00:54:05,220 --> 00:54:11,210
+reaped it and it it's no longer a zombie
+
+1037
+00:54:11,210 --> 00:54:16,069
+so the the the function that we use to
+
+1038
+00:54:16,069 --> 00:54:18,809
+to synchronize with children and reap
+
+1039
+00:54:18,809 --> 00:54:22,849
+them the simplest one is called wait and
+
+1040
+00:54:22,849 --> 00:54:24,589
+wait
+
+1041
+00:54:24,589 --> 00:54:28,950
+it takes an optional status where you
+
+1042
+00:54:28,950 --> 00:54:31,230
+can get the exit status of the inspect
+
+1043
+00:54:31,230 --> 00:54:34,619
+the exit status of the child basically
+
+1044
+00:54:34,619 --> 00:54:37,920
+wait suspends the execution of the
+
+1045
+00:54:37,920 --> 00:54:41,190
+process that calls it until one or one
+
+1046
+00:54:41,190 --> 00:54:43,109
+of its children terminates and it
+
+1047
+00:54:43,109 --> 00:54:45,000
+doesn't specify which one it just waits
+
+1048
+00:54:45,000 --> 00:54:47,400
+until one of the children that it
+
+1049
+00:54:47,400 --> 00:54:51,000
+created terminates and then if this
+
+1050
+00:54:51,000 --> 00:54:54,690
+child status is is not null then the
+
+1051
+00:54:54,690 --> 00:54:57,180
+integer that it returns or the integer
+
+1052
+00:54:57,180 --> 00:54:59,609
+that it points to this is a pointer the
+
+1053
+00:54:59,609 --> 00:55:01,500
+integer that it points to will be set to
+
+1054
+00:55:01,500 --> 00:55:03,450
+some value that indicated the reason the
+
+1055
+00:55:03,450 --> 00:55:05,549
+child terminated and its exit status and
+
+1056
+00:55:05,549 --> 00:55:07,770
+you can you can check that using these
+
+1057
+00:55:07,770 --> 00:55:11,220
+macros which your your textbook
+
+1058
+00:55:11,220 --> 00:55:16,619
+describes in more detail and let you so
+
+1059
+00:55:16,619 --> 00:55:18,359
+let's look at how how this works in a
+
+1060
+00:55:18,359 --> 00:55:21,119
+simple example so here we're calling
+
+1061
+00:55:21,119 --> 00:55:24,839
+fork and creating a child which prints a
+
+1062
+00:55:24,839 --> 00:55:29,190
+message and then exits the parent prints
+
+1063
+00:55:29,190 --> 00:55:31,950
+a message and then it waits for the
+
+1064
+00:55:31,950 --> 00:55:34,740
+child to terminate and when the child
+
+1065
+00:55:34,740 --> 00:55:38,180
+terminates it prints a message and
+
+1066
+00:55:38,180 --> 00:55:40,890
+indicating that the child terminated and
+
+1067
+00:55:40,890 --> 00:55:43,140
+then prints by so if we were to look at
+
+1068
+00:55:43,140 --> 00:55:46,410
+the the process graph for this you would
+
+1069
+00:55:46,410 --> 00:55:49,020
+see that we would have the fork creates
+
+1070
+00:55:49,020 --> 00:55:52,140
+the parent and the child both the parent
+
+1071
+00:55:52,140 --> 00:55:53,490
+and the child do they're they're
+
+1072
+00:55:53,490 --> 00:55:58,799
+printouts and then the parent waits it
+
+1073
+00:55:58,799 --> 00:56:02,220
+suspends until that the child terminates
+
+1074
+00:56:02,220 --> 00:56:06,690
+in this case by calling exit
+
+1075
+00:56:06,690 --> 00:56:09,070
+okay so what that means is it's it's
+
+1076
+00:56:09,070 --> 00:56:14,200
+infeasible so you can say hello from the
+
+1077
+00:56:14,200 --> 00:56:20,070
+parent it's infeasible though for this
+
+1078
+00:56:20,070 --> 00:56:24,670
+this child terminated message CT to
+
+1079
+00:56:24,670 --> 00:56:34,279
+occur before the bye because
+
+1080
+00:56:34,279 --> 00:56:36,410
+because the the child hasn't yet
+
+1081
+00:56:36,410 --> 00:56:40,460
+terminated so it's these two these two
+
+1082
+00:56:40,460 --> 00:56:43,339
+messages will never be printed until the
+
+1083
+00:56:43,339 --> 00:56:48,589
+child is terminated by calling exit so
+
+1084
+00:56:48,589 --> 00:56:57,319
+is that clear yes so the question is can
+
+1085
+00:56:57,319 --> 00:57:09,970
+you have an output HP HP HC C T bar yes
+
+1086
+00:57:09,970 --> 00:57:15,220
+yes because the parent ex-prince HP
+
+1087
+00:57:15,220 --> 00:57:17,720
+there's a context switch the child
+
+1088
+00:57:17,720 --> 00:57:21,529
+prints HC and then exits and now the
+
+1089
+00:57:21,529 --> 00:57:24,250
+parent will the wait will return and
+
+1090
+00:57:24,250 --> 00:57:32,600
+then it prints CT by
+
+1091
+00:57:32,600 --> 00:57:36,630
+okay here's this is a and this is a
+
+1092
+00:57:36,630 --> 00:57:40,470
+little more a little more involved
+
+1093
+00:57:40,470 --> 00:57:42,930
+example so here what we want to do we're
+
+1094
+00:57:42,930 --> 00:57:44,400
+going to create a bunch of children and
+
+1095
+00:57:44,400 --> 00:57:46,740
+then we're going to wait for them all to
+
+1096
+00:57:46,740 --> 00:57:49,230
+terminate and we're going to wait but we
+
+1097
+00:57:49,230 --> 00:57:51,360
+won't be able to wait in any specific
+
+1098
+00:57:51,360 --> 00:57:55,860
+order right we're just so here we have a
+
+1099
+00:57:55,860 --> 00:58:00,650
+loop 0 through n and in each loop body
+
+1100
+00:58:00,650 --> 00:58:03,180
+we're going to we're going to fork a
+
+1101
+00:58:03,180 --> 00:58:06,660
+child and exit with a return status that
+
+1102
+00:58:06,660 --> 00:58:08,340
+that's going to tell us which child it
+
+1103
+00:58:08,340 --> 00:58:14,970
+was ok so in the parent so we do this we
+
+1104
+00:58:14,970 --> 00:58:20,640
+do this a n times and then and then
+
+1105
+00:58:20,640 --> 00:58:23,910
+afterward the parent inside inside a
+
+1106
+00:58:23,910 --> 00:58:27,410
+similar loop zero to add waits for a
+
+1107
+00:58:27,410 --> 00:58:29,940
+child to terminate so it'll it'll work
+
+1108
+00:58:29,940 --> 00:58:33,710
+it will wait for M children to terminate
+
+1109
+00:58:33,710 --> 00:58:40,170
+wait returns a way returns the the
+
+1110
+00:58:40,170 --> 00:58:48,200
+process ID and then a status which is in
+
+1111
+00:58:48,200 --> 00:58:52,770
+in this child status variable and so we
+
+1112
+00:58:52,770 --> 00:58:54,660
+take that variable now and we can use
+
+1113
+00:58:54,660 --> 00:58:57,030
+this w if exited macro to determine if
+
+1114
+00:58:57,030 --> 00:58:59,250
+it terminated normally with an exit by
+
+1115
+00:58:59,250 --> 00:59:03,060
+calling exit and if so then we can check
+
+1116
+00:59:03,060 --> 00:59:05,610
+its exit status using the W exit status
+
+1117
+00:59:05,610 --> 00:59:10,290
+macro otherwise if it if W if exited it
+
+1118
+00:59:10,290 --> 00:59:13,170
+is false then that means some something
+
+1119
+00:59:13,170 --> 00:59:15,360
+the child terminated for some other
+
+1120
+00:59:15,360 --> 00:59:20,680
+reason not not because it called exit
+
+1121
+00:59:20,680 --> 00:59:25,390
+okay there's a weekend we can actually
+
+1122
+00:59:25,390 --> 00:59:28,720
+use wait pit which is similar to wait
+
+1123
+00:59:28,720 --> 00:59:30,369
+but it allows us to wait for a specific
+
+1124
+00:59:30,369 --> 00:59:33,940
+process a specific child a specific
+
+1125
+00:59:33,940 --> 00:59:36,309
+process a specific child with a specific
+
+1126
+00:59:36,309 --> 00:59:40,000
+process ID to terminate and I'll I'll
+
+1127
+00:59:40,000 --> 00:59:40,750
+let you
+
+1128
+00:59:40,750 --> 00:59:44,400
+you can wait pit is really involved and
+
+1129
+00:59:44,400 --> 00:59:47,020
+it's described in detail in the in your
+
+1130
+00:59:47,020 --> 00:59:49,029
+textbook and so you'll need to look
+
+1131
+00:59:49,029 --> 00:59:50,529
+you'll need to look there for the
+
+1132
+00:59:50,529 --> 00:59:55,510
+details on how that works now another
+
+1133
+00:59:55,510 --> 00:59:57,549
+important so we've learned how to create
+
+1134
+00:59:57,549 --> 01:00:02,980
+new processes the but we haven't learned
+
+1135
+01:00:02,980 --> 01:00:05,619
+how to when we when we call fork we just
+
+1136
+01:00:05,619 --> 01:00:08,829
+create an exact copy of the the child is
+
+1137
+01:00:08,829 --> 01:00:11,500
+just an exact copy of the parrot running
+
+1138
+01:00:11,500 --> 01:00:13,630
+the same code same program same
+
+1139
+01:00:13,630 --> 01:00:16,599
+variables okay to run a different
+
+1140
+01:00:16,599 --> 01:00:18,309
+program inside of a process we use a
+
+1141
+01:00:18,309 --> 01:00:25,660
+function called X ik ve and exit loads
+
+1142
+01:00:25,660 --> 01:00:29,890
+and runs within the current process it
+
+1143
+01:00:29,890 --> 01:00:33,039
+loads and runs the executable file name
+
+1144
+01:00:33,039 --> 01:00:35,829
+which is its first argument and file
+
+1145
+01:00:35,829 --> 01:00:38,650
+name can be either a binary executable
+
+1146
+01:00:38,650 --> 01:00:42,700
+binary okay or it can be a script it can
+
+1147
+01:00:42,700 --> 01:00:46,299
+be a text file a so-called script file
+
+1148
+01:00:46,299 --> 01:00:50,559
+that starts whose first line starts with
+
+1149
+01:00:50,559 --> 01:00:55,059
+a pound bang and then and then that the
+
+1150
+01:00:55,059 --> 01:00:57,460
+path of some interpreter so for example
+
+1151
+01:00:57,460 --> 01:00:59,109
+if you if you want to write a shell
+
+1152
+01:00:59,109 --> 01:01:02,260
+script you the first line of your shell
+
+1153
+01:01:02,260 --> 01:01:05,579
+script is is a pound bang and then the
+
+1154
+01:01:05,579 --> 01:01:09,190
+the path name of the bass show and then
+
+1155
+01:01:09,190 --> 01:01:12,069
+that will that will execute - and then
+
+1156
+01:01:12,069 --> 01:01:15,069
+bash will will read in that the lines
+
+1157
+01:01:15,069 --> 01:01:18,369
+following and interpret them as just as
+
+1158
+01:01:18,369 --> 01:01:20,470
+though you'd type them in at the at the
+
+1159
+01:01:20,470 --> 01:01:24,279
+command line so in either case it
+
+1160
+01:01:24,279 --> 01:01:26,319
+executes either an interpreter or it
+
+1161
+01:01:26,319 --> 01:01:29,920
+executes a binary with who's argued with
+
+1162
+01:01:29,920 --> 01:01:33,730
+the argument list Arg V and a list of
+
+1163
+01:01:33,730 --> 01:01:34,630
+environment very
+
+1164
+01:01:34,630 --> 01:01:40,180
+in env pee okay now by default are the
+
+1165
+01:01:40,180 --> 01:01:44,259
+first argument in RV is the name of the
+
+1166
+01:01:44,259 --> 01:01:46,480
+file that that's being executed so it
+
+1167
+01:01:46,480 --> 01:01:51,640
+it's it's this file name so what that
+
+1168
+01:01:51,640 --> 01:01:53,950
+allows you to do is in your code you can
+
+1169
+01:01:53,950 --> 01:01:55,750
+check our v-0 if you want to print out
+
+1170
+01:01:55,750 --> 01:01:57,430
+the name of the file the name of the
+
+1171
+01:01:57,430 --> 01:01:59,769
+program that's executing you just print
+
+1172
+01:01:59,769 --> 01:02:09,400
+out our v-0 okay now and exits all of
+
+1173
+01:02:09,400 --> 01:02:12,220
+the code and the data and the stack it
+
+1174
+01:02:12,220 --> 01:02:15,670
+overwrites the completely overrides the
+
+1175
+01:02:15,670 --> 01:02:18,640
+virtual address space so once you call
+
+1176
+01:02:18,640 --> 01:02:22,960
+eggs AK within a within a process it
+
+1177
+01:02:22,960 --> 01:02:25,119
+blows away the current program that's it
+
+1178
+01:02:25,119 --> 01:02:28,990
+okay however it retains that it's still
+
+1179
+01:02:28,990 --> 01:02:30,789
+the same process it's just running now a
+
+1180
+01:02:30,789 --> 01:02:36,009
+different program and so it retains the
+
+1181
+01:02:36,009 --> 01:02:39,069
+process ID and any open files that you
+
+1182
+01:02:39,069 --> 01:02:45,039
+have so x''k is really is really
+
+1183
+01:02:45,039 --> 01:02:47,430
+mind-blowing because it's called once
+
+1184
+01:02:47,430 --> 01:02:54,039
+but it never returns except if there's
+
+1185
+01:02:54,039 --> 01:02:56,170
+an error so if this file doesn't exist
+
+1186
+01:02:56,170 --> 01:02:58,210
+for example then then exec will return
+
+1187
+01:02:58,210 --> 01:03:01,509
+on -1 but otherwise in normal operation
+
+1188
+01:03:01,509 --> 01:03:06,549
+it never returns all right so let's look
+
+1189
+01:03:06,549 --> 01:03:08,619
+at the structure of the stack when this
+
+1190
+01:03:08,619 --> 01:03:11,950
+new program starts so after app after
+
+1191
+01:03:11,950 --> 01:03:15,009
+exit after the eggs egg ve finishes its
+
+1192
+01:03:15,009 --> 01:03:20,039
+work it creates a new stack it loads in
+
+1193
+01:03:20,039 --> 01:03:23,259
+new code and data creates a new empty
+
+1194
+01:03:23,259 --> 01:03:28,930
+heap ok everything's new and the stack
+
+1195
+01:03:28,930 --> 01:03:32,730
+that it creates has the following form
+
+1196
+01:03:32,730 --> 01:03:35,170
+ok at the bottom here's the bottom of
+
+1197
+01:03:35,170 --> 01:03:37,960
+the stack and our stack is growing this
+
+1198
+01:03:37,960 --> 01:03:42,130
+way so the first function that executes
+
+1199
+01:03:42,130 --> 01:03:46,329
+is is a function called Lipsy underscore
+
+1200
+01:03:46,329 --> 01:03:48,070
+start underscore main
+
+1201
+01:03:48,070 --> 01:03:53,830
+so that has it that has a stack frame so
+
+1202
+01:03:53,830 --> 01:03:55,360
+let's look this is what I'm showing here
+
+1203
+01:03:55,360 --> 01:03:57,250
+is the situation right before the
+
+1204
+01:03:57,250 --> 01:04:01,470
+startup code calls main so there's
+
+1205
+01:04:01,470 --> 01:04:04,720
+there's the future stack frame for main
+
+1206
+01:04:04,720 --> 01:04:07,350
+will be here at the top of this
+
+1207
+01:04:07,350 --> 01:04:11,620
+following the top of the stack there's
+
+1208
+01:04:11,620 --> 01:04:15,040
+some padding and then the argument list
+
+1209
+01:04:15,040 --> 01:04:20,080
+in RV is contained on the on the stack
+
+1210
+01:04:20,080 --> 01:04:22,890
+so that the RV is a list of pointers
+
+1211
+01:04:22,890 --> 01:04:26,080
+terminated by the null pointer and each
+
+1212
+01:04:26,080 --> 01:04:28,420
+one of these pointers points up into a
+
+1213
+01:04:28,420 --> 01:04:31,290
+string that corresponds to an argument
+
+1214
+01:04:31,290 --> 01:04:35,950
+okay so when you run a program you
+
+1215
+01:04:35,950 --> 01:04:39,580
+specify the program name and then
+
+1216
+01:04:39,580 --> 01:04:42,280
+arguments separated by spaces okay and
+
+1217
+01:04:42,280 --> 01:04:47,320
+so these these arguments this arc V is a
+
+1218
+01:04:47,320 --> 01:04:49,240
+list of pointers to those arguments
+
+1219
+01:04:49,240 --> 01:04:54,580
+strings and it's pointed to right right
+
+1220
+01:04:54,580 --> 01:04:57,310
+as main is called it's it's it's it's
+
+1221
+01:04:57,310 --> 01:04:59,680
+the second argument to main so it's
+
+1222
+01:04:59,680 --> 01:05:04,000
+contained in R si the address of this
+
+1223
+01:05:04,000 --> 01:05:07,180
+argument lists the number of arguments
+
+1224
+01:05:07,180 --> 01:05:10,540
+is contained is the first argument arc C
+
+1225
+01:05:10,540 --> 01:05:13,030
+and that's contained in R di by the x86
+
+1226
+01:05:13,030 --> 01:05:17,890
+64 parameter passing convention now the
+
+1227
+01:05:17,890 --> 01:05:21,070
+environment list is also contained on
+
+1228
+01:05:21,070 --> 01:05:23,650
+the stack and it too consists of a list
+
+1229
+01:05:23,650 --> 01:05:26,910
+of pointers each of which points into a
+
+1230
+01:05:26,910 --> 01:05:30,040
+environment string which is a set of key
+
+1231
+01:05:30,040 --> 01:05:34,660
+equal value pairs okay and it's pointed
+
+1232
+01:05:34,660 --> 01:05:37,300
+to by the global environment variable
+
+1233
+01:05:37,300 --> 01:05:42,370
+environ and if it's passed in it's
+
+1234
+01:05:42,370 --> 01:05:45,610
+pointed at an MVP it which is contained
+
+1235
+01:05:45,610 --> 01:05:48,280
+in RDX which is the always holds the
+
+1236
+01:05:48,280 --> 01:05:51,690
+third argument
+
+1237
+01:05:51,690 --> 01:05:54,690
+okay so let's look now how how we would
+
+1238
+01:05:54,690 --> 01:05:58,470
+use this so we want to within our
+
+1239
+01:05:58,470 --> 01:06:01,049
+current program we want to execute the
+
+1240
+01:06:01,049 --> 01:06:05,839
+LS command with two arguments - LT and
+
+1241
+01:06:05,839 --> 01:06:08,789
+slash user slash include so what this is
+
+1242
+01:06:08,789 --> 01:06:12,210
+saying is list list the files in slash
+
+1243
+01:06:12,210 --> 01:06:15,720
+user include show the long form of the
+
+1244
+01:06:15,720 --> 01:06:18,599
+listing and sort them in time order from
+
+1245
+01:06:18,599 --> 01:06:20,760
+most recently used to at least recently
+
+1246
+01:06:20,760 --> 01:06:28,740
+used so so the way we do this if we just
+
+1247
+01:06:28,740 --> 01:06:30,690
+called eggs-actly e it blow away our
+
+1248
+01:06:30,690 --> 01:06:33,089
+program so assuming we want to continue
+
+1249
+01:06:33,089 --> 01:06:36,900
+to do work after we execute LS the the
+
+1250
+01:06:36,900 --> 01:06:39,210
+standard way to do this is to to create
+
+1251
+01:06:39,210 --> 01:06:43,349
+a child using Fork and then X act within
+
+1252
+01:06:43,349 --> 01:06:46,440
+the child right have the child do the
+
+1253
+01:06:46,440 --> 01:06:49,260
+work and then the child terminates and
+
+1254
+01:06:49,260 --> 01:06:52,260
+the parent maybe will wait for the child
+
+1255
+01:06:52,260 --> 01:06:55,619
+maybe not right just usually it will
+
+1256
+01:06:55,619 --> 01:06:59,369
+wait for the child so within the parent
+
+1257
+01:06:59,369 --> 01:07:04,380
+we we we fork a child check that it's 0
+
+1258
+01:07:04,380 --> 01:07:07,349
+and so if it's 0 then we're executing
+
+1259
+01:07:07,349 --> 01:07:10,710
+that this code executes within the child
+
+1260
+01:07:10,710 --> 01:07:16,529
+so the child does the exact it it passes
+
+1261
+01:07:16,529 --> 01:07:19,230
+the name of the function since the the
+
+1262
+01:07:19,230 --> 01:07:21,119
+name of the function that we want to the
+
+1263
+01:07:21,119 --> 01:07:23,130
+the program that we want to execute is
+
+1264
+01:07:23,130 --> 01:07:24,960
+always contained in the first element of
+
+1265
+01:07:24,960 --> 01:07:29,849
+vard V we call exit with a parameter of
+
+1266
+01:07:29,849 --> 01:07:36,569
+my arc v-0 and we've set up the argument
+
+1267
+01:07:36,569 --> 01:07:41,039
+list in my RV and we pass the global
+
+1268
+01:07:41,039 --> 01:07:43,680
+environment variable environment we're
+
+1269
+01:07:43,680 --> 01:07:45,839
+just going to use the current list of
+
+1270
+01:07:45,839 --> 01:07:48,210
+environment variables that we have in
+
+1271
+01:07:48,210 --> 01:07:53,069
+the parent okay and these environment
+
+1272
+01:07:53,069 --> 01:07:55,349
+variables are things of the form user
+
+1273
+01:07:55,349 --> 01:08:00,280
+equaled Rho current working directory
+
+1274
+01:08:00,280 --> 01:08:07,600
+and so the the if there's if this
+
+1275
+01:08:07,600 --> 01:08:10,270
+program in my art v-0 doesn't exist then
+
+1276
+01:08:10,270 --> 01:08:14,050
+exact will return minus one so we check
+
+1277
+01:08:14,050 --> 01:08:17,190
+for that that condition and then exit
+
+1278
+01:08:17,190 --> 01:08:20,740
+otherwise it never returns right it
+
+1279
+01:08:20,740 --> 01:08:25,060
+executes cell s LS the code for LS this
+
+1280
+01:08:25,060 --> 01:08:28,000
+is the name of a binary this is a slash
+
+1281
+01:08:28,000 --> 01:08:31,089
+bin slash LS is a binary file that
+
+1282
+01:08:31,089 --> 01:08:35,470
+binary file gets loaded into memory that
+
+1283
+01:08:35,470 --> 01:08:37,839
+code gets executed and it terminates
+
+1284
+01:08:37,839 --> 01:08:41,380
+okay so the child at this point after
+
+1285
+01:08:41,380 --> 01:08:46,060
+the exit the child is running that the
+
+1286
+01:08:46,060 --> 01:08:49,299
+LS code and it's no longer running any
+
+1287
+01:08:49,299 --> 01:08:54,100
+of this code now this seems the first
+
+1288
+01:08:54,100 --> 01:08:55,839
+time you see this this combination of
+
+1289
+01:08:55,839 --> 01:08:58,690
+fork and exec it seems it seems a little
+
+1290
+01:08:58,690 --> 01:09:03,250
+odd doesn't it why not just why not just
+
+1291
+01:09:03,250 --> 01:09:05,109
+have one command that creates a new
+
+1292
+01:09:05,109 --> 01:09:08,049
+process and runs and runs a program in
+
+1293
+01:09:08,049 --> 01:09:11,200
+that process why why separate why have
+
+1294
+01:09:11,200 --> 01:09:18,480
+these these two separate fork and exec I
+
+1295
+01:09:18,480 --> 01:09:21,250
+mean in fact Windows does this Windows
+
+1296
+01:09:21,250 --> 01:09:23,470
+has like one command that creates a
+
+1297
+01:09:23,470 --> 01:09:25,930
+process and executes sit but it turns
+
+1298
+01:09:25,930 --> 01:09:29,970
+out that having having a separate
+
+1299
+01:09:29,970 --> 01:09:33,400
+function like fork just to create
+
+1300
+01:09:33,400 --> 01:09:35,799
+processes is actually really useful
+
+1301
+01:09:35,799 --> 01:09:37,810
+I mean sometimes you just want to create
+
+1302
+01:09:37,810 --> 01:09:39,730
+replicas of your current process for
+
+1303
+01:09:39,730 --> 01:09:41,799
+example let's say you have a server and
+
+1304
+01:09:41,799 --> 01:09:44,650
+you want to create a concurrent server
+
+1305
+01:09:44,650 --> 01:09:46,450
+you want to create multiple copies of
+
+1306
+01:09:46,450 --> 01:09:49,029
+that server then you just fork a bunch
+
+1307
+01:09:49,029 --> 01:09:51,970
+you have the main the parent server can
+
+1308
+01:09:51,970 --> 01:09:54,190
+fork a bunch of of children so that's
+
+1309
+01:09:54,190 --> 01:09:55,540
+useful they're just all running the same
+
+1310
+01:09:55,540 --> 01:09:58,570
+code but what's all what this also
+
+1311
+01:09:58,570 --> 01:10:01,570
+allows you to do is it allows you to
+
+1312
+01:10:01,570 --> 01:10:04,960
+execute code in the child before you
+
+1313
+01:10:04,960 --> 01:10:10,780
+call x'q so you may want to set some you
+
+1314
+01:10:10,780 --> 01:10:13,780
+may want to set some like some signal
+
+1315
+01:10:13,780 --> 01:10:14,320
+with
+
+1316
+01:10:14,320 --> 01:10:15,640
+is especially useful when you're dealing
+
+1317
+01:10:15,640 --> 01:10:18,460
+with with things like signals if you
+
+1318
+01:10:18,460 --> 01:10:20,890
+want to block certain signals or unblock
+
+1319
+01:10:20,890 --> 01:10:23,320
+certain signals you can do it right here
+
+1320
+01:10:23,320 --> 01:10:26,950
+in this this gap between the fork and
+
+1321
+01:10:26,950 --> 01:10:32,270
+the exact
+
+1322
+01:10:32,270 --> 01:10:36,270
+okay so so that's it so just to
+
+1323
+01:10:36,270 --> 01:10:38,370
+summarize what we've we've talked about
+
+1324
+01:10:38,370 --> 01:10:44,370
+today exceptions are in response to
+
+1325
+01:10:44,370 --> 01:10:45,840
+events that require some kind of
+
+1326
+01:10:45,840 --> 01:10:48,780
+non-standard or exceptional call
+
+1327
+01:10:48,780 --> 01:10:51,570
+exceptional control flow they can be
+
+1328
+01:10:51,570 --> 01:10:53,130
+generated internally in the form of
+
+1329
+01:10:53,130 --> 01:10:55,740
+interrupts or internally in the form of
+
+1330
+01:10:55,740 --> 01:10:59,310
+traps and faults so it at any point in
+
+1331
+01:10:59,310 --> 01:11:01,530
+time a process has multiple a system as
+
+1332
+01:11:01,530 --> 01:11:04,230
+multiple processes only one of which can
+
+1333
+01:11:04,230 --> 01:11:09,510
+execute on a single core so the process
+
+1334
+01:11:09,510 --> 01:11:11,400
+execution is interleaved by the kernel
+
+1335
+01:11:11,400 --> 01:11:14,790
+and each process thinks that it has
+
+1336
+01:11:14,790 --> 01:11:18,540
+total total control of the processor in
+
+1337
+01:11:18,540 --> 01:11:22,470
+its address space there's only one
+
+1338
+01:11:22,470 --> 01:11:24,870
+mechanism to spawn processes that's fork
+
+1339
+01:11:24,870 --> 01:11:28,940
+and it's called once and returns twice
+
+1340
+01:11:28,940 --> 01:11:31,710
+we can terminate our process by calling
+
+1341
+01:11:31,710 --> 01:11:34,410
+X exit which is called once and never
+
+1342
+01:11:34,410 --> 01:11:37,980
+returns we reap and wait for processes
+
+1343
+01:11:37,980 --> 01:11:40,500
+using wait or wait pit and we load and
+
+1344
+01:11:40,500 --> 01:11:43,380
+run programs using exact ve or one of
+
+1345
+01:11:43,380 --> 01:11:46,500
+its one of its variants and this one is
+
+1346
+01:11:46,500 --> 01:11:48,090
+called once and and normally never
+
+1347
+01:11:48,090 --> 01:11:51,840
+returns okay so that's that's it for
+
+1348
+01:11:51,840 --> 01:11:54,750
+today and we'll see you have a good
+
+1349
+01:11:54,750 --> 01:11:58,280
+weekend and we'll see you on Tuesday
+
