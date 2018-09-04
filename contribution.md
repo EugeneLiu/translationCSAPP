@@ -27,7 +27,7 @@
 
 #### 字幕字体
 
-* 使用[思源黑体](https://blog.typekit.com/alternate/source-han-sans-chs/)作为中英文字体
+* 使用[ Noto Sans CJK SC ](https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKsc-hinted.zip)作为中英文字体，Black字重。（Noto Sans CJK SC 就是 思源黑体）
 * 字体颜色待定
 
 #### 协同工作
