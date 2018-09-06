@@ -17,8 +17,10 @@ Audio File: ../../../../Desktop/csapp/Lecture 01  Course Overview.mp4
 Video File: ../../../../Desktop/csapp/Lecture 01  Course Overview.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
-Video Zoom Percent: 1.375000
-Video Position: 31
+Video Zoom Percent: 1.125000
+Scroll Position: 1617
+Active Line: 1632
+Video Position: 134935
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -310,11 +312,11 @@ Dialogue: 0,0:13:53.04,0:13:59.18,English,,0,0,0,,So that 3.14 compared to -1e20
 Dialogue: 0,0:13:53.04,0:13:59.18,Chinese,,0,0,0,,和 -1e20 大小相比 3.14 就显得微不足道了
 Dialogue: 0,0:13:59.18,0:14:04.30,English,,0,0,0,,That that result gets turned into -1e20
 Dialogue: 0,0:13:59.18,0:14:04.30,Chinese,,0,0,0,,结果是 -1e20（-1 后面 20 个 0）
-Dialogue: 0,0:14:04.70,0:14:10.04,English,,0,0,0,,And you add that to 1e20 and you end up with zero.So it's not associative.
+Dialogue: 0,0:14:04.70,0:14:10.04,English,,0,0,0,,And you add that to 1e20 and you end up with zero.So it's not associative
 Dialogue: 0,0:14:04.70,0:14:10.04,Chinese,,0,0,0,,然后加上 1e20 你会得到 0。这不符合结合律
 Dialogue: 0,0:14:10.56,0:14:18.62,English,,0,0,0,,And so what you see is the both these number systems have some peculiarities
 Dialogue: 0,0:14:10.56,0:14:18.62,Chinese,,0,0,0,,所以你看出这两种数系都有一些古怪
-Dialogue: 0,0:14:18.64,0:14:26.08,English,,0,0,0,,And it all comes down to the fact that they use finite representations of things that are potentially infinite in their expanse.
+Dialogue: 0,0:14:18.64,0:14:26.08,English,,0,0,0,,And it all comes down to the fact that they use finite representations of things that are potentially infinite in their expanse
 Dialogue: 0,0:14:18.64,0:14:26.08,Chinese,,0,0,0,,这一切都归结为一个事实，他们用有限的位组合形式表示在数域中无限扩张的数
 Dialogue: 0,0:14:26.68,0:14:30.10,English,,0,0,0,,So there's some compromises in how those work
 Dialogue: 0,0:14:26.68,0:14:30.10,Chinese,,0,0,0,,所以在如何实现功能上有一些妥协
@@ -378,8 +380,8 @@ Dialogue: 0,0:17:10.52,0:17:15.34,English,,0,0,0,,And that can be described in a
 Dialogue: 0,0:17:10.52,0:17:15.34,Chinese,,0,0,0,,这可以用汇编语言来描述，汇编语言是指令的文本版本
 Dialogue: 0,0:17:15.78,0:17:21.30,English,,0,0,0,,Or an object code which is the actual bit level binary encoding of instructions
 Dialogue: 0,0:17:15.78,0:17:21.30,Chinese,,0,0,0,,或者是用目标代码来描述，也就是位级别的二进制编码的指令
-Dialogue: 0,0:17:21.30,0:17:26.46,English,,0,0,0,,And we'll learn a fair bit about that and spend a fair amount of time seeing.
-Dialogue: 0,0:17:21.30,0:17:26.46,Chinese,,0,0,0,,我们将会学到一些相关知识并花费大量的时间来看待。
+Dialogue: 0,0:17:21.30,0:17:26.46,English,,0,0,0,,And we'll learn a fair bit about that and spend a fair amount of time seeing
+Dialogue: 0,0:17:21.30,0:17:26.46,Chinese,,0,0,0,,我们将会学到一些相关知识并花费大量的时间来看待
 Dialogue: 0,0:17:26.48,0:17:34.06,English,,0,0,0,,How code that you write in C gets turned into machine code and how that gets executed on the machine
 Dialogue: 0,0:17:26.48,0:17:34.06,Chinese,,0,0,0,,你编写的 C 语言代码是如何变成机器码，以及如何在机器上执行的
 Dialogue: 0,0:17:34.80,0:17:41.38,English,,0,0,0,,One thing I'll say is it historically courses like this would teach assembly code by having you write
@@ -408,7 +410,7 @@ Dialogue: 0,0:18:40.10,0:18:45.28,English,,0,0,0,,It's aspects of the memory sys
 Dialogue: 0,0:18:40.10,0:18:45.28,Chinese,,0,0,0,,是内存系统的一些方面，所以现代计算机有一个非常复杂的
 Dialogue: 0,0:18:45.58,0:18:52.80,English,,0,0,0,,layered memory system to try give you to hight performance in high capacity at the same time
 Dialogue: 0,0:18:45.58,0:18:52.80,Chinese,,0,0,0,,分层存储的系统，试图同时给你高性能的表现和较大的储存容量
-Dialogue: 0,0:18:53.22,0:18:58.12,English,,0,0,0,,And there's some results of that system that can mean that.
+Dialogue: 0,0:18:53.22,0:18:58.12,English,,0,0,0,,And there's some results of that system that can mean that
 Dialogue: 0,0:18:53.22,0:18:58.12,Chinese,,0,0,0,,使用这个系统的结果意味着
 Dialogue: 0,0:18:58.18,0:19:01.42,English,,0,0,0,,If you program write a program well it might work really well
 Dialogue: 0,0:18:58.18,0:19:01.42,Chinese,,0,0,0,,如果你的程序编写得很好，它可能运行得很好
@@ -605,7 +607,7 @@ Dialogue: 0,0:27:41.86,0:27:46.42,Chinese,,0,0,0,,这两个函数在这个内存
 Dialogue: 0,0:27:46.84,0:27:52.04,English,,0,0,0,,The one that goes through a row by row is much better than the one that goes through column by column
 Dialogue: 0,0:27:46.84,0:27:52.04,Chinese,,0,0,0,,一行接一行方法比一列接一列的访问方法要好得多
 Dialogue: 0,0:27:53.94,0:28:00.62,English,,0,0,0,,And as a result you're getting a lot better performance and it has to do with this memory hierarchy and what they call the cache memories
-Dialogue: 0,0:27:53.94,0:28:00.62,Chinese,,0,0,0,,结果是，你获得了更好的性能，它和内存层次结构中的缓存有关。
+Dialogue: 0,0:27:53.94,0:28:00.62,Chinese,,0,0,0,,结果是，你获得了更好的性能，它和内存层次结构中的缓存有关
 Dialogue: 0,0:28:01.22,0:28:06.40,English,,0,0,0,,That you're getting way better performance out of it in one case than the other
 Dialogue: 0,0:28:01.22,0:28:06.40,Chinese,,0,0,0,,在某种情况下你获得了比其他方式性能高得多的方法
 Dialogue: 0,0:28:06.72,0:28:11.56,English,,0,0,0,,So that's explains what the cover of the book is about
@@ -642,8 +644,8 @@ Dialogue: 0,0:29:31.88,0:29:37.70,English,,0,0,0,,So the reason why we make ever
 Dialogue: 0,0:29:31.88,0:29:37.70,Chinese,,0,0,0,,所以这就是我们为什么要让每个人都参加这门课程，包括刚入学的硕士生
 Dialogue: 0,0:29:38.28,0:29:44.70,English,,0,0,0,,It's that all these other courses at the university have come to rely on students being familiar
 Dialogue: 0,0:29:38.28,0:29:44.70,Chinese,,0,0,0,,就是这所大学的其他所有课程都依赖于学生熟悉本课程
-Dialogue: 0,0:29:45.10,0:29:51.42,English,,0,0,0,,and having done the work of to 13 or 513 as a prerequisite
-Dialogue: 0,0:29:45.10,0:29:51.42,Chinese,,0,0,0,,和 13 或 513 课程为前提
+Dialogue: 0,0:29:45.10,0:29:51.42,English,,0,0,0,,and having done the work of 213 or 513 as a prerequisite
+Dialogue: 0,0:29:45.10,0:29:51.42,Chinese,,0,0,0,,和 213 或 513 课程为前提
 Dialogue: 0,0:29:51.42,0:29:57.84,English,,0,0,0,,And they can build on that material and sort of cover more ground as a result rather than having to do
 Dialogue: 0,0:29:51.42,0:29:57.84,Chinese,,0,0,0,,而且它们可以基于内容进行深入，并覆盖更多领域，而不是面面俱到
 Dialogue: 0,0:29:58.04,0:30:01.20,English,,0,0,0,,What would otherwise be somewhat remedial work on it
@@ -727,13 +729,13 @@ Dialogue: 0,0:33:20.64,0:33:27.16,Chinese,,0,0,0,,我总是从 CMU 的学生那�
 Dialogue: 0,0:33:27.50,0:33:32.64,English,,0,0,0,,Students around the world who have taken the equivalent of 213 it at their schools
 Dialogue: 0,0:33:27.50,0:33:32.64,Chinese,,0,0,0,,从世界各地在他们学校已经接受了等同于 213 课程的学生口中
 Dialogue: 0,0:33:33.48,0:33:40.18,English,,0,0,0,,I even though a couple years ago we were interviewing a faculty member tenure tenure-track faculty member
-Dialogue: 0,0:33:33.48,0:33:40.18,Chinese,,0,0,0,,即使在几年前，当我们正在采访一位终身教授
+Dialogue: 0,0:33:33.48,0:33:40.18,Chinese,,0,0,0,,即使在几年前，当我们正在面试一位终身教授
 Dialogue: 0,0:33:40.60,0:33:43.62,English,,0,0,0,,Who went to did his undergrad at CMU
 Dialogue: 0,0:33:40.60,0:33:43.62,Chinese,,0,0,0,,他是在 CMU 就读的本科
 Dialogue: 0,0:33:43.94,0:33:51.32,English,,0,0,0,,And then went off to Stanford got his PhD at Stanford and was coming back to you know join the faculty
 Dialogue: 0,0:33:43.94,0:33:51.32,Chinese,,0,0,0,,然后去斯坦福大学获得他在斯坦福大学的博士学位，并回到这里的系就职
 Dialogue: 0,0:33:52.08,0:33:56.54,English,,0,0,0,,And he told me that 213 changed his life in our interview
-Dialogue: 0,0:33:52.08,0:33:56.54,Chinese,,0,0,0,,他在采访中告诉我，213 改变了他的生活
+Dialogue: 0,0:33:52.08,0:33:56.54,Chinese,,0,0,0,,他在面试中告诉我，213 改变了他的生活
 Dialogue: 0,0:33:56.54,0:33:59.10,English,,0,0,0,,Now I don't know if he was trying to butter me up
 Dialogue: 0,0:33:56.54,0:33:59.10,Chinese,,0,0,0,,现在我不知道他是否故意想要让我高兴
 Dialogue: 0,0:33:59.10,0:34:00.88,English,,0,0,0,,But I think I believe him
@@ -766,10 +768,10 @@ Dialogue: 0,0:35:13.88,0:35:19.66,English,,0,0,0,,And I mean it just blew me awa
 Dialogue: 0,0:35:13.88,0:35:19.66,Chinese,,0,0,0,,它戳破了我以为我会被读者牢记住的想法
 Dialogue: 0,0:35:20.14,0:35:23.96,English,,0,0,0,,halfway around the world it was just that it was just one of those moments
 Dialogue: 0,0:35:20.14,0:35:23.96,Chinese,,0,0,0,,在世界各地的中途，它只是那些时刻之一
-Dialogue: 0,0:35:24.22,0:35:30.28,English,,0,0,0,,So I'm not trying to boast, I'm just trying what I want I want to give you the sense of.
+Dialogue: 0,0:35:24.22,0:35:30.28,English,,0,0,0,,So I'm not trying to boast, I'm just trying what I want I want to give you the sense of
 Dialogue: 0,0:35:24.22,0:35:30.28,Chinese,,0,0,0,,所以我不想吹牛，我只是想尝试给你我的感受
 Dialogue: 0,0:35:30.28,0:35:35.84,English,,0,0,0,,What it what an opportunity this course represents for Randal and I to to have
-Dialogue: 0,0:35:30.28,0:35:35.84,English,,0,0,0,,这个课程对 Randy 和我来说有什么样的可能
+Dialogue: 0,0:35:30.28,0:35:35.84,Chinese,,0,0,0,,这个课程对 Randy 和我来说有什么样的可能
 Dialogue: 0,0:35:35.84,0:35:42.06,English,,0,0,0,,What we hope will be a really positive impact on on your lives
 Dialogue: 0,0:35:35.84,0:35:42.06,Chinese,,0,0,0,,我们希望对你的人生产生真正的积极影响
 Dialogue: 0,0:35:43.84,0:35:50.06,English,,0,0,0,,So let me we have kind of a kind of a funny organization for the course
@@ -778,7 +780,7 @@ Dialogue: 0,0:35:51.34,0:35:56.04,English,,0,0,0,,in response to that just the t
 Dialogue: 0,0:35:51.34,0:35:56.04,Chinese,,0,0,0,,为了应对巨大的需求，我们发现我们有这个需求
 Dialogue: 0,0:35:57.00,0:36:01.34,English,,0,0,0,,So there's there's actually three course numbers but it's all the same course
 Dialogue: 0,0:35:57.00,0:36:01.34,Chinese,,0,0,0,,所以实际上有三个课程号码，但它们都是相同的课程
-Dialogue: 0,0:36:02.36,0:36:07.28,English,,0,0,0,,It's the identical course 513, 15-513 is for our master students.
+Dialogue: 0,0:36:02.36,0:36:07.28,English,,0,0,0,,It's the identical course 513, 15-513 is for our master students
 Dialogue: 0,0:36:02.36,0:36:07.28,Chinese,,0,0,0,,这是相同的课程 513, 15-513 是针对我们的硕士生
 Dialogue: 0,0:36:07.92,0:36:14.38,English,,0,0,0,,And the 15-513 doesn't have a formal lecture so there's no seats assigned to it
 Dialogue: 0,0:36:07.92,0:36:14.38,Chinese,,0,0,0,,而 15-513 没有正式的面授课，所以没有分配座位
@@ -804,8 +806,8 @@ Dialogue: 0,0:37:12.36,0:37:19.18,English,,0,0,0,,The undergraduates will go to 
 Dialogue: 0,0:37:12.36,0:37:19.18,Chinese,,0,0,0,,本科生将去上课，研究生会看这些录像带
 Dialogue: 0,0:37:19.78,0:37:20.62,English,,0,0,0,,But otherwise,yes
 Dialogue: 0,0:37:19.78,0:37:20.62,Chinese,,0,0,0,,但是，从另一方面，好的
-Dialogue: 0,0:37:21.20,0:37:24.64,English,,0,0,0,,[students question]
-Dialogue: 0,0:37:21.20,0:37:24.64,Chinese,,0,0,0,,[学生问题]
+Dialogue: 0,0:37:21.20,0:37:24.64,English,,0,0,0,,[students speaking]
+Dialogue: 0,0:37:21.20,0:37:24.64,Chinese,,0,0,0,,[学生发言]
 Dialogue: 0,0:37:26.34,0:37:28.74,English,,0,0,0,,Yeah we're making them available to everyone actually
 Dialogue: 0,0:37:26.34,0:37:28.74,Chinese,,0,0,0,,是的，我们正在将它们提供给每个人
 Dialogue: 0,0:37:30.76,0:37:31.30,English,,0,0,0,,Sorry?
@@ -916,7 +918,7 @@ Dialogue: 0,0:41:55.30,0:42:00.14,English,,0,0,0,,Okay yeah the question was if 
 Dialogue: 0,0:41:55.30,0:42:00.14,Chinese,,0,0,0,,好的，问题是如果你在上一个学期上过课，你可以使用你的成果，答案是肯定的
 Dialogue: 0,0:42:04.38,0:42:08.32,English,,0,0,0,,So you can also talk to each other about high level you know design issues
 Dialogue: 0,0:42:04.38,0:42:08.32,Chinese,,0,0,0,,所以你也可以互相谈论高层次内容，设计理念
-Dialogue: 0,0:42:08.86,0:42:16.02,English,,0,0,0,,You know how are you using an explicit list or using a segregated list for your Malik lab
+Dialogue: 0,0:42:08.86,0:42:16.02,English,,0,0,0,,You know how are you using an explicit list or using a segregated list for your Malloc lab
 Dialogue: 0,0:42:08.86,0:42:16.02,Chinese,,0,0,0,,你是如何为你的 Malloc Lab 使用 explict list 或使用 segregated list
 Dialogue: 0,0:42:16.52,0:42:23.56,English,,0,0,0,,That kind of stuff is okay, high level okay low level not okay
 Dialogue: 0,0:42:16.52,0:42:23.56,Chinese,,0,0,0,,这样的东西可以，高层次的可以，低层次的不行
@@ -925,7 +927,7 @@ Dialogue: 0,0:42:24.18,0:42:27.02,Chinese,,0,0,0,,基本上我们希望你写你
 Dialogue: 0,0:42:28.86,0:42:32.28,English,,0,0,0,,This is not,you know it's kind of a cut and paste world these days
 Dialogue: 0,0:42:28.86,0:42:32.28,Chinese,,0,0,0,,你知道现在是一个复制和粘贴的世界
 Dialogue: 0,0:42:32.28,0:42:37.96,English,,0,0,0,,Right you look stuff up on Google, Stack Overflow you cut and paste it
-Dialogue: 0,0:42:32.28,0:42:37.96,English,,0,0,0,,你在 Google，Stack Overflow 找你想要的东西，然后剪切并粘贴它
+Dialogue: 0,0:42:32.28,0:42:37.96,Chinese,,0,0,0,,你在 Google，Stack Overflow 找你想要的东西，然后剪切并粘贴它
 Dialogue: 0,0:42:39.38,0:42:41.40,English,,0,0,0,,But that's not that's not the way we do it
 Dialogue: 0,0:42:39.38,0:42:41.40,Chinese,,0,0,0,,但那不是我们的方式
 Dialogue: 0,0:42:42.44,0:42:45.36,English,,0,0,0,,Here we want you to do the work yourself
@@ -991,7 +993,7 @@ Dialogue: 0,0:45:47.94,0:45:49.98,Chinese,,0,0,0,,这本书就是这个课程，
 Dialogue: 0,0:45:52.12,0:45:54.66,English,,0,0,0,,And so it'll it will really help you, love it
 Dialogue: 0,0:45:52.12,0:45:54.66,Chinese,,0,0,0,,所以它会真的帮助你，爱上它
 Dialogue: 0,0:45:54.66,0:45:58.18,English,,0,0,0,,The labs that we do come directly from material we discuss in the book
-Dialogue: 0,0:45:54.66,0:45:58.18,Chinese,,0,0,0,,我们的实验室直接来自我们在书中讨论的内容
+Dialogue: 0,0:45:54.66,0:45:58.18,Chinese,,0,0,0,,我们的实验直接来自我们在书中讨论的内容
 Dialogue: 0,0:45:59.20,0:46:00.82,English,,0,0,0,,So what I would encourage all of you to do
 Dialogue: 0,0:45:59.20,0:46:00.82,Chinese,,0,0,0,,所以我鼓励大家做
 Dialogue: 0,0:46:00.82,0:46:04.00,English,,0,0,0,,I'm not sure if anybody has ever taken this advice but I say it every year
@@ -1001,13 +1003,13 @@ Dialogue: 0,0:46:04.00,0:46:05.94,Chinese,,0,0,0,,无论如何因为我相信它
 Dialogue: 0,0:46:06.74,0:46:14.14,English,,0,0,0,,But I think a really good strategy for studying and preparing for this course would be to read each chapter three times
 Dialogue: 0,0:46:06.74,0:46:14.14,Chinese,,0,0,0,,但我认为为学习和准备这门课程，一个非常好的策略是每次阅读每章三次
 Dialogue: 0,0:46:16.96,0:46:20.48,English,,0,0,0,,Read three times work the practice problems
-Dialogue: 0,0:46:16.96,0:46:20.48,English,,0,0,0,,三次阅读，然后做练习题
+Dialogue: 0,0:46:16.96,0:46:20.48,Chinese,,0,0,0,,三次阅读，然后做练习题
 Dialogue: 0,0:46:20.48,0:46:26.36,English,,0,0,0,,So we have littered throughout the book or practice problems with solutions at  the end of the chapter
 Dialogue: 0,0:46:20.48,0:46:26.36,Chinese,,0,0,0,,我们在整本书的每个章节末尾设置了有答案的练习题
 Dialogue: 0,0:46:26.58,0:46:30.12,English,,0,0,0,,And these practice problems are like little sort of bite-size morsels just kind of
 Dialogue: 0,0:46:26.58,0:46:30.12,Chinese,,0,0,0,,而这些练习问题就像是一点点的一口大小的东西
 Dialogue: 0,0:46:30.52,0:46:35.74,English,,0,0,0,,just to kind of check your kind of a sanity check of your understanding of the material
-Dialogue: 0,0:46:30.52,0:46:35.74,Chinese,,0,0,0,,只是为了检查一下你对材料的理解程度
+Dialogue: 0,0:46:30.52,0:46:35.74,Chinese,,0,0,0,,只是为了检查一下你对教材的理解程度
 Dialogue: 0,0:46:36.88,0:46:41.78,English,,0,0,0,,I think if you read this if you read the book each chapter three times and work the practice problems
 Dialogue: 0,0:46:36.88,0:46:41.78,Chinese,,0,0,0,,我认为如果你阅读这本书，如果你每一章读三遍，并做练习
 Dialogue: 0,0:46:42.06,0:46:47.86,English,,0,0,0,,You would be an excellent way to go through the semester and prepare
@@ -1043,7 +1045,7 @@ Dialogue: 0,0:47:52.48,0:47:56.36,Chinese,,0,0,0,,背诵的目的是帮助你做
 Dialogue: 0,0:47:56.82,0:47:58.70,English,,0,0,0,,So it's very practical and hands-on
 Dialogue: 0,0:47:56.82,0:47:58.70,Chinese,,0,0,0,,所以这是非常实用的而且是亲自动手的
 Dialogue: 0,0:47:59.64,0:48:05.82,English,,0,0,0,,There's seven of those labs and these are really the heart and soul of the course
-Dialogue: 0,0:47:59.64,0:48:05.82,Chinese,,0,0,0,,这些实验室有七个，这些都是课程的核心和灵魂
+Dialogue: 0,0:47:59.64,0:48:05.82,Chinese,,0,0,0,,这些实验有七个，这些都是课程的核心和灵魂
 Dialogue: 0,0:48:05.82,0:48:09.26,English,,0,0,0,,This is where all the real learning comes in I think
 Dialogue: 0,0:48:05.82,0:48:09.26,Chinese,,0,0,0,,我认为这就是真正的学习的意义
 Dialogue: 0,0:48:09.26,0:48:11.87,English,,0,0,0,,When you actually have to do this stuff
@@ -1060,7 +1062,7 @@ Dialogue: 0,0:48:32.18,0:48:36.22,English,,0,0,0,,And involves typically some ki
 Dialogue: 0,0:48:32.18,0:48:36.22,Chinese,,0,0,0,,通常涉及某种编程或测量数据
 Dialogue: 0,0:48:36.86,0:48:39.68,English,,0,0,0,,There's also two exams a midterm and a final
 Dialogue: 0,0:48:36.86,0:48:39.68,Chinese,,0,0,0,,还有两个考试是期中考试和期末考试
-Dialogue: 0,0:48:40.00,0:48:50.98,English,,0,0,0,,The exams are proctored they're online proctored in Wien and and in Gates
+Dialogue: 0,0:48:40.00,0:48:50.98,English,,0,0,0,,The exams are proctored they're online proctored in Wayne and and in Gates
 Dialogue: 0,0:48:40.00,0:48:50.98,Chinese,,0,0,0,,这些考试被监督，他们是在线考试并且有监考，在 Wayne 和 Gates 教学楼
 Dialogue: 0,0:48:51.40,0:48:55.10,English,,0,0,0,,What we do for the exams is we have like we take like four days
 Dialogue: 0,0:48:51.40,0:48:55.10,Chinese,,0,0,0,,你要为考试准备四天时间
@@ -1118,7 +1120,7 @@ Dialogue: 0,0:50:58.42,0:51:00.10,English,,0,0,0,,And so we'll all see it
 Dialogue: 0,0:50:58.42,0:51:00.10,Chinese,,0,0,0,,所以我们都会看到它
 Dialogue: 0,0:51:01.28,0:51:05.12,English,,0,0,0,,And we usually we try to have you know really fast feedback right
 Dialogue: 0,0:51:01.28,0:51:05.12,Chinese,,0,0,0,,我们会尽量让你收到快速反馈
-Dialogue: 0,0:51:05.54,0:51:11.26,English,,0,0,0,,So there's so many people looking at at your emails
+Dialogue: 0,0:51:05.54,0:51:11.26,English,,0,0,0,,So there's so many people looking at your emails
 Dialogue: 0,0:51:05.54,0:51:11.26,Chinese,,0,0,0,,有这么多人在看你的电子邮件
 Dialogue: 0,0:51:11.26,0:51:14.62,English,,0,0,0,,That chance is very high you'll get on and answer back quickly
 Dialogue: 0,0:51:11.26,0:51:14.62,Chinese,,0,0,0,,这个机会非常高，你会很快收到回复
@@ -1133,7 +1135,7 @@ Dialogue: 0,0:51:31.80,0:51:37.14,Chinese,,0,0,0,,因为我们一遍又一遍地
 Dialogue: 0,0:51:37.30,0:51:40.80,English,,0,0,0,,We've established a FAQ on the course web page
 Dialogue: 0,0:51:37.30,0:51:40.80,Chinese,,0,0,0,,我们已经在课程网页上建立了一个 FAQ
 Dialogue: 0,0:51:41.26,0:51:49.20,English,,0,0,0,, For it sort of organized by labs,so you can see the answers to frequently asked questions
-Dialogue: 0,0:51:41.26,0:51:49.20,Chinese,,0,0,0,,由于它是由实验室分类的，所以你可以看到常见问题的答案
+Dialogue: 0,0:51:41.26,0:51:49.20,Chinese,,0,0,0,,由于它是由实验分类的，所以你可以看到常见问题的答案
 Dialogue: 0,0:51:52.54,0:52:00.00,English,,0,0,0,,We have office hours they were still trying to we were still trying to meet with the staff and
 Dialogue: 0,0:51:52.54,0:52:00.00,Chinese,,0,0,0,,我们有开放办公时间，我仍然在跟工作人员联系
 Dialogue: 0,0:52:00.00,0:52:01.60,English,,0,0,0,,figure out the exact office hours
@@ -1153,7 +1155,7 @@ Dialogue: 0,0:52:37.38,0:52:40.43,Chinese,,0,0,0,,但是你知道每天同一时
 Dialogue: 0,0:52:40.43,0:52:43.24,English,,0,0,0,,There's somebody you can go to for help
 Dialogue: 0,0:52:40.43,0:52:43.24,Chinese,,0,0,0,,那里有你可以去寻求帮助的人
 Dialogue: 0,0:52:48.02,0:52:52.64,English,,0,0,0,,Okay for our labs and exams every assignment,every lab is a single person
-Dialogue: 0,0:52:48.02,0:52:52.64,Chinese,,0,0,0,,好的，我们的实验室项目和考试每个任务，每个实验室项目都是一个人完成的
+Dialogue: 0,0:52:48.02,0:52:52.64,Chinese,,0,0,0,,好的，我们的实验项目和考试每个任务，每个实验都是一个人完成的
 Dialogue: 0,0:52:52.82,0:52:54.22,English,,0,0,0,,So we don't have any group projects
 Dialogue: 0,0:52:52.82,0:52:54.22,Chinese,,0,0,0,,所以我们没有任何集体项目
 Dialogue: 0,0:52:55.58,0:52:57.50,English,,0,0,0,,We want you to do the work yourself
@@ -1167,7 +1169,7 @@ Dialogue: 0,0:53:10.58,0:53:16.04,Chinese,,0,0,0,,我们所有的上交作业将
 Dialogue: 0,0:53:16.18,0:53:20.06,English,,0,0,0,,You can see which on the schedule page on the course webpage
 Dialogue: 0,0:53:16.18,0:53:20.06,Chinese,,0,0,0,,你可以在课程网页上的日程表页面上看到
 Dialogue: 0,0:53:20.78,0:53:24.06,English,,0,0,0,,And all of our hand-ins are using autolab
-Dialogue: 0,0:53:20.78,0:53:24.06,Chinese,,0,0,0,,我们所有的作业都使用 Auto Lab 自动实验室系统
+Dialogue: 0,0:53:20.78,0:53:24.06,Chinese,,0,0,0,,我们所有的作业都使用 Auto Lab 自动实验系统
 Dialogue: 0,0:53:25.58,0:53:29.78,English,,0,0,0,,Where you know you've probably used it for some of your other classes
 Dialogue: 0,0:53:25.58,0:53:29.78,Chinese,,0,0,0,,你知道你可能在其他一些课程已经见到它了
 Dialogue: 0,0:53:29.78,0:53:36.62,English,,0,0,0,,But it's a Auto grading service that allows you to get instant feedback on your handin
@@ -1199,13 +1201,13 @@ Dialogue: 0,0:54:32.50,0:54:38.38,Chinese,,0,0,0,,所以我们有一个申诉成
 Dialogue: 0,0:54:38.38,0:54:43.50,English,,0,0,0,,If you think that there was a glitch the work wasn't graded properly
 Dialogue: 0,0:54:38.38,0:54:43.50,Chinese,,0,0,0,,如果你认为有一个系统错误，作业没有被正确评级
 Dialogue: 0,0:54:44.20,0:54:49.70,English,,0,0,0,,So what you do after after either an exam or after your labs are graded
-Dialogue: 0,0:54:44.20,0:54:49.70,Chinese,,0,0,0,,所以你在考试之后或者在你的实验室项目之后都要进行评级
+Dialogue: 0,0:54:44.20,0:54:49.70,Chinese,,0,0,0,,所以你在考试之后或者在你的实验项目之后都要进行评级
 Dialogue: 0,0:54:50.52,0:54:53.02,English,,0,0,0,,You have seven days to file an appeal
 Dialogue: 0,0:54:50.52,0:54:53.02,Chinese,,0,0,0,,你有七天的时间提出上诉
 Dialogue: 0,0:54:53.54,0:54:57.12,English,,0,0,0,,And appeals have to be in writing and hardcopy
 Dialogue: 0,0:54:53.54,0:54:57.12,Chinese,,0,0,0,,上诉必须以书面形式和纸质形式进行
 Dialogue: 0,0:54:57.88,0:55:03.12,English,,0,0,0,,Okay so there's no we won't consider any email any appeals via email
-Dialogue: 0,0:54:57.88,0:55:03.12,Chinese,,0,0,0,,好，所以没有我们不会考虑任何电子邮件通过电子邮件的任何申诉
+Dialogue: 0,0:54:57.88,0:55:03.12,Chinese,,0,0,0,,所以没有我们不会考虑任何电子邮件通过电子邮件的任何申诉
 Dialogue: 0,0:55:03.50,0:55:07.88,English,,0,0,0,,It has to be in writing and hardcopy  and you give those to me
 Dialogue: 0,0:55:03.50,0:55:07.88,Chinese,,0,0,0,,它必须以书面形式和纸质形式提交给我
 Dialogue: 0,0:55:08.42,0:55:10.36,English,,0,0,0,,If I'm not there you can just slide it under the desk
@@ -1283,7 +1285,7 @@ Dialogue: 0,0:58:05.76,0:58:09.68,Chinese,,0,0,0,,所以整个学期我们有五
 Dialogue: 0,0:58:10.16,0:58:16.96,English,,0,0,0,,And a maximum of two grace days for the assignments
 Dialogue: 0,0:58:10.16,0:58:16.96,Chinese,,0,0,0,,和最多两个作业上交宽限日
 Dialogue: 0,0:58:16.96,0:58:23.02,English,,0,0,0,,Now we're going to set up since the first three assignments are kind of not as programming intensive
-Dialogue: 0,0:58:16.96,0:58:23.02,Chinese,,0,0,0,,现在我们要开始了，因为前三个实验室任务并不要求很多编程
+Dialogue: 0,0:58:16.96,0:58:23.02,Chinese,,0,0,0,,现在我们要开始了，因为前三个实验任务并不要求很多编程
 Dialogue: 0,0:58:23.92,0:58:25.70,English,,0,0,0,,And don't take as much time
 Dialogue: 0,0:58:23.92,0:58:25.70,Chinese,,0,0,0,,而且不要花太多时间
 Dialogue: 0,0:58:26.48,0:58:28.78,English,,0,0,0,,We're not going to allow any grace days for those
@@ -1300,7 +1302,7 @@ Dialogue: 0,0:58:53.80,0:58:57.54,English,,0,0,0,,So we don't want you to burn u
 Dialogue: 0,0:58:53.80,0:58:57.54,Chinese,,0,0,0,,所以我们不希望你在学期的早期耗尽你的宽限日
 Dialogue: 0,0:58:57.54,0:58:59.26,English,,0,0,0,,And this happens every semester
 Dialogue: 0,0:58:57.54,0:58:59.26,Chinese,,0,0,0,,每个学期都会发生
-Dialogue: 0,0:58:59.60,0:59:03.38,English,,0,0,0,,And it and then when Malik lab comes up there's no grace days left
+Dialogue: 0,0:58:59.60,0:59:03.38,English,,0,0,0,,And it and then when Malloc lab comes up there's no grace days left
 Dialogue: 0,0:58:59.60,0:59:03.38,Chinese,,0,0,0,,然后，当 Malloc 实验室作业出现时，没有任何宽限日了
 Dialogue: 0,0:59:03.84,0:59:06.16,English,,0,0,0,,It's really sad to see that
 Dialogue: 0,0:59:03.84,0:59:06.16,Chinese,,0,0,0,,这真令人觉得难受
@@ -1391,11 +1393,11 @@ Dialogue: 0,1:02:50.60,1:02:56.16,Chinese,,0,0,0,,但想象一下，如果不使
 Dialogue: 0,1:02:57.02,1:03:05.86,English,,0,0,0,,Right so this is how this is our way of teaching you how data is really represented in the machine
 Dialogue: 0,1:02:57.02,1:03:05.86,Chinese,,0,0,0,,对，这就是我们如何教导你如何在机器中表现数据的方式
 Dialogue: 0,1:03:06.64,1:03:09.36,English,,0,0,0,,Now the bomblab which you've probably heard at this is
-Dialogue: 0,1:03:06.64,1:03:09.36,Chinese,,0,0,0,,现在你可能已经听过了这个炸弹实验室
+Dialogue: 0,1:03:06.64,1:03:09.36,Chinese,,0,0,0,,现在你可能已经听过了这个 bomblab
 Dialogue: 0,1:03:10.18,1:03:15.92,English,,0,0,0,,This is a kind of famous all over the world now and at CMU
-Dialogue: 0,1:03:10.18,1:03:15.92,Chinese,,0,0,0,,这个实验室在 CMU 和全世界都很有名的
+Dialogue: 0,1:03:10.18,1:03:15.92,Chinese,,0,0,0,,这个实验在 CMU 和全世界都很有名的
 Dialogue: 0,1:03:16.36,1:03:21.32,English,,0,0,0,,The bomb lab is the way we teach you how to read and understand assembly language
-Dialogue: 0,1:03:16.36,1:03:21.32,Chinese,,0,0,0,,炸弹实验室是我们教你如何阅读和理解汇编语言的方式
+Dialogue: 0,1:03:16.36,1:03:21.32,Chinese,,0,0,0,,炸弹实验是我们教你如何阅读和理解汇编语言的方式
 Dialogue: 0,1:03:22.60,1:03:31.40,English,,0,0,0,,And a bomb just briefly a bomb is it is a C program that consists of a collection of six phases
 Dialogue: 0,1:03:22.60,1:03:31.40,Chinese,,0,0,0,,一颗炸弹，简单来说它是一个由六个阶段组成的 C 程序
 Dialogue: 0,1:03:32.68,1:03:35.86,English,,0,0,0,,And each phase wants you to type something in at the keyboard
@@ -1415,7 +1417,7 @@ Dialogue: 0,1:04:00.08,1:04:01.78,Chinese,,0,0,0,,你必须再试一次
 Dialogue: 0,1:04:02.70,1:04:05.92,English,,0,0,0,,And the kicker is in either case when if you explode the bomb
 Dialogue: 0,1:04:02.70,1:04:05.92,Chinese,,0,0,0,,异常条件是，任意条件下如果爆炸炸弹
 Dialogue: 0,1:04:06.56,1:04:12.12,English,,0,0,0,,Or defuse a phase that information gets sent to auto lab
-Dialogue: 0,1:04:06.56,1:04:12.12,Chinese,,0,0,0,,或者成功拆解，信息都会被发送到自动实验室
+Dialogue: 0,1:04:06.56,1:04:12.12,Chinese,,0,0,0,,或者成功拆解，信息都会被发送到 auto lab
 Dialogue: 0,1:04:12.56,1:04:17.44,English,,0,0,0,,If you exit and we use the defusing string that that your bomb sends us
 Dialogue: 0,1:04:12.56,1:04:17.44,Chinese,,0,0,0,,如果你退出了，我们使用你的炸弹发送给我们的字符串
 Dialogue: 0,1:04:17.98,1:04:22.48,English,,0,0,0,,And we check it out on a copy of your bomb that we keep on the server
@@ -1459,7 +1461,7 @@ Dialogue: 0,1:05:51.34,1:05:57.88,Chinese,,0,0,0,,除了教你如何编程汇编
 Dialogue: 0,1:05:57.90,1:06:01.06,English,,0,0,0,,Because you really can't do it if you don't use if you don't run gdb
 Dialogue: 0,1:05:57.90,1:06:01.06,Chinese,,0,0,0,,因为如果你不运行 GDB，你真的不能完成它
 Dialogue: 0,1:06:04.34,1:06:07.42,English,,0,0,0,,And then the the third lab is this is a new lab
-Dialogue: 0,1:06:04.34,1:06:07.42,Chinese,,0,0,0,,然后第三个实验室是这是一个新的实验室
+Dialogue: 0,1:06:04.34,1:06:07.42,Chinese,,0,0,0,,然后第三个实验是这是一个新的实验
 Dialogue: 0,1:06:07.66,1:06:11.42,English,,0,0,0,,This semester the randy's develops called the attack lab
 Dialogue: 0,1:06:07.66,1:06:11.42,Chinese,,0,0,0,,这个学期 Randy 发明的被称为攻击实验室的东西
 Dialogue: 0,1:06:12.04,1:06:17.38,English,,0,0,0,,And we developed this lab specifically for 64-bit architecture
@@ -1475,11 +1477,11 @@ Dialogue: 0,1:06:37.56,1:06:46.54,Chinese,,0,0,0,,这是一种十分现代的方
 Dialogue: 0,1:06:46.78,1:06:54.22,English,,0,0,0,,And prohibitive and make it impossible to execute code on the on the stack
 Dialogue: 0,1:06:46.78,1:06:54.22,Chinese,,0,0,0,,而且禁止，也不可能在栈上执行代码的事实
 Dialogue: 0,1:06:54.90,1:06:59.28,English,,0,0,0,,So this is a brand new labs really I think it's really going to be really going to be neat
-Dialogue: 0,1:06:54.90,1:06:59.28,Chinese,,0,0,0,,所以这是一个全新的实验室，我认为它确实会很清晰
+Dialogue: 0,1:06:54.90,1:06:59.28,Chinese,,0,0,0,,所以这是一个全新的实验，我认为它确实会很清晰
 Dialogue: 0,1:07:01.80,1:07:05.48,English,,0,0,0,,In the memory hierarchy when we study the memory hierarchy
 Dialogue: 0,1:07:01.80,1:07:05.48,Chinese,,0,0,0,,在我们研究内存层次结构时，在内存层次结构中
 Dialogue: 0,1:07:05.66,1:07:08.24,English,,0,0,0,,We have a cache lab called the cache lab
-Dialogue: 0,1:07:05.66,1:07:08.24,Chinese,,0,0,0,,我们有一个名为缓存实验室的实验室
+Dialogue: 0,1:07:05.66,1:07:08.24,Chinese,,0,0,0,,我们有一个名为缓存实验的实验
 Dialogue: 0,1:07:08.56,1:07:10.68,English,,0,0,0,,Where you'll build your own cache simulator
 Dialogue: 0,1:07:08.56,1:07:10.68,Chinese,,0,0,0,,你会在哪里建立你自己的缓存模拟器
 Dialogue: 0,1:07:10.68,1:07:18.12,English,,0,0,0,,So this is how sort of learn how this hardware that Randy was mentioning called cache memory works
@@ -1527,9 +1529,9 @@ Dialogue: 0,1:09:05.56,1:09:09.40,Chinese,,0,0,0,,所以这种异常控制流的
 Dialogue: 0,1:09:09.56,1:09:11.84,English,,0,0,0,,in all parts of the system we covered all at once
 Dialogue: 0,1:09:09.56,1:09:11.84,Chinese,,0,0,0,,在系统的所有部分，我们一次覆盖全部
 Dialogue: 0,1:09:13.28,1:09:21.34,English,,0,0,0,,And the lab that we use  to sort of exercise all these ideas is called the shell lab
-Dialogue: 0,1:09:13.28,1:09:21.34,Chinese,,0,0,0,,我们用来练习所有这些想法的实验室被称为 Shell 实验室
+Dialogue: 0,1:09:13.28,1:09:21.34,Chinese,,0,0,0,,我们用来练习所有这些想法的实验被称为 Shell 实验
 Dialogue: 0,1:09:21.78,1:09:25.92,English,,0,0,0,,In the shell lab you'll write your own linux shell which is really cool
-Dialogue: 0,1:09:21.78,1:09:25.92,Chinese,,0,0,0,,在 Shell 实验室中，你将编写你自己的 Linux Shell，这真的很酷
+Dialogue: 0,1:09:21.78,1:09:25.92,Chinese,,0,0,0,,在 Shell 实验中，你将编写你自己的 Linux Shell，这真的很酷
 Dialogue: 0,1:09:25.92,1:09:31.72,English,,0,0,0,,So that's the program the command line program that you interact with whenever you login a Linux box
 Dialogue: 0,1:09:25.92,1:09:31.72,Chinese,,0,0,0,,所以，这就是你无论何时登录到 Linux 机器时，与其交互就要用到的命令行程序
 Dialogue: 0,1:09:32.48,1:09:33.56,English,,0,0,0,,You're going to write your own
@@ -1558,8 +1560,8 @@ Dialogue: 0,1:10:30.36,1:10:35.22,English,,0,0,0,,We'll learn about the performa
 Dialogue: 0,1:10:30.36,1:10:35.22,Chinese,,0,0,0,,我们将了解你的程序中可能对性能造成潜在影响的部分
 Dialogue: 0,1:10:36.54,1:10:42.80,English,,0,0,0,,And we'll also learn how to manage that large pool of memory that it makes available to you
 Dialogue: 0,1:10:36.54,1:10:42.80,Chinese,,0,0,0,,我们还将学习如何管理它提供给你的大量内存
-Dialogue: 0,1:10:43.24,1:10:47.88,English,,0,0,0,,And the lab that we do that the lab where you'll do that is called malloclab
-Dialogue: 0,1:10:43.24,1:10:47.88,Chinese,,0,0,0,,你要做的实验室叫做 Malloc Lab
+Dialogue: 0,1:10:43.24,1:10:47.88,English,,0,0,0,,And the lab that we do that the lab where you'll do that is called malloc lab
+Dialogue: 0,1:10:43.24,1:10:47.88,Chinese,,0,0,0,,你要做的实验叫做 Malloc Lab
 Dialogue: 0,1:10:48.46,1:10:52.64,English,,0,0,0,, And in the malloc lab you'll write your own malloc and free functions
 Dialogue: 0,1:10:48.46,1:10:52.64,Chinese,,0,0,0,,在 Malloc Lab 中，你将编写自己的 Malloc 和 Free 函数
 Dialogue: 0,1:10:53.98,1:10:58.08,English,,0,0,0,,You'll reimplementation the functionally of the lib C malloc and free
@@ -1629,27 +1631,26 @@ Dialogue: 0,1:13:26.02,1:13:30.20,Chinese,,0,0,0,,但只是想到这可能是在
 Dialogue: 0,1:13:30.76,1:13:34.56,English,,0,0,0,,That could have been any machine that is just like opens up a whole new world
 Dialogue: 0,1:13:30.76,1:13:34.56,Chinese,,0,0,0,,这可能是任何一台机器，就像打开了一个全新的世界
 Dialogue: 0,1:13:40.00,1:13:45.08,English,,0,0,0,,okay all of our all of our hand-ins are using a system called auto lab
-Dialogue: 0,1:13:40.00,1:13:45.08,Chinese,,0,0,0,,好的，你们所有的作业，都使用了一个叫做自动实验室的系统
+Dialogue: 0,1:13:40.00,1:13:45.08,Chinese,,0,0,0,,好的，你们所有的作业，都使用了一个叫做 auto lab 的系统
 Dialogue: 0,1:13:45.46,1:13:49.44,English,,0,0,0,,Which was developed here and you can access it
 Dialogue: 0,1:13:45.46,1:13:49.44,Chinese,,0,0,0,,这是我们开发的，你可以访问它
 Dialogue: 0,1:13:49.44,1:13:55.50,English,,0,0,0,,If you were on the roster as of this morning if you go to the auto lab link
-Dialogue: 0,1:13:49.44,1:13:55.50,Chinese,,0,0,0,,如果你在今天早上进入自动实验室的链接，并且你在课程花名册上
+Dialogue: 0,1:13:49.44,1:13:55.50,Chinese,,0,0,0,,如果你在今天早上进入 auto lab 的链接，并且你在课程花名册上
 Dialogue: 0,1:13:55.80,1:13:58.52,English,,0,0,0,,Then you'll see this course listed on your page
 Dialogue: 0,1:13:55.80,1:13:58.52,Chinese,,0,0,0,,然后你会看到你的页面上列出了这门课程
 Dialogue: 0,1:13:58.94,1:14:02.84,English,,0,0,0,,If you're not enrolled you won't have an auto lab account
-Dialogue: 0,1:13:58.94,1:14:02.84,Chinese,,0,0,0,,如果你没有注册课程，你将不会有一个自动实验室帐户
+Dialogue: 0,1:13:58.94,1:14:02.84,Chinese,,0,0,0,,如果你没有注册课程，你将不会有一个 auto lab 帐户
 Dialogue: 0,1:14:04.00,1:14:06.24,English,,0,0,0,,And you have to be enrolled to get an auto lab account
-Dialogue: 0,1:14:04.00,1:14:06.24,Chinese,,0,0,0,,你必须注册课程才能获得一个自动实验室帐户
+Dialogue: 0,1:14:04.00,1:14:06.24,Chinese,,0,0,0,,你必须注册课程才能获得一个 auto lab 帐户
 Dialogue: 0,1:14:07.96,1:14:11.88,English,,0,0,0,,If you if you want to try to wait it out and wait for people to drop
 Dialogue: 0,1:14:07.96,1:14:11.88,Chinese,,0,0,0,,如果你想等等，人数下降你才能注册进来
 Dialogue: 0,1:14:12.10,1:14:16.90,English,,0,0,0,,I'll make the first couple of at least the first assignment due available from the course webpage
 Dialogue: 0,1:14:12.10,1:14:16.90,Chinese,,0,0,0,,我会在课程网页上至少提供第一份的作业时间限制
 Dialogue: 0,1:14:17.18,1:14:20.60,English,,0,0,0,,So you can work on it without actually handin to auto lab
-Dialogue: 0,1:14:17.18,1:14:20.60,Chinese,,0,0,0,,所以你可以在没有实际操作自动实验室的情况下进行实验
+Dialogue: 0,1:14:17.18,1:14:20.60,Chinese,,0,0,0,,所以你可以在没有实际操作 auto lab 的情况下进行实验
 Dialogue: 0,1:14:21.06,1:14:22.82,English,,0,0,0,,But at least you can keep going
 Dialogue: 0,1:14:21.06,1:14:22.82,Chinese,,0,0,0,,但至少你可以继续学下去
 Dialogue: 0,1:14:27.58,1:14:32.48,English,,0,0,0,,Okay if you are enrolled actually I didn't update this but I updated the auto lab accounts today
-Dialogue: 0,1:14:27.58,1:14:32.48,Chinese,,0,0,0,,好的，如果你注册了，我没有更新这个，但我今天更新了自动实验室帐户
 Dialogue: 0,1:14:34.38,1:14:37.44,English,,0,0,0,,Now one final thing if you have waitlist questions
 Dialogue: 0,1:14:34.38,1:14:37.44,Chinese,,0,0,0,,现在最后一件事情，如果你有候课名单的问题
 Dialogue: 0,1:14:37.84,1:14:41.24,English,,0,0,0,,Please don't don't send email to the staff
@@ -1662,7 +1663,3 @@ Dialogue: 0,1:14:53.54,1:14:57.82,English,,0,0,0,,Okay so that's that welcome ag
 Dialogue: 0,1:14:53.54,1:14:57.82,Chinese,,0,0,0,,好的，再次欢迎你们加入这个宏伟的学期课程
 Dialogue: 0,1:14:57.82,1:14:59.68,English,,0,0,0,,And we'll see you on Thursday
 Dialogue: 0,1:14:57.82,1:14:59.68,Chinese,,0,0,0,,我们将在周四见到你
-Dialogue: 0,1:14:59.68,1:15:02.39,English,,0,0,0,,[Applause]
-Dialogue: 0,1:14:59.68,1:15:02.39,Chinese,,0,0,0,,[掌声]
-Dialogue: 0,1:15:02.39,1:15:04.39,English,,0,0,0,,
-Dialogue: 0,1:15:02.39,1:15:04.39,Chinese,,0,0,0,,
