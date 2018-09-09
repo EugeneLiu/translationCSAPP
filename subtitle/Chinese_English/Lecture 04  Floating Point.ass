@@ -11,13 +11,14 @@ PlayResY: 720
 
 [Aegisub Project Garbage]
 Last Style Storage: Default
-Audio File: ../../../../Desktop/csapp/Lecture 04  Floating Point.mp4
-Video File: ../../../../Desktop/csapp/Lecture 04  Floating Point.mp4
+Audio File: ../../../../CSAPP/#4 Floating Point.mp4
+Video File: ../../../../CSAPP/#4 Floating Point.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
-Video Zoom Percent: 1.125000
-Active Line: 3
-Video Position: 103
+Video Zoom Percent: 0.500000
+Scroll Position: 105
+Active Line: 110
+Video Position: 10710
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -33,53 +34,53 @@ Dialogue: 0,0:00:03.42,0:00:04.36,Chinese,,0,0,0,,欢迎
 Dialogue: 0,0:00:05.64,0:00:06.70,English,,0,0,0,,Good to see you
 Dialogue: 0,0:00:05.64,0:00:06.70,Chinese,,0,0,0,,很高兴见到你
 Dialogue: 0,0:00:11.32,0:00:17.46,English,,0,0,0,,So today we're going to study an arcane area of computer systems known as floating point
-Dialogue: 0,0:00:11.32,0:00:17.46,Chinese,,0,0,0,,所以今天我们要研究一个称为浮点的计算机系统的神秘区域
+Dialogue: 0,0:00:11.32,0:00:17.46,Chinese,,0,0,0,,今天我们要研究一个称为浮点的计算机系统的神秘区域
 Dialogue: 0,0:00:17.98,0:00:22.34,English,,0,0,0,,Which is the way that computer systems represent the real numbers
-Dialogue: 0,0:00:17.98,0:00:22.34,Chinese,,0,0,0,,计算机系统代表实数的方式是什么
+Dialogue: 0,0:00:17.98,0:00:22.34,Chinese,,0,0,0,,也就是计算机系统代表实数的方式是什么
 Dialogue: 0,0:00:24.54,0:00:31.06,English,,0,0,0,,So you're all familiar with decimal you know something like 3.14
-Dialogue: 0,0:00:24.54,0:00:31.06,Chinese,,0,0,0,,所以你们都熟悉十进制，你知道像3.14这样的东西
+Dialogue: 0,0:00:24.54,0:00:31.06,Chinese,,0,0,0,,你们都熟悉十进制，像3.14这样的东西
 Dialogue: 0,0:00:31.52,0:00:36.36,English,,0,0,0,,And there's a similar idea with binary numbers
-Dialogue: 0,0:00:31.52,0:00:36.36,Chinese,,0,0,0,,并且二进制数也有类似的想法
+Dialogue: 0,0:00:31.52,0:00:36.36,Chinese,,0,0,0,,二进制数也有类似的东西
 Dialogue: 0,0:00:36.82,0:00:50.04,English,,0,0,0,,Okay so what does a fractional binary number like 10111.01 represent and how does that work
-Dialogue: 0,0:00:36.82,0:00:50.04,Chinese,,0,0,0,,那么像10111.01那样的小数二进制数代表什么呢？它是如何工作的呢？
+Dialogue: 0,0:00:36.82,0:00:50.04,Chinese,,0,0,0,,那么像10111.01那样的二进制小数代表什么呢？它是如何工作的呢？
 Dialogue: 0,0:00:51.96,0:00:58.34,English,,0,0,0,, Well it works just like the fractional decimal numbers that you used to
-Dialogue: 0,0:00:51.96,0:00:58.34,Chinese,,0,0,0,,它就像你以前的小数十进制数一样工作
+Dialogue: 0,0:00:51.96,0:00:58.34,Chinese,,0,0,0,,它就像你熟悉的十进制小数一样工作
 Dialogue: 0,0:01:04.92,0:01:08.76,English,,0,0,0,,So you have a in this case it's a binary point
-Dialogue: 0,0:01:04.92,0:01:08.76,Chinese,,0,0,0,,所以你在这种情况下有一个二进制点
+Dialogue: 0,0:01:04.92,0:01:08.76,Chinese,,0,0,0,,在二进制小数中有一个二进制点
 Dialogue: 0,0:01:08.76,0:01:10.62,English,,0,0,0,,And to the left of the binary point
 Dialogue: 0,0:01:08.76,0:01:10.62,Chinese,,0,0,0,,在二进制点的左边
 Dialogue: 0,0:01:12.50,0:01:16.46,English,,0,0,0,,You have bit positions to representing powers-of-2
-Dialogue: 0,0:01:12.50,0:01:16.46,Chinese,,0,0,0,,你有位置代表2的幂
+Dialogue: 0,0:01:12.50,0:01:16.46,Chinese,,0,0,0,,每一位代表2的正幂
 Dialogue: 0,0:01:16.46,0:01:20.00,English,,0,0,0,,So 2^0,2^1,2^2
-Dialogue: 0,0:01:16.46,0:01:20.00,Chinese,,0,0,0,,所以2 ^ 0,2 ^ 1,2 ^ 2
+Dialogue: 0,0:01:16.46,0:01:20.00,Chinese,,0,0,0,,所以左边的每一位分别代表2 ^ 0,2 ^ 1,2 ^ 2
 Dialogue: 0,0:01:20.64,0:01:26.60,English,,0,0,0,,So 1/2.I'm sorry 1,2,4 and so on
-Dialogue: 0,0:01:20.64,0:01:26.60,Chinese,,0,0,0,,所以1 / 2.对不起1,2,4等等
+Dialogue: 0,0:01:20.64,0:01:26.60,Chinese,,0,0,0,,所以从小数点开始向左依次是1,2,4等等
 Dialogue: 0,0:01:27.34,0:01:30.50,English,,0,0,0,,And to the right of the binary point
 Dialogue: 0,0:01:27.34,0:01:30.50,Chinese,,0,0,0,,在二进制点的右侧
-Dialogue: 0,0:01:31.04,0:01:40.46,English,,0,0,0,,You have 2^-1=1/2,2^-2=1/4, 2^-3=1/8 and so on
+Dialogue: 0,0:01:31.04,0:01:40.46,English,,0,0,0,,依次是 2^-1=1/2,2^-2=1/4, 2^-3=1/8 and so on
 Dialogue: 0,0:01:31.04,0:01:40.46,Chinese,,0,0,0,,你有2 ^ -1 = 1 / 2,2 ^ -2 = 1 / 4,2 ^ -3 = 1/8等等
 Dialogue: 0,0:01:41.20,0:01:46.80,English,,0,0,0,,So we can represent that any fractional binary number
-Dialogue: 0,0:01:41.20,0:01:46.80,Chinese,,0,0,0,,所以我们可以表示任何小数二进制数
+Dialogue: 0,0:01:41.20,0:01:46.80,Chinese,,0,0,0,,所以我们可以表示任何二进制小数
 Dialogue: 0,0:01:47.54,0:01:57.36,English,,0,0,0,,Using this notation where we sum each the bit at position k*2^k
-Dialogue: 0,0:01:47.54,0:01:57.36,Chinese,,0,0,0,,使用这种表示法，我们在位置k * 2 ^ k处对每个位求和
+Dialogue: 0,0:01:47.54,0:01:57.36,Chinese,,0,0,0,,使用这种表示法，我们对每个位 k 处代表的值 2^k 求和
 Dialogue: 0,0:01:58.76,0:02:05.46,English,,0,0,0,,Ok so it's really works exactly the same way as with base 10, just with base 2
-Dialogue: 0,0:01:58.76,0:02:05.46,Chinese,,0,0,0,,好的，它的确与基座10完全相同，只是基座2
+Dialogue: 0,0:01:58.76,0:02:05.46,Chinese,,0,0,0,,好的，这与10进制完全相同，只是进制变成了2
 Dialogue: 0,0:02:08.94,0:02:13.94,English,,0,0,0,,So let's look at some of these values
 Dialogue: 0,0:02:08.94,0:02:13.94,Chinese,,0,0,0,,那么让我们看看其中一些值
 Dialogue: 0,0:02:13.94,0:02:20.24,English,,0,0,0,,So 5 3/4 we would represent as 101.11
-Dialogue: 0,0:02:13.94,0:02:20.24,Chinese,,0,0,0,,所以5 3/4我们将代表101.11
+Dialogue: 0,0:02:13.94,0:02:20.24,Chinese,,0,0,0,,所以5 3/4将表示101.11
 Dialogue: 0,0:02:21.96,0:02:27.96,English,,0,0,0,,So this is before plus 1 is 5
-Dialogue: 0,0:02:21.96,0:02:27.96,Chinese,,0,0,0,,所以这是在加1之前是5
+Dialogue: 0,0:02:21.96,0:02:27.96,Chinese,,0,0,0,,所以二进制点左边相加后是5
 Dialogue: 0,0:02:29.30,0:02:32.58,English,,0,0,0,,+1/2, +1/4
 Dialogue: 0,0:02:29.30,0:02:32.58,Chinese,,0,0,0,,+1/2, +1/4
 Dialogue: 0,0:02:32.88,0:02:38.40,English,,0,0,0,,Ok so 2/4+1/4=3/4. so 5 3/4
-Dialogue: 0,0:02:32.88,0:02:38.40,Chinese,,0,0,0,,好吧2/4 + 1/4 = 3/4。所以5 3/4
+Dialogue: 0,0:02:32.88,0:02:38.40,Chinese,,0,0,0,,2/4 + 1/4 = 3/4。最终结果5 3/4
 Dialogue: 0,0:02:38.92,0:02:40.50,English,,0,0,0,,Ok so that's pretty simple
 Dialogue: 0,0:02:38.92,0:02:40.50,Chinese,,0,0,0,,好的，这很简单
 Dialogue: 0,0:02:41.34,0:02:51.92,English,,0,0,0,,2 7/8 is 10.111 so that 10 is 2 of course
-Dialogue: 0,0:02:41.34,0:02:51.92,Chinese,,0,0,0,,2 7/8是10.111，所以10当然是2
-Dialogue: 0,0:02:53.90,0:03:08.66,English,,0,0,0,,And then .111 is 1/2,so 4/8+1/4=2/8 + 1/8,okay so 7/8
-Dialogue: 0,0:02:53.90,0:03:08.66,Chinese,,0,0,0,,然后.111是1/2，所以4/8 + 1/4 = 2/8 + 1/8，好吧所以7/8
+Dialogue: 0,0:02:41.34,0:02:51.92,Chinese,,0,0,0,,2 7/8是10.111。二进制的10当然是2
+Dialogue: 0,0:02:53.90,0:03:08.66,English,,0,0,0,,And then .111 is 1/2,so 4/8,1/4=2/8 + 1/8,okay so 7/8
+Dialogue: 0,0:02:53.90,0:03:08.66,Chinese,,0,0,0,,然后.111是 (1/2=4/8) + (1/4 = 2/8) + 1/8 =7/8
 Dialogue: 0,0:03:11.58,0:03:21.04,English,,0,0,0,,And 1 7/16 would be 1.0111
 Dialogue: 0,0:03:11.58,0:03:21.04,Chinese,,0,0,0,,1 7/16将是1.0111
 Dialogue: 0,0:03:21.16,0:03:24.20,English,,0,0,0,,So that the 1 to the left of the binary point is 1
@@ -87,33 +88,33 @@ Dialogue: 0,0:03:21.16,0:03:24.20,Chinese,,0,0,0,,这样二进制点左边的1�
 Dialogue: 0,0:03:25.08,0:03:31.04,English,,0,0,0,,And then we have 1/4+1/8+1/16
 Dialogue: 0,0:03:25.08,0:03:31.04,Chinese,,0,0,0,,然后我们有1/4 + 1/8 + 1/16
 Dialogue: 0,0:03:32.00,0:03:47.70,English,,0,0,0,,So 1/4 is 4/16, 1/8 is 2/16 and 1/16,so you add those up you get 7/16
-Dialogue: 0,0:03:32.00,0:03:47.70,Chinese,,0,0,0,,所以1/4是4 / 16,1 / 8是2/16和1/16，所以你加上那些你得到7/16
+Dialogue: 0,0:03:32.00,0:03:47.70,Chinese,,0,0,0,,所以1/4是4 / 16,1 / 8是2/16, 1/16，所以你加上那些你得到7/16
 Dialogue: 0,0:03:49.48,0:03:51.66,English,,0,0,0,,Okay now notice that for some of these numbers
 Dialogue: 0,0:03:49.48,0:03:51.66,Chinese,,0,0,0,,好的，现在注意到其中一些数字
 Dialogue: 0,0:03:51.66,0:03:57.90,English,,0,0,0,,This bit pattern 101.11
-Dialogue: 0,0:03:51.66,0:03:57.90,Chinese,,0,0,0,,这个位模式101.11
+Dialogue: 0,0:03:51.66,0:03:57.90,Chinese,,0,0,0,,这个位组合101.11
 Dialogue: 0,0:03:58.50,0:04:02.82,English,,0,0,0,,If we shift it to the right to get 10.111
 Dialogue: 0,0:03:58.50,0:04:02.82,Chinese,,0,0,0,,如果我们将它移到右边获得10.111
 Dialogue: 0,0:04:04.36,0:04:08.58,English,,0,0,0,,We've divided by 2 right so we've taken 5 3/4 and divided it by 2
-Dialogue: 0,0:04:04.36,0:04:08.58,Chinese,,0,0,0,,我们将2除以2，所以我们取5 3/4并将其除以2
+Dialogue: 0,0:04:04.36,0:04:08.58,Chinese,,0,0,0,,就相当于把5 3/4除以2
 Dialogue: 0,0:04:09.20,0:04:12.00,English,,0,0,0,,And it works the other way too
-Dialogue: 0,0:04:09.20,0:04:12.00,Chinese,,0,0,0,,它也是另一种方式
+Dialogue: 0,0:04:09.20,0:04:12.00,Chinese,,0,0,0,,反方向也同样可以
 Dialogue: 0,0:04:12.00,0:04:17.28,English,,0,0,0,,If you shift to the left you multiply if you shift to the left by 1 you multiply by 1
-Dialogue: 0,0:04:12.00,0:04:17.28,Chinese,,0,0,0,,如果向左移动，如果向左移1，则乘以1
+Dialogue: 0,0:04:12.00,0:04:17.28,Chinese,,0,0,0,,如果向左移动1位，则乘2一次
 Dialogue: 0,0:04:19.02,0:04:26.12,English,,0,0,0,,And these numbers that are all ones to the right of the of the binary point
 Dialogue: 0,0:04:19.02,0:04:26.12,Chinese,,0,0,0,,而这些数字都是二进制点右边的数字
 Dialogue: 0,0:04:26.12,0:04:31.62,English,,0,0,0,,These are numbers that are just slightly less than 1 okay
-Dialogue: 0,0:04:26.12,0:04:31.62,Chinese,,0,0,0,,这些数字仅略低于1
+Dialogue: 0,0:04:26.12,0:04:31.62,Chinese,,0,0,0,,这些数字比1小一点点
 Dialogue: 0,0:04:33.50,0:04:36.14,English,,0,0,0,,So well when we want to represent those
-Dialogue: 0,0:04:33.50,0:04:36.14,Chinese,,0,0,0,,当我们想要代表那些时，那就好了
+Dialogue: 0,0:04:33.50,0:04:36.14,Chinese,,0,0,0,,当我们想要表示这些值的时候
 Dialogue: 0,0:04:36.14,0:04:43.36,English,,0,0,0,,We will sometimes refer to those numbers of that form is 1- ℇ
-Dialogue: 0,0:04:36.14,0:04:43.36,Chinese,,0,0,0,,我们有时会将那些形式的数字称为1-ℇ
-Dialogue: 0,0:04:43.36,0:04:50.16,English,,0,0,0,,And epsilon just depends on how many bits you have to the right of the binary point
-Dialogue: 0,0:04:43.36,0:04:50.16,Chinese,,0,0,0,,而epsilon只取决于你在二进制点右边有多少位
-Dialogue: 0,0:04:50.38,0:04:56.40,English,,0,0,0,,So epsilon gets smaller the more,the more of those bits you have there it gets closer to 1
-Dialogue: 0,0:04:50.38,0:04:56.40,Chinese,,0,0,0,,因此，epsilon变得越小越多，那里的那些位越多，它越接近1
-Dialogue: 0,0:04:56.90,0:04:59.30,English,,0,0,0,,And epsilon gets smaller the more of those bits you have
-Dialogue: 0,0:04:56.90,0:04:59.30,Chinese,,0,0,0,,并且epsilon越小，你拥有的那些比特就越多
+Dialogue: 0,0:04:36.14,0:04:43.36,Chinese,,0,0,0,,我们有时会将那些形式的数字称为 1.0 - ℇ
+Dialogue: 0,0:04:43.36,0:04:50.16,English,,0,0,0,,And ℇ just depends on how many bits you have to the right of the binary point
+Dialogue: 0,0:04:43.36,0:04:50.16,Chinese,,0,0,0,,而 ℇ 只取决于你在二进制点右边有多少位
+Dialogue: 0,0:04:50.38,0:04:56.40,English,,0,0,0,,So ℇ gets smaller the more,the more of those bits you have there it gets closer to 1
+Dialogue: 0,0:04:50.38,0:04:56.40,Chinese,,0,0,0,,因此，ℇ变得越小，二进制点右边的位越多，值越接近1
+Dialogue: 0,0:04:56.90,0:04:59.30,English,,0,0,0,,And ℇ gets smaller the more of those bits you have
+Dialogue: 0,0:04:56.90,0:04:59.30,Chinese,,0,0,0,,并且 ℇ 越小，二进制点右边的位就越多
 Dialogue: 0,0:05:00.92,0:05:08.08,English,,0,0,0,,Now there's limitations in this kind of representation
 Dialogue: 0,0:05:00.92,0:05:08.08,Chinese,,0,0,0,,现在这种表现存在局限性
 Dialogue: 0,0:05:08.08,0:05:14.18,English,,0,0,0,,So first of all we can only represent rational numbers of the form x/2^k
@@ -121,11 +122,11 @@ Dialogue: 0,0:05:08.08,0:05:14.18,Chinese,,0,0,0,,首先，我们只能表示x /
 Dialogue: 0,0:05:14.18,0:05:16.80,English,,0,0,0,,We can only represent numbers of that form exactly
 Dialogue: 0,0:05:14.18,0:05:16.80,Chinese,,0,0,0,,我们只能准确地表示该表格的数字
 Dialogue: 0,0:05:17.20,0:05:23.70,English,,0,0,0,,Other numbers have to get have repeating bit representations that can't be represented
-Dialogue: 0,0:05:17.20,0:05:23.70,Chinese,,0,0,0,,其他数字必须具有无法表示的重复位表示
+Dialogue: 0,0:05:17.20,0:05:23.70,Chinese,,0,0,0,,其他不能准确表示的数字必须通过重复位表示
 Dialogue: 0,0:05:24.06,0:05:27.82,English,,0,0,0,,With a finite number of bits that we have in a computer system
 Dialogue: 0,0:05:24.06,0:05:27.82,Chinese,,0,0,0,,我们在计算机系统中拥有有限数量的位
 Dialogue: 0,0:05:29.14,0:05:38.54,English,,0,0,0,,So for example things like a 1/3 is this repeating representation 1/5 and 1/10 or other examples of that
-Dialogue: 0,0:05:29.14,0:05:38.54,Chinese,,0,0,0,,因此，例如像1/3这样的重复表示是1/5和1/10或其他示例
+Dialogue: 0,0:05:29.14,0:05:38.54,Chinese,,0,0,0,,因此，例如像1/3就是这样的重复表示，1/5和1/10也是这样的例子
 Dialogue: 0,0:05:39.28,0:05:42.06,English,,0,0,0,,Now the other problem we have is that
 Dialogue: 0,0:05:39.28,0:05:42.06,Chinese,,0,0,0,,现在我们遇到的另一个问题是
 Dialogue: 0,0:05:42.68,0:05:45.18,English,,0,0,0,,We can only...
