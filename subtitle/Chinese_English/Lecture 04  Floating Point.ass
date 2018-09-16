@@ -10,15 +10,15 @@ PlayResX: 1280
 PlayResY: 720
 
 [Aegisub Project Garbage]
-Last Style Storage: Default
-Audio File: ../../../../CSAPP/#4 Floating Point.mp4
-Video File: ../../../../CSAPP/#4 Floating Point.mp4
+Last Style Storage: Noto
+Audio File: ../../../../Movies/#4 Floating Point.mp4
+Video File: ../../../../Movies/#4 Floating Point.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
-Video Zoom Percent: 0.500000
-Scroll Position: 105
-Active Line: 110
-Video Position: 10710
+Video Zoom Percent: 1.125000
+Scroll Position: 341
+Active Line: 352
+Video Position: 30213
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -134,59 +134,59 @@ Dialogue: 0,0:05:42.68,0:05:45.18,Chinese,,0,0,0,,我们只能......
 Dialogue: 0,0:05:45.18,0:05:49.02,English,,0,0,0,,There's only so many bits to the left and the right of the the binary point
 Dialogue: 0,0:05:45.18,0:05:49.02,Chinese,,0,0,0,,二进制点的左侧和右侧只有很多位
 Dialogue: 0,0:05:49.88,0:05:52.06,English,,0,0,0,,So we're kind of...
-Dialogue: 0,0:05:49.88,0:05:52.06,Chinese,,0,0,0,,所以我们有点......
+Dialogue: 0,0:05:49.88,0:05:52.06,Chinese,,0,0,0,,所以......
 Dialogue: 0,0:05:52.12,0:05:55.48,English,,0,0,0,,If we move the binary point to the left
-Dialogue: 0,0:05:52.12,0:05:55.48,Chinese,,0,0,0,,如果我们将二进制点移动到左侧
+Dialogue: 0,0:05:52.12,0:05:55.48,Chinese,,0,0,0,,如果我们将二进制点左移
 Dialogue: 0,0:05:56.98,0:06:02.90,English,,0,0,0,,Then we don't have as many we can't represent as many large numbers
-Dialogue: 0,0:05:56.98,0:06:02.90,Chinese,,0,0,0,,然后我们没有那么多我们不能代表那么多的大数字
+Dialogue: 0,0:05:56.98,0:06:02.90,Chinese,,0,0,0,,我们就没有那么多我们不能代表那么多的位来表示那么大的数字
 Dialogue: 0,0:06:02.90,0:06:04.62,English,,0,0,0,,We can only represent small numbers
-Dialogue: 0,0:06:02.90,0:06:04.62,Chinese,,0,0,0,,我们只能代表小数字
+Dialogue: 0,0:06:02.90,0:06:04.62,Chinese,,0,0,0,,我们只能代表小一点的数字
 Dialogue: 0,0:06:04.62,0:06:07.54,English,,0,0,0,,But we have more precision to the right of the binary point
 Dialogue: 0,0:06:04.62,0:06:07.54,Chinese,,0,0,0,,但是我们在二进制点的右边有更多的精度
 Dialogue: 0,0:06:07.76,0:06:10.18,English,,0,0,0,, so we can represent more fractional values
 Dialogue: 0,0:06:07.76,0:06:10.18,Chinese,,0,0,0,,所以我们可以代表更多的小数值
 Dialogue: 0,0:06:10.60,0:06:13.70,English,,0,0,0,,Just the range of those values will be much smaller
-Dialogue: 0,0:06:10.60,0:06:13.70,Chinese,,0,0,0,,只是这些值的范围会小得多
+Dialogue: 0,0:06:10.60,0:06:13.70,Chinese,,0,0,0,,只是总的取值范围会小得多
 Dialogue: 0,0:06:14.56,0:06:16.98,English,,0,0,0,,Similarly if we move the binary point to the right
-Dialogue: 0,0:06:14.56,0:06:16.98,Chinese,,0,0,0,,同样，如果我们将二进制点移动到右侧
+Dialogue: 0,0:06:14.56,0:06:16.98,Chinese,,0,0,0,,同样，如果我们将二进制点向右移动
 Dialogue: 0,0:06:17.78,0:06:20.32,English,,0,0,0,,We'll have a larger range of values
-Dialogue: 0,0:06:17.78,0:06:20.32,Chinese,,0,0,0,,我们将拥有更大范围的价值观
+Dialogue: 0,0:06:17.78,0:06:20.32,Chinese,,0,0,0,,我们将拥有更大的取值范围
 Dialogue: 0,0:06:20.54,0:06:23.18,English,,0,0,0,, But we won't build represent as many fractions
-Dialogue: 0,0:06:20.54,0:06:23.18,Chinese,,0,0,0,,但我们不会建立代表尽可能多的分数
+Dialogue: 0,0:06:20.54,0:06:23.18,Chinese,,0,0,0,,但我们不能表达同样多的小数
 Dialogue: 0,0:06:24.82,0:06:32.06,English,,0,0,0,,So there's this kind of trade-off  and floating point is a representation
-Dialogue: 0,0:06:24.82,0:06:32.06,Chinese,,0,0,0,,所以有这种权衡和浮点是一种表现形式
+Dialogue: 0,0:06:24.82,0:06:32.06,Chinese,,0,0,0,,浮点数的表达方式有这种权衡策略
 Dialogue: 0,0:06:32.80,0:06:42.76,English,,0,0,0,,To try that enables us to move that basically to move that binary point to represent sort of as wide a range as possible
-Dialogue: 0,0:06:32.80,0:06:42.76,Chinese,,0,0,0,,为了尝试这一点，我们可以基本上移动那个二进制点来表示尽可能宽的范围
+Dialogue: 0,0:06:32.80,0:06:42.76,Chinese,,0,0,0,,为了尝试这一点，基本上我们可以通过移动那个二进制点来确定给定的位，表示尽可能大的取值范围
 Dialogue: 0,0:06:43.14,0:06:46.26,English,,0,0,0,,With as much precision given the number of bits
-Dialogue: 0,0:06:43.14,0:06:46.26,Chinese,,0,0,0,,具有尽可能多的精度给定位数
+Dialogue: 0,0:06:43.14,0:06:46.26,Chinese,,0,0,0,,具有尽可能多的精度
 Dialogue: 0,0:06:46.78,0:06:49.14,English,,0,0,0,,The finite number of bits that we have to work with
 Dialogue: 0,0:06:46.78,0:06:49.14,Chinese,,0,0,0,,我们必须处理的有限位数
 Dialogue: 0,0:06:49.50,0:06:54.56,English,,0,0,0,,So that the float and floating point is this sort of shifting binary point right
-Dialogue: 0,0:06:49.50,0:06:54.56,Chinese,,0,0,0,,因此，浮点和浮点就是这种右移的二进制点
+Dialogue: 0,0:06:49.50,0:06:54.56,Chinese,,0,0,0,,因此，浮点就是这种移动的二进制点
 Dialogue: 0,0:06:54.56,0:06:57.16,English,,0,0,0,,This floating, the floating binary point
-Dialogue: 0,0:06:54.56,0:06:57.16,Chinese,,0,0,0,,这个浮点，浮点二进制点
+Dialogue: 0,0:06:54.56,0:06:57.16,Chinese,,0,0,0,,浮点数的二进制点
 Dialogue: 0,0:06:59.24,0:07:02.24,English,,0,0,0,,Now up until 1985
-Dialogue: 0,0:06:59.24,0:07:02.24,Chinese,,0,0,0,,现在到1985年
+Dialogue: 0,0:06:59.24,0:07:02.24,Chinese,,0,0,0,,直到1985年
 Dialogue: 0,0:07:02.64,0:07:05.94,English,,0,0,0,,A floating point was just a disaster
-Dialogue: 0,0:07:02.64,0:07:05.94,Chinese,,0,0,0,,浮点只是一场灾难
+Dialogue: 0,0:07:02.64,0:07:05.94,Chinese,,0,0,0,,浮点数就是一场灾难
 Dialogue: 0,0:07:06.48,0:07:11.18,English,,0,0,0,,And every computer manufacturer had their own representation
-Dialogue: 0,0:07:06.48,0:07:11.18,Chinese,,0,0,0,,每个计算机制造商都有自己的代表
+Dialogue: 0,0:07:06.48,0:07:11.18,Chinese,,0,0,0,,每个计算机制造商都有自己的实现
 Dialogue: 0,0:07:12.40,0:07:16.22,English,,0,0,0,,You couldn't...and it was just terrible,because you couldn't predict
-Dialogue: 0,0:07:12.40,0:07:16.22,Chinese,,0,0,0,,你不能......而且它太可怕了，因为你无法预测
+Dialogue: 0,0:07:12.40,0:07:16.22,Chinese,,0,0,0,,它太可怕了，因为你无法预测
 Dialogue: 0,0:07:16.90,0:07:21.46,English,,0,0,0,,What would happen if you moved your program from one machine to another
 Dialogue: 0,0:07:16.90,0:07:21.46,Chinese,,0,0,0,,如果你将程序从一台机器移动到另一台机器，会发生什么
 Dialogue: 0,0:07:21.84,0:07:24.66,English,,0,0,0,,The behavior would be different the rounding would be different
 Dialogue: 0,0:07:21.84,0:07:24.66,Chinese,,0,0,0,,行为会有所不同，舍入会有所不同
 Dialogue: 0,0:07:25.86,0:07:35.13,English,,0,0,0,,It was a very difficult situation and people really computer scientists in particular really disliked floating point
-Dialogue: 0,0:07:25.86,0:07:35.13,Chinese,,0,0,0,,这是一个非常困难的情况，人们真的特别是计算机科学家真的不喜欢浮点
+Dialogue: 0,0:07:25.86,0:07:35.13,Chinese,,0,0,0,,这是一个非常困难的情况，人们特别是计算机科学家真的不喜欢浮点
 Dialogue: 0,0:07:35.62,0:07:45.02,English,,0,0,0,,In 1985 IEEE which is the professional association for electrical engineers
-Dialogue: 0,0:07:35.62,0:07:45.02,Chinese,,0,0,0,,1985年IEEE是电气工程师的专业协会
+Dialogue: 0,0:07:35.62,0:07:45.02,Chinese,,0,0,0,,1985年电气工程师的专业协会，IEEE
 Dialogue: 0,0:07:45.44,0:07:51.02,English,,0,0,0,,Introduced a...and it's also a very important standards body
-Dialogue: 0,0:07:45.44,0:07:51.02,Chinese,,0,0,0,,介绍了......它也是一个非常重要的标准组织
+Dialogue: 0,0:07:45.44,0:07:51.02,Chinese,,0,0,0,,介绍一下......它也是一个非常重要的标准化组织
 Dialogue: 0,0:07:51.34,0:07:56.54,English,,0,0,0,,They introduced a standard floating-point representation called IEEE floating point
 Dialogue: 0,0:07:51.34,0:07:56.54,Chinese,,0,0,0,,他们引入了一个称为IEEE浮点的标准浮点表示
 Dialogue: 0,0:07:57.16,0:08:00.52,English,,0,0,0,,Which was then adopted by all computer manufacturers
-Dialogue: 0,0:07:57.16,0:08:00.52,Chinese,,0,0,0,,然后由所有计算机制造商采用
+Dialogue: 0,0:07:57.16,0:08:00.52,Chinese,,0,0,0,,被所有计算机制造商采用
 Dialogue: 0,0:08:00.52,0:08:02.16,English,,0,0,0,,So now the situation is much better
 Dialogue: 0,0:08:00.52,0:08:02.16,Chinese,,0,0,0,,所以现在情况要好得多
 Dialogue: 0,0:08:02.60,0:08:06.96,English,,0,0,0,,Everybody supports the same kind of floating point representation
@@ -197,94 +197,94 @@ Dialogue: 0,0:08:14.66,0:08:18.38,English,,0,0,0,,So the floating point has the 
 Dialogue: 0,0:08:14.66,0:08:18.38,Chinese,,0,0,0,,所以浮点有形式
 Dialogue: 0,0:08:19.34,0:08:24.26,English,,0,0,0,,It represents numbers in a this is like a scientific notation
 Dialogue: 0,0:08:19.34,0:08:24.26,Chinese,,0,0,0,,它代表数字，这就像科学记数法
-Dialogue: 0,0:08:24.46,0:08:36.66,English,,0,0,0,, It represents numbers of the form (-1)^s,where s is a sign bit,times a significant m
-Dialogue: 0,0:08:24.46,0:08:36.66,Chinese,,0,0,0,,它表示形式（-1）^ s的数字，其中s是符号位，乘以有效m
+Dialogue: 0,0:08:24.46,0:08:36.66,English,,0,0,0,, It represents numbers of the form (-1)^s*m*2^E,where s is a sign bit,times a significant m
+Dialogue: 0,0:08:24.46,0:08:36.66,Chinese,,0,0,0,,它表示形式 (-1)^s*m*2^E的数字，其中s是符号位，乘以尾数M
 Dialogue: 0,0:08:38.00,0:08:43.60,English,,0,0,0,,Ok times 2^E
-Dialogue: 0,0:08:38.00,0:08:43.60,Chinese,,0,0,0,,好的时候2 ^ E.
+Dialogue: 0,0:08:38.00,0:08:43.60,Chinese,,0,0,0,,然后乘以2 ^ E.
 Dialogue: 0,0:08:43.94,0:08:51.86,English,,0,0,0,,Ok so all of the numbers that we can represent in floating point have to be represented in this form
-Dialogue: 0,0:08:43.94,0:08:51.86,Chinese,,0,0,0,,好的，我们可以用浮点表示的所有数字都必须以这种形式表示
+Dialogue: 0,0:08:43.94,0:08:51.86,Chinese,,0,0,0,,所有浮点数都都必须以这种形式表示
 Dialogue: 0,0:08:53.04,0:08:59.42,English,,0,0,0,,So the sign bit s determines whether the number is negative or positive obviously
-Dialogue: 0,0:08:53.04,0:08:59.42,Chinese,,0,0,0,,因此符号位s显然确定该数字是负数还是正数
+Dialogue: 0,0:08:53.04,0:08:59.42,Chinese,,0,0,0,,显然，符号位s确定了该数字是负数还是正数
 Dialogue: 0,0:08:59.86,0:09:04.02,English,,0,0,0,,The significant m and this is sometimes sometimes called the mantissa
-Dialogue: 0,0:08:59.86,0:09:04.02,Chinese,,0,0,0,,重要的m和有时有时被称为尾数
+Dialogue: 0,0:08:59.86,0:09:04.02,Chinese,,0,0,0,,尾数m，有时叫做mantissa
 Dialogue: 0,0:09:04.02,0:09:05.68,English,,0,0,0,,Where the m comes from
 Dialogue: 0,0:09:04.02,0:09:05.68,Chinese,,0,0,0,,m来自哪里
 Dialogue: 0,0:09:06.16,0:09:13.06,English,,0,0,0,,The significant m normally is a fractional value in the range between 1 and 2
-Dialogue: 0,0:09:06.16,0:09:13.06,Chinese,,0,0,0,,显着的m通常是在1和2之间的范围内的分数值
+Dialogue: 0,0:09:06.16,0:09:13.06,Chinese,,0,0,0,,尾数m通常是介于在1和2之间的小数
 Dialogue: 0,0:09:13.06,0:09:16.00,English,,0,0,0,,And we'll see why that is in a second
-Dialogue: 0,0:09:13.06,0:09:16.00,Chinese,,0,0,0,,我们会在一秒钟内看到原因
+Dialogue: 0,0:09:13.06,0:09:16.00,Chinese,,0,0,0,,我们会在一秒钟内（马上）看到原因
 Dialogue: 0,0:09:16.52,0:09:19.88,English,,0,0,0,,And then the exponent e weights the value by some power-of-2
-Dialogue: 0,0:09:16.52,0:09:19.88,Chinese,,0,0,0,,然后指数e将该值加权一些2的幂
+Dialogue: 0,0:09:16.52,0:09:19.88,Chinese,,0,0,0,,然后指数e会对浮点数加权2的E次幂
 Dialogue: 0,0:09:20.48,0:09:25.76,English,,0,0,0,,Okay so this is encoded either 32-bit or 64-bit
-Dialogue: 0,0:09:20.48,0:09:25.76,Chinese,,0,0,0,,好的，所以这是32位或64位编码
+Dialogue: 0,0:09:20.48,0:09:25.76,Chinese,,0,0,0,,32位或64位编码都是这样
 Dialogue: 0,0:09:26.28,0:09:30.42,English,,0,0,0,,In the following way the the sign bit s is the most significant bit
-Dialogue: 0,0:09:26.28,0:09:30.42,Chinese,,0,0,0,,以下面的方式，符号位s是最重要的位
+Dialogue: 0,0:09:26.28,0:09:30.42,Chinese,,0,0,0,,下面的表示中，符号位s是最重要的位
 Dialogue: 0,0:09:31.26,0:09:34.62,English,,0,0,0,,And then this is followed by some number of
 Dialogue: 0,0:09:31.26,0:09:34.62,Chinese,,0,0,0,,接下来是一些
 Dialogue: 0,0:09:34.64,0:09:37.86,English,,0,0,0,,By some number of bits called the exp field
-Dialogue: 0,0:09:34.64,0:09:37.86,Chinese,,0,0,0,,通过一些称为exp字段的位
+Dialogue: 0,0:09:34.64,0:09:37.86,Chinese,,0,0,0,,一些称为exp字段的位
 Dialogue: 0,0:09:38.74,0:09:42.20,English,,0,0,0,,Which encodes the exponent e
-Dialogue: 0,0:09:38.74,0:09:42.20,Chinese,,0,0,0,,其中编码指数e
-Dialogue: 0,0:09:43.24,0:09:47.70,English,,0,0,0,,But it's not identical to e,it encodes e we'll see how that works
-Dialogue: 0,0:09:43.24,0:09:47.70,Chinese,,0,0,0,,但它与e不同，它编码我们会看到它是如何工作的
+Dialogue: 0,0:09:38.74,0:09:42.20,Chinese,,0,0,0,,其中编码了指数e
+Dialogue: 0,0:09:43.24,0:09:47.70,English,,0,0,0,,But it's not identical to e,it encodes e, we'll see how that works
+Dialogue: 0,0:09:43.24,0:09:47.70,Chinese,,0,0,0,,但它与e不同，它编码了e，我们会看到它是如何工作的
 Dialogue: 0,0:09:48.18,0:09:54.54,English,,0,0,0,,And then the frac. And then that's followed the remaining bits are the the frac field
-Dialogue: 0,0:09:48.18,0:09:54.54,Chinese,,0,0,0,,然后是压裂。然后是剩下的比特是压裂场
+Dialogue: 0,0:09:48.18,0:09:54.54,Chinese,,0,0,0,,剩下的比特位是小数字段
 Dialogue: 0,0:09:55.96,0:09:59.38,English,,0,0,0,, Which encodes m but isn't identical to m
-Dialogue: 0,0:09:55.96,0:09:59.38,Chinese,,0,0,0,,哪个编码m但与m不同
+Dialogue: 0,0:09:55.96,0:09:59.38,Chinese,,0,0,0,,它编码了m但与m不完全相同
 Dialogue: 0,0:10:02.02,0:10:09.46,English,,0,0,0,, Now we are...IEEE floating point has provides two different kinds of floating-point
-Dialogue: 0,0:10:02.02,0:10:09.46,Chinese,,0,0,0,,现在我们...... IEEE浮点数提供了两种不同的浮点
+Dialogue: 0,0:10:02.02,0:10:09.46,Chinese,,0,0,0,,IEEE提供了两种不同的浮点数
 Dialogue: 0,0:10:09.46,0:10:14.47,English,,0,0,0,,The single precision 32 bits and so-called double precision which is 64 bits
-Dialogue: 0,0:10:09.46,0:10:14.47,Chinese,,0,0,0,,单精度32位和所谓的双精度是64位
+Dialogue: 0,0:10:09.46,0:10:14.47,Chinese,,0,0,0,,单精度32位和双精度64位
 Dialogue: 0,0:10:15.12,0:10:20.38,English,,0,0,0,,There's this funky intel extended precision
-Dialogue: 0,0:10:15.12,0:10:20.38,Chinese,,0,0,0,,有这种时髦的英特尔扩展精度
+Dialogue: 0,0:10:15.12,0:10:20.38,Chinese,,0,0,0,,还有这种时髦的英特尔扩展精度
 Dialogue: 0,0:10:20.38,0:10:22.84,English,,0,0,0,,Which is non-standard and we won't talk about it anymore
 Dialogue: 0,0:10:20.38,0:10:22.84,Chinese,,0,0,0,,这是非标准的，我们不再谈论它了
 Dialogue: 0,0:10:25.18,0:10:27.82,English,,0,0,0,,And so in the single precision 32 bits
-Dialogue: 0,0:10:25.18,0:10:27.82,Chinese,,0,0,0,,所以在单精度32位中
+Dialogue: 0,0:10:25.18,0:10:27.82,Chinese,,0,0,0,,在单精度32位中
 Dialogue: 0,0:10:27.82,0:10:30.30,English,,0,0,0,,You have one sign bit, there's always a sign bit
 Dialogue: 0,0:10:27.82,0:10:30.30,Chinese,,0,0,0,,你有一个符号位，总是有一个符号位
 Dialogue: 0,0:10:30.30,0:10:34.68,English,,0,0,0,,You have 8 exp bits and you have 23 frac bits
-Dialogue: 0,0:10:30.30,0:10:34.68,Chinese,,0,0,0,,你有8个exp位，你有23个压缩位
+Dialogue: 0,0:10:30.30,0:10:34.68,Chinese,,0,0,0,,你有8个exp位，你有23个frac位
 Dialogue: 0,0:10:35.34,0:10:40.20,English,,0,0,0,,In double precision you have 11 exp and 52 frac bits
-Dialogue: 0,0:10:35.34,0:10:40.20,Chinese,,0,0,0,,在双精度中，你有11个exp和52个压缩位
+Dialogue: 0,0:10:35.34,0:10:40.20,Chinese,,0,0,0,,在双精度中，你有11个exp和52个frac
 Dialogue: 0,0:10:42.58,0:10:47.60,English,,0,0,0,,Now there's a number of different kinds of floating-point representations
-Dialogue: 0,0:10:42.58,0:10:47.60,Chinese,,0,0,0,,现在有许多不同类型的浮点表示
+Dialogue: 0,0:10:42.58,0:10:47.60,Chinese,,0,0,0,,现在有许多不同类型的浮点表示方法
 Dialogue: 0,0:10:48.12,0:10:54.22,English,,0,0,0,,The sort of the default and sort of the common representation is called normalized
-Dialogue: 0,0:10:48.12,0:10:54.22,Chinese,,0,0,0,,公共表示的默认排序和排序称为标准化
+Dialogue: 0,0:10:48.12,0:10:54.22,Chinese,,0,0,0,,这种默认的通用的表示方法被称为标准化的（表示方法）
 Dialogue: 0,0:10:55.38,0:10:57.17,English,,0,0,0,,So called normalized values
 Dialogue: 0,0:10:55.38,0:10:57.17,Chinese,,0,0,0,,所谓的标准化值
 Dialogue: 0,0:10:58.26,0:11:00.28,English,,0,0,0,,And normalized values are
 Dialogue: 0,0:10:58.26,0:11:00.28,Chinese,,0,0,0,,标准化值是
 Dialogue: 0,0:11:01.12,0:11:05.46,English,,0,0,0,,All the values where the exp field is not equal to 0
-Dialogue: 0,0:11:01.12,0:11:05.46,Chinese,,0,0,0,,exp字段不等于0的所有值
+Dialogue: 0,0:11:01.12,0:11:05.46,Chinese,,0,0,0,,exp字段的所有值
 Dialogue: 0,0:11:06.06,0:11:10.78,English,,0,0,0,,And not equal to all zeros and not equal to all ones
-Dialogue: 0,0:11:06.06,0:11:10.78,Chinese,,0,0,0,,并不等于全零并且不等于所有零
+Dialogue: 0,0:11:06.06,0:11:10.78,Chinese,,0,0,0,,不等于全0并且不等于全1
 Dialogue: 0,0:11:11.46,0:11:17.48,English,,0,0,0,,So everything all zeros and all ones are special kinds of numbers we'll look at second
-Dialogue: 0,0:11:11.46,0:11:17.48,Chinese,,0,0,0,,因此，所有零和所有零都是特殊类型的数字，我们将看到第二
+Dialogue: 0,0:11:11.46,0:11:17.48,Chinese,,0,0,0,,全0和全1都是特殊类型的数字，我们将看到第二马上看到
 Dialogue: 0,0:11:18.58,0:11:20.80,English,,0,0,0,,So the exponent
 Dialogue: 0,0:11:18.58,0:11:20.80,Chinese,,0,0,0,,所以指数
 Dialogue: 0,0:11:21.74,0:11:30.54,English,,0,0,0,,This exponent e remember our numbers are (-1)^s*m*2^E
-Dialogue: 0,0:11:21.74,0:11:30.54,Chinese,,0,0,0,,这个指数e记住我们的数字是（-1）^ s * m * 2 ^ E.
+Dialogue: 0,0:11:21.74,0:11:30.54,Chinese,,0,0,0,,请记住我们的数字是（-1）^ s * m * 2 ^ E.
 Dialogue: 0,0:11:31.36,0:11:37.94,English,,0,0,0,,The exponent e is encoded as this biased value
-Dialogue: 0,0:11:31.36,0:11:37.94,Chinese,,0,0,0,,指数e被编码为该偏差值
+Dialogue: 0,0:11:31.36,0:11:37.94,Chinese,,0,0,0,,指数e被编码为偏置(biased)值
 Dialogue: 0,0:11:39.76,0:11:42.74,English,,0,0,0,,Which is the called exp
-Dialogue: 0,0:11:39.76,0:11:42.74,Chinese,,0,0,0,,哪个叫做exp
+Dialogue: 0,0:11:39.76,0:11:42.74,Chinese,,0,0,0,,也就是exp
 Dialogue: 0,0:11:43.44,0:11:48.06,English,,0,0,0,,So the x the exponent E is Exp - bias
-Dialogue: 0,0:11:43.44,0:11:48.06,Chinese,,0,0,0,,所以x指数E是Exp  -  bias
+Dialogue: 0,0:11:43.44,0:11:48.06,Chinese,,0,0,0,,所以指数 E = Exp  -  bias
 Dialogue: 0,0:11:48.50,0:11:50.88,English,,0,0,0,,And exp is the value
 Dialogue: 0,0:11:48.50,0:11:50.88,Chinese,,0,0,0,,而exp就是价值
 Dialogue: 0,0:11:51.10,0:11:57.56,English,,0,0,0,,Exp is the value of the exp bits, the bits in the exp field treated as a positive number
-Dialogue: 0,0:11:51.10,0:11:57.56,Chinese,,0,0,0,,Exp是exp位的值，exp字段中的位被视为正数
+Dialogue: 0,0:11:51.10,0:11:57.56,Chinese,,0,0,0,,阶码就是exp位的值，exp字段中的位被视为正数
 Dialogue: 0,0:11:57.96,0:12:09.72,English,,0,0,0,,Okay so Exp you just look at it as an unsigned  7-bit in case of single precision 7-bit number
-Dialogue: 0,0:11:57.96,0:12:09.72,Chinese,,0,0,0,,好的，所以在单精度7位数字的情况下，你只需将它看作无符号7位
+Dialogue: 0,0:11:57.96,0:12:09.72,Chinese,,0,0,0,,所以在单精度7位数字的情况下，你只需将它看作无符号7位
 Dialogue: 0,0:12:11.40,0:12:20.44,English,,0,0,0,, Okay now the bias=2^(k-1) - 1,where k is number of exponent bits
-Dialogue: 0,0:12:11.40,0:12:20.44,Chinese,,0,0,0,,好的，现在偏差= 2 ^（k-1）-1，其中k是指数位的数量
+Dialogue: 0,0:12:11.40,0:12:20.44,Chinese,,0,0,0,,好的，现在偏置值= 2 ^（k-1）-1，其中k是指数位的值
 Dialogue: 0,0:12:21.08,0:12:26.85,English,,0,0,0,,Okay so for single precision we have 8 exponent bits
 Dialogue: 0,0:12:21.08,0:12:26.85,Chinese,,0,0,0,,好的，对于单精度，我们有8个指数位
 Dialogue: 0,0:12:27.72,0:12:39.86,English,,0,0,0,,So 2^8, 2^(8-1=7) so 2^7=128 - 1 is 127
 Dialogue: 0,0:12:27.72,0:12:39.86,Chinese,,0,0,0,,所以2 ^ 8,2 ^（8-1 = 7）所以2 ^ 7 = 128-1是127
 Dialogue: 0,0:12:40.00,0:12:43.36,English,,0,0,0,,Ok so the bias for single precision is 127
-Dialogue: 0,0:12:40.00,0:12:43.36,Chinese,,0,0,0,,好吧，单精度的偏差是127
+Dialogue: 0,0:12:40.00,0:12:43.36,Chinese,,0,0,0,,所以单精度的偏置值是127
 Dialogue: 0,0:12:43.88,0:12:47.00,English,,0,0,0,,And similarly for double precision it's 1023
 Dialogue: 0,0:12:43.88,0:12:47.00,Chinese,,0,0,0,,同样，对于双精度，它是1023
 Dialogue: 0,0:12:49.82,0:12:54.94,English,,0,0,0,,Okay so you just have to memorize this formula
@@ -294,17 +294,17 @@ Dialogue: 0,0:12:54.94,0:13:03.02,Chinese,,0,0,0,,指数E是exp字段，将其�
 Dialogue: 0,0:13:04.24,0:13:10.58,English,,0,0,0,,This is kind of a strange thing the first time you encounter floating-point
 Dialogue: 0,0:13:04.24,0:13:10.58,Chinese,,0,0,0,,第一次遇到浮点时，这有点奇怪
 Dialogue: 0,0:13:10.78,0:13:13.66,English,,0,0,0,,It seems kind of odd right so why not
-Dialogue: 0,0:13:10.78,0:13:13.66,Chinese,,0,0,0,,这似乎有点奇怪，所以为什么不呢
+Dialogue: 0,0:13:10.78,0:13:13.66,Chinese,,0,0,0,,这似乎有点奇怪，对吧
 Dialogue: 0,0:13:14.92,0:13:16.78,English,,0,0,0,,I mean we've already learned about two's complement
 Dialogue: 0,0:13:14.92,0:13:16.78,Chinese,,0,0,0,,我的意思是我们已经学会了两个补码
 Dialogue: 0,0:13:16.78,0:13:20.66,English,,0,0,0,,That's a perfectly fine way to represent positive and negative numbers
-Dialogue: 0,0:13:16.78,0:13:20.66,Chinese,,0,0,0,,这是表示正面和负面数字的完美方式
+Dialogue: 0,0:13:16.78,0:13:20.66,Chinese,,0,0,0,,这是表示正数和负数的完美方式
 Dialogue: 0,0:13:21.28,0:13:26.42,English,,0,0,0,,Okay we have exponents that are negative and positive right
-Dialogue: 0,0:13:21.28,0:13:26.42,Chinese,,0,0,0,,好的，我们的指数是消极和正面的
+Dialogue: 0,0:13:21.28,0:13:26.42,Chinese,,0,0,0,,好的，我们的指数有负的有正的
 Dialogue: 0,0:13:26.42,0:13:29.04,English,,0,0,0,,So why not just use the exp field to represent
-Dialogue: 0,0:13:26.42,0:13:29.04,Chinese,,0,0,0,,那么为什么不使用exp字段来表示呢
+Dialogue: 0,0:13:26.42,0:13:29.04,Chinese,,0,0,0,,那为什么不使用exp字段来表示正负呢
 Dialogue: 0,0:13:29.98,0:13:37.12,English,,0,0,0,,Why not just use a two's complement in the exp field to represent those positive and negative exponents right
-Dialogue: 0,0:13:29.98,0:13:37.12,Chinese,,0,0,0,,为什么不在exp字段中使用二进制补码来表示那些正面和负面的指数
+Dialogue: 0,0:13:29.98,0:13:37.12,Chinese,,0,0,0,,为什么不在exp字段中使用二进制补码来表示那些正数和负数
 Dialogue: 0,0:13:37.88,0:13:42.14,English,,0,0,0,,So it turns out that the reason they do this is
 Dialogue: 0,0:13:37.88,0:13:42.14,Chinese,,0,0,0,,事实证明，他们这样做的原因是
 Dialogue: 0,0:13:44.72,0:13:45.72,English,,0,0,0,, is that...
@@ -312,21 +312,21 @@ Dialogue: 0,0:13:44.72,0:13:45.72,Chinese,,0,0,0,,就是它...
 Dialogue: 0,0:13:46.28,0:13:49.72,English,,0,0,0,,And if you think about think about this and we'll come back to it
 Dialogue: 0,0:13:46.28,0:13:49.72,Chinese,,0,0,0,,如果你考虑考虑这个问题，我们会回过头来
 Dialogue: 0,0:13:49.74,0:13:56.90,English,,0,0,0,,But if we encode the the exponent E using this bias representation
-Dialogue: 0,0:13:49.74,0:13:56.90,Chinese,,0,0,0,,但是如果我们使用这种偏差表示来编码指数E.
+Dialogue: 0,0:13:49.74,0:13:56.90,Chinese,,0,0,0,,但是如果我们使用这种偏置值的方式来编码指数E
 Dialogue: 0,0:13:57.82,0:14:02.40,English,,0,0,0,,The smallest negative exponent is represented by all zeros
 Dialogue: 0,0:13:57.82,0:14:02.40,Chinese,,0,0,0,,最小的负指数由全零表示
 Dialogue: 0,0:14:05.10,0:14:12.38,English,,0,0,0,,And the largest exponent is represented by 01111
 Dialogue: 0,0:14:05.10,0:14:12.38,Chinese,,0,0,0,,最大的指数由01111表示
 Dialogue: 0,0:14:15.22,0:14:20.64,English,,0,0,0,,So the smallest, the number with the smallest exponent
-Dialogue: 0,0:14:15.22,0:14:20.64,Chinese,,0,0,0,,所以最小的，指数最小的数字
+Dialogue: 0,0:14:15.22,0:14:20.64,Chinese,,0,0,0,,所以，指数最小的数字
 Dialogue: 0,0:14:21.34,0:14:22.98,English,,0,0,0,,If we were just to compare the bits
-Dialogue: 0,0:14:21.34,0:14:22.98,Chinese,,0,0,0,,如果我们只是比较比特
+Dialogue: 0,0:14:21.34,0:14:22.98,Chinese,,0,0,0,,如果我们通过把比特位的表示方式进行比较
 Dialogue: 0,0:14:22.98,0:14:30.12,English,,0,0,0,,Using a just some kind of unsigned representation just comparing the bits  treating it as an unsigned number
-Dialogue: 0,0:14:22.98,0:14:30.12,Chinese,,0,0,0,,使用一种只是某种无符号表示，只比较将其视为无符号数的位
+Dialogue: 0,0:14:22.98,0:14:30.12,Chinese,,0,0,0,,一种是无符数号表示
 Dialogue: 0,0:14:30.70,0:14:33.52,English,,0,0,0,, By using this biased representation
-Dialogue: 0,0:14:30.70,0:14:33.52,Chinese,,0,0,0,,通过使用这种有偏见的表示
+Dialogue: 0,0:14:30.70,0:14:33.52,Chinese,,0,0,0,,一种是使用这种有偏置值的表示
 Dialogue: 0,0:14:33.52,0:14:38.40,English,,0,0,0,, We can just compare two floating-point numbers just as unsigned
-Dialogue: 0,0:14:33.52,0:14:38.40,Chinese,,0,0,0,,我们可以比较两个浮点数，就像无符号一样
+Dialogue: 0,0:14:33.52,0:14:38.40,Chinese,,0,0,0,,我们可以比较两个浮点数，就像无符号整数一样
 Dialogue: 0,0:14:38.40,0:14:43.10,English,,0,0,0,, We can treat the whole floating-point number as an unsigned integer and compare two numbers
 Dialogue: 0,0:14:38.40,0:14:43.10,Chinese,,0,0,0,,我们可以将整个浮点数视为无符号整数并比较两个数字
 Dialogue: 0,0:14:43.50,0:14:46.24,English,,0,0,0,,And get a true comparison
@@ -334,49 +334,49 @@ Dialogue: 0,0:14:43.50,0:14:46.24,Chinese,,0,0,0,,并得到真正的比较
 Dialogue: 0,0:14:50.58,0:14:54.56,English,,0,0,0,,So the exponent uses this this sort of biasing encoding
 Dialogue: 0,0:14:50.58,0:14:54.56,Chinese,,0,0,0,,所以指数使用这种偏置编码
 Dialogue: 0,0:14:55.22,0:15:00.98,English,,0,0,0,,And then the significant is encoded with an implied one
-Dialogue: 0,0:14:55.22,0:15:00.98,Chinese,,0,0,0,,然后重要的是用隐含的编码
+Dialogue: 0,0:14:55.22,0:15:00.98,Chinese,,0,0,0,,然后尾数（significant）是用隐含的编码
 Dialogue: 0,0:15:01.52,0:15:06.52,English,,0,0,0,,So and this is where they are...this is where the normalized
 Dialogue: 0,0:15:01.52,0:15:06.52,Chinese,,0,0,0,,所以这就是他们所在的地方......这就是规范化的地方
 Dialogue: 0,0:15:07.04,0:15:09.04,English,,0,0,0,, In the normalized representation comes from
-Dialogue: 0,0:15:07.04,0:15:09.04,Chinese,,0,0,0,,在规范化表示中来自
+Dialogue: 0,0:15:07.04,0:15:09.04,Chinese,,0,0,0,,在规范化表示中
 Dialogue: 0,0:15:09.70,0:15:11.84,English,,0,0,0,,That we're always going to represent our numbers
-Dialogue: 0,0:15:09.70,0:15:11.84,Chinese,,0,0,0,,我们总是要代表我们的数字
+Dialogue: 0,0:15:09.70,0:15:11.84,Chinese,,0,0,0,,这是我们想表达数字的方法
 Dialogue: 0,0:15:12.44,0:15:16.74,English,,0,0,0,, So m we're always going to normalize m
 Dialogue: 0,0:15:12.44,0:15:16.74,Chinese,,0,0,0,,所以我们总是要将m标准化
 Dialogue: 0,0:15:16.74,0:15:19.24,English,,0,0,0,, No matter what the number we want to represent
 Dialogue: 0,0:15:16.74,0:15:19.24,Chinese,,0,0,0,,无论我们想要代表什么数字
 Dialogue: 0,0:15:19.24,0:15:23.26,English,,0,0,0,, We're always going to normalize m as one point something
-Dialogue: 0,0:15:19.24,0:15:23.26,Chinese,,0,0,0,,我们总是将m标准化为一点
+Dialogue: 0,0:15:19.24,0:15:23.26,Chinese,,0,0,0,,我们总是将m标准化为1.xxx...x
 Dialogue: 0,0:15:23.98,0:15:26.52,English,,0,0,0,,And then we adjust the exponent accordingly
 Dialogue: 0,0:15:23.98,0:15:26.52,Chinese,,0,0,0,,然后我们相应地调整指数
 Dialogue: 0,0:15:26.94,0:15:32.66,English,,0,0,0,, So if the value we want to represent is 100.01
 Dialogue: 0,0:15:26.94,0:15:32.66,Chinese,,0,0,0,,因此，如果我们想要表示的值是100.01
 Dialogue: 0,0:15:33.56,0:15:37.68,English,,0,0,0,,We're going to shift it over and it will be 1.00
-Dialogue: 0,0:15:33.56,0:15:37.68,Chinese,,0,0,0,,我们将把它转移过来，它将是1.00
+Dialogue: 0,0:15:33.56,0:15:37.68,Chinese,,0,0,0,,我们将把它的二进制点左移，它将是1.00
 Dialogue: 0,0:15:40.60,0:15:45.04,English,,0,0,0,, Okay and then we'll adjust the exponent to represent that shift
-Dialogue: 0,0:15:40.60,0:15:45.04,Chinese,,0,0,0,,好的，然后我们将调整指数来表示这种转变
+Dialogue: 0,0:15:40.60,0:15:45.04,Chinese,,0,0,0,,然后我们将调整指数来表示这种位移
 Dialogue: 0,0:15:47.44,0:15:54.34,English,,0,0,0,,Okay so the bits in the frac field xxxx...x are
-Dialogue: 0,0:15:47.44,0:15:54.34,Chinese,,0,0,0,,好吧，压裂区域xxxx ... x中的位是
+Dialogue: 0,0:15:47.44,0:15:54.34,Chinese,,0,0,0,,好吧，frac区域xxxx ... x中的位是
 Dialogue: 0,0:15:54.86,0:15:58.10,English,,0,0,0,,All of the numbers to the right of the binary point right
-Dialogue: 0,0:15:54.86,0:15:58.10,Chinese,,0,0,0,,二进制数右边的所有数字都是正确的
+Dialogue: 0,0:15:54.86,0:15:58.10,Chinese,,0,0,0,,二进制点右边的所有数字
 Dialogue: 0,0:15:58.10,0:16:00.18,English,,0,0,0,,So there's always this implied one
 Dialogue: 0,0:15:58.10,0:16:00.18,Chinese,,0,0,0,,总是有这种暗示的
 Dialogue: 0,0:16:01.48,0:16:03.52,English,,0,0,0,,But we don't even encode it we just throw it away
-Dialogue: 0,0:16:01.48,0:16:03.52,Chinese,,0,0,0,,但是我们甚至没有对它进行编码，我们只是扔掉它
+Dialogue: 0,0:16:01.48,0:16:03.52,Chinese,,0,0,0,,我们甚至没有对它进行编码，我们只是扔掉它
 Dialogue: 0,0:16:03.52,0:16:05.14,English,,0,0,0,,Because it's always there right
 Dialogue: 0,0:16:03.52,0:16:05.14,Chinese,,0,0,0,,因为它总是在那里
 Dialogue: 0,0:16:05.14,0:16:08.90,English,,0,0,0,,So this is a little trick just to get it one more bit for free
-Dialogue: 0,0:16:05.14,0:16:08.90,Chinese,,0,0,0,,所以这是一个小技巧，只是为了免费获得一点
+Dialogue: 0,0:16:05.14,0:16:08.90,Chinese,,0,0,0,,所以这是一个小技巧，只是为了免费获得一位
 Dialogue: 0,0:16:10.18,0:16:14.40,English,,0,0,0,,Okay so the the xxx bits in the frac field
-Dialogue: 0,0:16:10.18,0:16:14.40,Chinese,,0,0,0,,好吧，压裂领域的xxx位
+Dialogue: 0,0:16:10.18,0:16:14.40,Chinese,,0,0,0,,好吧，frac区域的xxx位
 Dialogue: 0,0:16:15.06,0:16:21.72,English,,0,0,0,,All the bits to the right of the binary point after one point the one point
-Dialogue: 0,0:16:15.06,0:16:21.72,Chinese,,0,0,0,,二点之后的所有位在一点之后指向一点
+Dialogue: 0,0:16:15.06,0:16:21.72,Chinese,,0,0,0,,二进制点之后的所有位在1.之后
 Dialogue: 0,0:16:22.66,0:16:27.54,English,,0,0,0,,And this is,the so this is the smallest fractal is all zeros
-Dialogue: 0,0:16:22.66,0:16:27.54,Chinese,,0,0,0,,这就是，所以这是最小的分形是全零
+Dialogue: 0,0:16:22.66,0:16:27.54,Chinese,,0,0,0,,所以这是最小的frac是全零
 Dialogue: 0,0:16:27.56,0:16:31.10,English,,0,0,0,, Which corresponds to a significant of 1.0
-Dialogue: 0,0:16:27.56,0:16:31.10,Chinese,,0,0,0,,这相当于1.0的显着性
+Dialogue: 0,0:16:27.56,0:16:31.10,Chinese,,0,0,0,,这相当于尾数是1.0
 Dialogue: 0,0:16:34.26,0:16:39.64,English,,0,0,0,,A frac field of all ones corresponds to 2-ɛ
-Dialogue: 0,0:16:34.26,0:16:39.64,Chinese,,0,0,0,,所有1的压裂场对应于2-ɛ
+Dialogue: 0,0:16:34.26,0:16:39.64,Chinese,,0,0,0,,所有位都是1的frac对应于2-ɛ
 Dialogue: 0,0:16:39.64,0:16:43.04,English,,0,0,0,,So that's 1.111...
 Dialogue: 0,0:16:39.64,0:16:43.04,Chinese,,0,0,0,,那是1.111 ......
 Dialogue: 0,0:16:47.08,0:16:50.64,English,,0,0,0,,So let's look at an example
