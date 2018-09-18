@@ -15,10 +15,10 @@ Audio File: ../../../../Movies/#4 Floating Point.mp4
 Video File: ../../../../Movies/#4 Floating Point.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
-Video Zoom Percent: 1.125000
-Scroll Position: 341
-Active Line: 352
-Video Position: 30213
+Video Zoom Percent: 1.000000
+Scroll Position: 397
+Active Line: 398
+Video Position: 34068
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -386,39 +386,39 @@ Dialogue: 0,0:16:51.82,0:16:56.06,Chinese,,0,0,0,,那么让我们来看看我们
 Dialogue: 0,0:16:58.84,0:17:01.12,English,,0,0,0,,In two's complement in floating point
 Dialogue: 0,0:16:58.84,0:17:01.12,Chinese,,0,0,0,,在浮点数的二进制补码中
 Dialogue: 0,0:17:02.52,0:17:05.22,English,,0,0,0,,So the if we represent that so it's an integer
-Dialogue: 0,0:17:02.52,0:17:05.22,Chinese,,0,0,0,,所以如果我们代表那么它就是一个整数
+Dialogue: 0,0:17:02.52,0:17:05.22,Chinese,,0,0,0,,所以如果我们那么表达它那么它就是一个整数
 Dialogue: 0,0:17:06.60,0:17:15.34,English,,0,0,0,,And we represent it using these bits take my word for it correspond to the integer 213
-Dialogue: 0,0:17:06.60,0:17:15.34,Chinese,,0,0,0,,并且我们使用这些位表示它，因为它对应于整数213
+Dialogue: 0,0:17:06.60,0:17:15.34,Chinese,,0,0,0,,我们使用这些位表示它，它对应于整数213
 Dialogue: 0,0:17:16.22,0:17:18.56,English,,0,0,0,,So now we want to convert it we want to normalize it
-Dialogue: 0,0:17:16.22,0:17:18.56,Chinese,,0,0,0,,所以现在我们要转换它，我们想要标准化它
-Dialogue: 0,0:17:20.88,0:17:26.70,English,,0,0,0,, By expressing it as 1.110 and so on times 2^13
-Dialogue: 0,0:17:20.88,0:17:26.70,Chinese,,0,0,0,,通过将其表示为1.110等等，时间为2 ^ 13
+Dialogue: 0,0:17:16.22,0:17:18.56,Chinese,,0,0,0,,现在我们要转换它，我们想要标准化它
+Dialogue: 0,0:17:20.88,0:17:26.70,English,,0,0,0,, By expressing it as 1.110xxx * 2^13
+Dialogue: 0,0:17:20.88,0:17:26.70,Chinese,,0,0,0,,通过将其表示为1.110xxx * 2 ^ 13
 Dialogue: 0,0:17:27.22,0:17:29.50,English,,0,0,0,,Okay same number we just normalized it
-Dialogue: 0,0:17:27.22,0:17:29.50,Chinese,,0,0,0,,好的，相同的数字，我们只是将其标准化
+Dialogue: 0,0:17:27.22,0:17:29.50,Chinese,,0,0,0,,这是相同的数字，我们只是将其标准化
 Dialogue: 0,0:17:29.78,0:17:32.26,English,,0,0,0,,So that there's always this leading 1
-Dialogue: 0,0:17:29.78,0:17:32.26,Chinese,,0,0,0,,所以总是有这个领先1
-Dialogue: 0,0:17:36.76,0:17:45.62,English,,0,0,0,, So the significant m is 1.11011 and so on
-Dialogue: 0,0:17:36.76,0:17:45.62,Chinese,,0,0,0,,所以显着的m是1.11011，依此类推
+Dialogue: 0,0:17:29.78,0:17:32.26,Chinese,,0,0,0,,所以总是有这个开头的1
+Dialogue: 0,0:17:36.76,0:17:45.62,English,,0,0,0,, So the significant m is 1.11011xxx
+Dialogue: 0,0:17:36.76,0:17:45.62,Chinese,,0,0,0,,所以尾数m是1.11011xxx
 Dialogue: 0,0:17:46.74,0:17:50.78,English,,0,0,0,,The frac field is everything to the right of the binary point
-Dialogue: 0,0:17:46.74,0:17:50.78,Chinese,,0,0,0,,压裂字段是二进制点右侧的所有内容
+Dialogue: 0,0:17:46.74,0:17:50.78,Chinese,,0,0,0,,frac字段是二进制点右侧的所有内容
 Dialogue: 0,0:17:50.94,0:17:54.60,English,,0,0,0,,So we just,we throw this one away
-Dialogue: 0,0:17:50.94,0:17:54.60,Chinese,,0,0,0,,所以我们只是把它扔掉了
+Dialogue: 0,0:17:50.94,0:17:54.60,Chinese,,0,0,0,,所以我们可以把这个1忽略掉
 Dialogue: 0,0:17:54.60,0:17:59.44,English,,0,0,0,,And we just take the the values to the right of the binary point
-Dialogue: 0,0:17:54.60,0:17:59.44,Chinese,,0,0,0,,我们只需将值放在二进制点的右侧
-Dialogue: 0,0:17:59.74,0:18:04.62,English,,0,0,0,,And then we pat it out with zeros 2 to get the 23 bits that we need for single precision
-Dialogue: 0,0:17:59.74,0:18:04.62,Chinese,,0,0,0,,然后我们用零2来拍摄它以获得我们需要的单个精度的23位
+Dialogue: 0,0:17:54.60,0:17:59.44,Chinese,,0,0,0,,我们只需取得二进制点的右侧的值
+Dialogue: 0,0:17:59.74,0:18:04.62,English,,0,0,0,,And then we pat it out with zeros to get the 23 bits that we need for single precision
+Dialogue: 0,0:17:59.74,0:18:04.62,Chinese,,0,0,0,,然后我们用零来补全它以获得我们需要的单精度浮点数的23位
 Dialogue: 0,0:18:07.40,0:18:09.10,English,,0,0,0,, Ok so now we've got our frac field
-Dialogue: 0,0:18:07.40,0:18:09.10,Chinese,,0,0,0,,好的，现在我们有了压裂领域
+Dialogue: 0,0:18:07.40,0:18:09.10,Chinese,,0,0,0,,好的，现在我们有了frac区域
 Dialogue: 0,0:18:11.14,0:18:12.22,English,,0,0,0,, The exponent
 Dialogue: 0,0:18:11.14,0:18:12.22,Chinese,,0,0,0,,指数
 Dialogue: 0,0:18:13.12,0:18:15.74,English,,0,0,0,,So in this case right E is
-Dialogue: 0,0:18:13.12,0:18:15.74,Chinese,,0,0,0,,所以在这种情况下，右E是
+Dialogue: 0,0:18:13.12,0:18:15.74,Chinese,,0,0,0,,所以在这种情况下，E是
 Dialogue: 0,0:18:16.98,0:18:20.72,English,,0,0,0,,We're multiplying by 2 ^13.So E is 13
 Dialogue: 0,0:18:16.98,0:18:20.72,Chinese,,0,0,0,,我们乘以2 ^ 13.So E是13
 Dialogue: 0,0:18:21.26,0:18:25.36,English,,0,0,0,,So we want to represent the value 13 using this bias encoding
-Dialogue: 0,0:18:21.26,0:18:25.36,Chinese,,0,0,0,,因此，我们希望使用此偏差编码来表示值13
+Dialogue: 0,0:18:21.26,0:18:25.36,Chinese,,0,0,0,,因此，我们希望使用此偏置编码来表示值13
 Dialogue: 0,0:18:27.84,0:18:29.86,English,,0,0,0,,So the bias is 127
-Dialogue: 0,0:18:27.84,0:18:29.86,Chinese,,0,0,0,,所以偏见是127
+Dialogue: 0,0:18:27.84,0:18:29.86,Chinese,,0,0,0,,所以偏置值是127
 Dialogue: 0,0:18:32.26,0:18:41.38,English,,0,0,0,,And so the exponent the value of the exp field should be 140
 Dialogue: 0,0:18:32.26,0:18:41.38,Chinese,,0,0,0,,所以指数exp字段的值应该是140
 Dialogue: 0,0:18:41.58,0:18:49.32,English,,0,0,0,,Because if we take 140-127 we get 13
@@ -430,11 +430,11 @@ Dialogue: 0,0:18:55.58,0:18:58.02,Chinese,,0,0,0,,这就成了我们的exp领域
 Dialogue: 0,0:19:00.02,0:19:01.92,English,,0,0,0,, Okay so the resulting floating-point number
 Dialogue: 0,0:19:00.02,0:19:01.92,Chinese,,0,0,0,,好的，所以得到的浮点数
 Dialogue: 0,0:19:01.92,0:19:05.08,English,,0,0,0,, And of course it's a positive number so the significand bit is zero
-Dialogue: 0,0:19:01.92,0:19:05.08,Chinese,,0,0,0,,当然它是一个正数，因此有效位为零
+Dialogue: 0,0:19:01.92,0:19:05.08,Chinese,,0,0,0,,当然它是一个正数，因此符号位为零
 Dialogue: 0,0:19:06.96,0:19:09.72,English,,0,0,0,, So the resulting floating point number has these eight
-Dialogue: 0,0:19:06.96,0:19:09.72,Chinese,,0,0,0,,因此得到的浮点数有八个
+Dialogue: 0,0:19:06.96,0:19:09.72,Chinese,,0,0,0,,因此得到的浮点数有八个bits
 Dialogue: 0,0:19:10.30,0:19:19.30,English,,0,0,0,,The 8 bits and exp field that we computed by subtracting 127 from 140
-Dialogue: 0,0:19:10.30,0:19:19.30,Chinese,,0,0,0,,我们通过从140减去127来计算的8位和exp字段
+Dialogue: 0,0:19:10.30,0:19:19.30,Chinese,,0,0,0,,我们通过从140减去127来计算的8位的值和exp字段
 Dialogue: 0,0:19:20.00,0:19:27.68,English,,0,0,0,,And then the frack field are these bits that we got here by just taking everything to the right of the binary point
 Dialogue: 0,0:19:20.00,0:19:27.68,Chinese,,0,0,0,,然后frack字段是我们通过将所有内容都放在二进制点右侧而得到的这些位
 Dialogue: 0,0:19:32.12,0:19:33.10,English,,0,0,0,, So this...
