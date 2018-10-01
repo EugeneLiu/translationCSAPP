@@ -1,10 +1,10 @@
 # 汉化 CSAPP 课程资料
 
-本项目的英文字幕以 Youtube 视频机器字幕为底稿，经过审校和和时间轴调整而来。每个视频的字幕均经过一位译者翻译，1-2 位校对者校对，一位管理员审校。
+> 本项目的英文字幕以 Youtube 视频机器字幕为底稿，经过审校和和时间轴调整而来。每个视频的字幕均经过一位译者翻译，1-2 位校对者校对，一位管理员审校。
+> 
+> 如果你也对这个项目感兴趣，欢迎参与翻译和校对工作。
 
-如果你也对这个项目感兴趣，欢迎参与翻译和校对工作。
-
-[欢迎贡献该项目](https://github.com/EugeneLiu/translationCSAPP/blob/master/contribution.md)
+[欢迎参与本项目的工作](https://github.com/EugeneLiu/translationCSAPP/blob/master/contribution.md)
 
 ### 汉化内容链接
 
@@ -21,13 +21,6 @@
 
 - [Youtube 视频地址](https://www.youtube.com/playlist?list=PLmBgoRqEQCWy58EIwLSWwMPfkwLOLRM5R)
 
-### 字幕制作相关
-
-
-
 ### 版权相关
 
-![creative commons logo](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)  本作品采用[知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc-sa/4.0/)进行许可。
-
-
-
+![creative commons logo](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png) 本作品采用[知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc-sa/4.0/)进行许可。
