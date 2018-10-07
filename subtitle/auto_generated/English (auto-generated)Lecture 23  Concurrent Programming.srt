@@ -1,0 +1,5416 @@
+﻿1
+00:00:00,319 --> 00:00:03,589
+well good afternoon everybody welcome
+
+2
+00:00:03,589 --> 00:00:09,719
+good to see you so this week we're going
+
+3
+00:00:09,719 --> 00:00:12,330
+to study how to incorporate concurrency
+
+4
+00:00:12,330 --> 00:00:15,240
+into into programs now we've seen
+
+5
+00:00:15,240 --> 00:00:17,730
+concurrent concurrency before in the
+
+6
+00:00:17,730 --> 00:00:22,529
+form of processes exception handlers and
+
+7
+00:00:22,529 --> 00:00:25,230
+in the in the case of processes it was a
+
+8
+00:00:25,230 --> 00:00:28,050
+Mac we use we used processes as a
+
+9
+00:00:28,050 --> 00:00:30,960
+mechanism to run multiple independent
+
+10
+00:00:30,960 --> 00:00:36,230
+application programs now but you could
+
+11
+00:00:36,230 --> 00:00:39,600
+concurrency also exists in application
+
+12
+00:00:39,600 --> 00:00:41,850
+programs now we've seen a little bit of
+
+13
+00:00:41,850 --> 00:00:43,829
+this when we when we studied signal
+
+14
+00:00:43,829 --> 00:00:46,140
+handlers okay so a signal handler is
+
+15
+00:00:46,140 --> 00:00:48,899
+that is a concurrent flow that runs
+
+16
+00:00:48,899 --> 00:00:50,940
+concurrently with your with your main
+
+17
+00:00:50,940 --> 00:00:54,320
+application program okay and we've seen
+
+18
+00:00:54,320 --> 00:00:57,930
+we've seen how some of the difficulties
+
+19
+00:00:57,930 --> 00:01:01,320
+that can arise when we introduce
+
+20
+00:01:01,320 --> 00:01:08,610
+concurrency in our programs so even with
+
+21
+00:01:08,610 --> 00:01:10,170
+something like a signal handler which
+
+22
+00:01:10,170 --> 00:01:13,710
+isn't doing very much it's very hard for
+
+23
+00:01:13,710 --> 00:01:15,960
+us to reason about this kind of kind of
+
+24
+00:01:15,960 --> 00:01:18,450
+thing we have to two concurrent flows
+
+25
+00:01:18,450 --> 00:01:20,909
+running at the same time like there's
+
+26
+00:01:20,909 --> 00:01:22,799
+our brains just tend to be kind of
+
+27
+00:01:22,799 --> 00:01:24,509
+sequential we want to think about things
+
+28
+00:01:24,509 --> 00:01:27,090
+happening one after the other you know
+
+29
+00:01:27,090 --> 00:01:28,979
+it is and it's much easier for us to
+
+30
+00:01:28,979 --> 00:01:31,590
+reason about that reasoning about
+
+31
+00:01:31,590 --> 00:01:33,299
+multiple things happening at the same
+
+32
+00:01:33,299 --> 00:01:37,590
+time really causes problems and that the
+
+33
+00:01:37,590 --> 00:01:41,070
+fundamental reason is that - really -
+
+34
+00:01:41,070 --> 00:01:43,829
+really reason about say - two
+
+35
+00:01:43,829 --> 00:01:47,460
+independent two concurrent flows we have
+
+36
+00:01:47,460 --> 00:01:49,020
+to account for all of the possible
+
+37
+00:01:49,020 --> 00:01:51,210
+interleavings of those flows okay and
+
+38
+00:01:51,210 --> 00:01:53,189
+that's where and that's that grows
+
+39
+00:01:53,189 --> 00:01:55,649
+exponentially with the the with the
+
+40
+00:01:55,649 --> 00:01:58,619
+number of flows okay so you had you saw
+
+41
+00:01:58,619 --> 00:02:00,240
+this with your signal handlers when you
+
+42
+00:02:00,240 --> 00:02:03,960
+did shell lab you had you had two
+
+43
+00:02:03,960 --> 00:02:06,360
+concurrent flows the main program and
+
+44
+00:02:06,360 --> 00:02:10,289
+and your signal handler both accessing a
+
+45
+00:02:10,289 --> 00:02:12,230
+shared resource in the form of
+
+46
+00:02:12,230 --> 00:02:15,020
+the jobs list right and you had to be
+
+47
+00:02:15,020 --> 00:02:18,170
+very careful to prevent an interleaving
+
+48
+00:02:18,170 --> 00:02:22,340
+where that where that data structure was
+
+49
+00:02:22,340 --> 00:02:24,080
+being referenced in an inconsistent
+
+50
+00:02:24,080 --> 00:02:27,110
+state okay so what we're going to do
+
+51
+00:02:27,110 --> 00:02:29,180
+this week and into next week is we're
+
+52
+00:02:29,180 --> 00:02:30,739
+going to we're going to look at that
+
+53
+00:02:30,739 --> 00:02:33,440
+kind of application level concurrency
+
+54
+00:02:33,440 --> 00:02:36,380
+but in a more principled in a more
+
+55
+00:02:36,380 --> 00:02:38,450
+principled way than than we encountered
+
+56
+00:02:38,450 --> 00:02:46,220
+with with signal handlers so as soon as
+
+57
+00:02:46,220 --> 00:02:48,709
+you have multiple flows accessing shared
+
+58
+00:02:48,709 --> 00:02:52,610
+resources all kinds of bad things can
+
+59
+00:02:52,610 --> 00:02:56,000
+happen in your program and these these
+
+60
+00:02:56,000 --> 00:03:00,019
+have been these bad things these
+
+61
+00:03:00,019 --> 00:03:02,450
+problems that occur been objects of
+
+62
+00:03:02,450 --> 00:03:04,190
+study in computer science for four
+
+63
+00:03:04,190 --> 00:03:06,680
+decades but the the kinds of things that
+
+64
+00:03:06,680 --> 00:03:09,470
+can happen are our races which we've
+
+65
+00:03:09,470 --> 00:03:12,459
+seen in when we did the shell lab where
+
+66
+00:03:12,459 --> 00:03:15,410
+the the outcome whether good or bad
+
+67
+00:03:15,410 --> 00:03:18,319
+outcome depends on some some arbitrary
+
+68
+00:03:18,319 --> 00:03:20,510
+scheduling decision right in the case of
+
+69
+00:03:20,510 --> 00:03:23,540
+you know one of the races we saw in the
+
+70
+00:03:23,540 --> 00:03:25,489
+case of a shell was the case where that
+
+71
+00:03:25,489 --> 00:03:27,440
+a child just because of a scheduling
+
+72
+00:03:27,440 --> 00:03:31,400
+decision by the kernel runs and finishes
+
+73
+00:03:31,400 --> 00:03:33,290
+before the parent has a chance to add
+
+74
+00:03:33,290 --> 00:03:35,030
+that child to the job list okay so
+
+75
+00:03:35,030 --> 00:03:38,060
+that's that's a classic example of a
+
+76
+00:03:38,060 --> 00:03:41,930
+race and similarly if you have two
+
+77
+00:03:41,930 --> 00:03:43,420
+people that are trying to making
+
+78
+00:03:43,420 --> 00:03:46,660
+accessing a reservation system on a bird
+
+79
+00:03:46,660 --> 00:03:48,139
+for an airline
+
+80
+00:03:48,139 --> 00:03:51,980
+who gets the if they both access at the
+
+81
+00:03:51,980 --> 00:03:54,620
+same time who actually gets a seat just
+
+82
+00:03:54,620 --> 00:03:57,079
+depends on those various scheduling
+
+83
+00:03:57,079 --> 00:03:58,940
+decisions that are going on in the the
+
+84
+00:03:58,940 --> 00:04:02,950
+reservation system another kind of a
+
+85
+00:04:02,950 --> 00:04:06,170
+problem that occurs is deadlock so a
+
+86
+00:04:06,170 --> 00:04:09,200
+deadlock is a condition that exists
+
+87
+00:04:09,200 --> 00:04:12,349
+where you have multiple flows waiting
+
+88
+00:04:12,349 --> 00:04:15,620
+for an event that will never occur okay
+
+89
+00:04:15,620 --> 00:04:18,289
+so using printf in a signal handler is
+
+90
+00:04:18,289 --> 00:04:21,320
+an example of this kind of of this kind
+
+91
+00:04:21,320 --> 00:04:23,720
+of problem or introduces the potential
+
+92
+00:04:23,720 --> 00:04:25,310
+for that kind of problem
+
+93
+00:04:25,310 --> 00:04:29,450
+okay so in your main routine uxu you
+
+94
+00:04:29,450 --> 00:04:33,220
+execute a printf and that printf
+
+95
+00:04:33,220 --> 00:04:37,250
+acquires a lock on some system resource
+
+96
+00:04:37,250 --> 00:04:42,230
+I I think it's a terminal lock and then
+
+97
+00:04:42,230 --> 00:04:45,530
+after that that main printf acquires
+
+98
+00:04:45,530 --> 00:04:47,300
+that lock it gets interrupted by a
+
+99
+00:04:47,300 --> 00:04:50,480
+signal handler and now the signal
+
+100
+00:04:50,480 --> 00:04:54,010
+handler if it does a printf that printf
+
+101
+00:04:54,010 --> 00:04:57,139
+will try to acquire that lock but it
+
+102
+00:04:57,139 --> 00:04:59,090
+won't be able to get it because the the
+
+103
+00:04:59,090 --> 00:05:01,880
+printf and the main routine has it so
+
+104
+00:05:01,880 --> 00:05:03,560
+now your signal ham the printf and the
+
+105
+00:05:03,560 --> 00:05:05,930
+signal handler is waiting for an event
+
+106
+00:05:05,930 --> 00:05:07,280
+that will never occur it's waiting for
+
+107
+00:05:07,280 --> 00:05:09,440
+that lock to be released and it will
+
+108
+00:05:09,440 --> 00:05:13,370
+never occur because the main the printf
+
+109
+00:05:13,370 --> 00:05:15,320
+in the main routine can't release the
+
+110
+00:05:15,320 --> 00:05:18,229
+lock until the signal handler returns
+
+111
+00:05:18,229 --> 00:05:21,470
+and the signal handler can't acquire the
+
+112
+00:05:21,470 --> 00:05:22,910
+lock until the printf in the main
+
+113
+00:05:22,910 --> 00:05:25,820
+routine terminates so that's that's a
+
+114
+00:05:25,820 --> 00:05:28,610
+classic example of deadlock another more
+
+115
+00:05:28,610 --> 00:05:31,820
+from from real life imagine that imagine
+
+116
+00:05:31,820 --> 00:05:34,900
+that you're all drivers follow the rules
+
+117
+00:05:34,900 --> 00:05:38,570
+very precisely and and and the rule for
+
+118
+00:05:38,570 --> 00:05:41,030
+a four-way stop is that whoever gets
+
+119
+00:05:41,030 --> 00:05:46,850
+there first gets to go first okay so if
+
+120
+00:05:46,850 --> 00:05:50,060
+four cars arrive at the intersection
+
+121
+00:05:50,060 --> 00:05:52,430
+exactly the same time then you have a
+
+122
+00:05:52,430 --> 00:05:55,010
+deadlock you have none of the drivers
+
+123
+00:05:55,010 --> 00:05:57,890
+was first so no but of the drivers goes
+
+124
+00:05:57,890 --> 00:06:00,169
+and so they're all waiting for a
+
+125
+00:06:00,169 --> 00:06:04,010
+condition that will never occur and then
+
+126
+00:06:04,010 --> 00:06:05,600
+other classical things that can go wrong
+
+127
+00:06:05,600 --> 00:06:08,060
+or things like liveness starvation
+
+128
+00:06:08,060 --> 00:06:13,250
+fairness of this starvation occurs when
+
+129
+00:06:13,250 --> 00:06:15,289
+you fail you're trying to do something
+
+130
+00:06:15,289 --> 00:06:17,090
+but you fail to make progress because
+
+131
+00:06:17,090 --> 00:06:19,340
+somebody else keeps getting all the work
+
+132
+00:06:19,340 --> 00:06:22,430
+right so if you were if you had two
+
+133
+00:06:22,430 --> 00:06:24,110
+processes and the kernel always
+
+134
+00:06:24,110 --> 00:06:27,550
+scheduled process a instead of process B
+
+135
+00:06:27,550 --> 00:06:29,630
+process B that would be an example of
+
+136
+00:06:29,630 --> 00:06:32,050
+process B being starved out because of a
+
+137
+00:06:32,050 --> 00:06:35,810
+improper scheduling decision and we then
+
+138
+00:06:35,810 --> 00:06:37,789
+we would say that that that scheduling
+
+139
+00:06:37,789 --> 00:06:39,200
+policy always schedule
+
+140
+00:06:39,200 --> 00:06:41,000
+B is unfair right so it doesn't have
+
+141
+00:06:41,000 --> 00:06:43,930
+this this property of fairness where
+
+142
+00:06:43,930 --> 00:06:47,620
+every every entity in the system gets
+
+143
+00:06:47,620 --> 00:06:51,140
+gets sort of a reasonable chunk of the
+
+144
+00:06:51,140 --> 00:06:55,660
+processor so like I said I mean this
+
+145
+00:06:55,660 --> 00:06:57,710
+concurrency has been studied for years
+
+146
+00:06:57,710 --> 00:07:00,770
+it's a very it's a very deep difficult
+
+147
+00:07:00,770 --> 00:07:02,900
+topic because of this because of this
+
+148
+00:07:02,900 --> 00:07:05,120
+sort of exponential explosion in the
+
+149
+00:07:05,120 --> 00:07:08,120
+number of interleavings so we can't
+
+150
+00:07:08,120 --> 00:07:10,940
+we're not going to cover all of them but
+
+151
+00:07:10,940 --> 00:07:12,560
+we will cover some so as you get a
+
+152
+00:07:12,560 --> 00:07:16,940
+reasonable idea of how to incorporate
+
+153
+00:07:16,940 --> 00:07:21,440
+concurrency in your programs now for for
+
+154
+00:07:21,440 --> 00:07:22,700
+our study of application level
+
+155
+00:07:22,700 --> 00:07:25,010
+concurrency we're going to use servers
+
+156
+00:07:25,010 --> 00:07:28,070
+as a motivating example and and the
+
+157
+00:07:28,070 --> 00:07:30,020
+reason is that you cannot write a
+
+158
+00:07:30,020 --> 00:07:32,710
+correct server without using concurrency
+
+159
+00:07:32,710 --> 00:07:36,310
+okay so it's a good it's a really good
+
+160
+00:07:36,310 --> 00:07:41,930
+good motivation and here's the reason so
+
+161
+00:07:41,930 --> 00:07:44,120
+so far we've looked at servers that are
+
+162
+00:07:44,120 --> 00:07:46,370
+iterative okay so they only the only
+
+163
+00:07:46,370 --> 00:07:48,830
+process requests from one client at a
+
+164
+00:07:48,830 --> 00:07:51,500
+time and once they finish processing a
+
+165
+00:07:51,500 --> 00:07:54,500
+request from a client then they go on to
+
+166
+00:07:54,500 --> 00:08:00,020
+the next client so they so like with our
+
+167
+00:08:00,020 --> 00:08:03,020
+iterative echo server you can see the
+
+168
+00:08:03,020 --> 00:08:06,890
+each each of these clients makes a
+
+169
+00:08:06,890 --> 00:08:12,350
+connection request then it writes a line
+
+170
+00:08:12,350 --> 00:08:14,840
+of text to the server and then it waits
+
+171
+00:08:14,840 --> 00:08:17,810
+for the server to echo that back and in
+
+172
+00:08:17,810 --> 00:08:19,940
+this case this simple case it just then
+
+173
+00:08:19,940 --> 00:08:23,570
+it just closes okay and the server waits
+
+174
+00:08:23,570 --> 00:08:27,070
+for a connection requests and accept and
+
+175
+00:08:27,070 --> 00:08:31,190
+then and then waits waits for and then
+
+176
+00:08:31,190 --> 00:08:32,990
+once it accepts that connection requests
+
+177
+00:08:32,990 --> 00:08:36,740
+it it reads and when waits for what
+
+178
+00:08:36,740 --> 00:08:39,349
+waits for that client to to to write
+
+179
+00:08:39,349 --> 00:08:41,900
+something to the connection and then it
+
+180
+00:08:41,900 --> 00:08:45,500
+echoes it back and then it and then it
+
+181
+00:08:45,500 --> 00:08:50,420
+waits for the next line until the until
+
+182
+00:08:50,420 --> 00:08:52,970
+the the client closes that
+
+183
+00:08:52,970 --> 00:08:55,220
+that connection and then the server
+
+184
+00:08:55,220 --> 00:08:56,870
+closes this connection and then only
+
+185
+00:08:56,870 --> 00:08:59,420
+them does it does it do another except
+
+186
+00:08:59,420 --> 00:09:01,600
+to wait for the next connection request
+
+187
+00:09:01,600 --> 00:09:05,540
+okay so in in in this example client two
+
+188
+00:09:05,540 --> 00:09:09,589
+is also making a connection request but
+
+189
+00:09:09,589 --> 00:09:12,589
+it never it never runs it has to wait
+
+190
+00:09:12,589 --> 00:09:17,509
+until the server actually echoes back
+
+191
+00:09:17,509 --> 00:09:20,300
+the response now there's a there's a
+
+192
+00:09:20,300 --> 00:09:24,800
+little subtlety here that in where
+
+193
+00:09:24,800 --> 00:09:29,180
+exactly that this client Waits so the
+
+194
+00:09:29,180 --> 00:09:31,430
+the semantics of connect you would think
+
+195
+00:09:31,430 --> 00:09:33,680
+that connect would block until the
+
+196
+00:09:33,680 --> 00:09:36,319
+connection was established but actually
+
+197
+00:09:36,319 --> 00:09:38,889
+if you tried this out it turns out that
+
+198
+00:09:38,889 --> 00:09:42,889
+connect actually initiates the
+
+199
+00:09:42,889 --> 00:09:45,019
+connection process inside the kernel but
+
+200
+00:09:45,019 --> 00:09:48,139
+then it returns okay before the the
+
+201
+00:09:48,139 --> 00:09:52,189
+connection has been established and then
+
+202
+00:09:52,189 --> 00:09:56,170
+it does a right and that right also
+
+203
+00:09:56,170 --> 00:09:58,339
+returns immediately so right so it
+
+204
+00:09:58,339 --> 00:10:01,670
+doesn't it doesn't wait until the server
+
+205
+00:10:01,670 --> 00:10:05,870
+reads that the the string that was
+
+206
+00:10:05,870 --> 00:10:10,100
+written and it doesn't block until it it
+
+207
+00:10:10,100 --> 00:10:14,180
+calls the read function wait waiting for
+
+208
+00:10:14,180 --> 00:10:18,050
+the echoed response from the server and
+
+209
+00:10:18,050 --> 00:10:20,449
+so it actually it it doesn't block until
+
+210
+00:10:20,449 --> 00:10:22,670
+it hits this read and then it spends all
+
+211
+00:10:22,670 --> 00:10:25,069
+it waits waits waits Waits and finally
+
+212
+00:10:25,069 --> 00:10:28,309
+the server accepts the connection
+
+213
+00:10:28,309 --> 00:10:31,550
+requests and then writes the writes the
+
+214
+00:10:31,550 --> 00:10:33,350
+string echoes the string back to the
+
+215
+00:10:33,350 --> 00:10:40,300
+client
+
+216
+00:10:40,300 --> 00:10:44,209
+so the the call to connect actually
+
+217
+00:10:44,209 --> 00:10:48,230
+returns immediately and it's it exploits
+
+218
+00:10:48,230 --> 00:10:49,519
+this feature in the kernel that can
+
+219
+00:10:49,519 --> 00:10:51,529
+queue up these connection requests okay
+
+220
+00:10:51,529 --> 00:10:54,620
+so that the kernel now is going through
+
+221
+00:10:54,620 --> 00:10:56,060
+all the process of setting up the
+
+222
+00:10:56,060 --> 00:10:58,250
+connection but the application program
+
+223
+00:10:58,250 --> 00:11:02,720
+continues and then the right the right
+
+224
+00:11:02,720 --> 00:11:04,820
+inside the client doesn't block because
+
+225
+00:11:04,820 --> 00:11:08,420
+the the the kernel can also queue up the
+
+226
+00:11:08,420 --> 00:11:10,070
+data that's written so it'll little
+
+227
+00:11:10,070 --> 00:11:11,510
+queue it up remember that it was written
+
+228
+00:11:11,510 --> 00:11:13,220
+when the connection actually gets
+
+229
+00:11:13,220 --> 00:11:15,620
+created then it'll it'll send that data
+
+230
+00:11:15,620 --> 00:11:19,430
+along and but there's no way to avoid
+
+231
+00:11:19,430 --> 00:11:22,430
+the the read from from blocking write a
+
+232
+00:11:22,430 --> 00:11:24,589
+read can't return until it gets some
+
+233
+00:11:24,589 --> 00:11:30,290
+data okay so read has to block okay now
+
+234
+00:11:30,290 --> 00:11:31,670
+here's the fundamental flaw of an
+
+235
+00:11:31,670 --> 00:11:34,399
+iterative server and the reason the
+
+236
+00:11:34,399 --> 00:11:37,160
+reason why we have to write them using
+
+237
+00:11:37,160 --> 00:11:39,920
+with with the concurrency okay so let's
+
+238
+00:11:39,920 --> 00:11:43,579
+say in our echo server example we have a
+
+239
+00:11:43,579 --> 00:11:52,880
+client that creates a connection or
+
+240
+00:11:52,880 --> 00:11:54,890
+request a connection it's accepted in
+
+241
+00:11:54,890 --> 00:11:59,180
+the server does the write the server
+
+242
+00:11:59,180 --> 00:12:03,790
+echoes back one you know one string and
+
+243
+00:12:03,790 --> 00:12:08,390
+then the client blocks again or instead
+
+244
+00:12:08,390 --> 00:12:10,430
+of doing the next write or closing the
+
+245
+00:12:10,430 --> 00:12:16,640
+connection the person it
+
+246
+00:12:16,640 --> 00:12:19,459
+the the user goes out to lunch and never
+
+247
+00:12:19,459 --> 00:12:21,820
+types in a string to the the echo client
+
+248
+00:12:21,820 --> 00:12:25,970
+okay so at this point the server calls
+
+249
+00:12:25,970 --> 00:12:29,269
+Reed and then it blocks waiting for this
+
+250
+00:12:29,269 --> 00:12:33,170
+user to type in something and so that
+
+251
+00:12:33,170 --> 00:12:35,000
+the client can send it to the server to
+
+252
+00:12:35,000 --> 00:12:38,600
+be echoed but the user is gone gets hit
+
+253
+00:12:38,600 --> 00:12:42,740
+by a truck who knows anyway so this
+
+254
+00:12:42,740 --> 00:12:46,430
+never this Reed then blocks for an
+
+255
+00:12:46,430 --> 00:12:49,880
+indeterminate amount of time right and
+
+256
+00:12:49,880 --> 00:12:53,300
+while it's blocking client to which also
+
+257
+00:12:53,300 --> 00:12:59,480
+wants service it has to block okay so
+
+258
+00:12:59,480 --> 00:13:01,839
+now you you're in an untenable situation
+
+259
+00:13:01,839 --> 00:13:05,060
+where one client has sort of totally
+
+260
+00:13:05,060 --> 00:13:07,310
+affected all of the other clients in the
+
+261
+00:13:07,310 --> 00:13:08,959
+system and none of the other clients can
+
+262
+00:13:08,959 --> 00:13:11,180
+get service it's so if this were a web
+
+263
+00:13:11,180 --> 00:13:16,149
+server if if one client for some reason
+
+264
+00:13:16,149 --> 00:13:19,610
+blocked no other no other users would be
+
+265
+00:13:19,610 --> 00:13:22,250
+able to use that that web service or
+
+266
+00:13:22,250 --> 00:13:24,829
+look at pages on that that's site so
+
+267
+00:13:24,829 --> 00:13:29,300
+obviously this we can't have this okay
+
+268
+00:13:29,300 --> 00:13:32,660
+so the solution is to use is to write a
+
+269
+00:13:32,660 --> 00:13:34,670
+concurrent server instead of an
+
+270
+00:13:34,670 --> 00:13:37,010
+iterative server where we'll have a
+
+271
+00:13:37,010 --> 00:13:40,100
+separate concurrent flow handle each
+
+272
+00:13:40,100 --> 00:13:44,660
+clients request and interact with each
+
+273
+00:13:44,660 --> 00:13:48,350
+client so now if one client for some
+
+274
+00:13:48,350 --> 00:13:51,529
+reason is slow or misbehaves or blocks
+
+275
+00:13:51,529 --> 00:13:53,750
+the system other clients won't be
+
+276
+00:13:53,750 --> 00:13:55,370
+affected because those clients will be
+
+277
+00:13:55,370 --> 00:14:00,060
+handled way by concurrent flows
+
+278
+00:14:00,060 --> 00:14:03,490
+so there are several ways a number of
+
+279
+00:14:03,490 --> 00:14:09,730
+ways to create these yes from multiple
+
+280
+00:14:09,730 --> 00:14:12,580
+in class probably say four or five of
+
+281
+00:14:12,580 --> 00:14:16,410
+their other clients contacted and put
+
+282
+00:14:16,410 --> 00:14:18,940
+their rights over and queue of all those
+
+283
+00:14:18,940 --> 00:14:21,310
+it actually could and in fact that's
+
+284
+00:14:21,310 --> 00:14:24,430
+that's a form of concurrency okay so the
+
+285
+00:14:24,430 --> 00:14:26,350
+question is could the because could the
+
+286
+00:14:26,350 --> 00:14:29,880
+server queue up requests from from the
+
+287
+00:14:29,880 --> 00:14:34,540
+from clients it could but it would you
+
+288
+00:14:34,540 --> 00:14:36,400
+know I guess actually it would have to
+
+289
+00:14:36,400 --> 00:14:38,200
+queue up it would somehow have to accept
+
+290
+00:14:38,200 --> 00:14:43,630
+those connections right so that no so
+
+291
+00:14:43,630 --> 00:14:48,750
+that wouldn't work so somehow you have
+
+292
+00:14:48,750 --> 00:14:52,300
+since the since the accept calls are
+
+293
+00:14:52,300 --> 00:14:54,940
+iterative sequential there's no way to
+
+294
+00:14:54,940 --> 00:14:57,210
+get data from those those other clients
+
+295
+00:14:57,210 --> 00:15:00,730
+okay but but actually what you're
+
+296
+00:15:00,730 --> 00:15:02,560
+suggesting is very similar to something
+
+297
+00:15:02,560 --> 00:15:05,110
+called an event-based server that that
+
+298
+00:15:05,110 --> 00:15:07,470
+will which is one of the ways we can
+
+299
+00:15:07,470 --> 00:15:10,930
+create concurrent flows so there's
+
+300
+00:15:10,930 --> 00:15:14,860
+there's there's three ways to to create
+
+301
+00:15:14,860 --> 00:15:19,000
+these concurrent flows one is to use
+
+302
+00:15:19,000 --> 00:15:21,000
+processes okay like we've already seen
+
+303
+00:15:21,000 --> 00:15:25,180
+okay so the kernel and so in this case
+
+304
+00:15:25,180 --> 00:15:26,920
+the kernel handles all the the
+
+305
+00:15:26,920 --> 00:15:30,310
+scheduling for us and interleaves it it
+
+306
+00:15:30,310 --> 00:15:33,480
+interleaves the process execution
+
+307
+00:15:33,480 --> 00:15:36,340
+automatically for us and then as we saw
+
+308
+00:15:36,340 --> 00:15:38,710
+before each flow has its own private
+
+309
+00:15:38,710 --> 00:15:40,510
+address space so that each flow is
+
+310
+00:15:40,510 --> 00:15:43,630
+independent and scheduled by the kernel
+
+311
+00:15:43,630 --> 00:15:48,430
+okay now there's a another another
+
+312
+00:15:48,430 --> 00:15:50,950
+approach called event based where the
+
+313
+00:15:50,950 --> 00:15:53,410
+programmer manually interleaves the
+
+314
+00:15:53,410 --> 00:15:55,750
+flows okay so instead of relying on the
+
+315
+00:15:55,750 --> 00:15:58,210
+kernel to interleave these different
+
+316
+00:15:58,210 --> 00:16:01,510
+flows that the user the programmer
+
+317
+00:16:01,510 --> 00:16:04,960
+creates this flows and then manually
+
+318
+00:16:04,960 --> 00:16:09,230
+interleaves them okay
+
+319
+00:16:09,230 --> 00:16:12,079
+and since it's one program all of the
+
+320
+00:16:12,079 --> 00:16:14,119
+flows share the same address space right
+
+321
+00:16:14,119 --> 00:16:15,499
+so they have access to all the same
+
+322
+00:16:15,499 --> 00:16:21,139
+global data structures and they they do
+
+323
+00:16:21,139 --> 00:16:23,540
+they do this inter interleaving using a
+
+324
+00:16:23,540 --> 00:16:25,819
+technique called IO multiplexing you
+
+325
+00:16:25,819 --> 00:16:27,579
+know I'll talk briefly about that but
+
+326
+00:16:27,579 --> 00:16:31,369
+it's it's it's addressed much it much
+
+327
+00:16:31,369 --> 00:16:35,119
+more detail in your book the the third
+
+328
+00:16:35,119 --> 00:16:36,649
+approach which is kind of a hybrid of
+
+329
+00:16:36,649 --> 00:16:40,519
+process based and event based is thread
+
+330
+00:16:40,519 --> 00:16:44,149
+base so used each each each of these
+
+331
+00:16:44,149 --> 00:16:46,939
+flows is is implemented using something
+
+332
+00:16:46,939 --> 00:16:52,839
+called a thread the the kernel
+
+333
+00:16:52,839 --> 00:16:57,279
+like like processes the kernel
+
+334
+00:16:57,279 --> 00:16:59,329
+automatically interleaves these these
+
+335
+00:16:59,329 --> 00:17:03,109
+different threads
+
+336
+00:17:03,109 --> 00:17:05,510
+but unlike a process each each thread
+
+337
+00:17:05,510 --> 00:17:08,389
+shares the same address space okay so
+
+338
+00:17:08,389 --> 00:17:10,760
+each thread has access to all the global
+
+339
+00:17:10,760 --> 00:17:15,289
+variables declared in the program so in
+
+340
+00:17:15,289 --> 00:17:17,750
+so it's like process based and that the
+
+341
+00:17:17,750 --> 00:17:19,970
+kernel automatic automatically schedules
+
+342
+00:17:19,970 --> 00:17:22,100
+it for us but it's like event based in
+
+343
+00:17:22,100 --> 00:17:24,709
+the sense that every flow shares the
+
+344
+00:17:24,709 --> 00:17:28,159
+same address space okay so we'll look
+
+345
+00:17:28,159 --> 00:17:29,240
+let's look at all three of these
+
+346
+00:17:29,240 --> 00:17:34,039
+approaches in more detail so the first
+
+347
+00:17:34,039 --> 00:17:36,590
+approach is to create these flows using
+
+348
+00:17:36,590 --> 00:17:42,320
+processes so in this case this is our
+
+349
+00:17:42,320 --> 00:17:48,190
+echo server example the the client
+
+350
+00:17:48,190 --> 00:17:52,700
+requests a connection and then calls F
+
+351
+00:17:52,700 --> 00:17:55,909
+get us to wait for the the user to type
+
+352
+00:17:55,909 --> 00:17:59,269
+something in at the at the keyboard but
+
+353
+00:17:59,269 --> 00:18:02,659
+the user is gone and so F guest F get us
+
+354
+00:18:02,659 --> 00:18:04,760
+this client just blocks in the call to F
+
+355
+00:18:04,760 --> 00:18:09,380
+get s so the server when it gets a
+
+356
+00:18:09,380 --> 00:18:12,500
+request it accepts the connection
+
+357
+00:18:12,500 --> 00:18:14,809
+requests and returns from the accept
+
+358
+00:18:14,809 --> 00:18:17,940
+call
+
+359
+00:18:17,940 --> 00:18:20,520
+and after it returns from the accept
+
+360
+00:18:20,520 --> 00:18:24,330
+call it Forks a child and then that
+
+361
+00:18:24,330 --> 00:18:27,060
+child interacts that child process now
+
+362
+00:18:27,060 --> 00:18:29,850
+will be responsible for interacting with
+
+363
+00:18:29,850 --> 00:18:32,640
+client number one so the child blocks
+
+364
+00:18:32,640 --> 00:18:36,420
+waiting for data from client one which
+
+365
+00:18:36,420 --> 00:18:38,250
+is never going to show up because the
+
+366
+00:18:38,250 --> 00:18:43,440
+the user left okay but it that's okay
+
+367
+00:18:43,440 --> 00:18:46,860
+because it doesn't stop the server the
+
+368
+00:18:46,860 --> 00:18:49,230
+server after it Forks the child goes
+
+369
+00:18:49,230 --> 00:18:53,070
+right back and calls accept and now
+
+370
+00:18:53,070 --> 00:18:55,440
+accept can accept the connection request
+
+371
+00:18:55,440 --> 00:18:59,790
+from from client to and fork off another
+
+372
+00:18:59,790 --> 00:19:03,510
+a different child that can interact with
+
+373
+00:19:03,510 --> 00:19:06,530
+with client two so that child will read
+
+374
+00:19:06,530 --> 00:19:09,420
+waits for data to show up from the
+
+375
+00:19:09,420 --> 00:19:12,300
+client and then it echoes it back and at
+
+376
+00:19:12,300 --> 00:19:15,120
+some point then closes the this
+
+377
+00:19:15,120 --> 00:19:17,820
+connection okay so you see that this
+
+378
+00:19:17,820 --> 00:19:19,800
+misbehaving client number one now
+
+379
+00:19:19,800 --> 00:19:22,820
+because we have concurrent flows
+
+380
+00:19:22,820 --> 00:19:26,190
+interacting with all the clients this
+
+381
+00:19:26,190 --> 00:19:28,200
+misbehaving client can't adversely
+
+382
+00:19:28,200 --> 00:19:30,510
+affect other clients okay so now that's
+
+383
+00:19:30,510 --> 00:19:34,530
+and this is this idea of creating
+
+384
+00:19:34,530 --> 00:19:36,540
+concurrent flows to to interact with
+
+385
+00:19:36,540 --> 00:19:40,020
+clients is is fundamental there you have
+
+386
+00:19:40,020 --> 00:19:42,750
+to do this in order to to have a sort of
+
+387
+00:19:42,750 --> 00:19:47,160
+a working server implementation alright
+
+388
+00:19:47,160 --> 00:19:48,810
+so how would we actually program this
+
+389
+00:19:48,810 --> 00:19:53,910
+process based concurrent server it's
+
+390
+00:19:53,910 --> 00:19:59,780
+actually surprisingly compact right so
+
+391
+00:19:59,780 --> 00:20:03,900
+we're going to pass in in art V we're
+
+392
+00:20:03,900 --> 00:20:05,790
+going to pass in a port number that we
+
+393
+00:20:05,790 --> 00:20:09,510
+want this server to listen on we've got
+
+394
+00:20:09,510 --> 00:20:11,610
+a listening descriptor and a connected
+
+395
+00:20:11,610 --> 00:20:15,510
+descriptor we've got and then we've got
+
+396
+00:20:15,510 --> 00:20:20,190
+a length and a an address address field
+
+397
+00:20:20,190 --> 00:20:21,760
+and
+
+398
+00:20:21,760 --> 00:20:24,550
+the address is declared in a protocol
+
+399
+00:20:24,550 --> 00:20:27,010
+independent way using this sock outer
+
+400
+00:20:27,010 --> 00:20:29,710
+storage type which is guaranteed to be
+
+401
+00:20:29,710 --> 00:20:31,600
+big enough as you saw last time it's
+
+402
+00:20:31,600 --> 00:20:34,030
+guaranteed to be big enough to handle
+
+403
+00:20:34,030 --> 00:20:39,000
+any type of address either ipv4 or ipv6
+
+404
+00:20:39,000 --> 00:20:41,740
+okay so we install a sick child handler
+
+405
+00:20:41,740 --> 00:20:47,260
+and then we use the the open listen FD a
+
+406
+00:20:47,260 --> 00:20:50,890
+call from your from your textbook to
+
+407
+00:20:50,890 --> 00:20:54,370
+create a listening descriptor on port
+
+408
+00:20:54,370 --> 00:20:56,470
+the port that we pass in as the as the
+
+409
+00:20:56,470 --> 00:21:00,880
+argument to this program and then the
+
+410
+00:21:00,880 --> 00:21:04,930
+server goes into an into a loop and in
+
+411
+00:21:04,930 --> 00:21:11,290
+each iteration it it gets the size of
+
+412
+00:21:11,290 --> 00:21:14,590
+the socket or storage type and puts it
+
+413
+00:21:14,590 --> 00:21:19,300
+into client client lend and then it
+
+414
+00:21:19,300 --> 00:21:24,940
+calls it except with pointers to the to
+
+415
+00:21:24,940 --> 00:21:31,980
+the clients address and client line
+
+416
+00:21:31,980 --> 00:21:34,300
+using the listening descriptor that was
+
+417
+00:21:34,300 --> 00:21:37,960
+returned by open listened FD the accept
+
+418
+00:21:37,960 --> 00:21:41,260
+call after it gets a connection request
+
+419
+00:21:41,260 --> 00:21:43,360
+it returns with the address of the
+
+420
+00:21:43,360 --> 00:21:48,370
+client that made the that at the other
+
+421
+00:21:48,370 --> 00:21:51,430
+end of the connection along with the the
+
+422
+00:21:51,430 --> 00:21:54,700
+at the true length of that of that
+
+423
+00:21:54,700 --> 00:21:58,810
+address so the case of ipv4 before for
+
+424
+00:21:58,810 --> 00:22:02,260
+bytes and then the acceptor turns this
+
+425
+00:22:02,260 --> 00:22:07,720
+this connected file descriptor that the
+
+426
+00:22:07,720 --> 00:22:13,120
+then that that the the child that that
+
+427
+00:22:13,120 --> 00:22:14,890
+it can use to to read and write and
+
+428
+00:22:14,890 --> 00:22:17,920
+interact with that client so it creates
+
+429
+00:22:17,920 --> 00:22:21,610
+say it Forks the child and then the
+
+430
+00:22:21,610 --> 00:22:23,830
+child closes it's listening descriptor
+
+431
+00:22:23,830 --> 00:22:26,800
+and then it calls the echo routine to
+
+432
+00:22:26,800 --> 00:22:30,400
+interact with the to interact with the
+
+433
+00:22:30,400 --> 00:22:33,860
+client and when the echo routine
+
+434
+00:22:33,860 --> 00:22:36,590
+returns the client closes this connected
+
+435
+00:22:36,590 --> 00:22:39,799
+descriptor and then exits and so this
+
+436
+00:22:39,799 --> 00:22:44,360
+close isn't isn't absolutely necessary
+
+437
+00:22:44,360 --> 00:22:46,539
+but we just did it to be careful okay
+
+438
+00:22:46,539 --> 00:22:50,629
+now the parent and this is important
+
+439
+00:22:50,629 --> 00:22:53,029
+closes the connected descriptor because
+
+440
+00:22:53,029 --> 00:22:54,799
+it's not going to use that connected
+
+441
+00:22:54,799 --> 00:22:56,539
+Scripture only the child's will use that
+
+442
+00:22:56,539 --> 00:22:59,210
+connected descriptor so in order to
+
+443
+00:22:59,210 --> 00:23:00,980
+avoid this memory leak it's very
+
+444
+00:23:00,980 --> 00:23:03,259
+important for the child to to close this
+
+445
+00:23:03,259 --> 00:23:05,629
+descriptor okay because remember this
+
+446
+00:23:05,629 --> 00:23:08,239
+the server's running in an infinite loop
+
+447
+00:23:08,239 --> 00:23:11,960
+i mediate in in theory it would never it
+
+448
+00:23:11,960 --> 00:23:16,879
+would never terminate okay and then and
+
+449
+00:23:16,879 --> 00:23:23,090
+then to avoid and to avoid a memory leak
+
+450
+00:23:23,090 --> 00:23:25,850
+we have to in our handler we have to
+
+451
+00:23:25,850 --> 00:23:29,269
+have a sick child handler that will will
+
+452
+00:23:29,269 --> 00:23:31,730
+reap all of the children that have
+
+453
+00:23:31,730 --> 00:23:36,859
+terminated okay so let's look a little
+
+454
+00:23:36,859 --> 00:23:39,169
+more detail how this how this except
+
+455
+00:23:39,169 --> 00:23:43,700
+works so you have a client with a client
+
+456
+00:23:43,700 --> 00:23:45,679
+file descriptor and then you have a
+
+457
+00:23:45,679 --> 00:23:47,119
+server that creates a listening
+
+458
+00:23:47,119 --> 00:23:49,909
+descriptor so let's say that's you know
+
+459
+00:23:49,909 --> 00:23:51,529
+descriptors are indexed by small
+
+460
+00:23:51,529 --> 00:23:54,889
+integers so let's say that that index is
+
+461
+00:23:54,889 --> 00:23:59,809
+three the description number is three so
+
+462
+00:23:59,809 --> 00:24:01,850
+the server blocks and accept waiting for
+
+463
+00:24:01,850 --> 00:24:05,509
+this connection request the client makes
+
+464
+00:24:05,509 --> 00:24:07,220
+a connection request using the connect
+
+465
+00:24:07,220 --> 00:24:10,390
+call
+
+466
+00:24:10,390 --> 00:24:13,570
+okay the server accepts the connect call
+
+467
+00:24:13,570 --> 00:24:19,630
+and then it creates a child and then the
+
+468
+00:24:19,630 --> 00:24:21,490
+child interacts with the client using
+
+469
+00:24:21,490 --> 00:24:23,590
+the the connected file descriptor that
+
+470
+00:24:23,590 --> 00:24:25,690
+was returned from the accept so that
+
+471
+00:24:25,690 --> 00:24:28,750
+would be say descriptive number four
+
+472
+00:24:28,750 --> 00:24:33,970
+just be some different number okay so
+
+473
+00:24:33,970 --> 00:24:36,190
+are the execution model we have for
+
+474
+00:24:36,190 --> 00:24:38,710
+these process based servers is that we
+
+475
+00:24:38,710 --> 00:24:41,950
+have this the server processor listening
+
+476
+00:24:41,950 --> 00:24:44,500
+for connection requests one after the
+
+477
+00:24:44,500 --> 00:24:47,850
+other from clients and then we have
+
+478
+00:24:47,850 --> 00:24:50,050
+multiple clients interacting
+
+479
+00:24:50,050 --> 00:24:53,050
+concurrently with with multiple children
+
+480
+00:24:53,050 --> 00:24:56,470
+interacting concurrently with multiple
+
+481
+00:24:56,470 --> 00:25:01,060
+clients okay since each of these each of
+
+482
+00:25:01,060 --> 00:25:02,920
+these children are processes there's no
+
+483
+00:25:02,920 --> 00:25:07,990
+shared state between them and both
+
+484
+00:25:07,990 --> 00:25:13,330
+parent and child inherit the have they
+
+485
+00:25:13,330 --> 00:25:15,100
+inherit the descriptor table so they
+
+486
+00:25:15,100 --> 00:25:17,920
+have they both have copies of listen F T
+
+487
+00:25:17,920 --> 00:25:21,640
+and and can end the listening descriptor
+
+488
+00:25:21,640 --> 00:25:25,180
+in the connected descriptor okay and as
+
+489
+00:25:25,180 --> 00:25:27,250
+we saw before the parent must close its
+
+490
+00:25:27,250 --> 00:25:29,620
+it's copy of the connected file
+
+491
+00:25:29,620 --> 00:25:32,500
+descriptor the child should close the
+
+492
+00:25:32,500 --> 00:25:35,170
+listening descriptor but it's you know
+
+493
+00:25:35,170 --> 00:25:40,260
+just to be just because it's not needed
+
+494
+00:25:40,260 --> 00:25:42,850
+all right when you so these are actually
+
+495
+00:25:42,850 --> 00:25:45,130
+pretty simple to create and there's just
+
+496
+00:25:45,130 --> 00:25:46,480
+a couple of things you have to keep in
+
+497
+00:25:46,480 --> 00:25:49,000
+mind when you when you build a process
+
+498
+00:25:49,000 --> 00:25:53,260
+based server so firstly as we as with
+
+499
+00:25:53,260 --> 00:25:55,750
+any any any process that creates
+
+500
+00:25:55,750 --> 00:26:00,220
+children it has to reap these children
+
+501
+00:26:00,220 --> 00:26:02,640
+that have terminated to avoid this
+
+502
+00:26:02,640 --> 00:26:05,860
+memory leak the parent process has to
+
+503
+00:26:05,860 --> 00:26:07,510
+close its copy of the connected file
+
+504
+00:26:07,510 --> 00:26:11,650
+descriptor and there's a couple reasons
+
+505
+00:26:11,650 --> 00:26:15,820
+it fact if it doesn't it will not only
+
+506
+00:26:15,820 --> 00:26:19,600
+create a memory leak but that the
+
+507
+00:26:19,600 --> 00:26:21,700
+the state associated with that
+
+508
+00:26:21,700 --> 00:26:24,429
+descriptor will actually stay around
+
+509
+00:26:24,429 --> 00:26:26,410
+forever because the the kernel won't
+
+510
+00:26:26,410 --> 00:26:30,580
+close that connection so it as we saw
+
+511
+00:26:30,580 --> 00:26:33,970
+when we looked at at file i/o this is
+
+512
+00:26:33,970 --> 00:26:35,830
+just enough this is the same kind of
+
+513
+00:26:35,830 --> 00:26:39,220
+file i/o we looked at before so the
+
+514
+00:26:39,220 --> 00:26:40,750
+kernel keeps a reference count for each
+
+515
+00:26:40,750 --> 00:26:44,799
+each socket that's open so after the
+
+516
+00:26:44,799 --> 00:26:47,049
+fork now there's there's two there's a
+
+517
+00:26:47,049 --> 00:26:48,880
+parent and the child which are accessing
+
+518
+00:26:48,880 --> 00:26:52,210
+the file table associated with the
+
+519
+00:26:52,210 --> 00:26:55,900
+connected file descriptor okay so that
+
+520
+00:26:55,900 --> 00:26:58,210
+and the connection won't be closed until
+
+521
+00:26:58,210 --> 00:26:59,770
+the reference count for that connected
+
+522
+00:26:59,770 --> 00:27:02,549
+file description is zero right so the
+
+523
+00:27:02,549 --> 00:27:05,440
+that file table entry won't be removed
+
+524
+00:27:05,440 --> 00:27:09,490
+from the kernel until until there's only
+
+525
+00:27:09,490 --> 00:27:11,350
+there until there's zero references to
+
+526
+00:27:11,350 --> 00:27:12,780
+it okay
+
+527
+00:27:12,780 --> 00:27:16,840
+so both the parent and the child have to
+
+528
+00:27:16,840 --> 00:27:21,760
+close that that descriptor okay now the
+
+529
+00:27:21,760 --> 00:27:23,650
+good thing about process based servers
+
+530
+00:27:23,650 --> 00:27:25,720
+is that they they do the job for us that
+
+531
+00:27:25,720 --> 00:27:27,190
+we asked them to do right we wanted them
+
+532
+00:27:27,190 --> 00:27:30,429
+to handle to interact with multiple
+
+533
+00:27:30,429 --> 00:27:32,169
+clients concurrently or have that
+
+534
+00:27:32,169 --> 00:27:34,900
+ability there's a very clean sharing
+
+535
+00:27:34,900 --> 00:27:38,110
+model right so there's private address
+
+536
+00:27:38,110 --> 00:27:41,320
+spaces between the NE all of the
+
+537
+00:27:41,320 --> 00:27:44,830
+children and the parent they shared they
+
+538
+00:27:44,830 --> 00:27:46,570
+have separate descriptors but they share
+
+539
+00:27:46,570 --> 00:27:48,850
+they have separate copies of the
+
+540
+00:27:48,850 --> 00:27:51,640
+descriptor table but they share the same
+
+541
+00:27:51,640 --> 00:27:56,150
+Open File table okay
+
+542
+00:27:56,150 --> 00:27:59,779
+and there's so in some sense this is a
+
+543
+00:27:59,779 --> 00:28:01,900
+simplest possible way to create a
+
+544
+00:28:01,900 --> 00:28:04,669
+concurrent servers and if you can get
+
+545
+00:28:04,669 --> 00:28:06,919
+get if you can get by with not sharing
+
+546
+00:28:06,919 --> 00:28:09,320
+any global variables or sharing address
+
+547
+00:28:09,320 --> 00:28:13,490
+basis then this is this is the way to go
+
+548
+00:28:13,490 --> 00:28:16,549
+all right now the disadvantage is that
+
+549
+00:28:16,549 --> 00:28:18,470
+there's additional overhead for
+
+550
+00:28:18,470 --> 00:28:20,600
+processes even even with this
+
+551
+00:28:20,600 --> 00:28:23,230
+copy-on-write trick that we saw for
+
+552
+00:28:23,230 --> 00:28:26,390
+sharing the sharing the address space
+
+553
+00:28:26,390 --> 00:28:29,350
+between the parent and the child still
+
+554
+00:28:29,350 --> 00:28:33,860
+it's still non-trivial overhead and it's
+
+555
+00:28:33,860 --> 00:28:35,630
+it's you have to actually do a lot of
+
+556
+00:28:35,630 --> 00:28:37,250
+work if you want to share data between
+
+557
+00:28:37,250 --> 00:28:38,960
+processes so like let's say you want to
+
+558
+00:28:38,960 --> 00:28:41,419
+have some kind of a shared cache between
+
+559
+00:28:41,419 --> 00:28:44,380
+multiple processes either have to use
+
+560
+00:28:44,380 --> 00:28:49,340
+files okay on disk or if you want to
+
+561
+00:28:49,340 --> 00:28:52,549
+share memory you have to use some kind
+
+562
+00:28:52,549 --> 00:28:54,500
+of you have to use some kind of memory
+
+563
+00:28:54,500 --> 00:28:59,090
+mapping or you have to use what's these
+
+564
+00:28:59,090 --> 00:29:01,190
+inter process communication mechanisms
+
+565
+00:29:01,190 --> 00:29:03,830
+which we haven't we haven't talked about
+
+566
+00:29:03,830 --> 00:29:06,529
+but there's there's ways pipes are
+
+567
+00:29:06,529 --> 00:29:07,460
+probably the ones you're most familiar
+
+568
+00:29:07,460 --> 00:29:12,230
+with so a pipe allows one process to to
+
+569
+00:29:12,230 --> 00:29:16,520
+send data to another process and there's
+
+570
+00:29:16,520 --> 00:29:19,460
+ways to share memory between processes
+
+571
+00:29:19,460 --> 00:29:22,539
+but they're they're cumbersome and
+
+572
+00:29:22,539 --> 00:29:26,029
+require I have to be implemented with
+
+573
+00:29:26,029 --> 00:29:29,899
+care okay now the second approach is is
+
+574
+00:29:29,899 --> 00:29:33,440
+we call an event-based server so the
+
+575
+00:29:33,440 --> 00:29:38,149
+idea here is that the server maintains a
+
+576
+00:29:38,149 --> 00:29:43,330
+set of active connections so it it it
+
+577
+00:29:43,330 --> 00:29:46,549
+has an array of of connected file
+
+578
+00:29:46,549 --> 00:29:48,850
+descriptors from different clients okay
+
+579
+00:29:48,850 --> 00:29:51,289
+and then it determines which of those
+
+580
+00:29:51,289 --> 00:29:52,970
+and it also has a listening descriptor
+
+581
+00:29:52,970 --> 00:29:57,159
+and then it determines which of those
+
+582
+00:29:57,159 --> 00:30:01,130
+descriptors have pending input and it
+
+583
+00:30:01,130 --> 00:30:04,760
+determines this using a system call
+
+584
+00:30:04,760 --> 00:30:07,039
+called select or eople there's several
+
+585
+00:30:07,039 --> 00:30:08,640
+ways to determine this
+
+586
+00:30:08,640 --> 00:30:12,710
+but but basically using select or a poll
+
+587
+00:30:12,710 --> 00:30:15,270
+you can determine which of a set of
+
+588
+00:30:15,270 --> 00:30:20,880
+descriptors has pending input right and
+
+589
+00:30:20,880 --> 00:30:23,580
+then this this and so the arrival of
+
+590
+00:30:23,580 --> 00:30:25,950
+input at a descriptors is called an
+
+591
+00:30:25,950 --> 00:30:27,780
+event because it changes the state of
+
+592
+00:30:27,780 --> 00:30:31,290
+the descriptor okay so an event is
+
+593
+00:30:31,290 --> 00:30:33,600
+always event in general is always some
+
+594
+00:30:33,600 --> 00:30:38,850
+kind of state change so in this case
+
+595
+00:30:38,850 --> 00:30:42,690
+when data arrives on a socket that's a
+
+596
+00:30:42,690 --> 00:30:46,230
+change in the state so there was no data
+
+597
+00:30:46,230 --> 00:30:49,290
+before the event after the event now
+
+598
+00:30:49,290 --> 00:30:54,870
+there's data that the server can read so
+
+599
+00:30:54,870 --> 00:30:58,470
+if if the listening descriptor has input
+
+600
+00:30:58,470 --> 00:31:00,690
+then the server calls except to accept
+
+601
+00:31:00,690 --> 00:31:04,800
+the connection and for all and then all
+
+602
+00:31:04,800 --> 00:31:06,690
+connected descriptors that have pending
+
+603
+00:31:06,690 --> 00:31:09,330
+inputs it services those it reads from
+
+604
+00:31:09,330 --> 00:31:16,260
+those in some order okay now that the
+
+605
+00:31:16,260 --> 00:31:17,940
+details for how to do this are described
+
+606
+00:31:17,940 --> 00:31:24,270
+in the book but basically I mean the
+
+607
+00:31:24,270 --> 00:31:25,650
+conceptually is pretty simple it's
+
+608
+00:31:25,650 --> 00:31:29,430
+actually tricky to implement but the
+
+609
+00:31:29,430 --> 00:31:31,470
+idea is that there's some set of active
+
+610
+00:31:31,470 --> 00:31:33,390
+descriptors right there's some set of
+
+611
+00:31:33,390 --> 00:31:35,250
+descriptors connected descriptors that
+
+612
+00:31:35,250 --> 00:31:39,990
+you're using that are being used right
+
+613
+00:31:39,990 --> 00:31:44,880
+now to to interact with a client there's
+
+614
+00:31:44,880 --> 00:31:47,930
+some that are inactive so if descriptors
+
+615
+00:31:47,930 --> 00:31:50,250
+descriptor was closed then it's it's
+
+616
+00:31:50,250 --> 00:31:54,240
+it's no longer active right and then
+
+617
+00:31:54,240 --> 00:31:55,710
+there's other descriptors that have
+
+618
+00:31:55,710 --> 00:31:57,300
+never been used so we just have this
+
+619
+00:31:57,300 --> 00:32:01,770
+array of descriptors and then and then
+
+620
+00:32:01,770 --> 00:32:04,970
+we record there you know the the
+
+621
+00:32:04,970 --> 00:32:07,130
+descriptor number for each of those
+
+622
+00:32:07,130 --> 00:32:16,349
+connected for each of those descriptors
+
+623
+00:32:16,349 --> 00:32:19,450
+and then using select or a poll or some
+
+624
+00:32:19,450 --> 00:32:21,669
+other mechanism we somehow determine
+
+625
+00:32:21,669 --> 00:32:24,489
+which of those active descriptors have
+
+626
+00:32:24,489 --> 00:32:27,429
+input and then we service each of those
+
+627
+00:32:27,429 --> 00:32:30,129
+in the case of listen FD by calling
+
+628
+00:32:30,129 --> 00:32:34,149
+except in the case of these connected
+
+629
+00:32:34,149 --> 00:32:36,789
+descriptors actually these are this
+
+630
+00:32:36,789 --> 00:32:41,200
+should be con up D not client of D but
+
+631
+00:32:41,200 --> 00:32:42,309
+in the case of these connected
+
+632
+00:32:42,309 --> 00:32:44,799
+descriptors we we read the data from
+
+633
+00:32:44,799 --> 00:32:51,460
+them and the when we when we read the
+
+634
+00:32:51,460 --> 00:32:54,129
+data from each each descriptor we do
+
+635
+00:32:54,129 --> 00:33:00,159
+some work okay so so data arrives that a
+
+636
+00:33:00,159 --> 00:33:02,710
+descriptor and then we read that data
+
+637
+00:33:02,710 --> 00:33:06,210
+and then we do some kind of work okay
+
+638
+00:33:06,210 --> 00:33:09,219
+maybe in in the case of an echo server
+
+639
+00:33:09,219 --> 00:33:11,519
+we echo it right back okay
+
+640
+00:33:11,519 --> 00:33:15,669
+in the case of a web server we may if
+
+641
+00:33:15,669 --> 00:33:19,749
+that data was HTTP request we might go
+
+642
+00:33:19,749 --> 00:33:22,149
+and fetch a file from disk and return it
+
+643
+00:33:22,149 --> 00:33:26,919
+okay but but in any case we we notice
+
+644
+00:33:26,919 --> 00:33:29,649
+that the descriptor has some data we
+
+645
+00:33:29,649 --> 00:33:32,139
+read that data and then we respond to it
+
+646
+00:33:32,139 --> 00:33:36,190
+in some way okay so that response those
+
+647
+00:33:36,190 --> 00:33:40,679
+multiple responses are concurrent flows
+
+648
+00:33:40,679 --> 00:33:44,320
+okay the the we're interacting with that
+
+649
+00:33:44,320 --> 00:33:47,710
+client we're interacting we're creating
+
+650
+00:33:47,710 --> 00:33:49,629
+concurrent flows while concurrent flow
+
+651
+00:33:49,629 --> 00:33:53,950
+for each each client and we're servicing
+
+652
+00:33:53,950 --> 00:33:56,349
+those clients concurrently okay so even
+
+653
+00:33:56,349 --> 00:33:58,299
+though it's a sequential program right
+
+654
+00:33:58,299 --> 00:34:00,279
+we're not using fork or anything it's
+
+655
+00:34:00,279 --> 00:34:02,259
+it's a it's just a sea program
+
+656
+00:34:02,259 --> 00:34:06,039
+straightforward C program we're writing
+
+657
+00:34:06,039 --> 00:34:08,349
+in such a way that we're creating our
+
+658
+00:34:08,349 --> 00:34:15,440
+own concurrent flows
+
+659
+00:34:15,440 --> 00:34:18,540
+so there's uh as with any any approach
+
+660
+00:34:18,540 --> 00:34:19,800
+there's there's advantages and
+
+661
+00:34:19,800 --> 00:34:22,290
+disadvantages so the a big advantage of
+
+662
+00:34:22,290 --> 00:34:24,420
+event based servers is that it's just a
+
+663
+00:34:24,420 --> 00:34:27,660
+sequoia it's one process with the st.
+
+664
+00:34:27,660 --> 00:34:29,160
+with one address space
+
+665
+00:34:29,160 --> 00:34:30,600
+right so it's very easy you can use
+
+666
+00:34:30,600 --> 00:34:33,270
+conventional debugger gdb to step
+
+667
+00:34:33,270 --> 00:34:35,220
+through you can see everything you have
+
+668
+00:34:35,220 --> 00:34:37,410
+access to everything so in that sense
+
+669
+00:34:37,410 --> 00:34:41,960
+they're much simpler to debug understand
+
+670
+00:34:41,960 --> 00:34:44,550
+and then there's no process or thread
+
+671
+00:34:44,550 --> 00:34:48,890
+control overhead so when we when we
+
+672
+00:34:48,890 --> 00:34:51,120
+service a particular descriptor it's
+
+673
+00:34:51,120 --> 00:34:53,730
+very it's there's very little overhead
+
+674
+00:34:53,730 --> 00:34:55,770
+right we just the only overhead is sort
+
+675
+00:34:55,770 --> 00:34:57,960
+of determining that that descriptor has
+
+676
+00:34:57,960 --> 00:35:03,840
+input available okay and so because of
+
+677
+00:35:03,840 --> 00:35:07,950
+that this is the high performance web
+
+678
+00:35:07,950 --> 00:35:11,670
+servers like nodejs nginx tornado they
+
+679
+00:35:11,670 --> 00:35:14,390
+all use this event based approach gates
+
+680
+00:35:14,390 --> 00:35:18,900
+if you want to get over 10,000 10,000
+
+681
+00:35:18,900 --> 00:35:20,910
+requests per second you have to go with
+
+682
+00:35:20,910 --> 00:35:23,700
+something like this okay the
+
+683
+00:35:23,700 --> 00:35:26,790
+disadvantage is it's much harder to more
+
+684
+00:35:26,790 --> 00:35:29,720
+complexed it to code up then the other
+
+685
+00:35:29,720 --> 00:35:36,240
+processor thread based designs and it's
+
+686
+00:35:36,240 --> 00:35:39,960
+very difficult so one of the the hardest
+
+687
+00:35:39,960 --> 00:35:42,330
+aspects aspects of the writing and event
+
+688
+00:35:42,330 --> 00:35:44,460
+based server is that you have to figure
+
+689
+00:35:44,460 --> 00:35:46,260
+out how much work you're going to do in
+
+690
+00:35:46,260 --> 00:35:50,040
+response to an event okay so let me give
+
+691
+00:35:50,040 --> 00:35:51,780
+you let's say that this server is a web
+
+692
+00:35:51,780 --> 00:35:56,220
+server and you get input on on one of
+
+693
+00:35:56,220 --> 00:35:59,790
+your connected file descriptor the
+
+694
+00:35:59,790 --> 00:36:02,190
+simplest the simplest thing to do would
+
+695
+00:36:02,190 --> 00:36:05,990
+be to then assume to read the entire
+
+696
+00:36:05,990 --> 00:36:10,200
+HTTP request and not and not return
+
+697
+00:36:10,200 --> 00:36:12,620
+until you've read the entire request
+
+698
+00:36:12,620 --> 00:36:15,990
+okay so in that case the the amount of
+
+699
+00:36:15,990 --> 00:36:19,170
+work that you do in response to an event
+
+700
+00:36:19,170 --> 00:36:21,540
+is very coarse-grained there's a lot of
+
+701
+00:36:21,540 --> 00:36:23,310
+instructions because we're going to read
+
+702
+00:36:23,310 --> 00:36:25,590
+every single every single line in that
+
+703
+00:36:25,590 --> 00:36:26,599
+HTTP
+
+704
+00:36:26,599 --> 00:36:30,229
+request header but it's so that's course
+
+705
+00:36:30,229 --> 00:36:33,829
+that's an example of coarse grain it's
+
+706
+00:36:33,829 --> 00:36:36,499
+very simple because every time you get a
+
+707
+00:36:36,499 --> 00:36:38,119
+request on a connected descriptor you
+
+708
+00:36:38,119 --> 00:36:40,160
+just read the whole you just read the
+
+709
+00:36:40,160 --> 00:36:43,099
+whole HTTP request and then send a
+
+710
+00:36:43,099 --> 00:36:44,079
+response
+
+711
+00:36:44,079 --> 00:36:49,279
+okay so there's on the other hand it's
+
+712
+00:36:49,279 --> 00:36:51,680
+vulnerable because what if a client
+
+713
+00:36:51,680 --> 00:36:54,650
+misbehaves and doesn't send the entire
+
+714
+00:36:54,650 --> 00:36:56,779
+HTTP request what if it sends half of
+
+715
+00:36:56,779 --> 00:36:59,569
+the requests so if you were doing to
+
+716
+00:36:59,569 --> 00:37:01,940
+design an event based web server you
+
+717
+00:37:01,940 --> 00:37:03,700
+probably wouldn't want to do that right
+
+718
+00:37:03,700 --> 00:37:07,670
+because that a single client we would be
+
+719
+00:37:07,670 --> 00:37:09,829
+back in the situation we were before
+
+720
+00:37:09,829 --> 00:37:12,079
+where a single misbehaving client could
+
+721
+00:37:12,079 --> 00:37:14,690
+sort of shut down the whole server so
+
+722
+00:37:14,690 --> 00:37:17,749
+you might say well I'm going to I'm
+
+723
+00:37:17,749 --> 00:37:22,369
+going to my unit of work that I do in
+
+724
+00:37:22,369 --> 00:37:25,460
+response to a request will be to read a
+
+725
+00:37:25,460 --> 00:37:28,059
+single line from the request
+
+726
+00:37:28,059 --> 00:37:30,680
+okay so I'll read a single line and then
+
+727
+00:37:30,680 --> 00:37:34,519
+I'll and then I'll return okay so every
+
+728
+00:37:34,519 --> 00:37:37,940
+so now we're interleaving reading single
+
+729
+00:37:37,940 --> 00:37:40,479
+lines and once I've read the entire
+
+730
+00:37:40,479 --> 00:37:42,920
+request then out then I'll send the
+
+731
+00:37:42,920 --> 00:37:46,599
+response so that's better right so a
+
+732
+00:37:46,599 --> 00:37:50,450
+misbehaving client if it if it's sending
+
+733
+00:37:50,450 --> 00:37:53,859
+like whole whole text lines at a time
+
+734
+00:37:53,859 --> 00:37:56,329
+even if it stops halfway through we'll
+
+735
+00:37:56,329 --> 00:37:57,499
+still be able to make progress in
+
+736
+00:37:57,499 --> 00:38:01,519
+service other other clients so that's a
+
+737
+00:38:01,519 --> 00:38:03,650
+finer grained approach it's better it's
+
+738
+00:38:03,650 --> 00:38:06,469
+probably more robust than waiting for
+
+739
+00:38:06,469 --> 00:38:08,539
+the whole the whole request but it's
+
+740
+00:38:08,539 --> 00:38:11,210
+still vulnerable because the client
+
+741
+00:38:11,210 --> 00:38:14,450
+could just send a partial line so now
+
+742
+00:38:14,450 --> 00:38:17,239
+we're back so really the only way to
+
+743
+00:38:17,239 --> 00:38:20,690
+write a robust event based web server is
+
+744
+00:38:20,690 --> 00:38:25,339
+to be able to handle partial lines just
+
+745
+00:38:25,339 --> 00:38:28,369
+read when there's data available on a on
+
+746
+00:38:28,369 --> 00:38:30,440
+a on a descriptor you just read whatever
+
+747
+00:38:30,440 --> 00:38:32,930
+data is available you remember how much
+
+748
+00:38:32,930 --> 00:38:35,150
+you read if it's not a whole line you
+
+749
+00:38:35,150 --> 00:38:36,499
+somehow have to remember that you have
+
+750
+00:38:36,499 --> 00:38:38,040
+to buffer it remember it
+
+751
+00:38:38,040 --> 00:38:39,450
+so now it's getting really complicated
+
+752
+00:38:39,450 --> 00:38:43,200
+right but that's what you that's the
+
+753
+00:38:43,200 --> 00:38:45,030
+price you pay for this for this low
+
+754
+00:38:45,030 --> 00:38:47,930
+overhead sort of easier to debug kind of
+
+755
+00:38:47,930 --> 00:38:50,940
+kind of model and then another
+
+756
+00:38:50,940 --> 00:38:52,860
+disadvantage is that you can't since
+
+757
+00:38:52,860 --> 00:38:54,570
+it's it's really a sequential program
+
+758
+00:38:54,570 --> 00:38:57,060
+right it's one C program you can't take
+
+759
+00:38:57,060 --> 00:38:59,670
+advantage of multiple cores so the only
+
+760
+00:38:59,670 --> 00:39:01,500
+way to get sort of more performance out
+
+761
+00:39:01,500 --> 00:39:03,780
+of something an event-based servers just
+
+762
+00:39:03,780 --> 00:39:06,770
+to replicate copies of that that server
+
+763
+00:39:06,770 --> 00:39:09,840
+but you can't make an individual server
+
+764
+00:39:09,840 --> 00:39:15,930
+go faster by using multiple cores okay
+
+765
+00:39:15,930 --> 00:39:19,140
+the third approach is to use threads to
+
+766
+00:39:19,140 --> 00:39:23,640
+create these concurrent flows it's very
+
+767
+00:39:23,640 --> 00:39:26,610
+similar to processes but there are some
+
+768
+00:39:26,610 --> 00:39:29,490
+important differences so let's look
+
+769
+00:39:29,490 --> 00:39:35,460
+first at what we mean by a thread so
+
+770
+00:39:35,460 --> 00:39:37,350
+let's go back I'm going to let's go back
+
+771
+00:39:37,350 --> 00:39:41,310
+in and look at the traditional view of a
+
+772
+00:39:41,310 --> 00:39:43,580
+process so we think of a process as some
+
+773
+00:39:43,580 --> 00:39:46,830
+context that's data structures in the
+
+774
+00:39:46,830 --> 00:39:49,170
+kernel okay data that the kernel keeps
+
+775
+00:39:49,170 --> 00:39:52,080
+about that process as well as this
+
+776
+00:39:52,080 --> 00:39:55,230
+private address space which contains a
+
+777
+00:39:55,230 --> 00:39:59,360
+stack code and data and then the stack
+
+778
+00:39:59,360 --> 00:40:03,240
+okay and then as part of the and then
+
+779
+00:40:03,240 --> 00:40:06,360
+the the process context consists of
+
+780
+00:40:06,360 --> 00:40:07,890
+context that's associated with the
+
+781
+00:40:07,890 --> 00:40:10,200
+program like the the registers condition
+
+782
+00:40:10,200 --> 00:40:13,590
+codes program counter stack pointer okay
+
+783
+00:40:13,590 --> 00:40:16,680
+and then it contains kernel context
+
+784
+00:40:16,680 --> 00:40:19,110
+which is information in the kernel that
+
+785
+00:40:19,110 --> 00:40:22,650
+the the kernel needs to to implement
+
+786
+00:40:22,650 --> 00:40:26,220
+this idea of a process okay so all of
+
+787
+00:40:26,220 --> 00:40:27,450
+this data is actually stored in the
+
+788
+00:40:27,450 --> 00:40:31,400
+kernel but some of the data is is
+
+789
+00:40:31,400 --> 00:40:33,930
+directly associated with the program and
+
+790
+00:40:33,930 --> 00:40:37,830
+other other other data is sort of
+
+791
+00:40:37,830 --> 00:40:40,980
+support data that the kernel needs to to
+
+792
+00:40:40,980 --> 00:40:43,260
+implement processes
+
+793
+00:40:43,260 --> 00:40:46,160
+okay so let's just take this picture and
+
+794
+00:40:46,160 --> 00:40:48,690
+we're just going to just move things
+
+795
+00:40:48,690 --> 00:40:55,380
+around a little bit so what I've done is
+
+796
+00:40:55,380 --> 00:40:59,460
+I've taken the stack off of the this
+
+797
+00:40:59,460 --> 00:41:03,810
+virtual address space and sort of pulled
+
+798
+00:41:03,810 --> 00:41:07,190
+it out along with its stack pointer and
+
+799
+00:41:07,190 --> 00:41:12,330
+the the contacts that's associated with
+
+800
+00:41:12,330 --> 00:41:15,270
+the program so the data registers the
+
+801
+00:41:15,270 --> 00:41:17,820
+condition codes the stack pointer the
+
+802
+00:41:17,820 --> 00:41:19,800
+program counter okay and I've just
+
+803
+00:41:19,800 --> 00:41:22,800
+renamed a thread context instead of
+
+804
+00:41:22,800 --> 00:41:25,070
+program context but it's it's the same
+
+805
+00:41:25,070 --> 00:41:28,380
+it's the same thing and then I'm going
+
+806
+00:41:28,380 --> 00:41:29,850
+to call this this whole thing the
+
+807
+00:41:29,850 --> 00:41:33,480
+combination of the of a stack and this
+
+808
+00:41:33,480 --> 00:41:35,220
+thread context I'm gonna call that a
+
+809
+00:41:35,220 --> 00:41:39,890
+thread
+
+810
+00:41:39,890 --> 00:41:43,970
+and then everything else remains the
+
+811
+00:41:43,970 --> 00:41:46,100
+same it's it's we have we still have our
+
+812
+00:41:46,100 --> 00:41:49,070
+code and data and we have the kernel
+
+813
+00:41:49,070 --> 00:41:52,330
+context
+
+814
+00:41:52,330 --> 00:41:54,950
+okay now by by doing this sort of
+
+815
+00:41:54,950 --> 00:41:57,200
+refactoring and just moving things
+
+816
+00:41:57,200 --> 00:41:57,860
+around
+
+817
+00:41:57,860 --> 00:42:01,610
+I can now imagine so this stack isn't
+
+818
+00:42:01,610 --> 00:42:05,030
+very much right it's so there's that
+
+819
+00:42:05,030 --> 00:42:08,030
+there's this there's the stack space and
+
+820
+00:42:08,030 --> 00:42:09,710
+then there's a little bit of data here
+
+821
+00:42:09,710 --> 00:42:11,420
+in the form of some registers and some
+
+822
+00:42:11,420 --> 00:42:13,520
+things to be stored but in this is a
+
+823
+00:42:13,520 --> 00:42:17,900
+fairly small amount of data now when I
+
+824
+00:42:17,900 --> 00:42:23,480
+really like an think about there being
+
+825
+00:42:23,480 --> 00:42:25,670
+multiple threads associated with the
+
+826
+00:42:25,670 --> 00:42:29,270
+same process if I if I just keep
+
+827
+00:42:29,270 --> 00:42:32,090
+different set of data thread context for
+
+828
+00:42:32,090 --> 00:42:35,030
+each thread and then a private a
+
+829
+00:42:35,030 --> 00:42:37,400
+separate portion of the stack that's
+
+830
+00:42:37,400 --> 00:42:41,240
+associated with that thread so now each
+
+831
+00:42:41,240 --> 00:42:45,730
+thread shares the same code and data
+
+832
+00:42:45,730 --> 00:42:49,610
+same virtual address space has the same
+
+833
+00:42:49,610 --> 00:42:52,100
+kernel context okay the same i/o
+
+834
+00:42:52,100 --> 00:42:58,850
+structures but now it has it has its its
+
+835
+00:42:58,850 --> 00:43:03,020
+own separate individual stack okay so
+
+836
+00:43:03,020 --> 00:43:05,690
+local local variables things that you
+
+837
+00:43:05,690 --> 00:43:07,040
+would store on a stack now would be
+
+838
+00:43:07,040 --> 00:43:10,310
+would be private sort of independent and
+
+839
+00:43:10,310 --> 00:43:13,370
+it has its own set of its own program
+
+840
+00:43:13,370 --> 00:43:15,860
+counter its own stack pointer its own
+
+841
+00:43:15,860 --> 00:43:21,980
+set of registers and condition codes
+
+842
+00:43:21,980 --> 00:43:25,200
+and then the one difference is now is
+
+843
+00:43:25,200 --> 00:43:27,360
+that each thread instead of there's
+
+844
+00:43:27,360 --> 00:43:29,280
+still a process ID for this process
+
+845
+00:43:29,280 --> 00:43:30,830
+that's pointed part of the kernel
+
+846
+00:43:30,830 --> 00:43:33,870
+context but each thread now has its own
+
+847
+00:43:33,870 --> 00:43:38,660
+thread ID as part of its thread context
+
+848
+00:43:38,660 --> 00:43:44,730
+okay so now the kernel can just treat
+
+849
+00:43:44,730 --> 00:43:46,920
+each of these as separate flows right
+
+850
+00:43:46,920 --> 00:43:48,480
+there's a separate so it's just like a
+
+851
+00:43:48,480 --> 00:43:50,700
+process now the kernel can remember
+
+852
+00:43:50,700 --> 00:43:53,580
+where the each thread has its own
+
+853
+00:43:53,580 --> 00:43:56,880
+program counter and but they're running
+
+854
+00:43:56,880 --> 00:43:59,670
+code out of the same that code the same
+
+855
+00:43:59,670 --> 00:44:02,010
+code section in the in the virtual
+
+856
+00:44:02,010 --> 00:44:04,550
+address space so the sharing code
+
+857
+00:44:04,550 --> 00:44:06,990
+sharing data but they have their own
+
+858
+00:44:06,990 --> 00:44:09,690
+program counter so they can the kernel
+
+859
+00:44:09,690 --> 00:44:11,970
+can provide can create each of these
+
+860
+00:44:11,970 --> 00:44:14,490
+threads as a as a separate flow of
+
+861
+00:44:14,490 --> 00:44:16,800
+control that it then schedules just like
+
+862
+00:44:16,800 --> 00:44:19,350
+it does of a process or in a similar way
+
+863
+00:44:19,350 --> 00:44:22,170
+that does is a process but the
+
+864
+00:44:22,170 --> 00:44:25,800
+difference is the reason the reason that
+
+865
+00:44:25,800 --> 00:44:28,680
+for threads in the first place is that
+
+866
+00:44:28,680 --> 00:44:30,840
+when the colonel wants to contact switch
+
+867
+00:44:30,840 --> 00:44:34,140
+from one thread to another there's not
+
+868
+00:44:34,140 --> 00:44:37,430
+that much information that has to be
+
+869
+00:44:37,430 --> 00:44:39,810
+saved and restored it's just a small
+
+870
+00:44:39,810 --> 00:44:42,630
+amount of data so the kernel has to save
+
+871
+00:44:42,630 --> 00:44:45,930
+this the data thread one context in some
+
+872
+00:44:45,930 --> 00:44:47,520
+data structure some way and then restore
+
+873
+00:44:47,520 --> 00:44:50,850
+the context for thread two but we're
+
+874
+00:44:50,850 --> 00:44:52,770
+talking about a very low overhead kind
+
+875
+00:44:52,770 --> 00:44:54,510
+of operation right it doesn't have to
+
+876
+00:44:54,510 --> 00:44:57,030
+mess around with page tables virtual
+
+877
+00:44:57,030 --> 00:44:59,370
+address space or any other of the
+
+878
+00:44:59,370 --> 00:45:05,560
+process context
+
+879
+00:45:05,560 --> 00:45:09,200
+so so threads are luck kind of like
+
+880
+00:45:09,200 --> 00:45:11,840
+processes it but they're different in
+
+881
+00:45:11,840 --> 00:45:12,920
+the sense that they share the same
+
+882
+00:45:12,920 --> 00:45:17,480
+virtual address space and unlike
+
+883
+00:45:17,480 --> 00:45:21,010
+processes which are created by fork
+
+884
+00:45:21,010 --> 00:45:24,460
+which creates a strict process hierarchy
+
+885
+00:45:24,460 --> 00:45:27,800
+threads are just pools you can think of
+
+886
+00:45:27,800 --> 00:45:30,470
+threads as pools of concurrent flows
+
+887
+00:45:30,470 --> 00:45:35,890
+that access the same code and data and
+
+888
+00:45:35,890 --> 00:45:38,210
+then the current the kernel is
+
+889
+00:45:38,210 --> 00:45:39,860
+responsible for scheduling those flows
+
+890
+00:45:39,860 --> 00:45:41,930
+and if in a way that so each flow gets
+
+891
+00:45:41,930 --> 00:45:47,240
+gets time on the processor so much like
+
+892
+00:45:47,240 --> 00:45:51,020
+much like processes much like concurrent
+
+893
+00:45:51,020 --> 00:45:53,900
+processes we say the two threads are
+
+894
+00:45:53,900 --> 00:45:57,020
+concurrent if their flows overlap in
+
+895
+00:45:57,020 --> 00:45:58,640
+time otherwise they're sequential so
+
+896
+00:45:58,640 --> 00:46:01,040
+this is the exact same example that I
+
+897
+00:46:01,040 --> 00:46:02,630
+showed you when we looked at processes
+
+898
+00:46:02,630 --> 00:46:04,580
+so here you have instead of three
+
+899
+00:46:04,580 --> 00:46:07,010
+processes we have three threads running
+
+900
+00:46:07,010 --> 00:46:10,460
+it within the same process
+
+901
+00:46:10,460 --> 00:46:13,250
+thread a runs for a little bit and then
+
+902
+00:46:13,250 --> 00:46:16,760
+the kernel just decides to walk it out
+
+903
+00:46:16,760 --> 00:46:20,120
+and and run thread B so then thread B
+
+904
+00:46:20,120 --> 00:46:22,070
+runs for a little bit and then the
+
+905
+00:46:22,070 --> 00:46:24,350
+kernel decides to give thread C some
+
+906
+00:46:24,350 --> 00:46:27,950
+time so it it saves thread B's context
+
+907
+00:46:27,950 --> 00:46:32,360
+restores thread C's context and sets the
+
+908
+00:46:32,360 --> 00:46:37,010
+PC to the the PC value and thread C's
+
+909
+00:46:37,010 --> 00:46:40,100
+context and so C runs and then the
+
+910
+00:46:40,100 --> 00:46:42,380
+kernel decides to give a some time again
+
+911
+00:46:42,380 --> 00:46:47,860
+so then a runs some more so because
+
+912
+00:46:47,860 --> 00:46:50,690
+thread a and B overlap in time they're
+
+913
+00:46:50,690 --> 00:46:54,920
+running concurrently B and C don't
+
+914
+00:46:54,920 --> 00:46:56,930
+overlap in time so they they're not
+
+915
+00:46:56,930 --> 00:46:59,720
+running concurrently but a and C are
+
+916
+00:46:59,720 --> 00:47:03,640
+concurrent because they overlap in time
+
+917
+00:47:03,640 --> 00:47:07,880
+and so you can you also have the option
+
+918
+00:47:07,880 --> 00:47:10,190
+if there's multi multiple cores than
+
+919
+00:47:10,190 --> 00:47:12,050
+multiple threat a thread can run on each
+
+920
+00:47:12,050 --> 00:47:13,820
+core so then you can have true
+
+921
+00:47:13,820 --> 00:47:14,940
+parallelism
+
+922
+00:47:14,940 --> 00:47:21,059
+okay
+
+923
+00:47:21,059 --> 00:47:24,659
+okay so like I said threads and
+
+924
+00:47:24,659 --> 00:47:29,339
+processes are similar ideas but in the
+
+925
+00:47:29,339 --> 00:47:33,979
+sense that they they each stage kinase
+
+926
+00:47:33,979 --> 00:47:36,749
+and process corresponds to some kind of
+
+927
+00:47:36,749 --> 00:47:40,529
+logical flow and they can run
+
+928
+00:47:40,529 --> 00:47:42,919
+concurrently with with other flows and
+
+929
+00:47:42,919 --> 00:47:45,989
+each is scheduled and contact switched
+
+930
+00:47:45,989 --> 00:47:49,739
+by the kernel okay but they're different
+
+931
+00:47:49,739 --> 00:47:52,519
+because threads share all code and data
+
+932
+00:47:52,519 --> 00:47:57,209
+except their local stacks okay and in
+
+933
+00:47:57,209 --> 00:48:00,059
+fact those local stacks although they're
+
+934
+00:48:00,059 --> 00:48:03,029
+each thread has its own it's it's really
+
+935
+00:48:03,029 --> 00:48:08,369
+just sharing the same stack and so it's
+
+936
+00:48:08,369 --> 00:48:09,869
+really the same portion of the virtual
+
+937
+00:48:09,869 --> 00:48:12,269
+address space it's just that each each
+
+938
+00:48:12,269 --> 00:48:14,999
+thread is assigned its own part of that
+
+939
+00:48:14,999 --> 00:48:17,640
+stack okay so even though threads have
+
+940
+00:48:17,640 --> 00:48:21,179
+their own individual stacks since it's
+
+941
+00:48:21,179 --> 00:48:22,559
+all part of the same virtual address
+
+942
+00:48:22,559 --> 00:48:25,439
+space a thread can access the the stack
+
+943
+00:48:25,439 --> 00:48:28,140
+of any other thread if it's and that's
+
+944
+00:48:28,140 --> 00:48:29,849
+not a good thing to do but it's possible
+
+945
+00:48:29,849 --> 00:48:32,519
+okay
+
+946
+00:48:32,519 --> 00:48:34,859
+so processes don't share any of the
+
+947
+00:48:34,859 --> 00:48:37,079
+state right they they have their own
+
+948
+00:48:37,079 --> 00:48:39,650
+private address spaces and threads are
+
+949
+00:48:39,650 --> 00:48:46,409
+less expensive than processes the it's
+
+950
+00:48:46,409 --> 00:48:48,359
+it's cheaper to create them and the main
+
+951
+00:48:48,359 --> 00:48:50,429
+reason is that there's just less context
+
+952
+00:48:50,429 --> 00:48:52,140
+associated with the thread than there is
+
+953
+00:48:52,140 --> 00:48:55,049
+as a process and so on our system when
+
+954
+00:48:55,049 --> 00:48:59,369
+we measure a bunch of we just create in
+
+955
+00:48:59,369 --> 00:49:02,909
+and wait for a bunch of creative process
+
+956
+00:49:02,909 --> 00:49:04,229
+wait for word process over and over
+
+957
+00:49:04,229 --> 00:49:07,140
+again and measure the time turns out to
+
+958
+00:49:07,140 --> 00:49:09,630
+be about twenty thousand cycles to
+
+959
+00:49:09,630 --> 00:49:12,689
+create and reap a process about ten
+
+960
+00:49:12,689 --> 00:49:14,969
+thousand cycles to create an reapeth
+
+961
+00:49:14,969 --> 00:49:19,699
+thread so that the kernel provides
+
+962
+00:49:19,699 --> 00:49:22,469
+threads to us using an interface called
+
+963
+00:49:22,469 --> 00:49:25,949
+the P threads POSIX threads so this is a
+
+964
+00:49:25,949 --> 00:49:29,729
+fairly recent standard that all all
+
+965
+00:49:29,729 --> 00:49:31,390
+Linux
+
+966
+00:49:31,390 --> 00:49:36,130
+UNIX systems and and Windows Macintosh
+
+967
+00:49:36,130 --> 00:49:39,420
+so every this is a sort of standard
+
+968
+00:49:39,420 --> 00:49:46,210
+POSIX standard for for manipulating
+
+969
+00:49:46,210 --> 00:49:48,700
+threads and so you can do things like
+
+970
+00:49:48,700 --> 00:49:51,910
+create and reap threads so there's this
+
+971
+00:49:51,910 --> 00:49:55,059
+is sort of sort of like fork and this is
+
+972
+00:49:55,059 --> 00:49:58,240
+sort of like weight but not not quite
+
+973
+00:49:58,240 --> 00:50:02,769
+because it doesn't create there's no
+
+974
+00:50:02,769 --> 00:50:05,049
+hierarchy associated with these you can
+
+975
+00:50:05,049 --> 00:50:07,690
+you could just like get pit you can
+
+976
+00:50:07,690 --> 00:50:11,980
+retain there's a function to to get your
+
+977
+00:50:11,980 --> 00:50:15,130
+thread ID you can kill threads so one
+
+978
+00:50:15,130 --> 00:50:18,910
+thread can kill another thread a thread
+
+979
+00:50:18,910 --> 00:50:21,069
+there's a there's a function to exit a
+
+980
+00:50:21,069 --> 00:50:25,660
+thread the normal exit system call
+
+981
+00:50:25,660 --> 00:50:29,079
+terminates all the threads and return is
+
+982
+00:50:29,079 --> 00:50:31,539
+similar to P thread exit in the sense
+
+983
+00:50:31,539 --> 00:50:33,369
+that just terminates the current thread
+
+984
+00:50:33,369 --> 00:50:36,789
+the thread that that calls it and then
+
+985
+00:50:36,789 --> 00:50:38,980
+there's ways to access synchronize
+
+986
+00:50:38,980 --> 00:50:41,140
+access to shared variables which which
+
+987
+00:50:41,140 --> 00:50:46,380
+we'll look at on Thursday more detail
+
+988
+00:50:46,380 --> 00:50:49,630
+okay so here's the the pthreads hello
+
+989
+00:50:49,630 --> 00:50:53,410
+world program you know your K in our
+
+990
+00:50:53,410 --> 00:50:56,350
+book the the C the C reference manual
+
+991
+00:50:56,350 --> 00:51:00,010
+the the very first the very first thing
+
+992
+00:51:00,010 --> 00:51:01,390
+that it does is it shows you how to
+
+993
+00:51:01,390 --> 00:51:03,280
+write the simplest possible C program
+
+994
+00:51:03,280 --> 00:51:05,920
+called so the famous hello world program
+
+995
+00:51:05,920 --> 00:51:07,990
+so that goes all the way back to like
+
+996
+00:51:07,990 --> 00:51:10,540
+1978 when K in our book was first
+
+997
+00:51:10,540 --> 00:51:13,660
+written but that's that's caught on and
+
+998
+00:51:13,660 --> 00:51:17,650
+and whenever we like learn a new
+
+999
+00:51:17,650 --> 00:51:20,050
+language or we learn a new concept we
+
+1000
+00:51:20,050 --> 00:51:21,820
+always write the hello world program for
+
+1001
+00:51:21,820 --> 00:51:24,070
+that concept so the hello world program
+
+1002
+00:51:24,070 --> 00:51:27,880
+for threads this is this is a simplest
+
+1003
+00:51:27,880 --> 00:51:29,740
+threads program that I can think of so I
+
+1004
+00:51:29,740 --> 00:51:31,960
+call it the hello world program for
+
+1005
+00:51:31,960 --> 00:51:37,510
+threads so this program defines a
+
+1006
+00:51:37,510 --> 00:51:42,400
+function so court by in POSIX a thread
+
+1007
+00:51:42,400 --> 00:51:45,790
+is actually executed by executing the
+
+1008
+00:51:45,790 --> 00:51:48,160
+the code and a function called the
+
+1009
+00:51:48,160 --> 00:51:54,120
+thread routine okay and POSIX imposes
+
+1010
+00:51:54,120 --> 00:51:56,560
+this thread routine takes a generic
+
+1011
+00:51:56,560 --> 00:51:58,180
+pointer as an argument
+
+1012
+00:51:58,180 --> 00:52:00,820
+optional generic pointer and it returns
+
+1013
+00:52:00,820 --> 00:52:03,520
+a generic pointer okay so anytime if you
+
+1014
+00:52:03,520 --> 00:52:05,110
+want to pass anything to a thread you
+
+1015
+00:52:05,110 --> 00:52:08,800
+somehow got to pack up all that data
+
+1016
+00:52:08,800 --> 00:52:12,070
+into a single object then you can take
+
+1017
+00:52:12,070 --> 00:52:15,880
+an address up but it's it you can see
+
+1018
+00:52:15,880 --> 00:52:20,660
+that this is extremely general-purpose
+
+1019
+00:52:20,660 --> 00:52:25,310
+so our hello world program creates a
+
+1020
+00:52:25,310 --> 00:52:29,930
+thread by calling pthread create and we
+
+1021
+00:52:29,930 --> 00:52:31,850
+say instead of a child we call this a
+
+1022
+00:52:31,850 --> 00:52:35,390
+peer thread okay so that there's no
+
+1023
+00:52:35,390 --> 00:52:37,930
+parent-child relationship any any
+
+1024
+00:52:37,930 --> 00:52:41,090
+threads can threads can reap other
+
+1025
+00:52:41,090 --> 00:52:44,900
+threads whether they created those
+
+1026
+00:52:44,900 --> 00:52:47,060
+threads or not okay so you don't have
+
+1027
+00:52:47,060 --> 00:52:51,080
+the strict parent-child hierarchy Pizza
+
+1028
+00:52:51,080 --> 00:52:57,230
+create creates a thread that executes
+
+1029
+00:52:57,230 --> 00:52:59,300
+the thread routine in this third
+
+1030
+00:52:59,300 --> 00:53:03,740
+argument and returns the thread idea of
+
+1031
+00:53:03,740 --> 00:53:06,260
+that thread in the address and the
+
+1032
+00:53:06,260 --> 00:53:10,120
+integer pointed at by the first argument
+
+1033
+00:53:10,120 --> 00:53:15,710
+the second argument is set up there's
+
+1034
+00:53:15,710 --> 00:53:17,600
+there's ways to set attributes of
+
+1035
+00:53:17,600 --> 00:53:21,440
+threads that are beyond the scope of
+
+1036
+00:53:21,440 --> 00:53:23,990
+this course and will always just have
+
+1037
+00:53:23,990 --> 00:53:29,270
+those no and then that this fourth
+
+1038
+00:53:29,270 --> 00:53:31,700
+argument is the optional argument that
+
+1039
+00:53:31,700 --> 00:53:33,200
+you want to pass to your thread routine
+
+1040
+00:53:33,200 --> 00:53:36,200
+okay so in this case we're saying call
+
+1041
+00:53:36,200 --> 00:53:39,260
+the thread routine that's that's called
+
+1042
+00:53:39,260 --> 00:53:44,600
+thread with no arguments and then our
+
+1043
+00:53:44,600 --> 00:53:46,760
+thread routine just prints out hello
+
+1044
+00:53:46,760 --> 00:53:49,970
+world and then it returns in this case
+
+1045
+00:53:49,970 --> 00:53:51,710
+it doesn't return anything so it returns
+
+1046
+00:53:51,710 --> 00:53:54,230
+no but if we wanted to return something
+
+1047
+00:53:54,230 --> 00:53:59,120
+to the to the calling program we could
+
+1048
+00:53:59,120 --> 00:54:01,070
+have returned something a pointer to
+
+1049
+00:54:01,070 --> 00:54:10,550
+some generic object okay
+
+1050
+00:54:10,550 --> 00:54:12,900
+okay so the thread ID the thread
+
+1051
+00:54:12,900 --> 00:54:14,460
+attributes are null that the thread
+
+1052
+00:54:14,460 --> 00:54:16,860
+routine the thread arguments are void
+
+1053
+00:54:16,860 --> 00:54:23,190
+star P and the return value is a void
+
+1054
+00:54:23,190 --> 00:54:25,410
+double so it's a pointer to the pointer
+
+1055
+00:54:25,410 --> 00:54:29,610
+that you want to return okay all right
+
+1056
+00:54:29,610 --> 00:54:30,960
+so let's look at what happens when we
+
+1057
+00:54:30,960 --> 00:54:34,400
+execute hello world so the main thread
+
+1058
+00:54:34,400 --> 00:54:39,060
+runs for a while then it calls pthread
+
+1059
+00:54:39,060 --> 00:54:43,440
+create which creates the pure thread
+
+1060
+00:54:43,440 --> 00:54:45,390
+which now is a concurrent flow that's
+
+1061
+00:54:45,390 --> 00:54:48,410
+running once once the pthread create
+
+1062
+00:54:48,410 --> 00:54:51,810
+returns then we're running two
+
+1063
+00:54:51,810 --> 00:54:53,370
+concurrent flows or running the main
+
+1064
+00:54:53,370 --> 00:54:56,760
+thread and we're running the the peer
+
+1065
+00:54:56,760 --> 00:55:01,590
+thread
+
+1066
+00:55:01,590 --> 00:55:03,450
+and so in this case our hello world
+
+1067
+00:55:03,450 --> 00:55:07,020
+waits for the peer thread to finish by
+
+1068
+00:55:07,020 --> 00:55:11,820
+calling P thread join the peer-to-peer
+
+1069
+00:55:11,820 --> 00:55:15,930
+thread after the calls it's printf it
+
+1070
+00:55:15,930 --> 00:55:20,240
+returns no which terminates the thread
+
+1071
+00:55:20,240 --> 00:55:24,350
+at that point the P thread join returns
+
+1072
+00:55:24,350 --> 00:55:31,470
+and the main thread continues okay so
+
+1073
+00:55:31,470 --> 00:55:36,390
+using using these create this create
+
+1074
+00:55:36,390 --> 00:55:38,370
+function how would we write a thread
+
+1075
+00:55:38,370 --> 00:55:41,490
+based concurrent echo server and again
+
+1076
+00:55:41,490 --> 00:55:43,050
+it's very similar to the way we did it
+
+1077
+00:55:43,050 --> 00:55:50,340
+with the process based design so we call
+
+1078
+00:55:50,340 --> 00:55:52,980
+we acquire a listening descriptor by
+
+1079
+00:55:52,980 --> 00:55:56,060
+calling our au s-- open listen FD
+
+1080
+00:55:56,060 --> 00:55:59,760
+function just as before and then inside
+
+1081
+00:55:59,760 --> 00:56:05,310
+this infinite server loop we we get the
+
+1082
+00:56:05,310 --> 00:56:09,270
+size of the we get the size of the
+
+1083
+00:56:09,270 --> 00:56:13,530
+client adder struct so which is which is
+
+1084
+00:56:13,530 --> 00:56:16,740
+going to be a large enough to fit any
+
+1085
+00:56:16,740 --> 00:56:22,050
+address and then we we malloc space for
+
+1086
+00:56:22,050 --> 00:56:23,730
+the connected file descriptor so we're
+
+1087
+00:56:23,730 --> 00:56:27,980
+making a one integer sized portion of
+
+1088
+00:56:27,980 --> 00:56:30,720
+dynamic storage for this connected
+
+1089
+00:56:30,720 --> 00:56:33,390
+descriptor that were that we're going to
+
+1090
+00:56:33,390 --> 00:56:36,830
+get back from accept and we're going to
+
+1091
+00:56:36,830 --> 00:56:39,240
+this is actually really important to
+
+1092
+00:56:39,240 --> 00:56:42,090
+avoid a nasty race condition they'll
+
+1093
+00:56:42,090 --> 00:56:46,140
+show you in a second so now we call
+
+1094
+00:56:46,140 --> 00:56:50,430
+except with our listening descriptor and
+
+1095
+00:56:50,430 --> 00:56:52,020
+client address and client length just
+
+1096
+00:56:52,020 --> 00:56:56,700
+like before and except returns the
+
+1097
+00:56:56,700 --> 00:56:59,700
+connected descriptor and then we
+
+1098
+00:56:59,700 --> 00:57:03,090
+dereference this connected descriptor
+
+1099
+00:57:03,090 --> 00:57:06,450
+pointer and so and store that the value
+
+1100
+00:57:06,450 --> 00:57:08,520
+returned by except in this in this
+
+1101
+00:57:08,520 --> 00:57:10,790
+location in the heap
+
+1102
+00:57:10,790 --> 00:57:15,320
+and then we call pthread create by
+
+1103
+00:57:15,320 --> 00:57:17,030
+giving it the name of our thread routine
+
+1104
+00:57:17,030 --> 00:57:19,150
+which in this case is just simply a
+
+1105
+00:57:19,150 --> 00:57:21,710
+function we defined in our program
+
+1106
+00:57:21,710 --> 00:57:25,730
+called thread and the pointer to the
+
+1107
+00:57:25,730 --> 00:57:29,990
+connected file descriptor okay now our
+
+1108
+00:57:29,990 --> 00:57:32,450
+client which our client which our thread
+
+1109
+00:57:32,450 --> 00:57:33,980
+routine then will use to interact with
+
+1110
+00:57:33,980 --> 00:57:39,100
+the client okay so the thread routine
+
+1111
+00:57:39,100 --> 00:57:42,380
+dereferences the argument a member is a
+
+1112
+00:57:42,380 --> 00:57:44,240
+pointer to a connected file descriptor
+
+1113
+00:57:44,240 --> 00:57:48,050
+so it dereferences that pointer to get
+
+1114
+00:57:48,050 --> 00:57:50,870
+the to get the actual integer connected
+
+1115
+00:57:50,870 --> 00:57:56,030
+descriptor and then it detaches the
+
+1116
+00:57:56,030 --> 00:58:02,840
+thread so by default threads Threat
+
+1117
+00:58:02,840 --> 00:58:04,940
+threads run an independent and attached
+
+1118
+00:58:04,940 --> 00:58:08,030
+mode so they can be you know they can be
+
+1119
+00:58:08,030 --> 00:58:09,980
+joined by other threads and they can be
+
+1120
+00:58:09,980 --> 00:58:15,950
+killed by other threads but by default
+
+1121
+00:58:15,950 --> 00:58:18,350
+if it's similar
+
+1122
+00:58:18,350 --> 00:58:20,630
+when threads are running in sort of
+
+1123
+00:58:20,630 --> 00:58:32,240
+unattached mode detail or undetected by
+
+1124
+00:58:32,240 --> 00:58:35,300
+a join function to to acquire those
+
+1125
+00:58:35,300 --> 00:58:40,700
+resources but if we detach a thread then
+
+1126
+00:58:40,700 --> 00:58:42,500
+it can't be it can't be joined by any
+
+1127
+00:58:42,500 --> 00:58:44,150
+threads but when it dies the kernel will
+
+1128
+00:58:44,150 --> 00:58:50,060
+automatically restore the the resources
+
+1129
+00:58:50,060 --> 00:58:52,400
+associated with that thread so in this
+
+1130
+00:58:52,400 --> 00:58:54,290
+case we're going to just detach this
+
+1131
+00:58:54,290 --> 00:58:56,740
+thread so we're not to worry about
+
+1132
+00:58:56,740 --> 00:59:01,790
+reaping it when it when it finishes and
+
+1133
+00:59:01,790 --> 00:59:04,210
+then we're going to free this this
+
+1134
+00:59:04,210 --> 00:59:06,530
+memory that was malloc so this is
+
+1135
+00:59:06,530 --> 00:59:08,090
+important we have to free this memory
+
+1136
+00:59:08,090 --> 00:59:10,630
+that was malloc by the the main thread
+
+1137
+00:59:10,630 --> 00:59:16,070
+in order to avoid a memory leak and then
+
+1138
+00:59:16,070 --> 00:59:18,470
+we we call our echo function so we
+
+1139
+00:59:18,470 --> 00:59:20,870
+interact with the the echo client until
+
+1140
+00:59:20,870 --> 00:59:23,480
+the echo clients finished
+
+1141
+00:59:23,480 --> 00:59:25,820
+and then we close this descriptor again
+
+1142
+00:59:25,820 --> 00:59:34,990
+to avoid a potentially fatal memory leak
+
+1143
+00:59:34,990 --> 00:59:37,790
+so this thread based education model is
+
+1144
+00:59:37,790 --> 00:59:40,010
+very similar to the execution model that
+
+1145
+00:59:40,010 --> 00:59:43,310
+we saw with with processes so we have a
+
+1146
+00:59:43,310 --> 00:59:46,400
+list of a main thread that's listening
+
+1147
+00:59:46,400 --> 00:59:48,440
+for connection requests they were
+
+1148
+00:59:48,440 --> 00:59:50,560
+waiting for connection requests via
+
+1149
+00:59:50,560 --> 00:59:56,240
+accept and then we have for each client
+
+1150
+00:59:56,240 --> 00:59:58,460
+we have a peer thread that interacts
+
+1151
+00:59:58,460 --> 01:00:01,400
+with that client using the connected
+
+1152
+01:00:01,400 --> 01:00:03,320
+descriptor that was passed in when we
+
+1153
+01:00:03,320 --> 01:00:07,900
+created the thread and then each thread
+
+1154
+01:00:07,900 --> 01:00:10,820
+has its own since it has its own stack
+
+1155
+01:00:10,820 --> 01:00:14,960
+it has it has separate space for its
+
+1156
+01:00:14,960 --> 01:00:18,010
+local variables and this is really the
+
+1157
+01:00:18,010 --> 01:00:20,420
+powerful thing about threads now we can
+
+1158
+01:00:20,420 --> 01:00:24,110
+with these things they by declaring
+
+1159
+01:00:24,110 --> 01:00:28,520
+these local variables we can we can
+
+1160
+01:00:28,520 --> 01:00:30,560
+create threads that won't interact with
+
+1161
+01:00:30,560 --> 01:00:32,450
+each other it won't and can run
+
+1162
+01:00:32,450 --> 01:00:36,990
+independently yes
+
+1163
+01:00:36,990 --> 01:00:42,260
+drunky cash
+
+1164
+01:00:42,260 --> 01:00:44,690
+I guess yeah the question is is there
+
+1165
+01:00:44,690 --> 01:00:45,890
+any time you wouldn't want to run
+
+1166
+01:00:45,890 --> 01:00:50,090
+detached so when you run detached you
+
+1167
+01:00:50,090 --> 01:00:52,250
+give up the the power to kill other
+
+1168
+01:00:52,250 --> 01:00:56,150
+threads so so I don't know if you it's
+
+1169
+01:00:56,150 --> 01:00:57,620
+hard to it's hard to come up with good
+
+1170
+01:00:57,620 --> 01:01:00,830
+example right that but if you wanted the
+
+1171
+01:01:00,830 --> 01:01:03,470
+ability to to be able to terminate other
+
+1172
+01:01:03,470 --> 01:01:07,250
+threads you know maybe if you had maybe
+
+1173
+01:01:07,250 --> 01:01:08,870
+if you if you were running a pool of
+
+1174
+01:01:08,870 --> 01:01:15,710
+like worker threads and at some point at
+
+1175
+01:01:15,710 --> 01:01:18,800
+some point if I mean I guess you can
+
+1176
+01:01:18,800 --> 01:01:21,050
+imagine a scenario where suppose you're
+
+1177
+01:01:21,050 --> 01:01:22,520
+running a pool of worker threads you
+
+1178
+01:01:22,520 --> 01:01:24,050
+give them all jobs to do the first one
+
+1179
+01:01:24,050 --> 01:01:26,660
+that finishes you take the result and
+
+1180
+01:01:26,660 --> 01:01:28,130
+you don't need the results from the
+
+1181
+01:01:28,130 --> 01:01:30,320
+other threads so you might you might
+
+1182
+01:01:30,320 --> 01:01:34,150
+just want to kill those threads but it's
+
+1183
+01:01:34,150 --> 01:01:37,250
+yeah it's hard it's hard to come up with
+
+1184
+01:01:37,250 --> 01:01:46,360
+a really compelling reason
+
+1185
+01:01:46,360 --> 01:01:48,440
+okay so there's a few things to think
+
+1186
+01:01:48,440 --> 01:01:49,820
+about when you're when you're writing
+
+1187
+01:01:49,820 --> 01:01:51,620
+thread based servers so the first is
+
+1188
+01:01:51,620 --> 01:01:54,110
+that yet you need to run detach to avoid
+
+1189
+01:01:54,110 --> 01:01:58,280
+potential memory leaks I'm sorry I
+
+1190
+01:01:58,280 --> 01:02:00,140
+forgot this word so it the opposite of
+
+1191
+01:02:00,140 --> 01:02:03,140
+detached is joinable and so joinable
+
+1192
+01:02:03,140 --> 01:02:04,970
+threads like I mentioned can be reaped
+
+1193
+01:02:04,970 --> 01:02:08,330
+and killed by other threads detached
+
+1194
+01:02:08,330 --> 01:02:11,240
+threads cannot and their resources are
+
+1195
+01:02:11,240 --> 01:02:14,960
+automatically claimed on termination so
+
+1196
+01:02:14,960 --> 01:02:17,150
+the default states joinable and you have
+
+1197
+01:02:17,150 --> 01:02:19,820
+to use this detach function call to make
+
+1198
+01:02:19,820 --> 01:02:24,740
+to make the thread detached the biggest
+
+1199
+01:02:24,740 --> 01:02:26,330
+the biggest issue with threads though
+
+1200
+01:02:26,330 --> 01:02:28,430
+like the beautiful thing about threads
+
+1201
+01:02:28,430 --> 01:02:29,990
+is that you're sharing the same global
+
+1202
+01:02:29,990 --> 01:02:33,050
+address space so it's very easy to share
+
+1203
+01:02:33,050 --> 01:02:34,640
+data structures you know if you had
+
+1204
+01:02:34,640 --> 01:02:36,920
+multiple threads if you had a web server
+
+1205
+01:02:36,920 --> 01:02:38,960
+a concurrent web server that was built
+
+1206
+01:02:38,960 --> 01:02:41,390
+with multiple threads be very easy to
+
+1207
+01:02:41,390 --> 01:02:44,150
+implement a cache that all the threads
+
+1208
+01:02:44,150 --> 01:02:45,980
+could could use right because they're
+
+1209
+01:02:45,980 --> 01:02:47,600
+all sharing that same virtual address
+
+1210
+01:02:47,600 --> 01:02:51,020
+space but the thing that makes threads
+
+1211
+01:02:51,020 --> 01:02:53,960
+so nice this ease the ease with which
+
+1212
+01:02:53,960 --> 01:02:56,720
+you can share resources is also the
+
+1213
+01:02:56,720 --> 01:02:58,160
+thing that makes them very tricky to
+
+1214
+01:02:58,160 --> 01:03:00,320
+deal with so as soon as just like we saw
+
+1215
+01:03:00,320 --> 01:03:05,540
+with our shell lab handlers you know as
+
+1216
+01:03:05,540 --> 01:03:06,770
+soon as you're as soon as you have
+
+1217
+01:03:06,770 --> 01:03:08,240
+multiple flows accessing shared
+
+1218
+01:03:08,240 --> 01:03:10,610
+resources you have to be very careful
+
+1219
+01:03:10,610 --> 01:03:15,290
+it's very easy to make mistakes and it's
+
+1220
+01:03:15,290 --> 01:03:18,500
+it's very it's very easy to or it's
+
+1221
+01:03:18,500 --> 01:03:21,470
+possible to to share resources in
+
+1222
+01:03:21,470 --> 01:03:24,980
+unexpected and unintended ways for
+
+1223
+01:03:24,980 --> 01:03:29,270
+example if if one if one thread passes
+
+1224
+01:03:29,270 --> 01:03:32,720
+the address of a local variable on its
+
+1225
+01:03:32,720 --> 01:03:35,180
+stack to another thread then now that
+
+1226
+01:03:35,180 --> 01:03:38,690
+that the called thread now has access to
+
+1227
+01:03:38,690 --> 01:03:40,520
+the callers thread and there's nothing
+
+1228
+01:03:40,520 --> 01:03:44,840
+to prevent that that that called thread
+
+1229
+01:03:44,840 --> 01:03:48,200
+from manipulating local variables on the
+
+1230
+01:03:48,200 --> 01:03:50,390
+caller stack you know that would be a
+
+1231
+01:03:50,390 --> 01:03:53,120
+very bad thing to do but it's possible
+
+1232
+01:03:53,120 --> 01:03:55,850
+you might you might forget you know you
+
+1233
+01:03:55,850 --> 01:03:56,960
+might you might forget
+
+1234
+01:03:56,960 --> 01:03:58,940
+that the variable you're passing is a
+
+1235
+01:03:58,940 --> 01:04:06,240
+local variable no not a not a global
+
+1236
+01:04:06,240 --> 01:04:12,549
+okay and a really bad mistake in our in
+
+1237
+01:04:12,549 --> 01:04:17,440
+our hello in our echo server example you
+
+1238
+01:04:17,440 --> 01:04:19,029
+notice we were very careful to malloc
+
+1239
+01:04:19,029 --> 01:04:26,680
+space for this for this connected file
+
+1240
+01:04:26,680 --> 01:04:29,770
+descriptor that we passed into that the
+
+1241
+01:04:29,770 --> 01:04:32,470
+peer thread that we are creating would
+
+1242
+01:04:32,470 --> 01:04:35,619
+have been much easier just to pass the
+
+1243
+01:04:35,619 --> 01:04:37,660
+address of the connected file descriptor
+
+1244
+01:04:37,660 --> 01:04:41,589
+into our peer thread be much easier but
+
+1245
+01:04:41,589 --> 01:04:49,970
+it would also be wrong
+
+1246
+01:04:49,970 --> 01:04:57,730
+can you see why
+
+1247
+01:04:57,730 --> 01:04:59,950
+okay let's say right here when we call
+
+1248
+01:04:59,950 --> 01:05:02,770
+pthread create instead of passing a
+
+1249
+01:05:02,770 --> 01:05:06,100
+pointer to a separately allocated region
+
+1250
+01:05:06,100 --> 01:05:08,440
+of the heap instead of doing that we
+
+1251
+01:05:08,440 --> 01:05:10,090
+just pass the address of the connected
+
+1252
+01:05:10,090 --> 01:05:18,160
+file descriptor same thing right okay
+
+1253
+01:05:18,160 --> 01:05:21,790
+and then in our thread routine we
+
+1254
+01:05:21,790 --> 01:05:25,930
+dereference that pointer to to get the
+
+1255
+01:05:25,930 --> 01:05:28,930
+connected file descriptor okay if we
+
+1256
+01:05:28,930 --> 01:05:30,460
+just pass the address of the connected
+
+1257
+01:05:30,460 --> 01:05:33,550
+file descriptor this is real it's really
+
+1258
+01:05:33,550 --> 01:05:45,190
+bad can you see why yes it does okay
+
+1259
+01:05:45,190 --> 01:05:47,740
+that's true and why is that bad I mean
+
+1260
+01:05:47,740 --> 01:05:58,070
+just
+
+1261
+01:05:58,070 --> 01:06:02,280
+that's yeah that's right so what what
+
+1262
+01:06:02,280 --> 01:06:04,740
+this is assuming this entered this
+
+1263
+01:06:04,740 --> 01:06:06,960
+bypassing the address of this connected
+
+1264
+01:06:06,960 --> 01:06:11,570
+file descriptor we're introducing a race
+
+1265
+01:06:11,570 --> 01:06:14,280
+okay in the race what we're assuming
+
+1266
+01:06:14,280 --> 01:06:20,040
+that the peer thread will be able to
+
+1267
+01:06:20,040 --> 01:06:25,830
+dereference that pointer before the main
+
+1268
+01:06:25,830 --> 01:06:27,900
+thread goes back up and gets a new
+
+1269
+01:06:27,900 --> 01:06:33,000
+connected file descriptor right so what
+
+1270
+01:06:33,000 --> 01:06:35,670
+happens what happens right we can't in a
+
+1271
+01:06:35,670 --> 01:06:37,020
+concurrent system we can't make any
+
+1272
+01:06:37,020 --> 01:06:38,760
+assumptions about how the kernel is
+
+1273
+01:06:38,760 --> 01:06:40,440
+going to schedule things right we saw
+
+1274
+01:06:40,440 --> 01:06:44,070
+the same thing with processes so what
+
+1275
+01:06:44,070 --> 01:06:48,720
+happens if after pthread create the main
+
+1276
+01:06:48,720 --> 01:06:52,250
+thread runs instead of the peer thread
+
+1277
+01:06:52,250 --> 01:06:55,680
+okay so we've passed the we've passed
+
+1278
+01:06:55,680 --> 01:06:58,020
+the address of the connected file
+
+1279
+01:06:58,020 --> 01:07:02,010
+descriptor for this client that that we
+
+1280
+01:07:02,010 --> 01:07:03,510
+accepted the connection requests from
+
+1281
+01:07:03,510 --> 01:07:08,370
+and then before the before the peer
+
+1282
+01:07:08,370 --> 01:07:12,210
+thread can dereference that argument we
+
+1283
+01:07:12,210 --> 01:07:19,040
+get a new connected file descriptor okay
+
+1284
+01:07:19,040 --> 01:07:22,520
+and now the child runs and it
+
+1285
+01:07:22,520 --> 01:07:26,470
+dereferences that that descriptor but
+
+1286
+01:07:26,470 --> 01:07:30,580
+what it gets now is the descriptor
+
+1287
+01:07:30,580 --> 01:07:33,230
+that's that's corresponding to the
+
+1288
+01:07:33,230 --> 01:07:35,690
+second the second child not the first
+
+1289
+01:07:35,690 --> 01:07:40,700
+child so now we have two threads talking
+
+1290
+01:07:40,700 --> 01:07:42,500
+to the same client using the same
+
+1291
+01:07:42,500 --> 01:07:50,030
+descriptor
+
+1292
+01:07:50,030 --> 01:07:55,280
+so do you see them hope so it's very
+
+1293
+01:07:55,280 --> 01:07:56,930
+tricky this is like a real subtle this
+
+1294
+01:07:56,930 --> 01:07:59,390
+is an example of sort of subtle errors
+
+1295
+01:07:59,390 --> 01:08:02,030
+that you can introduce because of this
+
+1296
+01:08:02,030 --> 01:08:09,020
+unintended sharing and it's cause the
+
+1297
+01:08:09,020 --> 01:08:10,880
+root cause is as you correctly pointed
+
+1298
+01:08:10,880 --> 01:08:13,490
+out is that they're both sharing the
+
+1299
+01:08:13,490 --> 01:08:20,410
+same memory on on the caller stack yes
+
+1300
+01:08:20,410 --> 01:08:23,299
+in this case of what you could do
+
+1301
+01:08:23,299 --> 01:08:24,830
+there's another there's another thing
+
+1302
+01:08:24,830 --> 01:08:27,740
+you could do you could just pass the
+
+1303
+01:08:27,740 --> 01:08:29,109
+descriptor itself
+
+1304
+01:08:29,109 --> 01:08:32,120
+okay avoid so you could just cast the
+
+1305
+01:08:32,120 --> 01:08:34,970
+descriptor to a generic pointer and just
+
+1306
+01:08:34,970 --> 01:08:37,400
+pass that and that that's just kind of
+
+1307
+01:08:37,400 --> 01:08:40,150
+yucky though that that would work
+
+1308
+01:08:40,150 --> 01:08:43,580
+because instead of dereferencing it the
+
+1309
+01:08:43,580 --> 01:08:49,309
+child would would just use it directly
+
+1310
+01:08:49,309 --> 01:09:00,469
+okay so good that's good
+
+1311
+01:09:00,469 --> 01:09:07,620
+okay the so the so the really good
+
+1312
+01:09:07,620 --> 01:09:09,569
+things with with threads is ease of
+
+1313
+01:09:09,569 --> 01:09:11,250
+sharing but that that sharing also
+
+1314
+01:09:11,250 --> 01:09:15,390
+introduces can introduce introduces
+
+1315
+01:09:15,390 --> 01:09:17,640
+complications in fact that's we're going
+
+1316
+01:09:17,640 --> 01:09:21,480
+to look at ways to sort of control the
+
+1317
+01:09:21,480 --> 01:09:27,989
+the sharing so that so that we do so
+
+1318
+01:09:27,989 --> 01:09:29,790
+that we don't get unintended unintended
+
+1319
+01:09:29,790 --> 01:09:38,489
+sharing okay so to summarize the the
+
+1320
+01:09:38,489 --> 01:09:40,739
+approaches to concurrency that that
+
+1321
+01:09:40,739 --> 01:09:43,230
+we've looked at we have process based
+
+1322
+01:09:43,230 --> 01:09:46,680
+concurrency so it's hard to share
+
+1323
+01:09:46,680 --> 01:09:49,410
+resources but it's easy to avoid
+
+1324
+01:09:49,410 --> 01:09:51,540
+unintended sharing so in some ways it's
+
+1325
+01:09:51,540 --> 01:09:54,510
+safer and easier to program event based
+
+1326
+01:09:54,510 --> 01:09:57,510
+so it's it's very low-level very tedious
+
+1327
+01:09:57,510 --> 01:10:00,210
+you have to be very careful about how
+
+1328
+01:10:00,210 --> 01:10:03,600
+you the granularity of the work that you
+
+1329
+01:10:03,600 --> 01:10:08,910
+do in response to events but you have
+
+1330
+01:10:08,910 --> 01:10:10,860
+total control over scheduling so you can
+
+1331
+01:10:10,860 --> 01:10:13,320
+decide which which descriptors you're
+
+1332
+01:10:13,320 --> 01:10:15,810
+going to service and in which order it
+
+1333
+01:10:15,810 --> 01:10:18,120
+sits since there's a single flow of
+
+1334
+01:10:18,120 --> 01:10:22,610
+control you can debug it with a debugger
+
+1335
+01:10:22,610 --> 01:10:25,140
+but it doesn't make use of multi-core so
+
+1336
+01:10:25,140 --> 01:10:26,989
+there's a handful of trade-offs there
+
+1337
+01:10:26,989 --> 01:10:30,900
+and with thread based systems it's very
+
+1338
+01:10:30,900 --> 01:10:33,840
+easy to share resources but that that
+
+1339
+01:10:33,840 --> 01:10:36,350
+sharing can create problems of its own
+
+1340
+01:10:36,350 --> 01:10:39,510
+it's fairly efficient compared to two
+
+1341
+01:10:39,510 --> 01:10:41,760
+processors you don't have much control
+
+1342
+01:10:41,760 --> 01:10:44,400
+over the scheduling so just like we saw
+
+1343
+01:10:44,400 --> 01:10:46,320
+you're not you can't really control
+
+1344
+01:10:46,320 --> 01:10:49,200
+which which threads get executed in
+
+1345
+01:10:49,200 --> 01:10:52,140
+which order and it can be difficult to
+
+1346
+01:10:52,140 --> 01:10:56,989
+debug because there can be races that
+
+1347
+01:10:56,989 --> 01:10:59,880
+occur very rarely very infrequently and
+
+1348
+01:10:59,880 --> 01:11:03,989
+so the probability of sort of creating
+
+1349
+01:11:03,989 --> 01:11:05,580
+one of those race conditions is is
+
+1350
+01:11:05,580 --> 01:11:09,320
+difficult
+
+1351
+01:11:09,320 --> 01:11:13,080
+okay so that's it for today tomorrow
+
+1352
+01:11:13,080 --> 01:11:15,420
+we'll look at thread based servers in
+
+1353
+01:11:15,420 --> 01:11:18,420
+more detail and how to write thread
+
+1354
+01:11:18,420 --> 01:11:22,699
+based systems efficiently and correctly
+
