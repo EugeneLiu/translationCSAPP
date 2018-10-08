@@ -20,7 +20,7 @@
 - [bilibili 视频地址](https://www.bilibili.com/video/av24540152)
 - [Youtube 视频地址](https://www.youtube.com/playlist?list=PLmBgoRqEQCWy58EIwLSWwMPfkwLOLRM5R)
 
-### [项目支持方：掘金翻译计划](https://github.com/xitu/gold-miner)
+### 项目支持方：掘金翻译计划
 
 <a href="https://github.com/xitu/gold-miner" target="_blank"><img src="https://i.loli.net/2018/10/03/5bb4a33390f44.png" width="110px;"/></a> [翻译计划](https://github.com/xitu/gold-miner) 是一个翻译优质互联网技术文章的社区，文章来源为 [掘金](https://juejin.im) 上的英文分享文章。内容覆盖[人工智能](#ai--deep-learning--machine-learning)、[Android](#android)、[iOS](#ios)、[React](#react)、[前端](#前端)、[后端](#后端)、[产品](#产品)、[设计](#设计) 等领域，读者为热爱新技术的新锐开发者。[掘金翻译计划](https://github.com/xitu/gold-miner) 目前翻译完成千余篇文章，官方文档及手册十余个，共有近 1000 名译者贡献翻译和校对。
 
