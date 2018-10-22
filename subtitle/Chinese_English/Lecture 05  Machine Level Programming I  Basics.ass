@@ -11,14 +11,14 @@ PlayResY: 720
 
 [Aegisub Project Garbage]
 Last Style Storage: Default
-Audio File: ../../../../Desktop/csapp/Lecture 05  Machine Level Programming I  Basics.mp4
-Video File: ../../../../Desktop/csapp/Lecture 05  Machine Level Programming I  Basics.mp4
+Audio File: F:/BaiduYunDownload/计算机系统/#5 Machine-Level Programming I_Basics.mp4
+Video File: F:/BaiduYunDownload/计算机系统/#5 Machine-Level Programming I_Basics.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
-Video Zoom Percent: 1.125000
-Scroll Position: 843
-Active Line: 854
-Video Position: 131976
+Video Zoom Percent: 0.375000
+Scroll Position: 200
+Active Line: 219
+Video Position: 14220
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -30,45 +30,45 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 0,0:00:00.00,0:00:02.82,English,,0,0,0,,Good afternoon everyone
 Dialogue: 0,0:00:00.00,0:00:02.82,Chinese,,0,0,0,,大家下午好
 Dialogue: 0,0:00:05.48,0:00:10.40,English,,0,0,0,,So now we're going to jump into the part of the course that I'd call the real core of course
-Dialogue: 0,0:00:05.48,0:00:10.40,Chinese,,0,0,0,,所以现在我们将跳到课程的一部分，当然我称之为真正的核心
+Dialogue: 0,0:00:05.48,0:00:10.40,Chinese,,0,0,0,,所以现在我们将跳到课程的核心部分
 Dialogue: 0,0:00:10.40,0:00:14.32,English,,0,0,0,,Where we go into machine level programming
-Dialogue: 0,0:00:10.40,0:00:14.32,Chinese,,0,0,0,,我们进入机器级编程的地方
+Dialogue: 0,0:00:10.40,0:00:14.32,Chinese,,0,0,0,,深入学习机器级编程
 Dialogue: 0,0:00:14.32,0:00:17.18,English,,0,0,0,,And by the term machine level programming I mean
-Dialogue: 0,0:00:14.32,0:00:17.18,Chinese,,0,0,0,,我的意思是术语机器级编程
+Dialogue: 0,0:00:14.32,0:00:17.18,Chinese,,0,0,0,,「机器级编程」这个术语的意思是
 Dialogue: 0,0:00:17.70,0:00:26.24,English,,0,0,0,,When you're actually considering the individual instructions to get executed by the machine in response to your program
-Dialogue: 0,0:00:17.70,0:00:26.24,Chinese,,0,0,0,,当你实际考虑单个指令由机器执行以响应你的程序时
+Dialogue: 0,0:00:17.70,0:00:26.24,Chinese,,0,0,0,,理解计算机为了运行你的程序，所相应执行的一条条的指令
 Dialogue: 0,0:00:26.54,0:00:29.64,English,,0,0,0,,And there's really two forms of machine programs
 Dialogue: 0,0:00:26.54,0:00:29.64,Chinese,,0,0,0,,实际上有两种形式的机器程序
 Dialogue: 0,0:00:29.64,0:00:33.44,English,,0,0,0,,One is the actual object code that runs on the computer
 Dialogue: 0,0:00:29.64,0:00:33.44,Chinese,,0,0,0,,一个是在计算机上运行的实际目标代码
 Dialogue: 0,0:00:33.62,0:00:39.92,English,,0,0,0,,And as we'll see that's a series of bytes that encode instructions that the processor executes
-Dialogue: 0,0:00:33.62,0:00:39.92,Chinese,,0,0,0,,正如我们将看到的那样，这是一系列字节，用于编码处理器执行的指令
+Dialogue: 0,0:00:33.62,0:00:39.92,Chinese,,0,0,0,,正如我们将看到的那样，（目标代码）是一串字节，编码处理器执行的指令
 Dialogue: 0,0:00:40.46,0:00:48.40,English,,0,0,0,,But well,because it's hard to look at bytes and understand them there's various text forms to make it more clear
-Dialogue: 0,0:00:40.46,0:00:48.40,Chinese,,0,0,0,,但是，因为很难看到字节并理解它们，所以有各种文本形式可以使它更清晰
+Dialogue: 0,0:00:40.46,0:00:48.40,Chinese,,0,0,0,,但是，因为很难通过观察它们每个字节并理解它们，它有许多文本形式可以使它更清晰
 Dialogue: 0,0:00:48.88,0:00:54.86,English,,0,0,0,,And one of  those is assembly code that used to be that's how people program machines
-Dialogue: 0,0:00:48.88,0:00:54.86,Chinese,,0,0,0,,其中一个是汇编代码，以前是人们编程机器的方式
+Dialogue: 0,0:00:48.88,0:00:54.86,Chinese,,0,0,0,,其中一种是汇编代码，以前是人们对机器编程的方式
 Dialogue: 0,0:00:54.86,0:01:00.10,English,,0,0,0,,And nowadays it's what the target of a compiler is to generate assembly code
-Dialogue: 0,0:00:54.86,0:01:00.10,Chinese,,0,0,0,,而现在，编译器的目标是生成汇编代码
+Dialogue: 0,0:00:54.86,0:01:00.10,Chinese,,0,0,0,,而现在，生成汇编代码是编译器的目标
 Dialogue: 0,0:01:00.40,0:01:01.86,English,,0,0,0,,And I'll use those terms
-Dialogue: 0,0:01:00.40,0:01:01.86,Chinese,,0,0,0,,我将使用这些条款
+Dialogue: 0,0:01:00.40,0:01:01.86,Chinese,,0,0,0,,我将使用这些专有名词
 Dialogue: 0,0:01:01.86,0:01:10.12,English,,0,0,0,,When I say machine code,I sort of interchangeably mean object code the binary form or assembly code the text version of it
-Dialogue: 0,0:01:01.86,0:01:10.12,Chinese,,0,0,0,,当我说机器代码时，我可以互换地表示对象代码的二进制形式或汇编代码的文本版本
+Dialogue: 0,0:01:01.86,0:01:10.12,Chinese,,0,0,0,,当我说机器代码时，我有时候指的是目标代码，有时候指的是文本格式的汇编代码
 Dialogue: 0,0:01:10.58,0:01:14.58,English,,0,0,0,,Interchangeably because it really is a one-to-one mapping between them
-Dialogue: 0,0:01:10.58,0:01:14.58,Chinese,,0,0,0,,可互换，因为它确实是它们之间的一对一映射
+Dialogue: 0,0:01:10.58,0:01:14.58,Chinese,,0,0,0,,这两者可互换，因为它们之间的映射是一对一的
 Dialogue: 0,0:01:14.76,0:01:19.56,English,,0,0,0,,But in case,I sort of use a term like assembly code
-Dialogue: 0,0:01:14.76,0:01:19.56,Chinese,,0,0,0,,但万一，我有点像汇编代码这样的术语
+Dialogue: 0,0:01:14.76,0:01:19.56,Chinese,,0,0,0,,但以防万一，我倾向于使用「汇编代码」
 Dialogue: 0,0:01:19.76,0:01:22.76,English,,0,0,0,,When I instead of consistently saying machine code
-Dialogue: 0,0:01:19.76,0:01:22.76,Chinese,,0,0,0,,当我而不是一直说机器代码
+Dialogue: 0,0:01:19.76,0:01:22.76,Chinese,,0,0,0,,而不是一直说机器代码
 Dialogue: 0,0:01:22.78,0:01:25.14,English,,0,0,0,,It's because they're really the same general idea
-Dialogue: 0,0:01:22.78,0:01:25.14,Chinese,,0,0,0,,这是因为他们真的是一般的想法
+Dialogue: 0,0:01:22.78,0:01:25.14,Chinese,,0,0,0,,这是因为他们通常真的是同样的意思
 Dialogue: 0,0:01:26.12,0:01:29.56,English,,0,0,0,,So this is sort of one place where
-Dialogue: 0,0:01:26.12,0:01:29.56,Chinese,,0,0,0,,所以这是一个地方
+Dialogue: 0,0:01:26.12,0:01:29.56,Chinese,,0,0,0,,所以在本节课程中
 Dialogue: 0,0:01:29.94,0:01:35.50,English,,0,0,0,,This course 213/513 takes a particular perspective
-Dialogue: 0,0:01:29.94,0:01:35.50,Chinese,,0,0,0,,本课程213/513采用了特定的视角
+Dialogue: 0,0:01:29.94,0:01:35.50,Chinese,,0,0,0,,本课程 213/513 采用了特定的角度
 Dialogue: 0,0:01:35.50,0:01:38.72,English,,0,0,0,,That's very different from done ever elsewhere
-Dialogue: 0,0:01:35.50,0:01:38.72,Chinese,,0,0,0,,这与其他地方的做法截然不同
+Dialogue: 0,0:01:35.50,0:01:38.72,Chinese,,0,0,0,,与其他地方的做法截然不同
 Dialogue: 0,0:01:39.18,0:01:41.54,English,,0,0,0,,In the bad old days of computing
-Dialogue: 0,0:01:39.18,0:01:41.54,Chinese,,0,0,0,,在计算机的糟糕时期
+Dialogue: 0,0:01:39.18,0:01:41.54,Chinese,,0,0,0,,在计算机编程的糟糕时期
 Dialogue: 0,0:01:42.02,0:01:46.74,English,,0,0,0,,You would be required to take a course it was typically called assembly level programming
 Dialogue: 0,0:01:42.02,0:01:46.74,Chinese,,0,0,0,,你将需要参加一个通常称为汇编级编程的课程
 Dialogue: 0,0:01:47.34,0:01:50.26,English,,0,0,0,,The way you actually learn to write programs in assembler
@@ -76,23 +76,23 @@ Dialogue: 0,0:01:47.34,0:01:50.26,Chinese,,0,0,0,,你实际学习用汇编语言
 Dialogue: 0,0:01:50.74,0:01:58.52,English,,0,0,0,,And your assignments would be to do things like to sort a array of numbers
 Dialogue: 0,0:01:50.74,0:01:58.52,Chinese,,0,0,0,,你的任务就是做一些数字排序
 Dialogue: 0,0:01:58.52,0:02:03.30,English,,0,0,0,,Who set up some kind of linked list data structure  just sort of low-level programming
-Dialogue: 0,0:01:58.52,0:02:03.30,Chinese,,0,0,0,,谁设置了某种链表数据结构只是一种低级编程
+Dialogue: 0,0:01:58.52,0:02:03.30,Chinese,,0,0,0,,设置某种链表数据结构，等等的低级编程
 Dialogue: 0,0:02:03.30,0:02:06.94,English,,0,0,0,,That nowadays you wouldn't even think of wanting to write an assembly code
-Dialogue: 0,0:02:03.30,0:02:06.94,Chinese,,0,0,0,,那时候你甚至都不会想要编写汇编代码
+Dialogue: 0,0:02:03.30,0:02:06.94,Chinese,,0,0,0,,现在你甚至不会想要编写汇编代码
 Dialogue: 0,0:02:07.68,0:02:12.34,English,,0,0,0,,And so people didn't really enjoy those courses very well
-Dialogue: 0,0:02:07.68,0:02:12.34,Chinese,,0,0,0,,因此人们并不十分喜欢这些课程
+Dialogue: 0,0:02:07.68,0:02:12.34,Chinese,,0,0,0,,人们并不十分喜欢这些课程
 Dialogue: 0,0:02:12.66,0:02:15.32,English,,0,0,0,,And so they got sort of our we cut out of the curriculum
-Dialogue: 0,0:02:12.66,0:02:15.32,Chinese,,0,0,0,,所以他们得到了我们的课程
+Dialogue: 0,0:02:12.66,0:02:15.32,Chinese,,0,0,0,,所以他们想让我们取消这些课程
 Dialogue: 0,0:02:15.76,0:02:17.88,English,,0,0,0,,But what our version of it is...
 Dialogue: 0,0:02:15.76,0:02:17.88,Chinese,,0,0,0,,但我们的版本是什么......
 Dialogue: 0,0:02:18.26,0:02:20.78,English,,0,0,0,,This is pretty important stuff to know
-Dialogue: 0,0:02:18.26,0:02:20.78,Chinese,,0,0,0,,这是非常重要的事情要知道
+Dialogue: 0,0:02:18.26,0:02:20.78,Chinese,,0,0,0,,这（机器级编程）是非常重要的事情，你要了解它
 Dialogue: 0,0:02:21.12,0:02:25.98,English,,0,0,0,,As the sort of gateway between what's how you write your programs
-Dialogue: 0,0:02:21.12,0:02:25.98,Chinese,,0,0,0,,作为你编写程序的方式之间的关系
+Dialogue: 0,0:02:21.12,0:02:25.98,Chinese,,0,0,0,,作为一个桥梁，连接你编写的程序
 Dialogue: 0,0:02:25.98,0:02:28.20,English,,0,0,0,,And C or any other language
-Dialogue: 0,0:02:25.98,0:02:28.20,Chinese,,0,0,0,,和C或任何其他语言
+Dialogue: 0,0:02:25.98,0:02:28.20,Chinese,,0,0,0,,使用 C 语言或任何其他语言
 Dialogue: 0,0:02:28.58,0:02:31.40,English,,0,0,0,,And how those programs actually execute on a machine
-Dialogue: 0,0:02:28.58,0:02:31.40,Chinese,,0,0,0,,以及这些程序如何在机器上实际执行
+Dialogue: 0,0:02:28.58,0:02:31.40,Chinese,,0,0,0,,和这些程序如何实际的在机器上运行的
 Dialogue: 0,0:02:32.08,0:02:35.30,English,,0,0,0,,So machine code is sort of the intermediate form there
 Dialogue: 0,0:02:32.08,0:02:35.30,Chinese,,0,0,0,,所以机器代码就是那种中间形式
 Dialogue: 0,0:02:35.30,0:02:39.46,English,,0,0,0,,The intermediate language and you need to understand that to understand better
@@ -102,25 +102,25 @@ Dialogue: 0,0:02:39.74,0:02:41.86,Chinese,,0,0,0,,你的程序正在尝试做什
 Dialogue: 0,0:02:42.32,0:02:44.84,English,,0,0,0,,And what the machine is trying to do
 Dialogue: 0,0:02:42.32,0:02:44.84,Chinese,,0,0,0,,机器正在尝试做什么
 Dialogue: 0,0:02:45.60,0:02:49.18,English,,0,0,0,,So as a result of that our perspective will be
-Dialogue: 0,0:02:45.60,0:02:49.18,Chinese,,0,0,0,,因此，我们的观点将是
+Dialogue: 0,0:02:45.60,0:02:49.18,Chinese,,0,0,0,,因此，我们的目标是
 Dialogue: 0,0:02:49.18,0:02:52.72,English,,0,0,0,,We won't actually write except in very very small amounts
-Dialogue: 0,0:02:49.18,0:02:52.72,Chinese,,0,0,0,,除非数量非常少，否则我们实际上不会写
+Dialogue: 0,0:02:49.18,0:02:52.72,Chinese,,0,0,0,,除非数量非常少，否则我们实际上不会写代码
 Dialogue: 0,0:02:53.22,0:02:57.32,English,,0,0,0,,We're not going to actually sit down and write assembly programs in this course
 Dialogue: 0,0:02:53.22,0:02:57.32,Chinese,,0,0,0,,我们不打算在本课程中坐下来编写汇编程序
 Dialogue: 0,0:02:57.96,0:03:01.04,English,,0,0,0,,But what you'll do is,you're going to look at a lot of code
 Dialogue: 0,0:02:57.96,0:03:01.04,Chinese,,0,0,0,,但你要做的是，你要看很多代码
-Dialogue: 0,0:03:01.38,0:03:04.38,English,,0,0,0,,That was generated by a C compiler gcc
-Dialogue: 0,0:03:01.38,0:03:04.38,Chinese,,0,0,0,,这是由C编译器gcc生成的
+Dialogue: 0,0:03:01.38,0:03:04.38,English,,0,0,0,,That was generated by a C compiler GCC
+Dialogue: 0,0:03:01.38,0:03:04.38,Chinese,,0,0,0,,这是由 C 编译器 GCC 生成的
 Dialogue: 0,0:03:05.08,0:03:11.04,English,,0,0,0,,And try to see how does that what came out of that compiler relate to what went into it
-Dialogue: 0,0:03:05.08,0:03:11.04,Chinese,,0,0,0,,并试着看看那个编译器产生的结果与进入它的内容有什么关系
+Dialogue: 0,0:03:05.08,0:03:11.04,Chinese,,0,0,0,,并试着看看那个编译器产生的结果与输入它的内容有什么关系
 Dialogue: 0,0:03:11.04,0:03:18.72,English,,0,0,0,,How does this low-level code implement the higher level constructs
-Dialogue: 0,0:03:11.04,0:03:18.72,Chinese,,0,0,0,,这个低级代码如何实现更高级别的构造
+Dialogue: 0,0:03:11.04,0:03:18.72,Chinese,,0,0,0,,低级的代码如何实现更高级别的构造
 Dialogue: 0,0:03:18.72,0:03:21.70,English,,0,0,0,,That I was trying to express my program in
-Dialogue: 0,0:03:18.72,0:03:21.70,Chinese,,0,0,0,,那是我试图表达我的节目
+Dialogue: 0,0:03:18.72,0:03:21.70,Chinese,,0,0,0,,我在程序中试图表现的
 Dialogue: 0,0:03:22.28,0:03:26.92,English,,0,0,0,,How our procedures functions implemented in machine language
-Dialogue: 0,0:03:22.28,0:03:26.92,Chinese,,0,0,0,,我们的程序如何在机器语言中实现
+Dialogue: 0,0:03:22.28,0:03:26.92,Chinese,,0,0,0,,我们的过程函数如何在机器语言中实现
 Dialogue: 0,0:03:26.92,0:03:29.91,English,,0,0,0,,How our data structures such as arrays and struts
-Dialogue: 0,0:03:26.92,0:03:29.91,Chinese,,0,0,0,,我们的数据结构如数组和struts
+Dialogue: 0,0:03:26.92,0:03:29.91,Chinese,,0,0,0,,我们的数据结构如数组和结构体
 Dialogue: 0,0:03:30.52,0:03:33.92,English,,0,0,0,,How are those implemented in machine codes
 Dialogue: 0,0:03:30.52,0:03:33.92,Chinese,,0,0,0,,这些是如何在机器代码中实现的
 Dialogue: 0,0:03:33.92,0:03:35.60,English,,0,0,0,,So we're going to learn all of that stuff
@@ -130,55 +130,55 @@ Dialogue: 0,0:03:35.96,0:03:39.14,Chinese,,0,0,0,,它占据了这个课程的很
 Dialogue: 0,0:03:39.58,0:03:42.38,English,,0,0,0,,And a fair number of lectures to get through all that material
 Dialogue: 0,0:03:39.58,0:03:42.38,Chinese,,0,0,0,,还有相当数量的讲座来完成所有这些材料
 Dialogue: 0,0:03:42.38,0:03:43.56,English,,0,0,0,,Because it's really quite a bit
-Dialogue: 0,0:03:42.38,0:03:43.56,Chinese,,0,0,0,,因为它真的很有点
+Dialogue: 0,0:03:42.38,0:03:43.56,Chinese,,0,0,0,,因为它真的很多
 Dialogue: 0,0:03:44.42,0:03:50.52,English,,0,0,0,,But I think this is sort of the core of where this course is
 Dialogue: 0,0:03:44.42,0:03:50.52,Chinese,,0,0,0,,但我认为这是本课程的核心内容
 Dialogue: 0,0:03:52.78,0:04:00.72,English,,0,0,0,,And as you know in this course we only look at one particular class of machines
 Dialogue: 0,0:03:52.78,0:04:00.72,Chinese,,0,0,0,,正如你在本课程中所知，我们只关注一类特定的机器
 Dialogue: 0,0:04:00.72,0:04:07.12,English,,0,0,0,,Even though there's many more different machine level programming possibilities out there
-Dialogue: 0,0:04:00.72,0:04:07.12,Chinese,,0,0,0,,即使有更多不同的机器级编程可能性
+Dialogue: 0,0:04:00.72,0:04:07.12,Chinese,,0,0,0,,即使有更多不同的机器级编程语言的可能性
 Dialogue: 0,0:04:07.12,0:04:12.72,English,,0,0,0,,And we've chosen the intel the 64-bit version of the intel instruction set
-Dialogue: 0,0:04:07.12,0:04:12.72,Chinese,,0,0,0,,我们选择了英特尔64位版本的intel指令集
+Dialogue: 0,0:04:07.12,0:04:12.72,Chinese,,0,0,0,,我们选择了英特尔 64 位版本的 Intel 指令集
 Dialogue: 0,0:04:13.46,0:04:18.50,English,,0,0,0,,So I'll go through a little bit of the history behind intel and how it got to where it is
-Dialogue: 0,0:04:13.46,0:04:18.50,Chinese,,0,0,0,,所以我将介绍一下英特尔背后的历史，以及它如何到达它的位置
+Dialogue: 0,0:04:13.46,0:04:18.50,Chinese,,0,0,0,,所以我将介绍一下英特尔背后的历史，以及它如何到达现在的位置
 Dialogue: 0,0:04:19.74,0:04:25.56,English,,0,0,0,,We'll look at through this idea of how does C code relate to assembly code machine code and so forth
-Dialogue: 0,0:04:19.74,0:04:25.56,Chinese,,0,0,0,,我们将通过这个想法来了解C代码如何与汇编代码机器代码相关联等等
+Dialogue: 0,0:04:19.74,0:04:25.56,Chinese,,0,0,0,,我们将通过这个想法来了解 C 代码如何与汇编代码机器代码相关联等等
 Dialogue: 0,0:04:26.36,0:04:33.94,English,,0,0,0,,We'll go through set of low-level basics that you need to understand the of what assembly code,machine code looks like
-Dialogue: 0,0:04:26.36,0:04:33.94,Chinese,,0,0,0,,我们将介绍一组低级基础知识，你需要了解哪些汇编代码，机器代码看起来像什么
+Dialogue: 0,0:04:26.36,0:04:33.94,Chinese,,0,0,0,,我们将介绍一组你需要了解的低级基础知识，机器代码看起来像什么
 Dialogue: 0,0:04:34.28,0:04:40.48,English,,0,0,0,,And then we'll actually take on and look at some real code ,focusing specifically on arithmetic operations
-Dialogue: 0,0:04:34.28,0:04:40.48,Chinese,,0,0,0,,然后我们将实际接受并查看一些真正的代码，特别关注算术运算
+Dialogue: 0,0:04:34.28,0:04:40.48,Chinese,,0,0,0,,然后我们将实际开始并查看一些真正的代码，特别关注算术运算
 Dialogue: 0,0:04:42.86,0:04:48.66,English,,0,0,0,,So x86 is sort of a colloquial term for intel processors
-Dialogue: 0,0:04:42.86,0:04:48.66,Chinese,,0,0,0,,所以x86对于英特尔处理器来说是一个口语
+Dialogue: 0,0:04:42.86,0:04:48.66,Chinese,,0,0,0,,所以 x86 对于英特尔处理器来说是一个口头的称谓
 Dialogue: 0,0:04:48.66,0:04:51.66,English,,0,0,0,,And the reason is that the first one was called the 8086
-Dialogue: 0,0:04:48.66,0:04:51.66,Chinese,,0,0,0,,原因是第一个被称为8086
-Dialogue: 0,0:04:52.80,0:04:58.65,English,,0,0,0,,And then they kind of skipped 81, but then they went to 80 to 86
-Dialogue: 0,0:04:52.80,0:04:58.65,Chinese,,0,0,0,,然后他们有点跳过了81，但随后又达到了80到86
+Dialogue: 0,0:04:48.66,0:04:51.66,Chinese,,0,0,0,,原因是第一个被称为 8086
+Dialogue: 0,0:04:52.80,0:04:58.65,English,,0,0,0,,And then they kind of skipped 81, but then they went to 8286
+Dialogue: 0,0:04:52.80,0:04:58.65,Chinese,,0,0,0,,然后他们跳过了81，随后推出了 8286
 Dialogue: 0,0:04:58.65,0:05:01.50,English,,0,0,0,,And so forth 8386
-Dialogue: 0,0:04:58.65,0:05:01.50,Chinese,,0,0,0,,等等8386
+Dialogue: 0,0:04:58.65,0:05:01.50,Chinese,,0,0,0,,、8386 等等
 Dialogue: 0,0:05:01.56,0:05:06.84,English,,0,0,0,,So the one thing in common was 86  and so people just call it x86
-Dialogue: 0,0:05:01.56,0:05:06.84,Chinese,,0,0,0,,所以共同点是86，所以人们只称它为x86
+Dialogue: 0,0:05:01.56,0:05:06.84,Chinese,,0,0,0,,所以共同点是都有 86，所以人们只称它为 x86
 Dialogue: 0,0:05:07.74,0:05:13.78,English,,0,0,0,,And one thing that's important to this and it will have influence on what the programs look like is
 Dialogue: 0,0:05:07.74,0:05:13.78,Chinese,,0,0,0,,有一点对此非常重要，它会对程序的外观产生影响
-Dialogue: 0,0:05:14.28,0:05:17.06,English,,0,0,0,,X86 is a language like english
-Dialogue: 0,0:05:14.28,0:05:17.06,Chinese,,0,0,0,,X86是一种像英语的语言
+Dialogue: 0,0:05:14.28,0:05:17.06,English,,0,0,0,,x86 is a language like english
+Dialogue: 0,0:05:14.28,0:05:17.06,Chinese,,0,0,0,,x86 是一种像英语的语言
 Dialogue: 0,0:05:17.18,0:05:24.76,English,,0,0,0,,That it's been an accrual and evolution of different features layered on top of each other
-Dialogue: 0,0:05:17.18,0:05:24.76,Chinese,,0,0,0,,它是一种应计和不同功能的演变，彼此叠加
+Dialogue: 0,0:05:17.18,0:05:24.76,Chinese,,0,0,0,,它的特性不断发展，进化，相互叠加
 Dialogue: 0,0:05:25.30,0:05:27.84,English,,0,0,0,,And not always the most elegant way
-Dialogue: 0,0:05:25.30,0:05:27.84,Chinese,,0,0,0,,并不总是最优雅的方式
+Dialogue: 0,0:05:25.30,0:05:27.84,Chinese,,0,0,0,,并不总是按照最优雅的方式
 Dialogue: 0,0:05:28.24,0:05:32.70,English,,0,0,0,,So just like english there's all these sort of quirky things
-Dialogue: 0,0:05:28.24,0:05:32.70,Chinese,,0,0,0,,所以就像英语一样，这些都是古怪的东西
+Dialogue: 0,0:05:28.24,0:05:32.70,Chinese,,0,0,0,,所以就像英语一样，有许多古怪的东西
 Dialogue: 0,0:05:32.70,0:05:35.80,English,,0,0,0,,That how you write it is very different from how you pronounce it
-Dialogue: 0,0:05:32.70,0:05:35.80,Chinese,,0,0,0,,你如何写它与你发音的方式有很大的不同
+Dialogue: 0,0:05:32.70,0:05:35.80,Chinese,,0,0,0,,写出来的方式和发音的方式不同
 Dialogue: 0,0:05:36.04,0:05:38.16,English,,0,0,0,,Then there's all these irregular cases
-Dialogue: 0,0:05:36.04,0:05:38.16,Chinese,,0,0,0,,然后是所有这些不规则的情况
+Dialogue: 0,0:05:36.04,0:05:38.16,Chinese,,0,0,0,,然后是许多不规则的情况
 Dialogue: 0,0:05:38.50,0:05:41.94,English,,0,0,0,,It doesn't make sense it's not sort of a purpose-designed language
-Dialogue: 0,0:05:38.50,0:05:41.94,Chinese,,0,0,0,,它没有意义，它不是一种专门设计的语言
+Dialogue: 0,0:05:38.50,0:05:41.94,Chinese,,0,0,0,,这些特性没有意义，它（英文）不是一种专门设计的语言
 Dialogue: 0,0:05:42.40,0:05:44.06,English,,0,0,0,,It's the same with x86
-Dialogue: 0,0:05:42.40,0:05:44.06,Chinese,,0,0,0,,它与x86相同
+Dialogue: 0,0:05:42.40,0:05:44.06,Chinese,,0,0,0,,x86 与它相同
 Dialogue: 0,0:05:44.06,0:05:46.32,English,,0,0,0,,It's a language that just got there
 Dialogue: 0,0:05:44.06,0:05:46.32,Chinese,,0,0,0,,这是一种刚刚到达那里的语言
 Dialogue: 0,0:05:46.32,0:05:50.96,English,,0,0,0,,Because of a bunch of decisions that locally were probably the right thing to do
-Dialogue: 0,0:05:46.32,0:05:50.96,Chinese,,0,0,0,,由于一系列决策在本地可能是正确的事情
+Dialogue: 0,0:05:46.32,0:05:50.96,Chinese,,0,0,0,,由于一系列公司内部认为可能是正确的决定
 Dialogue: 0,0:05:50.96,0:05:52.00,English,,0,0,0,,But globally were not
 Dialogue: 0,0:05:50.96,0:05:52.00,Chinese,,0,0,0,,但全球并非如此
 Dialogue: 0,0:05:52.52,0:05:56.36,English,,0,0,0,,There's other instruction sets that are much cleaner and easier to understand
@@ -187,66 +187,66 @@ Dialogue: 0,0:05:56.70,0:06:04.00,English,,0,0,0,,But we figure it's just the sa
 Dialogue: 0,0:05:56.70,0:06:04.00,Chinese,,0,0,0,,但我们认为这与你学习英语而不是学习世界语或类似的东西的原因相同
 Dialogue: 0,0:06:04.46,0:06:06.44,English,,0,0,0,,That it's a much more useful language
 Dialogue: 0,0:06:04.46,0:06:06.44,Chinese,,0,0,0,,这是一种更有用的语言
-Dialogue: 0,0:06:09.18,0:06:12.28,English,,0,0,0,,X86 is what sometimes was called a CISC
-Dialogue: 0,0:06:09.18,0:06:12.28,Chinese,,0,0,0,,X86有时被称为CISC
+Dialogue: 0,0:06:09.18,0:06:12.28,English,,0,0,0,,x86 is what sometimes was called a CISC
+Dialogue: 0,0:06:09.18,0:06:12.28,Chinese,,0,0,0,,x86 有时被称为 CISC
 Dialogue: 0,0:06:12.90,0:06:19.84,English,,0,0,0,,There's a big thing in the early 80s.80s in general called RISC vs. CISC
-Dialogue: 0,0:06:12.90,0:06:19.84,Chinese,,0,0,0,,在80年代早期，80年代早期的一件大事就是RISC与CISC
-Dialogue: 0,0:06:20.46,0:06:23.90,English,,0,0,0,,CISC a well risk was a relatively new idea
-Dialogue: 0,0:06:20.46,0:06:23.90,Chinese,,0,0,0,,CISC风险很大是一个相对较新的想法
+Dialogue: 0,0:06:12.90,0:06:19.84,Chinese,,0,0,0,,在 80 年代早期，80 年代又被称作 RISC vs. CISC 年代
+Dialogue: 0,0:06:20.46,0:06:23.90,English,,0,0,0,,CISC a well RISC was a relatively new idea
+Dialogue: 0,0:06:20.46,0:06:23.90,Chinese,,0,0,0,,RISC 是一个相对较新的想法
 Dialogue: 0,0:06:23.90,0:06:28.54,English,,0,0,0,,What they called a reduced instruction set computer and it was all the rage
 Dialogue: 0,0:06:23.90,0:06:28.54,Chinese,,0,0,0,,他们称之为简化指令集计算机，它风靡一时
 Dialogue: 0,0:06:28.98,0:06:31.54,English,,0,0,0,,And nobody had a name for what came before
-Dialogue: 0,0:06:28.98,0:06:31.54,Chinese,,0,0,0,,没有人知道之前的名字
+Dialogue: 0,0:06:28.98,0:06:31.54,Chinese,,0,0,0,,之前没有人给它们命名
 Dialogue: 0,0:06:31.54,0:06:35.40,English,,0,0,0,,But the RSIC people named what came before a CISC
-Dialogue: 0,0:06:31.54,0:06:35.40,Chinese,,0,0,0,,但是，RSIC人员将其命名为CISC之前的内容
+Dialogue: 0,0:06:31.54,0:06:35.40,Chinese,,0,0,0,,但是，RSIC 人员将之前的处理器称作 CISC
 Dialogue: 0,0:06:35.96,0:06:41.24,English,,0,0,0,,For complex instruction set computer with the obvious sort of pejorative nature to that title
-Dialogue: 0,0:06:35.96,0:06:41.24,Chinese,,0,0,0,,对于复杂的指令集计算机，具有明显的贬义性质
-Dialogue: 0,0:06:41.68,0:06:46.38,English,,0,0,0,,And so intel to the the classic CISC architecture
-Dialogue: 0,0:06:41.68,0:06:46.38,Chinese,,0,0,0,,所以英特尔对经典的CISC架构非常了解
-Dialogue: 0,0:06:46.38,0:06:51.68,English,,0,0,0,,Meaning it has a ton of features we're not going to even scratch the surface if you want it
-Dialogue: 0,0:06:46.38,0:06:51.68,Chinese,,0,0,0,,这意味着它有很多功能，如果你需要，我们甚至不会划伤表面
-Dialogue: 0,0:06:52.00,0:06:55.42,English,,0,0,0,,The manual for it is two big fat books
-Dialogue: 0,0:06:52.00,0:06:55.42,Chinese,,0,0,0,,它的手册是两本大书
+Dialogue: 0,0:06:35.96,0:06:41.24,Chinese,,0,0,0,,意思是复杂的指令集计算机，具有明显的贬义性质
+Dialogue: 0,0:06:41.68,0:06:46.38,English,,0,0,0,,And so intel is sort of the the classic CISC architecture
+Dialogue: 0,0:06:41.68,0:06:46.38,Chinese,,0,0,0,,英特尔使用的是经典的 CISC 架构
+Dialogue: 0,0:06:46.38,0:06:50.90,English,,0,0,0,,Meaning it has a ton of features we're not going to even scratch the surface
+Dialogue: 0,0:06:46.38,0:06:50.90,Chinese,,0,0,0,,这意味着它有很多特性，这节课的内容甚至算不上皮毛
+Dialogue: 0,0:06:51.00,0:06:55.42,English,,0,0,0,,If you want it, the manual for it is two big fat books
+Dialogue: 0,0:06:51.00,0:06:55.42,Chinese,,0,0,0,,如果你想了解更深入，它的手册是两本大书
 Dialogue: 0,0:06:56.04,0:07:00.78,English,,0,0,0,,Which nowadays you do with pdf documents but it's still a huge amount of stuff
-Dialogue: 0,0:06:56.04,0:07:00.78,Chinese,,0,0,0,,现在你使用pdf文件，但它仍然是大量的东西
+Dialogue: 0,0:06:56.04,0:07:00.78,Chinese,,0,0,0,,现在你使用 pdf 文件，但它仍然是一个庞大的东西
 Dialogue: 0,0:07:01.18,0:07:04.38,English,,0,0,0,,Some 500 or more instructions
-Dialogue: 0,0:07:01.18,0:07:04.38,Chinese,,0,0,0,,大约500条或更多说明
+Dialogue: 0,0:07:01.18,0:07:04.38,Chinese,,0,0,0,,大约 500 条或更多条指令
 Dialogue: 0,0:07:04.68,0:07:09.98,English,,0,0,0,,Everything from doing decimal arithmetic to even decimal floating point
-Dialogue: 0,0:07:04.68,0:07:09.98,Chinese,,0,0,0,,从做十进制算术到偶数十进制浮点数的一切
+Dialogue: 0,0:07:04.68,0:07:09.98,Chinese,,0,0,0,,从做十进制运算到偶数十进制浮点数的一切
 Dialogue: 0,0:07:09.98,0:07:12.14,English,,0,0,0,,And all kinds of goofy stuff in there
 Dialogue: 0,0:07:09.98,0:07:12.14,Chinese,,0,0,0,,那里有各种愚蠢的东西
 Dialogue: 0,0:07:13.38,0:07:17.24,English,,0,0,0,,But it turns out that you can kind of get a pretty good handle on it
-Dialogue: 0,0:07:13.38,0:07:17.24,Chinese,,0,0,0,,但事实证明，你可以很好地处理它
+Dialogue: 0,0:07:13.38,0:07:17.24,Chinese,,0,0,0,,但事实证明，你可以很好地把握它
 Dialogue: 0,0:07:17.24,0:07:20.84,English,,0,0,0,,By focusing more on just what does the code look like that
 Dialogue: 0,0:07:17.24,0:07:20.84,Chinese,,0,0,0,,通过更多地关注代码看起来是什么样的
 Dialogue: 0,0:07:21.08,0:07:25.46,English,,0,0,0,,GCC is generating for the kind of programs that you typically write
-Dialogue: 0,0:07:21.08,0:07:25.46,Chinese,,0,0,0,,GCC正在为你通常编写的程序生成
+Dialogue: 0,0:07:21.08,0:07:25.46,Chinese,,0,0,0,,GCC 正在为你编写的程序生成的代码
 Dialogue: 0,0:07:27.62,0:07:30.06,English,,0,0,0,,And it should also realize it
-Dialogue: 0,0:07:27.62,0:07:30.06,Chinese,,0,0,0,,它也应该意识到这一点
+Dialogue: 0,0:07:27.62,0:07:30.06,Chinese,,0,0,0,,并且应该意识到这一点
 Dialogue: 0,0:07:30.70,0:07:40.36,English,,0,0,0,,It many levels of this should not have been the successful design
-Dialogue: 0,0:07:30.70,0:07:40.36,Chinese,,0,0,0,,它的许多层面不应该是成功的设计
+Dialogue: 0,0:07:30.70,0:07:40.36,Chinese,,0,0,0,,它的许多层面没有成为成功的设计
 Dialogue: 0,0:07:40.36,0:07:43.30,English,,0,0,0,,Because as I said it's just got lots of stuff on there
 Dialogue: 0,0:07:40.36,0:07:43.30,Chinese,,0,0,0,,因为正如我所说，那里有很多东西
 Dialogue: 0,0:07:43.78,0:07:48.34,English,,0,0,0,,But intel has been such a powerful company and had so much market
 Dialogue: 0,0:07:43.78,0:07:48.34,Chinese,,0,0,0,,但英特尔一直是如此强大的公司，拥有如此多的市场
 Dialogue: 0,0:07:48.66,0:07:51.12,English,,0,0,0,,And such better technology
-Dialogue: 0,0:07:48.66,0:07:51.12,Chinese,,0,0,0,,而这种更好的技术
+Dialogue: 0,0:07:48.66,0:07:51.12,Chinese,,0,0,0,,和更好的技术
 Dialogue: 0,0:07:51.12,0:07:53.54,English,,0,0,0,,As far as semiconductors than its competitors
-Dialogue: 0,0:07:51.12,0:07:53.54,Chinese,,0,0,0,,至于半导体比其竞争对手
+Dialogue: 0,0:07:51.12,0:07:53.54,Chinese,,0,0,0,,在半导体领域和竞争对手相比
 Dialogue: 0,0:07:53.98,0:07:59.56,English,,0,0,0,,That's been able to kind of keep this thing alive for almost 40 years
-Dialogue: 0,0:07:53.98,0:07:59.56,Chinese,,0,0,0,,这已经能够让这件事保持活力近40年了
+Dialogue: 0,0:07:53.98,0:07:59.56,Chinese,,0,0,0,,英特尔在这件事方面活跃了 40 年
 Dialogue: 0,0:08:00.08,0:08:01.34,English,,0,0,0,,It's pretty admirable
 Dialogue: 0,0:08:00.08,0:08:01.34,Chinese,,0,0,0,,这非常令人钦佩
 Dialogue: 0,0:08:03.76,0:08:06.12,English,,0,0,0,,So just to give you a sort of timescale
-Dialogue: 0,0:08:03.76,0:08:06.12,Chinese,,0,0,0,,所以只是给你一种时间表
+Dialogue: 0,0:08:03.76,0:08:06.12,Chinese,,0,0,0,,接下来给你们展示的是历史时间表
 Dialogue: 0,0:08:06.12,0:08:09.30,English,,0,0,0,,As I mentioned the 8086 was the first
-Dialogue: 0,0:08:06.12,0:08:09.30,Chinese,,0,0,0,,正如我提到的那样，8086是第一个
+Dialogue: 0,0:08:06.12,0:08:09.30,Chinese,,0,0,0,,正如我提到的那样，8086 是第一个
 Dialogue: 0,0:08:09.30,0:08:15.10,English,,0,0,0,,One of the first single chip 16-bit microprocessors  came out in (19)78
-Dialogue: 0,0:08:09.30,0:08:15.10,Chinese,,0,0,0,,第一个单芯片16位微处理器之一出现在（19）78
+Dialogue: 0,0:08:09.30,0:08:15.10,Chinese,,0,0,0,,第一个单芯片 16 位微处理器之一出现在（19）78
 Dialogue: 0,0:08:15.48,0:08:20.76,English,,0,0,0,,And it a slight variation on it was a very basis for the original IBM pc
-Dialogue: 0,0:08:15.48,0:08:20.76,Chinese,,0,0,0,,它略有不同，是原始IBM电脑的基础
+Dialogue: 0,0:08:15.48,0:08:20.76,Chinese,,0,0,0,,它被稍微修改，成为了原始 IBM 电脑的基础
 Dialogue: 0,0:08:20.78,0:08:24.96,English,,0,0,0,,Which I know predates most of you your lives
-Dialogue: 0,0:08:20.78,0:08:24.96,Chinese,,0,0,0,,我所知道的大多数人都是你的生命
+Dialogue: 0,0:08:20.78,0:08:24.96,Chinese,,0,0,0,,我所知道比你们大多数人的出生都要早
 Dialogue: 0,0:08:24.96,0:08:33.30,English,,0,0,0,,But it was sort of a the the big breakthrough that put computers on the desktops of many people
 Dialogue: 0,0:08:24.96,0:08:33.30,Chinese,,0,0,0,,但这是将计算机放在许多人桌面上的重大突破
 Dialogue: 0,0:08:35.08,0:08:41.30,English,,0,0,0,,And there's been many many generations I'm just giving you the highlights relevant to this particular class
