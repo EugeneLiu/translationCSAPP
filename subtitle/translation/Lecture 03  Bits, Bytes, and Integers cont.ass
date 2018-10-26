@@ -395,21 +395,21 @@ Dialogue: 0,0:18:29.40,0:18:30.84,English,,0,0,0,,Because we throwing this away
 Dialogue: 0,0:18:29.40,0:18:30.84,Chinese,,0,0,0,,因为我们把这些扔了
 ------------------
 Dialogue: 0,0:18:31.34,0:18:41.64,English,,0,0,0,,But if we did 5*5 as we saw before that's represented like this
-Dialogue: 0,0:18:31.34,0:18:41.64,Chinese,,0,0,0,,但是，如果我们做像之前那样的5 * 5
+Dialogue: 0,0:18:31.34,0:18:41.64,Chinese,,0,0,0,,但是，如果我们算5 * 5
 Dialogue: 0,0:18:50.22,0:18:51.38,English,,0,0,0,,And that's sum...
 Dialogue: 0,0:18:50.22,0:18:51.38,Chinese,,0,0,0,,总和......
 Dialogue: 0,0:18:52.72,0:18:54.08,English,,0,0,0,, Now becomes...
 Dialogue: 0,0:18:52.72,0:18:54.08,Chinese,,0,0,0,,现在变成......
 Dialogue: 0,0:18:54.28,0:18:55.64,English,,0,0,0,,So we're throwing away this
-Dialogue: 0,0:18:54.28,0:18:55.64,Chinese,,0,0,0,,我们扔掉了这个
+Dialogue: 0,0:18:54.28,0:18:55.64,Chinese,,0,0,0,,我们扔掉了这些
 Dialogue: 0,0:18:56.08,0:19:02.08,English,,0,0,0,,And this becomes our sign bit so the result is a -8 + 1= -7
-Dialogue: 0,0:18:56.08,0:19:02.08,Chinese,,0,0,0,,这成为我们的符号位，因此结果为-8 + 1 = -7
+Dialogue: 0,0:18:56.08,0:19:02.08,Chinese,,0,0,0,,这个成为我们的符号位，因此结果为-8 + 1 = -7
 Dialogue: 0,0:19:05.70,0:19:11.60,English,,0,0,0,,So you see this is a similar to an example we showed at the beginning of the first lecture
-Dialogue: 0,0:19:05.70,0:19:11.60,Chinese,,0,0,0,,所以你看到的与我们在第一堂课开始时展示的例子类似
+Dialogue: 0,0:19:05.70,0:19:11.60,Chinese,,0,0,0,,你看这与我们在第一堂课开始时展示的例子类似
 Dialogue: 0,0:19:11.62,0:19:16.18,English,,0,0,0,,You can have two positive numbers and multiply them and get a negative result
 Dialogue: 0,0:19:11.62,0:19:16.18,Chinese,,0,0,0,,你有两个正数并将它们相乘得到负的结果
 Dialogue: 0,0:19:18.08,0:19:20.94,English,,0,0,0,,Because of the sort of quirks of this overflow
-Dialogue: 0,0:19:18.08,0:19:20.94,Chinese,,0,0,0,,因为这种溢出的诡异现象
+Dialogue: 0,0:19:18.08,0:19:20.94,Chinese,,0,0,0,,因为溢出这种诡异的现象
 Dialogue: 0,0:19:20.94,0:19:21.66,English,,0,0,0,, Question that
 Dialogue: 0,0:19:20.94,0:19:21.66,Chinese,,0,0,0,,开始提问
 Dialogue: 0,0:19:21.66,0:19:23.66,English,,0,0,0,,[student speaking]
@@ -421,9 +421,9 @@ Dialogue: 0,0:19:28.04,0:19:30.38,Chinese,,0,0,0,,[学生说话]
 Dialogue: 0,0:19:30.38,0:19:34.68,English,,0,0,0,,Yeah if you want to you know you start with the two numbers
 Dialogue: 0,0:19:30.38,0:19:34.68,Chinese,,0,0,0,,是的，如果你想知道，你从这两个数字开始
 Dialogue: 0,0:19:36.82,0:19:40.62,English,,0,0,0,,I'm not going to do well actually this one's an easy one there's a trick for this
-Dialogue: 0,0:19:36.82,0:19:40.62,Chinese,,0,0,0,,我做得不是很好，这个就挺容易的了
+Dialogue: 0,0:19:36.82,0:19:40.62,Chinese,,0,0,0,,我做得不是很好，不过这个挺容易的
 Dialogue: 0,0:19:41.20,0:19:44.00,English,,0,0,0,,If you want to know multiply a number by a power-of-2
-Dialogue: 0,0:19:41.20,0:19:44.00,Chinese,,0,0,0,,如果你想知道一个数乘以2的幂会发生什么
+Dialogue: 0,0:19:41.20,0:19:44.00,Chinese,,0,0,0,,如果你想知道怎么计算一个数乘2的幂
 Dialogue: 0,0:19:44.50,0:19:49.94,English,,0,0,0,,We're going to show that later you just shift it left by two positions
 Dialogue: 0,0:19:44.50,0:19:49.94,Chinese,,0,0,0,,我们以后将证明你只需将它左移两个位置
 Dialogue: 0,0:19:54.92,0:19:56.22,English,,0,0,0,, So that one's an easy one
@@ -443,61 +443,61 @@ Dialogue: 0,0:20:33.10,0:20:38.74,Chinese,,0,0,0,,但如果数字可以用低位
 Dialogue: 0,0:20:38.74,0:20:41.64,English,,0,0,0,,So let me just demonstrate to that to you
 Dialogue: 0,0:20:38.74,0:20:41.64,Chinese,,0,0,0,,所以，让我向你们展示一下
 Dialogue: 0,0:20:45.26,0:20:47.32,English,,0,0,0,, So this is -3
-Dialogue: 0,0:20:45.26,0:20:47.32,Chinese,,0,0,0,,所以这是-3
+Dialogue: 0,0:20:45.26,0:20:47.32,Chinese,,0,0,0,,这是-3
 Dialogue: 0,0:20:48.18,0:20:53.40,English,,0,0,0,,But you remember that this is equivalent to 13 as an unsigned number
 Dialogue: 0,0:20:48.18,0:20:53.40,Chinese,,0,0,0,,但作为无符号数时这是13
 Dialogue: 0,0:20:54.78,0:21:05.78,English,,0,0,0,,And this is -2 which is equivalent to 14 as an unsigned number
 Dialogue: 0,0:20:54.78,0:21:05.78,Chinese,,0,0,0,,这是-2，作为无符号数时它等于14
 Dialogue: 0,0:21:06.78,0:21:13.54,English,,0,0,0,,So now if we multiply 13*14, you get 182
-Dialogue: 0,0:21:06.78,0:21:13.54,Chinese,,0,0,0,,所以如果我们做13 * 14，你就会得到182
+Dialogue: 0,0:21:06.78,0:21:13.54,Chinese,,0,0,0,,所以如果我们算13 * 14，会得到182
 Dialogue: 0,0:21:15.24,0:21:18.60,English,,0,0,0,, And that has a hex representation of 0xb6
-Dialogue: 0,0:21:15.24,0:21:18.60,Chinese,,0,0,0,,并且它的十六进制表示是0xb6
+Dialogue: 0,0:21:15.24,0:21:18.60,Chinese,,0,0,0,,它的十六进制表示是0xb6
 Dialogue: 0,0:21:28.76,0:21:34.24,English,,0,0,0,,And so just looking at the low-order for bits are 0110 is 6
 Dialogue: 0,0:21:28.76,0:21:34.24,Chinese,,0,0,0,,因此，仅看低位0110它是6
 Dialogue: 0,0:21:34.90,0:21:39.44,English,,0,0,0,,And indeed that's -3*-2 is 6
-Dialogue: 0,0:21:34.90,0:21:39.44,Chinese,,0,0,0,,事实上，-3 * -2是6
+Dialogue: 0,0:21:34.90,0:21:39.44,Chinese,,0,0,0,,事实上，-3 * -2就是6
 Dialogue: 0,0:21:39.72,0:21:43.98,English,,0,0,0,,So the point being oh and I'm waving my hands here
 Dialogue: 0,0:21:39.72,0:21:43.98,Chinese,,0,0,0,,我挥手的地方是重点
 Dialogue: 0,0:21:43.98,0:21:46.60,English,,0,0,0,,Because I don't want to go through all the details
 Dialogue: 0,0:21:43.98,0:21:46.60,Chinese,,0,0,0,,因为我不想详细介绍所有细节
 Dialogue: 0,0:21:46.92,0:21:50.80,English,,0,0,0,,But two's complement multiplication also gives you
-Dialogue: 0,0:21:46.92,0:21:50.80,Chinese,,0,0,0,,但是这补码乘法也给你一点想法
+Dialogue: 0,0:21:46.92,0:21:50.80,Chinese,,0,0,0,,但是补码乘法也能给你一些启发
 Dialogue: 0,0:21:51.88,0:21:54.70,English,,0,0,0,,If you can do it using the exact same rules
-Dialogue: 0,0:21:51.88,0:21:54.70,Chinese,,0,0,0,,你可以使用完全相同的规则
+Dialogue: 0,0:21:51.88,0:21:54.70,Chinese,,0,0,0,,你可以使用与无符号数乘法
 Dialogue: 0,0:21:55.48,0:21:59.39,English,,0,0,0,, And as you do for unsigned multiplication the exact same hardware
-Dialogue: 0,0:21:55.48,0:21:59.39,Chinese,,0,0,0,,正如你对无符号乘法所做的那样，完全相同的硬件
+Dialogue: 0,0:21:55.48,0:21:59.39,Chinese,,0,0,0,完全相同的规则，完全相同的硬件
 Dialogue: 0,0:21:59.74,0:22:04.88,English,,0,0,0,,I should mention that and there are instructions in the computer
-Dialogue: 0,0:21:59.74,0:22:04.88,Chinese,,0,0,0,,我应该提一下，计算机中有说明
+Dialogue: 0,0:21:59.74,0:22:04.88,Chinese,,0,0,0,,我应该提一下，计算机中有一些指令
 Dialogue: 0,0:22:04.88,0:22:09.10,English,,0,0,0,,In ways that you can get the upper word of a multiplication too
-Dialogue: 0,0:22:04.88,0:22:09.10,Chinese,,0,0,0,,通过这种方式，你也可以获得乘积的高位
+Dialogue: 0,0:22:04.88,0:22:09.10,Chinese,,0,0,0,,通过它们可以获得乘积的高位
 Dialogue: 0,0:22:09.50,0:22:12.70,English,,0,0,0,,And those the bit patterns are different depending on whether
-Dialogue: 0,0:22:09.50,0:22:12.70,Chinese,,0,0,0,,这些位模式是不同的通过
+Dialogue: 0,0:22:09.50,0:22:12.70,Chinese,,0,0,0,,这时位模式是不统一的
 Dialogue: 0,0:22:13.72,0:22:16.46,English,,0,0,0,,it's treated as a two's complement number versus unsigned
-Dialogue: 0,0:22:13.72,0:22:16.46,Chinese,,0,0,0,,被看作是二进制补码或无符号整数
+Dialogue: 0,0:22:13.72,0:22:16.46,Chinese,,0,0,0,,它取决于这个数是二进制补码还是无符号整数
 Dialogue: 0,0:22:16.46,0:22:20.64,English,,0,0,0,,So these typically different instructions for doing that computation
-Dialogue: 0,0:22:16.46,0:22:20.64,Chinese,,0,0,0,,所以表示这个乘积有不同的表示法
+Dialogue: 0,0:22:16.46,0:22:20.64,Chinese,,0,0,0,,此时对于这些运算它会有不同的指令
 Dialogue: 0,0:22:20.94,0:22:27.72,English,,0,0,0,, But 99% of the time or more you just are looking at this lower part of the product
-Dialogue: 0,0:22:20.94,0:22:27.72,Chinese,,0,0,0,,但是99％的时间或者更多你只是在看这个乘积的低位
+Dialogue: 0,0:22:20.94,0:22:27.72,Chinese,,0,0,0,,但是99％以上的时候你只需要看乘积的低位
 Dialogue: 0,0:22:27.72,0:22:31.36,English,,0,0,0,,And that's the same whether it's a two's complement or an unsigned
 Dialogue: 0,0:22:27.72,0:22:31.36,Chinese,,0,0,0,,无论是补码还是无符号数都是一样的
 Dialogue: 0,0:22:33.42,0:22:38.12,English,,0,0,0,, And it handles negative numbers positive but it has these overflow characteristics
 Dialogue: 0,0:22:33.42,0:22:38.12,Chinese,,0,0,0,,它把负数变成正数，但它具有这些溢出特征
 Dialogue: 0,0:22:43.42,0:22:50.38,English,,0,0,0,,So as I was talking about there's a trick we can do for multiplying by a power-of-2
-Dialogue: 0,0:22:43.42,0:22:50.38,Chinese,,0,0,0,,当我在谈论乘以２的幂的技巧时
+Dialogue: 0,0:22:43.42,0:22:50.38,Chinese,,0,0,0,,再比如我刚才说的乘以２的幂的技巧
 Dialogue: 0,0:22:50.80,0:22:52.98,English,,0,0,0,,Which is just to shift the number to the left
-Dialogue: 0,0:22:50.80,0:22:52.98,Chinese,,0,0,0,,这只是将数字向左移动
+Dialogue: 0,0:22:50.80,0:22:52.98,Chinese,,0,0,0,,只要将数字向左移动就可以了
 Dialogue: 0,0:22:53.32,0:22:56.42,English,,0,0,0,,And you'll often see that when you have in your code
-Dialogue: 0,0:22:53.32,0:22:56.42,Chinese,,0,0,0,,当你看你的代码时，你会经常看到这个操作
+Dialogue: 0,0:22:53.32,0:22:56.42,Chinese,,0,0,0,,当你看代码时，你会经常看到这钟操作
 Dialogue: 0,0:22:56.76,0:23:01.16,English,,0,0,0,, I want to multiply some number by 4 you'll write it in your C code
-Dialogue: 0,0:22:56.76,0:23:01.16,Chinese,,0,0,0,,我想将一些数字乘以4，你将它写在你的C代码中
+Dialogue: 0,0:22:56.76,0:23:01.16,Chinese,,0,0,0,,比如我想将一些数字乘以4，在C代码中
 Dialogue: 0,0:23:01.44,0:23:04.12,English,,0,0,0,,If you look at the assembly code you'll see that what
 Dialogue: 0,0:23:01.44,0:23:04.12,Chinese,,0,0,0,,如果你看看汇编代码，你会看到
 Dialogue: 0,0:23:04.18,0:23:08.42,English,,0,0,0,,The compiler generated is just says oh just shift it left by 2
-Dialogue: 0,0:23:04.18,0:23:08.42,Chinese,,0,0,0,,编译器就会说哦，只需将它向左移2
+Dialogue: 0,0:23:04.18,0:23:08.42,Chinese,,0,0,0,,编译器就会说哦，只需将它向左移2位
 Dialogue: 0,0:23:09.22,0:23:11.98,English,,0,0,0,,So in general and you could see why this is true
 Dialogue: 0,0:23:09.22,0:23:11.98,Chinese,,0,0,0,,你可以看出为什么这是对的
 Dialogue: 0,0:23:11.98,0:23:34.04,English,,0,0,0,,By the way if you think of the number as the sum of the bits
-Dialogue: 0,0:23:11.98,0:23:34.04,Chinese,,0,0,0,,通过认为乘积是和
+Dialogue: 0,0:23:11.98,0:23:34.04,Chinese,,0,0,0,,如果我们把乘积看做各位之和
 Dialogue: 0,0:23:34.04,0:23:38.32,English,,0,0,0,,Where X sub I is the if--but and X is the number it represents
 Dialogue: 0,0:23:34.04,0:23:38.32,Chinese,,0,0,0,,其中２的Ｉ次幂是位代表的数，X是位上的数字
 Dialogue: 0,0:23:38.88,0:23:43.92,English,,0,0,0,,If I want to if I shift everything left by 2
