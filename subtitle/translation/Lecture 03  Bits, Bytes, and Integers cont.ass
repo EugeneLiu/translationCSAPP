@@ -498,8 +498,8 @@ Dialogue: 0,0:23:09.22,0:23:11.98,English,,0,0,0,,So in general and you could se
 Dialogue: 0,0:23:09.22,0:23:11.98,Chinese,,0,0,0,,你可以看出为什么这是对的
 Dialogue: 0,0:23:11.98,0:23:34.04,English,,0,0,0,,By the way if you think of the number as the sum of the bits
 Dialogue: 0,0:23:11.98,0:23:34.04,Chinese,,0,0,0,,如果我们把乘积看做各位之和
-Dialogue: 0,0:23:34.04,0:23:38.32,English,,0,0,0,,Where X sub I is the if--but and X is the number it represents
-Dialogue: 0,0:23:34.04,0:23:38.32,Chinese,,0,0,0,,其中２的Ｉ次幂是位代表的数，X是位上的数字
+Dialogue: 0,0:23:34.04,0:23:38.32,English,,0,0,0,,Where X sub I is the i-th bit and X is the number it represents
+Dialogue: 0,0:23:34.04,0:23:38.32,Chinese,,0,0,0,,其中Xi是每一位上的数字，X是这个数整体
 Dialogue: 0,0:23:38.88,0:23:43.92,English,,0,0,0,,If I want to if I shift everything left by 2
 Dialogue: 0,0:23:38.88,0:23:43.92,Chinese,,0,0,0,,如果我把所有数字都向左移２位
 Dialogue: 0,0:23:44.12,0:23:50.30,English,,0,0,0,,What I'm effectively doing is increasing their weight by that number of positions
@@ -507,7 +507,7 @@ Dialogue: 0,0:23:44.12,0:23:50.30,Chinese,,0,0,0,,我实际上做的是增加他
 Dialogue: 0,0:23:51.16,0:23:55.98,English,,0,0,0,,So let's just shift by one if I shift everything to the left by one
 Dialogue: 0,0:23:51.16,0:23:55.98,Chinese,,0,0,0,,如果我将数向左移一位，就是把所有的数字一个一个地向左移
 Dialogue: 0,0:24:01.26,0:24:05.90,English,,0,0,0,,Which we write like this and see two left two less symbols
-Dialogue: 0,0:24:01.26,0:24:05.90,Chinese,,0,0,0,,我们这样写，看到它就是乘了一个２
+Dialogue: 0,0:24:01.26,0:24:05.90,Chinese,,0,0,0,,这样写，2个小于号
 Dialogue: 0,0:24:10.36,0:24:15.72,English,,0,0,0,,It's like taking that sum but now weighting the bits by two to the i+1 by one more
 Dialogue: 0,0:24:10.36,0:24:15.72,Chinese,,0,0,0,,看这个乘积，就是将原来的权重变成i + 1
 Dialogue: 0,0:24:16.12,0:24:20.90,English,,0,0,0,,And of cause that's equal to twice what the original sum was
@@ -517,21 +517,21 @@ Dialogue: 0,0:24:23.72,0:24:25.12,Chinese,,0,0,0,,我们乘上了2
 Dialogue: 0,0:24:27.48,0:24:34.88,English,,0,0,0,,And that works also even if you shift things
 Dialogue: 0,0:24:27.48,0:24:34.88,Chinese,,0,0,0,,即使你移别的数字，这也有效
 Dialogue: 0,0:24:35.06,0:24:38.62,English,,0,0,0,,So that you lose some bits right they they shift off to the left
-Dialogue: 0,0:24:35.06,0:24:38.62,Chinese,,0,0,0,,但你可能失去正确值，因为他们会向左移动
+Dialogue: 0,0:24:35.06,0:24:38.62,Chinese,,0,0,0,,但你可能丢失一些位，对吧，因为它们左移了
 Dialogue: 0,0:24:39.10,0:24:45.58,English,,0,0,0,,All you're doing is the way multiplication works anyhow of truncating to w bit product
 Dialogue: 0,0:24:39.10,0:24:45.58,Chinese,,0,0,0,,你要做的是把乘积截断到w位
 Dialogue: 0,0:24:45.76,0:24:52.64,English,,0,0,0,,So you'll see this as I mentioned quite often in in compiled code machine level code
-Dialogue: 0,0:24:45.76,0:24:52.64,Chinese,,0,0,0,,以后，我会在编译后的机器级代码中经常提到这一点
+Dialogue: 0,0:24:45.76,0:24:52.64,Chinese,,0,0,0,,现在你明白我在编译后的机器级代码中经常提到的这一点
 Dialogue: 0,0:24:52.64,0:24:56.70,English,,0,0,0,,That they're doing shifts where you might expect them to be doing multiplications
 Dialogue: 0,0:24:52.64,0:24:56.70,Chinese,,0,0,0,,当你希望做乘法时，编译器可能会解释为移位
 Dialogue: 0,0:24:57.14,0:25:05.12,English,,0,0,0,,And the reason for that as an optimization is historically the multiplication instruction took a lot longer than a shift instruction
 Dialogue: 0,0:24:57.14,0:25:05.12,Chinese,,0,0,0,,而这样优化的原因在于乘法指令比起移位指令会花更长的时间
 Dialogue: 0,0:25:05.80,0:25:09.00,English,,0,0,0,,Say one clock cycle to do a shift
-Dialogue: 0,0:25:05.80,0:25:09.00,Chinese,,0,0,0,,比如一个时钟周期做一次移位
+Dialogue: 0,0:25:05.80,0:25:09.00,Chinese,,0,0,0,,比如做一次移位需要一个时钟周期
 Dialogue: 0,0:25:09.54,0:25:15.60,English,,0,0,0,,And it used to be like 11,12,13 clock cycles to do a multiplication
-Dialogue: 0,0:25:09.54,0:25:15.60,Chinese,,0,0,0,,乘法运算却需要11，12，13个时钟周期
+Dialogue: 0,0:25:09.54,0:25:15.60,Chinese,,0,0,0,,乘法运算却曾需要11，12，13个时钟周期
 Dialogue: 0,0:25:15.92,0:25:18.46,English,,0,0,0,,Nowadays like on computers
-Dialogue: 0,0:25:15.92,0:25:18.46,Chinese,,0,0,0,,像在现代计算机上
+Dialogue: 0,0:25:15.92,0:25:18.46,Chinese,,0,0,0,,在现代计算机上
 Dialogue: 0,0:25:20.28,0:25:24.44,English,,0,0,0,,We use the shark machines it only takes three clock cycles to do multiplication
 Dialogue: 0,0:25:20.28,0:25:24.44,Chinese,,0,0,0,,我们只需要三个时钟周期来进行乘法运算
 Dialogue: 0,0:25:24.44,0:25:27.46,English,,0,0,0,,Because they added a lot of hardware to do that
@@ -539,13 +539,13 @@ Dialogue: 0,0:25:24.44,0:25:27.46,Chinese,,0,0,0,,因为他们添加了很多硬
 Dialogue: 0,0:25:27.96,0:25:31.78,English,,0,0,0,,But three clock cycles is still more time than one
 Dialogue: 0,0:25:27.96,0:25:31.78,Chinese,,0,0,0,,但是三个时钟周期仍然比一个时钟周期更长
 Dialogue: 0,0:25:32.18,0:25:36.42,English,,0,0,0,,And so when you can get away with a shift it's generally a better idea
-Dialogue: 0,0:25:32.18,0:25:36.42,Chinese,,0,0,0,,因此，当你能够用移位运算符时，通常是一个更好的主意
+Dialogue: 0,0:25:32.18,0:25:36.42,Chinese,,0,0,0,,因此，当你能够用移位运算来替换时时，通常会更好
 Dialogue: 0,0:25:36.42,0:25:41.20,English,,0,0,0,,And the compiler has its own kind of judgment calls on
-Dialogue: 0,0:25:36.42,0:25:41.20,Chinese,,0,0,0,,编译器有自己的判断关于
+Dialogue: 0,0:25:36.42,0:25:41.20,Chinese,,0,0,0,,编译器会自己判断
 Dialogue: 0,0:25:41.20,0:25:46.36,English,,0,0,0,,When is it more efficient to substitute one up for another
 Dialogue: 0,0:25:41.20,0:25:46.36,Chinese,,0,0,0,,何时执行替换会更有效
 Dialogue: 0,0:25:51.36,0:25:53.54,English,,0,0,0,, Did we, did I lose ground here?
-Dialogue: 0,0:25:51.36,0:25:53.54,Chinese,,0,0,0,,我搞错了吗
+Dialogue: 0,0:25:51.36,0:25:53.54,Chinese,,0,0,0,,我翻错了吗
 Dialogue: 0,0:26:00.74,0:26:10.14,English,,0,0,0,, Okay so the idea that if we want to multiply something by 2^k
 Dialogue: 0,0:26:00.74,0:26:10.14,Chinese,,0,0,0,,好吧，如果我们想要将数字乘以2 ^ k
 Dialogue: 0,0:26:10.44,0:26:12.58,English,,0,0,0,,We just shift it left by k bit
@@ -553,15 +553,15 @@ Dialogue: 0,0:26:10.44,0:26:12.58,Chinese,,0,0,0,,我们只需将它左移k位
 Dialogue: 0,0:26:19.04,0:26:24.78,English,,0,0,0,, It turns out that the same almost works for dividing by 2 as well
 Dialogue: 0,0:26:19.04,0:26:24.78,Chinese,,0,0,0,,事实上，除以2也可以这样做
 Dialogue: 0,0:26:24.80,0:26:32.98,English,,0,0,0,,That if you want to divide something by a power-of-2 you can shift it right by this in the same general
-Dialogue: 0,0:26:24.80,0:26:32.98,Chinese,,0,0,0,,如果你想用某个数字除以2的幂，你可以右移数字用同样的方式
+Dialogue: 0,0:26:24.80,0:26:32.98,Chinese,,0,0,0,,如果你想用某个数字除以2的幂，你可以用同样的方法右移数字
 Dialogue: 0,0:26:33.52,0:26:36.56,English,,0,0,0,,The only thing that becomes a little bit quirky is
 Dialogue: 0,0:26:33.52,0:26:36.56,Chinese,,0,0,0,,唯一变得有点奇怪的是
 Dialogue: 0,0:26:36.92,0:26:42.12,English,,0,0,0,,Well what if the number you have is not actually divisible by that power-of-2
-Dialogue: 0,0:26:36.92,0:26:42.12,Chinese,,0,0,0,,如果你写出的数字实际上不能被2的幂整除
+Dialogue: 0,0:26:36.92,0:26:42.12,Chinese,,0,0,0,,如果你的数字实际上不能被2的幂整除
 Dialogue: 0,0:26:51.36,0:26:55.02,English,,0,0,0,,So for example if we had the number 01
 Dialogue: 0,0:26:51.36,0:26:55.02,Chinese,,0,0,0,,例如，如果我们有数字01
 Dialogue: 0,0:26:58.14,0:27:01.58,English,,0,0,0,,I want. I'm going to use this
-Dialogue: 0,0:26:58.14,0:27:01.58,Chinese,,0,0,0,,我打算用这个
+Dialogue: 0,0:26:58.14,0:27:01.58,Chinese,,0,0,0,,我打算用这个数
 Dialogue: 0,0:27:07.48,0:27:09.74,English,,0,0,0,,Yeah so that's 6
 Dialogue: 0,0:27:07.48,0:27:09.74,Chinese,,0,0,0,,是的，这是6
 Dialogue: 0,0:27:10.90,0:27:17.46,English,,0,0,0,,So if we shift it right by one we'll get 0010
@@ -569,7 +569,7 @@ Dialogue: 0,0:27:10.90,0:27:17.46,Chinese,,0,0,0,,因此，如果我们将它右
 Dialogue: 0,0:27:19.88,0:27:21.26,English,,0,0,0,, (00)11 thank you
 Dialogue: 0,0:27:19.88,0:27:21.26,Chinese,,0,0,0,,（00）11谢谢你
 Dialogue: 0,0:27:22.12,0:27:26.06,English,,0,0,0,,Which is 3 and that's 6/3=2
-Dialogue: 0,0:27:22.12,0:27:26.06,Chinese,,0,0,0,,这是3，那是6/3 = 2
+Dialogue: 0,0:27:22.12,0:27:26.06,Chinese,,0,0,0,,这是3，6/3 = 2
 Dialogue: 0,0:27:26.28,0:27:27.76,English,,0,0,0,, If we shift that again
 Dialogue: 0,0:27:26.28,0:27:27.76,Chinese,,0,0,0,,如果我们再次移位它
 Dialogue: 0,0:27:32.10,0:27:37.78,English,,0,0,0,,We'll get 1.But of cause you know that three-halves or 1.5
@@ -577,9 +577,9 @@ Dialogue: 0,0:27:32.10,0:27:37.78,Chinese,,0,0,0,,我们会得到1.但是结果�
 Dialogue: 0,0:27:39.24,0:27:46.08,English,,0,0,0,,The rule on integer division is you round it down round it toward 0
 Dialogue: 0,0:27:39.24,0:27:46.08,Chinese,,0,0,0,,整数除法的规则是将它向０向下舍入
 Dialogue: 0,0:27:47.40,0:27:49.96,English,,0,0,0,,And so that goes to 1 so
-Dialogue: 0,0:27:47.40,0:27:49.96,Chinese,,0,0,0,,所以这应该是1
+Dialogue: 0,0:27:47.40,0:27:49.96,Chinese,,0,0,0,,所以就应该是1
 Dialogue: 0,0:27:50.90,0:27:54.40,English,,0,0,0,,This is what the unsigned case works fine
-Dialogue: 0,0:27:50.90,0:27:54.40,Chinese,,0,0,0,,这是无符号整数正常工作的情况
+Dialogue: 0,0:27:50.90,0:27:54.40,Chinese,,0,0,0,,这是无符号整数情况，一切正常
 Dialogue: 0,0:27:55.30,0:28:00.80,English,,0,0,0,, The signed case which I don't have a slide for
 Dialogue: 0,0:27:55.30,0:28:00.80,Chinese,,0,0,0,,补码的情况，我没有幻灯片
 Dialogue: 0,0:28:05.84,0:28:09.80,English,,0,0,0,, Is a little bit less of pretty
@@ -591,7 +591,7 @@ Dialogue: 0,0:28:18.44,0:28:20.20,Chinese,,0,0,0,,就像无符号整数的一样
 Dialogue: 0,0:28:20.34,0:28:28.08,English,,0,0,0,,But let's take a number that is negative
 Dialogue: 0,0:28:20.34,0:28:28.08,Chinese,,0,0,0,,但是，当我们用一个负数时
 Dialogue: 0,0:28:28.52,0:28:34.70,English,,0,0,0,,So this is -6 right
-Dialogue: 0,0:28:28.52,0:28:34.70,Chinese,,0,0,0,,所以这是-6
+Dialogue: 0,0:28:28.52,0:28:34.70,Chinese,,0,0,0,,这是-6
 Dialogue: 0,0:28:34.82,0:28:40.42,English,,0,0,0,,Now here's where remember I told you in the previous lecture
 Dialogue: 0,0:28:34.82,0:28:40.42,Chinese,,0,0,0,,这里我记得在上一堂课中告诉过你们
 Dialogue: 0,0:28:40.42,0:28:45.80,English,,0,0,0,, There's two ways to do shifting there is logical shifting where you fill in with 0
@@ -617,9 +617,9 @@ Dialogue: 0,0:29:28.84,0:29:31.32,Chinese,,0,0,0,,但现在如果我们再次使
 Dialogue: 0,0:29:34.44,0:29:42.24,English,,0,0,0,, We will get what? -２
 Dialogue: 0,0:29:34.44,0:29:42.24,Chinese,,0,0,0,,我们会得到什么？ -2
 Dialogue: 0,0:29:42.64,0:29:46.52,English,,0,0,0,,I can see you guys need to know how to negate numbers right
-Dialogue: 0,0:29:42.64,0:29:46.52,Chinese,,0,0,0,,我可以看到你们想知道如何正确的对负数执行运算
+Dialogue: 0,0:29:42.64,0:29:46.52,Chinese,,0,0,0,,我明白你们想知道如何正确的对负数执行运算
 Dialogue: 0,0:29:46.52,0:29:49.46,English,,0,0,0,,You don't know that so I'll show you in a second
-Dialogue: 0,0:29:46.52,0:29:49.46,Chinese,,0,0,0,,你不知道，所以我会在一秒钟内告诉你
+Dialogue: 0,0:29:46.52,0:29:49.46,Chinese,,0,0,0,,你不知道，所以我会马上告诉你
 Dialogue: 0,0:29:50.02,0:29:53.94,English,,0,0,0,,So here is a little bit problematic that we shifted
 Dialogue: 0,0:29:50.02,0:29:53.94,Chinese,,0,0,0,,这里的移位出了一点问题
 Dialogue: 0,0:29:54.88,0:29:56.86,English,,0,0,0,,We want to divide by two
@@ -629,7 +629,7 @@ Dialogue: 0,0:29:58.08,0:30:01.76,Chinese,,0,0,0,,规则应该是相同的，你
 Dialogue: 0,0:30:02.10,0:30:04.86,English,,0,0,0,,And what this is doing is it's rounding toward
 Dialogue: 0,0:30:02.10,0:30:04.86,Chinese,,0,0,0,,而它正在做的是向
 Dialogue: 0,0:30:05.32,0:30:11.04,English,,0,0,0,,Minus infinity it's rounding toward a more negative number than the the true thing
-Dialogue: 0,0:30:05.32,0:30:11.04,Chinese,,0,0,0,,负无穷舍入，它向一个比真的结果更小的数舍入
+Dialogue: 0,0:30:05.32,0:30:11.04,Chinese,,0,0,0,,负无穷舍入，它向一个比真实结果更小的数舍入
 Dialogue: 0,0:30:12.76,0:30:15.10,English,,0,0,0,,And so there's a little cute little trick
 Dialogue: 0,0:30:12.76,0:30:15.10,Chinese,,0,0,0,,所以这里有一个小技巧
 Dialogue: 0,0:30:17.08,0:30:23.08,English,,0,0,0,, That says before you shift before you divide by a power-of-2 before you do the shift
@@ -637,9 +637,9 @@ Dialogue: 0,0:30:17.08,0:30:23.08,Chinese,,0,0,0,,就是说，你在执行除以
 Dialogue: 0,0:30:23.90,0:30:25.22,English,,0,0,0,,You should add a bias
 Dialogue: 0,0:30:23.90,0:30:25.22,Chinese,,0,0,0,,你应该加一个偏移量
 Dialogue: 0,0:30:31.64,0:30:34.00,English,,0,0,0,,Which in this case would just be one
-Dialogue: 0,0:30:31.64,0:30:34.00,Chinese,,0,0,0,,在这种情况下，这只能是一个
+Dialogue: 0,0:30:31.64,0:30:34.00,Chinese,,0,0,0,,在这种情况下，就是1
 Dialogue: 0,0:30:34.00,0:30:36.06,English,,0,0,0,,You know and I'll tell you where that comes from
-Dialogue: 0,0:30:34.00,0:30:36.06,Chinese,,0,0,0,,我会告诉你它是从哪里得到的
+Dialogue: 0,0:30:34.00,0:30:36.06,Chinese,,0,0,0,,我会告诉你这是从哪里得到的
 Dialogue: 0,0:30:36.48,0:30:45.70,English,,0,0,0,, And so if we add those numbers together we'll get 1110 right
 Dialogue: 0,0:30:36.48,0:30:45.70,Chinese,,0,0,0,,因此，如果我们将这些数字加在一起，我们将获得1110
 Dialogue: 0,0:30:46.10,0:30:52.78,English,,0,0,0,,And now when we do the shift on that we'll get 1111
@@ -651,13 +651,13 @@ Dialogue: 0,0:30:55.64,0:30:59.30,Chinese,,0,0,0,,这里有一个现象，你会
 Dialogue: 0,0:31:00.00,0:31:04.14,English,,0,0,0,,You have in your code divided by 16 and we'll add a bias
 Dialogue: 0,0:31:00.00,0:31:04.14,Chinese,,0,0,0,,除以16的时候，会先添加偏移值
 Dialogue: 0,0:31:04.38,0:31:07.60,English,,0,0,0,,And then it will do a right shift instead of calling division
-Dialogue: 0,0:31:04.38,0:31:07.60,Chinese,,0,0,0,,然后它将进行右移而不是调用除法
+Dialogue: 0,0:31:04.38,0:31:07.60,Chinese,,0,0,0,,然后它将进行右移，而不是调用除法
 Dialogue: 0,0:31:07.72,0:31:13.68,English,,0,0,0,,And by the way division really really is slow even on a modern computer like what you have
 Dialogue: 0,0:31:07.72,0:31:13.68,Chinese,,0,0,0,,顺便说一句，即使在现代计算机上，除法仍然很慢
 Dialogue: 0,0:31:13.98,0:31:19.00,English,,0,0,0,,The shark machines it takes 30 plus Hawk cycles
 Dialogue: 0,0:31:13.98,0:31:19.00,Chinese,,0,0,0,,计算机需要用30个计算周期
 Dialogue: 0,0:31:19.44,0:31:23.14,English,,0,0,0,,So anytime the compiler can avoid figure out a trick
-Dialogue: 0,0:31:19.44,0:31:23.14,Chinese,,0,0,0,,因此编译器可以尽力避免这种现象
+Dialogue: 0,0:31:19.44,0:31:23.14,Chinese,,0,0,0,,因此编译器会尽力避免这种现象
 Dialogue: 0,0:31:23.14,0:31:26.86,English,,0,0,0,,That does it with shifting and tweaking things around it will
 Dialogue: 0,0:31:23.14,0:31:26.86,Chinese,,0,0,0,,它可以通过移位和其他调整来实现
 Dialogue: 0,0:31:28.14,0:31:31.38,English,,0,0,0,,Oh so I realize I should tell you
@@ -665,42 +665,42 @@ Dialogue: 0,0:31:28.14,0:31:31.38,Chinese,,0,0,0,,哦，我应该告诉你
 Dialogue: 0,0:31:31.38,0:31:36.86,English,,0,0,0,,There's a couple ways you can negate a number
 Dialogue: 0,0:31:31.38,0:31:36.86,Chinese,,0,0,0,,有几种方法可以对一个数字取负
 Dialogue: 0,0:31:36.86,0:31:41.58,English,,0,0,0,,That are handy to know if you ever have to do it in your head or on paper
-Dialogue: 0,0:31:36.86,0:31:41.58,Chinese,,0,0,0,,这很简单，你可以在纸上或在脑中去做它
+Dialogue: 0,0:31:36.86,0:31:41.58,Chinese,,0,0,0,,这很便利，当你需要在纸上或在脑中运算的时候
 Dialogue: 0,0:31:43.70,0:31:46.74,English,,0,0,0,, And the standard way is what's called complement and increment
 Dialogue: 0,0:31:43.70,0:31:46.74,Chinese,,0,0,0,,最常用的方式是对数取反再加１
 Dialogue: 0,0:31:47.26,0:31:51.88,English,,0,0,0,,So this is how do I go from X to -X
-Dialogue: 0,0:31:47.26,0:31:51.88,Chinese,,0,0,0,,这就是把ｘ变为－ｘ的方法
+Dialogue: 0,0:31:47.26,0:31:51.88,Chinese,,0,0,0,,我们来看把ｘ变为－ｘ的方法
 Dialogue: 0,0:31:52.68,0:31:59.44,English,,0,0,0,,So if I have a number and I want to negate it
 Dialogue: 0,0:31:52.68,0:31:59.44,Chinese,,0,0,0,,如果我有一个数字，我想对它取负
 Dialogue: 0,0:31:59.48,0:32:04.82,English,,0,0,0,,Whether it's currently a negative number or it's a positive number the same trick works
-Dialogue: 0,0:31:59.48,0:32:04.82,Chinese,,0,0,0,,无论它目前是负数还是正数，都可以用同样的方法去做
+Dialogue: 0,0:31:59.48,0:32:04.82,Chinese,,0,0,0,,无论它原本是负数还是正数，都可以用同样的方法去做
 Dialogue: 0,0:32:05.08,0:32:07.86,English,,0,0,0,,What I'll do is complement it meaning I'll flip all the bits
 Dialogue: 0,0:32:05.08,0:32:07.86,Chinese,,0,0,0,,我要做的就是对它取反，意味着我将反转所有的位
 Dialogue: 0,0:32:11.64,0:32:18.98,English,,0,0,0,,And then I'll add one to that
-Dialogue: 0,0:32:11.64,0:32:18.98,Chinese,,0,0,0,,然后我会加一个１
+Dialogue: 0,0:32:11.64,0:32:18.98,Chinese,,0,0,0,,然后加一个１
 Dialogue: 0,0:32:18.98,0:32:25.32,English,,0,0,0,, And do the regular sum
-Dialogue: 0,0:32:18.98,0:32:25.32,Chinese,,0,0,0,,在做常规求和
+Dialogue: 0,0:32:18.98,0:32:25.32,Chinese,,0,0,0,,常规求和
 Dialogue: 0,0:32:25.32,0:32:30.61,English,,0,0,0,, And so this is 6,this is -6
 Dialogue: 0,0:32:25.32,0:32:30.61,Chinese,,0,0,0,,这是6，这是-6
 Dialogue: 0,0:32:31.48,0:32:33.24,English,,0,0,0,,So if you ever have to do it by hand
-Dialogue: 0,0:32:31.48,0:32:33.24,Chinese,,0,0,0,,如果你曾经做过
+Dialogue: 0,0:32:31.48,0:32:33.24,Chinese,,0,0,0,,如果你需要手算的话
 Dialogue: 0,0:32:33.24,0:32:36.54,English,,0,0,0,,That's the way to do it complement and increment  and it goes the other way
-Dialogue: 0,0:32:33.24,0:32:36.54,Chinese,,0,0,0,,这是用取反和增量的方式，那再做一次
+Dialogue: 0,0:32:33.24,0:32:36.54,Chinese,,0,0,0,,这就是用取反加一法，现在再做一次
 Dialogue: 0,0:32:37.02,0:32:38.62,English,,0,0,0,,You'll see if I compliment this
-Dialogue: 0,0:32:37.02,0:32:38.62,Chinese,,0,0,0,,你会看到我非常喜欢这一点
+Dialogue: 0,0:32:37.02,0:32:38.62,Chinese,,0,0,0,,你会看到当我再次取反
 Dialogue: 0,0:32:44.58,0:32:51.84,English,,0,0,0,,And I increment it I'll get back to my previous number
-Dialogue: 0,0:32:44.58,0:32:51.84,Chinese,,0,0,0,,我对它加１，我会得到之前的值
+Dialogue: 0,0:32:44.58,0:32:51.84,Chinese,,0,0,0,,并加１，我会得到之前的值
 Dialogue: 0,0:32:52.14,0:32:53.44,English,,0,0,0,,So that's a trick
-Dialogue: 0,0:32:52.14,0:32:53.44,Chinese,,0,0,0,,所以这是一个奇特的现象
+Dialogue: 0,0:32:52.14,0:32:53.44,Chinese,,0,0,0,,这是一个奇特的现象
 Dialogue: 0,0:32:56.28,0:32:59.68,English,,0,0,0,,That is pretty much only useful when you do things on the blackboard
-Dialogue: 0,0:32:56.28,0:32:59.68,Chinese,,0,0,0,,只有当你在纸上写时，这才会非常有帮助
+Dialogue: 0,0:32:56.28,0:32:59.68,Chinese,,0,0,0,,不过这种方法只有当你在纸上计算时，才比较有用
 Dialogue: 0,0:32:59.88,0:33:02.60,English,,0,0,0,,Or when you have to solve a problem in data lab
-Dialogue: 0,0:32:59.88,0:33:02.60,Chinese,,0,0,0,,或者当你必须解决lab中的某些问题时
+Dialogue: 0,0:32:59.88,0:33:02.60,Chinese,,0,0,0,,或者当你必须解决data lab中的某些问题时
 Dialogue: 0,0:33:13.02,0:33:21.36,English,,0,0,0,,Anyways the this idea of doing a using up shifting to the right to do power-of-2 division
-Dialogue: 0,0:33:13.02,0:33:21.36,Chinese,,0,0,0,,无论如何，这个想法是用向右的移位来表示除以2的幂
+Dialogue: 0,0:33:13.02,0:33:21.36,Chinese,,0,0,0,,无论如何，用向右移位来实现除以2的幂
 Dialogue: 0,0:33:21.36,0:33:25.58,English,,0,0,0,, is actually that's the whole justification for arithmetic shifting in the first place
-Dialogue: 0,0:33:21.36,0:33:25.58,Chinese,,0,0,0,,这就是用算术右移的第一个理由
-Dialogue: 0,0:33:25.98,0:33:31.68,English,,0,0,0,,Which by the way in and see there's no fixed requirement
+Dialogue: 0,0:33:21.36,0:33:25.58,Chinese,,0,0,0,,就是用算术右移的首要理由
+Dialogue: 0,0:33:25.98,0:33:31.68,English,,0,0,0,,Which by the way in C there's no fixed requirement
 Dialogue: 0,0:33:25.98,0:33:31.68,Chinese,,0,0,0,,顺便说一下，在C语言中没有明确的要求
 Dialogue: 0,0:33:31.68,0:33:35.88,English,,0,0,0,,For how shifting works in c for signed numbers
 Dialogue: 0,0:33:31.68,0:33:35.88,Chinese,,0,0,0,,对有符号数执行什么移位
@@ -709,11 +709,12 @@ Dialogue: 0,0:33:35.88,0:33:38.20,Chinese,,0,0,0,,对于无符号，它必须是
 Dialogue: 0,0:33:38.74,0:33:43.50,English,,0,0,0,,Sign numbers the C standard says there's no fixed definition
 Dialogue: 0,0:33:38.74,0:33:43.50,Chinese,,0,0,0,,对于有符号数字,C标准没有明确的规定
 Dialogue: 0,0:33:43.74,0:33:48.56,English,,0,0,0,, The reality is on our machines most machines just about every machine out there
-Dialogue: 0,0:33:43.74,0:33:48.56,Chinese,,0,0,0,,事实上在我们的机器上，大多数机器上
+Dialogue: 0,0:33:43.74,0:33:48.56,Chinese,,0,0,0,,事实上在我们的机器上，绝大多数机器上
 Dialogue: 0,0:33:49.24,0:33:55.14,English,,0,0,0,,When it's a two's complement number when it's a negative where it's the signed number it's two's complement
-Dialogue: 0,0:33:49.24,0:33:55.14,Chinese,,0,0,0,,当它是一个补码时，它是一个负数时，代表有符号数时
-Dialogue: 0,0:33:55.40,0:33:58.12,English,,0,0,0,,And when you do a shift it will be an earth metic shift
-Dialogue: 0,0:33:55.40,0:33:58.12,Chinese,,0,0,0,,当你做一次移位时，这将是一个巨大的变化
+Dialogue: 0,0:33:49.24,0:33:55.14,Chinese,,0,0,0,,当它是一个补码或有符号数时，当它是一个负数时
+Dialogue: 0,0:33:55.40,0:33:58.12,English,,0,0,0,,And when you do a shift it will be an arithmetic shift
+-----------------
+Dialogue: 0,0:33:55.40,0:33:58.12,Chinese,,0,0,0,,当你做一次移位时，它会是算术移位
 Dialogue: 0,0:34:07.22,0:34:11.44,English,,0,0,0,,So getting back to them summarizing this integer arithmetic
 Dialogue: 0,0:34:07.22,0:34:11.44,Chinese,,0,0,0,,所以回到之前，总结整数运算
 Dialogue: 0,0:34:11.90,0:34:15.79,English,,0,0,0,,You see that first of all whether it's signed your unsigned
