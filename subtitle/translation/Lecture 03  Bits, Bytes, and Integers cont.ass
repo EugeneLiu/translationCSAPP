@@ -713,72 +713,71 @@ Dialogue: 0,0:33:43.74,0:33:48.56,Chinese,,0,0,0,,事实上在我们的机器上
 Dialogue: 0,0:33:49.24,0:33:55.14,English,,0,0,0,,When it's a two's complement number when it's a negative where it's the signed number it's two's complement
 Dialogue: 0,0:33:49.24,0:33:55.14,Chinese,,0,0,0,,当它是一个补码或有符号数时，当它是一个负数时
 Dialogue: 0,0:33:55.40,0:33:58.12,English,,0,0,0,,And when you do a shift it will be an arithmetic shift
------------------
 Dialogue: 0,0:33:55.40,0:33:58.12,Chinese,,0,0,0,,当你做一次移位时，它会是算术移位
 Dialogue: 0,0:34:07.22,0:34:11.44,English,,0,0,0,,So getting back to them summarizing this integer arithmetic
 Dialogue: 0,0:34:07.22,0:34:11.44,Chinese,,0,0,0,,所以回到之前，总结整数运算
-Dialogue: 0,0:34:11.90,0:34:15.79,English,,0,0,0,,You see that first of all whether it's signed your unsigned
+Dialogue: 0,0:34:11.90,0:34:15.79,English,,0,0,0,,You see that first of all whether it's signed or unsigned
 Dialogue: 0,0:34:11.90,0:34:15.79,Chinese,,0,0,0,,你首先要看它是无符号数还是有符号数
 Dialogue: 0,0:34:16.22,0:34:21.64,English,,0,0,0,,The addition or multiplication operations are the same
-Dialogue: 0,0:34:16.22,0:34:21.64,Chinese,,0,0,0,,加法或乘法运算是相同的
+Dialogue: 0,0:34:16.22,0:34:21.64,Chinese,,0,0,0,,加法和乘法运算是相同的
 Dialogue: 0,0:34:22.00,0:34:25.84,English,,0,0,0,,Whether it's a unsigned number or two's complement
 Dialogue: 0,0:34:22.00,0:34:25.84,Chinese,,0,0,0,,无论是无符号数还是有符号数
 Dialogue: 0,0:34:27.06,0:34:31.02,English,,0,0,0,,And it works the negative stuff works out
-Dialogue: 0,0:34:27.06,0:34:31.02,Chinese,,0,0,0,,它不会起负作用
+Dialogue: 0,0:34:27.06,0:34:31.02,Chinese,,0,0,0,,对负数一样起作用
 Dialogue: 0,0:34:31.58,0:34:33.98,English,,0,0,0,,As long as you don't have an overflow
 Dialogue: 0,0:34:31.58,0:34:33.98,Chinese,,0,0,0,,只要你没有溢出
 Dialogue: 0,0:34:34.38,0:34:36.56,English,,0,0,0,,And you can end up with an overflow
-Dialogue: 0,0:34:34.38,0:34:36.56,Chinese,,0,0,0,,而你最终可能会溢出
+Dialogue: 0,0:34:34.38,0:34:36.56,Chinese,,0,0,0,,但你确实可能会溢出
 Dialogue: 0,0:34:38.48,0:34:43.02,English,,0,0,0,,Only one type of overflow for unsigned and two types for signed numbers
 Dialogue: 0,0:34:38.48,0:34:43.02,Chinese,,0,0,0,,无符号数只有一种溢出而有符号数有两种溢出
 Dialogue: 0,0:34:43.64,0:34:48.26,English,,0,0,0,, But it's not like they just overflow on generate random numbers
 Dialogue: 0,0:34:43.64,0:34:48.26,Chinese,,0,0,0,,但它们并不是溢出就生成随机数
 Dialogue: 0,0:34:48.26,0:34:54.24,English,,0,0,0,,There is some a pattern to what result what they are and how they can be interpreted
-Dialogue: 0,0:34:48.26,0:34:54.24,Chinese,,0,0,0,,这有一些规则说明他们是如何变化的
+Dialogue: 0,0:34:48.26,0:34:54.24,Chinese,,0,0,0,,依然有规律可以解释它们的结果
 Dialogue: 0,0:35:01.72,0:35:07.46,English,,0,0,0,,So we I talked about this a little bit last time and gave this example similar to this
 Dialogue: 0,0:35:01.72,0:35:07.46,Chinese,,0,0,0,,所以我们上次谈了一小点，并给出了与此类似的例子
 Dialogue: 0,0:35:07.46,0:35:09.58,English,,0,0,0,,But let me go over it a little bit more
-Dialogue: 0,0:35:07.46,0:35:09.58,Chinese,,0,0,0,,但是让我再多谈一下
+Dialogue: 0,0:35:07.46,0:35:09.58,Chinese,,0,0,0,,但是让我再复习一下
 Dialogue: 0,0:35:10.94,0:35:17.42,English,,0,0,0,,One thing you might think of wow if this unsigned and signed stuff gets so murky
-Dialogue: 0,0:35:10.94,0:35:17.42,Chinese,,0,0,0,,你可能会认为是既然无符号整数这么复杂
+Dialogue: 0,0:35:10.94,0:35:17.42,Chinese,,0,0,0,,你可能会认为是既然无符号整数和有符号整数这么复杂
 Dialogue: 0,0:35:17.46,0:35:19.98,English,,0,0,0,,And we saw some funny examples last time
 Dialogue: 0,0:35:17.46,0:35:19.98,Chinese,,0,0,0,,并且我们上次也看到了一些奇怪的例子
 Dialogue: 0,0:35:20.34,0:35:24.92,English,,0,0,0,, Maybe we should just banished unsigned numbers from the universe
 Dialogue: 0,0:35:20.34,0:35:24.92,Chinese,,0,0,0,,那我们就应该消除无符号数
 Dialogue: 0,0:35:25.40,0:35:27.12,English,,0,0,0,, And only allow two's complement
-Dialogue: 0,0:35:25.40,0:35:27.12,Chinese,,0,0,0,,并且只允许补码存在
+Dialogue: 0,0:35:25.40,0:35:27.12,Chinese,,0,0,0,,只允许补码存在
 Dialogue: 0,0:35:27.44,0:35:31.92,English,,0,0,0,,And that's exactly the rule that was adopted for example in Java
-Dialogue: 0,0:35:27.44,0:35:31.92,Chinese,,0,0,0,,而这已经被Java采用
+Dialogue: 0,0:35:27.44,0:35:31.92,Chinese,,0,0,0,,而这已经被Java等语言采用
 Dialogue: 0,0:35:31.92,0:35:34.24,English,,0,0,0,,They said is too weird
-Dialogue: 0,0:35:31.92,0:35:34.24,Chinese,,0,0,0,,他们说太奇怪了
+Dialogue: 0,0:35:31.92,0:35:34.24,Chinese,,0,0,0,,他们认为这太奇怪了
 Dialogue: 0,0:35:35.98,0:35:38.86,English,,0,0,0,,What let's just say every number is two's complement
-Dialogue: 0,0:35:35.98,0:35:38.86,Chinese,,0,0,0,,每个数字都应该是补码
+Dialogue: 0,0:35:35.98,0:35:38.86,Chinese,,0,0,0,,应该每个数字都是补码
 Dialogue: 0,0:35:39.22,0:35:47.92,English,,0,0,0,, The only trick they did was they put in a triple right shift
-Dialogue: 0,0:35:39.22,0:35:47.92,Chinese,,0,0,0,,他们做的唯一改变是他们把>>>
+Dialogue: 0,0:35:39.22,0:35:47.92,Chinese,,0,0,0,,他们做的唯一改变是引入了>>>
 Dialogue: 0,0:35:51.18,0:35:54.52,English,,0,0,0,,Means logical shift this is Java this is not C
-Dialogue: 0,0:35:51.18,0:35:54.52,Chinese,,0,0,0,,认为是逻辑右移，这是Java不是ｃ
+Dialogue: 0,0:35:51.18,0:35:54.52,Chinese,,0,0,0,,认为它是逻辑右移，这是Java不是ｃ
 Dialogue: 0,0:36:02.16,0:36:12.40,English,,0,0,0,, Whereas the double is a arithmetic
 Dialogue: 0,0:36:02.16,0:36:12.40,Chinese,,0,0,0,,而把>>认为是算术右移
 Dialogue: 0,0:36:13.74,0:36:18.00,English,,0,0,0,,So because they realized there's a lot of cute little times
-Dialogue: 0,0:36:13.74,0:36:18.00,Chinese,,0,0,0,,因为他们意识到有很多有趣的小问题
+Dialogue: 0,0:36:13.74,0:36:18.00,Chinese,,0,0,0,,因为他们意识到有很多小问题
 Dialogue: 0,0:36:18.00,0:36:20.18,English,,0,0,0,,When you want to play tricks with things
-Dialogue: 0,0:36:18.00,0:36:20.18,Chinese,,0,0,0,,当你想搞点花哨的东西时
+Dialogue: 0,0:36:18.00,0:36:20.18,Chinese,,0,0,0,,当你想玩点小技巧
 Dialogue: 0,0:36:20.50,0:36:22.94,English,,0,0,0,,And you need that logical right shift
 Dialogue: 0,0:36:20.50,0:36:22.94,Chinese,,0,0,0,,你需要逻辑右移
 Dialogue: 0,0:36:23.96,0:36:29.52,English,,0,0,0,,So that's actually one approach or other more modern languages and C are saying
-Dialogue: 0,0:36:23.96,0:36:29.52,Chinese,,0,0,0,,所以这实际上是一种方法，其他的现代语言和c
+Dialogue: 0,0:36:23.96,0:36:29.52,Chinese,,0,0,0,,这是一种处理方式，其他的现代语言和c
 Dialogue: 0,0:36:29.82,0:36:31.92,English,,0,0,0,,It's okay to have signed and unsigned
-Dialogue: 0,0:36:29.82,0:36:31.92,Chinese,,0,0,0,,说有符号数和无符号数都是可以的
+Dialogue: 0,0:36:29.82,0:36:31.92,Chinese,,0,0,0,,认为有符号数和无符号数都是可以的
 Dialogue: 0,0:36:32.16,0:36:35.96,English,,0,0,0,,But we don't want them sort of mysteriously being cast back and forth
-Dialogue: 0,0:36:32.16,0:36:35.96,Chinese,,0,0,0,,但是我们不希望他们以一种诡异的方式搞来搞去
+Dialogue: 0,0:36:32.16,0:36:35.96,Chinese,,0,0,0,,但是我们不希望他们以一种诡异的方式变来变去
 Dialogue: 0,0:36:35.96,0:36:38.82,English,,0,0,0,,In ways that the programmer might not recognize
-Dialogue: 0,0:36:35.96,0:36:38.82,Chinese,,0,0,0,,可能无法被程序员所理解
+Dialogue: 0,0:36:35.96,0:36:38.82,Chinese,,0,0,0,,程序员可能会意识不到这种变化
 Dialogue: 0,0:36:38.82,0:36:43.70,English,,0,0,0,, And so you have to explicitly do a cast rather than implicitly
-Dialogue: 0,0:36:38.82,0:36:43.70,Chinese,,0,0,0,,所以你必须做一个明确的映射而不是暗示
+Dialogue: 0,0:36:38.82,0:36:43.70,Chinese,,0,0,0,,所以你必须做一个明确的分配而不是暗示
 Dialogue: 0,0:36:44.24,0:36:45.86,English,,0,0,0,, And I think that's the better approach
 Dialogue: 0,0:36:44.24,0:36:45.86,Chinese,,0,0,0,,我认为这是一个更好的方法
 Dialogue: 0,0:36:45.86,0:36:49.74,English,,0,0,0,, But C as I mentioned does this implicit casting
-Dialogue: 0,0:36:45.86,0:36:49.74,Chinese,,0,0,0,,但正如我所提到的那样C是隐式投射
+Dialogue: 0,0:36:45.86,0:36:49.74,Chinese,,0,0,0,,但正如我所提到的那样C是隐式分配
 Dialogue: 0,0:36:50.00,0:36:55.28,English,,0,0,0,,And so as we saw for last time what happens with this program when you run it
 Dialogue: 0,0:36:50.00,0:36:55.28,Chinese,,0,0,0,,正如我们上次看到的那样，当你运行它时，这个程序会做什么
 Dialogue: 0,0:36:59.15,0:37:08.89,English,,0,0,0,,To count down through an array do you remember?
@@ -790,15 +789,15 @@ Dialogue: 0,0:37:16.58,0:37:19.64,Chinese,,0,0,0,,它总是成功，所以程序
 Dialogue: 0,0:37:20.18,0:37:22.68,English,,0,0,0,,Actually what will happen is it will try to access
 Dialogue: 0,0:37:20.18,0:37:22.68,Chinese,,0,0,0,,实际上不管发生什么，它总会尝试访问
 Dialogue: 0,0:37:23.38,0:37:27.66,English,,0,0,0,,I will go down to 0 and then it will wrap around to become
-Dialogue: 0,0:37:23.38,0:37:27.66,Chinese,,0,0,0,,我将它减到0然后它会回去成为
+Dialogue: 0,0:37:23.38,0:37:27.66,Chinese,,0,0,0,,它减到0然后会倒回去成为
 Dialogue: 0,0:37:28.22,0:37:30.14,English,,0,0,0,, The largest possible unsigned number
 Dialogue: 0,0:37:28.22,0:37:30.14,Chinese,,0,0,0,,最大的无符号数
 Dialogue: 0,0:37:30.14,0:37:34.08,English,,0,0,0,,Which is probably way out of bounds and it will give a memory error
-Dialogue: 0,0:37:30.14,0:37:34.08,Chinese,,0,0,0,,可能会超出数组边界，然后会给出内存错误
+Dialogue: 0,0:37:30.14,0:37:34.08,Chinese,,0,0,0,,可能会超出数组边界，导致内存错误
 Dialogue: 0,0:37:35.34,0:37:37.64,English,,0,0,0,,But it won't do what's supposed to be
-Dialogue: 0,0:37:35.34,0:37:37.64,Chinese,,0,0,0,,但它不会做应该做的事情
+Dialogue: 0,0:37:35.34,0:37:37.64,Chinese,,0,0,0,,但它不会做你希望它做的事情
 Dialogue: 0,0:37:37.82,0:37:42.67,English,,0,0,0,,And as I mentioned before these things there is a lot of sneaky ways this problem can show up
-Dialogue: 0,0:37:37.82,0:37:42.67,Chinese,,0,0,0,,正如我之前提到的那样，这个问题可以展示许多诡异的问题
+Dialogue: 0,0:37:37.82,0:37:42.67,Chinese,,0,0,0,,正如我之前提到的那样，这个问题可以导致许多诡异的情况
 Dialogue: 0,0:37:43.00,0:37:44.90,English,,0,0,0,, In ways you might never think of
 Dialogue: 0,0:37:43.00,0:37:44.90,Chinese,,0,0,0,,以你可能永远不会想到的方式
 Dialogue: 0,0:37:45.28,0:37:55.16,English,,0,0,0,,So for example the operator sizeof is defined to say how big a particular datatype is
@@ -811,34 +810,34 @@ Dialogue: 0,0:38:03.48,0:38:07.12,English,,0,0,0,,Which is defined to be a long 
 Dialogue: 0,0:38:03.48,0:38:07.12,Chinese,,0,0,0,,它被定义为 unsigned long 
 Dialogue: 0,0:38:07.70,0:38:12.88,English,,0,0,0,, And so if we just throw in a constant like this
 Dialogue: 0,0:38:07.70,0:38:12.88,Chinese,,0,0,0,,所以，如果我们就这样把它输出
-Dialogue: 0,0:38:13.14,0:38:17.02,English,,0,0,0,, Then this subtraction we have a sign in is now int
-Dialogue: 0,0:38:13.14,0:38:17.02,Chinese,,0,0,0,,然后这个减法中有一个int类型的值
-Dialogue: 0,0:38:17.54,0:38:19.60,English,,0,0,0,,But sizeof is unsgned
+Dialogue: 0,0:38:13.14,0:38:17.02,English,,0,0,0,, Then this subtraction we have a signed, i is now int
+Dialogue: 0,0:38:13.14,0:38:17.02,Chinese,,0,0,0,,然后这个减法中有一个int类型的值i
+Dialogue: 0,0:38:17.54,0:38:19.60,English,,0,0,0,,But sizeof is unsigned
 Dialogue: 0,0:38:17.54,0:38:19.60,Chinese,,0,0,0,,但sizeof是无符号的
 Dialogue: 0,0:38:19.86,0:38:23.38,English,,0,0,0,,And so it will cast that to be unsigned implicitly
-Dialogue: 0,0:38:19.86,0:38:23.38,Chinese,,0,0,0,,因此它将 int 自动转换为无符号的
+Dialogue: 0,0:38:19.86,0:38:23.38,Chinese,,0,0,0,,于是它将i自动转换为无符号数
 Dialogue: 0,0:38:24.15,0:38:28.06,English,,0,0,0,,And when you compare it to 0 you'll have the same problem as before
 Dialogue: 0,0:38:24.15,0:38:28.06,Chinese,,0,0,0,,当你将它与0比较时，你会遇到和以前一样的问题
 Dialogue: 0,0:38:29.40,0:38:35.00,English,,0,0,0,, So just to show you that these things can sneak in very tricky ways
-Dialogue: 0,0:38:29.40,0:38:35.00,Chinese,,0,0,0,,所以只是为了告诉你这些东西在你想耍点小聪明的时候会变的十分诡异
+Dialogue: 0,0:38:29.40,0:38:35.00,Chinese,,0,0,0,,这个例子是为了告诉你这些东西在你想耍点小技巧的时候会变的十分诡异
 Dialogue: 0,0:38:35.46,0:38:41.86,English,,0,0,0,,So one way to do that then is just don't use unsigned like
-Dialogue: 0,0:38:35.46,0:38:41.86,Chinese,,0,0,0,,因此，避免这个的一种方法就是不要这样使用无符号整型
+Dialogue: 0,0:38:35.46,0:38:41.86,Chinese,,0,0,0,,因此，避免这种问题的一种方法就是不要使用无符号整型
 Dialogue: 0,0:38:41.92,0:38:47.14,English,,0,0,0,,And make sure if this is a a possible
-Dialogue: 0,0:38:41.92,0:38:47.14,Chinese,,0,0,0,,如果这是可能的请确保
+Dialogue: 0,0:38:41.92,0:38:47.14,Chinese,,0,0,0,,如果一个数可能是无符号数
 Dialogue: 0,0:38:48.26,0:38:51.36,English,,0,0,0,,Unsigned number you cast it to signed
-Dialogue: 0,0:38:48.26,0:38:51.36,Chinese,,0,0,0,,你已经把无符号数变为有符号数
+Dialogue: 0,0:38:48.26,0:38:51.36,Chinese,,0,0,0,,请确保你已经把它变为有符号数
 Dialogue: 0,0:38:51.70,0:38:54.34,English,,0,0,0,,You make sure this is recognized and signed
-Dialogue: 0,0:38:51.70,0:38:54.34,Chinese,,0,0,0,,你确保这是是有符号整数
+Dialogue: 0,0:38:51.70,0:38:54.34,Chinese,,0,0,0,,确保它被有意识地转换为了有符号数
 Dialogue: 0,0:38:54.94,0:38:57.72,English,,0,0,0,, But there's another way that actually
 Dialogue: 0,0:38:54.94,0:38:57.72,Chinese,,0,0,0,,但实际上还有另一种方式
 Dialogue: 0,0:38:57.96,0:39:02.40,English,,0,0,0,, At least there's a fellow over the software engineering Institute named Robert Seacord
-Dialogue: 0,0:38:57.96,0:39:02.40,Chinese,,0,0,0,,至少有一位名叫Robert Seacord的软件工程学院的研究员
+Dialogue: 0,0:38:57.96,0:39:02.40,Chinese,,0,0,0,,有一位名叫Robert Seacord的软件工程学院的研究员
 Dialogue: 0,0:39:03.02,0:39:12.88,English,,0,0,0,, Who has written the books that are suited to considered the  this the gold standard for how to write secure code
 Dialogue: 0,0:39:03.02,0:39:12.88,Chinese,,0,0,0,,他编写了如何写出安全代码的黄金标准
 Dialogue: 0,0:39:13.20,0:39:16.82,English,,0,0,0,,He works for this organization called the computer emergency response team
 Dialogue: 0,0:39:13.20,0:39:16.82,Chinese,,0,0,0,,他在一个名为计算机应急响应小组的组织工作
 Dialogue: 0,0:39:16.82,0:39:24.72,English,,0,0,0,, Which is out there tracking down bad things going on in computer security
-Dialogue: 0,0:39:16.82,0:39:24.72,Chinese,,0,0,0,,这个组织是去找出计算机安全中存在的威胁
+Dialogue: 0,0:39:16.82,0:39:24.72,Chinese,,0,0,0,,这个组织的目标是找出计算机安全中存在的威胁
 Dialogue: 0,0:39:25.18,0:39:30.20,English,,0,0,0,,And one of the things he and others have done is to try and come up with standards
 Dialogue: 0,0:39:25.18,0:39:30.20,Chinese,,0,0,0,,他和其他人所做的一件事就是尝试提出标准
 Dialogue: 0,0:39:30.20,0:39:36.04,English,,0,0,0,, So that people who write programs will you know avoid some of the pitfalls
@@ -848,31 +847,31 @@ Dialogue: 0,0:39:36.04,0:39:40.74,Chinese,,0,0,0,,会使他们的程序易受攻
 Dialogue: 0,0:39:41.24,0:39:44.62,English,,0,0,0,, And so his recommended technique is when I first saw this
 Dialogue: 0,0:39:41.24,0:39:44.62,Chinese,,0,0,0,,他推荐的方法，当我第一次看到时
 Dialogue: 0,0:39:44.62,0:39:46.70,English,,0,0,0,,It was so counterintuitive to me
-Dialogue: 0,0:39:44.62,0:39:46.70,Chinese,,0,0,0,,这对我来说太违反直觉了
+Dialogue: 0,0:39:44.62,0:39:46.70,Chinese,,0,0,0,,我觉得太违反直觉了
 Dialogue: 0,0:39:47.46,0:39:52.36,English,,0,0,0,,It hardly made sense right
-Dialogue: 0,0:39:47.46,0:39:52.36,Chinese,,0,0,0,,这很难马上有感觉
+Dialogue: 0,0:39:47.46,0:39:52.36,Chinese,,0,0,0,,很不合理
 Dialogue: 0,0:39:52.48,0:39:55.62,English,,0,0,0,,So you start and again this is all unsigned arithmetic
-Dialogue: 0,0:39:52.48,0:39:55.62,Chinese,,0,0,0,,所以你重新开始这这里全部是无符号整数
+Dialogue: 0,0:39:52.48,0:39:55.62,Chinese,,0,0,0,,我们重新开始，这里全部是无符号数运算
 Dialogue: 0,0:39:55.84,0:39:58.18,English,,0,0,0,, So I'm starting to count down
-Dialogue: 0,0:39:55.84,0:39:58.18,Chinese,,0,0,0,,所以我开始倒计时了
+Dialogue: 0,0:39:55.84,0:39:58.18,Chinese,,0,0,0,,我开始倒计时了
 Dialogue: 0,0:39:58.42,0:40:01.50,English,,0,0,0,,And my test is when I is less than count
 Dialogue: 0,0:39:58.42,0:40:01.50,Chinese,,0,0,0,,我的测试条件是当ｉ小于 cnt 时
 Dialogue: 0,0:40:02.40,0:40:05.62,English,,0,0,0,,So here's the thing I started off smaller than count
-Dialogue: 0,0:40:02.40,0:40:05.62,Chinese,,0,0,0,,所以有一个问题, 当 i 小于 cnt 时
+Dialogue: 0,0:40:02.40,0:40:05.62,Chinese,,0,0,0,,那么问题来了, 当 i 小于 cnt 时停止
 Dialogue: 0,0:40:06.14,0:40:10.58,English,,0,0,0,,And it's only being decremented so when would this test ever fail
-Dialogue: 0,0:40:06.14,0:40:10.58,Chinese,,0,0,0,,它只会减少，所以这次测试什么时候会终止
+Dialogue: 0,0:40:06.14,0:40:10.58,Chinese,,0,0,0,,但i只会递减，那么这次测试什么时候会终止
 Dialogue: 0,0:40:10.58,0:40:15.68,English,,0,0,0,,[student question]
 Dialogue: 0,0:40:10.58,0:40:15.68,Chinese,,0,0,0,,[学生问题]
 Dialogue: 0,0:40:15.84,0:40:17.92,English,,0,0,0,,When it overflows when it wraps around
 Dialogue: 0,0:40:15.84,0:40:17.92,Chinese,,0,0,0,,当它溢出时，对吧
 Dialogue: 0,0:40:18.26,0:40:23.30,English,,0,0,0,, Right when I goes from zero and counts down to what would now be UMax
-Dialogue: 0,0:40:18.26,0:40:23.30,Chinese,,0,0,0,,当我从 0 开始倒计时，之后就会变成UMAX
+Dialogue: 0,0:40:18.26,0:40:23.30,Chinese,,0,0,0,,当我从 0 开始减少，就会变成UMAX
 Dialogue: 0,0:40:24.28,0:40:27.82,English,,0,0,0,,This test will fail which is exactly when you want it to stop
-Dialogue: 0,0:40:24.28,0:40:27.82,Chinese,,0,0,0,,此测试失败，正好是你希望它停止的时
+Dialogue: 0,0:40:24.28,0:40:27.82,Chinese,,0,0,0,,此测试失败，正好是你希望它停止的时候
 Dialogue: 0,0:40:28.60,0:40:35.60,English,,0,0,0,,And his observation is and in C with signed numbers there's no guarantee on what happens with overflowing
-Dialogue: 0,0:40:28.60,0:40:35.60,Chinese,,0,0,0,,他的观察结果是在C中有符号数字，并不能保证溢出会发生什么
+Dialogue: 0,0:40:28.60,0:40:35.60,Chinese,,0,0,0,,他发现在C中，有符号数字不能保证溢出会发生什么
 Dialogue: 0,0:40:35.68,0:40:39.68,English,,0,0,0,,As I said most people just assume it's going to be two's complement
-Dialogue: 0,0:40:35.68,0:40:39.68,Chinese,,0,0,0,,正如我所说，大多数人只是假设它将是补码
+Dialogue: 0,0:40:35.68,0:40:39.68,Chinese,,0,0,0,,正如我说过的，大多数人只是假设它是补码
 Dialogue: 0,0:40:39.68,0:40:41.64,English,,0,0,0,,But if you really want to be careful
 Dialogue: 0,0:40:39.68,0:40:41.64,Chinese,,0,0,0,,但如果你真的想要小心
 Dialogue: 0,0:40:41.90,0:40:45.04,English,,0,0,0,,You shouldn't assume anything outside of the C standard
@@ -884,7 +883,7 @@ Dialogue: 0,0:40:47.54,0:40:51.12,Chinese,,0,0,0,,谨慎保守可能是一个好
 Dialogue: 0,0:40:52.16,0:40:55.46,English,,0,0,0,,On the other hand the C standard guarantees
 Dialogue: 0,0:40:52.16,0:40:55.46,Chinese,,0,0,0,,另一方面，C标准保证
 Dialogue: 0,0:40:55.94,0:41:00.50,English,,0,0,0,,That unsigned arithmetic will be modular arithmetic so it guarantees
-Dialogue: 0,0:40:55.94,0:41:00.50,Chinese,,0,0,0,,无符号运算将是模运算，因此它保证
+Dialogue: 0,0:40:55.94,0:41:00.50,Chinese,,0,0,0,,无符号运算是模运算，因此它保证
 Dialogue: 0,0:41:00.68,0:41:05.48,English,,0,0,0,,If you subtract one from zero you'll get the largest number that could be represented
 Dialogue: 0,0:41:00.68,0:41:05.48,Chinese,,0,0,0,,如果从0中减去 1，你将获得无符号数可以表示的最大数字
 Dialogue: 0,0:41:05.96,0:41:09.16,English,,0,0,0,,So it will be okay
@@ -909,26 +908,27 @@ Dialogue: 0,0:41:44.24,0:41:50.64,English,,0,0,0,,What would happen if count wer
 Dialogue: 0,0:41:44.24,0:41:50.64,Chinese,,0,0,0,,如果count是有符号数int会发生什么
 Dialogue: 0,0:41:52.08,0:41:57.50,English,,0,0,0,,And it were you were up and it was less than zero what would happen here
 Dialogue: 0,0:41:52.08,0:41:57.50,Chinese,,0,0,0,,在这里当他小于0的时候会发生什么
-Dialogue: 0,0:42:01.80,0:42:04.58,English,,0,0,0,,So I less than count what would happen
-Dialogue: 0,0:42:01.80,0:42:04.58,Chinese,,0,0,0,,所以我不知道会发生什么
+Dialogue: 0,0:42:01.80,0:42:04.58,English,,0,0,0,,So i less than count what would happen
+Dialogue: 0,0:42:01.80,0:42:04.58,Chinese,,0,0,0,,i 小于 cnt 会发生什么
 Dialogue: 0,0:42:05.06,0:42:10.72,English,,0,0,0,, [student question]
 Dialogue: 0,0:42:05.06,0:42:10.72,Chinese,,0,0,0,,[学生问题]
 Dialogue: 0,0:42:10.72,0:42:14.46,English,,0,0,0,,Right and so it become a very large positive number
-Dialogue: 0,0:42:10.72,0:42:14.46,Chinese,,0,0,0,,是的，所以它成为一个非常大的正数
+Dialogue: 0,0:42:10.72,0:42:14.46,Chinese,,0,0,0,,是的，它成为一个非常大的正数
 Dialogue: 0,0:42:14.86,0:42:16.98,English,,0,0,0,,And this test would almost certainly succeed
 Dialogue: 0,0:42:14.86,0:42:16.98,Chinese,,0,0,0,,而这项测试几乎肯定会成功
 Dialogue: 0,0:42:17.04,0:42:20.58,English,,0,0,0,, So you have the same this code doesn't avoid the pitfall
-Dialogue: 0,0:42:17.04,0:42:20.58,Chinese,,0,0,0,,所以你有相同的代码，不能避免陷阱
+Dialogue: 0,0:42:17.04,0:42:20.58,Chinese,,0,0,0,,同样的问题，这样的代码并不能避免陷阱
 Dialogue: 0,0:42:21.00,0:42:22.54,English,,0,0,0,,It just shifts it to saying
-Dialogue: 0,0:42:21.00,0:42:22.54,Chinese,,0,0,0,,它只是说
+Dialogue: 0,0:42:21.00,0:42:22.54,Chinese,,0,0,0,,换句话说
 Dialogue: 0,0:42:23.26,0:42:30.46,English,,0,0,0,,You better make sure you don't you know just for this case beforehand before you get into it
 Dialogue: 0,0:42:23.26,0:42:30.46,Chinese,,0,0,0,,在用它之前，你最好确保知道怎么用
 Dialogue: 0,0:42:32.48,0:42:41.14,English,,0,0,0,,So I think part of it is the observation that man if you want to be careful and write code that
-Dialogue: 0,0:42:32.48,0:42:41.14,Chinese,,0,0,0,,所以我认为，这部分就靠人的观察如果你想写出
+Dialogue: 0,0:42:32.48,0:42:41.14,Chinese,,0,0,0,,所以我认为，结论是如果你谨慎一些确保写出正确的代码
 Dialogue: 0,0:42:41.66,0:42:48.72,English,,0,0,0,,That is guaranteed correct no matter what implementation goes on as long as it's within the C standard
-Dialogue: 0,0:42:41.66,0:42:48.72,Chinese,,0,0,0,,在C标准内，无论执行什么，都可以保证正确的代码
+Dialogue: 0,0:42:41.66,0:42:48.72,Chinese,,0,0,0,,无论何种实现，只要是在C标准之下，都可以保证正确
 Dialogue: 0,0:42:49.16,0:42:51.46,English,,0,0,0,,It's pretty tricky business.question up there
-Dialogue: 0,0:42:49.16,0:42:51.46,Chinese,,0,0,0,,这是非常棘手的业务。提问
+Dialogue: 0,0:42:49.16,0:42:51.46,Chinese,,0,0,0,,这是非常棘手的事情，提问
+--------------------
 Dialogue: 0,0:42:52.12,0:42:59.46,English,,0,0,0,,[student question]
 Dialogue: 0,0:42:52.12,0:42:59.46,Chinese,,0,0,0,,[学生问题]
 Dialogue: 0,0:42:59.84,0:43:04.42,English,,0,0,0,,Yes!Which is unfortunate right
