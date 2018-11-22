@@ -90,51 +90,51 @@ Dialogue: 0,0:03:05.00,0:03:16.96,Chinese,,0,0,0,,甚至 FreeBSD (UNIX 操作系
 Dialogue: 0,0:03:19.76,0:03:23.32,English,,0,0,0,,Um so if you think about what goes on in a procedure
 Dialogue: 0,0:03:19.76,0:03:23.32,Chinese,,0,0,0,,如果你思考在过程中发生了什么
 Dialogue: 0,0:03:23.32,0:03:30.06,English,,0,0,0,,Even in C which is a relatively unsophisticated language in many ways,there's a lot going on
-Dialogue: 0,0:03:23.32,0:03:30.06,Chinese,,0,0,0,,即便对于 C 这种相对简单的语言有很多事情要发生
+Dialogue: 0,0:03:23.32,0:03:30.06,Chinese,,0,0,0,,即便对于 C 这种相对简单的语言，过程也是相对复杂的
 Dialogue: 0,0:03:30.66,0:03:33.74,English,,0,0,0,,And so it's worth breaking down those and thinking about it
-Dialogue: 0,0:03:30.66,0:03:33.74,Chinese,,0,0,0,,所以值得打破分解这些并思考它
+Dialogue: 0,0:03:30.66,0:03:33.74,Chinese,,0,0,0,,所以值得将它分解，然后逐个击破
 Dialogue: 0,0:03:34.20,0:03:36.34,English,,0,0,0,,One is there's a notion of control
-Dialogue: 0,0:03:34.20,0:03:36.34,Chinese,,0,0,0,,一个是控制概念
+Dialogue: 0,0:03:34.20,0:03:36.34,Chinese,,0,0,0,,第一个概念是：控制
 Dialogue: 0,0:03:36.68,0:03:40.96,English,,0,0,0,,So in my example I show a procedure P calling a procedure Q
-Dialogue: 0,0:03:36.68,0:03:40.96,Chinese,,0,0,0,,所以在我的例子中，我展示了一个程序 P 调用程序 Q
+Dialogue: 0,0:03:36.68,0:03:40.96,Chinese,,0,0,0,,在我的这个例子中，我将展示一个过程 P 调用另一个过程 Q
 Dialogue: 0,0:03:41.58,0:03:52.32,English,,0,0,0,,And so when P calls Q then somehow the program has to jump down and begin executing the the lines of code for Q
-Dialogue: 0,0:03:41.58,0:03:52.32,Chinese,,0,0,0,,所以当 P 调用 Q 后程序必须以某种方式跳转并开始执行 Q 的代码
+Dialogue: 0,0:03:41.58,0:03:52.32,Chinese,,0,0,0,,所以当 P 调用 Q 时，程序必须以某种方式跳转进入到 Q 中，并开始执行 Q 的代码
 Dialogue: 0,0:03:52.70,0:03:59.36,English,,0,0,0,,And then when Q hits its exit point its return point, somehow is to get back to P
-Dialogue: 0,0:03:52.70,0:03:59.36,Chinese,,0,0,0,,然后当 Q 执行到它的返回点，需要以某种方式回到 P
+Dialogue: 0,0:03:52.70,0:03:59.36,Chinese,,0,0,0,,然后当 Q 执行到它的退出点，程序需要以某种方式回到 P
 Dialogue: 0,0:03:59.62,0:04:06.80,English,,0,0,0,,And not just to any old place in P, but specifically to whatever comes in P right after the call to Q
 Dialogue: 0,0:03:59.62,0:04:06.80,Chinese,,0,0,0,,不是返回到 P 的任何地方都可以，必须恰好在 P 调用 Q 后的位置
 Dialogue: 0,0:04:07.72,0:04:15.00,English,,0,0,0,,So somehow we have to record the information about where the return should be to return to the correct place
 Dialogue: 0,0:04:07.72,0:04:15.00,Chinese,,0,0,0,,因此为了返回到正确的位置，我们需要记录返回位置的信息
 Dialogue: 0,0:04:15.62,0:04:23.30,English,,0,0,0,,So that's first of all.To for passing control to a function and having that function return back to where it should get back to
-Dialogue: 0,0:04:15.62,0:04:23.30,Chinese,,0,0,0,,首先，我们需要转移控制给函数并使它返回到正确的位置
+Dialogue: 0,0:04:15.62,0:04:23.30,Chinese,,0,0,0,,首先这是第一点，我们需要将控制权转移给一个函数并确保它能返回到正确的位置
 Dialogue: 0,0:04:24.54,0:04:29.08,English,,0,0,0,,Our second there is data, how do we get operands to it
 Dialogue: 0,0:04:24.54,0:04:29.08,Chinese,,0,0,0,,第二个问题是数据，即我们如何传递参数
 Dialogue: 0,0:04:29.08,0:04:30.76,English,,0,0,0,,So in this particular case
-Dialogue: 0,0:04:29.08,0:04:30.76,Chinese,,0,0,0,,所以在这种特殊情况下
+Dialogue: 0,0:04:29.08,0:04:30.76,Chinese,,0,0,0,,在我们的这个例子中
 Dialogue: 0,0:04:31.38,0:04:36.18,English,,0,0,0,,Q is a function that takes a single argument that it calls internally it calls i
-Dialogue: 0,0:04:31.38,0:04:36.18,Chinese,,0,0,0,,Q 是一个函数，它接受一个参数 i 并能在函数内部使用这个参数
+Dialogue: 0,0:04:31.38,0:04:36.18,Chinese,,0,0,0,,Q 是一个函数，它接受单个参数 i 并能在函数内部使用这个参数
 Dialogue: 0,0:04:36.90,0:04:42.12,English,,0,0,0,,And up here where P is calling it,it's passing some value within P called x
-Dialogue: 0,0:04:36.90,0:04:42.12,Chinese,,0,0,0,,在 P 调用它的地方，它在 P 中传递了一个参数 x
+Dialogue: 0,0:04:36.90,0:04:42.12,Chinese,,0,0,0,,在 P 调用它的地方，P 给 Q 传递了一个称为 x 的值
 Dialogue: 0,0:04:42.82,0:04:48.00,English,,0,0,0,,So somehow that data value of x has to be recorded in a form
-Dialogue: 0,0:04:42.82,0:04:48.00,Chinese,,0,0,0,,所以 x 的值必须以某种形式记录
+Dialogue: 0,0:04:42.82,0:04:48.00,Chinese,,0,0,0,,所以 x 的值必须以某种形式记录下来
 Dialogue: 0,0:04:48.36,0:04:51.92,English,,0,0,0,,That within Q it will have access to that information
-Dialogue: 0,0:04:48.36,0:04:51.92,Chinese,,0,0,0,,在 Q 内，它将有权访问该信息
+Dialogue: 0,0:04:48.36,0:04:51.92,Chinese,,0,0,0,,使得在 Q 内，程序有有权访问其信息
 Dialogue: 0,0:04:52.24,0:05:00.78,English,,0,0,0,,And similarly when Q wants to return a value back and then P will make use of that value
-Dialogue: 0,0:04:52.24,0:05:00.78,Chinese,,0,0,0,,同样，当 Q 想要返回一个值时 P 将利用该值
+Dialogue: 0,0:04:52.24,0:05:00.78,Chinese,,0,0,0,,类似的，当 Q 想要返回一个值时 P 也将用相同的方式利用该值
 Dialogue: 0,0:05:00.78,0:05:05.46,English,,0,0,0,,There has to be some convention of how that data gets communicated back
-Dialogue: 0,0:05:00.78,0:05:05.46,Chinese,,0,0,0,,必须有一些关于如何传回数据的惯例
+Dialogue: 0,0:05:00.78,0:05:05.46,Chinese,,0,0,0,,因此，我们必须规定一些关于如何回传数据的约定
 Dialogue: 0,0:05:07.34,0:05:11.68,English,,0,0,0,,And then finally in a function might have some local data
 Dialogue: 0,0:05:07.34,0:05:11.68,Chinese,,0,0,0,,最后一点，在一个函数中可能会有一些局部数据
 Dialogue: 0,0:05:12.15,0:05:16.42,English,,0,0,0,,That requires allocation of some amount of space
 Dialogue: 0,0:05:12.15,0:05:16.42,Chinese,,0,0,0,,这需要分配一些空间
 Dialogue: 0,0:05:16.96,0:05:21.64,English,,0,0,0,,And so where does that space get allocated.How do we make sure it gets allocated properly?
-Dialogue: 0,0:05:16.96,0:05:21.64,Chinese,,0,0,0,,那么这个空间在哪里被分配、如何确保它被正确分配？
+Dialogue: 0,0:05:16.96,0:05:21.64,Chinese,,0,0,0,,那么在哪里分配这些空间？如何确保正确分配？
 Dialogue: 0,0:05:22.18,0:05:31.62,English,,0,0,0,,In particular in C as you know when a function returns any local data that it allocated should get deallocated should be freed up
-Dialogue: 0,0:05:22.18,0:05:31.62,Chinese,,0,0,0,,特别地，在 C 中局部变量被返回的同时应该被释放
+Dialogue: 0,0:05:22.18,0:05:31.62,Chinese,,0,0,0,,特别是 C 语言，我们需要确保函数返回的局部数据所分配的空间应该被释放掉
 Dialogue: 0,0:05:31.74,0:05:36.44,English,,0,0,0,,So that we don't sort of start consuming an unbounded amount of storage
-Dialogue: 0,0:05:31.74,0:05:36.44,Chinese,,0,0,0,,这确保我们不会消耗无限量的存储空间
+Dialogue: 0,0:05:31.74,0:05:36.44,Chinese,,0,0,0,,这样，我们才不会无限量地消耗存储空间
 Dialogue: 0,0:05:37.08,0:05:38.00,English,,0,0,0,,So how do we do that
-Dialogue: 0,0:05:37.08,0:05:38.00,Chinese,,0,0,0,,那我们该怎么做呢
+Dialogue: 0,0:05:37.08,0:05:38.00,Chinese,,0,0,0,,那我们该如何实现这一点呢？
 Dialogue: 0,0:05:38.02,0:05:44.80,English,,0,0,0,,Those are all the sort of different aspects that a procedure call in return I have to deal with somehow
 Dialogue: 0,0:05:38.02,0:05:44.80,Chinese,,0,0,0,,这些都是过程调用的不同方面，之后我都会讲到
 Dialogue: 0,0:05:45.52,0:05:50.18,English,,0,0,0,,And part of the reason for breaking it down into those little segments is
@@ -142,83 +142,83 @@ Dialogue: 0,0:05:45.52,0:05:50.18,Chinese,,0,0,0,,将其分解为那些小部分
 Dialogue: 0,0:05:50.62,0:05:59.50,English,,0,0,0,,In x86-64,one of the clever things they did was to try and reduce the overhead of procedure calls as much as possible
 Dialogue: 0,0:05:50.62,0:05:59.50,Chinese,,0,0,0,,在 x86-64 中，他们做的一件聪明的事情就是尽可能地减少过程调用的开销
 Dialogue: 0,0:05:59.50,0:06:09.12,English,,0,0,0,,Because as you know in good programming style you often write these functions that do a fairly small amount of actual useful stuff
-Dialogue: 0,0:05:59.50,0:06:09.12,Chinese,,0,0,0,,因为在好的编程风格中你经常写实际上只有很少用途的函数
+Dialogue: 0,0:05:59.50,0:06:09.12,Chinese,,0,0,0,,因为在好的编程风格中，你写的函数往往专注于很小的功能
 Dialogue: 0,0:06:09.80,0:06:16.40,English,,0,0,0,,And it's sort of good programming style to do that especially in a more object-oriented programming style
-Dialogue: 0,0:06:09.80,0:06:16.40,Chinese,,0,0,0,,特别地，在面向对象编程中更需要好的编程风格
-Dialogue: 0,0:06:17.06,0:06:27.30,English,,0,0,0,,And so you don't want the overhead the extra number of steps taken to nvoke a procedure and deal with all those aspects to take any more time than it needs to
-Dialogue: 0,0:06:17.06,0:06:27.30,Chinese,,0,0,0,,你不希望因为这些额外的步骤调用过程，导致花费更多的时间
+Dialogue: 0,0:06:09.80,0:06:16.40,Chinese,,0,0,0,,在面向对象编程中， 这尤其是一种很好的编程风格
+Dialogue: 0,0:06:17.06,0:06:27.30,English,,0,0,0,,And so you don't want the overhead the extra number of steps taken to invoke a procedure and deal with all those aspects to take any more time than it needs to
+Dialogue: 0,0:06:17.06,0:06:27.30,Chinese,,0,0,0,,因而，你不希望调用过程时产生任何多余的步骤，以及进而导致的更多不必要的时间开销
 Dialogue: 0,0:06:27.30,0:06:30.42,English,,0,0,0,,Because it's a fairly critical overhead
 Dialogue: 0,0:06:27.30,0:06:30.42,Chinese,,0,0,0,,因为这是一个相当关键的开销
 Dialogue: 0,0:06:31.44,0:06:37.46,English,,0,0,0,,So one of the things they do in this, they only do whatever is absolutely needed
-Dialogue: 0,0:06:31.44,0:06:37.46,Chinese,,0,0,0,,为此他们只做了绝对需要的事情
+Dialogue: 0,0:06:31.44,0:06:37.46,Chinese,,0,0,0,,为此，设计者们的原则之一时，只做绝对必要的事情
 Dialogue: 0,0:06:37.94,0:06:45.94,English,,0,0,0,,So hurt in particular if no local storage is needed on this for data then don't allocate it therefore don't free it
-Dialogue: 0,0:06:37.94,0:06:45.94,Chinese,,0,0,0,,如果数据不需要本地存储空间则不要分配和释放空间了
+Dialogue: 0,0:06:37.94,0:06:45.94,Chinese,,0,0,0,,所以，如果数据不需要本地存储空间则不要分配和释放空间了
 Dialogue: 0,0:06:46.38,0:06:49.54,English,,0,0,0,,If you're not passing any values don't pass them
-Dialogue: 0,0:06:46.38,0:06:49.54,Chinese,,0,0,0,,如果你没有传递任何值则不要传递它们
+Dialogue: 0,0:06:46.38,0:06:49.54,Chinese,,0,0,0,,如果你没有必要传递任何值，那就不要传递它们
 Dialogue: 0,0:06:49.96,0:06:54.12,English,,0,0,0,,And in general sort of how little can you get away with
 Dialogue: 0,0:06:49.96,0:06:54.12,Chinese,,0,0,0,,总之就是尽可能规避开销
 Dialogue: 0,0:06:54.32,0:06:58.38,English,,0,0,0,,And that makes it a little bit confusing from a teaching point of view
 Dialogue: 0,0:06:54.32,0:06:58.38,Chinese,,0,0,0,,从教学的角度来看，这有点令人困惑
 Dialogue: 0,0:06:58.38,0:07:01.87,English,,0,0,0,,And that there is no set template that it follows every time
-Dialogue: 0,0:06:58.38,0:07:01.87,Chinese,,0,0,0,,并且每次都没有固定的模板
+Dialogue: 0,0:06:58.38,0:07:01.87,Chinese,,0,0,0,,因为每次都没有固定的模板
 Dialogue: 0,0:07:01.94,0:07:08.34,English,,0,0,0,,It sort of you have to each case is a special case for how a particular procedure gets implemented
-Dialogue: 0,0:07:01.94,0:07:08.34,Chinese,,0,0,0,,在每种情况中，过程的执行都是需要具体分析的
+Dialogue: 0,0:07:01.94,0:07:08.34,Chinese,,0,0,0,,差不多在每种情况中，过程的执行都需要具体情况具体分析
 Dialogue: 0,0:07:11.28,0:07:15.02,English,,0,0,0,,So we'll go through all these parts and see how they happen
-Dialogue: 0,0:07:11.28,0:07:15.02,Chinese,,0,0,0,,因此，我们将通过这几部分看看它们是如何发生的
+Dialogue: 0,0:07:11.28,0:07:15.02,Chinese,,0,0,0,,因此，我们将一步一步地分析这些步骤，看看到底发生了什么
 Dialogue: 0,0:07:15.02,0:07:17.58,English,,0,0,0,,And you've already seen little glimpses of them
 Dialogue: 0,0:07:15.02,0:07:17.58,Chinese,,0,0,0,,你已经看到了一小部分
 Dialogue: 0,0:07:17.96,0:07:20.66,English,,0,0,0,,We'll hit the little fragments of code that we've shown already
 Dialogue: 0,0:07:17.96,0:07:20.66,Chinese,,0,0,0,,我们将用已经展示过的代码片段为例
 Dialogue: 0,0:07:22.38,0:07:29.08,English,,0,0,0,,So the first one and sort of the most critical is how do we pass control to a function
-Dialogue: 0,0:07:22.38,0:07:29.08,Chinese,,0,0,0,,所以第一个也是最关键的，是我们如何将控制传递给一个函数
+Dialogue: 0,0:07:22.38,0:07:29.08,Chinese,,0,0,0,,所以第一个也是最关键的问题是，我们如何将控制传递给一个函数
 Dialogue: 0,0:07:29.30,0:07:32.52,English,,0,0,0,,But before we can even talk about that we have to talk about the stack
-Dialogue: 0,0:07:29.30,0:07:32.52,Chinese,,0,0,0,,但在我们谈论之前我们不得不谈论栈
+Dialogue: 0,0:07:29.30,0:07:32.52,Chinese,,0,0,0,,但在我们谈论这个问题之前我们不得不提到：栈
 Dialogue: 0,0:07:34.06,0:07:37.08,English,,0,0,0,,So and you've heard that term the stack in various ways
-Dialogue: 0,0:07:34.06,0:07:37.08,Chinese,,0,0,0,,你已经以各种方式听到了这个术语
+Dialogue: 0,0:07:34.06,0:07:37.08,Chinese,,0,0,0,,你们应该或多或少听说过栈这个术语
 Dialogue: 0,0:07:37.56,0:07:41.08,English,,0,0,0,,The stack is really not a special memory
-Dialogue: 0,0:07:37.56,0:07:41.08,Chinese,,0,0,0,,堆栈实际上不是特殊的内存
+Dialogue: 0,0:07:37.56,0:07:41.08,Chinese,,0,0,0,,栈并不是什么特殊的内存
 Dialogue: 0,0:07:41.30,0:07:43.76,English,,0,0,0,,It's just a region of the normal memory
-Dialogue: 0,0:07:41.30,0:07:43.76,Chinese,,0,0,0,,它只是普通内存的一个区域
+Dialogue: 0,0:07:41.30,0:07:43.76,Chinese,,0,0,0,,它只不过是普通内存的一个区域
 Dialogue: 0,0:07:44.14,0:07:52.74,English,,0,0,0,,Remember to the programmers perspective assembly level programmers perspective is memory is just a big array of bytes
-Dialogue: 0,0:07:44.14,0:07:52.74,Chinese,,0,0,0,,对于汇编层面的程序员而言，内存只是一个巨大的字节数组
+Dialogue: 0,0:07:44.14,0:07:52.74,Chinese,,0,0,0,,记住，对于汇编层面的程序员而言，内存只是一个巨大的字节数组
 Dialogue: 0,0:07:53.84,0:07:58.24,English,,0,0,0,,And somewhere within that bunch of bytes,we're going to call it the stack
 Dialogue: 0,0:07:53.84,0:07:58.24,Chinese,,0,0,0,,在那一堆字节中的某个地方，我们将其称为栈
 Dialogue: 0,0:07:59.02,0:08:08.00,English,,0,0,0,,And the stack is used by the program to manage the state associated with the procedures that it calls and as they return
 Dialogue: 0,0:07:59.02,0:08:08.00,Chinese,,0,0,0,,程序用栈来管理过程调用与返回的状态
-Dialogue: 0,0:08:08.14,0:08:18.90,English,,0,0,0,,So it's where it passes all these potential information the control information data and allocates local data
-Dialogue: 0,0:08:08.14,0:08:18.90,Chinese,,0,0,0,,在栈中，程序传递潜在信息，控制信息和数据并分配本地数据
+Dialogue: 0,0:08:08.14,0:08:18.90,English,,0,0,0,,So it's where it passes all these potential information, the control information, data and allocates local data
+Dialogue: 0,0:08:08.14,0:08:18.90,Chinese,,0,0,0,,在栈中，程序传递潜在信息、控制信息和数据，并分配本地数据
 Dialogue: 0,0:08:19.32,0:08:21.62,English,,0,0,0,,And the reason why it can be managed is a stack
-Dialogue: 0,0:08:19.32,0:08:21.62,Chinese,,0,0,0,,它可以被管理的原因是栈
+Dialogue: 0,0:08:19.32,0:08:21.62,Chinese,,0,0,0,,栈可以用于管理这些信息的原因在于栈这种数据结构
 Dialogue: 0,0:08:21.66,0:08:26.74,English,,0,0,0,,Because of the nature of the whole idea of procedure calls and returns
-Dialogue: 0,0:08:21.66,0:08:26.74,Chinese,,0,0,0,,由于程序调用和返回的整个想法的实质
+Dialogue: 0,0:08:21.66,0:08:26.74,Chinese,,0,0,0,,符合过程调用和返回的整个想法的实质
 Dialogue: 0,0:08:26.74,0:08:30.42,English,,0,0,0,,That you make a call and you might need some information
 Dialogue: 0,0:08:26.74,0:08:30.42,Chinese,,0,0,0,,当你调用时，可能需要一些信息
 Dialogue: 0,0:08:30.80,0:08:35.01,English,,0,0,0,,But when you return from a call, all that information can be discarded
 Dialogue: 0,0:08:30.80,0:08:35.01,Chinese,,0,0,0,,但是当你从调用中返回时，所有这些信息都可以被丢弃
 Dialogue: 0,0:08:36.38,0:08:41.62,English,,0,0,0,,And so it makes use of that sort of last in first out allocation principle
-Dialogue: 0,0:08:36.38,0:08:41.62,Chinese,,0,0,0,,因此它利用了那种后进先出的原则
-Dialogue: 0,0:08:41.94,0:08:45.22,English,,0,0,0,,Meshes very well with this idea of procedure call and return
+Dialogue: 0,0:08:36.38,0:08:41.62,Chinese,,0,0,0,,因此它利用了栈的那种后进先出的原则
+Dialogue: 0,0:08:41.94,0:08:45.22,English,,0,0,0,,Matches very well with this idea of procedure call and return
 Dialogue: 0,0:08:41.94,0:08:45.22,Chinese,,0,0,0,,这与调用与返回的思想十分吻合
 Dialogue: 0,0:08:46.30,0:08:49.36,English,,0,0,0,,So in x86 stacks
 Dialogue: 0,0:08:46.30,0:08:49.36,Chinese,,0,0,0,,所以在 x86 栈中
 Dialogue: 0,0:08:50.20,0:08:53.28,English,,0,0,0,,Actually start with a very high numbered address
-Dialogue: 0,0:08:50.20,0:08:53.28,Chinese,,0,0,0,,实际上从一个非常高的编号地址开始
+Dialogue: 0,0:08:50.20,0:08:53.28,Chinese,,0,0,0,,开始的地址实际上是一个编号非常高的地址
 Dialogue: 0,0:08:54.10,0:08:59.60,English,,0,0,0,,And when they grow when more data are allocated for the stack
 Dialogue: 0,0:08:54.10,0:08:59.60,Chinese,,0,0,0,,当栈生长时，更多的数据分配给栈
 Dialogue: 0,0:08:59.60,0:09:03.20,English,,0,0,0,,It's done by decrementing the stack pointer
 Dialogue: 0,0:08:59.60,0:09:03.20,Chinese,,0,0,0,,这是通过递减栈指针来完成的
 Dialogue: 0,0:09:03.20,0:09:08.02,English,,0,0,0,,So the stack pointer as you know is just a regular register %rsp
-Dialogue: 0,0:09:03.20,0:09:08.02,Chinese,,0,0,0,,所以栈指针只是一个常规寄存器 ％rsp
+Dialogue: 0,0:09:03.20,0:09:08.02,Chinese,,0,0,0,,所以栈指针只是一个常规寄存器 %rsp
 Dialogue: 0,0:09:08.68,0:09:12.64,English,,0,0,0,,And its value is the address of the current top of the stack
 Dialogue: 0,0:09:08.68,0:09:12.64,Chinese,,0,0,0,,它的值是当前栈顶部的地址
 Dialogue: 0,0:09:13.30,0:09:18.10,English,,0,0,0,,And every time you allocate more space on the stack it does by decrementing that pointer
 Dialogue: 0,0:09:13.30,0:09:18.10,Chinese,,0,0,0,,每次在栈上分配更多空间时，都会通过递减该指针来实现
 Dialogue: 0,0:09:18.80,0:09:21.22,English,,0,0,0,,Now just for convention
-Dialogue: 0,0:09:18.80,0:09:21.22,Chinese,,0,0,0,,现在只是为了惯例
+Dialogue: 0,0:09:18.80,0:09:21.22,Chinese,,0,0,0,,现在，我们采用一种约定的方式
 Dialogue: 0,0:09:23.44,0:09:26.67,English,,0,0,0,,And I'm not sure why this happens but this is the way we do it
-Dialogue: 0,0:09:23.44,0:09:26.67,Chinese,,0,0,0,,而且我不确定为什么会这样，但这就是我们这样做的方式
+Dialogue: 0,0:09:23.44,0:09:26.67,Chinese,,0,0,0,,我并不确定为什么一定要这样，但我们一直就是这样做的
 Dialogue: 0,0:09:27.30,0:09:29.70,English,,0,0,0,,Is we draw stacks upside down
-Dialogue: 0,0:09:27.30,0:09:29.70,Chinese,,0,0,0,,我们倒着画栈
+Dialogue: 0,0:09:27.30,0:09:29.70,Chinese,,0,0,0,,我们要倒着画栈
 Dialogue: 0,0:09:30.10,0:09:35.94,English,,0,0,0,,So the top of the stack is actually shown at the bottom
 Dialogue: 0,0:09:30.10,0:09:35.94,Chinese,,0,0,0,,所以栈的顶部实际显示在底部
 Dialogue: 0,0:09:38.52,0:09:42.10,English,,0,0,0,,And just to add to that confusion
