@@ -32,61 +32,61 @@ Dialogue: 0,0:00:00.00,0:00:07.96,Chinese,,0,0,0,,我们仍将继续讨论机器
 Dialogue: 0,0:00:07.96,0:00:14.18,English,,0,0,0,,I think it's in some ways the core of this course that much of the rest of material builds upon
 Dialogue: 0,0:00:07.96,0:00:14.18,Chinese,,0,0,0,,这些内容算得上是本课程的核心，也是很多其他内容的基础
 Dialogue: 0,0:00:14.72,0:00:21.00,English,,0,0,0,,And hopefully you've all had a chance to check out lab2 and your bomb lab
-Dialogue: 0,0:00:14.72,0:00:21.00,Chinese,,0,0,0,,希望你们都看了 lab2 和 bomb lab
+Dialogue: 0,0:00:14.72,0:00:21.00,Chinese,,0,0,0,,希望你们都看了 lab2 和 bomb lab 这两个作业
 Dialogue: 0,0:00:21.00,0:00:23.38,English,,0,0,0,,And you've gotten started on that
 Dialogue: 0,0:00:21.00,0:00:23.38,Chinese,,0,0,0,,并且已经开始做了
 Dialogue: 0,0:00:23.76,0:00:27.96,English,,0,0,0,,And certainly by the time you're finished with the material from today
-Dialogue: 0,0:00:23.76,0:00:27.96,Chinese,,0,0,0,,当你在完成今天的内容之后
+Dialogue: 0,0:00:23.76,0:00:27.96,Chinese,,0,0,0,,当学完今天的内容之后
 Dialogue: 0,0:00:28.34,0:00:34.12,English,,0,0,0,,You will be well on the way to solving all but the last one or two stages of the bomb lab
-Dialogue: 0,0:00:28.34,0:00:34.12,Chinese,,0,0,0,,除了 bomb lab 的最后一个或两个阶段之外，你将很好地解决所有问题
+Dialogue: 0,0:00:28.34,0:00:34.12,Chinese,,0,0,0,,除了 bomb lab 的最后一个或两个阶段之外，你们将能很好地解决作业中其他所有问题
 Dialogue: 0,0:00:34.16,0:00:39.76,English,,0,0,0,,So I highly recommend you get going on that not put it off to the last minute
-Dialogue: 0,0:00:34.16,0:00:39.76,Chinese,,0,0,0,,所以我强烈建议你抓紧做，不要把它放到最后一分钟
+Dialogue: 0,0:00:34.16,0:00:39.76,Chinese,,0,0,0,,所以我强烈建议你们抓紧做，不要拖到最后一分钟
 Dialogue: 0,0:00:40.80,0:00:50.86,English,,0,0,0,,So and what we're talking about today is how procedures, I'm going to use the same terminology here
-Dialogue: 0,0:00:40.80,0:00:50.86,Chinese,,0,0,0,,那么我们今天谈论的是过程，我将在这里使用相同的术语
+Dialogue: 0,0:00:40.80,0:00:50.86,Chinese,,0,0,0,,那么我们今天要谈论的是过程，我这里将统一使用同一个术语
 Dialogue: 0,0:00:51.44,0:00:56.96,English,,0,0,0,,Whether it's a function a procedure or an object-oriented programming a method
-Dialogue: 0,0:00:51.44,0:00:56.96,Chinese,,0,0,0,,无论是函数、过程，还是面向对象编程方法
+Dialogue: 0,0:00:51.44,0:00:56.96,Chinese,,0,0,0,,它既可以是函数、过程，也可以是面向对象编程中的方法
 Dialogue: 0,0:00:57.24,0:01:02.12,English,,0,0,0,,Those are all roughly the same thing and what we'll talk about covers them overall
-Dialogue: 0,0:00:57.24,0:01:02.12,Chinese,,0,0,0,,这些都是大致相同的事情，今天的讲座都会覆盖到
+Dialogue: 0,0:00:57.24,0:01:02.12,Chinese,,0,0,0,,这些都是大致相同的东西，今天的讲座将全部覆盖到
 Dialogue: 0,0:01:08.66,0:01:23.94,English,,0,0,0,,I'll also mention at the outset that the way this is handled in the procedures That we'll be talking about today is a combination of the actual x86 hardware and how it supports it
-Dialogue: 0,0:01:08.66,0:01:23.94,Chinese,,0,0,0,,我在最开始还要提到，过程处理这些问题的方式依赖于 x86 硬件的支持
+Dialogue: 0,0:01:08.66,0:01:23.94,Chinese,,0,0,0,,开讲之前值得一提的是，我们讲述的过程虽然是基于 x86 硬件及其运行方式
 Dialogue: 0,0:01:24.34,0:01:30.11,English,,0,0,0,,But also in some ways more importantly a set of conventions that were developed that
-Dialogue: 0,0:01:24.34,0:01:30.11,Chinese,,0,0,0,,但更重要的是一套被普遍承认的公约的建立
+Dialogue: 0,0:01:24.34,0:01:30.11,Chinese,,0,0,0,,但更重要的是，我们也采用了一套被普遍承认的约定
 Dialogue: 0,0:01:30.64,0:01:34.64,English,,0,0,0,,Basically everyone agreed to and it's known as an ABI
-Dialogue: 0,0:01:30.64,0:01:34.64,Chinese,,0,0,0,,它被称为 ABI
+Dialogue: 0,0:01:30.64,0:01:34.64,Chinese,,0,0,0,,这种约定称为 ABI
 Dialogue: 0,0:01:34.96,0:01:40.18,English,,0,0,0,,But I want...who stands for application binary interface
-Dialogue: 0,0:01:34.96,0:01:40.18,Chinese,,0,0,0,,全称是应用二进制接口
+Dialogue: 0,0:01:34.96,0:01:40.18,Chinese,,0,0,0,,我想，它的全称是应用程序二进制接口
 Dialogue: 0,0:01:49.64,0:01:53.94,English,,0,0,0,,So the idea is a document you can get it online
-Dialogue: 0,0:01:49.64,0:01:53.94,Chinese,,0,0,0,,你可以在网上获取该文件
+Dialogue: 0,0:01:49.64,0:01:53.94,Chinese,,0,0,0,,你们可以在网上获取 ABI 的文档
 Dialogue: 0,0:01:54.26,0:01:57.12,English,,0,0,0,,And it's cited in the book
-Dialogue: 0,0:01:54.26,0:01:57.12,Chinese,,0,0,0,,在书中也有引用
+Dialogue: 0,0:01:54.26,0:01:57.12,Chinese,,0,0,0,,在这本书中也有引用
 Dialogue: 0,0:01:57.80,0:02:06.27,English,,0,0,0,,It's a document that people put together the initial version When the first x86-64 machines were first being developed
-Dialogue: 0,0:01:57.80,0:02:06.27,Chinese,,0,0,0,,这是当第一台 x86-64 机器被开发时人们整理的初始文档
+Dialogue: 0,0:01:57.80,0:02:06.27,Chinese,,0,0,0,,此文档描述的是开发第一台 x86-64 机器时人们所使用的 ABI 初始版本
 Dialogue: 0,0:02:06.92,0:02:08.90,English,,0,0,0,,And specifically for Linux
 Dialogue: 0,0:02:06.92,0:02:08.90,Chinese,,0,0,0,,特别是对于 Linux
 Dialogue: 0,0:02:09.42,0:02:18.40,English,,0,0,0,,They said okay all Linux programs, all compilers,all the operating system,all the different parts of a system
-Dialogue: 0,0:02:09.42,0:02:18.40,Chinese,,0,0,0,,所有 Linux 程序，所有编译器，所有操作系统，系统的所有不同部分
+Dialogue: 0,0:02:09.42,0:02:18.40,Chinese,,0,0,0,,它要求所有 Linux 程序，所有编译器，所有操作系统，系统的所有不同部分
 Dialogue: 0,0:02:18.40,0:02:24.58,English,,0,0,0,,That need to have some common understanding of how to manage the resources on the machine
-Dialogue: 0,0:02:18.40,0:02:24.58,Chinese,,0,0,0,,这需要对如何管理机器上的资源有一些共同的理解
+Dialogue: 0,0:02:18.40,0:02:24.58,Chinese,,0,0,0,,都需要对如何管理机器上的资源有一些共同的理解
 Dialogue: 0,0:02:24.98,0:02:27.36,English,,0,0,0,,Will agree to adhere to this set of rules
-Dialogue: 0,0:02:24.98,0:02:27.36,Chinese,,0,0,0,,将同意遵守这套规则
+Dialogue: 0,0:02:24.98,0:02:27.36,Chinese,,0,0,0,,并且同意遵守这套规则
 Dialogue: 0,0:02:28.16,0:02:35.16,English,,0,0,0,,And so it goes beyond the actual what the hardware does to a set of software standards
-Dialogue: 0,0:02:28.16,0:02:35.16,Chinese,,0,0,0,,因此，它超越了硬件对一组软件标准的实际作用
+Dialogue: 0,0:02:28.16,0:02:35.16,Chinese,,0,0,0,,因此，它超越了硬件实际提供的软件标准
 Dialogue: 0,0:02:35.92,0:02:38.32,English,,0,0,0,,And it's called application binary interface
 Dialogue: 0,0:02:35.92,0:02:38.32,Chinese,,0,0,0,,它被称为应用程序二进制接口
 Dialogue: 0,0:02:38.38,0:02:45.58,English,,0,0,0,,Because it's particularly the interface at the machine program level
-Dialogue: 0,0:02:38.38,0:02:45.58,Chinese,,0,0,0,,特别地，因为它是机器程序级别的接口
+Dialogue: 0,0:02:38.38,0:02:45.58,Chinese,,0,0,0,,因为，它是机器程序级别的接口
 Dialogue: 0,0:02:46.30,0:02:48.22,English,,0,0,0,,And so that's what we'll be covering today
 Dialogue: 0,0:02:46.30,0:02:48.22,Chinese,,0,0,0,,这就是我们今天要介绍的内容
 Dialogue: 0,0:02:48.22,0:02:52.66,English,,0,0,0,,So people asked sort of well you know who makes up these rules and things
-Dialogue: 0,0:02:48.22,0:02:52.66,Chinese,,0,0,0,,所以人们问你知道谁制定了这些规则和事情
+Dialogue: 0,0:02:48.22,0:02:52.66,Chinese,,0,0,0,,所以，当人们问起是谁制定了这些规则和事情的时候
 Dialogue: 0,0:02:52.66,0:02:55.34,English,,0,0,0,,And the point was there was a working group that did this
-Dialogue: 0,0:02:52.66,0:02:55.34,Chinese,,0,0,0,,关键是有一个工作组做到了这一点
+Dialogue: 0,0:02:52.66,0:02:55.34,Chinese,,0,0,0,,回答的要点是：是一个工作组实现了这些标准
 Dialogue: 0,0:02:55.80,0:02:58.12,English,,0,0,0,,And there's a separate ABI for windows
-Dialogue: 0,0:02:55.80,0:02:58.12,Chinese,,0,0,0,,Windows 还有一个单独的 ABI
-Dialogue: 0,0:02:58.60,0:03:04.46,English,,0,0,0,,It's similar but not quite the same there's a separate ABI for OSX for apple
-Dialogue: 0,0:02:58.60,0:03:04.46,Chinese,,0,0,0,,它类似但不完全相同，它为苹果的 OSX 提供了单独的 ABI
-Dialogue: 0,0:03:05.00,0:03:16.96,English,,0,0,0,,And even freebsd a different variant of a UNIX like operating system has its own ABI that they all share a lot in common but some of the details differ
-Dialogue: 0,0:03:05.00,0:03:16.96,Chinese,,0,0,0,,甚至 FreeBSD(UNIX 操作系统的另一种变体)有自己的 ABI，他们都有很多共同点，但有些细节不同
+Dialogue: 0,0:02:55.80,0:02:58.12,Chinese,,0,0,0,,Windows 也有一个单独的 ABI
+Dialogue: 0,0:02:58.60,0:03:04.46,English,,0,0,0,,It's similar but not quite the same. There's a separate ABI for OSX for apple
+Dialogue: 0,0:02:58.60,0:03:04.46,Chinese,,0,0,0,,它与 Linux API 类似但不完全相同。苹果 OSX 系统也有它自己的 ABI
+Dialogue: 0,0:03:05.00,0:03:16.96,English,,0,0,0,,And even FreeBSD, a different variant of a UNIX like operating system, has its own ABI that they all share a lot in common but some of the details differ
+Dialogue: 0,0:03:05.00,0:03:16.96,Chinese,,0,0,0,,甚至 FreeBSD (UNIX 操作系统的另一种变体) 都有自己的 ABI。这些 API 有很多共同点，但在细节上有些不同
 Dialogue: 0,0:03:19.76,0:03:23.32,English,,0,0,0,,Um so if you think about what goes on in a procedure
 Dialogue: 0,0:03:19.76,0:03:23.32,Chinese,,0,0,0,,如果你思考在过程中发生了什么
 Dialogue: 0,0:03:23.32,0:03:30.06,English,,0,0,0,,Even in C which is a relatively unsophisticated language in many ways,there's a lot going on
