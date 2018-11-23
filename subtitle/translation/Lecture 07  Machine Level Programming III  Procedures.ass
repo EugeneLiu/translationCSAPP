@@ -318,31 +318,31 @@ Dialogue: 0,0:13:49.58,0:13:52.80,Chinese,,0,0,0,,那么让我们看看一些例
 Dialogue: 0,0:13:53.22,0:13:56.56,English,,0,0,0,,But this is a C function called multstore
 Dialogue: 0,0:13:53.22,0:13:56.56,Chinese,,0,0,0,,但这是一个名为 multstore 的 C 函数
 Dialogue: 0,0:13:57.08,0:14:05.00,English,,0,0,0,,And then this is the output slightly cleaned up output from the disassembler of that exact function
-Dialogue: 0,0:13:57.08,0:14:05.00,Chinese,,0,0,0,,这是经处理过的反汇编器的输出
+Dialogue: 0,0:13:57.08,0:14:05.00,Chinese,,0,0,0,,这是此函数经过反汇编器输出并稍微清理后的结果
 Dialogue: 0,0:14:05.74,0:14:08.20,English,,0,0,0,,And similarly this is a function called mult2
-Dialogue: 0,0:14:05.74,0:14:08.20,Chinese,,0,0,0,,同样，这是一个名为 mult2 的函数
+Dialogue: 0,0:14:05.74,0:14:08.20,Chinese,,0,0,0,,类似地，还有一个名为 mult2 的函数
 Dialogue: 0,0:14:08.88,0:14:10.90,English,,0,0,0,,And this is disassembled version
-Dialogue: 0,0:14:08.88,0:14:10.90,Chinese,,0,0,0,,这是反汇编的版本
+Dialogue: 0,0:14:08.88,0:14:10.90,Chinese,,0,0,0,,这是它地反汇编版本
 Dialogue: 0,0:14:11.32,0:14:20.90,English,,0,0,0,,And the reason I'm showing this is,because I want to make use of the addresses that these instructions are at that you don't see when you write it in assembly code
-Dialogue: 0,0:14:11.32,0:14:20.90,Chinese,,0,0,0,,我展示这些是为了应用指令所在的地址，而你在汇编代码中是看不到这些的
+Dialogue: 0,0:14:11.32,0:14:20.90,Chinese,,0,0,0,,我展示这些是为了参考指令所在的地址，而你在汇编代码中是看不到这些的
 Dialogue: 0,0:14:20.94,0:14:23.92,English,,0,0,0,,So I'm showing it the disassembled version
-Dialogue: 0,0:14:20.94,0:14:23.92,Chinese,,0,0,0,,所以我展示了反汇编的版本
+Dialogue: 0,0:14:20.94,0:14:23.92,Chinese,,0,0,0,,所以我展示的是反汇编版本
 Dialogue: 0,0:14:25.16,0:14:32.10,English,,0,0,0,,And the reason all this is up here is because you'll see the function multstore calls mult2
-Dialogue: 0,0:14:25.16,0:14:32.10,Chinese,,0,0,0,,你会看到函数 multstore 调用 mult2
+Dialogue: 0,0:14:25.16,0:14:32.10,Chinese,,0,0,0,,说了这么多，其实是向你们展示函数 multstore 对 mult2 的调用
 Dialogue: 0,0:14:32.14,0:14:33.84,English,,0,0,0,,So I want to show how that works
-Dialogue: 0,0:14:32.14,0:14:33.84,Chinese,,0,0,0,,所以我想通过这些代码展示一下它是如何工作的
+Dialogue: 0,0:14:32.14,0:14:33.84,Chinese,,0,0,0,,我想通过这些代码展示一下这个调用是如何工作的
 Dialogue: 0,0:14:36.10,0:14:41.18,English,,0,0,0,,So and there's two instructions and you've seen these in some form
-Dialogue: 0,0:14:36.10,0:14:41.18,Chinese,,0,0,0,,所以，有两个指令你已经以某种形式看到了
+Dialogue: 0,0:14:36.10,0:14:41.18,Chinese,,0,0,0,,其中有两个指令你已经以某种形式看到过了
 Dialogue: 0,0:14:41.72,0:14:45.78,English,,0,0,0,,To call a function you just call it where you give a label
-Dialogue: 0,0:14:41.72,0:14:45.78,Chinese,,0,0,0,,要调用一个函数，只需在给出标签的地方调用它
+Dialogue: 0,0:14:41.72,0:14:45.78,Chinese,,0,0,0,,要调用一个函数，只需要调用 (call) 此函数的标签
 Dialogue: 0,0:14:46.24,0:14:49.30,English,,0,0,0,,But keep in mind that this these two instructions
 Dialogue: 0,0:14:46.24,0:14:49.30,Chinese,,0,0,0,,但请记住这两条指令
 Dialogue: 0,0:14:49.30,0:14:54.00,English,,0,0,0,,And the other is when you're ready to return you just execute the ret instruction
-Dialogue: 0,0:14:49.30,0:14:54.00,Chinese,,0,0,0,,另一种是当你准备好返回时，只需执行 ret 指令即可
+Dialogue: 0,0:14:49.30,0:14:54.00,Chinese,,0,0,0,,另一条指令是 ret，当你准备好返回时，执行 ret 指令即可
 Dialogue: 0,0:14:54.76,0:15:00.94,English,,0,0,0,,And keep in mind though that these functions don't do the whole business of procedure call and return
-Dialogue: 0,0:14:54.76,0:15:00.94,Chinese,,0,0,0,,请记住这些函数并不完成调用与返回的全部任务
+Dialogue: 0,0:14:54.76,0:15:00.94,Chinese,,0,0,0,,请记住这些两个指令并没有完成过程调用与返回的全部任务
 Dialogue: 0,0:15:00.94,0:15:06.76,English,,0,0,0,,They just do the control part of it which as we saw is only one of three aspects of a procedure
-Dialogue: 0,0:15:00.94,0:15:06.76,Chinese,,0,0,0,,它们只是完成了控制部分，正如我们所见，这只是过程三个方面中的一个
+Dialogue: 0,0:15:00.94,0:15:06.76,Chinese,,0,0,0,,它们只是完成了控制部分，正如我们所见，这只是过程调用的三个方面之一
 Dialogue: 0,0:15:08.36,0:15:16.14,English,,0,0,0,,Also mention you'll see especially in...sometimes it will say rep; ret
 Dialogue: 0,0:15:08.36,0:15:16.14,Chinese,,0,0,0,,另外你会看到 rep,ret 指令
 Dialogue: 0,0:15:17.68,0:15:20.06,English,,0,0,0,,And you can pretty much just ignore that
