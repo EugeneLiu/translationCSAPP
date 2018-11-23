@@ -222,43 +222,43 @@ Dialogue: 0,0:09:27.30,0:09:29.70,Chinese,,0,0,0,,我们要倒着画栈
 Dialogue: 0,0:09:30.10,0:09:35.94,English,,0,0,0,,So the top of the stack is actually shown at the bottom
 Dialogue: 0,0:09:30.10,0:09:35.94,Chinese,,0,0,0,,所以栈的顶部实际显示在底部
 Dialogue: 0,0:09:38.52,0:09:42.10,English,,0,0,0,,And just to add to that confusion
-Dialogue: 0,0:09:38.52,0:09:42.10,Chinese,,0,0,0,,只是为了增加这种混乱
+Dialogue: 0,0:09:38.52,0:09:42.10,Chinese,,0,0,0,,更加混乱的是
 Dialogue: 0,0:09:42.10,0:09:48.80,English,,0,0,0,,And also remember that the addresses go from bottom to top, not from top to bottom
-Dialogue: 0,0:09:42.10,0:09:48.80,Chinese,,0,0,0,,还记得地址从下到上，而不是从上到下
+Dialogue: 0,0:09:42.10,0:09:48.80,Chinese,,0,0,0,,你需要记得地址是从下往上递增的，而不是从上往下
 Dialogue: 0,0:09:48.80,0:09:52.44,English,,0,0,0,,So when you add to the stack you decrement the stack pointer
-Dialogue: 0,0:09:48.80,0:09:52.44,Chinese,,0,0,0,,因此，当你添加到堆栈时，你将减少栈指针
-Dialogue: 0,0:09:53.04,0:09:56.46,English,,0,0,0,,Neither of those kind of meshes with your intuition perhaps
+Dialogue: 0,0:09:48.80,0:09:52.44,Chinese,,0,0,0,,因此，当你往栈里添加数据时，栈指针地址是递减的
+Dialogue: 0,0:09:53.04,0:09:56.46,English,,0,0,0,,Neither of those kind of matches with your intuition perhaps
 Dialogue: 0,0:09:53.04,0:09:56.46,Chinese,,0,0,0,,也许这些都与你的直觉不相符
 Dialogue: 0,0:09:56.46,0:10:01.14,English,,0,0,0,,But you just have to get used to it,because we're not going to redraw out all the slides
-Dialogue: 0,0:09:56.46,0:10:01.14,Chinese,,0,0,0,,但你只需要习惯它，因为我们不会重新绘制所有幻灯片
+Dialogue: 0,0:09:56.46,0:10:01.14,Chinese,,0,0,0,,但你只需要习惯就好了，因为我们不打算重新绘制所有幻灯片
 Dialogue: 0,0:10:04.70,0:10:09.62,English,,0,0,0,,So anyway sets just remember that over and over again
 Dialogue: 0,0:10:04.70,0:10:09.62,Chinese,,0,0,0,,所以无论如何都要一遍又一遍地记住
 Dialogue: 0,0:10:09.62,0:10:11.70,English,,0,0,0,,That's why this arrow show that
-Dialogue: 0,0:10:09.62,0:10:11.70,Chinese,,0,0,0,,这就是为什么这个箭头强调了这一点
+Dialogue: 0,0:10:09.62,0:10:11.70,Chinese,,0,0,0,,正如这箭头所示
 Dialogue: 0,0:10:12.20,0:10:16.06,English,,0,0,0,,If we were to enumerate the addresses of these different bytes in the data
 Dialogue: 0,0:10:12.20,0:10:16.06,Chinese,,0,0,0,,如果我们要枚举数据中这些不同字节的地址
 Dialogue: 0,0:10:16.06,0:10:20.80,English,,0,0,0,,They'd be increasing in this direction and when we add to the stack
-Dialogue: 0,0:10:16.06,0:10:20.80,Chinese,,0,0,0,,当我们向栈中添加数据时，地址会朝这个方向增加
+Dialogue: 0,0:10:16.06,0:10:20.80,Chinese,,0,0,0,,它们沿箭头方向是递减的。当我们向栈中添加数据时，
 Dialogue: 0,0:10:21.32,0:10:26.54,English,,0,0,0,,The stack top is at the bottom of the picture and we do it by decrementing the stack pointer
-Dialogue: 0,0:10:21.32,0:10:26.54,Chinese,,0,0,0,,堆栈顶部位于图片的底部，我们通过递减堆栈指针来完成
+Dialogue: 0,0:10:21.32,0:10:26.54,Chinese,,0,0,0,,栈的顶部位于图片的底部，我们通过递减堆栈指针来完成这个操作
 Dialogue: 0,0:10:28.42,0:10:37.08,English,,0,0,0,,So in particular there is explicit instructions push and pop that make use of the stack
-Dialogue: 0,0:10:28.42,0:10:37.08,Chinese,,0,0,0,,特别地，有操作栈的显式指令 push 和 pop
+Dialogue: 0,0:10:28.42,0:10:37.08,Chinese,,0,0,0,,具体而言，我们有 push 和 pop 这两个明确的指令来对栈进行操作
 Dialogue: 0,0:10:37.62,0:10:41.28,English,,0,0,0,,And it's often written pushq and popq
-Dialogue: 0,0:10:37.62,0:10:41.28,Chinese,,0,0,0,,它经常写成 pushq 和 popq
-Dialogue: 0,0:10:41.62,0:10:47.56,English,,0,0,0,,But that q is actually a an optional suffix on the instruction
+Dialogue: 0,0:10:37.62,0:10:41.28,Chinese,,0,0,0,,它们经常被写成 pushq 和 popq
+Dialogue: 0,0:10:41.62,0:10:47.56,English,,0,0,0,,But that q is actually an optional suffix on the instruction
 Dialogue: 0,0:10:41.62,0:10:47.56,Chinese,,0,0,0,,但是实际上 q 是指令的可选后缀
 Dialogue: 0,0:10:48.69,0:10:51.94,English,,0,0,0,,So the idea of pushing something onto the stack
-Dialogue: 0,0:10:48.69,0:10:51.94,Chinese,,0,0,0,,所以这就是 push 操作的思想
+Dialogue: 0,0:10:48.69,0:10:51.94,Chinese,,0,0,0,,所以这就是栈上的 push 操作的思想
 Dialogue: 0,0:10:52.02,0:11:00.66,English,,0,0,0,,Then is,there is some source operand it could be from register or from memory or an immediate
-Dialogue: 0,0:10:52.02,0:11:00.66,Chinese,,0,0,0,,然后，有一些源操作数可以来自寄存器或内存或立即数
+Dialogue: 0,0:10:52.02,0:11:00.66,Chinese,,0,0,0,,此操作的源操作数可以来自寄存器、内存或立即数
 Dialogue: 0,0:11:01.16,0:11:03.22,English,,0,0,0,,So this is sort of like a move instruction
-Dialogue: 0,0:11:01.16,0:11:03.22,Chinese,,0,0,0,,所以这有点像移动指令
+Dialogue: 0,0:11:01.16,0:11:03.22,Chinese,,0,0,0,,所以这有点像移动指令 (move) 
 Dialogue: 0,0:11:03.22,0:11:07.80,English,,0,0,0,,But the destination of the move will be toward memory
-Dialogue: 0,0:11:03.22,0:11:07.80,Chinese,,0,0,0,,但移动的目的地是内存
+Dialogue: 0,0:11:03.22,0:11:07.80,Chinese,,0,0,0,,不过，移动指令 (move) 的目的地是内存
 Dialogue: 0,0:11:08.26,0:11:14.86,English,,0,0,0,,And that address of the memory is determined by first decrementing the stack pointer and then doing a write
-Dialogue: 0,0:11:08.26,0:11:14.86,Chinese,,0,0,0,,内存地址通过首先递减堆栈指针然后执行写操作来确定
+Dialogue: 0,0:11:08.26,0:11:14.86,Chinese,,0,0,0,,而目的内存地址是通过首先递减栈指针然后执行写操作来确定的
 Dialogue: 0,0:11:20.02,0:11:24.68,English,,0,0,0,,And similarly the pop instruction takes reads data from the stack
-Dialogue: 0,0:11:20.02,0:11:24.68,Chinese,,0,0,0,,类似地，pop 指令从堆栈中读取数据
+Dialogue: 0,0:11:20.02,0:11:24.68,Chinese,,0,0,0,,类似地，pop 指令从栈中读取数据
 Dialogue: 0,0:11:24.68,0:11:30.48,English,,0,0,0,,And stores it in the destination which must be a register for this particular instruction
 Dialogue: 0,0:11:24.68,0:11:30.48,Chinese,,0,0,0,,并将其存储在目标中，对该指令而言目标必须是寄存器
 Dialogue: 0,0:11:31.24,0:11:38.88,English,,0,0,0,,I think push must be a register too, now that I think of it or immediate, you can't push from memory to
@@ -266,23 +266,23 @@ Dialogue: 0,0:11:31.24,0:11:38.88,Chinese,,0,0,0,,我认为 push 操作的目标
 Dialogue: 0,0:11:40.56,0:11:43.50,English,,0,0,0,,So pop reads from memory
 Dialogue: 0,0:11:40.56,0:11:43.50,Chinese,,0,0,0,,所以 pop 从内存中读取
 Dialogue: 0,0:11:43.80,0:11:47.70,English,,0,0,0,,The address it reads from is given by the current stack pointer
-Dialogue: 0,0:11:43.80,0:11:47.70,Chinese,,0,0,0,,它读取的地址由当前堆栈指针给出
+Dialogue: 0,0:11:43.80,0:11:47.70,Chinese,,0,0,0,,它读取的地址由当前栈指针给出
 Dialogue: 0,0:11:48.82,0:11:52.14,English,,0,0,0,,and then it increments the stack pointer by 8
-Dialogue: 0,0:11:48.82,0:11:52.14,Chinese,,0,0,0,,然后它将堆栈指针递增 8
+Dialogue: 0,0:11:48.82,0:11:52.14,Chinese,,0,0,0,,然后它将栈指针递增 8
 Dialogue: 0,0:11:52.40,0:11:56.48,English,,0,0,0,,These both work only on 8 byte operands I'll get to you in a second and
 Dialogue: 0,0:11:52.40,0:11:56.48,Chinese,,0,0,0,,这些都只适用于 8 字节操作数，我一会儿将要提到
 Dialogue: 0,0:11:57.02,0:12:01.42,English,,0,0,0,,Then the result of that is stored in a register
 Dialogue: 0,0:11:57.02,0:12:01.42,Chinese,,0,0,0,,然后将其结果存储在寄存器中
 Dialogue: 0,0:12:02.02,0:12:02.42,English,,0,0,0,,Question
 Dialogue: 0,0:12:02.02,0:12:02.42,Chinese,,0,0,0,,有问题吗
-Dialogue: 0,0:12:03.54,0:12:14.70,English,,0,0,0,,...pop and push or just like doing the the three things like is, there a difference between like using the like the top
+Dialogue: 0,0:12:03.54,0:12:14.70,English,,0,0,0,,...pop and push or just like doing the three things like is, there a difference between like using the like the top
 Dialogue: 0,0:12:03.54,0:12:14.70,Chinese,,0,0,0,,pop 和 push 或者就像做三件事情一样，只有使用顶部的区别？
 Dialogue: 0,0:12:14.74,0:12:17.12,English,,0,0,0,,Oh could you write it as a set of instructions
 Dialogue: 0,0:12:14.74,0:12:17.12,Chinese,,0,0,0,,哦，你能把它写成一套指令吗？
 Dialogue: 0,0:12:17.66,0:12:25.14,English,,0,0,0,,Yeah you could actually except for some weird corner cases write it out as a set of separate instructions
 Dialogue: 0,0:12:17.66,0:12:25.14,Chinese,,0,0,0,,是的。除了一些奇怪的特例，你可以将其作为一组分开的指令写出来
-Dialogue: 0,0:12:25.80,0:12:31.92,English,,0,0,0,,But it's a common enough thing that it's sort of built in as a as an operation
-Dialogue: 0,0:12:25.80,0:12:31.92,Chinese,,0,0,0,,但这很普遍，就是内置在操作中的
+Dialogue: 0,0:12:25.80,0:12:31.92,English,,0,0,0,,But it's a common enough thing that it's sort of built in as an operation
+Dialogue: 0,0:12:25.80,0:12:31.92,Chinese,,0,0,0,,但这们的使用太普遍了，因此成了内置操作
 Dialogue: 0,0:12:32.66,0:12:36.80,English,,0,0,0,,Whereas call and returner are special they can't be simulated
 Dialogue: 0,0:12:32.66,0:12:36.80,Chinese,,0,0,0,,然而 call 与 ret 指令比较特殊，它们不能被模拟
 Dialogue: 0,0:12:37.22,0:12:40.58,English,,0,0,0,,So one thing do you remember too is it's important that
@@ -294,25 +294,25 @@ Dialogue: 0,0:12:47.78,0:12:49.72,Chinese,,0,0,0,,因为当你第一次开始时
 Dialogue: 0,0:12:49.72,0:12:53.30,English,,0,0,0,,The stack pointer is pointing to whatever was the top element of the stack
 Dialogue: 0,0:12:49.72,0:12:53.30,Chinese,,0,0,0,,栈指针指向原本的栈顶元素
 Dialogue: 0,0:12:54.00,0:12:59.47,English,,0,0,0,,We want to create a new top element so we're going to decrement first and then do the write
-Dialogue: 0,0:12:54.00,0:12:59.47,Chinese,,0,0,0,,我们想创建一个新的栈顶元素，所以我们先减少再写入
+Dialogue: 0,0:12:54.00,0:12:59.47,Chinese,,0,0,0,,当我们想创建一个新的栈顶元素，就需要先减少栈指针，然后再写入
 Dialogue: 0,0:13:00.10,0:13:05.60,English,,0,0,0,,Whereas going the other direction you want to read off the current top of stack element
 Dialogue: 0,0:13:00.10,0:13:05.60,Chinese,,0,0,0,,另一种情况，你想读取目前的栈顶元素
 Dialogue: 0,0:13:05.96,0:13:10.72,English,,0,0,0,,And then you want to increment the stack pointer to sort of deallocate it
-Dialogue: 0,0:13:05.96,0:13:10.72,Chinese,,0,0,0,,然后你想增加栈指针来释放空间
+Dialogue: 0,0:13:05.96,0:13:10.72,Chinese,,0,0,0,,读完之后，你想增加栈指针来释放空间
 Dialogue: 0,0:13:11.10,0:13:13.76,English,,0,0,0,,And one thing you'll notice here is when I say deallocate
-Dialogue: 0,0:13:11.10,0:13:13.76,Chinese,,0,0,0,,注意到当我说“释放”的时候
+Dialogue: 0,0:13:11.10,0:13:13.76,Chinese,,0,0,0,,你们需要注意的是，当我说“释放”的时候
 Dialogue: 0,0:13:13.76,0:13:20.08,English,,0,0,0,,It's not like I magically erase this or something all I'm doing is just moving a stack pointer
-Dialogue: 0,0:13:13.76,0:13:20.08,Chinese,,0,0,0,,并不意味着我神奇地抹去了什么，我仅仅移动了栈指针
+Dialogue: 0,0:13:13.76,0:13:20.08,Chinese,,0,0,0,,并不意味着我神奇地抹去了什么，我仅仅移动了栈指针而已
 Dialogue: 0,0:13:20.08,0:13:24.60,English,,0,0,0,,Whatever it was there at the top of the stack is still in memory
-Dialogue: 0,0:13:20.08,0:13:24.60,Chinese,,0,0,0,,栈顶元素仍然保留在内存中
+Dialogue: 0,0:13:20.08,0:13:24.60,Chinese,,0,0,0,,原来的栈顶元素仍然保留在内存中
 Dialogue: 0,0:13:24.90,0:13:27.22,English,,0,0,0,,It's just no longer considered part of the stack
 Dialogue: 0,0:13:24.90,0:13:27.22,Chinese,,0,0,0,,只是不再是栈的一部分了
 Dialogue: 0,0:13:32.10,0:13:34.72,English,,0,0,0,,Okay so that's the idea of the stack
-Dialogue: 0,0:13:32.10,0:13:34.72,Chinese,,0,0,0,,好的，这就是栈的思想
+Dialogue: 0,0:13:32.10,0:13:34.72,Chinese,,0,0,0,,好啦，这就是栈的思想
 Dialogue: 0,0:13:35.22,0:13:41.74,English,,0,0,0,,And the instructions push and pop are to...put data on the stack or take it off
 Dialogue: 0,0:13:35.22,0:13:41.74,Chinese,,0,0,0,,而 push 和 pop 的指令是为了将数据放入栈或将其取出
 Dialogue: 0,0:13:41.80,0:13:45.66,English,,0,0,0,,But we use the same basic idea for a call and return
-Dialogue: 0,0:13:41.80,0:13:45.66,Chinese,,0,0,0,,但我们对于指令 call 与 ret 使用相同的思想
+Dialogue: 0,0:13:41.80,0:13:45.66,Chinese,,0,0,0,,指令 call 与 ret 使用了相同的思想
 Dialogue: 0,0:13:49.58,0:13:52.80,English,,0,0,0,,So let's look at some examples and there's a lot of stuff up here
 Dialogue: 0,0:13:49.58,0:13:52.80,Chinese,,0,0,0,,那么让我们看看一些例子，这里有很多要讲的
 Dialogue: 0,0:13:53.22,0:13:56.56,English,,0,0,0,,But this is a C function called multstore
