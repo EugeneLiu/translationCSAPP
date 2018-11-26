@@ -356,32 +356,32 @@ Dialogue: 0,0:15:30.46,0:15:35.66,Chinese,,0,0,0,,好的，让我们把它分解
 Dialogue: 0,0:15:35.74,0:15:37.68,English,,0,0,0,,So let's imagine a scenario
 Dialogue: 0,0:15:35.74,0:15:37.68,Chinese,,0,0,0,,让我们想象一个场景
 Dialogue: 0,0:15:38.52,0:15:43.60,English,,0,0,0,,In which the top of stack is at 0x120
-Dialogue: 0,0:15:38.52,0:15:43.60,Chinese,,0,0,0,,其中栈顶在 0x120
+Dialogue: 0,0:15:38.52,0:15:43.60,Chinese,,0,0,0,,假设栈顶地址在 0x120
 Dialogue: 0,0:15:43.94,0:15:45.86,English,,0,0,0,,Which is not realistic by the way
-Dialogue: 0,0:15:43.94,0:15:45.86,Chinese,,0,0,0,,顺便说一下这是不现实的
+Dialogue: 0,0:15:43.94,0:15:45.86,Chinese,,0,0,0,,顺便说一下，这样的栈顶地址在实际中是不可能出现的
 Dialogue: 0,0:15:46.86,0:15:52.02,English,,0,0,0,,And the program counter which is called %rip which is not anything to do with death
-Dialogue: 0,0:15:46.86,0:15:52.02,Chinese,,0,0,0,,程序计数器称为 ％rip，与死亡无关
-Dialogue: 0,0:15:54.04,0:16:00.14,English,,0,0,0,,Is is indicating that the current instruction is this at (0x)544
-Dialogue: 0,0:15:54.04,0:16:00.14,Chinese,,0,0,0,,是指示当前指令是 0x544
+Dialogue: 0,0:15:46.86,0:15:52.02,Chinese,,0,0,0,,另外，这个称为 ％rip 的程序计数器与死亡 (rest in peace) 无关
+Dialogue: 0,0:15:54.04,0:16:00.14,English,,0,0,0,,It is indicating that the current instruction is this at (0x)544
+Dialogue: 0,0:15:54.04,0:16:00.14,Chinese,,0,0,0,,它表示当前指令的地址位于 0x544
 Dialogue: 0,0:16:01.86,0:16:03.22,English,,0,0,0,,Which is this call instruction
-Dialogue: 0,0:16:01.86,0:16:03.22,Chinese,,0,0,0,,即为这个 call 指令
+Dialogue: 0,0:16:01.86,0:16:03.22,Chinese,,0,0,0,,即这个 call 指令
 Dialogue: 0,0:16:04.68,0:16:10.34,English,,0,0,0,,And so what would happen with the call instruction is it would do two things
 Dialogue: 0,0:16:04.68,0:16:10.34,Chinese,,0,0,0,,那么 call 指令会发生什么呢？它会做两件事
 Dialogue: 0,0:16:11.36,0:16:14.28,English,,0,0,0,,It would actually three things
-Dialogue: 0,0:16:11.36,0:16:14.28,Chinese,,0,0,0,,实际上会有三件事
+Dialogue: 0,0:16:11.36,0:16:14.28,Chinese,,0,0,0,,实际上是三件事
 Dialogue: 0,0:16:14.28,0:16:21.40,English,,0,0,0,,It would decrement the stack pointer and so subtracting 8 from (0x)120 and hex gives you (0x)118
-Dialogue: 0,0:16:14.28,0:16:21.40,Chinese,,0,0,0,,它会减少栈指针，即从 0x120 和十六进制中减去 8 会得到 0x118
+Dialogue: 0,0:16:14.28,0:16:21.40,Chinese,,0,0,0,,它会减少栈指针，即从十六进制数 0x120 中减去 8 得到 0x118
 Dialogue: 0,0:16:22.08,0:16:31.32,English,,0,0,0,,And it would write the address of the instruction following the call onto the top of the stack
-Dialogue: 0,0:16:22.08,0:16:31.32,Chinese,,0,0,0,,它会将调用后的指令地址写入堆栈顶部
+Dialogue: 0,0:16:22.08,0:16:31.32,Chinese,,0,0,0,,然后，它会将此调用之后的指令地址写入栈顶部
 Dialogue: 0,0:16:32.16,0:16:36.68,English,,0,0,0,,And it's important that it does it the one following the call to fit
 Dialogue: 0,0:16:32.16,0:16:36.68,Chinese,,0,0,0,,并且重要的是，它是按照适合的要求进行的
 Dialogue: 0,0:16:36.94,0:16:42.04,English,,0,0,0,,That's instruction I'm going to return a use for my return address
-Dialogue: 0,0:16:36.94,0:16:42.04,Chinese,,0,0,0,,这是我将要返回用于返回地址的指令
+Dialogue: 0,0:16:36.94,0:16:42.04,Chinese,,0,0,0,,这个指令是我返回时要继续执行的指令
 Dialogue: 0,0:16:42.60,0:16:46.32,English,,0,0,0,,And I want to resume execution in this function
 Dialogue: 0,0:16:42.60,0:16:46.32,Chinese,,0,0,0,,我想继续执行这个函数
 Dialogue: 0,0:16:46.90,0:16:51.82,English,,0,0,0,,At the instruction after the call not the call itself otherwise you'd have an infinite loop
-Dialogue: 0,0:16:46.90,0:16:51.82,Chinese,,0,0,0,,在调用指令之后而不是其本身，否则会导致无限循环
-Dialogue: 0,0:16:54.52,0:17:06.64,English,,0,0,0,,And it also this call instruction also embedded in the encoding of the instruction is the destination address of it
+Dialogue: 0,0:16:46.90,0:16:51.82,Chinese,,0,0,0,,而且它是当前调用之后的指令，而不是其当前被调用的指令，否则会导致无限循环
+Dialogue: 0,0:16:54.52,0:17:06.64,English,,0,0,0,,And it also this call instruction also embedded in the encoding of the instruction in the destination address of it
 Dialogue: 0,0:16:54.52,0:17:06.64,Chinese,,0,0,0,,在 call 指令的编码中也有指令的目标地址
 Dialogue: 0,0:17:07.88,0:17:12.62,English,,0,0,0,,And which happens to be the starting address of this particular function
 Dialogue: 0,0:17:07.88,0:17:12.62,Chinese,,0,0,0,,该地址恰好是函数的起始地址
