@@ -386,15 +386,15 @@ Dialogue: 0,0:16:54.52,0:17:06.64,Chinese,,0,0,0,,在 call 指令的编码中也
 Dialogue: 0,0:17:07.88,0:17:12.62,English,,0,0,0,,And which happens to be the starting address of this particular function
 Dialogue: 0,0:17:07.88,0:17:12.62,Chinese,,0,0,0,,该地址恰好是函数的起始地址
 Dialogue: 0,0:17:13.02,0:17:16.44,English,,0,0,0,,So the program counter will be set to that value
-Dialogue: 0,0:17:13.02,0:17:16.44,Chinese,,0,0,0,,因此程序计数器将设置为该值
+Dialogue: 0,0:17:13.02,0:17:16.44,Chinese,,0,0,0,,因此程序计数器被设置为该值
 Dialogue: 0,0:17:16.54,0:17:22.76,English,,0,0,0,,And now the processor starts just executing along these instructions
 Dialogue: 0,0:17:16.54,0:17:22.76,Chinese,,0,0,0,,现在处理器开始执行这些指令
 Dialogue: 0,0:17:22.78,0:17:28.28,English,,0,0,0,,So it did a combination of a jump and a push and that's why the question was raised earlier
-Dialogue: 0,0:17:22.78,0:17:28.28,Chinese,,0,0,0,,所以它做了一个 jump 和 push 的组合，这就是为什么之前提出的问题
+Dialogue: 0,0:17:22.78,0:17:28.28,Chinese,,0,0,0,,所以它做了一个 jump 和 push 的组合，这就是为什么之前会提出这个问题：
 Dialogue: 0,0:17:28.56,0:17:34.32,English,,0,0,0,,Is a push instruction could you assemble that out of existing instructions
-Dialogue: 0,0:17:28.56,0:17:34.32,Chinese,,0,0,0,,push 指令是否可以根据现有指令进行组装
+Dialogue: 0,0:17:28.56,0:17:34.32,Chinese,,0,0,0,,push 指令是否可以根据现有指令组合得到呢？
 Dialogue: 0,0:17:34.32,0:17:36.70,English,,0,0,0,,The answer is yes for push but not for call
-Dialogue: 0,0:17:34.32,0:17:36.70,Chinese,,0,0,0,,对于push而言是这样，而call指令就不是了
+Dialogue: 0,0:17:34.32,0:17:36.70,Chinese,,0,0,0,,对于push而言是可以的，而call指令就不行了
 Dialogue: 0,0:17:36.96,0:17:38.04,English,,0,0,0,,Question back there
 Dialogue: 0,0:17:36.96,0:17:38.04,Chinese,,0,0,0,,问题回到那里
 Dialogue: 0,0:17:38.42,0:17:47.18,English,,0,0,0,,- before you actually go to the function in like multstore you would let me address some mult2 into %rip?
@@ -402,7 +402,7 @@ Dialogue: 0,0:17:38.42,0:17:47.18,Chinese,,0,0,0,, - 在你真正进入 multstor
 Dialogue: 0,0:17:47.24,0:17:52.30,English,,0,0,0,,No no it did that %rip you never explicitly
 Dialogue: 0,0:17:47.24,0:17:52.30,Chinese,,0,0,0,,不，你不会明确地看到 %rip 做了什么
 Dialogue: 0,0:17:52.54,0:17:55.22,English,,0,0,0,,There aren't instructions that manipulate that directly
-Dialogue: 0,0:17:52.54,0:17:55.22,Chinese,,0,0,0,,没有直接操纵它的指令
+Dialogue: 0,0:17:52.54,0:17:55.22,Chinese,,0,0,0,,没有那条指令可以直接操作它
 Dialogue: 0,0:17:55.50,0:17:58.28,English,,0,0,0,,It's implicitly part of the call instruction
 Dialogue: 0,0:17:55.50,0:17:58.28,Chinese,,0,0,0,,它是 call 指令隐含的一部分
 Dialogue: 0,0:17:59.14,0:18:00.82,English,,0,0,0,,The call instruction will take
@@ -422,13 +422,13 @@ Dialogue: 0,0:18:33.06,0:18:34.74,Chinese,,0,0,0,,所以它做了这两件事
 Dialogue: 0,0:18:38.16,0:18:38.96,English,,0,0,0,,Question
 Dialogue: 0,0:18:38.16,0:18:38.96,Chinese,,0,0,0,,请讲
 Dialogue: 0,0:18:39.72,0:18:46.06,English,,0,0,0,,Is there any ways affecting program counter using ...
-Dialogue: 0,0:18:39.72,0:18:46.06,Chinese,,0,0,0,,[学生说话]
+Dialogue: 0,0:18:39.72,0:18:46.06,Chinese,,0,0,0,,[学生说话] 有什么方法通过...来影响程序计数器吗？
 Dialogue: 0,0:18:46.14,0:18:49.62,English,,0,0,0,,I don't think so,with either call or return
 Dialogue: 0,0:18:46.14,0:18:49.62,Chinese,,0,0,0,,无论是 call 还是 return，我都不这么认为
 Dialogue: 0,0:18:52.34,0:18:57.84,English,,0,0,0,,If so it would be really obscure,no I don't think so
-Dialogue: 0,0:18:52.34,0:18:57.84,Chinese,,0,0,0,,如果是这样，那将是非常模糊的，不，我不这么认为
+Dialogue: 0,0:18:52.34,0:18:57.84,Chinese,,0,0,0,,如果是这样，那将是非常含糊不清的，不，我不这么认为
 Dialogue: 0,0:18:58.68,0:19:06.46,English,,0,0,0,,No so call and return are the there might be some weird system instructions that let you do that but not in you'd see in any normal program
-Dialogue: 0,0:18:58.68,0:19:06.46,Chinese,,0,0,0,,call 和 return 是这样，可能有一些奇怪的系统指令让你这样做，但不是你在任何正常程序中看到的
+Dialogue: 0,0:18:58.68,0:19:06.46,Chinese,,0,0,0,,call 和 return 不会这样，可能有一些奇怪的系统指令让你这样做，但你不会在任何正常程序中看到
 Dialogue: 0,0:19:08.60,0:19:10.80,English,,0,0,0,,Other questions you've good questions
 Dialogue: 0,0:19:08.60,0:19:10.80,Chinese,,0,0,0,,其他问题？你们提出了很好的问题
 Dialogue: 0,0:19:11.04,0:19:11.82,English,,0,0,0,,So
@@ -441,7 +441,7 @@ Dialogue: 0,0:19:25.72,0:19:29.30,English,,0,0,0,,And it hits its return point a
 Dialogue: 0,0:19:25.72,0:19:29.30,Chinese,,0,0,0,,它到达返回点并且到达这个 ret 指令
 Dialogue: 0,0:19:29.44,0:19:32.54,English,,0,0,0,,By the way again retq and rep the same instruction
 Dialogue: 0,0:19:29.44,0:19:32.54,Chinese,,0,0,0,,顺便说一下 retq 和 rep 是同样的指令
-Dialogue: 0,0:19:33.48,0:19:40.48,English,,0,0,0,,And ret will ts purpose is to sort of reverse the effect of a call
+Dialogue: 0,0:19:33.48,0:19:40.48,English,,0,0,0,,And ret will, its purpose is to sort of reverse the effect of a call
 Dialogue: 0,0:19:33.48,0:19:40.48,Chinese,,0,0,0,,ret 的目的是逆转 call 的效果
 Dialogue: 0,0:19:41.08,0:19:48.46,English,,0,0,0,,It assumes that the top of the stack has an address that you want to jump to
 Dialogue: 0,0:19:41.08,0:19:48.46,Chinese,,0,0,0,,它假定栈顶部有一个你想要跳转的地址
@@ -452,7 +452,7 @@ Dialogue: 0,0:19:52.82,0:19:54.78,Chinese,,0,0,0,,这意味着它将增加栈指
 Dialogue: 0,0:19:54.96,0:19:58.50,English,,0,0,0,,Like I said the value doesn't really disappear from the memory
 Dialogue: 0,0:19:54.96,0:19:58.50,Chinese,,0,0,0,,就像我说的那样，值并没有真正从内存中消失
 Dialogue: 0,0:19:58.50,0:20:01.22,English,,0,0,0,,Just is no consider part of the stack
-Dialogue: 0,0:19:58.50,0:20:01.22,Chinese,,0,0,0,,只是不被认为是栈的一部分
+Dialogue: 0,0:19:58.50,0:20:01.22,Chinese,,0,0,0,,只是不再被视为栈的一部分
 Dialogue: 0,0:20:02.00,0:20:06.58,English,,0,0,0,,And then it will set the program counter to what it just popped off the stack
 Dialogue: 0,0:20:02.00,0:20:06.58,Chinese,,0,0,0,,然后它会将程序计数器设置为刚从堆栈中弹出的地址
 Dialogue: 0,0:20:07.72,0:20:12.34,English,,0,0,0,,And that will cause the program to resume back to where it came from
@@ -464,61 +464,61 @@ Dialogue: 0,0:20:18.92,0:20:23.82,Chinese,,0,0,0,,因此返回时它将达到应
 Dialogue: 0,0:20:27.40,0:20:29.04,English,,0,0,0,,Okay so that's passing control
 Dialogue: 0,0:20:27.40,0:20:29.04,Chinese,,0,0,0,,好的，这就是传递控制
 Dialogue: 0,0:20:29.10,0:20:33.76,English,,0,0,0,,It's pretty simple all these things by the way is just the nature machine code
-Dialogue: 0,0:20:29.10,0:20:33.76,Chinese,,0,0,0,,所有这些事情都非常简单，顺便说一句就是自然机器代码
+Dialogue: 0,0:20:29.10,0:20:33.76,Chinese,,0,0,0,,所有这些事情都非常简单，只不过是一些自然的机器代码
 Dialogue: 0,0:20:34.12,0:20:36.18,English,,0,0,0,,Every single part of it is pretty simple
 Dialogue: 0,0:20:34.12,0:20:36.18,Chinese,,0,0,0,,它的每一部分都非常简单
 Dialogue: 0,0:20:36.18,0:20:42.54,English,,0,0,0,,Because it's designed to be executed by the original hardware is fairly simple
 Dialogue: 0,0:20:36.18,0:20:42.54,Chinese,,0,0,0,,因为它被设计为由原始硬件执行，所以相当简单
-Dialogue: 0,0:20:43.00,0:20:46.80,English,,0,0,0,,It's not any more but it's really the basic ideas are
-Dialogue: 0,0:20:43.00,0:20:46.80,Chinese,,0,0,0,,这没有太大的难度，但这的确就是最基本的思想
+Dialogue: 0,0:20:43.00,0:20:46.80,English,,0,0,0,,It's not any more, but it's really the basic ideas are
+Dialogue: 0,0:20:43.00,0:20:46.80,Chinese,,0,0,0,,其实并不仅仅这么简单，但这的确就是最基本的思想
 Dialogue: 0,0:20:47.40,0:20:56.32,English,,0,0,0,,And that we use kind of combinations of instructions to build up all the layers associated with operations like procedure call and return
-Dialogue: 0,0:20:47.40,0:20:56.32,Chinese,,0,0,0,,我们使用各种指令组合来构建所有与过程调用和返回等操作相关联的部分
+Dialogue: 0,0:20:47.40,0:20:56.32,Chinese,,0,0,0,,我们使用各种指令组合来构建所有更复杂的层次及相关的操作，比如过程调用和返回
 Dialogue: 0,0:20:57.14,0:20:58.74,English,,0,0,0,,Ok so passing data
 Dialogue: 0,0:20:57.14,0:20:58.74,Chinese,,0,0,0,,好，下面是传递数据
 Dialogue: 0,0:20:59.36,0:21:03.62,English,,0,0,0,,Now we've already seen a few small examples of passing data
 Dialogue: 0,0:20:59.36,0:21:03.62,Chinese,,0,0,0,,现在我们已经看到了一些传递数据的小例子
 Dialogue: 0,0:21:04.92,0:21:10.53,English,,0,0,0,,We've seen a couple registers that get used when you're passing arguments to a function
-Dialogue: 0,0:21:04.92,0:21:10.53,Chinese,,0,0,0,,我们已经看到了一些传参时使用的寄存器
+Dialogue: 0,0:21:04.92,0:21:10.53,Chinese,,0,0,0,,我们已经看到了一些寄存器用来传递函数参数
 Dialogue: 0,0:21:11.04,0:21:15.82,English,,0,0,0,,And we've seen the register %rax getting used to return values from a function
-Dialogue: 0,0:21:11.04,0:21:15.82,Chinese,,0,0,0,,我们已经看到寄存器 ％rax 习惯于从函数返回值
+Dialogue: 0,0:21:11.04,0:21:15.82,Chinese,,0,0,0,,我们已经看到寄存器 ％rax 用于函数的返回值
 Dialogue: 0,0:21:16.26,0:21:18.30,English,,0,0,0,,And so those that's the basic idea
-Dialogue: 0,0:21:16.26,0:21:18.30,Chinese,,0,0,0,,所以那些是基本的想法
+Dialogue: 0,0:21:16.26,0:21:18.30,Chinese,,0,0,0,,都是一些基本的想法
 Dialogue: 0,0:21:19.38,0:21:22.10,English,,0,0,0,,And again this is all built into this ABI
 Dialogue: 0,0:21:19.38,0:21:22.10,Chinese,,0,0,0,,而这一切都在这个 ABI 中
 Dialogue: 0,0:21:23.06,0:21:26.94,English,,0,0,0,,You know defined as the set of conventions not particularly part of the hardware
-Dialogue: 0,0:21:23.06,0:21:26.94,Chinese,,0,0,0,,你知道定义为一组约定而不是硬件的一部分
+Dialogue: 0,0:21:23.06,0:21:26.94,Chinese,,0,0,0,,如你所见，它们被定义为一组约定，而不限定于硬件的某个部分
 Dialogue: 0,0:21:27.70,0:21:36.98,English,,0,0,0,,So in particular the rule is that the first six arguments get passed within these particular registers
-Dialogue: 0,0:21:27.70,0:21:36.98,Chinese,,0,0,0,,因此特别地，规则是前六个参数通过这些特定的寄存器传递
+Dialogue: 0,0:21:27.70,0:21:36.98,Chinese,,0,0,0,,特别地，这些规则要求前六个参数通过这些特定的寄存器来传递
 Dialogue: 0,0:21:38.26,0:21:45.36,English,,0,0,0,,And you just have to memorize the order of them or have a table handy to look at
-Dialogue: 0,0:21:38.26,0:21:45.36,Chinese,,0,0,0,,而你只需要记住它们的顺序或者有一个方便的表格来查看
+Dialogue: 0,0:21:38.26,0:21:45.36,Chinese,,0,0,0,,而你只需要记住它们的顺序就行了，或者手头放一个表格以便随时查看
 Dialogue: 0,0:21:45.36,0:21:48.60,English,,0,0,0,,Or something like that because there's no particular logic to it
-Dialogue: 0,0:21:45.36,0:21:48.60,Chinese,,0,0,0,,或类似的东西，因为它没有特定的逻辑
+Dialogue: 0,0:21:45.36,0:21:48.60,Chinese,,0,0,0,,总之想办法记住，因为这几个寄存器的选择并没有什么逻辑
 Dialogue: 0,0:21:52.38,0:21:57.34,English,,0,0,0,,And the return value is returned in register %rax
-Dialogue: 0,0:21:52.38,0:21:57.34,Chinese,,0,0,0,,返回值在寄存器 ％rax 中返回
+Dialogue: 0,0:21:52.38,0:21:57.34,Chinese,,0,0,0,,返回值由寄存器 ％rax 返回
 Dialogue: 0,0:21:57.48,0:22:02.94,English,,0,0,0,,And by the way this is all for arguments that are either integers or pointers
-Dialogue: 0,0:21:57.48,0:22:02.94,Chinese,,0,0,0,,顺便说一下，这些参数都是整数或指针
+Dialogue: 0,0:21:57.48,0:22:02.94,Chinese,,0,0,0,,顺便说一下，这里的参数要求是整数或指针类型
 Dialogue: 0,0:22:03.40,0:22:08.94,English,,0,0,0,,Well I think I've got a little bit on float point those are passed in a separate set of registers
-Dialogue: 0,0:22:03.40,0:22:08.94,Chinese,,0,0,0,,好吧，我想我有讲了一点浮点类型，它们是在一组单独的寄存器中传递的
+Dialogue: 0,0:22:03.40,0:22:08.94,Chinese,,0,0,0,,好吧，我想我讲过一点浮点类型，但浮点类型的参数是由另外一组单独的寄存器来传递的
 Dialogue: 0,0:22:09.00,0:22:14.08,English,,0,0,0,,So these are just for assumed now we just are dealing with integer data pointer data
-Dialogue: 0,0:22:09.00,0:22:14.08,Chinese,,0,0,0,,所以假设现在我们只处理整数数据和指针数据
+Dialogue: 0,0:22:09.00,0:22:14.08,Chinese,,0,0,0,,现在，暂且假设我们只处理整数数据和指针数据吧
 Dialogue: 0,0:22:15.26,0:22:19.88,English,,0,0,0,,And then you ask well what happens if you have more than 6 arguments to a function
 Dialogue: 0,0:22:15.26,0:22:19.88,Chinese,,0,0,0,,然后你会问，如果你有一个函数超过 6 个参数会发生什么
 Dialogue: 0,0:22:19.88,0:22:22.12,English,,0,0,0,,Which isn't very common but it happens
-Dialogue: 0,0:22:19.88,0:22:22.12,Chinese,,0,0,0,,这不是很常见，但它发生了
+Dialogue: 0,0:22:19.88,0:22:22.12,Chinese,,0,0,0,,这不是很常见，但偶尔会有
 Dialogue: 0,0:22:22.60,0:22:26.20,English,,0,0,0,,Well the rule on that is those get put in memory on the stack
-Dialogue: 0,0:22:22.60,0:22:26.20,Chinese,,0,0,0,,那么规则是那些参数被放入栈内存
+Dialogue: 0,0:22:22.60,0:22:26.20,Chinese,,0,0,0,,处理这种情况的规则是：将超出的参数放入栈上的内存中
 Dialogue: 0,0:22:26.24,0:22:28.98,English,,0,0,0,,And I'll show straight what I mean by that
-Dialogue: 0,0:22:26.24,0:22:28.98,Chinese,,0,0,0,,我会直截了当地表明我的意思
+Dialogue: 0,0:22:26.24,0:22:28.98,Chinese,,0,0,0,,我会直观地解释这是什么意思
 Dialogue: 0,0:22:29.56,0:22:31.48,English,,0,0,0,,So they're passed to the function
-Dialogue: 0,0:22:29.56,0:22:31.48,Chinese,,0,0,0,,所以他们被传递给了这个函数
+Dialogue: 0,0:22:29.56,0:22:31.48,Chinese,,0,0,0,,所以，他们被传递给了这个函数
 Dialogue: 0,0:22:31.92,0:22:34.80,English,,0,0,0,,And then the function has to retrieve those values off the stack
-Dialogue: 0,0:22:31.92,0:22:34.80,Chinese,,0,0,0,,然后该函数必须从堆栈中检索这些值
+Dialogue: 0,0:22:31.92,0:22:34.80,Chinese,,0,0,0,,然后，该函数必须从栈中检索这些值
 Dialogue: 0,0:22:36.92,0:22:41.74,English,,0,0,0,,Back in the bad old days of IA-32 by the way all arguments got passed on the stack
-Dialogue: 0,0:22:36.92,0:22:41.74,Chinese,,0,0,0,,回到 IA-32 过去的糟糕时期，所有参数都在栈中传递
-Dialogue: 0,0:22:42.14,0:22:46.18,English,,0,0,0,,But now for the most part you pass arguments and registers
-Dialogue: 0,0:22:42.14,0:22:46.18,Chinese,,0,0,0,,但现在大多数情况下你传递参数和寄存器
+Dialogue: 0,0:22:36.92,0:22:41.74,Chinese,,0,0,0,,回到过去 IA-32 的糟糕时期，所有参数都在栈中传递
+Dialogue: 0,0:22:42.14,0:22:46.18,English,,0,0,0,,But now for the most part you pass arguments on registers
+Dialogue: 0,0:22:42.14,0:22:46.18,Chinese,,0,0,0,,但现在大多数情况下你通过寄存器传递参数
 Dialogue: 0,0:22:46.94,0:22:51.38,English,,0,0,0,,And the reason for that is register access is way faster than memory access
-Dialogue: 0,0:22:46.94,0:22:51.38,Chinese,,0,0,0,,原因是寄存器访问比内存访问更快
+Dialogue: 0,0:22:46.94,0:22:51.38,Chinese,,0,0,0,,原因是寄存器访问比内存访问快得多
 Dialogue: 0,0:22:52.84,0:22:56.72,English,,0,0,0,,Okay so here is a kind of a messy bunch of code
 Dialogue: 0,0:22:52.84,0:22:56.72,Chinese,,0,0,0,,好的，所以这里是一堆乱七八糟的代码
 Dialogue: 0,0:22:56.72,0:23:00.98,English,,0,0,0,,But just to show you how they show up all the time
