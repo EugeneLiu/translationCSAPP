@@ -375,7 +375,7 @@ Dialogue: 0,0:16:22.08,0:16:31.32,English,,0,0,0,,And it would write the address
 Dialogue: 0,0:16:22.08,0:16:31.32,Chinese,,0,0,0,,然后，它会将此调用之后的指令地址写入栈顶部
 Dialogue: 0,0:16:32.16,0:16:36.68,English,,0,0,0,,And it's important that it does it the one following the call to fit
 Dialogue: 0,0:16:32.16,0:16:36.68,Chinese,,0,0,0,,并且重要的是，它是按照适合的要求进行的
-Dialogue: 0,0:16:36.94,0:16:42.04,English,,0,0,0,,That's instruction I'm going to return a use for my return address
+Dialogue: 0,0:16:36.94,0:16:42.04,English,,0,0,0,,That's instruction I'm going to return and use for my return address
 Dialogue: 0,0:16:36.94,0:16:42.04,Chinese,,0,0,0,,这个指令是我返回时要继续执行的指令
 Dialogue: 0,0:16:42.60,0:16:46.32,English,,0,0,0,,And I want to resume execution in this function
 Dialogue: 0,0:16:42.60,0:16:46.32,Chinese,,0,0,0,,我想继续执行这个函数
@@ -396,11 +396,11 @@ Dialogue: 0,0:17:28.56,0:17:34.32,Chinese,,0,0,0,,push 指令是否可以根据�
 Dialogue: 0,0:17:34.32,0:17:36.70,English,,0,0,0,,The answer is yes for push but not for call
 Dialogue: 0,0:17:34.32,0:17:36.70,Chinese,,0,0,0,,对于push而言是可以的，而call指令就不行了
 Dialogue: 0,0:17:36.96,0:17:38.04,English,,0,0,0,,Question back there
-Dialogue: 0,0:17:36.96,0:17:38.04,Chinese,,0,0,0,,问题回到那里
+Dialogue: 0,0:17:36.96,0:17:38.04,Chinese,,0,0,0,,那边有人提问
 Dialogue: 0,0:17:38.42,0:17:47.18,English,,0,0,0,,- before you actually go to the function in like multstore you would let me address some mult2 into %rip?
 Dialogue: 0,0:17:38.42,0:17:47.18,Chinese,,0,0,0,, - 在你真正进入 multstore 之前，会将 mult2 的地址存入 %rip 吗？
 Dialogue: 0,0:17:47.24,0:17:52.30,English,,0,0,0,,No no it did that %rip you never explicitly
-Dialogue: 0,0:17:47.24,0:17:52.30,Chinese,,0,0,0,,不，你不会明确地看到 %rip 做了什么
+Dialogue: 0,0:17:47.24,0:17:52.30,Chinese,,0,0,0,,不，你永远不会显式地操作 %rip 
 Dialogue: 0,0:17:52.54,0:17:55.22,English,,0,0,0,,There aren't instructions that manipulate that directly
 Dialogue: 0,0:17:52.54,0:17:55.22,Chinese,,0,0,0,,没有那条指令可以直接操作它
 Dialogue: 0,0:17:55.50,0:17:58.28,English,,0,0,0,,It's implicitly part of the call instruction
@@ -527,122 +527,122 @@ Dialogue: 0,0:23:03.00,0:23:07.17,English,,0,0,0,,In the function multstore as t
 Dialogue: 0,0:23:03.00,0:23:07.17,Chinese,,0,0,0,,在函数 multstore 中有三个参数 x，y 和 *dest
 Dialogue: 0,0:23:08.00,0:23:09.98,English,,0,0,0,,And you can just see within this code
 Dialogue: 0,0:23:08.00,0:23:09.98,Chinese,,0,0,0,,你可以在这段代码中看到
-Dialogue: 0,0:23:10.52,0:23:15.24,English,,0,0,0,,That it's making use of of registers like %rdi
+Dialogue: 0,0:23:10.52,0:23:15.24,English,,0,0,0,,That it's making use of registers like %rdi
 Dialogue: 0,0:23:10.52,0:23:15.24,Chinese,,0,0,0,,它正在利用像 ％rdi 这样的寄存器
 Dialogue: 0,0:23:16.10,0:23:19.26,English,,0,0,0,,And doesn't show where
-Dialogue: 0,0:23:16.10,0:23:19.26,Chinese,,0,0,0,,并没有显示在哪里
-Dialogue: 0,0:23:19.50,0:23:23.32,English,,0,0,0,,And in other places like mult2 as two arguments
+Dialogue: 0,0:23:16.10,0:23:19.26,Chinese,,0,0,0,,这里并没有显示
+Dialogue: 0,0:23:19.50,0:23:23.32,English,,0,0,0,,And in other places like mult2, they are two arguments
 Dialogue: 0,0:23:19.50,0:23:23.32,Chinese,,0,0,0,,而在其他地方，如 mult2 有两个参数
 Dialogue: 0,0:23:23.90,0:23:28.00,English,,0,0,0,,And you can see how it's making use of %rdi and %rsi in code
 Dialogue: 0,0:23:23.90,0:23:28.00,Chinese,,0,0,0,,你可以看到它是如何在代码中使用 ％rdi 和 ％rsi 的
 Dialogue: 0,0:23:28.08,0:23:39.36,English,,0,0,0,,So basically the code is generated under the assumptions that whatever arguments is being passed to it will be passed in that particular set of registers in the particular order they're listed
 Dialogue: 0,0:23:28.08,0:23:39.36,Chinese,,0,0,0,,基本上代码能运行是基于这样的假设：无论什么参数都按列出的顺序被传递给这一系列寄存器
 Dialogue: 0,0:23:39.70,0:23:42.68,English,,0,0,0,,And the code is sort of makes those assumptions
-Dialogue: 0,0:23:39.70,0:23:42.68,Chinese,,0,0,0,,并且代码做出这些假设
+Dialogue: 0,0:23:39.70,0:23:42.68,Chinese,,0,0,0,,并且代码显然是依赖于这些假设的
 Dialogue: 0,0:23:42.96,0:23:48.50,English,,0,0,0,,And then similarly when you have a return value from the function
 Dialogue: 0,0:23:42.96,0:23:48.50,Chinese,,0,0,0,,然后类似地，当你有一个函数的返回值
 Dialogue: 0,0:23:51.20,0:23:53.88,English,,0,0,0,,Let's see multstore does not have a return value
-Dialogue: 0,0:23:51.20,0:23:53.88,Chinese,,0,0,0,,让我们看看 multstore 没有返回值
+Dialogue: 0,0:23:51.20,0:23:53.88,Chinese,,0,0,0,,这里的 multstore 没有返回值
 Dialogue: 0,0:23:54.30,0:23:56.88,English,,0,0,0,,But of mult2 does
-Dialogue: 0,0:23:54.30,0:23:56.88,Chinese,,0,0,0,,但是 mult2 确实如此
+Dialogue: 0,0:23:54.30,0:23:56.88,Chinese,,0,0,0,,但是 mult2 是有返回值的
 Dialogue: 0,0:23:58.02,0:24:01.98,English,,0,0,0,,And the way it does is it deposits the value into %rax
-Dialogue: 0,0:23:58.02,0:24:01.98,Chinese,,0,0,0,,它的作用方式是将值存入 ％rax
+Dialogue: 0,0:23:58.02,0:24:01.98,Chinese,,0,0,0,,它的处理方式是将返回值存入 ％rax
 Dialogue: 0,0:24:02.78,0:24:08.96,English,,0,0,0,,And then when the return from %rax occurs to multstore
-Dialogue: 0,0:24:02.78,0:24:08.96,Chinese,,0,0,0,,然后当从 ％rax 返回到 mulstore 发生时
+Dialogue: 0,0:24:02.78,0:24:08.96,Chinese,,0,0,0,,然后当从 ％rax 返回到 mulstore 中
 Dialogue: 0,0:24:09.54,0:24:12.96,English,,0,0,0,,You see that..it assumes
-Dialogue: 0,0:24:09.54,0:24:12.96,Chinese,,0,0,0,,你看，那是假设的
+Dialogue: 0,0:24:09.54,0:24:12.96,Chinese,,0,0,0,,你看，它就是那么假设的
 Dialogue: 0,0:24:13.58,0:24:22.64,English,,0,0,0,,Now that the multstore code can assume that register %rax holds  the return value
-Dialogue: 0,0:24:13.58,0:24:22.64,Chinese,,0,0,0,,现在 multstore 代码可以假设寄存器 ％rax 保存返回值
+Dialogue: 0,0:24:13.58,0:24:22.64,Chinese,,0,0,0,,现在 multstore 代码可以假设寄存器 ％rax 保存了返回值
 Dialogue: 0,0:24:22.90,0:24:26.02,English,,0,0,0,,And it can store it in its destination register
-Dialogue: 0,0:24:22.90,0:24:26.02,Chinese,,0,0,0,,它可以将其存储在目标寄存器中
+Dialogue: 0,0:24:22.90,0:24:26.02,Chinese,,0,0,0,,然后，它可以将其存储在目标寄存器中
 Dialogue: 0,0:24:26.56,0:24:29.48,English,,0,0,0,,And we'll look in a minute why %rbx gets used here
-Dialogue: 0,0:24:26.56,0:24:29.48,Chinese,,0,0,0,,我们将在一分钟内了解为什么在这里使用 ％rbx
-Dialogue: 0,0:24:30.66,0:24:32.82,English,,0,0,0,,We'll cover that in just a little waiter
+Dialogue: 0,0:24:26.56,0:24:29.48,Chinese,,0,0,0,,我们将在一分钟内了解为什么在这里使用了 ％rbx
+Dialogue: 0,0:24:30.66,0:24:32.82,English,,0,0,0,,We'll cover that in just a little later
 Dialogue: 0,0:24:30.66,0:24:32.82,Chinese,,0,0,0,,我们一会儿就会提到
 Dialogue: 0,0:24:33.48,0:24:38.88,English,,0,0,0,,But that's the point that as long as everyone sticks to this common interface standard
 Dialogue: 0,0:24:33.48,0:24:38.88,Chinese,,0,0,0,,但是重点在于，只要每个人都坚持这种通用接口标准
 Dialogue: 0,0:24:39.30,0:24:43.78,English,,0,0,0,,Then you can even use different compilers to compile code
 Dialogue: 0,0:24:39.30,0:24:43.78,Chinese,,0,0,0,,然后你甚至可以使用不同的编译器来编译代码
 Dialogue: 0,0:24:44.06,0:24:50.88,English,,0,0,0,,And have them be able to cooperate with each other in terms of passing arguments returning data
-Dialogue: 0,0:24:44.06,0:24:50.88,Chinese,,0,0,0,,并且让他们能够在传参与返回数据方面相互合作
+Dialogue: 0,0:24:44.06,0:24:50.88,Chinese,,0,0,0,,并且让他们能够在传参与返回数据方面相互协作
 Dialogue: 0,0:24:51.58,0:24:54.52,English,,0,0,0,,And that's the reason why you want that convention
-Dialogue: 0,0:24:51.58,0:24:54.52,Chinese,,0,0,0,,这就是你想要这个惯例的原因
+Dialogue: 0,0:24:51.58,0:24:54.52,Chinese,,0,0,0,,这就是为何你会需要这要地约定
 Dialogue: 0,0:24:54.54,0:24:55.08,English,,0,0,0,,Yes
-Dialogue: 0,0:24:54.54,0:24:55.08,Chinese,,0,0,0,,是
+Dialogue: 0,0:24:54.54,0:24:55.08,Chinese,,0,0,0,,请讲
 Dialogue: 0,0:24:55.86,0:24:59.12,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:24:55.86,0:24:59.12,Chinese,,0,0,0,,[学生说话]
 Dialogue: 0,0:24:59.18,0:25:03.74,English,,0,0,0,,8 bytes because the well first of all for call and return
 Dialogue: 0,0:24:59.18,0:25:03.74,Chinese,,0,0,0,,8 个字节，首先对于 call 和 return
 Dialogue: 0,0:25:04.12,0:25:09.10,English,,0,0,0,,It's a 64-bit machine so all addresses are 64 bits or 8 bytes
-Dialogue: 0,0:25:04.12,0:25:09.10,Chinese,,0,0,0,,它是一台 64 位机器，因此所有地址都是 64 位或 8 字节
+Dialogue: 0,0:25:04.12,0:25:09.10,Chinese,,0,0,0,,这是一台 64 位机器，因此所有地址都是 64 位或 8 字节
 Dialogue: 0,0:25:09.80,0:25:14.72,English,,0,0,0,,But also even the push and pop instruction only work on 8 byte values
-Dialogue: 0,0:25:09.80,0:25:14.72,Chinese,,0,0,0,,但是，即使 push 于 pop 指令也仅适用于 8 字节值
+Dialogue: 0,0:25:09.80,0:25:14.72,Chinese,,0,0,0,,但是，即使 push 和 pop 指令也仅适用于 8 字节值
 Dialogue: 0,0:25:15.44,0:25:20.54,English,,0,0,0,,If you said pushl ,if you tried to write that in x in 64-bit code
-Dialogue: 0,0:25:15.44,0:25:20.54,Chinese,,0,0,0,,如果你说 pushl，如果你试图在 64 位代码中写入 x
+Dialogue: 0,0:25:15.44,0:25:20.54,Chinese,,0,0,0,,如果你说的是 pushl，如果你试图在 64 位代码中写入 x
 Dialogue: 0,0:25:20.54,0:25:22.37,English,,0,0,0,,It would come back with a syntax error
 Dialogue: 0,0:25:20.54,0:25:22.37,Chinese,,0,0,0,,它会返回语法错误
 Dialogue: 0,0:25:23.06,0:25:24.88,English,,0,0,0,,If you add it in this somewhere
 Dialogue: 0,0:25:23.06,0:25:24.88,Chinese,,0,0,0,,如果你把它添加到某个地方
 Dialogue: 0,0:25:28.82,0:25:33.46,English,,0,0,0,,So that,and that's different IA-32 there'd be four byte values
-Dialogue: 0,0:25:28.82,0:25:33.46,Chinese,,0,0,0,,所以，那是不同的 IA-32，有四个字节值
+Dialogue: 0,0:25:28.82,0:25:33.46,Chinese,,0,0,0,,所以，对于不同的 IA-32 机器，则为四字节值
 Dialogue: 0,0:25:37.00,0:25:43.56,English,,0,0,0,,Okay so like I said you've sort of seen that implicitly in some of the code you've already been looking at
-Dialogue: 0,0:25:37.00,0:25:43.56,Chinese,,0,0,0,,好的，就像我说你已经在你已经看过的一些代码中隐含地看到的那样
+Dialogue: 0,0:25:37.00,0:25:43.56,Chinese,,0,0,0,,好吧，我已经说过，你们业看到了，代码中常常会隐含一些假设
 Dialogue: 0,0:25:43.56,0:25:45.56,English,,0,0,0,,And it's pretty straightforward
-Dialogue: 0,0:25:43.56,0:25:45.56,Chinese,,0,0,0,,而且非常简单
+Dialogue: 0,0:25:43.56,0:25:45.56,Chinese,,0,0,0,,而且这些假设非常直接
 Dialogue: 0,0:25:46.00,0:25:50.56,English,,0,0,0,,To get an example that shows passing arguments
 Dialogue: 0,0:25:46.00,0:25:50.56,Chinese,,0,0,0,,为了获取一个显示传递参数的示例
 Dialogue: 0,0:25:50.56,0:25:54.80,English,,0,0,0,,You have a function with at least 7 arguments which is pretty messy to do
-Dialogue: 0,0:25:50.56,0:25:54.80,Chinese,,0,0,0,,需要一个至少有 7 个参数的函数，这是非常混乱的
+Dialogue: 0,0:25:50.56,0:25:54.80,Chinese,,0,0,0,,需要一个至少有 7 个参数的函数，这中代码当然是非常混乱的
 Dialogue: 0,0:25:54.80,0:25:57.08,English,,0,0,0,,So I won't do it but there's examples in the book
-Dialogue: 0,0:25:54.80,0:25:57.08,Chinese,,0,0,0,,所以我不会这样做，但书中有例子
+Dialogue: 0,0:25:54.80,0:25:57.08,Chinese,,0,0,0,,我决不会这样做，但书中有这样一个例子
 Dialogue: 0,0:25:59.74,0:26:02.54,English,,0,0,0,,But now and we'll sort of pick it up
-Dialogue: 0,0:25:59.74,0:26:02.54,Chinese,,0,0,0,,但是现在我们会接受它
+Dialogue: 0,0:25:59.74,0:26:02.54,Chinese,,0,0,0,,所以，现在我们不得不接受它
 Dialogue: 0,0:26:02.54,0:26:05.70,English,,0,0,0,,I'll show you,also in this later part
-Dialogue: 0,0:26:02.54,0:26:05.70,Chinese,,0,0,0,,我也会是在后面的部分告诉你
+Dialogue: 0,0:26:02.54,0:26:05.70,Chinese,,0,0,0,,在后面的部分中，我会展示这个例子
 Dialogue: 0,0:26:06.84,0:26:11.00,English,,0,0,0,,And now the third part of it is again
-Dialogue: 0,0:26:06.84,0:26:11.00,Chinese,,0,0,0,,现在它的第三部分又来了
+Dialogue: 0,0:26:06.84,0:26:11.00,Chinese,,0,0,0,,现在，第三部分又来了
 Dialogue: 0,0:26:11.00,0:26:14.08,English,,0,0,0,,What if there's some local data that we need to make use of
-Dialogue: 0,0:26:11.00,0:26:14.08,Chinese,,0,0,0,,如果有一些我们需要使用的本地数据怎么办？
+Dialogue: 0,0:26:11.00,0:26:14.08,Chinese,,0,0,0,,如果我们需要用到一些本地数据，该怎么办？
 Dialogue: 0,0:26:14.76,0:26:22.84,English,,0,0,0,,And so to get that idea across I have bring another concept which is called the stack frame
-Dialogue: 0,0:26:14.76,0:26:22.84,Chinese,,0,0,0,,因此，为了使你们理解，我引入了另一个叫做栈帧的概念
+Dialogue: 0,0:26:14.76,0:26:22.84,Chinese,,0,0,0,,因此，为了使你们理解其实现思想，我引入了另一个叫做栈帧的概念
 Dialogue: 0,0:26:23.58,0:26:29.88,English,,0,0,0,,And so this is a particular allocation pattern that's used in memory and as I mentioned earlier
-Dialogue: 0,0:26:23.58,0:26:29.88,Chinese,,0,0,0,,所以这是一个用在内存中的特别分配模式，正如之前我提到的
+Dialogue: 0,0:26:23.58,0:26:29.88,Chinese,,0,0,0,,正如我之前所说，这也只不过是一种特别地内存分配模式
 Dialogue: 0,0:26:30.34,0:26:40.94,English,,0,0,0,,One of the features of calling and returning is you can imagine when you have a nested series of calls to a function
-Dialogue: 0,0:26:30.34,0:26:40.94,Chinese,,0,0,0,,调用和返回的功能之一是当你对函数进行嵌套系列调用时
+Dialogue: 0,0:26:30.34,0:26:40.94,Chinese,,0,0,0,,调用和返回的功能之一是你可以对函数进行嵌套调用
 Dialogue: 0,0:26:41.64,0:26:44.02,English,,0,0,0,,When a particular function is executing
-Dialogue: 0,0:26:41.64,0:26:44.02,Chinese,,0,0,0,,执行特定功能时
+Dialogue: 0,0:26:41.64,0:26:44.02,Chinese,,0,0,0,,执行特定函数时
 Dialogue: 0,0:26:46.32,0:26:54.20,English,,0,0,0,,It only needs to reference the data within that function or values that have been passed to it
-Dialogue: 0,0:26:46.32,0:26:54.20,Chinese,,0,0,0,,它只需要引用该函数中的数据或已传递给它的值
+Dialogue: 0,0:26:46.32,0:26:54.20,Chinese,,0,0,0,,它只需要引用该函数内部的数据或已传递给它的值
 Dialogue: 0,0:26:54.90,0:26:59.22,English,,0,0,0,,Some which might be pointers and therefore pointing to other locations in memory
 Dialogue: 0,0:26:54.90,0:26:59.22,Chinese,,0,0,0,,一些可能是指针，因此指向内存中的其他位置
 Dialogue: 0,0:26:59.24,0:27:11.62,English,,0,0,0,,But the point is sort of the rest of the functions in your code however many there are are sort of frozen at that moment really there's only one function executing at any given time
 Dialogue: 0,0:26:59.24,0:27:11.62,Chinese,,0,0,0,, 但关键是代码中其他函数，无论有多少，在那个时刻都被冻结了，在任何给定的时间只有一个函数在运行
 Dialogue: 0,0:27:12.08,0:27:17.20,English,,0,0,0,,I'm assuming a sort of what you'd call single threaded model here
-Dialogue: 0,0:27:12.08,0:27:17.20,Chinese,,0,0,0,,我假设你在这里称之为单线程模型
+Dialogue: 0,0:27:12.08,0:27:17.20,Chinese,,0,0,0,,我假设我们使用的是一种称之为单线程的运行模型
 Dialogue: 0,0:27:18.20,0:27:26.12,English,,0,0,0,,And so we can just allocate on this stack whatever space is required for this particular function
-Dialogue: 0,0:27:18.20,0:27:26.12,Chinese,,0,0,0,,所以我们可以在这个栈上分配函数需要的空间，无论多少
+Dialogue: 0,0:27:18.20,0:27:26.12,Chinese,,0,0,0,,所以我们可以在这个栈上分配这个当前函数需要的任意多的空间
 Dialogue: 0,0:27:26.82,0:27:29.04,English,,0,0,0,,And then when we return from that function
 Dialogue: 0,0:27:26.82,0:27:29.04,Chinese,,0,0,0,,然后当我们从那个函数返回时
 Dialogue: 0,0:27:29.46,0:27:35.70,English,,0,0,0,,We shouldn't if it's correctly written need any of the information associated with that function
-Dialogue: 0,0:27:29.46,0:27:35.70,Chinese,,0,0,0,,如果正确编写，我们不需要与该函数相关的任何信息
+Dialogue: 0,0:27:29.46,0:27:35.70,Chinese,,0,0,0,,在正确编写的代码中，我们不需要保留与该函数相关的任何信息
 Dialogue: 0,0:27:35.70,0:27:37.50,English,,0,0,0,,It can just sort of disappear forever
-Dialogue: 0,0:27:35.70,0:27:37.50,Chinese,,0,0,0,,它可以永远消失
+Dialogue: 0,0:27:35.70,0:27:37.50,Chinese,,0,0,0,,返回时，之前被调用地函数就可以永远消失了
 Dialogue: 0,0:27:37.82,0:27:39.78,English,,0,0,0,,And that's why this idea of a stack
-Dialogue: 0,0:27:37.82,0:27:39.78,Chinese,,0,0,0,,这就是为什么我们用栈的思想
+Dialogue: 0,0:27:37.82,0:27:39.78,Chinese,,0,0,0,,这就是为什么我们要用栈的思想
 Dialogue: 0,0:27:40.26,0:27:45.58,English,,0,0,0,,You allocate something if you make more calls you keep allocating more stuff
-Dialogue: 0,0:27:40.26,0:27:45.58,Chinese,,0,0,0,,如果你调用函数就会不停地分配空间
+Dialogue: 0,0:27:40.26,0:27:45.58,Chinese,,0,0,0,,在栈上可分配空间，如果调用更多函数，一直分配下去就是了
 Dialogue: 0,0:27:45.72,0:27:50.60,English,,0,0,0,,But as they return you kind of back out of the stack and and free things up
-Dialogue: 0,0:27:45.72,0:27:50.60,Chinese,,0,0,0,,但当它们返回的时候你会推出栈并释放空间
+Dialogue: 0,0:27:45.72,0:27:50.60,Chinese,,0,0,0,,但当它们返回的时候你需要退出栈，并释放空间
 Dialogue: 0,0:27:51.36,0:27:54.16,English,,0,0,0,,So the stack discipline is exactly the right
-Dialogue: 0,0:27:51.36,0:27:54.16,Chinese,,0,0,0,,所以堆栈规则是正确的
+Dialogue: 0,0:27:51.36,0:27:54.16,Chinese,,0,0,0,,所以栈的规则完全适用
 Dialogue: 0,0:27:54.84,0:27:58.06,English,,0,0,0,,It matches well this whole idea of procedure call and return
-Dialogue: 0,0:27:54.84,0:27:58.06,Chinese,,0,0,0,,它吻合过程调用与返回的思想
+Dialogue: 0,0:27:54.84,0:27:58.06,Chinese,,0,0,0,,它与过程调用和返回的思想完美匹配
 Dialogue: 0,0:27:58.70,0:28:04.06,English,,0,0,0,,So each block we use for a particular call then is called the stack frame
-Dialogue: 0,0:27:58.70,0:28:04.06,Chinese,,0,0,0,,因此，我们用于特定 call 的每个块称为栈帧
+Dialogue: 0,0:27:58.70,0:28:04.06,Chinese,,0,0,0,,因此，我们把栈上用于特定 call 的每个内存块称为栈帧
 Dialogue: 0,0:28:07.44,0:28:17.48,English,,0,0,0,,And to be sort of more technical we'll say that it's a frame for a particular instance of a procedure a particular call to a procedure
-Dialogue: 0,0:28:07.44,0:28:17.48,Chinese,,0,0,0,, 更技术性地说，它是特定过程调用的框架
+Dialogue: 0,0:28:07.44,0:28:17.48,Chinese,,0,0,0,, 更技术性地说，它是特定过程调用的特定实例的栈帧
 Dialogue: 0,0:28:19.16,0:28:24.28,English,,0,0,0,,So just imagine we had a set of functions one called "yoo"
-Dialogue: 0,0:28:19.16,0:28:24.28,Chinese,,0,0,0,,所以想象一下我们有一组叫做 "yoo" 的函数
+Dialogue: 0,0:28:19.16,0:28:24.28,Chinese,,0,0,0,,想象一下我们有一组叫做 "yoo" 的函数
 Dialogue: 0,0:28:24.86,0:28:26.72,English,,0,0,0,,Which calls a function called "who"
 Dialogue: 0,0:28:24.86,0:28:26.72,Chinese,,0,0,0,,调用了 "who" 函数
 Dialogue: 0,0:28:27.30,0:28:32.42,English,,0,0,0,,And "who" has multiple calls to another function called "amI"
@@ -650,32 +650,32 @@ Dialogue: 0,0:28:27.30,0:28:32.42,Chinese,,0,0,0,,"who" 多次调用了函数 "a
 Dialogue: 0,0:28:32.90,0:28:36.40,English,,0,0,0,,And "amI" is itself is recursive it calls itself
 Dialogue: 0,0:28:32.90,0:28:36.40,Chinese,,0,0,0,,而 "amI" 本身就是递归调用自身的
 Dialogue: 0,0:28:37.44,0:28:42.86,English,,0,0,0,,And so an imagine we had a chain of calls
-Dialogue: 0,0:28:37.44,0:28:42.86,Chinese,,0,0,0,,所以想象一下，我们有一连串的调用
+Dialogue: 0,0:28:37.44,0:28:42.86,Chinese,,0,0,0,,可以想象，我们有了一连串的调用
 Dialogue: 0,0:28:42.98,0:28:46.04,English,,0,0,0,,Where "yoo" calls "who" calls "amI"
 Dialogue: 0,0:28:42.98,0:28:46.04,Chinese,,0,0,0,,"yoo" 调用 "who"，"who" 调用 "amI"
 Dialogue: 0,0:28:46.44,0:28:48.82,English,,0,0,0,,Which calls itself recursively twice
-Dialogue: 0,0:28:46.44,0:28:48.82,Chinese,,0,0,0,,它递归调用自己两次
+Dialogue: 0,0:28:46.44,0:28:48.82,Chinese,,0,0,0,,"amI" 又递归调用了自己两次
 Dialogue: 0,0:28:49.56,0:28:54.00,English,,0,0,0,,And then we'll exit out of "amI" and get back to "who"
 Dialogue: 0,0:28:49.56,0:28:54.00,Chinese,,0,0,0,,然后我们退出 "amI" 并回到 "who"
 Dialogue: 0,0:28:54.34,0:28:57.06,English,,0,0,0,,And then "who" will hit it second call to "amI"
 Dialogue: 0,0:28:54.34,0:28:57.06,Chinese,,0,0,0,,然后 "who" 将第二次调用 "amI"
 Dialogue: 0,0:28:57.28,0:29:00.36,English,,0,0,0,,Which won't go any further and that will be it
-Dialogue: 0,0:28:57.28,0:29:00.36,Chinese,,0,0,0,,不会再进一步​​了，那就是它
+Dialogue: 0,0:28:57.28,0:29:00.36,Chinese,,0,0,0,,到这里不会再进一步了，到此为止
 Dialogue: 0,0:29:00.54,0:29:07.16,English,,0,0,0,,So this picture here shows this whole history of all these calls that get made
 Dialogue: 0,0:29:00.54,0:29:07.16,Chinese,,0,0,0,,所以这张图片显示了所有这些调用的整个历史
 Dialogue: 0,0:29:09.52,0:29:11.16,English,,0,0,0,,But in terms of the stack
 Dialogue: 0,0:29:09.52,0:29:11.16,Chinese,,0,0,0,,但就栈而言
 Dialogue: 0,0:29:14.42,0:29:20.52,English,,0,0,0,,All we need what will keep a frame for every sort of procedure that has been called
-Dialogue: 0,0:29:14.42,0:29:20.52,Chinese,,0,0,0,,我们所需要的只是在栈中为每种被调用的过程保留一个框架
+Dialogue: 0,0:29:14.42,0:29:20.52,Chinese,,0,0,0,,我们所需要的只是在栈中为每个被调用且未返回的过程
 Dialogue: 0,0:29:20.52,0:29:25.26,English,,0,0,0,,But not yet returned on the stack
-Dialogue: 0,0:29:20.52,0:29:25.26,Chinese,,0,0,0,,但还没有返回
+Dialogue: 0,0:29:20.52,0:29:25.26,Chinese,,0,0,0,,保留一个栈帧
 Dialogue: 0,0:29:25.72,0:29:31.12,English,,0,0,0,,And in general this stack of is delimited by two pointers
-Dialogue: 0,0:29:25.72,0:29:31.12,Chinese,,0,0,0,,通常这个堆栈由两个指针分隔
+Dialogue: 0,0:29:25.72,0:29:31.12,Chinese,,0,0,0,,通常一个栈帧由两个指针分隔
 Dialogue: 0,0:29:31.12,0:29:33.74,English,,0,0,0,,One is the stack pointer which we're familiar with
-Dialogue: 0,0:29:31.12,0:29:33.74,Chinese,,0,0,0,,一个是我们熟悉的堆栈指针
+Dialogue: 0,0:29:31.12,0:29:33.74,Chinese,,0,0,0,,一个是我们熟悉的栈指针
 Dialogue: 0,0:29:34.30,0:29:40.04,English,,0,0,0,,And then there's another called the base pointer which register %rbp indicates
-Dialogue: 0,0:29:34.30,0:29:40.04,Chinese,,0,0,0,,然后还有一个叫做基本指针的寄存器 ％rbp
-Dialogue: 0,0:29:40.56,0:29:50.80,English,,0,0,0,,But one a feature of actually it's now become a feature of IA32 as well is that this is an optional pointer
+Dialogue: 0,0:29:34.30,0:29:40.04,Chinese,,0,0,0,,然后还有一个叫做基本指针，由寄存器 ％rbp 保存
+Dialogue: 0,0:29:40.56,0:29:50.80,English,,0,0,0,,But one a feature of actually is now become a feature of IA32 as well is that this is an optional pointer
 Dialogue: 0,0:29:40.56,0:29:50.80,Chinese,,0,0,0,,但实际上它的一个特征（现在也成为 IA32 的一个特征）是这是一个可选指针
 Dialogue: 0,0:29:51.68,0:29:56.46,English,,0,0,0,,And in particular the code that we'll see does not use a base pointer
 Dialogue: 0,0:29:51.68,0:29:56.46,Chinese,,0,0,0,,特别地，我们将看到的代码不使用基指针
