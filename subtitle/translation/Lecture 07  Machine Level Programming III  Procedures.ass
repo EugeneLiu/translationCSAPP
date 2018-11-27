@@ -674,63 +674,63 @@ Dialogue: 0,0:29:25.72,0:29:31.12,Chinese,,0,0,0,,通常一个栈帧由两个指
 Dialogue: 0,0:29:31.12,0:29:33.74,English,,0,0,0,,One is the stack pointer which we're familiar with
 Dialogue: 0,0:29:31.12,0:29:33.74,Chinese,,0,0,0,,一个是我们熟悉的栈指针
 Dialogue: 0,0:29:34.30,0:29:40.04,English,,0,0,0,,And then there's another called the base pointer which register %rbp indicates
-Dialogue: 0,0:29:34.30,0:29:40.04,Chinese,,0,0,0,,然后还有一个叫做基本指针，由寄存器 ％rbp 保存
-Dialogue: 0,0:29:40.56,0:29:50.80,English,,0,0,0,,But one a feature of actually is now become a feature of IA32 as well is that this is an optional pointer
-Dialogue: 0,0:29:40.56,0:29:50.80,Chinese,,0,0,0,,但实际上它的一个特征（现在也成为 IA32 的一个特征）是这是一个可选指针
+Dialogue: 0,0:29:34.30,0:29:40.04,Chinese,,0,0,0,,然后还有一个叫做基指针，由寄存器 ％rbp 保存
+Dialogue: 0,0:29:40.56,0:29:50.80,English,,0,0,0,,But one feature (actually is now become a feature of IA32 as well) is that this is an optional pointer
+Dialogue: 0,0:29:40.56,0:29:50.80,Chinese,,0,0,0,,但基指针是一个可选指针 (实际上对于 IA32 也是如此）
 Dialogue: 0,0:29:51.68,0:29:56.46,English,,0,0,0,,And in particular the code that we'll see does not use a base pointer
-Dialogue: 0,0:29:51.68,0:29:56.46,Chinese,,0,0,0,,特别地，我们将看到的代码不使用基指针
+Dialogue: 0,0:29:51.68,0:29:56.46,Chinese,,0,0,0,,特别是，我们将要看到的代码并不会使用基指针
 Dialogue: 0,0:29:56.80,0:29:59.56,English,,0,0,0,,Except in some very special cases
-Dialogue: 0,0:29:56.80,0:29:59.56,Chinese,,0,0,0,,除了一些非常特殊的情况
+Dialogue: 0,0:29:56.80,0:29:59.56,Chinese,,0,0,0,,一些非常特殊的情况除外
 Dialogue: 0,0:30:00.36,0:30:09.92,English,,0,0,0,,So this register doesn't really won't show up in your programs being used in a special way as a frame pointer
-Dialogue: 0,0:30:00.36,0:30:09.92,Chinese,,0,0,0,,所以这个寄存器实际上不会出现在你的程序中以特殊方式用作帧指针
+Dialogue: 0,0:30:00.36,0:30:09.92,Chinese,,0,0,0,,所以这个寄存器实际上并不会在你的程序中以帧指针的形式出现
 Dialogue: 0,0:30:10.34,0:30:13.20,English,,0,0,0,,It will be used instead just as a regular register
 Dialogue: 0,0:30:10.34,0:30:13.20,Chinese,,0,0,0,,它将被用作常规寄存器
-Dialogue: 0,0:30:14.48,0:30:17.94,English,,0,0,0,,So typically then the only thing you'll know about the stack pointer
-Dialogue: 0,0:30:14.48,0:30:17.94,Chinese,,0,0,0,,所以通常你会知道关于栈指针的唯一事情
+Dialogue: 0,0:30:14.48,0:30:17.94,English,,0,0,0,,So typically the only thing you'll know about is the stack pointer
+Dialogue: 0,0:30:14.48,0:30:17.94,Chinese,,0,0,0,,所以通常情况下，你知道栈帧的唯一事情是栈指针
 Dialogue: 0,0:30:17.94,0:30:22.78,English,,0,0,0,,You won't even be able to figure out where the frame is exactly
-Dialogue: 0,0:30:17.94,0:30:22.78,Chinese,,0,0,0,,你甚至无法弄清楚框架的确切位置
+Dialogue: 0,0:30:17.94,0:30:22.78,Chinese,,0,0,0,,因而，你甚至无法弄清楚栈帧的确切范围
 Dialogue: 0,0:30:22.78,0:30:29.96,English,,0,0,0,,You'll just know that the top part of the stack is the top frame for the topmost function
-Dialogue: 0,0:30:22.78,0:30:29.96,Chinese,,0,0,0,,你只知道栈的顶部是最顶层函数的顶部框架
+Dialogue: 0,0:30:22.78,0:30:29.96,Chinese,,0,0,0,,你只知道栈的顶部是对应于最顶层函数的顶部栈帧
 Dialogue: 0,0:30:31.06,0:30:34.66,English,,0,0,0,,And this is all managed by the code itself
-Dialogue: 0,0:30:31.06,0:30:34.66,Chinese,,0,0,0,,这一切都由代码本身管理
+Dialogue: 0,0:30:31.06,0:30:34.66,Chinese,,0,0,0,,这一切都得由代码本身管理
 Dialogue: 0,0:30:37.04,0:30:42.30,English,,0,0,0,,And this is the same stack by the way in which you're pushing and popping addresses too
-Dialogue: 0,0:30:37.04,0:30:42.30,Chinese,,0,0,0,,这同样是那个你 pop 和 push 地址的栈
+Dialogue: 0,0:30:37.04,0:30:42.30,Chinese,,0,0,0,,而这个栈正是你一直 pop 和 push 地址的那个栈
 Dialogue: 0,0:30:42.30,0:30:44.30,English,,0,0,0,,And they all kind of get mixed together
-Dialogue: 0,0:30:42.30,0:30:44.30,Chinese,,0,0,0,,他们都混在了一起
+Dialogue: 0,0:30:42.30,0:30:44.30,Chinese,,0,0,0,,两个概念完全混在了一起
 Dialogue: 0,0:30:47.40,0:30:54.32,English,,0,0,0,,So we haven't actually seen any code up til now that makes you ask to do any explicit management of the stack
-Dialogue: 0,0:30:47.40,0:30:54.32,Chinese,,0,0,0,,所以我们知道现在还没有看到任何代码要求你对栈进行任何显式管理
+Dialogue: 0,0:30:47.40,0:30:54.32,Chinese,,0,0,0,,那么，目前为止，我们还没有看到什么代码对栈进行任何显式管理
 Dialogue: 0,0:30:54.34,0:30:56.78,English,,0,0,0,,Because all our examples were very simple
-Dialogue: 0,0:30:54.34,0:30:56.78,Chinese,,0,0,0,,因为我们所有的例子都非常简单
-Dialogue: 0,0:30:57.24,0:31:02.32,English,,0,0,0,,And just did a made use of the stack only for return addresses
-Dialogue: 0,0:30:57.24,0:31:02.32,Chinese,,0,0,0,,并且只是将堆栈用于返回地址
-Dialogue: 0,0:31:03.74,0:31:05.46,English,,0,0,0,,But we'll see some that uses more
+Dialogue: 0,0:30:54.34,0:30:56.78,Chinese,,0,0,0,,因为我们现有的例子都非常简单
+Dialogue: 0,0:30:57.24,0:31:02.32,English,,0,0,0,,And just made use of the stack only for return addresses
+Dialogue: 0,0:30:57.24,0:31:02.32,Chinese,,0,0,0,,并且只是将栈用于返回地址
+Dialogue: 0,0:31:03.74,0:31:05.46,English,,0,0,0,,But we'll see some more other uses
 Dialogue: 0,0:31:03.74,0:31:05.46,Chinese,,0,0,0,,但我们会看到一些更多使用栈的例子
 Dialogue: 0,0:31:06.20,0:31:17.02,English,,0,0,0,,But so in general then imagine that each time you begin a function some space gets allocated potentially on the stack for its frame
-Dialogue: 0,0:31:06.20,0:31:17.02,Chinese,,0,0,0,,但总的来说，想象一下，每次开始一个函数时，一些空间可能会在栈中为其框架分配
-Dialogue: 0,0:31:17.64,0:31:25.91,English,,0,0,0,,And then and that frame is indicated by either one pointer only or two pointers
-Dialogue: 0,0:31:17.64,0:31:25.91,Chinese,,0,0,0,,然后，该帧由一个指针或两个指针指示
+Dialogue: 0,0:31:06.20,0:31:17.02,Chinese,,0,0,0,,但大致来说，想象一下，每次开始调用一个函数时，栈上就会为它地栈帧分配一些空间
+Dialogue: 0,0:31:17.64,0:31:25.91,English,,0,0,0,,And then and that frame is indicated by either one pointer or two pointers
+Dialogue: 0,0:31:17.64,0:31:25.91,Chinese,,0,0,0,,然后，该帧的位置由一个指针或两个指针指示
 Dialogue: 0,0:31:27.66,0:31:33.45,English,,0,0,0,,And so now as "yoo" calls "who" then that will create a new stack frame for "who"
 Dialogue: 0,0:31:27.66,0:31:33.45,Chinese,,0,0,0,,所以现在因为 yoo 调用 who 然后将为 who 创建一个新的栈帧
 Dialogue: 0,0:31:33.96,0:31:37.94,English,,0,0,0,,In some way when "amI" gets called that creates a new stack frame
-Dialogue: 0,0:31:33.96,0:31:37.94,Chinese,,0,0,0,,以某种方式调用 amI 时会创建一个新的栈帧
+Dialogue: 0,0:31:33.96,0:31:37.94,Chinese,,0,0,0,,以某种方式调用 amI 时也会创建一个新的栈帧
 Dialogue: 0,0:31:38.64,0:31:41.20,English,,0,0,0,,And as we continue with these recursive calls
 Dialogue: 0,0:31:38.64,0:31:41.20,Chinese,,0,0,0,,当我们继续这些递归调用时
 Dialogue: 0,0:31:41.20,0:31:44.70,English,,0,0,0,,We're just adding more stuff to the stack getting deeper and deeper
 Dialogue: 0,0:31:41.20,0:31:44.70,Chinese,,0,0,0,,我们只是在栈中添加更多东西使它越来越深
 Dialogue: 0,0:31:45.38,0:31:50.52,English,,0,0,0,,And that will keep happening that's one of the reasons why recursion is a little bit of a risky thing
-Dialogue: 0,0:31:45.38,0:31:50.52,Chinese,,0,0,0,,这将不断进行，递归有点冒险的原因之一是：
+Dialogue: 0,0:31:45.38,0:31:50.52,Chinese,,0,0,0,,这个过程可以不断进行，使得递归有点危险，原因之一是：
 Dialogue: 0,0:31:51.04,0:31:53.54,English,,0,0,0,,Is that it compared to iteration
 Dialogue: 0,0:31:51.04,0:31:53.54,Chinese,,0,0,0,,与迭代相比
 Dialogue: 0,0:31:54.12,0:31:58.40,English,,0,0,0,,It keeps requiring more space as you go deeper in the recursion
 Dialogue: 0,0:31:54.12,0:31:58.40,Chinese,,0,0,0,,随着你在递归中的深入，它不断需要更多空间
 Dialogue: 0,0:31:58.84,0:32:04.78,English,,0,0,0,,And in particular most systems limit the total depth of the stack
-Dialogue: 0,0:31:58.84,0:32:04.78,Chinese,,0,0,0,,特别地，大多数系统限制了栈的总深度
+Dialogue: 0,0:31:58.84,0:32:04.78,Chinese,,0,0,0,,特别是，大多数系统限制了栈的最大深度
 Dialogue: 0,0:32:06.54,0:32:08.30,English,,0,0,0,,And you can have what
-Dialogue: 0,0:32:06.54,0:32:08.30,Chinese,,0,0,0,,你可以理解
+Dialogue: 0,0:32:06.54,0:32:08.30,Chinese,,0,0,0,,这是可以理解的
 Dialogue: 0,0:32:08.56,0:32:12.68,English,,0,0,0,,Because they're afraid of the sort of infinite loop version of recursion is
 Dialogue: 0,0:32:08.56,0:32:12.68,Chinese,,0,0,0,,因为他们害怕那种无限循环版本的递归
 Dialogue: 0,0:32:12.98,0:32:16.98,English,,0,0,0,,Runaway recursion where it just keeps trying to push more and more stuff onto the stack
-Dialogue: 0,0:32:12.98,0:32:16.98,Chinese,,0,0,0,,失控的递归，它只是不断尝试将越来越多的东西压入栈
+Dialogue: 0,0:32:12.98,0:32:16.98,Chinese,,0,0,0,,即失控的递归，这种递归只会不断将越来越多的东西压入栈
 Dialogue: 0,0:32:17.66,0:32:18.96,English,,0,0,0,,That's an aside
 Dialogue: 0,0:32:17.66,0:32:18.96,Chinese,,0,0,0,,那是题外话了
 Dialogue: 0,0:32:21.22,0:32:29.26,English,,0,0,0,,And then as these begin to return they those frames get deallocated removed from the stack
@@ -738,21 +738,21 @@ Dialogue: 0,0:32:21.22,0:32:29.26,Chinese,,0,0,0,,然后当这些开始返回时
 Dialogue: 0,0:32:29.86,0:32:34.22,English,,0,0,0,,So part of it the nice thing about this is it means that
 Dialogue: 0,0:32:29.86,0:32:34.22,Chinese,,0,0,0,,所以关于这一点的好处就是它意味着
 Dialogue: 0,0:32:34.94,0:32:38.18,English,,0,0,0,,Every time I if I have multiple calls to "amI"
-Dialogue: 0,0:32:34.94,0:32:38.18,Chinese,,0,0,0,,每当我有多次调用 amI
+Dialogue: 0,0:32:34.94,0:32:38.18,Chinese,,0,0,0,,每当我多次调用 amI
 Dialogue: 0,0:32:38.52,0:32:46.34,English,,0,0,0,,Because I've gone deep recursively each one of them will have its own local state that it needs to manage
-Dialogue: 0,0:32:38.52,0:32:46.34,Chinese,,0,0,0,,因为我深层递归，所以每层都会有自己需要管理的局部状态
+Dialogue: 0,0:32:38.52,0:32:46.34,Chinese,,0,0,0,,这时形成了深层递归，但每层都会有由自己管理的局部状态
 Dialogue: 0,0:32:46.72,0:32:51.62,English,,0,0,0,,And again the whole stack discipline is what makes it work
-Dialogue: 0,0:32:46.72,0:32:51.62,Chinese,,0,0,0,,是整个栈的规则保证它工作
+Dialogue: 0,0:32:46.72,0:32:51.62,Chinese,,0,0,0,,于是，栈的原则再次保证了它能正确工作
 Dialogue: 0,0:32:53.30,0:32:57.10,English,,0,0,0,,And what we'll find out in particular is because of the way this is set up
-Dialogue: 0,0:32:53.30,0:32:57.10,Chinese,,0,0,0,,特别地我们会发现，因为它的设置方式
+Dialogue: 0,0:32:53.30,0:32:57.10,Chinese,,0,0,0,,特别地，我们会注意到递归的构造方式
 Dialogue: 0,0:32:57.92,0:33:01.82,English,,0,0,0,,Recursive calls are handled the same way that regular calls are
-Dialogue: 0,0:32:57.92,0:33:01.82,Chinese,,0,0,0,,递归调用的处理方式与常规调用相同
+Dialogue: 0,0:32:57.92,0:33:01.82,Chinese,,0,0,0,,递归调用的处理方式与常规调用完全相同
 Dialogue: 0,0:33:01.82,0:33:03.62,English,,0,0,0,,There's nothing special about them
-Dialogue: 0,0:33:01.82,0:33:03.62,Chinese,,0,0,0,,他们没什么特别的
+Dialogue: 0,0:33:01.82,0:33:03.62,Chinese,,0,0,0,,它们没什么特别的
 Dialogue: 0,0:33:03.62,0:33:10.80,English,,0,0,0,,All the sort of infrastructure required to support recursion is built into this whole stack discipline
-Dialogue: 0,0:33:03.62,0:33:10.80,Chinese,,0,0,0,,支持递归所需的所有基础结构都内置于整个栈规程中
+Dialogue: 0,0:33:03.62,0:33:10.80,Chinese,,0,0,0,,递归所需的所有基础结构都由栈的原则所保证
 Dialogue: 0,0:33:13.56,0:33:18.64,English,,0,0,0,,So anyways imagine that all these calls are returned back to "who"
-Dialogue: 0,0:33:13.56,0:33:18.64,Chinese,,0,0,0,,所以无论如何，想象所有这些调用都将返回给 who
+Dialogue: 0,0:33:13.56,0:33:18.64,Chinese,,0,0,0,,所以无论如何，想象所有这些调用最终都将返回到 who
 Dialogue: 0,0:33:18.96,0:33:21.76,English,,0,0,0,,And then "who" would call "amI" again
 Dialogue: 0,0:33:18.96,0:33:21.76,Chinese,,0,0,0,,然后 who 再次调用 amI
 Dialogue: 0,0:33:22.36,0:33:27.18,English,,0,0,0,,And then again as we exit we were sort of deallocating these stack frames
@@ -764,7 +764,7 @@ Dialogue: 0,0:33:31.18,0:33:31.90,Chinese,,0,0,0,,请讲
 Dialogue: 0,0:33:32.72,0:33:37.42,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:33:32.72,0:33:37.42,Chinese,,0,0,0,,[学生说话]
 Dialogue: 0,0:33:37.42,0:33:44.66,English,,0,0,0,,Oh so the question was if %rbp is optional then how does the program know how to do the deallocation
-Dialogue: 0,0:33:37.42,0:33:44.66,Chinese,,0,0,0,,哦，问题是既然 ％rbp 是可选的那么程序怎么知道如何释放空间
+Dialogue: 0,0:33:37.42,0:33:44.66,Chinese,,0,0,0,,哦，问题是，既然 ％rbp 是可选的那么程序怎么知道如何释放空间
 Dialogue: 0,0:33:44.66,0:33:47.48,English,,0,0,0,,How can it reset the stack back to the right place
 Dialogue: 0,0:33:44.66,0:33:47.48,Chinese,,0,0,0,,如何将栈重置回正确的位置
 Dialogue: 0,0:33:48.10,0:33:53.42,English,,0,0,0,,And the answer is and we'll see examples that the code is compiled
@@ -774,9 +774,9 @@ Dialogue: 0,0:33:53.90,0:33:59.90,Chinese,,0,0,0,,例如，它知道当它分配
 Dialogue: 0,0:34:00.52,0:34:04.14,English,,0,0,0,,And then it knows at the end that it can deallocated 16 bytes
 Dialogue: 0,0:34:00.52,0:34:04.14,Chinese,,0,0,0,,然后它最终知道可以释放 16 个字节
 Dialogue: 0,0:34:04.78,0:34:06.32,English,,0,0,0,,And it actually brings up a good point
-Dialogue: 0,0:34:04.78,0:34:06.32,Chinese,,0,0,0,,实际上你提出了一个重点
+Dialogue: 0,0:34:04.78,0:34:06.32,Chinese,,0,0,0,,实际上你提到了一个关键问题
 Dialogue: 0,0:34:06.32,0:34:10.30,English,,0,0,0,,There is sort of an obscure part of the book that goes over this
-Dialogue: 0,0:34:06.32,0:34:10.30,Chinese,,0,0,0,,这本书有一个关于这一点的模糊的部分
+Dialogue: 0,0:34:06.32,0:34:10.30,Chinese,,0,0,0,,这本书有一部分隐约谈到了这一点
 Dialogue: 0,0:34:10.74,0:34:16.02,English,,0,0,0,,There's a few special cases where it can't know in advance how much space will be allocated
 Dialogue: 0,0:34:10.74,0:34:16.02,Chinese,,0,0,0,,有一些特殊情况，它无法提前知道将分配多少空间
 Dialogue: 0,0:34:16.36,0:34:23.42,English,,0,0,0,,When it has to allocate an array or a memory buffer of variable size
@@ -802,35 +802,35 @@ Dialogue: 0,0:35:17.84,0:35:20.32,Chinese,,0,0,0,,我们已经看到当你调用
 Dialogue: 0,0:35:20.76,0:35:23.60,English,,0,0,0,,It will push the return address onto the stack
 Dialogue: 0,0:35:20.76,0:35:23.60,Chinese,,0,0,0,,它会将返回地址压入栈
 Dialogue: 0,0:35:24.30,0:35:29.72,English,,0,0,0,,So before our function even starts all this information would be on the stack
-Dialogue: 0,0:35:24.30,0:35:29.72,Chinese,,0,0,0,,所以在我们的函数开始之前，所有这些信息都将在堆栈中
+Dialogue: 0,0:35:24.30,0:35:29.72,Chinese,,0,0,0,,所以在我们的函数开始之前，所有这些信息都已经在栈中
 Dialogue: 0,0:35:30.96,0:35:37.40,English,,0,0,0,,Now if there's a if this particular if we're making use of a base pointer
-Dialogue: 0,0:35:30.96,0:35:37.40,Chinese,,0,0,0,,如果我们正在使用基指针，那么如果有这个特殊情况的话
+Dialogue: 0,0:35:30.96,0:35:37.40,Chinese,,0,0,0,,如果我们正在使用基指针，如果有这个特殊情况的话
 Dialogue: 0,0:35:37.68,0:35:41.26,English,,0,0,0,,Then we have to have some way where to store the old value of the base pointer
-Dialogue: 0,0:35:37.68,0:35:41.26,Chinese,,0,0,0,,然后我们必须有一些方法来存储基指针的旧值
+Dialogue: 0,0:35:37.68,0:35:41.26,Chinese,,0,0,0,,那么我们必须有一些方法来存储基指针的旧值
 Dialogue: 0,0:35:41.26,0:35:44.34,English,,0,0,0,,So that we could fix it back when we return
-Dialogue: 0,0:35:41.26,0:35:44.34,Chinese,,0,0,0,,这样我们就可以在返回时修复它
+Dialogue: 0,0:35:41.26,0:35:44.34,Chinese,,0,0,0,,这样我们就可以在返回时恢复它
 Dialogue: 0,0:35:45.04,0:35:48.40,English,,0,0,0,,We won't show any code doing that here so this is optional
 Dialogue: 0,0:35:45.04,0:35:48.40,Chinese,,0,0,0,,我们不会在此处显示任何代码，因此这是可选的
 Dialogue: 0,0:35:49.06,0:35:51.58,English,,0,0,0,,But in general if there's some local state
-Dialogue: 0,0:35:49.06,0:35:51.58,Chinese,,0,0,0,,但总的来说，如果有一些局部状态
+Dialogue: 0,0:35:49.06,0:35:51.58,Chinese,,0,0,0,,但一般来说，如果有一些局部状态
 Dialogue: 0,0:35:52.52,0:35:56.40,English,,0,0,0,,Like some registers that need to be saved and we'll see examples of that
-Dialogue: 0,0:35:52.52,0:35:56.40,Chinese,,0,0,0,,像一些需要保存的寄存器，我们会看到它的例子
+Dialogue: 0,0:35:52.52,0:35:56.40,Chinese,,0,0,0,,比如一些需要保存的寄存器，我们将会看到那样的例子
 Dialogue: 0,0:35:56.84,0:35:59.60,English,,0,0,0,,Or an array that needs to be allocated locally
-Dialogue: 0,0:35:56.84,0:35:59.60,Chinese,,0,0,0,,或者需要在局部分配的数组
+Dialogue: 0,0:35:56.84,0:35:59.60,Chinese,,0,0,0,,或者需要在局部分配一个数组
 Dialogue: 0,0:36:00.06,0:36:03.32,English,,0,0,0,,That will be stored within the stack frame
 Dialogue: 0,0:36:00.06,0:36:03.32,Chinese,,0,0,0,,那将存储在栈帧内
 Dialogue: 0,0:36:03.84,0:36:08.90,English,,0,0,0,,And there might be some requirement for some extra space in the stack frame for other stuff
-Dialogue: 0,0:36:03.84,0:36:08.90,Chinese,,0,0,0,,对于其他东西，可能需要在堆栈帧中增加一些空间
+Dialogue: 0,0:36:03.84,0:36:08.90,Chinese,,0,0,0,,对于其他东西，可能需要在栈帧中增加一些额外空间
 Dialogue: 0,0:36:09.48,0:36:15.86,English,,0,0,0,,In particular if it we're going to pass more than seven arguments it needs space somewhere in the stack frame to do it
 Dialogue: 0,0:36:09.48,0:36:15.86,Chinese,,0,0,0,,特别是如果我们要传递超过七个参数，它需要在栈帧中分配空间
-Dialogue: 0,0:36:16.56,0:36:19.50,English,,0,0,0,,And what we'll see in typical a code is
+Dialogue: 0,0:36:16.56,0:36:19.50,English,,0,0,0,,And what we'll see in a typical code is
 Dialogue: 0,0:36:16.56,0:36:19.50,Chinese,,0,0,0,,我们在典型代码中会看到的是
 Dialogue: 0,0:36:19.98,0:36:26.56,English,,0,0,0,,This stack pointer gets decremented pretty soon after the procedure begins
-Dialogue: 0,0:36:19.98,0:36:26.56,Chinese,,0,0,0,,程序开始后，这个堆栈指针很快就会减少
+Dialogue: 0,0:36:19.98,0:36:26.56,Chinese,,0,0,0,,程序开始后，这个栈指针会减小得很快
 Dialogue: 0,0:36:26.88,0:36:29.88,English,,0,0,0,,And it gets incremented back just before it returns
-Dialogue: 0,0:36:26.88,0:36:29.88,Chinese,,0,0,0,,它会在返回之前递增
+Dialogue: 0,0:36:26.88,0:36:29.88,Chinese,,0,0,0,,它会在返回之前递增回来
 Dialogue: 0,0:36:30.62,0:36:32.38,English,,0,0,0,,That's how it manages this stack
-Dialogue: 0,0:36:30.62,0:36:32.38,Chinese,,0,0,0,,这就是它如何管理栈的
+Dialogue: 0,0:36:30.62,0:36:32.38,Chinese,,0,0,0,,这就是它管理栈的方式
 Dialogue: 0,0:36:34.50,0:36:36.38,English,,0,0,0,,So let's do some examples
 Dialogue: 0,0:36:34.50,0:36:36.38,Chinese,,0,0,0,,让我们举一些例子吧
 Dialogue: 0,0:36:41.68,0:36:48.42,English,,0,0,0,,Um let's see look at this before
@@ -838,7 +838,7 @@ Dialogue: 0,0:36:41.68,0:36:48.42,Chinese,,0,0,0,,嗯，让我们看看...
 Dialogue: 0,0:36:48.58,0:36:49.98,English,,0,0,0,,But this is a function
 Dialogue: 0,0:36:48.58,0:36:49.98,Chinese,,0,0,0,,但这是一个函数
 Dialogue: 0,0:36:50.06,0:36:55.20,English,,0,0,0,,Oh I think the interesting thing about this function is that it has a pointer being passed to it
-Dialogue: 0,0:36:50.06,0:36:55.20,Chinese,,0,0,0,,哦，我认为这个函数的有趣之处在于它有一个传递给它的指针
+Dialogue: 0,0:36:50.06,0:36:55.20,Chinese,,0,0,0,,哦，我认为这个函数的有趣之处在于它有一个指针参数
 Dialogue: 0,0:36:56.08,0:36:58.20,English,,0,0,0,,So this function takes an argument
 Dialogue: 0,0:36:56.08,0:36:58.20,Chinese,,0,0,0,,所以这个函数需要一个参数
 Dialogue: 0,0:36:58.22,0:37:02.38,English,,0,0,0,,One argument is a pointer and another is a an integer value
@@ -860,7 +860,7 @@ Dialogue: 0,0:37:38.12,0:37:40.08,Chinese,,0,0,0,,所以我们将从该指针读
 Dialogue: 0,0:37:40.88,0:37:46.44,English,,0,0,0,,And it will put the value in %rax which is where the return value should be anyhow
 Dialogue: 0,0:37:40.88,0:37:46.44,Chinese,,0,0,0,,并且它会将值放在 ％rax 中，这也是返回值所在的地方
 Dialogue: 0,0:37:47.48,0:37:56.76,English,,0,0,0,,And then it will increment %rsi which has the value called val here initially and now it has the value of x + val
-Dialogue: 0,0:37:47.48,0:37:56.76,Chinese,,0,0,0,,然后它将增加 ％rsi，其最初具有名为 val 的值，现在它具有 x+val 的值
+Dialogue: 0,0:37:47.48,0:37:56.76,Chinese,,0,0,0,,然后它将增加 ％rsi，其初值为 val，现在它具有 x+val 的值
 Dialogue: 0,0:37:58.08,0:38:07.48,English,,0,0,0,,And then it will store that in...the value pointed to by p
 Dialogue: 0,0:37:58.08,0:38:07.48,Chinese,,0,0,0,,然后它会将其存储在 p 指向的值中
 Dialogue: 0,0:38:08.14,0:38:12.76,English,,0,0,0,,And it will do a return,so you see these three instructions do all the different parts of this
