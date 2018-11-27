@@ -874,14 +874,14 @@ Dialogue: 0,0:38:21.94,0:38:27.02,Chinese,,0,0,0,,％rdi 是第一个参数，�
 Dialogue: 0,0:38:27.34,0:38:31.14,English,,0,0,0,,But now it will be set to y during the call
 Dialogue: 0,0:38:27.34,0:38:31.14,Chinese,,0,0,0,,但现在它将在调用期间设置为 y
 Dialogue: 0,0:38:31.68,0:38:41.02,English,,0,0,0,,And similarly %rax is initially the value well it's both what x is here and it's used as the return value
-Dialogue: 0,0:38:31.68,0:38:41.02,Chinese,,0,0,0,,同样，％rax 最初是 x 的值，同时被用作返回值
+Dialogue: 0,0:38:31.68,0:38:41.02,Chinese,,0,0,0,,同样，％rax 保存的是初值，它既用于保存 x 的值，同时也被用作返回值
 Dialogue: 0,0:38:42.50,0:38:49.20,English,,0,0,0,,Okay so what's up the reason to go through all that is to actually show you examples of calling this
 Dialogue: 0,0:38:42.50,0:38:49.20,Chinese,,0,0,0,,好的，这就是为什么要通过所有这些来实际向你展示调用它的例子
 Dialogue: 0,0:38:49.28,0:38:54.70,English,,0,0,0,,And how arguments get passed to the function and how it makes use of the stack frame
 Dialogue: 0,0:38:49.28,0:38:54.70,Chinese,,0,0,0,,以及如何将参数传递给函数、如何使用栈帧
 Dialogue: 0,0:38:56.74,0:38:59.66,English,,0,0,0,,So now there's a function called "call_incr"
 Dialogue: 0,0:38:56.74,0:38:59.66,Chinese,,0,0,0,,所以现在有一个名为 call_incr 的函数
-Dialogue: 0,0:39:00.68,0:39:08.18,English,,0,0,0,,And it's going to create a value called  v1 and have to generate a pointer to that
+Dialogue: 0,0:39:00.68,0:39:08.18,English,,0,0,0,,And it's going to create a value called v1 and have to generate a pointer to that
 Dialogue: 0,0:39:00.68,0:39:08.18,Chinese,,0,0,0,,它将创建一个名为 v1 的值，并且必须生成一个指向该值的指针
 Dialogue: 0,0:39:08.98,0:39:13.12,English,,0,0,0,,So what that means is v1 can't just stay in a register
 Dialogue: 0,0:39:08.98,0:39:13.12,Chinese,,0,0,0,,那么这意味着 v1 不能只保存在寄存器中
@@ -892,29 +892,29 @@ Dialogue: 0,0:39:21.58,0:39:25.58,Chinese,,0,0,0,,那么它存在哪里呢？在
 Dialogue: 0,0:39:26.54,0:39:29.78,English,,0,0,0,,So how does it find space on the stack while allocates
 Dialogue: 0,0:39:26.54,0:39:29.78,Chinese,,0,0,0,,那么在分配时如何在栈上找到空间呢
 Dialogue: 0,0:39:30.08,0:39:34.62,English,,0,0,0,,So the function "call_incr" then and we'll go through all the different parts of it
-Dialogue: 0,0:39:30.08,0:39:34.62,Chinese,,0,0,0,,我们将遍历函数 call_incr 的所有不同部分
+Dialogue: 0,0:39:30.08,0:39:34.62,Chinese,,0,0,0,,我们将依次介绍函数 call_incr 的所有不同部分
 Dialogue: 0,0:39:34.62,0:39:45.98,English,,0,0,0,,But you see that this red code here (is generated) generates these two instructions one is to allocate 16 bytes on the stack
 Dialogue: 0,0:39:34.62,0:39:45.98,Chinese,,0,0,0,,你看到这个红色的代码会生成两条指令，其一是在栈中分配 16 字节的空间
 Dialogue: 0,0:39:46.78,0:39:53.76,English,,0,0,0,,And the other is to store $15213 at offset eight from the stack pointer
 Dialogue: 0,0:39:46.78,0:39:53.76,Chinese,,0,0,0,,其二是在离栈指针的偏移量为 8 的地方存储常数 15213
 Dialogue: 0,0:39:54.46,0:40:02.32,English,,0,0,0,,And as will often see the the program often allocates more space on the stack than it really needs to
-Dialogue: 0,0:39:54.46,0:40:02.32,Chinese,,0,0,0,,并且通常会看到程序经常在栈上分配比实际需要更多的空间
+Dialogue: 0,0:39:54.46,0:40:02.32,Chinese,,0,0,0,,我们通常会看到，程序经常在栈上分配比实际需求还要多的空间
 Dialogue: 0,0:40:02.82,0:40:11.38,English,,0,0,0,,And there's some conventions about trying to keep addresses on aligned in various ways
-Dialogue: 0,0:40:02.82,0:40:11.38,Chinese,,0,0,0,,并且有一些关于尝试以各种方式保持地址对齐的约定
+Dialogue: 0,0:40:02.82,0:40:11.38,Chinese,,0,0,0,,这是因为，有一些约定要求内存地址保持对齐，对齐的方式可以有很多种
 Dialogue: 0,0:40:11.56,0:40:18.10,English,,0,0,0,,That are sort of obscure and we you should just kind of not worry about the fact there's unused space and functions
-Dialogue: 0,0:40:11.56,0:40:18.10,Chinese,,0,0,0,,这有点模糊，你不必担心有未使用的空间和功能
+Dialogue: 0,0:40:11.56,0:40:18.10,Chinese,,0,0,0,,这有点含糊不清，但你大可不必担心是否会有未使用的空间和函数
 Dialogue: 0,0:40:18.10,0:40:24.58,English,,0,0,0,,Because they do it the reasons for doing it are...
 Dialogue: 0,0:40:18.10,0:40:24.58,Chinese,,0,0,0,,因为他们这样做的原因是......
 Dialogue: 0,0:40:26.16,0:40:31.12,English,,0,0,0,,Maybe interesting to some but not really ones you need to understand at this point
-Dialogue: 0,0:40:26.16,0:40:31.12,Chinese,,0,0,0,,对某些人来说可能很有趣，但在这一点上你不需要理解
+Dialogue: 0,0:40:26.16,0:40:31.12,Chinese,,0,0,0,,对某些人来说可能很有趣，但目前你并不需要理解
 Dialogue: 0,0:40:32.60,0:40:40.50,English,,0,0,0,,So the point being that the way we got space on the stack was to just (add to the stack pointer) decrement the stack pointer
-Dialogue: 0,0:40:32.60,0:40:40.50,Chinese,,0,0,0,,所以关键是我们在栈上获得空间的方式是递减堆栈指针
+Dialogue: 0,0:40:32.60,0:40:40.50,Chinese,,0,0,0,,关键是我们在栈上获得空间的方式是递减堆栈指针
 Dialogue: 0,0:40:42.36,0:40:48.08,English,,0,0,0,,So now we have a number 15213 that's sitting in memory
 Dialogue: 0,0:40:42.36,0:40:48.08,Chinese,,0,0,0,,所以现在我们在内存中有一个数字 15213
 Dialogue: 0,0:40:48.64,0:40:51.42,English,,0,0,0,,And we can create a pointer to it
 Dialogue: 0,0:40:48.64,0:40:51.42,Chinese,,0,0,0,,我们可以创建一个指向它的指针
 Dialogue: 0,0:40:54.72,0:41:08.40,English,,0,0,0,,And so now to set up this call, we need to create a pointer to v1 and we have to pass the number 3000
-Dialogue: 0,0:40:54.72,0:41:08.40,Chinese,,0,0,0,,所以现在要设置这个调用，我们需要创建一个指针指向 v1，然后传递数字 3000
+Dialogue: 0,0:40:54.72,0:41:08.40,Chinese,,0,0,0,,所以现在要构造这个调用，我们需要创建一个指针指向 v1，然后给它传递一个数字 3000
 Dialogue: 0,0:41:09.12,0:41:13.46,English,,0,0,0,,So we'll see that will copy 3000 to register %esi
 Dialogue: 0,0:41:09.12,0:41:13.46,Chinese,,0,0,0,,所以我们会看到代码将 3000 复制到寄存器 ％esi
 Dialogue: 0,0:41:14.26,0:41:17.42,English,,0,0,0,,And let me just double check here
@@ -932,7 +932,7 @@ Dialogue: 0,0:41:38.34,0:41:40.46,Chinese,,0,0,0,,它使用的是 movl 而不是
 Dialogue: 0,0:41:41.16,0:41:42.94,English,,0,0,0,,I think we might have covered that last time
 Dialogue: 0,0:41:41.16,0:41:42.94,Chinese,,0,0,0,,我想我们上次可能讲到了
 Dialogue: 0,0:41:42.94,0:41:47.36,English,,0,0,0,,But 3,000 is a small enough number it will fit in 32 bits
-Dialogue: 0,0:41:42.94,0:41:47.36,Chinese,,0,0,0,,但 3,000 是一个足够小的数字，它将适合 32 位
+Dialogue: 0,0:41:42.94,0:41:47.36,Chinese,,0,0,0,,但 3,000 是一个足够小的数字，32 位已经够用了
 Dialogue: 0,0:41:47.78,0:41:50.86,English,,0,0,0,,It's a positive number so we don't have to worry about sign bits
 Dialogue: 0,0:41:47.78,0:41:50.86,Chinese,,0,0,0,,这是一个正数，所以我们不必担心符号位
 Dialogue: 0,0:41:51.34,0:41:57.58,English,,0,0,0,,So the thing can sort of get away with a trick here of using just a movl instruction
@@ -944,31 +944,31 @@ Dialogue: 0,0:42:05.96,0:42:12.46,Chinese,,0,0,0,,它会将该寄存器的高 32
 Dialogue: 0,0:42:13.16,0:42:17.44,English,,0,0,0,,So this will have the effect of copying the number 3000
 Dialogue: 0,0:42:13.16,0:42:17.44,Chinese,,0,0,0,,因此，这将具有复制数字 3000 的效果
 Dialogue: 0,0:42:18.18,0:42:21.06,English,,0,0,0,,And zeroing out the upper bytes to register %rsi
-Dialogue: 0,0:42:18.18,0:42:21.06,Chinese,,0,0,0,,对于寄存器 %rsi 来说则使高位清零
+Dialogue: 0,0:42:18.18,0:42:21.06,Chinese,,0,0,0,,对于寄存器 %rsi 来说则是高位清零
 Dialogue: 0,0:42:21.66,0:42:28.44,English,,0,0,0,,And the reason the compiler likes this is it takes one less byte to encode a movl than it does to encode a movq
-Dialogue: 0,0:42:21.66,0:42:28.44,Chinese,,0,0,0,,编译器喜欢这个的原因是 movl 比 movq 少一个字节
+Dialogue: 0,0:42:21.66,0:42:28.44,Chinese,,0,0,0,,编译器喜欢这么干的原因是 movl 比 movq 少一个字节
 Dialogue: 0,0:42:30.04,0:42:33.96,English,,0,0,0,,Um so just you have to get used to these kind of things
-Dialogue: 0,0:42:30.04,0:42:33.96,Chinese,,0,0,0,,嗯所以你必须习惯这些事情
-Dialogue: 0,0:42:34.46,0:42:38.40,English,,0,0,0,,So that's setting up argument the the second argument to the call
+Dialogue: 0,0:42:30.04,0:42:33.96,Chinese,,0,0,0,,嗯所以你必须习惯这些做法
+Dialogue: 0,0:42:34.46,0:42:38.40,English,,0,0,0,,So that's setting up argument the second argument to the call
 Dialogue: 0,0:42:34.46,0:42:38.40,Chinese,,0,0,0,,这就是设置调用的第二个参数的过程
 Dialogue: 0,0:42:39.88,0:42:49.61,English,,0,0,0,,But the first argument it's using this instruction lea or leaq for what it's supposed to be used for,which is to create pointers
-Dialogue: 0,0:42:39.88,0:42:49.61,Chinese,,0,0,0,,但是它的第一个参数是使用这个指令lea或leaq用于它本来应该做的，即创建指针
+Dialogue: 0,0:42:39.88,0:42:49.61,Chinese,,0,0,0,,但是它的第一个参数是使用指令lea或leaq来完成其本职工作，即创建指针
 Dialogue: 0,0:42:50.22,0:42:54.82,English,,0,0,0,,Remember we talked about this instruction often getting used just to add two numbers
 Dialogue: 0,0:42:50.22,0:42:54.82,Chinese,,0,0,0,,记得我们说过这个指令经常被用来做两个数字的加法
 Dialogue: 0,0:42:55.78,0:42:58.84,English,,0,0,0,,But it's actually designed exactly for this purpose
-Dialogue: 0,0:42:55.78,0:42:58.84,Chinese,,0,0,0,,但它实际上是为此目的而设计的
+Dialogue: 0,0:42:55.78,0:42:58.84,Chinese,,0,0,0,,但它实际上却是为此目的而设计的
 Dialogue: 0,0:42:59.54,0:43:04.66,English,,0,0,0,,That it looks like a memory reference 8 relative to the stack pointer
-Dialogue: 0,0:42:59.54,0:43:04.66,Chinese,,0,0,0,,它看起来像是与栈指针相邻 8 字节的内存引用
+Dialogue: 0,0:42:59.54,0:43:04.66,Chinese,,0,0,0,,它看起来像是与栈指针相差 8 字节处的内存引用
 Dialogue: 0,0:43:06.38,0:43:14.24,English,,0,0,0,,But instead of now reading from that memory reference the instruction will just copy the computed address to %rdi
-Dialogue: 0,0:43:06.38,0:43:14.24,Chinese,,0,0,0,,但是与从该内存引用读取数据不同，该指令会直接将计算的地址复制给 %rdi
+Dialogue: 0,0:43:06.38,0:43:14.24,Chinese,,0,0,0,,但是与从该内存引用处读取数据不同，该指令会直接将计算的地址复制给 %rdi
 Dialogue: 0,0:43:17.78,0:43:25.72,English,,0,0,0,,And so %rdi will now be equal to whatever the stack pointer plus 8
 Dialogue: 0,0:43:17.78,0:43:25.72,Chinese,,0,0,0,,所以 ％rdi 现在将等于栈指针加上 8
 Dialogue: 0,0:43:28.10,0:43:32.40,English,,0,0,0,,Okay so that creates the two arguments that I'm passing to this function
-Dialogue: 0,0:43:28.10,0:43:32.40,Chinese,,0,0,0,,好的，这样就创建了我传递给这个函数的两个参数
+Dialogue: 0,0:43:28.10,0:43:32.40,Chinese,,0,0,0,,好的，这样就创建好了我要传递给这个函数的两个参数
 Dialogue: 0,0:43:33.56,0:43:36.94,English,,0,0,0,,And now the call instruction will happen
 Dialogue: 0,0:43:33.56,0:43:36.94,Chinese,,0,0,0,,现在调用指令将会发生
 Dialogue: 0,0:43:37.60,0:43:45.30,English,,0,0,0,,And you'll recall that the call instruction adds(3000)these two numbers and stores the result back in the pointer
-Dialogue: 0,0:43:37.60,0:43:45.30,Chinese,,0,0,0,,你会记得 call 指令将两个数字相加并将结果存储回指针
+Dialogue: 0,0:43:37.60,0:43:45.30,Chinese,,0,0,0,,你会记得 call 指令将两个数字相加 (加3000) 并将结果存储回指针
 Dialogue: 0,0:43:46.00,0:43:53.18,English,,0,0,0,,So its effect will be to set the of this memory location to 18213
 Dialogue: 0,0:43:46.00,0:43:53.18,Chinese,,0,0,0,,因此它的作用是将此内存位置设置为 18213
 Dialogue: 0,0:43:53.74,0:43:55.72,English,,0,0,0,,You'll notice the clever trick here
@@ -982,27 +982,27 @@ Dialogue: 0,0:44:04.18,0:44:06.82,Chinese,,0,0,0,,不，我们确实使用了返
 Dialogue: 0,0:44:09.92,0:44:11.24,English,,0,0,0,,And now the...
 Dialogue: 0,0:44:09.92,0:44:11.24,Chinese,,0,0,0,,现在......
 Dialogue: 0,0:44:16.90,0:44:18.74,English,,0,0,0,,Now when we return back
-Dialogue: 0,0:44:16.90,0:44:18.74,Chinese,,0,0,0,,现在我们回来的时候
+Dialogue: 0,0:44:16.90,0:44:18.74,Chinese,,0,0,0,,现在我们回过头来
 Dialogue: 0,0:44:20.12,0:44:27.22,English,,0,0,0,,What we want to do is add the value in v1 to the value we just computed
-Dialogue: 0,0:44:20.12,0:44:27.22,Chinese,,0,0,0,,我们想要做的是将 v1 中的值加到我们刚刚计算的值中
+Dialogue: 0,0:44:20.12,0:44:27.22,Chinese,,0,0,0,,我们想要做的是将 v1 中的值加到我们刚刚计算的值上
 Dialogue: 0,0:44:27.22,0:44:29.92,English,,0,0,0,,The value we just computed is in v2
 Dialogue: 0,0:44:27.22,0:44:29.92,Chinese,,0,0,0,,我们刚刚计算的值是 v2
 Dialogue: 0,0:44:30.70,0:44:38.24,English,,0,0,0,,And we know that the v1 is designated by this memory location that %rsp+8
-Dialogue: 0,0:44:30.70,0:44:38.24,Chinese,,0,0,0,,我们知道 v1 内存位置指定为 ％rsp+8
+Dialogue: 0,0:44:30.70,0:44:38.24,Chinese,,0,0,0,,我们知道 v1 内存位置在 ％rsp+8
 Dialogue: 0,0:44:38.62,0:44:43.00,English,,0,0,0,,And so we'll just read from memory to include that to %rax
-Dialogue: 0,0:44:38.62,0:44:43.00,Chinese,,0,0,0,,所以我们只是从内存中读取，将其包含在 ％rax 中
+Dialogue: 0,0:44:38.62,0:44:43.00,Chinese,,0,0,0,,所以我们只是从内存中读取出来，将其存到 ％rax 中
 Dialogue: 0,0:44:44.90,0:44:48.92,English,,0,0,0,,And then the final step is to deallocate,so you see the match here
-Dialogue: 0,0:44:44.90,0:44:48.92,Chinese,,0,0,0,,然后最后一步是取消分配，所以你在这里看到是匹配的
+Dialogue: 0,0:44:44.90,0:44:48.92,Chinese,,0,0,0,,然后最后一步是释放空间，所以你在这里看到是匹配的
 Dialogue: 0,0:44:49.68,0:44:56.66,English,,0,0,0,,And this was to answer the question earlier how does it know how to restore the the stack back to its original place?
-Dialogue: 0,0:44:49.68,0:44:56.66,Chinese,,0,0,0,,这是为了回答这个问题，它是怎么知道如何将栈恢复到原来的位置？
+Dialogue: 0,0:44:49.68,0:44:56.66,Chinese,,0,0,0,,这是为了回答之前的问题，编译器是怎么知道如何将栈恢复到原来的位置的？
 Dialogue: 0,0:44:57.18,0:45:02.90,English,,0,0,0,,Well the compiler you know built into it figured out how much space it would need for this particular function
-Dialogue: 0,0:44:57.18,0:45:02.90,Chinese,,0,0,0,,那么内置编译器会计算出这个特定函数需要多少空间
+Dialogue: 0,0:44:57.18,0:45:02.90,Chinese,,0,0,0,,因为编译器会计算出这个特定的函数需要多少空间
 Dialogue: 0,0:45:03.52,0:45:07.54,English,,0,0,0,,And it allocates that when it comes in,and it deallocates it when it goes out
-Dialogue: 0,0:45:03.52,0:45:07.54,Chinese,,0,0,0,,并且它在它被调用时分配它，并在它结束时时释放它
+Dialogue: 0,0:45:03.52,0:45:07.54,Chinese,,0,0,0,,然后，在调用时分配那么多的空间，并在结束调用时释放掉
 Dialogue: 0,0:45:09.94,0:45:13.86,English,,0,0,0,,So and this you know this is a very simple example
-Dialogue: 0,0:45:09.94,0:45:13.86,Chinese,,0,0,0,,所以，你知道这是一个非常简单的例子
+Dialogue: 0,0:45:09.94,0:45:13.86,Chinese,,0,0,0,,所以，你现在知道了这个非常简单的例子
 Dialogue: 0,0:45:13.86,0:45:17.94,English,,0,0,0,,But even more elaborate examples are still based on that same set of ideas
-Dialogue: 0,0:45:13.86,0:45:17.94,Chinese,,0,0,0,,但更精细的例子仍然基于同样的想法
+Dialogue: 0,0:45:13.86,0:45:17.94,Chinese,,0,0,0,,但更复杂的例子仍然是基于同样的思想
 Dialogue: 0,0:45:19.80,0:45:25.02,English,,0,0,0,,So that shows you in 1 then the data management the stack management
 Dialogue: 0,0:45:19.80,0:45:25.02,Chinese,,0,0,0,,这样就可以在一个例子显示数据管理，栈管理
 Dialogue: 0,0:45:25.02,0:45:27.02,English,,0,0,0,,The idea of using a stack frame
@@ -1010,137 +1010,137 @@ Dialogue: 0,0:45:25.02,0:45:27.02,Chinese,,0,0,0,,使用栈帧的想法
 Dialogue: 0,0:45:30.64,0:45:37.14,English,,0,0,0,,And now the return by this point the only thing that's left is
 Dialogue: 0,0:45:30.64,0:45:37.14,Chinese,,0,0,0,,而现在通过这一点返回了，唯一剩下的就是
 Dialogue: 0,0:45:38.26,0:45:42.84,English,,0,0,0,,After I increment the stack pointer it will be pointing back to this return address
-Dialogue: 0,0:45:38.26,0:45:42.84,Chinese,,0,0,0,,在我递增堆栈指针后，它将指向此返回地址
+Dialogue: 0,0:45:38.26,0:45:42.84,Chinese,,0,0,0,,在我递增堆栈指针后，它将指向返回地址
 Dialogue: 0,0:45:44.28,0:45:46.22,English,,0,0,0,,Whoops wrong direction here
 Dialogue: 0,0:45:44.28,0:45:46.22,Chinese,,0,0,0,,哦弄错了
 Dialogue: 0,0:45:46.78,0:45:54.48,English,,0,0,0,,So now if I do a ret. the ret instruction will always take whatever is pointed to by the stack pointer and use that as the return address
-Dialogue: 0,0:45:46.78,0:45:54.48,Chinese,,0,0,0,,所以现在如果我做一个 ret。 ret 指令将始终采用栈指针指向的地址并将它作为返回地址
+Dialogue: 0,0:45:46.78,0:45:54.48,Chinese,,0,0,0,,所以现在如果我执行 ret， ret 指令将始终采用栈指针指向的地址并将它作为返回地址
 Dialogue: 0,0:45:56.16,0:46:01.94,English,,0,0,0,,So it's very important that %rsp get set back to where it should be before you it does a ret
 Dialogue: 0,0:45:56.16,0:46:01.94,Chinese,,0,0,0,,所以 ％rsp 在你进行 ret 之前应该回到它应该的位置是非常重要的
 Dialogue: 0,0:46:05.50,0:46:08.20,English,,0,0,0,,Okay so that's sort of the the basic principles
-Dialogue: 0,0:46:05.50,0:46:08.20,Chinese,,0,0,0,,好的，这就是基本原则
+Dialogue: 0,0:46:05.50,0:46:08.20,Chinese,,0,0,0,,好了，这就是基本原则了
 Dialogue: 0,0:46:08.20,0:46:12.18,English,,0,0,0,,Now let's get a little bit more refined
-Dialogue: 0,0:46:08.20,0:46:12.18,Chinese,,0,0,0,,现在让我们更精致一点
+Dialogue: 0,0:46:08.20,0:46:12.18,Chinese,,0,0,0,,现在让我们更深入一点
 Dialogue: 0,0:46:12.72,0:46:17.12,English,,0,0,0,,An important idea is...well what about these registers
-Dialogue: 0,0:46:12.72,0:46:17.12,Chinese,,0,0,0,,一个重要的想法是......那么这些寄存器呢
+Dialogue: 0,0:46:12.72,0:46:17.12,Chinese,,0,0,0,,一个重要的想法是......这些寄存器有什么值得一提的呢？
 Dialogue: 0,0:46:17.12,0:46:23.50,English,,0,0,0,,What can be assumed about particularly registers and how they get changed and so forth
-Dialogue: 0,0:46:17.12,0:46:23.50,Chinese,,0,0,0,,对于寄存器有什么假设或者它们有什么变化
+Dialogue: 0,0:46:17.12,0:46:23.50,Chinese,,0,0,0,,对于寄存器有什么假设？或者它们会发生什么变化？
 Dialogue: 0,0:46:23.98,0:46:29.98,English,,0,0,0,,And so again it's built into this idea of an ABI is a set of conventions about the register
-Dialogue: 0,0:46:23.98,0:46:29.98,Chinese,,0,0,0,,因此，ABI 再次构建了一套关于寄存器的约定
+Dialogue: 0,0:46:23.98,0:46:29.98,Chinese,,0,0,0,,同样，ABI 也准备了一套关于寄存器的约定
 Dialogue: 0,0:46:29.98,0:46:33.10,English,,0,0,0,,Obviously %rsp is a very important register
 Dialogue: 0,0:46:29.98,0:46:33.10,Chinese,,0,0,0,,显然 ％rsp 是一个非常重要的寄存器
 Dialogue: 0,0:46:33.56,0:46:39.32,English,,0,0,0,,And you don't want programs just to randomly change its value without them knowing what to do
-Dialogue: 0,0:46:33.56,0:46:39.32,Chinese,,0,0,0,,并且你不希望程序在他们不知道该怎么做的情况下随机改变它的值
+Dialogue: 0,0:46:33.56,0:46:39.32,Chinese,,0,0,0,,因为，你不会希望程序在他们不知道该怎么做的情况下随机改变此寄存器的值
 Dialogue: 0,0:46:39.82,0:46:43.62,English,,0,0,0,,But it turns out we'll also be careful with some of the other registers too
 Dialogue: 0,0:46:39.82,0:46:43.62,Chinese,,0,0,0,,但事实证明，我们对其他一些寄存器也要小心
 Dialogue: 0,0:46:44.72,0:46:52.68,English,,0,0,0,,And so here's sort of a thought experiment imagine we had a function called "yoo" that's going to call "who"
-Dialogue: 0,0:46:44.72,0:46:52.68,Chinese,,0,0,0,,所以这是一种思想实验，想象我们有一个函数叫做 yoo，它将调用 who
+Dialogue: 0,0:46:44.72,0:46:52.68,Chinese,,0,0,0,,假设我们开展一个思想实验，想象我们有一个函数叫做 yoo，它将调用 who
 Dialogue: 0,0:46:53.68,0:47:01.56,English,,0,0,0,,And it has some data that it wants to put somewhere
 Dialogue: 0,0:46:53.68,0:47:01.56,Chinese,,0,0,0,,它有一些想要存储的数据
 Dialogue: 0,0:47:02.70,0:47:06.44,English,,0,0,0,,And then when...who's going to get called
 Dialogue: 0,0:47:02.70,0:47:06.44,Chinese,,0,0,0,,当 who 被调用的时候
 Dialogue: 0,0:47:06.92,0:47:15.20,English,,0,0,0,,And then the question is can I rely on the fact that register %rdx will still hold the number 15213
-Dialogue: 0,0:47:06.92,0:47:15.20,Chinese,,0,0,0,,然后问题是我可以依赖寄存器 ％rdx 仍然保持数字 15213 的事实吗
+Dialogue: 0,0:47:06.92,0:47:15.20,Chinese,,0,0,0,,然后问题是，寄存器 ％rdx 一定还保存着数字 15213 吗
 Dialogue: 0,0:47:16.02,0:47:17.96,English,,0,0,0,,And the answer is not in general
 Dialogue: 0,0:47:16.02,0:47:17.96,Chinese,,0,0,0,,答案一般是否定的
 Dialogue: 0,0:47:18.16,0:47:23.08,English,,0,0,0,,Because “who” might have overwritten %rdx and put something else there
 Dialogue: 0,0:47:18.16,0:47:23.08,Chinese,,0,0,0,,因为 who 可能覆盖了 ％rdx 并在那里放了其他东西
 Dialogue: 0,0:47:25.46,0:47:30.58,English,,0,0,0,,So in particular if "who" did some operation involving register %rdx
-Dialogue: 0,0:47:25.46,0:47:30.58,Chinese,,0,0,0,,所以特别是如果 who 做了一些涉及寄存器 ％rdx 的操作
+Dialogue: 0,0:47:25.46,0:47:30.58,Chinese,,0,0,0,,所以如果 who 做了一些涉及寄存器 ％rdx 的操作
 Dialogue: 0,0:47:31.20,0:47:33.74,English,,0,0,0,,It could have messed up the value that was there before
-Dialogue: 0,0:47:31.20,0:47:33.74,Chinese,,0,0,0,,它可能弄乱了之前的值
+Dialogue: 0,0:47:31.20,0:47:33.74,Chinese,,0,0,0,,它可能已经替换掉之前的值了
 Dialogue: 0,0:47:36.42,0:47:42.38,English,,0,0,0,,So the obvious answer is while you should not have used %rdx for that purpose right
 Dialogue: 0,0:47:36.42,0:47:42.38,Chinese,,0,0,0,,所以显而易见的答案是你不应该为此目的使用 ％rdx
 Dialogue: 0,0:47:43.38,0:47:48.22,English,,0,0,0,,And that's why we will come up with a set of conventions
-Dialogue: 0,0:47:43.38,0:47:48.22,Chinese,,0,0,0,,这就是为什么我们会提出一系列惯例
+Dialogue: 0,0:47:43.38,0:47:48.22,Chinese,,0,0,0,,这就是为什么我们会提出一系列约定
 Dialogue: 0,0:47:49.12,0:47:51.72,English,,0,0,0,,So just some terminology
-Dialogue: 0,0:47:49.12,0:47:51.72,Chinese,,0,0,0,,所以只是一些术语
+Dialogue: 0,0:47:49.12,0:47:51.72,Chinese,,0,0,0,,首先是一些术语
 Dialogue: 0,0:47:52.18,0:47:54.82,English,,0,0,0,,When we're talking about one function calling another
 Dialogue: 0,0:47:52.18,0:47:54.82,Chinese,,0,0,0,,当我们谈论一个函数调用另一个函数时
 Dialogue: 0,0:47:54.94,0:48:01.12,English,,0,0,0,,It's useful to have used the following words we'll call the calling function the caller
-Dialogue: 0,0:47:54.94,0:48:01.12,Chinese,,0,0,0,,使用下面的单词是很有用的。我们称调用别的函数的函数为调用函数
+Dialogue: 0,0:47:54.94,0:48:01.12,Chinese,,0,0,0,,使用下面的词汇是很有用的：我们称调用别的函数的函数为调用者 (caller)
 Dialogue: 0,0:48:01.56,0:48:03.86,English,,0,0,0,,And the function that gets called the callee
-Dialogue: 0,0:48:01.56,0:48:03.86,Chinese,,0,0,0,,并且被调用的称为被调用者的函数
+Dialogue: 0,0:48:01.56,0:48:03.86,Chinese,,0,0,0,,而被调用的函数称为被调用者 (callee)
 Dialogue: 0,0:48:06.44,0:48:12.80,English,,0,0,0,,And now there's basically two ways we can manage register it can be what's called caller saved
-Dialogue: 0,0:48:06.44,0:48:12.80,Chinese,,0,0,0,,现在基本上有两种方法可以管理寄存器，被称为调用者保存
+Dialogue: 0,0:48:06.44,0:48:12.80,Chinese,,0,0,0,,基本上，我们有两种方法可以管理寄存器，一种称为调用者保存 (caller saved)
 Dialogue: 0,0:48:13.56,0:48:15.74,English,,0,0,0,,Which means if the caller really cares
-Dialogue: 0,0:48:13.56,0:48:15.74,Chinese,,0,0,0,,这意味着如果调用者真正在意
+Dialogue: 0,0:48:13.56,0:48:15.74,Chinese,,0,0,0,,这意味着如果调用者真的在意
 Dialogue: 0,0:48:16.88,0:48:27.72,English,,0,0,0,,If you really want to value that will be there when it returns when control returns back to it
 Dialogue: 0,0:48:16.88,0:48:27.72,Chinese,,0,0,0,,如果你真的想要这个值在返回时保持不变
 Dialogue: 0,0:48:28.32,0:48:35.78,English,,0,0,0,,Then it should store it away first,it shouldn't assume that the register will be....
-Dialogue: 0,0:48:28.32,0:48:35.78,Chinese,,0,0,0,,然后它应该首先存储它，它不应该假设寄存器将....
+Dialogue: 0,0:48:28.32,0:48:35.78,Chinese,,0,0,0,,则它应该首先存储它，它不应该假设寄存器会一直不变....
 Dialogue: 0,0:48:36.76,0:48:39.68,English,,0,0,0,,It should assume that the register might get altered by it
 Dialogue: 0,0:48:36.76,0:48:39.68,Chinese,,0,0,0,,它应该假设寄存器的值可能被改变
 Dialogue: 0,0:48:42.18,0:48:46.96,English,,0,0,0,,But there's another class we can define it called callee save
-Dialogue: 0,0:48:42.18,0:48:46.96,Chinese,,0,0,0,,但是我们可以定义另一个叫做被调用者保存的类
+Dialogue: 0,0:48:42.18,0:48:46.96,Chinese,,0,0,0,,另外一种方式称为被调用者保存 (callee save)
 Dialogue: 0,0:48:47.52,0:48:52.34,English,,0,0,0,,Which is sort of a contract between all the functions and it's built into the ABI that says
-Dialogue: 0,0:48:47.52,0:48:52.34,Chinese,,0,0,0,,这是所有函数之间的契约，它是内置于 ABI 中的
+Dialogue: 0,0:48:47.52,0:48:52.34,Chinese,,0,0,0,,这是所有函数之间的约定，它也是 ABI 的一部分
 Dialogue: 0,0:48:53.06,0:48:56.92,English,,0,0,0,,If a particular function wants to alter the... alter this register
-Dialogue: 0,0:48:53.06,0:48:56.92,Chinese,,0,0,0,,如果特定函数想要更改此寄存器
+Dialogue: 0,0:48:53.06,0:48:56.92,Chinese,,0,0,0,,如果特定函数想要更改某寄存器
 Dialogue: 0,0:48:57.48,0:49:02.02,English,,0,0,0,,What it needs to do is first store it away and it will do it by putting the value in the stack
-Dialogue: 0,0:48:57.48,0:49:02.02,Chinese,,0,0,0,,它需要做的是先将它存储起来，然后将值放入堆栈中
+Dialogue: 0,0:48:57.48,0:49:02.02,Chinese,,0,0,0,,它需要做的是先将它存储起来，然后将值放入栈中
 Dialogue: 0,0:49:02.52,0:49:06.04,English,,0,0,0,,And then before we return from that procedure
-Dialogue: 0,0:49:02.52,0:49:06.04,Chinese,,0,0,0,,然后在我们从该过程返回之前
+Dialogue: 0,0:49:02.52,0:49:06.04,Chinese,,0,0,0,,然后我们从该过程返回之前
 Dialogue: 0,0:49:06.28,0:49:09.18,English,,0,0,0,,We should restore it back to whatever it was before
 Dialogue: 0,0:49:06.28,0:49:09.18,Chinese,,0,0,0,,我们应该把它恢复到以前的状态
 Dialogue: 0,0:49:09.78,0:49:12.38,English,,0,0,0,,So that's a convention called callee save
-Dialogue: 0,0:49:09.78,0:49:12.38,Chinese,,0,0,0,,所以这是一个名为被调用者保存的约定
+Dialogue: 0,0:49:09.78,0:49:12.38,Chinese,,0,0,0,,所以这是一种名为被调用者保存的约定
 Dialogue: 0,0:49:13.02,0:49:16.84,English,,0,0,0,,And it's a little less intuitive and it takes a while to get the hang of this
 Dialogue: 0,0:49:13.02,0:49:16.84,Chinese,,0,0,0,,它有点不那么直观，需要一段时间才能掌握这一点
 Dialogue: 0,0:49:16.86,0:49:18.90,English,,0,0,0,,But you'll begin to see its value
 Dialogue: 0,0:49:16.86,0:49:18.90,Chinese,,0,0,0,,但你会开始看到它的价值
 Dialogue: 0,0:49:21.70,0:49:23.86,English,,0,0,0,,So in particular with this ABI
-Dialogue: 0,0:49:21.70,0:49:23.86,Chinese,,0,0,0,,所以特别是这个 ABI
+Dialogue: 0,0:49:21.70,0:49:23.86,Chinese,,0,0,0,,特别是在 ABI 中
 Dialogue: 0,0:49:25.28,0:49:31.06,English,,0,0,0,,We've already seen %rax used for the return value
 Dialogue: 0,0:49:25.28,0:49:31.06,Chinese,,0,0,0,,我们已经看到 ％rax 用于返回值
 Dialogue: 0,0:49:31.46,0:49:36.98,English,,0,0,0,,And we've seen these six registers that get used for passing arguments
-Dialogue: 0,0:49:31.46,0:49:36.98,Chinese,,0,0,0,,我们已经看到这六个寄存器用于传递参数
+Dialogue: 0,0:49:31.46,0:49:36.98,Chinese,,0,0,0,,我们已经看到还有六个寄存器用于传递参数
 Dialogue: 0,0:49:38.06,0:49:49.01,English,,0,0,0,,And will also designate registers %r10 and %r11 to be just temporary values that can be altered by any function
 Dialogue: 0,0:49:38.06,0:49:49.01,Chinese,,0,0,0,,寄存器 %r10 与 %r11 用于存储可以被任何函数修改的临时值
 Dialogue: 0,0:49:49.18,0:49:50.80,English,,0,0,0,,That's meaning of caller saved
-Dialogue: 0,0:49:49.18,0:49:50.80,Chinese,,0,0,0,,这是调用者保存的意思
+Dialogue: 0,0:49:49.18,0:49:50.80,Chinese,,0,0,0,,它们属于调用者保存
 Dialogue: 0,0:49:51.26,0:49:56.96,English,,0,0,0,,We've already seen actually within code often them overriding these registers
-Dialogue: 0,0:49:51.26,0:49:56.96,Chinese,,0,0,0,,我们已经在代码中看到它们通常会覆盖这些寄存器
+Dialogue: 0,0:49:51.26,0:49:56.96,Chinese,,0,0,0,,我们已经在代码中看到这些寄存器常常被改写
 Dialogue: 0,0:49:56.96,0:49:59.70,English,,0,0,0,,Because whatever gets passed to a function
-Dialogue: 0,0:49:56.96,0:49:59.70,Chinese,,0,0,0,,因为无论什么传递给函数
+Dialogue: 0,0:49:56.96,0:49:59.70,Chinese,,0,0,0,,因为无论给函数传递什么参数
 Dialogue: 0,0:50:00.68,0:50:03.38,English,,0,0,0,,The function can do whatever it wants to that data
 Dialogue: 0,0:50:00.68,0:50:03.38,Chinese,,0,0,0,,该函数可以对数据执行任何操作
 Dialogue: 0,0:50:04.48,0:50:07.28,English,,0,0,0,,As long as it's not somehow corrupting other data
 Dialogue: 0,0:50:04.48,0:50:07.28,Chinese,,0,0,0,,只要它不会以某种方式破坏其他数据
 Dialogue: 0,0:50:07.28,0:50:10.84,English,,0,0,0,,So those often get used as temporary storage as well
-Dialogue: 0,0:50:07.28,0:50:10.84,Chinese,,0,0,0,,所以这些通常也被用作临时存储
+Dialogue: 0,0:50:07.28,0:50:10.84,Chinese,,0,0,0,,所以这些寄存器也通常被用作临时存储
 Dialogue: 0,0:50:12.92,0:50:19.00,English,,0,0,0,,And %rax gets often overwritten multiple times before it gets set to a final return value
-Dialogue: 0,0:50:12.92,0:50:19.00,Chinese,,0,0,0,,并且 ％rax 在被设置为最终返回值之前经常被多次覆盖
+Dialogue: 0,0:50:12.92,0:50:19.00,Chinese,,0,0,0,,而 ％rax 在被设置为最终返回值之前经常被多次覆盖
 Dialogue: 0,0:50:21.08,0:50:25.68,English,,0,0,0,,But we're going to say that these four registers and most commonly %rbx
-Dialogue: 0,0:50:21.08,0:50:25.68,Chinese,,0,0,0,,但我们要说的是这四个寄存器，最常见的是 ％rbx
+Dialogue: 0,0:50:21.08,0:50:25.68,Chinese,,0,0,0,,但我们要说的是下面四个寄存器，其中最常见的是 ％rbx
 Dialogue: 0,0:50:28.14,0:50:30.20,English,,0,0,0,,Are our what are called callee-saved registers
-Dialogue: 0,0:50:28.14,0:50:30.20,Chinese,,0,0,0,,我们称之为被调用者保存的寄存器
+Dialogue: 0,0:50:28.14,0:50:30.20,Chinese,,0,0,0,,属于所谓的被调用者保存的寄存器
 Dialogue: 0,0:50:30.20,0:50:34.74,English,,0,0,0,,Meaning they'll only get used in this special way that if a function wants to alter it
-Dialogue: 0,0:50:30.20,0:50:34.74,Chinese,,0,0,0,,意味着它们只会以这种特殊方式使用，如果一个函数想要改变它
+Dialogue: 0,0:50:30.20,0:50:34.74,Chinese,,0,0,0,,意味着，当一个函数要改变这类寄存器的值时，只能使用一些特殊的方式
 Dialogue: 0,0:50:35.10,0:50:40.02,English,,0,0,0,,One of these registers has to push...it will push the value on the stack
 Dialogue: 0,0:50:35.10,0:50:40.02,Chinese,,0,0,0,,其中一个寄存器必须把值 push 到栈中
 Dialogue: 0,0:50:40.52,0:50:44.02,English,,0,0,0,,And then just before returning it will pop that value back off the stack
 Dialogue: 0,0:50:40.52,0:50:44.02,Chinese,,0,0,0,,然后在返回之前它会将该值从栈中 pop 出
 Dialogue: 0,0:50:44.92,0:50:50.94,English,,0,0,0,,So register %rbp as I told you about is special, if you're using frame pointers
-Dialogue: 0,0:50:44.92,0:50:50.94,Chinese,,0,0,0,,所以注册 ％rbp 正如我告诉你的那样特别，如果你正在使用帧指针
+Dialogue: 0,0:50:44.92,0:50:50.94,Chinese,,0,0,0,,所以如前所述，当你使用帧指针时，寄存器 ％rbp 是很特殊的
 Dialogue: 0,0:50:51.36,0:50:58.06,English,,0,0,0,,If you're not using frame pointers then it can be treated as a callee-saved register
 Dialogue: 0,0:50:51.36,0:50:58.06,Chinese,,0,0,0,,如果你不使用帧指针，则可以将其视为被调用者保存的寄存器
 Dialogue: 0,0:50:58.06,0:50:59.98,English,,0,0,0,,So I'll get back to that in a minute
 Dialogue: 0,0:50:58.06,0:50:59.98,Chinese,,0,0,0,,所以我会在一分钟后再回过头来看看
 Dialogue: 0,0:50:59.98,0:51:05.84,English,,0,0,0,,The fact you can combine those two and it works fine is actually a little bit subtle
-Dialogue: 0,0:50:59.98,0:51:05.84,Chinese,,0,0,0,,你可以将这两者结合起来并且工作正常的事实实际上有点微妙
+Dialogue: 0,0:50:59.98,0:51:05.84,Chinese,,0,0,0,,你可以将这两者结合起来并且正常工作，这好像有些微妙
 Dialogue: 0,0:51:06.38,0:51:11.44,English,,0,0,0,,And then as I mentioned %rsp is special you don't mess with that unless you know what you're doing
-Dialogue: 0,0:51:06.38,0:51:11.44,Chinese,,0,0,0,,然后正如我所提到的，％rsp 是特别的，除非你知道你在做什么，否则你不要乱用它
+Dialogue: 0,0:51:06.38,0:51:11.44,Chinese,,0,0,0,,同样，我提到过，％rsp 也很特别的，除非你知道你在做什么，否则你不要乱用它
 Dialogue: 0,0:51:12.86,0:51:20.30,English,,0,0,0,,So let's look at an example of this use of callee-save registers and why how it works
 Dialogue: 0,0:51:12.86,0:51:20.30,Chinese,,0,0,0,,那么让我们看一下被调用者保存寄存器的使用示例及其工作原理
 Dialogue: 0,0:51:20.84,0:51:28.56,English,,0,0,0,,And I'll do it by a version of this similar function to what we did before
-Dialogue: 0,0:51:20.84,0:51:28.56,Chinese,,0,0,0,,我会通过一个类似于这个函数的例子来解释
+Dialogue: 0,0:51:20.84,0:51:28.56,Chinese,,0,0,0,,我会通过一个类似的函数示例来解释
 Dialogue: 0,0:51:32.24,0:51:45.28,English,,0,0,0,,But now what I'm going to do is my return value Is to add x which is an argument of being passed to this function
-Dialogue: 0,0:51:32.24,0:51:45.28,Chinese,,0,0,0,,但现在我要做的就是，返回值需要加上 x，它是传递给此函数的参数
+Dialogue: 0,0:51:32.24,0:51:45.28,Chinese,,0,0,0,,但现在我要做的是，让返回值加上 x，它是传递给此函数的参数
 Dialogue: 0,0:51:45.28,0:51:47.30,English,,0,0,0,,There were no arguments in the earlier version
-Dialogue: 0,0:51:45.28,0:51:47.30,Chinese,,0,0,0,,早期版本中没有任何参数
+Dialogue: 0,0:51:45.28,0:51:47.30,Chinese,,0,0,0,,之前的版本中该函数没有任何参数
 Dialogue: 0,0:51:47.96,0:51:54.60,English,,0,0,0,,So somehow I have to have x, it gets passed originally in register %rdi as you know
-Dialogue: 0,0:51:47.96,0:51:54.60,Chinese,,0,0,0,,所以我必须有 x，它最初在寄存器 ％rdi 中传递，如你所知
+Dialogue: 0,0:51:47.96,0:51:54.60,Chinese,,0,0,0,,所以我必须先有 x，你已经知道了，它是由寄存器 ％rdi 传递进来的
 Dialogue: 0,0:51:56.56,0:51:58.62,English,,0,0,0,,But %rdi might...
 Dialogue: 0,0:51:56.56,0:51:58.62,Chinese,,0,0,0,,但 ％rdi 可能......
 Dialogue: 0,0:51:59.06,0:52:03.34,English,,0,0,0,,Well I'm going to have to reuse register %rdi to pass value to "incr"
@@ -1148,11 +1148,11 @@ Dialogue: 0,0:51:59.06,0:52:03.34,Chinese,,0,0,0,,好吧，我将不得不重用
 Dialogue: 0,0:52:03.82,0:52:05.90,English,,0,0,0,,So somehow I have to do something with x
 Dialogue: 0,0:52:03.82,0:52:05.90,Chinese,,0,0,0,,所以我不得不用 x 做点什么
 Dialogue: 0,0:52:06.42,0:52:11.12,English,,0,0,0,,Because I'm going to need x, when I return back to here after the call
-Dialogue: 0,0:52:06.42,0:52:11.12,Chinese,,0,0,0,,因为当我从调用中返回后需要 x
+Dialogue: 0,0:52:06.42,0:52:11.12,Chinese,,0,0,0,,然而，当我从调用中返回后还需要 x
 Dialogue: 0,0:52:11.76,0:52:15.62,English,,0,0,0,,So where am I going to put it well that's why I have callee-saved registers
-Dialogue: 0,0:52:11.76,0:52:15.62,Chinese,,0,0,0,,所以我要把它放好，这就是为什么我有被调用者保存的寄存器
+Dialogue: 0,0:52:11.76,0:52:15.62,Chinese,,0,0,0,,所以我要把它放好，这就是为什么我需要用到被调用者保存的寄存器
 Dialogue: 0,0:52:16.68,0:52:18.82,English,,0,0,0,,And so you see that the code here
-Dialogue: 0,0:52:16.68,0:52:18.82,Chinese,,0,0,0,,所以你在这里看到代码
+Dialogue: 0,0:52:16.68,0:52:18.82,Chinese,,0,0,0,,在这里可以看到相关代码
 Dialogue: 0,0:52:19.70,0:52:27.94,English,,0,0,0,,At the outset of this function then it will store away whatever is in %rbx currently it will put it on the stack
 Dialogue: 0,0:52:19.70,0:52:27.94,Chinese,,0,0,0,,在此函数开始时，它将存储 ％rbx 目前的值并将把它放在栈上
 Dialogue: 0,0:52:28.70,0:52:33.98,English,,0,0,0,,And so now the the stack frame for this function looks like there's a return address
