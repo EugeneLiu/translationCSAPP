@@ -148,7 +148,7 @@ Dialogue: 0,0:05:05.64,0:05:07.54,Chinese,,0,0,0,,那么数组的元素是什么
 Dialogue: 0,0:05:08.04,0:05:11.46,English,,0,0,0,,And some number of elements in that array in the declaration L
 Dialogue: 0,0:05:08.04,0:05:11.46,Chinese,,0,0,0,,声明中该数组中的元素数目是 L
 Dialogue: 0,0:05:12.30,0:05:19.64,English,,0,0,0,,{\s1}Then we will{\s0} That declaration actually does two things
-Dialogue: 0,0:05:12.30,0:05:19.64,Chinese,,0,0,0,,{\s1}然后我们将{\s0}该声明实际上做两件事
+Dialogue: 0,0:05:12.30,0:05:19.64,Chinese,,0,0,0,,然后我们将...该声明实际上做两件事
 Dialogue: 0,0:05:20.74,0:05:25.80,English,,0,0,0,,One is it allocates enough bytes of storage to hold the entire array
 Dialogue: 0,0:05:20.74,0:05:25.80,Chinese,,0,0,0,,第一件事是分配足够的存储字节来保存整个数组
 Dialogue: 0,0:05:26.38,0:05:29.12,English,,0,0,0,,And the second from a programming language's perspective
@@ -952,7 +952,7 @@ Dialogue: 0,0:41:40.63,0:41:43.74,Chinese,,0,0,0,,我会这么放，这样的话
 Dialogue: 0,0:41:44.46,0:41:48.94,English,,0,0,0,,All the elements of row 1 come next and so forth up to the end
 Dialogue: 0,0:41:44.46,0:41:48.94,Chinese,,0,0,0,,接下来是第 1 行的所有元素，这样直到最后一行
 Dialogue: 0,0:41:49.90,0:41:57.70,English,,0,0,0,,And so the total allocation will be 4 times...the data size times the number of rows times the number of columns bytes
-Dialogue: 0,0:41:49.90,0:41:57.70,Chinese,,0,0,0,,因此总共分配{\s1} 4 乘以{\s0}数据大小乘以行数再乘以列数那么多字节
+Dialogue: 0,0:41:49.90,0:41:57.70,Chinese,,0,0,0,,因此总共分配 4 乘以...数据大小乘以行数再乘以列数那么多字节
 Dialogue: 0,0:41:59.02,0:42:01.02,English,,0,0,0,,But the reason why they're in that order
 Dialogue: 0,0:41:59.02,0:42:01.02,Chinese,,0,0,0,,但是元素按照这个顺序排练的原因
 Dialogue: 0,0:42:01.18,0:42:03.36,English,,0,0,0,,which is called row major order
