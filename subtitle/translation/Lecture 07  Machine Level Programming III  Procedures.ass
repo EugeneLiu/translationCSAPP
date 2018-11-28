@@ -1306,121 +1306,121 @@ Dialogue: 0,0:58:38.16,0:58:43.40,Chinese,,0,0,0,,然后我将 x 右移一位
 Dialogue: 0,0:58:43.94,0:58:46.59,English,,0,0,0,,Which sets me up for this recursive call
 Dialogue: 0,0:58:43.94,0:58:46.59,Chinese,,0,0,0,,从而设置好了递归调用的参数
 Dialogue: 0,0:58:47.04,0:58:51.04,English,,0,0,0,,So this red code does both of these parts of it here
-Dialogue: 0,0:58:47.04,0:58:51.04,Chinese,,0,0,0,,所以这个红色代码在这里完成了这两部分
+Dialogue: 0,0:58:47.04,0:58:51.04,Chinese,,0,0,0,,所以这几行红色代码完成了这几部分工作
 Dialogue: 0,0:58:52.48,0:58:56.14,English,,0,0,0,,And now I'm ready to call "pcount_r" recursively
-Dialogue: 0,0:58:52.48,0:58:56.14,Chinese,,0,0,0,,而现在我已准备好递归调用 pcount_r
+Dialogue: 0,0:58:52.48,0:58:56.14,Chinese,,0,0,0,,现在，我们已准备好递归调用 pcount_r 了
 Dialogue: 0,0:58:56.18,0:59:00.70,English,,0,0,0,,Because I have the shifted value in %rdi
-Dialogue: 0,0:58:56.18,0:59:00.70,Chinese,,0,0,0,,因为我在 ％rdi 中有移位的值
+Dialogue: 0,0:58:56.18,0:59:00.70,Chinese,,0,0,0,,因为我在 ％rdi 保存了移位后的值
 Dialogue: 0,0:59:03.92,0:59:09.30,English,,0,0,0,,And I know because this is a well behaved function
-Dialogue: 0,0:59:03.92,0:59:09.30,Chinese,,0,0,0,,我知道因为这是一个表现良好的函数
+Dialogue: 0,0:59:03.92,0:59:09.30,Chinese,,0,0,0,,我也知道这是一个行为良好的函数
 Dialogue: 0,0:59:09.62,0:59:15.70,English,,0,0,0,,That when "pcount_r" returns it can assume that %rax holds  the recursive result
-Dialogue: 0,0:59:09.62,0:59:15.70,Chinese,,0,0,0,,当 pcount_r 返回时，可以假设 ％rax 保存递归结果
+Dialogue: 0,0:59:09.62,0:59:15.70,Chinese,,0,0,0,,当 pcount_r 返回时，可以假设 ％rax 保存了递归调用的返回值
 Dialogue: 0,0:59:16.98,0:59:22.28,English,,0,0,0,,And I also know even though "pcount_r" actually does modify %rbx
-Dialogue: 0,0:59:16.98,0:59:22.28,Chinese,,0,0,0,,我也知道即使 pcount_r 确实修改了 ％rbx
+Dialogue: 0,0:59:16.98,0:59:22.28,Chinese,,0,0,0,,我们也知道，即使 pcount_r 确实修改了 ％rbx
 Dialogue: 0,0:59:22.42,0:59:26.62,English,,0,0,0,,But I know because the code is well behaved
-Dialogue: 0,0:59:22.42,0:59:26.62,Chinese,,0,0,0,,但我知道，因为代码很好
+Dialogue: 0,0:59:22.42,0:59:26.62,Chinese,,0,0,0,,但因为代码行为良好
 Dialogue: 0,0:59:27.08,0:59:31.24,English,,0,0,0,,The %rbx will get restored to whatever was there before
 Dialogue: 0,0:59:27.08,0:59:31.24,Chinese,,0,0,0,,％rbx 将恢复到之前的状态
 Dialogue: 0,0:59:32.18,0:59:40.62,English,,0,0,0,,And %rbx in this case just before making the call I set it to the value of this we significant bit right
 Dialogue: 0,0:59:32.18,0:59:40.62,Chinese,,0,0,0,,在这种情况下，％rbx 就在调用之前我把它设置为这个右移后的值
 Dialogue: 0,0:59:41.16,0:59:47.44,English,,0,0,0,,So when I return back I can assume that %rbx holds the least significant bit of x my original argument
-Dialogue: 0,0:59:41.16,0:59:47.44,Chinese,,0,0,0,,因此当我返回时，我可以假设 ％rbx 保持 x 原始参数的最低有效位
+Dialogue: 0,0:59:41.16,0:59:47.44,Chinese,,0,0,0,,因此当我返回时，我可以假设 ％rbx 中存储了原始参数 x 的最低有效位
 Dialogue: 0,0:59:47.82,0:59:50.68,English,,0,0,0,,And %rax call holds the recursive result
-Dialogue: 0,0:59:47.82,0:59:50.68,Chinese,,0,0,0,,％rax 调用保存递归结果
+Dialogue: 0,0:59:47.82,0:59:50.68,Chinese,,0,0,0,,而％rax 保存的是递归结果
 Dialogue: 0,0:59:51.18,0:59:53.78,English,,0,0,0,,So I can just add those two numbers together
 Dialogue: 0,0:59:51.18,0:59:53.78,Chinese,,0,0,0,,所以我可以将这两个数字加在一起
 Dialogue: 0,0:59:54.66,0:59:59.62,English,,0,0,0,,Call that the return value and I've correctly computed the result
-Dialogue: 0,0:59:54.66,0:59:59.62,Chinese,,0,0,0,,调用返回值并且我已正确计算结果
+Dialogue: 0,0:59:54.66,0:59:59.62,Chinese,,0,0,0,,最后的返回值即为正确计算的结果
 Dialogue: 0,1:00:00.28,1:00:06.44,English,,0,0,0,,And then the final clean-up is to pop %rbx to restore whatever was in there
-Dialogue: 0,1:00:00.28,1:00:06.44,Chinese,,0,0,0,,然后最后是弹出 ％rbx 来恢复那里的东西
+Dialogue: 0,1:00:00.28,1:00:06.44,Chinese,,0,0,0,,然后最后是弹出 ％rbx 来恢复它的值
 Dialogue: 0,1:00:06.90,1:00:08.46,English,,0,0,0,,And then to do the return
 Dialogue: 0,1:00:06.90,1:00:08.46,Chinese,,0,0,0,,然后返回
 Dialogue: 0,1:00:08.98,1:00:13.90,English,,0,0,0,,So again you see that the piece is all kind of it's a puzzle that all fits together
-Dialogue: 0,1:00:08.98,1:00:13.90,Chinese,,0,0,0,,所以你再次看到这件作品是一种拼图，它们都融合在一起
+Dialogue: 0,1:00:08.98,1:00:13.90,Chinese,,0,0,0,,所以你看，这又是一个像拼图一样的融合了多种技巧的例子
 Dialogue: 0,1:00:14.22,1:00:19.96,English,,0,0,0,,Because all the functions are using this common set of conventions about
-Dialogue: 0,1:00:14.22,1:00:19.96,Chinese,,0,0,0,,因为所有函数都使用这个常见的约定
+Dialogue: 0,1:00:14.22,1:00:19.96,Chinese,,0,0,0,,而且，所有函数都使用了同一个通用约定
 Dialogue: 0,1:00:20.48,1:00:21.92,English,,0,0,0,,Where arguments get past
-Dialogue: 0,1:00:20.48,1:00:21.92,Chinese,,0,0,0,,参数在哪里传递
+Dialogue: 0,1:00:20.48,1:00:21.92,Chinese,,0,0,0,,比如，参数在哪里传递
 Dialogue: 0,1:00:22.54,1:00:25.48,English,,0,0,0,,What registers can be used...how registers
-Dialogue: 0,1:00:22.54,1:00:25.48,Chinese,,0,0,0,,什么寄存器可以使用...如何寄存器
+Dialogue: 0,1:00:22.54,1:00:25.48,Chinese,,0,0,0,,比如，什么寄存器可以使用，如何使用寄存器，等等
 Dialogue: 0,1:00:26.50,1:00:32.42,English,,0,0,0,,If some registers have to be restored back if they get used and all that stuff works together
-Dialogue: 0,1:00:26.50,1:00:32.42,Chinese,,0,0,0,,如果一些寄存器在被使用后必须被恢复，并且所有这些东西一起工作
+Dialogue: 0,1:00:26.50,1:00:32.42,Chinese,,0,0,0,,如果一些寄存器在被使用后必须被恢复，还可能参与其它工作，
 Dialogue: 0,1:00:35.44,1:00:39.64,English,,0,0,0,,Which gets me back to just the point I was making before
-Dialogue: 0,1:00:35.44,1:00:39.64,Chinese,,0,0,0,,这让我回到了之前的观点
+Dialogue: 0,1:00:35.44,1:00:39.64,Chinese,,0,0,0,,我们就需要让它能够恢复到之前的状态
 Dialogue: 0,1:00:41.90,1:00:48.66,English,,0,0,0,,If you're using register %rbp for a frame pointer
 Dialogue: 0,1:00:41.90,1:00:48.66,Chinese,,0,0,0,,如果你使用寄存器 ％rbp 作为帧指针
 Dialogue: 0,1:00:52.68,1:00:56.08,English,,0,0,0,,So typically point to the beginning of a frame like that
-Dialogue: 0,1:00:52.68,1:00:56.08,Chinese,,0,0,0,,所以通常指向这样的帧的开头
+Dialogue: 0,1:00:52.68,1:00:56.08,Chinese,,0,0,0,,即指向一个帧的开头
 Dialogue: 0,1:00:57.20,1:01:00.48,English,,0,0,0,,So imagine you have a function that needs a base pointer
-Dialogue: 0,1:00:57.20,1:01:00.48,Chinese,,0,0,0,,所以假设你有一个需要基指针的函数
+Dialogue: 0,1:00:57.20,1:01:00.48,Chinese,,0,0,0,,同时，假设你有一个需要基指针的函数
 Dialogue: 0,1:01:00.48,1:01:08.46,English,,0,0,0,,Because as I mentioned the case is that if it has to within that function allocate some amount of space
-Dialogue: 0,1:01:00.48,1:01:08.46,Chinese,,0,0,0,,因为正如我所提到的那样，如果它必须在该函数内分配一些空间
+Dialogue: 0,1:01:00.48,1:01:08.46,Chinese,,0,0,0,,因为我们之前提过，如果一个函数在内部需要分配一些空间
 Dialogue: 0,1:01:08.46,1:01:10.66,English,,0,0,0,,It's unknown at compile time
 Dialogue: 0,1:01:08.46,1:01:10.66,Chinese,,0,0,0,,它在编译时是未知的
 Dialogue: 0,1:01:14.10,1:01:22.54,English,,0,0,0,,Well imagine now that some other code gets called deep recursive calls
-Dialogue: 0,1:01:14.10,1:01:22.54,Chinese,,0,0,0,,现在想象一下其他一些代码被称为深度递归调用
+Dialogue: 0,1:01:14.10,1:01:22.54,Chinese,,0,0,0,,现在想象一下还要其他一些代码构成深度递归调用
 Dialogue: 0,1:01:22.54,1:01:28.52,English,,0,0,0,,Or whatever that might do other things
-Dialogue: 0,1:01:22.54,1:01:28.52,Chinese,,0,0,0,,或者其他可能做的事情
+Dialogue: 0,1:01:22.54,1:01:28.52,Chinese,,0,0,0,,或者开展其他可能的事情
 Dialogue: 0,1:01:28.90,1:01:33.06,English,,0,0,0,,Well if you treat %rbp as a callee saved register
-Dialogue: 0,1:01:28.90,1:01:33.06,Chinese,,0,0,0,,好吧，如果你将 ％rbp 视为被调用者保存的寄存器
+Dialogue: 0,1:01:28.90,1:01:33.06,Chinese,,0,0,0,,无论怎样，如果你将 ％rbp 视为被调用者保存的寄存器
 Dialogue: 0,1:01:33.72,1:01:36.18,English,,0,0,0,,Then when these other functions return
-Dialogue: 0,1:01:33.72,1:01:36.18,Chinese,,0,0,0,,然后当这些其他函数返回时
+Dialogue: 0,1:01:33.72,1:01:36.18,Chinese,,0,0,0,,那么，当这些其他函数返回时
 Dialogue: 0,1:01:36.64,1:01:40.82,English,,0,0,0,,If they've altered... if they made use of %rbp for one reason or another
 Dialogue: 0,1:01:36.64,1:01:40.82,Chinese,,0,0,0,,如果他们改变了...如果他们出于某种原因使用了 ％rbp
 Dialogue: 0,1:01:41.50,1:01:44.86,English,,0,0,0,,It's guaranteed that they will restore it back to
-Dialogue: 0,1:01:41.50,1:01:44.86,Chinese,,0,0,0,,它保证会恢复它
+Dialogue: 0,1:01:41.50,1:01:44.86,Chinese,,0,0,0,,它们会保证将其恢复
 Dialogue: 0,1:01:44.96,1:01:49.06,English,,0,0,0,,Whatever condition it was in originally before
-Dialogue: 0,1:01:44.96,1:01:49.06,Chinese,,0,0,0,,无论以前是什么条件
+Dialogue: 0,1:01:44.96,1:01:49.06,Chinese,,0,0,0,,无论以前发生了什么
 Dialogue: 0,1:01:49.66,1:01:53.54,English,,0,0,0,,So now this function will have a reliable value of %rbp
-Dialogue: 0,1:01:49.66,1:01:53.54,Chinese,,0,0,0,,所以现在这个函数将具有 ％rbp 的可靠值
+Dialogue: 0,1:01:49.66,1:01:53.54,Chinese,,0,0,0,,现在这个函数都将得到具有可靠值的 ％rbp
 Dialogue: 0,1:01:54.27,1:01:59.04,English,,0,0,0,,So again it shows as long as all the code obeys these conventions on
-Dialogue: 0,1:01:54.27,1:01:59.04,Chinese,,0,0,0,,所以只要所有代码遵守这些约定，它就会再次显示出来
+Dialogue: 0,1:01:54.27,1:01:59.04,Chinese,,0,0,0,,所以只要所有代码遵守这些约定，我们就可以看到
 Dialogue: 0,1:01:59.14,1:02:03.62,English,,0,0,0,,How it they use registers then sort of life is good
-Dialogue: 0,1:01:59.14,1:02:03.62,Chinese,,0,0,0,,他们如何使用寄存器然后生活是好的
+Dialogue: 0,1:01:59.14,1:02:03.62,Chinese,,0,0,0,,那样使用寄存器让生活变得美好
 Dialogue: 0,1:02:03.62,1:02:08.12,English,,0,0,0,,You can make use of these...
 Dialogue: 0,1:02:03.62,1:02:08.12,Chinese,,0,0,0,,你可以利用这些......
 Dialogue: 0,1:02:08.18,1:02:12.78,English,,0,0,0,,So to have a trust that the things will be the way they are
-Dialogue: 0,1:02:08.18,1:02:12.78,Chinese,,0,0,0,,所以要相信事情会是这样的
+Dialogue: 0,1:02:08.18,1:02:12.78,Chinese,,0,0,0,,并对它们的行为充满信心
 Dialogue: 0,1:02:13.44,1:02:19.22,English,,0,0,0,,And so again that's why there's this sort of very careful process for creating an ABI
-Dialogue: 0,1:02:13.44,1:02:19.22,Chinese,,0,0,0,,这就是为什么创建 ABI 这种非常谨慎的过程的原因
+Dialogue: 0,1:02:13.44,1:02:19.22,Chinese,,0,0,0,,这就是为什么创建 ABI 这种非常谨慎的规范的原因
 Dialogue: 0,1:02:20.38,1:02:24.36,English,,0,0,0,,Of early on in the life time of a new processor
 Dialogue: 0,1:02:20.38,1:02:24.36,Chinese,,0,0,0,,在新处理器的生命周期的早期
 Dialogue: 0,1:02:24.78,1:02:28.34,English,,0,0,0,,So that all the compiler writers operating systems people
-Dialogue: 0,1:02:24.78,1:02:28.34,Chinese,,0,0,0,,使所有编译器编写者操作系统的人
+Dialogue: 0,1:02:24.78,1:02:28.34,Chinese,,0,0,0,,对于所有编译器的编写者、操作系统编写者
 Dialogue: 0,1:02:29.16,1:02:33.74,English,,0,0,0,,And the ones who implement tools like gdb debugging tools
 Dialogue: 0,1:02:29.16,1:02:33.74,Chinese,,0,0,0,,以及那些实现 gdb 调试工具等工具的人
 Dialogue: 0,1:02:34.28,1:02:38.78,English,,0,0,0,,Kind of all I have the right set of standards by which they can work from
-Dialogue: 0,1:02:34.28,1:02:38.78,Chinese,,0,0,0,,总之，我有他们可以使用的正确标准
+Dialogue: 0,1:02:34.28,1:02:38.78,Chinese,,0,0,0,,总之，我有他们可以使用的合适标准
 Dialogue: 0,1:02:42.24,1:02:45.50,English,,0,0,0,,Okay so just to sort of wrap things up
-Dialogue: 0,1:02:42.24,1:02:45.50,Chinese,,0,0,0,,好的，只是为了整理一下
+Dialogue: 0,1:02:42.24,1:02:45.50,Chinese,,0,0,0,,好的，说这些，只是为了总结一下
 Dialogue: 0,1:02:49.40,1:02:53.12,English,,0,0,0,,And I would say by the way this is the kind of thing you can
-Dialogue: 0,1:02:49.40,1:02:53.12,Chinese,,0,0,0,,顺便说一句，这就是你能做到的事情
+Dialogue: 0,1:02:49.40,1:02:53.12,Chinese,,0,0,0,,顺便说一句，实际动手才是你们应该做的事
 Dialogue: 0,1:02:56.52,1:03:00.38,English,,0,0,0,,I could lecture to you for weeks but to really get it in your mind
-Dialogue: 0,1:02:56.52,1:03:00.38,Chinese,,0,0,0,,我可以在几周内给你讲课，但要真正理解
+Dialogue: 0,1:02:56.52,1:03:00.38,Chinese,,0,0,0,,我可以给你讲几周的课，但要真正理解
 Dialogue: 0,1:03:00.68,1:03:06.22,English,,0,0,0,,The best way is to almost to hand execute some very simple examples
 Dialogue: 0,1:03:00.68,1:03:06.22,Chinese,,0,0,0,,最好的方法是几乎手动执行一些非常简单的例子
 Dialogue: 0,1:03:06.82,1:03:10.32,English,,0,0,0,,Or use a debugging tool and and run through them yourself
-Dialogue: 0,1:03:06.82,1:03:10.32,Chinese,,0,0,0,,或者使用调试工具并自己运行它们
+Dialogue: 0,1:03:06.82,1:03:10.32,Chinese,,0,0,0,,或者使用调试工具亲自运行它们
 Dialogue: 0,1:03:10.90,1:03:14.32,English,,0,0,0,,Just to make sure you really are convinced that this is all going to work
-Dialogue: 0,1:03:10.90,1:03:14.32,Chinese,,0,0,0,,只是为了确保你真的相信这一切都会起作用
+Dialogue: 0,1:03:10.90,1:03:14.32,Chinese,,0,0,0,,只是为了确保你真的相信这一切都是可行的
 Dialogue: 0,1:03:14.36,1:03:19.98,English,,0,0,0,,Because all these pieces just fit together and the way they fit together is what makes it work
-Dialogue: 0,1:03:14.36,1:03:19.98,Chinese,,0,0,0,,因为所有这些部件恰好合在一起，它们相互配合的方式才能使它起作用
+Dialogue: 0,1:03:14.36,1:03:19.98,Chinese,,0,0,0,,因为所有这些部件恰好合在一起，它们相互配合的方式才能发挥作用
 Dialogue: 0,1:03:20.92,1:03:25.24,English,,0,0,0,,So as I mentioned before and I'll say it again
-Dialogue: 0,1:03:20.92,1:03:25.24,Chinese,,0,0,0,,正如我之前提到的，我会再说一遍
-Dialogue: 0,1:03:25.86,1:03:30.80,English,,0,0,0,,That this this discipline is what makes recursion work
-Dialogue: 0,1:03:25.86,1:03:30.80,Chinese,,0,0,0,,这个规则是使递归起作用的原因
+Dialogue: 0,1:03:20.92,1:03:25.24,Chinese,,0,0,0,,正如我之前提到的，我这里再说一遍
+Dialogue: 0,1:03:25.86,1:03:30.80,English,,0,0,0,,That this discipline is what makes recursion work
+Dialogue: 0,1:03:25.86,1:03:30.80,Chinese,,0,0,0,,这个栈原则是递归调用可行的原因所在
 Dialogue: 0,1:03:32.42,1:03:37.24,English,,0,0,0,,So the idea of having a stack frame for every call to a function means that
-Dialogue: 0,1:03:32.42,1:03:37.24,Chinese,,0,0,0,,因此，每次调用函数时都有一个栈帧的想法意味着
+Dialogue: 0,1:03:32.42,1:03:37.24,Chinese,,0,0,0,,因此，每次调用函数时都有一个栈帧，这个思想意味着
 Dialogue: 0,1:03:38.00,1:03:41.52,English,,0,0,0,,I can call a function call a function call a function call function
-Dialogue: 0,1:03:38.00,1:03:41.52,Chinese,,0,0,0,,我可以调用函数调用函数调用函数调用函数
+Dialogue: 0,1:03:38.00,1:03:41.52,Chinese,,0,0,0,,我可以调用函数, 调用函数, 调用函数, 调用函数，直到永久...
 Dialogue: 0,1:03:42.58,1:03:49.58,English,,0,0,0,,When I'm deep in that recursion I still have data associated with the other outstanding calls to that function
-Dialogue: 0,1:03:42.58,1:03:49.58,Chinese,,0,0,0,,当我深层递归时，我仍然拥有与该函数的其他未完成调用相关联的数据
+Dialogue: 0,1:03:42.58,1:03:49.58,Chinese,,0,0,0,,当我深层递归时，我仍然拥有调用当前函数的其他未完成调用相关联的数据
 Dialogue: 0,1:03:50.06,1:03:52.52,English,,0,0,0,,But each of them will have their own stack frames
 Dialogue: 0,1:03:50.06,1:03:52.52,Chinese,,0,0,0,,但是每个函数都有自己的栈帧
 Dialogue: 0,1:03:52.52,1:03:59.92,English,,0,0,0,,And so it has a place to store that sort of information that's associated with one particular instantiation of a function
-Dialogue: 0,1:03:52.52,1:03:59.92,Chinese,,0,0,0,,所以它有一个地方，用于存储与函数的一个特定实例相关联的信息
+Dialogue: 0,1:03:52.52,1:03:59.92,Chinese,,0,0,0,,所以必然有一个地方，用于存储与函数的一个特定实例相关联的信息
 Dialogue: 0,1:04:03.28,1:04:09.52,English,,0,0,0,,The register saving conventions we saw are a way that functions avoid sort of trashing each other's data
-Dialogue: 0,1:04:03.28,1:04:09.52,Chinese,,0,0,0,,我们看到的寄存器保存约定是函数避免了相互摧毁彼此的数据的方式
+Dialogue: 0,1:04:03.28,1:04:09.52,Chinese,,0,0,0,,我们看到的寄存器保存约定确保了函数之间避免出现相互摧毁彼此数据的情况
 Dialogue: 0,1:04:10.08,1:04:12.82,English,,0,0,0,,If I'm using a callee saved register
 Dialogue: 0,1:04:10.08,1:04:12.82,Chinese,,0,0,0,,如果我正在使用被调用者保存的寄存器
 Dialogue: 0,1:04:14.16,1:04:18.28,English,,0,0,0,,It's my obligation to save it and restore it properly
@@ -1428,7 +1428,7 @@ Dialogue: 0,1:04:14.16,1:04:18.28,Chinese,,0,0,0,,我有义务保存并正确恢
 Dialogue: 0,1:04:18.68,1:04:25.20,English,,0,0,0,,It's the obligation of any function that gets called further down to also do that save and restore
 Dialogue: 0,1:04:18.68,1:04:25.20,Chinese,,0,0,0,,任何被调用的函数都有义务进行保存和恢复
 Dialogue: 0,1:04:26.80,1:04:38.46,English,,0,0,0,,And then this sort of... notion of a stack being the right match of how procedure call and return works
-Dialogue: 0,1:04:26.80,1:04:38.46,Chinese,,0,0,0,,然后这种...... 堆栈的概念是过程调用和返回如何工作的正确匹配
+Dialogue: 0,1:04:26.80,1:04:38.46,Chinese,,0,0,0,,然后这种...... 栈的概念与过程调用和返回的方式相匹配
 Dialogue: 0,1:04:39.32,1:04:40.78,English,,0,0,0,,It if p calls q
 Dialogue: 0,1:04:39.32,1:04:40.78,Chinese,,0,0,0,,如果 p 调用 q
 Dialogue: 0,1:04:41.44,1:04:43.10,English,,0,0,0,,Then before I go back to p
@@ -1436,44 +1436,44 @@ Dialogue: 0,1:04:41.44,1:04:43.10,Chinese,,0,0,0,,然后在我回到 p 之前
 Dialogue: 0,1:04:43.26,1:04:47.40,English,,0,0,0,,q would have returned and so I won't need that storage for q anymore
 Dialogue: 0,1:04:43.26,1:04:47.40,Chinese,,0,0,0,,q 已经返回了，所以我不再需要 q 的存储空间了
 Dialogue: 0,1:04:48.10,1:04:55.50,English,,0,0,0,,Those you've taken 150 or other places where you look at fancier languages
-Dialogue: 0,1:04:48.10,1:04:55.50,Chinese,,0,0,0,,那些你已经在 150 或其他地方看到有趣的语言
+Dialogue: 0,1:04:48.10,1:04:55.50,Chinese,,0,0,0,,那些你已经在 150 或其他地方看到一些有趣的语言
 Dialogue: 0,1:04:55.96,1:04:59.70,English,,0,0,0,,Don't have that status can trust that stack discipline
-Dialogue: 0,1:04:55.96,1:04:59.70,Chinese,,0,0,0,,没有那种状态可以信任栈规则
+Dialogue: 0,1:04:55.96,1:04:59.70,Chinese,,0,0,0,,它们并没有那种状态可以信任的栈规则
 Dialogue: 0,1:05:00.06,1:05:02.80,English,,0,0,0,,And they have to use some other mechanism though actually
-Dialogue: 0,1:05:00.06,1:05:02.80,Chinese,,0,0,0,,实际上，他们必须使用其他一些机制
+Dialogue: 0,1:05:00.06,1:05:02.80,Chinese,,0,0,0,,但实际上，他们必然使用了其他某种机制
 Dialogue: 0,1:05:03.58,1:05:06.92,English,,0,0,0,,If required use heap allocation of
-Dialogue: 0,1:05:03.58,1:05:06.92,Chinese,,0,0,0,,如果需要使用堆分配
+Dialogue: 0,1:05:03.58,1:05:06.92,Chinese,,0,0,0,,比如，使用堆空间而不是栈
 Dialogue: 0,1:05:07.38,1:05:10.08,English,,0,0,0,,Of the stack of the frames than all your stack frames
-Dialogue: 0,1:05:07.38,1:05:10.08,Chinese,,0,0,0,,堆栈的帧数比所有堆栈帧
+Dialogue: 0,1:05:07.38,1:05:10.08,Chinese,,0,0,0,,来存储函数帧的栈数据结构
 Dialogue: 0,1:05:10.30,1:05:14.08,English,,0,0,0,,To keep data around after a function returns
-Dialogue: 0,1:05:10.30,1:05:14.08,Chinese,,0,0,0,,在函数返回后保持数据
+Dialogue: 0,1:05:10.30,1:05:14.08,Chinese,,0,0,0,,从而在函数返回后恢复数据
 Dialogue: 0,1:05:14.14,1:05:19.18,English,,0,0,0,,But for C and instead of all the standard commonplace languages
-Dialogue: 0,1:05:14.14,1:05:19.18,Chinese,,0,0,0,,但是对于 C 而不是所有标准的普通语言
+Dialogue: 0,1:05:14.14,1:05:19.18,Chinese,,0,0,0,,但是对于 C 以及所有标准的常用语言
 Dialogue: 0,1:05:19.66,1:05:22.04,English,,0,0,0,,The stack discipline is what is exactly what's needed
-Dialogue: 0,1:05:19.66,1:05:22.04,Chinese,,0,0,0,,栈的规则正是所需要的
+Dialogue: 0,1:05:19.66,1:05:22.04,Chinese,,0,0,0,,栈的原则是我们所必需的
 Dialogue: 0,1:05:22.40,1:05:25.74,English,,0,0,0,,And that's not next the designers of C knew this well
-Dialogue: 0,1:05:22.40,1:05:25.74,Chinese,,0,0,0,,接下来，C 的设计师非常了解这一点
+Dialogue: 0,1:05:22.40,1:05:25.74,Chinese,,0,0,0,,C 的设计师们非常了解
 Dialogue: 0,1:05:26.34,1:05:29.08,English,,0,0,0,,This matching of a stack to their language
-Dialogue: 0,1:05:26.34,1:05:29.08,Chinese,,0,0,0,,栈与其语言的匹配
+Dialogue: 0,1:05:26.34,1:05:29.08,Chinese,,0,0,0,,他们设计的语言与栈之间是何等之匹配
 Dialogue: 0,1:05:30.68,1:05:35.04,English,,0,0,0,,And I'll mention also this we I was talking about simple recursion before
-Dialogue: 0,1:05:30.68,1:05:35.04,Chinese,,0,0,0,,我还要提到这个，我之前谈的是简单的递归
+Dialogue: 0,1:05:30.68,1:05:35.04,Chinese,,0,0,0,,此外，虽然我之前谈的是简单的递归
 Dialogue: 0,1:05:35.04,1:05:40.92,English,,0,0,0,,But there's also mutual recursion where a function say p calls q and then q might call p
-Dialogue: 0,1:05:35.04,1:05:40.92,Chinese,,0,0,0,,但是也存在相互递归，其中函数说 p 调用 q 然后 q 可能调用 p 
+Dialogue: 0,1:05:35.04,1:05:40.92,Chinese,,0,0,0,,但有时也存在相互递归，比如，函数 p 调用 q 然后 q 又可能调用 p 
 Dialogue: 0,1:05:41.54,1:05:45.68,English,,0,0,0,,And it looks very exotic and  it's a quite clever
-Dialogue: 0,1:05:41.54,1:05:45.68,Chinese,,0,0,0,,它看起来非常奇特，而且非常聪明
+Dialogue: 0,1:05:41.54,1:05:45.68,Chinese,,0,0,0,,它看起来非常奇怪，也非常聪明
 Dialogue: 0,1:05:46.06,1:05:49.38,English,,0,0,0,,But again how it's implemented is exactly what we've seen here
-Dialogue: 0,1:05:46.06,1:05:49.38,Chinese,,0,0,0,,但是它的实现方式正是我们在这里看到的
-Dialogue: 0,1:05:50.10,1:05:54.06,English,,0,0,0,,Doesn't take any special special kind of code
-Dialogue: 0,1:05:50.10,1:05:54.06,Chinese,,0,0,0,,不需要任何特殊的特殊代码
+Dialogue: 0,1:05:46.06,1:05:49.38,Chinese,,0,0,0,,但是它的实现方式和我们刚才讲的没什么两样
+Dialogue: 0,1:05:50.10,1:05:54.06,English,,0,0,0,,Doesn't take any special kind of code
+Dialogue: 0,1:05:50.10,1:05:54.06,Chinese,,0,0,0,,不需要任何特殊代码
 Dialogue: 0,1:05:57.10,1:06:00.20,English,,0,0,0,,So
 Dialogue: 0,1:05:57.10,1:06:00.20,Chinese,,0,0,0,,所以
 Dialogue: 0,1:06:00.50,1:06:13.95,English,,0,0,0,,Then to finish up this is sort of what you need to remember about procedure calls that it's all about the stack discipline
-Dialogue: 0,1:06:00.50,1:06:13.95,Chinese,,0,0,0,,作为结束，关于过程调用你需要记住的就是栈规则
+Dialogue: 0,1:06:00.50,1:06:13.95,Chinese,,0,0,0,,作为结束语，关于过程调用你需要记住的就是栈原则
 Dialogue: 0,1:06:13.95,1:06:19.08,English,,0,0,0,,And you'll get as you're working through your lab
 Dialogue: 0,1:06:13.95,1:06:19.08,Chinese,,0,0,0,,当你写 lab 的时候
 Dialogue: 0,1:06:19.08,1:06:26.72,English,,0,0,0,,You'll just get much more ingrained to this idea of of the stack and what's on there and be able to examine
-Dialogue: 0,1:06:19.08,1:06:26.72,Chinese,,0,0,0,,你会对堆栈的这个概念以及那里的内容有所了解，并且能够进行检查
+Dialogue: 0,1:06:19.08,1:06:26.72,Chinese,,0,0,0,,你会对栈这个概念以及那里的相关内容有所了解，并且能够理解
 Dialogue: 0,1:06:28.70,1:06:31.04,English,,0,0,0,,It okay so that's all I've got for today
 Dialogue: 0,1:06:28.70,1:06:31.04,Chinese,,0,0,0,,这就是我今天要讲的
 Dialogue: 0,1:06:31.04,1:06:35.45,English,,0,0,0,,So give you a little extra time in your calendar
-Dialogue: 0,1:06:31.04,1:06:35.45,Chinese,,0,0,0,,所以在你的日历中给你一点额外的时间
+Dialogue: 0,1:06:31.04,1:06:35.45,Chinese,,0,0,0,,给你们留一点额外的时间吧
