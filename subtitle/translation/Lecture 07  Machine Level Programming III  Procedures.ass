@@ -1156,99 +1156,99 @@ Dialogue: 0,0:52:16.68,0:52:18.82,Chinese,,0,0,0,,在这里可以看到相关代
 Dialogue: 0,0:52:19.70,0:52:27.94,English,,0,0,0,,At the outset of this function then it will store away whatever is in %rbx currently it will put it on the stack
 Dialogue: 0,0:52:19.70,0:52:27.94,Chinese,,0,0,0,,在此函数开始时，它将存储 ％rbx 目前的值并将把它放在栈上
 Dialogue: 0,0:52:28.70,0:52:33.98,English,,0,0,0,,And so now the stack frame for this function looks like there's a return address
-Dialogue: 0,0:52:28.70,0:52:33.98,Chinese,,0,0,0,,所以现在看来，这个函数的栈帧有一个返回地址
+Dialogue: 0,0:52:28.70,0:52:33.98,Chinese,,0,0,0,,而且，这个函数的栈帧似乎有一个返回地址
 Dialogue: 0,0:52:35.32,0:52:38.08,English,,0,0,0,,From before but I'm going to save the value of %rbx
-Dialogue: 0,0:52:35.32,0:52:38.08,Chinese,,0,0,0,,从以前开始，我将保存 ％rbx 的值
+Dialogue: 0,0:52:35.32,0:52:38.08,Chinese,,0,0,0,,我先保存 ％rbx 的值
 Dialogue: 0,0:52:38.74,0:52:43.02,English,,0,0,0,,And then I'm going to decrement the stack pointer by 16 as I did before
 Dialogue: 0,0:52:38.74,0:52:43.02,Chinese,,0,0,0,,然后我将按照之前的方式将栈指针递减 16
 Dialogue: 0,0:52:43.80,0:52:48.76,English,,0,0,0,,But that will be on top of the eight bytes I've already allocated to store %rbx
-Dialogue: 0,0:52:43.80,0:52:48.76,Chinese,,0,0,0,,但这将是我已分配用于存储 ％rbx 的八个字节之上
+Dialogue: 0,0:52:43.80,0:52:48.76,Chinese,,0,0,0,,这 16 个字节的空间位于为 ％rbx 所分配的 8 个字节空间之后
 Dialogue: 0,0:52:51.84,0:52:54.44,English,,0,0,0,,And then you'll see within the code
 Dialogue: 0,0:52:51.84,0:52:54.44,Chinese,,0,0,0,,然后你会在代码中看到
 Dialogue: 0,0:52:55.46,0:52:58.90,English,,0,0,0,,For example when it wants to compute this return value
 Dialogue: 0,0:52:55.46,0:52:58.90,Chinese,,0,0,0,,例如，当它想要计算此返回值时
 Dialogue: 0,0:52:59.38,0:53:07.40,English,,0,0,0,,It can assume that %rbx when whatever this call does "incr"
-Dialogue: 0,0:52:59.38,0:53:07.40,Chinese,,0,0,0,,我们可以假设无论 incr 这个调用做什么，%rbx...
+Dialogue: 0,0:52:59.38,0:53:07.40,Chinese,,0,0,0,,无论 incr 这个调用做什么，我们可以假设 %rbx...
 Dialogue: 0,0:53:08.30,0:53:12.56,English,,0,0,0,,We assume "inrc" is well behaved that if it makes use of register %rbx
-Dialogue: 0,0:53:08.30,0:53:12.56,Chinese,,0,0,0,,我们假设 inrc 表现良好，如果它使用寄存器 ％rbx
+Dialogue: 0,0:53:08.30,0:53:12.56,Chinese,,0,0,0,,我们可假设 inrc 表现良好，即使 incr 函数用到了寄存器 ％rbx
 Dialogue: 0,0:53:12.78,0:53:14.78,English,,0,0,0,,It will fix it up before it returns
-Dialogue: 0,0:53:12.78,0:53:14.78,Chinese,,0,0,0,,它会在它返回之前修复它
+Dialogue: 0,0:53:12.78,0:53:14.78,Chinese,,0,0,0,,它会在返回之前恢复此寄存器的值
 Dialogue: 0,0:53:15.44,0:53:22.58,English,,0,0,0,,And then this function well, in its exit code will not only increment the stack pointer
-Dialogue: 0,0:53:15.44,0:53:22.58,Chinese,,0,0,0,,然后这个函数在它的退出指令中不仅会增加栈指针
+Dialogue: 0,0:53:15.44,0:53:22.58,Chinese,,0,0,0,,然后，对于这个函数，它在退出时不仅会增加栈指针
 Dialogue: 0,0:53:22.58,0:53:25.84,English,,0,0,0,,But it will then pop the value of %rbx back
-Dialogue: 0,0:53:22.58,0:53:25.84,Chinese,,0,0,0,,但它会将％rbx的值重新弹回
+Dialogue: 0,0:53:22.58,0:53:25.84,Chinese,,0,0,0,,它还会将 ％rbx 的值重新弹回
 Dialogue: 0,0:53:25.84,0:53:32.44,English,,0,0,0,,And so again you see this sort of bracketing push,pop,subtract,add
-Dialogue: 0,0:53:25.84,0:53:32.44,Chinese,,0,0,0,,所以你再次看到这种 push，pop，减去，添加
+Dialogue: 0,0:53:25.84,0:53:32.44,Chinese,,0,0,0,,所以你再次看到这种成对的 push/pop，地址的减小/增加
 Dialogue: 0,0:53:32.44,0:53:33.74,English,,0,0,0,,And you'll notice that things
-Dialogue: 0,0:53:32.44,0:53:33.74,Chinese,,0,0,0,,你会注意到这些事情
+Dialogue: 0,0:53:32.44,0:53:33.74,Chinese,,0,0,0,,你会注意到这些
 Dialogue: 0,0:53:34.52,0:53:39.10,English,,0,0,0,,On the clean-up part of it the end you sort of do things in the reverse order that they were done
-Dialogue: 0,0:53:34.52,0:53:39.10,Chinese,,0,0,0,,在它的最终部分，你会按照与它们进来时相反的顺序做事
+Dialogue: 0,0:53:34.52,0:53:39.10,Chinese,,0,0,0,,在函数调用结束时，它总会按照与之前相反的顺序执行
 Dialogue: 0,0:53:39.32,0:53:42.58,English,,0,0,0,,Coming in again because of the stack discipline
-Dialogue: 0,0:53:39.32,0:53:42.58,Chinese,,0,0,0,,这是由于堆栈规则
+Dialogue: 0,0:53:39.32,0:53:42.58,Chinese,,0,0,0,,再此强调，这都是源于栈的原则
 Dialogue: 0,0:53:44.06,0:53:48.66,English,,0,0,0,,So that's sort of a demonstration of this eight idea of an ABI that
-Dialogue: 0,0:53:44.06,0:53:48.66,Chinese,,0,0,0,,所以这就是对这个 ABI 概念的一种证明
+Dialogue: 0,0:53:44.06,0:53:48.66,Chinese,,0,0,0,,算是对 API 的 8 种思想的一种展示吧
 Dialogue: 0,0:53:49.28,0:53:53.60,English,,0,0,0,,Everyone will treat %rbx this way it will save it on the stack
-Dialogue: 0,0:53:49.28,0:53:53.60,Chinese,,0,0,0,,每个人都会以这种方式处理 ％rbx，它会将它保存在堆栈中
-Dialogue: 0,0:53:53.88,0:53:58.52,English,,0,0,0,,If it's going to alter it,if it's not going to alter it it doesn't have to save anything
-Dialogue: 0,0:53:53.88,0:53:58.52,Chinese,,0,0,0,,如果它会改变它，如果它不会改变它，它不需要保存任何东西
-Dialogue: 0,0:53:58.72,0:54:01.28,English,,0,0,0,,Whose question I saw?No
-Dialogue: 0,0:53:58.72,0:54:01.28,Chinese,,0,0,0,,我看到了谁的问题？
+Dialogue: 0,0:53:49.28,0:53:53.60,Chinese,,0,0,0,,每个程序都会以这种方式处理 ％rbx，即修改之前将它先暂存在栈上
+Dialogue: 0,0:53:53.88,0:53:58.52,English,,0,0,0,,If it's going to alter it,if it's not going to alter it, it doesn't have to save anything
+Dialogue: 0,0:53:53.88,0:53:58.52,Chinese,,0,0,0,,如果不用改变，则不需要保存任何东西
+Dialogue: 0,0:53:58.72,0:54:01.28,English,,0,0,0,,Whose question I saw? No
+Dialogue: 0,0:53:58.72,0:54:01.28,Chinese,,0,0,0,,谁在提问题？我看到你了。没有人吗？
 Dialogue: 0,0:54:02.68,0:54:04.76,English,,0,0,0,,So we haven't seen that in other code
-Dialogue: 0,0:54:02.68,0:54:04.76,Chinese,,0,0,0,,所以我们还没有在其他代码中看到过
+Dialogue: 0,0:54:02.68,0:54:04.76,Chinese,,0,0,0,,这个用法我们还没有在其它代码中看到过
 Dialogue: 0,0:54:04.76,0:54:11.58,English,,0,0,0,,Because we didn't typically need it, that's again an example in this particular machine code
-Dialogue: 0,0:54:04.76,0:54:11.58,Chinese,,0,0,0,,因为我们通常不需要它，所以这又是这个特定机器代码中的一个例子
+Dialogue: 0,0:54:04.76,0:54:11.58,Chinese,,0,0,0,,因为我们通常并不需要它，所以这又是机器代码的一种特例
 Dialogue: 0,0:54:11.58,0:54:13.18,English,,0,0,0,,We only do what we have to do
 Dialogue: 0,0:54:11.58,0:54:13.18,Chinese,,0,0,0,,我们只做我们必须做的事情
 Dialogue: 0,0:54:16.38,0:54:16.94,English,,0,0,0,,Okay
 Dialogue: 0,0:54:16.38,0:54:16.94,Chinese,,0,0,0,,好的
 Dialogue: 0,0:54:19.84,0:54:22.58,English,,0,0,0,,Okay so now we can kind of put this all together
-Dialogue: 0,0:54:19.84,0:54:22.58,Chinese,,0,0,0,,好的，现在我们可以把这些放在一起了
+Dialogue: 0,0:54:19.84,0:54:22.58,Chinese,,0,0,0,,好的，现在我们可以把这些想法结合起来了
 Dialogue: 0,0:54:23.26,0:54:29.04,English,,0,0,0,,And look at some examples of recursion and the important thing to keep in mind is
-Dialogue: 0,0:54:23.26,0:54:29.04,Chinese,,0,0,0,,看一些递归的例子，要记住的重要事情是
+Dialogue: 0,0:54:23.26,0:54:29.04,Chinese,,0,0,0,,我们来看看一些递归的例子，需要牢记的是
 Dialogue: 0,0:54:29.66,0:54:36.32,English,,0,0,0,,You know recursion is one of those sort of magical parts of computer science it seems like some black art
-Dialogue: 0,0:54:29.66,0:54:36.32,Chinese,,0,0,0,,你知道递归是计算机科学中那些神奇的部分之一，它似乎是一些黑科技
+Dialogue: 0,0:54:29.66,0:54:36.32,Chinese,,0,0,0,,你会认为递归是某种神奇的计算机科学，它似乎是一种黑科技
 Dialogue: 0,0:54:37.08,0:54:38.42,English,,0,0,0,,That it actually works
-Dialogue: 0,0:54:37.08,0:54:38.42,Chinese,,0,0,0,,它确实有效
+Dialogue: 0,0:54:37.08,0:54:38.42,Chinese,,0,0,0,,但它确实可行
 Dialogue: 0,0:54:39.90,0:54:43.54,English,,0,0,0,,But when you look at these low-level mechanisms it all works out
-Dialogue: 0,0:54:39.90,0:54:43.54,Chinese,,0,0,0,,但是当你看到这些低级机制时，一切都会成功
+Dialogue: 0,0:54:39.90,0:54:43.54,Chinese,,0,0,0,,但当你看到这些底层机制时，你会发现黑科技其实没那么神奇
 Dialogue: 0,0:54:43.88,0:54:50.90,English,,0,0,0,,And the C compiler doesn't have to make any special consideration for
-Dialogue: 0,0:54:43.88,0:54:50.90,Chinese,,0,0,0,,并且 C 编译器不必特别考虑
+Dialogue: 0,0:54:43.88,0:54:50.90,Chinese,,0,0,0,,而且 C 编译器并不需要专门考虑递归的情况
 Dialogue: 0,0:54:51.54,0:54:54.34,English,,0,0,0,,A recursive function versus a normal function
-Dialogue: 0,0:54:51.54,0:54:54.34,Chinese,,0,0,0,,递归函数与正常函数
+Dialogue: 0,0:54:51.54,0:54:54.34,Chinese,,0,0,0,,递归函数和正常函数别无二致
 Dialogue: 0,0:54:54.50,0:54:56.64,English,,0,0,0,,Because this whole stack discipline makes it work
-Dialogue: 0,0:54:54.50,0:54:56.64,Chinese,,0,0,0,,因为整个堆栈规则使它工作
+Dialogue: 0,0:54:54.50,0:54:56.64,Chinese,,0,0,0,,因为栈的原则确保了它的可行性
 Dialogue: 0,0:54:59.64,0:55:07.14,English,,0,0,0,,So I'm going to illustrate that then with a version of this function I called "pcount_r" had various instance of it
-Dialogue: 0,0:54:59.64,0:55:07.14,Chinese,,0,0,0,,所以我将说明，然后使用此函数的一个版本，我称之为 pcount_r，它有各种各样的实例
-Dialogue: 0,0:55:07.16,0:55:12.24,English,,0,0,0,,Where you remember it's the the role of this is to count the number of ones
-Dialogue: 0,0:55:07.16,0:55:12.24,Chinese,,0,0,0,,你还记得它的作用是计算一个的数量
+Dialogue: 0,0:54:59.64,0:55:07.14,Chinese,,0,0,0,,下面让我来阐述这一点，我会使用 pcount 函数的另一个版本，称之为 pcount_r，它有多个实例
+Dialogue: 0,0:55:07.16,0:55:12.24,English,,0,0,0,,Where you remember it's the role of this is to count the number of ones
+Dialogue: 0,0:55:07.16,0:55:12.24,Chinese,,0,0,0,,还记得吗？此函数的作用是统计一个数的二进制表示中 1 的数目
 Dialogue: 0,0:55:12.80,0:55:14.54,English,,0,0,0,,In an initial word
-Dialogue: 0,0:55:12.80,0:55:14.54,Chinese,,0,0,0,,用一句话来说
+Dialogue: 0,0:55:12.80,0:55:14.54,Chinese,,0,0,0,,初始情况下
 Dialogue: 0,0:55:15.04,0:55:17.10,English,,0,0,0,,So the recursive version of this says
-Dialogue: 0,0:55:15.04,0:55:17.10,Chinese,,0,0,0,,所以这个的递归版本说
+Dialogue: 0,0:55:15.04,0:55:17.10,Chinese,,0,0,0,,这个的递归版本的函数说
 Dialogue: 0,0:55:17.66,0:55:21.00,English,,0,0,0,,If the argument is zero then it has no ones in it
-Dialogue: 0,0:55:17.66,0:55:21.00,Chinese,,0,0,0,,如果参数为零，则其中没有参数
+Dialogue: 0,0:55:17.66,0:55:21.00,Chinese,,0,0,0,,如果参数为零，则 1 的个数是 0
 Dialogue: 0,0:55:21.64,0:55:29.32,English,,0,0,0,,Otherwise I take the leading bit... the least significant bit
-Dialogue: 0,0:55:21.64,0:55:29.32,Chinese,,0,0,0,,否则我采取领先位...最不重要的位
+Dialogue: 0,0:55:21.64,0:55:29.32,Chinese,,0,0,0,,否则，我提取第一个比特位，即最低有效位 (LSB)
 Dialogue: 0,0:55:30.56,0:55:35.02,English,,0,0,0,,And I'll which is either going to be a one or a zero of course
-Dialogue: 0,0:55:30.56,0:55:35.02,Chinese,,0,0,0,,而且我当然会成为一个或零
+Dialogue: 0,0:55:30.56,0:55:35.02,Chinese,,0,0,0,,这个比特要么是 1 要么是 0，即 1 个或 0 个 1
 Dialogue: 0,0:55:35.60,0:55:40.76,English,,0,0,0,,And add that to what you get by shifting right x right by one position
-Dialogue: 0,0:55:35.60,0:55:40.76,Chinese,,0,0,0,,并通过将右 x 向右移动一个位置来添加到你得到的东西
+Dialogue: 0,0:55:35.60,0:55:40.76,Chinese,,0,0,0,,这个结果加上剩余数字的统计结果即为最终结果，剩余数字可通过原来数字右移一位得到
 Dialogue: 0,0:55:41.14,0:55:43.86,English,,0,0,0,,And recursively counting the number of one bits in that
-Dialogue: 0,0:55:41.14,0:55:43.86,Chinese,,0,0,0,,并递归计算其中一位的数量
+Dialogue: 0,0:55:41.14,0:55:43.86,Chinese,,0,0,0,,我们可以递归计算剩余数字中 1 的数目
 Dialogue: 0,0:55:44.22,0:55:46.26,English,,0,0,0,,So pretty natural kind of recursion and
-Dialogue: 0,0:55:44.22,0:55:46.26,Chinese,,0,0,0,,非常自然的递归和
+Dialogue: 0,0:55:44.22,0:55:46.26,Chinese,,0,0,0,,你看，非常自然的递归过程
 Dialogue: 0,0:55:47.86,0:55:52.12,English,,0,0,0,,And keep in mind these are all unsigned numbers the argument is
-Dialogue: 0,0:55:47.86,0:55:52.12,Chinese,,0,0,0,,请记住，这些参数都是 unsigned 类型
+Dialogue: 0,0:55:47.86,0:55:52.12,Chinese,,0,0,0,,请记住，参数类型都是 unsigned
 Dialogue: 0,0:55:52.54,0:55:55.52,English,,0,0,0,,So the right shifts are logical
-Dialogue: 0,0:55:52.54,0:55:55.52,Chinese,,0,0,0,,所以右移都是逻辑右移
+Dialogue: 0,0:55:52.54,0:55:55.52,Chinese,,0,0,0,,所以右移运算都是逻辑右移
 Dialogue: 0,0:55:56.24,0:56:01.26,English,,0,0,0,,This would really be a bad idea with arithmetic right
-Dialogue: 0,0:55:56.24,0:56:01.26,Chinese,,0,0,0,,这对算术右移来说确实是一个坏主意
+Dialogue: 0,0:55:56.24,0:56:01.26,Chinese,,0,0,0,,此例中绝对不要使用算术右移
 Dialogue: 0,0:56:02.66,0:56:04.32,English,,0,0,0,,And this is a code generated
-Dialogue: 0,0:56:02.66,0:56:04.32,Chinese,,0,0,0,,这是一个生成的代码
+Dialogue: 0,0:56:02.66,0:56:04.32,Chinese,,0,0,0,,这是生成的代码
 Dialogue: 0,0:56:04.32,0:56:12.54,English,,0,0,0,,In general, recursive code it's going to always generate a bigger blob of code than the iterative version
-Dialogue: 0,0:56:04.32,0:56:12.54,Chinese,,0,0,0,,通常，递归代码总是会产生比迭代版本更大的代码块
+Dialogue: 0,0:56:04.32,0:56:12.54,Chinese,,0,0,0,,通常，相比于迭代，递归代码总是会生成更大的代码块
 Dialogue: 0,0:56:12.84,0:56:14.84,English,,0,0,0,,Because it has to do all the stack stuff
-Dialogue: 0,0:56:12.84,0:56:14.84,Chinese,,0,0,0,,因为它必须做所有堆栈的东西
+Dialogue: 0,0:56:12.84,0:56:14.84,Chinese,,0,0,0,,因为它必须处理更多栈上的操作
 Dialogue: 0,0:56:17.42,0:56:20.42,English,,0,0,0,,So this is about as simple as it gets in recursive calls
 Dialogue: 0,0:56:17.42,0:56:20.42,Chinese,,0,0,0,,所以这和递归调用一样简单
 Dialogue: 0,0:56:20.88,0:56:24.41,English,,0,0,0,,So let's just sort of pick it apart
@@ -1256,21 +1256,21 @@ Dialogue: 0,0:56:20.88,0:56:24.41,Chinese,,0,0,0,,所以，让我们把它分开
 Dialogue: 0,0:56:24.92,0:56:28.94,English,,0,0,0,,Well if easy case is if x is zero you'll see what happens is
 Dialogue: 0,0:56:24.92,0:56:28.94,Chinese,,0,0,0,,好吧，如果简单的情况是如果 x 为零你会看到发生了什么
 Dialogue: 0,0:56:30.50,0:56:35.32,English,,0,0,0,,It first of all assumes x is going to be zero in fact
-Dialogue: 0,0:56:30.50,0:56:35.32,Chinese,,0,0,0,,首先假设 x 实际上将为零
+Dialogue: 0,0:56:30.50,0:56:35.32,Chinese,,0,0,0,,首先假设 x 为零
 Dialogue: 0,0:56:35.76,0:56:40.98,English,,0,0,0,,And sets up the return value of zero to the register
 Dialogue: 0,0:56:35.76,0:56:40.98,Chinese,,0,0,0,,并将寄存器的返回值设置为零
 Dialogue: 0,0:56:41.56,0:56:45.52,English,,0,0,0,,And then it will test now while is x zero
-Dialogue: 0,0:56:41.56,0:56:45.52,Chinese,,0,0,0,,然后它将在 x 为零时进行测试
+Dialogue: 0,0:56:41.56,0:56:45.52,Chinese,,0,0,0,,然后它将将测试 x 是否为零
 Dialogue: 0,0:56:45.96,0:56:49.28,English,,0,0,0,,You remember the test instruction has two operands that get ended
-Dialogue: 0,0:56:45.96,0:56:49.28,Chinese,,0,0,0,,你记得测试指令有两个结束的操作数
+Dialogue: 0,0:56:45.96,0:56:49.28,Chinese,,0,0,0,,还记得吗？test 指令有两个操作数
 Dialogue: 0,0:56:49.28,0:56:54.02,English,,0,0,0,,So when they're... the same it just is testing the value of x here
-Dialogue: 0,0:56:49.28,0:56:54.02,Chinese,,0,0,0,,所以，当它们......相同时，它只是在这里测试 x 的值
+Dialogue: 0,0:56:49.28,0:56:54.02,Chinese,,0,0,0,,所以，当它们......相同时，这里它只是测试 x 的值
 Dialogue: 0,0:56:54.92,0:57:00.52,English,,0,0,0,,And if that's equal je is means jump equal to 0 in this case
-Dialogue: 0,0:56:54.92,0:57:00.52,Chinese,,0,0,0,,如果相同的 je 是指在这种情况下跳跃等于 0
+Dialogue: 0,0:56:54.92,0:57:00.52,Chinese,,0,0,0,,如果两者相同，je 表示测试结果为 0 (相等) 时就跳转
 Dialogue: 0,0:57:01.10,0:57:03.86,English,,0,0,0,,Or might say jz is the same instruction
-Dialogue: 0,0:57:01.10,0:57:03.86,Chinese,,0,0,0,,或者可能会说 jz，它们是相同的指令
+Dialogue: 0,0:57:01.10,0:57:03.86,Chinese,,0,0,0,,或者，你也可以用 jz，它们是相同的指令
 Dialogue: 0,0:57:04.36,0:57:11.62,English,,0,0,0,,So if the value equals zero, we'll jump to the end of the function and hit the return instruction
-Dialogue: 0,0:57:04.36,0:57:11.62,Chinese,,0,0,0,,因此，如果值等于零，我们将跳转到函数的末尾并按下返回指令
+Dialogue: 0,0:57:04.36,0:57:11.62,Chinese,,0,0,0,,因此，如果值等于零，我们将跳转到函数的末尾并执行返回指令
 Dialogue: 0,0:57:12.02,0:57:15.38,English,,0,0,0,,Like I said before the %rap; you can ignore that
 Dialogue: 0,0:57:12.02,0:57:15.38,Chinese,,0,0,0,,就像我在 ％rap 之前所说的那样;你可以忽略它
 Dialogue: 0,0:57:17.02,0:57:18.16,English,,0,0,0,,So that handles that one
