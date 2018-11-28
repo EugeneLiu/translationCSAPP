@@ -1258,7 +1258,7 @@ Dialogue: 0,0:56:24.92,0:56:28.94,Chinese,,0,0,0,,好吧，如果简单的情况
 Dialogue: 0,0:56:30.50,0:56:35.32,English,,0,0,0,,It first of all assumes x is going to be zero in fact
 Dialogue: 0,0:56:30.50,0:56:35.32,Chinese,,0,0,0,,首先假设 x 为零
 Dialogue: 0,0:56:35.76,0:56:40.98,English,,0,0,0,,And sets up the return value of zero to the register
-Dialogue: 0,0:56:35.76,0:56:40.98,Chinese,,0,0,0,,并将寄存器的返回值设置为零
+Dialogue: 0,0:56:35.76,0:56:40.98,Chinese,,0,0,0,,并将寄存器的返回值设置为零 (%eax)
 Dialogue: 0,0:56:41.56,0:56:45.52,English,,0,0,0,,And then it will test now while is x zero
 Dialogue: 0,0:56:41.56,0:56:45.52,Chinese,,0,0,0,,然后它将将测试 x 是否为零
 Dialogue: 0,0:56:45.96,0:56:49.28,English,,0,0,0,,You remember the test instruction has two operands that get ended
@@ -1266,45 +1266,45 @@ Dialogue: 0,0:56:45.96,0:56:49.28,Chinese,,0,0,0,,还记得吗？test 指令有�
 Dialogue: 0,0:56:49.28,0:56:54.02,English,,0,0,0,,So when they're... the same it just is testing the value of x here
 Dialogue: 0,0:56:49.28,0:56:54.02,Chinese,,0,0,0,,所以，当它们......相同时，这里它只是测试 x 的值
 Dialogue: 0,0:56:54.92,0:57:00.52,English,,0,0,0,,And if that's equal je is means jump equal to 0 in this case
-Dialogue: 0,0:56:54.92,0:57:00.52,Chinese,,0,0,0,,如果两者相同，je 表示测试结果为 0 (相等) 时就跳转
+Dialogue: 0,0:56:54.92,0:57:00.52,Chinese,,0,0,0,,如果 x 至为零，je 表示测试结果为 0 (相等) 时就跳转
 Dialogue: 0,0:57:01.10,0:57:03.86,English,,0,0,0,,Or might say jz is the same instruction
 Dialogue: 0,0:57:01.10,0:57:03.86,Chinese,,0,0,0,,或者，你也可以用 jz，它们是相同的指令
 Dialogue: 0,0:57:04.36,0:57:11.62,English,,0,0,0,,So if the value equals zero, we'll jump to the end of the function and hit the return instruction
 Dialogue: 0,0:57:04.36,0:57:11.62,Chinese,,0,0,0,,因此，如果值等于零，我们将跳转到函数的末尾并执行返回指令
 Dialogue: 0,0:57:12.02,0:57:15.38,English,,0,0,0,,Like I said before the %rap; you can ignore that
-Dialogue: 0,0:57:12.02,0:57:15.38,Chinese,,0,0,0,,就像我在 ％rap 之前所说的那样;你可以忽略它
+Dialogue: 0,0:57:12.02,0:57:15.38,Chinese,,0,0,0,,就像我在 ％rap 之前所说的那样; 你可以忽略它
 Dialogue: 0,0:57:17.02,0:57:18.16,English,,0,0,0,,So that handles that one
 Dialogue: 0,0:57:17.02,0:57:18.16,Chinese,,0,0,0,,所以那个处理那一个
 Dialogue: 0,0:57:19.68,0:57:23.00,English,,0,0,0,,And now the rest of the code is to handle this lower part
 Dialogue: 0,0:57:19.68,0:57:23.00,Chinese,,0,0,0,,现在剩下的代码就是处理这个下半部分
 Dialogue: 0,0:57:23.00,0:57:27.02,English,,0,0,0,,Where I have to set up the arguments to recursive call
-Dialogue: 0,0:57:23.00,0:57:27.02,Chinese,,0,0,0,,我必须设置递归调用的参数
+Dialogue: 0,0:57:23.00,0:57:27.02,Chinese,,0,0,0,,它们需要设置递归调用的参数
 Dialogue: 0,0:57:27.02,0:57:35.38,English,,0,0,0,,I have to keep track of (what) at least the least significant bit of x is and handle all that stuff
-Dialogue: 0,0:57:27.02,0:57:35.38,Chinese,,0,0,0,,我必须跟踪（什么）x 最不重要的位并处理所有这些东西
+Dialogue: 0,0:57:27.02,0:57:35.38,Chinese,,0,0,0,,我必须跟踪 x 的最低有效比特位，并处理其它所有事情
 Dialogue: 0,0:57:37.58,0:57:42.40,English,,0,0,0,,So here's the code and it doesn't need any other thing anything on the stack
-Dialogue: 0,0:57:37.58,0:57:42.40,Chinese,,0,0,0,,所以这是代码，它不需要任何其他东西在堆栈上
+Dialogue: 0,0:57:37.58,0:57:42.40,Chinese,,0,0,0,,看这里的代码，除了存储 %rbx 之外，它并没有用到栈上其它什么东西
 Dialogue: 0,0:57:42.40,0:57:48.72,English,,0,0,0,,Other than a space to store %rbx which is whatever again
-Dialogue: 0,0:57:42.40,0:57:48.72,Chinese,,0,0,0,,除了存储 ％rbx 的空间之外，这又是什么
+Dialogue: 0,0:57:42.40,0:57:48.72,Chinese,,0,0,0,,不管 %rbx 存了什么东西
 Dialogue: 0,0:57:48.98,0:57:51.22,English,,0,0,0,,Whatever was in %rbx when you enter
-Dialogue: 0,0:57:48.98,0:57:51.22,Chinese,,0,0,0,,当你进入时，％rbx 是什么
+Dialogue: 0,0:57:48.98,0:57:51.22,Chinese,,0,0,0,,当你进入时，％rbx 是什么值，程序并不关心
 Dialogue: 0,0:57:51.66,0:57:55.24,English,,0,0,0,,I'm just going to put it on the stack I won't look at it I won't make use of it
-Dialogue: 0,0:57:51.66,0:57:55.24,Chinese,,0,0,0,,我只是把它放在栈上我不会看它，我不会利用它
+Dialogue: 0,0:57:51.66,0:57:55.24,Chinese,,0,0,0,,它被静静放在栈上，没人看它一眼，也没人会用它
 Dialogue: 0,0:57:55.98,0:58:02.18,English,,0,0,0,,But I'll have it there so I can restore the register when I return
-Dialogue: 0,0:57:55.98,0:58:02.18,Chinese,,0,0,0,,但是我会把它放在那里，所以当我回来时我可以恢复寄存器
+Dialogue: 0,0:57:55.98,0:58:02.18,Chinese,,0,0,0,,但是，我们还是必须把它暂存在栈上，以便返回时可以恢复成原来的值
 Dialogue: 0,0:58:02.82,0:58:05.36,English,,0,0,0,,So it will push the value under the stack
-Dialogue: 0,0:58:02.82,0:58:05.36,Chinese,,0,0,0,,所以它会把值 push 到栈中
+Dialogue: 0,0:58:02.82,0:58:05.36,Chinese,,0,0,0,,所以它会把 %rbx 的值 push 到栈中
 Dialogue: 0,0:58:07.32,0:58:16.92,English,,0,0,0,,And now the real meat of the the body of it is, it will copy x into %rbx
-Dialogue: 0,0:58:07.32,0:58:16.92,Chinese,,0,0,0,,而现在它真正到主要部分是，它将 x 复制到 ％rbx
+Dialogue: 0,0:58:07.32,0:58:16.92,Chinese,,0,0,0,,而后，代码的主体是将 x 复制到 ％rbx
 Dialogue: 0,0:58:17.02,0:58:20.74,English,,0,0,0,,Which we've just put on the stack so we can safely do it
-Dialogue: 0,0:58:17.02,0:58:20.74,Chinese,,0,0,0,,我们刚刚把它放在栈上，这样我们就可以安全地完成它
+Dialogue: 0,0:58:17.02,0:58:20.74,Chinese,,0,0,0,,因为我们刚刚把它放在栈上了，现在就可以安全愉快地存储别的值了
 Dialogue: 0,0:58:21.08,0:58:29.14,English,,0,0,0,,And we'll just set only will clear out at all but the least significant bit of that particular register
-Dialogue: 0,0:58:21.08,0:58:29.14,Chinese,,0,0,0,,而且我们只会设置只清除该特定寄存器中最不重要的位
+Dialogue: 0,0:58:21.08,0:58:29.14,Chinese,,0,0,0,,并且，我们只需要用到该寄存器中的值的最低有效位
 Dialogue: 0,0:58:29.52,0:58:36.92,English,,0,0,0,,And again this is one of these weird ones where I can use %ebx as a destination knowing that all 0 all the high order bits
-Dialogue: 0,0:58:29.52,0:58:36.92,Chinese,,0,0,0,,再次，这是其中一个奇怪的，我可以使用 ％ebx 作为目的地因为高位都是 0
+Dialogue: 0,0:58:29.52,0:58:36.92,Chinese,,0,0,0,,这里再次出现一个奇怪的现象 (就像之前用 %eax 取代 %rax 一样)，我们使用 ％ebx 而不是 %rbx 作为 andl 的目的地，因为 %rbx 高位都是 0
 Dialogue: 0,0:58:38.16,0:58:43.40,English,,0,0,0,,And then I'm going to take x and I'm just going to shift it right by one position
-Dialogue: 0,0:58:38.16,0:58:43.40,Chinese,,0,0,0,,然后我将采取 x，我只是将它向右移动一个位置
+Dialogue: 0,0:58:38.16,0:58:43.40,Chinese,,0,0,0,,然后我将 x 右移一位
 Dialogue: 0,0:58:43.94,0:58:46.59,English,,0,0,0,,Which sets me up for this recursive call
-Dialogue: 0,0:58:43.94,0:58:46.59,Chinese,,0,0,0,,这让我接受了这个递归调用
+Dialogue: 0,0:58:43.94,0:58:46.59,Chinese,,0,0,0,,从而设置好了递归调用的参数
 Dialogue: 0,0:58:47.04,0:58:51.04,English,,0,0,0,,So this red code does both of these parts of it here
 Dialogue: 0,0:58:47.04,0:58:51.04,Chinese,,0,0,0,,所以这个红色代码在这里完成了这两部分
 Dialogue: 0,0:58:52.48,0:58:56.14,English,,0,0,0,,And now I'm ready to call "pcount_r" recursively
