@@ -1016,7 +1016,7 @@ Dialogue: 0,0:45:44.28,0:45:46.22,Chinese,,0,0,0,,哦弄错了
 Dialogue: 0,0:45:46.78,0:45:54.48,English,,0,0,0,,So now if I do a ret. the ret instruction will always take whatever is pointed to by the stack pointer and use that as the return address
 Dialogue: 0,0:45:46.78,0:45:54.48,Chinese,,0,0,0,,所以现在如果我执行 ret， ret 指令将始终采用栈指针指向的地址并将它作为返回地址
 Dialogue: 0,0:45:56.16,0:46:01.94,English,,0,0,0,,So it's very important that %rsp get set back to where it should be before you it does a ret
-Dialogue: 0,0:45:56.16,0:46:01.94,Chinese,,0,0,0,,所以 ％rsp 在你进行 ret 之前应该回到它应该的位置是非常重要的
+Dialogue: 0,0:45:56.16,0:46:01.94,Chinese,,0,0,0,,所以 ％rsp 在你执行 ret 之前就恢复到它原来的位置是非常重要的
 Dialogue: 0,0:46:05.50,0:46:08.20,English,,0,0,0,,Okay so that's sort of the the basic principles
 Dialogue: 0,0:46:05.50,0:46:08.20,Chinese,,0,0,0,,好了，这就是基本原则了
 Dialogue: 0,0:46:08.20,0:46:12.18,English,,0,0,0,,Now let's get a little bit more refined
@@ -1155,8 +1155,8 @@ Dialogue: 0,0:52:16.68,0:52:18.82,English,,0,0,0,,And so you see that the code h
 Dialogue: 0,0:52:16.68,0:52:18.82,Chinese,,0,0,0,,在这里可以看到相关代码
 Dialogue: 0,0:52:19.70,0:52:27.94,English,,0,0,0,,At the outset of this function then it will store away whatever is in %rbx currently it will put it on the stack
 Dialogue: 0,0:52:19.70,0:52:27.94,Chinese,,0,0,0,,在此函数开始时，它将存储 ％rbx 目前的值并将把它放在栈上
-Dialogue: 0,0:52:28.70,0:52:33.98,English,,0,0,0,,And so now the the stack frame for this function looks like there's a return address
-Dialogue: 0,0:52:28.70,0:52:33.98,Chinese,,0,0,0,,所以现在这个函数的栈帧看起来像是一个返回地址
+Dialogue: 0,0:52:28.70,0:52:33.98,English,,0,0,0,,And so now the stack frame for this function looks like there's a return address
+Dialogue: 0,0:52:28.70,0:52:33.98,Chinese,,0,0,0,,所以现在看来，这个函数的栈帧有一个返回地址
 Dialogue: 0,0:52:35.32,0:52:38.08,English,,0,0,0,,From before but I'm going to save the value of %rbx
 Dialogue: 0,0:52:35.32,0:52:38.08,Chinese,,0,0,0,,从以前开始，我将保存 ％rbx 的值
 Dialogue: 0,0:52:38.74,0:52:43.02,English,,0,0,0,,And then I'm going to decrement the stack pointer by 16 as I did before
