@@ -16,9 +16,9 @@ Video File: ../../../../Desktop/csapp/Lecture 08  Machine Level Programming IV  
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 1.015625
-Scroll Position: 54
-Active Line: 67
-Video Position: 4864
+Scroll Position: 1672
+Active Line: 1670
+Video Position: 143241
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -147,7 +147,7 @@ Dialogue: 0,0:05:05.64,0:05:07.54,English,,0,0,0,,What the elements of the array
 Dialogue: 0,0:05:05.64,0:05:07.54,Chinese,,0,0,0,,那么数组的元素是什么
 Dialogue: 0,0:05:08.04,0:05:11.46,English,,0,0,0,,And some number of elements in that array in the declaration L
 Dialogue: 0,0:05:08.04,0:05:11.46,Chinese,,0,0,0,,声明中该数组中的元素数目是 L
-Dialogue: 0,0:05:12.30,0:05:19.64,English,,0,0,0,,{\s1}Then we will{\s0} That declaration actually does two things
+Dialogue: 0,0:05:12.30,0:05:19.64,English,,0,0,0,,Then we will...that declaration actually does two things
 Dialogue: 0,0:05:12.30,0:05:19.64,Chinese,,0,0,0,,然后我们将...该声明实际上做两件事
 Dialogue: 0,0:05:20.74,0:05:25.80,English,,0,0,0,,One is it allocates enough bytes of storage to hold the entire array
 Dialogue: 0,0:05:20.74,0:05:25.80,Chinese,,0,0,0,,第一件事是分配足够的存储字节来保存整个数组
@@ -185,8 +185,8 @@ Dialogue: 0,0:06:40.16,0:06:44.10,English,,0,0,0,,Like you say you know p++ for 
 Dialogue: 0,0:06:40.16,0:06:44.10,Chinese,,0,0,0,,比如说，你知道对一个指针进行 p++
 Dialogue: 0,0:06:44.84,0:06:46.52,English,,0,0,0,,We just give you an example
 Dialogue: 0,0:06:44.84,0:06:46.52,Chinese,,0,0,0,,我们只是举一个例子
-Dialogue: 0,0:06:48.98,0:06:53.30,English,,0,0,0,,So if you had something like char * p  as a declaration
-Dialogue: 0,0:06:48.98,0:06:53.30,Chinese,,0,0,0,,所以如果你有像 char * p这样的声明
+Dialogue: 0,0:06:48.98,0:06:53.30,English,,0,0,0,,So if you had something like char *p as a declaration
+Dialogue: 0,0:06:48.98,0:06:53.30,Chinese,,0,0,0,,所以如果你有像 char *p 这样的声明
 Dialogue: 0,0:06:53.88,0:06:56.62,English,,0,0,0,,And you said p is equal to some string s
 Dialogue: 0,0:06:53.88,0:06:56.62,Chinese,,0,0,0,,你说 p 等于某些字符串 s
 Dialogue: 0,0:06:58.62,0:07:00.50,English,,0,0,0,,And then you say p++
@@ -228,13 +228,13 @@ Dialogue: 0,0:08:57.92,0:09:07.32,Chinese,,0,0,0,,类似地，&val[2] 是说给�
 Dialogue: 0,0:09:07.44,0:09:09.06,English,,0,0,0,,So that would be at x+8
 Dialogue: 0,0:09:07.44,0:09:09.06,Chinese,,0,0,0,,即 x+8
 Dialogue: 0,0:09:10.22,0:09:15.00,English,,0,0,0,,And this is again one of the fundamental properties of C
-Dialogue: 0,0:09:10.22,0:09:15.00,Chinese,,0,0,0,,这又是C的基本属性之一
+Dialogue: 0,0:09:10.22,0:09:15.00,Chinese,,0,0,0,,这又是 C 的基本属性之一
 Dialogue: 0,0:09:16.08,0:09:37.77,English,,0,0,0,,that basically in C if you take a pointer
 Dialogue: 0,0:09:16.08,0:09:37.77,Chinese,,0,0,0,,即如果你拿一个指针，基本上在 C 语言里
 Dialogue: 0,0:09:38.50,0:09:39.24,English,,0,0,0,,That's weird
 Dialogue: 0,0:09:38.50,0:09:39.24,Chinese,,0,0,0,,这很奇怪
 Dialogue: 0,0:09:44.36,0:09:46.00,English,,0,0,0,,This is an "i" not very well written
-Dialogue: 0,0:09:44.36,0:09:46.00,Chinese,,0,0,0,,这是一个写得不太好的 "i"
+Dialogue: 0,0:09:44.36,0:09:46.00,Chinese,,0,0,0,,这是一个写得不太好的 i
 Dialogue: 0,0:09:46.32,0:09:47.76,English,,0,0,0,,These are equivalent statements
 Dialogue: 0,0:09:46.32,0:09:47.76,Chinese,,0,0,0,,这些是等同的陈述
 Dialogue: 0,0:09:51.56,0:09:54.16,English,,0,0,0,,Right. they are just two notations for the same thing
@@ -298,7 +298,7 @@ Dialogue: 0,0:11:59.08,0:12:05.20,Chinese,,0,0,0,,但是当编译器在私底下
 Dialogue: 0,0:12:05.64,0:12:06.98,English,,0,0,0,,It's scaling everything
 Dialogue: 0,0:12:05.64,0:12:06.98,Chinese,,0,0,0,,它会缩放一切
 Dialogue: 0,0:12:07.76,0:12:11.34,English,,0,0,0,,So now the question that is being asked is what if x is a negative number
-Dialogue: 0,0:12:07.76,0:12:11.34,Chinese,,0,0,0,,所以现在问的问题是，如果x  是负数，该怎么办？
+Dialogue: 0,0:12:07.76,0:12:11.34,Chinese,,0,0,0,,所以现在问的问题是，如果 x  是负数，该怎么办？
 Dialogue: 0,0:12:12.14,0:12:13.64,English,,0,0,0,,Well the rule still applies
 Dialogue: 0,0:12:12.14,0:12:13.64,Chinese,,0,0,0,,那么规则仍然适用
 Dialogue: 0,0:12:13.66,0:12:18.28,English,,0,0,0,,It's just that the final result will be less than ip instead of greater than ip
@@ -332,7 +332,7 @@ Dialogue: 0,0:13:04.90,0:13:07.12,Chinese,,0,0,0,,你可以让两个指针相减
 Dialogue: 0,0:13:08.10,0:13:11.64,English,,0,0,0,,This is obscure. I'm not even going to tell you about this
 Dialogue: 0,0:13:08.10,0:13:11.64,Chinese,,0,0,0,,这是让人费解的，我甚至都没有打算告诉你们这点
 Dialogue: 0,0:13:11.64,0:13:14.66,English,,0,0,0,,Look it up in K&R. But you can do arithmetic
-Dialogue: 0,0:13:11.64,0:13:14.66,Chinese,,0,0,0,,你们去翻下 K&R 写的那本书（即 C 程序设计语言）吧。但你可以做指针运算
+Dialogue: 0,0:13:11.64,0:13:14.66,Chinese,,0,0,0,,你们去翻下 K&R 写的那本书（即 《C 程序设计语言》）吧。但你可以做指针运算
 Dialogue: 0,0:13:14.66,0:13:21.44,English,,0,0,0,,But you can only for addition it can only be one pointer in one and then the other has to be a regular integer value
 Dialogue: 0,0:13:14.66,0:13:21.44,Chinese,,0,0,0,,但是你只能对于指针加法运算，只能是一个是指针，另一个必须是常规的整数
 Dialogue: 0,0:13:21.72,0:13:23.38,English,,0,0,0,,And it will scale it appropriately
@@ -450,7 +450,7 @@ Dialogue: 0,0:17:57.54,0:18:01.16,Chinese,,0,0,0,,这就是实现此特定操作
 Dialogue: 0,0:18:01.26,0:18:01.58,English,,0,0,0,,Yes
 Dialogue: 0,0:18:01.26,0:18:01.58,Chinese,,0,0,0,,有问题请讲
 Dialogue: 0,0:18:01.58,0:18:11.12,English,,0,0,0,,So %rdi is the base address of the array yeah ah %rsi on the right side yeah
-Dialogue: 0,0:18:01.58,0:18:11.12,Chinese,,0,0,0,,学生：所以 %rdi　是数组的基地址? 老师：是  学生：... 那么为什么乘以 4，再加上右侧的 %rsi ？
+Dialogue: 0,0:18:01.58,0:18:11.12,Chinese,,0,0,0,,学生：所以 %rdi 是数组的基地址? 老师：是  学生：... 那么为什么乘以 4，再加上右侧的 %rsi ？
 Dialogue: 0,0:18:11.12,0:18:15.60,English,,0,0,0,,This is a typo, thank you! Thanks for pointing it out, I'll make a note of that
 Dialogue: 0,0:18:11.12,0:18:15.60,Chinese,,0,0,0,,这里打错字了，谢谢你指出它，我会记下来的
 Dialogue: 0,0:18:18.18,0:18:22.60,English,,0,0,0,,Right, so this slide is incorrect and I'll fix that
@@ -527,7 +527,8 @@ Dialogue: 0,0:21:59.98,0:22:03.30,Chinese,,0,0,0,,我有几个这样的例子
 Dialogue: 0,0:22:04.00,0:22:06.12,English,,0,0,0,,that I'll bring out one by one
 Dialogue: 0,0:22:04.00,0:22:06.12,Chinese,,0,0,0,,我会一个接一个地拿出来
 Dialogue: 0,0:22:07.06,0:22:11.24,English,,0,0,0,,But the idea of this is you see the declaration on the left
-Dialogue: 0,0:22:07.06,0:22:11.24,Chinese,,0,0,0,,但是想法是：你看到左边的声明 （译者注：请对照 15 年之后的 PPT 或看 https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=03308c94-fc20-40d8-8978-1a9b81c344ed 上拍到投影仪的课程视频）
+Dialogue: 0,0:22:07.06,0:22:11.24,Chinese,,0,0,0,,但是想法是：你看到左边的声明
+Dialogue: 0,0:22:07.06,0:22:11.24,Chinese,,0,0,0,,{\pos(663.649,138.728)}译者注：请对照 15 年之后的 PPT 或看 https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=03308c94-fc20-40d8-8978-1a9b81c344ed 上拍到投影仪的课程视频）
 Dialogue: 0,0:22:11.36,0:22:15.64,English,,0,0,0,,There's something called a1 and something called a2
 Dialogue: 0,0:22:11.36,0:22:15.64,Chinese,,0,0,0,,有一个东东叫 A1， 还有一个叫 A2
 Dialogue: 0,0:22:16.18,0:22:18.40,English,,0,0,0,,So call those A sub n
@@ -766,7 +767,8 @@ Dialogue: 0,0:33:01.72,0:33:06.22,Chinese,,0,0,0,,但它...它真的指向一个
 Dialogue: 0,0:33:07.58,0:33:12.80,English,,0,0,0,,So this would be potentially bad...therefor double stars doubly bad, right?
 Dialogue: 0,0:33:07.58,0:33:12.80,Chinese,,0,0,0,,因此，这可能会有坏结果，因此对于双星（指针的指针），是双重的坏结果，对吧？
 Dialogue: 0,0:33:15.16,0:33:17.54,English,,0,0,0,,Okay so now let's look at A4
-Dialogue: 0,0:33:15.16,0:33:17.54,Chinese,,0,0,0,,好了，现在让我们看看 A4 （{\i1}译者注：这里的声明是 int (*A4[3])， 15 年之后学期的 PPT 可能也没有包括讨论 A4 的这部分内容{\i0}）
+Dialogue: 0,0:33:15.16,0:33:17.54,Chinese,,0,0,0,,好了，现在让我们看看 A4
+Dialogue: 0,0:33:15.16,0:33:17.54,Chinese,,0,0,0,,{\pos(659.707,64.856)}译者注：这里的声明是 int (*A4[3])， 15 年之后学期的 PPT 可能也没有包括讨论 A4 的这部分内容
 Dialogue: 0,0:33:19.72,0:33:30.74,English,,0,0,0,,So A4...to understand that, you actually have to look at the charts in C
 Dialogue: 0,0:33:19.72,0:33:30.74,Chinese,,0,0,0,,所以要搞明白 A4，你要看 C 语言中的图表
 Dialogue: 0,0:33:31.20,0:33:32.36,English,,0,0,0,,the precedence chart
@@ -810,7 +812,7 @@ Dialogue: 0,0:35:14.18,0:35:16.06,Chinese,,0,0,0,,对吧？A4 是一个指针数
 Dialogue: 0,0:35:16.68,0:35:22.30,English,,0,0,0,,So when I get an element out of that array what I'll get is a pointer
 Dialogue: 0,0:35:16.68,0:35:22.30,Chinese,,0,0,0,,因此，当我从该数组中获取一个元素时，我会得到一个指针
 Dialogue: 0,0:35:24.14,0:35:28.72,English,,0,0,0,,And so A4 (*A4) is a pointer and so it's also 8
-Dialogue: 0,0:35:24.14,0:35:28.72,Chinese,,0,0,0,,所以 A4 (*A4) 是一个指针，所以它的大小也是8
+Dialogue: 0,0:35:24.14,0:35:28.72,Chinese,,0,0,0,,所以 A4 (*A4) 是一个指针，所以它的大小也是 8
 Dialogue: 0,0:35:29.94,0:35:31.98,English,,0,0,0,,But if I now do a second dereference
 Dialogue: 0,0:35:29.94,0:35:31.98,Chinese,,0,0,0,,但是，如果我现在再做一次间接引用
 Dialogue: 0,0:35:32.92,0:35:36.66,English,,0,0,0,,Then I'll get an int and it's size is 4
@@ -879,10 +881,8 @@ Dialogue: 0,0:38:10.38,0:38:14.66,English,,0,0,0,,it's equivalent to doing a poi
 Dialogue: 0,0:38:10.38,0:38:14.66,Chinese,,0,0,0,,这相当于做一个指针声明，你没有为其分配任何空间
 Dialogue: 0,0:38:14.72,0:38:21.04,English,,0,0,0,,[student speaking] It by saying one graphically...
 Dialogue: 0,0:38:14.72,0:38:21.04,Chinese,,0,0,0,,[学生提问] .......
-Dialogue: 0,0:38:21.20,0:38:31.00,English,,0,0,0,,Yes, right here, when you declare an array
-Dialogue: 0,0:38:21.04,0:38:23.04,Chinese,,0,0,0,,对的，在这里，当你声明一个数组时，
-Dialogue: 0,0:38:25.78,0:38:31.00,English,,0,0,0,,and you give a number—the size of that array, it really allocates that memories
-Dialogue: 0,0:38:25.78,0:38:31.00,Chinese,,0,0,0,,并且你给出一个数字即数组的大小，它确实分配了那些内存
+Dialogue: 0,0:38:21.98,0:38:31.00,English,,0,0,0,,Yes, right here, when you declare an array and you give a number—the size of that array, it really allocates that memories
+Dialogue: 0,0:38:21.98,0:38:31.00,Chinese,,0,0,0,,对的，在这里，当你声明一个数组时， 并且你给出一个数字即数组的大小，它确实分配了那些内存
 Dialogue: 0,0:38:31.84,0:38:32.66,English,,0,0,0,,Question
 Dialogue: 0,0:38:31.84,0:38:32.66,Chinese,,0,0,0,,问题请讲
 Dialogue: 0,0:38:32.66,0:38:35.70,English,,0,0,0,,[student speaking]
@@ -1035,9 +1035,8 @@ Dialogue: 0,0:46:00.64,0:46:05.50,English,,0,0,0,,The underlying data type in th
 Dialogue: 0,0:46:00.64,0:46:05.50,Chinese,,0,0,0,,在这种情况下，t 表示的数据类型是整型，因此 k 等于 4
 Dialogue: 0,0:46:06.00,0:46:09.78,English,,0,0,0,,But in general the starting address then of row i
 Dialogue: 0,0:46:06.00,0:46:09.78,Chinese,,0,0,0,,但一般来说，第 i 行的起始地址
-Dialogue: 0,0:46:10.34,0:46:23.37,English,,0,0,0,,would be gotten by multiplying the number of columns by k
-Dialogue: 0,0:46:10.34,0:46:15.78,Chinese,,0,0,0,,可以通过将列数乘以 k 再乘以行号得到
-Dialogue: 0,0:46:16.24,0:46:23.37,English,,0,0,0,,And then multiplying that by the row number
+Dialogue: 0,0:46:10.34,0:46:19.56,English,,0,0,0,,would be gotten by multiplying the number of columns by k and then multiplying that by the row number
+Dialogue: 0,0:46:10.34,0:46:19.56,Chinese,,0,0,0,,可以通过将列数乘以 k 再乘以行号得到
 Dialogue: 0,0:46:23.84,0:46:28.64,English,,0,0,0,,And now if within the array I want to reference an array element A[i][j]
 Dialogue: 0,0:46:23.84,0:46:28.64,Chinese,,0,0,0,,现在如果在数组中我想引用一个数组元素 A[i][j]
 Dialogue: 0,0:46:29.82,0:46:34.66,English,,0,0,0,,Then it comes out to this computation. You take the starting address
@@ -1125,9 +1124,8 @@ Dialogue: 0,0:50:39.14,0:50:42.20,English,,0,0,0,,then the value of C will also 
 Dialogue: 0,0:50:39.14,0:50:42.20,Chinese,,0,0,0,,那么 C 的值也将是一个常数
 Dialogue: 0,0:50:42.68,0:50:48.24,English,,0,0,0,,And so a piece of code for this and that's why it got omitted by accident
 Dialogue: 0,0:50:42.68,0:50:48.24,Chinese,,0,0,0,,所以对应此的一段汇编代码—这就是为什么它被意外省略了—
-Dialogue: 0,0:50:48.24,0:50:57.88,English,,0,0,0,,will basically take this value and use some combination of the memory referencing
-Dialogue: 0,0:50:48.24,0:50:54.22,Chinese,,0,0,0,,将基本上采用此值并使用内存引用、移位和 lea 指令等的某种组合
-Dialogue: 0,0:50:54.22,0:50:57.88,English,,0,0,0,,and shifting and lea instructions and so forth
+Dialogue: 0,0:50:48.24,0:50:57.88,English,,0,0,0,,will basically take this value and use some combination of the memory referencing and shifting and lea instructions and so forth
+Dialogue: 0,0:50:48.24,0:50:57.88,Chinese,,0,0,0,,将基本上采用此值并使用内存引用、移位和 lea 指令等的某种组合
 Dialogue: 0,0:50:58.40,0:51:01.96,English,,0,0,0,,to implement this computation and then do a dereference
 Dialogue: 0,0:50:58.40,0:51:01.96,Chinese,,0,0,0,,来实现此计算，然后进行间接引用
 Dialogue: 0,0:51:03.90,0:51:09.34,English,,0,0,0,,So let's look at this second example and there is code for this and it's actually a little bit more complex
@@ -1211,10 +1209,10 @@ Dialogue: 0,0:55:01.00,0:55:06.70,English,,0,0,0,,And it used to be in C if you 
 Dialogue: 0,0:55:01.00,0:55:06.70,Chinese,,0,0,0,,过去在 C 里面，如果你想要玩多维数组的话
 Dialogue: 0,0:55:06.72,0:55:09.85,English,,0,0,0,,where the size of the array was not fixed at compile time
 Dialogue: 0,0:55:06.72,0:55:09.85,Chinese,,0,0,0,,而这个数组的大小在编译时还没确定下来时
-Dialogue: 0,0:55:10.28,0:55:15.10,English,,0,0,0,,you basically had to implement your own version of that computation I showed before
-Dialogue: 0,0:55:10.28,0:55:15.10,Chinese,,0,0,0,,基本上你必须自己实现一个我前面所展示的一个（地址）计算版本
-Dialogue: 0,0:55:14.26,0:55:24.99,English,,0,0,0,,of scaling the row number by the number of columns and adding to j
-Dialogue: 0,0:55:14.26,0:55:24.99,Chinese,,0,0,0,,即将行数乘以列数，并加上 j
+Dialogue: 0,0:55:10.28,0:55:15.30,English,,0,0,0,,you basically had to implement your own version of that computation I showed before
+Dialogue: 0,0:55:10.28,0:55:15.30,Chinese,,0,0,0,,基本上你必须自己实现一个我前面所展示的一个（地址）计算版本
+Dialogue: 0,0:55:15.30,0:55:24.99,English,,0,0,0,,of scaling the row number by the number of columns and adding to j
+Dialogue: 0,0:55:15.30,0:55:24.99,Chinese,,0,0,0,,即将行数乘以列数，并加上 j
 Dialogue: 0,0:55:25.86,0:55:29.92,English,,0,0,0,,So this is sort of classic C, I've written it as a macro here but you can see it's...
 Dialogue: 0,0:55:25.86,0:55:29.92,Chinese,,0,0,0,,所以这是一种经典的 C 写法，我在这里把它写成宏，但你可以看到
 Dialogue: 0,0:55:30.46,0:55:35.88,English,,0,0,0,,it's just doing the row major scaling directly here...is address arithmetic
@@ -1222,12 +1220,11 @@ Dialogue: 0,0:55:30.46,0:55:35.88,Chinese,,0,0,0,,它只是在这里直接进行
 Dialogue: 0,0:55:36.58,0:55:40.94,English,,0,0,0,,Now since a more recent generation of the C compiler
 Dialogue: 0,0:55:36.58,0:55:40.94,Chinese,,0,0,0,,而现在，自从较近的一代即被称为 C99 的 C 编译器开始
 Dialogue: 0,0:55:41.38,0:55:46.24,English,,0,0,0,,what they call C99—it was introduced in 1999—
-Dialogue: 0,0:55:41.38,0:55:46.24,Chinese,,0,0,0,,C99 是在 1999 年引入的，
+Dialogue: 0,0:55:41.38,0:55:46.24,Chinese,,0,0,0,,C99 是在 1999 年引入的
 Dialogue: 0,0:55:47.44,0:55:54.84,English,,0,0,0,,Um you can actually pass as a parameter an array
 Dialogue: 0,0:55:47.44,0:55:54.84,Chinese,,0,0,0,,你实际上可以将数组作为一个参数传递
-Dialogue: 0,0:55:55.34,0:56:00.30,English,,0,0,0,,where the number of elements in the array is also a parameter
-Dialogue: 0,0:55:55.34,0:56:00.30,Chinese,,0,0,0,,其中数组中的元素个数也是一个传递给函数的参数
-Dialogue: 0,0:56:00.62,0:56:03.91,English,,0,0,0,,that's being passed to the the function
+Dialogue: 0,0:55:55.34,0:56:03.91,English,,0,0,0,,where the number of elements in the array is also a parameter that's being passed to the the function
+Dialogue: 0,0:55:55.34,0:56:03.91,Chinese,,0,0,0,,其中数组中的元素个数也是一个传递给函数的参数
 Dialogue: 0,0:56:04.34,0:56:07.92,English,,0,0,0,,And similarly you can declare an array to be of n elements
 Dialogue: 0,0:56:04.34,0:56:07.92,Chinese,,0,0,0,,同样，你可以声明一个包含 n 个元素的数组
 Dialogue: 0,0:56:07.92,0:56:12.06,English,,0,0,0,,as long as n has been computed before it hit that array declaration
@@ -1338,10 +1335,10 @@ Dialogue: 0,1:01:27.04,1:01:32.72,English,,0,0,0,,uh...I'm...if this were a link
 Dialogue: 0,1:01:27.04,1:01:32.72,Chinese,,0,0,0,,如果这是一个链表，我想要做的是到链表的下一个节点去
 Dialogue: 0,1:01:33.34,1:01:38.18,English,,0,0,0,,So I need to retrieve the next field from here
 Dialogue: 0,1:01:33.34,1:01:38.18,Chinese,,0,0,0,,所以我需要从这里得到下一个字段
-Dialogue: 0,1:01:38.72,1:01:42.94,English,,0,0,0,,And {\s1}so these struc{\s0} so I'm actually making three references to this structure
-Dialogue: 0,1:01:38.72,1:01:45.30,Chinese,,0,0,0,,所以，实际上，在这么一个小小的函数里，我对这个结构进行了三次引用
-Dialogue: 0,1:01:42.96,1:01:46.98,English,,0,0,0,,in this one rather small function. So let's try and figure it all out
-Dialogue: 0,1:01:42.96,1:01:46.98,Chinese,,0,0,0,,让我们试着把它弄清楚吧
+Dialogue: 0,1:01:38.72,1:01:45.36,English,,0,0,0,,And {\s1}so these struc{\s0} so I'm actually making three references to this structure in this one rather small function
+Dialogue: 0,1:01:38.72,1:01:45.36,Chinese,,0,0,0,,所以，实际上，在这么一个小小的函数里，我对这个结构进行了三次引用
+Dialogue: 0,1:01:45.36,1:01:46.98,English,,0,0,0,,So let's try and figure it all out
+Dialogue: 0,1:01:45.36,1:01:46.98,Chinese,,0,0,0,,让我们试着把它弄清楚吧
 Dialogue: 0,1:01:49.70,1:01:53.22,English,,0,0,0,,So first of all I have to retrieve element i from it
 Dialogue: 0,1:01:49.70,1:01:53.22,Chinese,,0,0,0,,首先，我必须从中得到元素 i
 Dialogue: 0,1:01:53.22,1:01:57.40,English,,0,0,0,,And here you see that we know that element i is that offset 16
@@ -1445,7 +1442,7 @@ Dialogue: 0,1:06:27.64,1:06:30.60,Chinese,,0,0,0,,原因是这里有一个双精
 Dialogue: 0,1:06:31.14,1:06:37.20,English,,0,0,0,,And it should reside on a boundary that its starting address should be a multiple of eight
 Dialogue: 0,1:06:31.14,1:06:37.20,Chinese,,0,0,0,,它应该位于一个边界上，这样浮点数的起始地址是 8 的倍数
 Dialogue: 0,1:06:38.12,1:06:41.54,English,,0,0,0,,And you'll see as long as this is eight...a multiple of 8
-Dialogue: 0,1:06:38.12,1:06:41.54,Chinese,,0,0,0,,你会看到，只要这是 8 的倍数，
+Dialogue: 0,1:06:38.12,1:06:41.54,Chinese,,0,0,0,,你会看到，只要这是 8 的倍数
 Dialogue: 0,1:06:42.00,1:06:44.34,English,,0,0,0,,and this offset here is a multiple of 8
 Dialogue: 0,1:06:42.00,1:06:44.34,Chinese,,0,0,0,,同时这里的偏移是 8 的倍数
 Dialogue: 0,1:06:44.90,1:06:46.76,English,,0,0,0,,then this address will be a multiple of eight
@@ -1457,15 +1454,13 @@ Dialogue: 0,1:06:51.68,1:06:55.68,Chinese,,0,0,0,,那么为什么要这么做，
 Dialogue: 0,1:06:56.10,1:07:02.82,English,,0,0,0,,the memory system sort of...the actual hardware memory does not reference
 Dialogue: 0,1:06:56.10,1:07:02.82,Chinese,,0,0,0,,即内存系统，实际的硬件内存一次不取一个字节
 Dialogue: 0,1:07:02.82,1:07:10.28,English,,0,0,0,,one byte at a time, it references—actually in most machines nowadays—about 64 bytes at a time
-Dialogue: 0,1:07:02.82,1:07:10.28,Chinese,,0,0,0,,实际上现在的大多数机器，一次取大约 64个字节
+Dialogue: 0,1:07:02.82,1:07:10.28,Chinese,,0,0,0,,实际上现在的大多数机器，一次取大约 64 个字节
 Dialogue: 0,1:07:10.66,1:07:14.20,English,,0,0,0,,Or depending on various widths within the hardware
 Dialogue: 0,1:07:10.66,1:07:14.20,Chinese,,0,0,0,,或者这取决于硬件中的各种宽度
-Dialogue: 0,1:07:14.72,1:07:18.74,English,,0,0,0,,And in general with if a particular piece of data across
-Dialogue: 0,1:07:14.72,1:07:25.10,Chinese,,0,0,0,,一般来说，如果因为没有一个对齐的地址，一个特定的数据跨越了两个块之间的边界，
-Dialogue: 0,1:07:19.16,1:07:25.10,English,,0,0,0,,the boundaries between two blocks that are...because of a misaligned address,
-Dialogue: 0,1:07:25.12,1:07:27.88,English,,0,0,0,,that will take extra steps by the hardware
-Dialogue: 0,1:07:23.24,1:07:30.90,Chinese,,0,0,0,,那么这会让硬件甚至有可能操作系统来采取一些额外的步骤来处理
-Dialogue: 0,1:07:27.88,1:07:30.90,English,,0,0,0,,and potentially even the operating system to deal with
+Dialogue: 0,1:07:14.72,1:07:25.10,English,,0,0,0,,And in general with if a particular piece of data across the boundaries between two blocks that are...because of a misaligned address
+Dialogue: 0,1:07:14.72,1:07:25.10,Chinese,,0,0,0,,一般来说，如果因为没有一个对齐的地址，一个特定的数据跨越了两个块之间的边界
+Dialogue: 0,1:07:25.44,1:07:30.90,English,,0,0,0,,that will take extra steps by the hardware and potentially even the operating system to deal with
+Dialogue: 0,1:07:25.44,1:07:30.90,Chinese,,0,0,0,,那么这会让硬件甚至有可能操作系统来采取一些额外的步骤来处理
 Dialogue: 0,1:07:31.02,1:07:35.88,English,,0,0,0,,So just for efficiency reason they say do this alignment, trust me
 Dialogue: 0,1:07:31.02,1:07:35.88,Chinese,,0,0,0,,因此，只是出于效率原因，他们说：相信我，进行数据对齐吧
 Dialogue: 0,1:07:36.37,1:07:41.88,English,,0,0,0,,In x86 machines if you have unaligned data it will execute just fine
@@ -1509,7 +1504,7 @@ Dialogue: 0,1:09:20.66,1:09:24.58,Chinese,,0,0,0,,整个数据结构必须在 8 
 Dialogue: 0,1:09:26.84,1:09:35.62,English,,0,0,0,,And the reasoning for that is imagine I had an array of structs, of these structs in particular
 Dialogue: 0,1:09:26.84,1:09:35.62,Chinese,,0,0,0,,而对此的思路是，假设有一个结构数组，特别是这些结构的一个数组
 Dialogue: 0,1:09:36.48,1:09:43.74,English,,0,0,0,,then if {\s1}I can assume that{\s0} if I can ensure that this array is a multiple...address is a multiple of eight
-Dialogue: 0,1:09:36.48,1:09:43.74,Chinese,,0,0,0,,那么，如果我可以确保地址是 8 的倍数，
+Dialogue: 0,1:09:36.48,1:09:43.74,Chinese,,0,0,0,,那么，如果我可以确保地址是 8 的倍数
 Dialogue: 0,1:09:44.54,1:09:51.38,English,,0,0,0,,then you can see that each successive element of this array of these structs  is a multiple of eight
 Dialogue: 0,1:09:44.54,1:09:51.38,Chinese,,0,0,0,,那么，你可以看到这个数组或这些结构体的每个连续元素（的地址）是 8 的倍数
 Dialogue: 0,1:09:51.84,1:09:57.08,English,,0,0,0,,And then within that struct I've ensured that each field that requires an alignment by eight
@@ -1550,9 +1545,8 @@ Dialogue: 0,1:11:29.46,1:11:31.42,English,,0,0,0,,I would have only wasted two b
 Dialogue: 0,1:11:29.46,1:11:31.42,Chinese,,0,0,0,,总共我只会浪费两个字节
 Dialogue: 0,1:11:32.48,1:11:37.54,English,,0,0,0,,And in general because all the alignment requirements are powers of two
 Dialogue: 0,1:11:32.48,1:11:37.54,Chinese,,0,0,0,,通常因为所有对齐要求都是 2 的幂
-Dialogue: 0,1:11:38.08,1:11:42.94,English,,0,0,0,,the sort of greedy algorithm works it says if I just take put the biggest stuff at the beginning
+Dialogue: 0,1:11:38.08,1:11:45.51,English,,0,0,0,,the sort of greedy algorithm works it says if I just take put the biggest stuff at the beginning and then successfully smaller elements
 Dialogue: 0,1:11:38.08,1:11:45.51,Chinese,,0,0,0,,如果我只是把最大的东西放在开头，再依次放更小的元素，那种贪心的算法是有效的
-Dialogue: 0,1:11:43.34,1:11:45.51,English,,0,0,0,,and then successfully smaller elements
 Dialogue: 0,1:11:45.84,1:11:48.94,English,,0,0,0,,I will be able to minimize any wasted space
 Dialogue: 0,1:11:45.84,1:11:48.94,Chinese,,0,0,0,,我将能够最大限度地减少任何浪费的空间
 Dialogue: 0,1:11:50.88,1:11:54.58,English,,0,0,0,,And that's a general property but
@@ -1579,9 +1573,8 @@ Dialogue: 0,1:12:49.68,1:12:56.39,English,,0,0,0,,Uh...floating point is a compl
 Dialogue: 0,1:12:49.68,1:12:56.39,Chinese,,0,0,0,,浮点数在 x86 里有复杂的历史。在回到很古老的时候，那时
 Dialogue: 0,1:12:56.39,1:13:01.82,English,,0,0,0,,there was a chip that went with the 8086 processor called the 8087
 Dialogue: 0,1:12:56.39,1:13:01.82,Chinese,,0,0,0,,8086 处理器上有一块称为 8087 的芯片
-Dialogue: 0,1:13:02.76,1:13:14.06,English,,0,0,0,,And uh...the time it was a masterpiece of engineering to be able to complete all the hardware necessary to implement
-Dialogue: 0,1:13:02.76,1:13:10.62,Chinese,,0,0,0,,能够完成所有所需的硬件以在单个芯片上实现完整的 IEEE 浮点数是工程上的杰作
-Dialogue: 0,1:13:11.12,1:13:14.06,English,,0,0,0,,full IEEE floating point on a single chip
+Dialogue: 0,1:13:02.76,1:13:14.06,English,,0,0,0,,And uh...the time it was a masterpiece of engineering to be able to complete all the hardware necessary to implement full IEEE floating point on a single chip
+Dialogue: 0,1:13:02.76,1:13:14.06,Chinese,,0,0,0,,能够完成所有所需的硬件以在单个芯片上实现完整的 IEEE 浮点数是工程上的杰作
 Dialogue: 0,1:13:15.60,1:13:18.22,English,,0,0,0,,And it was the first one of its type
 Dialogue: 0,1:13:15.60,1:13:18.22,Chinese,,0,0,0,,而它是它这个类型芯片的第一块
 Dialogue: 0,1:13:18.60,1:13:23.90,English,,0,0,0,,In fact it was a sort of co-developed with the IEEE floating point standard itself
@@ -1614,9 +1607,8 @@ Dialogue: 0,1:14:25.60,1:14:33.19,English,,0,0,0,,which....but the shark machine
 Dialogue: 0,1:14:25.60,1:14:33.19,Chinese,,0,0,0,,但是鲨鱼机器（CMU的课程实验机器）支持这个所谓的 SSE 版本。那么让我给你一个感觉
 Dialogue: 0,1:14:33.78,1:14:38.15,English,,0,0,0,,And in particularly the shark machine support what's called SSE version 3
 Dialogue: 0,1:14:33.78,1:14:38.15,Chinese,,0,0,0,,特别是鲨鱼机器支持所谓的 SSE 版本 3
-Dialogue: 0,1:14:38.58,1:14:41.88,English,,0,0,0,,And what it is that...there are 16 special registers
+Dialogue: 0,1:14:38.58,1:14:45.32,English,,0,0,0,,And what it is that...there are 16 special registers distinct from the other registries we've talked about before
 Dialogue: 0,1:14:38.58,1:14:45.32,Chinese,,0,0,0,,有 16 个特殊的寄存器 ，完全不同于我们之前讨论过的寄存器
-Dialogue: 0,1:14:42.30,1:14:45.32,English,,0,0,0,,distinct from the other registries we've talked about before
 Dialogue: 0,1:14:45.76,1:14:47.50,English,,0,0,0,,Each of which has 16 bytes
 Dialogue: 0,1:14:45.76,1:14:47.50,Chinese,,0,0,0,,每个寄存器都有 16 个字节
 Dialogue: 0,1:14:48.34,1:14:53.26,English,,0,0,0,,And then there's operations that can operate on those and treat them in different ways
@@ -1639,9 +1631,8 @@ Dialogue: 0,1:15:36.48,1:15:43.60,English,,0,0,0,,This is again an example of wh
 Dialogue: 0,1:15:36.48,1:15:43.60,Chinese,,0,0,0,,这又是一个现实比它本来更复杂的例子
 Dialogue: 0,1:15:44.20,1:15:48.96,English,,0,0,0,,So for example there is an instruction that says addss
 Dialogue: 0,1:15:44.20,1:15:48.96,Chinese,,0,0,0,,例如，有一条写成 addss 的指令
-Dialogue: 0,1:15:48.98,1:16:00.78,English,,0,0,0,,So add a single scalar is what that notation...add a single precision scalar...
-Dialogue: 0,1:15:48.98,1:15:54.50,Chinese,,0,0,0,,那么（这条指令）是指对单精度标量做加法运算
-Dialogue: 0,1:15:58.26,1:16:00.78,English,,0,0,0,,add a scaler single-precision
+Dialogue: 0,1:15:48.98,1:16:00.78,English,,0,0,0,,So add a single scalar is what that notation...add a single precision scalar... add a scaler single-precision
+Dialogue: 0,1:15:48.98,1:16:00.78,Chinese,,0,0,0,,那么（这条指令）是指对单精度标量做加法运算
 Dialogue: 0,1:16:01.18,1:16:07.44,English,,0,0,0,,And it looks a little like the add instructions...the addq instructions you've seen that
 Dialogue: 0,1:16:01.18,1:16:07.44,Chinese,,0,0,0,,它看起来有点像你见过的 addq 指令
 Dialogue: 0,1:16:08.02,1:16:12.80,English,,0,0,0,,It increments...it adds the source to the destination
@@ -1653,7 +1644,7 @@ Dialogue: 0,1:16:18.74,1:16:21.88,Chinese,,0,0,0,,即使用他们所谓的 SIMD 
 Dialogue: 0,1:16:22.14,1:16:24.98,English,,0,0,0,,which stands for single instruction multiple data
 Dialogue: 0,1:16:22.14,1:16:24.98,Chinese,,0,0,0,,这是 single instruction multiple data（单指令多数据）的缩写
 Dialogue: 0,1:16:25.44,1:16:29.60,English,,0,0,0,,One instruction the addps stands for pact
-Dialogue: 0,1:16:25.44,1:16:29.60,Chinese,,0,0,0,,单个指令 addps，p 是指 pack（一组），
+Dialogue: 0,1:16:25.44,1:16:29.60,Chinese,,0,0,0,,单个指令 addps，p 是指 pack（一组）
 Dialogue: 0,1:16:30.34,1:16:37.96,English,,0,0,0,,will do...will perform...that one instruction will do add with four different numbers
 Dialogue: 0,1:16:30.34,1:16:37.96,Chinese,,0,0,0,,就能同时对四个不同的数进行加法运算
 Dialogue: 0,1:16:39.58,1:16:45.80,English,,0,0,0,,And similarly you can do it with double precision you can do one of them you can do pack

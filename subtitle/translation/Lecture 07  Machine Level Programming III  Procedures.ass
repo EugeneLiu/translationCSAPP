@@ -238,7 +238,7 @@ Dialogue: 0,0:10:09.62,0:10:11.70,Chinese,,0,0,0,,正如这箭头所示
 Dialogue: 0,0:10:12.20,0:10:16.06,English,,0,0,0,,If we were to enumerate the addresses of these different bytes in the data
 Dialogue: 0,0:10:12.20,0:10:16.06,Chinese,,0,0,0,,如果我们要枚举数据中这些不同字节的地址
 Dialogue: 0,0:10:16.06,0:10:20.80,English,,0,0,0,,They'd be increasing in this direction and when we add to the stack
-Dialogue: 0,0:10:16.06,0:10:20.80,Chinese,,0,0,0,,它们沿箭头方向是递减的。当我们向栈中添加数据时，
+Dialogue: 0,0:10:16.06,0:10:20.80,Chinese,,0,0,0,,它们沿箭头方向是递减的。当我们向栈中添加数据时
 Dialogue: 0,0:10:21.32,0:10:26.54,English,,0,0,0,,The stack top is at the bottom of the picture and we do it by decrementing the stack pointer
 Dialogue: 0,0:10:21.32,0:10:26.54,Chinese,,0,0,0,,栈的顶部位于图片的底部，我们通过递减堆栈指针来完成这个操作
 Dialogue: 0,0:10:28.42,0:10:37.08,English,,0,0,0,,So in particular there is explicit instructions push and pop that make use of the stack
@@ -252,7 +252,7 @@ Dialogue: 0,0:10:48.69,0:10:51.94,Chinese,,0,0,0,,所以这就是栈上的 push 
 Dialogue: 0,0:10:52.02,0:11:00.66,English,,0,0,0,,Then is,there is some source operand it could be from register or from memory or an immediate
 Dialogue: 0,0:10:52.02,0:11:00.66,Chinese,,0,0,0,,此操作的源操作数可以来自寄存器、内存或立即数
 Dialogue: 0,0:11:01.16,0:11:03.22,English,,0,0,0,,So this is sort of like a move instruction
-Dialogue: 0,0:11:01.16,0:11:03.22,Chinese,,0,0,0,,所以这有点像移动指令 (move) 
+Dialogue: 0,0:11:01.16,0:11:03.22,Chinese,,0,0,0,,所以这有点像移动指令 (move)
 Dialogue: 0,0:11:03.22,0:11:07.80,English,,0,0,0,,But the destination of the move will be toward memory
 Dialogue: 0,0:11:03.22,0:11:07.80,Chinese,,0,0,0,,不过，移动指令 (move) 的目的地是内存
 Dialogue: 0,0:11:08.26,0:11:14.86,English,,0,0,0,,And that address of the memory is determined by first decrementing the stack pointer and then doing a write
@@ -400,7 +400,7 @@ Dialogue: 0,0:17:36.96,0:17:38.04,Chinese,,0,0,0,,那边有人提问
 Dialogue: 0,0:17:38.42,0:17:47.18,English,,0,0,0,,- before you actually go to the function in like multstore you would let me address some mult2 into %rip?
 Dialogue: 0,0:17:38.42,0:17:47.18,Chinese,,0,0,0,, - 在你真正进入 multstore 之前，会将 mult2 的地址存入 %rip 吗？
 Dialogue: 0,0:17:47.24,0:17:52.30,English,,0,0,0,,No no it did that %rip you never explicitly
-Dialogue: 0,0:17:47.24,0:17:52.30,Chinese,,0,0,0,,不，你永远不会显式地操作 %rip 
+Dialogue: 0,0:17:47.24,0:17:52.30,Chinese,,0,0,0,,不，你永远不会显式地操作 %rip
 Dialogue: 0,0:17:52.54,0:17:55.22,English,,0,0,0,,There aren't instructions that manipulate that directly
 Dialogue: 0,0:17:52.54,0:17:55.22,Chinese,,0,0,0,,没有那条指令可以直接操作它
 Dialogue: 0,0:17:55.50,0:17:58.28,English,,0,0,0,,It's implicitly part of the call instruction
@@ -642,23 +642,23 @@ Dialogue: 0,0:27:58.70,0:28:04.06,Chinese,,0,0,0,,因此，我们把栈上用于
 Dialogue: 0,0:28:07.44,0:28:17.48,English,,0,0,0,,And to be sort of more technical we'll say that it's a frame for a particular instance of a procedure a particular call to a procedure
 Dialogue: 0,0:28:07.44,0:28:17.48,Chinese,,0,0,0,, 更技术性地说，它是特定过程调用的特定实例的栈帧
 Dialogue: 0,0:28:19.16,0:28:24.28,English,,0,0,0,,So just imagine we had a set of functions one called "yoo"
-Dialogue: 0,0:28:19.16,0:28:24.28,Chinese,,0,0,0,,想象一下我们有一组叫做 "yoo" 的函数
+Dialogue: 0,0:28:19.16,0:28:24.28,Chinese,,0,0,0,,想象一下我们有一组叫做 yoo 的函数
 Dialogue: 0,0:28:24.86,0:28:26.72,English,,0,0,0,,Which calls a function called "who"
-Dialogue: 0,0:28:24.86,0:28:26.72,Chinese,,0,0,0,,调用了 "who" 函数
+Dialogue: 0,0:28:24.86,0:28:26.72,Chinese,,0,0,0,,调用了 who 函数
 Dialogue: 0,0:28:27.30,0:28:32.42,English,,0,0,0,,And "who" has multiple calls to another function called "amI"
-Dialogue: 0,0:28:27.30,0:28:32.42,Chinese,,0,0,0,,"who" 多次调用了函数 "amI"
+Dialogue: 0,0:28:27.30,0:28:32.42,Chinese,,0,0,0,,who 多次调用了函数 amI
 Dialogue: 0,0:28:32.90,0:28:36.40,English,,0,0,0,,And "amI" is itself is recursive it calls itself
-Dialogue: 0,0:28:32.90,0:28:36.40,Chinese,,0,0,0,,而 "amI" 本身就是递归调用自身的
+Dialogue: 0,0:28:32.90,0:28:36.40,Chinese,,0,0,0,,而 amI 本身就是递归调用自身的
 Dialogue: 0,0:28:37.44,0:28:42.86,English,,0,0,0,,And so an imagine we had a chain of calls
 Dialogue: 0,0:28:37.44,0:28:42.86,Chinese,,0,0,0,,可以想象，我们有了一连串的调用
 Dialogue: 0,0:28:42.98,0:28:46.04,English,,0,0,0,,Where "yoo" calls "who" calls "amI"
-Dialogue: 0,0:28:42.98,0:28:46.04,Chinese,,0,0,0,,"yoo" 调用 "who"，"who" 调用 "amI"
+Dialogue: 0,0:28:42.98,0:28:46.04,Chinese,,0,0,0,,yoo 调用 who，who 调用 amI
 Dialogue: 0,0:28:46.44,0:28:48.82,English,,0,0,0,,Which calls itself recursively twice
-Dialogue: 0,0:28:46.44,0:28:48.82,Chinese,,0,0,0,,"amI" 又递归调用了自己两次
+Dialogue: 0,0:28:46.44,0:28:48.82,Chinese,,0,0,0,,amI 又递归调用了自己两次
 Dialogue: 0,0:28:49.56,0:28:54.00,English,,0,0,0,,And then we'll exit out of "amI" and get back to "who"
-Dialogue: 0,0:28:49.56,0:28:54.00,Chinese,,0,0,0,,然后我们退出 "amI" 并回到 "who"
+Dialogue: 0,0:28:49.56,0:28:54.00,Chinese,,0,0,0,,然后我们退出 amI 并回到 who
 Dialogue: 0,0:28:54.34,0:28:57.06,English,,0,0,0,,And then "who" will hit it second call to "amI"
-Dialogue: 0,0:28:54.34,0:28:57.06,Chinese,,0,0,0,,然后 "who" 将第二次调用 "amI"
+Dialogue: 0,0:28:54.34,0:28:57.06,Chinese,,0,0,0,,然后 who 将第二次调用 amI
 Dialogue: 0,0:28:57.28,0:29:00.36,English,,0,0,0,,Which won't go any further and that will be it
 Dialogue: 0,0:28:57.28,0:29:00.36,Chinese,,0,0,0,,到这里不会再进一步了，到此为止
 Dialogue: 0,0:29:00.54,0:29:07.16,English,,0,0,0,,So this picture here shows this whole history of all these calls that get made
@@ -952,7 +952,7 @@ Dialogue: 0,0:42:30.04,0:42:33.96,Chinese,,0,0,0,,嗯所以你必须习惯这些
 Dialogue: 0,0:42:34.46,0:42:38.40,English,,0,0,0,,So that's setting up argument the second argument to the call
 Dialogue: 0,0:42:34.46,0:42:38.40,Chinese,,0,0,0,,这就是设置调用的第二个参数的过程
 Dialogue: 0,0:42:39.88,0:42:49.61,English,,0,0,0,,But the first argument it's using this instruction lea or leaq for what it's supposed to be used for,which is to create pointers
-Dialogue: 0,0:42:39.88,0:42:49.61,Chinese,,0,0,0,,但是它的第一个参数是使用指令lea或leaq来完成其本职工作，即创建指针
+Dialogue: 0,0:42:39.88,0:42:49.61,Chinese,,0,0,0,,但是它的第一个参数是使用指令 lea 或 leaq 来完成其本职工作，即创建指针
 Dialogue: 0,0:42:50.22,0:42:54.82,English,,0,0,0,,Remember we talked about this instruction often getting used just to add two numbers
 Dialogue: 0,0:42:50.22,0:42:54.82,Chinese,,0,0,0,,记得我们说过这个指令经常被用来做两个数字的加法
 Dialogue: 0,0:42:55.78,0:42:58.84,English,,0,0,0,,But it's actually designed exactly for this purpose
@@ -1326,7 +1326,7 @@ Dialogue: 0,0:59:32.18,0:59:40.62,Chinese,,0,0,0,,在这种情况下，％rbx �
 Dialogue: 0,0:59:41.16,0:59:47.44,English,,0,0,0,,So when I return back I can assume that %rbx holds the least significant bit of x my original argument
 Dialogue: 0,0:59:41.16,0:59:47.44,Chinese,,0,0,0,,因此当我返回时，我可以假设 ％rbx 中存储了原始参数 x 的最低有效位
 Dialogue: 0,0:59:47.82,0:59:50.68,English,,0,0,0,,And %rax call holds the recursive result
-Dialogue: 0,0:59:47.82,0:59:50.68,Chinese,,0,0,0,,而％rax 保存的是递归结果
+Dialogue: 0,0:59:47.82,0:59:50.68,Chinese,,0,0,0,,而 ％rax 保存的是递归结果
 Dialogue: 0,0:59:51.18,0:59:53.78,English,,0,0,0,,So I can just add those two numbers together
 Dialogue: 0,0:59:51.18,0:59:53.78,Chinese,,0,0,0,,所以我可以将这两个数字加在一起
 Dialogue: 0,0:59:54.66,0:59:59.62,English,,0,0,0,,Call that the return value and I've correctly computed the result
@@ -1458,7 +1458,7 @@ Dialogue: 0,1:05:26.34,1:05:29.08,Chinese,,0,0,0,,他们设计的语言与栈之
 Dialogue: 0,1:05:30.68,1:05:35.04,English,,0,0,0,,And I'll mention also this we I was talking about simple recursion before
 Dialogue: 0,1:05:30.68,1:05:35.04,Chinese,,0,0,0,,此外，虽然我之前谈的是简单的递归
 Dialogue: 0,1:05:35.04,1:05:40.92,English,,0,0,0,,But there's also mutual recursion where a function say p calls q and then q might call p
-Dialogue: 0,1:05:35.04,1:05:40.92,Chinese,,0,0,0,,但有时也存在相互递归，比如，函数 p 调用 q 然后 q 又可能调用 p 
+Dialogue: 0,1:05:35.04,1:05:40.92,Chinese,,0,0,0,,但有时也存在相互递归，比如，函数 p 调用 q 然后 q 又可能调用 p
 Dialogue: 0,1:05:41.54,1:05:45.68,English,,0,0,0,,And it looks very exotic and  it's a quite clever
 Dialogue: 0,1:05:41.54,1:05:45.68,Chinese,,0,0,0,,它看起来非常奇怪，也非常聪明
 Dialogue: 0,1:05:46.06,1:05:49.38,English,,0,0,0,,But again how it's implemented is exactly what we've seen here
