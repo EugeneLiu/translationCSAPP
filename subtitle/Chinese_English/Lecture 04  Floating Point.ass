@@ -121,54 +121,50 @@ Dialogue: 0,0:05:08.08,0:05:14.18,English,,0,0,0,,So first of all we can only re
 Dialogue: 0,0:05:08.08,0:05:14.18,Chinese,,0,0,0,,首先，我们只能表示形如 x/2^k 的有理数
 Dialogue: 0,0:05:14.18,0:05:16.80,English,,0,0,0,,We can only represent numbers of that form exactly
 Dialogue: 0,0:05:14.18,0:05:16.80,Chinese,,0,0,0,,可表示的数必须严格满足那种形式
-
-
-
-
 Dialogue: 0,0:05:17.20,0:05:23.70,English,,0,0,0,,Other numbers have to get have repeating bit representations that can't be represented
-Dialogue: 0,0:05:17.20,0:05:23.70,Chinese,,0,0,0,,其他不能准确表示的数字必须通过重复位表示
-Dialogue: 0,0:05:24.06,0:05:27.82,English,,0,0,0,,With a finite number of bits that we have in a computer system
-Dialogue: 0,0:05:24.06,0:05:27.82,Chinese,,0,0,0,,我们在计算机系统中拥有有限数量的位
+Dialogue: 0,0:05:17.20,0:05:23.70,Chinese,,0,0,0,,考虑到目前计算机系统位的数量有限
+Dialogue: 0,0:05:24.06,0:05:27.82,English,,0,0,0,,with a finite number of bits that we have in a computer system
+Dialogue: 0,0:05:24.06,0:05:27.82,Chinese,,0,0,0,,其他不能以有限位数表示的数字必须通过重复位表示
 Dialogue: 0,0:05:29.14,0:05:38.54,English,,0,0,0,,So for example things like a 1/3 is this repeating representation 1/5 and 1/10 or other examples of that
-Dialogue: 0,0:05:29.14,0:05:38.54,Chinese,,0,0,0,,因此，例如像1/3就是这样的重复表示，1/5和1/10也是这样的例子
+Dialogue: 0,0:05:29.14,0:05:38.54,Chinese,,0,0,0,,因此，例如像 1/3 就是这样的重复表示，1/5 和 1/10 也是这样的例子
 Dialogue: 0,0:05:39.28,0:05:42.06,English,,0,0,0,,Now the other problem we have is that
 Dialogue: 0,0:05:39.28,0:05:42.06,Chinese,,0,0,0,,现在我们遇到的另一个问题是
 Dialogue: 0,0:05:42.68,0:05:45.18,English,,0,0,0,,We can only...
-Dialogue: 0,0:05:42.68,0:05:45.18,Chinese,,0,0,0,,我们只能......
+Dialogue: 0,0:05:42.68,0:05:45.18,Chinese,,0,0,0,,我们只能……
 Dialogue: 0,0:05:45.18,0:05:49.02,English,,0,0,0,,There's only so many bits to the left and the right of the the binary point
-Dialogue: 0,0:05:45.18,0:05:49.02,Chinese,,0,0,0,,二进制点的左侧和右侧只有很多位
+Dialogue: 0,0:05:45.18,0:05:49.02,Chinese,,0,0,0,,二进制小数点的左侧和右侧只有那么多位
 Dialogue: 0,0:05:49.88,0:05:52.06,English,,0,0,0,,So we're kind of...
-Dialogue: 0,0:05:49.88,0:05:52.06,Chinese,,0,0,0,,所以......
+Dialogue: 0,0:05:49.88,0:05:52.06,Chinese,,0,0,0,,所以
 Dialogue: 0,0:05:52.12,0:05:55.48,English,,0,0,0,,If we move the binary point to the left
-Dialogue: 0,0:05:52.12,0:05:55.48,Chinese,,0,0,0,,如果我们将二进制点左移
-Dialogue: 0,0:05:56.98,0:06:02.90,English,,0,0,0,,Then we don't have as many we can't represent as many large numbers
-Dialogue: 0,0:05:56.98,0:06:02.90,Chinese,,0,0,0,,我们就没有那么多我们不能代表那么多的位来表示那么大的数字
+Dialogue: 0,0:05:52.12,0:05:55.48,Chinese,,0,0,0,,如果我们将二进制小数点左移
+Dialogue: 0,0:05:56.98,0:06:02.90,English,,0,0,0,,Then we don't have as many... We can't represent as many large numbers
+Dialogue: 0,0:05:56.98,0:06:02.90,Chinese,,0,0,0,,那么，我们就没有那么多位来表示那么大的数字
 Dialogue: 0,0:06:02.90,0:06:04.62,English,,0,0,0,,We can only represent small numbers
-Dialogue: 0,0:06:02.90,0:06:04.62,Chinese,,0,0,0,,我们只能代表小一点的数字
+Dialogue: 0,0:06:02.90,0:06:04.62,Chinese,,0,0,0,,我们只能表示小一点的数字
 Dialogue: 0,0:06:04.62,0:06:07.54,English,,0,0,0,,But we have more precision to the right of the binary point
-Dialogue: 0,0:06:04.62,0:06:07.54,Chinese,,0,0,0,,但是我们在二进制点的右边有更多的精度
-Dialogue: 0,0:06:07.76,0:06:10.18,English,,0,0,0,, so we can represent more fractional values
-Dialogue: 0,0:06:07.76,0:06:10.18,Chinese,,0,0,0,,所以我们可以代表更多的小数值
+Dialogue: 0,0:06:04.62,0:06:07.54,Chinese,,0,0,0,,但是我们在二进制小数点的右边有更高的精度
+Dialogue: 0,0:06:07.76,0:06:10.18,English,,0,0,0,,So we can represent more fractional values
+Dialogue: 0,0:06:07.76,0:06:10.18,Chinese,,0,0,0,,所以我们可以表示更多的小数值
 Dialogue: 0,0:06:10.60,0:06:13.70,English,,0,0,0,,Just the range of those values will be much smaller
 Dialogue: 0,0:06:10.60,0:06:13.70,Chinese,,0,0,0,,只是总的取值范围会小得多
 Dialogue: 0,0:06:14.56,0:06:16.98,English,,0,0,0,,Similarly if we move the binary point to the right
-Dialogue: 0,0:06:14.56,0:06:16.98,Chinese,,0,0,0,,同样，如果我们将二进制点向右移动
+Dialogue: 0,0:06:14.56,0:06:16.98,Chinese,,0,0,0,,同样，如果我们将二进制小数点向右移动
 Dialogue: 0,0:06:17.78,0:06:20.32,English,,0,0,0,,We'll have a larger range of values
 Dialogue: 0,0:06:17.78,0:06:20.32,Chinese,,0,0,0,,我们将拥有更大的取值范围
-Dialogue: 0,0:06:20.54,0:06:23.18,English,,0,0,0,, But we won't build represent as many fractions
-Dialogue: 0,0:06:20.54,0:06:23.18,Chinese,,0,0,0,,但我们不能表达同样多的小数
-Dialogue: 0,0:06:24.82,0:06:32.06,English,,0,0,0,,So there's this kind of trade-off  and floating point is a representation
-Dialogue: 0,0:06:24.82,0:06:32.06,Chinese,,0,0,0,,浮点数的表达方式有这种权衡策略
-Dialogue: 0,0:06:32.80,0:06:42.76,English,,0,0,0,,To try that enables us to move that basically to move that binary point to represent sort of as wide a range as possible
-Dialogue: 0,0:06:32.80,0:06:42.76,Chinese,,0,0,0,,为了尝试这一点，基本上我们可以通过移动那个二进制点来确定给定的位，表示尽可能大的取值范围
-Dialogue: 0,0:06:43.14,0:06:46.26,English,,0,0,0,,With as much precision given the number of bits
-Dialogue: 0,0:06:43.14,0:06:46.26,Chinese,,0,0,0,,具有尽可能多的精度
-Dialogue: 0,0:06:46.78,0:06:49.14,English,,0,0,0,,The finite number of bits that we have to work with
-Dialogue: 0,0:06:46.78,0:06:49.14,Chinese,,0,0,0,,我们必须处理的有限位数
-Dialogue: 0,0:06:49.50,0:06:54.56,English,,0,0,0,,So that the float and floating point is this sort of shifting binary point right
-Dialogue: 0,0:06:49.50,0:06:54.56,Chinese,,0,0,0,,因此，浮点就是这种移动的二进制点
+Dialogue: 0,0:06:20.54,0:06:23.18,English,,0,0,0,,But we won't build represent as many fractions
+Dialogue: 0,0:06:20.54,0:06:23.18,Chinese,,0,0,0,,但我们不能表示同样多的小数
+Dialogue: 0,0:06:24.82,0:06:32.06,English,,0,0,0,,So there's this kind of trade-off and floating point is a representation
+Dialogue: 0,0:06:24.82,0:06:32.06,Chinese,,0,0,0,,因此，选择浮点作为折中的表示方式
+Dialogue: 0,0:06:32.80,0:06:42.76,English,,0,0,0,,to try that enables us to move that basically to move that binary point to represent sort of as wide a range as possible
+Dialogue: 0,0:06:32.80,0:06:42.76,Chinese,,0,0,0,,浮点主要通过移动二进制小数点来表示尽可能大的取值范围
+Dialogue: 0,0:06:43.14,0:06:46.26,English,,0,0,0,,with as much precision given the number of bits
+Dialogue: 0,0:06:43.14,0:06:46.26,Chinese,,0,0,0,,兼顾尽可能高的精度
+Dialogue: 0,0:06:46.78,0:06:49.14,English,,0,0,0,,the finite number of bits that we have to work with
+Dialogue: 0,0:06:46.78,0:06:49.14,Chinese,,0,0,0,,同时受到必须处理的有限位数的限制
+Dialogue: 0,0:06:49.50,0:06:54.56,English,,0,0,0,,So that the float and floating point is this sort of shifting binary point. Right
+Dialogue: 0,0:06:49.50,0:06:54.56,Chinese,,0,0,0,,因此，浮点就是这种移动的二进制小数点
 Dialogue: 0,0:06:54.56,0:06:57.16,English,,0,0,0,,This floating, the floating binary point
-Dialogue: 0,0:06:54.56,0:06:57.16,Chinese,,0,0,0,,浮点数的二进制点
+Dialogue: 0,0:06:54.56,0:06:57.16,Chinese,,0,0,0,,浮动的二进制小数点
 Dialogue: 0,0:06:59.24,0:07:02.24,English,,0,0,0,,Now up until 1985
 Dialogue: 0,0:06:59.24,0:07:02.24,Chinese,,0,0,0,,直到1985年
 Dialogue: 0,0:07:02.64,0:07:05.94,English,,0,0,0,,A floating point was just a disaster
