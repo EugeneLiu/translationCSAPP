@@ -165,62 +165,62 @@ Dialogue: 0,0:06:49.50,0:06:54.56,English,,0,0,0,,So that the float and floating
 Dialogue: 0,0:06:49.50,0:06:54.56,Chinese,,0,0,0,,因此，浮点就是这种移动的二进制小数点
 Dialogue: 0,0:06:54.56,0:06:57.16,English,,0,0,0,,This floating, the floating binary point
 Dialogue: 0,0:06:54.56,0:06:57.16,Chinese,,0,0,0,,浮动的二进制小数点
-
-
 Dialogue: 0,0:06:59.24,0:07:02.24,English,,0,0,0,,Now up until 1985
-Dialogue: 0,0:06:59.24,0:07:02.24,Chinese,,0,0,0,,直到1985年
+Dialogue: 0,0:06:59.24,0:07:02.24,Chinese,,0,0,0,,直到 1985 年
 Dialogue: 0,0:07:02.64,0:07:05.94,English,,0,0,0,,A floating point was just a disaster
 Dialogue: 0,0:07:02.64,0:07:05.94,Chinese,,0,0,0,,浮点数就是一场灾难
 Dialogue: 0,0:07:06.48,0:07:11.18,English,,0,0,0,,And every computer manufacturer had their own representation
-Dialogue: 0,0:07:06.48,0:07:11.18,Chinese,,0,0,0,,每个计算机制造商都有自己的实现
+Dialogue: 0,0:07:06.48,0:07:11.18,Chinese,,0,0,0,,每个计算机制造商都有自己的实现方式
 Dialogue: 0,0:07:12.40,0:07:16.22,English,,0,0,0,,You couldn't...and it was just terrible,because you couldn't predict
 Dialogue: 0,0:07:12.40,0:07:16.22,Chinese,,0,0,0,,它太可怕了，因为你无法预测
 Dialogue: 0,0:07:16.90,0:07:21.46,English,,0,0,0,,What would happen if you moved your program from one machine to another
 Dialogue: 0,0:07:16.90,0:07:21.46,Chinese,,0,0,0,,如果你将程序从一台机器移动到另一台机器，会发生什么
 Dialogue: 0,0:07:21.84,0:07:24.66,English,,0,0,0,,The behavior would be different the rounding would be different
 Dialogue: 0,0:07:21.84,0:07:24.66,Chinese,,0,0,0,,行为会有所不同，舍入会有所不同
-Dialogue: 0,0:07:25.86,0:07:35.13,English,,0,0,0,,It was a very difficult situation and people really computer scientists in particular really disliked floating point
-Dialogue: 0,0:07:25.86,0:07:35.13,Chinese,,0,0,0,,这是一个非常困难的情况，人们特别是计算机科学家真的不喜欢浮点
+Dialogue: 0,0:07:25.86,0:07:35.13,English,,0,0,0,,It was a very difficult situation and people really, computer scientists in particular, really disliked floating point
+Dialogue: 0,0:07:25.86,0:07:35.13,Chinese,,0,0,0,,这是一个非常困难的局面，人们特别是计算机科学家真的不喜欢浮点
 Dialogue: 0,0:07:35.62,0:07:45.02,English,,0,0,0,,In 1985 IEEE which is the professional association for electrical engineers
-Dialogue: 0,0:07:35.62,0:07:45.02,Chinese,,0,0,0,,1985年电气工程师的专业协会，IEEE
+Dialogue: 0,0:07:35.62,0:07:45.02,Chinese,,0,0,0,,1985 年，电气电子工程师协会（IEEE）
 Dialogue: 0,0:07:45.44,0:07:51.02,English,,0,0,0,,Introduced a...and it's also a very important standards body
-Dialogue: 0,0:07:45.44,0:07:51.02,Chinese,,0,0,0,,介绍一下......它也是一个非常重要的标准化组织
+Dialogue: 0,0:07:45.44,0:07:51.02,Chinese,,0,0,0,,引入了一个非常重要的标准化表示
 Dialogue: 0,0:07:51.34,0:07:56.54,English,,0,0,0,,They introduced a standard floating-point representation called IEEE floating point
-Dialogue: 0,0:07:51.34,0:07:56.54,Chinese,,0,0,0,,他们引入了一个称为IEEE浮点的标准浮点表示
-Dialogue: 0,0:07:57.16,0:08:00.52,English,,0,0,0,,Which was then adopted by all computer manufacturers
-Dialogue: 0,0:07:57.16,0:08:00.52,Chinese,,0,0,0,,被所有计算机制造商采用
+Dialogue: 0,0:07:51.34,0:07:56.54,Chinese,,0,0,0,,他们引入了一个称为 IEEE 浮点的标准浮点表示法
+Dialogue: 0,0:07:57.16,0:08:00.52,English,,0,0,0,,which was then adopted by all computer manufacturers
+Dialogue: 0,0:07:57.16,0:08:00.52,Chinese,,0,0,0,,得到了所有计算机制造商的一致采用
 Dialogue: 0,0:08:00.52,0:08:02.16,English,,0,0,0,,So now the situation is much better
 Dialogue: 0,0:08:00.52,0:08:02.16,Chinese,,0,0,0,,所以现在情况要好得多
 Dialogue: 0,0:08:02.60,0:08:06.96,English,,0,0,0,,Everybody supports the same kind of floating point representation
-Dialogue: 0,0:08:02.60,0:08:06.96,Chinese,,0,0,0,,每个人都支持相同类型的浮点表示
-Dialogue: 0,0:08:06.98,0:08:08.84,English,,0,0,0,,Which is what we're going to learn about today
+Dialogue: 0,0:08:02.60,0:08:06.96,Chinese,,0,0,0,,各方都支持相同类型的浮点表示
+Dialogue: 0,0:08:06.98,0:08:08.84,English,,0,0,0,,which is what we're going to learn about today
 Dialogue: 0,0:08:06.98,0:08:08.84,Chinese,,0,0,0,,这就是我们今天要学习的内容
 Dialogue: 0,0:08:14.66,0:08:18.38,English,,0,0,0,,So the floating point has the form
-Dialogue: 0,0:08:14.66,0:08:18.38,Chinese,,0,0,0,,所以浮点有形式
-Dialogue: 0,0:08:19.34,0:08:24.26,English,,0,0,0,,It represents numbers in a this is like a scientific notation
-Dialogue: 0,0:08:19.34,0:08:24.26,Chinese,,0,0,0,,它代表数字，这就像科学记数法
-Dialogue: 0,0:08:24.46,0:08:36.66,English,,0,0,0,, It represents numbers of the form (-1)^s*m*2^E,where s is a sign bit,times a significant m
-Dialogue: 0,0:08:24.46,0:08:36.66,Chinese,,0,0,0,,它表示形式 (-1)^s*m*2^E的数字，其中s是符号位，乘以尾数M
+Dialogue: 0,0:08:14.66,0:08:18.38,Chinese,,0,0,0,,所以浮点数有如下形式
+Dialogue: 0,0:08:19.34,0:08:24.26,English,,0,0,0,,It represents numbers in a… this is, like a scientific notation
+Dialogue: 0,0:08:19.34,0:08:24.26,Chinese,,0,0,0,,它以一种类似科学计数法的方式来表示数字
+Dialogue: 0,0:08:24.46,0:08:36.66,English,,0,0,0,,It represents numbers of the form (-1)^S*M*2^E,where S is a sign bit,times a significant M
+Dialogue: 0,0:08:24.46,0:08:36.66,Chinese,,0,0,0,,它表示形式 (-1)^S*M*2^E 的数字，其中 S 是符号位，乘以尾数 M
 Dialogue: 0,0:08:38.00,0:08:43.60,English,,0,0,0,,Ok times 2^E
-Dialogue: 0,0:08:38.00,0:08:43.60,Chinese,,0,0,0,,然后乘以2 ^ E.
+Dialogue: 0,0:08:38.00,0:08:43.60,Chinese,,0,0,0,,然后乘以 2 的 E 次幂.
 Dialogue: 0,0:08:43.94,0:08:51.86,English,,0,0,0,,Ok so all of the numbers that we can represent in floating point have to be represented in this form
 Dialogue: 0,0:08:43.94,0:08:51.86,Chinese,,0,0,0,,所有浮点数都都必须以这种形式表示
-Dialogue: 0,0:08:53.04,0:08:59.42,English,,0,0,0,,So the sign bit s determines whether the number is negative or positive obviously
-Dialogue: 0,0:08:53.04,0:08:59.42,Chinese,,0,0,0,,显然，符号位s确定了该数字是负数还是正数
-Dialogue: 0,0:08:59.86,0:09:04.02,English,,0,0,0,,The significant m and this is sometimes sometimes called the mantissa
-Dialogue: 0,0:08:59.86,0:09:04.02,Chinese,,0,0,0,,尾数m，有时叫做mantissa
-Dialogue: 0,0:09:04.02,0:09:05.68,English,,0,0,0,,Where the m comes from
-Dialogue: 0,0:09:04.02,0:09:05.68,Chinese,,0,0,0,,m来自哪里
-Dialogue: 0,0:09:06.16,0:09:13.06,English,,0,0,0,,The significant m normally is a fractional value in the range between 1 and 2
-Dialogue: 0,0:09:06.16,0:09:13.06,Chinese,,0,0,0,,尾数m通常是介于在1和2之间的小数
+Dialogue: 0,0:08:53.04,0:08:59.42,English,,0,0,0,,So the sign bit S determines whether the number is negative or positive obviously
+Dialogue: 0,0:08:53.04,0:08:59.42,Chinese,,0,0,0,,显然，符号位 S 确定了该数字是负数还是正数
+Dialogue: 0,0:08:59.86,0:09:04.02,English,,0,0,0,,The significant M and this is sometimes sometimes called the mantissa
+Dialogue: 0,0:08:59.86,0:09:04.02,Chinese,,0,0,0,,尾数 M，有时叫做mantissa
+Dialogue: 0,0:09:04.02,0:09:05.68,English,,0,0,0,,where the M comes from
+Dialogue: 0,0:09:04.02,0:09:05.68,Chinese,,0,0,0,,单词的首字母就是 M 的来源
+Dialogue: 0,0:09:06.16,0:09:13.06,English,,0,0,0,,The significant M normally is a fractional value in the range between 1 and 2
+Dialogue: 0,0:09:06.16,0:09:13.06,Chinese,,0,0,0,,尾数 M 通常是介于 1 和 2 之间的小数
 Dialogue: 0,0:09:13.06,0:09:16.00,English,,0,0,0,,And we'll see why that is in a second
-Dialogue: 0,0:09:13.06,0:09:16.00,Chinese,,0,0,0,,我们会在一秒钟内（马上）看到原因
-Dialogue: 0,0:09:16.52,0:09:19.88,English,,0,0,0,,And then the exponent e weights the value by some power-of-2
-Dialogue: 0,0:09:16.52,0:09:19.88,Chinese,,0,0,0,,然后指数e会对浮点数加权2的E次幂
-Dialogue: 0,0:09:20.48,0:09:25.76,English,,0,0,0,,Okay so this is encoded either 32-bit or 64-bit
-Dialogue: 0,0:09:20.48,0:09:25.76,Chinese,,0,0,0,,32位或64位编码都是这样
-Dialogue: 0,0:09:26.28,0:09:30.42,English,,0,0,0,,In the following way the the sign bit s is the most significant bit
-Dialogue: 0,0:09:26.28,0:09:30.42,Chinese,,0,0,0,,下面的表示中，符号位s是最重要的位
+Dialogue: 0,0:09:13.06,0:09:16.00,Chinese,,0,0,0,,接下来，我们会很快看到这样设置的原因
+Dialogue: 0,0:09:16.52,0:09:19.88,English,,0,0,0,,And then the exponent E weights the value by some power of 2
+Dialogue: 0,0:09:16.52,0:09:19.88,Chinese,,0,0,0,,指数 E 会对浮点数加权 2 的 E 次幂
+Dialogue: 0,0:09:20.48,0:09:25.76,English,,0,0,0,,Okay so this is encoded in either 32-bit or 64-bit
+Dialogue: 0,0:09:20.48,0:09:25.76,Chinese,,0,0,0,,32 位或 64 位编码中都是这样
+
+
+Dialogue: 0,0:09:26.28,0:09:30.42,English,,0,0,0,,In the following way the the sign bit S is the most significant bit
+Dialogue: 0,0:09:26.28,0:09:30.42,Chinese,,0,0,0,,下面的表示中，符号位 S 是最重要的位
 Dialogue: 0,0:09:31.26,0:09:34.62,English,,0,0,0,,And then this is followed by some number of
 Dialogue: 0,0:09:31.26,0:09:34.62,Chinese,,0,0,0,,接下来是一些
 Dialogue: 0,0:09:34.64,0:09:37.86,English,,0,0,0,,By some number of bits called the exp field
