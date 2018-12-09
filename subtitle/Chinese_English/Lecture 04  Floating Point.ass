@@ -45,7 +45,7 @@ Dialogue: 0,0:00:36.82,0:00:50.04,English,,0,0,0,,Okay so what does a fractional
 Dialogue: 0,0:00:36.82,0:00:50.04,Chinese,,0,0,0,,那么像 10111.01 那样的二进制小数代表什么呢？它是如何使用的？
 Dialogue: 0,0:00:51.96,0:00:58.34,English,,0,0,0,, Well, it works just like the fractional decimal numbers that you used to
 Dialogue: 0,0:00:51.96,0:00:58.34,Chinese,,0,0,0,,它就像你熟悉的十进制小数一样使用
-Dialogue: 0,0:01:04.92,0:01:08.76,English,,0,0,0,,So you have a… in this case, it's a binary point
+Dialogue: 0,0:01:04.92,0:01:08.76,English,,0,0,0,,So you have a... this case, it's a binary point
 Dialogue: 0,0:01:04.92,0:01:08.76,Chinese,,0,0,0,,在二进制小数中有一个二进制小数点
 Dialogue: 0,0:01:08.76,0:01:10.62,English,,0,0,0,,And to the left of the binary point
 Dialogue: 0,0:01:08.76,0:01:10.62,Chinese,,0,0,0,,在二进制小数点的左边
@@ -53,13 +53,13 @@ Dialogue: 0,0:01:12.50,0:01:16.46,English,,0,0,0,,You have bit positions to repr
 Dialogue: 0,0:01:12.50,0:01:16.46,Chinese,,0,0,0,,每一位代表 2 的正幂
 Dialogue: 0,0:01:16.46,0:01:20.00,English,,0,0,0,,So 2^0, 2^1, 2^2
 Dialogue: 0,0:01:16.46,0:01:20.00,Chinese,,0,0,0,,所以左边的每一位分别代表 2^0，2^1，2^2
-Dialogue: 0,0:01:20.64,0:01:26.60,English,,0,0,0,,So 1/2… I'm sorry. 1, 2, 4 and so on
+Dialogue: 0,0:01:20.64,0:01:26.60,English,,0,0,0,,So 1/2... I'm sorry. 1, 2, 4 and so on
 Dialogue: 0,0:01:20.64,0:01:26.60,Chinese,,0,0,0,,所以从小数点开始向左依次是 1，2，4 等等
 Dialogue: 0,0:01:27.34,0:01:30.50,English,,0,0,0,,And to the right of the binary point
 Dialogue: 0,0:01:27.34,0:01:30.50,Chinese,,0,0,0,,在二进制小数点的右侧
 Dialogue: 0,0:01:31.04,0:01:40.46,English,,0,0,0,,You have 2^-1=1/2, 2^-2=1/4, 2^-3=1/8 and so on
 Dialogue: 0,0:01:31.04,0:01:40.46,Chinese,,0,0,0,,存在 2^-1=1/2，2^-2=1/4，2^-3=1/8 等等
-Dialogue: 0,0:01:41.20,0:01:46.80,English,,0,0,0,,So we can represent the… any fractional binary number
+Dialogue: 0,0:01:41.20,0:01:46.80,English,,0,0,0,,So we can represent the... any fractional binary number
 Dialogue: 0,0:01:41.20,0:01:46.80,Chinese,,0,0,0,,所以我们可以使用这种注记法表示任何二进制小数
 Dialogue: 0,0:01:47.54,0:01:57.36,English,,0,0,0,,Using this notation where we sum each the bit at position k*2^k
 Dialogue: 0,0:01:47.54,0:01:57.36,Chinese,,0,0,0,,我们对每个位 k 处代表的值乘 2^k 后求和
@@ -195,7 +195,7 @@ Dialogue: 0,0:08:06.98,0:08:08.84,English,,0,0,0,,which is what we're going to l
 Dialogue: 0,0:08:06.98,0:08:08.84,Chinese,,0,0,0,,这就是我们今天要学习的内容
 Dialogue: 0,0:08:14.66,0:08:18.38,English,,0,0,0,,So the floating point has the form
 Dialogue: 0,0:08:14.66,0:08:18.38,Chinese,,0,0,0,,所以浮点数有如下形式
-Dialogue: 0,0:08:19.34,0:08:24.26,English,,0,0,0,,It represents numbers in a… this is, like a scientific notation
+Dialogue: 0,0:08:19.34,0:08:24.26,English,,0,0,0,,It represents numbers in a... this is, like a scientific notation
 Dialogue: 0,0:08:19.34,0:08:24.26,Chinese,,0,0,0,,它以一种类似科学计数法的方式来表示数字
 Dialogue: 0,0:08:24.46,0:08:36.66,English,,0,0,0,,It represents numbers of the form (-1)^S*M*2^E,where S is a sign bit,times a significant M
 Dialogue: 0,0:08:24.46,0:08:36.66,Chinese,,0,0,0,,它表示形式 (-1)^S*M*2^E 的数字，其中 S 是符号位，乘以尾数 M
@@ -217,24 +217,22 @@ Dialogue: 0,0:09:16.52,0:09:19.88,English,,0,0,0,,And then the exponent E weight
 Dialogue: 0,0:09:16.52,0:09:19.88,Chinese,,0,0,0,,指数 E 会对浮点数加权 2 的 E 次幂
 Dialogue: 0,0:09:20.48,0:09:25.76,English,,0,0,0,,Okay so this is encoded in either 32-bit or 64-bit
 Dialogue: 0,0:09:20.48,0:09:25.76,Chinese,,0,0,0,,32 位或 64 位编码中都是这样
-
-
 Dialogue: 0,0:09:26.28,0:09:30.42,English,,0,0,0,,In the following way the the sign bit S is the most significant bit
 Dialogue: 0,0:09:26.28,0:09:30.42,Chinese,,0,0,0,,下面的表示中，符号位 S 是最重要的位
 Dialogue: 0,0:09:31.26,0:09:34.62,English,,0,0,0,,And then this is followed by some number of
-Dialogue: 0,0:09:31.26,0:09:34.62,Chinese,,0,0,0,,接下来是一些
-Dialogue: 0,0:09:34.64,0:09:37.86,English,,0,0,0,,By some number of bits called the exp field
-Dialogue: 0,0:09:34.64,0:09:37.86,Chinese,,0,0,0,,一些称为exp字段的位
-Dialogue: 0,0:09:38.74,0:09:42.20,English,,0,0,0,,Which encodes the exponent e
-Dialogue: 0,0:09:38.74,0:09:42.20,Chinese,,0,0,0,,其中编码了指数e
-Dialogue: 0,0:09:43.24,0:09:47.70,English,,0,0,0,,But it's not identical to e,it encodes e, we'll see how that works
-Dialogue: 0,0:09:43.24,0:09:47.70,Chinese,,0,0,0,,但它与e不同，它编码了e，我们会看到它是如何工作的
+Dialogue: 0,0:09:31.26,0:09:34.62,Chinese,,0,0,0, 紧随其后的
+Dialogue: 0,0:09:34.64,0:09:37.86,English,,0,0,0,,by some number of bits called the exp field
+Dialogue: 0,0:09:34.64,0:09:37.86,Chinese,,0,0,0,,是一些被称为 exp 字段的位
+Dialogue: 0,0:09:38.74,0:09:42.20,English,,0,0,0,,which encodes the exponent E
+Dialogue: 0,0:09:38.74,0:09:42.20,Chinese,,0,0,0,,它编码了指数 E
+Dialogue: 0,0:09:43.24,0:09:47.70,English,,0,0,0,,But it's not identical to E,it encodes E, we'll see how that works
+Dialogue: 0,0:09:43.24,0:09:47.70,Chinese,,0,0,0,,但它与 E 不同，它编码了 E ，我们会看到它是如何起效的
 Dialogue: 0,0:09:48.18,0:09:54.54,English,,0,0,0,,And then the frac. And then that's followed the remaining bits are the the frac field
-Dialogue: 0,0:09:48.18,0:09:54.54,Chinese,,0,0,0,,剩下的比特位是小数字段
-Dialogue: 0,0:09:55.96,0:09:59.38,English,,0,0,0,, Which encodes m but isn't identical to m
-Dialogue: 0,0:09:55.96,0:09:59.38,Chinese,,0,0,0,,它编码了m但与m不完全相同
-Dialogue: 0,0:10:02.02,0:10:09.46,English,,0,0,0,, Now we are...IEEE floating point has provides two different kinds of floating-point
-Dialogue: 0,0:10:02.02,0:10:09.46,Chinese,,0,0,0,,IEEE提供了两种不同的浮点数
+Dialogue: 0,0:09:48.18,0:09:54.54,Chinese,,0,0,0,,后面剩下的比特位是小数字段
+Dialogue: 0,0:09:55.96,0:09:59.38,English,,0,0,0,,which encodes M but isn't identical to M
+Dialogue: 0,0:09:55.96,0:09:59.38,Chinese,,0,0,0,,它编码了 M 但与 M 不完全相同
+Dialogue: 0,0:10:02.02,0:10:09.46,English,,0,0,0, Now we are...IEEE floating point has provides two different kinds of floating-point
+Dialogue: 0,0:10:02.02,0:10:09.46,Chinese,,0,0,0,,IEEE 提供了两种不同的浮点数
 Dialogue: 0,0:10:09.46,0:10:14.47,English,,0,0,0,,The single precision 32 bits and so-called double precision which is 64 bits
 Dialogue: 0,0:10:09.46,0:10:14.47,Chinese,,0,0,0,,单精度32位和双精度64位
 Dialogue: 0,0:10:15.12,0:10:20.38,English,,0,0,0,,There's this funky intel extended precision
