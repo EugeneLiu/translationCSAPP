@@ -17,6 +17,8 @@
 
 ### 其他链接
 
+* [中英字幕精校版视频地址](https://www.bilibili.com/video/av31289365/)
+
 - [bilibili 视频地址](https://www.bilibili.com/video/av24540152)
 - [Youtube 视频地址](https://www.youtube.com/playlist?list=PLmBgoRqEQCWy58EIwLSWwMPfkwLOLRM5R)
 
