@@ -11,14 +11,14 @@ PlayResY: 720
 
 [Aegisub Project Garbage]
 Last Style Storage: Default
-Audio File: F:/BaiduYunDownload/计算机系统/#5 Machine-Level Programming I_Basics.mp4
-Video File: F:/BaiduYunDownload/计算机系统/#5 Machine-Level Programming I_Basics.mp4
+Audio File: ../../../../../../../BaiduNetdiskDownload/#5 Machine-Level Programming I_Basics.mp4
+Video File: ../../../../../../../BaiduNetdiskDownload/#5 Machine-Level Programming I_Basics.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
-Video Zoom Percent: 0.375000
-Scroll Position: 200
-Active Line: 219
-Video Position: 14220
+Video Zoom Percent: 1.000000
+Scroll Position: 475
+Active Line: 487
+Video Position: 35153
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -30,13 +30,13 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 0,0:00:00.00,0:00:02.82,English,,0,0,0,,Good afternoon everyone
 Dialogue: 0,0:00:00.00,0:00:02.82,Chinese,,0,0,0,,大家下午好
 Dialogue: 0,0:00:05.48,0:00:10.40,English,,0,0,0,,So now we're going to jump into the part of the course that I'd call the real core of course
-Dialogue: 0,0:00:05.48,0:00:10.40,Chinese,,0,0,0,,所以现在我们将跳到课程的核心部分
+Dialogue: 0,0:00:05.48,0:00:10.40,Chinese,,0,0,0,,所以现在我们将跳到课程的真正核心部分
 Dialogue: 0,0:00:10.40,0:00:14.32,English,,0,0,0,,Where we go into machine level programming
-Dialogue: 0,0:00:10.40,0:00:14.32,Chinese,,0,0,0,,深入学习机器级编程
+Dialogue: 0,0:00:10.40,0:00:14.32,Chinese,,0,0,0,,我们将深入学习机器级编程
 Dialogue: 0,0:00:14.32,0:00:17.18,English,,0,0,0,,And by the term machine level programming I mean
-Dialogue: 0,0:00:14.32,0:00:17.18,Chinese,,0,0,0,,「机器级编程」这个术语的意思是
+Dialogue: 0,0:00:14.32,0:00:17.18,Chinese,,0,0,0,,当我说「机器级编程」这个术语时，我的意思是
 Dialogue: 0,0:00:17.70,0:00:26.24,English,,0,0,0,,When you're actually considering the individual instructions to get executed by the machine in response to your program
-Dialogue: 0,0:00:17.70,0:00:26.24,Chinese,,0,0,0,,理解计算机为了运行你的程序，所相应执行的一条条的指令
+Dialogue: 0,0:00:17.70,0:00:26.24,Chinese,,0,0,0,,你关心计算机为了运行你的程序，所执行的一串独立的指令
 Dialogue: 0,0:00:26.54,0:00:29.64,English,,0,0,0,,And there's really two forms of machine programs
 Dialogue: 0,0:00:26.54,0:00:29.64,Chinese,,0,0,0,,实际上有两种形式的机器程序
 Dialogue: 0,0:00:29.64,0:00:33.44,English,,0,0,0,,One is the actual object code that runs on the computer
@@ -44,9 +44,9 @@ Dialogue: 0,0:00:29.64,0:00:33.44,Chinese,,0,0,0,,一个是在计算机上运行
 Dialogue: 0,0:00:33.62,0:00:39.92,English,,0,0,0,,And as we'll see that's a series of bytes that encode instructions that the processor executes
 Dialogue: 0,0:00:33.62,0:00:39.92,Chinese,,0,0,0,,正如我们将看到的那样，（目标代码）是一串字节，编码处理器执行的指令
 Dialogue: 0,0:00:40.46,0:00:48.40,English,,0,0,0,,But well,because it's hard to look at bytes and understand them there's various text forms to make it more clear
-Dialogue: 0,0:00:40.46,0:00:48.40,Chinese,,0,0,0,,但是，因为很难通过观察它们每个字节并理解它们，它有许多文本形式可以使它更清晰
+Dialogue: 0,0:00:40.46,0:00:48.40,Chinese,,0,0,0,,但是，因为很难通过观察字节去并理解含义，它有许多更清晰的文本形式
 Dialogue: 0,0:00:48.88,0:00:54.86,English,,0,0,0,,And one of  those is assembly code that used to be that's how people program machines
-Dialogue: 0,0:00:48.88,0:00:54.86,Chinese,,0,0,0,,其中一种是汇编代码，以前是人们对机器编程的方式
+Dialogue: 0,0:00:48.88,0:00:54.86,Chinese,,0,0,0,,其中一种是汇编代码，过去是人们用它对于机器进行编程
 Dialogue: 0,0:00:54.86,0:01:00.10,English,,0,0,0,,And nowadays it's what the target of a compiler is to generate assembly code
 Dialogue: 0,0:00:54.86,0:01:00.10,Chinese,,0,0,0,,而现在，生成汇编代码是编译器的目标
 Dialogue: 0,0:01:00.40,0:01:01.86,English,,0,0,0,,And I'll use those terms
@@ -58,27 +58,27 @@ Dialogue: 0,0:01:10.58,0:01:14.58,Chinese,,0,0,0,,这两者可互换，因为它
 Dialogue: 0,0:01:14.76,0:01:19.56,English,,0,0,0,,But in case,I sort of use a term like assembly code
 Dialogue: 0,0:01:14.76,0:01:19.56,Chinese,,0,0,0,,但以防万一，我倾向于使用「汇编代码」
 Dialogue: 0,0:01:19.76,0:01:22.76,English,,0,0,0,,When I instead of consistently saying machine code
-Dialogue: 0,0:01:19.76,0:01:22.76,Chinese,,0,0,0,,而不是一直说机器代码
+Dialogue: 0,0:01:19.76,0:01:22.76,Chinese,,0,0,0,,而不是一直说「机器代码」
 Dialogue: 0,0:01:22.78,0:01:25.14,English,,0,0,0,,It's because they're really the same general idea
-Dialogue: 0,0:01:22.78,0:01:25.14,Chinese,,0,0,0,,这是因为他们通常真的是同样的意思
+Dialogue: 0,0:01:22.78,0:01:25.14,Chinese,,0,0,0,,这是因为他们在一般情况下意思一样
 Dialogue: 0,0:01:26.12,0:01:29.56,English,,0,0,0,,So this is sort of one place where
 Dialogue: 0,0:01:26.12,0:01:29.56,Chinese,,0,0,0,,所以在本节课程中
 Dialogue: 0,0:01:29.94,0:01:35.50,English,,0,0,0,,This course 213/513 takes a particular perspective
-Dialogue: 0,0:01:29.94,0:01:35.50,Chinese,,0,0,0,,本课程 213/513 采用了特定的角度
+Dialogue: 0,0:01:29.94,0:01:35.50,Chinese,,0,0,0,,本课程 213/513 采用了特殊的教学角度
 Dialogue: 0,0:01:35.50,0:01:38.72,English,,0,0,0,,That's very different from done ever elsewhere
 Dialogue: 0,0:01:35.50,0:01:38.72,Chinese,,0,0,0,,与其他地方的做法截然不同
 Dialogue: 0,0:01:39.18,0:01:41.54,English,,0,0,0,,In the bad old days of computing
-Dialogue: 0,0:01:39.18,0:01:41.54,Chinese,,0,0,0,,在计算机编程的糟糕时期
+Dialogue: 0,0:01:39.18,0:01:41.54,Chinese,,0,0,0,,在过去的计算机编程的糟糕时期
 Dialogue: 0,0:01:42.02,0:01:46.74,English,,0,0,0,,You would be required to take a course it was typically called assembly level programming
-Dialogue: 0,0:01:42.02,0:01:46.74,Chinese,,0,0,0,,你将需要参加一个通常称为汇编级编程的课程
+Dialogue: 0,0:01:42.02,0:01:46.74,Chinese,,0,0,0,,你必须参加一个通常称为“汇编级编程”的课程
 Dialogue: 0,0:01:47.34,0:01:50.26,English,,0,0,0,,The way you actually learn to write programs in assembler
-Dialogue: 0,0:01:47.34,0:01:50.26,Chinese,,0,0,0,,你实际学习用汇编语言编写程序的方式
+Dialogue: 0,0:01:47.34,0:01:50.26,Chinese,,0,0,0,,在这个课程中学习用汇编语言编写程序的方式
 Dialogue: 0,0:01:50.74,0:01:58.52,English,,0,0,0,,And your assignments would be to do things like to sort a array of numbers
-Dialogue: 0,0:01:50.74,0:01:58.52,Chinese,,0,0,0,,你的任务就是做一些数字排序
+Dialogue: 0,0:01:50.74,0:01:58.52,Chinese,,0,0,0,,你的课后作业就是做一些数字排序
 Dialogue: 0,0:01:58.52,0:02:03.30,English,,0,0,0,,Who set up some kind of linked list data structure  just sort of low-level programming
 Dialogue: 0,0:01:58.52,0:02:03.30,Chinese,,0,0,0,,设置某种链表数据结构，等等的低级编程
 Dialogue: 0,0:02:03.30,0:02:06.94,English,,0,0,0,,That nowadays you wouldn't even think of wanting to write an assembly code
-Dialogue: 0,0:02:03.30,0:02:06.94,Chinese,,0,0,0,,现在你甚至不会想要编写汇编代码
+Dialogue: 0,0:02:03.30,0:02:06.94,Chinese,,0,0,0,,现在你们（学生）可能都不想要写汇编语言
 Dialogue: 0,0:02:07.68,0:02:12.34,English,,0,0,0,,And so people didn't really enjoy those courses very well
 Dialogue: 0,0:02:07.68,0:02:12.34,Chinese,,0,0,0,,人们并不十分喜欢这些课程
 Dialogue: 0,0:02:12.66,0:02:15.32,English,,0,0,0,,And so they got sort of our we cut out of the curriculum
@@ -102,7 +102,7 @@ Dialogue: 0,0:02:39.74,0:02:41.86,Chinese,,0,0,0,,你的程序正在尝试做什
 Dialogue: 0,0:02:42.32,0:02:44.84,English,,0,0,0,,And what the machine is trying to do
 Dialogue: 0,0:02:42.32,0:02:44.84,Chinese,,0,0,0,,机器正在尝试做什么
 Dialogue: 0,0:02:45.60,0:02:49.18,English,,0,0,0,,So as a result of that our perspective will be
-Dialogue: 0,0:02:45.60,0:02:49.18,Chinese,,0,0,0,,因此，我们的目标是
+Dialogue: 0,0:02:45.60,0:02:49.18,Chinese,,0,0,0,,作为我们的教学角度的结果，我们的目标是
 Dialogue: 0,0:02:49.18,0:02:52.72,English,,0,0,0,,We won't actually write except in very very small amounts
 Dialogue: 0,0:02:49.18,0:02:52.72,Chinese,,0,0,0,,除非数量非常少，否则我们实际上不会写代码
 Dialogue: 0,0:02:53.22,0:02:57.32,English,,0,0,0,,We're not going to actually sit down and write assembly programs in this course
@@ -114,9 +114,9 @@ Dialogue: 0,0:03:01.38,0:03:04.38,Chinese,,0,0,0,,这是由 C 编译器 GCC 生�
 Dialogue: 0,0:03:05.08,0:03:11.04,English,,0,0,0,,And try to see how does that what came out of that compiler relate to what went into it
 Dialogue: 0,0:03:05.08,0:03:11.04,Chinese,,0,0,0,,并试着看看那个编译器产生的结果与输入它的内容有什么关系
 Dialogue: 0,0:03:11.04,0:03:18.72,English,,0,0,0,,How does this low-level code implement the higher level constructs
-Dialogue: 0,0:03:11.04,0:03:18.72,Chinese,,0,0,0,,低级的代码如何实现更高级别的构造
+Dialogue: 0,0:03:11.04,0:03:18.72,Chinese,,0,0,0,,低级的代码如何实现更高级别的程序构造
 Dialogue: 0,0:03:18.72,0:03:21.70,English,,0,0,0,,That I was trying to express my program in
-Dialogue: 0,0:03:18.72,0:03:21.70,Chinese,,0,0,0,,我在程序中试图表现的
+Dialogue: 0,0:03:18.72,0:03:21.70,Chinese,,0,0,0,,那些我 在程序中试图表现的
 Dialogue: 0,0:03:22.28,0:03:26.92,English,,0,0,0,,How our procedures functions implemented in machine language
 Dialogue: 0,0:03:22.28,0:03:26.92,Chinese,,0,0,0,,我们的过程函数如何在机器语言中实现
 Dialogue: 0,0:03:26.92,0:03:29.91,English,,0,0,0,,How our data structures such as arrays and struts
@@ -131,12 +131,12 @@ Dialogue: 0,0:03:39.58,0:03:42.38,English,,0,0,0,,And a fair number of lectures 
 Dialogue: 0,0:03:39.58,0:03:42.38,Chinese,,0,0,0,,还有相当数量的讲座来完成所有这些材料
 Dialogue: 0,0:03:42.38,0:03:43.56,English,,0,0,0,,Because it's really quite a bit
 Dialogue: 0,0:03:42.38,0:03:43.56,Chinese,,0,0,0,,因为它真的很多
-Dialogue: 0,0:03:44.42,0:03:50.52,English,,0,0,0,,But I think this is sort of the core of where this course is
+Dialogue: 0,0:03:44.42,0:03:50.52,English,,0,0,0,,But I think it is like I said I think this is the sort of the core of where this course is
 Dialogue: 0,0:03:44.42,0:03:50.52,Chinese,,0,0,0,,但我认为这是本课程的核心内容
 Dialogue: 0,0:03:52.78,0:04:00.72,English,,0,0,0,,And as you know in this course we only look at one particular class of machines
-Dialogue: 0,0:03:52.78,0:04:00.72,Chinese,,0,0,0,,正如你在本课程中所知，我们只关注一类特定的机器
+Dialogue: 0,0:03:52.78,0:04:00.72,Chinese,,0,0,0,,正如你在本课程中所知，我们只基于一种特定的机器
 Dialogue: 0,0:04:00.72,0:04:07.12,English,,0,0,0,,Even though there's many more different machine level programming possibilities out there
-Dialogue: 0,0:04:00.72,0:04:07.12,Chinese,,0,0,0,,即使有更多不同的机器级编程语言的可能性
+Dialogue: 0,0:04:00.72,0:04:07.12,Chinese,,0,0,0,,即使那里有许多不同的机器级编程语言的选择
 Dialogue: 0,0:04:07.12,0:04:12.72,English,,0,0,0,,And we've chosen the intel the 64-bit version of the intel instruction set
 Dialogue: 0,0:04:07.12,0:04:12.72,Chinese,,0,0,0,,我们选择了英特尔 64 位版本的 Intel 指令集
 Dialogue: 0,0:04:13.46,0:04:18.50,English,,0,0,0,,So I'll go through a little bit of the history behind intel and how it got to where it is
@@ -146,11 +146,11 @@ Dialogue: 0,0:04:19.74,0:04:25.56,Chinese,,0,0,0,,我们将通过这个想法来
 Dialogue: 0,0:04:26.36,0:04:33.94,English,,0,0,0,,We'll go through set of low-level basics that you need to understand the of what assembly code,machine code looks like
 Dialogue: 0,0:04:26.36,0:04:33.94,Chinese,,0,0,0,,我们将介绍一组你需要了解的低级基础知识，机器代码看起来像什么
 Dialogue: 0,0:04:34.28,0:04:40.48,English,,0,0,0,,And then we'll actually take on and look at some real code ,focusing specifically on arithmetic operations
-Dialogue: 0,0:04:34.28,0:04:40.48,Chinese,,0,0,0,,然后我们将实际开始并查看一些真正的代码，特别关注算术运算
+Dialogue: 0,0:04:34.28,0:04:40.48,Chinese,,0,0,0,,然后我们将着手去做并查看一些真正的代码，特别是算术运算操作
 Dialogue: 0,0:04:42.86,0:04:48.66,English,,0,0,0,,So x86 is sort of a colloquial term for intel processors
 Dialogue: 0,0:04:42.86,0:04:48.66,Chinese,,0,0,0,,所以 x86 对于英特尔处理器来说是一个口头的称谓
 Dialogue: 0,0:04:48.66,0:04:51.66,English,,0,0,0,,And the reason is that the first one was called the 8086
-Dialogue: 0,0:04:48.66,0:04:51.66,Chinese,,0,0,0,,原因是第一个被称为 8086
+Dialogue: 0,0:04:48.66,0:04:51.66,Chinese,,0,0,0,,原因是第一个芯片被称为 8086
 Dialogue: 0,0:04:52.80,0:04:58.65,English,,0,0,0,,And then they kind of skipped 81, but then they went to 8286
 Dialogue: 0,0:04:52.80,0:04:58.65,Chinese,,0,0,0,,然后他们跳过了81，随后推出了 8286
 Dialogue: 0,0:04:58.65,0:05:01.50,English,,0,0,0,,And so forth 8386
@@ -162,7 +162,7 @@ Dialogue: 0,0:05:07.74,0:05:13.78,Chinese,,0,0,0,,有一点对此非常重要，
 Dialogue: 0,0:05:14.28,0:05:17.06,English,,0,0,0,,x86 is a language like english
 Dialogue: 0,0:05:14.28,0:05:17.06,Chinese,,0,0,0,,x86 是一种像英语的语言
 Dialogue: 0,0:05:17.18,0:05:24.76,English,,0,0,0,,That it's been an accrual and evolution of different features layered on top of each other
-Dialogue: 0,0:05:17.18,0:05:24.76,Chinese,,0,0,0,,它的特性不断发展，进化，相互叠加
+Dialogue: 0,0:05:17.18,0:05:24.76,Chinese,,0,0,0,,它的特性不断发展，进化，不同特性 相互叠加
 Dialogue: 0,0:05:25.30,0:05:27.84,English,,0,0,0,,And not always the most elegant way
 Dialogue: 0,0:05:25.30,0:05:27.84,Chinese,,0,0,0,,并不总是按照最优雅的方式
 Dialogue: 0,0:05:28.24,0:05:32.70,English,,0,0,0,,So just like english there's all these sort of quirky things
@@ -190,11 +190,11 @@ Dialogue: 0,0:06:04.46,0:06:06.44,Chinese,,0,0,0,,这是一种更有用的语言
 Dialogue: 0,0:06:09.18,0:06:12.28,English,,0,0,0,,x86 is what sometimes was called a CISC
 Dialogue: 0,0:06:09.18,0:06:12.28,Chinese,,0,0,0,,x86 有时被称为 CISC
 Dialogue: 0,0:06:12.90,0:06:19.84,English,,0,0,0,,There's a big thing in the early 80s.80s in general called RISC vs. CISC
-Dialogue: 0,0:06:12.90,0:06:19.84,Chinese,,0,0,0,,在 80 年代早期，80 年代又被称作 RISC vs. CISC 年代
-Dialogue: 0,0:06:20.46,0:06:23.90,English,,0,0,0,,CISC a well RISC was a relatively new idea
+Dialogue: 0,0:06:12.90,0:06:19.84,Chinese,,0,0,0,,在 80 年代早期有一件大事，80 年代又被称作 RISC vs. CISC 年代
+Dialogue: 0,0:06:20.46,0:06:23.90,English,,0,0,0,,CISC uh well RISC was a relatively new idea
 Dialogue: 0,0:06:20.46,0:06:23.90,Chinese,,0,0,0,,RISC 是一个相对较新的想法
 Dialogue: 0,0:06:23.90,0:06:28.54,English,,0,0,0,,What they called a reduced instruction set computer and it was all the rage
-Dialogue: 0,0:06:23.90,0:06:28.54,Chinese,,0,0,0,,他们称之为简化指令集计算机，它风靡一时
+Dialogue: 0,0:06:23.90,0:06:28.54,Chinese,,0,0,0,,他们称之为精简指令集计算机，它风靡一时
 Dialogue: 0,0:06:28.98,0:06:31.54,English,,0,0,0,,And nobody had a name for what came before
 Dialogue: 0,0:06:28.98,0:06:31.54,Chinese,,0,0,0,,之前没有人给它们命名
 Dialogue: 0,0:06:31.54,0:06:35.40,English,,0,0,0,,But the RSIC people named what came before a CISC
@@ -212,7 +212,7 @@ Dialogue: 0,0:06:56.04,0:07:00.78,Chinese,,0,0,0,,现在你使用 pdf 文件，�
 Dialogue: 0,0:07:01.18,0:07:04.38,English,,0,0,0,,Some 500 or more instructions
 Dialogue: 0,0:07:01.18,0:07:04.38,Chinese,,0,0,0,,大约 500 条或更多条指令
 Dialogue: 0,0:07:04.68,0:07:09.98,English,,0,0,0,,Everything from doing decimal arithmetic to even decimal floating point
-Dialogue: 0,0:07:04.68,0:07:09.98,Chinese,,0,0,0,,从做十进制运算到偶数十进制浮点数的一切
+Dialogue: 0,0:07:04.68,0:07:09.98,Chinese,,0,0,0,,从做十进制整数运算到甚至是十进制浮点数的一切
 Dialogue: 0,0:07:09.98,0:07:12.14,English,,0,0,0,,And all kinds of goofy stuff in there
 Dialogue: 0,0:07:09.98,0:07:12.14,Chinese,,0,0,0,,那里有各种愚蠢的东西
 Dialogue: 0,0:07:13.38,0:07:17.24,English,,0,0,0,,But it turns out that you can kind of get a pretty good handle on it
@@ -242,157 +242,157 @@ Dialogue: 0,0:08:03.76,0:08:06.12,Chinese,,0,0,0,,接下来给你们展示的是
 Dialogue: 0,0:08:06.12,0:08:09.30,English,,0,0,0,,As I mentioned the 8086 was the first
 Dialogue: 0,0:08:06.12,0:08:09.30,Chinese,,0,0,0,,正如我提到的那样，8086 是第一个
 Dialogue: 0,0:08:09.30,0:08:15.10,English,,0,0,0,,One of the first single chip 16-bit microprocessors  came out in (19)78
-Dialogue: 0,0:08:09.30,0:08:15.10,Chinese,,0,0,0,,第一个单芯片 16 位微处理器之一出现在（19）78
+Dialogue: 0,0:08:09.30,0:08:15.10,Chinese,,0,0,0,,第一个 16 位微处理器之一，它出现在（19）78
 Dialogue: 0,0:08:15.48,0:08:20.76,English,,0,0,0,,And it a slight variation on it was a very basis for the original IBM pc
-Dialogue: 0,0:08:15.48,0:08:20.76,Chinese,,0,0,0,,它被稍微修改，成为了原始 IBM 电脑的基础
+Dialogue: 0,0:08:15.48,0:08:20.76,Chinese,,0,0,0,,它被稍微改造，成为了初始 IBM 电脑的基础
 Dialogue: 0,0:08:20.78,0:08:24.96,English,,0,0,0,,Which I know predates most of you your lives
-Dialogue: 0,0:08:20.78,0:08:24.96,Chinese,,0,0,0,,我所知道比你们大多数人的出生都要早
+Dialogue: 0,0:08:20.78,0:08:24.96,Chinese,,0,0,0,,我知道这比你们大多数人的出生都要早
 Dialogue: 0,0:08:24.96,0:08:33.30,English,,0,0,0,,But it was sort of a the the big breakthrough that put computers on the desktops of many people
 Dialogue: 0,0:08:24.96,0:08:33.30,Chinese,,0,0,0,,但这是将计算机放在许多人桌面上的重大突破
 Dialogue: 0,0:08:35.08,0:08:41.30,English,,0,0,0,,And there's been many many generations I'm just giving you the highlights relevant to this particular class
-Dialogue: 0,0:08:35.08,0:08:41.30,Chinese,,0,0,0,,并且已经有很多代人，我只是给你提供与这个特定班级相关的亮点
+Dialogue: 0,0:08:35.08,0:08:41.30,Chinese,,0,0,0,,在此之后更新了许多代，我只指出与这节课有关的那一部分
 Dialogue: 0,0:08:41.90,0:08:49.60,English,,0,0,0,,The 386 which dates back to 1985 was the one that really made the transition from these being personal computers
-Dialogue: 0,0:08:41.90,0:08:49.60,Chinese,,0,0,0,,可以追溯到1985年的386是真正从这些个人电脑转型的386
+Dialogue: 0,0:08:41.90,0:08:49.60,Chinese,,0,0,0,,可以追溯到 1985 年的 386 是真正从那些
 Dialogue: 0,0:08:49.60,0:08:52.96,English,,0,0,0,,That could run not very interesting applications
-Dialogue: 0,0:08:49.60,0:08:52.96,Chinese,,0,0,0,,这可能不是非常有趣的应用程序
+Dialogue: 0,0:08:49.60,0:08:52.96,Chinese,,0,0,0,,不能够运行很多有意思的应用的个人电脑
 Dialogue: 0,0:08:53.48,0:08:57.70,English,,0,0,0,,To ones that could actually run something like a unix or linux machine
-Dialogue: 0,0:08:53.48,0:08:57.70,Chinese,,0,0,0,,对于那些实际上可以运行unix或linux机器的东西
+Dialogue: 0,0:08:53.48,0:08:57.70,Chinese,,0,0,0,,转变成那些实际上可以运行 unix 或 linux 机器的东西
 Dialogue: 0,0:08:58.42,0:09:01.18,English,,0,0,0,,And the reason is they extended it to 32-bit
-Dialogue: 0,0:08:58.42,0:09:01.18,Chinese,,0,0,0,,原因是他们将其扩展到32位
+Dialogue: 0,0:08:58.42,0:09:01.18,Chinese,,0,0,0,,原因是他们将其扩展到 32 位
 Dialogue: 0,0:09:01.46,0:09:06.00,English,,0,0,0,,And they removed some of the weird addressing stuff that used to be in there
-Dialogue: 0,0:09:01.46,0:09:06.00,Chinese,,0,0,0,,他们删除了过去常见的一些奇怪的寻址内容
-Dialogue: 0,0:09:06.38,0:09:09.78,English,,0,0,0,,So that these look like sort of a generic a processor
-Dialogue: 0,0:09:06.38,0:09:09.78,Chinese,,0,0,0,,所以这些看起来像一个通用的处理器
+Dialogue: 0,0:09:01.46,0:09:06.00,Chinese,,0,0,0,,他们删除了过去常见的一些奇怪的寻址的东西
+Dialogue: 0,0:09:06.38,0:09:09.78,English,,0,0,0,,So that these look like sort of a generic, a processor
+Dialogue: 0,0:09:06.38,0:09:09.78,Chinese,,0,0,0,,所以它看起来像一个通用的处理器
 Dialogue: 0,0:09:10.56,0:09:16.84,English,,0,0,0,,And that was clear back in (19)85 and that was what sometimes called IA32 intel architecture 32
-Dialogue: 0,0:09:10.56,0:09:16.84,Chinese,,0,0,0,,这在（19）85中很明显，有时也称为IA32 intel架构32
-Dialogue: 0,0:09:17.48,0:09:25.42,English,,0,0,0,,Which was the dominant way of code up told just even a few years ago
-Dialogue: 0,0:09:17.48,0:09:25.42,Chinese,,0,0,0,,即使在几年前，这也是代码的主要方式
+Dialogue: 0,0:09:10.56,0:09:16.84,Chinese,,0,0,0,,我么可以看到是在 (19)85 年，有时也称为 IA32，intel 架构 32
+Dialogue: 0,0:09:17.48,0:09:25.42,English,,0,0,0,,Which was the dominant way of code up to just even a few years ago
+Dialogue: 0,0:09:17.48,0:09:25.42,Chinese,,0,0,0,,它几乎统治了所有的代码形式，即使就是几年前
 Dialogue: 0,0:09:25.52,0:09:28.28,English,,0,0,0,,So even up as recently as this past summer
 Dialogue: 0,0:09:25.52,0:09:28.28,Chinese,,0,0,0,,所以即使在去年夏天也是如此
 Dialogue: 0,0:09:29.14,0:09:31.54,English,,0,0,0,,This course was teaching IA32
-Dialogue: 0,0:09:29.14,0:09:31.54,Chinese,,0,0,0,,这门课程教授IA32
+Dialogue: 0,0:09:29.14,0:09:31.54,Chinese,,0,0,0,,这门课程在那是教授 IA32
 Dialogue: 0,0:09:33.70,0:09:36.70,English,,0,0,0,,And then there and I'll talk about it more later
 Dialogue: 0,0:09:33.70,0:09:36.70,Chinese,,0,0,0,,然后我会在稍后讨论它
 Dialogue: 0,0:09:36.70,0:09:43.68,English,,0,0,0,,There was a reason in a strange story behind the extension from 32 to 64 bits
-Dialogue: 0,0:09:36.70,0:09:43.68,Chinese,,0,0,0,,从32位到64位的扩展背后有一个奇怪的故事是有原因的
+Dialogue: 0,0:09:36.70,0:09:43.68,Chinese,,0,0,0,,从 32 位到 64 位的扩展有原因的，背后有一个奇怪的故事
 Dialogue: 0,0:09:44.10,0:09:46.62,English,,0,0,0,,Which kind of was sneaked in by intel
-Dialogue: 0,0:09:44.10,0:09:46.62,Chinese,,0,0,0,,什么被英特尔偷偷摸摸
+Dialogue: 0,0:09:44.10,0:09:46.62,Chinese,,0,0,0,,英特尔好像是偷偷摸摸推出的
 Dialogue: 0,0:09:47.22,0:09:50.36,English,,0,0,0,,And an odd model the Pentium 4E
-Dialogue: 0,0:09:47.22,0:09:50.36,Chinese,,0,0,0,,奔腾4E是一个奇怪的模型
+Dialogue: 0,0:09:47.22,0:09:50.36,Chinese,,0,0,0,,奔腾 4E 是一个奇怪的型号
 Dialogue: 0,0:09:50.36,0:09:53.74,English,,0,0,0,,But you see it was only about 10 years ago
-Dialogue: 0,0:09:50.36,0:09:53.74,Chinese,,0,0,0,,但是你看到它只是大约10年前
+Dialogue: 0,0:09:50.36,0:09:53.74,Chinese,,0,0,0,,但是你看到它只是大约 10 年前
 Dialogue: 0,0:09:54.94,0:10:04.32,English,,0,0,0,,And one of the smart things they did with that is that the machines that can run the 64-bit code can also run 32-bit code
 Dialogue: 0,0:09:54.94,0:10:04.32,Chinese,,0,0,0,,他们所做的一件聪明的事情是，运行64位代码的机器也可以运行32位代码
 Dialogue: 0,0:10:04.84,0:10:10.88,English,,0,0,0,,So they were able to sort of bring out all these machines without everybody having to change over their software
-Dialogue: 0,0:10:04.84,0:10:10.88,Chinese,,0,0,0,,因此，他们能够在不需要更换软件的情况下将所有这些机器带出来
+Dialogue: 0,0:10:04.84,0:10:10.88,Chinese,,0,0,0,,因此，他们能够在不需要任何人更换软件的情况下更换硬件
 Dialogue: 0,0:10:11.20,0:10:20.62,English,,0,0,0,,And it's taken about that amount of time for the software to largely transition away from 32-bit code to 64-bit code
-Dialogue: 0,0:10:11.20,0:10:20.62,Chinese,,0,0,0,,并且花费了大量时间使软件从32位代码大幅转换为64位代码
+Dialogue: 0,0:10:11.20,0:10:20.62,Chinese,,0,0,0,,大量软件从 32 位代码转换为 64 位代码的过程相当漫长
 Dialogue: 0,0:10:22.66,0:10:28.60,English,,0,0,0,,And then for actually fairly interesting reasons
 Dialogue: 0,0:10:22.66,0:10:28.60,Chinese,,0,0,0,,然后是实际上相当有趣的原因
 Dialogue: 0,0:10:28.92,0:10:32.98,English,,0,0,0,,You could map how fast a single processor would run
-Dialogue: 0,0:10:28.92,0:10:32.98,Chinese,,0,0,0,,你可以映射单个处理器的运行速度
+Dialogue: 0,0:10:28.92,0:10:32.98,Chinese,,0,0,0,,你可以画出单个处理器的运行速度图
 Dialogue: 0,0:10:33.38,0:10:39.26,English,,0,0,0,,And it was climbing up at a pretty steady pace until around 2004
-Dialogue: 0,0:10:33.38,0:10:39.26,Chinese,,0,0,0,,直到2004年左右，它才以稳定的速度攀升
+Dialogue: 0,0:10:33.38,0:10:39.26,Chinese,,0,0,0,,在 2004 年之前，它一直保持稳定的增长趋势
 Dialogue: 0,0:10:39.72,0:10:44.98,English,,0,0,0,,And then intel got and all the companies got into serious trouble with the power consumption of their chips
-Dialogue: 0,0:10:39.72,0:10:44.98,Chinese,,0,0,0,,然后英特尔得到了所有公司在芯片功耗方面遇到了严重问题
+Dialogue: 0,0:10:39.72,0:10:44.98,Chinese,,0,0,0,,然后英特尔收到所有公司在芯片功耗方面遇到了严重问题的反馈
 Dialogue: 0,0:10:45.68,0:10:47.48,English,,0,0,0,,They're approaching a hundred watts
-Dialogue: 0,0:10:45.68,0:10:47.48,Chinese,,0,0,0,,它们接近百瓦
+Dialogue: 0,0:10:45.68,0:10:47.48,Chinese,,0,0,0,,他们的芯片接近百瓦
 Dialogue: 0,0:10:47.52,0:10:50.02,English,,0,0,0,,So imagine a hundred watt light bulb
 Dialogue: 0,0:10:47.52,0:10:50.02,Chinese,,0,0,0,,想象一下百瓦灯泡
 Dialogue: 0,0:10:50.02,0:10:53.20,English,,0,0,0,,And how much heat that generates inside of a box
-Dialogue: 0,0:10:50.02,0:10:53.20,Chinese,,0,0,0,,盒子内部会产生多少热量
+Dialogue: 0,0:10:50.02,0:10:53.20,Chinese,,0,0,0,,在盒子内部会产生多少热量
 Dialogue: 0,0:10:53.60,0:10:57.66,English,,0,0,0,,That you try to blow a fan on really hard to keep it from getting too hot
-Dialogue: 0,0:10:53.60,0:10:57.66,Chinese,,0,0,0,,你试图吹风扇真的很难让它变得太热
+Dialogue: 0,0:10:53.60,0:10:57.66,Chinese,,0,0,0,,吹风扇使它不过热相当困难
 Dialogue: 0,0:10:58.40,0:11:04.08,English,,0,0,0,,And they were reaching the point where they really couldn't go much beyond a hundred watts
-Dialogue: 0,0:10:58.40,0:11:04.08,Chinese,,0,0,0,,他们已经达到了他们真的无法超过百瓦的程度
+Dialogue: 0,0:10:58.40,0:11:04.08,Chinese,,0,0,0,,他们已经达到了不能超过百瓦的功率瓶颈
 Dialogue: 0,0:11:04.10,0:11:06.94,English,,0,0,0,,And so they sort of got into a power budget problem
-Dialogue: 0,0:11:04.10,0:11:06.94,Chinese,,0,0,0,,因此他们有点陷入电力预算问题
+Dialogue: 0,0:11:04.10,0:11:06.94,Chinese,,0,0,0,,因此他们有点陷入功率预算问题
 Dialogue: 0,0:11:07.40,0:11:10.52,English,,0,0,0,,And as a result they haven't been a to scale up the frequency
-Dialogue: 0,0:11:07.40,0:11:10.52,Chinese,,0,0,0,,因此，他们不是一个扩大频率的人
+Dialogue: 0,0:11:07.40,0:11:10.52,Chinese,,0,0,0,,作为结果，他们没有继续增加频率
 Dialogue: 0,0:11:10.52,0:11:16.00,English,,0,0,0,,How fast the inner clock that drives this thing is beyond just a few GHz
-Dialogue: 0,0:11:10.52,0:11:16.00,Chinese,,0,0,0,,驱动这个东西的内部时钟的速度超过几GHz
+Dialogue: 0,0:11:10.52,0:11:16.00,Chinese,,0,0,0,,芯片内部的时钟频率仅仅是几个 GHz
 Dialogue: 0,0:11:17.42,0:11:21.88,English,,0,0,0,,Since 2004 so what's happened was
-Dialogue: 0,0:11:17.42,0:11:21.88,Chinese,,0,0,0,,自2004年以来发生了什么事
+Dialogue: 0,0:11:17.42,0:11:21.88,Chinese,,0,0,0,,自 2004 年以来发生了什么事呢
 Dialogue: 0,0:11:22.24,0:11:25.32,English,,0,0,0,,They said well we can't make any single processor faster
-Dialogue: 0,0:11:22.24,0:11:25.32,Chinese,,0,0,0,,他们说我们不能更快地制造任何单一处理器
+Dialogue: 0,0:11:22.24,0:11:25.32,Chinese,,0,0,0,,他们说我们不能更快地制造任何单核处理器
 Dialogue: 0,0:11:25.32,0:11:28.18,English,,0,0,0,,But we can put a bunch of processors on a single chip
 Dialogue: 0,0:11:25.32,0:11:28.18,Chinese,,0,0,0,,但我们可以在一个芯片上放置一堆处理器
 Dialogue: 0,0:11:28.64,0:11:31.04,English,,0,0,0,,And those are referred to cores or multi-core
-Dialogue: 0,0:11:28.64,0:11:31.04,Chinese,,0,0,0,,那些被称为核心或多核
+Dialogue: 0,0:11:28.64,0:11:31.04,Chinese,,0,0,0,,那些被称为多核心或多核
 Dialogue: 0,0:11:31.58,0:11:36.02,English,,0,0,0,,So most of you with laptops probably have two cores on those
-Dialogue: 0,0:11:31.58,0:11:36.02,Chinese,,0,0,0,,因此，大多数使用笔记本电脑的人可能都有两个内核
-Dialogue: 0,0:11:36.76,0:11:40.88,English,,0,0,0,,And a laptop processor and a server might have up to 16 cores
-Dialogue: 0,0:11:36.76,0:11:40.88,Chinese,,0,0,0,,笔记本电脑处理器和服务器最多可能有16个核心
+Dialogue: 0,0:11:31.58,0:11:36.02,Chinese,,0,0,0,,因此，大多数人使用的笔记本电脑可能都有两个核心
+Dialogue: 0,0:11:36.76,0:11:40.88,English,,0,0,0,,unlike laptop processor and a server might have up to 16 cores
+Dialogue: 0,0:11:36.76,0:11:40.88,Chinese,,0,0,0,,与笔记本电脑不同，服务器最多可能有 16 个核心
 Dialogue: 0,0:11:42.18,0:11:46.90,English,,0,0,0,,So those are independent processors that are all reside on a single chip
-Dialogue: 0,0:11:42.18,0:11:46.90,Chinese,,0,0,0,,因此，这些都是独立的处理器，都位于单个芯片上
+Dialogue: 0,0:11:42.18,0:11:46.90,Chinese,,0,0,0,,这些都是独立的处理器，位于单个芯片上
 Dialogue: 0,0:11:48.52,0:11:51.64,English,,0,0,0,,The shark machines date back to 2008
-Dialogue: 0,0:11:48.52,0:11:51.64,Chinese,,0,0,0,,鲨鱼机器的历史可以追溯到2008年
+Dialogue: 0,0:11:48.52,0:11:51.64,Chinese,,0,0,0,,鲨鱼机器的历史可以追溯到 2008 年
 Dialogue: 0,0:11:52.40,0:11:55.48,English,,0,0,0,,And they are each have four cores on them
 Dialogue: 0,0:11:52.40,0:11:55.48,Chinese,,0,0,0,,它们每个都有四个核心
 Dialogue: 0,0:11:57.08,0:12:04.10,English,,0,0,0,,The shark machines the one thing about computers haven't really gotten that much faster of in the meantime
-Dialogue: 0,0:11:57.08,0:12:04.10,Chinese,,0,0,0,,鲨鱼机器有关计算机的一件事在此期间并没有真正得到那么快
-Dialogue: 0,0:12:04.10,0:12:10.14,English,,0,0,0,,So there's still fairways and they were in their day a very high-performance machine
-Dialogue: 0,0:12:04.10,0:12:10.14,Chinese,,0,0,0,,所以还有球道，他们当时是一台非常高性能的机器
+Dialogue: 0,0:11:57.08,0:12:04.10,Chinese,,0,0,0,,在鲨鱼机器出来之后，计算机的性能发展并不是很快
+Dialogue: 0,0:12:04.10,0:12:10.14,English,,0,0,0,,So there's still fairly and they were in their day a very high-performance machine
+Dialogue: 0,0:12:04.10,0:12:10.14,Chinese,,0,0,0,,所以直到今日，它们
 Dialogue: 0,0:12:10.14,0:12:11.38,English,,0,0,0,,So they're still pretty decent
 Dialogue: 0,0:12:10.14,0:12:11.38,Chinese,,0,0,0,,所以他们仍然相当不错
 Dialogue: 0,0:12:14.82,0:12:19.22,English,,0,0,0,,This shows a picture of the chip that makes up a...
 Dialogue: 0,0:12:14.82,0:12:19.22,Chinese,,0,0,0,,这显示了构成一个...的芯片的图片
 Dialogue: 0,0:12:20.88,0:12:25.66,English,,0,0,0,,I think the the shark machines or approximately that same area
-Dialogue: 0,0:12:20.88,0:12:25.66,Chinese,,0,0,0,,我认为鲨鱼机器或大约相同的区域
+Dialogue: 0,0:12:20.88,0:12:25.66,Chinese,,0,0,0,,我认为是鲨鱼机器或差不多的东西
 Dialogue: 0,0:12:26.02,0:12:31.68,English,,0,0,0,,And you'll see that as the picture shows these four cores are integrated onto one chip
 Dialogue: 0,0:12:26.02,0:12:31.68,Chinese,,0,0,0,,你会看到，如图所示，这四个内核集成在一个芯片上
 Dialogue: 0,0:12:32.10,0:12:34.94,English,,0,0,0,,And then down at the bottom is what they call a cache
 Dialogue: 0,0:12:32.10,0:12:34.94,Chinese,,0,0,0,,然后在底部是他们所谓的缓存
 Dialogue: 0,0:12:35.02,0:12:37.06,English,,0,0,0,,And we'll learn a lot about cache memory but it's
-Dialogue: 0,0:12:35.02,0:12:37.06,Chinese,,0,0,0,,我们将学习很多关于缓存的知识，但它确实如此
+Dialogue: 0,0:12:35.02,0:12:37.06,Chinese,,0,0,0,,我们将学习很多关于缓存的知识，但它其实是
 Dialogue: 0,0:12:37.62,0:12:44.62,English,,0,0,0,,It's basically a temporary memory used to hold the most recently accessed data
 Dialogue: 0,0:12:37.62,0:12:44.62,Chinese,,0,0,0,,它基本上是用于保存最近访问的数据的临时内存
 Dialogue: 0,0:12:44.62,0:12:46.62,English,,0,0,0,,So that you can get to it more quickly
-Dialogue: 0,0:12:44.62,0:12:46.62,Chinese,,0,0,0,,这样你就可以更快地完成它
+Dialogue: 0,0:12:44.62,0:12:46.62,Chinese,,0,0,0,,这样你就可以更快地访问数据
 Dialogue: 0,0:12:47.52,0:12:50.08,English,,0,0,0,,And you'll see that that shared across the four cores
-Dialogue: 0,0:12:47.52,0:12:50.08,Chinese,,0,0,0,,而且你会看到这四个核心共享
+Dialogue: 0,0:12:47.52,0:12:50.08,Chinese,,0,0,0,,而且你会看到这四个核心共享缓存
 Dialogue: 0,0:12:53.02,0:13:00.22,English,,0,0,0,,So if you look at the latest if you were to go off shopping on in the catalog the latest instance
-Dialogue: 0,0:12:53.02,0:13:00.22,Chinese,,0,0,0,,所以如果你看一下最新的，如果你在目录中购买最新的实例
-Dialogue: 0,0:13:00.22,0:13:02.06,English,,0,0,0,,And I don't have any chip pictures
-Dialogue: 0,0:13:00.22,0:13:02.06,Chinese,,0,0,0,,我没有任何芯片图片
+Dialogue: 0,0:12:53.02,0:13:00.22,Chinese,,0,0,0,,所以如果你想买一个最新的型号，在最新型号列表中
+Dialogue: 0,0:13:00.22,0:13:02.06,English,,0,0,0,,And I don't have any chip pictures of it
+Dialogue: 0,0:13:00.22,0:13:02.06,Chinese,,0,0,0,,我没有任何新芯片的图片
 Dialogue: 0,0:13:02.62,0:13:04.88,English,,0,0,0,,It is a model they called a broadwell model
-Dialogue: 0,0:13:02.62,0:13:04.88,Chinese,,0,0,0,,这是一个他们称之为broadwell模型的模型
+Dialogue: 0,0:13:02.62,0:13:04.88,Chinese,,0,0,0,,这是一个他们称之为 broadwell 型号的模型
 Dialogue: 0,0:13:05.54,0:13:09.70,English,,0,0,0,,And you'll see that on a single chip they have multiple cores
 Dialogue: 0,0:13:05.54,0:13:09.70,Chinese,,0,0,0,,而且你会发现在一块芯片上它们有多个内核
 Dialogue: 0,0:13:10.74,0:13:16.44,English,,0,0,0,,4 cores a serious standard desktop model eight first a server class machine
-Dialogue: 0,0:13:10.74,0:13:16.44,Chinese,,0,0,0,,4核一个严重的标准桌面型号八个第一个服务器类机器
+Dialogue: 0,0:13:10.74,0:13:16.44,Chinese,,0,0,0,,标准桌面型号有四个核心，服务器类别机器八个核心
 Dialogue: 0,0:13:16.88,0:13:22.38,English,,0,0,0,,And then built around the perimeter there are various connections to the rest of the world
-Dialogue: 0,0:13:16.88,0:13:22.38,Chinese,,0,0,0,,然后围绕周边建造了与世界其他地方的各种连接
+Dialogue: 0,0:13:16.88,0:13:22.38,Chinese,,0,0,0,,在芯片的边缘有许多接口连接其余的设备
 Dialogue: 0,0:13:22.88,0:13:28.52,English,,0,0,0,,So DDR is the way you connect to the main memory what's called DRAM dynamic RAM
-Dialogue: 0,0:13:22.88,0:13:28.52,Chinese,,0,0,0,,因此，DDR是连接到主存储器的方式，即所谓的DRAM动态RAM
+Dialogue: 0,0:13:22.88,0:13:28.52,Chinese,,0,0,0,,因此，DDR 是连接到主存储器的方式，即所谓的 DRAM 动态 RAM
 Dialogue: 0,0:13:29.32,0:13:32.64,English,,0,0,0,,PCI is the connection to peripheral devices
-Dialogue: 0,0:13:29.32,0:13:32.64,Chinese,,0,0,0,,PCI是与外围设备的连接
+Dialogue: 0,0:13:29.32,0:13:32.64,Chinese,,0,0,0,,PCI 是与外围设备的连接
 Dialogue: 0,0:13:34.34,0:13:37.38,English,,0,0,0,,SATA is a connection to different types of discs
-Dialogue: 0,0:13:34.34,0:13:37.38,Chinese,,0,0,0,,SATA是与不同类型光盘的连接
+Dialogue: 0,0:13:34.34,0:13:37.38,Chinese,,0,0,0,,SATA 是与不同类型盘的连接
 Dialogue: 0,0:13:38.82,0:13:42.61,English,,0,0,0,,And USB well you know USB is
-Dialogue: 0,0:13:38.82,0:13:42.61,Chinese,,0,0,0,,和USB你知道USB是
+Dialogue: 0,0:13:38.82,0:13:42.61,Chinese,,0,0,0,,和 USB，你肯定知道 USB 是什么
 Dialogue: 0,0:13:44.34,0:13:48.20,English,,0,0,0,,And then the ethernet is the connection also to a network connection
-Dialogue: 0,0:13:44.34,0:13:48.20,Chinese,,0,0,0,,然后以太网也是网络连接的连接
+Dialogue: 0,0:13:44.34,0:13:48.20,Chinese,,0,0,0,,然后以太网接口，连接到一个网络
 Dialogue: 0,0:13:48.44,0:13:55.74,English,,0,0,0,,So that's all integrated onto a single chip is not just the processor itself
 Dialogue: 0,0:13:48.44,0:13:55.74,Chinese,,0,0,0,,因此，所有集成到单个芯片上的不仅仅是处理器本身
 Dialogue: 0,0:13:56.22,0:14:01.76,English,,0,0,0,,But a lot of logic that glues that processor into a larger system
-Dialogue: 0,0:13:56.22,0:14:01.76,Chinese,,0,0,0,,但是很多逻辑将处理器粘合到一个更大的系统中
+Dialogue: 0,0:13:56.22,0:14:01.76,Chinese,,0,0,0,,而是有很多逻辑单元粘在一起所组成的更大的系统
 Dialogue: 0,0:14:02.78,0:14:08.24,English,,0,0,0,,And one interesting thing you'll notice is that the desktop model is a higher power 65 watts
-Dialogue: 0,0:14:02.78,0:14:08.24,Chinese,,0,0,0,,你会注意到一个有趣的事情是桌面型号的功率更高，为65瓦
+Dialogue: 0,0:14:02.78,0:14:08.24,Chinese,,0,0,0,,你会注意到一个有趣的事情是桌面型号的功率更高，为 65 瓦
 Dialogue: 0,0:14:08.84,0:14:10.80,English,,0,0,0,,Versus the server is 45 watts
-Dialogue: 0,0:14:08.84,0:14:10.80,Chinese,,0,0,0,,与服务器相比是45瓦
+Dialogue: 0,0:14:08.84,0:14:10.80,Chinese,,0,0,0,,相比服务器是 45 瓦
 Dialogue: 0,0:14:10.90,0:14:13.20,English,,0,0,0,,When you put a lot of computers in a room
 Dialogue: 0,0:14:10.90,0:14:13.20,Chinese,,0,0,0,,当你把很多电脑放在一个房间里时
 Dialogue: 0,0:14:13.76,0:14:16.58,English,,0,0,0,,Turns out power is the biggest issue you have to deal with
-Dialogue: 0,0:14:13.76,0:14:16.58,Chinese,,0,0,0,,结果是权力是你必须处理的最大问题
+Dialogue: 0,0:14:13.76,0:14:16.58,Chinese,,0,0,0,,功率是你必须处理的最大问题
 Dialogue: 0,0:14:21.22,0:14:23.90,English,,0,0,0,,So intel isn't the only company in this game
 Dialogue: 0,0:14:21.22,0:14:23.90,Chinese,,0,0,0,,所以英特尔并不是这场比赛中唯一的公司
 Dialogue: 0,0:14:24.02,0:14:27.76,English,,0,0,0,,They're sort of historic competitors a company called AMD
-Dialogue: 0,0:14:24.02,0:14:27.76,Chinese,,0,0,0,,他们是一家名为AMD的历史性竞争对手
+Dialogue: 0,0:14:24.02,0:14:27.76,Chinese,,0,0,0,,有一家名为 AMD 的历史性竞争对手
 Dialogue: 0,0:14:28.32,0:14:33.64,English,,0,0,0,,And AMD was always sort of NO.2 behind intel
-Dialogue: 0,0:14:28.32,0:14:33.64,Chinese,,0,0,0,,而AMD在英特尔方面总是排名第二
+Dialogue: 0,0:14:28.32,0:14:33.64,Chinese,,0,0,0,,而 AMD 在英特尔方面总是排名第二
 Dialogue: 0,0:14:34.52,0:14:37.58,English,,0,0,0,,In all the just so I gave is his NO.2 behind hertz
-Dialogue: 0,0:14:34.52,0:14:37.58,Chinese,,0,0,0,,在所有的情况下，我给出的是赫兹后面的NO.2
+Dialogue: 0,0:14:34.52,0:14:37.58,Chinese,,0,0,0,,在所有的情况下，我给出的是主频后面的 NO.2
 Dialogue: 0,0:14:38.36,0:14:42.22,English,,0,0,0,,But they are...
 Dialogue: 0,0:14:38.36,0:14:42.22,Chinese,,0,0,0,,但他们是......
 Dialogue: 0,0:14:43.58,0:14:48.04,English,,0,0,0,,But they had a little burst in time when they kind of got out ahead of intel
@@ -400,23 +400,23 @@ Dialogue: 0,0:14:43.58,0:14:48.04,Chinese,,0,0,0,,但是当他们有点超越英
 Dialogue: 0,0:14:48.04,0:14:52.38,English,,0,0,0,,Because intel had wasted their time on some bad ideas
 Dialogue: 0,0:14:48.04,0:14:52.38,Chinese,,0,0,0,,因为英特尔浪费了他们的时间在一些坏主意上
 Dialogue: 0,0:14:53.08,0:14:58.26,English,,0,0,0,,And they actually were the one that came up with the 64-bit extension to intel that we use
-Dialogue: 0,0:14:53.08,0:14:58.26,Chinese,,0,0,0,,他们实际上是我们使用的64位英特尔扩展程序
+Dialogue: 0,0:14:53.08,0:14:58.26,Chinese,,0,0,0,,他们实际上提出了我们使用的 64 位英特尔扩展程序
 Dialogue: 0,0:15:00.48,0:15:03.28,English,,0,0,0,,Right now though AMD is not doing very well
-Dialogue: 0,0:15:00.48,0:15:03.28,Chinese,,0,0,0,,目前虽然AMD表现不佳
+Dialogue: 0,0:15:00.48,0:15:03.28,Chinese,,0,0,0,,目前虽然 AMD 表现不佳
 Dialogue: 0,0:15:03.36,0:15:07.74,English,,0,0,0,,Intel sort of realized that it had to get its act together and it did
 Dialogue: 0,0:15:03.36,0:15:07.74,Chinese,,0,0,0,,英特尔意识到必须采取行动，而且确实如此
 Dialogue: 0,0:15:08.20,0:15:10.00,English,,0,0,0,,And is more or less crushed AMD
 Dialogue: 0,0:15:08.20,0:15:10.00,Chinese,,0,0,0,,而且或多或少都是粉碎了AMD
 Dialogue: 0,0:15:12.18,0:15:16.98,English,,0,0,0,,But and I should mention that they had these ferocious patent suits
-Dialogue: 0,0:15:12.18,0:15:16.98,Chinese,,0,0,0,,但我应该提到他们有这些凶猛的专利诉讼
+Dialogue: 0,0:15:12.18,0:15:16.98,Chinese,,0,0,0,,但我应该提到他们之间有凶猛的专利诉讼
 Dialogue: 0,0:15:17.60,0:15:24.72,English,,0,0,0,,Many years ago and the result of that was a cross licensing deal that allows AMD to produce x86 processors
-Dialogue: 0,0:15:17.60,0:15:24.72,Chinese,,0,0,0,,许多年前，其结果是允许AMD生产x86处理器的交叉许可协议
+Dialogue: 0,0:15:17.60,0:15:24.72,Chinese,,0,0,0,,许多年前，其结果是允许 AMD 生产 x86 处理器的交叉许可协议
 Dialogue: 0,0:15:26.50,0:15:29.58,English,,0,0,0,,Now it's interesting story behind intel in 64-bit
-Dialogue: 0,0:15:26.50,0:15:29.58,Chinese,,0,0,0,,现在这是64位英特尔背后的有趣故事
+Dialogue: 0,0:15:26.50,0:15:29.58,Chinese,,0,0,0,,这是 64  位英特尔背后的有趣故事
 Dialogue: 0,0:15:30.20,0:15:34.94,English,,0,0,0,,They decided to make this radical shift to an architecture that they called the...
-Dialogue: 0,0:15:30.20,0:15:34.94,Chinese,,0,0,0,,他们决定将这种激进的转变为他们称之为......的建筑。
+Dialogue: 0,0:15:30.20,0:15:34.94,Chinese,,0,0,0,,他们决定将架构进行一个彻底的改变，并称全新架构为...
 Dialogue: 0,0:15:38.10,0:15:40.96,English,,0,0,0,,They called IA-64 at the time
-Dialogue: 0,0:15:38.10,0:15:40.96,Chinese,,0,0,0,,他们当时打电话给IA-64
+Dialogue: 0,0:15:38.10,0:15:40.96,Chinese,,0,0,0,,他们当时叫它 IA-64
 Dialogue: 0,0:15:41.22,0:15:43.70,English,,0,0,0,,And it was based on a whole new concept
 Dialogue: 0,0:15:41.22,0:15:43.70,Chinese,,0,0,0,,它基于一个全新的概念
 Dialogue: 0,0:15:44.36,0:15:48.98,English,,0,0,0,,That looked really good on paper and initial results look promising
@@ -436,83 +436,83 @@ Dialogue: 0,0:16:11.46,0:16:14.16,Chinese,,0,0,0,,这是一个分支
 Dialogue: 0,0:16:14.84,0:16:19.42,English,,0,0,0,,The intel pursued and felt obligated to keep it up because they'd invested so much in it
 Dialogue: 0,0:16:14.84,0:16:19.42,Chinese,,0,0,0,,英特尔追求并感到有义务坚持下去，因为他们投入了大量资金
 Dialogue: 0,0:16:19.86,0:16:23.34,English,,0,0,0,,And along came AMD and they said well we don't have to do this radical shift
-Dialogue: 0,0:16:19.86,0:16:23.34,Chinese,,0,0,0,,随之而来的是AMD，他们说我们不必做这种彻底的转变
+Dialogue: 0,0:16:19.86,0:16:23.34,Chinese,,0,0,0,,随之而来的是 AMD，他们说我们不必做这种彻底的转变
 Dialogue: 0,0:16:23.46,0:16:26.62,English,,0,0,0,,We'll just sort of do the obvious thing of adding
-Dialogue: 0,0:16:23.46,0:16:26.62,Chinese,,0,0,0,,我们只会做一些显而易见的事情
+Dialogue: 0,0:16:23.46,0:16:26.62,Chinese,,0,0,0,,我们只会做一些简单的事情
 Dialogue: 0,0:16:27.34,0:16:32.20,English,,0,0,0,,Making the registers bigger making things go from 32 to 64 bits
-Dialogue: 0,0:16:27.34,0:16:32.20,Chinese,,0,0,0,,使寄存器更大，使得事情从32位变为64位
+Dialogue: 0,0:16:27.34,0:16:32.20,Chinese,,0,0,0,,使寄存器更大，使东西从 32 位变为 64 位
 Dialogue: 0,0:16:32.66,0:16:37.08,English,,0,0,0,,And they came along with that and were successful
-Dialogue: 0,0:16:32.66,0:16:37.08,Chinese,,0,0,0,,他们也随之而来并取得了成功
+Dialogue: 0,0:16:32.66,0:16:37.08,Chinese,,0,0,0,,他们采用了这种办法，也随之而来并取得了成功
 Dialogue: 0,0:16:37.16,0:16:43.46,English,,0,0,0,,And so intel kind of had to just sheepishly follow behind AMD on this
-Dialogue: 0,0:16:37.16,0:16:43.46,Chinese,,0,0,0,,因此英特尔不得不羞怯地跟在后面并且在此
+Dialogue: 0,0:16:37.16,0:16:43.46,Chinese,,0,0,0,,因此英特尔不得不羞怯地跟在 AMD 后面推出自己的产品
 Dialogue: 0,0:16:43.86,0:16:46.08,English,,0,0,0,,But they could because of their cross licensing deal
 Dialogue: 0,0:16:43.86,0:16:46.08,Chinese,,0,0,0,,但他们可能因为他们的交叉许可协议
 Dialogue: 0,0:16:47.06,0:16:54.76,English,,0,0,0,,So nowadays as I mentioned hardware wise just about every processor that is in a laptop,in a desktop
 Dialogue: 0,0:16:47.06,0:16:54.76,Chinese,,0,0,0,,所以现在我提到硬件方面只是关于笔记本电脑，台式机中的每个处理器
 Dialogue: 0,0:16:54.76,0:16:59.12,English,,0,0,0,,Even your cell phones of recent generation are all 64-bit processors
-Dialogue: 0,0:16:54.76,0:16:59.12,Chinese,,0,0,0,,甚至你最近一代的手机都是64位处理器
+Dialogue: 0,0:16:54.76,0:16:59.12,Chinese,,0,0,0,,而甚至你最近一代的手机都是 64 位处理器
 Dialogue: 0,0:17:03.90,0:17:08.06,English,,0,0,0,,So what we'll talk about then we used to teach IA32
-Dialogue: 0,0:17:03.90,0:17:08.06,Chinese,,0,0,0,,那么我们将谈论的是那时我们曾经教过IA32
+Dialogue: 0,0:17:03.90,0:17:08.06,Chinese,,0,0,0,,那么我们将谈论的是那时我们曾经教过 IA32
 Dialogue: 0,0:17:08.06,0:17:12.42,English,,0,0,0,,But that's gone this is the first term where we're skipping it all together
-Dialogue: 0,0:17:08.06,0:17:12.42,Chinese,,0,0,0,,但这已经消失了，这是我们一起跳过这一切的第一个词
+Dialogue: 0,0:17:08.06,0:17:12.42,Chinese,,0,0,0,,但它已经消失了，这是我们一起跳过的第一个术语
 Dialogue: 0,0:17:13.04,0:17:16.82,English,,0,0,0,,So we're using what we'll call x86-64
-Dialogue: 0,0:17:13.04,0:17:16.82,Chinese,,0,0,0,,所以我们使用的是x86-64
+Dialogue: 0,0:17:13.04,0:17:16.82,Chinese,,0,0,0,,与之替代的是我们称作 x86-64
 Dialogue: 0,0:17:16.82,0:17:21.46,English,,0,0,0,,There's various ways this is named,but this is sort of the linux way of naming it
-Dialogue: 0,0:17:16.82,0:17:21.46,Chinese,,0,0,0,,这有多种方式命名，但这是linux命名方式
+Dialogue: 0,0:17:16.82,0:17:21.46,Chinese,,0,0,0,,这有多种方式命名，但这是 linux 命名方式
 Dialogue: 0,0:17:22.60,0:17:27.64,English,,0,0,0,,If you're interested in IA32 there's a document on the web associated with the book
-Dialogue: 0,0:17:22.60,0:17:27.64,Chinese,,0,0,0,,如果你对IA32感兴趣，那么与该书相关的网络上有一份文档
-Dialogue: 0,0:17:27.78,0:17:31.50,English,,0,0,0,,Called a web aside that goes through at least some of the basics of
-Dialogue: 0,0:17:27.78,0:17:31.50,Chinese,,0,0,0,,称为网络，至少经历了一些基础知识
-Dialogue: 0,0:17:31.94,0:17:37.34,English,,0,0,0,,But to really read that you need to learn the 64 bit,because it assumes you kind of already know that
-Dialogue: 0,0:17:31.94,0:17:37.34,Chinese,,0,0,0,,但要真正读到你需要学习64位，因为它假设你已经知道了
+Dialogue: 0,0:17:22.60,0:17:27.64,Chinese,,0,0,0,,如果你对 IA32 感兴趣，那么与该书相关的网站上有一份文档
+Dialogue: 0,0:17:27.78,0:17:31.50,English,,0,0,0,,Called a website that goes through at least some of the basics of
+Dialogue: 0,0:17:27.78,0:17:31.50,Chinese,,0,0,0,,名字是它的基础知识和回顾历史
+Dialogue: 0,0:17:31.94,0:17:37.34,English,,0,0,0,,But to really read that you need to learn the 64-bit, because it assumes you kind of already know that
+Dialogue: 0,0:17:31.94,0:17:37.34,Chinese,,0,0,0,,但要读懂它的话，你需要学习64位，因为它假设你已经知道了
 Dialogue: 0,0:17:39.76,0:17:43.76,English,,0,0,0,,Okay so let's go in,and I should mention to just for general interest
-Dialogue: 0,0:17:39.76,0:17:43.76,Chinese,,0,0,0,,好吧，让我们进去吧，我应该提到一般的兴趣
+Dialogue: 0,0:17:39.76,0:17:43.76,Chinese,,0,0,0,,好吧，让我们进去吧，我先提个醒
 Dialogue: 0,0:17:44.26,0:17:48.84,English,,0,0,0,,The other major class of processor and common use today are called ARM
-Dialogue: 0,0:17:44.26,0:17:48.84,Chinese,,0,0,0,,目前处理器和常用的另一大类是ARM
+Dialogue: 0,0:17:44.26,0:17:48.84,Chinese,,0,0,0,,目前处理器和常用的另一大类是 ARM
 Dialogue: 0,0:17:49.48,0:17:53.82,English,,0,0,0,,So ARM actually is an acronym for acorn RISC machine
-Dialogue: 0,0:17:49.48,0:17:53.82,Chinese,,0,0,0,,所以ARM实际上是acorn RISC机器的首字母缩写
+Dialogue: 0,0:17:49.48,0:17:53.82,Chinese,,0,0,0,,所以 ARM 实际上是 Acorn for RISC 机器的首字母缩写
 Dialogue: 0,0:17:54.66,0:17:58.58,English,,0,0,0,,I just told you what RISC means. It means reduced instruction set computer
-Dialogue: 0,0:17:54.66,0:17:58.58,Chinese,,0,0,0,,我刚刚告诉你RISC的含义。它意味着减少指令集计算机
+Dialogue: 0,0:17:54.66,0:17:58.58,Chinese,,0,0,0,,我刚刚告诉你 RISC 的含义。它意味着精简指令集计算机
 Dialogue: 0,0:17:59.04,0:18:04.64,English,,0,0,0,,An acorn means like you know the seed of an oak tree, it was a British company
-Dialogue: 0,0:17:59.04,0:18:04.64,Chinese,,0,0,0,,橡子意味着你知道橡树的种子，它是一家英国公司
+Dialogue: 0,0:17:59.04,0:18:04.64,Chinese,,0,0,0,,Acron 意味着，你知道它是橡树的种子，是一家英国公司
 Dialogue: 0,0:18:04.86,0:18:10.96,English,,0,0,0,,That decided to make its own personal computers in the early days of it and they said
-Dialogue: 0,0:18:04.86,0:18:10.96,Chinese,,0,0,0,,他们说，这决定在早期制造自己的个人电脑
+Dialogue: 0,0:18:04.86,0:18:10.96,Chinese,,0,0,0,,他们说在早期决定制造自己的个人电脑，并说
 Dialogue: 0,0:18:11.58,0:18:13.18,English,,0,0,0,,We're not going to buy those chips from intel
 Dialogue: 0,0:18:11.58,0:18:13.18,Chinese,,0,0,0,,我们不打算从英特尔购买这些芯片
 Dialogue: 0,0:18:13.18,0:18:16.42,English,,0,0,0,,We're going to make them ourselves so they designed and manufactured their own chips
-Dialogue: 0,0:18:13.18,0:18:16.42,Chinese,,0,0,0,,我们将自己制作它们，以便他们设计和制造自己的芯片
+Dialogue: 0,0:18:13.18,0:18:16.42,Chinese,,0,0,0,,我们将自己制作它们，以便于设计和生产自己的芯片
 Dialogue: 0,0:18:17.10,0:18:20.62,English,,0,0,0,,Well as a company a computer manufacturer it was a complete bust
-Dialogue: 0,0:18:17.10,0:18:20.62,Chinese,,0,0,0,,作为一家公司的计算机制造商，它是一个彻底的破产
+Dialogue: 0,0:18:17.10,0:18:20.62,Chinese,,0,0,0,,最后作为一家公司的计算机制造商，它彻底的破产了
 Dialogue: 0,0:18:21.32,0:18:26.24,English,,0,0,0,,But it turned out that they'd come up with a fairly good instruction set
 Dialogue: 0,0:18:21.32,0:18:26.24,Chinese,,0,0,0,,但事实证明他们提出了一个相当不错的指令集
 Dialogue: 0,0:18:26.32,0:18:32.60,English,,0,0,0,,That was sufficiently simple that it could be put on chips and better yet
-Dialogue: 0,0:18:26.32,0:18:32.60,Chinese,,0,0,0,,这非常简单，可以放在芯片上，但更好
+Dialogue: 0,0:18:26.32,0:18:32.60,Chinese,,0,0,0,,非常高效并且简单，可以放在芯片上，而且更好的是
 Dialogue: 0,0:18:32.60,0:18:33.84,English,,0,0,0,,It could be customized
 Dialogue: 0,0:18:32.60,0:18:33.84,Chinese,,0,0,0,,它可以定制
-Dialogue: 0,0:18:34.32,0:18:39.04,English,,0,0,0,,So arm is now a company of its own headquartered in Cambridge England
-Dialogue: 0,0:18:34.32,0:18:39.04,Chinese,,0,0,0,,因此，arm现在是一家总部位于英国剑桥的公司
+Dialogue: 0,0:18:34.32,0:18:39.04,English,,0,0,0,,So ARM is now a company of its own headquartered in Cambridge England
+Dialogue: 0,0:18:34.32,0:18:39.04,Chinese,,0,0,0,,因此，ARM 现在是一家总部位于英国剑桥的公司
 Dialogue: 0,0:18:39.64,0:18:43.06,English,,0,0,0,,And the reason why part of the reason they're successful therefore is
 Dialogue: 0,0:18:39.64,0:18:43.06,Chinese,,0,0,0,,这也是他们成功的部分原因所在
 Dialogue: 0,0:18:43.58,0:18:49.70,English,,0,0,0,,Because it tends to be a lower power than an x86 machine because it's simpler
-Dialogue: 0,0:18:43.58,0:18:49.70,Chinese,,0,0,0,,因为它比x86机器更低，因为它更简单
+Dialogue: 0,0:18:43.58,0:18:49.70,Chinese,,0,0,0,,因为它比 x86 机器功耗更低，因为它更简单
 Dialogue: 0,0:18:50.20,0:18:52.86,English,,0,0,0,,But the other is that they don't actually sell processors
-Dialogue: 0,0:18:50.20,0:18:52.86,Chinese,,0,0,0,,但另一个是他们实际上并没有销售处理器
+Dialogue: 0,0:18:50.20,0:18:52.86,Chinese,,0,0,0,,但另一个事实是他们实际上并没有销售处理器
 Dialogue: 0,0:18:52.86,0:18:58.86,English,,0,0,0,,They sell companies the rights the licensing rights to use their designs
 Dialogue: 0,0:18:52.86,0:18:58.86,Chinese,,0,0,0,,他们向公司出售使用其设计的许可权利
 Dialogue: 0,0:18:59.34,0:19:07.56,English,,0,0,0,,And so if you look at like a a cell phone processor,the actual arm processor is a little tiny part of it on the chip
-Dialogue: 0,0:18:59.34,0:19:07.56,Chinese,,0,0,0,,因此，如果你看一下像手机处理器一样，实际的手臂处理器只是它在芯片上的一小部分
+Dialogue: 0,0:18:59.34,0:19:07.56,Chinese,,0,0,0,,因此，如果你看一下像手机处理器，实际的 ARM 处理器只是它在芯片上的一小部分
 Dialogue: 0,0:19:08.20,0:19:14.80,English,,0,0,0,,And then they'll have other stuff to make the graphics go better to improve your phone calls and so forth
-Dialogue: 0,0:19:08.20,0:19:14.80,Chinese,,0,0,0,,然后他们会有其他东西让图形更好地改善你的电话等等
+Dialogue: 0,0:19:08.20,0:19:14.80,Chinese,,0,0,0,,然后他们会有其他东西，让图形更好，改善你的通话等等
 Dialogue: 0,0:19:14.84,0:19:19.36,English,,0,0,0,,And so they're really selling what intellectual property is as opposed to chips
 Dialogue: 0,0:19:14.84,0:19:19.36,Chinese,,0,0,0,,所以他们真正卖的是知识产权而不是芯片
 Dialogue: 0,0:19:20.10,0:19:23.66,English,,0,0,0,,And so people we've gotten various enquiries
-Dialogue: 0,0:19:20.10,0:19:23.66,Chinese,,0,0,0,,所以人们我们得到了各种各样的询问
+Dialogue: 0,0:19:20.10,0:19:23.66,Chinese,,0,0,0,,所以我们得到了别人各种各样的询问
 Dialogue: 0,0:19:23.66,0:19:28.08,English,,0,0,0,,When are you going to start talking about ARM in your book or your course or something and we go
-Dialogue: 0,0:19:23.66,0:19:28.08,Chinese,,0,0,0,,你什么时候开始在你的书或你的课程中谈论ARM，我们就去吧
+Dialogue: 0,0:19:23.66,0:19:28.08,Chinese,,0,0,0,,你什么时候开始在你的书或你的课程中谈论 ARM，我们就说
 Dialogue: 0,0:19:28.46,0:19:31.74,English,,0,0,0,,It would be another book to write to do justice to ARM
-Dialogue: 0,0:19:28.46,0:19:31.74,Chinese,,0,0,0,,这将是另一本书来为ARM做公平
+Dialogue: 0,0:19:28.46,0:19:31.74,Chinese,,0,0,0,,将有另一本书来介绍 ARM
 Dialogue: 0,0:19:31.74,0:19:34.24,English,,0,0,0,,It would be like a whole redo of the thing
-Dialogue: 0,0:19:31.74,0:19:34.24,Chinese,,0,0,0,,这就像是事情的重做
+Dialogue: 0,0:19:31.74,0:19:34.24,Chinese,,0,0,0,,这就像是推倒重新讲
 Dialogue: 0,0:19:34.58,0:19:37.74,English,,0,0,0,,And we were not inclined to do that right now
 Dialogue: 0,0:19:34.58,0:19:37.74,Chinese,,0,0,0,,我们现在并不倾向于这样做
 Dialogue: 0,0:19:39.32,0:19:44.16,English,,0,0,0,,But just so you know there's sort of a two worlds out there x86
