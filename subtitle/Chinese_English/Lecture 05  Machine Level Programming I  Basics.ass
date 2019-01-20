@@ -16,9 +16,9 @@ Video File: ../../../../../../../BaiduNetdiskDownload/#5 Machine-Level Programmi
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 1.000000
-Scroll Position: 475
-Active Line: 487
-Video Position: 35153
+Scroll Position: 598
+Active Line: 613
+Video Position: 44009
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -516,17 +516,17 @@ Dialogue: 0,0:19:31.74,0:19:34.24,Chinese,,0,0,0,,这就像是推倒重新讲
 Dialogue: 0,0:19:34.58,0:19:37.74,English,,0,0,0,,And we were not inclined to do that right now
 Dialogue: 0,0:19:34.58,0:19:37.74,Chinese,,0,0,0,,我们现在并不倾向于这样做
 Dialogue: 0,0:19:39.32,0:19:44.16,English,,0,0,0,,But just so you know there's sort of a two worlds out there x86
-Dialogue: 0,0:19:39.32,0:19:44.16,Chinese,,0,0,0,,但就是你知道那里有两个世界x86
-Dialogue: 0,0:19:44.16,0:19:46.06,English,,0,0,0,,ARM are the dominant players right now
-Dialogue: 0,0:19:44.16,0:19:46.06,Chinese,,0,0,0,,ARM现在是主要的参与者
+Dialogue: 0,0:19:39.32,0:19:44.16,Chinese,,0,0,0,,但就是你知道就像是两个世界
+Dialogue: 0,0:19:44.16,0:19:46.06,English,,0,0,0,, x86 ARM are the dominant players right now
+Dialogue: 0,0:19:44.16,0:19:46.06,Chinese,,0,0,0,,x86 ARM 现在是主要的活跃者
 Dialogue: 0,0:19:49.46,0:19:54.36,English,,0,0,0,,So let's talk some terminology,if you've probably heard some of these terms before but let's make it clear
-Dialogue: 0,0:19:49.46,0:19:54.36,Chinese,,0,0,0,,所以，让我们谈谈一些术语，如果你之前可能已经听过其中的一些术语，那么让我们说清楚
+Dialogue: 0,0:19:49.46,0:19:54.36,Chinese,,0,0,0,,所以，让我们谈谈术语，你之前可能已经听过其中的一些术语，我们要弄清楚
 Dialogue: 0,0:19:54.91,0:19:58.40,English,,0,0,0,,So when we talk about the instructions the instruction set
-Dialogue: 0,0:19:54.91,0:19:58.40,Chinese,,0,0,0,,所以当我们谈论指令集时
+Dialogue: 0,0:19:54.91,0:19:58.40,Chinese,,0,0,0,,所以当我们谈论指令和指令集时
 Dialogue: 0,0:19:58.96,0:20:06.76,English,,0,0,0,,That's the the target of a compiler to give you a series of instructions that tell the machine exactly what to do
-Dialogue: 0,0:19:58.96,0:20:06.76,Chinese,,0,0,0,,这是编译器的目标，它为你提供一系列指令，告诉机器确切地做什么
+Dialogue: 0,0:19:58.96,0:20:06.76,Chinese,,0,0,0,,这是编译器的目标，为你提供一系列指令，告诉机器确切地做什么
 Dialogue: 0,0:20:08.92,0:20:11.50,English,,0,0,0,,But it turns out that the hardware people have figured out
-Dialogue: 0,0:20:08.92,0:20:11.50,Chinese,,0,0,0,,但事实证明，硬件人已经想到了
+Dialogue: 0,0:20:08.92,0:20:11.50,Chinese,,0,0,0,,但事实证明，发明硬件的人们已经想到了
 Dialogue: 0,0:20:11.50,0:20:14.60,English,,0,0,0,,All kinds of clever ways to implement instructions
 Dialogue: 0,0:20:11.50,0:20:14.60,Chinese,,0,0,0,,各种巧妙的实施指令方式
 Dialogue: 0,0:20:15.26,0:20:18.96,English,,0,0,0,,Some of them are really fast but take a lot of hardware
@@ -534,79 +534,79 @@ Dialogue: 0,0:20:15.26,0:20:18.96,Chinese,,0,0,0,,其中一些非常快，但需
 Dialogue: 0,0:20:19.48,0:20:22.16,English,,0,0,0,,Some are pretty slow but don't take much hardware at all
 Dialogue: 0,0:20:19.48,0:20:22.16,Chinese,,0,0,0,,有些很慢，但根本不需要太多硬件
 Dialogue: 0,0:20:22.64,0:20:28.70,English,,0,0,0,,And so they managed to create this abstraction that's called the instruction set architecture
-Dialogue: 0,0:20:22.64,0:20:28.70,Chinese,,0,0,0,,因此他们设法创建了这种称为指令集架构的抽象
+Dialogue: 0,0:20:22.64,0:20:28.70,Chinese,,0,0,0,,因此他们设法创建了这种称为“指令集”架构的抽象
 Dialogue: 0,0:20:28.70,0:20:31.84,English,,0,0,0,,Which is what the target of a compiler should be
-Dialogue: 0,0:20:28.70,0:20:31.84,Chinese,,0,0,0,,这是编译器的目标应该是什么
+Dialogue: 0,0:20:28.70,0:20:31.84,Chinese,,0,0,0,,编译器的目标就是他们
 Dialogue: 0,0:20:32.12,0:20:35.18,English,,0,0,0,,And then let the hardware people figure out how best to implement it
-Dialogue: 0,0:20:32.12,0:20:35.18,Chinese,,0,0,0,,然后让硬件人员弄清楚如何最好地实现它
+Dialogue: 0,0:20:32.12,0:20:35.18,Chinese,,0,0,0,,而如何最好地实现它是硬件研究者的工作
 Dialogue: 0,0:20:35.84,0:20:40.52,English,,0,0,0,,And then the low,so that that's a concept actually it came along in the 1960s
-Dialogue: 0,0:20:35.84,0:20:40.52,Chinese,,0,0,0,,然后是低，所以这是一个概念实际上是在20世纪60年代出现的
+Dialogue: 0,0:20:35.84,0:20:40.52,Chinese,,0,0,0,,所以这个概念实际上是在 20 世纪 60 年代出现的
 Dialogue: 0,0:20:41.66,0:20:48.30,English,,0,0,0,,So that's even before my time as far as a computer person,but...
-Dialogue: 0,0:20:41.66,0:20:48.30,Chinese,,0,0,0,,所以，甚至在我的时间之前，就像一个计算机的人，但......
+Dialogue: 0,0:20:41.66,0:20:48.30,Chinese,,0,0,0,,那甚至在我的时间之前，在我研究计算机之前，但......
 Dialogue: 0,0:20:49.10,0:20:52.98,English,,0,0,0,,It's a very important concept in the world of computers
 Dialogue: 0,0:20:49.10,0:20:52.98,Chinese,,0,0,0,,这是计算机世界中一个非常重要的概念
 Dialogue: 0,0:20:53.50,0:20:55.92,English,,0,0,0,,And then what they call the lower level stuff
 Dialogue: 0,0:20:53.50,0:20:55.92,Chinese,,0,0,0,,然后他们称之为低级别的东西
 Dialogue: 0,0:20:55.92,0:20:58.80,English,,0,0,0,,How it actually gets implement is called the microarchitecture
-Dialogue: 0,0:20:55.92,0:20:58.80,Chinese,,0,0,0,,实际上如何实现它被称为微体系结构
+Dialogue: 0,0:20:55.92,0:20:58.80,Chinese,,0,0,0,,实际上如何实现它被称为微结构
 Dialogue: 0,0:20:59.12,0:21:02.50,English,,0,0,0,,And we will talk very very little about microarchitecture in this course
-Dialogue: 0,0:20:59.12,0:21:02.50,Chinese,,0,0,0,,我们将在本课程中谈论微体系结构
+Dialogue: 0,0:20:59.12,0:21:02.50,Chinese,,0,0,0,,我们将在本课程中谈论非常非常少的微结构知识
 Dialogue: 0,0:21:03.54,0:21:07.82,English,,0,0,0,,And as I mentioned machine code is sort of a generic term that incorporates both
 Dialogue: 0,0:21:03.54,0:21:07.82,Chinese,,0,0,0,,正如我所提到的，机器代码是一种包含两者的通用术语
-Dialogue: 0,0:21:08.26,0:21:14.20,English,,0,0,0,,The actual (bit)bytes that are operated executing as well as the assembly level version of it
-Dialogue: 0,0:21:08.26,0:21:14.20,Chinese,,0,0,0,,执行的实际（位）字节以及它的汇编级版本
+Dialogue: 0,0:21:08.26,0:21:14.20,English,,0,0,0,,The actual bytes that are operated executing as well as the assembly level version of it
+Dialogue: 0,0:21:08.26,0:21:14.20,Chinese,,0,0,0,,执行的实际字节以及它的汇编版本
 Dialogue: 0,0:21:18.26,0:21:22.12,English,,0,0,0,,And as I mentioned you can think of from instruction set point of view
 Dialogue: 0,0:21:18.26,0:21:22.12,Chinese,,0,0,0,,正如我所提到的，你可以从指令集的角度来思考
 Dialogue: 0,0:21:22.88,0:21:27.74,English,,0,0,0,,So IA32,x86-64 and what's called Itanium
-Dialogue: 0,0:21:22.88,0:21:27.74,Chinese,,0,0,0,,所以IA32，x86-64以及所谓的Itanium
+Dialogue: 0,0:21:22.88,0:21:27.74,Chinese,,0,0,0,,所以 IA32，x86-64 以及所谓的 Itanium
 Dialogue: 0,0:21:28.46,0:21:31.20,English,,0,0,0,,This not very successful intel thing
-Dialogue: 0,0:21:28.46,0:21:31.20,Chinese,,0,0,0,,这不是非常成功的英特尔事情
+Dialogue: 0,0:21:28.46,0:21:31.20,Chinese,,0,0,0,,那个不非常成功的英特尔的东西
 Dialogue: 0,0:21:31.46,0:21:37.28,English,,0,0,0,,Those are all in some ways different instruction set architectures
 Dialogue: 0,0:21:31.46,0:21:37.28,Chinese,,0,0,0,,这些都是在某些方面不同的指令集架构
 Dialogue: 0,0:21:37.28,0:21:42.02,English,,0,0,0,,ARM actually similar to intel has gone through various different generations
-Dialogue: 0,0:21:37.28,0:21:42.02,Chinese,,0,0,0,,ARM实际上类似于intel经历了各种不同的世代
+Dialogue: 0,0:21:37.28,0:21:42.02,Chinese,,0,0,0,,ARM 实际上类似于 intel 经历了各种不同的世代
 Dialogue: 0,0:21:42.02,0:21:45.42,English,,0,0,0,,So there's various different generations of its instruction set
 Dialogue: 0,0:21:42.02,0:21:45.42,Chinese,,0,0,0,,所以它的指令集有各种不同的代
 Dialogue: 0,0:21:47.82,0:21:51.32,English,,0,0,0,,So from a programmer machine level programmers perspective
 Dialogue: 0,0:21:47.82,0:21:51.32,Chinese,,0,0,0,,所以从程序员机器级程序员的角度来看
 Dialogue: 0,0:21:51.74,0:21:55.00,English,,0,0,0,,Things are a bit different than you see when you write C code
-Dialogue: 0,0:21:51.74,0:21:55.00,Chinese,,0,0,0,,与编写C代码时的情况有所不同
+Dialogue: 0,0:21:51.74,0:21:55.00,Chinese,,0,0,0,,（写汇编代码）与编写 C 代码时的情况有一点不同
 Dialogue: 0,0:21:56.24,0:22:01.38,English,,0,0,0,,First of all there is some very visible parts of the instruction the machine state
 Dialogue: 0,0:21:56.24,0:22:01.38,Chinese,,0,0,0,,首先，机器状态指令中有一些非常明显的部分
 Dialogue: 0,0:22:02.12,0:22:06.32,English,,0,0,0,,That you can examine and test and operate on and you must in fact
 Dialogue: 0,0:22:02.12,0:22:06.32,Chinese,,0,0,0,,你可以检查，测试和操作，事实上你必须这样做
 Dialogue: 0,0:22:06.82,0:22:10.92,English,,0,0,0,,You would never understand what those are if you're just thinking in terms of C
-Dialogue: 0,0:22:06.82,0:22:10.92,Chinese,,0,0,0,,如果你只是用C来思考，你永远不会明白那些是什么
+Dialogue: 0,0:22:06.82,0:22:10.92,Chinese,,0,0,0,,如果你只是用 C 语言来思考，你永远不会明白那些是什么
 Dialogue: 0,0:22:11.88,0:22:17.50,English,,0,0,0,,So in particular there's some sort of a program counter to tells you what
 Dialogue: 0,0:22:11.88,0:22:17.50,Chinese,,0,0,0,,所以特别是有某种程序计数器可以告诉你什么
 Dialogue: 0,0:22:17.66,0:22:22.62,English,,0,0,0,,What address is the instruction that you're going to execute next
 Dialogue: 0,0:22:17.66,0:22:22.62,Chinese,,0,0,0,,你接下来要执行的指令是什么地址
 Dialogue: 0,0:22:22.66,0:22:24.38,English,,0,0,0,,Where is that located in memory
-Dialogue: 0,0:22:22.66,0:22:24.38,Chinese,,0,0,0,,它位于记忆中的哪个位置
+Dialogue: 0,0:22:22.66,0:22:24.38,Chinese,,0,0,0,,它位于内存中的哪个位置
 Dialogue: 0,0:22:25.40,0:22:33.38,English,,0,0,0,,And then there's a set of registers which are part of that the programmer actually makes use of
-Dialogue: 0,0:22:25.40,0:22:33.38,Chinese,,0,0,0,,然后有一组寄存器，它们是程序员实际使用的一部分
+Dialogue: 0,0:22:25.40,0:22:33.38,Chinese,,0,0,0,,然后有一系列寄存器，它们是程序员实际使用的一部分
 Dialogue: 0,0:22:33.38,0:22:38.14,English,,0,0,0,,You can think of them as as a very small number of memory locations
-Dialogue: 0,0:22:33.38,0:22:38.14,Chinese,,0,0,0,,你可以将它们视为极少数的内存位置
+Dialogue: 0,0:22:33.38,0:22:38.14,Chinese,,0,0,0,,你可以将它们视为非常小的内存的位置
 Dialogue: 0,0:22:38.14,0:22:43.28,English,,0,0,0,,But rather than giving an address from 0 up to n-1 or something
-Dialogue: 0,0:22:38.14,0:22:43.28,Chinese,,0,0,0,,但不是给出从0到n-1或其他地址的地址
+Dialogue: 0,0:22:38.14,0:22:43.28,Chinese,,0,0,0,,但并不给出从 0 到 n-1 或其他地址
 Dialogue: 0,0:22:43.50,0:22:47.38,English,,0,0,0,,You actually give them by name as specifically
 Dialogue: 0,0:22:43.50,0:22:47.38,Chinese,,0,0,0,,你实际上是专门给他们的名字
 Dialogue: 0,0:22:48.22,0:22:50.34,English,,0,0,0,,And then there's another sort of state
-Dialogue: 0,0:22:48.22,0:22:50.34,Chinese,,0,0,0,,然后还有另一种状态
+Dialogue: 0,0:22:48.22,0:22:50.34,Chinese,,0,0,0,,然后还有另一种状态寄存器
 Dialogue: 0,0:22:50.54,0:22:53.64,English,,0,0,0,,That's just a few bits worth of state that talked about
-Dialogue: 0,0:22:50.54,0:22:53.64,Chinese,,0,0,0,,这只是谈到的几个州的状态
+Dialogue: 0,0:22:50.54,0:22:53.64,Chinese,,0,0,0,,只有几个位的状态寄存器，显示了
 Dialogue: 0,0:22:54.10,0:22:59.26,English,,0,0,0,,What are the results of some recent instructions
-Dialogue: 0,0:22:54.10,0:22:59.26,Chinese,,0,0,0,,最近的一些指示的结果是什么？
+Dialogue: 0,0:22:54.10,0:22:59.26,Chinese,,0,0,0,,最近的一些指令的运行结果是什么？
 Dialogue: 0,0:22:59.76,0:23:04.26,English,,0,0,0,,Where they did it produce a value of 0,did it produce a negative or a positive value
-Dialogue: 0,0:22:59.76,0:23:04.26,Chinese,,0,0,0,,如果他们这样做，它产生的值为0，是否产生负值或正值
+Dialogue: 0,0:22:59.76,0:23:04.26,Chinese,,0,0,0,,它产生的值为0？是否产生负值或正值？
 Dialogue: 0,0:23:04.60,0:23:06.66,English,,0,0,0,,And those are used to implement conditional branching
-Dialogue: 0,0:23:04.60,0:23:06.66,Chinese,,0,0,0,,这些用于实现条件分支
+Dialogue: 0,0:23:04.60,0:23:06.66,Chinese,,0,0,0,,这些值用于实现条件分支
 Dialogue: 0,0:23:06.66,0:23:08.82,English,,0,0,0,,Which we'll look at later as we go
-Dialogue: 0,0:23:06.66,0:23:08.82,Chinese,,0,0,0,,我们稍后会看到它们
+Dialogue: 0,0:23:06.66,0:23:08.82,Chinese,,0,0,0,,我们稍后会讨论它们
 Dialogue: 0,0:23:10.12,0:23:11.60,English,,0,0,0,,And then the other part of it
 Dialogue: 0,0:23:10.12,0:23:11.60,Chinese,,0,0,0,,然后是其他部分
 Dialogue: 0,0:23:11.86,0:23:15.64,English,,0,0,0,,So that's sort of the processor and then the other part of is the memory
-Dialogue: 0,0:23:11.86,0:23:15.64,Chinese,,0,0,0,,那就是处理器，然后是内存的另一部分
+Dialogue: 0,0:23:11.86,0:23:15.64,Chinese,,0,0,0,,刚才的部分是处理器，然后另一部分是内存
 Dialogue: 0,0:23:16.20,0:23:21.78,English,,0,0,0,,And as I mentioned in the one of the first lectures
 Dialogue: 0,0:23:16.20,0:23:21.78,Chinese,,0,0,0,,正如我在第一次讲座中提到的那样
 Dialogue: 0,0:23:21.78,0:23:25.56,English,,0,0,0,,The memory is you can think of logically as just an array of bytes
@@ -614,29 +614,29 @@ Dialogue: 0,0:23:21.78,0:23:25.56,Chinese,,0,0,0,,内存是你可以逻辑地认
 Dialogue: 0,0:23:26.72,0:23:30.50,English,,0,0,0,,And that's what the machine level programmer sees
 Dialogue: 0,0:23:26.72,0:23:30.50,Chinese,,0,0,0,,这就是机器级程序员所看到的
 Dialogue: 0,0:23:31.36,0:23:35.88,English,,0,0,0,,And it's actually kind of a fiction in different ways as I mentioned before
-Dialogue: 0,0:23:31.36,0:23:35.88,Chinese,,0,0,0,,如前所述，它实际上是一种不同的虚构形式
+Dialogue: 0,0:23:31.36,0:23:35.88,Chinese,,0,0,0,,如前所述，它实际上是一种用不同方式实现的虚构对象
 Dialogue: 0,0:23:35.90,0:23:39.24,English,,0,0,0,,There's sort of a collaboration between the operating system and the hardware
 Dialogue: 0,0:23:35.90,0:23:39.24,Chinese,,0,0,0,,操作系统和硬件之间存在一种协作
 Dialogue: 0,0:23:39.68,0:23:45.08,English,,0,0,0,,What they call virtual memory to make it look like each program running on the processor
-Dialogue: 0,0:23:39.68,0:23:45.08,Chinese,,0,0,0,,他们称之为虚拟内存使其看起来像处理器上运行的每个程序
+Dialogue: 0,0:23:39.68,0:23:45.08,Chinese,,0,0,0,,他们称之为虚拟内存，使处理器上运行的每个程序都看起来像
 Dialogue: 0,0:23:45.56,0:23:50.14,English,,0,0,0,,Has its own independent array of bytes that it can access
-Dialogue: 0,0:23:45.56,0:23:50.14,Chinese,,0,0,0,,它有自己独立的字节数组，可以访问
+Dialogue: 0,0:23:45.56,0:23:50.14,Chinese,,0,0,0,,拥有自己独立的字节数组，它们可以访问
 Dialogue: 0,0:23:51.20,0:23:56.70,English,,0,0,0,,Even though they actually share values within the the physical memory itself
-Dialogue: 0,0:23:51.20,0:23:56.70,Chinese,,0,0,0,,即使它们实际上在物理内存本身内共享值
+Dialogue: 0,0:23:51.20,0:23:56.70,Chinese,,0,0,0,,即使它们实际上在物理内存内部都是共享这些字节数组的
 Dialogue: 0,0:23:57.24,0:23:59.40,English,,0,0,0,,And furthermore you heard the term cache
-Dialogue: 0,0:23:57.24,0:23:59.40,Chinese,,0,0,0,,此外，你听到了术语缓存
+Dialogue: 0,0:23:57.24,0:23:59.40,Chinese,,0,0,0,,此外，你听到了术语“缓存（Cache）”
 Dialogue: 0,0:24:00.06,0:24:02.76,English,,0,0,0,,The idea of a cache is not visible here at all
-Dialogue: 0,0:24:00.06,0:24:02.76,Chinese,,0,0,0,,这里根本看不到缓存的想法
+Dialogue: 0,0:24:00.06,0:24:02.76,Chinese,,0,0,0,,这里根本看不到缓存的意义
 Dialogue: 0,0:24:03.28,0:24:06.84,English,,0,0,0,,Because it just is automatically loaded with recent stuff
 Dialogue: 0,0:24:03.28,0:24:06.84,Chinese,,0,0,0,,因为它只是自动加载最近的东西
 Dialogue: 0,0:24:08.16,0:24:13.14,English,,0,0,0,,And the only thing that will look different is if you re-access that memory it will go faster
-Dialogue: 0,0:24:08.16,0:24:13.14,Chinese,,0,0,0,,唯一看起来不同的是，如果你重新访问那个内存，它会更快
+Dialogue: 0,0:24:08.16,0:24:13.14,Chinese,,0,0,0,,唯一看起来不同的是，如果你重新访问那个内存，就会更快
 Dialogue: 0,0:24:13.18,0:24:15.18,English,,0,0,0,,Than it would if it hadn't been cached
-Dialogue: 0,0:24:13.18,0:24:15.18,Chinese,,0,0,0,,比没有缓存的情况还要好
+Dialogue: 0,0:24:13.18,0:24:15.18,Chinese,,0,0,0,,这在没有缓存的情况下是不会发生的
 Dialogue: 0,0:24:15.82,0:24:17.72,English,,0,0,0,,But it's not visible in terms of
-Dialogue: 0,0:24:15.82,0:24:17.72,Chinese,,0,0,0,,但就其而言，它并不可见
+Dialogue: 0,0:24:15.82,0:24:17.72,Chinese,,0,0,0,,但就程序而言，它并不可见
 Dialogue: 0,0:24:18.04,0:24:20.62,English,,0,0,0,,There's no instructions to manipulate the cache
-Dialogue: 0,0:24:18.04,0:24:20.62,Chinese,,0,0,0,,没有操作缓存的说明
+Dialogue: 0,0:24:18.04,0:24:20.62,Chinese,,0,0,0,,没有操作缓存的指令
 Dialogue: 0,0:24:20.72,0:24:24.92,English,,0,0,0,,There's no way you can directly access the cache
 Dialogue: 0,0:24:20.72,0:24:24.92,Chinese,,0,0,0,,你无法直接访问缓存
 Dialogue: 0,0:24:26.94,0:24:33.08,English,,0,0,0,,So you already see that it's already abstract it's got some more details of real hardware
