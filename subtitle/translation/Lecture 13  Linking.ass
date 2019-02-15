@@ -28,56 +28,107 @@ Style: Chinese,Source Han Sans CN,34,&H00FBFD00,&H00FFFFFF,&H00362A28,&H00FFFFFF
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 0,0:00:00.03,0:00:01.34,English,,0,0,0,,Welcome good to see you
+Dialogue: 0,0:00:00.03,0:00:01.34,Chinese,,0,0,0,,欢迎，很高兴见到大家
 Dialogue: 0,0:00:04.60,0:00:09.52,English,,0,0,0,,Today we're going to begin a transitioning from
+Dialogue: 0,0:00:04.60,0:00:09.52,Chinese,,0,0,0,,今天我们要转变一下研究内容
 Dialogue: 0,0:00:10.28,0:00:17.04,English,,0,0,0,,How a programs interact with hardware to how they interact with software in particular system software
+Dialogue: 0,0:00:10.28,0:00:17.04,Chinese,,0,0,0,,从程序如何与硬件交互，以及它们如何与特定系统软件中的软件交互开始
 Dialogue: 0,0:00:17.70,0:00:23.38,English,,0,0,0,,And we're going to start that investigation by studying and learning about a process called linking
+Dialogue: 0,0:00:17.70,0:00:23.38,Chinese,,0,0,0,,我们将通过研究和弄懂一个叫做链接的过程开始
 Dialogue: 0,0:00:25.12,0:00:30.98,English,,0,0,0,,Which is how the system builds your programs ok
+Dialogue: 0,0:00:25.12,0:00:30.98,English,,0,0,0,,这能帮助你好好弄清楚系统是如何构建你的程序
 Dialogue: 0,0:00:33.26,0:00:35.92,English,,0,0,0,,So we're going to study the process of linking
-Dialogue: 0,0:00:35.92,0:00:40.86,English,,0,0,0,,And then I'm going to show you a really cool technique called library inter positioning
+Dialogue: 0,0:00:33.26,0:00:35.92,English,,0,0,0,,所以我们要学习链接的过程
+Dialogue: 0,0:00:35.92,0:00:40.86,English,,0,0,0,,And then I'm going to show you a really cool technique called library interpositioning
+Dialogue: 0,0:00:35.92,0:00:40.86,English,,0,0,0,,然后我将向你展示一项非常酷的技术，称为库打桩技术
 Dialogue: 0,0:00:42.16,0:00:51.08,English,,0,0,0,,Which allows you to use linking to actually intercept on function calls in libraries like the standard C library
+Dialogue: 0,0:00:42.16,0:00:51.08,English,,0,0,0,,这允许你使用链接实际拦截像标准 C 库这样的库中的函数调用
 Dialogue: 0,0:00:51.66,0:00:56.38,English,,0,0,0,,So it's a very powerful and interesting technique and it's all enabled by by linking
+Dialogue: 0,0:00:51.66,0:00:56.38,English,,0,0,0,,所以它是一种非常强大而且有趣的技术，它通过链接实现
 Dialogue: 0,0:00:58.28,0:01:01.36,English,,0,0,0,,So let's start with a simple program
+Dialogue: 0,0:00:58.28,0:01:01.36,English,,0,0,0,,让我们从一个非常简单的程序开始吧
 Dialogue: 0,0:01:02.54,0:01:07.84,English,,0,0,0,,This program consists of two modules a main.c and sum.c
+Dialogue: 0,0:01:02.54,0:01:07.84,English,,0,0,0,,这个程序里包含两个模块 main.c 和 sum.c
 Dialogue: 0,0:01:09.06,0:01:14.90,English,,0,0,0,,sum.c takes as an array as an argument and a length n
+Dialogue: 0,0:01:09.06,0:01:14.90,English,,0,0,0,,sum.c 将一个数组和一个长度 n 作为参数
 Dialogue: 0,0:01:15.54,0:01:21.60,English,,0,0,0,,And then it sums up the elements of that array and returns the sum  back to the caller
+Dialogue: 0,0:01:15.54,0:01:21.60,English,,0,0,0,,然后它计算了该数组中元素的总和并将总和返回给调用者
 Dialogue: 0,0:01:23.48,0:01:26.21,English,,0,0,0,,main.c calls the sum function
+Dialogue: 0,0:01:23.48,0:01:26.21,English,,0,0,0,,main.c 调用了 sum 函数
 Dialogue: 0,0:01:26.76,0:01:29.54,English,,0,0,0,,Using and passes it a two element array of ints
+Dialogue: 0,0:01:26.76,0:01:29.54,English,,0,0,0,,使用并传递一个两元素的 int 类型数组
 Dialogue: 0,0:01:31.20,0:01:35.78,English,,0,0,0,,And then returns the value received from some
+Dialogue: 0,0:01:31.20,0:01:35.78,English,,0,0,0,,然后返回了从其中收到的值
 Dialogue: 0,0:01:37.74,0:01:43.54,English,,0,0,0,,Yeah we that that's kind of an odd thing to do to return your exit status like that
+Dialogue: 0,0:01:37.74,0:01:43.54,English,,0,0,0,,是的，我们认为像这样返回退出状态是件奇怪的事情
 Dialogue: 0,0:01:43.54,0:01:47.76,English,,0,0,0,,But we just did it so that the compiler wouldn't optimize away all of a code
+Dialogue: 0,0:01:43.54,0:01:47.76,English,,0,0,0,,但我们这样做，以便编译器不会优化掉所有代码
 Dialogue: 0,0:01:49.22,0:01:52.94,English,,0,0,0,,I know let's look at what happens if when we want to compile those those two modules
+Dialogue: 0,0:01:49.22,0:01:52.94,English,,0,0,0,,让我们来看看如果我们想要编译那两个模块会发生什么
 Dialogue: 0,0:01:55.44,0:01:58.74,English,,0,0,0,,For each of main.c and sum.c
+Dialogue: 0,0:01:55.44,0:01:58.74,English,,0,0,0,,对于每个 main.c 和 sum.c
 Dialogue: 0,0:01:59.52,0:02:08.66,English,,0,0,0,,The GCC calls a series of translators on that,on those modules,on those .c files
+Dialogue: 0,0:01:59.52,0:02:08.66,English,,0,0,0,,GCC 会在这些模块上调用 .c 文件上的一系列翻译器
 Dialogue: 0,0:02:09.38,0:02:11.68,English,,0,0,0,,First calls the C preprocessor cpp
+Dialogue: 0,0:02:09.38,0:02:11.68,English,,0,0,0,,首先调用 C 预处理器 cpp(将 main.c 翻译成 ASCII 中间文件 main.i)
 Dialogue: 0,0:02:14.30,0:02:18.82,English,,0,0,0,,Then it calls the compiler,the actual compiler which is cc1
+Dialogue: 0,0:02:14.30,0:02:18.82,English,,0,0,0,,然后它调用编译器，实际上使用的编译器是叫 cc1(将 main.i 翻译成 ASCII 汇编语言文件 main.s)
 Dialogue: 0,0:02:20.90,0:02:26.96,English,,0,0,0,,The compiler generates assembly which is then translated by the assembler as
+Dialogue: 0,0:02:20.90,0:02:26.96,English,,0,0,0,,编译器生成汇编程序，然后汇编器将其翻译
 Dialogue: 0,0:02:27.72,0:02:32.60,English,,0,0,0,,And resulting in a .o file called main.o
+Dialogue: 0,0:02:27.72,0:02:32.60,English,,0,0,0,,结果生成了一个 .o 文件,称为 main.o
 Dialogue: 0,0:02:33.26,0:02:36.24,English,,0,0,0,,Similar things happens for sum.c
+Dialogue: 0,0:02:33.26,0:02:36.24,English,,0,0,0,,sum.c 也发生了类似的事情
 Dialogue: 0,0:02:37.34,0:02:43.88,English,,0,0,0,,So after these three translators work on the code
+Dialogue: 0,0:02:37.34,0:02:43.88,English,,0,0,0,,在这三个翻译器处理完代码之后
 Dialogue: 0,0:02:44.36,0:02:47.14,English,,0,0,0,,We have two object files two .o files
+Dialogue: 0,0:02:44.36,0:02:47.14,English,,0,0,0,,生成了两个 .o 格式目标文件
 Dialogue: 0,0:02:48.86,0:02:51.54,English,,0,0,0,,The linker takes those those .o files
+Dialogue: 0,0:02:48.86,0:02:51.54,English,,0,0,0,,链接器取到这些 .o 格式目标文件
 Dialogue: 0,0:02:52.18,0:03:04.66,English,,0,0,0,,And put some,links them together sort of smashes them together to form a single executable called that we can then run
+Dialogue: 0,0:02:52.18,0:03:04.66,English,,0,0,0,,然后放一些（必要的系统目标文件），将它们链接在一起，将它们拼凑在一起，创建一个单个的可执行文件然后运行
 Dialogue: 0,0:03:07.02,0:03:09.24,English,,0,0,0,,Then we can then load and run on the system
+Dialogue: 0,0:03:07.02,0:03:09.24,English,,0,0,0,,然后我们就可以加载并运行到系统上
 Dialogue: 0,0:03:11.36,0:03:15.42,English,,0,0,0,,So the main.c and sum.c they are called source files
+Dialogue: 0,0:03:11.36,0:03:15.42,English,,0,0,0,,所以 main.c 和 sum.c 被称为源文件
 Dialogue: 0,0:03:15.94,0:03:19.90,English,,0,0,0,,These .o files are object files that
+Dialogue: 0,0:03:15.94,0:03:19.90,English,,0,0,0,,这些 .o 文件
 Dialogue: 0,0:03:20.60,0:03:22.28,English,,0,0,0,,We are separately compiled
+Dialogue: 0,0:03:20.60,0:03:22.28,English,,0,0,0,,虽然是我们分开编译的目标文件
 Dialogue: 0,0:03:23.18,0:03:25.64,English,,0,0,0,,But we call them relocatable object files
+Dialogue: 0,0:03:23.18,0:03:25.64,English,,0,0,0,,但我们还是要叫他们可重定位目标文件
 Dialogue: 0,0:03:25.74,0:03:33.32,English,,0,0,0,,Because they can be combined together to form the fully linked executable object file
+Dialogue: 0,0:03:25.74,0:03:33.32,English,,0,0,0,,因为它们可以组合在一起形成完全链接的可执行目标文件
 Dialogue: 0,0:03:36.06,0:03:42.56,English,,0,0,0,,So why do we do it like this, you know why do we allow this so-called separate compilation
+Dialogue: 0,0:03:36.06,0:03:42.56,English,,0,0,0,,那为什么我们这样做呢，你知道为什么我们允许这种所谓的分开编译
 Dialogue: 0,0:03:42.62,0:03:48.50,English,,0,0,0,,You know why don't we just have like one big you know one big file that with all of code in it
+Dialogue: 0,0:03:42.62,0:03:48.50,English,,0,0,0,,你知道为什么我们不喜欢一个包含所有代码的大文件
 Dialogue: 0,0:03:49.02,0:03:55.57,English,,0,0,0,,Well there's a couple reasons the first is is modularity so by allowing you to break your code into smaller pieces
+Dialogue: 0,0:03:49.02,0:03:55.57,English,,0,0,0,,有一些原因，首先是模块化，所以允许你将代码分解成更小的部分
 Dialogue: 0,0:03:55.96,0:03:58.96,English,,0,0,0,,You can put related functions into separate source files
+Dialogue: 0,0:03:55.96,0:03:58.96,English,,0,0,0,,你可以将相关功能放入单独的源文件中
 Dialogue: 0,0:03:59.30,0:04:01.58,English,,0,0,0,,You can define libraries of functions
+Dialogue: 0,0:03:59.30,0:04:01.58,English,,0,0,0,,你可以定义函数库
 Dialogue: 0,0:04:02.74,0:04:11.60,English,,0,0,0,,So it's just good technique and it allows you to kind of break your code up into nice modular pieces
+Dialogue: 0,0:04:02.74,0:04:11.60,English,,0,0,0,,所以这只是一种很好的技术，它可以让你将代码分解成很好的模块化部分
 Dialogue: 0,0:04:13.54,0:04:15.10,English,,0,0,0,,The other reason is efficiency
+Dialogue: 0,0:04:13.54,0:04:15.10,English,,0,0,0,,另一个理由是效率
 Dialogue: 0,0:04:18.68,0:04:21.92,English,,0,0,0,,So if we've broken up our program into multiple chunks
+Dialogue: 0,0:04:18.68,0:04:21.92,English,,0,0,0,,所以如果我们把我们的程序分为多个块
 Dialogue: 0,0:04:22.66,0:04:28.54,English,,0,0,0,,If we change and if we only need to change one of the chunks
+Dialogue: 0,0:04:22.66,0:04:28.54,English,,0,0,0,,如果我们改变，比如如果我们只需要更改其中一个块
 Dialogue: 0,0:04:29.26,0:04:33.06,English,,0,0,0,,We don't have to recompile the all the other modules
+Dialogue: 0,0:04:29.26,0:04:33.06,English,,0,0,0,,我们就没必要重新编译所有其他模块
 Dialogue: 0,0:04:33.28,0:04:38.50,English,,0,0,0,,Right we can just recompile the one module that we changed and then link them all together again
+Dialogue: 0,0:04:33.28,0:04:38.50,English,,0,0,0,,对，我们可以重新编译我们更改的一个模块，然后再将它们全部链接在一起
 Dialogue: 0,0:04:38.58,0:04:44.26,English,,0,0,0,,Right so it's efficient in time it's also efficient in space
+Dialogue: 0,0:04:38.58,0:04:44.26,English,,0,0,0,,所以这在时间和空间上都是有效的
 Dialogue: 0,0:04:44.26,0:04:51.64,English,,0,0,0,,Because you can take all of the functions in the standard C library you could put them all together
+Dialogue: 0,0:04:44.26,0:04:51.64,English,,0,0,0,,因为你可以使用标准 C 库中的所有功能，所以你可以将它们放在一起
 Dialogue: 0,0:04:52.14,0:04:57.86,English,,0,0,0,,But then the only functions that you actually get compiled and linked into your program are the ones that you actually call
+Dialogue: 0,0:04:52.14,0:04:57.86,English,,0,0,0,,但是，实际编译并链接到程序中的唯一函数是你实际调用的函数
 Dialogue: 0,0:04:58.68,0:05:01.62,English,,0,0,0,,Ok so you can save space
+Dialogue: 0,0:04:58.68,0:05:01.62,English,,0,0,0,,好的，这样你就可以节省空间
 Dialogue: 0,0:05:01.62,0:05:08.14,English,,0,0,0,,You don't you know normally you use only a small subset of the standard C functions
 Dialogue: 0,0:05:08.80,0:05:13.16,English,,0,0,0,,So there's no point in linking all of those functions into your code if you don't need them
 Dialogue: 0,0:05:15.08,0:05:16.66,English,,0,0,0,,Alright so what do linkers do
