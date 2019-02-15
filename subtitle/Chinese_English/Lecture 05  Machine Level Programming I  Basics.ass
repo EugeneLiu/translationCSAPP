@@ -15,10 +15,10 @@ Audio File: ../../../../../../../BaiduNetdiskDownload/#5 Machine-Level Programmi
 Video File: ../../../../../../../BaiduNetdiskDownload/#5 Machine-Level Programming I_Basics.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
-Video Zoom Percent: 1.500000
-Scroll Position: 218
-Active Line: 219
-Video Position: 15024
+Video Zoom Percent: 0.625000
+Scroll Position: 1110
+Active Line: 1139
+Video Position: 87096
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -714,7 +714,7 @@ Dialogue: 0,0:27:09.56,0:27:11.86,Chinese,,0,0,0,,call 意味着呼叫一些程�
 Dialogue: 0,0:27:12.70,0:27:15.12,English,,0,0,0,,Pop is the counterpart to push
 Dialogue: 0,0:27:12.70,0:27:15.12,Chinese,,0,0,0,,Pop 是 Push 的相反指令
 Dialogue: 0,0:27:15.74,0:27:20.32,English,,0,0,0,,And then ret is exit return out of this particular function
-Dialogue: 0,0:27:15.74,0:27:20.32,Chinese,,0,0,0,,然后 ret 是退出一个特定的函数
+Dialogue: 0,0:27:15.74,0:27:20.32,Chinese,,0,0,0,,然后 ret 是退出或者从一个特定的函数返回
 Dialogue: 0,0:27:20.32,0:27:24.82,English,,0,0,0,,So you see each of those is an instruction and it's written in text
 Dialogue: 0,0:27:20.32,0:27:24.82,Chinese,,0,0,0,,所以你看到每一个都是一个指令，它是用文本写的
 Dialogue: 0,0:27:24.82,0:27:30.74,English,,0,0,0,,But each of those will turn into one actual instruction in the object code representation
@@ -754,9 +754,9 @@ Dialogue: 0,0:29:28.38,0:29:30.04,Chinese,,0,0,0,,你可以在那里看到各种
 Dialogue: 0,0:29:30.90,0:29:37.54,English,,0,0,0,,That are used for the demonstration the C files are obviously the programs that we typed in
 Dialogue: 0,0:29:30.90,0:29:37.54,Chinese,,0,0,0,,这用于演示，里面的 C 文件显然是我们码出来的
 Dialogue: 0,0:29:37.54,0:29:41.72,English,,0,0,0,,And then once it have an s at the end that's assembly code
-Dialogue: 0,0:29:37.54,0:29:41.72,Chinese,,0,0,0,,然后，一旦后面有个 s 文件，那是汇编文件
+Dialogue: 0,0:29:37.54,0:29:41.72,Chinese,,0,0,0,,然后，一旦后面有个 s 的文件，那是汇编文件
 Dialogue: 0,0:29:41.72,0:29:44.16,English,,0,0,0,,One that end of d what's called disassembly
-Dialogue: 0,0:29:41.72,0:29:44.16,Chinese,,0,0,0,,一个 d 文件就是所谓的反汇编代码
+Dialogue: 0,0:29:41.72,0:29:44.16,Chinese,,0,0,0,,一个后缀是 d 的文件就是所谓的反汇编代码
 Dialogue: 0,0:29:44.94,0:29:57.24,English,,0,0,0,,So anyways if I say gcc -o2 ,I'm sorry. -og -s sum.c
 Dialogue: 0,0:29:44.94,0:29:57.24,Chinese,,0,0,0,,所以无论如何，如果我说 gcc -o2，说错了。 -Og -S sum.c
 Dialogue: 0,0:29:58.80,0:30:05.68,English,,0,0,0,,That what I did was just tell the compiler to take the C code and turn it into assembly code
@@ -806,7 +806,7 @@ Dialogue: 0,0:31:39.16,0:31:44.30,Chinese,,0,0,0,,它仅存在于最近的 GCC �
 Dialogue: 0,0:31:44.32,0:31:45.16,English,,0,0,0,,Question
 Dialogue: 0,0:31:44.32,0:31:45.16,Chinese,,0,0,0,,请问
 Dialogue: 0,0:31:45.16,0:31:48.36,English,,0,0,0,,[sutdent speaking]
-Dialogue: 0,0:31:45.16,0:31:48.36,Chinese,,0,0,0,,[sutdent发言]
+Dialogue: 0,0:31:45.16,0:31:48.36,Chinese,,0,0,0,,[学生发言]
 Dialogue: 0,0:31:48.38,0:31:53.02,English,,0,0,0,,No it's an o capital o,it stands for optimized
 Dialogue: 0,0:31:48.38,0:31:53.02,Chinese,,0,0,0,,不，它是一个 O，大写 O，它代表 Optimize 优化
 Dialogue: 0,0:31:55.84,0:32:00.76,English,,0,0,0,,So what that command just did was produce a file called sum.s
@@ -852,7 +852,7 @@ Dialogue: 0,0:33:58.04,0:34:04.32,Chinese,,0,0,0,,另一件事是正在学习的
 Dialogue: 0,0:34:04.56,0:34:11.32,English,,0,0,0,,And even like this is a MAC computer and I can run got gcc installed
 Dialogue: 0,0:34:04.56,0:34:11.32,Chinese,,0,0,0,,这是一台 MAC 计算机，我可以安装运行 GCC
 Dialogue: 0,0:34:11.92,0:34:14.62,English,,0,0,0,,And it generates its intel processor in there
-Dialogue: 0,0:34:11.92,0:34:14.62,Chinese,,0,0,0,,它生产的代码也是运行在 intel 处理器上的
+Dialogue: 0,0:34:11.92,0:34:14.62,Chinese,,0,0,0,,它生产的代码也是运行在 Intel 处理器上的
 Dialogue: 0,0:34:15.18,0:34:19.00,English,,0,0,0,,But it's not directly compatible with linux code so
 Dialogue: 0,0:34:15.18,0:34:19.00,Chinese,,0,0,0,,但它并不直接与 linux 代码兼容
 Dialogue: 0,0:34:19.44,0:34:21.22,English,,0,0,0,,It's pretty important for this course
@@ -1133,10 +1133,10 @@ Dialogue: 0,0:47:02.42,0:47:05.78,English,,0,0,0,,Because you're supposed to you
 Dialogue: 0,0:47:02.42,0:47:05.78,Chinese,,0,0,0,,因为你应该知道，但并不知道这一点
 Dialogue: 0,0:47:05.92,0:47:09.30,English,,0,0,0,,But remember all those click through I agree things
 Dialogue: 0,0:47:05.92,0:47:09.30,Chinese,,0,0,0,,但请回忆所有那些点击「我同意」的时刻
-Dialogue: 0,0:47:10.00,0:47:10.76,English,,0,0,0,,But you never read
-Dialogue: 0,0:47:10.00,0:47:10.76,Chinese,,0,0,0,,但你永远不会读的
-Dialogue: 0,0:47:11.22,0:47:17.90,English,,0,0,0,,One of them is very not to try to reverse engineer any Microsoft product so
-Dialogue: 0,0:47:11.22,0:47:17.90,Chinese,,0,0,0,,其中一个条款是：不要尝试对任何 Microsoft 产品进行逆向工程
+Dialogue: 0,0:47:10.00,0:47:11.02,English,,0,0,0,,But you never read
+Dialogue: 0,0:47:10.00,0:47:11.02,Chinese,,0,0,0,,其实你永远不会读的
+Dialogue: 0,0:47:11.22,0:47:17.90,English,,0,0,0,,One of them is I agree not to try to reverse engineer any Microsoft product so
+Dialogue: 0,0:47:11.22,0:47:17.90,Chinese,,0,0,0,,其中一个条款是：我同意不尝试对任何 Microsoft 产品进行逆向工程
 Dialogue: 0,0:47:19.68,0:47:24.62,English,,0,0,0,,So this is would technically so I've served just for modesty I blanked this out
 Dialogue: 0,0:47:19.68,0:47:24.62,Chinese,,0,0,0,,所以逆汇编在技术上是可行的，我只是为了低调，把它抹掉了
 Dialogue: 0,0:47:24.62,0:47:25.78,English,,0,0,0,,But you can actually do it
@@ -1166,7 +1166,7 @@ Dialogue: 0,0:48:12.82,0:48:15.52,Chinese,,0,0,0,,你可以使用来保存整数
 Dialogue: 0,0:48:16.44,0:48:22.34,English,,0,0,0,,And some of them have these sort of alphabetic names and some of them have numeric names
 Dialogue: 0,0:48:16.44,0:48:22.34,Chinese,,0,0,0,,其中一些有这些字母名称，其中一些有数字名称
 Dialogue: 0,0:48:23.18,0:48:24.38,English,,0,0,0,,I'll show you why in a minute
-Dialogue: 0,0:48:23.18,0:48:24.38,Chinese,,0,0,0,,我会在一分钟内告诉你原因
+Dialogue: 0,0:48:23.18,0:48:24.38,Chinese,,0,0,0,,我会马上告诉你原因
 Dialogue: 0,0:48:24.88,0:48:29.60,English,,0,0,0,,And also for each register if you use the sort of %r name of it
 Dialogue: 0,0:48:24.88,0:48:29.60,Chinese,,0,0,0,,如果你使用它的 ％r 名称
 Dialogue: 0,0:48:30.04,0:48:31.40,English,,0,0,0,,You'll get 64 bits
@@ -1510,11 +1510,11 @@ Dialogue: 0,1:03:35.98,1:03:40.42,Chinese,,0,0,0,,我指的是 XXX，它被称�
 Dialogue: 0,1:03:40.84,1:03:43.14,English,,0,0,0,,You multiply it by the scale factor
 Dialogue: 0,1:03:40.84,1:03:43.14,Chinese,,0,0,0,,你将它乘以比例因子
 Dialogue: 0,1:03:45.16,1:03:50.12,English,,0,0,0,,you add the value of Rb register Rb
-Dialogue: 0,1:03:45.16,1:03:50.12,Chinese,,0,0,0,,添加寄存器 Rb 的值
+Dialogue: 0,1:03:45.16,1:03:50.12,Chinese,,0,0,0,,你将他加上寄存器 Rb 的值
 Dialogue: 0,1:03:50.64,1:03:53.30,English,,0,0,0,,And you also add the constant displacement
-Dialogue: 0,1:03:50.64,1:03:53.30,Chinese,,0,0,0,,而且你还添加了恒定位移 D
+Dialogue: 0,1:03:50.64,1:03:53.30,Chinese,,0,0,0,,而且你还加了恒定位移量 D
 Dialogue: 0,1:03:53.86,1:04:00.12,English,,0,0,0,,And these have a Rb refers to base our Ri index and S is scale
-Dialogue: 0,1:03:53.86,1:04:00.12,Chinese,,0,0,0,,而这些中Rb 指的是基地址，Ri 指的是索引，和 S 尺度
+Dialogue: 0,1:03:53.86,1:04:00.12,Chinese,,0,0,0,,而这些中 Rb 指的是基地址，Ri 指的是索引，和 S 尺度
 Dialogue: 0,1:04:00.42,1:04:04.04,English,,0,0,0,,And it turns out this will be the sort of natural way to implement array referencing
 Dialogue: 0,1:04:00.42,1:04:04.04,Chinese,,0,0,0,,事实证明，这是实现数组引用的一种自然方式
 Dialogue: 0,1:04:04.12,1:04:07.16,English,,0,0,0,,It will make a lot more sense when we talk about arrays
@@ -1526,21 +1526,21 @@ Dialogue: 0,1:04:12.96,1:04:17.92,Chinese,,0,0,0,,我必须通过我的数据类
 Dialogue: 0,1:04:17.94,1:04:23.52,English,,0,0,0,,So if it's an int i have to scale it by four if it's a long i have to scale it by eight
 Dialogue: 0,1:04:17.94,1:04:23.52,Chinese,,0,0,0,,因此，如果它是一个 int 我必须将索引缩放四倍，如果它是 long，我必须将其缩放八倍
 Dialogue: 0,1:04:24.04,1:04:26.08,English,,0,0,0,,So that's where these scale factors will come in
-Dialogue: 0,1:04:24.04,1:04:26.08,Chinese,,0,0,0,,这就是这些比例因素的来源
+Dialogue: 0,1:04:24.04,1:04:26.08,Chinese,,0,0,0,,这就是这些比例因素的存在原因
 Dialogue: 0,1:04:30.22,1:04:33.92,English,,0,0,0,,And basically the the format in the assembly code
-Dialogue: 0,1:04:30.22,1:04:33.92,Chinese,,0,0,0,,这也是汇编代码中的内存引用的基本格式
+Dialogue: 0,1:04:30.22,1:04:33.92,Chinese,,0,0,0,,汇编代码中的内存引用的基本格式
 Dialogue: 0,1:04:33.92,1:04:39.60,English,,0,0,0,,Lets you eliminate some of these fields if they're not being used
 Dialogue: 0,1:04:33.92,1:04:39.60,Chinese,,0,0,0,,如果不使用某些字段，可以删除其中的一些字段
 Dialogue: 0,1:04:40.26,1:04:44.94,English,,0,0,0,,So you'll and we already saw the single parenthesis a sort of a reduced version of this form
-Dialogue: 0,1:04:40.26,1:04:44.94,Chinese,,0,0,0,,你和我已经看到，只有小括号是这种形式的缩小版本
+Dialogue: 0,1:04:40.26,1:04:44.94,Chinese,,0,0,0,,你和我已经看到，只有小括号这种形式的精简版本
 Dialogue: 0,1:04:46.98,1:04:50.84,English,,0,0,0,,So let's just do some examples of these address computations
 Dialogue: 0,1:04:46.98,1:04:50.84,Chinese,,0,0,0,,那么让我们来做一些这些地址计算的练习
 Dialogue: 0,1:04:52.22,1:04:57.08,English,,0,0,0,,And let's imagine that register %rdx hold text f with three zeros(0xf000)
 Dialogue: 0,1:04:52.22,1:04:57.08,Chinese,,0,0,0,,让我们假设寄存器 ％rdx 储存有 f 和三个 0 的数据（0xf000）
 Dialogue: 0,1:04:57.68,1:05:00.56,English,,0,0,0,,And %rcx holds a one with two zeros (0x0100)
-Dialogue: 0,1:04:57.68,1:05:00.56,Chinese,,0,0,0,,％rcx 保存一个有两个零的值（0x0100）
+Dialogue: 0,1:04:57.68,1:05:00.56,Chinese,,0,0,0,,％rcx 保存 0x0100
 Dialogue: 0,1:05:01.48,1:05:06.58,English,,0,0,0,,So if I rather than doing one at a time
-Dialogue: 0,1:05:01.48,1:05:06.58,Chinese,,0,0,0,,所以，如果我不是一次做一个
+Dialogue: 0,1:05:01.48,1:05:06.58,Chinese,,0,0,0,,所以，如果我不是一个个来
 Dialogue: 0,1:05:06.58,1:05:12.18,English,,0,0,0,,You can see each of these I'm taking %rdx which is 0xf000 + 0x8
 Dialogue: 0,1:05:06.58,1:05:12.18,Chinese,,0,0,0,,你可以看到我正在使用 ％rdx，即 0xf000 + 0x8
 Dialogue: 0,1:05:12.72,1:05:14.48,English,,0,0,0,,And so that's 0xf008
@@ -1552,7 +1552,7 @@ Dialogue: 0,1:05:19.44,1:05:21.66,Chinese,,0,0,0,,这给了我 0xf100
 Dialogue: 0,1:05:22.38,1:05:25.90,English,,0,0,0,,I'm doing the same here except that I'm scaling %rcx by 4
 Dialogue: 0,1:05:22.38,1:05:25.90,Chinese,,0,0,0,,我在这里也是这样做的，除了我将 ％rcx 缩放为四倍
 Dialogue: 0,1:05:26.52,1:05:32.16,English,,0,0,0,,So 4*0x100 is 0x400 and I'm adding that to 0xf000
-Dialogue: 0,1:05:26.52,1:05:32.16,Chinese,,0,0,0,,所以 4*0x100 是 0x400，我将其添加到 0xf000
+Dialogue: 0,1:05:26.52,1:05:32.16,Chinese,,0,0,0,,所以 4 * 0x100 是 0x400，我将其添加到 0xf000
 Dialogue: 0,1:05:34.04,1:05:38.64,English,,0,0,0,,And here I'm taking %rdx which is 0xf000
 Dialogue: 0,1:05:34.04,1:05:38.64,Chinese,,0,0,0,,在这里，我采用的是 ％rdx，即 0xf000
 Dialogue: 0,1:05:39.14,1:05:43.32,English,,0,0,0,,If I double that I get 0x1e000
@@ -1564,9 +1564,9 @@ Dialogue: 0,1:05:48.28,1:05:50.74,Chinese,,0,0,0,,然后 0xf 变成二进制 111
 Dialogue: 0,1:05:51.90,1:05:52.84,English,,0,0,0,,And that's an 0xe
 Dialogue: 0,1:05:51.90,1:05:52.84,Chinese,,0,0,0,,那是 0xe
 Dialogue: 0,1:05:53.82,1:05:57.40,English,,0,0,0,,Ok and then I'm adding this displacement of 0x80 to it
-Dialogue: 0,1:05:53.82,1:05:57.40,Chinese,,0,0,0,,好的，然后我将这个位移 0x80 添加到它
+Dialogue: 0,1:05:53.82,1:05:57.40,Chinese,,0,0,0,,好的，然后我加上这个位移 0x80 
 Dialogue: 0,1:05:58.00,1:06:03.14,English,,0,0,0,,So the point of this is all of this is arithmetic it's all using whatever is in the register
-Dialogue: 0,1:05:58.00,1:06:03.14,Chinese,,0,0,0,,所以关键是所有这些算法都是使用寄存器中的值
+Dialogue: 0,1:05:58.00,1:06:03.14,Chinese,,0,0,0,,所以关键是所有这些运算指令，都是使用寄存器中的值
 Dialogue: 0,1:06:04.06,1:06:07.66,English,,0,0,0,,And there's some rules for how you combine this and get an address
 Dialogue: 0,1:06:04.06,1:06:07.66,Chinese,,0,0,0,,如何将这个结合起来并得到一个地址，是有一些规则的
 Dialogue: 0,1:06:08.20,1:06:11.66,English,,0,0,0,,And then that's being used to either read or write some memory location
@@ -1594,7 +1594,7 @@ Dialogue: 0,1:06:55.52,1:07:05.38,Chinese,,0,0,0,,所以特别是，看起来它
 Dialogue: 0,1:07:06.34,1:07:08.54,English,,0,0,0,,But the destination has to be a register
 Dialogue: 0,1:07:06.34,1:07:08.54,Chinese,,0,0,0,,但目的地必须是寄存器
 Dialogue: 0,1:07:09.64,1:07:12.94,English,,0,0,0,,And the source will be one of these memory references
-Dialogue: 0,1:07:09.64,1:07:12.94,Chinese,,0,0,0,,源将是这些内存引用之一
+Dialogue: 0,1:07:09.64,1:07:12.94,Chinese,,0,0,0,,源是上面这些内存引用之一
 Dialogue: 0,1:07:15.00,1:07:16.80,English,,0,0,0,,So it looks like a mov instruction
 Dialogue: 0,1:07:15.00,1:07:16.80,Chinese,,0,0,0,,所以它看起来像一个 mov 指令
 Dialogue: 0,1:07:16.82,1:07:20.18,English,,0,0,0,,It looks like you're doing some address computation
@@ -1604,11 +1604,11 @@ Dialogue: 0,1:07:20.18,1:07:23.50,Chinese,,0,0,0,,然后你从内存中读取并
 Dialogue: 0,1:07:24.02,1:07:28.06,English,,0,0,0,,But what it actually does is it does that address computation
 Dialogue: 0,1:07:24.02,1:07:28.06,Chinese,,0,0,0,,但它实际上做的是，地址的运算过程
 Dialogue: 0,1:07:28.56,1:07:33.64,English,,0,0,0,,And then it actually writes that address not the memory value
-Dialogue: 0,1:07:28.56,1:07:33.64,Chinese,,0,0,0,,然后它实际上写入寄存器的是地址而不是内存值
+Dialogue: 0,1:07:28.56,1:07:33.64,Chinese,,0,0,0,,然后它实际上写入寄存器的是地址值而不是内存值
 Dialogue: 0,1:07:33.64,1:07:38.26,English,,0,0,0,,But the value of got that got computed directly to the register
 Dialogue: 0,1:07:33.64,1:07:38.26,Chinese,,0,0,0,,得到的计算后的地址值直接送到寄存器
 Dialogue: 0,1:07:39.08,1:07:42.38,English,,0,0,0,,Which is what you want to do here remember the ampersand operation is
-Dialogue: 0,1:07:39.08,1:07:42.38,Chinese,,0,0,0,,也是你想要做的地址运算，记住 ＆ 符号操作
+Dialogue: 0,1:07:39.08,1:07:42.38,Chinese,,0,0,0,,也是你想要做的地址运算，记住 ＆ 符号操作的意思是
 Dialogue: 0,1:07:42.96,1:07:45.96,English,,0,0,0,,Give me the address of some place give me a pointer
 Dialogue: 0,1:07:42.96,1:07:45.96,Chinese,,0,0,0,,给我一些位置的地址，给我一个指针
 Dialogue: 0,1:07:46.38,1:07:50.04,English,,0,0,0,,That designates some location
@@ -1619,28 +1619,28 @@ Dialogue: 0,1:07:57.76,1:08:04.44,English,,0,0,0,,It will turn it into a address
 Dialogue: 0,1:07:57.76,1:08:04.44,Chinese,,0,0,0,,它会把它变成一个地址计算
 Dialogue: 0,1:08:04.50,1:08:08.62,English,,0,0,0,,And this is just a clever way to compute three times %rdi
 Dialogue: 0,1:08:04.50,1:08:08.62,Chinese,,0,0,0,,这只是计算三倍 ％rdi 的聪明方法
-Dialogue: 0,1:08:09.58,1:08:13.24,English,,0,0,0,,It adds %rdi + 2*%rdi
+Dialogue: 0,1:08:09.58,1:08:13.24,English,,0,0,0,,It adds %rdi + 2 * %rdi
 Dialogue: 0,1:08:09.58,1:08:13.24,Chinese,,0,0,0,,它将 ％rdi 加上 2 倍的 ％rdi
-Dialogue: 0,1:08:13.30,1:08:16.74,English,,0,0,0,,So that's 3*%rdi and stores it in %rax
+Dialogue: 0,1:08:13.30,1:08:16.74,English,,0,0,0,,So that's 3 * %rdi and stores it in %rax
 Dialogue: 0,1:08:13.30,1:08:16.74,Chinese,,0,0,0,,所以这是 3*％rdi 并将其存储在 ％rax 中
 Dialogue: 0,1:08:17.96,1:08:24.68,English,,0,0,0,,And then salq means shift left by two
 Dialogue: 0,1:08:17.96,1:08:24.68,Chinese,,0,0,0,,然后 salq 意味着左移两位
 Dialogue: 0,1:08:25.18,1:08:28.80,English,,0,0,0,,And so you remember shifting left by two is like multiplying by four
 Dialogue: 0,1:08:25.18,1:08:28.80,Chinese,,0,0,0,,你记得左移两个就等价于乘以四
 Dialogue: 0,1:08:29.44,1:08:36.90,English,,0,0,0,,So the first value computed 3*x. i shift that left four by two positions and i have 12*x
-Dialogue: 0,1:08:29.44,1:08:36.90,Chinese,,0,0,0,,所以第一个值计算为 3*x。我左移了两位，我有 12*x
+Dialogue: 0,1:08:29.44,1:08:36.90,Chinese,,0,0,0,,所以第一个值计算为 3 * x。我左移了两位，我有 12 * x
 Dialogue: 0,1:08:39.84,1:08:45.80,English,,0,0,0,,So that's a very special the lea,but you'll see it all over the place so you need to be ready for it
 Dialogue: 0,1:08:39.84,1:08:45.80,Chinese,,0,0,0,,所以这是一个非常特别的 lea 指令，但你会在许多地方看到它，所以你需要做好准备
 Dialogue: 0,1:08:46.40,1:08:50.48,English,,0,0,0,,These other ones look more like what you'd expect for arithmetic instructions
-Dialogue: 0,1:08:46.40,1:08:50.48,Chinese,,0,0,0,,这些其他的看起来更像你对算术指令的期望
+Dialogue: 0,1:08:46.40,1:08:50.48,Chinese,,0,0,0,,这些其他的指令看起来更像你对算术指令的期望
 Dialogue: 0,1:08:50.48,1:08:55.28,English,,0,0,0,,They have names like add and subtract and multiply and so forth
 Dialogue: 0,1:08:50.48,1:08:55.28,Chinese,,0,0,0,,它们具有加，减，乘等名称
 Dialogue: 0,1:08:55.76,1:08:59.10,English,,0,0,0,,And they all have the same general format that they have two arguments
 Dialogue: 0,1:08:55.76,1:08:59.10,Chinese,,0,0,0,,它们都有相同的通用格式，它们有两个参数
 Dialogue: 0,1:09:00.24,1:09:04.15,English,,0,0,0,,And what's called the destination is actually also a source
 Dialogue: 0,1:09:00.24,1:09:04.15,Chinese,,0,0,0,,所谓的目的地实际上也是运算数的一个来源
-Dialogue: 0,1:09:05.04,1:09:08.74,English,,0,0,0,,It's a little like in c if you say x plus equals y
-Dialogue: 0,1:09:05.04,1:09:08.74,Chinese,,0,0,0,,它有点像 c，当你写 x+=y 的时候
+Dialogue: 0,1:09:05.04,1:09:08.74,English,,0,0,0,,It's a little like in c if you say x += y
+Dialogue: 0,1:09:05.04,1:09:08.74,Chinese,,0,0,0,,它有点像 c，当你写 x += y 的时候
 Dialogue: 0,1:09:09.50,1:09:15.44,English,,0,0,0,,It's saying take the value of x add the value of y and then store the result in x
 Dialogue: 0,1:09:09.50,1:09:15.44,Chinese,,0,0,0,,它是说取 x 的值加上 y 的值然后将结果存储在 x 中
 Dialogue: 0,1:09:15.78,1:09:18.30,English,,0,0,0,,And now the destination is like that
@@ -1702,13 +1702,13 @@ Dialogue: 0,1:11:38.66,1:11:43.00,Chinese,,0,0,0,,它是通过首先像我们之
 Dialogue: 0,1:11:44.24,1:11:47.76,English,,0,0,0,,And computing shifting that left by 4
 Dialogue: 0,1:11:44.24,1:11:47.76,Chinese,,0,0,0,,然后将它左移 4 位
 Dialogue: 0,1:11:48.04,1:11:50.36,English,,0,0,0,,Because 3 *16=48
-Dialogue: 0,1:11:48.04,1:11:50.36,Chinese,,0,0,0,,因为 3*16 = 48
+Dialogue: 0,1:11:48.04,1:11:50.36,Chinese,,0,0,0,,因为 3 * 16 = 48
 Dialogue: 0,1:11:51.18,1:11:54.90,English,,0,0,0,,And then the 4 here that x + 4 actually shows up here
-Dialogue: 0,1:11:51.18,1:11:54.90,Chinese,,0,0,0,,然后是 x+4 这里的 4 实际在这里
+Dialogue: 0,1:11:51.18,1:11:54.90,Chinese,,0,0,0,,然后是 x + 4 这里的 4 实际在这里
 Dialogue: 0,1:11:55.62,1:12:02.42,English,,0,0,0,,It just uses the displacement field of this computation to add 4 to some other values
 Dialogue: 0,1:11:55.62,1:12:02.42,Chinese,,0,0,0,,它只使用此计算的位移字段将 4 添加到其他值上
 Dialogue: 0,1:12:04.00,1:12:06.30,English,,0,0,0,,And so this is label then these comments show
-Dialogue: 0,1:12:04.00,1:12:06.30,Chinese,,0,0,0,,所以这是标签，然后这些注释显示
+Dialogue: 0,1:12:04.00,1:12:06.30,Chinese,,0,0,0,,所以这是标签，这些注释显示
 Dialogue: 0,1:12:06.32,1:12:09.46,English,,0,0,0,,How these correspond to the program and these registers show it
 Dialogue: 0,1:12:06.32,1:12:09.46,Chinese,,0,0,0,,这些寄存器，如何与程序对应
 Dialogue: 0,1:12:10.14,1:12:12.36,English,,0,0,0,,So the important thing to get from here
