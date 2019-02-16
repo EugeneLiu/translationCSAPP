@@ -32,27 +32,27 @@ Dialogue: 0,0:00:00.00,0:00:01.96,Chinese,,0,0,0,,各位同学，下午好
 Dialogue: 0,0:00:03.44,0:00:04.66,English,,0,0,0,,Welcome to see you
 Dialogue: 0,0:00:03.44,0:00:04.66,Chinese,,0,0,0,,很高兴见到你们
 Dialogue: 0,0:00:08.06,0:00:13.46,English,,0,0,0,,So today we're going to look at an idea called exceptional control flow
-Dialogue: 0,0:00:08.06,0:00:13.46,Chinese,,0,0,0,,今天我们要看一个叫做异常控制流的想法
+Dialogue: 0,0:00:08.06,0:00:13.46,Chinese,,0,0,0,,今天我们要介绍「异常控制流」
 Dialogue: 0,0:00:14.22,0:00:18.56,English,,0,0,0,,That's a very important part of making modern systems
 Dialogue: 0,0:00:14.22,0:00:18.56,Chinese,,0,0,0,,它是现代系统一个重要组成的部分
 Dialogue: 0,0:00:19.18,0:00:26.32,English,,0,0,0,,And it exists at all levels of the system from the lowest level hardware,all the way up to software
 Dialogue: 0,0:00:19.18,0:00:26.32,Chinese,,0,0,0,,它存在于操作系统的各个层次，从最底层的硬件，直到软件
 Dialogue: 0,0:00:30.62,0:00:38.22,English,,0,0,0,,So the idea is when you turn on a computer (from the very) from the very first time you turn it on
-Dialogue: 0,0:00:30.62,0:00:38.22,Chinese,,0,0,0,,当你从(第第)第一次打开计算机时，在你第一次开机的时候
+Dialogue: 0,0:00:30.62,0:00:38.22,Chinese,,0,0,0,,当你从第一次打开计算机时，
 Dialogue: 0,0:00:38.92,0:00:43.16,English,,0,0,0,,On it just does execute one instruction after another until that you turn it off
 Dialogue: 0,0:00:38.92,0:00:43.16,Chinese,,0,0,0,,它只是执行一个接一个的指令，直到你关闭计算机
 Dialogue: 0,0:00:43.96,0:00:50.08,English,,0,0,0,,Okay and if each core if you have multiple cores then each of those cores are executing instructions one after the other
-Dialogue: 0,0:00:43.96,0:00:50.08,Chinese,,0,0,0,,好吧，如果每个核心，如果你的计算机有多个 cpu 核心，那么每个核心都会依次执行指令
+Dialogue: 0,0:00:43.96,0:00:50.08,Chinese,,0,0,0,,如果你的计算机有多个 cpu 核心，那么每个核心会依次交替执行指令
 Dialogue: 0,0:00:51.52,0:00:56.20,English,,0,0,0,,Now the sequence of instructions is called the control flow
-Dialogue: 0,0:00:51.52,0:00:56.20,Chinese,,0,0,0,,现在，指令序列称为控制流
+Dialogue: 0,0:00:51.52,0:00:56.20,Chinese,,0,0,0,,指令序列称为「控制流」
 Dialogue: 0,0:00:57.04,0:01:03.62,English,,0,0,0,,Okay and the actual sequence of instructions that the hardware is executing is called the physical control flow
-Dialogue: 0,0:00:57.04,0:01:03.62,Chinese,,0,0,0,,硬件正在执行的实际指令序列称为物理控制流
+Dialogue: 0,0:00:57.04,0:01:03.62,Chinese,,0,0,0,,硬件正在执行的实际指令序列称为「物理控制流」
 Dialogue: 0,0:01:04.76,0:01:05.60,English,,0,0,0,,Now normally
 Dialogue: 0,0:01:04.76,0:01:05.60,Chinese,,0,0,0,,现在通常
 Dialogue: 0,0:01:07.52,0:01:15.18,English,,0,0,0,,Normally,this control flow that executes just one instruction after another just sequentially in memory
-Dialogue: 0,0:01:07.52,0:01:15.18,Chinese,,0,0,0,,通常，此控制流仅在内存中按顺序执行单条指令
+Dialogue: 0,0:01:07.52,0:01:15.18,Chinese,,0,0,0,,通常，此控制流在内存中按顺序执行单条指令
 Dialogue: 0,0:01:16.12,0:01:21.32,English,,0,0,0,,And we've so far we've seen two mechanisms for altering the control flow
-Dialogue: 0,0:01:16.12,0:01:21.32,Chinese,,0,0,0,,到目前为止，我们已经看到了两种改变控制流的机制
+Dialogue: 0,0:01:16.12,0:01:21.32,Chinese,,0,0,0,,目前为止，我们已经了解了两种改变控制流的机制
 Dialogue: 0,0:01:21.32,0:01:22.46,English,,0,0,0,,So that it's not
 Dialogue: 0,0:01:21.32,0:01:22.46,Chinese,,0,0,0,,事实不是如此，
 Dialogue: 0,0:01:22.92,0:01:25.68,English,,0,0,0,,So that we're not executing just the next instruction
@@ -66,13 +66,13 @@ Dialogue: 0,0:01:38.22,0:01:41.16,Chinese,,0,0,0,,这些都是对程序状态变
 Dialogue: 0,0:01:41.96,0:01:45.70,English,,0,0,0,,So when you do a branch you check the control condition codes
 Dialogue: 0,0:01:41.96,0:01:45.70,Chinese,,0,0,0,,当你执行分支时，请检查条件控制代码
 Dialogue: 0,0:01:46.18,0:01:50.82,English,,0,0,0,,And then based on some the results of that comparison then you do the branch
-Dialogue: 0,0:01:46.18,0:01:50.82,Chinese,,0,0,0,,然后基于该比较的一些结果，然后你做相应的分支处理
+Dialogue: 0,0:01:46.18,0:01:50.82,Chinese,,0,0,0,,基于该比较的一些结果，然后你做相应的分支处理
 Dialogue: 0,0:01:52.28,0:01:57.48,English,,0,0,0,,Okay but its real system needs to be able to adapt to changes in the system state
-Dialogue: 0,0:01:52.28,0:01:57.48,Chinese,,0,0,0,,好吧，但真正的操作系统需要能够处理系统级别的变化
+Dialogue: 0,0:01:52.28,0:01:57.48,Chinese,,0,0,0,,但真正的操作系统需要能够处理系统级别的变化
 Dialogue: 0,0:01:59.36,0:02:01.86,English,,0,0,0,,Okay so for example data arrives from a disk
 Dialogue: 0,0:01:59.36,0:02:01.86,Chinese,,0,0,0,,例如数据从磁盘到达
 Dialogue: 0,0:02:04.56,0:02:10.10,English,,0,0,0,,Or some network use types Ctrl-C
-Dialogue: 0,0:02:04.56,0:02:10.10,Chinese,,0,0,0,,或者某些网络使用 Ctrl-C 类型中断
+Dialogue: 0,0:02:04.56,0:02:10.10,Chinese,,0,0,0,,或者某些网络通信遇到 Ctrl-C 类型中断
 Dialogue: 0,0:02:10.92,0:02:13.90,English,,0,0,0,,Okay the program executes an illegal instruction
 Dialogue: 0,0:02:10.92,0:02:13.90,Chinese,,0,0,0,,还有，程序执行了非法指令
 Dialogue: 0,0:02:14.30,0:02:20.60,English,,0,0,0,,Okay all of these represent some change, some kind of change in the system state
@@ -86,7 +86,7 @@ Dialogue: 0,0:02:26.90,0:02:29.60,Chinese,,0,0,0,,我们需要的是称之为「
 Dialogue: 0,0:02:30.04,0:02:34.20,English,,0,0,0,,Because it's sort of outside of the normal control flow that we see in our programs
 Dialogue: 0,0:02:30.04,0:02:34.20,Chinese,,0,0,0,,因为它超出了我们在程序中看到的正常控制进程
 Dialogue: 0,0:02:36.20,0:02:41.22,English,,0,0,0,,Now exceptional control flow(ECF) exists at all levels in the system
-Dialogue: 0,0:02:36.20,0:02:41.22,Chinese,,0,0,0,,现在，系统中的所有级别都存在「异常控制流（ECF）」
+Dialogue: 0,0:02:36.20,0:02:41.22,Chinese,,0,0,0,,系统中的所有级别都存在「异常控制流（ECF）」
 Dialogue: 0,0:02:42.66,0:02:45.18,English,,0,0,0,,From the very lowest level of hardware
 Dialogue: 0,0:02:42.66,0:02:45.18,Chinese,,0,0,0,,从最底层的硬件
 Dialogue: 0,0:02:48.64,0:02:51.52,English,,0,0,0,,At the very lowest level we have what are called exceptions
@@ -96,11 +96,11 @@ Dialogue: 0,0:02:52.26,0:02:58.16,Chinese,,0,0,0,,这些是响应某些底层系
 Dialogue: 0,0:02:59.32,0:03:04.18,English,,0,0,0,,So this is a...or and by event we mean a change in the state
 Dialogue: 0,0:02:59.32,0:03:04.18,Chinese,,0,0,0,,这是...或者我们指的是事件引起状态的变化
 Dialogue: 0,0:03:05.24,0:03:11.38,English,,0,0,0,,Now exceptions are implemented using a combination of hardware and OS software which we'll see in it in a minute
-Dialogue: 0,0:03:05.24,0:03:11.38,Chinese,,0,0,0,,现在使用硬件和操作系统软件的组合实现异常，等一会儿我们将会看到它们
+Dialogue: 0,0:03:05.24,0:03:11.38,Chinese,,0,0,0,,使用硬件和操作系统软件的组合实现异常，等一会儿我们将会看到它们
 Dialogue: 0,0:03:12.08,0:03:16.58,English,,0,0,0,,But these exceptional control flow exists at higher levels too
 Dialogue: 0,0:03:12.08,0:03:16.58,Chinese,,0,0,0,,但这些异常控制流也存在于更高的层次
 Dialogue: 0,0:03:17.44,0:03:23.08,English,,0,0,0,,So in the a process context switch is an example of exceptional control flow
-Dialogue: 0,0:03:17.44,0:03:23.08,Chinese,,0,0,0,,在一个进程中，「上下文切换」就是是一个异常控制流程的典型示例
+Dialogue: 0,0:03:17.44,0:03:23.08,Chinese,,0,0,0,,在一个进程中，「上下文切换」就是是一个异常控制流的典型示例
 Dialogue: 0,0:03:23.66,0:03:28.58,English,,0,0,0,,That's also it's implemented by a hardware and the operating system kernel
 Dialogue: 0,0:03:23.66,0:03:28.58,Chinese,,0,0,0,,这也是由硬件和操作系统内核共同实现的
 Dialogue: 0,0:03:29.42,0:03:34.94,English,,0,0,0,,And it so a process context switches we'll see later later today
@@ -114,35 +114,35 @@ Dialogue: 0,0:03:48.14,0:03:50.38,Chinese,,0,0,0,,是的，你的进程就像暂
 Dialogue: 0,0:03:51.34,0:03:55.74,English,,0,0,0,,And so there's a...so that's a form of exceptional control flow
 Dialogue: 0,0:03:51.34,0:03:55.74,Chinese,,0,0,0,,有一个...这是一种异常控制流
 Dialogue: 0,0:03:55.74,0:04:01.82,English,,0,0,0,,Where you're executing statements instructions within one process
-Dialogue: 0,0:03:55.74,0:04:01.82,Chinese,,0,0,0,,你在一个进程中执行语句指令的位置
+Dialogue: 0,0:03:55.74,0:04:01.82,Chinese,,0,0,0,,你在一个进程中执行语句指令
 Dialogue: 0,0:04:01.82,0:04:06.54,English,,0,0,0,,And then all of a sudden you're executing statements instructions in another process
 Dialogue: 0,0:04:01.82,0:04:06.54,Chinese,,0,0,0,,然后你突然在另一个进程中执行语句指令  
 Dialogue: 0,0:04:08.56,0:04:11.22,English,,0,0,0,,At a higher level are totally in software
-Dialogue: 0,0:04:08.56,0:04:11.22,Chinese,,0,0,0,,在更高的层次上完全是软件
+Dialogue: 0,0:04:08.56,0:04:11.22,Chinese,,0,0,0,,在更高的层次上就是在软件层次了
 Dialogue: 0,0:04:11.60,0:04:13.18,English,,0,0,0,,We have the idea of a signal
 Dialogue: 0,0:04:11.60,0:04:13.18,Chinese,,0,0,0,,我们有一个「信号」的定义
 Dialogue: 0,0:04:13.82,0:04:19.40,English,,0,0,0,,And this is implemented by operating system software and we'll learn all about signals next lecture
 Dialogue: 0,0:04:13.82,0:04:19.40,Chinese,,0,0,0,,这是通过操作系统软件实现的，我们将在下一讲中学习所有关于信号的知识
 Dialogue: 0,0:04:20.60,0:04:25.08,English,,0,0,0,,And then even higher,at an even higher level you have nonlocal jumps in C
 Dialogue: 0,0:04:20.60,0:04:25.08,Chinese,,0,0,0,,然后甚至更高，在更高的水平，你有 C 的「非本地跳转」
-Dialogue: 0,0:04:25.60,0:04:28.26,English,,0,0,0,,Which are just implemented by the C run library
+Dialogue: 0,0:04:25.60,0:04:28.26,English,,0,0,0,,Which are just implemented by the C run time library
 Dialogue: 0,0:04:25.60,0:04:28.26,Chinese,,0,0,0,,这些只是由 C 运行库实现的
 Dialogue: 0,0:04:28.76,0:04:33.68,English,,0,0,0,,So this allows you nonlocal jumps allow you to break the normal call and return pattern
-Dialogue: 0,0:04:28.76,0:04:33.68,Chinese,,0,0,0,,这允许你非本地跳转，允许你打破正常的调用和返回模式
+Dialogue: 0,0:04:28.76,0:04:33.68,Chinese,,0,0,0,,这允许你非本地跳转，允许你违背正常的调用和返回模式
 Dialogue: 0,0:04:33.68,0:04:34.54,English,,0,0,0,,So from one...
 Dialogue: 0,0:04:33.68,0:04:34.54,Chinese,,0,0,0,,从一个......
 Dialogue: 0,0:04:35.18,0:04:40.82,English,,0,0,0,,So from within a function normally you can only return to the function that calls that called you
 Dialogue: 0,0:04:35.18,0:04:40.82,Chinese,,0,0,0,,在一个函数中，通常你只能返回到那个调用你的函数
 Dialogue: 0,0:04:41.46,0:04:50.12,English,,0,0,0,,Nonlocal jumps allow you to within a function break that and return to some other function or some other part of the code
-Dialogue: 0,0:04:41.46,0:04:50.12,Chinese,,0,0,0,,非本地跳转允许你在函数中断并返回到某些其他函数或代码的其他部分
+Dialogue: 0,0:04:41.46,0:04:50.12,Chinese,,0,0,0,,非本地跳转允许你在函数中断，并返回跳转到某些其他函数或代码
 Dialogue: 0,0:04:51.16,0:04:54.38,English,,0,0,0,,So we'll look at signals and nonlocal jumps next lecture
 Dialogue: 0,0:04:51.16,0:04:54.38,Chinese,,0,0,0,,我们将在下一章讲述信号和非本地跳跃
 Dialogue: 0,0:04:54.84,0:04:57.62,English,,0,0,0,,Today we're going to look at exceptions and processes
-Dialogue: 0,0:04:54.84,0:04:57.62,Chinese,,0,0,0,,今天我们将看看异常和进程
+Dialogue: 0,0:04:54.84,0:04:57.62,Chinese,,0,0,0,,今天我们将看看「异常」和「进程」
 Dialogue: 0,0:05:00.12,0:05:07.08,English,,0,0,0,,So an exception is a transfer of control to the operating systems kernel
-Dialogue: 0,0:05:00.12,0:05:07.08,Chinese,,0,0,0,,一个异常是将控制权转移到操作系统内核
+Dialogue: 0,0:05:00.12,0:05:07.08,Chinese,,0,0,0,,异常是将控制权转移到操作系统内核
 Dialogue: 0,0:05:07.70,0:05:13.32,English,,0,0,0,,Where the kernel is the memory resident part of the operating system you know
-Dialogue: 0,0:05:07.70,0:05:13.32,Chinese,,0,0,0,,内核是你知道的操作系统的内存驻留部分
+Dialogue: 0,0:05:07.70,0:05:13.32,Chinese,,0,0,0,,你知道的，「内核」是操作系统的内存驻留部分
 Dialogue: 0,0:05:13.34,0:05:23.86,English,,0,0,0,,So an operating system provides all kinds of programs like to list files,to change directories,to list the current processes
 Dialogue: 0,0:05:13.34,0:05:23.86,Chinese,,0,0,0,,操作系统提供各种程序，如列出文件，更改目录，列出当前进程
 Dialogue: 0,0:05:24.48,0:05:27.68,English,,0,0,0,,So all of that stuff constitutes the operating system
@@ -160,23 +160,23 @@ Dialogue: 0,0:05:47.70,0:05:53.32,Chinese,,0,0,0,,然后一些情况发生在某
 Dialogue: 0,0:05:54.96,0:06:04.34,English,,0,0,0,,In response to that there the exception transfers control from your user code to code in the kernel
 Dialogue: 0,0:05:54.96,0:06:04.34,Chinese,,0,0,0,,为此，异常将控制权从用户代码转移到内核态中的代码
 Dialogue: 0,0:06:04.82,0:06:06.42,English,,0,0,0,,Which is called an exception handler
-Dialogue: 0,0:06:04.82,0:06:06.42,Chinese,,0,0,0,,这称为异常处理程序
+Dialogue: 0,0:06:04.82,0:06:06.42,Chinese,,0,0,0,,这称为「异常处理程序」
 Dialogue: 0,0:06:07.18,0:06:10.58,English,,0,0,0,,And then the kernel responds to that change in some way
 Dialogue: 0,0:06:07.18,0:06:10.58,Chinese,,0,0,0,,然后内核以某种方式响应这种变化
 Dialogue: 0,0:06:12.72,0:06:14.50,English,,0,0,0,,This is called the exception processing
 Dialogue: 0,0:06:12.72,0:06:14.50,Chinese,,0,0,0,,这称为「异常处理」
 Dialogue: 0,0:06:15.66,0:06:21.98,English,,0,0,0,,And then there's three things that can happen after the kernel handles the exception
-Dialogue: 0,0:06:15.66,0:06:21.98,Chinese,,0,0,0,,然后在内核处理异常后会发生三件事
+Dialogue: 0,0:06:15.66,0:06:21.98,Chinese,,0,0,0,,然后在内核处理异常后可能会发生三种情况
 Dialogue: 0,0:06:22.74,0:06:25.92,English,,0,0,0,,It can return and reexecute that the current instruction
 Dialogue: 0,0:06:22.74,0:06:25.92,Chinese,,0,0,0,,它可以返回并重新执行当前指令
 Dialogue: 0,0:06:27.86,0:06:33.88,English,,0,0,0,,Okay and we'll see this is useful for things like page faults allows us to implement virtual memory
-Dialogue: 0,0:06:27.86,0:06:33.88,Chinese,,0,0,0,,我们会发现这对于「页缺失」这类允许我们实现虚拟内存的东西很有用
+Dialogue: 0,0:06:27.86,0:06:33.88,Chinese,,0,0,0,,我们会发现这对于「页缺失」很有用，我们用以实现虚拟内存
 Dialogue: 0,0:06:35.76,0:06:37.86,English,,0,0,0,,It could return to the next instruction
 Dialogue: 0,0:06:35.76,0:06:37.86,Chinese,,0,0,0,,它可以返回到下一条指令
 Dialogue: 0,0:06:39.04,0:06:43.00,English,,0,0,0,,Which I've shown here or it could abort
-Dialogue: 0,0:06:39.04,0:06:43.00,Chinese,,0,0,0,,这是我在这里展示的，也可能是中止的
+Dialogue: 0,0:06:39.04,0:06:43.00,Chinese,,0,0,0,,这是我在这里展示的，也可能是「中止」的
 Dialogue: 0,0:06:46.64,0:06:49.56,English,,0,0,0,,Now exceptions are implemented by hardware and software
-Dialogue: 0,0:06:46.64,0:06:49.56,Chinese,,0,0,0,,现在异常由硬件和软件共同实现
+Dialogue: 0,0:06:46.64,0:06:49.56,Chinese,,0,0,0,,异常由硬件和软件共同实现
 Dialogue: 0,0:06:49.56,0:06:53.30,English,,0,0,0,,So the actual transfer of control
 Dialogue: 0,0:06:49.56,0:06:53.30,Chinese,,0,0,0,,实际转移控制权
 Dialogue: 0,0:06:54.26,0:07:00.16,English,,0,0,0,,You know the change in the program counter or %rip is done by the hardware
@@ -186,15 +186,15 @@ Dialogue: 0,0:07:01.22,0:07:09.80,Chinese,,0,0,0,,但是由于该异常而执行
 Dialogue: 0,0:07:10.44,0:07:15.26,English,,0,0,0,,So every type of event has a unique exception number
 Dialogue: 0,0:07:10.44,0:07:15.26,Chinese,,0,0,0,,每种类型的事件都有一个唯一的「异常编号」
 Dialogue: 0,0:07:15.78,0:07:19.48,English,,0,0,0,,Which serves as an index into a jump table called an exception table
-Dialogue: 0,0:07:15.78,0:07:19.48,Chinese,,0,0,0,,它用作跳转表的索引，称为异常表
+Dialogue: 0,0:07:15.78,0:07:19.48,Chinese,,0,0,0,,它用作跳转表的索引，称为「异常表」
 Dialogue: 0,0:07:20.66,0:07:24.24,English,,0,0,0,,Okay and so when event k happens
 Dialogue: 0,0:07:20.66,0:07:24.24,Chinese,,0,0,0,,当事件 k 发生时
 Dialogue: 0,0:07:25.36,0:07:30.42,English,,0,0,0,,Then the hardware looks uses k as in as an index into this table
 Dialogue: 0,0:07:25.36,0:07:30.42,Chinese,,0,0,0,,然后硬件使用 k 作为此表的索引
 Dialogue: 0,0:07:30.90,0:07:36.10,English,,0,0,0,,And gets the address of the exception handler for that exception
-Dialogue: 0,0:07:30.90,0:07:36.10,Chinese,,0,0,0,,然后得到该异常的异常处理程序的地址
+Dialogue: 0,0:07:30.90,0:07:36.10,Chinese,,0,0,0,,然后得到该异常的处理程序的地址
 Dialogue: 0,0:07:38.02,0:07:43.82,English,,0,0,0,,And so every time that event k happens that handler handler k is invoked
-Dialogue: 0,0:07:38.02,0:07:43.82,Chinese,,0,0,0,,每次事件 k 发生时，都会调用处理程序处理程序 k
+Dialogue: 0,0:07:38.02,0:07:43.82,Chinese,,0,0,0,,每次事件 k 发生时，都会调用处理程序 k
 Dialogue: 0,0:07:45.36,0:07:52.84,English,,0,0,0,,Now there's a different kinds of exceptions we distinguish them as being asynchronous or synchronous
 Dialogue: 0,0:07:45.36,0:07:52.84,Chinese,,0,0,0,,现在有一种异常的分类方法，我们依此将它们区分为「异步」或「同步」
 Dialogue: 0,0:07:53.46,0:08:03.12,English,,0,0,0,,Asynchronous exceptions happen as a result of changes in state that are occurred outside of the processor
@@ -208,7 +208,7 @@ Dialogue: 0,0:08:10.44,0:08:17.06,Chinese,,0,0,0,,通过在处理器上设置引
 Dialogue: 0,0:08:17.06,0:08:20.28,English,,0,0,0,,An external pin called the interrupt pin
 Dialogue: 0,0:08:17.06,0:08:20.28,Chinese,,0,0,0,,外部引脚称为中断引脚
 Dialogue: 0,0:08:21.37,0:08:28.56,English,,0,0,0,,So this is the kind of when see a disk controller finishes doing a direct memory access
-Dialogue: 0,0:08:21.37,0:08:28.56,Chinese,,0,0,0,,这就是看到磁盘控制器完成「直接内存访问」的时候的情况
+Dialogue: 0,0:08:21.37,0:08:28.56,Chinese,,0,0,0,,这是看到磁盘控制器完成「直接内存访问」的情形
 Dialogue: 0,0:08:28.78,0:08:31.62,English,,0,0,0,,And copying data from the disk into memory
 Dialogue: 0,0:08:28.78,0:08:31.62,Chinese,,0,0,0,,首先将数据从磁盘复制到内存中
 Dialogue: 0,0:08:32.02,0:08:39.72,English,,0,0,0,,It notifies the processor that it's finished that copy by setting the interrupt pin hi okay
@@ -216,11 +216,11 @@ Dialogue: 0,0:08:32.02,0:08:39.72,Chinese,,0,0,0,,它通过设置中断引脚来
 Dialogue: 0,0:08:42.58,0:08:48.38,English,,0,0,0,,And so after an interrupt happens the handler returns to the next instruction
 Dialogue: 0,0:08:42.58,0:08:48.38,Chinese,,0,0,0,,在发生中断后，处理程序返回到下一条指令
 Dialogue: 0,0:08:48.52,0:08:55.42,English,,0,0,0,,So an interrupt typically it's the so you're running your program,you're running your program and then there's like this little
-Dialogue: 0,0:08:48.52,0:08:55.42,Chinese,,0,0,0,,一个中断通常是因为你正在运行你的程序，你正在运行你的程序然后就像这样，有一点点像
+Dialogue: 0,0:08:48.52,0:08:55.42,Chinese,,0,0,0,,中断通常是因为你正在运行你的程序，你正在运行你的程序，然后就像这样，
 Dialogue: 0,0:08:57.28,0:09:01.78,English,,0,0,0,,There's like this little pause while the interrupt handler runs and then your program just continues to run okay
 Dialogue: 0,0:08:57.28,0:09:01.78,Chinese,,0,0,0,,当中断处理程序运行时，就像这个小暂停，然后你的程序继续运行正常
 Dialogue: 0,0:09:02.22,0:09:11.52,English,,0,0,0,,So it's usually sort of done behind the scenes and doesn't affect your execution of your program
-Dialogue: 0,0:09:02.22,0:09:11.52,Chinese,,0,0,0,,它通常在幕后完成，不会影响你的程序执行 
+Dialogue: 0,0:09:02.22,0:09:11.52,Chinese,,0,0,0,,它通常在后台完成，不会影响你的程序执行 
 Dialogue: 0,0:09:12.28,0:09:18.74,English,,0,0,0,,Now the most common...a common example of a interrupt is the timer interrupts
 Dialogue: 0,0:09:12.28,0:09:18.74,Chinese,,0,0,0,,现在最常见的......中断的一个常见例子是定时器中断
 Dialogue: 0,0:09:19.66,0:09:25.44,English,,0,0,0,,So you're all systems have a built-in timer that goes off every few milliseconds
@@ -230,9 +230,9 @@ Dialogue: 0,0:09:26.36,0:09:29.76,Chinese,,0,0,0,,当它，当定时器熄灭时
 Dialogue: 0,0:09:30.38,0:09:34.02,English,,0,0,0,,And there's a special exception number for timer interrupts
 Dialogue: 0,0:09:30.38,0:09:34.02,Chinese,,0,0,0,,并且有一个特殊的异常编号用于定时器中断
 Dialogue: 0,0:09:34.88,0:09:37.54,English,,0,0,0,,And this is we need this in order for the
-Dialogue: 0,0:09:34.88,0:09:37.54,Chinese,,0,0,0,,这就是我们需要这个以便
+Dialogue: 0,0:09:34.88,0:09:37.54,Chinese,,0,0,0,,我们需要这个以便
 Dialogue: 0,0:09:37.96,0:09:43.20,English,,0,0,0,,This allows we need this to allow the kernel to get control of the system again
-Dialogue: 0,0:09:37.96,0:09:43.20,Chinese,,0,0,0,,这允许我们需要它来允许内核再次获得对系统的控制
+Dialogue: 0,0:09:37.96,0:09:43.20,Chinese,,0,0,0,,我们需要它来允许内核再次获得对系统的控制
 Dialogue: 0,0:09:43.20,0:09:47.38,English,,0,0,0,,Otherwise a user program could just run forever in an infinite loop
 Dialogue: 0,0:09:43.20,0:09:47.38,Chinese,,0,0,0,,否则，用户程序可能会陷入无限循环中永远运行
 Dialogue: 0,0:09:47.74,0:09:52.50,English,,0,0,0,,And no one...there be no way for the operating system to get control
@@ -250,9 +250,9 @@ Dialogue: 0,0:10:18.44,0:10:21.22,Chinese,,0,0,0,,现在另一类异常是「同
 Dialogue: 0,0:10:21.66,0:10:23.32,English,,0,0,0,,And there are three classes of those
 Dialogue: 0,0:10:21.66,0:10:23.32,Chinese,,0,0,0,,它有三类
 Dialogue: 0,0:10:25.76,0:10:32.54,English,,0,0,0,,One is that,one class is called the trap,a trap is a intentional exception
-Dialogue: 0,0:10:25.76,0:10:32.54,Chinese,,0,0,0,,一个是，一类称之为「陷阱」，陷阱是故意的异常
+Dialogue: 0,0:10:25.76,0:10:32.54,Chinese,,0,0,0,,一类称之为「陷阱」，陷阱是故意的异常
 Dialogue: 0,0:10:32.54,0:10:35.52,English,,0,0,0,,So this is an exception that's caused intentionally by the program
-Dialogue: 0,0:10:32.54,0:10:35.52,Chinese,,0,0,0,,这是一个由程序故意引起的异常
+Dialogue: 0,0:10:32.54,0:10:35.52,Chinese,,0,0,0,,这是由程序故意引起的异常
 Dialogue: 0,0:10:36.32,0:10:40.08,English,,0,0,0,,And the most common form of a trap is a system call
 Dialogue: 0,0:10:36.32,0:10:40.08,Chinese,,0,0,0,,最常见的陷阱形式是「系统调用」
 Dialogue: 0,0:10:41.42,0:10:46.58,English,,0,0,0,,So you know the operating system kernel provides all kinds of services to a program
@@ -264,13 +264,13 @@ Dialogue: 0,0:10:49.86,0:10:54.25,Chinese,,0,0,0,,你的程序无法在内核中
 Dialogue: 0,0:10:54.54,0:10:58.68,English,,0,0,0,,Because that memory is protected and unavailable to user programs
 Dialogue: 0,0:10:54.54,0:10:58.68,Chinese,,0,0,0,,因为该内存受到保护且对用户程序不可用
 Dialogue: 0,0:10:59.66,0:11:08.42,English,,0,0,0,,So what the kernel does is they provide a interface that allows programs to make requests to effectively
-Dialogue: 0,0:10:59.66,0:11:08.42,Chinese,,0,0,0,,内核的作用是提供一个允许程序发出请求的接口
+Dialogue: 0,0:10:59.66,0:11:08.42,Chinese,,0,0,0,,内核的作用是提供一个响应程序发出请求的接口
 Dialogue: 0,0:11:08.92,0:11:12.80,English,,0,0,0,,Call functions within the kernel and to make requests for various services
 Dialogue: 0,0:11:08.92,0:11:12.80,Chinese,,0,0,0,,调用内核中的函数并发出对各种服务的请求
 Dialogue: 0,0:11:13.32,0:11:15.82,English,,0,0,0,,And this interface is called a system call
 Dialogue: 0,0:11:13.32,0:11:15.82,Chinese,,0,0,0,,此接口称为「系统调用」
 Dialogue: 0,0:11:17.28,0:11:19.24,English,,0,0,0,,Ok so a program makes a system call
-Dialogue: 0,0:11:17.28,0:11:19.24,Chinese,,0,0,0,,一个程序进行系统调用
+Dialogue: 0,0:11:17.28,0:11:19.24,Chinese,,0,0,0,,程序进行系统调用
 Dialogue: 0,0:11:20.16,0:11:25.60,English,,0,0,0,,And requests various functions from the kernel
 Dialogue: 0,0:11:20.16,0:11:25.60,Chinese,,0,0,0,,并从内核请求各种功能
 Dialogue: 0,0:11:26.02,0:11:30.30,English,,0,0,0,,The kernel provides those sort of reacts to that request
@@ -282,15 +282,15 @@ Dialogue: 0,0:11:35.24,0:11:38.70,Chinese,,0,0,0,,你可以把系统调用想象
 Dialogue: 0,0:11:39.56,0:11:43.88,English,,0,0,0,,It looks like a function call but it's really transferring control into the kernel
 Dialogue: 0,0:11:39.56,0:11:43.88,Chinese,,0,0,0,,它看起来像一个函数调用，但它却是将控制权转移到内核中
 Dialogue: 0,0:11:47.42,0:11:54.26,English,,0,0,0,,Okay then there's some so traps are intentional faults are unintentional but may be recoverable
-Dialogue: 0,0:11:47.42,0:11:54.26,Chinese,,0,0,0,,好吧那么有一些陷阱是故意的，而一些故障是无意的，但可能是可以恢复的
+Dialogue: 0,0:11:47.42,0:11:54.26,Chinese,,0,0,0,,好吧那么有一些陷阱是故意的，而「故障」是无意的，但可能是可以恢复的
 Dialogue: 0,0:11:54.72,0:11:59.86,English,,0,0,0,,Okay so things like page faults which
-Dialogue: 0,0:11:54.72,0:11:59.86,Chinese,,0,0,0,,就像页缺失一样
+Dialogue: 0,0:11:54.72,0:11:59.86,Chinese,,0,0,0,,就像「页缺失」一样
 Dialogue: 0,0:12:01.50,0:12:04.64,English,,0,0,0,,When we will learn more about these when we study virtual memory
 Dialogue: 0,0:12:01.50,0:12:04.64,Chinese,,0,0,0,,当我们研究虚拟内存时，我们将更多地了解这些内容
 Dialogue: 0,0:12:04.64,0:12:08.88,English,,0,0,0,,But something like a page fault it's actually recoverable
-Dialogue: 0,0:12:04.64,0:12:08.88,Chinese,,0,0,0,,但是像页面错误这样的东西实际上是可以恢复的
+Dialogue: 0,0:12:04.64,0:12:08.88,Chinese,,0,0,0,,但是像页缺失这样的东西实际上是可以恢复的
 Dialogue: 0,0:12:08.88,0:12:16.70,English,,0,0,0,,It just that the kernel has to it means that the the data the portion of the address space that your program referenced isn't actually in memory
-Dialogue: 0,0:12:08.88,0:12:16.70,Chinese,,0,0,0,,它只是内核，意味程序引用的一部分地址空间、数据部分实际上不在内存中
+Dialogue: 0,0:12:08.88,0:12:16.70,Chinese,,0,0,0,,它只是意味着程序引用的一部分地址空间、数据部分实际上不在内存或者内核当中
 Dialogue: 0,0:12:17.92,0:12:21.80,English,,0,0,0,,It needs to be copied from disk where it's stored into memory
 Dialogue: 0,0:12:17.92,0:12:21.80,Chinese,,0,0,0,,它需要从磁盘复制到它应该存储在内存中的地址上
 Dialogue: 0,0:12:22.28,0:12:27.42,English,,0,0,0,,And then the instruction that that caused a fault needs is just restarted and then it works
@@ -302,33 +302,33 @@ Dialogue: 0,0:12:33.88,0:12:38.70,Chinese,,0,0,0,,但其他故障是不可恢复
 Dialogue: 0,0:12:38.70,0:12:43.78,English,,0,0,0,,So if you try to access a portion of memory that's not allocated
 Dialogue: 0,0:12:38.70,0:12:43.78,Chinese,,0,0,0,,如果你尝试访问未分配的内存部分
 Dialogue: 0,0:12:44.14,0:12:49.96,English,,0,0,0,,Or floating-point exceptions often times those can be recoverable
-Dialogue: 0,0:12:44.14,0:12:49.96,Chinese,,0,0,0,,或者通常是可以恢复的异常的浮点数异常
-Dialogue: 0,0:12:51.84,0:12:59.16,English,,0,0,0,,So in either case when there's a fault it either re-execute the current instruction all the abort
-Dialogue: 0,0:12:51.84,0:12:59.16,Chinese,,0,0,0,,在任何一种情况下，当出现故障时，要么重新执行当前指令，要么全部中止
+Dialogue: 0,0:12:44.14,0:12:49.96,Chinese,,0,0,0,,或者通常是可以恢复的异常：浮点数异常
+Dialogue: 0,0:12:51.84,0:12:59.16,English,,0,0,0,,So in either case when there's a fault it either re-execute the current instruction or the aborts
+Dialogue: 0,0:12:51.84,0:12:59.16,Chinese,,0,0,0,,在任何一种情况下，当出现故障时，要么重新执行当前指令，要么「中止」
 Dialogue: 0,0:13:00.82,0:13:08.26,English,,0,0,0,,And then there's unintentional and unrecoverable exceptions which are called the aborts and those those always abort
-Dialogue: 0,0:13:00.82,0:13:08.26,Chinese,,0,0,0,,然后是无意和不可恢复的异常，称为「中止」和那些总是中止的异常
+Dialogue: 0,0:13:00.82,0:13:08.26,Chinese,,0,0,0,,然后是无意和不可恢复的异常，称为「中止」,即那些总是中止的异常
 Dialogue: 0,0:13:08.80,0:13:14.74,English,,0,0,0,,So if you execute an illegal instruction,if there's a problem with your memory,memory and it's it's corrupted
 Dialogue: 0,0:13:08.80,0:13:14.74,Chinese,,0,0,0,,如果你执行非法指令，如果你的内存存在问题，那么它就会被破坏
-Dialogue: 0,0:13:15.86,0:13:21.36,English,,0,0,0,,There's some problem with the machine those creative warts that always...
-Dialogue: 0,0:13:15.86,0:13:21.36,Chinese,,0,0,0,,机器存在一些问题，那些创造性的总是......
+Dialogue: 0,0:13:15.86,0:13:21.36,English,,0,0,0,,There's some problem with the machine those creative aborts that always...
+Dialogue: 0,0:13:15.86,0:13:21.36,Chinese,,0,0,0,,机器存在一些问题，就总会是中止......
 Dialogue: 0,0:13:22.34,0:13:26.92,English,,0,0,0,,That are unrecoverable and never return back to the program
 Dialogue: 0,0:13:22.34,0:13:26.92,Chinese,,0,0,0,,这是不可恢复的，永远不会回到该程序
 Dialogue: 0,0:13:28.68,0:13:30.40,English,,0,0,0,,Now system calls there's...
-Dialogue: 0,0:13:28.68,0:13:30.40,Chinese,,0,0,0,,现在系统调用那里......
+Dialogue: 0,0:13:28.68,0:13:30.40,Chinese,,0,0,0,,现在「系统调用」那里......
 Dialogue: 0,0:13:32.02,0:13:35.28,English,,0,0,0,,Many different kinds of system calls and they all have their own unique number
 Dialogue: 0,0:13:32.02,0:13:35.28,Chinese,,0,0,0,,许多不同类型的系统调用都有自己唯一的编号
 Dialogue: 0,0:13:35.76,0:13:38.16,English,,0,0,0,,Which is assigned by Linux
 Dialogue: 0,0:13:35.76,0:13:38.16,Chinese,,0,0,0,,这是由 Linux 分配的
 Dialogue: 0,0:13:39.84,0:13:46.38,English,,0,0,0,,So for example to read a file,there's a system call called read
 Dialogue: 0,0:13:39.84,0:13:46.38,Chinese,,0,0,0,,例如，为了读取文件，有一个名为 read 的系统调用
-Dialogue: 0,0:13:46.38,0:13:53.40,English,,0,0,0,,Which is number 0 opening a file, a system call number 2 and so on
-Dialogue: 0,0:13:46.38,0:13:53.40,Chinese,,0,0,0,,这是编号0：打开文件，系统调用编码 2 等等
+Dialogue: 0,0:13:46.38,0:13:53.40,English,,0,0,0,,Which is number 0 ; opening a file, a system call number 2 and so on
+Dialogue: 0,0:13:46.38,0:13:53.40,Chinese,,0,0,0,,这是编号0；打开文件，系统调用编码 2 等等
 Dialogue: 0,0:13:56.14,0:14:01.58,English,,0,0,0,,And there's an instruction called syscall
-Dialogue: 0,0:13:56.14,0:14:01.58,Chinese,,0,0,0,,并且有一个名为 syscall 的指令
+Dialogue: 0,0:13:56.14,0:14:01.58,Chinese,,0,0,0,,还有一个名为 syscall 的指令
 Dialogue: 0,0:14:01.58,0:14:06.34,English,,0,0,0,,Which actually performs the system call
 Dialogue: 0,0:14:01.58,0:14:06.34,Chinese,,0,0,0,,实际执行系统调用
 Dialogue: 0,0:14:07.04,0:14:12.44,English,,0,0,0,,Now you usually don't use this system call and strike the syscall instruction directly in your program the
-Dialogue: 0,0:14:07.04,0:14:12.44,Chinese,,0,0,0,,现在你通常不需要在你自己的程序中直接使用此系统调用，并触发 syscall 指令
+Dialogue: 0,0:14:07.04,0:14:12.44,Chinese,,0,0,0,,你通常不需要在你自己的程序中直接使用系统调用，并触发 syscall 指令
 Dialogue: 0,0:14:12.96,0:14:17.98,English,,0,0,0,,Linux wraps those in system level functions which actually call it for you
 Dialogue: 0,0:14:12.96,0:14:17.98,Chinese,,0,0,0,,Linux 将这些函数包装在系统级函数中，这些函数实际上会为你调用的
 Dialogue: 0,0:14:18.74,0:14:22.28,English,,0,0,0,,But it's interesting in C how it actually works
@@ -342,13 +342,13 @@ Dialogue: 0,0:14:36.10,0:14:42.66,Chinese,,0,0,0,,在syscall指令中，第一�
 Dialogue: 0,0:14:44.12,0:14:50.60,English,,0,0,0,,And then other arguments are %rdi,%rsi,%rdx, %r10, %r9, %r8
 Dialogue: 0,0:14:44.12,0:14:50.60,Chinese,,0,0,0,,然后其他参数是 ％rdi，％rsi，％rdx，％r10，％r9，％r8
 Dialogue: 0,0:14:51.36,0:14:57.72,English,,0,0,0,,So you can see if we look in the the open function calls the __open function which actually invokes
-Dialogue: 0,0:14:51.36,0:14:57.72,Chinese,,0,0,0,,你可以看看，我们是否在open函数中调用实际调用的__open函数
+Dialogue: 0,0:14:51.36,0:14:57.72,Chinese,,0,0,0,,你可以看看，我们是否在open函数中调用了 __open 函数
 Dialogue: 0,0:14:58.22,0:15:02.04,English,,0,0,0,,The syscall so if you look at that code you see it moves the 0x2
 Dialogue: 0,0:14:58.22,0:15:02.04,Chinese,,0,0,0,,系统调用，如果你查看该代码，你会看到它移动0x2
 Dialogue: 0,0:15:02.04,0:15:07.52,English,,0,0,0,,which is the syscall number for read into %eax and then it does the syscall
 Dialogue: 0,0:15:02.04,0:15:07.52,Chinese,,0,0,0,,这是读入 ％eax 的系统调用号，然后是系统调用
 Dialogue: 0,0:15:09.72,0:15:15.54,English,,0,0,0,,And then the the syscall returns its status in %rax
-Dialogue: 0,0:15:09.72,0:15:15.54,Chinese,,0,0,0,,然后系统调用在 ％rax 中返回其状态
+Dialogue: 0,0:15:09.72,0:15:15.54,Chinese,,0,0,0,,系统调用在 ％rax 中返回其状态
 Dialogue: 0,0:15:16.30,0:15:19.80,English,,0,0,0,,If it's a negative number then that means something some error occurred
 Dialogue: 0,0:15:16.30,0:15:19.80,Chinese,,0,0,0,,如果它是负数，那么这意味着发生了一些错误
 Dialogue: 0,0:15:20.76,0:15:25.40,English,,0,0,0,,If it's a positive number then that means something that no error occurred
@@ -366,17 +366,17 @@ Dialogue: 0,0:15:50.18,0:15:53.36,Chinese,,0,0,0,,那么让我们看一个故障
 Dialogue: 0,0:15:54.28,0:16:00.54,English,,0,0,0,,So here suppose we have this program that we're writing into a valid region of memory
 Dialogue: 0,0:15:54.28,0:16:00.54,Chinese,,0,0,0,,这里假设我们有这个程序，我们写入一个有效的内存区域
 Dialogue: 0,0:16:00.54,0:16:07.70,English,,0,0,0,,But it's not actually stored on...it's not actually in the memory,it needs to be loaded from disk into into memory
-Dialogue: 0,0:16:00.54,0:16:07.70,Chinese,,0,0,0,,但它实际上并没有存储在......它实际上不在内存中，而是需要从磁盘加载到内存中
+Dialogue: 0,0:16:00.54,0:16:07.70,Chinese,,0,0,0,,但它实际上并没有存储在内存中，而是需要从磁盘加载到内存中
 Dialogue: 0,0:16:07.70,0:16:10.88,English,,0,0,0,,So this is a...so called page fault
-Dialogue: 0,0:16:07.70,0:16:10.88,Chinese,,0,0,0,,这是......所谓的页缺少
+Dialogue: 0,0:16:07.70,0:16:10.88,Chinese,,0,0,0,,这是......所谓的页缺失
 Dialogue: 0,0:16:12.52,0:16:14.82,English,,0,0,0,,So this instruction this movl
 Dialogue: 0,0:16:12.52,0:16:14.82,Chinese,,0,0,0,,这个指令这个 movl
 Dialogue: 0,0:16:15.40,0:16:22.82,English,,0,0,0,,Because this because the memory at this address isn't available triggers a page fault
-Dialogue: 0,0:16:15.40,0:16:22.82,Chinese,,0,0,0,,因为这是因为此地址的内存不可用，会触发页缺失
+Dialogue: 0,0:16:15.40,0:16:22.82,Chinese,,0,0,0,,因为这为此地址的内存不可用，会触发页缺失
 Dialogue: 0,0:16:24.60,0:16:30.92,English,,0,0,0,,So that creates an exception a transfer of control into the the page fault handler in the kernel
 Dialogue: 0,0:16:24.60,0:16:30.92,Chinese,,0,0,0,,这样就创建了一个异常，即将控制权转移到内核中的页缺失处理程序中
 Dialogue: 0,0:16:31.64,0:16:34.32,English,,0,0,0,,Which copies that page from disk to memory
-Dialogue: 0,0:16:31.64,0:16:34.32,Chinese,,0,0,0,,哪个页面从磁盘复制到内存
+Dialogue: 0,0:16:31.64,0:16:34.32,Chinese,,0,0,0,,哪个页从磁盘复制到内存
 Dialogue: 0,0:16:36.24,0:16:40.98,English,,0,0,0,,And then it returns and when it returns it reacts acutes the movl instruction
 Dialogue: 0,0:16:36.24,0:16:40.98,Chinese,,0,0,0,,然后它返回，当它返回时，它会对 movl 指令产生反应
 Dialogue: 0,0:16:41.52,0:16:42.24,English,,0,0,0,,So that's kind of cool
@@ -384,15 +384,15 @@ Dialogue: 0,0:16:41.52,0:16:42.24,Chinese,,0,0,0,,这很酷
 Dialogue: 0,0:16:42.24,0:16:44.88,English,,0,0,0,,So now the memory is available
 Dialogue: 0,0:16:42.24,0:16:44.88,Chinese,,0,0,0,,现在可以使用内存了
 Dialogue: 0,0:16:45.58,0:16:52.02,English,,0,0,0,,And now that the movl this movl instruction when it's reacts acute completes
-Dialogue: 0,0:16:45.58,0:16:52.02,Chinese,,0,0,0,,现在，当它的反应快速完成时，movl 这个 movl指令
+Dialogue: 0,0:16:45.58,0:16:52.02,Chinese,,0,0,0,,当它的响应快速完成时，执行这个 movl指令
 Dialogue: 0,0:16:53.66,0:16:54.68,English,,0,0,0,,And then we continue
 Dialogue: 0,0:16:53.66,0:16:54.68,Chinese,,0,0,0,,然后我们继续
 Dialogue: 0,0:16:55.66,0:16:58.80,English,,0,0,0,,Now another type of fault is an invalid memory reference
 Dialogue: 0,0:16:55.66,0:16:58.80,Chinese,,0,0,0,,现在另一种类型的故障是无效的内存引用
 Dialogue: 0,0:16:58.80,0:17:02.46,English,,0,0,0,,So here we have a...we're accessing an element of a
-Dialogue: 0,0:16:58.80,0:17:02.46,Chinese,,0,0,0,,我们在这里......我们正在访问一个元素
+Dialogue: 0,0:16:58.80,0:17:02.46,Chinese,,0,0,0,,我们在这里......我们正在访问一个数组元素
 Dialogue: 0,0:17:03.24,0:17:07.74,English,,0,0,0,,Which doesn't exist and it's an illegal,it's an invalid reference
-Dialogue: 0,0:17:03.24,0:17:07.74,Chinese,,0,0,0,,哪个不存在而且是非法的，这是一个无效的引用
+Dialogue: 0,0:17:03.24,0:17:07.74,Chinese,,0,0,0,,这是不存在而且是非法的，这是一个无效的引用
 Dialogue: 0,0:17:09.22,0:17:12.16,English,,0,0,0,,So in this case the movl instruction
 Dialogue: 0,0:17:09.22,0:17:12.16,Chinese,,0,0,0,,在这种情况下是 movl 指令
 Dialogue: 0,0:17:12.90,0:17:15.36,English,,0,0,0,,It looks like a...it looks like a page fault
@@ -403,12 +403,12 @@ Dialogue: 0,0:17:21.74,0:17:25.70,English,,0,0,0,,This is an invalid region of t
 Dialogue: 0,0:17:21.74,0:17:25.70,Chinese,,0,0,0,,这是虚拟地址空间的无效区域
 Dialogue: 0,0:17:27.38,0:17:34.24,English,,0,0,0,,So it sends a signal to the to the process and then never returns
 Dialogue: 0,0:17:27.38,0:17:34.24,Chinese,,0,0,0,,它向进程发送信号，然后永远不会返回
-Dialogue: 0,0:17:35.96,0:17:40.06,English,,0,0,0,,So the signal that sends is the infamous segmentation
-Dialogue: 0,0:17:35.96,0:17:40.06,Chinese,,0,0,0,,发送的信号是臭名昭著的部分
-Dialogue: 0,0:17:40.06,0:17:46.90,English,,0,0,0,,The signal that causes the infamous sauce segmentation fault message to print out
-Dialogue: 0,0:17:40.06,0:17:46.90,Chinese,,0,0,0,,信号导致臭名昭著的酱汁？（此处字幕应有误） 并打印相关错误信息
+Dialogue: 0,0:17:35.96,0:17:40.06,English,,0,0,0,,So the signal that sends is the SIGSEGV
+Dialogue: 0,0:17:35.96,0:17:40.06,Chinese,,0,0,0,,发送的信号是 SIGSEGV
+Dialogue: 0,0:17:40.06,0:17:46.90,English,,0,0,0,,The signal that causes the SIGSEGV fault message to print out
+Dialogue: 0,0:17:40.06,0:17:46.90,Chinese,,0,0,0,,信号导致 SIGSEGV 错误 并打印相关错误信息
 Dialogue: 0,0:17:47.94,0:17:52.28,English,,0,0,0,,And we'll see you next lecture,we'll see how these signals actually work
-Dialogue: 0,0:17:47.94,0:17:52.28,Chinese,,0,0,0,,我们将在下一个讲座中看到你，我们将看到这些信号是如何工作的
+Dialogue: 0,0:17:47.94,0:17:52.28,Chinese,,0,0,0,,我们将在下一个讲座中看到，我们将看到这些信号具体是如何工作的
 Dialogue: 0,0:17:56.26,0:18:01.88,English,,0,0,0,,Okay so I said we've seen exceptions or very low-level transfers of control
 Dialogue: 0,0:17:56.26,0:18:01.88,Chinese,,0,0,0,,我说我们已经看到异常，或者非常低层的控制转移
 Dialogue: 0,0:18:02.36,0:18:06.58,English,,0,0,0,,That are implemented by both hardware and the operating system software...it could sue
@@ -416,19 +416,19 @@ Dialogue: 0,0:18:02.36,0:18:06.58,Chinese,,0,0,0,,这是由硬件和操作系统
 Dialogue: 0,0:18:08.58,0:18:12.84,English,,0,0,0,,At the higher level is another form of exceptional control flow called
 Dialogue: 0,0:18:08.58,0:18:12.84,Chinese,,0,0,0,,在更高层次上是另一种形式的异常控制流
 Dialogue: 0,0:18:14.28,0:18:18.72,English,,0,0,0,,And we see it in the context of a process context switch
-Dialogue: 0,0:18:14.28,0:18:18.72,Chinese,,0,0,0,,我们在进程上下文切换中的上下文中看到它
+Dialogue: 0,0:18:14.28,0:18:18.72,Chinese,,0,0,0,,我们在上下文切换中的进程中看到它
 Dialogue: 0,0:18:21.00,0:18:25.34,English,,0,0,0,,So let's look at and let's look at what a process is
-Dialogue: 0,0:18:21.00,0:18:25.34,Chinese,,0,0,0,,那么让我们来看看，让我们看一下进程是什么
+Dialogue: 0,0:18:21.00,0:18:25.34,Chinese,,0,0,0,,那么让我们看一下「进程」是什么
 Dialogue: 0,0:18:26.64,0:18:32.38,English,,0,0,0,,So a process,the idea of a process is one of the most fundamental and important ideas in computer science
 Dialogue: 0,0:18:26.64,0:18:32.38,Chinese,,0,0,0,,进程，进程的思想是计算机科学中最基本和最重要的思想之一
 Dialogue: 0,0:18:33.34,0:18:39.22,English,,0,0,0,,And this classical definition of is that a process is an instance of a running program
-Dialogue: 0,0:18:33.34,0:18:39.22,Chinese,,0,0,0,,这个经典定义是，一个进程是一个正在运行的程序的实例
+Dialogue: 0,0:18:33.34,0:18:39.22,Chinese,,0,0,0,,这个经典定义是，进程是正在运行的程序的实例
 Dialogue: 0,0:18:40.88,0:18:43.20,English,,0,0,0,,Okay it's different from a program
 Dialogue: 0,0:18:40.88,0:18:43.20,Chinese,,0,0,0,,是的，它与程序不同
 Dialogue: 0,0:18:43.68,0:18:47.18,English,,0,0,0,,A program exists can exist in many different places right
 Dialogue: 0,0:18:43.68,0:18:47.18,Chinese,,0,0,0,,存在的程序可以存在于许多不同的地方
 Dialogue: 0,0:18:47.18,0:18:51.38,English,,0,0,0,,A program exists in you save as text in a C file
-Dialogue: 0,0:18:47.18,0:18:51.38,Chinese,,0,0,0,,你在 C 文件中以文本形式保存的程序
+Dialogue: 0,0:18:47.18,0:18:51.38,Chinese,,0,0,0,,你在 .C 文件中以文本形式保存的程序
 Dialogue: 0,0:18:51.98,0:18:57.24,English,,0,0,0,,It can exist as the .text section of a binary
 Dialogue: 0,0:18:51.98,0:18:57.24,Chinese,,0,0,0,,它可以作为二进制文件的 .text 部分存在
 Dialogue: 0,0:18:58.38,0:19:01.86,English,,0,0,0,,It can exist as bytes that have been loaded into memory
@@ -438,7 +438,7 @@ Dialogue: 0,0:19:02.26,0:19:06.96,Chinese,,0,0,0,,进程是正在运行的程序
 Dialogue: 0,0:19:13.40,0:19:16.92,English,,0,0,0,,And a process provides two key abstractions
 Dialogue: 0,0:19:13.40,0:19:16.92,Chinese,,0,0,0,,进程提供了两个关键的抽象
 Dialogue: 0,0:19:17.80,0:19:24.36,English,,0,0,0,,Okay it's the first abstraction is that it gives it gives you the illusion that you have
-Dialogue: 0,0:19:17.80,0:19:24.36,Chinese,,0,0,0,,好吧，第一个抽象就是，它给你带来的幻觉
+Dialogue: 0,0:19:17.80,0:19:24.36,Chinese,,0,0,0,,第一个抽象就是，它给你带来的幻觉
 Dialogue: 0,0:19:25.88,0:19:29.66,English,,0,0,0,,Exclusive access to the CPU and registers
 Dialogue: 0,0:19:25.88,0:19:29.66,Chinese,,0,0,0,,独占使用CPU和寄存器
 Dialogue: 0,0:19:30.60,0:19:31.58,English,,0,0,0,,Okay so when you're running
@@ -658,7 +658,7 @@ Dialogue: 0,0:29:17.10,0:29:20.64,Chinese,,0,0,0,,而你永远不会遇到麻烦
 Dialogue: 0,0:29:21.18,0:29:23.78,English,,0,0,0,,If you neglect to check the return values
 Dialogue: 0,0:29:21.18,0:29:23.78,Chinese,,0,0,0,,如果忽略检查返回值
 Dialogue: 0,0:29:24.26,0:29:30.84,English,,0,0,0,,Okay so you should never make a system level function call without checking the return value
-Dialogue: 0,0:29:24.26,0:29:30.84,Chinese,,0,0,0,,好吧，其实你不应该在不检查返回值的情况下，进行系统级函数调用
+Dialogue: 0,0:29:24.26,0:29:30.84,Chinese,,0,0,0,,其实你不应该在不检查返回值的情况下，进行系统级函数调用
 Dialogue: 0,0:29:31.64,0:29:35.56,English,,0,0,0,,The and the only exception there's some functions that return void
 Dialogue: 0,0:29:31.64,0:29:35.56,Chinese,,0,0,0,,唯一的例外是有些函数返回 void
 Dialogue: 0,0:29:37.98,0:29:42.10,English,,0,0,0,,Such as exit or free don't return anything
@@ -674,7 +674,7 @@ Dialogue: 0,0:29:57.54,0:30:04.12,Chinese,,0,0,0,,我们检查返回值是否小
 Dialogue: 0,0:30:06.18,0:30:09.52,English,,0,0,0,,Ok in this case we're just printing a message and exiting
 Dialogue: 0,0:30:06.18,0:30:09.52,Chinese,,0,0,0,,在这种情况下，我们只是打印一条消息并退出
 Dialogue: 0,0:30:10.68,0:30:13.82,English,,0,0,0,,Now this gets although it's essential to do this it gets
-Dialogue: 0,0:30:10.68,0:30:13.82,Chinese,,0,0,0,,现在，虽然这是必要的，但它必须这样做
+Dialogue: 0,0:30:10.68,0:30:13.82,Chinese,,0,0,0,,虽然这是必要的，但它必须这样做
 Dialogue: 0,0:30:16.16,0:30:20.58,English,,0,0,0,,From my point of view we're trying to present code to you
 Dialogue: 0,0:30:16.16,0:30:20.58,Chinese,,0,0,0,,从我的角度来看，我们正试图向你展示代码
 Dialogue: 0,0:30:22.06,0:30:25.10,English,,0,0,0,,It gets really messy it takes up a lot of space
@@ -697,7 +697,7 @@ Dialogue: 0,0:31:00.68,0:31:03.54,Chinese,,0,0,0,,那么我们将定义错误报
 Dialogue: 0,0:31:04.32,0:31:09.82,English,,0,0,0,,So unix-style errors where the function returns -1 and then sets there error no
 Dialogue: 0,0:31:04.32,0:31:09.82,Chinese,,0,0,0,,像 unix 样式的错误，其中函数返回-1然后设置错误号
 Dialogue: 0,0:31:11.92,0:31:16.20,English,,0,0,0,,Well if we get that kind of...if we get that kind of error will
-Dialogue: 0,0:31:11.92,0:31:16.20,Chinese,,0,0,0,,好吧，如果我们得到那种......如果我们得到那种错误会
+Dialogue: 0,0:31:11.92,0:31:16.20,Chinese,,0,0,0,,如果我们得到那种......如果我们得到那种错误会
 Dialogue: 0,0:31:16.98,0:31:23.12,English,,0,0,0,,Will print the will print a message and we'll report what that error was  before we exit
 Dialogue: 0,0:31:16.98,0:31:23.12,Chinese,,0,0,0,,将打印一条消息，我们将在退出之前报告该错误
 Dialogue: 0,0:31:23.46,0:31:30.96,English,,0,0,0,,And so then in the code we can replace that body of that if statement with just a single line
@@ -723,7 +723,7 @@ Dialogue: 0,0:32:15.42,0:32:20.80,Chinese,,0,0,0,,这个包装器的行为与包
 Dialogue: 0,0:32:21.20,0:32:22.28,English,,0,0,0,,If there's not an error
 Dialogue: 0,0:32:21.20,0:32:22.28,Chinese,,0,0,0,,如果没有错误
 Dialogue: 0,0:32:22.86,0:32:27.10,English,,0,0,0,,Okay and if there is an error then it deals with it somehow and prints a message
-Dialogue: 0,0:32:22.86,0:32:27.10,Chinese,,0,0,0,,好吧，如果有错误，那么它以某种方式处理它并打印一条消息
+Dialogue: 0,0:32:22.86,0:32:27.10,Chinese,,0,0,0,,如果有错误，那么它以某种方式处理它并打印一条消息
 Dialogue: 0,0:32:27.52,0:32:32.92,English,,0,0,0,,And so then this allows us to make our code really compact without violating this
 Dialogue: 0,0:32:27.52,0:32:32.92,Chinese,,0,0,0,,这使我们能够在不违反此规范的情况下使代码真正紧凑
 Dialogue: 0,0:32:33.52,0:32:36.38,English,,0,0,0,,Hard and fast rule that we have to check for errors
@@ -799,7 +799,7 @@ Dialogue: 0,0:35:19.54,0:35:22.50,Chinese,,0,0,0,,但退出你一次，然后它
 Dialogue: 0,0:35:23.32,0:35:27.46,English,,0,0,0,,Okay so that's a little unusual
 Dialogue: 0,0:35:23.32,0:35:27.46,Chinese,,0,0,0,,这有点不寻常
 Dialogue: 0,0:35:29.14,0:35:34.02,English,,0,0,0,,Now a parent process can create a child process by calling the fork function
-Dialogue: 0,0:35:29.14,0:35:34.02,Chinese,,0,0,0,,现在，父进程可以通过调用 fork 函数来创建子进程
+Dialogue: 0,0:35:29.14,0:35:34.02,Chinese,,0,0,0,,父进程可以通过调用 fork 函数来创建子进程
 Dialogue: 0,0:35:35.86,0:35:39.26,English,,0,0,0,,So fork takes no arguments
 Dialogue: 0,0:35:35.86,0:35:39.26,Chinese,,0,0,0,,fork 没有参数
 Dialogue: 0,0:35:41.94,0:35:47.54,English,,0,0,0,,And it returns an integer,it creates a new child process
@@ -1021,13 +1021,13 @@ Dialogue: 0,0:45:17.62,0:45:19.88,Chinese,,0,0,0,,让我们看看为什么 L0 �
 Dialogue: 0,0:45:22.06,0:45:28.18,English,,0,0,0,,And there's no way to print by before the first fork
 Dialogue: 0,0:45:22.06,0:45:28.18,Chinese,,0,0,0,,并且在第一个分叉之前没有办法打印
 Dialogue: 0,0:45:28.56,0:45:29.66,English,,0,0,0,,All right so that's infeasible
-Dialogue: 0,0:45:28.56,0:45:29.66,Chinese,,0,0,0,,好吧，这是不可行的
+Dialogue: 0,0:45:28.56,0:45:29.66,Chinese,,0,0,0,,这是不可行的
 Dialogue: 0,0:45:29.82,0:45:34.82,English,,0,0,0,,If we drew out this process graph we'd have a backward edge
 Dialogue: 0,0:45:29.82,0:45:34.82,Chinese,,0,0,0,,如果我们绘制出这个流程图，我们就会有一个后边
 Dialogue: 0,0:45:38.38,0:45:41.47,English,,0,0,0,,Okay now what happens if we nest forks in the parent
 Dialogue: 0,0:45:38.38,0:45:41.47,Chinese,,0,0,0,,如果我们在父进程中嵌套 forks 会发生什么
 Dialogue: 0,0:45:41.88,0:45:45.60,English,,0,0,0,,Okay I'm not sure why you'd want to do this except maybe to torture 213 students
-Dialogue: 0,0:45:41.88,0:45:45.60,Chinese,,0,0,0,,好吧，我不知道你为什么要这样做，除非想要折磨213名学生
+Dialogue: 0,0:45:41.88,0:45:45.60,Chinese,,0,0,0,,我不知道你为什么要这样做，除非想要折磨213名学生
 Dialogue: 0,0:45:46.78,0:45:47.22,English,,0,0,0,,But
 Dialogue: 0,0:45:46.78,0:45:47.22,Chinese,,0,0,0,,但
 Dialogue: 0,0:45:50.80,0:45:53.50,English,,0,0,0,,So we can just work this out by drawing the process graph
@@ -1217,7 +1217,7 @@ Dialogue: 0,0:53:28.68,0:53:32.30,Chinese,,0,0,0,,我们可以看到子进程还
 Dialogue: 0,0:53:39.58,0:53:43.52,English,,0,0,0,,Okay so the channel process is still running even though the parents's has terminated
 Dialogue: 0,0:53:39.58,0:53:43.52,Chinese,,0,0,0,,即使父进程已经终止，管道进程仍然在运行
 Dialogue: 0,0:53:45.06,0:53:48.90,English,,0,0,0,,And now if we kill this child 6676
-Dialogue: 0,0:53:45.06,0:53:48.90,Chinese,,0,0,0,,现在，如果我们杀死这个子进程 6676
+Dialogue: 0,0:53:45.06,0:53:48.90,Chinese,,0,0,0,,如果我们杀死这个子进程 6676
 Dialogue: 0,0:53:54.70,0:53:59.08,English,,0,0,0,,And then if we kill it,then we can see that it's it's gone,it's no longer in the system okay so
 Dialogue: 0,0:53:54.70,0:53:59.08,Chinese,,0,0,0,,如果我们杀了它，那么我们可以看到它已经消失了，它不再在系统中了，
 Dialogue: 0,0:54:00.12,0:54:02.72,English,,0,0,0,,That child when we killed it that terminated
@@ -1353,7 +1353,7 @@ Dialogue: 0,1:00:05.30,1:00:10.82,Chinese,,0,0,0,,我们只是创建一个子进
 Dialogue: 0,1:00:11.24,1:00:14.26,English,,0,0,0,,Running the same code,same program,same variables
 Dialogue: 0,1:00:11.24,1:00:14.26,Chinese,,0,0,0,,运行相同的代码，相同的程序，相同的变量
 Dialogue: 0,1:00:14.98,1:00:20.28,English,,0,0,0,,Okay to run a different program inside of a process we use a function called execve
-Dialogue: 0,1:00:14.98,1:00:20.28,Chinese,,0,0,0,,好吧，要在进程内运行不同的程序，我们使用一个名为 execve 的函数
+Dialogue: 0,1:00:14.98,1:00:20.28,Chinese,,0,0,0,,要在进程内运行不同的程序，我们使用一个名为 execve 的函数
 Dialogue: 0,1:00:22.50,1:00:26.40,English,,0,0,0,,And execve loads and runs
 Dialogue: 0,1:00:22.50,1:00:26.40,Chinese,,0,0,0,,并执行加载和运行
 Dialogue: 0,1:00:28.38,1:00:30.92,English,,0,0,0,,Within the current process it loads and runs
@@ -1363,7 +1363,7 @@ Dialogue: 0,1:00:31.46,1:00:34.54,Chinese,,0,0,0,,可执行文件名，这是它
 Dialogue: 0,1:00:35.48,1:00:39.16,English,,0,0,0,,And file name can be either a binary executable 
 Dialogue: 0,1:00:35.48,1:00:39.16,Chinese,,0,0,0,,文件名可以是二进制可执行
 Dialogue: 0,1:00:40.52,1:00:43.54,English,,0,0,0,,Okay or it can be a script,it can be a text file
-Dialogue: 0,1:00:40.52,1:00:43.54,Chinese,,0,0,0,,好吧，或者它可以是一个脚本，它可以是一个文本文件
+Dialogue: 0,1:00:40.52,1:00:43.54,Chinese,,0,0,0,,或者它可以是一个脚本，它可以是一个文本文件
 Dialogue: 0,1:00:45.22,1:00:47.72,English,,0,0,0,,A so-called script file that starts
 Dialogue: 0,1:00:45.22,1:00:47.72,Chinese,,0,0,0,,一个所谓的脚本文件启动
 Dialogue: 0,1:00:49.08,1:00:56.50,English,,0,0,0,,Whose first line starts with a pound bang and then that the path of some interpreter
@@ -1431,7 +1431,7 @@ Dialogue: 0,1:03:25.70,1:03:26.78,Chinese,,0,0,0,,一切都是新的
 Dialogue: 0,1:03:28.42,1:03:32.28,English,,0,0,0,,And the stack that it creates has the following form
 Dialogue: 0,1:03:28.42,1:03:32.28,Chinese,,0,0,0,,它创建的堆栈具有以下形式
 Dialogue: 0,1:03:33.64,1:03:38.38,English,,0,0,0,,Ok at the bottom here's the bottom of the stack and our stack is growing this way
-Dialogue: 0,1:03:33.64,1:03:38.38,Chinese,,0,0,0,,好吧，在底部这里是堆栈的底部，我们的堆栈正在以这种方式增长
+Dialogue: 0,1:03:33.64,1:03:38.38,Chinese,,0,0,0,,在底部这里是堆栈的底部，我们的堆栈正在以这种方式增长
 Dialogue: 0,1:03:40.76,1:03:42.44,English,,0,0,0,,So the first function that executes
 Dialogue: 0,1:03:40.76,1:03:42.44,Chinese,,0,0,0,,执行的第一个函数
 Dialogue: 0,1:03:43.84,1:03:47.78,English,,0,0,0,,Is a function called libc_start_main
@@ -1467,7 +1467,7 @@ Dialogue: 0,1:05:06.10,1:05:10.78,Chinese,,0,0,0,,第一个参数argc是包含�
 Dialogue: 0,1:05:10.82,1:05:17.08,English,,0,0,0,,And that's contained in %rdi by the x86-64  parameter passing convention
 Dialogue: 0,1:05:10.82,1:05:17.08,Chinese,,0,0,0,,并且 x86-64 参数传递约定包含在 ％rdi 中
 Dialogue: 0,1:05:17.68,1:05:21.62,English,,0,0,0,,Now the environment list is also contained on the stack
-Dialogue: 0,1:05:17.68,1:05:21.62,Chinese,,0,0,0,,现在，环境列表也包含在堆栈中
+Dialogue: 0,1:05:17.68,1:05:21.62,Chinese,,0,0,0,,环境列表也包含在堆栈中
 Dialogue: 0,1:05:21.70,1:05:28.98,English,,0,0,0,,And it too consists of a list of pointers each of which points into a environment string
 Dialogue: 0,1:05:21.70,1:05:28.98,Chinese,,0,0,0,,它也包含一个指针列表，每个指针都指向一个环境字符串
 Dialogue: 0,1:05:28.98,1:05:31.50,English,,0,0,0,,Which is a set of key equal value pairs, okay
