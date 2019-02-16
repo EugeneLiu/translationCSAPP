@@ -38,7 +38,7 @@ Dialogue: 0,0:00:29.36,0:00:33.70,English,,0,0,0,,我也会提到非本地跳转
 Dialogue: 0,0:00:36.08,0:00:38.70,English,,0,0,0,,但是更详细的内容你得看你的课本
 Dialogue: 0,0:00:38.84,0:00:43.40,English,,0,0,0,,还有幻灯片末尾的补充内容
 Dialogue: 0,0:00:45.64,0:00:48.06,English,,0,0,0,,现在我们把注意力集中在信号上
-Dialogue: 0,0:00:49.00,0:00:54.40,English,,0,0,0,,我想说一点 shell 程序的内容
+Dialogue: 0,0:00:49.00,0:00:54.40,English,,0,0,0,,我想先说一丢丢 shell 程序的内容
 Dialogue: 0,0:00:56.08,0:01:01.54,English,,0,0,0,,正如我们上次提到的，我们只有一种方法在 Linux 下创建进程
 Dialogue: 0,0:01:01.56,0:01:03.24,English,,0,0,0,,那就是使用 fork 调用
 Dialogue: 0,0:01:04.14,0:01:09.84,English,,0,0,0,,In fact the all of the processes on the system actually form a hierarchy
@@ -55,7 +55,7 @@ Dialogue: 0,0:01:53.10,0:01:55.84,English,,0,0,0,,你最后得到的是一个登
 Dialogue: 0,0:01:56.12,0:01:58.98,English,,0,0,0,,它希望你输入命令
 Dialogue: 0,0:02:01.72,0:02:07.36,English,,0,0,0,,然后登陆 shell 会以你的身份执行程序
 Dialogue: 0,0:02:08.52,0:02:11.92,English,,0,0,0,,所以当我们在 shell 里输入什么东西的时候
-Dialogue: 0,0:02:13.00,0:02:21.62,English,,0,0,0,,比如说 ls 命令，我们其实是在命令 shell 运行名为 ls 的可执行程序
+Dialogue: 0,0:02:13.00,0:02:21.62,English,,0,0,0,,比如说 ls 命令，我们其实是在要求 shell 运行名为 ls 的可执行程序
 Dialogue: 0,0:02:22.80,0:02:25.68,English,,0,0,0,,那么接下来 shell 会做什么呢，它会创建一个子进程
 Dialogue: 0,0:02:26.38,0:02:30.16,English,,0,0,0,,然后它会在这个子进程中执行 ls
 Dialogue: 0,0:02:31.12,0:02:37.28,English,,0,0,0,,并且这个子进程也有可能创建其它的子进程
@@ -81,45 +81,45 @@ Dialogue: 0,0:04:22.50,0:04:24.18,English,,0,0,0,,它解析命令行
 Dialogue: 0,0:04:25.92,0:04:32.76,English,,0,0,0,,在这个过程中，它获取命令行，在本例中是保存在 buff 里
 Dialogue: 0,0:04:33.10,0:04:37.46,English,,0,0,0,,它会生成一个数组 argv，其中 argv[0] 是一个命令
 Dialogue: 0,0:04:37.92,0:04:41.16,English,,0,0,0,,之后的 argv[1]，argv[2] 等是可选参数
-Dialogue: 0,0:04:42.82,0:04:48.24,English,,0,0,0,,And the convention in a shell is that if the command line is terminated 在 shell 中有个约定，那就是如果命令行被终止
-Dialogue: 0,0:04:49.56,0:04:55.14,English,,0,0,0,,By an ampersand then you're asking the shell to run that job,to run that command in the background 通过使用一个 & 符号，你可以使 shell 在后台运行此工作
-Dialogue: 0,0:04:56.02,0:04:58.18,English,,0,0,0,,Meaning the shell won't wait for that job to finish 这意味着 shell 不会等待这个工作完成
+Dialogue: 0,0:04:42.82,0:04:48.24,English,,0,0,0,,在 shell 中有个约定，那就是如果命令行以
+Dialogue: 0,0:04:49.56,0:04:55.14,English,,0,0,0,,一个 & 符号作为结尾，那么你可以使 shell 在后台运行此工作
+Dialogue: 0,0:04:56.02,0:04:58.18,English,,0,0,0,,这意味着 shell 不会等待这个工作完成
 Dialogue: 0,0:04:58.78,0:05:00.68,English,,0,0,0,,Before it goes through its next read stub
-Dialogue: 0,0:05:01.44,0:05:05.72,English,,0,0,0,,If the line that you type doesn't have an ampersand 如果你输入的行里没有 & 符号
-Dialogue: 0,0:05:05.72,0:05:10.38,English,,0,0,0,,Then you're asking the shell to run that job in the foreground which means the shell will wait 那么你就是要求 shell 在前台运行此工作，这意味着 shell 会等待它
-Dialogue: 0,0:05:13.56,0:05:19.38,English,,0,0,0,,So first we parse this command line into an argv array 所以我们首先把这个命令行解析成一个 argv 数组
-Dialogue: 0,0:05:19.42,0:05:25.46,English,,0,0,0,,And we return whether or not it was terminated by an ampersand, so bg for background 然后我们要返回它是否以 & 符号结尾，bg 是后台的意思
-Dialogue: 0,0:05:26.42,0:05:31.90,English,,0,0,0,,If argv[0] is null then that means we just hit a we just hit return right so as an empty line 如果 argv[0] 为空，那么就是说我们只输入了一个 return，所以得到空行
-Dialogue: 0,0:05:32.58,0:05:35.04,English,,0,0,0,,So we'll just return and just ignore those 所以我们返回即可，不用管这些
-Dialogue: 0,0:05:36.54,0:05:41.66,English,,0,0,0,,Now a shell also implements what are called built-in commands shell 也实现了一些内建的命令
-Dialogue: 0,0:05:41.90,0:05:47.36,English,,0,0,0,,So various things like jobs bg, fg 比如 jobs bg, fg 这样的东西
-Dialogue: 0,0:05:47.82,0:05:51.96,English,,0,0,0,,Are examples of built-in commands which are just implemented in the shell itself 都是 shell 本身就实现了的内建命令的例子
-Dialogue: 0,0:05:53.14,0:05:55.32,English,,0,0,0,,So if you type...if the first thing you type 所以，如果你输入。。。如果你输入的第一个东西
-Dialogue: 0,0:05:56.20,0:05:58.48,English,,0,0,0,,If the command you enter is a built in 如果你输入的是一个内建的命令
-Dialogue: 0,0:05:59.24,0:06:06.02,English,,0,0,0,,Then the shell will check that,it will check argv[0] for a to see if it's a built-in command shell 会检查它，看看 argv[0] 是否是一个内建 shell 命令
-Dialogue: 0,0:06:06.64,0:06:11.70,English,,0,0,0,,And if it is it'll just execute it whatever it is you asked it to do 如果是，那么不管你让它干什么，它都会照做
-Dialogue: 0,0:06:13.76,0:06:20.14,English,,0,0,0,,Okay otherwise if it's not a built-in then that means that you're asking the shell to run some program 此外，如果它不是内建的，这意味着你在要求 shell 运行一些程序
-Dialogue: 0,0:06:22.42,0:06:24.92,English,,0,0,0,,Okay so in that case the shell will fork a child 这种情况下 shell 会 fork 一个子进程
-Dialogue: 0,0:06:26.34,0:06:31.60,English,,0,0,0,,And then the child will execute that program by calling execve 这个子进程会使用 execve 调用来运行这个程序
-Dialogue: 0,0:06:32.98,0:06:35.50,English,,0,0,0,,Passing as the first argument the name of the command 将命令的名字作为第一个参数传递
-Dialogue: 0,0:06:36.18,0:06:41.24,English,,0,0,0,,And as the second and third argv and and the environment respectively
+Dialogue: 0,0:05:01.44,0:05:05.72,English,,0,0,0,,如果你输入的行里没有 & 符号
+Dialogue: 0,0:05:05.72,0:05:10.38,English,,0,0,0,,那么你就是要求 shell 在前台运行此工作，这意味着 shell 会等待它
+Dialogue: 0,0:05:13.56,0:05:19.38,English,,0,0,0,,所以我们首先把这个命令行解析成一个 argv 数组
+Dialogue: 0,0:05:19.42,0:05:25.46,English,,0,0,0,,然后我们要返回它是否以 & 符号结尾，bg 是后台的意思
+Dialogue: 0,0:05:26.42,0:05:31.90,English,,0,0,0,,如果 argv[0] 为空，那么就是说我们只输入了一个 return，所以得到空行
+Dialogue: 0,0:05:32.58,0:05:35.04,English,,0,0,0,,所以我们返回即可，不用管这些
+Dialogue: 0,0:05:36.54,0:05:41.66,English,,0,0,0,,shell 也实现了一些内建的命令
+Dialogue: 0,0:05:41.90,0:05:47.36,English,,0,0,0,,比如 jobs, bg, fg 这样的东西
+Dialogue: 0,0:05:47.82,0:05:51.96,English,,0,0,0,,都是 shell 本身就实现了的内建命令的例子
+Dialogue: 0,0:05:53.14,0:05:55.32,English,,0,0,0,,所以，如果你输入。。。如果你输入的第一个东西
+Dialogue: 0,0:05:56.20,0:05:58.48,English,,0,0,0,,如果你输入的是一个内建的命令
+Dialogue: 0,0:05:59.24,0:06:06.02,English,,0,0,0,,shell 会检查它，看看 argv[0] 是否是一个内建 shell 命令
+Dialogue: 0,0:06:06.64,0:06:11.70,English,,0,0,0,,如果是，那么不管你让它干什么，它都会照做
+Dialogue: 0,0:06:13.76,0:06:20.14,English,,0,0,0,,此外，如果它不是内建的，这意味着你在要求 shell 运行一些程序
+Dialogue: 0,0:06:22.42,0:06:24.92,English,,0,0,0,,在这种情况下 shell 会 fork 一个子进程
+Dialogue: 0,0:06:26.34,0:06:31.60,English,,0,0,0,,这个子进程会使用 execve 调用来运行这个程序
+Dialogue: 0,0:06:32.98,0:06:35.50,English,,0,0,0,,将命令的名字作为第一个参数传递
+Dialogue: 0,0:06:36.18,0:06:41.24,English,,0,0,0,,将环境信息分别作为 argv 的第二、第三个等等
 Dialogue: 0,0:06:42.10,0:06:46.86,English,,0,0,0,,Now execve if you recall from last time never returns unless there's an error
-Dialogue: 0,0:06:47.37,0:06:51.48,English,,0,0,0,,So it checks so we check it the return value for execve
+Dialogue: 0,0:06:47.37,0:06:51.48,English,,0,0,0,,所以我们检查 execve 的返回值
 Dialogue: 0,0:06:52.70,0:06:56.98,English,,0,0,0,,And if it returns less than zero fact the only time it will return
-Dialogue: 0,0:06:57.54,0:07:01.90,English,,0,0,0,,If it does return it will always return -1
-Dialogue: 0,0:07:02.32,0:07:04.56,English,,0,0,0,,But we're just being careful here
-Dialogue: 0,0:07:05.24,0:07:12.32,English,,0,0,0,,So we check that for an error and in print and error message if we find an error and then exit
-Dialogue: 0,0:07:15.26,0:07:22.06,English,,0,0,0,,So once the parent gets control again
-Dialogue: 0,0:07:22.76,0:07:25.20,English,,0,0,0,,Then it waits for that foreground job to terminate
-Dialogue: 0,0:07:26.22,0:07:28.52,English,,0,0,0,,Okay so if it's not a background job
-Dialogue: 0,0:07:29.30,0:07:32.18,English,,0,0,0,,Then it waits for it to terminate by calling waitpid
-Dialogue: 0,0:07:33.34,0:07:38.70,English,,0,0,0,,And waiting for that child that foreground job to terminate and then and reaping it
-Dialogue: 0,0:07:39.44,0:07:43.96,English,,0,0,0,,Otherwise if it's a background job it just prints say a message and goes on
-Dialogue: 0,0:07:44.82,0:07:46.44,English,,0,0,0,,So this is really interesting right that
-Dialogue: 0,0:07:46.74,0:07:50.98,English,,0,0,0,,There's really the only difference between a foreground job and a background job is just that the shell
-Dialogue: 0,0:07:51.76,0:07:53.62,English,,0,0,0,,Does a waitpid on that job or not
-Dialogue: 0,0:07:54.02,0:07:57.46,English,,0,0,0,,Right so there otherwise there's really no difference
-Dialogue: 0,0:07:58.78,0:08:03.68,English,,0,0,0,,Now what's the problem? there's a problem with our example show
+Dialogue: 0,0:06:57.54,0:07:01.90,English,,0,0,0,,如果它返回，那么它总是会返回 -1
+Dialogue: 0,0:07:02.32,0:07:04.56,English,,0,0,0,,但我们在这得小心点
+Dialogue: 0,0:07:05.24,0:07:12.32,English,,0,0,0,,我们检查是否有错误，如果有，那么把错误信息打印出来，然后退出
+Dialogue: 0,0:07:15.26,0:07:22.06,English,,0,0,0,,一旦父进程再次获得控制权
+Dialogue: 0,0:07:22.76,0:07:25.20,English,,0,0,0,,那么等待这个前台工作结束
+Dialogue: 0,0:07:26.22,0:07:28.52,English,,0,0,0,,所以如果它不是个后台进程
+Dialogue: 0,0:07:29.30,0:07:32.18,English,,0,0,0,,则通过调用 waitpid 等待进程结束
+Dialogue: 0,0:07:33.34,0:07:38.70,English,,0,0,0,,然后等待那个前台工作结束，之后获取它
+Dialogue: 0,0:07:39.44,0:07:43.96,English,,0,0,0,,如果它是个后台进程，那么输出一条信息并继续执行
+Dialogue: 0,0:07:44.82,0:07:46.44,English,,0,0,0,,这里很有趣
+Dialogue: 0,0:07:46.74,0:07:50.98,English,,0,0,0,,在 shell 中后台进程和前台进程相差的，仅仅是
+Dialogue: 0,0:07:51.76,0:07:53.62,English,,0,0,0,,仅仅是有没有使用 waitpid
+Dialogue: 0,0:07:54.02,0:07:57.46,English,,0,0,0,,除此之外没什么不同的地方
+Dialogue: 0,0:07:58.78,0:08:03.68,English,,0,0,0,,那么现在出现什么问题了呢？我们的例子展示出来了一个
 Dialogue: 0,0:08:05.88,0:08:09.88,English,,0,0,0,,And that the problem is that we're doing the right thing for the foreground job
 Dialogue: 0,0:08:10.40,0:08:13.72,English,,0,0,0,,We always have to reap these children so they they so that
 Dialogue: 0,0:08:15.10,0:08:17.54,English,,0,0,0,,They're their state can be released
