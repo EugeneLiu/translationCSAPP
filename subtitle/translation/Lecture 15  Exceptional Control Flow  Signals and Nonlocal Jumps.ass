@@ -120,35 +120,35 @@ Dialogue: 0,0:07:46.74,0:07:50.98,English,,0,0,0,,在 shell 中后台进程和�
 Dialogue: 0,0:07:51.76,0:07:53.62,English,,0,0,0,,仅仅是有没有使用 waitpid
 Dialogue: 0,0:07:54.02,0:07:57.46,English,,0,0,0,,除此之外没什么不同的地方
 Dialogue: 0,0:07:58.78,0:08:03.68,English,,0,0,0,,那么现在出现什么问题了呢？我们的例子展示出来了一个
-Dialogue: 0,0:08:05.88,0:08:09.88,English,,0,0,0,,And that the problem is that we're doing the right thing for the foreground job
-Dialogue: 0,0:08:10.40,0:08:13.72,English,,0,0,0,,We always have to reap these children so they they so that
-Dialogue: 0,0:08:15.10,0:08:17.54,English,,0,0,0,,They're their state can be released
-Dialogue: 0,0:08:19.82,0:08:23.62,English,,0,0,0,,But we're not doing anything to reap any background jobs
+Dialogue: 0,0:08:05.88,0:08:09.88,English,,0,0,0,,那么问题是，我们对前台进程做了正确的事情
+Dialogue: 0,0:08:10.40,0:08:13.72,English,,0,0,0,,我们需要收集它子进程的信息
+Dialogue: 0,0:08:15.10,0:08:17.54,English,,0,0,0,,以便能够释放它们
+Dialogue: 0,0:08:19.82,0:08:23.62,English,,0,0,0,,但是我们不会收集后台进程的任何东西
 Dialogue: 0,0:08:23.80,0:08:26.78,English,,0,0,0,,Right when if the background job so if not bg
-Dialogue: 0,0:08:27.26,0:08:29.38,English,,0,0,0,,We're just printing a message and then we're returning
-Dialogue: 0,0:08:30.30,0:08:32.80,English,,0,0,0,,And then we're continuing with this read evaluate step
-Dialogue: 0,0:08:33.58,0:08:38.82,English,,0,0,0,,And never going back and and taking care of that background job
-Dialogue: 0,0:08:40.40,0:08:44.24,English,,0,0,0,,So this is a problem because that the background job will eventually become
-Dialogue: 0,0:08:45.82,0:08:51.46,English,,0,0,0,,If we have enough of those jobs we create a memory leak that could crash the system right so this is an error
-Dialogue: 0,0:08:52.36,0:08:53.72,English,,0,0,0,,So what are we going to do about this
-Dialogue: 0,0:08:54.38,0:08:59.10,English,,0,0,0,,Well it turns out that exceptional control flow will help us solve this problem
-Dialogue: 0,0:09:00.08,0:09:04.72,English,,0,0,0,,And what happens is that the kernel will notify
-Dialogue: 0,0:09:05.18,0:09:08.54,English,,0,0,0,,The shell when a any of its children terminate
-Dialogue: 0,0:09:09.78,0:09:14.82,English,,0,0,0,,Okay and then the shell can then react to that and issue a waitpid
-Dialogue: 0,0:09:15.46,0:09:21.18,English,,0,0,0,,Okay and this notification mechanism that the kernel uses is something called a signal
-Dialogue: 0,0:09:25.92,0:09:28.22,English,,0,0,0,,So a signal is a small message
-Dialogue: 0,0:09:29.98,0:09:36.82,English,,0,0,0,,That the kernel delivers to a process to notify it that there's been some event in the system
-Dialogue: 0,0:09:37.66,0:09:44.18,English,,0,0,0,,Now so this is very similar to the exceptions that we studied the last time
-Dialogue: 0,0:09:44.34,0:09:47.52,English,,0,0,0,,Right except it's all implemented in software
-Dialogue: 0,0:09:49.12,0:09:53.02,English,,0,0,0,,Now kernel signals are always sent from the kernel
-Dialogue: 0,0:09:53.02,0:09:56.38,English,,0,0,0,,But sometimes they're sent at the request of another process
-Dialogue: 0,0:09:56.82,0:10:00.42,English,,0,0,0,,Right sometimes the kernel will notice that there's some event
-Dialogue: 0,0:10:01.22,0:10:07.06,English,,0,0,0,,Other times another process will ask the kernel to send a message to some other process
-Dialogue: 0,0:10:08.52,0:10:11.52,English,,0,0,0,,Now that we say that it's a small message
-Dialogue: 0,0:10:12.22,0:10:15.42,English,,0,0,0,,Because the only information that's contained in a signal
-Dialogue: 0,0:10:16.00,0:10:18.66,English,,0,0,0,,It's a unique integer id
-Dialogue: 0,0:10:19.66,0:10:23.50,English,,0,0,0,,And the fact that it was delivered okay so
-Dialogue: 0,0:10:24.34,0:10:27.94,English,,0,0,0,,That's so there's nothing else in a signal except that it arrived
+Dialogue: 0,0:08:27.26,0:08:29.38,English,,0,0,0,,我们仅仅显示一条信息就退出
+Dialogue: 0,0:08:30.30,0:08:32.80,English,,0,0,0,,然后我们又开始执行 eval 步骤
+Dialogue: 0,0:08:33.58,0:08:38.82,English,,0,0,0,,我们不会再去关心那个后台进程
+Dialogue: 0,0:08:40.40,0:08:44.24,English,,0,0,0,,所以这就有个问题，后台进程最后会变成
+Dialogue: 0,0:08:45.82,0:08:51.46,English,,0,0,0,,如果我们有太多这样的工作，，那么就会引起内存泄漏，这可能让系统崩溃掉，所以这是一处错误
+Dialogue: 0,0:08:52.36,0:08:53.72,English,,0,0,0,,那么怎么解决呢
+Dialogue: 0,0:08:54.38,0:08:59.10,English,,0,0,0,,很好，这就引出了异常控制流来帮助我们解决这个问题
+Dialogue: 0,0:09:00.08,0:09:04.72,English,,0,0,0,,会发生什么呢，内核会告知
+Dialogue: 0,0:09:05.18,0:09:08.54,English,,0,0,0,,会在 shell 的子进程结束时告知 shell
+Dialogue: 0,0:09:09.78,0:09:14.82,English,,0,0,0,,Okay and then the shell can then react to that and issue a waitpid 接下来 shell 会对此作出反应，并放出
+Dialogue: 0,0:09:15.46,0:09:21.18,English,,0,0,0,,好的，其实内核用到的这个通知机制就是所谓的信号
+Dialogue: 0,0:09:25.92,0:09:28.22,English,,0,0,0,,所以信号就是一条小小的信息
+Dialogue: 0,0:09:29.98,0:09:36.82,English,,0,0,0,,内核传递给进程一些系统事件的信息
+Dialogue: 0,0:09:37.66,0:09:44.18,English,,0,0,0,,这与我们上次学习的异常机制很像
+Dialogue: 0,0:09:44.34,0:09:47.52,English,,0,0,0,,当然，除了它是完全由软件实现的
+Dialogue: 0,0:09:49.12,0:09:53.02,English,,0,0,0,,内核信号总是由内核发出的
+Dialogue: 0,0:09:53.02,0:09:56.38,English,,0,0,0,,但有时它是在某些进程请求时发送的
+Dialogue: 0,0:09:56.82,0:10:00.42,English,,0,0,0,,是的，有时内核会告知一些事件
+Dialogue: 0,0:10:01.22,0:10:07.06,English,,0,0,0,,有时候某个进程会请求内核发送信息给另外一些进程
+Dialogue: 0,0:10:08.52,0:10:11.52,English,,0,0,0,,我们说它是一条小小的信息
+Dialogue: 0,0:10:12.22,0:10:15.42,English,,0,0,0,,是因为它仅仅只有信号的信息
+Dialogue: 0,0:10:16.00,0:10:18.66,English,,0,0,0,,是一个唯一的整数
+Dialogue: 0,0:10:19.66,0:10:23.50,English,,0,0,0,,是的，就是这样
+Dialogue: 0,0:10:24.34,0:10:27.94,English,,0,0,0,,没错，除了它以外，信号中没啥别的
 Dialogue: 0,0:10:28.18,0:10:31.88,English,,0,0,0,,And that it has some unique id
 Dialogue: 0,0:10:33.04,0:10:37.26,English,,0,0,0,,Now examples of these are the sigint
 Dialogue: 0,0:10:37.48,0:10:41.60,English,,0,0,0,,So signals have this ... this unique id and then they also have a name
