@@ -149,18 +149,18 @@ Dialogue: 0,0:10:12.22,0:10:15.42,English,,0,0,0,,是因为它仅仅只有信号
 Dialogue: 0,0:10:16.00,0:10:18.66,English,,0,0,0,,是一个唯一的整数
 Dialogue: 0,0:10:19.66,0:10:23.50,English,,0,0,0,,是的，就是这样
 Dialogue: 0,0:10:24.34,0:10:27.94,English,,0,0,0,,没错，除了它以外，信号中没啥别的
-Dialogue: 0,0:10:28.18,0:10:31.88,English,,0,0,0,,And that it has some unique id
-Dialogue: 0,0:10:33.04,0:10:37.26,English,,0,0,0,,Now examples of these are the sigint
-Dialogue: 0,0:10:37.48,0:10:41.60,English,,0,0,0,,So signals have this ... this unique id and then they also have a name
-Dialogue: 0,0:10:44.80,0:10:51.32,English,,0,0,0,,So the sigint is what the when you type ctrl-C at on the command line
-Dialogue: 0,0:10:51.64,0:10:56.90,English,,0,0,0,,The kernel sends a signal to every any processes in the foreground
-Dialogue: 0,0:10:57.26,0:11:00.52,English,,0,0,0,,And the default action of receiving a sigint is to terminate right
-Dialogue: 0,0:11:00.52,0:11:04.06,English,,0,0,0,,So this is how if you're running a foreground job you hit ctrl-c
-Dialogue: 0,0:11:04.52,0:11:07.08,English,,0,0,0,,You get the prompt back because it kills that job
-Dialogue: 0,0:11:08.36,0:11:13.84,English,,0,0,0,,Sigkill number 9 can be used to kill terminate any program
-Dialogue: 0,0:11:15.78,0:11:22.74,English,,0,0,0,,So these two have sigint and sigkill have the same effect on the programs me that they kill the program
-Dialogue: 0,0:11:23.02,0:11:30.36,English,,0,0,0,,The the unique aspect of sigkill is that there's no way to ignore it or override it
-Dialogue: 0,0:11:30.89,0:11:32.18,English,,0,0,0,,Okay so this is like the failsafe
+Dialogue: 0,0:10:28.18,0:10:31.88,English,,0,0,0,,这是一些特殊的信号 id
+Dialogue: 0,0:10:33.04,0:10:37.26,English,,0,0,0,,比如说这个 sigint
+Dialogue: 0,0:10:37.48,0:10:41.60,English,,0,0,0,,所以信号有，，这些独特的 id 都有自己的名字
+Dialogue: 0,0:10:44.80,0:10:51.32,English,,0,0,0,,当你在命令行中按下 ctrl-c 的时候就会触发 sigint 信号
+Dialogue: 0,0:10:51.64,0:10:56.90,English,,0,0,0,,内核向每个前台进程发送信号
+Dialogue: 0,0:10:57.26,0:11:00.52,English,,0,0,0,,收到 sigint 时的默认操作是终止任务
+Dialogue: 0,0:11:00.52,0:11:04.06,English,,0,0,0,,所以如果你对一个正在运行的前台任务按下 crtl-c
+Dialogue: 0,0:11:04.52,0:11:07.08,English,,0,0,0,,你会得到一条提示，因为你 kill 了它
+Dialogue: 0,0:11:08.36,0:11:13.84,English,,0,0,0,,信号 9 是 sigkill，可以在 kill 程序的时候用
+Dialogue: 0,0:11:15.78,0:11:22.74,English,,0,0,0,,所以对我来说 sigint 和 sigkill 的效果是一样的，它们都 kill 了程序
+Dialogue: 0,0:11:23.02,0:11:30.36,English,,0,0,0,,sigkill 的特殊之处是它不能被任何方式忽略或覆盖掉
+Dialogue: 0,0:11:30.89,0:11:32.18,English,,0,0,0,,这就像失效保护一样
 Dialogue: 0,0:11:33.36,0:11:38.48,English,,0,0,0,,As we'll see there are there are ways to catch and ignore other signals like sigint
 Dialogue: 0,0:11:40.22,0:11:43.32,English,,0,0,0,,Sigsegv is the our favorite segment
 Dialogue: 0,0:11:43.54,0:11:51.24,English,,0,0,0,,Segmentation violation so if you access a region of memory that's protected or not legal
