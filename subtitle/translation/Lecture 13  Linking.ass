@@ -130,72 +130,139 @@ Dialogue: 0,0:04:52.14,0:04:57.86,English,,0,0,0,,但是，实际编译并链接
 Dialogue: 0,0:04:58.68,0:05:01.62,English,,0,0,0,,Ok so you can save space
 Dialogue: 0,0:04:58.68,0:05:01.62,English,,0,0,0,,好的，这样你就可以节省空间
 Dialogue: 0,0:05:01.62,0:05:08.14,English,,0,0,0,,You don't you know normally you use only a small subset of the standard C functions
+Dialogue: 0,0:05:01.62,0:05:08.14,English,,0,0,0,,你通常不知道你其实只使用标准 C 函数的一小部分
 Dialogue: 0,0:05:08.80,0:05:13.16,English,,0,0,0,,So there's no point in linking all of those functions into your code if you don't need them
+Dialogue: 0,0:05:08.80,0:05:13.16,English,,0,0,0,,因此，如果你不需要将所有这些功能链接到代码中，那就没有意义了
 Dialogue: 0,0:05:15.08,0:05:16.66,English,,0,0,0,,Alright so what do linkers do
+Dialogue: 0,0:05:15.08,0:05:16.66,English,,0,0,0,,好吧，那么链接器做了什么呢
 Dialogue: 0,0:05:18.02,0:05:21.78,English,,0,0,0,,Well there's two main tasks that a linker performs
+Dialogue: 0,0:05:18.02,0:05:21.78,English,,0,0,0,,链接器执行的主要任务有两个
 Dialogue: 0,0:05:23.28,0:05:25.82,English,,0,0,0,,The first is called simple resolution
+Dialogue: 0,0:05:23.28,0:05:25.82,English,,0,0,0,,第一个被称为简单解析（符号解析）
 Dialogue: 0,0:05:27.16,0:05:30.16,English,,0,0,0,,So programs define and reference symbols
+Dialogue: 0,0:05:27.16,0:05:30.16,English,,0,0,0,,为了程序定义和应用符号
 Dialogue: 0,0:05:30.44,0:05:37.10,English,,0,0,0,,Okay that what the linker refers to as symbols and these are global variables and functions
+Dialogue: 0,0:05:30.44,0:05:37.10,English,,0,0,0,,好的，链接器称为符号，这些是全局变量和函数
 Dialogue: 0,0:05:37.62,0:05:44.40,English,,0,0,0,,Okay in the names and those objects they're referred to as a symbol
+Dialogue: 0,0:05:37.62,0:05:44.40,English,,0,0,0,,在名称和那些对象中，它们被称为符号
 Dialogue: 0,0:05:44.46,0:05:52.28,English,,0,0,0,,So here we're declaring,we're defining a symbol called swap
+Dialogue: 0,0:05:44.46,0:05:52.28,English,,0,0,0,,第一行代码，我们在这里声明，我们正在定义一个名为swap的符号
 Dialogue: 0,0:05:53.66,0:05:59.42,English,,0,0,0,,Here we're referring when we call swap, we're referring to that symbol
+Dialogue: 0,0:05:53.66,0:05:59.42,English,,0,0,0,,中间这行我们称之为 swap ，我们指的是那个符号
 Dialogue: 0,0:05:59.44,0:06:01.30,English,,0,0,0,,Okay that's a reference to the symbol
+Dialogue: 0,0:05:59.44,0:06:01.30,English,,0,0,0,,是的，这是对符号的一种引用
 Dialogue: 0,0:06:03.30,0:06:07.20,English,,0,0,0,,And here we're defining a pointer to an int called xp
+Dialogue: 0,0:06:03.30,0:06:07.20,English,,0,0,0,,最后一行，我们定义了一个指向名为 xp 的 int 类型指针
 Dialogue: 0,0:06:08.30,0:06:13.02,English,,0,0,0,,So we're defining xp and we're initializing it to the address of x
+Dialogue: 0,0:06:08.30,0:06:13.02,English,,0,0,0,,所以我们定义了 xp ，将它初始化为取 x 的地址
 Dialogue: 0,0:06:13.02,0:06:15.52,English,,0,0,0,,So we're referring,that's a reference to x
+Dialogue: 0,0:06:13.02,0:06:15.52,English,,0,0,0,,这指的是，这是对 x 的引用
 Dialogue: 0,0:06:18.00,0:06:24.24,English,,0,0,0,,Okay so the symbol definitions are stored in the object file by the assembler
+Dialogue: 0,0:06:18.00,0:06:24.24,English,,0,0,0,,汇编器将符号定义存储在目标文件中
 Dialogue: 0,0:06:25.32,0:06:28.52,English,,0,0,0,,In a symbol table which is an array of structs
-Dialogue: 0,0:06:29.12,0:06:32.19,English,,0,0,0,,Where each truck contains information about the symbol
+Dialogue: 0,0:06:25.32,0:06:28.52,English,,0,0,0,,在这个符号表里面，全是一系列结构数组
+Dialogue: 0,0:06:29.12,0:06:32.19,English,,0,0,0,,Where each structs contains information about the symbol
+Dialogue: 0,0:06:29.12,0:06:32.19,English,,0,0,0,,每个结构数组里面包含有关该符号的信息
 Dialogue: 0,0:06:32.58,0:06:37.54,English,,0,0,0,,Like the name of the symbol its size and where it's located
+Dialogue: 0,0:06:32.58,0:06:37.54,English,,0,0,0,,比如符号的名称，它的大小和位置等等信息
 Dialogue: 0,0:06:40.54,0:06:46.78,English,,0,0,0,,Now what we mean by symbol resolution is that during the linker linking process
+Dialogue: 0,0:06:40.54,0:06:46.78,English,,0,0,0,,所以现在我们说符号解析的意思是在链接器链接过程中
 Dialogue: 0,0:06:47.58,0:06:54.94,English,,0,0,0,,The linker associates each symbol reference with exactly one symbol definition
+Dialogue: 0,0:06:47.58,0:06:54.94,English,,0,0,0,,链接器将每个符号引用与一个符号定义相关联
 Dialogue: 0,0:06:57.68,0:06:59.42,English,,0,0,0,,Okay so it's possible in multiple
+Dialogue: 0,0:06:57.68,0:06:59.42,English,,0,0,0,,好的，所以这可能有多个
 Dialogue: 0,0:07:00.64,0:07:04.16,English,,0,0,0,,You know why is this an issue well it's possible like in multiple modules
+Dialogue: 0,0:07:00.64,0:07:04.16,English,,0,0,0,,这中间可能会有些问题，比如在多个模块中
 Dialogue: 0,0:07:04.16,0:07:06.84,English,,0,0,0,,You may declare a global variable with the same name
+Dialogue: 0,0:07:04.16,0:07:06.84,English,,0,0,0,,你可能会声明一个有相同名称的全局变量
 Dialogue: 0,0:07:07.80,0:07:13.76,English,,0,0,0,,The linker has to decide which one of those definitions to use for all subsequent references
+Dialogue: 0,0:07:07.80,0:07:13.76,English,,0,0,0,,链接器必须决定将其中的某个定义用于所有后续引用
 Dialogue: 0,0:07:16.70,0:07:21.74,English,,0,0,0,,Now once the linker is associated a unique object
+Dialogue: 0,0:07:16.70,0:07:21.74,English,,0,0,0,,一旦链接器和一个独一无二的目标建立联系
 Dialogue: 0,0:07:21.74,0:07:25.44,English,,0,0,0,,With each a unique symbol definition with each reference
+Dialogue: 0,0:07:21.74,0:07:25.44,English,,0,0,0,,每个引用都会有一个唯一的符号定义
 Dialogue: 0,0:07:26.84,0:07:29.22,English,,0,0,0,,Then it does the second step which is relocation
+Dialogue: 0,0:07:26.84,0:07:29.22,English,,0,0,0,,然后它执行第二步，即重定位
 Dialogue: 0,0:07:29.78,0:07:33.32,English,,0,0,0,,And during relocation it merges all of the modules together
+Dialogue: 0,0:07:29.78,0:07:33.32,English,,0,0,0,,在重定位期间，它会将所有模块合并在一起
 Dialogue: 0,0:07:33.70,0:07:42.98,English,,0,0,0,,Into a single executable object module that can be directly loaded and executed on the system
+Dialogue: 0,0:07:33.70,0:07:42.98,English,,0,0,0,,进入单个可执行目标模块后，就可以直接在系统上加载和执行
 Dialogue: 0,0:07:43.98,0:07:47.34,English,,0,0,0,,So when it does this merging
+Dialogue: 0,0:07:43.98,0:07:47.34,English,,0,0,0,,所以当它合并时
 Dialogue: 0,0:07:50.16,0:07:57.04,English,,0,0,0,,It has to figure out where each symbol,each function and each variable is going to be stored
+Dialogue: 0,0:07:50.16,0:07:57.04,English,,0,0,0,,它必须弄清楚每个符号，每个函数和每个变量是要准备存储在哪
 Dialogue: 0,0:07:57.92,0:07:59.16,English,,0,0,0,,And this is called relocation
+Dialogue: 0,0:07:57.92,0:07:59.16,English,,0,0,0,,这称为重定位
 Dialogue: 0,0:07:59.16,0:08:06.78,English,,0,0,0,,Because initially functions are just stored at some offset in their object module
+Dialogue: 0,0:07:59.16,0:08:06.78,English,,0,0,0,,因为最初的函数只是存储在其目标模块中的某个偏移处
 Dialogue: 0,0:08:07.36,0:08:13.26,English,,0,0,0,,Right because that the linker doesn't know where those functions are actually going to be eventually a loaded into memory
+Dialogue: 0,0:08:07.36,0:08:13.26,English,,0,0,0,,正确，因为链接器不知道这些函数最终会被真正加载到内存中的哪个地方
 Dialogue: 0,0:08:14.04,0:08:26.08,English,,0,0,0,,So before relocation the address of a function in the object module is just its offset in the module and similarly for data
+Dialogue: 0,0:08:14.04,0:08:26.08,English,,0,0,0,,所以在重定向前目标模块中的函数地址只是它在模块中的偏移量，对于数据也是如此
 Dialogue: 0,0:08:26.62,0:08:31.38,English,,0,0,0,,During the relocation step the linker decides on
+Dialogue: 0,0:08:26.62,0:08:31.38,English,,0,0,0,,在重定位步骤期间，链接器会决定
 Dialogue: 0,0:08:31.56,0:08:38.76,English,,0,0,0,,Where each symbol is going to be ultimately located in memory one at x,when the program executes
+Dialogue: 0,0:08:31.56,0:08:38.76,English,,0,0,0,,当程序执行时，每个符号最终将位于 x 中的存储区中的哪里
 Dialogue: 0,0:08:39.54,0:08:45.48,English,,0,0,0,,And it binds that those absolute memory locations to the symbol
+Dialogue: 0,0:08:39.54,0:08:45.48,English,,0,0,0,,并且它将那些绝对存储器位置绑定到符号
 Dialogue: 0,0:08:45.98,0:08:49.74,English,,0,0,0,,And then it goes and looks at all the references to those symbols
+Dialogue: 0,0:08:45.98,0:08:49.74,English,,0,0,0,,然后它会继续向下执行并查看所有对这些符号的引用
 Dialogue: 0,0:08:50.46,0:08:54.74,English,,0,0,0,,And it updates those references so that they now they point to the correct address
+Dialogue: 0,0:08:50.46,0:08:54.74,English,,0,0,0,,而且它它会更新那些引用，以便它们现在能指向正确的地址
 Dialogue: 0,0:08:55.54,0:08:57.72,English,,0,0,0,,Okay so figure out where stuff is going to go
+Dialogue: 0,0:08:55.54,0:08:57.72,English,,0,0,0,,好的，所以弄清楚原料要去哪里
 Dialogue: 0,0:08:58.88,0:09:03.78,English,,0,0,0,,For each definition figure out where it's going to go and for each reference then update that reference
+Dialogue: 0,0:08:58.88,0:09:03.78,English,,0,0,0,,对于每个定义，找出它要去的位置以及每个引用，然后更新该引用
 Dialogue: 0,0:09:03.78,0:09:06.14,English,,0,0,0,,So it now points to the right spot
+Dialogue: 0,0:09:03.78,0:09:06.14,English,,0,0,0,,所以它现在指向正确的位置
 Dialogue: 0,0:09:09.90,0:09:14.54,English,,0,0,0,,So let's look at what these...how these steps work in more detail
+Dialogue: 0,0:09:09.90,0:09:14.54,English,,0,0,0,,那么让我们来看看这些......这些步骤如何更详细地运作
 Dialogue: 0,0:09:14.92,0:09:18.22,English,,0,0,0,,Before that we need to define a few things
+Dialogue: 0,0:09:14.92,0:09:18.22,English,,0,0,0,,在那之前我们需要定义一些东西
 Dialogue: 0,0:09:19.80,0:09:23.34,English,,0,0,0,,So there's three kinds of object modules that I've alluded to
+Dialogue: 0,0:09:19.80,0:09:23.34,English,,0,0,0,,所以我提到了三种目标模块
 Dialogue: 0,0:09:24.18,0:09:29.72,English,,0,0,0,,There's the .o file which is a relocatable object module this is the output of the assembler
+Dialogue: 0,0:09:24.18,0:09:29.72,English,,0,0,0,,.o 文件是可重定位目标模块，这是汇编器的输出
 Dialogue: 0,0:09:30.50,0:09:33.40,English,,0,0,0,,And it's not a binary file
+Dialogue: 0,0:09:30.50,0:09:33.40,English,,0,0,0,,它不是一个二进制文件
 Dialogue: 0,0:09:34.00,0:09:39.34,English,,0,0,0,,But it's not in any form that can be directly loaded into memory
+Dialogue: 0,0:09:34.00,0:09:39.34,English,,0,0,0,,但它不能以任何形式直接加载到内存中
 Dialogue: 0,0:09:39.34,0:09:43.60,English,,0,0,0,, It needs to be manipulated by the linker before it can be actually used
+Dialogue: 0,0:09:39.34,0:09:43.60,English,,0,0,0,, 在实际使用之前，需要由链接器对其进行操作
 Dialogue: 0,0:09:44.64,0:09:48.48,English,,0,0,0,,There's the executable object file which is generated by the linker
+Dialogue: 0,0:09:44.64,0:09:48.48,English,,0,0,0,,由链接器生成的可执行目标文件
 Dialogue: 0,0:09:50.18,0:09:51.70,English,,0,0,0,,These is called a.out files
+Dialogue: 0,0:09:50.18,0:09:51.70,English,,0,0,0,,这被称为 a.out 文件
 Dialogue: 0,0:09:51.72,0:09:57.06,English,,0,0,0,,Sometimes historically the very first Linux systems the executable
+Dialogue: 0,0:09:51.72,0:09:57.06,English,,0,0,0,,在历史上第一个Linux操作系统就是可执行的
 Dialogue: 0,0:09:57.06,0:10:04.36,English,,0,0,0,,This sort of the default name that they the developers of Unix used,the default name for their executables was a.out
+Dialogue: 0,0:09:57.06,0:10:04.36,English,,0,0,0,,这是Unix开发人员使用的默认名称，其可执行文件的默认名称是a.out
 Dialogue: 0,0:10:05.72,0:10:10.34,English,,0,0,0,,So that's just sort of a historical reason that it's called a.out
+Dialogue: 0,0:10:05.72,0:10:10.34,English,,0,0,0,,所以这只是一个历史原因所以它被称为a.out
 Dialogue: 0,0:10:10.96,0:10:16.60,English,,0,0,0,,And then there's another type of object file called a shared object file or .so file
+Dialogue: 0,0:10:10.96,0:10:16.60,English,,0,0,0,,然后是另一种称为共享目标文件或.so文件的目标文件
 Dialogue: 0,0:10:17.12,0:10:24.46,English,,0,0,0,,Which is a modern technique for creating shared libraries
+Dialogue: 0,0:10:17.12,0:10:24.46,English,,0,0,0,,这是一种用于创建共享库的现代技术
 Dialogue: 0,0:10:24.62,0:10:27.64,English,,0,0,0,,And we'll look at those,we'll look at those later today
+Dialogue: 0,0:10:24.62,0:10:27.64,English,,0,0,0,,那个我们之后再了解，将在今天晚些时候再学习了解
 Dialogue: 0,0:10:29.14,0:10:34.50,English,,0,0,0,,Now object modules come in a standard format called ELF format
+Dialogue: 0,0:10:29.14,0:10:34.50,English,,0,0,0,,现在，目标模块采用称为ELF格式的标准格式
 Dialogue: 0,0:10:35.92,0:10:41.12,English,,0,0,0,,And it's a unified format for .o files for executables and for .so files
+Dialogue: 0,0:10:35.92,0:10:41.12,English,,0,0,0,,它是可执行文件，.so文件，.o文件的统一格式
 Dialogue: 0,0:10:41.12,0:10:45.34,English,,0,0,0,,They all use the same format,the same general format
+Dialogue: 0,0:10:41.12,0:10:45.34,English,,0,0,0,,他们都使用一样的格式，一样的通用的格式
 Dialogue: 0,0:10:48.26,0:10:52.68,English,,0,0,0,,So this while these ELF binaries are
+Dialogue: 0,0:10:48.26,0:10:52.68,English,,0,0,0,,这就是这些 ELF 二进制文件
 Dialogue: 0,0:10:53.48,0:10:55.58,English,,0,0,0,,Their binaries they're very structured
+Dialogue: 0,0:10:53.48,0:10:55.58,English,,0,0,0,,他们的二进制文件非常有条理
 Dialogue: 0,0:10:56.02,0:10:58.14,English,,0,0,0,,Ok and they're broken up into sections
+Dialogue: 0,0:10:56.02,0:10:58.14,English,,0,0,0,,他们被分成几个部分
 Dialogue: 0,0:10:58.94,0:11:08.02,English,,0,0,0,,The at the beginning is a header,that defines things like the size of the word the byte ordering
+Dialogue: 0,0:10:58.94,0:11:08.02,English,,0,0,0,,开头是一个标题，它定义了字节顺序这个字的大小
 Dialogue: 0,0:11:08.46,0:11:12.46,English,,0,0,0,,Whether it's a .o,a .out or a .so
+Dialogue: 0,0:11:08.46,0:11:12.46,English,,0,0,0,,无论是 .o,.out 还是 .so 
 Dialogue: 0,0:11:12.90,0:11:19.12,English,,0,0,0,,So it just provides some sort of general information about this binary
+Dialogue: 0,0:11:12.90,0:11:19.12,English,,0,0,0,,所以它只是提供了关于这个二进制文件的一些一般信息
 Dialogue: 0,0:11:19.76,0:11:23.88,English,,0,0,0,,And then there's what's a so called segment header table which is
 Dialogue: 0,0:11:24.74,0:11:28.10,English,,0,0,0,,It's only defined for the executable object files
 Dialogue: 0,0:11:28.50,0:11:34.30,English,,0,0,0,,And indicates where all the different segments of the code are going to go in memory
