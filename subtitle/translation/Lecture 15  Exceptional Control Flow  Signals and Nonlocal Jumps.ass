@@ -27,81 +27,81 @@ Style: Chinese,Source Han Sans CN,34,&H00FBFD00,&H00FFFFFF,&H00362A28,&H00FFFFFF
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.06,0:00:01.94,English,,0,0,0,,Good afternoon everybody welcome
-Dialogue: 0,0:00:02.86,0:00:03.68,English,,0,0,0,,Good to see you
-Dialogue: 0,0:00:05.02,0:00:08.52,English,,0,0,0,,Today we're going to continue our study of exceptional control flow
-Dialogue: 0,0:00:09.56,0:00:16.24,English,,0,0,0,,By looking at some higher level mechanisms known as Linux signals and C nonlocal jumps
-Dialogue: 0,0:00:16.90,0:00:21.42,English,,0,0,0,,Now we're going to spend most of our time looking at signals
-Dialogue: 0,0:00:21.62,0:00:26.60,English,,0,0,0,,Because they have a lot of subtleties the semantics can be kind of confusing
-Dialogue: 0,0:00:26.60,0:00:28.62,English,,0,0,0,,So we're going to we're going to spend most of our time there
-Dialogue: 0,0:00:29.36,0:00:33.70,English,,0,0,0,,And I'll mention the idea of nonlocal jumps but
-Dialogue: 0,0:00:36.08,0:00:38.70,English,,0,0,0,,For details on those you'll want to look in your textbook
-Dialogue: 0,0:00:38.84,0:00:43.40,English,,0,0,0,,And in the slides at the supplemental slides at the end of this the slide deck
-Dialogue: 0,0:00:45.64,0:00:48.06,English,,0,0,0,,Now to motivate the notion of signals
-Dialogue: 0,0:00:49.00,0:00:54.40,English,,0,0,0,,I want to talk a little bit about shell programs
-Dialogue: 0,0:00:56.08,0:01:01.54,English,,0,0,0,,Now as we mentioned last time there's only one way to create processes on a Linux system
-Dialogue: 0,0:01:01.56,0:01:03.24,English,,0,0,0,,And that's using the fork call
+Dialogue: 0,0:00:00.06,0:00:01.94,English,,0,0,0,,大家下午好
+Dialogue: 0,0:00:02.86,0:00:03.68,English,,0,0,0,,很高兴再次见到你们
+Dialogue: 0,0:00:05.02,0:00:08.52,English,,0,0,0,,今天我们继续学习异常控制流
+Dialogue: 0,0:00:09.56,0:00:16.24,English,,0,0,0,,主要是看看一些高层次的机制，比如说 Linux 信号机制和 C 中的非本地跳转
+Dialogue: 0,0:00:16.90,0:00:21.42,English,,0,0,0,,我们会把大多数时间花在信号机制上
+Dialogue: 0,0:00:21.62,0:00:26.60,English,,0,0,0,,因为它有一些巧妙的地方会让你产生疑惑
+Dialogue: 0,0:00:26.60,0:00:28.62,English,,0,0,0,,所以我们要我们要把大部分时间花在那里
+Dialogue: 0,0:00:29.36,0:00:33.70,English,,0,0,0,,我也会提到非本地跳转的概念
+Dialogue: 0,0:00:36.08,0:00:38.70,English,,0,0,0,,但是更详细的内容你得看你的课本
+Dialogue: 0,0:00:38.84,0:00:43.40,English,,0,0,0,,还有幻灯片末尾的补充内容
+Dialogue: 0,0:00:45.64,0:00:48.06,English,,0,0,0,,现在我们把注意力集中在信号上
+Dialogue: 0,0:00:49.00,0:00:54.40,English,,0,0,0,,我想说一点 shell 程序的内容
+Dialogue: 0,0:00:56.08,0:01:01.54,English,,0,0,0,,正如我们上次提到的，我们只有一种方法在 Linux 下创建进程
+Dialogue: 0,0:01:01.56,0:01:03.24,English,,0,0,0,,那就是使用 fork 调用
 Dialogue: 0,0:01:04.14,0:01:09.84,English,,0,0,0,,In fact the all of the processes on the system actually form a hierarchy
-Dialogue: 0,0:01:09.88,0:01:15.68,English,,0,0,0,,So that the very first process created when you boot the system up is the init process
-Dialogue: 0,0:01:16.08,0:01:17.92,English,,0,0,0,,Which has a process id of 1
-Dialogue: 0,0:01:18.48,0:01:23.81,English,,0,0,0,,And then all other processes on the system are descendants of that of that init process
-Dialogue: 0,0:01:24.68,0:01:29.04,English,,0,0,0,,Now the init process when it starts up it creates daemons
-Dialogue: 0,0:01:29.76,0:01:33.38,English,,0,0,0,,Which are long-running programs that provide services typically
-Dialogue: 0,0:01:33.42,0:01:41.44,English,,0,0,0,,So for example web server it other kinds of services that you always want running on the system
-Dialogue: 0,0:01:42.26,0:01:45.90,English,,0,0,0,,And then eventually it creates login so called login shells
-Dialogue: 0,0:01:46.50,0:01:49.34,English,,0,0,0,,Which provide the command-line interface to users
-Dialogue: 0,0:01:50.10,0:01:52.48,English,,0,0,0,,So when you login a Linux system
-Dialogue: 0,0:01:53.10,0:01:55.84,English,,0,0,0,,What you eventually get to is a login shell
-Dialogue: 0,0:01:56.12,0:01:58.98,English,,0,0,0,,That's expecting you to type commands
-Dialogue: 0,0:02:01.72,0:02:07.36,English,,0,0,0,,Now the login shells execute programs on your behalf
-Dialogue: 0,0:02:08.52,0:02:11.92,English,,0,0,0,,So when we type something into the shell
-Dialogue: 0,0:02:13.00,0:02:21.62,English,,0,0,0,,Say we type the ls command we're asking the shell to run the executable program called ls
-Dialogue: 0,0:02:22.80,0:02:25.68,English,,0,0,0,,And so what the shell will do,is it will create a child
-Dialogue: 0,0:02:26.38,0:02:30.16,English,,0,0,0,,And then it will execute ls within that child process
-Dialogue: 0,0:02:31.12,0:02:37.28,English,,0,0,0,,And it's possible that that process may create other child processes
-Dialogue: 0,0:02:40.36,0:02:44.34,English,,0,0,0,,So a shell is an application program no different from any other program
-Dialogue: 0,0:02:45.02,0:02:47.78,English,,0,0,0,,That executes programs on the behalf of users
-Dialogue: 0,0:02:49.62,0:02:52.56,English,,0,0,0,,Okay the default shell for Linux is called bash
-Dialogue: 0,0:02:52.72,0:03:01.66,English,,0,0,0,,But there's other shells that that were created on earlier with earlier versions of UNIX
-Dialogue: 0,0:03:02.26,0:03:07.38,English,,0,0,0,,Sh was the original shell called the Bourne shell because it was created by Stephen Bourne
-Dialogue: 0,0:03:07.82,0:03:10.26,English,,0,0,0,,And when Berkeley came out with their distribution of UNIX
-Dialogue: 0,0:03:10.72,0:03:13.18,English,,0,0,0,,They created a shell called the csh
-Dialogue: 0,0:03:14.68,0:03:21.90,English,,0,0,0,,Now the execution is in a shell is a sequence of read and evaluate steps
-Dialogue: 0,0:03:22.80,0:03:24.96,English,,0,0,0,,So first a shell prints out a prompt
-Dialogue: 0,0:03:25.84,0:03:30.96,English,,0,0,0,,And then it waits for it waits for you to type something in on the command line and hit return
-Dialogue: 0,0:03:32.24,0:03:38.14,English,,0,0,0,,Okay and typically what you're typing in is a command which is just the
-Dialogue: 0,0:03:38.74,0:03:44.10,English,,0,0,0,,So the first thing you type is a command and then you follow that with optional arguments separated by spaces
-Dialogue: 0,0:03:44.90,0:03:50.90,English,,0,0,0,,Okay so once you hit once you type in a command and those optional arguments and hit return
-Dialogue: 0,0:03:51.72,0:04:00.36,English,,0,0,0,,The shell checks for the end of file character which is a ctrl-d to terminal
-Dialogue: 0,0:04:00.60,0:04:04.56,English,,0,0,0,,And if so it exits otherwise it evaluates that command line
-Dialogue: 0,0:04:05.46,0:04:06.96,English,,0,0,0,,And the evaluation consists
+Dialogue: 0,0:01:09.88,0:01:15.68,English,,0,0,0,,当你启动系统时第一个创建的进程是 init 进程
+Dialogue: 0,0:01:16.08,0:01:17.92,English,,0,0,0,,它的进程 id 是 1
+Dialogue: 0,0:01:18.48,0:01:23.81,English,,0,0,0,,系统上其它所有的进程都是 init 进程的子进程
+Dialogue: 0,0:01:24.68,0:01:29.04,English,,0,0,0,,init 进程启动时会创建守护进程
+Dialogue: 0,0:01:29.76,0:01:33.38,English,,0,0,0,,守护进程一般是一个长期运行的程序，通常用来提供服务
+Dialogue: 0,0:01:33.42,0:01:41.44,English,,0,0,0,,比如说 web 服务器，或者其它那些你希望一直在系统上运行的服务
+Dialogue: 0,0:01:42.26,0:01:45.90,English,,0,0,0,,最后会创建登录进程，也就是登陆 shell
+Dialogue: 0,0:01:46.50,0:01:49.34,English,,0,0,0,,它为用户提供了命令行接口
+Dialogue: 0,0:01:50.10,0:01:52.48,English,,0,0,0,,所以当你登录到一个 Linux 系统
+Dialogue: 0,0:01:53.10,0:01:55.84,English,,0,0,0,,你最后得到的是一个登陆 shell
+Dialogue: 0,0:01:56.12,0:01:58.98,English,,0,0,0,,它希望你输入命令
+Dialogue: 0,0:02:01.72,0:02:07.36,English,,0,0,0,,然后登陆 shell 会以你的身份执行程序
+Dialogue: 0,0:02:08.52,0:02:11.92,English,,0,0,0,,所以当我们在 shell 里输入什么东西的时候
+Dialogue: 0,0:02:13.00,0:02:21.62,English,,0,0,0,,比如说 ls 命令，我们其实是在命令 shell 运行名为 ls 的可执行程序
+Dialogue: 0,0:02:22.80,0:02:25.68,English,,0,0,0,,那么接下来 shell 会做什么呢，它会创建一个子进程
+Dialogue: 0,0:02:26.38,0:02:30.16,English,,0,0,0,,然后它会在这个子进程中执行 ls
+Dialogue: 0,0:02:31.12,0:02:37.28,English,,0,0,0,,并且这个子进程也有可能创建其它的子进程
+Dialogue: 0,0:02:40.36,0:02:44.34,English,,0,0,0,,所以其实 shell 这个程序和其它的程序没啥区别
+Dialogue: 0,0:02:45.02,0:02:47.78,English,,0,0,0,,它们以用户的身份执行程序
+Dialogue: 0,0:02:49.62,0:02:52.56,English,,0,0,0,,在 Linux 下，默认的 shell 叫做 bash
+Dialogue: 0,0:02:52.72,0:03:01.66,English,,0,0,0,,但在早期版本的 UNIX 上也有其它的 shell
+Dialogue: 0,0:03:02.26,0:03:07.38,English,,0,0,0,,sh 是最原始的 shell，它被称为 Bourne shell，因为它是由 Stephen Bourne 创造的
+Dialogue: 0,0:03:07.82,0:03:10.26,English,,0,0,0,,还有当 Berkeley 推出他们的 UNIX 发行版时
+Dialogue: 0,0:03:10.72,0:03:13.18,English,,0,0,0,,推出了一款叫做 csh 的 shell
+Dialogue: 0,0:03:14.68,0:03:21.90,English,,0,0,0,,Now the execution is in a shell is a sequence of read and evaluate steps 现在执行程序就是在 shell 中的一系列读取与计算的步骤
+Dialogue: 0,0:03:22.80,0:03:24.96,English,,0,0,0,,首先，shell 打印一个提示符
+Dialogue: 0,0:03:25.84,0:03:30.96,English,,0,0,0,,然后等待你在命令行中输入一个命令，然后敲击 return
+Dialogue: 0,0:03:32.24,0:03:38.14,English,,0,0,0,,通常来说，你输入的东西是一个命令，它仅仅是。。
+Dialogue: 0,0:03:38.74,0:03:44.10,English,,0,0,0,,所以你输入的第一个东西是一个命令，然后再跟上用空格分隔开的可选参数
+Dialogue: 0,0:03:44.90,0:03:50.90,English,,0,0,0,,所以一旦你输入一个命令和一些可选的参数，并且敲下 return
+Dialogue: 0,0:03:51.72,0:04:00.36,English,,0,0,0,,shell 会检查文件末尾的字符，对终端来说是 ctrl-d
+Dialogue: 0,0:04:00.60,0:04:04.56,English,,0,0,0,,如果是则退出，否则计算此命令行
+Dialogue: 0,0:04:05.46,0:04:06.96,English,,0,0,0,,计算包括
 Dialogue: 0,0:04:10.48,0:04:14.14,English,,0,0,0,,And then when it returns from the evaluation it just does the same thing over in it
-Dialogue: 0,0:04:14.66,0:04:21.40,English,,0,0,0,,Now the evaluation consists of the following kinds of steps first
-Dialogue: 0,0:04:22.50,0:04:24.18,English,,0,0,0,,It parses the command line
-Dialogue: 0,0:04:25.92,0:04:32.76,English,,0,0,0,,And in the process so it takes the command-line which in this example is in buff
-Dialogue: 0,0:04:33.10,0:04:37.46,English,,0,0,0,,And it produces argv array okay where argv[0] is a command
-Dialogue: 0,0:04:37.92,0:04:41.16,English,,0,0,0,,And then argv[1] and argv[2] and so on are the optional arguments
-Dialogue: 0,0:04:42.82,0:04:48.24,English,,0,0,0,,And the convention in a shell is that if the command line is terminated
-Dialogue: 0,0:04:49.56,0:04:55.14,English,,0,0,0,,By an ampersand then you're asking the shell to run that job,to run that command in the background
-Dialogue: 0,0:04:56.02,0:04:58.18,English,,0,0,0,,Meaning the shell won't wait for that job to finish
+Dialogue: 0,0:04:14.66,0:04:21.40,English,,0,0,0,,计算从以下几步开始
+Dialogue: 0,0:04:22.50,0:04:24.18,English,,0,0,0,,它解析命令行
+Dialogue: 0,0:04:25.92,0:04:32.76,English,,0,0,0,,在这个过程中，它获取命令行，在本例中是保存在 buff 里
+Dialogue: 0,0:04:33.10,0:04:37.46,English,,0,0,0,,它会生成一个数组 argv，其中 argv[0] 是一个命令
+Dialogue: 0,0:04:37.92,0:04:41.16,English,,0,0,0,,之后的 argv[1]，argv[2] 等是可选参数
+Dialogue: 0,0:04:42.82,0:04:48.24,English,,0,0,0,,And the convention in a shell is that if the command line is terminated 在 shell 中有个约定，那就是如果命令行被终止
+Dialogue: 0,0:04:49.56,0:04:55.14,English,,0,0,0,,By an ampersand then you're asking the shell to run that job,to run that command in the background 通过使用一个 & 符号，你可以使 shell 在后台运行此工作
+Dialogue: 0,0:04:56.02,0:04:58.18,English,,0,0,0,,Meaning the shell won't wait for that job to finish 这意味着 shell 不会等待这个工作完成
 Dialogue: 0,0:04:58.78,0:05:00.68,English,,0,0,0,,Before it goes through its next read stub
-Dialogue: 0,0:05:01.44,0:05:05.72,English,,0,0,0,,If the line that you type doesn't have an ampersand
-Dialogue: 0,0:05:05.72,0:05:10.38,English,,0,0,0,,Then you're asking the shell to run that job in the foreground which means the shell will wait
-Dialogue: 0,0:05:13.56,0:05:19.38,English,,0,0,0,,So first we parse this command line into an argv array
-Dialogue: 0,0:05:19.42,0:05:25.46,English,,0,0,0,,And we return whether or not it was terminated by an ampersand, so bg for background
-Dialogue: 0,0:05:26.42,0:05:31.90,English,,0,0,0,,If argv[0] is null then that means we just hit a we just hit return right so as an empty line
-Dialogue: 0,0:05:32.58,0:05:35.04,English,,0,0,0,,So we'll just return and just ignore those
-Dialogue: 0,0:05:36.54,0:05:41.66,English,,0,0,0,,Now a shell also implements what are called built-in commands
-Dialogue: 0,0:05:41.90,0:05:47.36,English,,0,0,0,,So various things like jobs bg, fg
-Dialogue: 0,0:05:47.82,0:05:51.96,English,,0,0,0,,Are examples of built-in commands which are just implemented in the shell itself
-Dialogue: 0,0:05:53.14,0:05:55.32,English,,0,0,0,,So if you type...if the first thing you type
-Dialogue: 0,0:05:56.20,0:05:58.48,English,,0,0,0,,If the command you enter is a built in
-Dialogue: 0,0:05:59.24,0:06:06.02,English,,0,0,0,,Then the shell will check that,it will check argv[0] for a to see if it's a built-in command
-Dialogue: 0,0:06:06.64,0:06:11.70,English,,0,0,0,,And if it is it'll just execute it whatever it is you asked it to do
-Dialogue: 0,0:06:13.76,0:06:20.14,English,,0,0,0,,Okay otherwise if it's not a built-in then that means that you're asking the shell to run some program
-Dialogue: 0,0:06:22.42,0:06:24.92,English,,0,0,0,,Okay so in that case the shell will fork a child
-Dialogue: 0,0:06:26.34,0:06:31.60,English,,0,0,0,,And then the child will execute that program by calling execve
-Dialogue: 0,0:06:32.98,0:06:35.50,English,,0,0,0,,Passing as the first argument the name of the command
+Dialogue: 0,0:05:01.44,0:05:05.72,English,,0,0,0,,If the line that you type doesn't have an ampersand 如果你输入的行里没有 & 符号
+Dialogue: 0,0:05:05.72,0:05:10.38,English,,0,0,0,,Then you're asking the shell to run that job in the foreground which means the shell will wait 那么你就是要求 shell 在前台运行此工作，这意味着 shell 会等待它
+Dialogue: 0,0:05:13.56,0:05:19.38,English,,0,0,0,,So first we parse this command line into an argv array 所以我们首先把这个命令行解析成一个 argv 数组
+Dialogue: 0,0:05:19.42,0:05:25.46,English,,0,0,0,,And we return whether or not it was terminated by an ampersand, so bg for background 然后我们要返回它是否以 & 符号结尾，bg 是后台的意思
+Dialogue: 0,0:05:26.42,0:05:31.90,English,,0,0,0,,If argv[0] is null then that means we just hit a we just hit return right so as an empty line 如果 argv[0] 为空，那么就是说我们只输入了一个 return，所以得到空行
+Dialogue: 0,0:05:32.58,0:05:35.04,English,,0,0,0,,So we'll just return and just ignore those 所以我们返回即可，不用管这些
+Dialogue: 0,0:05:36.54,0:05:41.66,English,,0,0,0,,Now a shell also implements what are called built-in commands shell 也实现了一些内建的命令
+Dialogue: 0,0:05:41.90,0:05:47.36,English,,0,0,0,,So various things like jobs bg, fg 比如 jobs bg, fg 这样的东西
+Dialogue: 0,0:05:47.82,0:05:51.96,English,,0,0,0,,Are examples of built-in commands which are just implemented in the shell itself 都是 shell 本身就实现了的内建命令的例子
+Dialogue: 0,0:05:53.14,0:05:55.32,English,,0,0,0,,So if you type...if the first thing you type 所以，如果你输入。。。如果你输入的第一个东西
+Dialogue: 0,0:05:56.20,0:05:58.48,English,,0,0,0,,If the command you enter is a built in 如果你输入的是一个内建的命令
+Dialogue: 0,0:05:59.24,0:06:06.02,English,,0,0,0,,Then the shell will check that,it will check argv[0] for a to see if it's a built-in command shell 会检查它，看看 argv[0] 是否是一个内建 shell 命令
+Dialogue: 0,0:06:06.64,0:06:11.70,English,,0,0,0,,And if it is it'll just execute it whatever it is you asked it to do 如果是，那么不管你让它干什么，它都会照做
+Dialogue: 0,0:06:13.76,0:06:20.14,English,,0,0,0,,Okay otherwise if it's not a built-in then that means that you're asking the shell to run some program 此外，如果它不是内建的，这意味着你在要求 shell 运行一些程序
+Dialogue: 0,0:06:22.42,0:06:24.92,English,,0,0,0,,Okay so in that case the shell will fork a child 这种情况下 shell 会 fork 一个子进程
+Dialogue: 0,0:06:26.34,0:06:31.60,English,,0,0,0,,And then the child will execute that program by calling execve 这个子进程会使用 execve 调用来运行这个程序
+Dialogue: 0,0:06:32.98,0:06:35.50,English,,0,0,0,,Passing as the first argument the name of the command 将命令的名字作为第一个参数传递
 Dialogue: 0,0:06:36.18,0:06:41.24,English,,0,0,0,,And as the second and third argv and and the environment respectively
 Dialogue: 0,0:06:42.10,0:06:46.86,English,,0,0,0,,Now execve if you recall from last time never returns unless there's an error
 Dialogue: 0,0:06:47.37,0:06:51.48,English,,0,0,0,,So it checks so we check it the return value for execve
