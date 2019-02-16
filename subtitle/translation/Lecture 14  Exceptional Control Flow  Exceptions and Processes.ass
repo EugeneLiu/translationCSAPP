@@ -32,13 +32,13 @@ Dialogue: 0,0:00:00.00,0:00:01.96,Chinese,,0,0,0,,各位同学，下午好
 Dialogue: 0,0:00:03.44,0:00:04.66,English,,0,0,0,,Welcome to see you
 Dialogue: 0,0:00:03.44,0:00:04.66,Chinese,,0,0,0,,很高兴见到你们
 Dialogue: 0,0:00:08.06,0:00:13.46,English,,0,0,0,,So today we're going to look at an idea called exceptional control flow
-Dialogue: 0,0:00:08.06,0:00:13.46,Chinese,,0,0,0,,所以今天我们要看一个叫做异常控制流的想法
+Dialogue: 0,0:00:08.06,0:00:13.46,Chinese,,0,0,0,,今天我们要看一个叫做异常控制流的想法
 Dialogue: 0,0:00:14.22,0:00:18.56,English,,0,0,0,,That's a very important part of making modern systems
 Dialogue: 0,0:00:14.22,0:00:18.56,Chinese,,0,0,0,,它是现代系统一个重要组成的部分
 Dialogue: 0,0:00:19.18,0:00:26.32,English,,0,0,0,,And it exists at all levels of the system from the lowest level hardware,all the way up to software
 Dialogue: 0,0:00:19.18,0:00:26.32,Chinese,,0,0,0,,它存在于操作系统的各个层次，从最底层的硬件，直到软件
 Dialogue: 0,0:00:30.62,0:00:38.22,English,,0,0,0,,So the idea is when you turn on a computer (from the very) from the very first time you turn it on
-Dialogue: 0,0:00:30.62,0:00:38.22,Chinese,,0,0,0,,因此，当你从(第第)第一次打开计算机时，在你第一次开机的时候
+Dialogue: 0,0:00:30.62,0:00:38.22,Chinese,,0,0,0,,当你从(第第)第一次打开计算机时，在你第一次开机的时候
 Dialogue: 0,0:00:38.92,0:00:43.16,English,,0,0,0,,On it just does execute one instruction after another until that you turn it off
 Dialogue: 0,0:00:38.92,0:00:43.16,Chinese,,0,0,0,,它只是执行一个接一个的指令，直到你关闭计算机
 Dialogue: 0,0:00:43.96,0:00:50.08,English,,0,0,0,,Okay and if each core if you have multiple cores then each of those cores are executing instructions one after the other
@@ -46,7 +46,7 @@ Dialogue: 0,0:00:43.96,0:00:50.08,Chinese,,0,0,0,,好吧，如果每个核心，
 Dialogue: 0,0:00:51.52,0:00:56.20,English,,0,0,0,,Now the sequence of instructions is called the control flow
 Dialogue: 0,0:00:51.52,0:00:56.20,Chinese,,0,0,0,,现在，指令序列称为控制流
 Dialogue: 0,0:00:57.04,0:01:03.62,English,,0,0,0,,Okay and the actual sequence of instructions that the hardware is executing is called the physical control flow
-Dialogue: 0,0:00:57.04,0:01:03.62,Chinese,,0,0,0,,好的，硬件正在执行的实际指令序列称为物理控制流
+Dialogue: 0,0:00:57.04,0:01:03.62,Chinese,,0,0,0,,硬件正在执行的实际指令序列称为物理控制流
 Dialogue: 0,0:01:04.76,0:01:05.60,English,,0,0,0,,Now normally
 Dialogue: 0,0:01:04.76,0:01:05.60,Chinese,,0,0,0,,现在通常
 Dialogue: 0,0:01:07.52,0:01:15.18,English,,0,0,0,,Normally,this control flow that executes just one instruction after another just sequentially in memory
@@ -54,23 +54,23 @@ Dialogue: 0,0:01:07.52,0:01:15.18,Chinese,,0,0,0,,通常，此控制流仅在内
 Dialogue: 0,0:01:16.12,0:01:21.32,English,,0,0,0,,And we've so far we've seen two mechanisms for altering the control flow
 Dialogue: 0,0:01:16.12,0:01:21.32,Chinese,,0,0,0,,到目前为止，我们已经看到了两种改变控制流的机制
 Dialogue: 0,0:01:21.32,0:01:22.46,English,,0,0,0,,So that it's not
-Dialogue: 0,0:01:21.32,0:01:22.46,Chinese,,0,0,0,,所以事实不是如此，
+Dialogue: 0,0:01:21.32,0:01:22.46,Chinese,,0,0,0,,事实不是如此，
 Dialogue: 0,0:01:22.92,0:01:25.68,English,,0,0,0,,So that we're not executing just the next instruction
 Dialogue: 0,0:01:22.92,0:01:25.68,Chinese,,0,0,0,,这样，我们可以不仅仅只是执行下一条指令了
 Dialogue: 0,0:01:26.32,0:01:31.32,English,,0,0,0,,So that's branches and jumps and procedure call and return
 Dialogue: 0,0:01:26.32,0:01:31.32,Chinese,,0,0,0,,这就是「分支和跳转」以及「过程调用和返回」
 Dialogue: 0,0:01:32.76,0:01:37.42,English,,0,0,0,,Okay now jumps and call... branches jumps call and return
-Dialogue: 0,0:01:32.76,0:01:37.42,Chinese,,0,0,0,,好的，现在跳转并调用...分支跳转调用然后返回
+Dialogue: 0,0:01:32.76,0:01:37.42,Chinese,,0,0,0,,现在跳转并调用...分支跳转调用然后返回
 Dialogue: 0,0:01:38.22,0:01:41.16,English,,0,0,0,,Those are reacting to changes in program state
 Dialogue: 0,0:01:38.22,0:01:41.16,Chinese,,0,0,0,,这些都是对程序状态变化的处理
 Dialogue: 0,0:01:41.96,0:01:45.70,English,,0,0,0,,So when you do a branch you check the control condition codes
-Dialogue: 0,0:01:41.96,0:01:45.70,Chinese,,0,0,0,,因此，当你执行分支时，请检查条件控制代码
+Dialogue: 0,0:01:41.96,0:01:45.70,Chinese,,0,0,0,,当你执行分支时，请检查条件控制代码
 Dialogue: 0,0:01:46.18,0:01:50.82,English,,0,0,0,,And then based on some the results of that comparison then you do the branch
 Dialogue: 0,0:01:46.18,0:01:50.82,Chinese,,0,0,0,,然后基于该比较的一些结果，然后你做相应的分支处理
 Dialogue: 0,0:01:52.28,0:01:57.48,English,,0,0,0,,Okay but its real system needs to be able to adapt to changes in the system state
 Dialogue: 0,0:01:52.28,0:01:57.48,Chinese,,0,0,0,,好吧，但真正的操作系统需要能够处理系统级别的变化
 Dialogue: 0,0:01:59.36,0:02:01.86,English,,0,0,0,,Okay so for example data arrives from a disk
-Dialogue: 0,0:01:59.36,0:02:01.86,Chinese,,0,0,0,,好的，例如数据从磁盘到达
+Dialogue: 0,0:01:59.36,0:02:01.86,Chinese,,0,0,0,,例如数据从磁盘到达
 Dialogue: 0,0:02:04.56,0:02:10.10,English,,0,0,0,,Or some network use types Ctrl-C
 Dialogue: 0,0:02:04.56,0:02:10.10,Chinese,,0,0,0,,或者某些网络使用 Ctrl-C 类型中断
 Dialogue: 0,0:02:10.92,0:02:13.90,English,,0,0,0,,Okay the program executes an illegal instruction
@@ -80,9 +80,9 @@ Dialogue: 0,0:02:14.30,0:02:20.60,Chinese,,0,0,0,,所有这些代表了一些变
 Dialogue: 0,0:02:21.18,0:02:23.82,English,,0,0,0,,And we need some way to react to that
 Dialogue: 0,0:02:21.18,0:02:23.82,Chinese,,0,0,0,,于是，我们需要一些方法来对此做出反应
 Dialogue: 0,0:02:24.90,0:02:25.42,English,,0,0,0,,So this...
-Dialogue: 0,0:02:24.90,0:02:25.42,Chinese,,0,0,0,,所以这...
+Dialogue: 0,0:02:24.90,0:02:25.42,Chinese,,0,0,0,,这...
 Dialogue: 0,0:02:26.90,0:02:29.60,English,,0,0,0,,So what we need is we call this exceptional control flow
-Dialogue: 0,0:02:26.90,0:02:29.60,Chinese,,0,0,0,,所以我们需要的是称之为「异常控制流」的机制
+Dialogue: 0,0:02:26.90,0:02:29.60,Chinese,,0,0,0,,我们需要的是称之为「异常控制流」的机制
 Dialogue: 0,0:02:30.04,0:02:34.20,English,,0,0,0,,Because it's sort of outside of the normal control flow that we see in our programs
 Dialogue: 0,0:02:30.04,0:02:34.20,Chinese,,0,0,0,,因为它超出了我们在程序中看到的正常控制进程
 Dialogue: 0,0:02:36.20,0:02:41.22,English,,0,0,0,,Now exceptional control flow(ECF) exists at all levels in the system
@@ -90,17 +90,17 @@ Dialogue: 0,0:02:36.20,0:02:41.22,Chinese,,0,0,0,,现在，系统中的所有级
 Dialogue: 0,0:02:42.66,0:02:45.18,English,,0,0,0,,From the very lowest level of hardware
 Dialogue: 0,0:02:42.66,0:02:45.18,Chinese,,0,0,0,,从最底层的硬件
 Dialogue: 0,0:02:48.64,0:02:51.52,English,,0,0,0,,At the very lowest level we have what are called exceptions
-Dialogue: 0,0:02:48.64,0:02:51.52,Chinese,,0,0,0,,在最低级别，我们有所谓的「异常」
+Dialogue: 0,0:02:48.64,0:02:51.52,Chinese,,0,0,0,,在最底层，我们有所谓的「异常」
 Dialogue: 0,0:02:52.26,0:02:58.16,English,,0,0,0,,And these are changes in the control flow in response to some low level system event
 Dialogue: 0,0:02:52.26,0:02:58.16,Chinese,,0,0,0,,这些是响应某些底层系统事件的控制流的变化
 Dialogue: 0,0:02:59.32,0:03:04.18,English,,0,0,0,,So this is a...or and by event we mean a change in the state
-Dialogue: 0,0:02:59.32,0:03:04.18,Chinese,,0,0,0,,所以这是...或者我们指的是事件引起状态的变化
+Dialogue: 0,0:02:59.32,0:03:04.18,Chinese,,0,0,0,,这是...或者我们指的是事件引起状态的变化
 Dialogue: 0,0:03:05.24,0:03:11.38,English,,0,0,0,,Now exceptions are implemented using a combination of hardware and OS software which we'll see in it in a minute
 Dialogue: 0,0:03:05.24,0:03:11.38,Chinese,,0,0,0,,现在使用硬件和操作系统软件的组合实现异常，等一会儿我们将会看到它们
 Dialogue: 0,0:03:12.08,0:03:16.58,English,,0,0,0,,But these exceptional control flow exists at higher levels too
 Dialogue: 0,0:03:12.08,0:03:16.58,Chinese,,0,0,0,,但这些异常控制流也存在于更高的层次
 Dialogue: 0,0:03:17.44,0:03:23.08,English,,0,0,0,,So in the a process context switch is an example of exceptional control flow
-Dialogue: 0,0:03:17.44,0:03:23.08,Chinese,,0,0,0,,因此，在一个进程中，「上下文切换」就是是一个异常控制流程的典型示例
+Dialogue: 0,0:03:17.44,0:03:23.08,Chinese,,0,0,0,,在一个进程中，「上下文切换」就是是一个异常控制流程的典型示例
 Dialogue: 0,0:03:23.66,0:03:28.58,English,,0,0,0,,That's also it's implemented by a hardware and the operating system kernel
 Dialogue: 0,0:03:23.66,0:03:28.58,Chinese,,0,0,0,,这也是由硬件和操作系统内核共同实现的
 Dialogue: 0,0:03:29.42,0:03:34.94,English,,0,0,0,,And it so a process context switches we'll see later later today
@@ -110,9 +110,9 @@ Dialogue: 0,0:03:35.62,0:03:40.66,Chinese,,0,0,0,,你正在当前进程中执行
 Dialogue: 0,0:03:42.32,0:03:47.82,English,,0,0,0,,And then all of a sudden this the system is executing code from another process
 Dialogue: 0,0:03:42.32,0:03:47.82,Chinese,,0,0,0,,然后突然之间，系统正在执行另一个进程的代码
 Dialogue: 0,0:03:48.14,0:03:50.38,English,,0,0,0,,Right so your process gets like suspended
-Dialogue: 0,0:03:48.14,0:03:50.38,Chinese,,0,0,0,,是的，所以你的进程就像暂停了一样
+Dialogue: 0,0:03:48.14,0:03:50.38,Chinese,,0,0,0,,是的，你的进程就像暂停了一样
 Dialogue: 0,0:03:51.34,0:03:55.74,English,,0,0,0,,And so there's a...so that's a form of exceptional control flow
-Dialogue: 0,0:03:51.34,0:03:55.74,Chinese,,0,0,0,,所以有一个...所以这是一种异常控制流
+Dialogue: 0,0:03:51.34,0:03:55.74,Chinese,,0,0,0,,有一个...这是一种异常控制流
 Dialogue: 0,0:03:55.74,0:04:01.82,English,,0,0,0,,Where you're executing statements instructions within one process
 Dialogue: 0,0:03:55.74,0:04:01.82,Chinese,,0,0,0,,你在一个进程中执行语句指令的位置
 Dialogue: 0,0:04:01.82,0:04:06.54,English,,0,0,0,,And then all of a sudden you're executing statements instructions in another process
@@ -128,15 +128,15 @@ Dialogue: 0,0:04:20.60,0:04:25.08,Chinese,,0,0,0,,然后甚至更高，在更高
 Dialogue: 0,0:04:25.60,0:04:28.26,English,,0,0,0,,Which are just implemented by the C run library
 Dialogue: 0,0:04:25.60,0:04:28.26,Chinese,,0,0,0,,这些只是由 C 运行库实现的
 Dialogue: 0,0:04:28.76,0:04:33.68,English,,0,0,0,,So this allows you nonlocal jumps allow you to break the normal call and return pattern
-Dialogue: 0,0:04:28.76,0:04:33.68,Chinese,,0,0,0,,所以这允许你非本地跳转，允许你打破正常的调用和返回模式
+Dialogue: 0,0:04:28.76,0:04:33.68,Chinese,,0,0,0,,这允许你非本地跳转，允许你打破正常的调用和返回模式
 Dialogue: 0,0:04:33.68,0:04:34.54,English,,0,0,0,,So from one...
-Dialogue: 0,0:04:33.68,0:04:34.54,Chinese,,0,0,0,,所以从一个......
+Dialogue: 0,0:04:33.68,0:04:34.54,Chinese,,0,0,0,,从一个......
 Dialogue: 0,0:04:35.18,0:04:40.82,English,,0,0,0,,So from within a function normally you can only return to the function that calls that called you
 Dialogue: 0,0:04:35.18,0:04:40.82,Chinese,,0,0,0,,在一个函数中，通常你只能返回到那个调用你的函数
 Dialogue: 0,0:04:41.46,0:04:50.12,English,,0,0,0,,Nonlocal jumps allow you to within a function break that and return to some other function or some other part of the code
 Dialogue: 0,0:04:41.46,0:04:50.12,Chinese,,0,0,0,,非本地跳转允许你在函数中断并返回到某些其他函数或代码的其他部分
 Dialogue: 0,0:04:51.16,0:04:54.38,English,,0,0,0,,So we'll look at signals and nonlocal jumps next lecture
-Dialogue: 0,0:04:51.16,0:04:54.38,Chinese,,0,0,0,,因此，我们将在下一讲讲述信号和非局部跳跃
+Dialogue: 0,0:04:51.16,0:04:54.38,Chinese,,0,0,0,,我们将在下一章讲述信号和非本地跳跃
 Dialogue: 0,0:04:54.84,0:04:57.62,English,,0,0,0,,Today we're going to look at exceptions and processes
 Dialogue: 0,0:04:54.84,0:04:57.62,Chinese,,0,0,0,,今天我们将看看异常和进程
 Dialogue: 0,0:05:00.12,0:05:07.08,English,,0,0,0,,So an exception is a transfer of control to the operating systems kernel
@@ -144,19 +144,19 @@ Dialogue: 0,0:05:00.12,0:05:07.08,Chinese,,0,0,0,,一个异常是将控制权转
 Dialogue: 0,0:05:07.70,0:05:13.32,English,,0,0,0,,Where the kernel is the memory resident part of the operating system you know
 Dialogue: 0,0:05:07.70,0:05:13.32,Chinese,,0,0,0,,内核是你知道的操作系统的内存驻留部分
 Dialogue: 0,0:05:13.34,0:05:23.86,English,,0,0,0,,So an operating system provides all kinds of programs like to list files,to change directories,to list the current processes
-Dialogue: 0,0:05:13.34,0:05:23.86,Chinese,,0,0,0,,因此，操作系统提供各种程序，如列出文件，更改目录，列出当前进程
+Dialogue: 0,0:05:13.34,0:05:23.86,Chinese,,0,0,0,,操作系统提供各种程序，如列出文件，更改目录，列出当前进程
 Dialogue: 0,0:05:24.48,0:05:27.68,English,,0,0,0,,So all of that stuff constitutes the operating system
-Dialogue: 0,0:05:24.48,0:05:27.68,Chinese,,0,0,0,,因此，所有这些构成了操作系统
+Dialogue: 0,0:05:24.48,0:05:27.68,Chinese,,0,0,0,,所有这些构成了操作系统
 Dialogue: 0,0:05:27.68,0:05:33.20,English,,0,0,0,,The kernel is the part of the operating system that's always resident in memory
 Dialogue: 0,0:05:27.68,0:05:33.20,Chinese,,0,0,0,,内核是操作系统中始终驻留在内存中的一部分
 Dialogue: 0,0:05:34.98,0:05:40.64,English,,0,0,0,,So an exception is really low-level transfer of control to the operating system
-Dialogue: 0,0:05:34.98,0:05:40.64,Chinese,,0,0,0,,因此，异常实际上是将低级别的控制权转移到操作系统
+Dialogue: 0,0:05:34.98,0:05:40.64,Chinese,,0,0,0,,异常实际上是将低级别的控制权转移到操作系统
 Dialogue: 0,0:05:40.64,0:05:42.66,English,,0,0,0,,Because something happened in the system
 Dialogue: 0,0:05:40.64,0:05:42.66,Chinese,,0,0,0,,因为系统中发生了一些情况
 Dialogue: 0,0:05:43.48,0:05:46.66,English,,0,0,0,,So you're executing your code,user code
 Dialogue: 0,0:05:43.48,0:05:46.66,Chinese,,0,0,0,,而你正在执行代码，用户代码
 Dialogue: 0,0:05:47.70,0:05:53.32,English,,0,0,0,,And then something happens some event, so by event we mean there's some change in the system state
-Dialogue: 0,0:05:47.70,0:05:53.32,Chinese,,0,0,0,,然后一些情况发生在某些「事件」上，所以我们称为事件引起了系统状态的一些变化
+Dialogue: 0,0:05:47.70,0:05:53.32,Chinese,,0,0,0,,然后一些情况发生在某些「事件」上，我们称为事件引起了系统状态的一些变化
 Dialogue: 0,0:05:54.96,0:06:04.34,English,,0,0,0,,In response to that there the exception transfers control from your user code to code in the kernel
 Dialogue: 0,0:05:54.96,0:06:04.34,Chinese,,0,0,0,,为此，异常将控制权从用户代码转移到内核态中的代码
 Dialogue: 0,0:06:04.82,0:06:06.42,English,,0,0,0,,Which is called an exception handler
@@ -170,7 +170,7 @@ Dialogue: 0,0:06:15.66,0:06:21.98,Chinese,,0,0,0,,然后在内核处理异常后
 Dialogue: 0,0:06:22.74,0:06:25.92,English,,0,0,0,,It can return and reexecute that the current instruction
 Dialogue: 0,0:06:22.74,0:06:25.92,Chinese,,0,0,0,,它可以返回并重新执行当前指令
 Dialogue: 0,0:06:27.86,0:06:33.88,English,,0,0,0,,Okay and we'll see this is useful for things like page faults allows us to implement virtual memory
-Dialogue: 0,0:06:27.86,0:06:33.88,Chinese,,0,0,0,,好的，我们会发现这对于「页缺失」这类允许我们实现虚拟内存的东西很有用
+Dialogue: 0,0:06:27.86,0:06:33.88,Chinese,,0,0,0,,我们会发现这对于「页缺失」这类允许我们实现虚拟内存的东西很有用
 Dialogue: 0,0:06:35.76,0:06:37.86,English,,0,0,0,,It could return to the next instruction
 Dialogue: 0,0:06:35.76,0:06:37.86,Chinese,,0,0,0,,它可以返回到下一条指令
 Dialogue: 0,0:06:39.04,0:06:43.00,English,,0,0,0,,Which I've shown here or it could abort
@@ -178,29 +178,29 @@ Dialogue: 0,0:06:39.04,0:06:43.00,Chinese,,0,0,0,,这是我在这里展示的，
 Dialogue: 0,0:06:46.64,0:06:49.56,English,,0,0,0,,Now exceptions are implemented by hardware and software
 Dialogue: 0,0:06:46.64,0:06:49.56,Chinese,,0,0,0,,现在异常由硬件和软件共同实现
 Dialogue: 0,0:06:49.56,0:06:53.30,English,,0,0,0,,So the actual transfer of control
-Dialogue: 0,0:06:49.56,0:06:53.30,Chinese,,0,0,0,,所以实际转移控制权
+Dialogue: 0,0:06:49.56,0:06:53.30,Chinese,,0,0,0,,实际转移控制权
 Dialogue: 0,0:06:54.26,0:07:00.16,English,,0,0,0,,You know the change in the program counter or %rip is done by the hardware
 Dialogue: 0,0:06:54.26,0:07:00.16,Chinese,,0,0,0,,你知道程序计数器或 %rip 的更改是由硬件完成的
 Dialogue: 0,0:07:01.22,0:07:09.80,English,,0,0,0,,But the code that executes as a result of that exception is set up and determined by the operating system kernel
 Dialogue: 0,0:07:01.22,0:07:09.80,Chinese,,0,0,0,,但是由于该异常而执行的代码是由操作系统内核设置和确定的
 Dialogue: 0,0:07:10.44,0:07:15.26,English,,0,0,0,,So every type of event has a unique exception number
-Dialogue: 0,0:07:10.44,0:07:15.26,Chinese,,0,0,0,,因此，每种类型的事件都有一个唯一的「异常编号」
+Dialogue: 0,0:07:10.44,0:07:15.26,Chinese,,0,0,0,,每种类型的事件都有一个唯一的「异常编号」
 Dialogue: 0,0:07:15.78,0:07:19.48,English,,0,0,0,,Which serves as an index into a jump table called an exception table
 Dialogue: 0,0:07:15.78,0:07:19.48,Chinese,,0,0,0,,它用作跳转表的索引，称为异常表
 Dialogue: 0,0:07:20.66,0:07:24.24,English,,0,0,0,,Okay and so when event k happens
-Dialogue: 0,0:07:20.66,0:07:24.24,Chinese,,0,0,0,,好的，所以当事件 k 发生时
+Dialogue: 0,0:07:20.66,0:07:24.24,Chinese,,0,0,0,,当事件 k 发生时
 Dialogue: 0,0:07:25.36,0:07:30.42,English,,0,0,0,,Then the hardware looks uses k as in as an index into this table
 Dialogue: 0,0:07:25.36,0:07:30.42,Chinese,,0,0,0,,然后硬件使用 k 作为此表的索引
 Dialogue: 0,0:07:30.90,0:07:36.10,English,,0,0,0,,And gets the address of the exception handler for that exception
 Dialogue: 0,0:07:30.90,0:07:36.10,Chinese,,0,0,0,,然后得到该异常的异常处理程序的地址
 Dialogue: 0,0:07:38.02,0:07:43.82,English,,0,0,0,,And so every time that event k happens that handler handler k is invoked
-Dialogue: 0,0:07:38.02,0:07:43.82,Chinese,,0,0,0,,因此，每次事件 k 发生时，都会调用处理程序处理程序 k
+Dialogue: 0,0:07:38.02,0:07:43.82,Chinese,,0,0,0,,每次事件 k 发生时，都会调用处理程序处理程序 k
 Dialogue: 0,0:07:45.36,0:07:52.84,English,,0,0,0,,Now there's a different kinds of exceptions we distinguish them as being asynchronous or synchronous
 Dialogue: 0,0:07:45.36,0:07:52.84,Chinese,,0,0,0,,现在有一种异常的分类方法，我们依此将它们区分为「异步」或「同步」
 Dialogue: 0,0:07:53.46,0:08:03.12,English,,0,0,0,,Asynchronous exceptions happen as a result of changes in state that are occurred outside of the processor
 Dialogue: 0,0:07:53.46,0:08:03.12,Chinese,,0,0,0,,异步异常是由于处理器外部发生的状态变化而引起的
 Dialogue: 0,0:08:03.92,0:08:06.28,English,,0,0,0,,So these are called interrupts
-Dialogue: 0,0:08:03.92,0:08:06.28,Chinese,,0,0,0,,所以这些被称为「中断」
+Dialogue: 0,0:08:03.92,0:08:06.28,Chinese,,0,0,0,,这些被称为「中断」
 Dialogue: 0,0:08:07.20,0:08:09.64,English,,0,0,0,,And those changes in state are...
 Dialogue: 0,0:08:07.20,0:08:09.64,Chinese,,0,0,0,,那些状态的变化是......
 Dialogue: 0,0:08:10.44,0:08:17.06,English,,0,0,0,,The processor is notified about those changes in state by setting a pin on the processor
@@ -208,23 +208,23 @@ Dialogue: 0,0:08:10.44,0:08:17.06,Chinese,,0,0,0,,通过在处理器上设置引
 Dialogue: 0,0:08:17.06,0:08:20.28,English,,0,0,0,,An external pin called the interrupt pin
 Dialogue: 0,0:08:17.06,0:08:20.28,Chinese,,0,0,0,,外部引脚称为中断引脚
 Dialogue: 0,0:08:21.37,0:08:28.56,English,,0,0,0,,So this is the kind of when see a disk controller finishes doing a direct memory access
-Dialogue: 0,0:08:21.37,0:08:28.56,Chinese,,0,0,0,,所以这就是看到磁盘控制器完成「直接内存访问」的时候的情况
+Dialogue: 0,0:08:21.37,0:08:28.56,Chinese,,0,0,0,,这就是看到磁盘控制器完成「直接内存访问」的时候的情况
 Dialogue: 0,0:08:28.78,0:08:31.62,English,,0,0,0,,And copying data from the disk into memory
 Dialogue: 0,0:08:28.78,0:08:31.62,Chinese,,0,0,0,,首先将数据从磁盘复制到内存中
 Dialogue: 0,0:08:32.02,0:08:39.72,English,,0,0,0,,It notifies the processor that it's finished that copy by setting the interrupt pin hi okay
 Dialogue: 0,0:08:32.02,0:08:39.72,Chinese,,0,0,0,,它通过设置中断引脚来通知处理器它已完成复制
 Dialogue: 0,0:08:42.58,0:08:48.38,English,,0,0,0,,And so after an interrupt happens the handler returns to the next instruction
-Dialogue: 0,0:08:42.58,0:08:48.38,Chinese,,0,0,0,,因此，在发生中断后，处理程序返回到下一条指令
+Dialogue: 0,0:08:42.58,0:08:48.38,Chinese,,0,0,0,,在发生中断后，处理程序返回到下一条指令
 Dialogue: 0,0:08:48.52,0:08:55.42,English,,0,0,0,,So an interrupt typically it's the so you're running your program,you're running your program and then there's like this little
-Dialogue: 0,0:08:48.52,0:08:55.42,Chinese,,0,0,0,,所以一个中断通常是因为你正在运行你的程序，你正在运行你的程序然后就像这样，有一点点像
+Dialogue: 0,0:08:48.52,0:08:55.42,Chinese,,0,0,0,,一个中断通常是因为你正在运行你的程序，你正在运行你的程序然后就像这样，有一点点像
 Dialogue: 0,0:08:57.28,0:09:01.78,English,,0,0,0,,There's like this little pause while the interrupt handler runs and then your program just continues to run okay
 Dialogue: 0,0:08:57.28,0:09:01.78,Chinese,,0,0,0,,当中断处理程序运行时，就像这个小暂停，然后你的程序继续运行正常
 Dialogue: 0,0:09:02.22,0:09:11.52,English,,0,0,0,,So it's usually sort of done behind the scenes and doesn't affect your execution of your program
-Dialogue: 0,0:09:02.22,0:09:11.52,Chinese,,0,0,0,,所以它通常在幕后完成，不会影响你的程序执行 
+Dialogue: 0,0:09:02.22,0:09:11.52,Chinese,,0,0,0,,它通常在幕后完成，不会影响你的程序执行 
 Dialogue: 0,0:09:12.28,0:09:18.74,English,,0,0,0,,Now the most common...a common example of a interrupt is the timer interrupts
 Dialogue: 0,0:09:12.28,0:09:18.74,Chinese,,0,0,0,,现在最常见的......中断的一个常见例子是定时器中断
 Dialogue: 0,0:09:19.66,0:09:25.44,English,,0,0,0,,So you're all systems have a built-in timer that goes off every few milliseconds
-Dialogue: 0,0:09:19.66,0:09:25.44,Chinese,,0,0,0,,因此，所有系统都有一个内置计时器，每隔几毫秒就会关闭一次
+Dialogue: 0,0:09:19.66,0:09:25.44,Chinese,,0,0,0,,所有系统都有一个内置计时器，每隔几毫秒就会关闭一次
 Dialogue: 0,0:09:26.36,0:09:29.76,English,,0,0,0,,And when it,when the timer goes off it sets the interrupts pin high
 Dialogue: 0,0:09:26.36,0:09:29.76,Chinese,,0,0,0,,当它，当定时器熄灭时，它将中断引脚设置为高电平
 Dialogue: 0,0:09:30.38,0:09:34.02,English,,0,0,0,,And there's a special exception number for timer interrupts
@@ -238,7 +238,7 @@ Dialogue: 0,0:09:43.20,0:09:47.38,Chinese,,0,0,0,,否则，用户程序可能会
 Dialogue: 0,0:09:47.74,0:09:52.50,English,,0,0,0,,And no one...there be no way for the operating system to get control
 Dialogue: 0,0:09:47.74,0:09:52.50,Chinese,,0,0,0,,没有人......无法让操作系统获得控制权
 Dialogue: 0,0:09:52.50,0:10:00.40,English,,0,0,0,,So every few milliseconds this timer goes off that causes a transient exception into the kernel
-Dialogue: 0,0:09:52.50,0:10:00.40,Chinese,,0,0,0,,因此，此计时器每隔几毫秒就会关闭，从而导致内核发生瞬态异常
+Dialogue: 0,0:09:52.50,0:10:00.40,Chinese,,0,0,0,,此计时器每隔几毫秒就会关闭，从而导致内核发生瞬态异常
 Dialogue: 0,0:10:00.86,0:10:05.24,English,,0,0,0,,And then the kernel can...as we see the kernel can decide what to do
 Dialogue: 0,0:10:00.86,0:10:05.24,Chinese,,0,0,0,,然后内核可以......正如我们所看到的，内核可以决定做什么
 Dialogue: 0,0:10:05.70,0:10:09.48,English,,0,0,0,,Maybe maybe schedule a new process or let the current process run
@@ -252,11 +252,11 @@ Dialogue: 0,0:10:21.66,0:10:23.32,Chinese,,0,0,0,,它有三类
 Dialogue: 0,0:10:25.76,0:10:32.54,English,,0,0,0,,One is that,one class is called the trap,a trap is a intentional exception
 Dialogue: 0,0:10:25.76,0:10:32.54,Chinese,,0,0,0,,一个是，一类称之为「陷阱」，陷阱是故意的异常
 Dialogue: 0,0:10:32.54,0:10:35.52,English,,0,0,0,,So this is an exception that's caused intentionally by the program
-Dialogue: 0,0:10:32.54,0:10:35.52,Chinese,,0,0,0,,所以这是一个由程序故意引起的异常
+Dialogue: 0,0:10:32.54,0:10:35.52,Chinese,,0,0,0,,这是一个由程序故意引起的异常
 Dialogue: 0,0:10:36.32,0:10:40.08,English,,0,0,0,,And the most common form of a trap is a system call
 Dialogue: 0,0:10:36.32,0:10:40.08,Chinese,,0,0,0,,最常见的陷阱形式是「系统调用」
 Dialogue: 0,0:10:41.42,0:10:46.58,English,,0,0,0,,So you know the operating system kernel provides all kinds of services to a program
-Dialogue: 0,0:10:41.42,0:10:46.58,Chinese,,0,0,0,,所以，你知道操作系统内核为程序提供各种服务
+Dialogue: 0,0:10:41.42,0:10:46.58,Chinese,,0,0,0,,你知道操作系统内核为程序提供各种服务
 Dialogue: 0,0:10:46.58,0:10:48.62,English,,0,0,0,,But your program doesn't have direct access
 Dialogue: 0,0:10:46.58,0:10:48.62,Chinese,,0,0,0,,但是你的程序没有直接访问权限
 Dialogue: 0,0:10:49.86,0:10:54.25,English,,0,0,0,,Your program can't call functions in the kernel,can't access data directly in the kernel
@@ -264,13 +264,13 @@ Dialogue: 0,0:10:49.86,0:10:54.25,Chinese,,0,0,0,,你的程序无法在内核中
 Dialogue: 0,0:10:54.54,0:10:58.68,English,,0,0,0,,Because that memory is protected and unavailable to user programs
 Dialogue: 0,0:10:54.54,0:10:58.68,Chinese,,0,0,0,,因为该内存受到保护且对用户程序不可用
 Dialogue: 0,0:10:59.66,0:11:08.42,English,,0,0,0,,So what the kernel does is they provide a interface that allows programs to make requests to effectively
-Dialogue: 0,0:10:59.66,0:11:08.42,Chinese,,0,0,0,,所以内核的作用是提供一个允许程序发出请求的接口
+Dialogue: 0,0:10:59.66,0:11:08.42,Chinese,,0,0,0,,内核的作用是提供一个允许程序发出请求的接口
 Dialogue: 0,0:11:08.92,0:11:12.80,English,,0,0,0,,Call functions within the kernel and to make requests for various services
 Dialogue: 0,0:11:08.92,0:11:12.80,Chinese,,0,0,0,,调用内核中的函数并发出对各种服务的请求
 Dialogue: 0,0:11:13.32,0:11:15.82,English,,0,0,0,,And this interface is called a system call
 Dialogue: 0,0:11:13.32,0:11:15.82,Chinese,,0,0,0,,此接口称为「系统调用」
 Dialogue: 0,0:11:17.28,0:11:19.24,English,,0,0,0,,Ok so a program makes a system call
-Dialogue: 0,0:11:17.28,0:11:19.24,Chinese,,0,0,0,,好的，所以一个程序进行系统调用
+Dialogue: 0,0:11:17.28,0:11:19.24,Chinese,,0,0,0,,一个程序进行系统调用
 Dialogue: 0,0:11:20.16,0:11:25.60,English,,0,0,0,,And requests various functions from the kernel
 Dialogue: 0,0:11:20.16,0:11:25.60,Chinese,,0,0,0,,并从内核请求各种功能
 Dialogue: 0,0:11:26.02,0:11:30.30,English,,0,0,0,,The kernel provides those sort of reacts to that request
@@ -278,13 +278,13 @@ Dialogue: 0,0:11:26.02,0:11:30.30,Chinese,,0,0,0,,内核为该请求提供了对
 Dialogue: 0,0:11:30.30,0:11:34.62,English,,0,0,0,,And then returns control back to the the function there the calling program
 Dialogue: 0,0:11:30.30,0:11:34.62,Chinese,,0,0,0,,然后将控制权返回给调用程序那里的函数
 Dialogue: 0,0:11:35.24,0:11:38.70,English,,0,0,0,,So you can think of a system call as kind of it's a...
-Dialogue: 0,0:11:35.24,0:11:38.70,Chinese,,0,0,0,,所以你可以把系统调用想象成一种......
+Dialogue: 0,0:11:35.24,0:11:38.70,Chinese,,0,0,0,,你可以把系统调用想象成一种......
 Dialogue: 0,0:11:39.56,0:11:43.88,English,,0,0,0,,It looks like a function call but it's really transferring control into the kernel
 Dialogue: 0,0:11:39.56,0:11:43.88,Chinese,,0,0,0,,它看起来像一个函数调用，但它却是将控制权转移到内核中
 Dialogue: 0,0:11:47.42,0:11:54.26,English,,0,0,0,,Okay then there's some so traps are intentional faults are unintentional but may be recoverable
 Dialogue: 0,0:11:47.42,0:11:54.26,Chinese,,0,0,0,,好吧那么有一些陷阱是故意的，而一些故障是无意的，但可能是可以恢复的
 Dialogue: 0,0:11:54.72,0:11:59.86,English,,0,0,0,,Okay so things like page faults which
-Dialogue: 0,0:11:54.72,0:11:59.86,Chinese,,0,0,0,,好的，就像页缺失一样
+Dialogue: 0,0:11:54.72,0:11:59.86,Chinese,,0,0,0,,就像页缺失一样
 Dialogue: 0,0:12:01.50,0:12:04.64,English,,0,0,0,,When we will learn more about these when we study virtual memory
 Dialogue: 0,0:12:01.50,0:12:04.64,Chinese,,0,0,0,,当我们研究虚拟内存时，我们将更多地了解这些内容
 Dialogue: 0,0:12:04.64,0:12:08.88,English,,0,0,0,,But something like a page fault it's actually recoverable
@@ -300,15 +300,15 @@ Dialogue: 0,0:12:28.50,0:12:33.58,Chinese,,0,0,0,,内存在那里，然后指令
 Dialogue: 0,0:12:33.88,0:12:38.70,English,,0,0,0,,But other faults are unrecoverable like protection fault
 Dialogue: 0,0:12:33.88,0:12:38.70,Chinese,,0,0,0,,但其他故障是不可恢复的，如保护故障
 Dialogue: 0,0:12:38.70,0:12:43.78,English,,0,0,0,,So if you try to access a portion of memory that's not allocated
-Dialogue: 0,0:12:38.70,0:12:43.78,Chinese,,0,0,0,,因此，如果你尝试访问未分配的内存部分
+Dialogue: 0,0:12:38.70,0:12:43.78,Chinese,,0,0,0,,如果你尝试访问未分配的内存部分
 Dialogue: 0,0:12:44.14,0:12:49.96,English,,0,0,0,,Or floating-point exceptions often times those can be recoverable
 Dialogue: 0,0:12:44.14,0:12:49.96,Chinese,,0,0,0,,或者通常是可以恢复的异常的浮点数异常
 Dialogue: 0,0:12:51.84,0:12:59.16,English,,0,0,0,,So in either case when there's a fault it either re-execute the current instruction all the abort
-Dialogue: 0,0:12:51.84,0:12:59.16,Chinese,,0,0,0,,所以在任何一种情况下，当出现故障时，要么重新执行当前指令，要么全部中止
+Dialogue: 0,0:12:51.84,0:12:59.16,Chinese,,0,0,0,,在任何一种情况下，当出现故障时，要么重新执行当前指令，要么全部中止
 Dialogue: 0,0:13:00.82,0:13:08.26,English,,0,0,0,,And then there's unintentional and unrecoverable exceptions which are called the aborts and those those always abort
 Dialogue: 0,0:13:00.82,0:13:08.26,Chinese,,0,0,0,,然后是无意和不可恢复的异常，称为「中止」和那些总是中止的异常
 Dialogue: 0,0:13:08.80,0:13:14.74,English,,0,0,0,,So if you execute an illegal instruction,if there's a problem with your memory,memory and it's it's corrupted
-Dialogue: 0,0:13:08.80,0:13:14.74,Chinese,,0,0,0,,因此，如果你执行非法指令，如果你的内存存在问题，那么它就会被破坏
+Dialogue: 0,0:13:08.80,0:13:14.74,Chinese,,0,0,0,,如果你执行非法指令，如果你的内存存在问题，那么它就会被破坏
 Dialogue: 0,0:13:15.86,0:13:21.36,English,,0,0,0,,There's some problem with the machine those creative warts that always...
 Dialogue: 0,0:13:15.86,0:13:21.36,Chinese,,0,0,0,,机器存在一些问题，那些创造性的总是......
 Dialogue: 0,0:13:22.34,0:13:26.92,English,,0,0,0,,That are unrecoverable and never return back to the program
@@ -320,7 +320,7 @@ Dialogue: 0,0:13:32.02,0:13:35.28,Chinese,,0,0,0,,许多不同类型的系统调
 Dialogue: 0,0:13:35.76,0:13:38.16,English,,0,0,0,,Which is assigned by Linux
 Dialogue: 0,0:13:35.76,0:13:38.16,Chinese,,0,0,0,,这是由 Linux 分配的
 Dialogue: 0,0:13:39.84,0:13:46.38,English,,0,0,0,,So for example to read a file,there's a system call called read
-Dialogue: 0,0:13:39.84,0:13:46.38,Chinese,,0,0,0,,因此，例如，为了读取文件，有一个名为 read 的系统调用
+Dialogue: 0,0:13:39.84,0:13:46.38,Chinese,,0,0,0,,例如，为了读取文件，有一个名为 read 的系统调用
 Dialogue: 0,0:13:46.38,0:13:53.40,English,,0,0,0,,Which is number 0 opening a file, a system call number 2 and so on
 Dialogue: 0,0:13:46.38,0:13:53.40,Chinese,,0,0,0,,这是编号0：打开文件，系统调用编码 2 等等
 Dialogue: 0,0:13:56.14,0:14:01.58,English,,0,0,0,,And there's an instruction called syscall
@@ -338,13 +338,13 @@ Dialogue: 0,0:14:22.28,0:14:27.58,Chinese,,0,0,0,,假设你想打开一个文件
 Dialogue: 0,0:14:28.46,0:14:32.10,English,,0,0,0,,With a file name and some options say read only write only
 Dialogue: 0,0:14:28.46,0:14:32.10,Chinese,,0,0,0,,使用文件名和一些选项指定为 ：只读写
 Dialogue: 0,0:14:36.10,0:14:42.66,English,,0,0,0,,And so in at the syscall instruction takes the first the syscall number is %rax
-Dialogue: 0,0:14:36.10,0:14:42.66,Chinese,,0,0,0,,因此，在syscall指令中，第一个系统调用编号是 %rax
+Dialogue: 0,0:14:36.10,0:14:42.66,Chinese,,0,0,0,,在syscall指令中，第一个系统调用编号是 %rax
 Dialogue: 0,0:14:44.12,0:14:50.60,English,,0,0,0,,And then other arguments are %rdi,%rsi,%rdx, %r10, %r9, %r8
 Dialogue: 0,0:14:44.12,0:14:50.60,Chinese,,0,0,0,,然后其他参数是 ％rdi，％rsi，％rdx，％r10，％r9，％r8
 Dialogue: 0,0:14:51.36,0:14:57.72,English,,0,0,0,,So you can see if we look in the the open function calls the __open function which actually invokes
-Dialogue: 0,0:14:51.36,0:14:57.72,Chinese,,0,0,0,,所以你可以看看，我们是否在open函数中调用实际调用的__open函数
+Dialogue: 0,0:14:51.36,0:14:57.72,Chinese,,0,0,0,,你可以看看，我们是否在open函数中调用实际调用的__open函数
 Dialogue: 0,0:14:58.22,0:15:02.04,English,,0,0,0,,The syscall so if you look at that code you see it moves the 0x2
-Dialogue: 0,0:14:58.22,0:15:02.04,Chinese,,0,0,0,,系统调用因此，如果你查看该代码，你会看到它移动0x2
+Dialogue: 0,0:14:58.22,0:15:02.04,Chinese,,0,0,0,,系统调用，如果你查看该代码，你会看到它移动0x2
 Dialogue: 0,0:15:02.04,0:15:07.52,English,,0,0,0,,which is the syscall number for read into %eax and then it does the syscall
 Dialogue: 0,0:15:02.04,0:15:07.52,Chinese,,0,0,0,,这是读入 ％eax 的系统调用号，然后是系统调用
 Dialogue: 0,0:15:09.72,0:15:15.54,English,,0,0,0,,And then the the syscall returns its status in %rax
@@ -354,7 +354,7 @@ Dialogue: 0,0:15:16.30,0:15:19.80,Chinese,,0,0,0,,如果它是负数，那么这
 Dialogue: 0,0:15:20.76,0:15:25.40,English,,0,0,0,,If it's a positive number then that means something that no error occurred
 Dialogue: 0,0:15:20.76,0:15:25.40,Chinese,,0,0,0,,如果它是正数，那么这意味着没有发生错误
 Dialogue: 0,0:15:26.32,0:15:30.42,English,,0,0,0,,So in this case and in the open it's returning a file descriptor
-Dialogue: 0,0:15:26.32,0:15:30.42,Chinese,,0,0,0,,所以在这种情况下，在 open 中它返回一个文件描述符
+Dialogue: 0,0:15:26.32,0:15:30.42,Chinese,,0,0,0,,在这种情况下，在 open 中它返回一个文件描述符
 Dialogue: 0,0:15:30.42,0:15:36.74,English,,0,0,0,,A small integer called the file descriptor which then you can use in subsequent calls to read and write
 Dialogue: 0,0:15:30.42,0:15:36.74,Chinese,,0,0,0,,一个称为文件描述符的小整数，然后可以在后续的读写调用中使用
 Dialogue: 0,0:15:37.34,0:15:40.64,English,,0,0,0,,And then you can see the code is checking for this negative return value
@@ -364,13 +364,13 @@ Dialogue: 0,0:15:40.96,0:15:43.26,Chinese,,0,0,0,,还有一系列的比较
 Dialogue: 0,0:15:50.18,0:15:53.36,English,,0,0,0,,So let's look at an example of a fault
 Dialogue: 0,0:15:50.18,0:15:53.36,Chinese,,0,0,0,,那么让我们看一个故障的例子
 Dialogue: 0,0:15:54.28,0:16:00.54,English,,0,0,0,,So here suppose we have this program that we're writing into a valid region of memory
-Dialogue: 0,0:15:54.28,0:16:00.54,Chinese,,0,0,0,,所以这里假设我们有这个程序，我们写入一个有效的内存区域
+Dialogue: 0,0:15:54.28,0:16:00.54,Chinese,,0,0,0,,这里假设我们有这个程序，我们写入一个有效的内存区域
 Dialogue: 0,0:16:00.54,0:16:07.70,English,,0,0,0,,But it's not actually stored on...it's not actually in the memory,it needs to be loaded from disk into into memory
 Dialogue: 0,0:16:00.54,0:16:07.70,Chinese,,0,0,0,,但它实际上并没有存储在......它实际上不在内存中，而是需要从磁盘加载到内存中
 Dialogue: 0,0:16:07.70,0:16:10.88,English,,0,0,0,,So this is a...so called page fault
-Dialogue: 0,0:16:07.70,0:16:10.88,Chinese,,0,0,0,,所以这是......所谓的页缺少
+Dialogue: 0,0:16:07.70,0:16:10.88,Chinese,,0,0,0,,这是......所谓的页缺少
 Dialogue: 0,0:16:12.52,0:16:14.82,English,,0,0,0,,So this instruction this movl
-Dialogue: 0,0:16:12.52,0:16:14.82,Chinese,,0,0,0,,所以这个指令这个 movl
+Dialogue: 0,0:16:12.52,0:16:14.82,Chinese,,0,0,0,,这个指令这个 movl
 Dialogue: 0,0:16:15.40,0:16:22.82,English,,0,0,0,,Because this because the memory at this address isn't available triggers a page fault
 Dialogue: 0,0:16:15.40,0:16:22.82,Chinese,,0,0,0,,因为这是因为此地址的内存不可用，会触发页缺失
 Dialogue: 0,0:16:24.60,0:16:30.92,English,,0,0,0,,So that creates an exception a transfer of control into the the page fault handler in the kernel
@@ -380,9 +380,9 @@ Dialogue: 0,0:16:31.64,0:16:34.32,Chinese,,0,0,0,,哪个页面从磁盘复制到
 Dialogue: 0,0:16:36.24,0:16:40.98,English,,0,0,0,,And then it returns and when it returns it reacts acutes the movl instruction
 Dialogue: 0,0:16:36.24,0:16:40.98,Chinese,,0,0,0,,然后它返回，当它返回时，它会对 movl 指令产生反应
 Dialogue: 0,0:16:41.52,0:16:42.24,English,,0,0,0,,So that's kind of cool
-Dialogue: 0,0:16:41.52,0:16:42.24,Chinese,,0,0,0,,所以这很酷
+Dialogue: 0,0:16:41.52,0:16:42.24,Chinese,,0,0,0,,这很酷
 Dialogue: 0,0:16:42.24,0:16:44.88,English,,0,0,0,,So now the memory is available
-Dialogue: 0,0:16:42.24,0:16:44.88,Chinese,,0,0,0,,所以现在可以使用内存了
+Dialogue: 0,0:16:42.24,0:16:44.88,Chinese,,0,0,0,,现在可以使用内存了
 Dialogue: 0,0:16:45.58,0:16:52.02,English,,0,0,0,,And now that the movl this movl instruction when it's reacts acute completes
 Dialogue: 0,0:16:45.58,0:16:52.02,Chinese,,0,0,0,,现在，当它的反应快速完成时，movl 这个 movl指令
 Dialogue: 0,0:16:53.66,0:16:54.68,English,,0,0,0,,And then we continue
@@ -390,11 +390,11 @@ Dialogue: 0,0:16:53.66,0:16:54.68,Chinese,,0,0,0,,然后我们继续
 Dialogue: 0,0:16:55.66,0:16:58.80,English,,0,0,0,,Now another type of fault is an invalid memory reference
 Dialogue: 0,0:16:55.66,0:16:58.80,Chinese,,0,0,0,,现在另一种类型的故障是无效的内存引用
 Dialogue: 0,0:16:58.80,0:17:02.46,English,,0,0,0,,So here we have a...we're accessing an element of a
-Dialogue: 0,0:16:58.80,0:17:02.46,Chinese,,0,0,0,,所以我们在这里......我们正在访问一个元素
+Dialogue: 0,0:16:58.80,0:17:02.46,Chinese,,0,0,0,,我们在这里......我们正在访问一个元素
 Dialogue: 0,0:17:03.24,0:17:07.74,English,,0,0,0,,Which doesn't exist and it's an illegal,it's an invalid reference
 Dialogue: 0,0:17:03.24,0:17:07.74,Chinese,,0,0,0,,哪个不存在而且是非法的，这是一个无效的引用
 Dialogue: 0,0:17:09.22,0:17:12.16,English,,0,0,0,,So in this case the movl instruction
-Dialogue: 0,0:17:09.22,0:17:12.16,Chinese,,0,0,0,,所以在这种情况下是 movl 指令
+Dialogue: 0,0:17:09.22,0:17:12.16,Chinese,,0,0,0,,在这种情况下是 movl 指令
 Dialogue: 0,0:17:12.90,0:17:15.36,English,,0,0,0,,It looks like a...it looks like a page fault
 Dialogue: 0,0:17:12.90,0:17:15.36,Chinese,,0,0,0,,它看起来像......它看起来像一个页缺失
 Dialogue: 0,0:17:16.72,0:17:21.74,English,,0,0,0,,But the kernel detects that it's an invalid address that there isn't anything that can be loaded from disk
@@ -402,15 +402,15 @@ Dialogue: 0,0:17:16.72,0:17:21.74,Chinese,,0,0,0,,但内核检测到它是一个
 Dialogue: 0,0:17:21.74,0:17:25.70,English,,0,0,0,,This is an invalid region of the the virtual address space
 Dialogue: 0,0:17:21.74,0:17:25.70,Chinese,,0,0,0,,这是虚拟地址空间的无效区域
 Dialogue: 0,0:17:27.38,0:17:34.24,English,,0,0,0,,So it sends a signal to the to the process and then never returns
-Dialogue: 0,0:17:27.38,0:17:34.24,Chinese,,0,0,0,,因此它向进程发送信号，然后永远不会返回
+Dialogue: 0,0:17:27.38,0:17:34.24,Chinese,,0,0,0,,它向进程发送信号，然后永远不会返回
 Dialogue: 0,0:17:35.96,0:17:40.06,English,,0,0,0,,So the signal that sends is the infamous segmentation
-Dialogue: 0,0:17:35.96,0:17:40.06,Chinese,,0,0,0,,所以发送的信号是臭名昭著的部分
+Dialogue: 0,0:17:35.96,0:17:40.06,Chinese,,0,0,0,,发送的信号是臭名昭著的部分
 Dialogue: 0,0:17:40.06,0:17:46.90,English,,0,0,0,,The signal that causes the infamous sauce segmentation fault message to print out
 Dialogue: 0,0:17:40.06,0:17:46.90,Chinese,,0,0,0,,信号导致臭名昭著的酱汁？（此处字幕应有误） 并打印相关错误信息
 Dialogue: 0,0:17:47.94,0:17:52.28,English,,0,0,0,,And we'll see you next lecture,we'll see how these signals actually work
 Dialogue: 0,0:17:47.94,0:17:52.28,Chinese,,0,0,0,,我们将在下一个讲座中看到你，我们将看到这些信号是如何工作的
 Dialogue: 0,0:17:56.26,0:18:01.88,English,,0,0,0,,Okay so I said we've seen exceptions or very low-level transfers of control
-Dialogue: 0,0:17:56.26,0:18:01.88,Chinese,,0,0,0,,好的，所以我说我们已经看到异常，或者非常低层的控制转移
+Dialogue: 0,0:17:56.26,0:18:01.88,Chinese,,0,0,0,,我说我们已经看到异常，或者非常低层的控制转移
 Dialogue: 0,0:18:02.36,0:18:06.58,English,,0,0,0,,That are implemented by both hardware and the operating system software...it could sue
 Dialogue: 0,0:18:02.36,0:18:06.58,Chinese,,0,0,0,,这是由硬件和操作系统软件实现的...它可以
 Dialogue: 0,0:18:08.58,0:18:12.84,English,,0,0,0,,At the higher level is another form of exceptional control flow called
@@ -420,7 +420,7 @@ Dialogue: 0,0:18:14.28,0:18:18.72,Chinese,,0,0,0,,我们在进程上下文切换
 Dialogue: 0,0:18:21.00,0:18:25.34,English,,0,0,0,,So let's look at and let's look at what a process is
 Dialogue: 0,0:18:21.00,0:18:25.34,Chinese,,0,0,0,,那么让我们来看看，让我们看一下进程是什么
 Dialogue: 0,0:18:26.64,0:18:32.38,English,,0,0,0,,So a process,the idea of a process is one of the most fundamental and important ideas in computer science
-Dialogue: 0,0:18:26.64,0:18:32.38,Chinese,,0,0,0,,因此，进程，进程的思想是计算机科学中最基本和最重要的思想之一
+Dialogue: 0,0:18:26.64,0:18:32.38,Chinese,,0,0,0,,进程，进程的思想是计算机科学中最基本和最重要的思想之一
 Dialogue: 0,0:18:33.34,0:18:39.22,English,,0,0,0,,And this classical definition of is that a process is an instance of a running program
 Dialogue: 0,0:18:33.34,0:18:39.22,Chinese,,0,0,0,,这个经典定义是，一个进程是一个正在运行的程序的实例
 Dialogue: 0,0:18:40.88,0:18:43.20,English,,0,0,0,,Okay it's different from a program
@@ -442,7 +442,7 @@ Dialogue: 0,0:19:17.80,0:19:24.36,Chinese,,0,0,0,,好吧，第一个抽象就是
 Dialogue: 0,0:19:25.88,0:19:29.66,English,,0,0,0,,Exclusive access to the CPU and registers
 Dialogue: 0,0:19:25.88,0:19:29.66,Chinese,,0,0,0,,独占使用CPU和寄存器
 Dialogue: 0,0:19:30.60,0:19:31.58,English,,0,0,0,,Okay so when you're running
-Dialogue: 0,0:19:30.60,0:19:31.58,Chinese,,0,0,0,,好的，所以当你运行的时候
+Dialogue: 0,0:19:30.60,0:19:31.58,Chinese,,0,0,0,,当你运行的时候
 Dialogue: 0,0:19:31.98,0:19:33.90,English,,0,0,0,,When you're running your program in a process
 Dialogue: 0,0:19:31.98,0:19:33.90,Chinese,,0,0,0,,当你在一个进程中运行程序时
 Dialogue: 0,0:19:34.58,0:19:39.20,English,,0,0,0,,You never have to worry about any other programs modifying your registers
@@ -456,17 +456,17 @@ Dialogue: 0,0:19:53.16,0:20:01.06,Chinese,,0,0,0,,除此之外，看起来你有
 Dialogue: 0,0:20:02.36,0:20:06.50,English,,0,0,0,,The the other abstraction that it provides is the illusion that you have your own address space
 Dialogue: 0,0:20:02.36,0:20:06.50,Chinese,,0,0,0,,它提供的另一个抽象是你拥有自己的地址空间的错觉
 Dialogue: 0,0:20:08.70,0:20:09.84,English,,0,0,0,,Okay so you have
-Dialogue: 0,0:20:08.70,0:20:09.84,Chinese,,0,0,0,,好的，你有
+Dialogue: 0,0:20:08.70,0:20:09.84,Chinese,,0,0,0,,你有
 Dialogue: 0,0:20:10.12,0:20:13.58,English,,0,0,0,,And this is provided by a mechanism called virtual memory
 Dialogue: 0,0:20:10.12,0:20:13.58,Chinese,,0,0,0,,这是由一种称为虚拟内存的机制提供的
 Dialogue: 0,0:20:14.28,0:20:20.58,English,,0,0,0,,So each running program has its own code data heap stack
-Dialogue: 0,0:20:14.28,0:20:20.58,Chinese,,0,0,0,,因此每个运行的程序都有自己的代码数据堆栈
+Dialogue: 0,0:20:14.28,0:20:20.58,Chinese,,0,0,0,,每个运行的程序都有自己的代码数据堆栈
 Dialogue: 0,0:20:21.20,0:20:24.06,English,,0,0,0,,And you never see that the code...
 Dialogue: 0,0:20:21.20,0:20:24.06,Chinese,,0,0,0,,你永远不会看到代码......
 Dialogue: 0,0:20:24.68,0:20:27.72,English,,0,0,0,,And you never see the memory that's being used by other processes
 Dialogue: 0,0:20:24.68,0:20:27.72,Chinese,,0,0,0,,而且你永远不会看到其他进程正在使用的内存
 Dialogue: 0,0:20:28.54,0:20:33.68,English,,0,0,0,,Okay so it looks for all intents and purposes process gives you this illusion that
-Dialogue: 0,0:20:28.54,0:20:33.68,Chinese,,0,0,0,,好的，所以它寻找所有意图和目的进程给你这种错觉
+Dialogue: 0,0:20:28.54,0:20:33.68,Chinese,,0,0,0,,它寻找所有意图和目的进程给你这种错觉
 Dialogue: 0,0:20:33.68,0:20:39.82,English,,0,0,0,,You have access to the exclusive access to all the memory and the and the processor
 Dialogue: 0,0:20:33.68,0:20:39.82,Chinese,,0,0,0,,你可以访问所有内存和处理器的独占访问权限
 Dialogue: 0,0:20:42.88,0:20:46.64,English,,0,0,0,,Now that the system runs many of these processes simultaneously
@@ -504,7 +504,7 @@ Dialogue: 0,0:22:15.00,0:22:18.86,Chinese,,0,0,0,,在某些时候，操作系统
 Dialogue: 0,0:22:19.42,0:22:23.82,English,,0,0,0,,And in this case let's say it decides that it wants to run another process
 Dialogue: 0,0:22:19.42,0:22:23.82,Chinese,,0,0,0,,在这种情况下，让我们说它决定它想要运行另一个进程
 Dialogue: 0,0:22:25.28,0:22:31.94,English,,0,0,0,,So it copies the registers,the current register values into memory and saves them
-Dialogue: 0,0:22:25.28,0:22:31.94,Chinese,,0,0,0,,因此它将寄存器，当前寄存器值复制到存储器中并保存它们
+Dialogue: 0,0:22:25.28,0:22:31.94,Chinese,,0,0,0,,它将寄存器，当前寄存器值复制到存储器中并保存它们
 Dialogue: 0,0:22:34.04,0:22:37.04,English,,0,0,0,,And then it schedules the next process for execution
 Dialogue: 0,0:22:34.04,0:22:37.04,Chinese,,0,0,0,,然后它会安排下一个待执行的进程
 Dialogue: 0,0:22:38.18,0:22:46.00,English,,0,0,0,,And it loads the registers that were saved from the last time that process was running
@@ -514,11 +514,11 @@ Dialogue: 0,0:22:46.00,0:22:48.04,Chinese,,0,0,0,,它将这些加载到 cpu 寄�
 Dialogue: 0,0:22:48.64,0:22:54.48,English,,0,0,0,,And then it switches the address space to the address space for this process
 Dialogue: 0,0:22:48.64,0:22:54.48,Chinese,,0,0,0,,然后它将地址空间切换到此进程的地址空间
 Dialogue: 0,0:22:55.44,0:23:00.20,English,,0,0,0,,So this the address space and the register values are the context
-Dialogue: 0,0:22:55.44,0:23:00.20,Chinese,,0,0,0,,所以这个地址空间和寄存器值是上下文
+Dialogue: 0,0:22:55.44,0:23:00.20,Chinese,,0,0,0,,这个地址空间和寄存器值是上下文
 Dialogue: 0,0:23:01.56,0:23:09.02,English,,0,0,0,,And so the context switch is what is the change in the address space and the registers
-Dialogue: 0,0:23:01.56,0:23:09.02,Chinese,,0,0,0,,因此，上下文切换是地址空间和寄存器的变化
+Dialogue: 0,0:23:01.56,0:23:09.02,Chinese,,0,0,0,,上下文切换是地址空间和寄存器的变化
 Dialogue: 0,0:23:11.38,0:23:14.00,English,,0,0,0,,Ok so then at that point the that process is running
-Dialogue: 0,0:23:11.38,0:23:14.00,Chinese,,0,0,0,,好的，那时那个进程正在运行
+Dialogue: 0,0:23:11.38,0:23:14.00,Chinese,,0,0,0,,那时那个进程正在运行
 Dialogue: 0,0:23:15.98,0:23:19.02,English,,0,0,0,,Now in reality on modern systems with multiple cores
 Dialogue: 0,0:23:15.98,0:23:19.02,Chinese,,0,0,0,,现在实际上在具有多个核心的现代系统上
 Dialogue: 0,0:23:21.18,0:23:25.80,English,,0,0,0,,The operating system will schedule processes on those multiple cores
@@ -530,7 +530,7 @@ Dialogue: 0,0:23:31.92,0:23:34.08,Chinese,,0,0,0,,就像我们之前展示的一
 Dialogue: 0,0:23:37.74,0:23:41.92,English,,0,0,0,,Now each process represents a what we call a logical control flow
 Dialogue: 0,0:23:37.74,0:23:41.92,Chinese,,0,0,0,,现在每个进程代表一个我们称之为逻辑控制流的东西
 Dialogue: 0,0:23:42.72,0:23:45.32,English,,0,0,0,,So if you were to you know there's a physical control flow
-Dialogue: 0,0:23:42.72,0:23:45.32,Chinese,,0,0,0,,所以如果你对你知道有一个物理控制流
+Dialogue: 0,0:23:42.72,0:23:45.32,Chinese,,0,0,0,,如果你对你知道有一个物理控制流
 Dialogue: 0,0:23:45.84,0:23:47.96,English,,0,0,0,,Which if we just looked at all the PC values
 Dialogue: 0,0:23:45.84,0:23:47.96,Chinese,,0,0,0,,如果我们只看了所有的 PC 值，那该怎么办？
 Dialogue: 0,0:23:50.20,0:23:53.52,English,,0,0,0,,We'd be executing instructions from one process
@@ -556,7 +556,7 @@ Dialogue: 0,0:24:34.00,0:24:39.70,Chinese,,0,0,0,,当进程 B 完成时，进程
 Dialogue: 0,0:24:40.84,0:24:44.24,English,,0,0,0,,Then process A runs for a while and then process C terminates
 Dialogue: 0,0:24:40.84,0:24:44.24,Chinese,,0,0,0,,然后进程A运行一段时间，然后进程C终止
 Dialogue: 0,0:24:45.14,0:24:48.10,English,,0,0,0,,Okay so given this definition of concurrency
-Dialogue: 0,0:24:45.14,0:24:48.10,Chinese,,0,0,0,,好的，所以给出了「并发」的这个定义
+Dialogue: 0,0:24:45.14,0:24:48.10,Chinese,,0,0,0,,给出了「并发」的这个定义
 Dialogue: 0,0:24:51.20,0:24:54.78,English,,0,0,0,,Which of these processes are running concurrently
 Dialogue: 0,0:24:51.20,0:24:54.78,Chinese,,0,0,0,,哪些进程同时运行
 Dialogue: 0,0:24:58.12,0:24:59.52,English,,0,0,0,,What about a A and B?
@@ -564,7 +564,7 @@ Dialogue: 0,0:24:58.12,0:24:59.52,Chinese,,0,0,0,,A 和 B 怎么样？
 Dialogue: 0,0:25:07.50,0:25:12.56,English,,0,0,0,,So A and B flows, B's flow overlaps with A's flow right
 Dialogue: 0,0:25:07.50,0:25:12.56,Chinese,,0,0,0,,有 A 和 B 两个逻辑流，B的逻辑流中断掉A的逻辑流
 Dialogue: 0,0:25:13.30,0:25:17.62,English,,0,0,0,,So B
-Dialogue: 0,0:25:13.30,0:25:17.62,Chinese,,0,0,0,,所以B
+Dialogue: 0,0:25:13.30,0:25:17.62,Chinese,,0,0,0,,B
 Dialogue: 0,0:25:21.04,0:25:23.82,English,,0,0,0,,B finishes starts and finish
 Dialogue: 0,0:25:21.04,0:25:23.82,Chinese,,0,0,0,,B 完成开始和结束的一整个过程
 Dialogue: 0,0:25:27.30,0:25:31.58,English,,0,0,0,,Some portion this portion of B flow overlaps with A flow right
@@ -572,9 +572,9 @@ Dialogue: 0,0:25:27.30,0:25:31.58,Chinese,,0,0,0,,B 逻辑流的这部分的一�
 Dialogue: 0,0:25:32.18,0:25:34.46,English,,0,0,0,,Because B is still running hasn't finished
 Dialogue: 0,0:25:32.18,0:25:34.46,Chinese,,0,0,0,,因为 B 还在运行还没有完成
 Dialogue: 0,0:25:34.90,0:25:40.94,English,,0,0,0,,Ok so A and B are concurrent as and similarly C and A overlap
-Dialogue: 0,0:25:34.90,0:25:40.94,Chinese,,0,0,0,,好的，所以A和B是并发的，并且类似地 C 和 A 重叠
+Dialogue: 0,0:25:34.90,0:25:40.94,Chinese,,0,0,0,,A和B是并发的，并且类似地 C 和 A 重叠
 Dialogue: 0,0:25:41.62,0:25:42.84,English,,0,0,0,,So they're concurrent
-Dialogue: 0,0:25:41.62,0:25:42.84,Chinese,,0,0,0,,所以他们是并发的
+Dialogue: 0,0:25:41.62,0:25:42.84,Chinese,,0,0,0,,他们是并发的
 Dialogue: 0,0:25:43.36,0:25:48.90,English,,0,0,0,,But B and C are not concurrent right B finishes before C starts
 Dialogue: 0,0:25:43.36,0:25:48.90,Chinese,,0,0,0,,但是B和C在C不是并发的,因为 B 在 C 开始前完成
 Dialogue: 0,0:25:52.82,0:25:56.66,English,,0,0,0,,Now this idea of concurrency it doesn't
@@ -596,7 +596,7 @@ Dialogue: 0,0:26:30.90,0:26:33.24,Chinese,,0,0,0,,现在这个概念的上下文
 Dialogue: 0,0:26:35.78,0:26:38.76,English,,0,0,0,,It's managed by...its managed by the kernel
 Dialogue: 0,0:26:35.78,0:26:38.76,Chinese,,0,0,0,,它由...由内核管理
 Dialogue: 0,0:26:39.94,0:26:43.86,English,,0,0,0,,Okay and it's important to realize that the kernel is not like a separate process that's running
-Dialogue: 0,0:26:39.94,0:26:43.86,Chinese,,0,0,0,,好的，重要的是要意识到内核不像是一个正在运行的独立进程
+Dialogue: 0,0:26:39.94,0:26:43.86,Chinese,,0,0,0,,重要的是要意识到内核不像是一个正在运行的独立进程
 Dialogue: 0,0:26:43.86,0:26:46.54,English,,0,0,0,,It always runs in the context of some existing process
 Dialogue: 0,0:26:43.86,0:26:46.54,Chinese,,0,0,0,,它始终在某些现有进程的上下文中运行
 Dialogue: 0,0:26:47.96,0:26:53.82,English,,0,0,0,,And it's just code that's in the upper portion of the address space
@@ -612,9 +612,9 @@ Dialogue: 0,0:27:08.46,0:27:14.04,Chinese,,0,0,0,,内核调用其调度程序，
 Dialogue: 0,0:27:14.62,0:27:18.86,English,,0,0,0,,Or to to do a context switch and run a new process another process
 Dialogue: 0,0:27:14.62,0:27:18.86,Chinese,,0,0,0,,或者做一个上下文切换并运行另一个新的进程
 Dialogue: 0,0:27:19.44,0:27:25.56,English,,0,0,0,,So in this example the scheduler is decided to run process B
-Dialogue: 0,0:27:19.44,0:27:25.56,Chinese,,0,0,0,,因此，在此示例中，调度程序决定运行进程 B.
+Dialogue: 0,0:27:19.44,0:27:25.56,Chinese,,0,0,0,,在此示例中，调度程序决定运行进程 B.
 Dialogue: 0,0:27:25.56,0:27:32.92,English,,0,0,0,,So it executes code and then sort of changes sort of once it repoint the address space
-Dialogue: 0,0:27:25.56,0:27:32.92,Chinese,,0,0,0,,因此，一旦重新指定地址空间，它就会执行代码然后进行排序
+Dialogue: 0,0:27:25.56,0:27:32.92,Chinese,,0,0,0,,一旦重新指定地址空间，它就会执行代码然后进行排序
 Dialogue: 0,0:27:34.58,0:27:36.99,English,,0,0,0,,Then it's running in the context of process B
 Dialogue: 0,0:27:34.58,0:27:36.99,Chinese,,0,0,0,,然后它在进程B的上下文中运行
 Dialogue: 0,0:27:37.42,0:27:43.60,English,,0,0,0,,And it finishes loading the registers for process B general-purpose registers
@@ -628,7 +628,7 @@ Dialogue: 0,0:27:51.50,0:27:53.80,Chinese,,0,0,0,,而且在某些时候会发生
 Dialogue: 0,0:27:54.42,0:28:00.62,English,,0,0,0,,And in the kernel decides to transfer control back to process A which picks up where it left off right here
 Dialogue: 0,0:27:54.42,0:28:00.62,Chinese,,0,0,0,,并且在内核中决定将控制权转移回进程A，进程A在此处从中断处继续
 Dialogue: 0,0:28:01.68,0:28:04.62,English,,0,0,0,,So whatever instruction it finishes executing
-Dialogue: 0,0:28:01.68,0:28:04.62,Chinese,,0,0,0,,所以无论它完成执行的任何指令
+Dialogue: 0,0:28:01.68,0:28:04.62,Chinese,,0,0,0,,无论它完成执行的任何指令
 Dialogue: 0,0:28:05.60,0:28:11.66,English,,0,0,0,,Whatever instruction was executing at the time of the exception execute the next instruction here
 Dialogue: 0,0:28:05.60,0:28:11.66,Chinese,,0,0,0,,无论在异常时执行什么指令，都要执行下一条指令
 Dialogue: 0,0:28:17.56,0:28:20.54,English,,0,0,0,,Now Linux provides a number of functions
@@ -648,7 +648,7 @@ Dialogue: 0,0:28:49.60,0:28:57.58,Chinese,,0,0,0,,现在系统级，Linux系统�
 Dialogue: 0,0:28:58.26,0:29:02.42,English,,0,0,0,,And then they'll set a global variable called error no to indicate the reason
 Dialogue: 0,0:28:58.26,0:29:02.42,Chinese,,0,0,0,,然后他们将设置一个名为error no的全局变量来指示原因
 Dialogue: 0,0:29:03.58,0:29:06.68,English,,0,0,0,,So there's a hard and fast rule when you're doing
-Dialogue: 0,0:29:03.58,0:29:06.68,Chinese,,0,0,0,,所以当你做的时候有一条硬性规则
+Dialogue: 0,0:29:03.58,0:29:06.68,Chinese,,0,0,0,,当你做的时候有一条硬性规则
 Dialogue: 0,0:29:08.12,0:29:10.60,English,,0,0,0,,When you're invoking system level functions
 Dialogue: 0,0:29:08.12,0:29:10.60,Chinese,,0,0,0,,当你调用系统级函数时
 Dialogue: 0,0:29:11.84,0:29:16.60,English,,0,0,0,,You must check the return values from those functions you should
@@ -664,15 +664,15 @@ Dialogue: 0,0:29:31.64,0:29:35.56,Chinese,,0,0,0,,唯一的例外是有些函数
 Dialogue: 0,0:29:37.98,0:29:42.10,English,,0,0,0,,Such as exit or free don't return anything
 Dialogue: 0,0:29:37.98,0:29:42.10,Chinese,,0,0,0,,如 exit 或 free 不返回任何值
 Dialogue: 0,0:29:43.32,0:29:47.14,English,,0,0,0,,So the way the typical way you would do this is like the fork call
-Dialogue: 0,0:29:43.32,0:29:47.14,Chinese,,0,0,0,,所以你这样做的典型方式就像 fork 调用一样
+Dialogue: 0,0:29:43.32,0:29:47.14,Chinese,,0,0,0,,你这样做的典型方式就像 fork 调用一样
 Dialogue: 0,0:29:47.14,0:29:53.82,English,,0,0,0,,Which we use to create processes returns the process idea of the process that it created
 Dialogue: 0,0:29:47.14,0:29:53.82,Chinese,,0,0,0,,我们用来创建进程的进程返回了它创建的进程的进程信息
 Dialogue: 0,0:29:54.36,0:29:57.54,English,,0,0,0,,Which is always positive if there's an error returns -1
 Dialogue: 0,0:29:54.36,0:29:57.54,Chinese,,0,0,0,,则总是正数；如果有错误返回 -1，
 Dialogue: 0,0:29:57.54,0:30:04.12,English,,0,0,0,,So we check for the return value to be less than 0 and then we deal with that error somehow
-Dialogue: 0,0:29:57.54,0:30:04.12,Chinese,,0,0,0,,所以我们检查返回值是否小于0，然后我们以某种方式处理该错误
+Dialogue: 0,0:29:57.54,0:30:04.12,Chinese,,0,0,0,,我们检查返回值是否小于0，然后我们以某种方式处理该错误
 Dialogue: 0,0:30:06.18,0:30:09.52,English,,0,0,0,,Ok in this case we're just printing a message and exiting
-Dialogue: 0,0:30:06.18,0:30:09.52,Chinese,,0,0,0,,好的，在这种情况下，我们只是打印一条消息并退出
+Dialogue: 0,0:30:06.18,0:30:09.52,Chinese,,0,0,0,,在这种情况下，我们只是打印一条消息并退出
 Dialogue: 0,0:30:10.68,0:30:13.82,English,,0,0,0,,Now this gets although it's essential to do this it gets
 Dialogue: 0,0:30:10.68,0:30:13.82,Chinese,,0,0,0,,现在，虽然这是必要的，但它必须这样做
 Dialogue: 0,0:30:16.16,0:30:20.58,English,,0,0,0,,From my point of view we're trying to present code to you
@@ -685,9 +685,9 @@ Dialogue: 0,0:30:25.84,0:30:31.54,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:30:31.76,0:30:33.62,English,,0,0,0,,I'm checking that it's less than zero
 Dialogue: 0,0:30:31.76,0:30:33.62,Chinese,,0,0,0,,我正在检查它是否小于零
 Dialogue: 0,0:30:37.20,0:30:43.72,English,,0,0,0,,Oh yeah that probably that should be normally the convention is to return non zero so you're right that
-Dialogue: 0,0:30:37.20,0:30:43.72,Chinese,,0,0,0,,哦，是的，通常情况应该通常是返回非零，所以你是对的
+Dialogue: 0,0:30:37.20,0:30:43.72,Chinese,,0,0,0,,哦，是的，通常情况应该通常是返回非零，你是对的
 Dialogue: 0,0:30:44.82,0:30:49.68,English,,0,0,0,,It's not a hard and fast rule but that's typically the convention so I guess it should be exit one
-Dialogue: 0,0:30:44.82,0:30:49.68,Chinese,,0,0,0,,这不是一个硬性规则，但这通常是惯例，所以我想它应该退出一个
+Dialogue: 0,0:30:44.82,0:30:49.68,Chinese,,0,0,0,,这不是一个硬性规则，但这通常是惯例，我想它应该退出一个
 Dialogue: 0,0:30:54.04,0:30:56.22,English,,0,0,0,,So what we'll do to simplify this
 Dialogue: 0,0:30:54.04,0:30:56.22,Chinese,,0,0,0,,那么我们要做些什么来简化这一点
 Dialogue: 0,0:30:56.76,0:31:00.19,English,,0,0,0,,In the code that we present to you and in the code that we present you in the book
@@ -703,7 +703,7 @@ Dialogue: 0,0:31:16.98,0:31:23.12,Chinese,,0,0,0,,将打印一条消息，我们
 Dialogue: 0,0:31:23.46,0:31:30.96,English,,0,0,0,,And so then in the code we can replace that body of that if statement with just a single line
 Dialogue: 0,0:31:23.46,0:31:30.96,Chinese,,0,0,0,,然后在代码中我们可以用一行替换if语句的主体
 Dialogue: 0,0:31:31.36,0:31:34.00,English,,0,0,0,,Okay so that makes the code a little tighter
-Dialogue: 0,0:31:31.36,0:31:34.00,Chinese,,0,0,0,,好的，这样可以使代码更紧凑
+Dialogue: 0,0:31:31.36,0:31:34.00,Chinese,,0,0,0,,这样可以使代码更紧凑
 Dialogue: 0,0:31:34.56,0:31:38.52,English,,0,0,0,,But we'll go even further than that and we'll define these wrappers
 Dialogue: 0,0:31:34.56,0:31:38.52,Chinese,,0,0,0,,但我们会比这更进一步，我们将定义这些包装器
 Dialogue: 0,0:31:38.52,0:31:44.80,English,,0,0,0,,Which were pioneered by a great technical writer named W.Richards Stevens
@@ -719,29 +719,29 @@ Dialogue: 0,0:32:02.64,0:32:08.98,Chinese,,0,0,0,,然后这个包装器做的是
 Dialogue: 0,0:32:09.12,0:32:14.54,English,,0,0,0,,And then if there's no error returns what the original function would have returned
 Dialogue: 0,0:32:09.12,0:32:14.54,Chinese,,0,0,0,,然后，如果没有错误返回，原始函数将返回的内容
 Dialogue: 0,0:32:15.42,0:32:20.80,English,,0,0,0,,So the behavior of this wrapper is identical to the wrapped function
-Dialogue: 0,0:32:15.42,0:32:20.80,Chinese,,0,0,0,,所以这个包装器的行为与包装函数相同
+Dialogue: 0,0:32:15.42,0:32:20.80,Chinese,,0,0,0,,这个包装器的行为与包装函数相同
 Dialogue: 0,0:32:21.20,0:32:22.28,English,,0,0,0,,If there's not an error
 Dialogue: 0,0:32:21.20,0:32:22.28,Chinese,,0,0,0,,如果没有错误
 Dialogue: 0,0:32:22.86,0:32:27.10,English,,0,0,0,,Okay and if there is an error then it deals with it somehow and prints a message
 Dialogue: 0,0:32:22.86,0:32:27.10,Chinese,,0,0,0,,好吧，如果有错误，那么它以某种方式处理它并打印一条消息
 Dialogue: 0,0:32:27.52,0:32:32.92,English,,0,0,0,,And so then this allows us to make our code really compact without violating this
-Dialogue: 0,0:32:27.52,0:32:32.92,Chinese,,0,0,0,,因此，这使我们能够在不违反此规范的情况下使代码真正紧凑
+Dialogue: 0,0:32:27.52,0:32:32.92,Chinese,,0,0,0,,这使我们能够在不违反此规范的情况下使代码真正紧凑
 Dialogue: 0,0:32:33.52,0:32:36.38,English,,0,0,0,,Hard and fast rule that we have to check for errors
 Dialogue: 0,0:32:33.52,0:32:36.38,Chinese,,0,0,0,,我们必须检查错误的硬性规则
 Dialogue: 0,0:32:40.34,0:32:44.64,English,,0,0,0,,Okay the simplest function process control functions are
-Dialogue: 0,0:32:40.34,0:32:44.64,Chinese,,0,0,0,,好的，最简单的功能过程控制功能是
+Dialogue: 0,0:32:40.34,0:32:44.64,Chinese,,0,0,0,,最简单的功能过程控制功能是
 Dialogue: 0,0:32:45.08,0:32:48.96,English,,0,0,0,,Functions that allow you to get the pid for the current process which is getpid
 Dialogue: 0,0:32:45.08,0:32:48.96,Chinese,,0,0,0,,getpid函数允许你获取当前进程的pid
 Dialogue: 0,0:32:49.66,0:32:54.58,English,,0,0,0,,Or the the processor idea of you if the parent process that created the current process
 Dialogue: 0,0:32:49.66,0:32:54.58,Chinese,,0,0,0,,或者是处理器概念中的，创建当前进程的父进程
 Dialogue: 0,0:32:55.26,0:33:00.58,English,,0,0,0,,Okay so this these take no arguments and they return an integer which is a process id
-Dialogue: 0,0:32:55.26,0:33:00.58,Chinese,,0,0,0,,好的，所以这些不带参数，它们返回一个整数，这是一个进程ID
+Dialogue: 0,0:32:55.26,0:33:00.58,Chinese,,0,0,0,,这些不带参数，它们返回一个整数，这是一个进程ID
 Dialogue: 0,0:33:05.20,0:33:09.06,English,,0,0,0,,Now Linux provides ways to create and terminate processes
 Dialogue: 0,0:33:05.20,0:33:09.06,Chinese,,0,0,0,,现在 Linux 提供了创建和终止进程的方法
 Dialogue: 0,0:33:09.64,0:33:17.68,English,,0,0,0,,And from a programmers perspective we can think of a process as being in one of three states running
 Dialogue: 0,0:33:09.64,0:33:17.68,Chinese,,0,0,0,,从程序员的角度来看，我们可以将进程视为处于三种运行状态之一
 Dialogue: 0,0:33:17.76,0:33:22.06,English,,0,0,0,,So in this case the process is actually running and executes instructions
-Dialogue: 0,0:33:17.76,0:33:22.06,Chinese,,0,0,0,,因此，在这种情况下，该进程实际上正在运行并执行指令
+Dialogue: 0,0:33:17.76,0:33:22.06,Chinese,,0,0,0,,在这种情况下，该进程实际上正在运行并执行指令
 Dialogue: 0,0:33:22.68,0:33:25.74,English,,0,0,0,,Or it can be scheduled
 Dialogue: 0,0:33:22.68,0:33:25.74,Chinese,,0,0,0,,或者它可以安排
 Dialogue: 0,0:33:25.74,0:33:28.88,English,,0,0,0,,Maybe it's not running but it can be scheduled at a later time
@@ -753,7 +753,7 @@ Dialogue: 0,0:33:33.98,0:33:39.36,Chinese,,0,0,0,,它可以被停止，这意味
 Dialogue: 0,0:33:40.68,0:33:42.80,English,,0,0,0,,And won't be scheduled until further notice
 Dialogue: 0,0:33:40.68,0:33:42.80,Chinese,,0,0,0,,并且在进一步通知之前不会调度
 Dialogue: 0,0:33:42.82,0:33:46.10,English,,0,0,0,,So we'll see how this works when we study signals in the next lecture
-Dialogue: 0,0:33:42.82,0:33:46.10,Chinese,,0,0,0,,因此，当我们在下一讲课中研究信号时，我们将看到它是如何工作的
+Dialogue: 0,0:33:42.82,0:33:46.10,Chinese,,0,0,0,,当我们在下一讲课中研究信号时，我们将看到它是如何工作的
 Dialogue: 0,0:33:46.28,0:33:51.28,English,,0,0,0,,But usually a process is stopped because it receives a certain kind of signal
 Dialogue: 0,0:33:46.28,0:33:51.28,Chinese,,0,0,0,,但通常一个进程会停止，是因为它会收到某种信号
 Dialogue: 0,0:33:51.78,0:33:55.76,English,,0,0,0,,And then that the process becomes stopped in ways it won't be executed
@@ -763,19 +763,19 @@ Dialogue: 0,0:33:56.42,0:34:02.46,Chinese,,0,0,0,,在你明确告知其调度之
 Dialogue: 0,0:34:02.88,0:34:06.60,English,,0,0,0,,Or process can be terminated which means it stopped permanently
 Dialogue: 0,0:34:02.88,0:34:06.60,Chinese,,0,0,0,,或者可以终止进程，这意味着它永久停止
 Dialogue: 0,0:34:06.84,0:34:08.94,English,,0,0,0,,Okay so it'll never be scheduled again it's done
-Dialogue: 0,0:34:06.84,0:34:08.94,Chinese,,0,0,0,,好的，所以它永远不会再被安排完成了
+Dialogue: 0,0:34:06.84,0:34:08.94,Chinese,,0,0,0,,它永远不会再被安排完成了
 Dialogue: 0,0:34:11.58,0:34:14.80,English,,0,0,0,,Now a process can be terminated for one of three reasons
 Dialogue: 0,0:34:11.58,0:34:14.80,Chinese,,0,0,0,,现在可以通过三个原因之一终止进程
 Dialogue: 0,0:34:15.48,0:34:20.26,English,,0,0,0,,So one it receives a signal whose default action is to terminate it
-Dialogue: 0,0:34:15.48,0:34:20.26,Chinese,,0,0,0,,因此，它接收一个信号，其默认操作是终止它
+Dialogue: 0,0:34:15.48,0:34:20.26,Chinese,,0,0,0,,它接收一个信号，其默认操作是终止它
 Dialogue: 0,0:34:20.86,0:34:24.86,English,,0,0,0,,Or your program returns from the main routine
 Dialogue: 0,0:34:20.86,0:34:24.86,Chinese,,0,0,0,,或者你的程序从主程序返回
 Dialogue: 0,0:34:25.16,0:34:28.84,English,,0,0,0,,So you know you can...if you know the definition for main is int
-Dialogue: 0,0:34:25.16,0:34:28.84,Chinese,,0,0,0,,所以你知道你可以...如果你知道 main 的定义类型是int
+Dialogue: 0,0:34:25.16,0:34:28.84,Chinese,,0,0,0,,你知道你可以...如果你知道 main 的定义类型是int
 Dialogue: 0,0:34:30.02,0:34:31.82,English,,0,0,0,,See main routines always return an int
 Dialogue: 0,0:34:30.02,0:34:31.82,Chinese,,0,0,0,,看主程序总是返回一个 int
 Dialogue: 0,0:34:32.78,0:34:35.22,English,,0,0,0,,So you can return from main and that will terminate your
-Dialogue: 0,0:34:32.78,0:34:35.22,Chinese,,0,0,0,,所以你可以从 main 返回，这将终止你的
+Dialogue: 0,0:34:32.78,0:34:35.22,Chinese,,0,0,0,,你可以从 main 返回，这将终止你的
 Dialogue: 0,0:34:35.74,0:34:40.52,English,,0,0,0,,Event it will terminate the process or you can explicitly call the exit function
 Dialogue: 0,0:34:35.74,0:34:40.52,Chinese,,0,0,0,,事件它将终止进程，或者你可以显式调用 exit 函数
 Dialogue: 0,0:34:41.96,0:34:49.06,English,,0,0,0,,The exit function exits the program with an exit status of the of its argument
@@ -795,9 +795,9 @@ Dialogue: 0,0:35:09.44,0:35:13.96,Chinese,,0,0,0,,你会发现这是所有这些
 Dialogue: 0,0:35:14.54,0:35:18.90,English,,0,0,0,,That they normally functions you call them once and then they return once
 Dialogue: 0,0:35:14.54,0:35:18.90,Chinese,,0,0,0,,它们通常起作用，你只调用一次，然后它们返回一次
 Dialogue: 0,0:35:19.54,0:35:22.50,English,,0,0,0,,Okay but exit you call once and then it never returns
-Dialogue: 0,0:35:19.54,0:35:22.50,Chinese,,0,0,0,,好的，但退出你一次，然后它永远不会返回
+Dialogue: 0,0:35:19.54,0:35:22.50,Chinese,,0,0,0,,但退出你一次，然后它永远不会返回
 Dialogue: 0,0:35:23.32,0:35:27.46,English,,0,0,0,,Okay so that's a little unusual
-Dialogue: 0,0:35:23.32,0:35:27.46,Chinese,,0,0,0,,好的，这有点不寻常
+Dialogue: 0,0:35:23.32,0:35:27.46,Chinese,,0,0,0,,这有点不寻常
 Dialogue: 0,0:35:29.14,0:35:34.02,English,,0,0,0,,Now a parent process can create a child process by calling the fork function
 Dialogue: 0,0:35:29.14,0:35:34.02,Chinese,,0,0,0,,现在，父进程可以通过调用 fork 函数来创建子进程
 Dialogue: 0,0:35:35.86,0:35:39.26,English,,0,0,0,,So fork takes no arguments
@@ -817,7 +817,7 @@ Dialogue: 0,0:36:09.82,0:36:11.90,Chinese,,0,0,0,,对于子进程，它返回0
 Dialogue: 0,0:36:13.12,0:36:16.52,English,,0,0,0,,To the parent return it returns to the child's process id
 Dialogue: 0,0:36:13.12,0:36:16.52,Chinese,,0,0,0,,对于父进程返回，它返回子进程的id
 Dialogue: 0,0:36:21.86,0:36:26.12,English,,0,0,0,,Okay the child gets an identical copy of the parents virtual address space
-Dialogue: 0,0:36:21.86,0:36:26.12,Chinese,,0,0,0,,好的，子进程获得父进程虚拟地址空间的相同副本
+Dialogue: 0,0:36:21.86,0:36:26.12,Chinese,,0,0,0,,子进程获得父进程虚拟地址空间的相同副本
 Dialogue: 0,0:36:26.94,0:36:29.99,English,,0,0,0,,But separate right there they're distinct
 Dialogue: 0,0:36:26.94,0:36:29.99,Chinese,,0,0,0,,但在那里它们是截然不同的
 Dialogue: 0,0:36:30.86,0:36:37.36,English,,0,0,0,,But immediately after the fork returns the addresses the address space is identical
@@ -829,15 +829,15 @@ Dialogue: 0,0:36:44.22,0:36:50.10,Chinese,,0,0,0,,一切都是相同的，子进
 Dialogue: 0,0:36:51.86,0:36:56.98,English,,0,0,0,,The child gets identical copies of the parents open open file descriptors
 Dialogue: 0,0:36:51.86,0:36:56.98,Chinese,,0,0,0,,子进程获得父进程打开文件描述符的相同副本
 Dialogue: 0,0:36:57.02,0:37:04.16,English,,0,0,0,,So the child has access to any open files including like standard in and standard out that the parent had
-Dialogue: 0,0:36:57.02,0:37:04.16,Chinese,,0,0,0,,因此，子进程可以访问任何已打开的文件，包括父进程拥有的标准输入和标准输出
+Dialogue: 0,0:36:57.02,0:37:04.16,Chinese,,0,0,0,,子进程可以访问任何已打开的文件，包括父进程拥有的标准输入和标准输出
 Dialogue: 0,0:37:05.60,0:37:09.50,English,,0,0,0,,And the only difference is that the child gets a different process id than the parent
 Dialogue: 0,0:37:05.60,0:37:09.50,Chinese,,0,0,0,,唯一的区别是子进程获得的进程ID与父进程不同
 Dialogue: 0,0:37:10.88,0:37:12.78,English,,0,0,0,,So fork is really strange
-Dialogue: 0,0:37:10.88,0:37:12.78,Chinese,,0,0,0,,所以 fork 很奇怪
+Dialogue: 0,0:37:10.88,0:37:12.78,Chinese,,0,0,0,, fork 很奇怪
 Dialogue: 0,0:37:13.66,0:37:19.02,English,,0,0,0,,Because it's called once,but returns twice once, in the parent and once in the child
 Dialogue: 0,0:37:13.66,0:37:19.02,Chinese,,0,0,0,,因为它被调用一次，但返回两次，在父进程中返回，在子进程中也返回
 Dialogue: 0,0:37:21.56,0:37:23.04,English,,0,0,0,,So here's an example of this
-Dialogue: 0,0:37:21.56,0:37:23.04,Chinese,,0,0,0,,所以这是一个例子
+Dialogue: 0,0:37:21.56,0:37:23.04,Chinese,,0,0,0,,这是一个例子
 Dialogue: 0,0:37:25.94,0:37:34.66,English,,0,0,0,,Here's...this is an example program, it has a local variable called x on the stack initialized to 1
 Dialogue: 0,0:37:25.94,0:37:34.66,Chinese,,0,0,0,,这是......这是一个示例程序，它在堆栈上有一个名为 x 的局部变量，初始化为1
 Dialogue: 0,0:37:36.62,0:37:48.60,English,,0,0,0,,And then it calls fork and fork creates the child and returns a value to that both the parent and the child
@@ -845,17 +845,17 @@ Dialogue: 0,0:37:36.62,0:37:48.60,Chinese,,0,0,0,,然后调用 fork ，fork 创�
 Dialogue: 0,0:37:50.56,0:37:55.84,English,,0,0,0,,The only way we can distinguish whether we're executing in the parent or the child is to check that return value
 Dialogue: 0,0:37:50.56,0:37:55.84,Chinese,,0,0,0,,我们可以区分我们在父项或子项中执行的唯一方法是检查返回值
 Dialogue: 0,0:37:56.84,0:38:00.02,English,,0,0,0,,Okay so here if the process id if pid == 0
-Dialogue: 0,0:37:56.84,0:38:00.02,Chinese,,0,0,0,,好的，所以如果进程id为pid == 0
+Dialogue: 0,0:37:56.84,0:38:00.02,Chinese,,0,0,0,,如果进程id为pid == 0
 Dialogue: 0,0:38:00.52,0:38:02.02,English,,0,0,0,,Then we're executing in the child
 Dialogue: 0,0:38:00.52,0:38:02.02,Chinese,,0,0,0,,然后我们在子进程上执行
 Dialogue: 0,0:38:02.74,0:38:14.10,English,,0,0,0,,Now remember the child got exactly the same has exactly the same memory and encode is the parent
 Dialogue: 0,0:38:02.74,0:38:14.10,Chinese,,0,0,0,,现在记住，子进程得到和父进程完全相同的内存和代码
 Dialogue: 0,0:38:15.14,0:38:18.46,English,,0,0,0,,So x in the child is 1
-Dialogue: 0,0:38:15.14,0:38:18.46,Chinese,,0,0,0,,所以子进程的 x 是1
+Dialogue: 0,0:38:15.14,0:38:18.46,Chinese,,0,0,0,,子进程的 x 是1
 Dialogue: 0,0:38:18.86,0:38:25.20,English,,0,0,0,,So when we print this message from the child,we increment x and then print this message
-Dialogue: 0,0:38:18.86,0:38:25.20,Chinese,,0,0,0,,因此，当我们从子进程打印此消息时，我们增加x然后打印此消息
+Dialogue: 0,0:38:18.86,0:38:25.20,Chinese,,0,0,0,,当我们从子进程打印此消息时，我们增加x然后打印此消息
 Dialogue: 0,0:38:25.80,0:38:29.52,English,,0,0,0,,So the child will print 1+1=2
-Dialogue: 0,0:38:25.80,0:38:29.52,Chinese,,0,0,0,,所以子进程会打印 1 + 1 = 2
+Dialogue: 0,0:38:25.80,0:38:29.52,Chinese,,0,0,0,,子进程会打印 1 + 1 = 2
 Dialogue: 0,0:38:30.52,0:38:31.56,English,,0,0,0,,And then exit
 Dialogue: 0,0:38:30.52,0:38:31.56,Chinese,,0,0,0,,然后退出
 Dialogue: 0,0:38:33.60,0:38:36.40,English,,0,0,0,,In the parent when we check that this process id
@@ -863,13 +863,13 @@ Dialogue: 0,0:38:33.60,0:38:36.40,Chinese,,0,0,0,,在父进程中我们检查此
 Dialogue: 0,0:38:36.40,0:38:39.96,English,,0,0,0,,It's going to be nonzero because it's the process id of the child
 Dialogue: 0,0:38:36.40,0:38:39.96,Chinese,,0,0,0,,它将是非零的，因为它是子进程的​​进程ID
 Dialogue: 0,0:38:40.56,0:38:46.52,English,,0,0,0,,So in this case...so the parent won't execute this the body of this conditional
-Dialogue: 0,0:38:40.56,0:38:46.52,Chinese,,0,0,0,,所以在这种情况下......所以父进程不会执行这个条件的主体
+Dialogue: 0,0:38:40.56,0:38:46.52,Chinese,,0,0,0,,在这种情况下......父进程不会执行这个条件的主体
 Dialogue: 0,0:38:47.28,0:38:49.60,English,,0,0,0,,So the parent will execute this printf
-Dialogue: 0,0:38:47.28,0:38:49.60,Chinese,,0,0,0,,所以父级将执行此 printf
+Dialogue: 0,0:38:47.28,0:38:49.60,Chinese,,0,0,0,,父级将执行此 printf
 Dialogue: 0,0:38:50.20,0:38:53.00,English,,0,0,0,,And in the parent we decrement x before we print it
 Dialogue: 0,0:38:50.20,0:38:53.00,Chinese,,0,0,0,,在父进程中，我们在打印之前递减 x
 Dialogue: 0,0:38:53.46,0:38:57.18,English,,0,0,0,,So the parent prints out 1-1 is 0
-Dialogue: 0,0:38:53.46,0:38:57.18,Chinese,,0,0,0,,所以父打印出的 1-1 是 0
+Dialogue: 0,0:38:53.46,0:38:57.18,Chinese,,0,0,0,,父打印出的 1-1 是 0
 Dialogue: 0,0:38:58.84,0:39:05.04,English,,0,0,0,,Now there's no guarantee we have no guarantee whether the child or the parent executes first
 Dialogue: 0,0:38:58.84,0:39:05.04,Chinese,,0,0,0,,现在无法保证，我们无法保证子进程或父进程是先执行
 Dialogue: 0,0:39:05.04,0:39:07.46,English,,0,0,0,,It could at when the fork
@@ -877,7 +877,7 @@ Dialogue: 0,0:39:05.04,0:39:07.46,Chinese,,0,0,0,,它可以在 fork 时
 Dialogue: 0,0:39:08.34,0:39:12.46,English,,0,0,0,,When the fork returns the kernel may decide to schedule the child first
 Dialogue: 0,0:39:08.34,0:39:12.46,Chinese,,0,0,0,,当 fork 返回时，内核可能会决定先安排子进程
 Dialogue: 0,0:39:13.70,0:39:18.40,English,,0,0,0,,Okay in which case this code in the body of the conditional would run
-Dialogue: 0,0:39:13.70,0:39:18.40,Chinese,,0,0,0,,好的，在这种情况下，条件体中的代码将运行
+Dialogue: 0,0:39:13.70,0:39:18.40,Chinese,,0,0,0,,在这种情况下，条件体中的代码将运行
 Dialogue: 0,0:39:18.96,0:39:22.20,English,,0,0,0,,Or it may decide to run the parent first okay
 Dialogue: 0,0:39:18.96,0:39:22.20,Chinese,,0,0,0,,或者它可能决定首先运行父进程
 Dialogue: 0,0:39:23.00,0:39:28.06,English,,0,0,0,,And there's no way to predict and you it's is wrong,it's an error to make any assumption
@@ -899,15 +899,15 @@ Dialogue: 0,0:40:04.52,0:40:10.88,Chinese,,0,0,0,,好吧就像你说的 forks (�
 Dialogue: 0,0:40:11.12,0:40:14.52,English,,0,0,0,,And time to sin especially if they're nested or you call them multiple times
 Dialogue: 0,0:40:11.12,0:40:14.52,Chinese,,0,0,0,,还有随着时间，特别是如果它们是嵌套的，或者你多次调用它们
 Dialogue: 0,0:40:15.12,0:40:24.54,English,,0,0,0,,So we use a tool called the process graph to capture sort of what could happen when we call forks
-Dialogue: 0,0:40:15.12,0:40:24.54,Chinese,,0,0,0,,因此，我们使用一种称为进程图的工具来捕捉我们调用 forks 时可能发生的情况
+Dialogue: 0,0:40:15.12,0:40:24.54,Chinese,,0,0,0,,我们使用一种称为进程图的工具来捕捉我们调用 forks 时可能发生的情况
 Dialogue: 0,0:40:24.66,0:40:30.18,English,,0,0,0,,Right we can't make any assumption about the ordering of of different processes
 Dialogue: 0,0:40:24.66,0:40:30.18,Chinese,,0,0,0,,对，我们不能对不同过程的排序做出任何假设
 Dialogue: 0,0:40:30.50,0:40:35.88,English,,0,0,0,,But we can capture the partial ordering of events using this tool called a process graph
 Dialogue: 0,0:40:30.50,0:40:35.88,Chinese,,0,0,0,,但我们可以使用称为进程图的工具捕获事件的部分排序
 Dialogue: 0,0:40:36.86,0:40:41.20,English,,0,0,0,,So what we'll do is we'll let each vertex correspond to the execution of a statement
-Dialogue: 0,0:40:36.86,0:40:41.20,Chinese,,0,0,0,,所以我们要做的是让每个顶点对应一个语句的执行
+Dialogue: 0,0:40:36.86,0:40:41.20,Chinese,,0,0,0,,我们要做的是让每个顶点对应一个语句的执行
 Dialogue: 0,0:40:42.06,0:40:46.84,English,,0,0,0,,And then an edge is that happens before relation so a happens before b
-Dialogue: 0,0:40:42.06,0:40:46.84,Chinese,,0,0,0,,然后边缘是在关系之前发生的，所以 a 在 b 之前发生
+Dialogue: 0,0:40:42.06,0:40:46.84,Chinese,,0,0,0,,然后边缘是在关系之前发生的， a 在 b 之前发生
 Dialogue: 0,0:40:47.38,0:40:50.16,English,,0,0,0,,And we will label edges with current values of variables
 Dialogue: 0,0:40:47.38,0:40:50.16,Chinese,,0,0,0,,我们将使用当前变量值标记边
 Dialogue: 0,0:40:50.94,0:40:52.94,English,,0,0,0,,If we have a printf vertices
@@ -917,7 +917,7 @@ Dialogue: 0,0:40:53.38,0:40:57.44,Chinese,,0,0,0,,打印的 x 对应于printf，
 Dialogue: 0,0:40:58.28,0:41:02.38,English,,0,0,0,,And then the every graph starts with a vertex with no edges
 Dialogue: 0,0:40:58.28,0:41:02.38,Chinese,,0,0,0,,然后每个图形都以没有入边的顶点开始
 Dialogue: 0,0:41:03.56,0:41:07.28,English,,0,0,0,,So given this graph then any topological sort of the graph represents
-Dialogue: 0,0:41:03.56,0:41:07.28,Chinese,,0,0,0,,因此，给定此图，然后任何拓扑类型的图代表着
+Dialogue: 0,0:41:03.56,0:41:07.28,Chinese,,0,0,0,,给定此图，然后任何拓扑类型的图代表着
 Dialogue: 0,0:41:07.58,0:41:11.98,English,,0,0,0,,Some feasible total ordering of events
 Dialogue: 0,0:41:07.58,0:41:11.98,Chinese,,0,0,0,,一些可行的事件总排序
 Dialogue: 0,0:41:13.08,0:41:17.30,English,,0,0,0,,And by topological sort we mean a total ordering of the vertices
@@ -925,7 +925,7 @@ Dialogue: 0,0:41:13.08,0:41:17.30,Chinese,,0,0,0,,通过拓扑排序，我们指
 Dialogue: 0,0:41:17.40,0:41:19.98,English,,0,0,0,,Where all the edges go from left to right
 Dialogue: 0,0:41:17.40,0:41:19.98,Chinese,,0,0,0,,所有边按照从左到右的顺序
 Dialogue: 0,0:41:22.18,0:41:24.82,English,,0,0,0,,Okay so let's look at how this would work for our example program
-Dialogue: 0,0:41:22.18,0:41:24.82,Chinese,,0,0,0,,好的，让我们来看看它如何适用于我们的示例程序
+Dialogue: 0,0:41:22.18,0:41:24.82,Chinese,,0,0,0,,让我们来看看它如何适用于我们的示例程序
 Dialogue: 0,0:41:27.04,0:41:31.74,English,,0,0,0,,Here we have the parent initially x==1
 Dialogue: 0,0:41:27.04,0:41:31.74,Chinese,,0,0,0,,这里我们的父进程最初是 x == 1
 Dialogue: 0,0:41:32.60,0:41:34.12,English,,0,0,0,,And then the parent calls fork
@@ -937,35 +937,35 @@ Dialogue: 0,0:41:40.88,0:41:48.76,Chinese,,0,0,0,,子进程打印...父项和子
 Dialogue: 0,0:41:49.38,0:41:50.46,English,,0,0,0,,And then they both exit
 Dialogue: 0,0:41:49.38,0:41:50.46,Chinese,,0,0,0,,然后他们都退出了
 Dialogue: 0,0:41:51.44,0:41:52.84,English,,0,0,0,,Ok so you can think of these
-Dialogue: 0,0:41:51.44,0:41:52.84,Chinese,,0,0,0,,好的，你可以想到这些
+Dialogue: 0,0:41:51.44,0:41:52.84,Chinese,,0,0,0,,你可以想到这些
 Dialogue: 0,0:41:54.76,0:42:01.94,English,,0,0,0,,As happening...so these happen concurrently right which means they can be interleaved in any way the
-Dialogue: 0,0:41:54.76,0:42:01.94,Chinese,,0,0,0,,正如所发生的......所以这些同时发生，这意味着它们可以以任何方式交错
+Dialogue: 0,0:41:54.76,0:42:01.94,Chinese,,0,0,0,,正如所发生的......这些同时发生，这意味着它们可以以任何方式交错
 Dialogue: 0,0:42:01.94,0:42:07.84,English,,0,0,0,,So the topological sort of this graph will tell us a feasible
-Dialogue: 0,0:42:01.94,0:42:07.84,Chinese,,0,0,0,,所以这个图的拓扑类型将告诉我们一个可行的
+Dialogue: 0,0:42:01.94,0:42:07.84,Chinese,,0,0,0,,这个图的拓扑类型将告诉我们一个可行的
 Dialogue: 0,0:42:08.48,0:42:11.06,English,,0,0,0,,What's a feasible? What feasible inter leavings?
 Dialogue: 0,0:42:08.48,0:42:11.06,Chinese,,0,0,0,,什么是可行的？什么可能的交错？
 Dialogue: 0,0:42:14.26,0:42:18.96,English,,0,0,0,,Okay so we can...so if we real able the graph just to keep it simple
-Dialogue: 0,0:42:14.26,0:42:18.96,Chinese,,0,0,0,,好的，所以我们可以...所以如果我们真的能够让图表保持简单
+Dialogue: 0,0:42:14.26,0:42:18.96,Chinese,,0,0,0,,我们可以...如果我们真的能够让图表保持简单
 Dialogue: 0,0:42:18.96,0:42:22.68,English,,0,0,0,,So if we real able these edges with just single letters
-Dialogue: 0,0:42:18.96,0:42:22.68,Chinese,,0,0,0,,因此，如果我们只用一个字母就可以实现这些边缘
+Dialogue: 0,0:42:18.96,0:42:22.68,Chinese,,0,0,0,,如果我们只用一个字母就可以实现这些边缘
 Dialogue: 0,0:42:25.76,0:42:30.04,English,,0,0,0,,Then this total ordering abecfd
 Dialogue: 0,0:42:25.76,0:42:30.04,Chinese,,0,0,0,,然后这个总排序 abecfd
 Dialogue: 0,0:42:30.80,0:42:36.04,English,,0,0,0,,Represent is represents it's a topological sort and thus a feasible total ordering
-Dialogue: 0,0:42:30.80,0:42:36.04,Chinese,,0,0,0,,Represent表示它是拓扑排序，因此是可行的总排序
+Dialogue: 0,0:42:30.80,0:42:36.04,Chinese,,0,0,0,,Represent表示它是拓扑排序，是可行的总排序
 Dialogue: 0,0:42:36.56,0:42:40.40,English,,0,0,0,,So here we have a executing then b
-Dialogue: 0,0:42:36.56,0:42:40.40,Chinese,,0,0,0,,所以这里我们使 a 执行然后 b
+Dialogue: 0,0:42:36.56,0:42:40.40,Chinese,,0,0,0,,这里我们使 a 执行然后 b
 Dialogue: 0,0:42:41.60,0:42:43.36,English,,0,0,0,,Then e execute in the child
 Dialogue: 0,0:42:41.60,0:42:43.36,Chinese,,0,0,0,,然后 e 执行子进程
 Dialogue: 0,0:42:44.50,0:42:55.70,English,,0,0,0,,And then at this point the kernel decides to swap out,swap out e, swap out the child and now let the parent run
 Dialogue: 0,0:42:44.50,0:42:55.70,Chinese,,0,0,0,,然后在这一点上，内核决定换出，换出e，换掉子进程，现在让父进程运行
 Dialogue: 0,0:42:56.12,0:42:59.44,English,,0,0,0,,So the parent picks up and executes c
-Dialogue: 0,0:42:56.12,0:42:59.44,Chinese,,0,0,0,,所以父进程选择并执行c
+Dialogue: 0,0:42:56.12,0:42:59.44,Chinese,,0,0,0,,父进程选择并执行c
 Dialogue: 0,0:43:01.04,0:43:06.12,English,,0,0,0,,And then it gets rescheduled to chat then the child gets scheduled and executes f
 Dialogue: 0,0:43:01.04,0:43:06.12,Chinese,,0,0,0,,然后它被重新安排进行会话，然后子进程被安排并执行 f
 Dialogue: 0,0:43:06.54,0:43:09.48,English,,0,0,0,,And then the parent the parent runs and finally finishes
 Dialogue: 0,0:43:06.54,0:43:09.48,Chinese,,0,0,0,,然后是父进程运行，最后完成
 Dialogue: 0,0:43:10.18,0:43:12.76,English,,0,0,0,,Right so this is very unlikely that
-Dialogue: 0,0:43:10.18,0:43:12.76,Chinese,,0,0,0,,对，所以这是不太可能的
+Dialogue: 0,0:43:10.18,0:43:12.76,Chinese,,0,0,0,,对，这是不太可能的
 Dialogue: 0,0:43:13.28,0:43:20.20,English,,0,0,0,,It you only execute one instruction and then b,and then have a context switch but it's it's feasible
 Dialogue: 0,0:43:13.28,0:43:20.20,Chinese,,0,0,0,,它只执行一条指令然后执行 b，然后进行上下文切换，但这是可行的
 Dialogue: 0,0:43:20.98,0:43:22.45,English,,0,0,0,,Right because it represents
@@ -979,7 +979,7 @@ Dialogue: 0,0:43:35.66,0:43:39.48,Chinese,,0,0,0,,在这个总排序中，我们
 Dialogue: 0,0:43:40.30,0:43:43.26,English,,0,0,0,,And you can see that this that just can't happen right
 Dialogue: 0,0:43:40.30,0:43:43.26,Chinese,,0,0,0,,你可以看到，这是不可能发生的
 Dialogue: 0,0:43:43.26,0:43:47.96,English,,0,0,0,,So the edges on these the logical flow represented by this child
-Dialogue: 0,0:43:43.26,0:43:47.96,Chinese,,0,0,0,,所以这些逻辑流上的边由它们的子进程表示
+Dialogue: 0,0:43:43.26,0:43:47.96,Chinese,,0,0,0,,这些逻辑流上的边由它们的子进程表示
 Dialogue: 0,0:43:48.20,0:43:51.82,English,,0,0,0,,Have to occur in this order first e and then f right
 Dialogue: 0,0:43:48.20,0:43:51.82,Chinese,,0,0,0,,必须先按此顺序发生 e 然后再向右进行
 Dialogue: 0,0:43:51.92,0:43:59.92,English,,0,0,0,,By the just because f follows e in the code right that the compilers not
@@ -987,17 +987,17 @@ Dialogue: 0,0:43:51.92,0:43:59.92,Chinese,,0,0,0,,仅仅因为 f 在代码中跟
 Dialogue: 0,0:44:04.02,0:44:04.98,English,,0,0,0,,Going to it's not going to alter those
 Dialogue: 0,0:44:04.02,0:44:04.98,Chinese,,0,0,0,,它不会改变那些
 Dialogue: 0,0:44:07.06,0:44:09.64,English,,0,0,0,,Okay so what happens if now we have two consecutive forks
-Dialogue: 0,0:44:07.06,0:44:09.64,Chinese,,0,0,0,,好的，如果现在我们有两个连续的 forks 会发生什么
+Dialogue: 0,0:44:07.06,0:44:09.64,Chinese,,0,0,0,,如果现在我们有两个连续的 forks 会发生什么
 Dialogue: 0,0:44:13.46,0:44:17.56,English,,0,0,0,,Well let's draw the process graph will help us understand this
 Dialogue: 0,0:44:13.46,0:44:17.56,Chinese,,0,0,0,,那么让我们绘制流程图将有助于我们理解这一点
 Dialogue: 0,0:44:18.38,0:44:22.78,English,,0,0,0,,So in the parent we print L0  and then fork
-Dialogue: 0,0:44:18.38,0:44:22.78,Chinese,,0,0,0,,所以在父进程中我们打印 L0 然后fork
+Dialogue: 0,0:44:18.38,0:44:22.78,Chinese,,0,0,0,,在父进程中我们打印 L0 然后fork
 Dialogue: 0,0:44:23.76,0:44:26.48,English,,0,0,0,,And that creates a child and both
 Dialogue: 0,0:44:23.76,0:44:26.48,Chinese,,0,0,0,,这创造了一个子进程，
 Dialogue: 0,0:44:27.44,0:44:31.04,English,,0,0,0,,And so the fork returns to this printf in both the parent and the child
-Dialogue: 0,0:44:27.44,0:44:31.04,Chinese,,0,0,0,,因此fork在父级和子级中返回到此printf
+Dialogue: 0,0:44:27.44,0:44:31.04,Chinese,,0,0,0,,fork在父级和子级中返回到此printf
 Dialogue: 0,0:44:31.04,0:44:34.58,English,,0,0,0,,So they both the parent and the child print L1
-Dialogue: 0,0:44:31.04,0:44:34.58,Chinese,,0,0,0,,所以他们父进程和子进程都打印L1
+Dialogue: 0,0:44:31.04,0:44:34.58,Chinese,,0,0,0,,他们父进程和子进程都打印L1
 Dialogue: 0,0:44:36.86,0:44:39.40,English,,0,0,0,,And then both parent and child execute a fork
 Dialogue: 0,0:44:36.86,0:44:39.40,Chinese,,0,0,0,,然后父和子都执行fork
 Dialogue: 0,0:44:41.54,0:44:47.22,English,,0,0,0,,So that creates another child,that creates two more,now two children
@@ -1005,15 +1005,15 @@ Dialogue: 0,0:44:41.54,0:44:47.22,Chinese,,0,0,0,,这样就创造了另一个子
 Dialogue: 0,0:44:48.48,0:44:53.90,English,,0,0,0,,And then and so that returns to the printf which says bye
 Dialogue: 0,0:44:48.48,0:44:53.90,Chinese,,0,0,0,,然后又返回到输出 bye 的 printf
 Dialogue: 0,0:44:54.80,0:44:59.50,English,,0,0,0,,So the result of this of calling fork twice like this is that it creates four processes
-Dialogue: 0,0:44:54.80,0:44:59.50,Chinese,,0,0,0,,因此，调用 fork 两次这样的结果是它创建了四个进程
+Dialogue: 0,0:44:54.80,0:44:59.50,Chinese,,0,0,0,,调用 fork 两次这样的结果是它创建了四个进程
 Dialogue: 0,0:45:01.40,0:45:02.16,English,,0,0,0,,And you can
 Dialogue: 0,0:45:01.40,0:45:02.16,Chinese,,0,0,0,,你可以
 Dialogue: 0,0:45:02.80,0:45:06.66,English,,0,0,0,,And if it's confusing you can always work it out with the the process graph like this
 Dialogue: 0,0:45:02.80,0:45:06.66,Chinese,,0,0,0,,如果它令人困惑，你可以随时使用这样的流程图
 Dialogue: 0,0:45:07.18,0:45:11.84,English,,0,0,0,,Okay so we can see feasible and infeasible orderings
-Dialogue: 0,0:45:07.18,0:45:11.84,Chinese,,0,0,0,,好的，我们可以看到可行和不可行的排序
+Dialogue: 0,0:45:07.18,0:45:11.84,Chinese,,0,0,0,,我们可以看到可行和不可行的排序
 Dialogue: 0,0:45:12.66,0:45:14.68,English,,0,0,0,,So this one's feasible take my word for
-Dialogue: 0,0:45:12.66,0:45:14.68,Chinese,,0,0,0,,所以这个可行我的意思
+Dialogue: 0,0:45:12.66,0:45:14.68,Chinese,,0,0,0,,这个可行我的意思
 Dialogue: 0,0:45:14.70,0:45:16.92,English,,0,0,0,,This one is infeasible
 Dialogue: 0,0:45:14.70,0:45:16.92,Chinese,,0,0,0,,这个是不可行的
 Dialogue: 0,0:45:17.62,0:45:19.88,English,,0,0,0,,And let's see why so L0
@@ -1025,21 +1025,21 @@ Dialogue: 0,0:45:28.56,0:45:29.66,Chinese,,0,0,0,,好吧，这是不可行的
 Dialogue: 0,0:45:29.82,0:45:34.82,English,,0,0,0,,If we drew out this process graph we'd have a backward edge
 Dialogue: 0,0:45:29.82,0:45:34.82,Chinese,,0,0,0,,如果我们绘制出这个流程图，我们就会有一个后边
 Dialogue: 0,0:45:38.38,0:45:41.47,English,,0,0,0,,Okay now what happens if we nest forks in the parent
-Dialogue: 0,0:45:38.38,0:45:41.47,Chinese,,0,0,0,,好的，如果我们在父进程中嵌套 forks 会发生什么
+Dialogue: 0,0:45:38.38,0:45:41.47,Chinese,,0,0,0,,如果我们在父进程中嵌套 forks 会发生什么
 Dialogue: 0,0:45:41.88,0:45:45.60,English,,0,0,0,,Okay I'm not sure why you'd want to do this except maybe to torture 213 students
 Dialogue: 0,0:45:41.88,0:45:45.60,Chinese,,0,0,0,,好吧，我不知道你为什么要这样做，除非想要折磨213名学生
 Dialogue: 0,0:45:46.78,0:45:47.22,English,,0,0,0,,But
 Dialogue: 0,0:45:46.78,0:45:47.22,Chinese,,0,0,0,,但
 Dialogue: 0,0:45:50.80,0:45:53.50,English,,0,0,0,,So we can just work this out by drawing the process graph
-Dialogue: 0,0:45:50.80,0:45:53.50,Chinese,,0,0,0,,因此，我们可以通过绘制流程图来解决这个问题
+Dialogue: 0,0:45:50.80,0:45:53.50,Chinese,,0,0,0,,我们可以通过绘制流程图来解决这个问题
 Dialogue: 0,0:45:54.86,0:45:57.12,English,,0,0,0,,So here we have the parent it prints L0
-Dialogue: 0,0:45:54.86,0:45:57.12,Chinese,,0,0,0,,所以这里我们有父进程打印 L0
+Dialogue: 0,0:45:54.86,0:45:57.12,Chinese,,0,0,0,,这里我们有父进程打印 L0
 Dialogue: 0,0:45:57.76,0:46:01.04,English,,0,0,0,,And then it does a fork so that creates a child
 Dialogue: 0,0:45:57.76,0:46:01.04,Chinese,,0,0,0,,然后它做一个 fork ，以便创建一个子进程
 Dialogue: 0,0:46:04.02,0:46:09.74,English,,0,0,0,,So the child if fork is not equal to 0
-Dialogue: 0,0:46:04.02,0:46:09.74,Chinese,,0,0,0,,所以子进程如果 fork 不等于0
+Dialogue: 0,0:46:04.02,0:46:09.74,Chinese,,0,0,0,,子进程如果 fork 不等于0
 Dialogue: 0,0:46:10.86,0:46:13.82,English,,0,0,0,,Then we're in the parent right so this code executes in the parent
-Dialogue: 0,0:46:10.86,0:46:13.82,Chinese,,0,0,0,,然后我们在父权限中，所以此代码在父进程中执行
+Dialogue: 0,0:46:10.86,0:46:13.82,Chinese,,0,0,0,,然后我们在父权限中，此代码在父进程中执行
 Dialogue: 0,0:46:15.44,0:46:16.88,English,,0,0,0,,If fork is 0
 Dialogue: 0,0:46:15.44,0:46:16.88,Chinese,,0,0,0,,如果fork为0
 Dialogue: 0,0:46:17.74,0:46:21.14,English,,0,0,0,,Then we're executing the child and the child just prints by and then
@@ -1049,19 +1049,19 @@ Dialogue: 0,0:46:23.06,0:46:28.78,Chinese,,0,0,0,,然后终止它，最终终止
 Dialogue: 0,0:46:29.60,0:46:32.58,English,,0,0,0,,Think the function that called this function calls exit
 Dialogue: 0,0:46:29.60,0:46:32.58,Chinese,,0,0,0,,认为调用此函数的函数调用 exit
 Dialogue: 0,0:46:33.98,0:46:40.70,English,,0,0,0,,So the parent,so fork not equal to 0 indicates that this is the parent
-Dialogue: 0,0:46:33.98,0:46:40.70,Chinese,,0,0,0,,所以父，所以fork不等于0表示这是父
+Dialogue: 0,0:46:33.98,0:46:40.70,Chinese,,0,0,0,,父，fork不等于0表示这是父
 Dialogue: 0,0:46:42.26,0:46:46.00,English,,0,0,0,,So the parent prints L1 and then it does another fork
-Dialogue: 0,0:46:42.26,0:46:46.00,Chinese,,0,0,0,,所以父进程打印L1，然后再做另一个fork
+Dialogue: 0,0:46:42.26,0:46:46.00,Chinese,,0,0,0,,父进程打印L1，然后再做另一个fork
 Dialogue: 0,0:46:47.16,0:46:48.64,English,,0,0,0,,That fork creates a child
 Dialogue: 0,0:46:47.16,0:46:48.64,Chinese,,0,0,0,,那个 fork 创造了一个子进程
 Dialogue: 0,0:46:52.00,0:46:54.88,English,,0,0,0,,So if fork is not equal to 0
-Dialogue: 0,0:46:52.00,0:46:54.88,Chinese,,0,0,0,,所以如果 fork 不等于0
+Dialogue: 0,0:46:52.00,0:46:54.88,Chinese,,0,0,0,,如果 fork 不等于0
 Dialogue: 0,0:46:55.50,0:47:02.50,English,,0,0,0,,Then we're in the parent so the parent prints L2 and then exits this conditional and prints by
-Dialogue: 0,0:46:55.50,0:47:02.50,Chinese,,0,0,0,,然后我们在父进程那里，所以父进程打印L2然后退出这个条件判断，并打印
+Dialogue: 0,0:46:55.50,0:47:02.50,Chinese,,0,0,0,,然后我们在父进程那里，父进程打印L2然后退出这个条件判断，并打印
 Dialogue: 0,0:47:03.62,0:47:08.90,English,,0,0,0,,If fork returns 0 then that means we're executing the child
 Dialogue: 0,0:47:03.62,0:47:08.90,Chinese,,0,0,0,,如果 fork 返回0则表示我们正在执行子进程
 Dialogue: 0,0:47:08.96,0:47:12.60,English,,0,0,0,,So we don't execute this code we jump out of this conditional
-Dialogue: 0,0:47:08.96,0:47:12.60,Chinese,,0,0,0,,所以我们不执行这个代码，我们跳出这个条件
+Dialogue: 0,0:47:08.96,0:47:12.60,Chinese,,0,0,0,,我们不执行这个代码，我们跳出这个条件
 Dialogue: 0,0:47:12.98,0:47:15.32,English,,0,0,0,,And then the child just prints by
 Dialogue: 0,0:47:12.98,0:47:15.32,Chinese,,0,0,0,,然后子进程就打印了
 Dialogue: 0,0:47:16.32,0:47:16.72,English,,0,0,0,,Okay
@@ -1069,21 +1069,21 @@ Dialogue: 0,0:47:16.32,0:47:16.72,Chinese,,0,0,0,,好的
 Dialogue: 0,0:47:19.26,0:47:20.26,English,,0,0,0,,And we can
 Dialogue: 0,0:47:19.26,0:47:20.26,Chinese,,0,0,0,,我们可以
 Dialogue: 0,0:47:23.76,0:47:27.42,English,,0,0,0,,So this represents an infeasible output from this program
-Dialogue: 0,0:47:23.76,0:47:27.42,Chinese,,0,0,0,,所以这代表了该计划的不可行输出
+Dialogue: 0,0:47:23.76,0:47:27.42,Chinese,,0,0,0,,这代表了该计划的不可行输出
 Dialogue: 0,0:47:30.10,0:47:30.98,English,,0,0,0,,L0...
 Dialogue: 0,0:47:30.10,0:47:30.98,Chinese,,0,0,0,,L0 ......
 Dialogue: 0,0:47:32.74,0:47:36.02,English,,0,0,0,,So L0 followed by bye, that's feasible
-Dialogue: 0,0:47:32.74,0:47:36.02,Chinese,,0,0,0,,所以 L0 跟着再见，这是可行的
+Dialogue: 0,0:47:32.74,0:47:36.02,Chinese,,0,0,0,, L0 跟着再见，这是可行的
 Dialogue: 0,0:47:37.18,0:47:39.56,English,,0,0,0,,And then followed by L1 that's okay
 Dialogue: 0,0:47:37.18,0:47:39.56,Chinese,,0,0,0,,然后是 L1，那很好
 Dialogue: 0,0:47:42.58,0:47:45.32,English,,0,0,0,,And then the next bye is okay but it since
-Dialogue: 0,0:47:42.58,0:47:45.32,Chinese,,0,0,0,,然后下一个 bye 是好的，但从那以后
+Dialogue: 0,0:47:42.58,0:47:45.32,Chinese,,0,0,0,,然后下一个 bye 是但从那以后
 Dialogue: 0,0:47:45.80,0:47:51.86,English,,0,0,0,,We can't have this...we can't have this by proceeding this L2
 Dialogue: 0,0:47:45.80,0:47:51.86,Chinese,,0,0,0,,我们不能拥有这个...我们不能通过继续这个 L2
 Dialogue: 0,0:47:52.74,0:47:58.08,English,,0,0,0,,Because L2 will this printf will execute before this printf
 Dialogue: 0,0:47:52.74,0:47:58.08,Chinese,,0,0,0,,因为L2将在此 printf 之前执行此 printf
 Dialogue: 0,0:48:00.80,0:48:07.54,English,,0,0,0,,Okay and I'll let you work out this one as an exercise
-Dialogue: 0,0:48:00.80,0:48:07.54,Chinese,,0,0,0,,好的，我会让你把这个作为练习
+Dialogue: 0,0:48:00.80,0:48:07.54,Chinese,,0,0,0,,我会让你把这个作为练习
 Dialogue: 0,0:48:09.14,0:48:14.28,English,,0,0,0,,All right now when a process terminates for whatever reason
 Dialogue: 0,0:48:09.14,0:48:14.28,Chinese,,0,0,0,,当一个进程因任何原因终止时，
 Dialogue: 0,0:48:14.70,0:48:18.08,English,,0,0,0,,The system actually keeps it around for until it's reaped
@@ -1093,11 +1093,11 @@ Dialogue: 0,0:48:19.36,0:48:22.10,Chinese,,0,0,0,,直到它被父进程回收的
 Dialogue: 0,0:48:23.20,0:48:28.38,English,,0,0,0,,And the reason it does this is that the parent may want to know about the exit status of the child
 Dialogue: 0,0:48:23.20,0:48:28.38,Chinese,,0,0,0,,它这样做的原因是父进程可能想知道子进程的退出状态
 Dialogue: 0,0:48:28.40,0:48:30.56,English,,0,0,0,,So but if a parent creates a child
-Dialogue: 0,0:48:28.40,0:48:30.56,Chinese,,0,0,0,,所以，但如果父进程创建一个子进程
+Dialogue: 0,0:48:28.40,0:48:30.56,Chinese,,0,0,0,,但如果父进程创建一个子进程
 Dialogue: 0,0:48:31.04,0:48:35.90,English,,0,0,0,,It may want to wait for that child to finish and and check its exit status
 Dialogue: 0,0:48:31.04,0:48:35.90,Chinese,,0,0,0,,它可能希望等待该子进程完成并检查其退出状态
 Dialogue: 0,0:48:36.76,0:48:38.60,English,,0,0,0,,So when any process terminates
-Dialogue: 0,0:48:36.76,0:48:38.60,Chinese,,0,0,0,,所以当任何进程终止时
+Dialogue: 0,0:48:36.76,0:48:38.60,Chinese,,0,0,0,,当任何进程终止时
 Dialogue: 0,0:48:38.96,0:48:43.52,English,,0,0,0,,The system leaves that it, doesn't remove it entirely from the system
 Dialogue: 0,0:48:38.96,0:48:43.52,Chinese,,0,0,0,,系统离开它，不会完全从系统中删除它
 Dialogue: 0,0:48:43.74,0:48:46.96,English,,0,0,0,,It keeps it a little bit of state associated with that child
@@ -1107,7 +1107,7 @@ Dialogue: 0,0:48:47.40,0:48:50.88,Chinese,,0,0,0,,以子进程的退出状态的
 Dialogue: 0,0:48:51.54,0:48:55.74,English,,0,0,0,,And the in some other tables some other OS tables
 Dialogue: 0,0:48:51.54,0:48:55.74,Chinese,,0,0,0,,在其他一些表中还有一些其他 OS 表
 Dialogue: 0,0:48:56.70,0:49:00.38,English,,0,0,0,,So because this child that's terminated but it's not gone
-Dialogue: 0,0:48:56.70,0:49:00.38,Chinese,,0,0,0,,所以，因为这个子进程已经终止但它并没有消失
+Dialogue: 0,0:48:56.70,0:49:00.38,Chinese,,0,0,0,,因为这个子进程已经终止但它并没有消失
 Dialogue: 0,0:49:01.04,0:49:04.42,English,,0,0,0,,It they're called zombies so there's sort of half half-living half-dead
 Dialogue: 0,0:49:01.04,0:49:04.42,Chinese,,0,0,0,,它们被称为僵尸进程，半生半死
 Dialogue: 0,0:49:08.34,0:49:11.16,English,,0,0,0,,And so a process a zombie
@@ -1125,7 +1125,7 @@ Dialogue: 0,0:49:26.00,0:49:28.90,Chinese,,0,0,0,,然后内核删除僵尸进程
 Dialogue: 0,0:49:32.12,0:49:35.94,English,,0,0,0,,Now what if the parent doesn't reap it's one of its child zombies
 Dialogue: 0,0:49:32.12,0:49:35.94,Chinese,,0,0,0,,如果父进程没有回收它的子进程僵尸，怎么办呢
 Dialogue: 0,0:49:36.74,0:49:42.20,English,,0,0,0,,So if any parent if the parent terminates
-Dialogue: 0,0:49:36.74,0:49:42.20,Chinese,,0,0,0,,因此，如果父节点终止，
+Dialogue: 0,0:49:36.74,0:49:42.20,Chinese,,0,0,0,,如果父节点终止，
 Dialogue: 0,0:49:43.34,0:49:47.64,English,,0,0,0,,Then the system arranges for the very first process that existed in the system
 Dialogue: 0,0:49:43.34,0:49:47.64,Chinese,,0,0,0,,然后系统安排系统中存在的第一个进程
 Dialogue: 0,0:49:48.14,0:49:50.90,English,,0,0,0,,Called the init process which has a process id of one
@@ -1133,9 +1133,9 @@ Dialogue: 0,0:49:48.14,0:49:50.90,Chinese,,0,0,0,,进程ID为1的 init 进程
 Dialogue: 0,0:49:51.18,0:49:54.46,English,,0,0,0,,It arranges for the init process to reap that that child
 Dialogue: 0,0:49:51.18,0:49:54.46,Chinese,,0,0,0,,它安排 init 进程回收那个子进程
 Dialogue: 0,0:49:57.26,0:50:04.52,English,,0,0,0,,So there's so orphaned children will always be reaped by the init process
-Dialogue: 0,0:49:57.26,0:50:04.52,Chinese,,0,0,0,,因此，初始进程总是会回收这样的孤儿进程
+Dialogue: 0,0:49:57.26,0:50:04.52,Chinese,,0,0,0,,初始进程总是会回收这样的孤儿进程
 Dialogue: 0,0:50:04.92,0:50:10.04,English,,0,0,0,,So we only really have to worry about reaping zombies
-Dialogue: 0,0:50:04.92,0:50:10.04,Chinese,,0,0,0,,所以我们只需要担心回收僵尸
+Dialogue: 0,0:50:04.92,0:50:10.04,Chinese,,0,0,0,,我们只需要担心回收僵尸
 Dialogue: 0,0:50:10.54,0:50:16.68,English,,0,0,0,,In the case where we have long-running parents like shells or servers
 Dialogue: 0,0:50:10.54,0:50:16.68,Chinese,,0,0,0,,在我们有长期运行的父进程如shell或服务器的情况下
 Dialogue: 0,0:50:17.44,0:50:22.30,English,,0,0,0,,Because in that case a server may create millions of child processes
@@ -1151,7 +1151,7 @@ Dialogue: 0,0:50:34.20,0:50:37.02,Chinese,,0,0,0,,你可以得到它，这是一
 Dialogue: 0,0:50:37.92,0:50:43.60,English,,0,0,0,,If you don't...if you don't reap these zombie children that can eventually fill up the memory space and crash the kernel
 Dialogue: 0,0:50:37.92,0:50:43.60,Chinese,,0,0,0,,如果你不...如果你没有回收这些僵尸子进程，最终可能会填满内存空间并导致内核崩溃
 Dialogue: 0,0:50:48.84,0:50:52.32,English,,0,0,0,,So for cases where you have long-running programs
-Dialogue: 0,0:50:48.84,0:50:52.32,Chinese,,0,0,0,,因此，对于长期运行程序的情况
+Dialogue: 0,0:50:48.84,0:50:52.32,Chinese,,0,0,0,,对于长期运行程序的情况
 Dialogue: 0,0:50:52.32,0:50:56.48,English,,0,0,0,,Then we have to use wait or waitpid to reap the children
 Dialogue: 0,0:50:52.32,0:50:56.48,Chinese,,0,0,0,,然后我们必须使用 wait 或 waitpid 来回收子进程们
 Dialogue: 0,0:50:58.32,0:51:05.86,English,,0,0,0,,So let's look at an example,first let's look at an example of this zombie phenomenon
@@ -1163,9 +1163,9 @@ Dialogue: 0,0:51:10.14,0:51:17.18,Chinese,,0,0,0,,然后在子进程中我们打
 Dialogue: 0,0:51:18.24,0:51:22.48,English,,0,0,0,,Within the parent we print a message and then we go into an infinite loop
 Dialogue: 0,0:51:18.24,0:51:22.48,Chinese,,0,0,0,,在父进程内我们打印一条消息，然后我们进入一个无限循环
 Dialogue: 0,0:51:22.92,0:51:28.74,English,,0,0,0,,Okay so this is a parent that's that never reaps the child that it created
-Dialogue: 0,0:51:22.92,0:51:28.74,Chinese,,0,0,0,,好的，所以这是一个永远不会回收它创建的子进程的父进程
+Dialogue: 0,0:51:22.92,0:51:28.74,Chinese,,0,0,0,,这是一个永远不会回收它创建的子进程的父进程
 Dialogue: 0,0:51:30.00,0:51:34.18,English,,0,0,0,,So if we run this program called forks
-Dialogue: 0,0:51:30.00,0:51:34.18,Chinese,,0,0,0,,所以如果我们运行这个调用 forks 的程序
+Dialogue: 0,0:51:30.00,0:51:34.18,Chinese,,0,0,0,,如果我们运行这个调用 forks 的程序
 Dialogue: 0,0:51:36.20,0:51:38.32,English,,0,0,0,,You can see it prints these two messages
 Dialogue: 0,0:51:36.20,0:51:38.32,Chinese,,0,0,0,,你可以看到它打印这两条消息
 Dialogue: 0,0:51:39.92,0:51:44.98,English,,0,0,0,,The parent prints a message and the child prints a message and then
@@ -1173,59 +1173,59 @@ Dialogue: 0,0:51:39.92,0:51:44.98,Chinese,,0,0,0,,父进程打印一条消息，
 Dialogue: 0,0:51:46.28,0:51:48.92,English,,0,0,0,,And we're running it in the background with this ampersand
 Dialogue: 0,0:51:46.28,0:51:48.92,Chinese,,0,0,0,,我们用这个 ＆ 符号在后台运行它
 Dialogue: 0,0:51:49.16,0:51:54.04,English,,0,0,0,,Okay because we're going to otherwise it would...it's still running
-Dialogue: 0,0:51:49.16,0:51:54.04,Chinese,,0,0,0,,好的，因为我们,不会这样......它还在运行
+Dialogue: 0,0:51:49.16,0:51:54.04,Chinese,,0,0,0,,因为我们,不会这样......它还在运行
 Dialogue: 0,0:51:54.04,0:51:56.76,English,,0,0,0,,And we wouldn't be able to inspect it
 Dialogue: 0,0:51:54.04,0:51:56.76,Chinese,,0,0,0,,我们无法检查它
 Dialogue: 0,0:51:57.32,0:51:59.50,English,,0,0,0,,So after we run this program in the background
-Dialogue: 0,0:51:57.32,0:51:59.50,Chinese,,0,0,0,,所以在我们在后台运行这个程序之后
+Dialogue: 0,0:51:57.32,0:51:59.50,Chinese,,0,0,0,,在我们在后台运行这个程序之后
 Dialogue: 0,0:51:59.96,0:52:02.32,English,,0,0,0,,Then we use ps to print the current processes
 Dialogue: 0,0:51:59.96,0:52:02.32,Chinese,,0,0,0,,然后我们使用 ps 来打印当前进程
 Dialogue: 0,0:52:03.00,0:52:08.92,English,,0,0,0,,And we can see that there's two...we can see here at the parent which is process id 6639
 Dialogue: 0,0:52:03.00,0:52:08.92,Chinese,,0,0,0,,我们可以看到有两个......我们可以在父进程中看到进程ID为 6639
 Dialogue: 0,0:52:09.76,0:52:12.74,English,,0,0,0,,And then the child which is 6640 and
-Dialogue: 0,0:52:09.76,0:52:12.74,Chinese,,0,0,0,,然后子进程是 6640和
+Dialogue: 0,0:52:09.76,0:52:12.74,Chinese,,0,0,0,,子进程是 6640和
 Dialogue: 0,0:52:14.70,0:52:16.88,English,,0,0,0,,That the defunct indicates that it's a zombie
 Dialogue: 0,0:52:14.70,0:52:16.88,Chinese,,0,0,0,,那失效表明它是一个僵尸进程
 Dialogue: 0,0:52:19.16,0:52:23.78,English,,0,0,0,,Okay now if we kill 6639 that's the parent
-Dialogue: 0,0:52:19.16,0:52:23.78,Chinese,,0,0,0,,好的，如果我们杀死6639，那就是父进程
+Dialogue: 0,0:52:19.16,0:52:23.78,Chinese,,0,0,0,,如果我们杀死6639，那就是父进程
 Dialogue: 0,0:52:25.78,0:52:30.32,English,,0,0,0,,And then do another ps you see that the zombies gone that the child is gone
-Dialogue: 0,0:52:25.78,0:52:30.32,Chinese,,0,0,0,,然后做另一个ps，你看到那个僵尸进程消失了。子进程消失
+Dialogue: 0,0:52:25.78,0:52:30.32,Chinese,,0,0,0,,启动另一个ps，你看到那个僵尸进程消失了。子进程消失
 Dialogue: 0,0:52:30.32,0:52:33.02,English,,0,0,0,,Because it's been reaped by the init process one
 Dialogue: 0,0:52:30.32,0:52:33.02,Chinese,,0,0,0,,因为它是由init进程获得的
 Dialogue: 0,0:52:36.82,0:52:41.36,English,,0,0,0,,Now what happens if the child doesn't terminate you might wonder like if a parent creates a child
 Dialogue: 0,0:52:36.82,0:52:41.36,Chinese,,0,0,0,,现在如果子进程没有终止会发生什么，你可能想知道父进程是否创建了子进程
 Dialogue: 0,0:52:43.40,0:52:50.66,English,,0,0,0,,And then the parent,and then the child never terminates
-Dialogue: 0,0:52:43.40,0:52:50.66,Chinese,,0,0,0,,然后父进程，然后子进程永远不会终止
+Dialogue: 0,0:52:43.40,0:52:50.66,Chinese,,0,0,0,,父进程，然后子进程永远不会终止
 Dialogue: 0,0:52:51.64,0:52:54.88,English,,0,0,0,,And the parent terminates then what would happen right mark
-Dialogue: 0,0:52:51.64,0:52:54.88,Chinese,,0,0,0,,然后父进程终止了正确的标记
+Dialogue: 0,0:52:51.64,0:52:54.88,Chinese,,0,0,0,,父进程终止了正确的标记
 Dialogue: 0,0:52:56.54,0:52:58.94,English,,0,0,0,,So let's just let's look at an example of those in C
 Dialogue: 0,0:52:56.54,0:52:58.94,Chinese,,0,0,0,,那么让我们来看看 C 中的例子
 Dialogue: 0,0:52:59.92,0:53:04.52,English,,0,0,0,,So here we're calling fork we're creating a child
-Dialogue: 0,0:52:59.92,0:53:04.52,Chinese,,0,0,0,,所以我们在这里打电话给我们创造一个子进程
+Dialogue: 0,0:52:59.92,0:53:04.52,Chinese,,0,0,0,,我们在这里打电话给我们创造一个子进程
 Dialogue: 0,0:53:05.34,0:53:10.48,English,,0,0,0,,Within the child we'd print a message and then the child goes into an infinite loop
 Dialogue: 0,0:53:05.34,0:53:10.48,Chinese,,0,0,0,,在子进程中我们打印一条消息，然后子进程进入无限循环
 Dialogue: 0,0:53:11.80,0:53:15.48,English,,0,0,0,,And the parent prints a message and then exits
 Dialogue: 0,0:53:11.80,0:53:15.48,Chinese,,0,0,0,,父进程打印一条消息然后退出
 Dialogue: 0,0:53:16.74,0:53:18.12,English,,0,0,0,,So if we run this program
-Dialogue: 0,0:53:16.74,0:53:18.12,Chinese,,0,0,0,,所以如果我们运行这个程序
+Dialogue: 0,0:53:16.74,0:53:18.12,Chinese,,0,0,0,,如果我们运行这个程序
 Dialogue: 0,0:53:20.58,0:53:23.72,English,,0,0,0,,You can see that the two messages from parent and child
 Dialogue: 0,0:53:20.58,0:53:23.72,Chinese,,0,0,0,,你可以看到来自父级和子级的两条消息
 Dialogue: 0,0:53:25.52,0:53:28.68,English,,0,0,0,,And then if we look at the...if we look at the processes
-Dialogue: 0,0:53:25.52,0:53:28.68,Chinese,,0,0,0,,然后，如果我们看一下......如果我们看一下这些进程
+Dialogue: 0,0:53:25.52,0:53:28.68,Chinese,,0,0,0,,如果我们看一下......如果我们看一下这些进程
 Dialogue: 0,0:53:28.68,0:53:32.30,English,,0,0,0,,We can see that the child is still running
 Dialogue: 0,0:53:28.68,0:53:32.30,Chinese,,0,0,0,,我们可以看到子进程还在运行
 Dialogue: 0,0:53:39.58,0:53:43.52,English,,0,0,0,,Okay so the channel process is still running even though the parents's has terminated
-Dialogue: 0,0:53:39.58,0:53:43.52,Chinese,,0,0,0,,好的，即使父进程已经终止，管道进程仍然在运行
+Dialogue: 0,0:53:39.58,0:53:43.52,Chinese,,0,0,0,,即使父进程已经终止，管道进程仍然在运行
 Dialogue: 0,0:53:45.06,0:53:48.90,English,,0,0,0,,And now if we kill this child 6676
 Dialogue: 0,0:53:45.06,0:53:48.90,Chinese,,0,0,0,,现在，如果我们杀死这个子进程 6676
 Dialogue: 0,0:53:54.70,0:53:59.08,English,,0,0,0,,And then if we kill it,then we can see that it's it's gone,it's no longer in the system okay so
-Dialogue: 0,0:53:54.70,0:53:59.08,Chinese,,0,0,0,,然后，如果我们杀了它，那么我们可以看到它已经消失了，它不再在系统中了，所以
+Dialogue: 0,0:53:54.70,0:53:59.08,Chinese,,0,0,0,,如果我们杀了它，那么我们可以看到它已经消失了，它不再在系统中了，
 Dialogue: 0,0:54:00.12,0:54:02.72,English,,0,0,0,,That child when we killed it that terminated
 Dialogue: 0,0:54:00.12,0:54:02.72,Chinese,,0,0,0,,那个子进程，当我们杀了它终止了
 Dialogue: 0,0:54:03.46,0:54:09.36,English,,0,0,0,,It it had no parents so the init process reaped it and it it's no longer a zombie
-Dialogue: 0,0:54:03.46,0:54:09.36,Chinese,,0,0,0,,它没有父进程，所以初始进程回收了它，它不再是僵尸进程
+Dialogue: 0,0:54:03.46,0:54:09.36,Chinese,,0,0,0,,它没有父进程，初始进程回收了它，它不再是僵尸进程
 Dialogue: 0,0:54:12.08,0:54:19.20,English,,0,0,0,,So the function that we use to synchronize with children and reap them
-Dialogue: 0,0:54:12.08,0:54:19.20,Chinese,,0,0,0,,所以我们用来与子进程同步并回收他们的函数
+Dialogue: 0,0:54:12.08,0:54:19.20,Chinese,,0,0,0,,我们用来与子进程同步并回收他们的函数
 Dialogue: 0,0:54:20.74,0:54:22.20,English,,0,0,0,,The simplest one is called wait
 Dialogue: 0,0:54:20.74,0:54:22.20,Chinese,,0,0,0,,最简单的一个叫做 wait
 Dialogue: 0,0:54:23.50,0:54:27.20,English,,0,0,0,,And wait it takes an optional status
@@ -1239,7 +1239,7 @@ Dialogue: 0,0:54:40.12,0:54:42.36,Chinese,,0,0,0,,直到一个或其中一个子
 Dialogue: 0,0:54:42.88,0:54:48.26,English,,0,0,0,,And it doesn't specify which one it just waits,until one of the children that it created terminates
 Dialogue: 0,0:54:42.88,0:54:48.26,Chinese,,0,0,0,,并且它没有指定它只是等待哪一个，直到它创建的一个子进程终止
 Dialogue: 0,0:54:50.48,0:54:53.16,English,,0,0,0,,And then if this child status is not null
-Dialogue: 0,0:54:50.48,0:54:53.16,Chinese,,0,0,0,,然后，如果此子进程状态不为空
+Dialogue: 0,0:54:50.48,0:54:53.16,Chinese,,0,0,0,,如果此子进程状态不为空
 Dialogue: 0,0:54:54.02,0:54:58.82,English,,0,0,0,,Then the integer that it returns or the integer that it points to this is a pointer
 Dialogue: 0,0:54:54.02,0:54:58.82,Chinese,,0,0,0,,然后它返回的整数或它指向的整数是一个指针
 Dialogue: 0,0:54:59.50,0:55:05.54,English,,0,0,0,,The integer that it points to will be set to some value that indicated the reason the child terminated and its exit status
@@ -1249,9 +1249,9 @@ Dialogue: 0,0:55:06.10,0:55:08.50,Chinese,,0,0,0,,你可以检查使用这些宏
 Dialogue: 0,0:55:10.00,0:55:14.16,English,,0,0,0,,Which your textbook describes in more detail and let you
 Dialogue: 0,0:55:10.00,0:55:14.16,Chinese,,0,0,0,,你的教科书将更详细地描述，并让你
 Dialogue: 0,0:55:16.61,0:55:19.24,English,,0,0,0,,So let's look at how this works in a simple example
-Dialogue: 0,0:55:16.61,0:55:19.24,Chinese,,0,0,0,,因此，让我们看一下这个工作原理的简单示例
+Dialogue: 0,0:55:16.61,0:55:19.24,Chinese,,0,0,0,,让我们看一下这个工作原理的简单示例
 Dialogue: 0,0:55:19.88,0:55:26.04,English,,0,0,0,,So here we're calling fork and creating a child which prints a message and then exits
-Dialogue: 0,0:55:19.88,0:55:26.04,Chinese,,0,0,0,,所以这里我们调用fork并创建一个打印消息然后退出的子进程
+Dialogue: 0,0:55:19.88,0:55:26.04,Chinese,,0,0,0,,这里我们调用fork并创建一个打印消息然后退出的子进程
 Dialogue: 0,0:55:27.88,0:55:33.14,English,,0,0,0,,The parent prints a message and then it waits for the child to terminate
 Dialogue: 0,0:55:27.88,0:55:33.14,Chinese,,0,0,0,,父进程打印一条消息，然后等待子进程终止
 Dialogue: 0,0:55:34.14,0:55:37.40,English,,0,0,0,,And when the child terminates it prints a message
@@ -1259,17 +1259,17 @@ Dialogue: 0,0:55:34.14,0:55:37.40,Chinese,,0,0,0,,当子进程终止时，它会
 Dialogue: 0,0:55:38.24,0:55:41.74,English,,0,0,0,,And indicating that the child terminated and then prints by
 Dialogue: 0,0:55:38.24,0:55:41.74,Chinese,,0,0,0,,并指示子进程终止然后打印
 Dialogue: 0,0:55:42.40,0:55:45.34,English,,0,0,0,,So if we were to look at the process graph for this
-Dialogue: 0,0:55:42.40,0:55:45.34,Chinese,,0,0,0,,因此，如果我们要查看流程图
+Dialogue: 0,0:55:42.40,0:55:45.34,Chinese,,0,0,0,,如果我们要查看流程图
 Dialogue: 0,0:55:46.14,0:55:50.36,English,,0,0,0,,You would see that we would have the fork creates the parent and the child
 Dialogue: 0,0:55:46.14,0:55:50.36,Chinese,,0,0,0,,你会看到我们会让fork创建父级和子级
 Dialogue: 0,0:55:51.52,0:55:54.14,English,,0,0,0,,Both the parent and the child do they're printf
 Dialogue: 0,0:55:51.52,0:55:54.14,Chinese,,0,0,0,,父进程和子进程都会打印
 Dialogue: 0,0:55:55.74,0:56:04.46,English,,0,0,0,,And then the parent waits it suspends until that the child terminates in this case by calling exit
-Dialogue: 0,0:55:55.74,0:56:04.46,Chinese,,0,0,0,,然后父进程等待它暂停，直到子进程在这种情况下通过调用exit终止
+Dialogue: 0,0:55:55.74,0:56:04.46,Chinese,,0,0,0,,接着父进程等待它暂停，直到子进程在这种情况下通过调用exit终止
 Dialogue: 0,0:56:07.56,0:56:10.10,English,,0,0,0,,Okay so what that means is it's infeasible
 Dialogue: 0,0:56:07.56,0:56:10.10,Chinese,,0,0,0,,那么这意味着它是不可行的
 Dialogue: 0,0:56:13.10,0:56:14.70,English,,0,0,0,,So you can say hello from the parent
-Dialogue: 0,0:56:13.10,0:56:14.70,Chinese,,0,0,0,,所以你可以向父进程打招呼
+Dialogue: 0,0:56:13.10,0:56:14.70,Chinese,,0,0,0,,你可以向父进程打招呼
 Dialogue: 0,0:56:18.40,0:56:20.07,English,,0,0,0,,It's infeasible though for this
 Dialogue: 0,0:56:18.40,0:56:20.07,Chinese,,0,0,0,,尽管如此，这是不可行的
 Dialogue: 0,0:56:20.92,0:56:26.46,English,,0,0,0,,This child terminated message CT to occur before the bye
@@ -1285,7 +1285,7 @@ Dialogue: 0,0:56:42.86,0:56:45.46,Chinese,,0,0,0,,直到子进程通过调用 ex
 Dialogue: 0,0:56:47.92,0:56:49.42,English,,0,0,0,,So is that clear yes
 Dialogue: 0,0:56:47.92,0:56:49.42,Chinese,,0,0,0,,明确的是
 Dialogue: 0,0:56:56.32,0:56:58.72,English,,0,0,0,,So the question is can you have an output HP
-Dialogue: 0,0:56:56.32,0:56:58.72,Chinese,,0,0,0,,所以问题是你有输出 HP 吗？
+Dialogue: 0,0:56:56.32,0:56:58.72,Chinese,,0,0,0,,问题是你有输出 HP 吗？
 Dialogue: 0,0:57:03.24,0:57:09.08,English,,0,0,0,,HP,HC,CT bye yes
 Dialogue: 0,0:57:03.24,0:57:09.08,Chinese,,0,0,0,,HP，HC，CT再见
 Dialogue: 0,0:57:10.76,0:57:20.32,English,,0,0,0,,Yes because the parent prints HP, there's a context switch the child prints HC and then exits
@@ -1293,17 +1293,17 @@ Dialogue: 0,0:57:10.76,0:57:20.32,Chinese,,0,0,0,,是的，因为父进程打印
 Dialogue: 0,0:57:21.20,0:57:24.25,English,,0,0,0,,And now the parent will the wait will return
 Dialogue: 0,0:57:21.20,0:57:24.25,Chinese,,0,0,0,,现在父进程将等待返回
 Dialogue: 0,0:57:24.56,0:57:26.42,English,,0,0,0,,And then it prints CT bye
-Dialogue: 0,0:57:24.56,0:57:26.42,Chinese,,0,0,0,,然后它打印 CT 再见
+Dialogue: 0,0:57:24.56,0:57:26.42,Chinese,,0,0,0,,它打印 CT 再见
 Dialogue: 0,0:57:33.32,0:57:41.02,English,,0,0,0,,Okay here's this is a...this is a little more a little more involved example
-Dialogue: 0,0:57:33.32,0:57:41.02,Chinese,,0,0,0,,好的，这是一个...这是一个更多一点参与的例子
+Dialogue: 0,0:57:33.32,0:57:41.02,Chinese,,0,0,0,,这是一个...这是一个更多一点参与的例子
 Dialogue: 0,0:57:41.56,0:57:44.42,English,,0,0,0,,So here what we want to do we're going to create a bunch of children
-Dialogue: 0,0:57:41.56,0:57:44.42,Chinese,,0,0,0,,所以我们想要做的就是创造一堆子进程
+Dialogue: 0,0:57:41.56,0:57:44.42,Chinese,,0,0,0,,我们想要做的就是创造一堆子进程
 Dialogue: 0,0:57:45.06,0:57:47.42,English,,0,0,0,,And then we're going to wait for them all to terminate
-Dialogue: 0,0:57:45.06,0:57:47.42,Chinese,,0,0,0,,然后我们将等待他们全部终止
+Dialogue: 0,0:57:45.06,0:57:47.42,Chinese,,0,0,0,,我们将等待他们全部终止
 Dialogue: 0,0:57:48.10,0:57:52.70,English,,0,0,0,,And we're going to wait but we won't be able to wait in any specific order right we're just...
 Dialogue: 0,0:57:48.10,0:57:52.70,Chinese,,0,0,0,,我们将等待，但我们将无法按任何特定顺序等待，我们只是......
 Dialogue: 0,0:57:55.28,0:57:58.02,English,,0,0,0,,So here we have a loop 0 through n
-Dialogue: 0,0:57:55.28,0:57:58.02,Chinese,,0,0,0,,所以这里我们有一个循环 0 到 n
+Dialogue: 0,0:57:55.28,0:57:58.02,Chinese,,0,0,0,,这里我们有一个循环 0 到 n
 Dialogue: 0,0:57:59.24,0:58:06.44,English,,0,0,0,,And in each loop body we're going to fork a child and exit with a return status
 Dialogue: 0,0:57:59.24,0:58:06.44,Chinese,,0,0,0,,在每个循环体中，我们将fork一个子进程，并带有一个返回状态退出
 Dialogue: 0,0:58:06.44,0:58:08.62,English,,0,0,0,,That that's going to tell us which child it was
@@ -1311,17 +1311,17 @@ Dialogue: 0,0:58:06.44,0:58:08.62,Chinese,,0,0,0,,这将告诉我们这是哪个
 Dialogue: 0,0:58:12.02,0:58:16.86,English,,0,0,0,,In the parent so we do this n times
 Dialogue: 0,0:58:12.02,0:58:16.86,Chinese,,0,0,0,,在父进程那里我们这样做了 n 次
 Dialogue: 0,0:58:18.96,0:58:25.78,English,,0,0,0,,And then afterward the parent inside a similar loop 0 to n
-Dialogue: 0,0:58:18.96,0:58:25.78,Chinese,,0,0,0,,然后父进程在类似的循环 0 到 n 内
+Dialogue: 0,0:58:18.96,0:58:25.78,Chinese,,0,0,0,,父进程在类似的循环 0 到 n 内
 Dialogue: 0,0:58:26.32,0:58:29.18,English,,0,0,0,,Add waits for a child to terminate
 Dialogue: 0,0:58:26.32,0:58:29.18,Chinese,,0,0,0,,添加等待子进程终止
 Dialogue: 0,0:58:29.18,0:58:32.22,English,,0,0,0,,So it will wait for n children to terminate
-Dialogue: 0,0:58:29.18,0:58:32.22,Chinese,,0,0,0,,所以它将等待n个子进程终止
+Dialogue: 0,0:58:29.18,0:58:32.22,Chinese,,0,0,0,,它将等待n个子进程终止
 Dialogue: 0,0:58:34.50,0:58:41.20,English,,0,0,0,,Wait returns the the process id
 Dialogue: 0,0:58:34.50,0:58:41.20,Chinese,,0,0,0,,等待返回进程ID
 Dialogue: 0,0:58:42.22,0:58:51.26,English,,0,0,0,,And then a status which is... in this child status variable
-Dialogue: 0,0:58:42.22,0:58:51.26,Chinese,,0,0,0,,然后是这个子状态变量中的状态....
+Dialogue: 0,0:58:42.22,0:58:51.26,Chinese,,0,0,0,,是这个子状态变量中的状态....
 Dialogue: 0,0:58:52.40,0:58:57.02,English,,0,0,0,,And so we take that variable now and we can use this w if exited macro to determine
-Dialogue: 0,0:58:52.40,0:58:57.02,Chinese,,0,0,0,,因此我们现在采用该变量，如果退出宏，我们可以使用此 w 来确定
+Dialogue: 0,0:58:52.40,0:58:57.02,Chinese,,0,0,0,,我们现在采用该变量，如果退出宏，我们可以使用此 w 来确定
 Dialogue: 0,0:58:57.03,0:59:00.06,English,,0,0,0,,If it terminated normally with an exit by calling exit
 Dialogue: 0,0:58:57.03,0:59:00.06,Chinese,,0,0,0,,如果它通过调用 exit 退出，正常终止
 Dialogue: 0,0:59:00.84,0:59:06.68,English,,0,0,0,,And if so then we can check its exit status using the WEXITSTATUS macro
@@ -1331,7 +1331,7 @@ Dialogue: 0,0:59:07.28,0:59:10.29,Chinese,,0,0,0,,否则，如果退出它
 Dialogue: 0,0:59:10.64,0:59:17.64,English,,0,0,0,,It's false then that means something the child terminated for some other reason not because it called exit
 Dialogue: 0,0:59:10.64,0:59:17.64,Chinese,,0,0,0,,这是假的，这意味着子进程因某种其他原因而终止，而不是因为它调用exit
 Dialogue: 0,0:59:21.32,0:59:22.60,English,,0,0,0,,Okay there's a
-Dialogue: 0,0:59:21.32,0:59:22.60,Chinese,,0,0,0,,好的，有一个
+Dialogue: 0,0:59:21.32,0:59:22.60,Chinese,,0,0,0,,有一个
 Dialogue: 0,0:59:24.06,0:59:28.84,English,,0,0,0,,We can actually use waitpid which is similar to wait
 Dialogue: 0,0:59:24.06,0:59:28.84,Chinese,,0,0,0,,我们实际上可以使用类似于 wait 的 waitpid
 Dialogue: 0,0:59:28.84,0:59:33.08,English,,0,0,0,,But it allows us to wait for a specific process a specific child
@@ -1343,7 +1343,7 @@ Dialogue: 0,0:59:38.40,0:59:44.52,Chinese,,0,0,0,,我会告诉你，waitpid真�
 Dialogue: 0,0:59:44.98,0:59:48.10,English,,0,0,0,,It's described in detail in your textbook
 Dialogue: 0,0:59:44.98,0:59:48.10,Chinese,,0,0,0,,它在你的教科书中有详细描述
 Dialogue: 0,0:59:48.48,0:59:52.20,English,,0,0,0,,And so you'll need to look, you'll need to look there for the details on how that works
-Dialogue: 0,0:59:48.48,0:59:52.20,Chinese,,0,0,0,,因此，你需要查看，你需要查看有关其工作原理的详细信息
+Dialogue: 0,0:59:48.48,0:59:52.20,Chinese,,0,0,0,,你需要查看，你需要查看有关其工作原理的详细信息
 Dialogue: 0,0:59:55.08,0:59:58.68,English,,0,0,0,,Now another important so we've learned how to create new processes
 Dialogue: 0,0:59:55.08,0:59:58.68,Chinese,,0,0,0,,现在另一个重要的是，我们已经学会了如何创建新进程
 Dialogue: 0,1:00:02.38,1:00:05.30,English,,0,0,0,,The but we haven't learned how to when we call fork
@@ -1375,21 +1375,21 @@ Dialogue: 0,1:01:00.50,1:01:05.57,Chinese,,0,0,0,,你的 shell 脚本的第一�
 Dialogue: 0,1:01:06.02,1:01:07.96,English,,0,0,0,,The path name of the bash
 Dialogue: 0,1:01:06.02,1:01:07.96,Chinese,,0,0,0,,bash 的路径名
 Dialogue: 0,1:01:08.94,1:01:11.50,English,,0,0,0,,And then that will execute bash
-Dialogue: 0,1:01:08.94,1:01:11.50,Chinese,,0,0,0,,然后那将执行 bash
+Dialogue: 0,1:01:08.94,1:01:11.50,Chinese,,0,0,0,,那将执行 bash
 Dialogue: 0,1:01:11.90,1:01:17.34,English,,0,0,0,,And then bash will read in that the lines following and interpret them
-Dialogue: 0,1:01:11.90,1:01:17.34,Chinese,,0,0,0,,然后bash将读取下面的行并解译它们
+Dialogue: 0,1:01:11.90,1:01:17.34,Chinese,,0,0,0,,bash将读取下面的行并解译它们
 Dialogue: 0,1:01:18.08,1:01:21.04,English,,0,0,0,,As just as though you'd type them in at the command line
 Dialogue: 0,1:01:18.08,1:01:21.04,Chinese,,0,0,0,,就像你在命令行输入它们一样
 Dialogue: 0,1:01:23.10,1:01:27.42,English,,0,0,0,,So in either case it executes either an interpreter or it executes a binary
-Dialogue: 0,1:01:23.10,1:01:27.42,Chinese,,0,0,0,,因此，在任何一种情况下，它都执行解释器，或执行二进制文件
+Dialogue: 0,1:01:23.10,1:01:27.42,Chinese,,0,0,0,,在任何一种情况下，它都执行解释器，或执行二进制文件
 Dialogue: 0,1:01:28.42,1:01:31.96,English,,0,0,0,,With who's argued with the argument list argv
 Dialogue: 0,1:01:28.42,1:01:31.96,Chinese,,0,0,0,,谁对于参数列表argv感到迷惑
 Dialogue: 0,1:01:33.04,1:01:36.24,English,,0,0,0,,And a list of environment very in envp
 Dialogue: 0,1:01:33.04,1:01:36.24,Chinese,,0,0,0,,以及envp中的环境列表
 Dialogue: 0,1:01:38.52,1:01:41.54,English,,0,0,0,,Okay now by default are the first argument
-Dialogue: 0,1:01:38.52,1:01:41.54,Chinese,,0,0,0,,好的，现在默认是第一个参数
+Dialogue: 0,1:01:38.52,1:01:41.54,Chinese,,0,0,0,,现在默认是第一个参数
 Dialogue: 0,1:01:42.18,1:01:48.24,English,,0,0,0,,In argv is the name of the file that that's being executed so it's this file name
-Dialogue: 0,1:01:42.18,1:01:48.24,Chinese,,0,0,0,,在 argv 中是正在执行的文件的名称，因此它是此文件名
+Dialogue: 0,1:01:42.18,1:01:48.24,Chinese,,0,0,0,,在 argv 中是正在执行的文件的名称，它是此文件名
 Dialogue: 0,1:01:51.32,1:01:52.60,English,,0,0,0,,So what that allows you to do is
 Dialogue: 0,1:01:51.32,1:01:52.60,Chinese,,0,0,0,,那么你可以做的是
 Dialogue: 0,1:01:53.04,1:01:58.60,English,,0,0,0,,In your code you can check argv[0] if you want to print out the name of the file,the name of the program that's executing
@@ -1401,25 +1401,25 @@ Dialogue: 0,1:02:05.98,1:02:12.04,Chinese,,0,0,0,,现在好了，退出所有代
 Dialogue: 0,1:02:12.16,1:02:16.80,English,,0,0,0,,It overwrites the completely overrides the virtual address space
 Dialogue: 0,1:02:12.16,1:02:16.80,Chinese,,0,0,0,,它会覆盖，完全覆盖虚拟地址空间
 Dialogue: 0,1:02:17.82,1:02:20.78,English,,0,0,0,,So once you call eggs a within a process
-Dialogue: 0,1:02:17.82,1:02:20.78,Chinese,,0,0,0,,所以一旦你在一个进程调用eggs
+Dialogue: 0,1:02:17.82,1:02:20.78,Chinese,,0,0,0,,一旦你在一个进程调用eggs
 Dialogue: 0,1:02:22.52,1:02:25.14,English,,0,0,0,,It blows away the current program that's it
 Dialogue: 0,1:02:22.52,1:02:25.14,Chinese,,0,0,0,,它打破了当前的程序
 Dialogue: 0,1:02:25.70,1:02:31.70,English,,0,0,0,,Okay however it retains that it's still the same process, it's just running now a different program
 Dialogue: 0,1:02:25.70,1:02:31.70,Chinese,,0,0,0,,好吧但是它保留了它仍然是相同的进程，它现在只是运行一个不同的程序
 Dialogue: 0,1:02:35.06,1:02:39.44,English,,0,0,0,,And so it retains the process id and any open files that you have
-Dialogue: 0,1:02:35.06,1:02:39.44,Chinese,,0,0,0,,因此它保留了进程ID和你拥有的任何打开文件
+Dialogue: 0,1:02:35.06,1:02:39.44,Chinese,,0,0,0,,它保留了进程ID和你拥有的任何打开文件
 Dialogue: 0,1:02:43.18,1:02:47.43,English,,0,0,0,,So execve is really mind-blowing because it's called once
-Dialogue: 0,1:02:43.18,1:02:47.43,Chinese,,0,0,0,,所以execve真的令人兴奋，因为它被称为一次调用
+Dialogue: 0,1:02:43.18,1:02:47.43,Chinese,,0,0,0,,execve真的令人兴奋，因为它被称为一次调用
 Dialogue: 0,1:02:48.34,1:02:49.36,English,,0,0,0,,But it never returns
 Dialogue: 0,1:02:48.34,1:02:49.36,Chinese,,0,0,0,,但它永远不会返回
 Dialogue: 0,1:02:53.12,1:02:54.50,English,,0,0,0,,Except if there's an error
 Dialogue: 0,1:02:53.12,1:02:54.50,Chinese,,0,0,0,,除非出现错误
 Dialogue: 0,1:02:54.58,1:02:59.30,English,,0,0,0,,So if this file doesn't exist for example then then exec will return on -1
-Dialogue: 0,1:02:54.58,1:02:59.30,Chinese,,0,0,0,,因此，如果此文件不存在，那么exec将返回-1
+Dialogue: 0,1:02:54.58,1:02:59.30,Chinese,,0,0,0,,如果此文件不存在，那么exec将返回-1
 Dialogue: 0,1:02:59.90,1:03:03.04,English,,0,0,0,,But otherwise in normal operation it never returns
 Dialogue: 0,1:02:59.90,1:03:03.04,Chinese,,0,0,0,,但在正常操作中它永远不会返回
 Dialogue: 0,1:03:06.00,1:03:07.86,English,,0,0,0,,All right so let's look at the structure of the stack
-Dialogue: 0,1:03:06.00,1:03:07.86,Chinese,,0,0,0,,好的，让我们来看看堆栈的结构
+Dialogue: 0,1:03:06.00,1:03:07.86,Chinese,,0,0,0,,让我们来看看堆栈的结构
 Dialogue: 0,1:03:07.88,1:03:10.54,English,,0,0,0,,When this new program starts so after
 Dialogue: 0,1:03:07.88,1:03:10.54,Chinese,,0,0,0,,当这个新程序开始之后
 Dialogue: 0,1:03:11.42,1:03:15.54,English,,0,0,0,,After exit...after the egg argv finishes its work it creates
@@ -1427,21 +1427,21 @@ Dialogue: 0,1:03:11.42,1:03:15.54,Chinese,,0,0,0,,退出之后...在argv完成�
 Dialogue: 0,1:03:16.60,1:03:23.98,English,,0,0,0,,It create a new stack, it loads in new code and data creates a new empty heap
 Dialogue: 0,1:03:16.60,1:03:23.98,Chinese,,0,0,0,,它创建一个新的堆栈，它在新代码中加载数据，创建一个新的空堆
 Dialogue: 0,1:03:25.70,1:03:26.78,English,,0,0,0,,Ok everything's new
-Dialogue: 0,1:03:25.70,1:03:26.78,Chinese,,0,0,0,,好的，一切都是新的
+Dialogue: 0,1:03:25.70,1:03:26.78,Chinese,,0,0,0,,一切都是新的
 Dialogue: 0,1:03:28.42,1:03:32.28,English,,0,0,0,,And the stack that it creates has the following form
 Dialogue: 0,1:03:28.42,1:03:32.28,Chinese,,0,0,0,,它创建的堆栈具有以下形式
 Dialogue: 0,1:03:33.64,1:03:38.38,English,,0,0,0,,Ok at the bottom here's the bottom of the stack and our stack is growing this way
 Dialogue: 0,1:03:33.64,1:03:38.38,Chinese,,0,0,0,,好吧，在底部这里是堆栈的底部，我们的堆栈正在以这种方式增长
 Dialogue: 0,1:03:40.76,1:03:42.44,English,,0,0,0,,So the first function that executes
-Dialogue: 0,1:03:40.76,1:03:42.44,Chinese,,0,0,0,,所以执行的第一个函数
+Dialogue: 0,1:03:40.76,1:03:42.44,Chinese,,0,0,0,,执行的第一个函数
 Dialogue: 0,1:03:43.84,1:03:47.78,English,,0,0,0,,Is a function called libc_start_main
 Dialogue: 0,1:03:43.84,1:03:47.78,Chinese,,0,0,0,,是一个名为 libc_start_main 的函数
 Dialogue: 0,1:03:48.44,1:03:50.50,English,,0,0,0,,So that has a stack frame
-Dialogue: 0,1:03:48.44,1:03:50.50,Chinese,,0,0,0,,所以它有一个堆栈框架
+Dialogue: 0,1:03:48.44,1:03:50.50,Chinese,,0,0,0,,它有一个堆栈框架
 Dialogue: 0,1:03:53.83,1:03:59.00,English,,0,0,0,,So let's look this is what I'm showing here is the situation right before the startup code calls main
-Dialogue: 0,1:03:53.83,1:03:59.00,Chinese,,0,0,0,,所以让我们看看，这是我在这里展示的是，启动代码调用main之前的情况
+Dialogue: 0,1:03:53.83,1:03:59.00,Chinese,,0,0,0,,让我们看看，这是我在这里展示的是，启动代码调用main之前的情况
 Dialogue: 0,1:04:00.76,1:04:07.35,English,,0,0,0,,So there's the future stack frame for main will be here at the top of this
-Dialogue: 0,1:04:00.76,1:04:07.35,Chinese,,0,0,0,,因此，main的未来堆栈框架将位于此顶部
+Dialogue: 0,1:04:00.76,1:04:07.35,Chinese,,0,0,0,,main的未来堆栈框架将位于此顶部
 Dialogue: 0,1:04:07.70,1:04:09.40,English,,0,0,0,,Following the top of the stack
 Dialogue: 0,1:04:07.70,1:04:09.40,Chinese,,0,0,0,,在堆栈顶部之后
 Dialogue: 0,1:04:11.46,1:04:20.24,English,,0,0,0,,There's some padding and then the argument list in argv  is contained on the stack
@@ -1451,17 +1451,17 @@ Dialogue: 0,1:04:20.24,1:04:25.00,Chinese,,0,0,0,,这样argv就是一个由空�
 Dialogue: 0,1:04:25.72,1:04:31.29,English,,0,0,0,,And each one of these pointers points up into a string that corresponds to an argument
 Dialogue: 0,1:04:25.72,1:04:31.29,Chinese,,0,0,0,,这些指针中的每一个都指向一个与参数对应的字符串
 Dialogue: 0,1:04:32.26,1:04:38.14,English,,0,0,0,,Okay so when you run a program you specify the program name
-Dialogue: 0,1:04:32.26,1:04:38.14,Chinese,,0,0,0,,好的，所以在运行程序时指定程序名称
+Dialogue: 0,1:04:32.26,1:04:38.14,Chinese,,0,0,0,,在运行程序时指定程序名称
 Dialogue: 0,1:04:39.34,1:04:41.30,English,,0,0,0,,And then arguments separated by spaces
-Dialogue: 0,1:04:39.34,1:04:41.30,Chinese,,0,0,0,,然后由空格分隔的参数
+Dialogue: 0,1:04:39.34,1:04:41.30,Chinese,,0,0,0,,由空格分隔的参数
 Dialogue: 0,1:04:42.86,1:04:49.94,English,,0,0,0,,Okay and so these arguments this argv is a list of pointers to those arguments strings
-Dialogue: 0,1:04:42.86,1:04:49.94,Chinese,,0,0,0,,好的，所以这些参数，这个argv是一个指向这些参数字符串的指针列表
+Dialogue: 0,1:04:42.86,1:04:49.94,Chinese,,0,0,0,,这些参数，这个argv是一个指向这些参数字符串的指针列表
 Dialogue: 0,1:04:51.08,1:04:55.60,English,,0,0,0,,And it's pointed to right as main is called
 Dialogue: 0,1:04:51.08,1:04:55.60,Chinese,,0,0,0,,它被指向 main 被调用的地址
 Dialogue: 0,1:04:55.60,1:04:59.12,English,,0,0,0,,It's the second argument to main
 Dialogue: 0,1:04:55.60,1:04:59.12,Chinese,,0,0,0,,这是 main 的第二个参数
 Dialogue: 0,1:04:59.46,1:05:05.16,English,,0,0,0,,So it's contained in %rsi the address of this argument lists
-Dialogue: 0,1:04:59.46,1:05:05.16,Chinese,,0,0,0,,所以它包含在 ％rsi ，这个参数的地址列表
+Dialogue: 0,1:04:59.46,1:05:05.16,Chinese,,0,0,0,,它包含在 ％rsi ，这个参数的地址列表
 Dialogue: 0,1:05:06.10,1:05:10.78,English,,0,0,0,,The number of arguments is contained is the first argument argc
 Dialogue: 0,1:05:06.10,1:05:10.78,Chinese,,0,0,0,,第一个参数argc是包含的参数数量
 Dialogue: 0,1:05:10.82,1:05:17.08,English,,0,0,0,,And that's contained in %rdi by the x86-64  parameter passing convention
@@ -1479,19 +1479,19 @@ Dialogue: 0,1:05:39.20,1:05:46.40,Chinese,,0,0,0,,如果它被传入，则指向
 Dialogue: 0,1:05:46.40,1:05:49.40,English,,0,0,0,,Which is the always holds the third argument
 Dialogue: 0,1:05:46.40,1:05:49.40,Chinese,,0,0,0,,这就是总是存在的第三个参数
 Dialogue: 0,1:05:52.26,1:05:55.22,English,,0,0,0,,Okay so let's look now how we would use this
-Dialogue: 0,1:05:52.26,1:05:55.22,Chinese,,0,0,0,,好的，现在让我们来看看我们将如何使用它
+Dialogue: 0,1:05:52.26,1:05:55.22,Chinese,,0,0,0,,现在让我们来看看我们将如何使用它
 Dialogue: 0,1:05:57.44,1:06:02.08,English,,0,0,0,,So we want to within our current program we want to execute the ls command
 Dialogue: 0,1:05:57.44,1:06:02.08,Chinese,,0,0,0,,我们希望在当前程序中执行 ls 命令
 Dialogue: 0,1:06:03.08,1:06:08.20,English,,0,0,0,,With two arguments - lt and /usr/include
 Dialogue: 0,1:06:03.08,1:06:08.20,Chinese,,0,0,0,,有两个参数 -lt 和 /usr/include
 Dialogue: 0,1:06:08.20,1:06:13.28,English,,0,0,0,,So what this is saying is list,list the files in /usr/include
-Dialogue: 0,1:06:08.20,1:06:13.28,Chinese,,0,0,0,,所以这就是list，列出/usr/include中的文件
+Dialogue: 0,1:06:08.20,1:06:13.28,Chinese,,0,0,0,,这就是list，列出/usr/include中的文件
 Dialogue: 0,1:06:14.48,1:06:18.08,English,,0,0,0,,Show the long form of the listing and sort them in time order
 Dialogue: 0,1:06:14.48,1:06:18.08,Chinese,,0,0,0,,显示list的长格式并按时间顺序对其进行排序
 Dialogue: 0,1:06:18.48,1:06:21.04,English,,0,0,0,,From most recently used to at least recently used
 Dialogue: 0,1:06:18.48,1:06:21.04,Chinese,,0,0,0,,从最近使用到最少最近使用过
 Dialogue: 0,1:06:23.08,1:06:26.66,English,,0,0,0,,So the way we do this
-Dialogue: 0,1:06:23.08,1:06:26.66,Chinese,,0,0,0,,所以我们这样做的方式
+Dialogue: 0,1:06:23.08,1:06:26.66,Chinese,,0,0,0,,我们这样做的方式
 Dialogue: 0,1:06:28.32,1:06:31.24,English,,0,0,0,,If we just called execve it blow away our program
 Dialogue: 0,1:06:28.32,1:06:31.24,Chinese,,0,0,0,,如果我们只是调用 execve，那就吹走了我们的程序
 Dialogue: 0,1:06:31.24,1:06:35.08,English,,0,0,0,,So assuming we want to continue to do work after we execute ls
@@ -1499,19 +1499,19 @@ Dialogue: 0,1:06:31.24,1:06:35.08,Chinese,,0,0,0,,假设我们想在执行ls后�
 Dialogue: 0,1:06:36.24,1:06:40.78,English,,0,0,0,,The the standard way to do this is to to create a child using fork
 Dialogue: 0,1:06:36.24,1:06:40.78,Chinese,,0,0,0,,执行此操作的标准方法是使用fork创建子进程
 Dialogue: 0,1:06:41.92,1:06:44.40,English,,0,0,0,,And then x act within the child
-Dialogue: 0,1:06:41.92,1:06:44.40,Chinese,,0,0,0,,然后x在子进程内行动
+Dialogue: 0,1:06:41.92,1:06:44.40,Chinese,,0,0,0,,x在子进程内行动
 Dialogue: 0,1:06:45.60,1:06:46.84,English,,0,0,0,,Right have the child do the work
 Dialogue: 0,1:06:45.60,1:06:46.84,Chinese,,0,0,0,,是的，让子进程工作良好
 Dialogue: 0,1:06:47.76,1:06:53.56,English,,0,0,0,,And then the child terminates and the parent maybe will wait for the child, maybe not right just
-Dialogue: 0,1:06:47.76,1:06:53.56,Chinese,,0,0,0,,然后子进程终止，父进程可能会等待子进程，可能不对
+Dialogue: 0,1:06:47.76,1:06:53.56,Chinese,,0,0,0,,子进程终止，父进程可能会等待子进程，可能不对
 Dialogue: 0,1:06:55.04,1:06:56.52,English,,0,0,0,,Usually it will wait for the child
 Dialogue: 0,1:06:55.04,1:06:56.52,Chinese,,0,0,0,,通常它会等待子进程
 Dialogue: 0,1:06:58.44,1:07:04.62,English,,0,0,0,,So within the parent we fork a child check that it's 0
-Dialogue: 0,1:06:58.44,1:07:04.62,Chinese,,0,0,0,,所以在父进程中，我们 fork 子进程检查它是 0
+Dialogue: 0,1:06:58.44,1:07:04.62,Chinese,,0,0,0,,在父进程中，我们 fork 子进程检查它是 0
 Dialogue: 0,1:07:05.78,1:07:10.88,English,,0,0,0,,And so if it's 0 then we're executing that this code executes within the child
 Dialogue: 0,1:07:05.78,1:07:10.88,Chinese,,0,0,0,,如果它为0，那么我在子进程中执行这段代码
 Dialogue: 0,1:07:11.46,1:07:12.96,English,,0,0,0,,So the child does the exact
-Dialogue: 0,1:07:11.46,1:07:12.96,Chinese,,0,0,0,,所以子进程恰好工作
+Dialogue: 0,1:07:11.46,1:07:12.96,Chinese,,0,0,0,,子进程恰好工作
 Dialogue: 0,1:07:15.02,1:07:18.52,English,,0,0,0,,It passes the name of the function since the
 Dialogue: 0,1:07:15.02,1:07:18.52,Chinese,,0,0,0,,它传递了函数的名称
 Dialogue: 0,1:07:19.16,1:07:22.88,English,,0,0,0,,The name of the function that we want to the program that we want to execute
@@ -1527,13 +1527,13 @@ Dialogue: 0,1:07:39.62,1:07:43.34,Chinese,,0,0,0,,我们传递了全局环境，
 Dialogue: 0,1:07:43.54,1:07:48.70,English,,0,0,0,,We're just going to use the current list of environment variables that we have in the parent
 Dialogue: 0,1:07:43.54,1:07:48.70,Chinese,,0,0,0,,我们将使用父进程中的当前环境变量列表
 Dialogue: 0,1:07:52.00,1:07:58.06,English,,0,0,0,,Okay and these environment variables are things of the form USER=droh current working directory
-Dialogue: 0,1:07:52.00,1:07:58.06,Chinese,,0,0,0,,好的，这些环境变量是USER = droh，当前工作目录的形式
+Dialogue: 0,1:07:52.00,1:07:58.06,Chinese,,0,0,0,,这些环境变量是USER = droh，当前工作目录的形式
 Dialogue: 0,1:08:02.22,1:08:04.04,English,,0,0,0,,And so the the...
-Dialogue: 0,1:08:02.22,1:08:04.04,Chinese,,0,0,0,,所以......
+Dialogue: 0,1:08:02.22,1:08:04.04,Chinese,,0,0,0,,......
 Dialogue: 0,1:08:06.46,1:08:12.76,English,,0,0,0,,If this program in myargv[0] doesn't exist then exact will return -0
 Dialogue: 0,1:08:06.46,1:08:12.76,Chinese,,0,0,0,,如果myargv [0]中的这个程序不存在，那么exact将返回-0
 Dialogue: 0,1:08:13.28,1:08:17.19,English,,0,0,0,,So we check for that condition and then exit
-Dialogue: 0,1:08:13.28,1:08:17.19,Chinese,,0,0,0,,所以我们检查那个条件然后退出
+Dialogue: 0,1:08:13.28,1:08:17.19,Chinese,,0,0,0,,我们检查那个条件然后退出
 Dialogue: 0,1:08:17.64,1:08:21.92,English,,0,0,0,,Otherwise it never returns right it executes ls
 Dialogue: 0,1:08:17.64,1:08:21.92,Chinese,,0,0,0,,否则它永远不会返回，它执行ls
 Dialogue: 0,1:08:22.66,1:08:24.60,English,,0,0,0,,ls the code for ls
@@ -1545,7 +1545,7 @@ Dialogue: 0,1:08:30.94,1:08:33.04,Chinese,,0,0,0,,该二进制文件被加载到
 Dialogue: 0,1:08:35.36,1:08:37.83,English,,0,0,0,,That code gets executed and it terminates
 Dialogue: 0,1:08:35.36,1:08:37.83,Chinese,,0,0,0,,该代码被执行并终止
 Dialogue: 0,1:08:38.48,1:08:42.12,English,,0,0,0,,Okay so the child at this point after the exit
-Dialogue: 0,1:08:38.48,1:08:42.12,Chinese,,0,0,0,,好的，所以在子进程在退出后的这一刻
+Dialogue: 0,1:08:38.48,1:08:42.12,Chinese,,0,0,0,,在子进程在退出后的这一刻
 Dialogue: 0,1:08:43.60,1:08:47.00,English,,0,0,0,,The child is running that the ls code
 Dialogue: 0,1:08:43.60,1:08:47.00,Chinese,,0,0,0,,子进程正在运行ls代码
 Dialogue: 0,1:08:47.00,1:08:50.56,English,,0,0,0,,And it's no longer running any of this code
@@ -1575,7 +1575,7 @@ Dialogue: 0,1:09:42.64,1:09:47.86,Chinese,,0,0,0,,并且你想创建一个并发
 Dialogue: 0,1:09:48.76,1:09:53.92,English,,0,0,0,,A bunch you have the main the parent server can fork a bunch of children
 Dialogue: 0,1:09:48.76,1:09:53.92,Chinese,,0,0,0,,你的主服务器的一堆父服务器可以fork一堆子进程
 Dialogue: 0,1:09:53.92,1:09:56.22,English,,0,0,0,,So that's useful they're just all running the same code
-Dialogue: 0,1:09:53.92,1:09:56.22,Chinese,,0,0,0,,所以这很有用，他们只是运行相同的代码
+Dialogue: 0,1:09:53.92,1:09:56.22,Chinese,,0,0,0,,这很有用，他们只是运行相同的代码
 Dialogue: 0,1:09:56.84,1:09:59.72,English,,0,0,0,,But what's all...what this also allows you to do
 Dialogue: 0,1:09:56.84,1:09:59.72,Chinese,,0,0,0,,但是这一切......这也让你做到了
 Dialogue: 0,1:10:00.46,1:10:03.34,English,,0,0,0,,Is it allows you to execute code in the child
@@ -1583,7 +1583,7 @@ Dialogue: 0,1:10:00.46,1:10:03.34,Chinese,,0,0,0,,是否允许你在子进程中
 Dialogue: 0,1:10:04.12,1:10:05.98,English,,0,0,0,,Before you call execve
 Dialogue: 0,1:10:04.12,1:10:05.98,Chinese,,0,0,0,,在你调用execve之前
 Dialogue: 0,1:10:07.02,1:10:12.20,English,,0,0,0,,So you may want to set some,you may want to set some...
-Dialogue: 0,1:10:07.02,1:10:12.20,Chinese,,0,0,0,,所以你可能想设置一些，你可能想设置一些......
+Dialogue: 0,1:10:07.02,1:10:12.20,Chinese,,0,0,0,,你可能想设置一些，你可能想设置一些......
 Dialogue: 0,1:10:13.02,1:10:16.28,English,,0,0,0,,Like some signal with is especially useful when you're dealing with
 Dialogue: 0,1:10:13.02,1:10:16.28,Chinese,,0,0,0,,在你处理时，一些信号就特别有用
 Dialogue: 0,1:10:16.96,1:10:21.86,English,,0,0,0,,With things like signals if you want to block certain signals or unblock certain signals
@@ -1591,17 +1591,17 @@ Dialogue: 0,1:10:16.96,1:10:21.86,Chinese,,0,0,0,,如果你可以阻塞某些信
 Dialogue: 0,1:10:22.38,1:10:27.52,English,,0,0,0,,You can do it right here in this this gap between the fork and the exact
 Dialogue: 0,1:10:22.38,1:10:27.52,Chinese,,0,0,0,,你可以在这个fork和精确的间隙中做到这一点
 Dialogue: 0,1:10:32.94,1:10:38.96,English,,0,0,0,,Okay so that's it so just to summarize what we've talked about today
-Dialogue: 0,1:10:32.94,1:10:38.96,Chinese,,0,0,0,,好的，总结我们今天谈到的内容
+Dialogue: 0,1:10:32.94,1:10:38.96,Chinese,,0,0,0,,总结我们今天谈到的内容
 Dialogue: 0,1:10:39.86,1:10:50.04,English,,0,0,0,,Exceptions are in response to events that require some kind of non-standard or exceptional call exceptional control flow
 Dialogue: 0,1:10:39.86,1:10:50.04,Chinese,,0,0,0,,异常是对需要某种非标准或特殊调用异常控制流的事件的响应
 Dialogue: 0,1:10:50.84,1:10:56.66,English,,0,0,0,,They can be generated internally in the form of interrupts or internally in the form of traps and faults
 Dialogue: 0,1:10:50.84,1:10:56.66,Chinese,,0,0,0,,它们可以以中断的形式在内部生成，也可以以陷阱和故障的形式在内部生成
 Dialogue: 0,1:10:57.62,1:11:02.64,English,,0,0,0,,So at any point in time a process has multiple a system as multiple processes
-Dialogue: 0,1:10:57.62,1:11:02.64,Chinese,,0,0,0,,因此，在任何时间点，进程都有多个系统作为多个进程
+Dialogue: 0,1:10:57.62,1:11:02.64,Chinese,,0,0,0,,在任何时间点，进程都有多个系统作为多个进程
 Dialogue: 0,1:11:03.32,1:11:05.84,English,,0,0,0,,Only one of which can execute on a single core
 Dialogue: 0,1:11:03.32,1:11:05.84,Chinese,,0,0,0,,其中只有一个可以在单个核心上执行
 Dialogue: 0,1:11:06.62,1:11:11.54,English,,0,0,0,,So the process execution is interleaved by the kernel
-Dialogue: 0,1:11:06.62,1:11:11.54,Chinese,,0,0,0,,因此，由内核交替执行进程
+Dialogue: 0,1:11:06.62,1:11:11.54,Chinese,,0,0,0,,由内核交替执行进程
 Dialogue: 0,1:11:13.10,1:11:19.50,English,,0,0,0,,And each process thinks that it has total control of the processor in its address space
 Dialogue: 0,1:11:13.10,1:11:19.50,Chinese,,0,0,0,,并且每个进程都认为它在地址空间中完全控制了处理器
 Dialogue: 0,1:11:21.88,1:11:24.96,English,,0,0,0,,There's only one mechanism to spawn processes that's fork
@@ -1619,6 +1619,6 @@ Dialogue: 0,1:11:43.02,1:11:44.96,Chinese,,0,0,0,,或者它的一个参数之一
 Dialogue: 0,1:11:45.86,1:11:48.62,English,,0,0,0,,And this one is called once and and normally never returns
 Dialogue: 0,1:11:45.86,1:11:48.62,Chinese,,0,0,0,,这个被称为调用一次，从不返回
 Dialogue: 0,1:11:50.00,1:11:52.92,English,,0,0,0,,Okay so that's it for today and
-Dialogue: 0,1:11:50.00,1:11:52.92,Chinese,,0,0,0,,好的，这就是今天的全部内容
+Dialogue: 0,1:11:50.00,1:11:52.92,Chinese,,0,0,0,,这就是今天的全部内容
 Dialogue: 0,1:11:53.88,1:11:58.28,English,,0,0,0,,We'll see you have a good weekend and we'll see you on Tuesday
 Dialogue: 0,1:11:53.88,1:11:58.28,Chinese,,0,0,0,,祝你们周末愉快，周二我们再见
