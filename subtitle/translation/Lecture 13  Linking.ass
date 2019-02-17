@@ -258,62 +258,113 @@ Dialogue: 0,0:10:53.48,0:10:55.58,English,,0,0,0,,他们的二进制文件非常
 Dialogue: 0,0:10:56.02,0:10:58.14,English,,0,0,0,,Ok and they're broken up into sections
 Dialogue: 0,0:10:56.02,0:10:58.14,English,,0,0,0,,他们被分成几个部分
 Dialogue: 0,0:10:58.94,0:11:08.02,English,,0,0,0,,The at the beginning is a header,that defines things like the size of the word the byte ordering
-Dialogue: 0,0:10:58.94,0:11:08.02,English,,0,0,0,,开头是一个标题，它定义了字节顺序这个字的大小
+Dialogue: 0,0:10:58.94,0:11:08.02,English,,0,0,0,,开头是一个头，它定义了（生成该文件系统的）字节顺序和字的大小
 Dialogue: 0,0:11:08.46,0:11:12.46,English,,0,0,0,,Whether it's a .o,a .out or a .so
 Dialogue: 0,0:11:08.46,0:11:12.46,English,,0,0,0,,无论是 .o,.out 还是 .so 
 Dialogue: 0,0:11:12.90,0:11:19.12,English,,0,0,0,,So it just provides some sort of general information about this binary
-Dialogue: 0,0:11:12.90,0:11:19.12,English,,0,0,0,,所以它只是提供了关于这个二进制文件的一些一般信息
+Dialogue: 0,0:11:12.90,0:11:19.12,English,,0,0,0,,它只是提供了关于这个二进制文件的一般信息
 Dialogue: 0,0:11:19.76,0:11:23.88,English,,0,0,0,,And then there's what's a so called segment header table which is
+Dialogue: 0,0:11:19.76,0:11:23.88,English,,0,0,0,,然后就是所谓的节头部表
 Dialogue: 0,0:11:24.74,0:11:28.10,English,,0,0,0,,It's only defined for the executable object files
+Dialogue: 0,0:11:24.74,0:11:28.10,English,,0,0,0,,它只在可执行目标文件中定义
 Dialogue: 0,0:11:28.50,0:11:34.30,English,,0,0,0,,And indicates where all the different segments of the code are going to go in memory
+Dialogue: 0,0:11:28.50,0:11:34.30,English,,0,0,0,,并指出代码的所有不同段在内存中的位置
 Dialogue: 0,0:11:34.30,0:11:38.87,English,,0,0,0,,So where does your stack go, where do your shared libraries go
+Dialogue: 0,0:11:34.30,0:11:38.87,English,,0,0,0,,那么你的栈在哪里，你的共享库去了哪里
 Dialogue: 0,0:11:38.87,0:11:42.96,English,,0,0,0,,Where does your that you're initialized and uninitialized data
+Dialogue: 0,0:11:38.87,0:11:42.96,English,,0,0,0,,你初始化数据和未初始化数据的位置在哪里
 Dialogue: 0,0:11:43.74,0:11:45.00,English,,0,0,0,,Where does your code go
+Dialogue: 0,0:11:43.74,0:11:45.00,English,,0,0,0,,你的代码去了哪里
 Dialogue: 0,0:11:45.00,0:11:51.62,English,,0,0,0,,Right so all these various sections are defined in the segment header table
+Dialogue: 0,0:11:45.00,0:11:51.62,English,,0,0,0,,正确，因此所有这些不同的部分都在段头表中定义
 Dialogue: 0,0:11:52.60,0:11:59.60,English,,0,0,0,,And then there's the code itself which is called the .text section for sort of arcane historical reasons
-Dialogue: 0,0:11:59.78,0:12:02.16,English,,0,0,0,,So dot text is always code
+Dialogue: 0,0:11:52.60,0:11:59.60,English,,0,0,0,,然后是代码本身，出于某种神秘的历史原因它被称为.text部分
+Dialogue: 0,0:11:59.78,0:12:02.16,English,,0,0,0,,So .text is always code
+Dialogue: 0,0:11:59.78,0:12:02.16,English,,0,0,0,, .text 一般是代码
 Dialogue: 0,0:12:03.96,0:12:08.26,English,,0,0,0,,And then that's followed by read only data
+Dialogue: 0,0:12:03.96,0:12:08.26,English,,0,0,0,,然后是只读数据
 Dialogue: 0,0:12:08.42,0:12:11.14,English,,0,0,0,,Such as the jump tables in switch statements
+Dialogue: 0,0:12:08.42,0:12:11.14,English,,0,0,0,,比如switch语句中的跳转表
 Dialogue: 0,0:12:12.52,0:12:20.02,English,,0,0,0,,So text and read only the .text and .rodata have the property that they're both read-only you don't write to them
+Dialogue: 0,0:12:12.52,0:12:20.02,English,,0,0,0,,因此，文本.text和只读.rodata具有以下属性：它们都是只读的，你不会写入它们
 Dialogue: 0,0:12:21.90,0:12:24.78,English,,0,0,0,,Then that's followed by the .data section
+Dialogue: 0,0:12:21.90,0:12:24.78,English,,0,0,0,,然后是.data部分
 Dialogue: 0,0:12:24.96,0:12:29.98,English,,0,0,0,,Which is contains space for all of your initialized global variables
+Dialogue: 0,0:12:24.96,0:12:29.98,English,,0,0,0,,它包含了所有初始化全局变量的空间
 Dialogue: 0,0:12:31.06,0:12:33.44,English,,0,0,0,,And then there's a section called .bss
+Dialogue: 0,0:12:31.06,0:12:33.44,English,,0,0,0,,接下来是一个名为.bss的部分
 Dialogue: 0,0:12:33.56,0:12:41.36,English,,0,0,0,,Which defines the uninitialized global variables
+Dialogue: 0,0:12:33.56,0:12:41.36,English,,0,0,0,,它定义了未初始化的全局变量
 Dialogue: 0,0:12:42.78,0:12:46.82,English,,0,0,0,,Now this doesn't actually take up any space because they're uninitialized droids
+Dialogue: 0,0:12:42.78,0:12:46.82,English,,0,0,0,,这个节实际上并没有占用任何实际的空间，因为它们仅仅是未初始化的占位符
 Dialogue: 0,0:12:48.10,0:12:50.76,English,,0,0,0,,Ok but there are entries in the symbol table for them
+Dialogue: 0,0:12:48.10,0:12:50.76,English,,0,0,0,,好的，但符号表中会有条目
 Dialogue: 0,0:12:51.34,0:12:57.30,English,,0,0,0,,And in it at when this program gets loaded these variables are going to need
+Dialogue: 0,0:12:51.34,0:12:57.30,English,,0,0,0,,在这个程序加载时会需要这些变量
 Dialogue: 0,0:12:58.54,0:13:00.86,English,,0,0,0,,They're actually going to have to have space allocated for them
+Dialogue: 0,0:12:58.54,0:13:00.86,English,,0,0,0,,在这个时候就必须为他们分配空间
 Dialogue: 0,0:13:01.70,0:13:08.26,English,,0,0,0,,.bss is another one of those sort of arcane names,that cope goes all the way back to the 60s
+Dialogue: 0,0:13:01.70,0:13:08.26,English,,0,0,0,,.bss 是另一种神秘的名字，应对可以追溯到60年代
 Dialogue: 0,0:13:08.78,0:13:11.94,English,,0,0,0,,For there was IBM instruction called the block started by symbol
-Dialogue: 0,0:13:12.42,0:13:16.22,English,,0,0,0,,I think a better way to remember what it means is better safe space
+Dialogue: 0,0:13:08.78,0:13:11.94,English,,0,0,0,,那时候IBM指令将其称为块符号
+Dialogue: 0,0:13:12.42,0:13:16.22,English,,0,0,0,,I think a better way to remember what it means is better save space
+Dialogue: 0,0:13:12.42,0:13:16.22,English,,0,0,0,,我认为理解它的意义最好的方式是 better save space (BSS)的缩写
 Dialogue: 0,0:13:16.66,0:13:21.66,English,,0,0,0,,Ok so you can,if you have a separate section for the uninitialized variable since uninitialized
+Dialogue: 0,0:13:16.66,0:13:21.66,English,,0,0,0,,好的，如果在未初始化过程开始时有一个单独的节用于未初始化的变量，你可以这样理解
 Dialogue: 0,0:13:22.16,0:13:29.46,English,,0,0,0,,You don't have to...they don't have to consume any room in the .o file
+Dialogue: 0,0:13:22.16,0:13:29.46,English,,0,0,0,,他们不必占用.o文件中的任何空间
 Dialogue: 0,0:13:32.78,0:13:35.54,English,,0,0,0,,Ok there's also a section for the symbol table
+Dialogue: 0,0:13:32.78,0:13:35.54,English,,0,0,0,,好的接下来还有一个部分是针对符号表的
 Dialogue: 0,0:13:37.42,0:13:44.56,English,,0,0,0,,This contained like I said it's an array of structs for procedures global variables
+Dialogue: 0,0:13:37.42,0:13:44.56,English,,0,0,0,,就像我之前说的那样它包含程序全局变量的结构数组
 Dialogue: 0,0:13:47.72,0:13:50.80,English,,0,0,0,,And anything defined with the static attribute
+Dialogue: 0,0:13:47.72,0:13:50.80,English,,0,0,0,,以及我们使用static属性定义的任何内容
 Dialogue: 0,0:13:53.02,0:13:57.68,English,,0,0,0,,And each one of these symbols gets an entry in the symbol table
+Dialogue: 0,0:13:53.02,0:13:57.68,English,,0,0,0,,并且这些符号中的每一个都在符号表中获得了一个条目
 Dialogue: 0,0:13:59.18,0:14:04.56,English,,0,0,0,,And then there's two sections called them that contain relocation info so this is the notes
+Dialogue: 0,0:13:59.18,0:14:04.56,English,,0,0,0,,然后有两个部分称为包含重定位信息的部分，称为记录
 Dialogue: 0,0:14:06.62,0:14:12.04,English,,0,0,0,,When that linker went and identified all the references to symbols it put a little note to see
-Dialogue: 0,0:14:12.04,0:14:16.00,English,,0,0,0,, I'm going to have to remember to fix this the reference to this symbol up
+Dialogue: 0,0:14:06.62,0:14:12.04,English,,0,0,0,,当链接器去识别所有对符号的引用时，它就会记下一些记录
+Dialogue: 0,0:14:12.04,0:14:16.00,English,,0,0,0,,I'm going to have to remember to fix this the reference to this symbol up
+Dialogue: 0,0:14:12.04,0:14:16.00,English,,0,0,0,,我不得不记住去安排对这个符号的引用
 Dialogue: 0,0:14:16.44,0:14:21.16,English,,0,0,0,,When I actually create the executable
+Dialogue: 0,0:14:16.44,0:14:21.16,English,,0,0,0,,在我实际创建可执行文件时
 Dialogue: 0,0:14:21.84,0:14:25.26,English,,0,0,0,,So a relocation entry is just like that the linker
+Dialogue: 0,0:14:21.84,0:14:25.26,English,,0,0,0,,所以重定向条目就像链接器一样
 Dialogue: 0,0:14:25.80,0:14:31.74,English,,0,0,0,,That it's a note that the assembler makes to the linker to say hey you're going to have to fix up this this reference
+Dialogue: 0,0:14:25.80,0:14:31.74,English,,0,0,0,,这是一个记录，汇编程序让链接器说“嘿”，你将不得不安排这个引用
 Dialogue: 0,0:14:31.74,0:14:38.16,English,,0,0,0,,Because I don't know I don't know where this symbol is actually going to be stored in memory when it's loaded
+Dialogue: 0,0:14:31.74,0:14:38.16,English,,0,0,0,,因为我不知道这个符号在加载时实际存储在内存中的位置
 Dialogue: 0,0:14:41.56,0:14:43.72,English,,0,0,0,,Okay and then there's a debug section that contains
+Dialogue: 0,0:14:41.56,0:14:43.72,English,,0,0,0,,好的，接下来是调试部分
 Dialogue: 0,0:14:45.32,0:14:54.22,English,,0,0,0,,Information that relates line numbers to in the source code to line numbers in the machine code
+Dialogue: 0,0:14:45.32,0:14:54.22,English,,0,0,0,,它包含了将源代码中的行号与机器代码中的行号相关联的信息
 Dialogue: 0,0:14:55.10,0:14:59.40,English,,0,0,0,,Okay and so this is called .debug and this is what you get when you compile with -g
+Dialogue: 0,0:14:55.10,0:14:59.40,English,,0,0,0,,好的，所以这叫做 .debug，这是你用-g编译时得到的
 Dialogue: 0,0:14:59.98,0:15:06.04,English,,0,0,0,,And then there's a header table that tells you where all these different sections start
+Dialogue: 0,0:14:59.98,0:15:06.04,English,,0,0,0,,然后有一个节头表，告诉你所有这些不同部分的起始位置
 Dialogue: 0,0:15:08.20,0:15:11.34,English,,0,0,0,,Now to a linker there's three different kinds of symbols
+Dialogue: 0,0:15:08.20,0:15:11.34,English,,0,0,0,,现在我们说链接器有三种不同的符号
 Dialogue: 0,0:15:12.58,0:15:17.00,English,,0,0,0,,Global symbols are defined in some module m
+Dialogue: 0,0:15:12.58,0:15:17.00,English,,0,0,0,,全局符号在一些模块 m 中定义
 Dialogue: 0,0:15:17.50,0:15:20.82,English,,0,0,0,,And they can be used by other modules
+Dialogue: 0,0:15:17.50,0:15:20.82,English,,0,0,0,,它们可以被其他模块使用
 Dialogue: 0,0:15:21.08,0:15:27.14,English,,0,0,0,,Right so I mean did you notice when we...if we have a program that consists of multiple modules
+Dialogue: 0,0:15:21.08,0:15:27.14,English,,0,0,0,,是的，所以我的意思是你注意到我们......如果我们有一个由多个模块组成的程序
 Dialogue: 0,0:15:27.56,0:15:30.66,English,,0,0,0,,And we compile each one of those modules into a .o file
+Dialogue: 0,0:15:27.56,0:15:30.66,English,,0,0,0,,然后我们将每个模块编译成一个 .o 文件
 Dialogue: 0,0:15:32.18,0:15:37.42,English,,0,0,0,,Will be calling functions that aren't defined,that are defined by other modules right
+Dialogue: 0,0:15:32.18,0:15:37.42,English,,0,0,0,,将调用由其他模块正确定义的未定义的函数
 Dialogue: 0,0:15:38.94,0:15:44.64,English,,0,0,0,,Okay so those,but there's no error though that the compiler doesn't throw an error
+Dialogue: 0,0:15:38.94,0:15:44.64,English,,0,0,0,,好吧那些，但是虽然编译器没有抛出错误
 Dialogue: 0,0:15:44.64,0:15:48.44,English,,0,0,0,,Because it's assuming that those are defined in other modules and
+Dialogue: 0,0:15:44.64,0:15:48.44,English,,0,0,0,,因为它假设那些是在其他模块中定义的
 Dialogue: 0,0:15:49.10,0:15:53.32,English,,0,0,0,,It assumes the linker will be able to find them in and determine the address
+Dialogue: 0,0:15:49.10,0:15:53.32,English,,0,0,0,,它假定链接器能够找到它们并确定地址
 Dialogue: 0,0:15:54.40,0:16:04.06,English,,0,0,0,,So anything that's defined with that, any global,either global variable or function name
+Dialogue: 0,0:15:54.40,0:16:04.06,English,,0,0,0,,所以用任何全局变量或函数名定义的任何东西
 Dialogue: 0,0:16:04.46,0:16:08.82,English,,0,0,0,,That's defined without the static attribute is a global symbol
+Dialogue: 0,0:16:04.46,0:16:08.82,English,,0,0,0,,没有静态属性的定义是全局符号
 Dialogue: 0,0:16:10.92,0:16:14.92,English,,0,0,0,,Okay now and then external symbols are kind of the flip side of that
 Dialogue: 0,0:16:15.08,0:16:19.12,English,,0,0,0,,External symbols are symbols that are referenced by some module
 Dialogue: 0,0:16:19.44,0:16:21.54,English,,0,0,0,,But defined in some other module
