@@ -214,29 +214,29 @@ Dialogue: 0,0:16:26.86,0:16:34.66,English,,0,0,0,,让我们想想我们能不能
 Dialogue: 0,0:16:35.20,0:16:37.72,English,,0,0,0,,我们有我们的进程执行指令
 Dialogue: 0,0:16:39.00,0:16:41.72,English,,0,0,0,,接着进程会收到信号
 Dialogue: 0,0:16:43.02,0:16:47.10,English,,0,0,0,,所以内核将控制权转移给了信号处理程序
-Dialogue: 0,0:16:47.10,0:16:55.14,English,,0,0,0,,Which is also just in the code that's executing in the current process, it's just a function in our C code
-Dialogue: 0,0:16:56.18,0:17:01.52,English,,0,0,0,,The signal handler runs and when it returns,it eventually returns back to the next instruction
-Dialogue: 0,0:17:02.22,0:17:04.00,English,,0,0,0,,And then we continue
-Dialogue: 0,0:17:04.24,0:17:08.70,English,,0,0,0,,Okay so it's just like kind of like an interrupt right we just temporarily pause
-Dialogue: 0,0:17:09.36,0:17:16.22,English,,0,0,0,,What we're doing in our code to execute this handler before just continuing on
-Dialogue: 0,0:17:18.98,0:17:21.16,English,,0,0,0,,Okay now we say that a signal is pending
-Dialogue: 0,0:17:21.80,0:17:25.98,English,,0,0,0,,If it's been sent by the colonel but not you have received
-Dialogue: 0,0:17:27.98,0:17:34.92,English,,0,0,0,,Okay so if at any given point in time there can only be one pending signal of any particular type
-Dialogue: 0,0:17:36.84,0:17:40.70,English,,0,0,0,,Okay so this has very important consequences for using signals
-Dialogue: 0,0:17:40.70,0:17:47.32,English,,0,0,0,,Because you can't cue signals up right at any point in time there's there can only be one pending sigchild
-Dialogue: 0,0:17:47.66,0:17:51.02,English,,0,0,0,,Signal for example or sigint signal
-Dialogue: 0,0:17:51.84,0:17:55.38,English,,0,0,0,,And if a subsequent sigchild signals say is sent
-Dialogue: 0,0:17:55.94,0:18:00.51,English,,0,0,0,,It just over writes well you can think of it,it has no impact
-Dialogue: 0,0:18:00.78,0:18:04.04,English,,0,0,0,,It's just discarded right if there's already a pending signal
-Dialogue: 0,0:18:04.04,0:18:06.66,English,,0,0,0,,So they don't queue up in any meaningful way
-Dialogue: 0,0:18:09.58,0:18:12.50,English,,0,0,0,,Now our process can block the receipt of certain signals
-Dialogue: 0,0:18:13.62,0:18:16.42,English,,0,0,0,,Okay now it can't stop signals from being delivered
-Dialogue: 0,0:18:17.04,0:18:23.76,English,,0,0,0,,But it can stop the process from having to react to the route to that signal when it's received
-Dialogue: 0,0:18:27.84,0:18:34.10,English,,0,0,0,,Okay so block signals can be delivered but they won't be received until the signals unblocked
-Dialogue: 0,0:18:38.88,0:18:41.30,English,,0,0,0,,And pending signals are received at most once
-Dialogue: 0,0:18:46.34,0:18:49.36,English,,0,0,0,,Now the colonel keeps track of these pending and blocked
-Dialogue: 0,0:18:49.90,0:18:54.42,English,,0,0,0,,Signals in bit vectors that will call pending and blocked
-Dialogue: 0,0:18:55.24,0:18:58.62,English,,0,0,0,,And pending represents the set of pending signals
+Dialogue: 0,0:16:47.10,0:16:55.14,English,,0,0,0,,Which is also just in the code that's executing in the current process, it's just a function in our C code 它是一段仅仅在当前进程执行的代码，是你 C 代码里的一个函数，
+Dialogue: 0,0:16:56.18,0:17:01.52,English,,0,0,0,,The signal handler runs and when it returns,it eventually returns back to the next instruction 当这段信号处理程序执行完，它会返回到下一条指令
+Dialogue: 0,0:17:02.22,0:17:04.00,English,,0,0,0,,And then we continue 那我们继续
+Dialogue: 0,0:17:04.24,0:17:08.70,English,,0,0,0,,Okay so it's just like kind of like an interrupt right we just temporarily pause 好吧，这就像一次终端，我们先暂停一下
+Dialogue: 0,0:17:09.36,0:17:16.22,English,,0,0,0,,What we're doing in our code to execute this handler before just continuing on 在继续之前，我们要在处理程序里做什么呢
+Dialogue: 0,0:17:18.98,0:17:21.16,English,,0,0,0,,Okay now we say that a signal is pending 我们说这个信号现在是未决的
+Dialogue: 0,0:17:21.80,0:17:25.98,English,,0,0,0,,If it's been sent by the colonel but not you have received 如果它已经由 colonel 发出但你还没有收到
+Dialogue: 0,0:17:27.98,0:17:34.92,English,,0,0,0,,Okay so if at any given point in time there can only be one pending signal of any particular type 好的，那么如果在某些给定的时刻，只能有一个任意特定类型的未决信号
+Dialogue: 0,0:17:36.84,0:17:40.70,English,,0,0,0,,Okay so this has very important consequences for using signals 这对使用信号来说有很大影响
+Dialogue: 0,0:17:40.70,0:17:47.32,English,,0,0,0,,Because you can't cue signals up right at any point in time there's there can only be one pending sigchild 因为你无法随时提醒信号的接收，所以只能有一个未决的 sigchild 信号
+Dialogue: 0,0:17:47.66,0:17:51.02,English,,0,0,0,,Signal for example or sigint signal 再举一个 sigint 信号的例子
+Dialogue: 0,0:17:51.84,0:17:55.38,English,,0,0,0,,And if a subsequent sigchild signals say is sent 如果还有后续的 sigchild 信号被发送
+Dialogue: 0,0:17:55.94,0:18:00.51,English,,0,0,0,,It just over writes well you can think of it,it has no impact 这上面已经写了，你可以想到，它是没有影响的
+Dialogue: 0,0:18:00.78,0:18:04.04,English,,0,0,0,,It's just discarded right if there's already a pending signal 如果已经有一个未决的信号，那新来的就会被丢弃
+Dialogue: 0,0:18:04.04,0:18:06.66,English,,0,0,0,,So they don't queue up in any meaningful way 它们不存在排队的说法
+Dialogue: 0,0:18:09.58,0:18:12.50,English,,0,0,0,,Now our process can block the receipt of certain signals 现在我们的进程可以阻塞某些信号的接收
+Dialogue: 0,0:18:13.62,0:18:16.42,English,,0,0,0,,Okay now it can't stop signals from being delivered 它没办法阻止信号的传递
+Dialogue: 0,0:18:17.04,0:18:23.76,English,,0,0,0,,But it can stop the process from having to react to the route to that signal when it's received 但是它可以阻止进程在收到信号后的响应
+Dialogue: 0,0:18:27.84,0:18:34.10,English,,0,0,0,,Okay so block signals can be delivered but they won't be received until the signals unblocked 好的，所以被阻塞的信号可以被传递，但在阻塞解除前不能被接收
+Dialogue: 0,0:18:38.88,0:18:41.30,English,,0,0,0,,And pending signals are received at most once 还有，未决信号最多被接收一次
+Dialogue: 0,0:18:46.34,0:18:49.36,English,,0,0,0,,Now the colonel keeps track of these pending and blocked 现在 colonel 会跟踪这些 未决和阻塞的进程
+Dialogue: 0,0:18:49.90,0:18:54.42,English,,0,0,0,,Signals in bit vectors that will call pending and blocked 位向量中的信号会调用它们
+Dialogue: 0,0:18:55.24,0:18:58.62,English,,0,0,0,,And pending represents the set of pending signals 未决表示所有未决信号的集合
 Dialogue: 0,0:18:58.74,0:19:04.24,English,,0,0,0,,Right where each bit in the pending bit vector corresponds to some particular signal
 Dialogue: 0,0:19:04.84,0:19:07.06,English,,0,0,0,,Okay so this is why they can't be queued right because
 Dialogue: 0,0:19:08.18,0:19:12.38,English,,0,0,0,,There's only one bit for any signal key,there's only one bit in the bit vector
