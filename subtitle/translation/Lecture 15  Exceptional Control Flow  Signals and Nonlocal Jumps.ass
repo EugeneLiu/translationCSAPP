@@ -161,59 +161,59 @@ Dialogue: 0,0:11:08.36,0:11:13.84,English,,0,0,0,,信号 9 是 sigkill，可以�
 Dialogue: 0,0:11:15.78,0:11:22.74,English,,0,0,0,,所以对我来说 sigint 和 sigkill 的效果是一样的，它们都 kill 了程序
 Dialogue: 0,0:11:23.02,0:11:30.36,English,,0,0,0,,sigkill 的特殊之处是它不能被任何方式忽略或覆盖掉
 Dialogue: 0,0:11:30.89,0:11:32.18,English,,0,0,0,,这就像失效保护一样
-Dialogue: 0,0:11:33.36,0:11:38.48,English,,0,0,0,,As we'll see there are there are ways to catch and ignore other signals like sigint
+Dialogue: 0,0:11:33.36,0:11:38.48,English,,0,0,0,,我们很快就能看到有一些方法可以捕获并忽略其它像 sigint 这样的信号
 Dialogue: 0,0:11:40.22,0:11:43.32,English,,0,0,0,,Sigsegv is the our favorite segment
-Dialogue: 0,0:11:43.54,0:11:51.24,English,,0,0,0,,Segmentation violation so if you access a region of memory that's protected or not legal
-Dialogue: 0,0:11:52.48,0:11:57.74,English,,0,0,0,,Then your program will ,the kernel will send your that process a sigsegv
-Dialogue: 0,0:11:58.46,0:12:06.40,English,,0,0,0,,Okay signal and the default  the default effective that is to terminate the program
-Dialogue: 0,0:12:07.08,0:12:11.72,English,,0,0,0,,Sigalrm is a way within your program you can arrange for a signal to be sent to yourself
-Dialogue: 0,0:12:12.32,0:12:18.94,English,,0,0,0,,So you can say inside your program send me a sigalrm signal in three seconds
-Dialogue: 0,0:12:21.58,0:12:27.00,English,,0,0,0,,So this is a way to do things like you can set up timers,you can set up timeouts like if you want to
-Dialogue: 0,0:12:27.60,0:12:32.88,English,,0,0,0,,If you want to set a timeout value and you're doing some some some work and
-Dialogue: 0,0:12:33.28,0:12:39.76,English,,0,0,0,,You want to guard against that that work taking exceptionally long time, you can use sigalrm to set a timeout
-Dialogue: 0,0:12:40.64,0:12:46.72,English,,0,0,0,,And then a very important one is as we'll see that would be very important for our shell is the sigchild signal
-Dialogue: 0,0:12:47.30,0:12:54.48,English,,0,0,0,,Which the colonel sends to a parent every time one of its children terminates or stops
-Dialogue: 0,0:12:55.48,0:12:57.90,English,,0,0,0,,Okay so this as we'll see now
-Dialogue: 0,0:12:58.44,0:13:02.58,English,,0,0,0,,We'll see this is how we're going...this is how a shell that is going to actually reap
+Dialogue: 0,0:11:43.54,0:11:51.24,English,,0,0,0,,如果你试图访问受保护的，或不合法的内存区域，就会出现段错误
+Dialogue: 0,0:11:52.48,0:11:57.74,English,,0,0,0,,然后我们的程序会，内核会向这个进程发送 sigsegv 信号
+Dialogue: 0,0:11:58.46,0:12:06.40,English,,0,0,0,,信号和默认的效果是终止这个程序
+Dialogue: 0,0:12:07.08,0:12:11.72,English,,0,0,0,,sigalrm 信号 是一种你可以自行安排的信号，你可以将信号发送给你自己
+Dialogue: 0,0:12:12.32,0:12:18.94,English,,0,0,0,,所以你可以在你的程序里写每隔三秒给自己发送一个 sigalrm 信号
+Dialogue: 0,0:12:21.58,0:12:27.00,English,,0,0,0,,所以这是一种设置定时器的方式，你可以按照你的需求设置超时
+Dialogue: 0,0:12:27.60,0:12:32.88,English,,0,0,0,,如果你想设置一个超时变量并且做一些工作，比如
+Dialogue: 0,0:12:33.28,0:12:39.76,English,,0,0,0,,你想要防止这项工作运行太长时间，你可以用 sigalrm 来设置超时
+Dialogue: 0,0:12:40.64,0:12:46.72,English,,0,0,0,,那么接下来我们会看到有一个对 shell 来说非常重要的信号 sigchild
+Dialogue: 0,0:12:47.30,0:12:54.48,English,,0,0,0,,每当子进程被终止或结束时 colonel 就会通知它们的父进程
+Dialogue: 0,0:12:55.48,0:12:57.90,English,,0,0,0,,就是我们看到的
+Dialogue: 0,0:12:58.44,0:13:02.58,English,,0,0,0,,我们会看到。。这就是 shell 回收进程的做法
 Dialogue: 0,0:13:02.66,0:13:08.40,English,,0,0,0,,It's all of its children right is by taking advantage of the sigchild signal
-Dialogue: 0,0:13:09.78,0:13:11.92,English,,0,0,0,,But before I can show you that
-Dialogue: 0,0:13:12.46,0:13:18.58,English,,0,0,0,,We need to go through a number of concepts around signals
-Dialogue: 0,0:13:20.00,0:13:24.32,English,,0,0,0,,Okay like I said the semantics of signals
-Dialogue: 0,0:13:24.74,0:13:27.54,English,,0,0,0,,It's probably one of the thorniest aspects of Linux
-Dialogue: 0,0:13:28.94,0:13:40.98,English,,0,0,0,,It was developed very early in the the lifespan of Linux when and it maybe wasn't as clean as it could be right so
-Dialogue: 0,0:13:41.44,0:13:47.24,English,,0,0,0,,In order to get a handle on signals we're going to be very careful about defining terms and very careful about the way
-Dialogue: 0,0:13:47.62,0:13:48.88,English,,0,0,0,,We talk about them
-Dialogue: 0,0:13:50.26,0:13:57.46,English,,0,0,0,,So we say that the kernel sends or delivers a signal to some destination process
-Dialogue: 0,0:13:58.52,0:14:04.98,English,,0,0,0,,And it does this by setting some state in the context of the destination process
-Dialogue: 0,0:14:05.76,0:14:14.00,English,,0,0,0,,Now nothing happens except that some bits get changed in the destination process context
-Dialogue: 0,0:14:14.32,0:14:19.02,English,,0,0,0,,Okay there's no impact of, immediate impact of sending a signal
-Dialogue: 0,0:14:22.94,0:14:24.80,English,,0,0,0,,Now a kernel sends a signal
-Dialogue: 0,0:14:25.92,0:14:29.68,English,,0,0,0,,Either because it detected some event in the system like
-Dialogue: 0,0:14:30.38,0:14:33.02,English,,0,0,0,,That like a child process is terminated for example
+Dialogue: 0,0:13:09.78,0:13:11.92,English,,0,0,0,,在我放下个幻灯片之前
+Dialogue: 0,0:13:12.46,0:13:18.58,English,,0,0,0,,我们得搞定关于信号的一些概念
+Dialogue: 0,0:13:20.00,0:13:24.32,English,,0,0,0,,比如说我说过的信号的语义
+Dialogue: 0,0:13:24.74,0:13:27.54,English,,0,0,0,,这可能是 Linux 上比较棘手的一个地方
+Dialogue: 0,0:13:28.94,0:13:40.98,English,,0,0,0,,它是在 Linux 早期就出现的，可能不像你们想的那样简洁
+Dialogue: 0,0:13:41.44,0:13:47.24,English,,0,0,0,,为了处理信号，我们定义术语时得非常小心
+Dialogue: 0,0:13:47.62,0:13:48.88,English,,0,0,0,,我们现在就是在讨论这个
+Dialogue: 0,0:13:50.26,0:13:57.46,English,,0,0,0,,所以我们说内核给目标进程发送或传递一个信号
+Dialogue: 0,0:13:58.52,0:14:04.98,English,,0,0,0,,它通过为目标进程的上下文设置一些状态来实现
+Dialogue: 0,0:14:05.76,0:14:14.00,English,,0,0,0,,除了目标进程上下文中的一些位被改变了，再没有其它的
+Dialogue: 0,0:14:14.32,0:14:19.02,English,,0,0,0,,这里并没有影响。。直接发送信号的影响
+Dialogue: 0,0:14:22.94,0:14:24.80,English,,0,0,0,,现在内核发送一个信号
+Dialogue: 0,0:14:25.92,0:14:29.68,English,,0,0,0,,也可以是因为它监测到系统中的一些事件
+Dialogue: 0,0:14:30.38,0:14:33.02,English,,0,0,0,,比如说一个子进程被终止
 Dialogue: 0,0:14:34.66,0:14:41.42,English,,0,0,0,,Or another process has asked the kernel (to send) to deliver a process on a signal on its behalf
-Dialogue: 0,0:14:43.38,0:14:47.04,English,,0,0,0,,And there's a number of ways to do that one of them is with the kill system call
+Dialogue: 0,0:14:43.38,0:14:47.04,English,,0,0,0,,有很多方式可以做到这一点，系统调用 kill 就是其中一种
 Dialogue: 0,0:14:48.88,0:14:51.48,English,,0,0,0,,It's kind of an unfortunate tournament
-Dialogue: 0,0:14:52.18,0:14:55.50,English,,0,0,0,,I mean the so kill is a general way to send signals
-Dialogue: 0,0:14:56.10,0:15:01.50,English,,0,0,0,,And the impact is sometimes not to kill the program right
-Dialogue: 0,0:15:01.52,0:15:04.36,English,,0,0,0,,But for some reason they chose to call it kill
-Dialogue: 0,0:15:07.72,0:15:11.70,English,,0,0,0,,Now the destination process receives a signal
-Dialogue: 0,0:15:13.08,0:15:20.54,English,,0,0,0,,When it's forced by the kernel to act in some way to react in some way to the delivery of a signal
-Dialogue: 0,0:15:22.34,0:15:29.02,English,,0,0,0,,Okay so these are two very different things sending a signal set state in the context of the destination process
-Dialogue: 0,0:15:29.84,0:15:36.82,English,,0,0,0,,Receiving a signal is what happens when the destination process is finally
-Dialogue: 0,0:15:37.16,0:15:40.90,English,,0,0,0,,Forced by the kernel to act in some way to react in some way
-Dialogue: 0,0:15:41.82,0:15:45.70,English,,0,0,0,,Now some possible ways to react are to just ignore the signal
-Dialogue: 0,0:15:49.14,0:15:50.46,English,,0,0,0,,Okay to terminate the process
-Dialogue: 0,0:15:52.98,0:15:58.50,English,,0,0,0,,Or to catch the signal by executing a user level function called a signal handler
-Dialogue: 0,0:15:59.10,0:16:04.18,English,,0,0,0,,So in this case when we catch signals it's very similar to the...
-Dialogue: 0,0:16:04.94,0:16:06.38,English,,0,0,0,,And executes a signal handle
-Dialogue: 0,0:16:06.38,0:16:13.74,English,,0,0,0,,It's very similar to executing an exception handler in response to some kind of event in the system
-Dialogue: 0,0:16:14.20,0:16:17.52,English,,0,0,0,,Now the difference is that exception handlers are in the kernel
-Dialogue: 0,0:16:18.18,0:16:21.28,English,,0,0,0,,Signal handlers are actually just in your C code okay there
-Dialogue: 0,0:16:22.74,0:16:25.31,English,,0,0,0,,And they execute in your process
-Dialogue: 0,0:16:26.86,0:16:34.66,English,,0,0,0,,So the way to think about if we catch a signal by executing a signal handler
-Dialogue: 0,0:16:35.20,0:16:37.72,English,,0,0,0,,We have our process executing instructions
-Dialogue: 0,0:16:39.00,0:16:41.72,English,,0,0,0,,And then the signal is received by that process
-Dialogue: 0,0:16:43.02,0:16:47.10,English,,0,0,0,,So the kernel passes control to a signal handler
+Dialogue: 0,0:14:52.18,0:14:55.50,English,,0,0,0,,我的意思是说， kill 是一个发送信号的方式
+Dialogue: 0,0:14:56.10,0:15:01.50,English,,0,0,0,,当然有时候 kill 掉一个程序不太好
+Dialogue: 0,0:15:01.52,0:15:04.36,English,,0,0,0,,但因为某些理由，人们需要 kill 掉它
+Dialogue: 0,0:15:07.72,0:15:11.70,English,,0,0,0,,现在目标进程收到一个信号
+Dialogue: 0,0:15:13.08,0:15:20.54,English,,0,0,0,,当内核强制它在收到信号后作出应答时
+Dialogue: 0,0:15:22.34,0:15:29.02,English,,0,0,0,,好的，那么在设置目标进程上下文里的状态时，有两种差异很大的方式
+Dialogue: 0,0:15:29.84,0:15:36.82,English,,0,0,0,,收到信号是目标进程最终发生的事情
+Dialogue: 0,0:15:37.16,0:15:40.90,English,,0,0,0,,内核强制它以某种方式作出响应
+Dialogue: 0,0:15:41.82,0:15:45.70,English,,0,0,0,,那么有个可行的响应是忽视此信号
+Dialogue: 0,0:15:49.14,0:15:50.46,English,,0,0,0,,也可以终止此进程
+Dialogue: 0,0:15:52.98,0:15:58.50,English,,0,0,0,,或者用用户级的信号处理函数来捕获它
+Dialogue: 0,0:15:59.10,0:16:04.18,English,,0,0,0,,在这里我们捕获信号的方式很像。。
+Dialogue: 0,0:16:04.94,0:16:06.38,English,,0,0,0,,执行一个信号处理程序
+Dialogue: 0,0:16:06.38,0:16:13.74,English,,0,0,0,,很像响应某些系统事件的异常处理程序
+Dialogue: 0,0:16:14.20,0:16:17.52,English,,0,0,0,,它们的区别在于异常处理是内核级别的
+Dialogue: 0,0:16:18.18,0:16:21.28,English,,0,0,0,,信号处理实际上是在你的 C 代码里
+Dialogue: 0,0:16:22.74,0:16:25.31,English,,0,0,0,,它们在你的程序里执行
+Dialogue: 0,0:16:26.86,0:16:34.66,English,,0,0,0,,让我们想想我们能不能用信号处理的方式捕获信号
+Dialogue: 0,0:16:35.20,0:16:37.72,English,,0,0,0,,我们有我们的进程执行指令
+Dialogue: 0,0:16:39.00,0:16:41.72,English,,0,0,0,,接着进程会收到信号
+Dialogue: 0,0:16:43.02,0:16:47.10,English,,0,0,0,,所以内核将控制权转移给了信号处理程序
 Dialogue: 0,0:16:47.10,0:16:55.14,English,,0,0,0,,Which is also just in the code that's executing in the current process, it's just a function in our C code
 Dialogue: 0,0:16:56.18,0:17:01.52,English,,0,0,0,,The signal handler runs and when it returns,it eventually returns back to the next instruction
 Dialogue: 0,0:17:02.22,0:17:04.00,English,,0,0,0,,And then we continue
