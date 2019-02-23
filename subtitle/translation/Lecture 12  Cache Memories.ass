@@ -314,318 +314,322 @@ Dialogue: 0,0:13:22.18,0:13:28.58,Chinese,,0,0,0,,那么这一行中的标记位
 Dialogue: 0,0:13:30.04,0:13:39.42,English,,0,0,0,,Or is it the same? same? different? same? different?
 Dialogue: 0,0:13:30.04,0:13:39.42,Chinese,,0,0,0,,还是一样吗？相同？不同？相同？不同？
 Dialogue: 0,0:13:43.70,0:13:44.98,English,,0,0,0,,Now why would it be different ?
-Dialogue: 0,0:13:43.70,0:13:44.98,Chinese,,0,0,0,,现在为什么会有所不同？
+Dialogue: 0,0:13:43.70,0:13:44.98,Chinese,,0,0,0,,现在为什么会有所不同
 Dialogue: 0,0:13:48.46,0:13:59.24,English,,0,0,0,,-we haven't changed yes-[student speaking]-I'm sorry oh-[student speaking]
-Dialogue: 0,0:13:48.46,0:13:59.24,Chinese,,0,0,0,, - 我们没有改变是 -  [学生说话]  - 对不起哦 -  [学生说话]
+Dialogue: 0,0:13:48.46,0:13:59.24,Chinese,,0,0,0,, - 是的，我们没有改变 -  [学生说话]  - 对不起哦 -  [学生说话]
 Dialogue: 0,0:13:59.54,0:14:02.52,English,,0,0,0,,Oh it almost certainly has different data
-Dialogue: 0,0:13:59.54,0:14:02.52,Chinese,,0,0,0,,哦，它几乎肯定有不同的数据
+Dialogue: 0,0:13:59.54,0:14:02.52,Chinese,,0,0,0,,哦，几乎可以确定它的数据不同
 Dialogue: 0,0:14:02.92,0:14:04.16,English,,0,0,0,,But just have a different address
 Dialogue: 0,0:14:02.92,0:14:04.16,Chinese,,0,0,0,,但只是有一个不同的地址
 Dialogue: 0,0:14:13.24,0:14:17.60,English,,0,0,0,,Exactly it missed because the tag
-Dialogue: 0,0:14:13.24,0:14:17.60,Chinese,,0,0,0,,完全错过了因为标签
+Dialogue: 0,0:14:13.24,0:14:17.60,Chinese,,0,0,0,,因为标记位而发生未命中
 Dialogue: 0,0:14:18.18,0:14:19.82,English,,0,0,0,,It missed because the tag didn't match
-Dialogue: 0,0:14:18.18,0:14:19.82,Chinese,,0,0,0,,它错过了因为标签不匹配
+Dialogue: 0,0:14:18.18,0:14:19.82,Chinese,,0,0,0,,因为标记位不匹配，而未命中
 Dialogue: 0,0:14:22.90,0:14:26.94,English,,0,0,0,,If the valid bit was false and the tag match then that would also be a miss
-Dialogue: 0,0:14:22.90,0:14:26.94,Chinese,,0,0,0,,如果有效位为假且标记匹配，那么这也将是未命中
+Dialogue: 0,0:14:22.90,0:14:26.94,Chinese,,0,0,0,,如果有效位为假即使标记位匹配了，那么这也是未命中
 Dialogue: 0,0:14:28.74,0:14:34.74,English,,0,0,0,,Oh then you wouldn't...okay that's right,that's...okay good good good,okay,great
-Dialogue: 0,0:14:28.74,0:14:34.74,Chinese,,0,0,0,,哦，那你就不会......好吧，那是......好吧好的好，好的，好的
+Dialogue: 0,0:14:28.74,0:14:34.74,Chinese,,0,0,0,,哦，那你就不会......那是......好吧
 Dialogue: 0,0:14:39.70,0:14:48.10,English,,0,0,0,,All right let me do a little, let me do a really simple specific example of a how direct map cache works
-Dialogue: 0,0:14:39.70,0:14:48.10,Chinese,,0,0,0,,好吧，让我做一点，让我做一个关于直接地图缓存如何工作的一个非常简单的具体例子
+Dialogue: 0,0:14:39.70,0:14:48.10,Chinese,,0,0,0,,让我多说一点，让我讲一个非常简单的具体例子，关于直接映射如何工作的例子
 Dialogue: 0,0:14:48.92,0:14:53.56,English,,0,0,0,,I want you to understand in real detail how this would work
-Dialogue: 0,0:14:48.92,0:14:53.56,Chinese,,0,0,0,,我希望你真正了解这是如何工作的
+Dialogue: 0,0:14:48.92,0:14:53.56,Chinese,,0,0,0,,我希望你能真正了解这是如何工作的
 Dialogue: 0,0:14:53.56,0:14:59.42,English,,0,0,0,,But I also want to make a point for about the weakness of direct mapped cache is and why
-Dialogue: 0,0:14:53.56,0:14:59.42,Chinese,,0,0,0,,但我也想说明直接映射缓存的弱点和原因
+Dialogue: 0,0:14:53.56,0:14:59.42,Chinese,,0,0,0,,但我也想说明直接映射缓存的不足及其原因
 Dialogue: 0,0:15:00.08,0:15:02.62,English,,0,0,0,,Why you would want to have more than one line per set
-Dialogue: 0,0:15:00.08,0:15:02.62,Chinese,,0,0,0,,为什么你希望每组有多行
+Dialogue: 0,0:15:00.08,0:15:02.62,Chinese,,0,0,0,,为什么希望每组包含多行
 Dialogue: 0,0:15:04.96,0:15:11.48,English,,0,0,0,,Okay this is a really simple we have our memory system consists of 16 bytes
-Dialogue: 0,0:15:04.96,0:15:11.48,Chinese,,0,0,0,,好的，这是一个非常简单的我们的内存系统由16个字节组成
+Dialogue: 0,0:15:04.96,0:15:11.48,Chinese,,0,0,0,,这是一个非常简单的内存系统，由16个字节组成
 Dialogue: 0,0:15:11.70,0:15:15.30,English,,0,0,0,,Ok so it's not a very useful system with 4 bit addresses
-Dialogue: 0,0:15:11.70,0:15:15.30,Chinese,,0,0,0,,好的，这不是一个非常有用的4位地址系统
+Dialogue: 0,0:15:11.70,0:15:15.30,Chinese,,0,0,0,,这有一个不是很够用的 4 位地址系统
 Dialogue: 0,0:15:16.94,0:15:20.42,English,,0,0,0,,And it's broken up into blocks of 2 bytes each
-Dialogue: 0,0:15:16.94,0:15:20.42,Chinese,,0,0,0,,它被分解为每个2字节的块
+Dialogue: 0,0:15:16.94,0:15:20.42,Chinese,,0,0,0,,它被分解为包含 2 个字节的块
 Dialogue: 0,0:15:21.74,0:15:26.34,English,,0,0,0,,Our cache consists of 4 sets with one block per set
-Dialogue: 0,0:15:21.74,0:15:26.34,Chinese,,0,0,0,,我们的缓存由4组组成，每组一个区块
+Dialogue: 0,0:15:21.74,0:15:26.34,Chinese,,0,0,0,,我们的缓存由 4 组组成，每组一个块
 Dialogue: 0,0:15:28.32,0:15:31.26,English,,0,0,0,,Now 4 bytes,4 bit addresses
 Dialogue: 0,0:15:28.32,0:15:31.26,Chinese,,0,0,0,,现在4个字节，4位地址
 Dialogue: 0,0:15:33.08,0:15:38.56,English,,0,0,0,,Because B=2, that's 2^1 we only need 1 block offset bit
-Dialogue: 0,0:15:33.08,0:15:38.56,Chinese,,0,0,0,,因为B = 2，即2 ^ 1，我们只需要1个块偏移位
+Dialogue: 0,0:15:33.08,0:15:38.56,Chinese,,0,0,0,,因为 B=2，即 2^1 ，我们只需要 1 个块偏移位
 Dialogue: 0,0:15:38.80,0:15:44.74,English,,0,0,0,,Right there's only 2 bytes in a block so the byte we're looking for is either at 0 or 1
-Dialogue: 0,0:15:38.80,0:15:44.74,Chinese,,0,0,0,,在一个块中只有2个字节，所以我们要查找的字节是0或1
+Dialogue: 0,0:15:38.80,0:15:44.74,Chinese,,0,0,0,,在一个块中只有 2 个字节，所以我们要查找的字节是 0 或 1
 Dialogue: 0,0:15:46.80,0:15:51.82,English,,0,0,0,,Okay because we have 4 sets we need set index bits
-Dialogue: 0,0:15:46.80,0:15:51.82,Chinese,,0,0,0,,好的，因为我们有4套，我们需要设置索引位
+Dialogue: 0,0:15:46.80,0:15:51.82,Chinese,,0,0,0,,因为我们有 4 组，我们需要设置索引位
 Dialogue: 0,0:15:52.52,0:15:57.20,English,,0,0,0,,And then the remaining bits are always tag bits in this case there's just one tag bit
-Dialogue: 0,0:15:52.52,0:15:57.20,Chinese,,0,0,0,,然后剩余的位总是标记位，在这种情况下只有一个标记位
+Dialogue: 0,0:15:52.52,0:15:57.20,Chinese,,0,0,0,,最后剩余的位总是标记位，在这种情况下只有一个标记位
 Dialogue: 0,0:15:58.66,0:16:05.38,English,,0,0,0,,All right now let's suppose that our program executes instructions
-Dialogue: 0,0:15:58.66,0:16:05.38,Chinese,,0,0,0,,好了，我们假设我们的程序执行指令
+Dialogue: 0,0:15:58.66,0:16:05.38,Chinese,,0,0,0,,假设我们的程序开始执行指令
 Dialogue: 0,0:16:05.54,0:16:12.30,English,,0,0,0,,That reference the following memory address is 0,1,7,8 and 0
-Dialogue: 0,0:16:05.54,0:16:12.30,Chinese,,0,0,0,,该引用以下内存地址为0,1,7,8和0
+Dialogue: 0,0:16:05.54,0:16:12.30,Chinese,,0,0,0,,引用地址为 0,1,7,8 和 0 的内存
 Dialogue: 0,0:16:14.10,0:16:18.34,English,,0,0,0,,And these references are reads that they're reading one byte per read
-Dialogue: 0,0:16:14.10,0:16:18.34,Chinese,,0,0,0,,这些引用是读取它们每次读取一个字节的读取
+Dialogue: 0,0:16:14.10,0:16:18.34,Chinese,,0,0,0,,这些引用它们每次读取一个字节
 Dialogue: 0,0:16:19.04,0:16:20.92,English,,0,0,0,,Okay like I said this is a really simple system
-Dialogue: 0,0:16:19.04,0:16:20.92,Chinese,,0,0,0,,好吧我说这是一个非常简单的系统
+Dialogue: 0,0:16:19.04,0:16:20.92,Chinese,,0,0,0,,我说了这是一个非常简单的系统
 Dialogue: 0,0:16:23.46,0:16:24.90,English,,0,0,0,,So let's look at what happens now
-Dialogue: 0,0:16:23.46,0:16:24.90,Chinese,,0,0,0,,那么让我们来看看现在发生了什么
+Dialogue: 0,0:16:23.46,0:16:24.90,Chinese,,0,0,0,,让我们来看看现在发生了什么
 Dialogue: 0,0:16:24.90,0:16:33.82,English,,0,0,0,,We start tag,initially,cache is empty valid bits are all set to zero
-Dialogue: 0,0:16:24.90,0:16:33.82,Chinese,,0,0,0,,我们开始标记，最初，缓存是空的有效位都被设置为零
+Dialogue: 0,0:16:24.90,0:16:33.82,Chinese,,0,0,0,,我们开始检查标记位，初始时，缓存是空的，有效位都被设置为零
 Dialogue: 0,0:16:35.76,0:16:40.64,English,,0,0,0,,And now the cache receives the request for the byte that's at address 0
-Dialogue: 0,0:16:35.76,0:16:40.64,Chinese,,0,0,0,,现在，缓存接收对地址为0的字节的请求
+Dialogue: 0,0:16:35.76,0:16:40.64,Chinese,,0,0,0,,缓存接收对地址为 0 的字节的请求
 Dialogue: 0,0:16:43.02,0:16:46.90,English,,0,0,0,,So it extracts the set index bits which in this case are 00
-Dialogue: 0,0:16:43.02,0:16:46.90,Chinese,,0,0,0,,因此它提取设置索引位，在本例中为00
+Dialogue: 0,0:16:43.02,0:16:46.90,Chinese,,0,0,0,,因此它提取组索引位，在本例中为 00
 Dialogue: 0,0:16:47.96,0:16:51.02,English,,0,0,0,,So these so it's going to look in set 0
-Dialogue: 0,0:16:47.96,0:16:51.02,Chinese,,0,0,0,,所以这些它将在第0组中查找
+Dialogue: 0,0:16:47.96,0:16:51.02,Chinese,,0,0,0,,它将在第 0 组中查找
 Dialogue: 0,0:16:52.58,0:16:58.36,English,,0,0,0,,For and in this case since valid is 0 it's just a miss ok
-Dialogue: 0,0:16:52.58,0:16:58.36,Chinese,,0,0,0,,对于和在这种情况下，因为有效是0，它只是一个错过确定
+Dialogue: 0,0:16:52.58,0:16:58.36,Chinese,,0,0,0,,在这种情况下，因为有效位是 0，它只是一个未命中
 Dialogue: 0,0:16:59.76,0:17:04.64,English,,0,0,0,,So it fetches that block from memory sticks the block
-Dialogue: 0,0:16:59.76,0:17:04.64,Chinese,,0,0,0,,因此它从存储器中取出块来阻止块
+Dialogue: 0,0:16:59.76,0:17:04.64,Chinese,,0,0,0,,它从内存中取出该块
 Dialogue: 0,0:17:06.04,0:17:11.60,English,,0,0,0,,So this memory this is the...this is using array notation for memory
-Dialogue: 0,0:17:06.04,0:17:11.60,Chinese,,0,0,0,,所以这个内存就是......这是使用数组符号表示内存
+Dialogue: 0,0:17:06.04,0:17:11.60,Chinese,,0,0,0,,这个内存就是......使用数组符号来表示内存
 Dialogue: 0,0:17:11.60,0:17:18.78,English,,0,0,0,,So this is like the the bytes that extend from offset 0 to offset 1 inclusive in memory
-Dialogue: 0,0:17:11.60,0:17:18.78,Chinese,,0,0,0,,所以这就像在内存中从偏移0延伸到偏移1的字节
+Dialogue: 0,0:17:11.60,0:17:18.78,Chinese,,0,0,0,,这就像在内存中，从偏移 0 延伸到偏移 1 的字节
 Dialogue: 0,0:17:20.84,0:17:25.42,English,,0,0,0,,The tag bit is 0 and the valid bit is 1
 Dialogue: 0,0:17:20.84,0:17:25.42,Chinese,,0,0,0,,标记位为0，有效位为1
 Dialogue: 0,0:17:26.14,0:17:30.76,English,,0,0,0,,Ok now the next address that comes by is for address 1
-Dialogue: 0,0:17:26.14,0:17:30.76,Chinese,,0,0,0,,好的，现在下一个地址是地址1
+Dialogue: 0,0:17:26.14,0:17:30.76,Chinese,,0,0,0,,下一个选取的地址是地址 1
 Dialogue: 0,0:17:32.86,0:17:40.14,English,,0,0,0,,Well that's a hit right...because we...that block the block that contains the byte at address 1 is already in the cache
-Dialogue: 0,0:17:32.86,0:17:40.14,Chinese,,0,0,0,,好吧，这是一个正确的...因为我们...阻止包含地址1字节的块已经在缓存中
+Dialogue: 0,0:17:32.86,0:17:40.14,Chinese,,0,0,0,,这是一个命中...因为我们...包含地址 1 字节的块已经在缓存中
 Dialogue: 0,0:17:41.82,0:17:45.62,English,,0,0,0,,The tag and the tags match okay so we're good that's a hit
-Dialogue: 0,0:17:41.82,0:17:45.62,Chinese,,0,0,0,,标签和标签匹配正常，所以我们很好，这是一个打击
+Dialogue: 0,0:17:41.82,0:17:45.62,Chinese,,0,0,0,,标签位匹配正常，很好，这是一个命中
 Dialogue: 0,0:17:47.16,0:17:48.64,English,,0,0,0,,You now we get address 7
-Dialogue: 0,0:17:47.16,0:17:48.64,Chinese,,0,0,0,,你现在我们得到地址7
+Dialogue: 0,0:17:47.16,0:17:48.64,Chinese,,0,0,0,,我们得到地址 7
 Dialogue: 0,0:17:50.62,0:17:57.72,English,,0,0,0,,So the cache extracts the set index bits,which in this case are 11 or 4 or 3 rather
-Dialogue: 0,0:17:50.62,0:17:57.72,Chinese,,0,0,0,,因此缓存提取设置的索引位，在这种情况下是11或4或3
+Dialogue: 0,0:17:50.62,0:17:57.72,Chinese,,0,0,0,,缓存提取组索引位，在这种情况下是 11 或 4 或 3
 Dialogue: 0,0:17:59.80,0:18:07.42,English,,0,0,0,,Looks in set 3 there's no valid bit,so that's a miss and it loads the the data from memory
-Dialogue: 0,0:17:59.80,0:18:07.42,Chinese,,0,0,0,,在第3组中查找没有有效位，因此这是一个未命中并且它从内存加载数据
+Dialogue: 0,0:17:59.80,0:18:07.42,Chinese,,0,0,0,,在第 3 组中查找，发现有效位为零，因此这是一个未命中，并且它会从内存加载数据
 Dialogue: 0,0:18:08.22,0:18:11.14,English,,0,0,0,,That spans bytes 6~7
-Dialogue: 0,0:18:08.22,0:18:11.14,Chinese,,0,0,0,,跨越字节6~7
+Dialogue: 0,0:18:08.22,0:18:11.14,Chinese,,0,0,0,,跨越字节 6~7
 Dialogue: 0,0:18:13.04,0:18:16.68,English,,0,0,0,,In this case the the tag bit is 0
 Dialogue: 0,0:18:13.04,0:18:16.68,Chinese,,0,0,0,,在这种情况下，标记位为0
 Dialogue: 0,0:18:17.74,0:18:21.20,English,,0,0,0,,Okay so we record that in our metadata
-Dialogue: 0,0:18:17.74,0:18:21.20,Chinese,,0,0,0,,好的，我们在元数据中记录了这一点
+Dialogue: 0,0:18:17.74,0:18:21.20,Chinese,,0,0,0,,我们在元数据中记录了这一点
 Dialogue: 0,0:18:22.84,0:18:24.98,English,,0,0,0,,Okay the next reference that comes by is 8
-Dialogue: 0,0:18:22.84,0:18:24.98,Chinese,,0,0,0,,好的，下一个参考是8
+Dialogue: 0,0:18:22.84,0:18:24.98,Chinese,,0,0,0,,下一个引用是地址 8
 Dialogue: 0,0:18:27.06,0:18:31.02,English,,0,0,0,,Now 8 has a set index of 0,00
-Dialogue: 0,0:18:27.06,0:18:31.02,Chinese,,0,0,0,,现在8的集合索引为0,00
+Dialogue: 0,0:18:27.06,0:18:31.02,Chinese,,0,0,0,,8的集合索引为 0,00
 Dialogue: 0,0:18:31.84,0:18:36.70,English,,0,0,0,,But that's currently occupied by block zero one
-Dialogue: 0,0:18:31.84,0:18:36.70,Chinese,,0,0,0,,但那个目前被零块一个占据
+Dialogue: 0,0:18:31.84,0:18:36.70,Chinese,,0,0,0,,但那个目前被块 0-1 占据
 Dialogue: 0,0:18:37.20,0:18:41.96,English,,0,0,0,,And we can tell that because address eight has a tag of one
-Dialogue: 0,0:18:37.20,0:18:41.96,Chinese,,0,0,0,,我们可以告诉你，因为地址8有一个标签
+Dialogue: 0,0:18:37.20,0:18:41.96,Chinese,,0,0,0,,我们可以发现，因为地址 8 的标签位为 1
 Dialogue: 0,0:18:42.40,0:18:49.70,English,,0,0,0,,And the existing block,the block at the earlier address at address zero has a tag of zero so that's a miss so
 Dialogue: 0,0:18:42.40,0:18:49.70,Chinese,,0,0,0,,而现有的块，地址为零的早期地址处的块具有零标记，因此这是一个未命中
 Dialogue: 0,0:18:51.32,0:18:58.82,English,,0,0,0,,So now we have to go fetch the block containing byte number eight into memory
-Dialogue: 0,0:18:51.32,0:18:58.82,Chinese,,0,0,0,,所以现在我们必须将包含字节数8的块提取到内存中
+Dialogue: 0,0:18:51.32,0:18:58.82,Chinese,,0,0,0,,所以我们必须将包含字节数 8 的块提取到内存中
 Dialogue: 0,0:18:58.82,0:19:03.88,English,,0,0,0,,So now we have bytes 8-9 and we in our new tag bit
-Dialogue: 0,0:18:58.82,0:19:03.88,Chinese,,0,0,0,,所以现在我们有8-9字节，我们在新的标签位
+Dialogue: 0,0:18:58.82,0:19:03.88,Chinese,,0,0,0,,我们有 8-9 字节，我们设置了新的标签位
 Dialogue: 0,0:19:05.82,0:19:11.12,English,,0,0,0,,Okay now the next instruction is for byte 0
-Dialogue: 0,0:19:05.82,0:19:11.12,Chinese,,0,0,0,,好的，现在下一条指令是字节0
+Dialogue: 0,0:19:05.82,0:19:11.12,Chinese,,0,0,0,,现在下一条指令是字节 0
 Dialogue: 0,0:19:12.62,0:19:18.30,English,,0,0,0,,And we just replaced,we had that it,we had that in our cache and we just replaced it
-Dialogue: 0,0:19:12.62,0:19:18.30,Chinese,,0,0,0,,我们刚刚更换了，我们就拥有了它，我们在缓存中有了它，我们只是替换它
+Dialogue: 0,0:19:12.62,0:19:18.30,Chinese,,0,0,0,,我们刚刚更换了，也就拥有了这个块，即在缓存中有了它，我们只是替换它
 Dialogue: 0,0:19:19.76,0:19:22.32,English,,0,0,0,,So it's another miss so that's unfortunate
-Dialogue: 0,0:19:19.76,0:19:22.32,Chinese,,0,0,0,,所以这是另一个错过，所以这是不幸的
+Dialogue: 0,0:19:19.76,0:19:22.32,Chinese,,0,0,0,,不幸的是，这是另一个未命中
 Dialogue: 0,0:19:23.24,0:19:30.02,English,,0,0,0,,And it's the only reason we missed it is because we've got just one line per set
-Dialogue: 0,0:19:23.24,0:19:30.02,Chinese,,0,0,0,,这是我们错过它的唯一原因是因为我们每组只有一行
+Dialogue: 0,0:19:23.24,0:19:30.02,Chinese,,0,0,0,,我们错过它的唯一原因是，我们每组只有一行
 Dialogue: 0,0:19:31.06,0:19:33.00,English,,0,0,0,,Right so we were forced to overwrite
-Dialogue: 0,0:19:31.06,0:19:33.00,Chinese,,0,0,0,,是的，所以我们被迫覆盖
+Dialogue: 0,0:19:31.06,0:19:33.00,Chinese,,0,0,0,,所以我们被迫覆盖它
 Dialogue: 0,0:19:38.22,0:19:45.92,English,,0,0,0,,That that block containing bytes,the block zero one when we missed on block eight nine
-Dialogue: 0,0:19:38.22,0:19:45.92,Chinese,,0,0,0,,那块包含字节的块，当我们在块8九时错过时块0
+Dialogue: 0,0:19:38.22,0:19:45.92,Chinese,,0,0,0,,那块包含字节的块，当我们在块 8-9 时未命中时的块 0
 Dialogue: 0,0:19:47.88,0:19:54.14,English,,0,0,0,,Okay and you see there's plenty of room in our cache we've still got,we've got two lines
-Dialogue: 0,0:19:47.88,0:19:54.14,Chinese,,0,0,0,,好的，你看我们的缓存中有足够的空间我们还有，我们有两条线
+Dialogue: 0,0:19:47.88,0:19:54.14,Chinese,,0,0,0,,你看我们的缓存中有足够的空间，我们还有两行
 Dialogue: 0,0:19:54.78,0:19:58.96,English,,0,0,0,,That we haven't even access right so we've our cache is plenty big
-Dialogue: 0,0:19:54.78,0:19:58.96,Chinese,,0,0,0,,我们甚至都没有访问权限，因此我们的缓存非常大
+Dialogue: 0,0:19:54.78,0:19:58.96,Chinese,,0,0,0,,我们甚至都没有访问权限限制，因此我们的缓存非常大
 Dialogue: 0,0:19:59.62,0:20:04.54,English,,0,0,0,,But just because of the low associativity of our cache
 Dialogue: 0,0:19:59.62,0:20:04.54,Chinese,,0,0,0,,但仅仅因为我们的缓存关联性低
 Dialogue: 0,0:20:05.18,0:20:08.96,English,,0,0,0,,And the the sort of the pattern the access pattern that we were presented with
-Dialogue: 0,0:20:05.18,0:20:08.96,Chinese,,0,0,0,,以及我们呈现的访问模式的模式类型
+Dialogue: 0,0:20:05.18,0:20:08.96,Chinese,,0,0,0,,以及我们呈现的访问模式的类型
 Dialogue: 0,0:20:09.36,0:20:12.88,English,,0,0,0,,We've got a miss that really was kind of unnecessary
-Dialogue: 0,0:20:09.36,0:20:12.88,Chinese,,0,0,0,,我们有一个真的有点不必要的小姐
+Dialogue: 0,0:20:09.36,0:20:12.88,Chinese,,0,0,0,,我们有一个真的有点不必要的未命中
 Dialogue: 0,0:20:13.68,0:20:15.06,English,,0,0,0,,So oh yeah sorry
-Dialogue: 0,0:20:13.68,0:20:15.06,Chinese,,0,0,0,,哦，对不起
+Dialogue: 0,0:20:13.68,0:20:15.06,Chinese,,0,0,0,,不好意思
 Dialogue: 0,0:20:15.06,0:20:29.06,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:20:15.06,0:20:29.06,Chinese,,0,0,0,,[学生说话]
 Dialogue: 0,0:20:29.10,0:20:34.20,English,,0,0,0,,Six,so when we referenced a seven
-Dialogue: 0,0:20:29.10,0:20:34.20,Chinese,,0,0,0,,六，所以当我们引用七
+Dialogue: 0,0:20:29.10,0:20:34.20,Chinese,,0,0,0,,6，所以当我们引用 7
 Dialogue: 0,0:20:35.26,0:20:40.72,English,,0,0,0,,It's actually the it's at offset one in that block 6-7
-Dialogue: 0,0:20:35.26,0:20:40.72,Chinese,,0,0,0,,它实际上就是6-7区块中的偏移量
+Dialogue: 0,0:20:35.26,0:20:40.72,Chinese,,0,0,0,,它实际上就是 6-7 区块中的偏移量
 Dialogue: 0,0:20:41.50,0:20:45.38,English,,0,0,0,,Okay since blocks are two bytes they'll always start on an even multiple
 Dialogue: 0,0:20:41.50,0:20:45.38,Chinese,,0,0,0,,好吧，因为块是两个字节，它们总是以偶数倍开始
 Dialogue: 0,0:20:51.58,0:20:52.80,English,,0,0,0,,Any other questions
 Dialogue: 0,0:20:51.58,0:20:52.80,Chinese,,0,0,0,,还有其他问题吗
 Dialogue: 0,0:20:57.64,0:21:06.78,English,,0,0,0,,Okay so this sort of is the reason why you have caches have higher associativity,higher values of E
-Dialogue: 0,0:20:57.64,0:21:06.78,Chinese,,0,0,0,,好的，所以这就是为什么你有缓存具有更高的关联性，更高的E值的原因
+Dialogue: 0,0:20:57.64,0:21:06.78,Chinese,,0,0,0,,所以这就是为什么缓存需要具有更高的关联性，更高的 E 值的原因
 Dialogue: 0,0:21:08.24,0:21:17.96,English,,0,0,0,,So let's look at...and so for values of E greater...for values of E greater than greater than 1
-Dialogue: 0,0:21:08.24,0:21:17.96,Chinese,,0,0,0,,因此，让我们看看......对于E值大于......对于E的值大于1
+Dialogue: 0,0:21:08.24,0:21:17.96,Chinese,,0,0,0,,让我们看看......对于E的值大于1的情况
 Dialogue: 0,0:21:19.22,0:21:22.98,English,,0,0,0,,We refer to them as E way set associative caches
-Dialogue: 0,0:21:19.22,0:21:22.98,Chinese,,0,0,0,,我们将它们称为E路集关联缓存
+Dialogue: 0,0:21:19.22,0:21:22.98,Chinese,,0,0,0,,我们将它们称为 「E 路相连高速缓存」
 Dialogue: 0,0:21:24.34,0:21:27.92,English,,0,0,0,,So here E=2 so it's a 2-way it's 2-way associative
-Dialogue: 0,0:21:24.34,0:21:27.92,Chinese,,0,0,0,,所以这里E = 2所以它是双向的，它是双向关联的
+Dialogue: 0,0:21:24.34,0:21:27.92,Chinese,,0,0,0,,所以这里 E=2所以它是两路组相联缓存
 Dialogue: 0,0:21:30.44,0:21:36.00,English,,0,0,0,,Let's suppose we have a 2-way associative cache
-Dialogue: 0,0:21:30.44,0:21:36.00,Chinese,,0,0,0,,假设我们有一个双向关联缓存
+Dialogue: 0,0:21:30.44,0:21:36.00,Chinese,,0,0,0,,假设我们有一个两路组相联缓存
 Dialogue: 0,0:21:36.00,0:21:43.94,English,,0,0,0,,So here we have an array of sets and now each set contains two lines ok instead of one line
-Dialogue: 0,0:21:36.00,0:21:43.94,Chinese,,0,0,0,,所以这里我们有一组数组，现在每组包含两行ok而不是一行
+Dialogue: 0,0:21:36.00,0:21:43.94,Chinese,,0,0,0,,这里我们有一系列的组，现在每组包含两行，而不是一行
 Dialogue: 0,0:21:46.28,0:21:51.18,English,,0,0,0,,And suppose we're presented with an address with the following form
 Dialogue: 0,0:21:46.28,0:21:51.18,Chinese,,0,0,0,,并且假设我们被提供了具有以下形式的地址
 Dialogue: 0,0:21:53.50,0:21:58.40,English,,0,0,0,,We're looking for the word that begins at an off set of four inside our block
-Dialogue: 0,0:21:53.50,0:21:58.40,Chinese,,0,0,0,,我们正在寻找从我们的区块内的一组四个开始的单词
+Dialogue: 0,0:21:53.50,0:21:58.40,Chinese,,0,0,0,,我们正在寻找从区块内的偏移量 4 开始的字
 Dialogue: 0,0:22:01.04,0:22:05.20,English,,0,0,0,,At within set number one
 Dialogue: 0,0:22:01.04,0:22:05.20,Chinese,,0,0,0,,在第一组内
 Dialogue: 0,0:22:08.04,0:22:11.00,English,,0,0,0,,Okay so the cache expects tracts that set index
-Dialogue: 0,0:22:08.04,0:22:11.00,Chinese,,0,0,0,,好的，所以缓存需要设置索引的tracts
+Dialogue: 0,0:22:08.04,0:22:11.00,Chinese,,0,0,0,,缓存需要提取组索引
 Dialogue: 0,0:22:12.02,0:22:20.34,English,,0,0,0,,So this is set 0,this is set 1,this is set 2,throws away all the other sets
-Dialogue: 0,0:22:12.02,0:22:20.34,Chinese,,0,0,0,,所以这设置为0，设置为1，设置为2，抛弃所有其他集
+Dialogue: 0,0:22:12.02,0:22:20.34,Chinese,,0,0,0,,这是组 0 ，这是组 1 ，这是组 2，抛弃其他的组
 Dialogue: 0,0:22:21.50,0:22:33.58,English,,0,0,0,,And now in parallel it searches,it searches the tags,it searches for a matching tag in both of these lines
-Dialogue: 0,0:22:21.50,0:22:33.58,Chinese,,0,0,0,,现在并行搜索，搜索标签，搜索这两行中的匹配标签
+Dialogue: 0,0:22:21.50,0:22:33.58,Chinese,,0,0,0,,现在开始并行搜索，搜索标记位，在每组的两行中搜索匹配的标签位
 Dialogue: 0,0:22:35.18,0:22:40.22,English,,0,0,0,,And a valid bit so if we get a matching tag and a valid bit true
-Dialogue: 0,0:22:35.18,0:22:40.22,Chinese,,0,0,0,,如果我们得到匹配的标签和有效位，则为有效位
+Dialogue: 0,0:22:35.18,0:22:40.22,Chinese,,0,0,0,,如果我们得到匹配的标记位和有效位
 Dialogue: 0,0:22:40.74,0:22:45.06,English,,0,0,0,,Then we've got a hit
-Dialogue: 0,0:22:40.74,0:22:45.06,Chinese,,0,0,0,,然后我们受到了打击
+Dialogue: 0,0:22:40.74,0:22:45.06,Chinese,,0,0,0,,就是缓存命中
 Dialogue: 0,0:22:47.38,0:22:49.38,English,,0,0,0,,Now that yes yes
-Dialogue: 0,0:22:47.38,0:22:49.38,Chinese,,0,0,0,,现在是的，是的
+Dialogue: 0,0:22:47.38,0:22:49.38,Chinese,,0,0,0,,是的
 Dialogue: 0,0:22:49.38,0:22:56.84,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:22:49.38,0:22:56.84,Chinese,,0,0,0,,[学生说话]
 Dialogue: 0,0:22:56.92,0:23:01.60,English,,0,0,0,,Oh it's a very good question,so there's hardware logic that does that compare
-Dialogue: 0,0:22:56.92,0:23:01.60,Chinese,,0,0,0,,哦，这是一个非常好的问题，所以有比较的硬件逻辑
+Dialogue: 0,0:22:56.92,0:23:01.60,Chinese,,0,0,0,,哦，这是一个非常好的问题，这里的确存在比较检查的硬件逻辑
 Dialogue: 0,0:23:02.60,0:23:09.82,English,,0,0,0,,And that's the reason that as the number of...as the associativity goes up that logic gets more and more expensive
-Dialogue: 0,0:23:02.60,0:23:09.82,Chinese,,0,0,0,,这就是因为随着关联性的增加，逻辑变得越来越昂贵
+Dialogue: 0,0:23:02.60,0:23:09.82,Chinese,,0,0,0,,因为随着关联性的增加，逻辑电路变得越来越昂贵
 Dialogue: 0,0:23:10.78,0:23:15.42,English,,0,0,0,,Okay it's like something...like you're kind of doing some kind of tree search
-Dialogue: 0,0:23:10.78,0:23:15.42,Chinese,,0,0,0,,好吧，这就像是某种东西......就像你在做某种树搜索一样
+Dialogue: 0,0:23:10.78,0:23:15.42,Chinese,,0,0,0,,这就像是某种东西......就像你在做某种二叉树搜索一样
 Dialogue: 0,0:23:17.32,0:23:19.46,English,,0,0,0,,And so that actually is the limit that's why..
-Dialogue: 0,0:23:17.32,0:23:19.46,Chinese,,0,0,0,,所以这实际上是限制，这就是为什么..
+Dialogue: 0,0:23:17.32,0:23:19.46,Chinese,,0,0,0,,所以这实际上是限制
 Dialogue: 0,0:23:19.56,0:23:25.04,English,,0,0,0,,I mean because in general right that if you take this to the limit there's just one set
-Dialogue: 0,0:23:19.56,0:23:25.04,Chinese,,0,0,0,,我的意思是因为一般来说，如果你把它限制在极限，那么只有一套
+Dialogue: 0,0:23:19.56,0:23:25.04,Chinese,,0,0,0,,意思是说因为一般来说，如果你把要求电路特别便宜，那么只能存在一个组 flag
 Dialogue: 0,0:23:26.36,0:23:32.24,English,,0,0,0,,With there's just...we call that a fully associative cache so there's just one set
-Dialogue: 0,0:23:26.36,0:23:32.24,Chinese,,0,0,0,,只有...我们称之为完全关联的缓存，因此只有一组
+Dialogue: 0,0:23:26.36,0:23:32.24,Chinese,,0,0,0,,我们称之为「全相联高速缓存」，因此只有一个组
 Dialogue: 0,0:23:33.08,0:23:35.74,English,,0,0,0,,And now any block...a block can go anywhere
-Dialogue: 0,0:23:33.08,0:23:35.74,Chinese,,0,0,0,,而现在任何一块......一个块可以去任何地方
+Dialogue: 0,0:23:33.08,0:23:35.74,Chinese,,0,0,0,,而现在任何一块......一个块可以存在于任何地方
 Dialogue: 0,0:23:36.16,0:23:38.44,English,,0,0,0,,Right there's no constraints now where you place a block
-Dialogue: 0,0:23:36.16,0:23:38.44,Chinese,,0,0,0,,现在没有限制，你放置一个块
+Dialogue: 0,0:23:36.16,0:23:38.44,Chinese,,0,0,0,,现在你放置一个块不存在任何限制
 Dialogue: 0,0:23:39.66,0:23:44.74,English,,0,0,0,,But because of the complexity of that fully associative search
 Dialogue: 0,0:23:39.66,0:23:44.74,Chinese,,0,0,0,,但由于完全关联搜索的复杂性
 Dialogue: 0,0:23:45.10,0:23:53.22,English,,0,0,0,,Those are very rare in fact we do see we'll see fully associative caches but their software caches
-Dialogue: 0,0:23:45.10,0:23:53.22,Chinese,,0,0,0,,这些是非常罕见的，事实上我们确实看到我们会看到完全关联的缓存，但他们的软件缓存
+Dialogue: 0,0:23:45.10,0:23:53.22,Chinese,,0,0,0,,实际情况中，它是非常罕见的。我们确实会看到全相联高速缓存，除非是在软件级别的缓存中
 Dialogue: 0,0:23:54.70,0:23:59.12,English,,0,0,0,,Okay so in software,so the complexity the hardware
-Dialogue: 0,0:23:54.70,0:23:59.12,Chinese,,0,0,0,,好的，在软件中，硬件的复杂性
+Dialogue: 0,0:23:54.70,0:23:59.12,Chinese,,0,0,0,,好的，在软件中，硬件的复杂性 flag
 Dialogue: 0,0:23:59.90,0:24:03.40,English,,0,0,0,,And sort of doesn't
 Dialogue: 0,0:23:59.90,0:24:03.40,Chinese,,0,0,0,,而有点不
 Dialogue: 0,0:24:05.22,0:24:12.06,English,,0,0,0,,Doesn't it's not worth the complexity of the hardware for the penalty of having a lower associativity
 Dialogue: 0,0:24:05.22,0:24:12.06,Chinese,,0,0,0,,对于具有较低关联性的惩罚，不值得硬件的复杂性
 Dialogue: 0,0:24:12.78,0:24:16.24,English,,0,0,0,,Okay but there are some systems later on when we study virtual memory
-Dialogue: 0,0:24:12.78,0:24:16.24,Chinese,,0,0,0,,好的，但是稍后我们研究虚拟内存时会有一些系统
+Dialogue: 0,0:24:12.78,0:24:16.24,Chinese,,0,0,0,,但是稍后我们研究虚拟内存时,会有一些这样的系统
 Dialogue: 0,0:24:17.20,0:24:23.74,English,,0,0,0,,In a virtual memory system the DRAM serves as a cache for data stored on the disk
-Dialogue: 0,0:24:17.20,0:24:23.74,Chinese,,0,0,0,,在虚拟存储器系统中，DRAM用作存储在磁盘上的数据的高速缓存
+Dialogue: 0,0:24:17.20,0:24:23.74,Chinese,,0,0,0,,在虚拟存储器系统中，DRAM 作为存储在磁盘上的数据的高速缓存
 Dialogue: 0,0:24:24.78,0:24:28.04,English,,0,0,0,,And as we saw last time the penalty for a miss
-Dialogue: 0,0:24:24.78,0:24:28.04,Chinese,,0,0,0,,正如我们上次看到一个小姐的点球
+Dialogue: 0,0:24:24.78,0:24:28.04,Chinese,,0,0,0,,正如我们上次看到的未命中 flag
 Dialogue: 0,0:24:28.88,0:24:32.22,English,,0,0,0,,If you have a cache on DRAM and you miss and you have to go to disk
-Dialogue: 0,0:24:28.88,0:24:32.22,Chinese,,0,0,0,,如果你在DRAM上有一个缓存但你错过了，你必须转到磁盘
+Dialogue: 0,0:24:28.88,0:24:32.22,Chinese,,0,0,0,,如果你在DRAM上有一个缓存, 但你未命中，你必须转到磁盘
 Dialogue: 0,0:24:32.96,0:24:34.68,English,,0,0,0,,The penalty is huge for that
+Dialogue: 0,0:24:32.96,0:24:34.68,Chinese,,0,0,0,,这个耗时是非常巨大的
 Dialogue: 0,0:24:35.14,0:24:42.74,English,,0,0,0,,And so because of that it's worth while having very complex search algorithms
-Dialogue: 0,0:24:35.14,0:24:42.74,Chinese,,0,0,0,,因此，拥有非常复杂的搜索算法是值得的
+Dialogue: 0,0:24:35.14,0:24:42.74,Chinese,,0,0,0,,因此，拥有比较复杂的搜索算法是值得的
 Dialogue: 0,0:24:42.96,0:24:51.11,English,,0,0,0,,In particular in a virtual memory system that the DRAM is implements a fully associative cache where blocks from disk can go anywhere
-Dialogue: 0,0:24:42.96,0:24:51.11,Chinese,,0,0,0,,特别是在虚拟存储器系统中，DRAM实现了完全关联的高速缓存，其中来自磁盘的块可以到达任何地方
+Dialogue: 0,0:24:42.96,0:24:51.11,Chinese,,0,0,0,,特别是在虚拟存储器系统中，DRAM 实现了完全关联的高速缓存，其中来自磁盘的块可以存储于任何地方
 Dialogue: 0,0:24:51.52,0:24:54.40,English,,0,0,0,,We'll get into that later when we look in virtual memory
+Dialogue: 0,0:24:51.52,0:24:54.40,Chinese,,0,0,0,,当我们学习虚拟内存时，会更深入的了解此内容
 Dialogue: 0,0:24:54.60,0:24:56.22,English,,0,0,0,,But you're right you'll see in real systems
-Dialogue: 0,0:24:54.60,0:24:56.22,Chinese,,0,0,0,,但你是对的，你会在真实的系统中看到
+Dialogue: 0,0:24:54.60,0:24:56.22,Chinese,,0,0,0,,无疑，你会在真实的系统中看到它
 Dialogue: 0,0:24:56.70,0:25:01.16,English,,0,0,0,,Nowadays that the number goes up right because feature sizes are going down and
+Dialogue: 0,0:24:56.70,0:25:01.16,Chinese,,0,0,0,,现今，数目在快速增加，因为在减少 flag
 Dialogue: 0,0:25:01.56,0:25:04.86,English,,0,0,0,,Designers can afford to implement more expensive hardware
 Dialogue: 0,0:25:01.56,0:25:04.86,Chinese,,0,0,0,,设计人员可以负担得起更昂贵的硬件
 Dialogue: 0,0:25:04.86,0:25:12.02,English,,0,0,0,,But the largest associativity are Intel systems that I know of is 16-way associative L3 caches
-Dialogue: 0,0:25:04.86,0:25:12.02,Chinese,,0,0,0,,但最大的关联性是我所知道的英特尔系统是16路关联L3缓存
+Dialogue: 0,0:25:04.86,0:25:12.02,Chinese,,0,0,0,,我所知道的最大的关联性是 Intel 系统，是 16 路组相联 L3 三级缓存
 Dialogue: 0,0:25:12.60,0:25:14.14,English,,0,0,0,,And then the others are 8-ways associative
-Dialogue: 0,0:25:12.60,0:25:14.14,Chinese,,0,0,0,,然后其他人是8方式联想
+Dialogue: 0,0:25:12.60,0:25:14.14,Chinese,,0,0,0,,其他的大多是 8 路组相联
 Dialogue: 0,0:25:14.14,0:25:17.14,English,,0,0,0,,So that's sort of the order of magnitude that's state of the art right now
-Dialogue: 0,0:25:14.14,0:25:17.14,Chinese,,0,0,0,,所以这就是现在最先进的数量级
+Dialogue: 0,0:25:14.14,0:25:17.14,Chinese,,0,0,0,,这就是现在最先进的组数大小
 Dialogue: 0,0:25:20.76,0:25:25.24,English,,0,0,0,,Okay so then once we've identified a match we use the set offset bits
-Dialogue: 0,0:25:20.76,0:25:25.24,Chinese,,0,0,0,,好的，一旦我们确定匹配，我们就使用设置的偏移位
+Dialogue: 0,0:25:20.76,0:25:25.24,Chinese,,0,0,0,,一旦我们确定匹配，我们就检查组偏移位
 Dialogue: 0,0:25:26.46,0:25:33.20,English,,0,0,0,,In this case we're accessing a short int, so four is the offset within the block of this
-Dialogue: 0,0:25:26.46,0:25:33.20,Chinese,,0,0,0,,在这种情况下，我们正在访问一个短整数，因此四是该区块内的偏移量
+Dialogue: 0,0:25:26.46,0:25:33.20,Chinese,,0,0,0,,在这种情况下，我们正在访问一个短整型，因此 4 是该区块内的偏移量
 Dialogue: 0,0:25:33.90,0:25:37.48,English,,0,0,0,,The two byte short int which then we can return to the processor
-Dialogue: 0,0:25:33.90,0:25:37.48,Chinese,,0,0,0,,两个字节短的int然后我们可以返回到处理器
+Dialogue: 0,0:25:33.90,0:25:37.48,Chinese,,0,0,0,,两个字节短整形，然后我们可以把数据返回给处理器
 Dialogue: 0,0:25:39.44,0:25:42.02,English,,0,0,0,,Alright so let's do that same simulation that we did before
-Dialogue: 0,0:25:39.44,0:25:42.02,Chinese,,0,0,0,,好吧，让我们做同样的模拟，我们之前做过
+Dialogue: 0,0:25:39.44,0:25:42.02,Chinese,,0,0,0,,让我们做之前做过同样的模拟
 Dialogue: 0,0:25:42.02,0:25:46.10,English,,0,0,0,,But this time with a 2-way associative cache
-Dialogue: 0,0:25:42.02,0:25:46.10,Chinese,,0,0,0,,但这次使用了双向关联缓存
+Dialogue: 0,0:25:42.02,0:25:46.10,Chinese,,0,0,0,,但这次使用了 2 路组相联
 Dialogue: 0,0:25:46.78,0:25:49.02,English,,0,0,0,,Now memory system is the same
-Dialogue: 0,0:25:46.78,0:25:49.02,Chinese,,0,0,0,,现在记忆系统是一样的
+Dialogue: 0,0:25:46.78,0:25:49.02,Chinese,,0,0,0,,内存系统是一样的
 Dialogue: 0,0:25:50.42,0:25:52.90,English,,0,0,0,,But now instead of one set we have two sets
-Dialogue: 0,0:25:50.42,0:25:52.90,Chinese,,0,0,0,,但现在我们有两套，而不是一套
+Dialogue: 0,0:25:50.42,0:25:52.90,Chinese,,0,0,0,,但现在我们有两个组，而不是一个组
 Dialogue: 0,0:25:54.50,0:25:58.86,English,,0,0,0,,And I mean I'm sorry instead of four sets we have two sets
-Dialogue: 0,0:25:54.50,0:25:58.86,Chinese,,0,0,0,,我的意思是我很抱歉而不是四套我们有两套
+Dialogue: 0,0:25:54.50,0:25:58.86,Chinese,,0,0,0,,抱歉，我的意思是说，我们有两套而不是四套
 Dialogue: 0,0:25:58.94,0:26:02.06,English,,0,0,0,,So the cache,this is the same sized cache
-Dialogue: 0,0:25:58.94,0:26:02.06,Chinese,,0,0,0,,所以缓存，这是相同大小的缓存
+Dialogue: 0,0:25:58.94,0:26:02.06,Chinese,,0,0,0,,所以这是相同大小的缓存
 Dialogue: 0,0:26:02.14,0:26:07.12,English,,0,0,0,,But we're just going to organize it differently, instead of 1-way instead of a direct mapped cache
-Dialogue: 0,0:26:02.14,0:26:07.12,Chinese,,0,0,0,,但我们只是以不同的方式组织它，而不是单向而不是直接映射缓存
+Dialogue: 0,0:26:02.14,0:26:07.12,Chinese,,0,0,0,,但我们只是以不同的方式组织它，而不是单路组相联高速缓存，而不是直接映射缓存
 Dialogue: 0,0:26:08.36,0:26:12.00,English,,0,0,0,,With four lines containing four lines,one line per set
-Dialogue: 0,0:26:08.36,0:26:12.00,Chinese,,0,0,0,,四行包含四行，每行一行
+Dialogue: 0,0:26:08.36,0:26:12.00,Chinese,,0,0,0,,包含有四行，每组一行
 Dialogue: 0,0:26:12.48,0:26:18.50,English,,0,0,0,,We're going to implement a 2-way associative cache where we have two sets with two lines per set
-Dialogue: 0,0:26:12.48,0:26:18.50,Chinese,,0,0,0,,我们将实现一个双向关联缓存，其中我们有两组，每组有两行
+Dialogue: 0,0:26:12.48,0:26:18.50,Chinese,,0,0,0,,我们将实现一个双路组相联高速缓存，其中我们有两组，每组又有两行
 Dialogue: 0,0:26:18.68,0:26:22.10,English,,0,0,0,,Okay so each case there's four total lines
-Dialogue: 0,0:26:18.68,0:26:22.10,Chinese,,0,0,0,,好的，所以每个案例总共有四行
+Dialogue: 0,0:26:18.68,0:26:22.10,Chinese,,0,0,0,,所以案例总共有四行
 Dialogue: 0,0:26:22.46,0:26:22.86,English,,0,0,0,,Question
-Dialogue: 0,0:26:22.46,0:26:22.86,Chinese,,0,0,0,,题
+Dialogue: 0,0:26:22.46,0:26:22.86,Chinese,,0,0,0,,题目来了，
 Dialogue: 0,0:26:24.30,0:26:29.80,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:26:29.80,0:26:32.08,English,,0,0,0,,Oh so that that comes in with the request somehow
-Dialogue: 0,0:26:29.80,0:26:32.08,Chinese,,0,0,0,,哦，以便以某种方式提出请求
+Dialogue: 0,0:26:29.80,0:26:32.08,Chinese,,0,0,0,,以便以某种方式提出请求
 Dialogue: 0,0:26:32.62,0:26:34.74,English,,0,0,0,,And I actually don't know the details of that
-Dialogue: 0,0:26:32.62,0:26:34.74,Chinese,,0,0,0,,而我实际上并不知道具体细节
+Dialogue: 0,0:26:32.62,0:26:34.74,Chinese,,0,0,0,,实际上，而我并不知道具体细节
 Dialogue: 0,0:26:35.90,0:26:39.36,English,,0,0,0,,It may...I guess there...it could ask for just...
 Dialogue: 0,0:26:35.90,0:26:39.36,Chinese,,0,0,0,,它可能......我猜...它可以要求......
-Dialogue: 0,0:26:40.42,0:26:48.84,English,,0,0,0,,there could just be a default sighs maybe it's always a 64-byte word and then the processor extracts that the current bits
+Dialogue: 0,0:26:40.42,0:26:48.84,English,,0,0,0,,there could just be a default sighs 【flag】 maybe it's always a 64-byte word and then the processor extracts that the current bits
+Dialogue: 0,0:26:40.42,0:26:48.84,Chinese,,0,0,0,,这可能是一个，它总是一个 64 位，然后处理器提取当前比特位
 Dialogue: 0,0:26:48.84,0:26:51.68,English,,0,0,0,,I actually don't know the details of that
 Dialogue: 0,0:26:48.84,0:26:51.68,Chinese,,0,0,0,,我实际上不知道那个细节
 Dialogue: 0,0:26:51.98,0:26:59.10,English,,0,0,0,,But it either comes in on the request or there's a standard size that the processor then parses out
-Dialogue: 0,0:26:51.98,0:26:59.10,Chinese,,0,0,0,,但它要么在请求中，要么处理器然后解析标准大小
+Dialogue: 0,0:26:51.98,0:26:59.10,Chinese,,0,0,0,,但它要么在请求中，要么处理器解析标准大小 flag
 Dialogue: 0,0:27:01.46,0:27:05.00,English,,0,0,0,,We'll just assume that the cache knows the what size to return yes
-Dialogue: 0,0:27:01.46,0:27:05.00,Chinese,,0,0,0,,我们假设缓存知道返回的大小是什么
+Dialogue: 0,0:27:01.46,0:27:05.00,Chinese,,0,0,0,,我们假设缓存知道返回的大小
 Dialogue: 0,0:27:05.22,0:27:08.80,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:27:05.22,0:27:08.80,Chinese,,0,0,0,,[学生说话]
 Dialogue: 0,0:27:08.82,0:27:12.06,English,,0,0,0,,How do you decide which block to replace?that's a really good question
 Dialogue: 0,0:27:08.82,0:27:12.06,Chinese,,0,0,0,,你如何决定要替换哪个块？这是一个非常好的问题
 Dialogue: 0,0:27:12.06,0:27:13.70,English,,0,0,0,,So there's a lot of different algorithms
-Dialogue: 0,0:27:12.06,0:27:13.70,Chinese,,0,0,0,,所以有很多不同的算法
+Dialogue: 0,0:27:12.06,0:27:13.70,Chinese,,0,0,0,,有很多不同的算法
 Dialogue: 0,0:27:14.32,0:27:19.48,English,,0,0,0,,The most common algorithm or a common algorithm is least recently used
-Dialogue: 0,0:27:14.32,0:27:19.48,Chinese,,0,0,0,,最常用的算法或常用算法是最近最少使用的
+Dialogue: 0,0:27:14.32,0:27:19.48,Chinese,,0,0,0,,最常用的算法是「最近最少使用」策略
 Dialogue: 0,0:27:20.26,0:27:26.32,English,,0,0,0,,So by locality you want to keep blocks in the cache that are being used a lot
-Dialogue: 0,0:27:20.26,0:27:26.32,Chinese,,0,0,0,,因此，根据位置，你希望将缓存中的块保留在正在使用的块中
+Dialogue: 0,0:27:20.26,0:27:26.32,Chinese,,0,0,0,,根据局部性原则，你希望将缓存中的块将被尽可能多次的使用
 Dialogue: 0,0:27:27.32,0:27:34.94,English,,0,0,0,,And so if a block isn't referenced for a long time by the principle of locality by sort of the inverse locality principle
-Dialogue: 0,0:27:27.32,0:27:34.94,Chinese,,0,0,0,,因此，如果通过反向局部性原理的类型，通过局部性原理长时间不引用块
+Dialogue: 0,0:27:27.32,0:27:34.94,Chinese,,0,0,0,,逆着局部性原则思路来思考，如果一个块长时间不被引用，
 Dialogue: 0,0:27:35.40,0:27:39.32,English,,0,0,0,,It's likely not to be addressed referenced in the near future
-Dialogue: 0,0:27:35.40,0:27:39.32,Chinese,,0,0,0,,它可能不会在不久的将来被引用
+Dialogue: 0,0:27:35.40,0:27:39.32,Chinese,,0,0,0,,在不久的将来，它也不太可能会被引用
 Dialogue: 0,0:27:40.00,0:27:42.92,English,,0,0,0,,So that's one algorithm
 Dialogue: 0,0:27:40.00,0:27:42.92,Chinese,,0,0,0,,这就是一种算法
 Dialogue: 0,0:27:42.96,0:27:48.60,English,,0,0,0,,That you just keep track of and I'm not showing there needs to be additional bits
-Dialogue: 0,0:27:42.96,0:27:48.60,Chinese,,0,0,0,,你只是跟踪，我没有显示那里需要额外的位
+Dialogue: 0,0:27:42.96,0:27:48.60,Chinese,,0,0,0,,你只是跟踪，我没有说那里需要额外的位
 Dialogue: 0,0:27:49.06,0:27:53.44,English,,0,0,0,,In the line to sort of keep like sort of virtual timestamps that
-Dialogue: 0,0:27:49.06,0:27:53.44,Chinese,,0,0,0,,在排序中保持类似虚拟时间戳的那种
+Dialogue: 0,0:27:49.06,0:27:53.44,Chinese,,0,0,0,,类似于在排序中，保持虚拟时间戳
 Dialogue: 0,0:27:54.28,0:27:56.92,English,,0,0,0,,But that's sort of the general way you do it
-Dialogue: 0,0:27:54.28,0:27:56.92,Chinese,,0,0,0,,但这是你做这件事的一般方式
+Dialogue: 0,0:27:54.28,0:27:56.92,Chinese,,0,0,0,,但这只是你做这件事的常规方式
 Dialogue: 0,0:27:56.92,0:28:04.78,English,,0,0,0,,Just try to keep the things that are the blocks being accessed the most frequently,most recently yes
-Dialogue: 0,0:27:56.92,0:28:04.78,Chinese,,0,0,0,,只是尽量保持最常访问的块，最近是的
+Dialogue: 0,0:27:56.92,0:28:04.78,Chinese,,0,0,0,,只是尽量保持最常访问的块，
 Dialogue: 0,0:28:04.92,0:28:09.02,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:28:04.92,0:28:09.02,Chinese,,0,0,0,,[学生说话]
 Dialogue: 0,0:28:09.04,0:28:11.74,English,,0,0,0,,Okay the question is what determines the block size
-Dialogue: 0,0:28:09.04,0:28:11.74,Chinese,,0,0,0,,好的问题是什么决定了块的大小
+Dialogue: 0,0:28:09.04,0:28:11.74,Chinese,,0,0,0,,好问题，是什么决定了块的大小
 Dialogue: 0,0:28:12.92,0:28:15.28,English,,0,0,0,,That's determined by the design of the memory system
 Dialogue: 0,0:28:12.92,0:28:15.28,Chinese,,0,0,0,,这是由内存系统的设计决定的
 Dialogue: 0,0:28:15.98,0:28:20.86,English,,0,0,0,,So that's a fixed parameter of the memory system
-Dialogue: 0,0:28:15.98,0:28:20.86,Chinese,,0,0,0,,所以这是内存系统的固定参数
+Dialogue: 0,0:28:15.98,0:28:20.86,Chinese,,0,0,0,,这是内存系统的固定参数
 Dialogue: 0,0:28:21.38,0:28:26.50,English,,0,0,0,,So when the intel designers decided to put cache memories on their processors
-Dialogue: 0,0:28:21.38,0:28:26.50,Chinese,,0,0,0,,因此，当英特尔设计师决定将缓存存储器放在他们的处理器上时
+Dialogue: 0,0:28:21.38,0:28:26.50,Chinese,,0,0,0,,因此，当 Intel 设计师决定将缓存存储器放在他们的处理器上时
 Dialogue: 0,0:28:27.18,0:28:30.20,English,,0,0,0,,They decided that the block size would be 64 bytes
-Dialogue: 0,0:28:27.18,0:28:30.20,Chinese,,0,0,0,,他们认为块大小为64字节
+Dialogue: 0,0:28:27.18,0:28:30.20,Chinese,,0,0,0,,他们决定了块大小为 64 字节
 Dialogue: 0,0:28:33.30,0:28:37.28,English,,0,0,0,,Sorry
-Dialogue: 0,0:28:33.30,0:28:37.28,Chinese,,0,0,0,,抱歉
+Dialogue: 0,0:28:33.30,0:28:37.28,Chinese,,0,0,0,,不好意思
 Dialogue: 0,0:28:39.28,0:28:43.68,English,,0,0,0,,So the block size comes the block size comes first
-Dialogue: 0,0:28:39.28,0:28:43.68,Chinese,,0,0,0,,因此块大小首先出现块大小
+Dialogue: 0,0:28:39.28,0:28:43.68,Chinese,,0,0,0,,因此，先解决块大小
 Dialogue: 0,0:28:44.76,0:28:48.46,English,,0,0,0,,Then you determine how big you want your cache to be
-Dialogue: 0,0:28:44.76,0:28:48.46,Chinese,,0,0,0,,然后确定你希望缓存的大小
+Dialogue: 0,0:28:44.76,0:28:48.46,Chinese,,0,0,0,,然后决定你所期望的缓存的大小
 Dialogue: 0,0:28:49.66,0:28:52.78,English,,0,0,0,,Okay and you determine the associativity
-Dialogue: 0,0:28:49.66,0:28:52.78,Chinese,,0,0,0,,好的，你确定了关联性
+Dialogue: 0,0:28:49.66,0:28:52.78,Chinese,,0,0,0,,然后你再确定关联性
 Dialogue: 0,0:28:54.54,0:28:59.08,English,,0,0,0,,And then once you've determined the associativity and you know how big your cache is
-Dialogue: 0,0:28:54.54,0:28:59.08,Chinese,,0,0,0,,然后，一旦确定了关联性，就知道缓存有多大
+Dialogue: 0,0:28:54.54,0:28:59.08,Chinese,,0,0,0,,一旦确定了关联性，就可以知道缓存有多大
 Dialogue: 0,0:28:59.54,0:29:01.32,English,,0,0,0,,Then that determines the number of sets
-Dialogue: 0,0:28:59.54,0:29:01.32,Chinese,,0,0,0,,然后确定集的数量
+Dialogue: 0,0:28:59.54,0:29:01.32,Chinese,,0,0,0,,然后确定组的数量
 Dialogue: 0,0:29:02.68,0:29:09.23,English,,0,0,0,,Okay so basically all of those the
-Dialogue: 0,0:29:02.68,0:29:09.23,Chinese,,0,0,0,,好吧基本上所有这些
+Dialogue: 0,0:29:02.68,0:29:09.23,Chinese,,0,0,0,,基本上所有这些
 Dialogue: 0,0:29:09.70,0:29:16.62,English,,0,0,0,,The the number of lines and the cat and the capacity
-Dialogue: 0,0:29:09.70,0:29:16.62,Chinese,,0,0,0,,行数和猫的数量和容量
+Dialogue: 0,0:29:09.70,0:29:16.62,Chinese,,0,0,0,,行数的数量和容量大小
 Dialogue: 0,0:29:16.72,0:29:21.70,English,,0,0,0,,The number of lines per set is sort of a fixed high-level parameter design parameter
 Dialogue: 0,0:29:16.72,0:29:21.70,Chinese,,0,0,0,,每组的行数是固定的高级参数设计参数
 Dialogue: 0,0:29:21.98,0:29:26.50,English,,0,0,0,,The size of the cache is a high-level design parameter
