@@ -631,57 +631,57 @@ Dialogue: 0,0:29:02.68,0:29:09.23,Chinese,,0,0,0,,基本上所有这些
 Dialogue: 0,0:29:09.70,0:29:16.62,English,,0,0,0,,The the number of lines and the cat and the capacity
 Dialogue: 0,0:29:09.70,0:29:16.62,Chinese,,0,0,0,,行数的数量和容量大小
 Dialogue: 0,0:29:16.72,0:29:21.70,English,,0,0,0,,The number of lines per set is sort of a fixed high-level parameter design parameter
-Dialogue: 0,0:29:16.72,0:29:21.70,Chinese,,0,0,0,,每组的行数是固定的高级参数设计参数
+Dialogue: 0,0:29:16.72,0:29:21.70,Chinese,,0,0,0,,每组的行数是固定的高级设计参数
 Dialogue: 0,0:29:21.98,0:29:26.50,English,,0,0,0,,The size of the cache is a high-level design parameter
 Dialogue: 0,0:29:21.98,0:29:26.50,Chinese,,0,0,0,,缓存的大小是高级设计参数
 Dialogue: 0,0:29:26.84,0:29:29.88,English,,0,0,0,,And then the number of sets then is induced from that
-Dialogue: 0,0:29:26.84,0:29:29.88,Chinese,,0,0,0,,然后由此引发集合的数量
+Dialogue: 0,0:29:26.84,0:29:29.88,Chinese,,0,0,0,,由此可以推断组的数量
 Dialogue: 0,0:29:30.94,0:29:31.70,English,,0,0,0,,Okay yes
-Dialogue: 0,0:29:30.94,0:29:31.70,Chinese,,0,0,0,,好的，是的
+Dialogue: 0,0:29:30.94,0:29:31.70,Chinese,,0,0,0,,是的
 Dialogue: 0,0:29:32.32,0:29:40.74,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:29:32.32,0:29:40.74,Chinese,,0,0,0,,[学生说话]
 Dialogue: 0,0:29:41.06,0:29:45.38,English,,0,0,0,,Ah that's yeah how does...so that's the replacement policy
-Dialogue: 0,0:29:41.06,0:29:45.38,Chinese,,0,0,0,,啊，那是怎么回事......这就是替代政策
+Dialogue: 0,0:29:41.06,0:29:45.38,Chinese,,0,0,0,,那是怎么如何实现的......这就是替代策略
 Dialogue: 0,0:29:46.28,0:29:51.74,English,,0,0,0,,So the question is how does it when there's multiple lines in a set how does it determine which to over overwrite
-Dialogue: 0,0:29:46.28,0:29:51.74,Chinese,,0,0,0,,所以问题是如何在一组中有多行时如何确定哪些过度覆盖
+Dialogue: 0,0:29:46.28,0:29:51.74,Chinese,,0,0,0,,问题是，如何在一组中有多行时，确定哪些将被覆盖
 Dialogue: 0,0:29:52.32,0:29:55.88,English,,0,0,0,,And that was the previous question probably maybe I should have repeated it
 Dialogue: 0,0:29:52.32,0:29:55.88,Chinese,,0,0,0,,这就是之前的问题，也许我应该重复一遍
 Dialogue: 0,0:29:56.34,0:30:00.14,English,,0,0,0,,So you try to pick a line that was least recently used
 Dialogue: 0,0:29:56.34,0:30:00.14,Chinese,,0,0,0,,因此，你尝试选择最近最少使用的行
 Dialogue: 0,0:30:00.90,0:30:03.42,English,,0,0,0,,So lines that haven't been accessed
-Dialogue: 0,0:30:00.90,0:30:03.42,Chinese,,0,0,0,,所以没有访问过的行
+Dialogue: 0,0:30:00.90,0:30:03.42,Chinese,,0,0,0,,所以最近没有访问过的行
 Dialogue: 0,0:30:04.36,0:30:06.98,English,,0,0,0,,Recently are good candidates for replacement because
-Dialogue: 0,0:30:04.36,0:30:06.98,Chinese,,0,0,0,,最近很适合替换，因为
+Dialogue: 0,0:30:04.36,0:30:06.98,Chinese,,0,0,0,,很适合替换，因为
 Dialogue: 0,0:30:07.14,0:30:09.90,English,,0,0,0,,Because of the sort of inverse locality principle right that
 Dialogue: 0,0:30:07.14,0:30:09.90,Chinese,,0,0,0,,由于这种反向局部性原理的正确性
 Dialogue: 0,0:30:10.18,0:30:14.58,English,,0,0,0,,They haven't been inverse referenced recently chances are they won't be referenced
-Dialogue: 0,0:30:10.18,0:30:14.58,Chinese,,0,0,0,,它们最近没有被反向引用它们不会被引用的可能性很大
+Dialogue: 0,0:30:10.18,0:30:14.58,Chinese,,0,0,0,,它们最近没有被引用，它们不会被引用的可能性很大
 Dialogue: 0,0:30:15.16,0:30:19.06,English,,0,0,0,,Again it
 Dialogue: 0,0:30:15.16,0:30:19.06,Chinese,,0,0,0,,再一次
 Dialogue: 0,0:30:19.08,0:30:22.28,English,,0,0,0,,Oh yeah there's additional bits that I'm not showing here that you have to
-Dialogue: 0,0:30:19.08,0:30:22.28,Chinese,,0,0,0,,哦，是的，还有一些我不会在这里展示你需要的东西
+Dialogue: 0,0:30:19.08,0:30:22.28,Chinese,,0,0,0,,哦，是的，还有一些我不会在这里展示给你的东西 flag
 Dialogue: 0,0:30:22.82,0:30:25.58,English,,0,0,0,,So when you replace a line in the set
-Dialogue: 0,0:30:22.82,0:30:25.58,Chinese,,0,0,0,,所以当你替换集合中的一行时
+Dialogue: 0,0:30:22.82,0:30:25.58,Chinese,,0,0,0,,当你替换组中的一行时
 Dialogue: 0,0:30:26.16,0:30:30.56,English,,0,0,0,,If that data is has changed then it has to be written back to memory
 Dialogue: 0,0:30:26.16,0:30:30.56,Chinese,,0,0,0,,如果该数据已更改，则必须将其写回内存
 Dialogue: 0,0:30:30.58,0:30:31.94,English,,0,0,0,,And that's another bit I haven't shown
-Dialogue: 0,0:30:30.58,0:30:31.94,Chinese,,0,0,0,,这是我没有表现出来的另一点
+Dialogue: 0,0:30:30.58,0:30:31.94,Chinese,,0,0,0,,这是我没有展示出来的另一点
 Dialogue: 0,0:30:31.94,0:30:32.20,English,,0,0,0,,Yes
 Dialogue: 0,0:30:31.94,0:30:32.20,Chinese,,0,0,0,,是
 Dialogue: 0,0:30:32.36,0:30:44.46,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:30:32.36,0:30:44.46,Chinese,,0,0,0,,[学生说话]
 Dialogue: 0,0:30:44.46,0:30:52.14,English,,0,0,0,,Ah so yeah,so this is a really this is really tricky parameter writing
-Dialogue: 0,0:30:44.46,0:30:52.14,Chinese,,0,0,0,,啊，所以是的，所以这真是一个非常棘手的参数写作
+Dialogue: 0,0:30:44.46,0:30:52.14,Chinese,,0,0,0,,啊，所以是的，所以这真是一个非常棘手的参数写作 flag
 Dialogue: 0,0:30:52.14,0:30:56.72,English,,0,0,0,,It's a high level system parameter that it goes on for years
 Dialogue: 0,0:30:52.14,0:30:56.72,Chinese,,0,0,0,,它是一个高级系统参数，它持续多年
 Dialogue: 0,0:30:57.62,0:31:02.02,English,,0,0,0,,So the idea you want to have blocks in order to exploit spatial locality
-Dialogue: 0,0:30:57.62,0:31:02.02,Chinese,,0,0,0,,所以你想要拥有块以利用空间局部性的想法
+Dialogue: 0,0:30:57.62,0:31:02.02,Chinese,,0,0,0,,你想要通过块以利用空间局部性的想法
 Dialogue: 0,0:31:03.10,0:31:07.20,English,,0,0,0,,Right think about if you're going to go to the trouble of if you have a miss in cache
-Dialogue: 0,0:31:03.10,0:31:07.20,Chinese,,0,0,0,,正确的想一想，如果你错过缓存，你是否会遇到麻烦
+Dialogue: 0,0:31:03.10,0:31:07.20,Chinese,,0,0,0,,想一想，如果你缓存未命中，你是否会遇到麻烦
 Dialogue: 0,0:31:07.68,0:31:11.94,English,,0,0,0,,And you're going to go to the trouble of going all the way to memory to get some data
-Dialogue: 0,0:31:07.68,0:31:11.94,Chinese,,0,0,0,,而且你将会遇到一路走向内存以获取一些数据的麻烦
+Dialogue: 0,0:31:07.68,0:31:11.94,Chinese,,0,0,0,,而且你将会遇到麻烦，甚至去内存中获取一些数据
 Dialogue: 0,0:31:12.64,0:31:18.94,English,,0,0,0,,You want to amortize the cost of fetching that data by fetching more than one byte
-Dialogue: 0,0:31:12.64,0:31:18.94,Chinese,,0,0,0,,你希望通过获取多个字节来分摊获取该数据的成本
+Dialogue: 0,0:31:12.64,0:31:18.94,Chinese,,0,0,0,,你希望通过获取多个字节，来分摊获取该数据的成本
 Dialogue: 0,0:31:19.78,0:31:21.66,English,,0,0,0,,That's the motivation for blocks
 Dialogue: 0,0:31:19.78,0:31:21.66,Chinese,,0,0,0,,这是块的动机
 Dialogue: 0,0:31:22.46,0:31:29.34,English,,0,0,0,,Because by the principle of locality in spatial locality in particular
@@ -691,53 +691,53 @@ Dialogue: 0,0:31:30.64,0:31:32.90,Chinese,,0,0,0,,如果你引用块内的单词
 Dialogue: 0,0:31:32.90,0:31:36.60,English,,0,0,0,,Chances are you're going to reference a nearby word which will also be an epilogue
 Dialogue: 0,0:31:32.90,0:31:36.60,Chinese,,0,0,0,,你可能会引用附近的单词，这也是一个结尾
 Dialogue: 0,0:31:37.52,0:31:42.98,English,,0,0,0,,Okay so blocks the whole purpose of blocks is to exploit spatial locality
-Dialogue: 0,0:31:37.52,0:31:42.98,Chinese,,0,0,0,,好吧阻止块的整个目的是利用空间局部性
+Dialogue: 0,0:31:37.52,0:31:42.98,Chinese,,0,0,0,,块的整个目的就是利用空间局部性
 Dialogue: 0,0:31:43.40,0:31:49.28,English,,0,0,0,,Now if you make your block too small then you don't amortize
-Dialogue: 0,0:31:43.40,0:31:49.28,Chinese,,0,0,0,,现在，如果你的块太小，那么你就不会摊销
+Dialogue: 0,0:31:43.40,0:31:49.28,Chinese,,0,0,0,,如果你的块太小，那么你就不会摊销
 Dialogue: 0,0:31:49.66,0:31:52.32,English,,0,0,0,,You don't get the same amortization right you maybe get one
-Dialogue: 0,0:31:49.66,0:31:52.32,Chinese,,0,0,0,,你没有获得相同的摊销权，你可能得到一个
+Dialogue: 0,0:31:49.66,0:31:52.32,Chinese,,0,0,0,,你没有获得相同的摊销权，你可能得到一个 flag
 Dialogue: 0,0:31:52.80,0:31:53.98,English,,0,0,0,,You bring the block in
 Dialogue: 0,0:31:52.80,0:31:53.98,Chinese,,0,0,0,,你把块带进来
 Dialogue: 0,0:31:55.10,0:31:57.62,English,,0,0,0,,So there's a reference you get a miss you bring the block in
-Dialogue: 0,0:31:55.10,0:31:57.62,Chinese,,0,0,0,,所以有一个参考，你得到一个小姐，你带来了块
+Dialogue: 0,0:31:55.10,0:31:57.62,Chinese,,0,0,0,,有一个引用，你得到一个未命中，你带来了块并放置于此
 Dialogue: 0,0:31:58.12,0:32:01.60,English,,0,0,0,,There's another reference nearby you get a hit because the blocks in memory
-Dialogue: 0,0:31:58.12,0:32:01.60,Chinese,,0,0,0,,附近有另一个参考，因为内存中的块，你会受到打击
+Dialogue: 0,0:31:58.12,0:32:01.60,Chinese,,0,0,0,,附近有另一个引用，因为内存中已存在的块，你会命中缓存
 Dialogue: 0,0:32:02.24,0:32:04.76,English,,0,0,0,,But then the next reference is in a different block
-Dialogue: 0,0:32:02.24,0:32:04.76,Chinese,,0,0,0,,但接下来的参考文献是在不同的块中
+Dialogue: 0,0:32:02.24,0:32:04.76,Chinese,,0,0,0,,但接下来的引用是在不同的块中
 Dialogue: 0,0:32:05.32,0:32:06.90,English,,0,0,0,,Because your block sizes are too small
-Dialogue: 0,0:32:05.32,0:32:06.90,Chinese,,0,0,0,,因为你的块大小太小
+Dialogue: 0,0:32:05.32,0:32:06.90,Chinese,,0,0,0,,因为你的块实在太小
 Dialogue: 0,0:32:07.22,0:32:11.68,English,,0,0,0,,Right so you kind of want to make blocks big as big as possible
-Dialogue: 0,0:32:07.22,0:32:11.68,Chinese,,0,0,0,,是的，所以你想要制作尽可能大的积木
+Dialogue: 0,0:32:07.22,0:32:11.68,Chinese,,0,0,0,,所以你想要使得块尽可能大
 Dialogue: 0,0:32:12.10,0:32:13.74,English,,0,0,0,,But without slowing the system down
-Dialogue: 0,0:32:12.10,0:32:13.74,Chinese,,0,0,0,,但不会减慢系统速度
+Dialogue: 0,0:32:12.10,0:32:13.74,Chinese,,0,0,0,,但不至于减慢系统速度
 Dialogue: 0,0:32:13.74,0:32:17.84,English,,0,0,0,,So if you made your block size too big it would just take too long to bring that block in
-Dialogue: 0,0:32:13.74,0:32:17.84,Chinese,,0,0,0,,因此，如果你将块大小设置得过大，则需要花费太长时间才能使用该块
+Dialogue: 0,0:32:13.74,0:32:17.84,Chinese,,0,0,0,,因为如果你将块大小设置得过大，则需要花费太长时间才能放置该块
 Dialogue: 0,0:32:19.06,0:32:26.10,English,,0,0,0,,Plus now your blocks,that your blocks are taking up bits in your cache memory
-Dialogue: 0,0:32:19.06,0:32:26.10,Chinese,,0,0,0,,再加上你的块，你的块占用缓存内存中的位
+Dialogue: 0,0:32:19.06,0:32:26.10,Chinese,,0,0,0,,再加上你的块占用缓存内存中的位
 Dialogue: 0,0:32:26.48,0:32:28.12,English,,0,0,0,,So now there's no room for other blocks
-Dialogue: 0,0:32:26.48,0:32:28.12,Chinese,,0,0,0,,所以现在没有其他街区的空间了
+Dialogue: 0,0:32:26.48,0:32:28.12,Chinese,,0,0,0,,没有其他块的空间了
 Dialogue: 0,0:32:28.12,0:32:32.12,English,,0,0,0,,Right so it's a really tricky design problem right and
-Dialogue: 0,0:32:28.12,0:32:32.12,Chinese,,0,0,0,,对，所以这是一个非常棘手的设计问题
+Dialogue: 0,0:32:28.12,0:32:32.12,Chinese,,0,0,0,,这是一个非常棘手的设计问题
 Dialogue: 0,0:32:32.60,0:32:37.54,English,,0,0,0,,If we're doing it taking an architecture class then we would sort of dive into the
-Dialogue: 0,0:32:32.60,0:32:37.54,Chinese,,0,0,0,,如果我们正在做一个建筑类课程，那么我们就会深入研究
+Dialogue: 0,0:32:32.60,0:32:37.54,Chinese,,0,0,0,,如果我们正在做一个计算机体系结构课程，那么我们就会深入研究
 Dialogue: 0,0:32:38.12,0:32:41.46,English,,0,0,0,,You know how how architects make those design decisions
-Dialogue: 0,0:32:38.12,0:32:41.46,Chinese,,0,0,0,,你知道建筑师如何做出这些设计决策
+Dialogue: 0,0:32:38.12,0:32:41.46,Chinese,,0,0,0,,你将会学习架构师如何做出这些设计决策
 Dialogue: 0,0:32:41.86,0:32:44.72,English,,0,0,0,,But in general that's what it's kind of a balancing act right
 Dialogue: 0,0:32:41.86,0:32:44.72,Chinese,,0,0,0,,但总的来说，这是一种平衡行为
 Dialogue: 0,0:32:46.34,0:32:48.06,English,,0,0,0,,Were there any other questions? yes
-Dialogue: 0,0:32:46.34,0:32:48.06,Chinese,,0,0,0,,还有其他问题吗？是
+Dialogue: 0,0:32:46.34,0:32:48.06,Chinese,,0,0,0,,还有其他问题吗？
 Dialogue: 0,0:32:48.06,0:32:56.02,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:32:48.06,0:32:56.02,Chinese,,0,0,0,,[学生说话]
 Dialogue: 0,0:32:56.18,0:32:58.72,English,,0,0,0,,Oh the question is every time there's a miss
-Dialogue: 0,0:32:56.18,0:32:58.72,Chinese,,0,0,0,,哦问题是每次都有错过
+Dialogue: 0,0:32:56.18,0:32:58.72,Chinese,,0,0,0,,哦，问题是每次都有缓存未命中
 Dialogue: 0,0:32:58.72,0:33:02.34,English,,0,0,0,,Do you have to select a victim line and override it
 Dialogue: 0,0:32:58.72,0:33:02.34,Chinese,,0,0,0,,你是否必须选择受害者行并覆盖它
 Dialogue: 0,0:33:03.00,0:33:07.32,English,,0,0,0,,Yeah I don't know of any caches that don't do that
-Dialogue: 0,0:33:03.00,0:33:07.32,Chinese,,0,0,0,,是的我不知道任何不这样做的缓存
+Dialogue: 0,0:33:03.00,0:33:07.32,Chinese,,0,0,0,,是的，我不知道任何不这样做的缓存
 Dialogue: 0,0:33:07.92,0:33:09.48,English,,0,0,0,,Now we'll see when we look at rights
-Dialogue: 0,0:33:07.92,0:33:09.48,Chinese,,0,0,0,,现在我们将看到我们何时看待权利
+Dialogue: 0,0:33:07.92,0:33:09.48,Chinese,,0,0,0,,现在我们将看到我们何时看待权利 flag
 Dialogue: 0,0:33:10.70,0:33:14.88,English,,0,0,0,,We'll see there's an option of whether we're only looking at reads right now
-Dialogue: 0,0:33:10.70,0:33:14.88,Chinese,,0,0,0,,我们会看到有一个选项，我们是否只是立即查看读取
+Dialogue: 0,0:33:10.70,0:33:14.88,Chinese,,0,0,0,,我们会看到有一个选项，我们是否只是立即查看
 Dialogue: 0,0:33:15.16,0:33:17.02,English,,0,0,0,,But with rights that question does come up
 Dialogue: 0,0:33:15.16,0:33:17.02,Chinese,,0,0,0,,但是权利确实会出现问题
 Dialogue: 0,0:33:17.86,0:33:24.02,English,,0,0,0,,If you wait in a couple of slides we'll go over that
@@ -745,57 +745,57 @@ Dialogue: 0,0:33:17.86,0:33:24.02,Chinese,,0,0,0,,如果你在几张幻灯片中
 Dialogue: 0,0:33:24.78,0:33:25.80,English,,0,0,0,,Any other questions
 Dialogue: 0,0:33:24.78,0:33:25.80,Chinese,,0,0,0,,还有其他问题吗
 Dialogue: 0,0:33:29.04,0:33:32.48,English,,0,0,0,,Okay so let's look at this two-way associative cache now
-Dialogue: 0,0:33:29.04,0:33:32.48,Chinese,,0,0,0,,好的，现在让我们来看看这个双向关联缓存
+Dialogue: 0,0:33:29.04,0:33:32.48,Chinese,,0,0,0,,好的，现在让我们来看看这个二路组相联缓存
 Dialogue: 0,0:33:33.94,0:33:36.78,English,,0,0,0,,There's one block offset bit
 Dialogue: 0,0:33:33.94,0:33:36.78,Chinese,,0,0,0,,有一个块偏移位
 Dialogue: 0,0:33:37.30,0:33:40.18,English,,0,0,0,,We only have two sets so that we only need one set index
-Dialogue: 0,0:33:37.30,0:33:40.18,Chinese,,0,0,0,,我们只有两个集合，所以我们只需要一个集合索引
+Dialogue: 0,0:33:37.30,0:33:40.18,Chinese,,0,0,0,,我们只有两个组，所以我们只需要一个组索引
 Dialogue: 0,0:33:41.04,0:33:42.96,English,,0,0,0,,And then the remaining two bits are tagged
-Dialogue: 0,0:33:41.04,0:33:42.96,Chinese,,0,0,0,,然后标记剩下的两位
+Dialogue: 0,0:33:41.04,0:33:42.96,Chinese,,0,0,0,,然后标记剩下的两个比特位
 Dialogue: 0,0:33:44.02,0:33:52.16,English,,0,0,0,,So let's go through our trace so address zero has a set is in set zero right here that's a miss
-Dialogue: 0,0:33:44.02,0:33:52.16,Chinese,,0,0,0,,所以让我们通过我们的跟踪，所以地址零有一个集合在这里设置为零，这是一个未命中
-Dialogue: 0,0:33:53.06,0:33:54.54,English,,0,0,0,, so we load that into memory
-Dialogue: 0,0:33:53.06,0:33:54.54,Chinese,,0,0,0,,所以我们把它加载到内存中
+Dialogue: 0,0:33:44.02,0:33:52.16,Chinese,,0,0,0,,让我们进入我们的跟踪，所以地址零有一个组，在这里设置为零，这是一个未命中
+Dialogue: 0,0:33:53.06,0:33:54.54,English,,0,0,0,,so we load that into memory
+Dialogue: 0,0:33:53.06,0:33:54.54,Chinese,,0,0,0,,我们把它加载到内存中
 Dialogue: 0,0:33:59.72,0:34:01.50,English,,0,0,0,,With the reference to address one
-Dialogue: 0,0:33:59.72,0:34:01.50,Chinese,,0,0,0,,参考地址一
+Dialogue: 0,0:33:59.72,0:34:01.50,Chinese,,0,0,0,,参考地址 1
 Dialogue: 0,0:34:02.24,0:34:08.10,English,,0,0,0,,That's in set zero and that's a hit because that byte is in a block
-Dialogue: 0,0:34:02.24,0:34:08.10,Chinese,,0,0,0,,这是设置为零，这是一个命中，因为该字节在一个块中
+Dialogue: 0,0:34:02.24,0:34:08.10,Chinese,,0,0,0,,这是设置为 0 ，这是一个命中，因为该字节在一个块中
 Dialogue: 0,0:34:09.08,0:34:13.04,English,,0,0,0,,The reference to seven is a miss that's in set one so we load that
-Dialogue: 0,0:34:09.08,0:34:13.04,Chinese,,0,0,0,,对七的引用是在第一组中的未命中，因此我们加载它
+Dialogue: 0,0:34:09.08,0:34:13.04,Chinese,,0,0,0,,对 7 的引用是在第一组中的未命中，因此我们加载它
 Dialogue: 0,0:34:13.56,0:34:17.36,English,,0,0,0,,And we were just picking randomly pick one of these two over right
 Dialogue: 0,0:34:13.56,0:34:17.36,Chinese,,0,0,0,,而我们只是随意挑选这两个中的一个
 Dialogue: 0,0:34:18.54,0:34:20.80,English,,0,0,0,,Because the cache is empty
 Dialogue: 0,0:34:18.54,0:34:20.80,Chinese,,0,0,0,,因为缓存是空的
 Dialogue: 0,0:34:21.34,0:34:25.72,English,,0,0,0,,The next reference is to address number eight which is in set zero
-Dialogue: 0,0:34:21.34,0:34:25.72,Chinese,,0,0,0,,下一个参考是地址为零的地址
+Dialogue: 0,0:34:21.34,0:34:25.72,Chinese,,0,0,0,,下一个引用是地址为零的地址
 Dialogue: 0,0:34:26.20,0:34:31.80,English,,0,0,0,,Now here's the difference between the direct mapped cache and this 2-way set associative cache
-Dialogue: 0,0:34:26.20,0:34:31.80,Chinese,,0,0,0,,现在，这是直接映射缓存和这个双向组关联缓存之间的区别
+Dialogue: 0,0:34:26.20,0:34:31.80,Chinese,,0,0,0,,这是直接映射缓存和这个双路组相联缓存之间的区别
 Dialogue: 0,0:34:32.86,0:34:35.66,English,,0,0,0,,When we reference address 8
-Dialogue: 0,0:34:32.86,0:34:35.66,Chinese,,0,0,0,,当我们引用地址8时
+Dialogue: 0,0:34:32.86,0:34:35.66,Chinese,,0,0,0,,当我们引用地址 8 时
 Dialogue: 0,0:34:36.90,0:34:42.26,English,,0,0,0,,That block has to the corresponding block has to go into set 0
-Dialogue: 0,0:34:36.90,0:34:42.26,Chinese,,0,0,0,,该块必须进入相应的块才能进入设置0
+Dialogue: 0,0:34:36.90,0:34:42.26,Chinese,,0,0,0,,该块以及相邻的块也必须放进组 0
 Dialogue: 0,0:34:42.98,0:34:44.74,English,,0,0,0,,Because of this zero set index bit
-Dialogue: 0,0:34:42.98,0:34:44.74,Chinese,,0,0,0,,因为这个零设置索引位
+Dialogue: 0,0:34:42.98,0:34:44.74,Chinese,,0,0,0,,因为这个 0 组索引位
 Dialogue: 0,0:34:45.46,0:34:49.38,English,,0,0,0,,But we've got room now because we are set to have room for two lines instead of one
-Dialogue: 0,0:34:45.46,0:34:49.38,Chinese,,0,0,0,,但是我们现在已经有了空间，因为我们可以设置两条线而不是一条线
+Dialogue: 0,0:34:45.46,0:34:49.38,Chinese,,0,0,0,,但是我们现在已经有了空间，因为我们可以设置两个组而不是一个组
 Dialogue: 0,0:34:50.52,0:34:55.18,English,,0,0,0,,So when we load that in well if we have an available empty slot
-Dialogue: 0,0:34:50.52,0:34:55.18,Chinese,,0,0,0,,因此，如果我们有一个可用的空槽，那么当我们将其加载到井中时
+Dialogue: 0,0:34:50.52,0:34:55.18,Chinese,,0,0,0,,如果我们有一个可用的空槽，那么当我们将其加载好时
 Dialogue: 0,0:34:55.18,0:35:01.02,English,,0,0,0,,We'll put it there we won't overwrite anything right so if possible always try to overwrite empty lines
-Dialogue: 0,0:34:55.18,0:35:01.02,Chinese,,0,0,0,,我们将它放在那里我们不会覆盖任何正确的，所以如果可能的话总是试图覆盖空行
+Dialogue: 0,0:34:55.18,0:35:01.02,Chinese,,0,0,0,,我们将它放在那里，我们不会覆盖任何正确的，所以如果可能的话总是试图覆盖空行
 Dialogue: 0,0:35:02.64,0:35:07.86,English,,0,0,0,,So now we've got in this set...we've got block 0-1 and block 8-9
-Dialogue: 0,0:35:02.64,0:35:07.86,Chinese,,0,0,0,,所以现在我们已经进入了这个集合......我们有0-1区块和8-9区块
+Dialogue: 0,0:35:02.64,0:35:07.86,Chinese,,0,0,0,,所以现在我们已经进入了这个组......我们有 0-1 区块和 8-9 区块
 Dialogue: 0,0:35:08.38,0:35:12.46,English,,0,0,0,,So when we get our reference to address zero
-Dialogue: 0,0:35:08.38,0:35:12.46,Chinese,,0,0,0,,所以当我们得到我们的地址零参考时
+Dialogue: 0,0:35:08.38,0:35:12.46,Chinese,,0,0,0,,所以当我们得到我们的地址 0 的参考时
 Dialogue: 0,0:35:13.04,0:35:16.94,English,,0,0,0,,Whereas before with the when we had a conflict miss in the direct map cache
-Dialogue: 0,0:35:13.04,0:35:16.94,Chinese,,0,0,0,,而在之前我们在直接地图缓存中发生了冲突错过
+Dialogue: 0,0:35:13.04,0:35:16.94,Chinese,,0,0,0,,而在之前，我们在直接映射缓存中发生了冲突未命中
 Dialogue: 0,0:35:16.94,0:35:19.94,English,,0,0,0,,Now we can satisfy that that request
-Dialogue: 0,0:35:16.94,0:35:19.94,Chinese,,0,0,0,,现在我们可以满足那个要求
+Dialogue: 0,0:35:16.94,0:35:19.94,Chinese,,0,0,0,,现在我们可以满足那个请求
 Dialogue: 0,0:35:20.60,0:35:25.28,English,,0,0,0,,It hits in memory and the cache can satisfy it from the cache instead of going to memory
-Dialogue: 0,0:35:20.60,0:35:25.28,Chinese,,0,0,0,,它在内存中命中，缓存可以从缓存中满足它而不是去内存
+Dialogue: 0,0:35:20.60,0:35:25.28,Chinese,,0,0,0,,它在内存中命中，缓存可以从缓存中满足它，而不是去内存取回数据
 Dialogue: 0,0:35:26.78,0:35:30.40,English,,0,0,0,,Okay so that makes sense
-Dialogue: 0,0:35:26.78,0:35:30.40,Chinese,,0,0,0,,好的，这样才有意义
-Dialogue: 0,0:35:35.38,0:35:36.68,English,,0,0,0,,Okay now what about rights?
-Dialogue: 0,0:35:35.38,0:35:36.68,Chinese,,0,0,0,,好的，现在权利怎么样？
+Dialogue: 0,0:35:26.78,0:35:30.40,Chinese,,0,0,0,,明白了吗
+Dialogue: 0,0:35:35.38,0:35:36.68,English,,0,0,0,,Okay now what about writes?
+Dialogue: 0,0:35:35.38,0:35:36.68,Chinese,,0,0,0,,好的，写又是如何呢？
 Dialogue: 0,0:35:39.20,0:35:41.38,English,,0,0,0,,So there's multiple copies of the data
 Dialogue: 0,0:35:39.20,0:35:41.38,Chinese,,0,0,0,,所以有多个数据副本
 Dialogue: 0,0:35:42.08,0:35:49.96,English,,0,0,0,,Right we're sub setting as we move up the hierarchy we're creating subsets of the data in the caches
@@ -803,129 +803,129 @@ Dialogue: 0,0:35:42.08,0:35:49.96,Chinese,,0,0,0,,我们正在进行子设置，
 Dialogue: 0,0:35:50.88,0:36:00.62,English,,0,0,0,,So what we do a write to a word within a block that's currently in the cache
 Dialogue: 0,0:35:50.88,0:36:00.62,Chinese,,0,0,0,,那么我们对当前在缓存中的块内的单词进行写操作
 Dialogue: 0,0:36:02.86,0:36:04.82,English,,0,0,0,,Okay we have two options
-Dialogue: 0,0:36:02.86,0:36:04.82,Chinese,,0,0,0,,好的，我们有两个选择
+Dialogue: 0,0:36:02.86,0:36:04.82,Chinese,,0,0,0,,我们有两个选择
 Dialogue: 0,0:36:05.46,0:36:09.02,English,,0,0,0,,We can write that block immediately to memory right
 Dialogue: 0,0:36:05.46,0:36:09.02,Chinese,,0,0,0,,我们可以立即将该块写入内存
 Dialogue: 0,0:36:09.68,0:36:13.26,English,,0,0,0,,We're got a block that's like this big and we're updating a little chunk of it
-Dialogue: 0,0:36:09.68,0:36:13.26,Chinese,,0,0,0,,我们有一个像这样大的块，我们正在更新它的一小部分
+Dialogue: 0,0:36:09.68,0:36:13.26,Chinese,,0,0,0,,我们有一个这么大的块，我们正在更新它的一小部分
 Dialogue: 0,0:36:15.10,0:36:19.24,English,,0,0,0,,So we can either do the update and then flush it to memory immediately
 Dialogue: 0,0:36:15.10,0:36:19.24,Chinese,,0,0,0,,所以我们可以进行更新，然后立即将其刷新到内存中
 Dialogue: 0,0:36:19.28,0:36:25.02,English,,0,0,0,,So that memory always mirrors the contents of memory always mirror the contents of the cache
-Dialogue: 0,0:36:19.28,0:36:25.02,Chinese,,0,0,0,,因此，内存始终镜像内存的内容始终镜像缓存的内容
-Dialogue: 0,0:36:26.42,0:36:29.60,English,,0,0,0,,Okay but that's expensive right
-Dialogue: 0,0:36:26.42,0:36:29.60,Chinese,,0,0,0,,好吧，但这是昂贵的权利
+Dialogue: 0,0:36:19.28,0:36:25.02,Chinese,,0,0,0,,因此，内存始终保存 flag
+Dialogue: 0,0:36:26.42,0:36:29.60,English,,0,0,0,,Okay but that's expensive write
+Dialogue: 0,0:36:26.42,0:36:29.60,Chinese,,0,0,0,,好吧，但这是耗费高的写方式
 Dialogue: 0,0:36:29.62,0:36:32.44,English,,0,0,0,,I mean you know memory accesses are expensive
-Dialogue: 0,0:36:29.62,0:36:32.44,Chinese,,0,0,0,,我的意思是你知道内存访问很昂贵
+Dialogue: 0,0:36:29.62,0:36:32.44,Chinese,,0,0,0,,我的意思是，你知道内存访问是和费时的
 Dialogue: 0,0:36:33.68,0:36:36.96,English,,0,0,0,,The other so the other option is what what's called write back
-Dialogue: 0,0:36:33.68,0:36:36.96,Chinese,,0,0,0,,另一个是另一个选择就是所谓的回写
+Dialogue: 0,0:36:33.68,0:36:36.96,Chinese,,0,0,0,,另一个是另一个选择就是所谓的「写回」
 Dialogue: 0,0:36:37.90,0:36:40.56,English,,0,0,0,,So in this case when we write to a block in the cache
-Dialogue: 0,0:36:37.90,0:36:40.56,Chinese,,0,0,0,,所以在这种情况下我们写入缓存中的块
+Dialogue: 0,0:36:37.90,0:36:40.56,Chinese,,0,0,0,,在这种情况下我们写入缓存中的块
 Dialogue: 0,0:36:41.66,0:36:44.80,English,,0,0,0,,We don't flush it to memory
 Dialogue: 0,0:36:41.66,0:36:44.80,Chinese,,0,0,0,,我们不会将其刷新到内存中
 Dialogue: 0,0:36:45.14,0:36:50.94,English,,0,0,0,,Until we elect that particular line as a victim that's going to be overwritten
-Dialogue: 0,0:36:45.14,0:36:50.94,Chinese,,0,0,0,,直到我们选择那条特定的线作为受害者才会被覆盖
+Dialogue: 0,0:36:45.14,0:36:50.94,Chinese,,0,0,0,,直到我们选择的那条特定的组作为被替换者，才会被覆盖
 Dialogue: 0,0:36:52.38,0:36:55.90,English,,0,0,0,,And only then when we're just we sort of defer
-Dialogue: 0,0:36:52.38,0:36:55.90,Chinese,,0,0,0,,只有这样，当我们只是推迟时
+Dialogue: 0,0:36:52.38,0:36:55.90,Chinese,,0,0,0,,只有这样，当我们只是推迟写入的时间
 Dialogue: 0,0:36:55.92,0:36:58.56,English,,0,0,0,,The writing to memory until the last possible minute
-Dialogue: 0,0:36:55.92,0:36:58.56,Chinese,,0,0,0,,写入内存直到最后一分钟
-Dialogue: 0,0:36:59.22,0:37:04.71,English,,0,0,0,,We defer it until just before the cache would overwrite that  that data block
+Dialogue: 0,0:36:55.92,0:36:58.56,Chinese,,0,0,0,,尽可能的直到最后一分钟才写入内存
+Dialogue: 0,0:36:59.22,0:37:04.71,English,,0,0,0,,We defer it until just before the cache would overwrite that that data block
 Dialogue: 0,0:36:59.22,0:37:04.71,Chinese,,0,0,0,,我们将其推迟到缓存覆盖该数据块之前
-Dialogue: 0,0:37:05.36,0:37:06.80,English,,0,0,0,,Okay so that's called right back
-Dialogue: 0,0:37:05.36,0:37:06.80,Chinese,,0,0,0,,好的，这就叫回来吧
-Dialogue: 0,0:37:07.20,0:37:12.90,English,,0,0,0,,And for right back you need to have some an extra bit in the line that indicates whether that blocks been written to
-Dialogue: 0,0:37:07.20,0:37:12.90,Chinese,,0,0,0,,对于右后卫，你需要在行中加一些额外的位来指示是否写入了这些块
+Dialogue: 0,0:37:05.36,0:37:06.80,English,,0,0,0,,Okay so that's called write back
+Dialogue: 0,0:37:05.36,0:37:06.80,Chinese,,0,0,0,,好的，这就叫「写回」
+Dialogue: 0,0:37:07.20,0:37:12.90,English,,0,0,0,,And for write back you need to have some an extra bit in the line that indicates whether that blocks been written to
+Dialogue: 0,0:37:07.20,0:37:12.90,Chinese,,0,0,0,,对于写回，你需要在行中加一些额外的位来指示是否写入了这些块
 Dialogue: 0,0:37:13.60,0:37:18.88,English,,0,0,0,,So the algorithm is when the cache identifies a particular line to overwrite
-Dialogue: 0,0:37:13.60,0:37:18.88,Chinese,,0,0,0,,因此，算法是在缓存标识要覆盖的特定行时
+Dialogue: 0,0:37:13.60,0:37:18.88,Chinese,,0,0,0,,因此，算法就是：当缓存识别出一个特定行将覆盖时
 Dialogue: 0,0:37:19.62,0:37:25.50,English,,0,0,0,,It checks the dirty bit on that line if it's set then it writes that data to back to disk
-Dialogue: 0,0:37:19.62,0:37:25.50,Chinese,,0,0,0,,它检查该行上的脏位，如果已设置，则将该数据写回磁盘
+Dialogue: 0,0:37:19.62,0:37:25.50,Chinese,,0,0,0,,它检查该行上的「修改位」，如果已设置，则将该数据写回磁盘
 Dialogue: 0,0:37:28.18,0:37:33.26,English,,0,0,0,,Okay if the data hasn't...if that block hasn't been written there's no point there's no need to write it back
-Dialogue: 0,0:37:28.18,0:37:33.26,Chinese,,0,0,0,,好的，如果数据没有...如果没有写入该块那么没有必要将其写回来
+Dialogue: 0,0:37:28.18,0:37:33.26,Chinese,,0,0,0,,如果数据没有...如果没有写入，那么没有必要将其写回来
 Dialogue: 0,0:37:33.26,0:37:38.14,English,,0,0,0,,Because it has the same value as the copy of the block on disk
 Dialogue: 0,0:37:33.26,0:37:38.14,Chinese,,0,0,0,,因为它与磁盘上块的副本具有相同的值
-Dialogue: 0,0:37:41.20,0:37:45.74,English,,0,0,0,,Okay now so what about...so that's a right here now what happens if we have a right miss
-Dialogue: 0,0:37:41.20,0:37:45.74,Chinese,,0,0,0,,好的，那么......那么现在就在这里，如果我们有一个正确的错过会发生什么
+Dialogue: 0,0:37:41.20,0:37:45.74,English,,0,0,0,,Okay now so what about...so that's a write here now what happens if we have a right miss
+Dialogue: 0,0:37:41.20,0:37:45.74,Chinese,,0,0,0,,这里有一个写操作，如果我们有一个正确的缓存未命中会发生什么
 Dialogue: 0,0:37:46.46,0:37:48.98,English,,0,0,0,,So we're doing a write to memory
-Dialogue: 0,0:37:46.46,0:37:48.98,Chinese,,0,0,0,,所以我们正在写一个内存
+Dialogue: 0,0:37:46.46,0:37:48.98,Chinese,,0,0,0,,我们正在对内存进行一个写操作
 Dialogue: 0,0:37:50.60,0:37:55.88,English,,0,0,0,,And the word that we're writing is not contained in any block that's in our cache
-Dialogue: 0,0:37:50.60,0:37:55.88,Chinese,,0,0,0,,我们写的字不包含在缓存中的任何块中
+Dialogue: 0,0:37:50.60,0:37:55.88,Chinese,,0,0,0,,我们写的字，不包含在缓存中的任何块中
 Dialogue: 0,0:37:57.90,0:38:02.58,English,,0,0,0,,So we have two options we can do what's called write allocate so we can treat it if there's a miss
-Dialogue: 0,0:37:57.90,0:38:02.58,Chinese,,0,0,0,,所以我们有两个选项，我们可以做什么叫做写分配，所以我们可以处理它，如果有一个错过
+Dialogue: 0,0:37:57.90,0:38:02.58,Chinese,,0,0,0,,所以我们有两个选项，我们可以叫做写分配，所以我们可以处理它，如果有一个缓存未命中
 Dialogue: 0,0:38:03.24,0:38:07.32,English,,0,0,0,,We can do sort of the symmetric thing that we did with a hit which was create a new
-Dialogue: 0,0:38:03.24,0:38:07.32,Chinese,,0,0,0,,我们可以做一些对称的事情，我们用一个创建新的命中
+Dialogue: 0,0:38:03.24,0:38:07.32,Chinese,,0,0,0,,我们可以做一些对称的事情，我们缓存命中 flag
 Dialogue: 0,0:38:08.08,0:38:11.26,English,,0,0,0,,A newline possibly overwriting an existing line
 Dialogue: 0,0:38:08.08,0:38:11.26,Chinese,,0,0,0,,换行符可能会覆盖现有行
 Dialogue: 0,0:38:11.96,0:38:18.18,English,,0,0,0,,And then write in so we could create that cache enter that cache line
-Dialogue: 0,0:38:11.96,0:38:18.18,Chinese,,0,0,0,,然后写入，以便我们可以创建该缓存进入该缓存行
-Dialogue: 0,0:38:18.48,0:38:21.48,English,,0,0,0,,Fetch it from memory and then do the right
-Dialogue: 0,0:38:18.48,0:38:21.48,Chinese,,0,0,0,,从内存中获取它，然后执行右键
-Dialogue: 0,0:38:23.18,0:38:25.34,English,,0,0,0,,Okay so this is sort of symmetric to reads right then
-Dialogue: 0,0:38:23.18,0:38:25.34,Chinese,,0,0,0,,好的，所以这对于那时的读取来说是对称的
-Dialogue: 0,0:38:25.80,0:38:32.10,English,,0,0,0,,So every right if it misses when the write finishes the that block will be in the cache
-Dialogue: 0,0:38:25.80,0:38:32.10,Chinese,,0,0,0,,因此，如果在写入完成该块时未命中，则每个权限都将在缓存中
+Dialogue: 0,0:38:11.96,0:38:18.18,Chinese,,0,0,0,,然后写入，以便我们可以创建该缓存，进入该缓存行
+Dialogue: 0,0:38:18.48,0:38:21.48,English,,0,0,0,,Fetch it from memory and then do the writes
+Dialogue: 0,0:38:18.48,0:38:21.48,Chinese,,0,0,0,,从内存中获取它，然后执行写操作
+Dialogue: 0,0:38:23.18,0:38:25.34,English,,0,0,0,,Okay so this is sort of symmetric to reads writes then
+Dialogue: 0,0:38:23.18,0:38:25.34,Chinese,,0,0,0,,所以这对于那时的读取来说是对称的
+Dialogue: 0,0:38:25.80,0:38:32.10,English,,0,0,0,,So every write if it misses when the write finishes the that block will be in the cache
+Dialogue: 0,0:38:25.80,0:38:32.10,Chinese,,0,0,0,,flag
 Dialogue: 0,0:38:33.10,0:38:35.56,English,,0,0,0,,And if we do a subsequent read we get a hit
-Dialogue: 0,0:38:33.10,0:38:35.56,Chinese,,0,0,0,,如果我们进行后续阅读，我们会受到打击
+Dialogue: 0,0:38:33.10,0:38:35.56,Chinese,,0,0,0,,如果我们进行后续读操作，就会有缓存命中
 Dialogue: 0,0:38:36.04,0:38:38.18,English,,0,0,0,,Okay so that's the reason you might want to do that
-Dialogue: 0,0:38:36.04,0:38:38.18,Chinese,,0,0,0,,好的，这就是你可能想要这样做的原因
+Dialogue: 0,0:38:36.04,0:38:38.18,Chinese,,0,0,0,,这就是要这样做的原因
 Dialogue: 0,0:38:40.56,0:38:42.92,English,,0,0,0,,The the other option is just to
 Dialogue: 0,0:38:40.56,0:38:42.92,Chinese,,0,0,0,,另一种选择就是
 Dialogue: 0,0:38:43.44,0:38:50.18,English,,0,0,0,,Don't allocate an entry in the cache don't allocate a new line just write write the data directly to memory
-Dialogue: 0,0:38:43.44,0:38:50.18,Chinese,,0,0,0,,不要在缓存中分配条目不要分配新行只是将数据直接写入内存
+Dialogue: 0,0:38:43.44,0:38:50.18,Chinese,,0,0,0,,不要在缓存中分配条目，flag，不要分配新行，只是将数据直接写入内存
 Dialogue: 0,0:38:52.48,0:38:56.00,English,,0,0,0,,You don't really need to understand the distinction between these two things
 Dialogue: 0,0:38:52.48,0:38:56.00,Chinese,,0,0,0,,你真的不需要理解这两件事之间的区别
 Dialogue: 0,0:38:56.44,0:38:58.66,English,,0,0,0,,Different caches use different policies
 Dialogue: 0,0:38:56.44,0:38:58.66,Chinese,,0,0,0,,不同的缓存使用不同的策略
 Dialogue: 0,0:38:59.27,0:39:06.18,English,,0,0,0,,For your own mental model a good model to use is just to assume write back write allocate
-Dialogue: 0,0:38:59.27,0:39:06.18,Chinese,,0,0,0,,对于你自己的心理模型，一个好的模型就是假设写回写分配
+Dialogue: 0,0:38:59.27,0:39:06.18,Chinese,,0,0,0,,对于你自己的心中好的模型，就是假设写回写分配
 Dialogue: 0,0:39:07.08,0:39:10.22,English,,0,0,0,,So just assume that we won't copy the data to disk
-Dialogue: 0,0:39:07.08,0:39:10.22,Chinese,,0,0,0,,所以假设我们不会将数据复制到磁盘
+Dialogue: 0,0:39:07.08,0:39:10.22,Chinese,,0,0,0,,假设我们不会将数据复制到磁盘
 Dialogue: 0,0:39:10.76,0:39:14.84,English,,0,0,0,,If there's a hit we won't write it back to disk until the last possible minute
-Dialogue: 0,0:39:10.76,0:39:14.84,Chinese,,0,0,0,,如果有击中，我们将不会在最后一刻之前将其写回磁盘
+Dialogue: 0,0:39:10.76,0:39:14.84,Chinese,,0,0,0,,如果发生了缓存命中，我们才将其写回磁盘直到最后时刻
 Dialogue: 0,0:39:15.28,0:39:19.72,English,,0,0,0,,And every time there's a write miss what will create a new entry in the cache
-Dialogue: 0,0:39:15.28,0:39:19.72,Chinese,,0,0,0,,每次有写错过什么都会在缓存中创建一个新条目
+Dialogue: 0,0:39:15.28,0:39:19.72,Chinese,,0,0,0,,每次有「写未命中」，都会在缓存中创建一个新条目
 Dialogue: 0,0:39:20.28,0:39:23.84,English,,0,0,0,,Okay so that's...that I think that's sort of the simplest model that
-Dialogue: 0,0:39:20.28,0:39:23.84,Chinese,,0,0,0,,好的，那就是......我觉得那是最简单的模型
+Dialogue: 0,0:39:20.28,0:39:23.84,Chinese,,0,0,0,,我觉得这是最简单的模型
 Dialogue: 0,0:39:24.32,0:39:30.84,English,,0,0,0,,And it's a reason it's a reasonable model that you can use regardless of the particular cache implementation
 Dialogue: 0,0:39:24.32,0:39:30.84,Chinese,,0,0,0,,这是一个合理的模型，无论特定的缓存实现如何，你都可以使用它
 Dialogue: 0,0:39:33.78,0:39:38.04,English,,0,0,0,,Now in a real system so far we've only looked at we've only assumed that there's a single cache
-Dialogue: 0,0:39:33.78,0:39:38.04,Chinese,,0,0,0,,到目前为止，在一个真实的系统中，我们只看到我们只假设有一个缓存
+Dialogue: 0,0:39:33.78,0:39:38.04,Chinese,,0,0,0,,到目前为止，我们假设在一个真实的系统中，只有一个缓存
 Dialogue: 0,0:39:38.52,0:39:44.86,English,,0,0,0,,But in a in real systems there's multiple caches
-Dialogue: 0,0:39:38.52,0:39:44.86,Chinese,,0,0,0,,但在实际系统中，有多个缓存
+Dialogue: 0,0:39:38.52,0:39:44.86,Chinese,,0,0,0,,但在实际系统中，会存在多个缓存
 Dialogue: 0,0:39:46.66,0:39:53.86,English,,0,0,0,,So modern core i7 has well architecture from intel
-Dialogue: 0,0:39:46.66,0:39:53.86,Chinese,,0,0,0,,所以现代核心i7拥有来自英特尔的良好架构
+Dialogue: 0,0:39:46.66,0:39:53.86,Chinese,,0,0,0,,现代核心 i7 拥有来自英特尔的良好架构
 Dialogue: 0,0:39:56.24,0:39:58.48,English,,0,0,0,,Contains multiple processor cores
 Dialogue: 0,0:39:56.24,0:39:58.48,Chinese,,0,0,0,,包含多个处理器核心
 Dialogue: 0,0:39:59.40,0:40:02.32,English,,0,0,0,,So 4 is a typical number for like desktop systems
-Dialogue: 0,0:39:59.40,0:40:02.32,Chinese,,0,0,0,,所以4是类似桌面系统的典型数字
+Dialogue: 0,0:39:59.40,0:40:02.32,Chinese,,0,0,0,,所以 4 是类似桌面系统的典型数字
 Dialogue: 0,0:40:02.80,0:40:06.12,English,,0,0,0,,8~12 is typical for server class systems
-Dialogue: 0,0:40:02.80,0:40:06.12,Chinese,,0,0,0,,8~12是服务器类系统的典型代表
+Dialogue: 0,0:40:02.80,0:40:06.12,Chinese,,0,0,0,,8~12 是服务器类系统的典型代表
 Dialogue: 0,0:40:06.74,0:40:12.58,English,,0,0,0,,These processor cores can each execute their own independent instruction stream in parallel
 Dialogue: 0,0:40:06.74,0:40:12.58,Chinese,,0,0,0,,这些处理器内核可以各自并行执行它们自己的独立指令流
 Dialogue: 0,0:40:14.54,0:40:21.34,English,,0,0,0,,And each processor core can contains general-purpose registers which that's level 0 in the cache
-Dialogue: 0,0:40:14.54,0:40:21.34,Chinese,,0,0,0,,并且每个处理器内核可以包含通用寄存器，其在高速缓存中为0级
+Dialogue: 0,0:40:14.54,0:40:21.34,Chinese,,0,0,0,,并且每个处理器内核可以包含通用寄存器，其在高速缓存中为 0 级
 Dialogue: 0,0:40:22.46,0:40:26.30,English,,0,0,0,,And then two different kinds of L1 caches
-Dialogue: 0,0:40:22.46,0:40:26.30,Chinese,,0,0,0,,然后是两种不同的L1缓存
+Dialogue: 0,0:40:22.46,0:40:26.30,Chinese,,0,0,0,,然后是两种不同的 L1 缓存
 Dialogue: 0,0:40:27.20,0:40:29.16,English,,0,0,0,,The data cache the L1 d-cache
-Dialogue: 0,0:40:27.20,0:40:29.16,Chinese,,0,0,0,,数据缓存L1 d缓存
+Dialogue: 0,0:40:27.20,0:40:29.16,Chinese,,0,0,0,,数据缓存「L1 d缓存」
 Dialogue: 0,0:40:30.26,0:40:33.86,English,,0,0,0,,And the i-cache is the...which is the instruction cache
-Dialogue: 0,0:40:30.26,0:40:33.86,Chinese,,0,0,0,,而i-cache是​​......这是指令缓存
+Dialogue: 0,0:40:30.26,0:40:33.86,Chinese,,0,0,0,,而「i-cache」是指令缓存
 Dialogue: 0,0:40:35.28,0:40:40.16,English,,0,0,0,,And these are fairly small 32 k bytes they're eight-way associative
-Dialogue: 0,0:40:35.28,0:40:40.16,Chinese,,0,0,0,,这些是相当小的32 k字节，它们是八路关联的
+Dialogue: 0,0:40:35.28,0:40:40.16,Chinese,,0,0,0,,这些是相当小的 32k 字节，它们是八路组关联的
 Dialogue: 0,0:40:40.74,0:40:44.14,English,,0,0,0,,And they can be accessed in a very small number of cycles
-Dialogue: 0,0:40:40.74,0:40:44.14,Chinese,,0,0,0,,并且可以在极少数周期内访问它们
+Dialogue: 0,0:40:40.74,0:40:44.14,Chinese,,0,0,0,,并且可以在极少的时钟周期内访问它们
 Dialogue: 0,0:40:45.60,0:40:51.40,English,,0,0,0,,The next level of the hierarchy is L2 cache
-Dialogue: 0,0:40:45.60,0:40:51.40,Chinese,,0,0,0,,层次结构的下一级是L2缓存
+Dialogue: 0,0:40:45.60,0:40:51.40,Chinese,,0,0,0,,层次结构的下一级是「L2 缓存」 
 Dialogue: 0,0:40:52.12,0:40:58.58,English,,0,0,0,,Which is still fairly small 256 k bytes same associativity
-Dialogue: 0,0:40:52.12,0:40:58.58,Chinese,,0,0,0,,这仍然是相当小的256 k字节相同的关联性
+Dialogue: 0,0:40:52.12,0:40:58.58,Chinese,,0,0,0,,这仍然是相当小的 256k 字节，相同的关联性
 Dialogue: 0,0:40:59.12,0:41:02.30,English,,0,0,0,,And it has a slightly longer access time
-Dialogue: 0,0:40:59.12,0:41:02.30,Chinese,,0,0,0,,它的访问时间稍长
+Dialogue: 0,0:40:59.12,0:41:02.30,Chinese,,0,0,0,,它的访问时间稍长一点
 Dialogue: 0,0:41:03.14,0:41:08.68,English,,0,0,0,,And it's unified in the sense that the L2 cache contains both data and instructions
-Dialogue: 0,0:41:03.14,0:41:08.68,Chinese,,0,0,0,,在L2缓存包含数据和指令的意义上，它是统一的
+Dialogue: 0,0:41:03.14,0:41:08.68,Chinese,,0,0,0,,在 L2 缓存包含数据和指令的意义上，它是统一的
 Dialogue: 0,0:41:11.42,0:41:14.10,English,,0,0,0,,Ok so that's all within a single core on the chip
-Dialogue: 0,0:41:11.42,0:41:14.10,Chinese,,0,0,0,,好的，所以这一切都在芯片的单核心内
+Dialogue: 0,0:41:11.42,0:41:14.10,Chinese,,0,0,0,,这一切都在芯片的单核心内 next
 Dialogue: 0,0:41:15.74,0:41:20.80,English,,0,0,0,,And then also on the chip but external to all the cores and shared by all the cores
-Dialogue: 0,0:41:15.74,0:41:20.80,Chinese,,0,0,0,,然后在芯片上，但在所有内核外部并由所有内核共享
+Dialogue: 0,0:41:15.74,0:41:20.80,Chinese,,0,0,0,,然后在芯片上，但在所有内核外部，并由所有内核共享
 Dialogue: 0,0:41:21.36,0:41:27.62,English,,0,0,0,,Is at L3 unified cache which is 8 megabytes and 16 way associative
-Dialogue: 0,0:41:21.36,0:41:27.62,Chinese,,0,0,0,,处于L3统一缓存，即8兆字节和16路关联
+Dialogue: 0,0:41:21.36,0:41:27.62,Chinese,,0,0,0,,就是 「L3统一缓存」，即8兆字节和16路关联
 Dialogue: 0,0:41:28.06,0:41:31.74,English,,0,0,0,,With an access time that's like 40 to 75 cycles
 Dialogue: 0,0:41:28.06,0:41:31.74,Chinese,,0,0,0,,访问时间大约为40到75个周期
 Dialogue: 0,0:41:33.84,0:41:43.06,English,,0,0,0,,So if there's a miss in L1,then the L1 sense or tries to sends a request to L2 to try to find the data in L2
