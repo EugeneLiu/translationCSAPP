@@ -319,14 +319,14 @@ Dialogue: 0,0:26:31.92,0:26:34.90,English,,0,0,0,,And then in it we go in...anot
 Dialogue: 0,0:26:34.90,0:26:40.02,English,,0,0,0,,And we kill each of those child processes with by using the kill function 我们使用 kill 函数 kill 掉了所有那些子进程
 Dialogue: 0,0:26:40.74,0:26:45.56,English,,0,0,0,,Passing it the process id and the signal that we want sent to that process
 Dialogue: 0,0:26:47.72,0:26:52.24,English,,0,0,0,,Okay and then we do our due diligence and reap each one of those 好的，我们回收了所有应该被回收的
-Dialogue: 0,0:26:52.64,0:26:54.64,English,,0,0,0,,Children that we've terminated 我们终止的子进程
+Dialogue: 0,0:26:52.64,0:26:54.64,English,,0,0,0,,Children that we've terminated 被我们终止的子进程
 Dialogue: 0,0:26:55.56,0:27:02.28,English,,0,0,0,,Now this isn't strictly necessary because we're going to exit as soon as this fork12 function
 Dialogue: 0,0:27:02.80,0:27:06.58,English,,0,0,0,,Returns we're going to exit the code so but we're just being
 Dialogue: 0,0:27:07.38,0:27:11.90,English,,0,0,0,,You know careful here and maybe a little pedantic but
-Dialogue: 0,0:27:16.02,0:27:20.26,English,,0,0,0,,Okay now let's look at how we process receive signals
-Dialogue: 0,0:27:22.58,0:27:29.72,English,,0,0,0,,Now suppose process A is running along executing its user code and then
-Dialogue: 0,0:27:30.48,0:27:34.94,English,,0,0,0,,There's a control passes into the kernel because of some exception
-Dialogue: 0,0:27:36.12,0:27:40.36,English,,0,0,0,,Now that exception can be either a timer going off
+Dialogue: 0,0:27:16.02,0:27:20.26,English,,0,0,0,,Okay now let's look at how we process receive signals 好的，那我们来看看进程是如何接收信号的
+Dialogue: 0,0:27:22.58,0:27:29.72,English,,0,0,0,,Now suppose process A is running along executing its user code and then 假设有一个进程 A，正在执行用户代码
+Dialogue: 0,0:27:30.48,0:27:34.94,English,,0,0,0,,There's a control passes into the kernel because of some exception 然后由于出现了异常，控制权转移给内核
+Dialogue: 0,0:27:36.12,0:27:40.36,English,,0,0,0,,Now that exception can be either a timer going off 
 Dialogue: 0,0:27:40.90,0:27:45.12,English,,0,0,0,,They've been interrupts or it can be a trap user calls a system call
 Dialogue: 0,0:27:45.76,0:27:50.50,English,,0,0,0,,Okay but it's always caused that the trap into the
 Dialogue: 0,0:27:51.20,0:27:54.26,English,,0,0,0,,Or the transferring control into the kernel is always caused by some exception
