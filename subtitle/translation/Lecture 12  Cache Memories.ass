@@ -921,77 +921,77 @@ Dialogue: 0,0:40:59.12,0:41:02.30,Chinese,,0,0,0,,它的访问时间稍长一点
 Dialogue: 0,0:41:03.14,0:41:08.68,English,,0,0,0,,And it's unified in the sense that the L2 cache contains both data and instructions
 Dialogue: 0,0:41:03.14,0:41:08.68,Chinese,,0,0,0,,在 L2 缓存包含数据和指令的意义上，它是统一的
 Dialogue: 0,0:41:11.42,0:41:14.10,English,,0,0,0,,Ok so that's all within a single core on the chip
-Dialogue: 0,0:41:11.42,0:41:14.10,Chinese,,0,0,0,,这一切都在芯片的单核心内 next
+Dialogue: 0,0:41:11.42,0:41:14.10,Chinese,,0,0,0,,这一切都在芯片的单核心内
 Dialogue: 0,0:41:15.74,0:41:20.80,English,,0,0,0,,And then also on the chip but external to all the cores and shared by all the cores
-Dialogue: 0,0:41:15.74,0:41:20.80,Chinese,,0,0,0,,然后在芯片上，但在所有内核外部，并由所有内核共享
+Dialogue: 0,0:41:15.74,0:41:20.80,Chinese,,0,0,0,,然后在芯片上，但在所有内核外部，并由所有内核共享的
 Dialogue: 0,0:41:21.36,0:41:27.62,English,,0,0,0,,Is at L3 unified cache which is 8 megabytes and 16 way associative
-Dialogue: 0,0:41:21.36,0:41:27.62,Chinese,,0,0,0,,就是 「L3统一缓存」，即8兆字节和16路关联
+Dialogue: 0,0:41:21.36,0:41:27.62,Chinese,,0,0,0,,是「L3统一缓存」，其大小 8 兆字节和 16 路组相联
 Dialogue: 0,0:41:28.06,0:41:31.74,English,,0,0,0,,With an access time that's like 40 to 75 cycles
-Dialogue: 0,0:41:28.06,0:41:31.74,Chinese,,0,0,0,,访问时间大约为40到75个周期
+Dialogue: 0,0:41:28.06,0:41:31.74,Chinese,,0,0,0,,访问时间大约为 40 到 75 个周期
 Dialogue: 0,0:41:33.84,0:41:43.06,English,,0,0,0,,So if there's a miss in L1,then the L1 sense or tries to sends a request to L2 to try to find the data in L2
-Dialogue: 0,0:41:33.84,0:41:43.06,Chinese,,0,0,0,,因此，如果在L1中出现未命中，则L1感测或尝试向L2发送请求以尝试在L2中查找数据
+Dialogue: 0,0:41:33.84,0:41:43.06,Chinese,,0,0,0,,如果在 L1 中出现未命中，则L1感知到，然后尝试向 L2 发送请求以尝试在L2中查找数据
 Dialogue: 0,0:41:43.08,0:41:47.60,English,,0,0,0,,Since L2 is a little bigger maybe maybe the data hasn't been flushed out of L2 yet
-Dialogue: 0,0:41:43.08,0:41:47.60,Chinese,,0,0,0,,由于L2稍微大一点，也许数据还没有从L2中刷出
+Dialogue: 0,0:41:43.08,0:41:47.60,Chinese,,0,0,0,,由于 L2 稍微大一点，又或许数据还没有从 L2 中刷新
 Dialogue: 0,0:41:48.14,0:41:55.10,English,,0,0,0,,If L2 can't find it,it sends a request to L3 to see if they can find the data in L3
-Dialogue: 0,0:41:48.14,0:41:55.10,Chinese,,0,0,0,,如果L2无法找到它，它会向L3发送请求，以查看它们是否可以在L3中找到数据
+Dialogue: 0,0:41:48.14,0:41:55.10,Chinese,,0,0,0,,如果 L2 无法找到它，它会向 L3 发送请求，以查看它们是否可以在 L3 中找到数据
 Dialogue: 0,0:41:55.88,0:41:59.62,English,,0,0,0,,If L3 can't find it then it gives up and it goes off chip to memory
-Dialogue: 0,0:41:55.88,0:41:59.62,Chinese,,0,0,0,,如果L3找不到它，那么它就会放弃，它会从芯片到内存中消失
+Dialogue: 0,0:41:55.88,0:41:59.62,Chinese,,0,0,0,,如果 L3 中也找不到它，那么它就会放弃，它会从芯片到内存中消失 flag
 Dialogue: 0,0:42:00.46,0:42:03.88,English,,0,0,0,,Yes question
-Dialogue: 0,0:42:00.46,0:42:03.88,Chinese,,0,0,0,,是的问题
+Dialogue: 0,0:42:00.46,0:42:03.88,Chinese,,0,0,0,,请说你的问题
 Dialogue: 0,0:42:03.92,0:42:09.32,English,,0,0,0,,Yes name memory is this that's it's the DRAM built of DRAM chips
-Dialogue: 0,0:42:03.92,0:42:09.32,Chinese,,0,0,0,,是名称内存，这是由DRAM芯片构成的DRAM
+Dialogue: 0,0:42:03.92,0:42:09.32,Chinese,,0,0,0,,是的，是内存，这是由 DRAM 芯片构成的 DRAM
 Dialogue: 0,0:42:09.94,0:42:13.96,English,,0,0,0,,It's separate,it's in a separate separate set of chips on the motherboard
-Dialogue: 0,0:42:09.94,0:42:13.96,Chinese,,0,0,0,,它是独立的，它在主板上的一组独立芯片中
+Dialogue: 0,0:42:09.94,0:42:13.96,Chinese,,0,0,0,,它是独立的，存在主板上的一组独立芯片中
 Dialogue: 0,0:42:14.90,0:42:18.22,English,,0,0,0,,Connected by those that I/O bridge
-Dialogue: 0,0:42:14.90,0:42:18.22,Chinese,,0,0,0,,由那些I / O桥连接
+Dialogue: 0,0:42:14.90,0:42:18.22,Chinese,,0,0,0,,通过那些 I/O 桥连接
 Dialogue: 0,0:42:18.22,0:42:22.90,English,,0,0,0,,That we and the bus various buses then that we talked about last time
-Dialogue: 0,0:42:18.22,0:42:22.90,Chinese,,0,0,0,,那我们和公共汽车的各种公共汽车然后我们上次谈到了
+Dialogue: 0,0:42:18.22,0:42:22.90,Chinese,,0,0,0,,我们上次谈到了各种总线
 Dialogue: 0,0:42:29.14,0:42:34.02,English,,0,0,0,,And for all different for all of these different caches that block size is 64 bytes
-Dialogue: 0,0:42:29.14,0:42:34.02,Chinese,,0,0,0,,对于所有这些不同的缓存，所有不同的块大小为64字节
+Dialogue: 0,0:42:29.14,0:42:34.02,Chinese,,0,0,0,,对于所有这些不同的缓存，所有不同的块大小为 64 字节
 Dialogue: 0,0:42:38.88,0:42:44.60,English,,0,0,0,,Now there's a number of different ways to I think about the performance of caches
 Dialogue: 0,0:42:38.88,0:42:44.60,Chinese,,0,0,0,,现在有很多不同的方法来考虑缓存的性能
 Dialogue: 0,0:42:46.72,0:42:51.36,English,,0,0,0,,My most common way is using a metric called the miss rate
-Dialogue: 0,0:42:46.72,0:42:51.36,Chinese,,0,0,0,,我最常见的方法是使用称为未命中率的指标
+Dialogue: 0,0:42:46.72,0:42:51.36,Chinese,,0,0,0,,最常见的方法是使用称为「未命中率」的指标
 Dialogue: 0,0:42:52.08,0:42:54.96,English,,0,0,0,,So what this is the fraction of references that miss
-Dialogue: 0,0:42:52.08,0:42:54.96,Chinese,,0,0,0,,那么这是错过的参考文献的一部分
+Dialogue: 0,0:42:52.08,0:42:54.96,Chinese,,0,0,0,,这是关于未命中的参考文献的一部分
 Dialogue: 0,0:42:56.50,0:43:00.34,English,,0,0,0,,So we're very so I thought and it's 1- hit rate
-Dialogue: 0,0:42:56.50,0:43:00.34,Chinese,,0,0,0,,所以我们非常认真，这是1的命中率
+Dialogue: 0,0:42:56.50,0:43:00.34,Chinese,,0,0,0,,这是 1 的命中率
 Dialogue: 0,0:43:01.56,0:43:06.22,English,,0,0,0,,So typical for caches to work that miss rate has to be pretty low
-Dialogue: 0,0:43:01.56,0:43:06.22,Chinese,,0,0,0,,对于工作缓存来说，典型的错过率必须非常低
+Dialogue: 0,0:43:01.56,0:43:06.22,Chinese,,0,0,0,,对于正常工作的缓存来说，典型的未命中率必须非常低
 Dialogue: 0,0:43:07.58,0:43:11.70,English,,0,0,0,,And fortunately because of locality these miss rates are low
-Dialogue: 0,0:43:07.58,0:43:11.70,Chinese,,0,0,0,,幸运的是，由于当地的情况，这些错失率很低
+Dialogue: 0,0:43:07.58,0:43:11.70,Chinese,,0,0,0,,幸运的是，由于局部性原则，这些未命中率很低
 Dialogue: 0,0:43:13.38,0:43:16.66,English,,0,0,0,,Another metric is the hit time
-Dialogue: 0,0:43:13.38,0:43:16.66,Chinese,,0,0,0,,另一个指标是命中时间
+Dialogue: 0,0:43:13.38,0:43:16.66,Chinese,,0,0,0,,另一个指标是「命中时间」
 Dialogue: 0,0:43:16.66,0:43:21.34,English,,0,0,0,,So if we do have a hit in the cache how long does it actually take to...
-Dialogue: 0,0:43:16.66,0:43:21.34,Chinese,,0,0,0,,因此，如果我们确实在缓存中有一个命中，它实际需要多长时间...
+Dialogue: 0,0:43:16.66,0:43:21.34,Chinese,,0,0,0,,如果我们确实在缓存中有一个命中，它实际需要多长时间...
 Dialogue: 0,0:43:21.90,0:43:26.78,English,,0,0,0,,Sort of look up the you know do the lookup to determine that there was a hit and then return the value
-Dialogue: 0,0:43:21.90,0:43:26.78,Chinese,,0,0,0,,查找你知道的查找排序，确定有一个命中，然后返回值
+Dialogue: 0,0:43:21.90,0:43:26.78,Chinese,,0,0,0,,用你所知道的 flag 查找排序，确定有一个命中，然后返回值
 Dialogue: 0,0:43:29.08,0:43:36.66,English,,0,0,0,,So for L1 and in an intel system this is 4 clock cycles,10 clock cycles for L2
-Dialogue: 0,0:43:29.08,0:43:36.66,Chinese,,0,0,0,,因此对于L1和在intel系统中，这是4个时钟周期，L2为10个时钟周期
+Dialogue: 0,0:43:29.08,0:43:36.66,Chinese,,0,0,0,,对于 L1 和在 intel 系统中，这会花费 4 个时钟周期，L2 为 10 个时钟周期
 Dialogue: 0,0:43:37.74,0:43:39.40,English,,0,0,0,,And then there's an additional cost if
-Dialogue: 0,0:43:37.74,0:43:39.40,Chinese,,0,0,0,,然后还有额外的费用
+Dialogue: 0,0:43:37.74,0:43:39.40,Chinese,,0,0,0,,还会有额外的费用
 Dialogue: 0,0:43:39.92,0:43:43.62,English,,0,0,0,,So you always have to pay the hit time right the hit time is the best you can do
-Dialogue: 0,0:43:39.92,0:43:43.62,Chinese,,0,0,0,,所以你总是要付出命中时间，你可以做到最好
+Dialogue: 0,0:43:39.92,0:43:43.62,Chinese,,0,0,0,,你总是要付出命中时间，你应该在这部分尽力做到最好
 Dialogue: 0,0:43:45.42,0:43:49.08,English,,0,0,0,,But if you have a miss then it's you pay the hit time
-Dialogue: 0,0:43:45.42,0:43:49.08,Chinese,,0,0,0,,但是，如果你有一个小姐，那么你需要支付命中时间
+Dialogue: 0,0:43:45.42,0:43:49.08,Chinese,,0,0,0,,但是，如果你有一个未命中，那么你需要花费命中时间
 Dialogue: 0,0:43:50.66,0:43:54.80,English,,0,0,0,,Because you have to do the search and eventually you're going to have to return the word back to the requester
-Dialogue: 0,0:43:50.66,0:43:54.80,Chinese,,0,0,0,,因为你必须进行搜索，最终你必须将该单词返回给请求者
+Dialogue: 0,0:43:50.66,0:43:54.80,Chinese,,0,0,0,,因为你必须进行搜索，最终你必须将该字返回给请求者
 Dialogue: 0,0:43:55.32,0:43:57.34,English,,0,0,0,,But you then you have this additional cost
-Dialogue: 0,0:43:55.32,0:43:57.34,Chinese,,0,0,0,,但是你有这个额外的费用
+Dialogue: 0,0:43:55.32,0:43:57.34,Chinese,,0,0,0,,你会有这个额外的费用
 Dialogue: 0,0:43:57.34,0:44:01.24,English,,0,0,0,,Which you have to go which is going to the the memory ready to fetch the data
 Dialogue: 0,0:43:57.34,0:44:01.24,Chinese,,0,0,0,,你必须去哪个内存准备好获取数据
 Dialogue: 0,0:44:02.16,0:44:05.76,English,,0,0,0,,Okay so that miss penalty,that's what called miss penalty
-Dialogue: 0,0:44:02.16,0:44:05.76,Chinese,,0,0,0,,好吧，这样的小姐罚款，这就是所谓的小姐罚款
+Dialogue: 0,0:44:02.16,0:44:05.76,Chinese,,0,0,0,,这样的未命中所带来的惩罚，这就是所谓的「未命中处罚」
 Dialogue: 0,0:44:07.40,0:44:10.16,English,,0,0,0,,Is on the order of hundreds of cycles for main memory
-Dialogue: 0,0:44:07.40,0:44:10.16,Chinese,,0,0,0,,对于主存储器来说是大约数百个周期的顺序
+Dialogue: 0,0:44:07.40,0:44:10.16,Chinese,,0,0,0,,对于主存储器来说，是大约数百个时钟周期
 Dialogue: 0,0:44:11.00,0:44:14.35,English,,0,0,0,,But at other levels of the hierarchy it can be huge
-Dialogue: 0,0:44:11.00,0:44:14.35,Chinese,,0,0,0,,但在层次结构的其他层面，它可能是巨大的
+Dialogue: 0,0:44:11.00,0:44:14.35,Chinese,,0,0,0,,但在层次结构的其他层面，它可能就会特别耗时
 Dialogue: 0,0:44:14.84,0:44:18.02,English,,0,0,0,,So the miss penalty if you have a cache in main memory
-Dialogue: 0,0:44:14.84,0:44:18.02,Chinese,,0,0,0,,因此，如果你在主内存中有缓存，则会导致未命中
+Dialogue: 0,0:44:14.84,0:44:18.02,Chinese,,0,0,0,,因此，如果你在主内存中有缓存
 Dialogue: 0,0:44:18.64,0:44:23.12,English,,0,0,0,,That's caching blocks that are stored on disk, the miss penalty is enormous
-Dialogue: 0,0:44:18.64,0:44:23.12,Chinese,,0,0,0,,这是存储在磁盘上的缓存块，未命中的惩罚是巨大的
+Dialogue: 0,0:44:18.64,0:44:23.12,Chinese,,0,0,0,,这是存储在磁盘上的缓存块，未命中处罚将会十分严重
 Dialogue: 0,0:44:28.60,0:44:32.00,English,,0,0,0,,So it's kind of interesting if you think about it
-Dialogue: 0,0:44:28.60,0:44:32.00,Chinese,,0,0,0,,所以如果你想一想它会很有趣
+Dialogue: 0,0:44:28.60,0:44:32.00,Chinese,,0,0,0,,如果你想一想，这里有意思的是
 Dialogue: 0,0:44:34.00,0:44:39.74,English,,0,0,0,,The performance of these systems is very sensitive to the miss rate much more sensitive than you would think
 Dialogue: 0,0:44:34.00,0:44:39.74,Chinese,,0,0,0,,这些系统的性能对未命中率非常敏感，比你想象的要灵敏得多
 Dialogue: 0,0:44:41.32,0:44:49.66,English,,0,0,0,,And in fact 99% hit rate is twice as good as a 97% hit rate
@@ -1001,55 +1001,55 @@ Dialogue: 0,0:44:50.64,0:44:51.04,Chinese,,0,0,0,,是
 Dialogue: 0,0:44:51.60,0:45:06.74,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:44:51.60,0:45:06.74,Chinese,,0,0,0,,[学生说话]
 Dialogue: 0,0:45:06.86,0:45:13.50,English,,0,0,0,,Yeah they hit,so the question is does the hit time include the time to access the tag and yes
-Dialogue: 0,0:45:06.86,0:45:13.50,Chinese,,0,0,0,,是的，他们打了，所以问题是命中时间是否包括访问标签的时间，是的
+Dialogue: 0,0:45:06.86,0:45:13.50,Chinese,,0,0,0,,是的，他们命中了，问题是命中时间是否包括访问标记位的时间
 Dialogue: 0,0:45:13.80,0:45:17.38,English,,0,0,0,,So the hit time is the time it takes to just to search
-Dialogue: 0,0:45:13.80,0:45:17.38,Chinese,,0,0,0,,因此，命中时间是搜索所需的时间
+Dialogue: 0,0:45:13.80,0:45:17.38,Chinese,,0,0,0,,命中时间是搜索所需的时间
 Dialogue: 0,0:45:17.96,0:45:22.16,English,,0,0,0,,To determine if that item is in the cache and then return it
 Dialogue: 0,0:45:17.96,0:45:22.16,Chinese,,0,0,0,,确定该项是否在缓存中，然后将其返回
 Dialogue: 0,0:45:22.16,0:45:39.20,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:45:22.16,0:45:39.20,Chinese,,0,0,0,,[学生说话]
-Dialogue: 0,0:45:39.22,0:45:48.20,English,,0,0,0,,Yeah so the yeah so the the miss the miss penalty is the time it takes for the cash to fetch the data from memory
-Dialogue: 0,0:45:39.22,0:45:48.20,Chinese,,0,0,0,,是的所以是的，所以错过点球的错过是现金从记忆中获取数据所需的时间
+Dialogue: 0,0:45:39.22,0:45:48.20,English,,0,0,0,,Yeah so the yeah so the the miss the miss penalty is the time it takes for the cache to fetch the data from memory
+Dialogue: 0,0:45:39.22,0:45:48.20,Chinese,,0,0,0,,是的，未命中处罚就是它从内存取回数据所花的时间
 Dialogue: 0,0:45:48.94,0:45:51.92,English,,0,0,0,,So that's all the latency you know going across the buses
-Dialogue: 0,0:45:48.94,0:45:51.92,Chinese,,0,0,0,,这就是你所知道的所有延迟
+Dialogue: 0,0:45:48.94,0:45:51.92,Chinese,,0,0,0,,它是你所知道的所有延迟的之和
 Dialogue: 0,0:45:52.28,0:45:55.32,English,,0,0,0,,The time it takes the memory to respond to the requests
 Dialogue: 0,0:45:52.28,0:45:55.32,Chinese,,0,0,0,,内存响应请求所花费的时间
 Dialogue: 0,0:45:55.83,0:45:59.78,English,,0,0,0,,The time it takes the data to flow back over the buses back to the the cache
 Dialogue: 0,0:45:55.83,0:45:59.78,Chinese,,0,0,0,,数据通过总线返回缓存所需的时间
 Dialogue: 0,0:46:00.48,0:46:05.10,English,,0,0,0,,So the time for a miss is going to be the hit time plus the miss penalty that clear
-Dialogue: 0,0:46:00.48,0:46:05.10,Chinese,,0,0,0,,因此，未命中的时间将是命中时间加上明确的未命中罚分
+Dialogue: 0,0:46:00.48,0:46:05.10,Chinese,,0,0,0,,未命中的时间将是命中时间加上明确的未命中处罚
 Dialogue: 0,0:46:09.76,0:46:17.00,English,,0,0,0,,So I mean imagine suppose there's a hit time of one cycle and a miss penalty of 100 cycles that those are reasonable numbers
-Dialogue: 0,0:46:09.76,0:46:17.00,Chinese,,0,0,0,,所以我的意思是假设有一个周期的命中时间和100个周期的未命中罚分，那些是合理的数字
+Dialogue: 0,0:46:09.76,0:46:17.00,Chinese,,0,0,0,,假设有一个时钟周期的命中时间，和100个周期的未命中处罚，这实际上是合理的数字
 Dialogue: 0,0:46:18.48,0:46:22.76,English,,0,0,0,,So the the average access time if you have 97% hits
-Dialogue: 0,0:46:18.48,0:46:22.76,Chinese,,0,0,0,,所以如果你有97％的点击率，平均访问时间
+Dialogue: 0,0:46:18.48,0:46:22.76,Chinese,,0,0,0,,如果你有 97％ 的命中率，
 Dialogue: 0,0:46:24.22,0:46:29.48,English,,0,0,0,,It's the hit time plus the percentage of misses times the miss penalty
-Dialogue: 0,0:46:24.22,0:46:29.48,Chinese,,0,0,0,,这是命中时间加上未命中罚分的百分比
+Dialogue: 0,0:46:24.22,0:46:29.48,Chinese,,0,0,0,,平均访问时间是命中时间加上未命中处罚乘以百分系数
 Dialogue: 0,0:46:30.06,0:46:32.66,English,,0,0,0,,So that's four cycles for the average access time
-Dialogue: 0,0:46:30.06,0:46:32.66,Chinese,,0,0,0,,所以这是平均访问时间的四个周期
+Dialogue: 0,0:46:30.06,0:46:32.66,Chinese,,0,0,0,,所以平均访问时间是四个周期
 Dialogue: 0,0:46:33.36,0:46:36.56,English,,0,0,0,,But if we just increase the hit rate by two percent
-Dialogue: 0,0:46:33.36,0:46:36.56,Chinese,,0,0,0,,但如果我们只是将命中率提高2％
+Dialogue: 0,0:46:33.36,0:46:36.56,Chinese,,0,0,0,,但如果我们只将命中率提高 2％
 Dialogue: 0,0:46:37.38,0:46:42.72,English,,0,0,0,,The average access time drops by 50% a factor of two
-Dialogue: 0,0:46:37.38,0:46:42.72,Chinese,,0,0,0,,平均访问时间减少了50％，减少了两倍
+Dialogue: 0,0:46:37.38,0:46:42.72,Chinese,,0,0,0,,平均访问时间就会减少了 50％，减少了两倍
 Dialogue: 0,0:46:47.26,0:46:51.72,English,,0,0,0,,All right so why is this stuff important why should you care about it
-Dialogue: 0,0:46:47.26,0:46:51.72,Chinese,,0,0,0,,好吧，为什么这个东西很重要，为什么要关心它呢？
-Dialogue: 0,0:46:53.42,0:46:57.78,English,,0,0,0,,So cash is that as we've seen are these these they're automatic they're all built in hardware
-Dialogue: 0,0:46:53.42,0:46:57.78,Chinese,,0,0,0,,所以现金就像我们所看到的那样，这些都是自动的，它们都是用硬件构建的
+Dialogue: 0,0:46:47.26,0:46:51.72,Chinese,,0,0,0,,为什么这个东西很重要，为什么要关心它呢？
+Dialogue: 0,0:46:53.42,0:46:57.78,English,,0,0,0,,So cache is that as we've seen are these these they're automatic they're all built in hardware
+Dialogue: 0,0:46:53.42,0:46:57.78,Chinese,,0,0,0,,缓存就像我们所看到的那样，都是自动执行的，是由硬件构建的
 Dialogue: 0,0:46:58.44,0:47:04.48,English,,0,0,0,,There's no part of the sort of the visible instruction set that
-Dialogue: 0,0:46:58.44,0:47:04.48,Chinese,,0,0,0,,没有那种可见指令集的那部分
+Dialogue: 0,0:46:58.44,0:47:04.48,Chinese,,0,0,0,,不存在那种所谓的可见指令集
 Dialogue: 0,0:47:05.02,0:47:09.94,English,,0,0,0,,Lets you manipulate caches and your assembly machine code programs
-Dialogue: 0,0:47:05.02,0:47:09.94,Chinese,,0,0,0,,允许你操作缓存和组装机器代码程序
+Dialogue: 0,0:47:05.02,0:47:09.94,Chinese,,0,0,0,,去允许你操作缓存和组装机器代码程序
 Dialogue: 0,0:47:11.72,0:47:16.32,English,,0,0,0,,So that it all happens behind the scenes automatically in hardware
-Dialogue: 0,0:47:11.72,0:47:16.32,Chinese,,0,0,0,,所以这一切都在硬件中自动发生在幕后
-Dialogue: 0,0:47:17.42,0:47:21.26,English,,0,0,0,,But if you know how kit...if you know about the existence of caches
-Dialogue: 0,0:47:17.42,0:47:21.26,Chinese,,0,0,0,,但是，如果你知道如何使用套件......如果你知道缓存的存在
+Dialogue: 0,0:47:11.72,0:47:16.32,Chinese,,0,0,0,,这一切都在硬件中自动在幕后执行
+Dialogue: 0,0:47:17.42,0:47:21.26,English,,0,0,0,,But if you know how kit..flag.if you know about the existence of caches
+Dialogue: 0,0:47:17.42,0:47:21.26,Chinese,,0,0,0,,如果你知道缓存的存在
 Dialogue: 0,0:47:21.26,0:47:24.18,English,,0,0,0,,And you have this general idea of how you can work how they work
-Dialogue: 0,0:47:21.26,0:47:24.18,Chinese,,0,0,0,,而且你对如何运用它们的工作方式有了一个大概的了解
+Dialogue: 0,0:47:21.26,0:47:24.18,Chinese,,0,0,0,,而且你对它们的工作方式有了一个大概的了解
 Dialogue: 0,0:47:24.84,0:47:27.76,English,,0,0,0,,Then you can write code that's cache friendly
-Dialogue: 0,0:47:24.84,0:47:27.76,Chinese,,0,0,0,,然后你可以编写缓存友好的代码
+Dialogue: 0,0:47:24.84,0:47:27.76,Chinese,,0,0,0,,然后你就可以编写缓存友好的代码
 Dialogue: 0,0:47:27.76,0:47:36.68,English,,0,0,0,,In the sense that your code will have a higher higher miss rate than code that that isn't cache friendly
-Dialogue: 0,0:47:27.76,0:47:36.68,Chinese,,0,0,0,,从某种意义上说，你的代码具有比不缓存友好的代码更高的未命中率
+Dialogue: 0,0:47:27.76,0:47:36.68,Chinese,,0,0,0,,从某种意义上说，你的代码会比不缓存友好的代码具有更高的未命中率
 Dialogue: 0,0:47:37.96,0:47:44.76,English,,0,0,0,,So the idea is to...you want to focus on making the common case go fast
-Dialogue: 0,0:47:37.96,0:47:44.76,Chinese,,0,0,0,,因此，我们的想法是......你希望专注于使常见案例快速进行
+Dialogue: 0,0:47:37.96,0:47:44.76,Chinese,,0,0,0,,关键在于......你的专注于使得更常用的部分更加快一点
 Dialogue: 0,0:47:44.82,0:47:48.90,English,,0,0,0,,Don't spend your time on code  that sort of code that doesn't get execute very much
 Dialogue: 0,0:47:44.82,0:47:48.90,Chinese,,0,0,0,,不要把时间花在那些代码不能很快执行的代码上
 Dialogue: 0,0:47:50.16,0:47:53.00,English,,0,0,0,,So look at the most commonly called functions
@@ -1059,241 +1059,241 @@ Dialogue: 0,0:47:54.32,0:47:57.12,Chinese,,0,0,0,,然后在这些函数中查看
 Dialogue: 0,0:47:57.12,0:47:59.36,English,,0,0,0,,Because it's the inner loops that are executing the most
 Dialogue: 0,0:47:57.12,0:47:59.36,Chinese,,0,0,0,,因为它是执行最多的内循环
 Dialogue: 0,0:48:00.30,0:48:04.78,English,,0,0,0,,Right so you can as a first approximation you can just ignore sort of stuff
-Dialogue: 0,0:48:00.30,0:48:04.78,Chinese,,0,0,0,,对，所以你可以作为第一个近似，你可以忽略一些东西
+Dialogue: 0,0:48:00.30,0:48:04.78,Chinese,,0,0,0,,所以你可以做一个初步近似，忽略一些东西
 Dialogue: 0,0:48:04.78,0:48:08.76,English,,0,0,0,,If you have nested loops you can ignore stuff that's going on in the outer loops
 Dialogue: 0,0:48:04.78,0:48:08.76,Chinese,,0,0,0,,如果你有嵌套循环，你可以忽略外循环中发生的事情
 Dialogue: 0,0:48:08.78,0:48:11.02,English,,0,0,0,,And just focus on the code in the inner loop
 Dialogue: 0,0:48:08.78,0:48:11.02,Chinese,,0,0,0,,然后只关注内循环中的代码
 Dialogue: 0,0:48:12.36,0:48:15.22,English,,0,0,0,,Now what you want to do is try to minimize the misses in the inner loop
-Dialogue: 0,0:48:12.36,0:48:15.22,Chinese,,0,0,0,,现在你想要做的是尽量减少内循环中的失误
+Dialogue: 0,0:48:12.36,0:48:15.22,Chinese,,0,0,0,,现在你想要做的是尽量减少内循环中的未命中
 Dialogue: 0,0:48:16.62,0:48:21.91,English,,0,0,0,,Okay so repeated references to a variable is variables are good
-Dialogue: 0,0:48:16.62,0:48:21.91,Chinese,,0,0,0,,好吧，如此重复引用变量是变量是好的
+Dialogue: 0,0:48:16.62,0:48:21.91,Chinese,,0,0,0,,如此重复引用变量是好的
 Dialogue: 0,0:48:22.34,0:48:24.20,English,,0,0,0,,Especially if those are local variables
-Dialogue: 0,0:48:22.34,0:48:24.20,Chinese,,0,0,0,,特别是如果那些是局部变量
+Dialogue: 0,0:48:22.34,0:48:24.20,Chinese,,0,0,0,,特别是对于那些局部变量来说
 Dialogue: 0,0:48:24.78,0:48:27.56,English,,0,0,0,,Right so remember if you declare a local variable and see
-Dialogue: 0,0:48:24.78,0:48:27.56,Chinese,,0,0,0,,对，所以请记住，如果你声明一个局部变量，看看
+Dialogue: 0,0:48:24.78,0:48:27.56,Chinese,,0,0,0,,请记住，如果你声明一个局部变量
 Dialogue: 0,0:48:28.52,0:48:30.90,English,,0,0,0,,The compiler can put that in a register
-Dialogue: 0,0:48:28.52,0:48:30.90,Chinese,,0,0,0,,编译器可以将它放在寄存器中
+Dialogue: 0,0:48:28.52,0:48:30.90,Chinese,,0,0,0,,编译器可能将它放在寄存器中
 Dialogue: 0,0:48:32.30,0:48:34.30,English,,0,0,0,,Right if you're referencing global variables
-Dialogue: 0,0:48:32.30,0:48:34.30,Chinese,,0,0,0,,如果你正在引用全局变量，那就正确
+Dialogue: 0,0:48:32.30,0:48:34.30,Chinese,,0,0,0,,如果你正在引用全局变量 flag
 Dialogue: 0,0:48:34.72,0:48:37.26,English,,0,0,0,,Maybe not,the compiler doesn't know what's going on
-Dialogue: 0,0:48:34.72,0:48:37.26,Chinese,,0,0,0,,也许不是，编译器不知道发生了什么
+Dialogue: 0,0:48:34.72,0:48:37.26,Chinese,,0,0,0,,编译器不知道发生了什么
 Dialogue: 0,0:48:37.72,0:48:44.30,English,,0,0,0,,So it can't put the reference to that variable to see in a register
 Dialogue: 0,0:48:37.72,0:48:44.30,Chinese,,0,0,0,,因此它无法将该变量的引用放入寄存器中
 Dialogue: 0,0:48:44.98,0:48:50.18,English,,0,0,0,,Okay so repeated references to local variables stored on the stack are good
-Dialogue: 0,0:48:44.98,0:48:50.18,Chinese,,0,0,0,,好吧，如此重复引用存储在堆栈中的局部变量是好的
+Dialogue: 0,0:48:44.98,0:48:50.18,Chinese,,0,0,0,,如此重复引用存储在堆栈中的局部变量是好的
 Dialogue: 0,0:48:50.48,0:48:52.78,English,,0,0,0,,Because those will get turned into register accesses
 Dialogue: 0,0:48:50.48,0:48:52.78,Chinese,,0,0,0,,因为那些将变成寄存器访问
 Dialogue: 0,0:48:53.06,0:48:54.30,English,,0,0,0,,You'll never go to memory
-Dialogue: 0,0:48:53.06,0:48:54.30,Chinese,,0,0,0,,你永远不会去记忆
-Dialogue: 0,0:48:55.42,0:48:58.90,English,,0,0,0,,Okay also stride one accesses two arrays are good
-Dialogue: 0,0:48:55.42,0:48:58.90,Chinese,,0,0,0,,好的还有一个访问两个阵列是好的
+Dialogue: 0,0:48:53.06,0:48:54.30,Chinese,,0,0,0,,你永远不会去内存取回数据
+Dialogue: 0,0:48:55.42,0:48:58.90,English,,0,0,0,,Okay also stride-1 accesses two arrays are good
+Dialogue: 0,0:48:55.42,0:48:58.90,Chinese,,0,0,0,,逐元素的访问数组是好的 flag
 Dialogue: 0,0:48:59.98,0:49:02.60,English,,0,0,0,,And they're good because of the existence of these blocks
-Dialogue: 0,0:48:59.98,0:49:02.60,Chinese,,0,0,0,,由于存在这些块，它们很好
+Dialogue: 0,0:48:59.98,0:49:02.60,Chinese,,0,0,0,,由于块的存在，它们很好
 Dialogue: 0,0:49:03.20,0:49:07.48,English,,0,0,0,,Right so the only way you'd know that stride one references our good is if you knew that
-Dialogue: 0,0:49:03.20,0:49:07.48,Chinese,,0,0,0,,对，所以你知道如果你知道的话，唯一的方法就是知道那个步骤引用了我们的好处
+Dialogue: 0,0:49:03.20,0:49:07.48,Chinese,,0,0,0,,所以如果你知道的话，唯一的方法就是知道那个步骤引用了我们的好处
 Dialogue: 0,0:49:07.90,0:49:10.20,English,,0,0,0,,Caches have the 64-byte blocks
-Dialogue: 0,0:49:07.90,0:49:10.20,Chinese,,0,0,0,,高速缓存具有64字节块
-Dialogue: 0,0:49:11.88,0:49:18.34,English,,0,0,0,,Okay so the and stride one reference will have half the miss rate as a stride to reference
-Dialogue: 0,0:49:11.88,0:49:18.34,Chinese,,0,0,0,,好的，所以并且一步参考将有一半的未命中率作为参考的步幅
-Dialogue: 0,0:49:19.74,0:49:26.42,English,,0,0,0,,Because if you're doing stride one references the first reference to a word and a block will miss
-Dialogue: 0,0:49:19.74,0:49:26.42,Chinese,,0,0,0,,因为如果你正在做步幅，则引用对单词的第一个引用，并且块将会错过
+Dialogue: 0,0:49:07.90,0:49:10.20,Chinese,,0,0,0,,高速缓存的块大小为 64 比特
+Dialogue: 0,0:49:11.88,0:49:18.34,English,,0,0,0,,Okay so the and stride-1 reference will have half the miss rate as a stride-2 reference
+Dialogue: 0,0:49:11.88,0:49:18.34,Chinese,,0,0,0,,所以逐步引用相对于步长为 2 的引用，只会有一半的未命中率
+Dialogue: 0,0:49:19.74,0:49:26.42,English,,0,0,0,,Because if you're doing stride-1 references the first reference to a word and a block will miss
+Dialogue: 0,0:49:19.74,0:49:26.42,Chinese,,0,0,0,,因为如果你正在做步长为 1 的引用，则引用对单词的第一次引用，将会未命中
 Dialogue: 0,0:49:27.70,0:49:29.68,English,,0,0,0,,But then subsequent references will hit
-Dialogue: 0,0:49:27.70,0:49:29.68,Chinese,,0,0,0,,但随后的参考文献将会出现
-Dialogue: 0,0:49:31.64,0:49:37.42,English,,0,0,0,,Right and you'll hit if you're doing a stride one reference you're going to hit every word in that block
-Dialogue: 0,0:49:31.64,0:49:37.42,Chinese,,0,0,0,,是的，如果你正在做一个步幅，那么你将会击中你将要击中该区块中的每个单词
-Dialogue: 0,0:49:38.10,0:49:41.84,English,,0,0,0,,If your drive if you're doing stride two references you're only going to hit every other word
-Dialogue: 0,0:49:38.10,0:49:41.84,Chinese,,0,0,0,,如果你的驱动器如果你正在做两个参考，你只会打到其他所有的单词
+Dialogue: 0,0:49:27.70,0:49:29.68,Chinese,,0,0,0,,但对其随后的元素的引用将会命中缓存
+Dialogue: 0,0:49:31.64,0:49:37.42,English,,0,0,0,,Right and you'll hit if you're doing a stride-1 reference you're going to hit every word in that block
+Dialogue: 0,0:49:31.64,0:49:37.42,Chinese,,0,0,0,,如果你在做一个步长为 1 的引用，那么将会命中将要访问的块中其余的每个字
+Dialogue: 0,0:49:38.10,0:49:41.84,English,,0,0,0,,If your drive if you're doing stride-2 references you're only going to hit every other word
+Dialogue: 0,0:49:38.10,0:49:41.84,Chinese,,0,0,0,,如果你的驱动器，如果你在做步长为 2 的引用，你只会命中剩下的字
 Dialogue: 0,0:49:42.78,0:49:46.92,English,,0,0,0,,Right so you'll only get,you'll get sort of half the so you'll missed at twice the rate
-Dialogue: 0,0:49:42.78,0:49:46.92,Chinese,,0,0,0,,对，所以你只会得到，你会得到一半，所以你会错过两倍的速度
+Dialogue: 0,0:49:42.78,0:49:46.92,Chinese,,0,0,0,,对，所以你会得到一半的命中率，也就是加倍的未命中率
 Dialogue: 0,0:49:50.98,0:49:51.92,English,,0,0,0,,So
 Dialogue: 0,0:49:50.98,0:49:51.92,Chinese,,0,0,0,,所以
 Dialogue: 0,0:49:54.38,0:49:59.28,English,,0,0,0,,So basically the point I want to make to you is that our understanding of caches
-Dialogue: 0,0:49:54.38,0:49:59.28,Chinese,,0,0,0,,所以基本上我想对你说的是我们对缓存的理解
+Dialogue: 0,0:49:54.38,0:49:59.28,Chinese,,0,0,0,,基本上我想对你们说的是，我们对缓存的理解
 Dialogue: 0,0:49:59.84,0:50:06.20,English,,0,0,0,,Allow us to sort of quantify this qualitative notion of locality that we developed the last time
-Dialogue: 0,0:49:59.84,0:50:06.20,Chinese,,0,0,0,,让我们来量化我们最后一次开发的这种定性的地方概念
-Dialogue: 0,0:50:06.20,0:50:11.06,English,,0,0,0,,Right the last time we looked at we said if it's doing stride one references that's good if
-Dialogue: 0,0:50:06.20,0:50:11.06,Chinese,,0,0,0,,我们最后一次看到的时候，我们说如果它正在大步推进一个参考，那就好了
+Dialogue: 0,0:49:59.84,0:50:06.20,Chinese,,0,0,0,,让我们来量化上一次介绍的局部性概念
+Dialogue: 0,0:50:06.20,0:50:11.06,English,,0,0,0,,Right the last time we looked at we said if it's doing stride-1 references that's good if
+Dialogue: 0,0:50:06.20,0:50:11.06,Chinese,,0,0,0,,上一次看到的时候，我们说过如果它正在做步长为 1 的引用，那是缓存友好的
 Dialogue: 0,0:50:11.64,0:50:16.98,English,,0,0,0,,If we're doing if we're accessing the same variable over and over that's good
-Dialogue: 0,0:50:11.64,0:50:16.98,Chinese,,0,0,0,,如果我们正在做的话，如果我们一遍又一遍地访问同一个变量那就好了
+Dialogue: 0,0:50:11.64,0:50:16.98,Chinese,,0,0,0,,如果我们一遍又一遍地访问同一个变量，那也是缓存友好的
 Dialogue: 0,0:50:17.62,0:50:21.74,English,,0,0,0,,But if we understand caches now we can quantify it in terms of miss rate
-Dialogue: 0,0:50:17.62,0:50:21.74,Chinese,,0,0,0,,但是，如果我们现在了解缓存，我们可以根据未命中率对其进行量化
+Dialogue: 0,0:50:17.62,0:50:21.74,Chinese,,0,0,0,,如果我们了解了缓存，我们可以根据未命中率对其进行量化
 Dialogue: 0,0:50:26.42,0:50:28.82,English,,0,0,0,,All right so let's finish up the rest of the class
-Dialogue: 0,0:50:26.42,0:50:28.82,Chinese,,0,0,0,,好吧，让我们完成课程的其余部分
+Dialogue: 0,0:50:26.42,0:50:28.82,Chinese,,0,0,0,,让我们继续完成课程的其余部分
 Dialogue: 0,0:50:28.82,0:50:32.50,English,,0,0,0,,We're going to look at the performance impact of caches on your code
 Dialogue: 0,0:50:28.82,0:50:32.50,Chinese,,0,0,0,,我们将研究缓存对代码的性能影响
 Dialogue: 0,0:50:33.00,0:50:36.43,English,,0,0,0,,Okay and why you need to why you need to know about these things
-Dialogue: 0,0:50:33.00,0:50:36.43,Chinese,,0,0,0,,好的，为什么你需要知道为什么你需要知道这些事情
+Dialogue: 0,0:50:33.00,0:50:36.43,Chinese,,0,0,0,,为什么你需要知道这些事情
 Dialogue: 0,0:50:37.16,0:50:39.10,English,,0,0,0,,And that the impact that they can have
-Dialogue: 0,0:50:37.16,0:50:39.10,Chinese,,0,0,0,,而且他们可以产生的影响
+Dialogue: 0,0:50:37.16,0:50:39.10,Chinese,,0,0,0,,以及他们会造成的影响
 Dialogue: 0,0:50:41.52,0:50:44.58,English,,0,0,0,,So there's a very interesting function
-Dialogue: 0,0:50:41.52,0:50:44.58,Chinese,,0,0,0,,所以有一个非常有趣的功能
+Dialogue: 0,0:50:41.52,0:50:44.58,Chinese,,0,0,0,,有一个非常有趣的函数
 Dialogue: 0,0:50:45.22,0:50:48.32,English,,0,0,0,,This actually plotted on the cover of your text book
-Dialogue: 0,0:50:45.22,0:50:48.32,Chinese,,0,0,0,,这实际上绘制在教科书的封面上
+Dialogue: 0,0:50:45.22,0:50:48.32,Chinese,,0,0,0,,实际上绘制在教科书的封面上
 Dialogue: 0,0:50:49.12,0:50:50.50,English,,0,0,0,,That we call the memory mountain
-Dialogue: 0,0:50:49.12,0:50:50.50,Chinese,,0,0,0,,我们称之为记忆山
-Dialogue: 0,0:50:51.10,0:50:59.14,English,,0,0,0,,I learned about this from a graduate student here at Carnegie Mellon back in the 90s who developed this notion made Tom Stricker
-Dialogue: 0,0:50:51.10,0:50:59.14,Chinese,,0,0,0,,我从90年代卡内基梅隆大学的一名研究生那里了解到这一点，他开发了这个概念，让汤姆史翠克
-Dialogue: 0,0:51:00.34,0:51:07.66,English,,0,0,0,,And what it's a the memory mountain plots a measure called read through put or read bandwidth
-Dialogue: 0,0:51:00.34,0:51:07.66,Chinese,,0,0,0,,而它是一个记忆山，它描绘了一种称为通读或读取带宽的措施
+Dialogue: 0,0:50:49.12,0:50:50.50,Chinese,,0,0,0,,我们称之为「存储器山」
+Dialogue: 0,0:50:51.10,0:50:59.14,English,,0,0,0,,I learned about this from a graduate student here at Carnegie Mellon back in the 90s who developed this notion named Tom Stricker
+Dialogue: 0,0:50:51.10,0:50:59.14,Chinese,,0,0,0,,我从 90 年代卡内基梅隆大学的名叫汤姆史翠克的研究生那里了解到这个，他提出了这个概念，
+Dialogue: 0,0:51:00.34,0:51:07.66,English,,0,0,0,,And what it's a the memory mountain plots a measure called read throughput or read bandwidth
+Dialogue: 0,0:51:00.34,0:51:07.66,Chinese,,0,0,0,,存储器山，它描绘了一种称为「吞吐量」或「读带宽」的衡量标准
 Dialogue: 0,0:51:08.18,0:51:10.38,English,,0,0,0,,Which is the number of bytes read from memory
-Dialogue: 0,0:51:08.18,0:51:10.38,Chinese,,0,0,0,,哪个是从内存中读取的字节数
+Dialogue: 0,0:51:08.18,0:51:10.38,Chinese,,0,0,0,,也就是从内存中读取的字节数
 Dialogue: 0,0:51:10.66,0:51:16.08,English,,0,0,0,,So if you have a loop and you're scanning over a vector
-Dialogue: 0,0:51:10.66,0:51:16.08,Chinese,,0,0,0,,所以，如果你有一个循环而你正在扫描一个向量
+Dialogue: 0,0:51:10.66,0:51:16.08,Chinese,,0,0,0,,如果你有一个循环，而你正在扫描一个数组
 Dialogue: 0,0:51:16.36,0:51:19.40,English,,0,0,0,,So you have a vector of say double words
-Dialogue: 0,0:51:16.36,0:51:19.40,Chinese,,0,0,0,,所以你有一个说双字的向量
+Dialogue: 0,0:51:16.36,0:51:19.40,Chinese,,0,0,0,,一个双精度 double 类型的数组
 Dialogue: 0,0:51:20.20,0:51:23.86,English,,0,0,0,,And you're reading those elements from a vector one after the other
-Dialogue: 0,0:51:20.20,0:51:23.86,Chinese,,0,0,0,,而且你正在逐个从矢量中读取这些元素
+Dialogue: 0,0:51:20.20,0:51:23.86,Chinese,,0,0,0,,而且你正在逐个从数组中读取这些元素
 Dialogue: 0,0:51:24.68,0:51:30.04,English,,0,0,0,,The read throughput is the number of megabytes per second that you can perform that task
-Dialogue: 0,0:51:24.68,0:51:30.04,Chinese,,0,0,0,,读取吞吐量是你可以执行该任务的每秒兆字节数
+Dialogue: 0,0:51:24.68,0:51:30.04,Chinese,,0,0,0,,读吞吐量是执行该任务的每秒兆字节数
 Dialogue: 0,0:51:31.14,0:51:34.62,English,,0,0,0,,At and the memory mountain plots read throughput
-Dialogue: 0,0:51:31.14,0:51:34.62,Chinese,,0,0,0,,在和记忆山图上读取吞吐量
+Dialogue: 0,0:51:31.14,0:51:34.62,Chinese,,0,0,0,,在存储器山图上表示为读取吞吐量
 Dialogue: 0,0:51:35.02,0:51:39.48,English,,0,0,0,,As a function of the temporal and spatial locality in that loop
 Dialogue: 0,0:51:35.02,0:51:39.48,Chinese,,0,0,0,,作为该循环中的时间和空间局部性的函数
 Dialogue: 0,0:51:41.20,0:51:48.60,English,,0,0,0,,Okay so in a sense it's looking at a wide range of locality options or characteristics in a program
-Dialogue: 0,0:51:41.20,0:51:48.60,Chinese,,0,0,0,,好的，从某种意义上说，它正在考虑程序中的各种地点选项或特征
+Dialogue: 0,0:51:41.20,0:51:48.60,Chinese,,0,0,0,,从某种意义上说，它考虑程序中的各种地点选项或特征
 Dialogue: 0,0:51:48.80,0:51:55.68,English,,0,0,0,,And it's plotting the performance of that memory system on that across that range as a two-dimensional function
-Dialogue: 0,0:51:48.80,0:51:55.68,Chinese,,0,0,0,,并且它正在将该存储系统的性能绘制在该范围内作为二维函数
+Dialogue: 0,0:51:48.80,0:51:55.68,Chinese,,0,0,0,,将该存储系统的性能在该范围内作为二维函数绘制出来
 Dialogue: 0,0:51:56.08,0:51:58.23,English,,0,0,0,,So in some ways the memory mountain is a
-Dialogue: 0,0:51:56.08,0:51:58.23,Chinese,,0,0,0,,所以在某些方面，记忆山是一个
+Dialogue: 0,0:51:56.08,0:51:58.23,Chinese,,0,0,0,,从某些角度来说，存储器山就像指纹
 Dialogue: 0,0:51:59.10,0:52:02.56,English,,0,0,0,,Kind of a fingerprint right every system has its own unique memory mountain
 Dialogue: 0,0:51:59.10,0:52:02.56,Chinese,,0,0,0,,每种系统都有自己独特的记忆山
 Dialogue: 0,0:52:03.26,0:52:06.04,English,,0,0,0,,That we can measure right by writing a simple program
 Dialogue: 0,0:52:03.26,0:52:06.04,Chinese,,0,0,0,,我们可以通过编写一个简单的程序来衡量
 Dialogue: 0,0:52:07.50,0:52:14.22,English,,0,0,0,,And so the idea here is that to construct the memory mountain
-Dialogue: 0,0:52:07.50,0:52:14.22,Chinese,,0,0,0,,所以这里的想法是构建记忆山
+Dialogue: 0,0:52:07.50,0:52:14.22,Chinese,,0,0,0,,这里是要构建记忆山
 Dialogue: 0,0:52:15.08,0:52:16.78,English,,0,0,0,,We write a program called test
-Dialogue: 0,0:52:15.08,0:52:16.78,Chinese,,0,0,0,,我们编写了一个名为test的程序
+Dialogue: 0,0:52:15.08,0:52:16.78,Chinese,,0,0,0,,我们编写了一个名为 test 的程序
 Dialogue: 0,0:52:35.50,0:52:36.60,English,,0,0,0,,Oh shoot
-Dialogue: 0,0:52:35.50,0:52:36.60,Chinese,,0,0,0,,哦拍
+Dialogue: 0,0:52:35.50,0:52:36.60,Chinese,,0,0,0,,哦
 Dialogue: 0,0:52:51.54,0:52:53.04,English,,0,0,0,,For some reason it's not
 Dialogue: 0,0:52:51.54,0:52:53.04,Chinese,,0,0,0,,出于某种原因，事实并非如此
 Dialogue: 0,0:52:57.02,0:53:01.56,English,,0,0,0,,Okay right
 Dialogue: 0,0:52:57.02,0:53:01.56,Chinese,,0,0,0,,好的，没错
 Dialogue: 0,0:53:04.22,0:53:06.66,English,,0,0,0,,So when we build a memory mountain
-Dialogue: 0,0:53:04.22,0:53:06.66,Chinese,,0,0,0,,所以当我们建立一座记忆山
+Dialogue: 0,0:53:04.22,0:53:06.66,Chinese,,0,0,0,,当我们建立一座记忆山
 Dialogue: 0,0:53:07.38,0:53:12.66,English,,0,0,0,,We're given a vector that consists of a collection of double words
-Dialogue: 0,0:53:07.38,0:53:12.66,Chinese,,0,0,0,,我们给出了一个由双字组合组成的向量
+Dialogue: 0,0:53:07.38,0:53:12.66,Chinese,,0,0,0,,给出了一个由双字组成的向量
 Dialogue: 0,0:53:17.60,0:53:24.40,English,,0,0,0,,And then we write a loop that reads those words that read some number of words in this case
-Dialogue: 0,0:53:17.60,0:53:24.40,Chinese,,0,0,0,,然后我们编写一个循环来读取在这种情况下读取一些单词的那些单词
+Dialogue: 0,0:53:17.60,0:53:24.40,Chinese,,0,0,0,,然后我们编写一个循环来读取在这种情况下读取一些字
 Dialogue: 0,0:53:25.54,0:53:42.84,English,,0,0,0,,Hmm
 Dialogue: 0,0:53:25.54,0:53:42.84,Chinese,,0,0,0,,嗯
 Dialogue: 0,0:53:42.92,0:53:43.86,English,,0,0,0,,There we go
-Dialogue: 0,0:53:42.92,0:53:43.86,Chinese,,0,0,0,,我们走了
+Dialogue: 0,0:53:42.92,0:53:43.86,Chinese,,0,0,0,,开始了
 Dialogue: 0,0:53:44.90,0:53:49.60,English,,0,0,0,,So it reads it reads elems number of elements right
-Dialogue: 0,0:53:44.90,0:53:49.60,Chinese,,0,0,0,,所以它读取它读取元素数量正确
+Dialogue: 0,0:53:44.90,0:53:49.60,Chinese,,0,0,0,,它读取 elem 元素数量
 Dialogue: 0,0:53:49.90,0:53:55.28,English,,0,0,0,,So we've got each of these double word elements with a stride of stride
-Dialogue: 0,0:53:49.90,0:53:55.28,Chinese,,0,0,0,,因此，我们已经获得了这些双字元素中的每一个都迈出了一大步
+Dialogue: 0,0:53:49.90,0:53:55.28,Chinese,,0,0,0,,我们将通过步长 stride 获取每一个双字
 Dialogue: 0,0:53:56.62,0:53:58.40,English,,0,0,0,,Okay so if we have a stride of one
-Dialogue: 0,0:53:56.62,0:53:58.40,Chinese,,0,0,0,,好的，如果我们有一个步伐
+Dialogue: 0,0:53:56.62,0:53:58.40,Chinese,,0,0,0,,如果步长为 1
 Dialogue: 0,0:54:02.46,0:54:04.18,English,,0,0,0,,I know that was kind of redundant huh
 Dialogue: 0,0:54:02.46,0:54:04.18,Chinese,,0,0,0,,我知道那有点多余了
 Dialogue: 0,0:54:04.44,0:54:06.00,English,,0,0,0,,So if we have a stride of one
-Dialogue: 0,0:54:04.44,0:54:06.00,Chinese,,0,0,0,,所以，如果我们有一个步伐
+Dialogue: 0,0:54:04.44,0:54:06.00,Chinese,,0,0,0,,如果步长为 1 
 Dialogue: 0,0:54:09.18,0:54:12.86,English,,0,0,0,,Then we'll have our loop wills was sort of looped through
-Dialogue: 0,0:54:09.18,0:54:12.86,Chinese,,0,0,0,,然后我们将循环意志循环通过
+Dialogue: 0,0:54:09.18,0:54:12.86,Chinese,,0,0,0,,然后我们将循环遍历一遍
 Dialogue: 0,0:54:13.62,0:54:17.62,English,,0,0,0,,And read these elements until we've read elems number of those elements
-Dialogue: 0,0:54:13.62,0:54:17.62,Chinese,,0,0,0,,并阅读这些元素，直到我们阅读了这些元素的元数
+Dialogue: 0,0:54:13.62,0:54:17.62,Chinese,,0,0,0,,直到我们读完了 elem 个元素
 Dialogue: 0,0:54:18.54,0:54:23.14,English,,0,0,0,,Okay and then we'll do it again and then that warms up the cache
-Dialogue: 0,0:54:18.54,0:54:23.14,Chinese,,0,0,0,,好的，然后我们会再次这样做，然后加热缓存
+Dialogue: 0,0:54:18.54,0:54:23.14,Chinese,,0,0,0,,然后我们再次这样做，这会加热缓存
 Dialogue: 0,0:54:23.88,0:54:27.66,English,,0,0,0,,Then we do it again and do exactly the same thing
-Dialogue: 0,0:54:23.88,0:54:27.66,Chinese,,0,0,0,,然后我们再做一次并做同样的事情
+Dialogue: 0,0:54:23.88,0:54:27.66,Chinese,,0,0,0,,我们再做一次同样的事情
 Dialogue: 0,0:54:28.54,0:54:32.82,English,,0,0,0,,So if we're doing this with a stride of two then we would be reading
-Dialogue: 0,0:54:28.54,0:54:32.82,Chinese,,0,0,0,,因此，如果我们以两个步幅这样做，那么我们将会阅读
+Dialogue: 0,0:54:28.54,0:54:32.82,Chinese,,0,0,0,,如果我们以两个步长这样做
 Dialogue: 0,0:54:33.76,0:54:41.80,English,,0,0,0,,We would read this word zero or elem 2 elem 4 and so on
-Dialogue: 0,0:54:33.76,0:54:41.80,Chinese,,0,0,0,,我们会读到这个单词零或元素2元素4等等
+Dialogue: 0,0:54:33.76,0:54:41.80,Chinese,,0,0,0,,我们会读到这个字 0 或字 2 字 4 等等
 Dialogue: 0,0:54:45.60,0:54:50.02,English,,0,0,0,,Okay so well then what all we're doing we're just for wide range of strides
-Dialogue: 0,0:54:45.60,0:54:50.02,Chinese,,0,0,0,,好吧那么我们所做的一切只是为了取得广泛的进步
+Dialogue: 0,0:54:45.60,0:54:50.02,Chinese,,0,0,0,,那么我们所做的一切只是因为步长的不同取值范围
 Dialogue: 0,0:54:50.84,0:54:53.20,English,,0,0,0,,And a wide range of sizes
-Dialogue: 0,0:54:50.84,0:54:53.20,Chinese,,0,0,0,,和各种尺寸
+Dialogue: 0,0:54:50.84,0:54:53.20,Chinese,,0,0,0,,和各种大小
 Dialogue: 0,0:54:53.78,0:55:00.12,English,,0,0,0,,We're scanning over this vector and just recording how long it takes to do that read
-Dialogue: 0,0:54:53.78,0:55:00.12,Chinese,,0,0,0,,我们正在扫描这个向量，只记录读取所需的时间
+Dialogue: 0,0:54:53.78,0:55:00.12,Chinese,,0,0,0,,我们正在扫描这个数组，只记录读取所需的时间
 Dialogue: 0,0:55:00.56,0:55:04.03,English,,0,0,0,,And then convert we convert that into megabytes per second
-Dialogue: 0,0:55:00.56,0:55:04.03,Chinese,,0,0,0,,然后转换我们将其转换为每秒兆字节
+Dialogue: 0,0:55:00.56,0:55:04.03,Chinese,,0,0,0,,然后我们将其转换为每秒兆字节
 Dialogue: 0,0:55:05.32,0:55:12.74,English,,0,0,0,,And in order to I just wanted to show you this is we don't need,we're not going to go into detail about this but
-Dialogue: 0,0:55:05.32,0:55:12.74,Chinese,,0,0,0,,而且为了我想告诉你这是我们不需要的，我们不打算详细讨论这个问题
+Dialogue: 0,0:55:05.32,0:55:12.74,Chinese,,0,0,0,,而且为了突出我想告诉你们的，而这是我们不需要知道的，所以不打算详细讨论这个问题
 Dialogue: 0,0:55:13.09,0:55:17.86,English,,0,0,0,,This is actually how I generated the the cover on the book and
-Dialogue: 0,0:55:13.09,0:55:17.86,Chinese,,0,0,0,,这实际上就是我在书上制作封面的方式
+Dialogue: 0,0:55:13.09,0:55:17.86,Chinese,,0,0,0,,这实际上就是我如何制作出书本的封面
 Dialogue: 0,0:55:18.10,0:55:23.72,English,,0,0,0,,In order to use to exploit the parallelism inside the intel processor
-Dialogue: 0,0:55:18.10,0:55:23.72,Chinese,,0,0,0,,为了利用intel处理器内部的并行性
+Dialogue: 0,0:55:18.10,0:55:23.72,Chinese,,0,0,0,,为了利用 intel 处理器内部的并行性
 Dialogue: 0,0:55:23.86,0:55:27.30,English,,0,0,0,,Like you learned about last week there's a lot of parallel functional units
 Dialogue: 0,0:55:23.86,0:55:27.30,Chinese,,0,0,0,,就像你上周学到的那样，有许多并行的功能单元
 Dialogue: 0,0:55:27.88,0:55:33.68,English,,0,0,0,,In order to exploit those I did 4x4 loop unrolling
-Dialogue: 0,0:55:27.88,0:55:33.68,Chinese,,0,0,0,,为了利用那些我做了4x4循环展开
+Dialogue: 0,0:55:27.88,0:55:33.68,Chinese,,0,0,0,,为了利用那些，我做了 4x4 循环展开
 Dialogue: 0,0:55:34.20,0:55:36.96,English,,0,0,0,,So I'm actually doing sort of four scans in parallel
 Dialogue: 0,0:55:34.20,0:55:36.96,Chinese,,0,0,0,,所以我实际上并行进行了四次扫描
 Dialogue: 0,0:55:38.66,0:55:41.00,English,,0,0,0,,But the general idea is just what I've showed you here
-Dialogue: 0,0:55:38.66,0:55:41.00,Chinese,,0,0,0,,但总的想法就是我在这里向你展示的内容
+Dialogue: 0,0:55:38.66,0:55:41.00,Chinese,,0,0,0,,但总的大概就是我在这里向你们展示的内容
 Dialogue: 0,0:55:41.78,0:55:47.34,English,,0,0,0,,And this this 4x4 loop unrolling is just an optimization
-Dialogue: 0,0:55:41.78,0:55:47.34,Chinese,,0,0,0,,这个4x4循环展开只是一个优化
+Dialogue: 0,0:55:41.78,0:55:47.34,Chinese,,0,0,0,,这个 4x4 循环展开只是一个优化
 Dialogue: 0,0:55:47.92,0:55:51.74,English,,0,0,0,,But I wanted to show it to you because it actually it's the exact same principles
-Dialogue: 0,0:55:47.92,0:55:51.74,Chinese,,0,0,0,,但我想向你展示它，因为它实际上是完全相同的原则
+Dialogue: 0,0:55:47.92,0:55:51.74,Chinese,,0,0,0,,我想向你展示它，因为它实际上是完全相同的原则
 Dialogue: 0,0:55:51.74,0:55:57.24,English,,0,0,0,,You learned about last week professor Bryant talked about code optimization
-Dialogue: 0,0:55:51.74,0:55:57.24,Chinese,,0,0,0,,你上周了解了布莱恩特教授谈到的代码优化问题
+Dialogue: 0,0:55:51.74,0:55:57.24,Chinese,,0,0,0,,你上周了解了布莱恩特教授谈到的代码优化
 Dialogue: 0,0:55:58.78,0:56:05.48,English,,0,0,0,,So what we do is,we call this test function with these various ranges of elems and stride
-Dialogue: 0,0:55:58.78,0:56:05.48,Chinese,,0,0,0,,所以我们所做的是，我们称这个测试函数具有各种各样的元素和步幅
+Dialogue: 0,0:55:58.78,0:56:05.48,Chinese,,0,0,0,,我们所做的是，我们称这个测试函数具有不同大小的 elems 和 stride
 Dialogue: 0,0:56:06.22,0:56:09.96,English,,0,0,0,,And then we measure the performance and we get this beautiful picture
-Dialogue: 0,0:56:06.22,0:56:09.96,Chinese,,0,0,0,,然后我们衡量表现，我们得到了这幅美丽的画面
+Dialogue: 0,0:56:06.22,0:56:09.96,Chinese,,0,0,0,,我们评测性能，得到了这幅美丽的图
 Dialogue: 0,0:56:10.38,0:56:14.44,English,,0,0,0,,This beautiful function ,to me it's beautiful I don't know does it look beautiful to you
-Dialogue: 0,0:56:10.38,0:56:14.44,Chinese,,0,0,0,,这个美丽的功能，对我来说它是美丽的我不知道它对你来说是否美丽
+Dialogue: 0,0:56:10.38,0:56:14.44,Chinese,,0,0,0,,这个美丽的函数，对我来说它是美丽的，我不知道它对你们来说是否依然美丽
 Dialogue: 0,0:56:22.40,0:56:24.92,English,,0,0,0,,So on the z
-Dialogue: 0,0:56:22.40,0:56:24.92,Chinese,,0,0,0,,所以在z
+Dialogue: 0,0:56:22.40,0:56:24.92,Chinese,,0,0,0,,所以在 z 轴
 Dialogue: 0,0:56:25.32,0:56:29.90,English,,0,0,0,,On the z axis is plotting read throughput in megabytes per second
 Dialogue: 0,0:56:25.32,0:56:29.90,Chinese,,0,0,0,,在z轴上绘制读取吞吐量，以兆字节/秒为单位
 Dialogue: 0,0:56:29.90,0:56:37.58,English,,0,0,0,,Ranging from 2000 megabytes per second up to 16,000 megabytes per second
-Dialogue: 0,0:56:29.90,0:56:37.58,Chinese,,0,0,0,,范围从每秒2000兆字节到每秒16,000兆字节
+Dialogue: 0,0:56:29.90,0:56:37.58,Chinese,,0,0,0,,范围从每秒 2000 兆字节到每秒16,000兆字节
 Dialogue: 0,0:56:42.66,0:56:48.62,English,,0,0,0,,This this axis is measuring is stride
-Dialogue: 0,0:56:42.66,0:56:48.62,Chinese,,0,0,0,,这个轴测量是大步
+Dialogue: 0,0:56:42.66,0:56:48.62,Chinese,,0,0,0,,这个轴表示的是步长
 Dialogue: 0,0:56:49.28,0:56:53.00,English,,0,0,0,,So going from stride 1 up to stride 12
-Dialogue: 0,0:56:49.28,0:56:53.00,Chinese,,0,0,0,,所以从步幅1到步伐12
+Dialogue: 0,0:56:49.28,0:56:53.00,Chinese,,0,0,0,,所以从步幅 1 到步伐 12
 Dialogue: 0,0:56:55.08,0:57:03.86,English,,0,0,0,,And this axis is...so as we as we increase stride we're decreasing the spatial locality
-Dialogue: 0,0:56:55.08,0:57:03.86,Chinese,,0,0,0,,而这个轴是......所以当我们增加步幅时，我们正在减少空间局部性
+Dialogue: 0,0:56:55.08,0:57:03.86,Chinese,,0,0,0,,而这个轴是......当我们增加步幅时，我们在减少空间局部性
 Dialogue: 0,0:57:05.54,0:57:06.34,English,,0,0,0,,Alright
 Dialogue: 0,0:57:05.54,0:57:06.34,Chinese,,0,0,0,,好的
 Dialogue: 0,0:57:09.68,0:57:18.00,English,,0,0,0,,And this axis is the size axis so we're going from I think 16k up to 128 megabytes
-Dialogue: 0,0:57:09.68,0:57:18.00,Chinese,,0,0,0,,这个轴是大小轴，所以我们认为从16k到128兆
+Dialogue: 0,0:57:09.68,0:57:18.00,Chinese,,0,0,0,,这个轴是 size 轴，所以我们认为大约是从 16K 到 128M
 Dialogue: 0,0:57:18.72,0:57:23.16,English,,0,0,0,,So this is the number of elements we're going to read each pass through
-Dialogue: 0,0:57:18.72,0:57:23.16,Chinese,,0,0,0,,所以这是我们每次传递时要阅读的元素数量
+Dialogue: 0,0:57:18.72,0:57:23.16,Chinese,,0,0,0,,这是我们每次传递时要读取的元素总数量
 Dialogue: 0,0:57:25.60,0:57:29.10,English,,0,0,0,,So as we as we increase the size
-Dialogue: 0,0:57:25.60,0:57:29.10,Chinese,,0,0,0,,因此，正如我们增加尺寸一样
+Dialogue: 0,0:57:25.60,0:57:29.10,Chinese,,0,0,0,,正如我们增加 size 一样
 Dialogue: 0,0:57:30.38,0:57:36.08,English,,0,0,0,,We're sort of decreasing the impact of temporal locality because word
-Dialogue: 0,0:57:30.38,0:57:36.08,Chinese,,0,0,0,,我们有点减少时间局部性的影响因为单词
+Dialogue: 0,0:57:30.38,0:57:36.08,Chinese,,0,0,0,,因为字，我们减少时间局部性的影响
 Dialogue: 0,0:57:36.82,0:57:41.80,English,,0,0,0,,As we increase the size there's fewer and fewer caches in our hierarchy can hold all that data
-Dialogue: 0,0:57:36.82,0:57:41.80,Chinese,,0,0,0,,随着我们增加大小，我们的层次结构中的缓存越来越少，可以容纳所有数据
+Dialogue: 0,0:57:36.82,0:57:41.80,Chinese,,0,0,0,,随着我们增加 size ，我们的层次结构中的可以容纳数据的缓存越来越少，
 Dialogue: 0,0:57:44.62,0:57:49.94,English,,0,0,0,,And so this so we've got spatial locality decreasing in this direction
 Dialogue: 0,0:57:44.62,0:57:49.94,Chinese,,0,0,0,,所以这样我们就可以在这个方向上减少空间局部性
 Dialogue: 0,0:57:50.44,0:57:53.06,English,,0,0,0,,And temporal locality decreasing in this direction
 Dialogue: 0,0:57:50.44,0:57:53.06,Chinese,,0,0,0,,并且时间局部性在这个方向上减少
 Dialogue: 0,0:57:54.76,0:57:58.46,English,,0,0,0,,So as a programmer what you want to do you want to be up here
-Dialogue: 0,0:57:54.76,0:57:58.46,Chinese,,0,0,0,,所以作为程序员你想做什么，你想要在这里
+Dialogue: 0,0:57:54.76,0:57:58.46,Chinese,,0,0,0,,所以作为程序员你应该想办法在这里，做你认为该做的
 Dialogue: 0,0:57:59.86,0:58:02.52,English,,0,0,0,,Right good spatial locality good temporal locality
-Dialogue: 0,0:57:59.86,0:58:02.52,Chinese,,0,0,0,,正确的良好空间局部性良好的时间局部性
+Dialogue: 0,0:57:59.86,0:58:02.52,Chinese,,0,0,0,,良好的空间局部性，良好的时间局部性
 Dialogue: 0,0:58:02.92,0:58:07.60,English,,0,0,0,,Because you can get like 14 gigabytes per second measure agreed throughput
-Dialogue: 0,0:58:02.92,0:58:07.60,Chinese,,0,0,0,,因为你可以达到每秒14千兆字节的速度来衡量一致的吞吐量
+Dialogue: 0,0:58:02.92,0:58:07.60,Chinese,,0,0,0,,因为你可以达到每秒 14GB 的速度，来衡量一致的吞吐量
 Dialogue: 0,0:58:08.98,0:58:10.70,English,,0,0,0,,You don't want to be down here
 Dialogue: 0,0:58:08.98,0:58:10.70,Chinese,,0,0,0,,你不想在这里
 Dialogue: 0,0:58:11.98,0:58:15.94,English,,0,0,0,,Which is only about 100 megabytes per second where you're reading out of memory
-Dialogue: 0,0:58:11.98,0:58:15.94,Chinese,,0,0,0,,在你读取内存时，每秒只有大约100兆字节
+Dialogue: 0,0:58:11.98,0:58:15.94,Chinese,,0,0,0,,在你读取内存时，每秒只有大约 100 MB
 Dialogue: 0,0:58:16.18,0:58:20.42,English,,0,0,0,,Right so the difference between reading all of your data from memory
-Dialogue: 0,0:58:16.18,0:58:20.42,Chinese,,0,0,0,,这样就可以从内存中读取所有数据了
+Dialogue: 0,0:58:16.18,0:58:20.42,Chinese,,0,0,0,,从内存中读取数据
 Dialogue: 0,0:58:21.42,0:58:28.80,English,,0,0,0,,And reading it from some part of the the caches is huge it's enormous
-Dialogue: 0,0:58:21.42,0:58:28.80,Chinese,,0,0,0,,从缓存的某些部分读取它是巨大的，它是巨大的
+Dialogue: 0,0:58:21.42,0:58:28.80,Chinese,,0,0,0,,和从缓存的某些部分读取它,这两者之间的区别是巨大的，极大的
 Dialogue: 0,0:58:29.60,0:58:32.52,English,,0,0,0,,Ok so because you're 213 students you'll be up here
-Dialogue: 0,0:58:29.60,0:58:32.52,Chinese,,0,0,0,,好的，因为你是213名学生，你会在这里
+Dialogue: 0,0:58:29.60,0:58:32.52,Chinese,,0,0,0,,你们在座的是 213 课程的学生，你们会处于这个存储山的上方
 Dialogue: 0,0:58:33.08,0:58:35.94,English,,0,0,0,,And all the students that didn't take 213 they'll be down here
-Dialogue: 0,0:58:33.08,0:58:35.94,Chinese,,0,0,0,,并且所有没有拿到213的学生都会在这里
+Dialogue: 0,0:58:33.08,0:58:35.94,Chinese,,0,0,0,,没有来 213 上课的学生，他们会在这底下
 Dialogue: 0,0:58:38.10,0:58:43.04,English,,0,0,0,,And I've actually had I've actually had people several people write back
-Dialogue: 0,0:58:38.10,0:58:43.04,Chinese,,0,0,0,,事实上，我实际上有几个人写回来的人
+Dialogue: 0,0:58:38.10,0:58:43.04,Chinese,,0,0,0,,有几个同学写信回来告诉我
 Dialogue: 0,0:58:43.04,0:58:48.40,English,,0,0,0,,To tell me about their experiences you know in internships and jobs after they left CMU
-Dialogue: 0,0:58:43.04,0:58:48.40,Chinese,,0,0,0,,告诉我他们离开CMU后在实习和工作中所了解的经历
+Dialogue: 0,0:58:43.04,0:58:48.40,Chinese,,0,0,0,,告诉我，他们离开 CMU 之后在实习和工作中所了解的经历
 Dialogue: 0,0:58:48.94,0:58:51.74,English,,0,0,0,,Where they were given some code that that was down here
-Dialogue: 0,0:58:48.94,0:58:51.74,Chinese,,0,0,0,,他们在那里获得了一些代码
+Dialogue: 0,0:58:48.94,0:58:51.74,Chinese,,0,0,0,,他们在那里被分配负责一些代码
 Dialogue: 0,0:58:52.96,0:58:59.52,English,,0,0,0,,And they recognized the locality issues and they got it you know better up here or close at least better
-Dialogue: 0,0:58:52.96,0:58:59.52,Chinese,,0,0,0,,他们认识到了地方问题，他们得到了你在这里知道的更好或至少更好地关闭
+Dialogue: 0,0:58:52.96,0:58:59.52,Chinese,,0,0,0,,他们意识到了局部性问题，他们得到了处于上方的缓存友好的代码
 Dialogue: 0,0:59:01.18,0:59:07.22,English,,0,0,0,,So this picture this so-called memory mountain has all kinds of interesting features
-Dialogue: 0,0:59:01.18,0:59:07.22,Chinese,,0,0,0,,所以这张照片所谓的记忆山有各种有趣的特征
+Dialogue: 0,0:59:01.18,0:59:07.22,Chinese,,0,0,0,,这张所谓的存储器山，有各种有趣的特征
 Dialogue: 0,0:59:08.10,0:59:11.40,English,,0,0,0,,First of all there's these what I call ridges of temporal locality
-Dialogue: 0,0:59:08.10,0:59:11.40,Chinese,,0,0,0,,首先，我称之为时间局部的脊
+Dialogue: 0,0:59:08.10,0:59:11.40,Chinese,,0,0,0,,首先，我称之为「时间局部性的山坡」
 Dialogue: 0,0:59:12.02,0:59:15.86,English,,0,0,0,,Where these ridges see these ridge lines if you think of this is like a mountain
 Dialogue: 0,0:59:12.02,0:59:15.86,Chinese,,0,0,0,,如果你认为这就像一座山，这些山脊会看到这些山脊线
 Dialogue: 0,0:59:15.86,0:59:19.62,English,,0,0,0,,You see this ridge line and you see this ridge line
@@ -1303,265 +1303,265 @@ Dialogue: 0,0:59:20.34,0:59:23.24,Chinese,,0,0,0,,而这里是另一条山脊线
 Dialogue: 0,0:59:23.56,0:59:25.70,English,,0,0,0,,These correspond to different levels in the hierarchy
 Dialogue: 0,0:59:23.56,0:59:25.70,Chinese,,0,0,0,,这些对应于层次结构中的不同级别
 Dialogue: 0,0:59:25.70,0:59:29.58,English,,0,0,0,,So this this top ridge line is where you're reading directly out of L1
-Dialogue: 0,0:59:25.70,0:59:29.58,Chinese,,0,0,0,,所以这条顶部山脊线就是你直接读出L1的地方
+Dialogue: 0,0:59:25.70,0:59:29.58,Chinese,,0,0,0,,所以这条顶部山脊线就是你从 L1 直接读取的地方
 Dialogue: 0,0:59:30.78,0:59:33.16,English,,0,0,0,,And it should be perfectly flat and
 Dialogue: 0,0:59:30.78,0:59:33.16,Chinese,,0,0,0,,它应该是完全平坦的
 Dialogue: 0,0:59:33.90,0:59:38.80,English,,0,0,0,,It's so fast that we're getting like measurement jitter performance jitter right
-Dialogue: 0,0:59:33.90,0:59:38.80,Chinese,,0,0,0,,这是如此之快，以至于我们正在获得正确的测量抖动性能抖动
+Dialogue: 0,0:59:33.90,0:59:38.80,Chinese,,0,0,0,,这是如此之快，以至于我们正在获得性能抖动
 Dialogue: 0,0:59:39.90,0:59:45.60,English,,0,0,0,,But it's and this little drop off here is a measurement artifact it it should it shouldn't be there
-Dialogue: 0,0:59:39.90,0:59:45.60,Chinese,,0,0,0,,但它和这里的一点点下降是一个测量工件它应该不应该存在
+Dialogue: 0,0:59:39.90,0:59:45.60,Chinese,,0,0,0,,这里的一点点下降，是一个多余的测量时间函数
 Dialogue: 0,0:59:45.60,0:59:49.22,English,,0,0,0,,It should be flat and go all the way to the wall back here
-Dialogue: 0,0:59:45.60,0:59:49.22,Chinese,,0,0,0,,它应该是平的，一直到这里的墙
+Dialogue: 0,0:59:45.60,0:59:49.22,Chinese,,0,0,0,,它本应该是平的，一直到这里的墙
 Dialogue: 0,0:59:52.50,0:59:58.48,English,,0,0,0,,And then here this ridge line is where we're accessing L2
-Dialogue: 0,0:59:52.50,0:59:58.48,Chinese,,0,0,0,,然后在这里这条山脊线是我们访问L2的地方
+Dialogue: 0,0:59:52.50,0:59:58.48,Chinese,,0,0,0,,然后在这里这条山脊线是我们访问 L2 的地方
 Dialogue: 0,0:59:59.16,1:00:00.94,English,,0,0,0,,This is where we're accessing L3
-Dialogue: 0,0:59:59.16,1:00:00.94,Chinese,,0,0,0,,这是我们访问L3的地方
+Dialogue: 0,0:59:59.16,1:00:00.94,Chinese,,0,0,0,,这是我们访问 L3 的地方
 Dialogue: 0,1:00:02.00,1:00:05.26,English,,0,0,0,,And here's what we're accessing mostly from memory
-Dialogue: 0,1:00:02.00,1:00:05.26,Chinese,,0,0,0,,这就是我们主要通过记忆访问的内容
+Dialogue: 0,1:00:02.00,1:00:05.26,Chinese,,0,0,0,,这是我们主要通过内存访问的内容
 Dialogue: 0,1:00:06.38,1:00:08.58,English,,0,0,0,,So you have these ridges of temporal locality
-Dialogue: 0,1:00:06.38,1:00:08.58,Chinese,,0,0,0,,所以你有这些时间局部的山脊
+Dialogue: 0,1:00:06.38,1:00:08.58,Chinese,,0,0,0,,所以你有这些时间局部性的山坡
 Dialogue: 0,1:00:08.94,1:00:12.26,English,,0,0,0,,And then you have these slopes of decreasing spatial locality
-Dialogue: 0,1:00:08.94,1:00:12.26,Chinese,,0,0,0,,然后你有这些空间局部减少的斜率
+Dialogue: 0,1:00:08.94,1:00:12.26,Chinese,,0,0,0,,然后你有这些空间局部性减少的斜率
 Dialogue: 0,1:00:13.00,1:00:14.42,English,,0,0,0,,So you see the slope here
 Dialogue: 0,1:00:13.00,1:00:14.42,Chinese,,0,0,0,,所以你看到这里的斜坡
 Dialogue: 0,1:00:15.52,1:00:20.42,English,,0,0,0,,As work so as we're moving from the top of the slope down to the bottom
 Dialogue: 0,1:00:15.52,1:00:20.42,Chinese,,0,0,0,,正如我们正在从斜坡顶部向下移动到底部
 Dialogue: 0,1:00:21.84,1:00:28.76,English,,0,0,0,,We're decreasing our spatial locality so we're getting less benefit for these blocks that we're bringing in
-Dialogue: 0,1:00:21.84,1:00:28.76,Chinese,,0,0,0,,我们正在减少我们的空间位置，因此我们带来的这些块的利益会减少
+Dialogue: 0,1:00:21.84,1:00:28.76,Chinese,,0,0,0,,我们正在减少我们的空间局部性，因此我们带来的这些块的增益会减少
 Dialogue: 0,1:00:29.27,1:00:33.32,English,,0,0,0,,So you can see the we're getting less benefit out of the cost
-Dialogue: 0,1:00:29.27,1:00:33.32,Chinese,,0,0,0,,所以你可以看到我们从成本中获得的收益越来越少
+Dialogue: 0,1:00:29.27,1:00:33.32,Chinese,,0,0,0,,你可以看到我们从额外的消耗中获得的收益越来越少
 Dialogue: 0,1:00:33.68,1:00:36.64,English,,0,0,0,,That we went through of importing of fetching these blocks
-Dialogue: 0,1:00:33.68,1:00:36.64,Chinese,,0,0,0,,我们经历了导入这些块的导入
+Dialogue: 0,1:00:33.68,1:00:36.64,Chinese,,0,0,0,,我们需要这些块的导入
 Dialogue: 0,1:00:38.18,1:00:42.28,English,,0,0,0,,And once the stride hits the block size
-Dialogue: 0,1:00:38.18,1:00:42.28,Chinese,,0,0,0,,一旦步幅达到块大小
+Dialogue: 0,1:00:38.18,1:00:42.28,Chinese,,0,0,0,,一旦步长达到块大小
 Dialogue: 0,1:00:43.40,1:00:45.58,English,,0,0,0,,Now every reference is hitting a different block
-Dialogue: 0,1:00:43.40,1:00:45.58,Chinese,,0,0,0,,现在每个引用都会遇到不同的块
-Dialogue: 0,1:00:46.02,1:00:50.40,English,,0,0,0,,And so and then it flattens out then you get you're getting noes benefit from spatial locality
-Dialogue: 0,1:00:46.02,1:00:50.40,Chinese,,0,0,0,,然后它变得平坦，然后你得到你从空间局部获得noes
+Dialogue: 0,1:00:43.40,1:00:45.58,Chinese,,0,0,0,,每个引用都会遇到不同的块
+Dialogue: 0,1:00:46.02,1:00:50.40,English,,0,0,0,,And so and then it flattens out then you get you're getting none benefit from spatial locality
+Dialogue: 0,1:00:46.02,1:00:50.40,Chinese,,0,0,0,,然后它变得平坦，然后你不会从空间局部性获得增益
 Dialogue: 0,1:00:53.68,1:00:59.50,English,,0,0,0,,And similarly here is where this this slope is where we're reading from L3
-Dialogue: 0,1:00:53.68,1:00:59.50,Chinese,,0,0,0,,同样，这里的斜率是我们从L3读取的地方
+Dialogue: 0,1:00:53.68,1:00:59.50,Chinese,,0,0,0,,这里的斜率是我们从 L3 读取的地方
 Dialogue: 0,1:01:00.44,1:01:09.80,English,,0,0,0,,And it flattens out always they always flatten out at the block size which is a stride these are double words right
-Dialogue: 0,1:01:00.44,1:01:09.80,Chinese,,0,0,0,,并且它变得平坦，总是它们总是在块尺寸上变平，这是一个跨步，这些是双字
+Dialogue: 0,1:01:00.44,1:01:09.80,Chinese,,0,0,0,,它变得平坦，它们总是在达到块尺寸时变平，就是当 stride 等于双字大小时
 Dialogue: 0,1:01:10.44,1:01:14.12,English,,0,0,0,,So it's stride of eight is 64 bytes
-Dialogue: 0,1:01:10.44,1:01:14.12,Chinese,,0,0,0,,所以8的步幅是64字节
+Dialogue: 0,1:01:10.44,1:01:14.12,Chinese,,0,0,0,,步长为 8 就是64字节
 Dialogue: 0,1:01:14.12,1:01:16.66,English,,0,0,0,,So once you exceed a stride of eight then you're no longer
-Dialogue: 0,1:01:14.12,1:01:16.66,Chinese,,0,0,0,,所以，一旦你超过8的步伐，你就不再了
+Dialogue: 0,1:01:14.12,1:01:16.66,Chinese,,0,0,0,,一旦你超过8的步伐，你就不再有增益了
 Dialogue: 0,1:01:17.18,1:01:20.14,English,,0,0,0,,You're missing every time in a different block
-Dialogue: 0,1:01:17.18,1:01:20.14,Chinese,,0,0,0,,你每次都在不同的街区
+Dialogue: 0,1:01:17.18,1:01:20.14,Chinese,,0,0,0,,你每次都在不同的块
 Dialogue: 0,1:01:23.48,1:01:26.18,English,,0,0,0,,There's this interesting this one puzzled me for a while
-Dialogue: 0,1:01:23.48,1:01:26.18,Chinese,,0,0,0,,这个有趣的是这个让我困惑了一段时间
+Dialogue: 0,1:01:23.48,1:01:26.18,Chinese,,0,0,0,,有趣的是，这个让我困惑了一段时间
 Dialogue: 0,1:01:26.94,1:01:32.88,English,,0,0,0,,You might be wondering like how come like over here is we increase the size
-Dialogue: 0,1:01:26.94,1:01:32.88,Chinese,,0,0,0,,你可能想知道我们在这里如何增加尺寸
+Dialogue: 0,1:01:26.94,1:01:32.88,Chinese,,0,0,0,,你可能想知道我们在这里如何增加 size
 Dialogue: 0,1:01:33.52,1:01:39.86,English,,0,0,0,,We can sort of getting the...we're sort of as we increase the size
-Dialogue: 0,1:01:33.52,1:01:39.86,Chinese,,0,0,0,,我们可以得到......我们就像增加尺寸一样
+Dialogue: 0,1:01:33.52,1:01:39.86,Chinese,,0,0,0,,就像增加 size 一样
 Dialogue: 0,1:01:39.86,1:01:45.60,English,,0,0,0,,We're doing most of our references out of caches that are lower in the cache hierarchy
-Dialogue: 0,1:01:39.86,1:01:45.60,Chinese,,0,0,0,,我们从缓存层次结构中较低的缓存中执行大多数引用
-Dialogue: 0,1:01:47.60,1:01:50.68,English,,0,0,0,,Okay but except when we're doing stride one references
-Dialogue: 0,1:01:47.60,1:01:50.68,Chinese,,0,0,0,,好吧，但除非我们正在大步提到一个参考
+Dialogue: 0,1:01:39.86,1:01:45.60,Chinese,,0,0,0,,我们从缓存层次结构中较低的缓存中执行大多数引用 
+Dialogue: 0,1:01:47.60,1:01:50.68,English,,0,0,0,,Okay but except when we're doing stride-1 references
+Dialogue: 0,1:01:47.60,1:01:50.68,Chinese,,0,0,0,,除非我们在使用步长为 1 的引用
 Dialogue: 0,1:01:51.48,1:01:55.48,English,,0,0,0,,You can see all the way up to right at the end
-Dialogue: 0,1:01:51.48,1:01:55.48,Chinese,,0,0,0,,你可以看到最后一直到最后
+Dialogue: 0,1:01:51.48,1:01:55.48,Chinese,,0,0,0,,你可以一直到最后
 Dialogue: 0,1:01:56.80,1:01:59.76,English,,0,0,0,,Right before it exceeds the size of L3
-Dialogue: 0,1:01:56.80,1:01:59.76,Chinese,,0,0,0,,就在它超过L3的大小之前
+Dialogue: 0,1:01:56.80,1:01:59.76,Chinese,,0,0,0,,就在它超过 L3 的大小之前
 Dialogue: 0,1:02:01.24,1:02:01.96,English,,0,0,0,,It's flat
 Dialogue: 0,1:02:01.24,1:02:01.96,Chinese,,0,0,0,,它很平坦
 Dialogue: 0,1:02:05.74,1:02:07.78,English,,0,0,0,,And it's running at the L2 rate
-Dialogue: 0,1:02:05.74,1:02:07.78,Chinese,,0,0,0,,并且它以L2速率运行
+Dialogue: 0,1:02:05.74,1:02:07.78,Chinese,,0,0,0,,并且它以 L2 速率运行
 Dialogue: 0,1:02:08.08,1:02:13.06,English,,0,0,0,,Alright so here's the L1 rate and then it drops off and then it's running at a constant L2 rate
-Dialogue: 0,1:02:08.08,1:02:13.06,Chinese,,0,0,0,,好吧所以这里是L1率然后它下降然后它以恒定的L2速率运行
+Dialogue: 0,1:02:08.08,1:02:13.06,Chinese,,0,0,0,,这里是 L1 率，然后它下降，最后它以恒定的 L2 速率运行
 Dialogue: 0,1:02:13.64,1:02:15.92,English,,0,0,0,,Until the data no longer fits in L3
-Dialogue: 0,1:02:13.64,1:02:15.92,Chinese,,0,0,0,,直到数据不再适合L3
+Dialogue: 0,1:02:13.64,1:02:15.92,Chinese,,0,0,0,,直到数据不再适合 L3
 Dialogue: 0,1:02:17.24,1:02:20.36,English,,0,0,0,,So I think what's going on here is that the the hardware
-Dialogue: 0,1:02:17.24,1:02:20.36,Chinese,,0,0,0,,所以我认为这里发生的是硬件
+Dialogue: 0,1:02:17.24,1:02:20.36,Chinese,,0,0,0,,所以我认为这里起作用的是硬件
 Dialogue: 0,1:02:21.28,1:02:28.72,English,,0,0,0,,The cache L2 cache hardware is recognizing or maybe it's an L1 but
-Dialogue: 0,1:02:21.28,1:02:28.72,Chinese,,0,0,0,,高速缓存L2高速缓存硬件正在识别或者它可能是L1但是
+Dialogue: 0,1:02:21.28,1:02:28.72,Chinese,,0,0,0,,L2 高速缓存硬件正在识别，或者可能是L1
 Dialogue: 0,1:02:28.90,1:02:34.28,English,,0,0,0,,Some logic in the cache system is recognizing the stride one reference pattern
-Dialogue: 0,1:02:28.90,1:02:34.28,Chinese,,0,0,0,,缓存系统中的一些逻辑正在识别步幅一个参考模式
+Dialogue: 0,1:02:28.90,1:02:34.28,Chinese,,0,0,0,,但是缓存系统中的硬件逻辑，正在识别步长为 1 的引用
 Dialogue: 0,1:02:35.44,1:02:37.26,English,,0,0,0,,Right because it sees all the addresses
-Dialogue: 0,1:02:35.44,1:02:37.26,Chinese,,0,0,0,,是的，因为它看到了所有的地址
-Dialogue: 0,1:02:37.96,1:02:40.84,English,,0,0,0,,It's recognizing that stride one pattern
-Dialogue: 0,1:02:37.96,1:02:40.84,Chinese,,0,0,0,,它认识到跨越一种模式
+Dialogue: 0,1:02:35.44,1:02:37.26,Chinese,,0,0,0,,因为它看到了所有的地址
+Dialogue: 0,1:02:37.96,1:02:40.84,English,,0,0,0,,It's recognizing that stride-1 pattern
+Dialogue: 0,1:02:37.96,1:02:40.84,Chinese,,0,0,0,,它识别出为步长为 1 的模式
 Dialogue: 0,1:02:41.58,1:02:46.36,English,,0,0,0,,And then it's aggressively prefetching from L3 into L2
-Dialogue: 0,1:02:41.58,1:02:46.36,Chinese,,0,0,0,,然后它积极地从L3预取到L2
+Dialogue: 0,1:02:41.58,1:02:46.36,Chinese,,0,0,0,,然后它积极地从 L3 预存取到 L2
 Dialogue: 0,1:02:46.90,1:02:51.04,English,,0,0,0,,So that those so it's fetching ahead of time it's anticipating
-Dialogue: 0,1:02:46.90,1:02:51.04,Chinese,,0,0,0,,所以那些提前取出的东西正在预料中
-Dialogue: 0,1:02:51.04,1:02:54.52,English,,0,0,0,,It's saying look I've gotten five stride one references in a row
-Dialogue: 0,1:02:51.04,1:02:54.52,Chinese,,0,0,0,,它说我已经连续五次获得了一个参考文献
+Dialogue: 0,1:02:46.90,1:02:51.04,Chinese,,0,0,0,,那些提前取出的东西 flag
+Dialogue: 0,1:02:51.04,1:02:54.52,English,,0,0,0,,It's saying look I've gotten five stride-1 references in a row
+Dialogue: 0,1:02:51.04,1:02:54.52,Chinese,,0,0,0,,它说我已经连续五次引用步长为 1
 Dialogue: 0,1:02:55.14,1:02:58.10,English,,0,0,0,,I'm going to go grab a whole bunch of blocks and load them all up
-Dialogue: 0,1:02:55.14,1:02:58.10,Chinese,,0,0,0,,我要去抓一大堆积然后加载它们
+Dialogue: 0,1:02:55.14,1:02:58.10,Chinese,,0,0,0,,需要去抓取一大堆块，然后加载它们
 Dialogue: 0,1:02:58.10,1:03:02.66,English,,0,0,0,,Because by the principle of spatial locality those blocks
-Dialogue: 0,1:02:58.10,1:03:02.66,Chinese,,0,0,0,,因为根据空间局部性原则那些块
+Dialogue: 0,1:02:58.10,1:03:02.66,Chinese,,0,0,0,,因为根据空间局部性原则
 Dialogue: 0,1:03:03.32,1:03:05.84,English,,0,0,0,,Those blocks are going to be referenced in the near future
-Dialogue: 0,1:03:03.32,1:03:05.84,Chinese,,0,0,0,,这些块将在不久的将来被引用
+Dialogue: 0,1:03:03.32,1:03:05.84,Chinese,,0,0,0,,这些块将在不久的将会被引用
 Dialogue: 0,1:03:07.10,1:03:09.94,English,,0,0,0,,So this was really neat and this only happened within the last couple years
-Dialogue: 0,1:03:07.10,1:03:09.94,Chinese,,0,0,0,,所以这真的很整洁，这只发生在过去的几年里
+Dialogue: 0,1:03:07.10,1:03:09.94,Chinese,,0,0,0,,所以这真的很整洁，这仅仅发生在过去的几年里
 Dialogue: 0,1:03:09.94,1:03:12.58,English,,0,0,0,,So the intel engineers are always hard at work
-Dialogue: 0,1:03:09.94,1:03:12.58,Chinese,,0,0,0,,因此，英特尔工程师总是努力工作
+Dialogue: 0,1:03:09.94,1:03:12.58,Chinese,,0,0,0,,英特尔工程师总是在努力改善
 Dialogue: 0,1:03:13.14,1:03:20.70,English,,0,0,0,,And maybe by the time the time we do the next the next edition of the memory mountain
-Dialogue: 0,1:03:13.14,1:03:20.70,Chinese,,0,0,0,,也许到我们下一期的记忆山的时候
-Dialogue: 0,1:03:22.12,1:03:26.78,English,,0,0,0,,Those systems will recognize stride 2 and you know other stride pattarns two
-Dialogue: 0,1:03:22.12,1:03:26.78,Chinese,,0,0,0,,那些系统将识别步幅2，你知道其他步幅2
-Dialogue: 0,1:03:27.72,1:03:31.04,English,,0,0,0,,But from this data it appears that it's only recognizing stride one
-Dialogue: 0,1:03:27.72,1:03:31.04,Chinese,,0,0,0,,但从这些数据来看，它似乎只是认识到了一步
+Dialogue: 0,1:03:13.14,1:03:20.70,Chinese,,0,0,0,,也许到我们下一版本的存储器山的时候
+Dialogue: 0,1:03:22.12,1:03:26.78,English,,0,0,0,,Those systems will recognize stride-2 and you know other stride pattarns two
+Dialogue: 0,1:03:22.12,1:03:26.78,Chinese,,0,0,0,,那些系统将识别步长-2  flag
+Dialogue: 0,1:03:27.72,1:03:31.04,English,,0,0,0,,But from this data it appears that it's only recognizing stride-1
+Dialogue: 0,1:03:27.72,1:03:31.04,Chinese,,0,0,0,,但从这些数据来看，它似乎只是认识到了步长为 1
 Dialogue: 0,1:03:36.16,1:03:44.42,English,,0,0,0,,Ok so you can real...you we can improve the spatial and temporal locality of our programs
-Dialogue: 0,1:03:36.16,1:03:44.42,Chinese,,0,0,0,,好的，你可以真实......你我们可以改善我们程序的空间和时间局部性
+Dialogue: 0,1:03:36.16,1:03:44.42,Chinese,,0,0,0,,我们可以改善我们程序的空间和时间局部性
 Dialogue: 0,1:03:45.84,1:03:51.52,English,,0,0,0,,In several different ways that one way to improve the spatial locality is to rearrange loops
-Dialogue: 0,1:03:45.84,1:03:51.52,Chinese,,0,0,0,,以几种不同的方式，改善空间局部性的一种方法是重新排列循环
+Dialogue: 0,1:03:45.84,1:03:51.52,Chinese,,0,0,0,,以几种不同的方式，改善空间局部性的一种方法是「重新排列循环」
 Dialogue: 0,1:03:52.64,1:03:55.08,English,,0,0,0,,And I'll use matrix multiplication as an example
-Dialogue: 0,1:03:52.64,1:03:55.08,Chinese,,0,0,0,,我将使用矩阵乘法作为例子
+Dialogue: 0,1:03:52.64,1:03:55.08,Chinese,,0,0,0,,我们将使用矩阵乘法作为例子
 Dialogue: 0,1:03:56.48,1:04:03.58,English,,0,0,0,,So here's a sort of a simple matrix multiplication in code
-Dialogue: 0,1:03:56.48,1:04:03.58,Chinese,,0,0,0,,所以这是代码中的一种简单矩阵乘法
+Dialogue: 0,1:03:56.48,1:04:03.58,Chinese,,0,0,0,,这是代码中的简单矩阵乘法
 Dialogue: 0,1:04:03.58,1:04:08.14,English,,0,0,0,,Where we're multiplying a times b and adding it
-Dialogue: 0,1:04:03.58,1:04:08.14,Chinese,,0,0,0,,在哪里我们乘以次数b并加上它
+Dialogue: 0,1:04:03.58,1:04:08.14,Chinese,,0,0,0,,我们乘以 b 并加上它
 Dialogue: 0,1:04:08.58,1:04:13.82,English,,0,0,0,,We're taking what's in of the c[i][j]
-Dialogue: 0,1:04:08.58,1:04:13.82,Chinese,,0,0,0,,我们正在考虑c [i] [j]中的内容
+Dialogue: 0,1:04:08.58,1:04:13.82,Chinese,,0,0,0,,我们正在取出 c[i][j] 中的内容
 Dialogue: 0,1:04:15.18,1:04:24.72,English,,0,0,0,,And then to that we're adding the sum the inner product of row i of a and the row j column j of b
-Dialogue: 0,1:04:15.18,1:04:24.72,Chinese,,0,0,0,,然后我们将a的第i行和b的第j行j的内积相加
+Dialogue: 0,1:04:15.18,1:04:24.72,Chinese,,0,0,0,,然后我们将 a 的第 i 行和 b 的第 j 行 j 的内积相加
 Dialogue: 0,1:04:26.06,1:04:30.28,English,,0,0,0,,Okay and then so we're going through and for each i,j in this matrix c
-Dialogue: 0,1:04:26.06,1:04:30.28,Chinese,,0,0,0,,好的，那么我们将通过这个矩阵c中的每个i，j
+Dialogue: 0,1:04:26.06,1:04:30.28,Chinese,,0,0,0,,那么我们将通过这个矩阵 c 中的每个 i，j
 Dialogue: 0,1:04:30.30,1:04:35.96,English,,0,0,0,,We're computing an inner product and then creating that sum
-Dialogue: 0,1:04:30.30,1:04:35.96,Chinese,,0,0,0,,我们正在计算内部产品，然后创造这个总和
+Dialogue: 0,1:04:30.30,1:04:35.96,Chinese,,0,0,0,,我们正在计算内积，然后创造这个总和
 Dialogue: 0,1:04:38.20,1:04:42.64,English,,0,0,0,,So we can actually turns out there's a lot of different ways to do matrix multiply
-Dialogue: 0,1:04:38.20,1:04:42.64,Chinese,,0,0,0,,所以我们实际上可以证明有很多不同的方法来进行矩阵乘法运算
+Dialogue: 0,1:04:38.20,1:04:42.64,Chinese,,0,0,0,,我们实际上可以证明有很多不同的方法来进行矩阵乘法运算
 Dialogue: 0,1:04:43.76,1:04:46.08,English,,0,0,0,,And this is we can permute these these loops
-Dialogue: 0,1:04:43.76,1:04:46.08,Chinese,,0,0,0,,这是我们可以置换这些循环
+Dialogue: 0,1:04:43.76,1:04:46.08,Chinese,,0,0,0,,我们可以置换这些循环
 Dialogue: 0,1:04:47.36,1:04:50.50,English,,0,0,0,,In any of six different possible permutations
-Dialogue: 0,1:04:47.36,1:04:50.50,Chinese,,0,0,0,,在六种不同的可能排列中的任何一种
+Dialogue: 0,1:04:47.36,1:04:50.50,Chinese,,0,0,0,,置换成六种不同的可能排列中的任何一种
 Dialogue: 0,1:04:51.44,1:04:56.10,English,,0,0,0,,So this is a permutation where it's i followed by j followed by k
-Dialogue: 0,1:04:51.44,1:04:56.10,Chinese,,0,0,0,,所以这是一个排列，其中我跟着j后跟k
+Dialogue: 0,1:04:51.44,1:04:56.10,Chinese,,0,0,0,,所以这是一个排列，其中 i 跟着 j,k
 Dialogue: 0,1:04:56.10,1:05:00.48,English,,0,0,0,,But five other possibilities are feasible
-Dialogue: 0,1:04:56.10,1:05:00.48,Chinese,,0,0,0,,但其他五种可能性是可行的
+Dialogue: 0,1:04:56.10,1:05:00.48,Chinese,,0,0,0,,其他五种可能性同样也是可行的
 Dialogue: 0,1:05:01.94,1:05:05.56,English,,0,0,0,,And so we can actually analyze those those different permutations
-Dialogue: 0,1:05:01.94,1:05:05.56,Chinese,,0,0,0,,所以我们实际上可以分析那些不同的排列
+Dialogue: 0,1:05:01.94,1:05:05.56,Chinese,,0,0,0,,实际上，我们可以分析那些不同的排列
 Dialogue: 0,1:05:05.90,1:05:08.24,English,,0,0,0,,And predict which one will have the best performance
 Dialogue: 0,1:05:05.90,1:05:08.24,Chinese,,0,0,0,,并预测哪一个会有最佳表现
 Dialogue: 0,1:05:10.24,1:05:12.02,English,,0,0,0,,Okay so what we'll do is we'll look at the inner loop
-Dialogue: 0,1:05:10.24,1:05:12.02,Chinese,,0,0,0,,好的，我们要做的就是看看内循环
+Dialogue: 0,1:05:10.24,1:05:12.02,Chinese,,0,0,0,,我们要做的就是看看内循环
 Dialogue: 0,1:05:15.56,1:05:18.02,English,,0,0,0,,And we'll look at the access pattern of the inner loops
-Dialogue: 0,1:05:15.56,1:05:18.02,Chinese,,0,0,0,,我们将看看内循环的访问模式
+Dialogue: 0,1:05:15.56,1:05:18.02,Chinese,,0,0,0,,看看内循环的访问模式
 Dialogue: 0,1:05:18.02,1:05:22.34,English,,0,0,0,,And it's in the access pattern on arrays c,a and b
-Dialogue: 0,1:05:18.02,1:05:22.34,Chinese,,0,0,0,,它位于数组c，a和b的访问模式中
+Dialogue: 0,1:05:18.02,1:05:22.34,Chinese,,0,0,0,,它位于数组 c，a 和 b 的访问模式中
 Dialogue: 0,1:05:25.22,1:05:30.94,English,,0,0,0,,Okay so let's look at the i,j,k implementation that I just showed you
-Dialogue: 0,1:05:25.22,1:05:30.94,Chinese,,0,0,0,,好的，让我们来看看我刚给你看的i，j，k实现
+Dialogue: 0,1:05:25.22,1:05:30.94,Chinese,,0,0,0,,让我们来看看 i，j，k 实现
 Dialogue: 0,1:05:31.76,1:05:33.60,English,,0,0,0,,So as always we focus on the inner loop
-Dialogue: 0,1:05:31.76,1:05:33.60,Chinese,,0,0,0,,因此，我们始终专注于内循环
+Dialogue: 0,1:05:31.76,1:05:33.60,Chinese,,0,0,0,,我们始终专注于内循环
 Dialogue: 0,1:05:35.38,1:05:41.54,English,,0,0,0,,And if you notice this inner loop is doing a row wise access of column a
-Dialogue: 0,1:05:35.38,1:05:41.54,Chinese,,0,0,0,,如果你注意到这个内部循环正在对列a进行行方式访问
+Dialogue: 0,1:05:35.38,1:05:41.54,Chinese,,0,0,0,,如果你注意到这个内部循环正在对列 a 进行行方式访问
 Dialogue: 0,1:05:42.98,1:05:47.18,English,,0,0,0,,And a column wise access,I'm sorry, a row wise access of array a
-Dialogue: 0,1:05:42.98,1:05:47.18,Chinese,,0,0,0,,并且列明智的访问，对不起，一行明智访问数组a
+Dialogue: 0,1:05:42.98,1:05:47.18,Chinese,,0,0,0,,并且列优先的访问，不对，行优先访问数组a
 Dialogue: 0,1:05:47.82,1:05:51.00,English,,0,0,0,,And column wise access of row b
-Dialogue: 0,1:05:47.82,1:05:51.00,Chinese,,0,0,0,,并且列b明智地访问
+Dialogue: 0,1:05:47.82,1:05:51.00,Chinese,,0,0,0,,并且列 b 地访问
 Dialogue: 0,1:05:52.24,1:05:56.62,English,,0,0,0,,So row wise of a,column wise of b,we don't really care about c
-Dialogue: 0,1:05:52.24,1:05:56.62,Chinese,,0,0,0,,顺便说一下b的列，我们并不关心c
+Dialogue: 0,1:05:52.24,1:05:56.62,Chinese,,0,0,0,,顺便说一下 b 的列，我们并不关心c 
 Dialogue: 0,1:05:56.62,1:05:59.82,English,,0,0,0,,Because it's not in the inner loop okay so just ignore that
 Dialogue: 0,1:05:56.62,1:05:59.82,Chinese,,0,0,0,,因为它不在内循环中，所以只需忽略它
 Dialogue: 0,1:06:01.88,1:06:08.26,English,,0,0,0,,So given our assumption that we can hold in this case we're assuming that
-Dialogue: 0,1:06:01.88,1:06:08.26,Chinese,,0,0,0,,因此，假设我们可以在这种情况下坚持我们假设
+Dialogue: 0,1:06:01.88,1:06:08.26,Chinese,,0,0,0,,假设在这种情况下
 Dialogue: 0,1:06:08.26,1:06:13.80,English,,0,0,0,,We can hold for of these integer elements in a in one block
 Dialogue: 0,1:06:08.26,1:06:13.80,Chinese,,0,0,0,,我们可以在一个块中保存这些整数元素
 Dialogue: 0,1:06:15.52,1:06:20.22,English,,0,0,0,,So the row wise access which has good spatial locality will miss one every four accesses
-Dialogue: 0,1:06:15.52,1:06:20.22,Chinese,,0,0,0,,因此，具有良好空间局部性的行式访问将错过每四次访问一次
+Dialogue: 0,1:06:15.52,1:06:20.22,Chinese,,0,0,0,,因此，具有良好空间局部性的行式访问发生缓存未命中，每四次访问一次未命中
 Dialogue: 0,1:06:21.14,1:06:24.68,English,,0,0,0,,Okay the very first reference will miss and then the next three will hit
-Dialogue: 0,1:06:21.14,1:06:24.68,Chinese,,0,0,0,,好的，第一个参考将错过，然后接下来的三个将被击中
+Dialogue: 0,1:06:21.14,1:06:24.68,Chinese,,0,0,0,,第一个引用将错过，然后接下来的三个将被命中
 Dialogue: 0,1:06:25.58,1:06:27.76,English,,0,0,0,,And then the next reference after that will hit a new block
-Dialogue: 0,1:06:25.58,1:06:27.76,Chinese,,0,0,0,,然后在那之后的下一个参考将达到一个新的块
+Dialogue: 0,1:06:25.58,1:06:27.76,Chinese,,0,0,0,,在那之后的下一个引用将命中到一个新的块
 Dialogue: 0,1:06:28.62,1:06:33.24,English,,0,0,0,,Okay so one out of four references to a will miss
-Dialogue: 0,1:06:28.62,1:06:33.24,Chinese,,0,0,0,,好的，所以四分之一的引用会遗漏
+Dialogue: 0,1:06:28.62,1:06:33.24,Chinese,,0,0,0,,四分之一的引用会未命中
 Dialogue: 0,1:06:33.94,1:06:41.22,English,,0,0,0,,But because the access pattern for b is column wise every reference to b will miss
-Dialogue: 0,1:06:33.94,1:06:41.22,Chinese,,0,0,0,,但由于b的访问模式是列式的，因此每次对b的引用都会丢失
+Dialogue: 0,1:06:33.94,1:06:41.22,Chinese,,0,0,0,,但由于 b 的访问模式是列式的，因此每次对 b 的引用都会丢失
 Dialogue: 0,1:06:42.46,1:06:45.84,English,,0,0,0,,Okay so the average number of misses per loop iteration is 1.25
-Dialogue: 0,1:06:42.46,1:06:45.84,Chinese,,0,0,0,,好吧，每次循环迭代的平均未命中数是1.25
+Dialogue: 0,1:06:42.46,1:06:45.84,Chinese,,0,0,0,,每次循环迭代的平均未命中数是1.25
 Dialogue: 0,1:06:47.30,1:06:50.92,English,,0,0,0,,Okay the j,i,k version is exactly the same pattern
-Dialogue: 0,1:06:47.30,1:06:50.92,Chinese,,0,0,0,,好吧，j，i，k版本是完全相同的模式
+Dialogue: 0,1:06:47.30,1:06:50.92,Chinese,,0,0,0,,好吧，j，i，k 版本是完全相同的模式
 Dialogue: 0,1:06:55.08,1:06:57.78,English,,0,0,0,,K,i,j is a little different here
-Dialogue: 0,1:06:55.08,1:06:57.78,Chinese,,0,0,0,,K，i，j在这里有点不同
+Dialogue: 0,1:06:55.08,1:06:57.78,Chinese,,0,0,0,,K，i，j 在这里有点不同
 Dialogue: 0,1:06:59.22,1:07:01.34,English,,0,0,0,,We're doing row wise access of b
-Dialogue: 0,1:06:59.22,1:07:01.34,Chinese,,0,0,0,,我们正在对b进行逐行访问
+Dialogue: 0,1:06:59.22,1:07:01.34,Chinese,,0,0,0,,我们正在对 b 进行逐行访问
 Dialogue: 0,1:07:03.12,1:07:05.64,English,,0,0,0,,And a row wise access of c, so that's good right
-Dialogue: 0,1:07:03.12,1:07:05.64,Chinese,,0,0,0,,并且明智地访问c，这样才对
-Dialogue: 0,1:07:06.00,1:07:09.30,English,,0,0,0,,So now we've got stride one accesses on both b and c
-Dialogue: 0,1:07:06.00,1:07:09.30,Chinese,,0,0,0,,所以现在我们在b和c上都进行了一次访问
+Dialogue: 0,1:07:03.12,1:07:05.64,Chinese,,0,0,0,,并且明智地访问 c，这样才对
+Dialogue: 0,1:07:06.00,1:07:09.30,English,,0,0,0,,So now we've got stride-1 accesses on both b and c
+Dialogue: 0,1:07:06.00,1:07:09.30,Chinese,,0,0,0,,现在我们在 b 和 c 上都进行了单元素依次访问
 Dialogue: 0,1:07:10.16,1:07:13.58,English,,0,0,0,,And the reference to a is outside of the loop,so we don't care about it
-Dialogue: 0,1:07:10.16,1:07:13.58,Chinese,,0,0,0,,对a的引用是在循环之外，所以我们不关心它
+Dialogue: 0,1:07:10.16,1:07:13.58,Chinese,,0,0,0,,对 a 的引用是在循环之外，所以我们不关心它
 Dialogue: 0,1:07:14.84,1:07:18.96,English,,0,0,0,,So so both b and c will miss one quarter of the time
-Dialogue: 0,1:07:14.84,1:07:18.96,Chinese,,0,0,0,,所以b和c都会错过四分之一的时间
+Dialogue: 0,1:07:14.84,1:07:18.96,Chinese,,0,0,0,,b和c都是四分之一的未命中率
 Dialogue: 0,1:07:20.40,1:07:24.34,English,,0,0,0,,Okay so the total average number of misses per loop iteration will be 0.5
-Dialogue: 0,1:07:20.40,1:07:24.34,Chinese,,0,0,0,,好吧，每次循环迭代的总平均未命中数将为0.5
+Dialogue: 0,1:07:20.40,1:07:24.34,Chinese,,0,0,0,,每次循环迭代的总平均未命中数将为0.5
 Dialogue: 0,1:07:25.40,1:07:29.70,English,,0,0,0,,That's pretty good and i,k,j has the same similar behavior
-Dialogue: 0,1:07:25.40,1:07:29.70,Chinese,,0,0,0,,这是非常好的，我，k，j具有相同的相似行为
+Dialogue: 0,1:07:25.40,1:07:29.70,Chinese,,0,0,0,,这是非常好的，i，k，j 具有相同的相似行为
 Dialogue: 0,1:07:30.90,1:07:33.28,English,,0,0,0,,Now j,k,i is sort of the exact opposite
-Dialogue: 0,1:07:30.90,1:07:33.28,Chinese,,0,0,0,,现在j，k，我恰恰相反
+Dialogue: 0,1:07:30.90,1:07:33.28,Chinese,,0,0,0,,现在 j，k，i 恰恰相反
 Dialogue: 0,1:07:33.28,1:07:37.74,English,,0,0,0,,j,k,i does column wise access of a
-Dialogue: 0,1:07:33.28,1:07:37.74,Chinese,,0,0,0,,j，k，我按列进行a
+Dialogue: 0,1:07:33.28,1:07:37.74,Chinese,,0,0,0,,j，k，i 按列进行访问a
 Dialogue: 0,1:07:38.48,1:07:42.20,English,,0,0,0,,And column-wise access of c so right we know that's a stinker right
-Dialogue: 0,1:07:38.48,1:07:42.20,Chinese,,0,0,0,,对于c的列式访问权限我们知道这是一个很难找到的东西
+Dialogue: 0,1:07:38.48,1:07:42.20,Chinese,,0,0,0,,对于c的列式访问权限，我们知道这是一个很难找到的东西
 Dialogue: 0,1:07:42.96,1:07:51.62,English,,0,0,0,,And we qualitative well you know it's bad and we can compute that it will miss a one time per loop iteration
 Dialogue: 0,1:07:42.96,1:07:51.62,Chinese,,0,0,0,,而且我们定性很好，你知道它很糟糕，我们可以计算出它会错过每循环迭代一次
 Dialogue: 0,1:07:52.46,1:07:55.36,English,,0,0,0,,So that will be two total of two misses per iteration
 Dialogue: 0,1:07:52.46,1:07:55.36,Chinese,,0,0,0,,这样每次迭代总共会有两次失误
 Dialogue: 0,1:07:55.54,1:07:57.90,English,,0,0,0,,And k,j,i has the same bad pattern
-Dialogue: 0,1:07:55.54,1:07:57.90,Chinese,,0,0,0,,和k，j，我有相同的坏模式
+Dialogue: 0,1:07:55.54,1:07:57.90,Chinese,,0,0,0,,和k，j，i 有相同的坏模式
 Dialogue: 0,1:07:58.86,1:08:01.02,English,,0,0,0,,Okay so if we look at all these permutations
-Dialogue: 0,1:07:58.86,1:08:01.02,Chinese,,0,0,0,,好的，如果我们看看所有这些排列
+Dialogue: 0,1:07:58.86,1:08:01.02,Chinese,,0,0,0,,如果我们看看所有这些排列
 Dialogue: 0,1:08:02.42,1:08:08.68,English,,0,0,0,,You can see that i,j,k and j,i,k miss 1.25 have 1.25 misses
-Dialogue: 0,1:08:02.42,1:08:08.68,Chinese,,0,0,0,,你可以看到i，j，k和j，i，k小姐1.25有1.25次未命中
+Dialogue: 0,1:08:02.42,1:08:08.68,Chinese,,0,0,0,,你可以看到 i，j，k 和 j，i，k 平均有1.25次未命中
 Dialogue: 0,1:08:09.72,1:08:13.86,English,,0,0,0,,k,i,j has 0.5 misses and j,k,i has 2 misses
-Dialogue: 0,1:08:09.72,1:08:13.86,Chinese,,0,0,0,,k，i，j有0.5个未命中，j，k，我有2个未命中
+Dialogue: 0,1:08:09.72,1:08:13.86,Chinese,,0,0,0,,k，i，j 有 0.5 个未命中，j，k，i 有 2 个未命中
 Dialogue: 0,1:08:15.06,1:08:20.92,English,,0,0,0,,So clearly it looks like k,i,j and its brethren are the best option
-Dialogue: 0,1:08:15.06,1:08:20.92,Chinese,,0,0,0,,很明显，看起来k，i，j及其兄弟是最好的选择
+Dialogue: 0,1:08:15.06,1:08:20.92,Chinese,,0,0,0,,很明显，看起来k，i，j 及其兄弟是最好的选择 flag
 Dialogue: 0,1:08:20.92,1:08:25.56,English,,0,0,0,,The only difference is that k,i,j has this additional store
-Dialogue: 0,1:08:20.92,1:08:25.56,Chinese,,0,0,0,,唯一的区别是k，i，j有这个额外的商店
+Dialogue: 0,1:08:20.92,1:08:25.56,Chinese,,0,0,0,,唯一的区别是 k，i，j 有这个额外的储存
 Dialogue: 0,1:08:25.56,1:08:29.54,English,,0,0,0,,So there might be a question that is that going to create is that going to slow things down
-Dialogue: 0,1:08:25.56,1:08:29.54,Chinese,,0,0,0,,因此，可能存在一个问题，即创造的是减慢速度
+Dialogue: 0,1:08:25.56,1:08:29.54,Chinese,,0,0,0,,因此，可能存在一个问题，即创造的是减慢速度 flag
 Dialogue: 0,1:08:30.74,1:08:37.20,English,,0,0,0,,Well it turns out in systems in any kind storage systems rights
 Dialogue: 0,1:08:30.74,1:08:37.20,Chinese,,0,0,0,,在任何类型的存储系统权利系统中都证明了这一点
 Dialogue: 0,1:08:37.74,1:08:39.46,English,,0,0,0,,Are much easier to deal with them reads
-Dialogue: 0,1:08:37.74,1:08:39.46,Chinese,,0,0,0,,处理它们更容易阅读
+Dialogue: 0,1:08:37.74,1:08:39.46,Chinese,,0,0,0,,处理读操作更容易
 Dialogue: 0,1:08:40.94,1:08:42.90,English,,0,0,0,,Can you think about why that might be true
 Dialogue: 0,1:08:40.94,1:08:42.90,Chinese,,0,0,0,,你能想一想为什么会这样吗？
 Dialogue: 0,1:08:44.28,1:08:47.32,English,,0,0,0,,So writes you have a lot more flexibility than you do with reads
-Dialogue: 0,1:08:44.28,1:08:47.32,Chinese,,0,0,0,,所以写道你比读取更灵活
+Dialogue: 0,1:08:44.28,1:08:47.32,Chinese,,0,0,0,,所以写操作比读取操作更为灵活
 Dialogue: 0,1:08:53.06,1:08:57.26,English,,0,0,0,,I mean yes
-Dialogue: 0,1:08:53.06,1:08:57.26,Chinese,,0,0,0,,我是说是的
+Dialogue: 0,1:08:53.06,1:08:57.26,Chinese,,0,0,0,,是的
 Dialogue: 0,1:08:57.28,1:09:02.78,English,,0,0,0,,That's exactly so you can you have options you can do you can write back defer you can defer writing
-Dialogue: 0,1:08:57.28,1:09:02.78,Chinese,,0,0,0,,这就是你可以做的选择，你可以写回来推迟你可以推迟写作
+Dialogue: 0,1:08:57.28,1:09:02.78,Chinese,,0,0,0,,这就是你可以做的选择，你可以写回来推迟你可以推迟写作 flag
 Dialogue: 0,1:09:03.60,1:09:07.04,English,,0,0,0,,Until the value that you're written is actually used
 Dialogue: 0,1:09:03.60,1:09:07.04,Chinese,,0,0,0,,直到你实际使用的值
 Dialogue: 0,1:09:07.38,1:09:09.04,English,,0,0,0,,But when you read an item you're stuck
-Dialogue: 0,1:09:07.38,1:09:09.04,Chinese,,0,0,0,,但是当你读到一件物品时，你就会陷入困境
+Dialogue: 0,1:09:07.38,1:09:09.04,Chinese,,0,0,0,,但是当你读到一元素时，你就会陷入困境
 Dialogue: 0,1:09:10.02,1:09:12.64,English,,0,0,0,,You can't do anything until you get that data
 Dialogue: 0,1:09:10.02,1:09:12.64,Chinese,,0,0,0,,在获得该数据之前，你无法做任何事情
-Dialogue: 0,1:09:13.08,1:09:17.30,English,,0,0,0,,So it turns out that rights don't really that this additional store doesn't really hurt us
-Dialogue: 0,1:09:13.08,1:09:17.30,Chinese,,0,0,0,,所以事实证明，权利并不是真的这个额外的商店并没有真正伤害我们
+Dialogue: 0,1:09:13.08,1:09:17.30,English,,0,0,0,,So it turns out that writes don't really that this additional store doesn't really hurt us
+Dialogue: 0,1:09:13.08,1:09:17.30,Chinese,,0,0,0,,事实证明，写操作并不是 真的这个额外的   商店并没有真正伤害我们
 Dialogue: 0,1:09:18.54,1:09:22.22,English,,0,0,0,,And so when we measure these on a modern system
-Dialogue: 0,1:09:18.54,1:09:22.22,Chinese,,0,0,0,,因此，当我们在现代系统上测量这些时
+Dialogue: 0,1:09:18.54,1:09:22.22,Chinese,,0,0,0,,当我们在现代系统上测量这些时
 Dialogue: 0,1:09:22.66,1:09:29.34,English,,0,0,0,,You can see that that the k,i,j which has the the fewest number of misses
-Dialogue: 0,1:09:22.66,1:09:29.34,Chinese,,0,0,0,,你可以看到k，i，j具有最少的未命中数
+Dialogue: 0,1:09:22.66,1:09:29.34,Chinese,,0,0,0,,你可以看到k，i，j 具有最少的未命中数
 Dialogue: 0,1:09:29.82,1:09:36.32,English,,0,0,0,,Has you see we're getting like one miss what we're plotting here is cycles per inter loop iteration
-Dialogue: 0,1:09:29.82,1:09:36.32,Chinese,,0,0,0,,你有没有看到我们正在想象我们在这里绘制的是每个循环迭代的周期
+Dialogue: 0,1:09:29.82,1:09:36.32,Chinese,,0,0,0,,你有没有看到我们，我们在这里绘制的是每个循环迭代的周期
 Dialogue: 0,1:09:36.32,1:09:40.50,English,,0,0,0,,So each iteration is taking about one cycle which is really good
 Dialogue: 0,1:09:36.32,1:09:40.50,Chinese,,0,0,0,,所以每次迭代都需要大约一个周期，这非常好
 Dialogue: 0,1:09:41.54,1:09:46.30,English,,0,0,0,,This i,j,k pattern which is kind of the intermediate 1.2 misses
-Dialogue: 0,1:09:41.54,1:09:46.30,Chinese,,0,0,0,,这种i，j，k模式是中间体1.2的一种未命中
+Dialogue: 0,1:09:41.54,1:09:46.30,Chinese,,0,0,0,,这种 i，j，k 模式是中间体 1.2 的一种未命中
 Dialogue: 0,1:09:47.00,1:09:51.98,English,,0,0,0,,That's sort of in between and the j,k,i which has two misses per iteration is the worst
-Dialogue: 0,1:09:47.00,1:09:51.98,Chinese,,0,0,0,,这种情况介于两者之间，每次迭代有两次未命中的j，k，i是最差的
+Dialogue: 0,1:09:47.00,1:09:51.98,Chinese,,0,0,0,,这种情况介于两者之间，每次迭代有两次未命中的 j，k，i是最差的
 Dialogue: 0,1:09:52.86,1:09:57.16,English,,0,0,0,,Ok so what's interesting is we could actually just by doing a little bit of analysis
-Dialogue: 0,1:09:52.86,1:09:57.16,Chinese,,0,0,0,,好的，有趣的是我们实际上可以通过做一些分析
+Dialogue: 0,1:09:52.86,1:09:57.16,Chinese,,0,0,0,,有趣的是我们实际上可以通过做一些分析
 Dialogue: 0,1:09:57.88,1:10:02.08,English,,0,0,0,,Simple analysis we could actually predict what this graph would look like
-Dialogue: 0,1:09:57.88,1:10:02.08,Chinese,,0,0,0,,简单分析我们实际上可以预测这个图形的样子
+Dialogue: 0,1:09:57.88,1:10:02.08,Chinese,,0,0,0,,可以预测这个图形的样子
 Dialogue: 0,1:10:03.74,1:10:08.16,English,,0,0,0,,Okay in the last ten minutes of the class
-Dialogue: 0,1:10:03.74,1:10:08.16,Chinese,,0,0,0,,好在课程的最后十分钟
+Dialogue: 0,1:10:03.74,1:10:08.16,Chinese,,0,0,0,,在课程的最后十分钟
 Dialogue: 0,1:10:08.46,1:10:11.28,English,,0,0,0,,We're going to look at how to improve temporal locality
 Dialogue: 0,1:10:08.46,1:10:11.28,Chinese,,0,0,0,,我们将研究如何改善时间局部性
 Dialogue: 0,1:10:12.04,1:10:15.00,English,,0,0,0,,Now so what we did with... when we rearranged our loops
-Dialogue: 0,1:10:12.04,1:10:15.00,Chinese,,0,0,0,,现在我们做了什么......当我们重新安排我们的循环时
+Dialogue: 0,1:10:12.04,1:10:15.00,Chinese,,0,0,0,,当我们重新安排我们的循环时
 Dialogue: 0,1:10:15.38,1:10:20.26,English,,0,0,0,,With in the matrix multiplication what we were doing was in improving our spatial locality right
 Dialogue: 0,1:10:15.38,1:10:20.26,Chinese,,0,0,0,,在矩阵乘法中，我们正在做的是改善我们的空间局部性
 Dialogue: 0,1:10:21.30,1:10:24.96,English,,0,0,0,,But we didn't really do anything to improve the temporal locality
 Dialogue: 0,1:10:21.30,1:10:24.96,Chinese,,0,0,0,,但我们并没有真正做任何改善时间局部性的事情
 Dialogue: 0,1:10:25.58,1:10:28.58,English,,0,0,0,,To improve temporal locality you have to use a technique called blocking
-Dialogue: 0,1:10:25.58,1:10:28.58,Chinese,,0,0,0,,要改善时间局部性，你必须使用称为阻塞的技术
+Dialogue: 0,1:10:25.58,1:10:28.58,Chinese,,0,0,0,,要改善时间局部性，你必须使用称为「阻塞」的技术
 Dialogue: 0,1:10:29.50,1:10:34.78,English,,0,0,0,,And this is important to understand because you're going to need it in your cache lab for one thing
-Dialogue: 0,1:10:29.50,1:10:34.78,Chinese,,0,0,0,,这一点很重要，因为你需要在缓存实验室中完成一件事
+Dialogue: 0,1:10:29.50,1:10:34.78,Chinese,,0,0,0,,这一点很重要，因为你需要在缓存实验室中完成
 Dialogue: 0,1:10:35.18,1:10:37.02,English,,0,0,0,,But it's also a very general technique
 Dialogue: 0,1:10:35.18,1:10:37.02,Chinese,,0,0,0,,但它也是一种非常通用的技术
 Dialogue: 0,1:10:37.50,1:10:40.82,English,,0,0,0,,Anytime you need,any time you're having issues with temporal locality
@@ -1569,33 +1569,33 @@ Dialogue: 0,1:10:37.50,1:10:40.82,Chinese,,0,0,0,,任何时候你需要，任何
 Dialogue: 0,1:10:42.08,1:10:42.82,English,,0,0,0,,Okay so
 Dialogue: 0,1:10:42.08,1:10:42.82,Chinese,,0,0,0,,可以，然后呢
 Dialogue: 0,1:10:46.02,1:10:51.00,English,,0,0,0,,We're not going to go into too much detail this code but what I did I rewrote the matrix multiply
-Dialogue: 0,1:10:46.02,1:10:51.00,Chinese,,0,0,0,,我们不打算详细介绍这段代码，但是我做了什么我重写了矩阵乘法
+Dialogue: 0,1:10:46.02,1:10:51.00,Chinese,,0,0,0,,我们不打算详细介绍这段代码，但是我重写了矩阵乘法
 Dialogue: 0,1:10:53.06,1:10:58.18,English,,0,0,0,,So that it operates you know a two-dimensional matrix that you can really just think of it as a contiguous array of bytes
-Dialogue: 0,1:10:53.06,1:10:58.18,Chinese,,0,0,0,,因此，它运行时你知道一个二维矩阵，你真的可以把它想象成一个连续的字节数组
+Dialogue: 0,1:10:53.06,1:10:58.18,Chinese,,0,0,0,,它运行时你知道一个二维矩阵，可以把它想象成一个连续的字节数组
 Dialogue: 0,1:10:58.68,1:11:03.02,English,,0,0,0,,So I just rewrote this code to operate on a contiguous array one-dimensional array
-Dialogue: 0,1:10:58.68,1:11:03.02,Chinese,,0,0,0,,所以我只是重写了这段代码来操作一个连续的数组一维数组
+Dialogue: 0,1:10:58.68,1:11:03.02,Chinese,,0,0,0,,我只是重写了这段代码来操作一个连续的数组，一维数组
 Dialogue: 0,1:11:03.60,1:11:06.04,English,,0,0,0,,And then I'm doing the indexing explicitly here
-Dialogue: 0,1:11:03.60,1:11:06.04,Chinese,,0,0,0,,然后我在这里明确地做索引
+Dialogue: 0,1:11:03.60,1:11:06.04,Chinese,,0,0,0,,然后我在这里使用显式索引
 Dialogue: 0,1:11:06.30,1:11:11.22,English,,0,0,0,,So here at c[i*n+j] this is n matrix
-Dialogue: 0,1:11:06.30,1:11:11.22,Chinese,,0,0,0,,所以这里在c [i * n + j]这是n矩阵
+Dialogue: 0,1:11:06.30,1:11:11.22,Chinese,,0,0,0,,这里在 c[i * n + j] 这是 n 矩阵
 Dialogue: 0,1:11:11.22,1:11:16.30,English,,0,0,0,,So what I'm doing is...I'm accessing the I'm computing where the I throw starts
-Dialogue: 0,1:11:11.22,1:11:16.30,Chinese,,0,0,0,,所以我正在做的是......我正在访问我正在计算我开始的地方
+Dialogue: 0,1:11:11.22,1:11:16.30,Chinese,,0,0,0,,我正在做的是...... flag
 Dialogue: 0,1:11:16.92,1:11:21.66,English,,0,0,0,,And then I'm going to the j column of that row and then accessing that element
 Dialogue: 0,1:11:16.92,1:11:21.66,Chinese,,0,0,0,,然后我将转到该行的j列，然后访问该元素
 Dialogue: 0,1:11:27.50,1:11:30.08,English,,0,0,0,,All right so let's...but it's the same idea as before
-Dialogue: 0,1:11:27.50,1:11:30.08,Chinese,,0,0,0,,好吧，让我们......但它和以前一样
+Dialogue: 0,1:11:27.50,1:11:30.08,Chinese,,0,0,0,,让我们......但它和以前一样
 Dialogue: 0,1:11:31.04,1:11:38.16,English,,0,0,0,,So let's look at the miss rate for this, this is just an original this is an original unblocked matrix multiplied
-Dialogue: 0,1:11:31.04,1:11:38.16,Chinese,,0,0,0,,因此，让我们看一下这个未命中率，这只是一个原始的，这是一个原始的无阻塞矩阵相乘
+Dialogue: 0,1:11:31.04,1:11:38.16,Chinese,,0,0,0,,因此，让我们看一下这个未命中率，这是一个原始的无阻塞矩阵相乘
 Dialogue: 0,1:11:39.34,1:11:44.78,English,,0,0,0,,So what we're doing is we're computing c[0][0]
-Dialogue: 0,1:11:39.34,1:11:44.78,Chinese,,0,0,0,,所以我们正在做的是我们计算c [0] [0]
+Dialogue: 0,1:11:39.34,1:11:44.78,Chinese,,0,0,0,,我们正在做计算 c[0][0]
 Dialogue: 0,1:11:45.46,1:11:50.24,English,,0,0,0,,And we're doing that by taking an inner product of row 0 and column 0
-Dialogue: 0,1:11:45.46,1:11:50.24,Chinese,,0,0,0,,我们通过采用第0行和第0列的内积来做到这一点
+Dialogue: 0,1:11:45.46,1:11:50.24,Chinese,,0,0,0,,我们通过采用第 0 行和第 0 列的内积来做到这一点
 Dialogue: 0,1:11:53.80,1:11:59.80,English,,0,0,0,,So if you look at the we're assuming that the cache blocks holds eight doubles
-Dialogue: 0,1:11:53.80,1:11:59.80,Chinese,,0,0,0,,所以如果你看一下我们假设缓存块有8个双打
+Dialogue: 0,1:11:53.80,1:11:59.80,Chinese,,0,0,0,,所以如果你看一下我们假设缓存块有 8 个 double
 Dialogue: 0,1:12:00.06,1:12:04.64,English,,0,0,0,,And that the matrix elements are doubles then we're going to miss one eight of the time
-Dialogue: 0,1:12:00.06,1:12:04.64,Chinese,,0,0,0,,并且矩阵元素是双倍的，那么我们将错过八个时间
+Dialogue: 0,1:12:00.06,1:12:04.64,Chinese,,0,0,0,,并且矩阵元素是双精度浮点数，那么我们每八次将会有个未命中
 Dialogue: 0,1:12:05.96,1:12:08.06,English,,0,0,0,,Okay so in the first iteration
-Dialogue: 0,1:12:05.96,1:12:08.06,Chinese,,0,0,0,,好的，在第一次迭代中
+Dialogue: 0,1:12:05.96,1:12:08.06,Chinese,,0,0,0,,在第一次迭代中
 Dialogue: 0,1:12:11.42,1:12:16.22,English,,0,0,0,,We're going to miss the first iteration does n of these things
 Dialogue: 0,1:12:11.42,1:12:16.22,Chinese,,0,0,0,,我们将错过这些事情的第一次迭代
 Dialogue: 0,1:12:16.66,1:12:19.34,English,,0,0,0,,And since we're missing n over eight of the time
@@ -1603,7 +1603,7 @@ Dialogue: 0,1:12:16.66,1:12:19.34,Chinese,,0,0,0,,因为我们在八分之一的
 Dialogue: 0,1:12:19.72,1:12:25.12,English,,0,0,0,,We're missing one block for every eight references
 Dialogue: 0,1:12:19.72,1:12:25.12,Chinese,,0,0,0,,我们每八个引用丢失一个块
 Dialogue: 0,1:12:28.30,1:12:32.48,English,,0,0,0,,For each for the first iteration we're going to miss n over eight
-Dialogue: 0,1:12:28.30,1:12:32.48,Chinese,,0,0,0,,对于第一次迭代的每一次，我们将错过n超过八
+Dialogue: 0,1:12:28.30,1:12:32.48,Chinese,,0,0,0,,对于第一次迭代的每一次，我们将错过 n 超过八
 Dialogue: 0,1:12:34.22,1:12:37.44,English,,0,0,0,,And since there's n for each element for each block I'm sorry
 Dialogue: 0,1:12:34.22,1:12:37.44,Chinese,,0,0,0,,因为每个块的每个元素都有n，对不起
 Dialogue: 0,1:12:37.90,1:12:45.56,English,,0,0,0,,And then oh so this is the number of blocks and the number of misses and then we have n elements
@@ -1679,7 +1679,7 @@ Dialogue: 0,1:16:12.86,1:16:19.48,Chinese,,0,0,0,,所以在我们的第一个没
 Dialogue: 0,1:16:20.06,1:16:25.40,English,,0,0,0,,But there's this pretty, this big difference in the constant factor so for no blocking it's 9/8
 Dialogue: 0,1:16:20.06,1:16:25.40,Chinese,,0,0,0,,但是有这个漂亮的，恒定因素的这个巨大差异，所以没有阻止它是9/8
 Dialogue: 0,1:16:26.26,1:16:31.08,English,,0,0,0,,For blocking it's 1/4b we're now we can we can just sort of drive that down
-Dialogue: 0,1:16:26.26,1:16:31.08,Chinese,,0,0,0,,为了阻止它的1 / 4b我们现在我们可以把它驱逐下来
+Dialogue: 0,1:16:26.26,1:16:31.08,Chinese,,0,0,0,,为了阻止它的 1/4b 我们现在我们可以把它驱逐下来
 Dialogue: 0,1:16:31.52,1:16:36.38,English,,0,0,0,,By by increasing the block size so this gives us some control
 Dialogue: 0,1:16:31.52,1:16:36.38,Chinese,,0,0,0,,通过增加块大小，这给了我们一些控制
 Dialogue: 0,1:16:39.02,1:16:44.68,English,,0,0,0,,But we still we have...we can't make the block the blocks too big because we need to fit three blocks
@@ -1697,7 +1697,7 @@ Dialogue: 0,1:17:04.74,1:17:06.74,Chinese,,0,0,0,,所以我们正在利用更多
 Dialogue: 0,1:17:08.30,1:17:12.68,English,,0,0,0,,And matrix multiplication has this into this implicit locality
 Dialogue: 0,1:17:08.30,1:17:12.68,Chinese,,0,0,0,,矩阵乘法将这种情况纳入这个隐含的局部性
 Dialogue: 0,1:17:12.68,1:17:18.88,English,,0,0,0,,Because the computation is order n cubed but the size of the data is n squared
-Dialogue: 0,1:17:12.68,1:17:18.88,Chinese,,0,0,0,,因为计算是n阶的，但是数据的大小是n的平方
+Dialogue: 0,1:17:12.68,1:17:18.88,Chinese,,0,0,0,,因为计算是n阶的，但是数据的大小是 n 的平方
 Dialogue: 0,1:17:19.98,1:17:23.36,English,,0,0,0,,Right so we must be reusing some data items
 Dialogue: 0,1:17:19.98,1:17:23.36,Chinese,,0,0,0,,是的，所以我们必须重用一些数据项
 Dialogue: 0,1:17:24.18,1:17:29.71,English,,0,0,0,,Right the problem with our scalar approach is that we were when we were reusing them they weren't in the cache
@@ -1705,7 +1705,7 @@ Dialogue: 0,1:17:24.18,1:17:29.71,Chinese,,0,0,0,,我们的标量方法的问题
 Dialogue: 0,1:17:29.71,1:17:32.67,English,,0,0,0,,Ok
 Dialogue: 0,1:17:29.71,1:17:32.67,Chinese,,0,0,0,,好
 Dialogue: 0,1:17:35.66,1:17:40.00,English,,0,0,0,,All right so the point that I wanted to make with you is that
-Dialogue: 0,1:17:35.66,1:17:40.00,Chinese,,0,0,0,,好的，所以我想与你合作的重点是
+Dialogue: 0,1:17:35.66,1:17:40.00,Chinese,,0,0,0,,好的，所以我想使你了解的重点是
 Dialogue: 0,1:17:40.72,1:17:47.06,English,,0,0,0,,Cache memories although they're sort of built-in automatic hardware storage devices
 Dialogue: 0,1:17:40.72,1:17:47.06,Chinese,,0,0,0,,高速缓存存储器虽然它们是一种内置的自动硬件存储设备
 Dialogue: 0,1:17:47.72,1:17:49.60,English,,0,0,0,,And you can't really control them
@@ -1715,16 +1715,16 @@ Dialogue: 0,1:17:50.04,1:17:54.20,Chinese,,0,0,0,,如果你了解它们，你可
 Dialogue: 0,1:17:54.68,1:17:58.16,English,,0,0,0,,And exploit them and make your code run faster
 Dialogue: 0,1:17:54.68,1:17:58.16,Chinese,,0,0,0,,并利用它们并使你的代码运行得更快
 Dialogue: 0,1:17:59.36,1:18:03.14,English,,0,0,0,,Okay and the way you do this is like I said focus on the inner loops
-Dialogue: 0,1:17:59.36,1:18:03.14,Chinese,,0,0,0,,好吧，你这样做的方式就像我说的那样专注于内循环
+Dialogue: 0,1:17:59.36,1:18:03.14,Chinese,,0,0,0,,你这样做的方式就像我说的那样专注于内循环
 Dialogue: 0,1:18:05.84,1:18:10.00,English,,0,0,0,,Do is try to do try to do accesses that a stride one
-Dialogue: 0,1:18:05.84,1:18:10.00,Chinese,,0,0,0,,是尝试尝试做一个跨步的访问
+Dialogue: 0,1:18:05.84,1:18:10.00,Chinese,,0,0,0,,是尝试做一个跨步的访问
 Dialogue: 0,1:18:10.66,1:18:14.02,English,,0,0,0,,And try to maximize to to maximize spatial locality
-Dialogue: 0,1:18:10.66,1:18:14.02,Chinese,,0,0,0,,并尝试最大化以最大化空间局部性
+Dialogue: 0,1:18:10.66,1:18:14.02,Chinese,,0,0,0,,并尝试以最大化空间局部性
 Dialogue: 0,1:18:14.40,1:18:18.42,English,,0,0,0,,And try to maximize temporal locality by reusing local variables
 Dialogue: 0,1:18:14.40,1:18:18.42,Chinese,,0,0,0,,并尝试通过重用局部变量来最大化时间局部性
 Dialogue: 0,1:18:18.50,1:18:20.08,English,,0,0,0,,Which can then be put into registers
 Dialogue: 0,1:18:18.50,1:18:20.08,Chinese,,0,0,0,,然后可以将其放入寄存器中
 Dialogue: 0,1:18:21.90,1:18:26.46,English,,0,0,0,,Okay so that's it for today good luck with your attack lab if you haven't finished it and
-Dialogue: 0,1:18:21.90,1:18:26.46,Chinese,,0,0,0,,好吧，如果你还没有完成它，那么今天你的攻击实验室会好运
+Dialogue: 0,1:18:21.90,1:18:26.46,Chinese,,0,0,0,,如果你还没有完成 attack-lab，祝你顺利
 Dialogue: 0,1:18:27.18,1:18:32.30,English,,0,0,0,,Don't forget to get started on cache lab this weekend 
-Dialogue: 0,1:18:27.18,1:18:32.30,Chinese,,0,0,0,,不要忘记本周末开始使用缓存实验室
+Dialogue: 0,1:18:27.18,1:18:32.30,Chinese,,0,0,0,,不要忘记本周末开始 cache-lab
