@@ -172,11 +172,11 @@ Dialogue: 0,0:12:21.58,0:12:27.00,English,,0,0,0,,所以这是一种设置定时
 Dialogue: 0,0:12:27.60,0:12:32.88,English,,0,0,0,,如果你想设置一个超时变量并且做一些作业，比如
 Dialogue: 0,0:12:33.28,0:12:39.76,English,,0,0,0,,你想要防止这项作业运行太长时间，你可以用 sigalrm 来设置超时
 Dialogue: 0,0:12:40.64,0:12:46.72,English,,0,0,0,,那么接下来我们会看到有一个对 shell 来说非常重要的信号 sigchild
-Dialogue: 0,0:12:47.30,0:12:54.48,English,,0,0,0,,每当子进程被终止或结束时 colonel 就会通知它们的父进程
+Dialogue: 0,0:12:47.30,0:12:54.48,English,,0,0,0,,每当子进程被终止或结束时 kernel 就会通知它们的父进程
 Dialogue: 0,0:12:55.48,0:12:57.90,English,,0,0,0,,就是我们看到的
 Dialogue: 0,0:12:58.44,0:13:02.58,English,,0,0,0,,我们会看到。。这就是 shell 回收进程的做法
 Dialogue: 0,0:13:02.66,0:13:08.40,English,,0,0,0,,It's all of its children right is by taking advantage of the sigchild signal
-Dialogue: 0,0:13:09.78,0:13:11.92,English,,0,0,0,,在我放下个幻灯片之前
+Dialogue: 0,0:13:09.78,0:13:11.92,English,,0,0,0,,在我们看它之前
 Dialogue: 0,0:13:12.46,0:13:18.58,English,,0,0,0,,我们得搞定关于信号的一些概念
 Dialogue: 0,0:13:20.00,0:13:24.32,English,,0,0,0,,比如说我说过的信号的语义
 Dialogue: 0,0:13:24.74,0:13:27.54,English,,0,0,0,,这可能是 Linux 上比较棘手的一个地方
@@ -195,7 +195,7 @@ Dialogue: 0,0:14:43.38,0:14:47.04,English,,0,0,0,,有很多方式可以做到这
 Dialogue: 0,0:14:48.88,0:14:51.48,English,,0,0,0,,It's kind of an unfortunate tournament
 Dialogue: 0,0:14:52.18,0:14:55.50,English,,0,0,0,,我的意思是说， kill 是一个发送信号的方式
 Dialogue: 0,0:14:56.10,0:15:01.50,English,,0,0,0,,当然有时候 kill 掉一个程序不太好
-Dialogue: 0,0:15:01.52,0:15:04.36,English,,0,0,0,,但因为某些理由，人们需要 kill 掉它
+Dialogue: 0,0:15:01.52,0:15:04.36,English,,0,0,0,,但因为某些理由，人们把它叫做 kill
 Dialogue: 0,0:15:07.72,0:15:11.70,English,,0,0,0,,现在目标进程收到一个信号
 Dialogue: 0,0:15:13.08,0:15:20.54,English,,0,0,0,,当内核强制它在收到信号后作出应答时
 Dialogue: 0,0:15:22.34,0:15:29.02,English,,0,0,0,,好的，那么在设置目标进程上下文里的状态时，有两种差异很大的方式
@@ -210,18 +210,18 @@ Dialogue: 0,0:16:06.38,0:16:13.74,English,,0,0,0,,很像响应某些系统事件
 Dialogue: 0,0:16:14.20,0:16:17.52,English,,0,0,0,,它们的区别在于异常处理是内核级别的
 Dialogue: 0,0:16:18.18,0:16:21.28,English,,0,0,0,,信号处理实际上是在你的 C 代码里
 Dialogue: 0,0:16:22.74,0:16:25.31,English,,0,0,0,,它们在你的程序里执行
-Dialogue: 0,0:16:26.86,0:16:34.66,English,,0,0,0,,让我们想想我们能不能用信号处理的方式捕获信号
+Dialogue: 0,0:16:26.86,0:16:34.66,English,,0,0,0,,让我们想想如果我们用信号处理的方式捕获信号
 Dialogue: 0,0:16:35.20,0:16:37.72,English,,0,0,0,,我们有我们的进程执行指令
 Dialogue: 0,0:16:39.00,0:16:41.72,English,,0,0,0,,接着进程会收到信号
 Dialogue: 0,0:16:43.02,0:16:47.10,English,,0,0,0,,所以内核将控制权转移给了信号处理程序
 Dialogue: 0,0:16:47.10,0:16:55.14,English,,0,0,0,,Which is also just in the code that's executing in the current process, it's just a function in our C code 它是一段仅仅在当前进程执行的代码，是你 C 代码里的一个函数，
 Dialogue: 0,0:16:56.18,0:17:01.52,English,,0,0,0,,The signal handler runs and when it returns,it eventually returns back to the next instruction 当这段信号处理程序执行完，它会返回到下一条指令
-Dialogue: 0,0:17:02.22,0:17:04.00,English,,0,0,0,,And then we continue 那我们继续
+Dialogue: 0,0:17:02.22,0:17:04.00,English,,0,0,0,,And then we continue 接着我们继续
 Dialogue: 0,0:17:04.24,0:17:08.70,English,,0,0,0,,Okay so it's just like kind of like an interrupt right we just temporarily pause 好吧，这就像一次中断，我们先暂停一下
 Dialogue: 0,0:17:09.36,0:17:16.22,English,,0,0,0,,What we're doing in our code to execute this handler before just continuing on 在继续之前，我们要在处理程序里做什么呢
 Dialogue: 0,0:17:18.98,0:17:21.16,English,,0,0,0,,Okay now we say that a signal is pending 我们说这个信号现在是待处理的
-Dialogue: 0,0:17:21.80,0:17:25.98,English,,0,0,0,,If it's been sent by the colonel but not you have received 如果它已经由 colonel 发出但你还没有收到
-Dialogue: 0,0:17:27.98,0:17:34.92,English,,0,0,0,,Okay so if at any given point in time there can only be one pending signal of any particular type 好的，那么如果在某些给定的时刻，只能有一个任意特定类型的待处理信号
+Dialogue: 0,0:17:21.80,0:17:25.98,English,,0,0,0,,If it's been sent by the kernel but not you have received 如果它已经由内核发出但你还没有收到
+Dialogue: 0,0:17:27.98,0:17:34.92,English,,0,0,0,,Okay so if at any given point in time there can only be one pending signal of any particular type 那么如果在某些给定的时刻，只能有一个相同类型的待处理信号
 Dialogue: 0,0:17:36.84,0:17:40.70,English,,0,0,0,,Okay so this has very important consequences for using signals 这对使用信号来说有很大影响
 Dialogue: 0,0:17:40.70,0:17:47.32,English,,0,0,0,,Because you can't cue signals up right at any point in time there's there can only be one pending sigchild 因为你无法随时提醒信号的接收，所以只能有一个待处理的 sigchild 信号
 Dialogue: 0,0:17:47.66,0:17:51.02,English,,0,0,0,,Signal for example or sigint signal 再举一个 sigint 信号的例子
@@ -232,20 +232,20 @@ Dialogue: 0,0:18:04.04,0:18:06.66,English,,0,0,0,,So they don't queue up in any 
 Dialogue: 0,0:18:09.58,0:18:12.50,English,,0,0,0,,Now our process can block the receipt of certain signals 现在我们的进程可以阻塞某些信号的接收
 Dialogue: 0,0:18:13.62,0:18:16.42,English,,0,0,0,,Okay now it can't stop signals from being delivered 它没办法阻止信号的传递
 Dialogue: 0,0:18:17.04,0:18:23.76,English,,0,0,0,,But it can stop the process from having to react to the route to that signal when it's received 但是它可以阻止进程在收到信号后的响应
-Dialogue: 0,0:18:27.84,0:18:34.10,English,,0,0,0,,Okay so block signals can be delivered but they won't be received until the signals unblocked 好的，所以被阻塞的信号可以被传递，但在阻塞解除前不能被接收
+Dialogue: 0,0:18:27.84,0:18:34.10,English,,0,0,0,,Okay so block signals can be delivered but they won't be received until the signals unblocked 所以被阻塞的信号可以被传递，但在阻塞解除前不能被接收
 Dialogue: 0,0:18:38.88,0:18:41.30,English,,0,0,0,,And pending signals are received at most once 还有，待处理信号最多被接收一次
-Dialogue: 0,0:18:46.34,0:18:49.36,English,,0,0,0,,Now the colonel keeps track of these pending and blocked 现在 colonel 会跟踪这些待处理和阻塞的进程
+Dialogue: 0,0:18:46.34,0:18:49.36,English,,0,0,0,,Now the kernel keeps track of these pending and blocked 现在内核会跟踪这些待处理和阻塞的进程
 Dialogue: 0,0:18:49.90,0:18:54.42,English,,0,0,0,,Signals in bit vectors that will call pending and blocked 位向量中的信号会调用它们
 Dialogue: 0,0:18:55.24,0:18:58.62,English,,0,0,0,,And pending represents the set of pending signals 待处理表示所有待处理信号的集合
 Dialogue: 0,0:18:58.74,0:19:04.24,English,,0,0,0,,Right where each bit in the pending bit vector corresponds to some particular signal 待处理位向量中的每一个位都对应着一个特定的信号
 Dialogue: 0,0:19:04.84,0:19:07.06,English,,0,0,0,,Okay so this is why they can't be queued right because 这就是为什么它们不会有排队的说法
 Dialogue: 0,0:19:08.18,0:19:12.38,English,,0,0,0,,There's only one bit for any signal key,there's only one bit in the bit vector 因为每一个信号仅有一个位表示，在位向量里只有一个位
-Dialogue: 0,0:19:12.84,0:19:18.00,English,,0,0,0,,And if we...and when we deliver a signal we're just setting will set that bit the colonel will set that bit 如果我们。。。当我们传递一个信号我们仅仅是在设置，设置那个位，colonel 会设置那个位
+Dialogue: 0,0:19:12.84,0:19:18.00,English,,0,0,0,,And if we...and when we deliver a signal we're just setting will set that bit the kernel will set that bit 如果我们。。。当我们传递一个信号我们仅仅是在设置，设置那个位，内核会设置那个位
 Dialogue: 0,0:19:18.30,0:19:24.26,English,,0,0,0,,We deliver another signal of the same type, it'll just set that bit again which has no effect 我们传递同类型的另一个信号，它仅仅会再次设置那个位，其实什么都没有做
 Dialogue: 0,0:19:26.80,0:19:32.68,English,,0,0,0,,Now the kernel sets that the bit in pending when the signals delivered and it clears it 当信号被传递过来时，内核设置这个位到待处理中，并且将对应位清零
 Dialogue: 0,0:19:32.80,0:19:34.18,English,,0,0,0,,When the signals received 当信号被接收
 Dialogue: 0,0:19:35.68,0:19:43.22,English,,0,0,0,,And the kernel also provides mechanism for users to block signals with blocked bit vector 内核也向用户提供了可以阻塞信号的阻塞位向量
-Dialogue: 0,0:19:43.22,0:19:49.34,English,,0,0,0,,So the block bit vector is the same size as the pending bit vector turns out it's just a 32 bit int 阻塞位向量与待处理位向量基本相同，除了它是一个 32 位的 int 类型
+Dialogue: 0,0:19:43.22,0:19:49.34,English,,0,0,0,,So the block bit vector is the same size as the pending bit vector turns out it's just a 32 bit int 阻塞位向量与待处理位向量基本相同，它们都是一个 32 位的 int 类型
 Dialogue: 0,0:19:51.86,0:19:54.32,English,,0,0,0,,Okay and it can be set and cleared the bits 它可以被置位也可以被清零
 Dialogue: 0,0:19:54.46,0:19:58.10,English,,0,0,0,,And that can be set and cleared using the sigprocmask system call 使用系统调用 sigprocmask 就可以置位或清零它
 Dialogue: 0,0:19:59.10,0:20:05.18,English,,0,0,0,,Okay now that the blocked in the Linux literature the blocked bit vector is also called the signal mask 在一些 Linux 资料中，阻塞位向量有时也被称为信号掩码
@@ -326,41 +326,41 @@ Dialogue: 0,0:27:07.38,0:27:11.90,English,,0,0,0,,You know careful here and mayb
 Dialogue: 0,0:27:16.02,0:27:20.26,English,,0,0,0,,Okay now let's look at how we process receive signals 好的，那我们来看看进程是如何接收信号的
 Dialogue: 0,0:27:22.58,0:27:29.72,English,,0,0,0,,Now suppose process A is running along executing its user code and then 假设有一个进程 A，正在执行用户代码
 Dialogue: 0,0:27:30.48,0:27:34.94,English,,0,0,0,,There's a control passes into the kernel because of some exception 然后由于出现了异常，控制权转移给内核
-Dialogue: 0,0:27:36.12,0:27:40.36,English,,0,0,0,,Now that exception can be either a timer going off 
-Dialogue: 0,0:27:40.90,0:27:45.12,English,,0,0,0,,They've been interrupts or it can be a trap user calls a system call
-Dialogue: 0,0:27:45.76,0:27:50.50,English,,0,0,0,,Okay but it's always caused that the trap into the
-Dialogue: 0,0:27:51.20,0:27:54.26,English,,0,0,0,,Or the transferring control into the kernel is always caused by some exception
-Dialogue: 0,0:27:56.18,0:27:59.48,English,,0,0,0,,So at this point the kernel calls its scheduler function
-Dialogue: 0,0:28:00.12,0:28:07.34,English,,0,0,0,,And it decides do a context switch from process A to process B
-Dialogue: 0,0:28:09.46,0:28:15.50,English,,0,0,0,,And it gets processed B all set up and right before it returns from that exception
-Dialogue: 0,0:28:16.26,0:28:24.24,English,,0,0,0,,And right before it's ready to pass control back to process the user code and process B
-Dialogue: 0,0:28:25.30,0:28:29.34,English,,0,0,0,,It checks for any signals that any pending signals
-Dialogue: 0,0:28:32.58,0:28:38.50,English,,0,0,0,,Okay and it does this by computing a bit vector pnb so pending nonblocked
+Dialogue: 0,0:27:36.12,0:27:40.36,English,,0,0,0,,Now that exception can be either a timer going off 这个异常可以是定时器到时
+Dialogue: 0,0:27:40.90,0:27:45.12,English,,0,0,0,,They've been interrupts or it can be a trap user calls a system call 可以是一个中断或一个陷阱，用户调用系统调用
+Dialogue: 0,0:27:45.76,0:27:50.50,English,,0,0,0,,Okay but it's always caused that the trap into the 但它通常用作陷阱
+Dialogue: 0,0:27:51.20,0:27:54.26,English,,0,0,0,,Or the transferring control into the kernel is always caused by some exception 控制权转移到内核经常就经常由一些异常引起
+Dialogue: 0,0:27:56.18,0:27:59.48,English,,0,0,0,,So at this point the kernel calls its scheduler function 在这里，内核调用它的调度函数
+Dialogue: 0,0:28:00.12,0:28:07.34,English,,0,0,0,,And it decides do a context switch from process A to process B 它决定做一个从进程 A 到进程 B 的上下文切换
+Dialogue: 0,0:28:09.46,0:28:15.50,English,,0,0,0,,And it gets processed B all set up and right before it returns from that exception 它在从异常返回之前会获取进程 B 的有关设置
+Dialogue: 0,0:28:16.26,0:28:24.24,English,,0,0,0,,And right before it's ready to pass control back to process the user code and process B 在它准备好将控制权返还给进程用户代码和进程 B 之前
+Dialogue: 0,0:28:25.30,0:28:29.34,English,,0,0,0,,It checks for any signals that any pending signals 它会检查所有待处理的信号
+Dialogue: 0,0:28:32.58,0:28:38.50,English,,0,0,0,,Okay and it does this by computing a bit vector pnb so pending nonblocked 它通过计算位向量 pnb 来做到这一点，使之不会阻塞
 Dialogue: 0,0:28:39.42,0:28:42.58,English,,0,0,0,,Which is the logical and of the pending bit vector
-Dialogue: 0,0:28:44.00,0:28:46.48,English,,0,0,0,,And the inverse of the blocked bit vector
-Dialogue: 0,0:28:47.74,0:28:52.10,English,,0,0,0,,Okay so pnb is a list of all the pending signals that aren't blocked
-Dialogue: 0,0:28:53.34,0:28:56.08,English,,0,0,0,,Okay so these are all the pending signals that should be received
-Dialogue: 0,0:28:59.12,0:29:02.84,English,,0,0,0,,Now if pnb is all zeros then there's no pending signals
-Dialogue: 0,0:29:03.04,0:29:05.86,English,,0,0,0,,So it just returns it passes control back
-Dialogue: 0,0:29:07.18,0:29:10.98,English,,0,0,0,,It passes control back to process B which can continue executing
-Dialogue: 0,0:29:11.64,0:29:14.18,English,,0,0,0,,However if pnb is nonzero then
-Dialogue: 0,0:29:15.10,0:29:19.70,English,,0,0,0,,It chooses the smallest nonzero bit in pnb
-Dialogue: 0,0:29:19.70,0:29:24.56,English,,0,0,0,,And it forces process p to receive that signal the corresponding signal
-Dialogue: 0,0:29:27.74,0:29:32.20,English,,0,0,0,,The receipt of the signal triggers some action in the process
-Dialogue: 0,0:29:36.24,0:29:44.34,English,,0,0,0,,And then we repeat that for all the nonzero signals k that are nonzero bits that are set in pnb
-Dialogue: 0,0:29:44.78,0:29:47.60,English,,0,0,0,,And finally when we've gone all through all the nonzero bits
-Dialogue: 0,0:29:48.14,0:29:56.70,English,,0,0,0,,Then we pass control to the next instruction in process p
-Dialogue: 0,0:30:00.72,0:30:03.96,English,,0,0,0,,So the receipt of a signal always triggers some action
-Dialogue: 0,0:30:04.46,0:30:06.93,English,,0,0,0,,Which is either the process terminates
+Dialogue: 0,0:28:44.00,0:28:46.48,English,,0,0,0,,And the inverse of the blocked bit vector 反转阻塞位向量
+Dialogue: 0,0:28:47.74,0:28:52.10,English,,0,0,0,,Okay so pnb is a list of all the pending signals that aren't blocked pnb 是所有未阻塞待处理信号的列表
+Dialogue: 0,0:28:53.34,0:28:56.08,English,,0,0,0,,Okay so these are all the pending signals that should be received 所以，所有的待处理信号都应该被接收了
+Dialogue: 0,0:28:59.12,0:29:02.84,English,,0,0,0,,Now if pnb is all zeros then there's no pending signals 如果 pub 全为 0，那么就是说没有待处理的信号
+Dialogue: 0,0:29:03.04,0:29:05.86,English,,0,0,0,,So it just returns it passes control back 只要返回，返还控制权就好
+Dialogue: 0,0:29:07.18,0:29:10.98,English,,0,0,0,,It passes control back to process B which can continue executing 它将控制权返还给进程 B，让它可以继续执行
+Dialogue: 0,0:29:11.64,0:29:14.18,English,,0,0,0,,However if pnb is nonzero then 然而，如果 pub 是非 0 的
+Dialogue: 0,0:29:15.10,0:29:19.70,English,,0,0,0,,It chooses the smallest nonzero bit in pnb 那么它会选择 pub 中最小的非零位
+Dialogue: 0,0:29:19.70,0:29:24.56,English,,0,0,0,,And it forces process p to receive that signal the corresponding signal 它会让进程 p 接收相应的信号
+Dialogue: 0,0:29:27.74,0:29:32.20,English,,0,0,0,,The receipt of the signal triggers some action in the process 这个信号的接收会引起这个进程的一些行为
+Dialogue: 0,0:29:36.24,0:29:44.34,English,,0,0,0,,And then we repeat that for all the nonzero signals k that are nonzero bits that are set in pnb 然后我们对 pub 中的每一个非零位对应的信号 k 重复此过程
+Dialogue: 0,0:29:44.78,0:29:47.60,English,,0,0,0,,And finally when we've gone all through all the nonzero bits 最后我们会处理完所有的非零位
+Dialogue: 0,0:29:48.14,0:29:56.70,English,,0,0,0,,Then we pass control to the next instruction in process p 接着我们将控制权转移给进程 p 的下一条指令
+Dialogue: 0,0:30:00.72,0:30:03.96,English,,0,0,0,,So the receipt of a signal always triggers some action 所以每一个信号的接收都会引发一些行为
+Dialogue: 0,0:30:04.46,0:30:06.93,English,,0,0,0,,Which is either the process terminates 也包括进程的终止
 Dialogue: 0,0:30:07.86,0:30:11.40,English,,0,0,0,,The process stops until it's restarted by a sick can't signal
-Dialogue: 0,0:30:12.42,0:30:14.52,English,,0,0,0,,The process ignores the signal
-Dialogue: 0,0:30:15.36,0:30:18.42,English,,0,0,0,,Ok so that's there's always some predefined default action
-Dialogue: 0,0:30:21.72,0:30:29.72,English,,0,0,0,,But we can modify that default action by using a function system call called signal
-Dialogue: 0,0:30:31.66,0:30:37.28,English,,0,0,0,,Ok so we can...now signals a little that's another sort of misleading kind of term just like kill right because when we
-Dialogue: 0,0:30:37.74,0:30:40.50,English,,0,0,0,,When we send a signal to a process we don't always want to kill it
+Dialogue: 0,0:30:12.42,0:30:14.52,English,,0,0,0,,The process ignores the signal 进程忽略这个信号
+Dialogue: 0,0:30:15.36,0:30:18.42,English,,0,0,0,,Ok so that's there's always some predefined default action 这里有一些预定义的默认行为
+Dialogue: 0,0:30:21.72,0:30:29.72,English,,0,0,0,,But we can modify that default action by using a function system call called signal 但我们可以使用一个叫做 signal 的系统调用来修改默认行为
+Dialogue: 0,0:30:31.66,0:30:37.28,English,,0,0,0,,Ok so we can...now signals a little that's another sort of misleading kind of term just like kill right because when we 所以我们可以。。。
+Dialogue: 0,0:30:37.74,0:30:40.50,English,,0,0,0,,When we send a signal to a process we don't always want to kill it 我们给一个进程发送信号时，并不是总是要 kill 掉它
 Dialogue: 0,0:30:41.74,0:30:44.02,English,,0,0,0,,And signal doesn't actually signal anything
 Dialogue: 0,0:30:44.40,0:30:49.22,English,,0,0,0,,It just modifies the default action associated with some something
-Dialogue: 0,0:30:50.74,0:30:55.02,English,,0,0,0,,Okay so if the signal function takes out a signal number(signum)
+Dialogue: 0,0:30:50.74,0:30:55.02,English,,0,0,0,,Okay so if the signal function takes out a signal number(signum) 如果 signal 函数取出了一个信号数（signum）
 Dialogue: 0,0:30:56.90,0:31:01.98,English,,0,0,0,,And then specifies a change in the default action for that signal
 Dialogue: 0,0:31:04.16,0:31:07.46,English,,0,0,0,,And those default actions can be either to ignore the signal(sig_ign)
 Dialogue: 0,0:31:08.30,0:31:14.96,English,,0,0,0,,Ok ignore signals of type signal,revert to the default behavior for that signal
@@ -446,7 +446,7 @@ Dialogue: 0,0:38:36.38,0:38:39.30,English,,0,0,0,,And when at handler returns,it
 Dialogue: 0,0:38:40.36,0:38:45.80,English,,0,0,0,,To the to the instruction and handle or else that was where it was interrupted
 Dialogue: 0,0:38:46.36,0:38:50.50,English,,0,0,0,,And then handle or us continues its execution and eventually
 Dialogue: 0,0:38:50.50,0:38:54.34,English,,0,0,0,,Return back to the the point in the main program where it was interrupted
-Dialogue: 0,0:38:58.70,0:39:02.61,English,,0,0,0,,Now signals that the colonel always blocks
+Dialogue: 0,0:38:58.70,0:39:02.61,English,,0,0,0,,Now signals that the kernel always blocks
 Dialogue: 0,0:39:03.32,0:39:06.44,English,,0,0,0,,Pending signals of the type currently being handled right so
 Dialogue: 0,0:39:07.56,0:39:12.46,English,,0,0,0,,A handler for a signal of type t can't be interrupted
 Dialogue: 0,0:39:13.20,0:39:16.16,English,,0,0,0,,By the receipt of another signal of that same type
