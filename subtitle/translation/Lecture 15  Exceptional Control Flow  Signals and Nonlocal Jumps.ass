@@ -214,112 +214,112 @@ Dialogue: 0,0:16:26.86,0:16:34.66,English,,0,0,0,,让我们想想如果我们用
 Dialogue: 0,0:16:35.20,0:16:37.72,English,,0,0,0,,我们有我们的进程执行指令
 Dialogue: 0,0:16:39.00,0:16:41.72,English,,0,0,0,,接着进程会收到信号
 Dialogue: 0,0:16:43.02,0:16:47.10,English,,0,0,0,,所以内核将控制权转移给了信号处理程序
-Dialogue: 0,0:16:47.10,0:16:55.14,English,,0,0,0,,Which is also just in the code that's executing in the current process, it's just a function in our C code 它是一段仅仅在当前进程执行的代码，是你 C 代码里的一个函数，
-Dialogue: 0,0:16:56.18,0:17:01.52,English,,0,0,0,,The signal handler runs and when it returns,it eventually returns back to the next instruction 当这段信号处理程序执行完，它会返回到下一条指令
-Dialogue: 0,0:17:02.22,0:17:04.00,English,,0,0,0,,And then we continue 接着我们继续
-Dialogue: 0,0:17:04.24,0:17:08.70,English,,0,0,0,,Okay so it's just like kind of like an interrupt right we just temporarily pause 好吧，这就像一次中断，我们先暂停一下
-Dialogue: 0,0:17:09.36,0:17:16.22,English,,0,0,0,,What we're doing in our code to execute this handler before just continuing on 在继续之前，我们要在处理程序里做什么呢
-Dialogue: 0,0:17:18.98,0:17:21.16,English,,0,0,0,,Okay now we say that a signal is pending 我们说这个信号现在是待处理的
-Dialogue: 0,0:17:21.80,0:17:25.98,English,,0,0,0,,If it's been sent by the kernel but not you have received 如果它已经由内核发出但你还没有收到
-Dialogue: 0,0:17:27.98,0:17:34.92,English,,0,0,0,,Okay so if at any given point in time there can only be one pending signal of any particular type 那么如果在某些给定的时刻，只能有一个相同类型的待处理信号
-Dialogue: 0,0:17:36.84,0:17:40.70,English,,0,0,0,,Okay so this has very important consequences for using signals 这对使用信号来说有很大影响
-Dialogue: 0,0:17:40.70,0:17:47.32,English,,0,0,0,,Because you can't cue signals up right at any point in time there's there can only be one pending sigchild 因为你无法随时提醒信号的接收，所以只能有一个待处理的 sigchild 信号
-Dialogue: 0,0:17:47.66,0:17:51.02,English,,0,0,0,,Signal for example or sigint signal 再举一个 sigint 信号的例子
-Dialogue: 0,0:17:51.84,0:17:55.38,English,,0,0,0,,And if a subsequent sigchild signals say is sent 如果还有后续的 sigchild 信号被发送
-Dialogue: 0,0:17:55.94,0:18:00.51,English,,0,0,0,,It just over writes well you can think of it,it has no impact 这上面已经写了，你可以想到，它是没有影响的
-Dialogue: 0,0:18:00.78,0:18:04.04,English,,0,0,0,,It's just discarded right if there's already a pending signal 如果已经有一个待处理的信号，那新来的就会被丢弃
-Dialogue: 0,0:18:04.04,0:18:06.66,English,,0,0,0,,So they don't queue up in any meaningful way 它们不存在排队的说法
-Dialogue: 0,0:18:09.58,0:18:12.50,English,,0,0,0,,Now our process can block the receipt of certain signals 现在我们的进程可以阻塞某些信号的接收
-Dialogue: 0,0:18:13.62,0:18:16.42,English,,0,0,0,,Okay now it can't stop signals from being delivered 它没办法阻止信号的传递
-Dialogue: 0,0:18:17.04,0:18:23.76,English,,0,0,0,,But it can stop the process from having to react to the route to that signal when it's received 但是它可以阻止进程在收到信号后的响应
-Dialogue: 0,0:18:27.84,0:18:34.10,English,,0,0,0,,Okay so block signals can be delivered but they won't be received until the signals unblocked 所以被阻塞的信号可以被传递，但在阻塞解除前不能被接收
-Dialogue: 0,0:18:38.88,0:18:41.30,English,,0,0,0,,And pending signals are received at most once 还有，待处理信号最多被接收一次
-Dialogue: 0,0:18:46.34,0:18:49.36,English,,0,0,0,,Now the kernel keeps track of these pending and blocked 现在内核会跟踪这些待处理和阻塞的进程
-Dialogue: 0,0:18:49.90,0:18:54.42,English,,0,0,0,,Signals in bit vectors that will call pending and blocked 位向量中的信号会调用它们
-Dialogue: 0,0:18:55.24,0:18:58.62,English,,0,0,0,,And pending represents the set of pending signals 待处理表示所有待处理信号的集合
-Dialogue: 0,0:18:58.74,0:19:04.24,English,,0,0,0,,Right where each bit in the pending bit vector corresponds to some particular signal 待处理位向量中的每一个位都对应着一个特定的信号
-Dialogue: 0,0:19:04.84,0:19:07.06,English,,0,0,0,,Okay so this is why they can't be queued right because 这就是为什么它们不会有排队的说法
-Dialogue: 0,0:19:08.18,0:19:12.38,English,,0,0,0,,There's only one bit for any signal key,there's only one bit in the bit vector 因为每一个信号仅有一个位表示，在位向量里只有一个位
-Dialogue: 0,0:19:12.84,0:19:18.00,English,,0,0,0,,And if we...and when we deliver a signal we're just setting will set that bit the kernel will set that bit 如果我们。。。当我们传递一个信号我们仅仅是在设置，设置那个位，内核会设置那个位
-Dialogue: 0,0:19:18.30,0:19:24.26,English,,0,0,0,,We deliver another signal of the same type, it'll just set that bit again which has no effect 我们传递同类型的另一个信号，它仅仅会再次设置那个位，其实什么都没有做
-Dialogue: 0,0:19:26.80,0:19:32.68,English,,0,0,0,,Now the kernel sets that the bit in pending when the signals delivered and it clears it 当信号被传递过来时，内核设置这个位到待处理中，并且将对应位清零
-Dialogue: 0,0:19:32.80,0:19:34.18,English,,0,0,0,,When the signals received 当信号被接收
-Dialogue: 0,0:19:35.68,0:19:43.22,English,,0,0,0,,And the kernel also provides mechanism for users to block signals with blocked bit vector 内核也向用户提供了可以阻塞信号的阻塞位向量
-Dialogue: 0,0:19:43.22,0:19:49.34,English,,0,0,0,,So the block bit vector is the same size as the pending bit vector turns out it's just a 32 bit int 阻塞位向量与待处理位向量基本相同，它们都是一个 32 位的 int 类型
-Dialogue: 0,0:19:51.86,0:19:54.32,English,,0,0,0,,Okay and it can be set and cleared the bits 它可以被置位也可以被清零
-Dialogue: 0,0:19:54.46,0:19:58.10,English,,0,0,0,,And that can be set and cleared using the sigprocmask system call 使用系统调用 sigprocmask 就可以置位或清零它
-Dialogue: 0,0:19:59.10,0:20:05.18,English,,0,0,0,,Okay now that the blocked in the Linux literature the blocked bit vector is also called the signal mask 在一些 Linux 资料中，阻塞位向量有时也被称为信号掩码
-Dialogue: 0,0:20:10.28,0:20:14.40,English,,0,0,0,,Okay now we want to look in a little more detail about sending and receiving signals 那么我们来看看发送和接收信号的细节
-Dialogue: 0,0:20:14.40,0:20:16.76,English,,0,0,0,,So let's start first with sending signals 我们从发送信号开始
-Dialogue: 0,0:20:18.56,0:20:21.34,English,,0,0,0,,First we need to understand the idea of a process group 我们首先得理解进程组的概念
-Dialogue: 0,0:20:22.48,0:20:25.84,English,,0,0,0,,So every process belongs to exactly one process group 每一个进程都属于某个进程组
-Dialogue: 0,0:20:28.38,0:20:31.48,English,,0,0,0,,And those so here I'm showing a shell that's in process 在这里，我展示的这些，shell 也在一个进程中
-Dialogue: 0,0:20:31.88,0:20:35.38,English,,0,0,0,,It has a process id of 10 and a process group id of 10 它的进程 id 是 10，进程组 id 是 10
-Dialogue: 0,0:20:36.82,0:20:38.92,English,,0,0,0,,The shell created a foreground job shell 创建了一个前台作业
-Dialogue: 0,0:20:41.12,0:20:44.80,English,,0,0,0,,Which has a process id of 20 and a process group id of 20 它的进程 id 是 20，进程组 id 是 20
-Dialogue: 0,0:20:45.34,0:20:51.88,English,,0,0,0,,And then all of the children that this foreground job created have the same process group id of 20 这个前台作业创建的所有子进程都有相同的进程组 id 20
-Dialogue: 0,0:20:53.94,0:20:59.20,English,,0,0,0,,So these process groups can be set by a system call set called the set process group id(setpgid()) 这些进程组可以使用系统调用 setpgid 设置
-Dialogue: 0,0:21:01.30,0:21:06.96,English,,0,0,0,,And you can fetch that process group using the get process group system call 你也可以使用系统调用获取进程组 id
-Dialogue: 0,0:21:07.62,0:21:14.04,English,,0,0,0,,So you can see in this example what this shell is done is it created a foreground child 你可以在例子中看到，shell 做了什么，它创建了一个前台子进程
-Dialogue: 0,0:21:14.04,0:21:22.42,English,,0,0,0,,So it created this child and it changed the process group id to be equal to the process id of the child 它创建了这个子进程并修改了它的进程组 id，使之等于它的进程 id
-Dialogue: 0,0:21:24.06,0:21:27.04,English,,0,0,0,,And then when this child created other child children 当这个子进程创建了其它的子进程时
-Dialogue: 0,0:21:27.68,0:21:30.52,English,,0,0,0,,They just inherited the same process group id 它们会继承相同的进程组 id
-Dialogue: 0,0:21:34.74,0:21:37.34,English,,0,0,0,,Okay now this notion of a process group is useful 这个进程组的概念很有用
-Dialogue: 0,0:21:37.78,0:21:43.26,English,,0,0,0,,Because it allows you to send signals to groups of processes at the same time 这是因为它允许你可以同时给一组进程发送信号
-Dialogue: 0,0:21:43.74,0:21:46.08,English,,0,0,0,,And you can do that with a program called kill 你可以用一个叫 kill 的程序做到
-Dialogue: 0,0:21:46.64,0:21:49.46,English,,0,0,0,,Which is typically in /bin directory 它一般都在 /bin 目录下
-Dialogue: 0,0:21:50.56,0:21:55.60,English,,0,0,0,,And that the kill program you can use the kill program to send an arbitrary signal to 你可以用这个 kill 程序发送一个任意信号给
-Dialogue: 0,0:21:55.78,0:22:00.56,English,,0,0,0,,Either an individual process or all the processes in one process group 给某个进程，或者某个进程组中的所有进程
-Dialogue: 0,0:22:02.88,0:22:10.46,English,,0,0,0,,So let's look at an example this program,this forks program creates two children 我们看一个例子，这个程序创建了两个子进程
-Dialogue: 0,0:22:13.70,0:22:17.96,English,,0,0,0,,And with each of which has a process group of 24817 它们的进程组 id 是 24817
-Dialogue: 0,0:22:18.86,0:22:21.86,English,,0,0,0,,And of course they have different process they have different process ids 当然，它们的进程 id 是不同的
-Dialogue: 0,0:22:23.36,0:22:29.58,English,,0,0,0,,And so if we do a ps we see these two processes running 所以如果我们使用 ps 命令，可以看到有两个进程在运行
-Dialogue: 0,0:22:30.90,0:22:34.50,English,,0,0,0,,And these just go into loop so they'll just run continuously 它们陷入了死循环
-Dialogue: 0,0:22:36.10,0:22:37.50,English,,0,0,0,,Okay now we can 那么
-Dialogue: 0,0:22:40.30,0:22:43.48,English,,0,0,0,,We can use kill to kill an individual process 我们可以使用 kill 来 kill 掉某个进程
-Dialogue: 0,0:22:44.00,0:22:51.08,English,,0,0,0,,For example so if we call it the first argument indicates what signal you want to send 比如，如果我们用第一个参数表示你想传递的信号
-Dialogue: 0,0:22:51.08,0:22:55.30,English,,0,0,0,,So in this case it's signal 9 which is the sigkill signal 在这里，信号 9 是 sigkill 信号
-Dialogue: 0,0:22:55.88,0:23:02.98,English,,0,0,0,,So kill -9 is a very typical,usually if you want to kill processes you just kill -9 kill -9 很常用，如果你想 kill 掉某个进程，那使用 kill -9 准没错
-Dialogue: 0,0:23:03.94,0:23:13.10,English,,0,0,0,,And actually one of my favorite auto lab nicknames for 213 was the nickname was kill - 9 15-213 实际上，我最喜欢的 213 自动实验室的昵称之一是 kill -9 15-213
-Dialogue: 0,0:23:16.10,0:23:23.20,English,,0,0,0,,So but then the second argument is the if it's is the process id 第二个参数是进程的 id
-Dialogue: 0,0:23:23.22,0:23:29.54,English,,0,0,0,,So this is asking the kernel to kill process id 24818 所以这是请求内核 kill 进程 24818
-Dialogue: 0,0:23:30.12,0:23:32.44,English,,0,0,0,,By sending it a sigkill signal 因为传递了 sigkill 信号
-Dialogue: 0,0:23:33.64,0:23:38.58,English,,0,0,0,,Now if the process id is is preceded by a dash 如果在横杠符号之前出现了进程 id
-Dialogue: 0,0:23:40.86,0:23:45.12,English,,0,0,0,,Then it sends a signal to every process in process group 那么它的意思是发送信号给该进程组中的每一个进程
-Dialogue: 0,0:23:45.64,0:23:48.30,English,,0,0,0,,Then it treats this argument as a process group 它是被当作进程组 id 处理的
-Dialogue: 0,0:23:48.78,0:23:52.46,English,,0,0,0,,And it sends a signal to every process in that process group 它会发送信号给进程组中的每一个进程
-Dialogue: 0,0:23:52.96,0:23:58.82,English,,0,0,0,,So in this case it will send a signal to both of these children processes 在这种情况下，它会向这两个子进程都发送信号
-Dialogue: 0,0:24:00.48,0:24:05.40,English,,0,0,0,,And then afterwards we if we do a ps we see that those processes are gone 这时我们再执行 ps，这两个进程都没了
-Dialogue: 0,0:24:05.62,0:24:07.90,English,,0,0,0,,Okay that it really did work that way 好的，的确如此
-Dialogue: 0,0:24:09.78,0:24:15.24,English,,0,0,0,,Now another way to send signals is by typing either ctrl-c or ctrl-z 另一种发送信号的方法是在命令行里
-Dialogue: 0,0:24:15.62,0:24:18.26,English,,0,0,0,,At the to the command line 使用 ctrl-c 或 ctrl-z
-Dialogue: 0,0:24:19.44,0:24:25.50,English,,0,0,0,,Ctrl-c causes the kernel to send a signal to every job in the foreground process group ctrl-c 会使内核向前台进程组下的所有作业发送信号
-Dialogue: 0,0:24:25.84,0:24:35.58,English,,0,0,0,,And ctrl-z causes it to send a sigtstp signal to every job in the foreground process group 而 ctrl-z 会使向所有前台进程组下的作业发送 sigtstp 信号
-Dialogue: 0,0:24:36.38,0:24:39.28,English,,0,0,0,,The default action for sigint is to terminate the process sigint 的默认行为是终止进程
-Dialogue: 0,0:24:39.28,0:24:43.88,English,,0,0,0,,The default action for the sigtstp is to suspend the process stop it sigtstp 信号的默认行为是挂起进程
-Dialogue: 0,0:24:44.34,0:24:48.24,English,,0,0,0,,Until it receives a sig cont a signal 在收到 sigcont 信号之前停止它
-Dialogue: 0,0:24:54.90,0:24:58.58,English,,0,0,0,,So you can see an example of this here we have a program that 这有个例子，我们有这么一个程序
-Dialogue: 0,0:25:00.90,0:25:07.27,English,,0,0,0,,Creates a parent and a child running in the foreground so the parents running in the foreground 创建一个父进程，其一个子进程在前台运行，当然父进程也在前台
-Dialogue: 0,0:25:08.10,0:25:11.04,English,,0,0,0,,Now when we type ctrl-z to the command line 当我们在命令行敲下 ctrl-z
-Dialogue: 0,0:25:12.70,0:25:16.36,English,,0,0,0,,The shell notifies us that it's suspended that process shell 会告诉我们它已经挂起了这个进程
-Dialogue: 0,0:25:16.80,0:25:23.90,English,,0,0,0,,And if we do a ps we can see the parent and the child indeed are suspended 如果我们用 ps，呢么可以看到父进程和子进程都被挂起了
+Dialogue: 0,0:16:47.10,0:16:55.14,English,,0,0,0,,它是一段仅仅在当前进程执行的代码，是你 C 代码里的一个函数，
+Dialogue: 0,0:16:56.18,0:17:01.52,English,,0,0,0,,当这段信号处理程序执行完，它会返回到下一条指令
+Dialogue: 0,0:17:02.22,0:17:04.00,English,,0,0,0,,接着我们继续
+Dialogue: 0,0:17:04.24,0:17:08.70,English,,0,0,0,,好吧，这就像一次中断，我们先暂停一下
+Dialogue: 0,0:17:09.36,0:17:16.22,English,,0,0,0,,在继续之前，我们要在处理程序里做什么呢
+Dialogue: 0,0:17:18.98,0:17:21.16,English,,0,0,0,,我们说这个信号现在是待处理的
+Dialogue: 0,0:17:21.80,0:17:25.98,English,,0,0,0,,如果它已经由内核发出但你还没有收到
+Dialogue: 0,0:17:27.98,0:17:34.92,English,,0,0,0,,那么如果在某些给定的时刻，只能有一个相同类型的待处理信号
+Dialogue: 0,0:17:36.84,0:17:40.70,English,,0,0,0,,这对使用信号来说有很大影响
+Dialogue: 0,0:17:40.70,0:17:47.32,English,,0,0,0,,因为你无法随时提醒信号的接收，所以只能有一个待处理的 sigchild 信号
+Dialogue: 0,0:17:47.66,0:17:51.02,English,,0,0,0,,信号的例子
+Dialogue: 0,0:17:51.84,0:17:55.38,English,,0,0,0,,如果还有后续的 sigchild 信号被发送
+Dialogue: 0,0:17:55.94,0:18:00.51,English,,0,0,0,,这上面已经写了，你可以想到，它是没有影响的
+Dialogue: 0,0:18:00.78,0:18:04.04,English,,0,0,0,,如果已经有一个待处理的信号，那新来的就会被丢弃
+Dialogue: 0,0:18:04.04,0:18:06.66,English,,0,0,0,,它们不存在排队的说法
+Dialogue: 0,0:18:09.58,0:18:12.50,English,,0,0,0,,现在我们的进程可以阻塞某些信号的接收
+Dialogue: 0,0:18:13.62,0:18:16.42,English,,0,0,0,,它没办法阻止信号的传递
+Dialogue: 0,0:18:17.04,0:18:23.76,English,,0,0,0,,但是它可以阻止进程在收到信号后的响应
+Dialogue: 0,0:18:27.84,0:18:34.10,English,,0,0,0,,所以被阻塞的信号可以被传递，但在阻塞解除前不能被接收
+Dialogue: 0,0:18:38.88,0:18:41.30,English,,0,0,0,,还有，待处理信号最多被接收一次
+Dialogue: 0,0:18:46.34,0:18:49.36,English,,0,0,0,,现在内核会跟踪这些待处理和阻塞的进程
+Dialogue: 0,0:18:49.90,0:18:54.42,English,,0,0,0,,位向量中的信号会调用它们
+Dialogue: 0,0:18:55.24,0:18:58.62,English,,0,0,0,,待处理表示所有待处理信号的集合
+Dialogue: 0,0:18:58.74,0:19:04.24,English,,0,0,0,,待处理位向量中的每一个位都对应着一个特定的信号
+Dialogue: 0,0:19:04.84,0:19:07.06,English,,0,0,0,,这就是为什么它们不会有排队的说法
+Dialogue: 0,0:19:08.18,0:19:12.38,English,,0,0,0,,因为每一个信号仅有一个位表示，在位向量里只有一个位
+Dialogue: 0,0:19:12.84,0:19:18.00,English,,0,0,0,,如果我们。。。当我们传递一个信号我们仅仅是在设置，设置那个位，内核会设置那个位
+Dialogue: 0,0:19:18.30,0:19:24.26,English,,0,0,0,,我们传递同类型的另一个信号，它仅仅会再次设置那个位，其实什么都没有做
+Dialogue: 0,0:19:26.80,0:19:32.68,English,,0,0,0,,当信号被传递过来时，内核设置这个位到待处理中，并且将对应位清零
+Dialogue: 0,0:19:32.80,0:19:34.18,English,,0,0,0,,当信号被接收
+Dialogue: 0,0:19:35.68,0:19:43.22,English,,0,0,0,,内核也向用户提供了可以阻塞信号的阻塞位向量
+Dialogue: 0,0:19:43.22,0:19:49.34,English,,0,0,0,,阻塞位向量与待处理位向量基本相同，它们都是一个 32 位的 int 类型
+Dialogue: 0,0:19:51.86,0:19:54.32,English,,0,0,0,,它可以被置位也可以被清零
+Dialogue: 0,0:19:54.46,0:19:58.10,English,,0,0,0,,使用系统调用 sigprocmask 就可以置位或清零它
+Dialogue: 0,0:19:59.10,0:20:05.18,English,,0,0,0,,在一些 Linux 资料中，阻塞位向量有时也被称为信号掩码
+Dialogue: 0,0:20:10.28,0:20:14.40,English,,0,0,0,,那么我们来看看发送和接收信号的细节
+Dialogue: 0,0:20:14.40,0:20:16.76,English,,0,0,0,,我们从发送信号开始
+Dialogue: 0,0:20:18.56,0:20:21.34,English,,0,0,0,,我们首先得理解进程组的概念
+Dialogue: 0,0:20:22.48,0:20:25.84,English,,0,0,0,,每一个进程都属于某个进程组
+Dialogue: 0,0:20:28.38,0:20:31.48,English,,0,0,0,,在这里，我展示的这些，shell 也在一个进程中
+Dialogue: 0,0:20:31.88,0:20:35.38,English,,0,0,0,,它的进程 id 是 10，进程组 id 是 10
+Dialogue: 0,0:20:36.82,0:20:38.92,English,,0,0,0,,创建了一个前台作业
+Dialogue: 0,0:20:41.12,0:20:44.80,English,,0,0,0,,它的进程 id 是 20，进程组 id 是 20
+Dialogue: 0,0:20:45.34,0:20:51.88,English,,0,0,0,,这个前台作业创建的所有子进程都有相同的进程组 id 20
+Dialogue: 0,0:20:53.94,0:20:59.20,English,,0,0,0,,这些进程组可以使用系统调用 setpgid 设置
+Dialogue: 0,0:21:01.30,0:21:06.96,English,,0,0,0,,你也可以使用系统调用获取进程组 id
+Dialogue: 0,0:21:07.62,0:21:14.04,English,,0,0,0,,你可以在例子中看到，shell 做了什么，它创建了一个前台子进程
+Dialogue: 0,0:21:14.04,0:21:22.42,English,,0,0,0,,它创建了这个子进程并修改了它的进程组 id，使之等于它的进程 id
+Dialogue: 0,0:21:24.06,0:21:27.04,English,,0,0,0,,当这个子进程创建了其它的子进程时
+Dialogue: 0,0:21:27.68,0:21:30.52,English,,0,0,0,,它们会继承相同的进程组 id
+Dialogue: 0,0:21:34.74,0:21:37.34,English,,0,0,0,,这个进程组的概念很有用
+Dialogue: 0,0:21:37.78,0:21:43.26,English,,0,0,0,,这是因为它允许你可以同时给一组进程发送信号
+Dialogue: 0,0:21:43.74,0:21:46.08,English,,0,0,0,,你可以用一个叫 kill 的程序做到
+Dialogue: 0,0:21:46.64,0:21:49.46,English,,0,0,0,,它一般都在 /bin 目录下
+Dialogue: 0,0:21:50.56,0:21:55.60,English,,0,0,0,,你可以用这个 kill 程序发送一个任意信号给
+Dialogue: 0,0:21:55.78,0:22:00.56,English,,0,0,0,,给某个进程，或者某个进程组中的所有进程
+Dialogue: 0,0:22:02.88,0:22:10.46,English,,0,0,0,,我们看一个例子，这个程序创建了两个子进程
+Dialogue: 0,0:22:13.70,0:22:17.96,English,,0,0,0,,它们的进程组 id 是 24817
+Dialogue: 0,0:22:18.86,0:22:21.86,English,,0,0,0,,当然，它们的进程 id 是不同的
+Dialogue: 0,0:22:23.36,0:22:29.58,English,,0,0,0,,所以如果我们使用 ps 命令，可以看到有两个进程在运行
+Dialogue: 0,0:22:30.90,0:22:34.50,English,,0,0,0,,它们陷入了死循环
+Dialogue: 0,0:22:36.10,0:22:37.50,English,,0,0,0,,那么
+Dialogue: 0,0:22:40.30,0:22:43.48,English,,0,0,0,,我们可以使用 kill 来 kill 掉某个进程
+Dialogue: 0,0:22:44.00,0:22:51.08,English,,0,0,0,,比如，如果我们用第一个参数表示你想传递的信号
+Dialogue: 0,0:22:51.08,0:22:55.30,English,,0,0,0,,在这里，信号 9 是 sigkill 信号
+Dialogue: 0,0:22:55.88,0:23:02.98,English,,0,0,0,,kill -9 很常用，如果你想 kill 掉某个进程，那使用 kill -9 准没错
+Dialogue: 0,0:23:03.94,0:23:13.10,English,,0,0,0,,实际上，我最喜欢的 213 自动实验室的昵称之一是 kill -9 15-213
+Dialogue: 0,0:23:16.10,0:23:23.20,English,,0,0,0,,第二个参数是进程的 id
+Dialogue: 0,0:23:23.22,0:23:29.54,English,,0,0,0,,所以这是请求内核 kill 进程 24818
+Dialogue: 0,0:23:30.12,0:23:32.44,English,,0,0,0,,因为传递了 sigkill 信号
+Dialogue: 0,0:23:33.64,0:23:38.58,English,,0,0,0,,如果在横杠符号之前出现了进程 id
+Dialogue: 0,0:23:40.86,0:23:45.12,English,,0,0,0,,那么它的意思是发送信号给该进程组中的每一个进程
+Dialogue: 0,0:23:45.64,0:23:48.30,English,,0,0,0,,它是被当作进程组 id 处理的
+Dialogue: 0,0:23:48.78,0:23:52.46,English,,0,0,0,,它会发送信号给进程组中的每一个进程
+Dialogue: 0,0:23:52.96,0:23:58.82,English,,0,0,0,,在这种情况下，它会向这两个子进程都发送信号
+Dialogue: 0,0:24:00.48,0:24:05.40,English,,0,0,0,,这时我们再执行 ps，这两个进程都没了
+Dialogue: 0,0:24:05.62,0:24:07.90,English,,0,0,0,,好的，的确如此
+Dialogue: 0,0:24:09.78,0:24:15.24,English,,0,0,0,,另一种发送信号的方法是在命令行里
+Dialogue: 0,0:24:15.62,0:24:18.26,English,,0,0,0,,使用 ctrl-c 或 ctrl-z
+Dialogue: 0,0:24:19.44,0:24:25.50,English,,0,0,0,,会使内核向前台进程组下的所有作业发送信号
+Dialogue: 0,0:24:25.84,0:24:35.58,English,,0,0,0,,而 ctrl-z 会使向所有前台进程组下的作业发送 sigtstp 信号
+Dialogue: 0,0:24:36.38,0:24:39.28,English,,0,0,0,,sigint 的默认行为是终止进程
+Dialogue: 0,0:24:39.28,0:24:43.88,English,,0,0,0,,sigtstp 信号的默认行为是挂起进程
+Dialogue: 0,0:24:44.34,0:24:48.24,English,,0,0,0,,在收到 sigcont 信号之前停止它
+Dialogue: 0,0:24:54.90,0:24:58.58,English,,0,0,0,,这有个例子，我们有这么一个程序
+Dialogue: 0,0:25:00.90,0:25:07.27,English,,0,0,0,,创建一个父进程，其一个子进程在前台运行，当然父进程也在前台
+Dialogue: 0,0:25:08.10,0:25:11.04,English,,0,0,0,,当我们在命令行敲下 ctrl-z
+Dialogue: 0,0:25:12.70,0:25:16.36,English,,0,0,0,,会告诉我们它已经挂起了这个进程
+Dialogue: 0,0:25:16.80,0:25:23.90,English,,0,0,0,,如果我们用 ps，呢么可以看到父进程和子进程都被挂起了
 Dialogue: 0,0:25:23.94,0:25:28.72,English,,0,0,0,,So the ps indicates that it's suspended or stopped using T
-Dialogue: 0,0:25:33.04,0:25:37.04,English,,0,0,0,,Now next we type in the built in the shell built in which is fg 下面我们用 shell 内建的指令 fg
-Dialogue: 0,0:25:37.16,0:25:42.36,English,,0,0,0,,And fg restores those suspended jobs to the foreground fg 把这些被挂起的进程恢复到后台运行
-Dialogue: 0,0:25:44.70,0:25:50.06,English,,0,0,0,,So after typing fg now we're running this our program again in the foreground 后面我们再输入 fg，我们的作业又到前台运行了
-Dialogue: 0,0:25:51.58,0:25:54.28,English,,0,0,0,,And then we can kill it by typing ctrl-c 接下来我们用 ctrl-c kill 掉它
-Dialogue: 0,0:25:54.78,0:25:58.84,English,,0,0,0,,Which elicits a sigint whose default action is to terminate 这会触发 sigint，它的默认行为是终止进程
-Dialogue: 0,0:25:59.18,0:26:03.30,English,,0,0,0,,And then when we do a ps we see that indeed that's that they're gone 再使用 ps，它们都没了
-Dialogue: 0,0:26:06.96,0:26:11.40,English,,0,0,0,,Now the third way that we can send signals is by using the kill system call 第三种发送信号的方式是使用系统调用 kill
-Dialogue: 0,0:26:15.44,0:26:17.60,English,,0,0,0,,So here's an example of how that works 这是展示它如何工作的例子
-Dialogue: 0,0:26:18.04,0:26:21.82,English,,0,0,0,,So in this example we're creating N children 在这个例子中，我们创建了 N 个子进程
-Dialogue: 0,0:26:23.00,0:26:25.14,English,,0,0,0,,Now each of which goes into an infinite loop 且都陷入了死循环
-Dialogue: 0,0:26:25.84,0:26:29.90,English,,0,0,0,,And we're recording this the process id of each child that we create 我们记录了所有创建的进程的进程 id
-Dialogue: 0,0:26:31.92,0:26:34.90,English,,0,0,0,,And then in it we go in...another loop we go through 然后我们到。。到另一个循环去
-Dialogue: 0,0:26:34.90,0:26:40.02,English,,0,0,0,,And we kill each of those child processes with by using the kill function 我们使用 kill 函数 kill 掉了所有那些子进程
+Dialogue: 0,0:25:33.04,0:25:37.04,English,,0,0,0,,下面我们用 shell 内建的指令 fg
+Dialogue: 0,0:25:37.16,0:25:42.36,English,,0,0,0,,fg 把这些被挂起的进程恢复到后台运行
+Dialogue: 0,0:25:44.70,0:25:50.06,English,,0,0,0,,后面我们再输入 fg，我们的作业又到前台运行了
+Dialogue: 0,0:25:51.58,0:25:54.28,English,,0,0,0,,接下来我们用 ctrl-c kill 掉它
+Dialogue: 0,0:25:54.78,0:25:58.84,English,,0,0,0,,这会触发 sigint，它的默认行为是终止进程
+Dialogue: 0,0:25:59.18,0:26:03.30,English,,0,0,0,,再使用 ps，它们都没了
+Dialogue: 0,0:26:06.96,0:26:11.40,English,,0,0,0,,第三种发送信号的方式是使用系统调用 kill
+Dialogue: 0,0:26:15.44,0:26:17.60,English,,0,0,0,,这是展示它如何工作的例子
+Dialogue: 0,0:26:18.04,0:26:21.82,English,,0,0,0,,在这个例子中，我们创建了 N 个子进程
+Dialogue: 0,0:26:23.00,0:26:25.14,English,,0,0,0,,且都陷入了死循环
+Dialogue: 0,0:26:25.84,0:26:29.90,English,,0,0,0,,我们记录了所有创建的进程的进程 id
+Dialogue: 0,0:26:31.92,0:26:34.90,English,,0,0,0,,然后我们到。。到另一个循环去
+Dialogue: 0,0:26:34.90,0:26:40.02,English,,0,0,0,,我们使用 kill 函数 kill 掉了所有那些子进程
 Dialogue: 0,0:26:40.74,0:26:45.56,English,,0,0,0,,Passing it the process id and the signal that we want sent to that process
-Dialogue: 0,0:26:47.72,0:26:52.24,English,,0,0,0,,Okay and then we do our due diligence and reap each one of those 好的，我们回收了所有应该被回收的
-Dialogue: 0,0:26:52.64,0:26:54.64,English,,0,0,0,,Children that we've terminated 被我们终止的子进程
+Dialogue: 0,0:26:47.72,0:26:52.24,English,,0,0,0,,好的，我们回收了所有应该被回收的
+Dialogue: 0,0:26:52.64,0:26:54.64,English,,0,0,0,,被我们终止的子进程
 Dialogue: 0,0:26:55.56,0:27:02.28,English,,0,0,0,,Now this isn't strictly necessary because we're going to exit as soon as this fork12 function
 Dialogue: 0,0:27:02.80,0:27:06.58,English,,0,0,0,,Returns we're going to exit the code so but we're just being
 Dialogue: 0,0:27:07.38,0:27:11.90,English,,0,0,0,,You know careful here and maybe a little pedantic but
