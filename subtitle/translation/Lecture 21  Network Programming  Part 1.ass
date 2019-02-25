@@ -30,40 +30,75 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 0,0:00:00.80,0:00:02.02,English,,0,0,0,,Good afternoon everyone
 Dialogue: 0,0:00:00.80,0:00:02.02,Chinese,,0,0,0,,大家下午好
 Dialogue: 0,0:00:04.12,0:00:07.60,English,,0,0,0,,So today we're going to transition into a topic that
+Dialogue: 0,0:00:04.12,0:00:07.60,Chinese,,0,0,0,,今天我们将过渡到一个新的章节
 Dialogue: 0,0:00:08.10,0:00:17.24,English,,0,0,0,,To me is sort of the reward for having slugged through all the low-level stuff you've done up to this point
+Dialogue: 0,0:00:08.10,0:00:17.24,Chinese,,0,0,0,,对我来说，这是看完到目前为止你们完成的所有低级的作业的奖励
 Dialogue: 0,0:00:17.68,0:00:23.54,English,,0,0,0,,To be able to really understand and become adept at programming network software
+Dialogue: 0,0:00:17.68,0:00:23.54,Chinese,,0,0,0,,我们的目标是能真正理解和熟练的编写网络软件
 Dialogue: 0,0:00:24.12,0:00:27.20,English,,0,0,0,,Now there's a lot to networking that we're not going to cover
+Dialogue: 0,0:00:24.12,0:00:27.20,Chinese,,0,0,0,,目前有些关于网络设计的内容我们不准备完全掌握
 Dialogue: 0,0:00:27.20,0:00:29.86,English,,0,0,0,,But at least to have some familiarity with it
+Dialogue: 0,0:00:27.20,0:00:29.86,Chinese,,0,0,0,,但我们至少应对它有些熟悉
 Dialogue: 0,0:00:30.46,0:00:34.88,English,,0,0,0,,So I know that a lot of you are sort of in the midst of trying to figure out
+Dialogue: 0,0:00:30.46,0:00:34.88,Chinese,,0,0,0,,我知道你们中很多人有点沉浸于找出
 Dialogue: 0,0:00:34.88,0:00:37.12,English,,0,0,0,,How to make malloc run and make it run fast
+Dialogue: 0,0:00:34.88,0:00:37.12,Chinese,,0,0,0,,让储存管理器运行并让它运行的更快的方法
 Dialogue: 0,0:00:37.92,0:00:43.52,English,,0,0,0,,And so this topic is really more pointing toward the future
+Dialogue: 0,0:00:37.92,0:00:43.52,Chinese,,0,0,0,,然而这个章节在长远看来更重要
 Dialogue: 0,0:00:43.52,0:00:46.70,English,,0,0,0,,But it's very relevant to the final web lab you'll do for the course
+Dialogue: 0,0:00:43.52,0:00:46.70,Chinese,,0,0,0,,而且它和你们将要在这个课程中完成的期末网络实验关系很大
 Dialogue: 0,0:00:47.58,0:00:50.32,English,,0,0,0,,And so we're starting to get ready for that
+Dialogue: 0,0:00:47.58,0:00:50.32,Chinese,,0,0,0,,因此我们要准备好迎接它
 Dialogue: 0,0:00:56.90,0:01:00.58,English,,0,0,0,,So like I said this course is not really a full course in networking
+Dialogue: 0,0:00:56.90,0:01:00.58,Chinese,,0,0,0,,就像我说的，这门课程并不是一门完整的网络设计课程
 Dialogue: 0,0:01:00.58,0:01:03.38,English,,0,0,0,,There's many other courses at the university that are
+Dialogue: 0,0:01:00.58,0:01:03.38,Chinese,,0,0,0,,在大学期间还有很多其他课程(与网络设计有关)
 Dialogue: 0,0:01:03.80,0:01:07.28,English,,0,0,0,,And so what we're going to try and do is give you just a little flavor of it
+Dialogue: 0,0:01:03.80,0:01:07.28,Chinese,,0,0,0,,所以我们将要做的只是让你们稍微了解一下它
 Dialogue: 0,0:01:07.28,0:01:10.86,English,,0,0,0,,And particularly as everything in the course of programmers perspective
+Dialogue: 0,0:01:07.28,0:01:10.86,Chinese,,0,0,0,,就像我们在这15-213门课的大部分时间做的事情一样
 Dialogue: 0,0:01:11.04,0:01:20.80,English,,0,0,0,,So how you as a software developer would make use of the C level api's that are relevant to network programming
+Dialogue: 0,0:01:11.04,0:01:20.80,Chinese,,0,0,0,,那么，作为一个软件开发者，你们准备怎样利用与网络编程有关的C语言级的api
 Dialogue: 0,0:01:24.44,0:01:26.74,English,,0,0,0,,And why isn't this working
+Dialogue: 0,0:01:24.44,0:01:26.74,Chinese,,0,0,0,,它为什么不灵了
 Dialogue: 0,0:01:31.68,0:01:32.70,English,,0,0,0,,Okay so
+Dialogue: 0,0:01:31.68,0:01:32.70,Chinese,,0,0,0,,好的，那么
 Dialogue: 0,0:01:33.68,0:01:39.92,English,,0,0,0,,The idea behind most networking systems is what's called  the client-server model
+Dialogue: 0,0:01:33.68,0:01:39.92,Chinese,,0,0,0,,大多数网络系统都是基于客户端-服务器编程模型
 Dialogue: 0,0:01:40.44,0:01:44.38,English,,0,0,0,,And the idea is that there's a service out there that you want access to
+Dialogue: 0,0:01:40.44,0:01:44.38,Chinese,,0,0,0,,主要的思路就你想要使用某项服务
 Dialogue: 0,0:01:44.88,0:01:49.58,English,,0,0,0,,And you as a customer or a client are making a request to that server
+Dialogue: 0,0:01:44.88,0:01:49.58,Chinese,,0,0,0,,然后你作为一个顾客或是一个客户对那台服务器发出一个请求
 Dialogue: 0,0:01:49.72,0:01:54.14,English,,0,0,0,,So an example would be when you order something on amazon
+Dialogue: 0,0:01:49.72,0:01:54.14,Chinese,,0,0,0,,举个例子，当你在亚马逊上订购一些东西时
 Dialogue: 0,0:01:54.20,0:01:56.34,English,,0,0,0,,Amazon has a bunch of servers
+Dialogue: 0,0:01:54.20,0:01:56.34,Chinese,,0,0,0,,亚马逊有一群服务器
 Dialogue: 0,0:01:57.10,0:02:04.12,English,,0,0,0,,And you go to your web browser and contacts the amazon a web server
+Dialogue: 0,0:01:57.10,0:02:04.12,Chinese,,0,0,0,,你通过浏览器联系亚马逊的一台网络服务器
 Dialogue: 0,0:02:04.50,0:02:08.90,English,,0,0,0,,And you make transactions you request something you provide information
+Dialogue: 0,0:02:04.50,0:02:08.90,Chinese,,0,0,0,,你做了一些交易，请求了一些东西，提供了一些信息
 Dialogue: 0,0:02:09.32,0:02:14.56,English,,0,0,0,,And it gives you back pretty pictures of things you might want to buy
+Dialogue: 0,0:02:09.32,0:02:14.56,Chinese,,0,0,0,,然后它给了你一些你可能想要买的东西的精美图片
 Dialogue: 0,0:02:14.84,0:02:17.06,English,,0,0,0,,It acknowledges your credit card transactions
+Dialogue: 0,0:02:14.84,0:02:17.06,Chinese,,0,0,0,,它承认你的信用卡交易
 Dialogue: 0,0:02:17.42,0:02:21.20,English,,0,0,0,,Those are all very classic client-server types of interactions
+Dialogue: 0,0:02:17.42,0:02:21.20,Chinese,,0,0,0,,那些就是很经典的客户端-服务器型互动
 Dialogue: 0,0:02:21.64,0:02:24.36,English,,0,0,0,,You as the client,amazon is the server
+Dialogue: 0,0:02:21.64,0:02:24.36,Chinese,,0,0,0,,你就是客户端，亚马逊就是服务器
 Dialogue: 0,0:02:24.84,0:02:27.36,English,,0,0,0,,Another interesting example is a telephone
+Dialogue: 0,0:02:24.84,0:02:27.36,Chinese,,0,0,0,,另一个有趣的例子是电话
 Dialogue: 0,0:02:28.14,0:02:32.40,English,,0,0,0,,So if you think about it a telephone is both a client and a server in that
+Dialogue: 0,0:02:28.14,0:02:32.40,Chinese,,0,0,0,,如果你认为电话既包含了客户端又包含了服务器
 Dialogue: 0,0:02:33.18,0:02:36.62,English,,0,0,0,,When I'm making a placing a call to somebody else
+Dialogue: 0,0:02:33.18,0:02:36.62,Chinese,,0,0,0,,当我给其他人拨一通电话时
 Dialogue: 0,0:02:37.08,0:02:41.46,English,,0,0,0,,I'm the client and that person's phone is the server right
+Dialogue: 0,0:02:37.08,0:02:41.46,Chinese,,0,0,0,,我这边的电话是客户端，而他的电话是服务器，对吧
 Dialogue: 0,0:02:41.96,0:02:45.92,English,,0,0,0,,It's sitting there waiting for calls to come in
+Dialogue: 0,0:02:41.96,0:02:45.92,Chinese,,0,0,0,,它就在那里等待通话请求进来
 Dialogue: 0,0:02:46.44,0:02:49.42,English,,0,0,0,,And when that call comes in it makes a connection
+Dialogue: 0,0:02:46.44,0:02:49.42,Chinese,,0,0,0,,然后当通话进来时就形成了一个连接
 Dialogue: 0,0:02:49.90,0:02:54.86,English,,0,0,0,,We talk over the phone and then I hang up either side hangs up
+Dialogue: 0,0:02:49.90,0:02:54.86,Chinese,,0,0,0,,我们通过电话交谈，然后我挂掉电话，或是任意一边挂掉电话
 Dialogue: 0,0:02:54.94,0:02:59.92,English,,0,0,0,,So there's a lot of instances out there of some variation of client and server
 Dialogue: 0,0:02:59.92,0:03:06.76,English,,0,0,0,,And it's a much richer idea in that you can often switch back and forth  the roles of those two parties
 Dialogue: 0,0:03:06.88,0:03:15.18,English,,0,0,0,,But it's a pretty universal and a ubiquitous way of thinking about how to set up a network system
