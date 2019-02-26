@@ -32,7 +32,7 @@ Dialogue: 0,0:00:00.80,0:00:02.02,Chinese,,0,0,0,,大家下午好
 Dialogue: 0,0:00:04.12,0:00:07.60,English,,0,0,0,,So today we're going to transition into a topic that
 Dialogue: 0,0:00:04.12,0:00:07.60,Chinese,,0,0,0,,今天我们将过渡到一个新的章节
 Dialogue: 0,0:00:08.10,0:00:17.24,English,,0,0,0,,To me is sort of the reward for having slugged through all the low-level stuff you've done up to this point
-Dialogue: 0,0:00:08.10,0:00:17.24,Chinese,,0,0,0,,对我来说，这是看完到目前为止你们完成的所有低级的作业的奖励
+Dialogue: 0,0:00:08.10,0:00:17.24,Chinese,,0,0,0,,对我来说,这是看完到目前为止你们完成的所有低级的作业的奖励
 Dialogue: 0,0:00:17.68,0:00:23.54,English,,0,0,0,,To be able to really understand and become adept at programming network software
 Dialogue: 0,0:00:17.68,0:00:23.54,Chinese,,0,0,0,,我们的目标是能真正理解和熟练的编写网络软件
 Dialogue: 0,0:00:24.12,0:00:27.20,English,,0,0,0,,Now there's a lot to networking that we're not going to cover
@@ -50,33 +50,33 @@ Dialogue: 0,0:00:43.52,0:00:46.70,Chinese,,0,0,0,,而且它和你们将要在这
 Dialogue: 0,0:00:47.58,0:00:50.32,English,,0,0,0,,And so we're starting to get ready for that
 Dialogue: 0,0:00:47.58,0:00:50.32,Chinese,,0,0,0,,因此我们要准备好迎接它
 Dialogue: 0,0:00:56.90,0:01:00.58,English,,0,0,0,,So like I said this course is not really a full course in networking
-Dialogue: 0,0:00:56.90,0:01:00.58,Chinese,,0,0,0,,就像我说的，这门课程并不是一门完整的网络设计课程
+Dialogue: 0,0:00:56.90,0:01:00.58,Chinese,,0,0,0,,就像我说的,这门课程并不是一门完整的网络设计课程
 Dialogue: 0,0:01:00.58,0:01:03.38,English,,0,0,0,,There's many other courses at the university that are
 Dialogue: 0,0:01:00.58,0:01:03.38,Chinese,,0,0,0,,在大学期间还有很多其他课程(与网络设计有关)
 Dialogue: 0,0:01:03.80,0:01:07.28,English,,0,0,0,,And so what we're going to try and do is give you just a little flavor of it
-Dialogue: 0,0:01:03.80,0:01:07.28,Chinese,,0,0,0,,所以我们将要做的只是让你们稍微了解一下它
+Dialogue: 0,0:01:03.80,0:01:07.28,Chinese,,0,0,0,,所以我们将要做的只是让你们对它有一定的了解
 Dialogue: 0,0:01:07.28,0:01:10.86,English,,0,0,0,,And particularly as everything in the course of programmers perspective
 Dialogue: 0,0:01:07.28,0:01:10.86,Chinese,,0,0,0,,就像我们在这15-213门课的大部分时间做的事情一样
 Dialogue: 0,0:01:11.04,0:01:20.80,English,,0,0,0,,So how you as a software developer would make use of the C level api's that are relevant to network programming
-Dialogue: 0,0:01:11.04,0:01:20.80,Chinese,,0,0,0,,那么，作为一个软件开发者，你们准备怎样利用与网络编程有关的C语言级的api
+Dialogue: 0,0:01:11.04,0:01:20.80,Chinese,,0,0,0,,那么,作为一个软件开发者,你们准备怎样利用与网络编程有关的 C 语言级的 api
 Dialogue: 0,0:01:24.44,0:01:26.74,English,,0,0,0,,And why isn't this working
 Dialogue: 0,0:01:24.44,0:01:26.74,Chinese,,0,0,0,,它为什么不灵了
 Dialogue: 0,0:01:31.68,0:01:32.70,English,,0,0,0,,Okay so
 Dialogue: 0,0:01:31.68,0:01:32.70,Chinese,,0,0,0,,好的，那么
 Dialogue: 0,0:01:33.68,0:01:39.92,English,,0,0,0,,The idea behind most networking systems is what's called  the client-server model
-Dialogue: 0,0:01:33.68,0:01:39.92,Chinese,,0,0,0,,大多数网络系统都是基于客户端-服务器编程模型
+Dialogue: 0,0:01:33.68,0:01:39.92,Chinese,,0,0,0,,大多数网络系统都是基于客户端-服务器模型编写的
 Dialogue: 0,0:01:40.44,0:01:44.38,English,,0,0,0,,And the idea is that there's a service out there that you want access to
 Dialogue: 0,0:01:40.44,0:01:44.38,Chinese,,0,0,0,,主要的思路就你想要使用某项服务
 Dialogue: 0,0:01:44.88,0:01:49.58,English,,0,0,0,,And you as a customer or a client are making a request to that server
 Dialogue: 0,0:01:44.88,0:01:49.58,Chinese,,0,0,0,,然后你作为一个顾客或是一个客户对那台服务器发出一个请求
 Dialogue: 0,0:01:49.72,0:01:54.14,English,,0,0,0,,So an example would be when you order something on amazon
-Dialogue: 0,0:01:49.72,0:01:54.14,Chinese,,0,0,0,,举个例子，当你在亚马逊上订购一些东西时
+Dialogue: 0,0:01:49.72,0:01:54.14,Chinese,,0,0,0,,举个例子,当你在亚马逊上订购一些东西时
 Dialogue: 0,0:01:54.20,0:01:56.34,English,,0,0,0,,Amazon has a bunch of servers
 Dialogue: 0,0:01:54.20,0:01:56.34,Chinese,,0,0,0,,亚马逊有一群服务器
 Dialogue: 0,0:01:57.10,0:02:04.12,English,,0,0,0,,And you go to your web browser and contacts the amazon a web server
 Dialogue: 0,0:01:57.10,0:02:04.12,Chinese,,0,0,0,,你通过浏览器联系亚马逊的一台网络服务器
 Dialogue: 0,0:02:04.50,0:02:08.90,English,,0,0,0,,And you make transactions you request something you provide information
-Dialogue: 0,0:02:04.50,0:02:08.90,Chinese,,0,0,0,,你做了一些交易，请求了一些东西，提供了一些信息
+Dialogue: 0,0:02:04.50,0:02:08.90,Chinese,,0,0,0,,你做了一些交易,请求了一些东西,提供了一些信息
 Dialogue: 0,0:02:09.32,0:02:14.56,English,,0,0,0,,And it gives you back pretty pictures of things you might want to buy
 Dialogue: 0,0:02:09.32,0:02:14.56,Chinese,,0,0,0,,然后它给了你一些你可能想要买的东西的精美图片
 Dialogue: 0,0:02:14.84,0:02:17.06,English,,0,0,0,,It acknowledges your credit card transactions
@@ -84,7 +84,7 @@ Dialogue: 0,0:02:14.84,0:02:17.06,Chinese,,0,0,0,,它承认你的信用卡交易
 Dialogue: 0,0:02:17.42,0:02:21.20,English,,0,0,0,,Those are all very classic client-server types of interactions
 Dialogue: 0,0:02:17.42,0:02:21.20,Chinese,,0,0,0,,那些就是很经典的客户端-服务器型互动
 Dialogue: 0,0:02:21.64,0:02:24.36,English,,0,0,0,,You as the client,amazon is the server
-Dialogue: 0,0:02:21.64,0:02:24.36,Chinese,,0,0,0,,你就是客户端，亚马逊就是服务器
+Dialogue: 0,0:02:21.64,0:02:24.36,Chinese,,0,0,0,,你就是客户端,亚马逊就是服务器
 Dialogue: 0,0:02:24.84,0:02:27.36,English,,0,0,0,,Another interesting example is a telephone
 Dialogue: 0,0:02:24.84,0:02:27.36,Chinese,,0,0,0,,另一个有趣的例子是电话
 Dialogue: 0,0:02:28.14,0:02:32.40,English,,0,0,0,,So if you think about it a telephone is both a client and a server in that
@@ -92,63 +92,113 @@ Dialogue: 0,0:02:28.14,0:02:32.40,Chinese,,0,0,0,,如果你认为电话既包含
 Dialogue: 0,0:02:33.18,0:02:36.62,English,,0,0,0,,When I'm making a placing a call to somebody else
 Dialogue: 0,0:02:33.18,0:02:36.62,Chinese,,0,0,0,,当我给其他人拨一通电话时
 Dialogue: 0,0:02:37.08,0:02:41.46,English,,0,0,0,,I'm the client and that person's phone is the server right
-Dialogue: 0,0:02:37.08,0:02:41.46,Chinese,,0,0,0,,我这边的电话是客户端，而他的电话是服务器，对吧
+Dialogue: 0,0:02:37.08,0:02:41.46,Chinese,,0,0,0,,我这边的电话是客户端,而他的电话是服务器,对吧
 Dialogue: 0,0:02:41.96,0:02:45.92,English,,0,0,0,,It's sitting there waiting for calls to come in
 Dialogue: 0,0:02:41.96,0:02:45.92,Chinese,,0,0,0,,它就在那里等待通话请求进来
 Dialogue: 0,0:02:46.44,0:02:49.42,English,,0,0,0,,And when that call comes in it makes a connection
-Dialogue: 0,0:02:46.44,0:02:49.42,Chinese,,0,0,0,,然后当通话进来时就形成了一个连接
+Dialogue: 0,0:02:46.44,0:02:49.42,Chinese,,0,0,0,,当通话进来时就创建了一个连接
 Dialogue: 0,0:02:49.90,0:02:54.86,English,,0,0,0,,We talk over the phone and then I hang up either side hangs up
-Dialogue: 0,0:02:49.90,0:02:54.86,Chinese,,0,0,0,,我们通过电话交谈，然后我挂掉电话，或是任意一边挂掉电话
+Dialogue: 0,0:02:49.90,0:02:54.86,Chinese,,0,0,0,,我们通过电话交谈,然后我挂掉电话,或是任意一边挂掉电话
 Dialogue: 0,0:02:54.94,0:02:59.92,English,,0,0,0,,So there's a lot of instances out there of some variation of client and server
+Dialogue: 0,0:02:54.94,0:02:59.92,Chinese,,0,0,0,,所以现实中有许多不同的客户端-服务器模型的例子
 Dialogue: 0,0:02:59.92,0:03:06.76,English,,0,0,0,,And it's a much richer idea in that you can often switch back and forth  the roles of those two parties
+Dialogue: 0,0:02:59.92,0:03:06.76,Chinese,,0,0,0,,而且应该有更多的例子,因为你可以反复切换两者的角色
 Dialogue: 0,0:03:06.88,0:03:15.18,English,,0,0,0,,But it's a pretty universal and a ubiquitous way of thinking about how to set up a network system
+Dialogue: 0,0:03:06.88,0:03:15.18,Chinese,,0,0,0,,但思考如何建立一个网络系统的方式是非常通用的
 Dialogue: 0,0:03:16.30,0:03:21.82,English,,0,0,0,,So in general then the idea is that there's a...system working
+Dialogue: 0,0:03:16.30,0:03:21.82,Chinese,,0,0,0,,通常来说,思路就是...有一个系统在工作
 Dialogue: 0,0:03:23.44,0:03:26.90,English,,0,0,0,,The client is making some requests to the server
+Dialogue: 0,0:03:23.44,0:03:26.90,Chinese,,0,0,0,,客户端在向服务器发送一些请求
 Dialogue: 0,0:03:27.70,0:03:30.96,English,,0,0,0,,The server does something locally to deal with it
+Dialogue: 0,0:03:27.70,0:03:30.96,Chinese,,0,0,0,,服务器在本地做一些事情来处理这些请求
 Dialogue: 0,0:03:31.04,0:03:37.28,English,,0,0,0,,It receive it gets information that retrieves from its database the things you might want to buy
+Dialogue: 0,0:03:31.04,0:03:37.28,Chinese,,0,0,0,,它从数据库中检索你可能想买的东西的信息
 Dialogue: 0,0:03:38.34,0:03:44.38,English,,0,0,0,,And then it sends back information say a nicely formatted a web page with all kinds of shopping suggestions
+Dialogue: 0,0:03:38.34,0:03:44.38,Chinese,,0,0,0,,然后它返回信息,比如一个格式化好的网页,上面有各种各样的购物建议
 Dialogue: 0,0:03:45.28,0:03:47.34,English,,0,0,0,,And then the client decides what to do next
+Dialogue: 0,0:03:45.28,0:03:47.34,Chinese,,0,0,0,,然后客户端决定下一步要做什么
 Dialogue: 0,0:03:49.22,0:03:51.66,English,,0,0,0,,So from a hardware perspective the
+Dialogue: 0,0:03:49.22,0:03:51.66,English,,0,0,0,,所以从硬件的角度来看
 Dialogue: 0,0:03:52.28,0:03:56.75,English,,0,0,0,,Interface to a between the network and
+Dialogue: 0,0:03:52.28,0:03:56.75,Chinese,,0,0,0,,网络和你计算机之间的接口
 Dialogue: 0,0:03:57.44,0:04:02.92,English,,0,0,0,,Your computer is called the NIC or network interface card even though it's not always on a card
+Dialogue: 0,0:03:57.44,0:04:02.92,Chinese,,0,0,0,,叫做 NIC 或是网络接口卡,即使它不总是一张卡
 Dialogue: 0,0:04:03.66,0:04:08.90,English,,0,0,0,,And we really won't talk about hardware at all
+Dialogue: 0,0:04:03.66,0:04:08.90,Chinese,,0,0,0,,我们不会讨论硬件
 Dialogue: 0,0:04:08.90,0:04:13.16,English,,0,0,0,,But what's most interesting from it is that
+Dialogue: 0,0:04:08.90,0:04:13.16,Chinese,,0,0,0,,但最有趣的是
 Dialogue: 0,0:04:14.44,0:04:18.36,English,,0,0,0,,It looks to your computer like an I/O device
-Dialogue: 0,0:04:19.00,0:04:23.92,English,,0,0,0,,And in fact the UNIX of api for dealing with networks
+Dialogue: 0,0:04:14.44,0:04:18.36,Chinese,,0,0,0,,它对你的计算机来说就像一个输入/输出设备
+Dialogue: 0,0:04:19.00,0:04:23.92,English,,0,0,0,,And in fact the UNIX uh api for dealing with networks
+Dialogue: 0,0:04:19.00,0:04:23.92,Chinese,,0,0,0,,实际上, UNIX 用于网络处理的 api
 Dialogue: 0,0:04:24.38,0:04:25.68,English,,0,0,0,,Makes it look like a file
+Dialogue: 0,0:04:24.38,0:04:25.68,Chinese,,0,0,0,,使它看起来像一个文件
 Dialogue: 0,0:04:26.38,0:04:30.66,English,,0,0,0,,So in particular just as a disk sits off of a bus
+Dialogue: 0,0:04:26.38,0:04:30.66,English,,0,0,0,,打个比方,总线上有一张磁盘
 Dialogue: 0,0:04:31.42,0:04:34.46,English,,0,0,0,,And you write data to a disk
+Dialogue: 0,0:04:31.42,0:04:34.46,Chinese,,0,0,0,,你向磁盘写入数据
 Dialogue: 0,0:04:35.08,0:04:36.60,English,,0,0,0,,Or you read it from a disk
+Dialogue: 0,0:04:35.08,0:04:36.60,Chinese,,0,0,0,,或者从磁盘中读取数据
 Dialogue: 0,0:04:37.12,0:04:40.74,English,,0,0,0,,Similarly the network sits of a similar bus
+Dialogue: 0,0:04:37.12,0:04:40.74,Chinese,,0,0,0,,同样,网络位于一条类似的总线上
 Dialogue: 0,0:04:41.18,0:04:44.44,English,,0,0,0,,And when you want to send a message you actually do it by writing
+Dialogue: 0,0:04:41.18,0:04:44.44,Chinese,,0,0,0,,当你想要发送信息时，你实际上是通过
 Dialogue: 0,0:04:44.92,0:04:47.92,English,,0,0,0,,To a sort of virtual file that's called the network
+Dialogue: 0,0:04:44.92,0:04:47.92,Chinese,,0,0,0,,向一个叫做网络的虚拟文件写入数据来实现的
 Dialogue: 0,0:04:48.72,0:04:52.14,English,,0,0,0,,And if you want...when you're receiving data you do it by reading
+Dialogue: 0,0:04:48.72,0:04:52.14,Chinese,,0,0,0,,如果你想...当你接收数据时,你通过读取文件来实现
 Dialogue: 0,0:04:52.28,0:04:56.48,English,,0,0,0,,So just as several weeks ago I gave the lecture on I/O
+Dialogue: 0,0:04:52.28,0:04:56.48,Chinese,,0,0,0,,所以几周前我讲输入/输出
 Dialogue: 0,0:04:57.18,0:05:00.56,English,,0,0,0,,It turns out that it's extremely relevant to network programming
+Dialogue: 0,0:04:57.18,0:05:00.56,Chinese,,0,0,0,,事实证明它与网络编程非常相关
 Dialogue: 0,0:05:00.56,0:05:08.48,English,,0,0,0,,That's the basic model that was created by the early developers of the sort of standard UNIX
+Dialogue: 0,0:05:00.56,0:05:08.48,Chinese,,0,0,0,,这就是早期标准 UNIX 开发人员创建的基本模型
 Dialogue: 0,0:05:08.98,0:05:14.02,English,,0,0,0,,And now that's carried over not just to UNIX but it's the same model for windows and other operating systems
+Dialogue: 0,0:05:08.98,0:05:14.02,Chinese,,0,0,0,,现在这不仅适用于 UNIX 也适用于 windows 和其他操作系统
 Dialogue: 0,0:05:15.50,0:05:16.74,English,,0,0,0,,So
+Dialogue: 0,0:05:15.50,0:05:16.74,Chinese,,0,0,0,,那么
 Dialogue: 0,0:05:19.90,0:05:24.24,English,,0,0,0,,And now let's just talk a little about what computer networking means
+Dialogue: 0,0:05:19.90,0:05:24.24,Chinese,,0,0,0,,我们现在先讲一点计算机网络的概念
 Dialogue: 0,0:05:24.70,0:05:31.16,English,,0,0,0,,The idea of a network is a collection of systems that are referred to as hosts
+Dialogue: 0,0:05:24.70,0:05:31.16,Chinese,,0,0,0,,网络的是被称为主机的系统的集合
 Dialogue: 0,0:05:32.08,0:05:40.18,English,,0,0,0,,That are able to communicate with each other over some kind of communication fabric let's call
+Dialogue: 0,0:05:32.08,0:05:40.18,Chinese,,0,0,0,,它们能够通过某种通信结构相互通交流
 Dialogue: 0,0:05:40.68,0:05:41.94,English,,0,0,0,,It communications system
+Dialogue: 0,0:05:40.68,0:05:41.94,Chinese,,0,0,0,,我们就把它叫做通信系统吧
 Dialogue: 0,0:05:42.36,0:05:44.60,English,,0,0,0,,And they're sort of partitioned into
+Dialogue: 0,0:05:42.36,0:05:44.60,Chinese,,0,0,0,,它们大多数被划分成
 Dialogue: 0,0:05:45.36,0:05:48.56,English,,0,0,0,,Mostly referred to as lands or local area networks
+Dialogue: 0,0:05:45.36,0:05:48.56,Chinese,,0,0,0,,局域网
 Dialogue: 0,0:05:48.74,0:05:51.90,English,,0,0,0,,That you establish within a small region
+Dialogue: 0,0:05:48.74,0:05:51.90,Chinese,,0,0,0,,它们主要是建在小区域内的
 Dialogue: 0,0:05:52.42,0:05:58.68,English,,0,0,0,,And then a wide area network which would be over something the size of a city or perhaps more
+Dialogue: 0,0:05:52.42,0:05:58.68,Chinese,,0,0,0,,接着是广域网络,它覆盖了一个城市或者更大的区域
 Dialogue: 0,0:06:00.10,0:06:06.12,English,,0,0,0,,And over a enterprise such as CMU it's a very complex set of
-Dialogue: 0,0:06:06.16,0:06:12.62,English,,0,0,0,, For example there's wireless base stations that right in this room
+Dialogue: 0,0:06:00.10,0:06:06.12,Chinese,,0,0,0,,对于像CMU这样的集团来说,会有一个很复杂的网络结构
+Dialogue: 0,0:06:06.16,0:06:12.62,English,,0,0,0,,For example there's wireless base stations that right in this room
+Dialogue: 0,0:06:06.16,0:06:12.62,Chinese,,0,0,0,,例如，这个房间里就有无线基站
 Dialogue: 0,0:06:12.96,0:06:16.94,English,,0,0,0,,That you're interacting with when you're using a wireless system or your your phone
+Dialogue: 0,0:06:12.96,0:06:16.94,Chinese,,0,0,0,,当你使用无线系统或手机时,你就会与之交互
 Dialogue: 0,0:06:17.49,0:06:21.56,English,,0,0,0,,And then there's a whole networking infrastructure within the university
-Dialogue: 0,0:06:21.92,0:06:24.42,English,,0,0,0,,The then goes to some commercial providers
+Dialogue: 0,0:06:17.49,0:06:21.56,Chinese,,0,0,0,,总的来说就是大学里有一套完整的网络基础设施
+Dialogue: 0,0:06:21.92,0:06:24.42,English,,0,0,0,,Then goes to some commercial providers
+Dialogue: 0,0:06:21.92,0:06:24.42,Chinese,,0,0,0,,然后就是一些商业供应商
 Dialogue: 0,0:06:25.06,0:06:31.32,English,,0,0,0,,At&t in particular that give it access to the commercial internet
+Dialogue: 0,0:06:25.06,0:06:31.32,English,,0,0,0,,尤其是 At&t ,它可以接入商业互联网
 Dialogue: 0,0:06:31.66,0:06:36.40,English,,0,0,0,,And then there's another set of network connections hosted by the supercomputing center
-Dialogue: 0,0:06:36.70,0:06:43.28,English,,0,0,0,,That give you access to what's called internet 2 which is the resource that's used for communicating among universities
+Dialogue: 0,0:06:31.66,0:06:36.40,English,,0,0,0,,此外还有一些网络连接由超级计算中心托管
+Dialogue: 0,0:06:36.70,0:06:43.28,English,,0,0,0,,That give you access to what's called internet2 which is the resource that's used for communicating among universities
+Dialogue: 0,0:06:36.70,0:06:43.28,Chinese,,0,0,0,,它们可以让你访问 internet2 ，这是用于大学之间交流的资源
 Dialogue: 0,0:06:43.98,0:06:48.61,English,,0,0,0,,So underneath you know when you're doing your networking stuff
+Dialogue: 0,0:06:43.98,0:06:48.61,Chinese,,0,0,0,,至少你要知道当你在网络上做一些事情时
 Dialogue: 0,0:06:48.61,0:06:52.06,English,,0,0,0,,There's this amazingly complex combination of things going on
+Dialogue: 0,0:06:48.61,0:06:52.06,Chinese,,0,0,0,,有许多非常复杂的组合在运行
 Dialogue: 0,0:06:53.02,0:06:57.78,English,,0,0,0,,The idea of an internet is supposed is refers to the idea
+Dialogue: 0,0:06:53.02,0:06:57.78,Chinese,,0,0,0,,互联网的概念就是指这个
 Dialogue: 0,0:06:58.24,0:07:01.34,English,,0,0,0,,The general idea of a network of networks
+Dialogue: 0,0:06:58.24,0:07:01.34,Chinese,,0,0,0,,网络的一般概念
 Dialogue: 0,0:07:01.62,0:07:06.46,English,,0,0,0,,Taking for example the local area network that this base station provides
+Dialogue: 0,0:07:01.62,0:07:06.46,Chinese,,0,0,0,,举个例子，这个基站提供的地区网络
 Dialogue: 0,0:07:06.94,0:07:10.57,English,,0,0,0,,And connecting it up to other networks on campus and across the world
 Dialogue: 0,0:07:11.28,0:07:14.36,English,,0,0,0,,And when we refer to the capital i internet
 Dialogue: 0,0:07:15.22,0:07:20.32,English,,0,0,0,,That refers to the one instance the most significant instance of an internet
