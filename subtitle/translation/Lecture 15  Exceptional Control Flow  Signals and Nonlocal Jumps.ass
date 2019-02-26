@@ -350,44 +350,44 @@ Dialogue: 0,0:29:27.74,0:29:32.20,English,,0,0,0,,The receipt of the signal trig
 Dialogue: 0,0:29:36.24,0:29:44.34,English,,0,0,0,,And then we repeat that for all the nonzero signals k that are nonzero bits that are set in pnb 然后我们对 pub 中的每一个非零位对应的信号 k 重复此过程
 Dialogue: 0,0:29:44.78,0:29:47.60,English,,0,0,0,,And finally when we've gone all through all the nonzero bits 最后我们会处理完所有的非零位
 Dialogue: 0,0:29:48.14,0:29:56.70,English,,0,0,0,,Then we pass control to the next instruction in process p 接着我们将控制权转移给进程 p 的下一条指令
-Dialogue: 0,0:30:00.72,0:30:03.96,English,,0,0,0,,So the receipt of a signal always triggers some action 所以每一个信号的接收都会引发一些行为
-Dialogue: 0,0:30:04.46,0:30:06.93,English,,0,0,0,,Which is either the process terminates 也包括进程的终止
-Dialogue: 0,0:30:07.86,0:30:11.40,English,,0,0,0,,The process stops until it's restarted by a sick can't signal
-Dialogue: 0,0:30:12.42,0:30:14.52,English,,0,0,0,,The process ignores the signal 进程忽略这个信号
-Dialogue: 0,0:30:15.36,0:30:18.42,English,,0,0,0,,Ok so that's there's always some predefined default action 这里有一些预定义的默认行为
-Dialogue: 0,0:30:21.72,0:30:29.72,English,,0,0,0,,But we can modify that default action by using a function system call called signal 但我们可以使用一个叫做 signal 的系统调用来修改默认行为
+Dialogue: 0,0:30:00.72,0:30:03.96,English,,0,0,0,,所以每一个信号的接收都会触发一些行为
+Dialogue: 0,0:30:04.46,0:30:06.93,English,,0,0,0,,也包括进程的终止
+Dialogue: 0,0:30:07.86,0:30:11.40,English,,0,0,0,,线程在收到 sigcont 信号之前保持停止
+Dialogue: 0,0:30:12.42,0:30:14.52,English,,0,0,0,,进程忽略这个信号
+Dialogue: 0,0:30:15.36,0:30:18.42,English,,0,0,0,,这里有一些预定义的默认行为
+Dialogue: 0,0:30:21.72,0:30:29.72,English,,0,0,0,,但我们可以使用一个叫做 signal 的系统调用来修改默认行为
 Dialogue: 0,0:30:31.66,0:30:37.28,English,,0,0,0,,Ok so we can...now signals a little that's another sort of misleading kind of term just like kill right because when we 所以我们可以。。。
 Dialogue: 0,0:30:37.74,0:30:40.50,English,,0,0,0,,When we send a signal to a process we don't always want to kill it 我们给一个进程发送信号时，并不是总是要 kill 掉它
 Dialogue: 0,0:30:41.74,0:30:44.02,English,,0,0,0,,And signal doesn't actually signal anything
-Dialogue: 0,0:30:44.40,0:30:49.22,English,,0,0,0,,It just modifies the default action associated with some something
+Dialogue: 0,0:30:44.40,0:30:49.22,English,,0,0,0,,It just modifies the default action associated with some something 它可以修改为与默认操作相关的某些操作
 Dialogue: 0,0:30:50.74,0:30:55.02,English,,0,0,0,,Okay so if the signal function takes out a signal number(signum) 如果 signal 函数取出了一个信号数（signum）
 Dialogue: 0,0:30:56.90,0:31:01.98,English,,0,0,0,,And then specifies a change in the default action for that signal
 Dialogue: 0,0:31:04.16,0:31:07.46,English,,0,0,0,,And those default actions can be either to ignore the signal(sig_ign)
 Dialogue: 0,0:31:08.30,0:31:14.96,English,,0,0,0,,Ok ignore signals of type signal,revert to the default behavior for that signal
-Dialogue: 0,0:31:17.48,0:31:21.96,English,,0,0,0,,Or we can give it...or it can be the address of a user level signal handler
-Dialogue: 0,0:31:22.64,0:31:26.38,English,,0,0,0,,Which is a function that we've declared in our C program
-Dialogue: 0,0:31:26.76,0:31:32.92,English,,0,0,0,,Ok there's nothing special about the function it has a certain prototype that has it takes a single argument
-Dialogue: 0,0:31:33.60,0:31:40.06,English,,0,0,0,,Which is the signal number so when that function gets called in response to receiving a signal
-Dialogue: 0,0:31:41.24,0:31:44.02,English,,0,0,0,,That argument will be set to the signal number
-Dialogue: 0,0:31:47.80,0:31:54.54,English,,0,0,0,,So calling signal with a specifying a signal handler is called installing a handler
-Dialogue: 0,0:31:55.42,0:31:59.68,English,,0,0,0,,And then executing the handlers referred to as catching or executing
-Dialogue: 0,0:31:59.68,0:32:01.52,English,,0,0,0,,They were handling the signal
-Dialogue: 0,0:32:03.78,0:32:06.64,English,,0,0,0,,And and this handler then is just like an exception handler
-Dialogue: 0,0:32:06.66,0:32:12.56,English,,0,0,0,,When it returns it will be when it's executed it will interrupt the
-Dialogue: 0,0:32:13.16,0:32:16.66,English,,0,0,0,,Whatever is currently executing in the process when it returns
-Dialogue: 0,0:32:16.92,0:32:19.94,English,,0,0,0,,It will return back to that point and continue executing
-Dialogue: 0,0:32:22.74,0:32:26.74,English,,0,0,0,,Okay so here's a simple example of installing a handler
-Dialogue: 0,0:32:28.62,0:32:32.48,English,,0,0,0,,So here in main where we're going to install a sigint handler
-Dialogue: 0,0:32:34.92,0:32:38.80,English,,0,0,0,,Which is called sigint_handler which is defined up here
-Dialogue: 0,0:32:39.80,0:32:43.12,English,,0,0,0,,And the prototype for this function is returns nothing
-Dialogue: 0,0:32:43.80,0:32:48.12,English,,0,0,0,,And it takes a single integer argument which is the signal number and returns nothing
-Dialogue: 0,0:32:50.76,0:32:52.42,English,,0,0,0,,Okay and after we install that handler
+Dialogue: 0,0:31:17.48,0:31:21.96,English,,0,0,0,,Or we can give it...or it can be the address of a user level signal handler 我们也可以给它一个。。。也可以是一个用户级信号处理函数的地址
+Dialogue: 0,0:31:22.64,0:31:26.38,English,,0,0,0,,Which is a function that we've declared in our C program 也就是那个我们在 C 程序中定义的函数
+Dialogue: 0,0:31:26.76,0:31:32.92,English,,0,0,0,,Ok there's nothing special about the function it has a certain prototype that has it takes a single argument 这个函数没什么特别的地方，它有一个明确声明了的信号参数
+Dialogue: 0,0:31:33.60,0:31:40.06,English,,0,0,0,,Which is the signal number so when that function gets called in response to receiving a signal  就是这个信号编号，所以当响应这个被接收到的信号时这个函数会被调用
+Dialogue: 0,0:31:41.24,0:31:44.02,English,,0,0,0,,That argument will be set to the signal number 然后这个参数会设置这个信号标号
+Dialogue: 0,0:31:47.80,0:31:54.54,English,,0,0,0,,So calling signal with a specifying a signal handler is called installing a handler 所以用指定的信号处理函数调用信号，被称作
+Dialogue: 0,0:31:55.42,0:31:59.68,English,,0,0,0,,And then executing the handlers referred to as catching or executing 然后将这个处理程序作为捕获或者执行运行
+Dialogue: 0,0:31:59.68,0:32:01.52,English,,0,0,0,,They were handling the signal 这就是信号的处理
+Dialogue: 0,0:32:03.78,0:32:06.64,English,,0,0,0,,And and this handler then is just like an exception handler 这些信号处理就像异常处理一样
+Dialogue: 0,0:32:06.66,0:32:12.56,English,,0,0,0,,When it returns it will be when it's executed it will interrupt the 当它返回时，它会。。当它执行后，它会中断
+Dialogue: 0,0:32:13.16,0:32:16.66,English,,0,0,0,,Whatever is currently executing in the process when it returns 当他返回时，不论这个进程执行到哪里
+Dialogue: 0,0:32:16.92,0:32:19.94,English,,0,0,0,,It will return back to that point and continue executing 它都会返回到这里并继续执行
+Dialogue: 0,0:32:22.74,0:32:26.74,English,,0,0,0,,Okay so here's a simple example of installing a handler 这是一个安装处理程序的例子
+Dialogue: 0,0:32:28.62,0:32:32.48,English,,0,0,0,,So here in main where we're going to install a sigint handler 在 main 里，我们来安装 sigint 的处理程序
+Dialogue: 0,0:32:34.92,0:32:38.80,English,,0,0,0,,Which is called sigint_handler which is defined up here 它叫做 sigint_handler，被定义在这
+Dialogue: 0,0:32:39.80,0:32:43.12,English,,0,0,0,,And the prototype for this function is returns nothing 这个函数的原型没有返回值
+Dialogue: 0,0:32:43.80,0:32:48.12,English,,0,0,0,,And it takes a single integer argument which is the signal number and returns nothing 它需要一个信号编号数字作为参数，并且没有返回值
+Dialogue: 0,0:32:50.76,0:32:52.42,English,,0,0,0,,Okay and after we install that handler 然后我们来安装它
 Dialogue: 0,0:32:53.12,0:32:59.24,English,,0,0,0,,Then we're going to execute the pause this call which just waits for a signal handler to execute
 Dialogue: 0,0:32:59.48,0:33:03.20,English,,0,0,0,,Ok so pause terminates the current or suspends the current process
 Dialogue: 0,0:33:04.28,0:33:08.38,English,,0,0,0,,Until a signal is received and a handler executes in that process
 Dialogue: 0,0:33:08.92,0:33:10.68,English,,0,0,0,,And then pause then pause returns
 Dialogue: 0,0:33:13.36,0:33:16.36,English,,0,0,0,,So we're going to wait until the sigint happens
-Dialogue: 0,0:33:16.40,0:33:19.54,English,,0,0,0,,So sigint entry call is when we type ctrl-c
+Dialogue: 0,0:33:16.40,0:33:19.54,English,,0,0,0,,So sigint entry call is when we type ctrl-c 当我们按下 ctrl-c 时，sigint 开始执行
 Dialogue: 0,0:33:21.98,0:33:27.04,English,,0,0,0,,So when you're doing your bombs did you panic at some point and try to hit ctrl-c to get out of it
 Dialogue: 0,0:33:28.50,0:33:30.86,English,,0,0,0,,Okay so that snarky message you got that was
 Dialogue: 0,0:33:32.04,0:33:37.20,English,,0,0,0,,We did that by installing a sigint handler in your bomb
