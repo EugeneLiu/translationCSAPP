@@ -320,46 +320,85 @@ Dialogue: 0,0:11:50.94,0:11:52.62,Chinese,,0,0,0,,它为什么可靠,和其它�
 Dialogue: 0,0:11:53.16,0:11:56.64,English,,0,0,0,,But we're going to just assume that somebody else has figured that out
 Dialogue: 0,0:11:53.16,0:11:56.64,Chinese,,0,0,0,,但是我们假设其他人已经知道了
 Dialogue: 0,0:11:57.02,0:12:01.86,English,,0,0,0,,And our job as programmers is just to be able to communicate from one host to another
-Dialogue: 0,0:11:57.02,0:12:01.86,Chinese,,0,0,0,,作为程序员，我们的工作就是能够实现在主机之间进行通信
+Dialogue: 0,0:11:57.02,0:12:01.86,Chinese,,0,0,0,,作为程序员，我们的工作只是实现在主机之间进行通信
 Dialogue: 0,0:12:06.42,0:12:10.42,English,,0,0,0,,And so how could you design a system where all these diverse systems
+Dialogue: 0,0:12:06.42,0:12:10.42,Chinese,,0,0,0,,那么你如何设计一个系统，让所有这些不同的系统
 Dialogue: 0,0:12:10.42,0:12:22.00,English,,0,0,0,,Made by computers made by different manufacturers operating under different countries with different telecommunications bodies governing bodies and so forth
+Dialogue: 0,0:12:10.42,0:12:22.00,Chinese,,0,0,0,,它们有着由不同的计算机生成,不同的厂商发行,不同国家的不同电信机构经营等等的差异
 Dialogue: 0,0:12:22.00,0:12:23.80,English,,0,0,0,,How can they all work with each other
+Dialogue: 0,0:12:22.00,0:12:23.80,Chinese,,0,0,0,,怎么能让他们互相协同工作
 Dialogue: 0,0:12:24.38,0:12:29.34,English,,0,0,0,,And the requirement is you have to have a protocol you have to have some common set of conventions
+Dialogue: 0,0:12:24.38,0:12:29.34,Chinese,,0,0,0,,答案是你必须有一个协议,你必须有一些共同的约定
 Dialogue: 0,0:12:30.02,0:12:33.18,English,,0,0,0,,For what messages look like how they get sent
+Dialogue: 0,0:12:30.02,0:12:33.18,Chinese,,0,0,0,,比如报文应该是什么格式，它们怎么被发送
 Dialogue: 0,0:12:33.66,0:12:39.48,English,,0,0,0,,What happens if one of them doesn't make it how do you recover from that and so forth
+Dialogue: 0,0:12:33.66,0:12:39.48,Chinese,,0,0,0,,如果其中一个报文没有成功发送你怎样恢复它们，等等
 Dialogue: 0,0:12:44.14,0:12:49.46,English,,0,0,0,,And so what does a protocol include well it has to include some way of naming things so that
+Dialogue: 0,0:12:44.14,0:12:49.46,Chinese,,0,0,0,,那么协议包括什么呢?事实上,它必须包含一些命名的方式
 Dialogue: 0,0:12:49.94,0:12:53.08,English,,0,0,0,,If I want to send to some host I have some way of designating
+Dialogue: 0,0:12:49.94,0:12:53.08,Chinese,,0,0,0,,如果我想向某台主机发送报文,我得有一些方法
 Dialogue: 0,0:12:53.52,0:12:54.80,English,,0,0,0,,Who that host is
+Dialogue: 0,0:12:53.52,0:12:54.80,Chinese,,0,0,0,,去指定主机是谁
 Dialogue: 0,0:12:55.32,0:13:01.82,English,,0,0,0,,And then there's the routing system has to have some reliable way of getting my data to that named host
+Dialogue: 0,0:12:55.32,0:13:01.82,Chinese,,0,0,0,,然后是路由系统必须有可靠的方式将我的数据送到指定主机
 Dialogue: 0,0:13:03.02,0:13:04.66,English,,0,0,0,,And that's the delivery mechanism
+Dialogue: 0,0:13:03.02,0:13:04.66,Chinese,,0,0,0,,这就是传递机制
 Dialogue: 0,0:13:05.54,0:13:11.70,English,,0,0,0,,And that's usually done and one of the things that we now accept  as universal
+Dialogue: 0,0:13:05.54,0:13:11.70,English,,0,0,0,,这个机制已经完成了,而且我们如今已经普遍接受了这一机制
 Dialogue: 0,0:13:11.70,0:13:17.46,English,,0,0,0,,But it really wasn't when it first came out was idea of you take all your data and you divide it into packets
+Dialogue: 0,0:13:11.70,0:13:17.46,English,,0,0,0,,但当这个观点--把你所有的数据分到一个个数据包中--第一次出现的时候,它并不被普遍接受
 Dialogue: 0,0:13:17.48,0:13:21.38,English,,0,0,0,,And packets are typically about a thousand to two thousand bytes
+Dialogue: 0,0:13:17.48,0:13:21.38,English,,0,0,0,,数据包通常是 1000 到 2000 字节
 Dialogue: 0,0:13:22.36,0:13:27.72,English,,0,0,0,,And so if you have a longer message it chops it up into individual packets and sends it across
+Dialogue: 0,0:13:22.36,0:13:27.72,English,,0,0,0,,所以如果你有一个较长的报文,它会被切分成许多单独的数据包,然后发送出去
 Dialogue: 0,0:13:28.24,0:13:30.52,English,,0,0,0,,And all the communication occurs at the packet level
+Dialogue: 0,0:13:28.24,0:13:30.52,English,,0,0,0,,而且所有的通信都发生在数据包这一层
 Dialogue: 0,0:13:31.16,0:13:33.76,English,,0,0,0,,That's different than the historic phone system
-Dialogue: 0,0:13:35.22,0:13:37.36,English,,0,0,0,,I was a connection based system meaning that
+Dialogue: 0,0:13:31.16,0:13:33.76,English,,0,0,0,,这与历史上的电话系统不同
+Dialogue: 0,0:13:35.22,0:13:37.36,English,,0,0,0,,With a connection based system meaning that
+Dialogue: 0,0:13:35.22,0:13:37.36,English,,0,0,0,,电话系统是一个以线路为基础的系统,这意味着
 Dialogue: 0,0:13:37.76,0:13:45.30,English,,0,0,0,,If I was calling somebody there is a dedicated wire set of wires maintained by the phone company
+Dialogue: 0,0:13:37.76,0:13:45.30,English,,0,0,0,,如果我打电话给某人,会有一组由电话公司维护的专用线路
 Dialogue: 0,0:13:45.78,0:13:49.16,English,,0,0,0,,That would be reserved and locked down for our own use
+Dialogue: 0,0:13:45.78,0:13:49.16,English,,0,0,0,,被保留和锁定，供我们使用
 Dialogue: 0,0:13:49.56,0:13:51.38,English,,0,0,0,,During the entire duration of that phone call
+Dialogue: 0,0:13:49.56,0:13:51.38,English,,0,0,0,,在整个通话过程中都是如此
 Dialogue: 0,0:13:56.62,0:13:57.56,English,,0,0,0,,So
+Dialogue: 0,0:13:56.62,0:13:57.56,English,,0,0,0,,因此
 Dialogue: 0,0:13:58.94,0:14:03.42,English,,0,0,0,,To get them from one host say A to B
+Dialogue: 0,0:13:58.94,0:14:03.42,English,,0,0,0,,把报文从一个主机 A 发往另一个主机 B
 Dialogue: 0,0:14:03.80,0:14:05.86,English,,0,0,0,,What happens is we want to send a packet
+Dialogue: 0,0:14:03.80,0:14:05.86,English,,0,0,0,,实际上发生的事是我们想传递一个数据包
 Dialogue: 0,0:14:06.66,0:14:09.30,English,,0,0,0,,And that packet will contain some amount of data
+Dialogue: 0,0:14:06.66,0:14:09.30,English,,0,0,0,,那个数据包包含一部分数据
 Dialogue: 0,0:14:10.32,0:14:15.04,English,,0,0,0,,And the idea of a packet communication then is you put little headers on
+
 Dialogue: 0,0:14:15.34,0:14:20.80,English,,0,0,0,,That contain certain routing information see on the front of an envelope of a letter perhaps
+
 Dialogue: 0,0:14:21.72,0:14:24.42,English,,0,0,0,,And so and at different points in the way
+
 Dialogue: 0,0:14:24.42,0:14:30.82,English,,0,0,0,,They'll have different numbers of headers and different protocols or formats for what those headers look like
+
 Dialogue: 0,0:14:31.58,0:14:33.74,English,,0,0,0,,So in particular within
+
 Dialogue: 0,0:14:34.92,0:14:37.10,English,,0,0,0,,I want to send a message and I'll
+
 Dialogue: 0,0:14:37.76,0:14:42.32,English,,0,0,0,,I'll do that and then the software that runs on my machine that handles this
+
 Dialogue: 0,0:14:42.76,0:14:50.06,English,,0,0,0,,Will put a header in front of that describes the internet routing
+
 Dialogue: 0,0:14:50.44,0:14:55.62,English,,0,0,0,,And then it will tack a header in front of that talks about the local area network routing that gets used
+
 Dialogue: 0,0:14:56.42,0:15:02.06,English,,0,0,0,,And that's what's referred to as the a PH the packet header for the internet protocol
+
 Dialogue: 0,0:15:02.74,0:15:08.30,English,,0,0,0,,And FH1 the frame header for this particular message being sent within this local network
+
 Dialogue: 0,0:15:10.90,0:15:15.24,English,,0,0,0,,And then the network interface card or the adapter here
+
 Dialogue: 0,0:15:16.10,0:15:23.48,English,,0,0,0,,Is then responsible for putting that out over this local communication of capability
+
 Dialogue: 0,0:15:23.78,0:15:31.44,English,,0,0,0,,And then that gets received at the other end by the network adapter at the receivers direction
+
 Dialogue: 0,0:15:32.14,0:15:40.00,English,,0,0,0,,It will put up its own frame header on it to pass it in
 Dialogue: 0,0:15:40.94,0:15:42.94,English,,0,0,0,,And that then gets tripped off
 Dialogue: 0,0:15:43.80,0:15:48.58,English,,0,0,0,,So that all hosts be set sees is the the data that gets sent
