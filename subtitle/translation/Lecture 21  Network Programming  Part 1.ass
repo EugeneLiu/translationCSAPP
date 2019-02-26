@@ -102,7 +102,7 @@ Dialogue: 0,0:02:49.90,0:02:54.86,Chinese,,0,0,0,,我们通过电话交谈,然�
 Dialogue: 0,0:02:54.94,0:02:59.92,English,,0,0,0,,So there's a lot of instances out there of some variation of client and server
 Dialogue: 0,0:02:54.94,0:02:59.92,Chinese,,0,0,0,,所以现实中有许多不同的客户端-服务器模型的例子
 Dialogue: 0,0:02:59.92,0:03:06.76,English,,0,0,0,,And it's a much richer idea in that you can often switch back and forth  the roles of those two parties
-Dialogue: 0,0:02:59.92,0:03:06.76,Chinese,,0,0,0,,而且应该有更多的例子,因为你可以反复切换两者的角色
+Dialogue: 0,0:02:59.92,0:03:06.76,Chinese,,0,0,0,,而且应该有更多的例子,因为你可以来回切换两者的角色
 Dialogue: 0,0:03:06.88,0:03:15.18,English,,0,0,0,,But it's a pretty universal and a ubiquitous way of thinking about how to set up a network system
 Dialogue: 0,0:03:06.88,0:03:15.18,Chinese,,0,0,0,,但思考如何建立一个网络系统的方式是非常通用的
 Dialogue: 0,0:03:16.30,0:03:21.82,English,,0,0,0,,So in general then the idea is that there's a...system working
@@ -174,7 +174,7 @@ Dialogue: 0,0:05:48.74,0:05:51.90,Chinese,,0,0,0,,它们主要是建在小区域
 Dialogue: 0,0:05:52.42,0:05:58.68,English,,0,0,0,,And then a wide area network which would be over something the size of a city or perhaps more
 Dialogue: 0,0:05:52.42,0:05:58.68,Chinese,,0,0,0,,接着是广域网络,它覆盖了一个城市或者更大的区域
 Dialogue: 0,0:06:00.10,0:06:06.12,English,,0,0,0,,And over a enterprise such as CMU it's a very complex set of
-Dialogue: 0,0:06:00.10,0:06:06.12,Chinese,,0,0,0,,对于像CMU这样的集团来说,会有一个很复杂的网络结构
+Dialogue: 0,0:06:00.10,0:06:06.12,Chinese,,0,0,0,,对于像 CMU 这样的集团来说,会有一个很复杂的网络结构
 Dialogue: 0,0:06:06.16,0:06:12.62,English,,0,0,0,,For example there's wireless base stations that right in this room
 Dialogue: 0,0:06:06.16,0:06:12.62,Chinese,,0,0,0,,例如，这个房间里就有无线基站
 Dialogue: 0,0:06:12.96,0:06:16.94,English,,0,0,0,,That you're interacting with when you're using a wireless system or your your phone
@@ -188,9 +188,9 @@ Dialogue: 0,0:06:25.06,0:06:31.32,English,,0,0,0,,尤其是 At&t ,它可以接�
 Dialogue: 0,0:06:31.66,0:06:36.40,English,,0,0,0,,And then there's another set of network connections hosted by the supercomputing center
 Dialogue: 0,0:06:31.66,0:06:36.40,English,,0,0,0,,此外还有一些网络连接由超级计算中心托管
 Dialogue: 0,0:06:36.70,0:06:43.28,English,,0,0,0,,That give you access to what's called internet2 which is the resource that's used for communicating among universities
-Dialogue: 0,0:06:36.70,0:06:43.28,Chinese,,0,0,0,,它们可以让你访问 internet2 ，这是用于大学之间交流的资源
+Dialogue: 0,0:06:36.70,0:06:43.28,Chinese,,0,0,0,,它们可以让你访问 internet2 ,这是用于大学之间交流的资源
 Dialogue: 0,0:06:43.98,0:06:48.61,English,,0,0,0,,So underneath you know when you're doing your networking stuff
-Dialogue: 0,0:06:43.98,0:06:48.61,Chinese,,0,0,0,,至少你要知道当你在网络上做一些事情时
+Dialogue: 0,0:06:43.98,0:06:48.61,Chinese,,0,0,0,,所以至少你要知道当你在网络上做一些事情时
 Dialogue: 0,0:06:48.61,0:06:52.06,English,,0,0,0,,There's this amazingly complex combination of things going on
 Dialogue: 0,0:06:48.61,0:06:52.06,Chinese,,0,0,0,,有许多非常复杂的组合在运行
 Dialogue: 0,0:06:53.02,0:06:57.78,English,,0,0,0,,The idea of an internet is supposed is refers to the idea
@@ -198,68 +198,129 @@ Dialogue: 0,0:06:53.02,0:06:57.78,Chinese,,0,0,0,,互联网的概念就是指这
 Dialogue: 0,0:06:58.24,0:07:01.34,English,,0,0,0,,The general idea of a network of networks
 Dialogue: 0,0:06:58.24,0:07:01.34,Chinese,,0,0,0,,网络的一般概念
 Dialogue: 0,0:07:01.62,0:07:06.46,English,,0,0,0,,Taking for example the local area network that this base station provides
-Dialogue: 0,0:07:01.62,0:07:06.46,Chinese,,0,0,0,,举个例子，这个基站提供的地区网络
+Dialogue: 0,0:07:01.62,0:07:06.46,Chinese,,0,0,0,,举个例子,这个基站提供的地区网络
 Dialogue: 0,0:07:06.94,0:07:10.57,English,,0,0,0,,And connecting it up to other networks on campus and across the world
+Dialogue: 0,0:07:06.94,0:07:10.57,Chinese,,0,0,0,,将其与校园网和世界各地的其他网络连接起来
 Dialogue: 0,0:07:11.28,0:07:14.36,English,,0,0,0,,And when we refer to the capital i internet
+Dialogue: 0,0:07:11.28,0:07:14.36,Chinese,,0,0,0,,补充一下,当我们提到大写 I 的 Internet 时
 Dialogue: 0,0:07:15.22,0:07:20.32,English,,0,0,0,,That refers to the one instance the most significant instance of an internet
-Dialogue: 0,0:07:20.32,0:07:25.68,English,,0,0,0,,So i means the sort of general idea of creating a network of networks
+Dialogue: 0,0:07:15.22,0:07:20.32,Chinese,,0,0,0,,指的是那个最大的因特网
+Dialogue: 0,0:07:20.32,0:07:25.68,English,,0,0,0,,So low case i means the sort of general idea of creating a network of networks
+Dialogue: 0,0:07:20.32,0:07:25.68,Chinese,,0,0,0,,而小写 i 的 internet 指的是互联网这一总体概念
 Dialogue: 0,0:07:26.22,0:07:31.74,English,,0,0,0,,Uppercase i(I) is the specific example that we all know and use all the time
+Dialogue: 0,0:07:26.22,0:07:31.74,Chinese,,0,0,0,,大写 i(I) 的英特网是我们一直都知道并使用的一个具体例子
 Dialogue: 0,0:07:32.14,0:07:37.42,English,,0,0,0,,That's organized by a certain set of principles that uses a particular set of protocols and so forth
-Dialogue: 0,0:07:37.98,0:07:41.20,English,,0,0,0,,And of course we tend to just talk the internet
+Dialogue: 0,0:07:32.14,0:07:37.42,Chinese,,0,0,0,,它是由一组使用特定协议的原理形成的
+Dialogue: 0,0:07:37.98,0:07:41.20,English,,0,0,0,,And of course we tend to just talk the Internet
+Dialogue: 0,0:07:37.98,0:07:41.20,Chinese,,0,0,0,,当然,我们倾向于只谈论因特网
 Dialogue: 0,0:07:41.40,0:07:49.54,English,,0,0,0,,And most people know that what that really implies is the sort of existing network structure that there is
+Dialogue: 0,0:07:41.40,0:07:49.54,Chinese,,0,0,0,,大多数人都知道这指的是现有的主要网络结构
 Dialogue: 0,0:07:51.44,0:07:53.84,English,,0,0,0,,And that's good enough for the purpose of this course
+Dialogue: 0,0:07:51.44,0:07:53.84,Chinese,,0,0,0,,这对于这门课来说已经足够了
 Dialogue: 0,0:07:53.84,0:07:57.56,English,,0,0,0,,We're not going to talk much about other possible designs one might have for a network
+Dialogue: 0,0:07:53.84,0:07:57.56,Chinese,,0,0,0,,我们不会讨论部分网络可能使用的另一些网络设计结构
 Dialogue: 0,0:07:58.60,0:08:04.76,English,,0,0,0,,So most of the low level networking is supported by something called Ethernet
+Dialogue: 0,0:07:58.60,0:08:04.76,Chinese,,0,0,0,,大部分低级网络是由以太网支持的
 Dialogue: 0,0:08:05.22,0:08:08.76,English,,0,0,0,,And the term Ethernet actually has evolved tremendously over time
+Dialogue: 0,0:08:05.22,0:08:08.76,Chinese,,0,0,0,,随着时间的推移,以太网这个术语已经有了很大的发展
 Dialogue: 0,0:08:09.24,0:08:13.84,English,,0,0,0,,So that it's almost more like a brand name that it is in specific technology
+Dialogue: 0,0:08:09.24,0:08:13.84,Chinese,,0,0,0,,所以比起一种特定的技术名称,它更像是一个品牌
 Dialogue: 0,0:08:14.32,0:08:18.50,English,,0,0,0,,And the version you're familiar with the wired version of it
+Dialogue: 0,0:08:14.32,0:08:18.50,Chinese,,0,0,0,,你们熟悉有线版本的以太网就是
 Dialogue: 0,0:08:18.50,0:08:23.98,English,,0,0,0,,You have a wire to some sort of a box
+Dialogue: 0,0:08:18.50,0:08:23.98,Chinese,,0,0,0,,你有一根电线连接到某个盒子上
 Dialogue: 0,0:08:24.70,0:08:28.24,English,,0,0,0,,Like that you plug the your Ethernet jacks into
+Dialogue: 0,0:08:24.70,0:08:28.24,Chinese,,0,0,0,,比如你把以太网插孔插进去
 Dialogue: 0,0:08:28.68,0:08:30.58,English,,0,0,0,,And historically those were called hubs
+Dialogue: 0,0:08:28.68,0:08:30.58,Chinese,,0,0,0,,通常那些被称为集线器
 Dialogue: 0,0:08:31.08,0:08:36.88,English,,0,0,0,,And the idea of a hub, it was just a repeater that whatever came into it from one computer
+Dialogue: 0,0:08:31.08,0:08:36.88,Chinese,,0,0,0,,集线器的概念就是一个中继器,无论什么东西从一台电脑进入它
 Dialogue: 0,0:08:36.88,0:08:39.04,English,,0,0,0,,It would broadcast to all the connected machines
+Dialogue: 0,0:08:36.88,0:08:39.04,Chinese,,0,0,0,,它将被广播到所有连接的机器上
 Dialogue: 0,0:08:39.70,0:08:43.86,English,,0,0,0,,And so you only want to do this for maybe a dozen or
+Dialogue: 0,0:08:39.70,0:08:43.86,Chinese,,0,0,0,,你原本需要重复做十几次
 Dialogue: 0,0:08:43.88,0:08:49.80,English,,0,0,0,,So machines that it's like a party-line they're all hearing what everybody else is saying
+Dialogue: 0,0:08:43.88,0:08:49.80,Chinese,,0,0,0,,所以机器就像一个聚会的队伍,他们都在听其他人在说什么
 Dialogue: 0,0:08:50.40,0:08:59.38,English,,0,0,0,,And in fact the original first version the Ethernet did that by everyone interacting over a single cable
+Dialogue: 0,0:08:50.40,0:08:59.38,Chinese,,0,0,0,,事实上，以太网最初的版本是通过每个人用一根电缆进行交互来实现的
 Dialogue: 0,0:08:59.70,0:09:02.00,English,,0,0,0,,Carrying essentially radio signals and
+Dialogue: 0,0:08:59.70,0:09:02.00,Chinese,,0,0,0,,它们携带了无线电信号
 Dialogue: 0,0:09:02.44,0:09:06.10,English,,0,0,0,,And similarly when you're in this room using a wireless internet
+Dialogue: 0,0:09:02.44,0:09:06.10,Chinese,,0,0,0,,同样的，当你在这个房间里使用无线网的时候
 Dialogue: 0,0:09:06.98,0:09:09.60,English,,0,0,0,,A wireless internet is sort of like a hub and that
+Dialogue: 0,0:09:06.98,0:09:09.60,Chinese,,0,0,0,,无线网就像一个集线器
 Dialogue: 0,0:09:10.30,0:09:15.88,English,,0,0,0,,All the packets that you're sending all across the room
+Dialogue: 0,0:09:10.30,0:09:15.88,Chinese,,0,0,0,,你在房间里发送的所有数据包
 Dialogue: 0,0:09:15.88,0:09:21.30,English,,0,0,0,,They're all sort of making use of the same radio frequencies the same communication channel
+Dialogue: 0,0:09:15.88,0:09:21.30,Chinese,,0,0,0,,它们都使用相同的无线电频率,相同的通信信道
 Dialogue: 0,0:09:21.64,0:09:28.80,English,,0,0,0,,And there's a protocol for how they detect when two messages get set at the same time and therefore interfere with each other
+Dialogue: 0,0:09:21.64,0:09:28.80,Chinese,,0,0,0,,有一个协议用于检测当两条报文同时被发出时,是否会因此相互干扰
 Dialogue: 0,0:09:29.44,0:09:34.38,English,,0,0,0,,So that can only sort of scale up to maybe at most a hundred different
+Dialogue: 0,0:09:29.44,0:09:34.38,Chinese,,0,0,0,,因此无线网最多只能扩展到同时让 100 台不同的
 Dialogue: 0,0:09:36.68,0:09:41.02,English,,0,0,0,,Hosts communicating because they're all sharing a single communication channel
+Dialogue: 0,0:09:36.68,0:09:41.02,Chinese,,0,0,0,,主机通信,是因为它们共享一个通信通道
 Dialogue: 0,0:09:41.78,0:09:46.68,English,,0,0,0,,Now in the wired world what's evolved is usually when you buy a box
+Dialogue: 0,0:09:41.78,0:09:46.68,Chinese,,0,0,0,,在有线通信中,变化是,当你买一个盒子时
 Dialogue: 0,0:09:47.48,0:09:49.32,English,,0,0,0,,Or you get one from your cable company
+Dialogue: 0,0:09:47.48,0:09:49.32,Chinese,,0,0,0,,或者你可以从有线电公司得到一个
 Dialogue: 0,0:09:49.94,0:09:56.48,English,,0,0,0,,With all those ports in it, it's actually called a router or sometimes a switch in that
+Dialogue: 0,0:09:49.94,0:09:56.48,Chinese,,0,0,0,,它上面有一些端口,它实际上被称为路由器或是交换机
 Dialogue: 0,0:09:59.16,0:10:01.68,English,,0,0,0,,It doesn't broadcast to everyone
+Dialogue: 0,0:09:59.16,0:10:01.68,Chinese,,0,0,0,,它不会向所有人广播
 Dialogue: 0,0:10:01.70,0:10:04.38,English,,0,0,0,,It selectively tries to guess
+Dialogue: 0,0:10:01.70,0:10:04.38,Chinese,,0,0,0,,它有选择地尝试猜测
 Dialogue: 0,0:10:05.12,0:10:08.74,English,,0,0,0,,Is this particular message bound for this particular host
+Dialogue: 0,0:10:05.12,0:10:08.74,Chinese,,0,0,0,,这个特定的报文是发送到这个特定的主机的吗
 Dialogue: 0,0:10:09.48,0:10:11.94,English,,0,0,0,,And only send to that one
+Dialogue: 0,0:10:09.48,0:10:11.94,Chinese,,0,0,0,,然后只发送到那台主机上
 Dialogue: 0,0:10:12.34,0:10:14.86,English,,0,0,0,,And as you know you can take these and wire up
-Dialogue: 0,0:10:15.36,0:10:18.82,English,,0,0,0,,I think about up to 6 levels deep in and hub
+Dialogue: 0,0:10:12.34,0:10:14.86,Chinese,,0,0,0,,正如你们所知，你们可以把它们连接起来
+Dialogue: 0,0:10:15.36,0:10:18.82,English,,0,0,0,,I think about up to 6 levels deep in an hub
+Dialogue: 0,0:10:15.36,0:10:18.82,Chinese,,0,0,0,,我觉得在一个集线器中至多可以连接 6 层深
 Dialogue: 0,0:10:19.48,0:10:24.66,English,,0,0,0,,And basically create a network of wired connections
+Dialogue: 0,0:10:19.48,0:10:24.66,Chinese,,0,0,0,,基本上,只要建立一个有线连接的网络
 Dialogue: 0,0:10:25.18,0:10:27.60,English,,0,0,0,,And they'll all get from one to the other somehow
-Dialogue: 0,0:10:28.82,0:10:35.23,English,,0,0,0,,And then after that it gets more complicated you can add more sophisticated types of switching on top of it
+Dialogue: 0,0:10:25.18,0:10:27.60,Chinese,,0,0,0,,它们都会以某种方式从一个连接到另一个
+Dialogue: 0,0:10:28.82,0:10:35.23,English,,0,0,0,,And then after that it gets more complicated you can add more sophisticated types of switch on top of it
+Dialogue: 0,0:10:28.82,0:10:35.23,Chinese,,0,0,0,,之后当它变得更复杂时,你可以在顶层添加更复杂的交换机
 Dialogue: 0,0:10:35.90,0:10:40.52,English,,0,0,0,,But so the general idea of even an Ethernet is actually a fairly complex thing
+Dialogue: 0,0:10:35.90,0:10:40.52,Chinese,,0,0,0,,虽然以太网的概念其实很复杂
 Dialogue: 0,0:10:41.28,0:10:44.92,English,,0,0,0,,But it's some sort of conceptual level we can just think of it as a bunch of hosts
+Dialogue: 0,0:10:41.28,0:10:44.92,Chinese,,0,0,0,,但我们可以在某种概念层面把它想象成一堆主机
 Dialogue: 0,0:10:45.48,0:10:47.26,English,,0,0,0,,That can talk directly to one another
+Dialogue: 0,0:10:45.48,0:10:47.26,Chinese,,0,0,0,,它们可以直接相互对话
 Dialogue: 0,0:10:49.42,0:10:56.14,English,,0,0,0,,And then an internet then refers to the idea of taking those local area networks and connecting them together
+Dialogue: 0,0:10:49.42,0:10:56.14,Chinese,,0,0,0,,然后互联网指的是通过路由器把这些局域网连接起来
 Dialogue: 0,0:10:56.74,0:11:02.46,English,,0,0,0,,Via routers and routers obey a particular protocol based on the address
+Dialogue: 0,0:10:56.74,0:11:02.46,Chinese,,0,0,0,,而路由器应用的特定的协议则是
 Dialogue: 0,0:11:02.70,0:11:04.42,English,,0,0,0,,That you're trying to send data to
+Dialogue: 0,0:11:02.70,0:11:04.42,Chinese,,0,0,0,,基于你发送数据的目标地址
 Dialogue: 0,0:11:05.34,0:11:06.18,English,,0,0,0,,And
+Dialogue: 0,0:11:05.34,0:11:06.18,Chinese,,0,0,0,,然后
 Dialogue: 0,0:11:08.78,0:11:16.72,English,,0,0,0,,And so what you end up with conceptually is a whole bunch of hosts spread potentially all across the world
+Dialogue: 0,0:11:08.78,0:11:16.72,Chinese,,0,0,0,,因此,从概念上讲,你最终连接的的是一大堆可能分布在世界各地的主机
 Dialogue: 0,0:11:17.26,0:11:20.02,English,,0,0,0,,And then some magical system of routers
+Dialogue: 0,0:11:17.26,0:11:20.02,Chinese,,0,0,0,,然后是一些神奇的路由器系统
 Dialogue: 0,0:11:20.42,0:11:22.96,English,,0,0,0,,That will get a message from one place to the other
+Dialogue: 0,0:11:20.42,0:11:22.96,Chinese,,0,0,0,,它们会把报文将从一个地方传递到另一个地方
 Dialogue: 0,0:11:23.24,0:11:29.08,English,,0,0,0,,Based on a mode of addressing where there's some known address of the hosts
+Dialogue: 0,0:11:23.24,0:11:29.08,Chinese,,0,0,0,,基于有已知地址的寻址模式
 Dialogue: 0,0:11:29.08,0:11:30.50,English,,0,0,0,,That you're trying to send to
+Dialogue: 0,0:11:29.08,0:11:30.50,Chinese,,0,0,0,,最终到达你的目标主机
 Dialogue: 0,0:11:30.96,0:11:36.90,English,,0,0,0,,And it will hub through multiple routers to get from one place to the other
+Dialogue: 0,0:11:30.96,0:11:36.90,Chinese,,0,0,0,,它将通过多个路由,器集线器从一个地方移动到另一个地方
 Dialogue: 0,0:11:36.92,0:11:38.90,English,,0,0,0,,And that's true whether it's on campus
+Dialogue: 0,0:11:36.92,0:11:38.90,Chinese,,0,0,0,,所以它会四处跃迁,无论在校园里
 Dialogue: 0,0:11:40.88,0:11:44.35,English,,0,0,0,,Or whether it's hopping all the way around the world
+Dialogue: 0,0:11:40.88,0:11:44.35,Chinese,,0,0,0,,或是在世界各地
 Dialogue: 0,0:11:45.04,0:11:50.82,English,,0,0,0,,And so again there's this huge body of information and knowledge about how that routing works
+Dialogue: 0,0:11:45.04,0:11:50.82,Chinese,,0,0,0,,所以会有许多关于路由是如何工作
 Dialogue: 0,0:11:50.94,0:11:52.62,English,,0,0,0,,And how its reliable and all that
+Dialogue: 0,0:11:50.94,0:11:52.62,Chinese,,0,0,0,,它为什么可靠,和其它一些知识点
 Dialogue: 0,0:11:53.16,0:11:56.64,English,,0,0,0,,But we're going to just assume that somebody else has figured that out
+Dialogue: 0,0:11:53.16,0:11:56.64,Chinese,,0,0,0,,但是我们假设其他人已经知道了
 Dialogue: 0,0:11:57.02,0:12:01.86,English,,0,0,0,,And our job as programmers is just to be able to communicate from one host to another
+Dialogue: 0,0:11:57.02,0:12:01.86,Chinese,,0,0,0,,作为程序员，我们的工作就是能够实现在主机之间进行通信
 Dialogue: 0,0:12:06.42,0:12:10.42,English,,0,0,0,,And so how could you design a system where all these diverse systems
 Dialogue: 0,0:12:10.42,0:12:22.00,English,,0,0,0,,Made by computers made by different manufacturers operating under different countries with different telecommunications bodies governing bodies and so forth
 Dialogue: 0,0:12:22.00,0:12:23.80,English,,0,0,0,,How can they all work with each other
