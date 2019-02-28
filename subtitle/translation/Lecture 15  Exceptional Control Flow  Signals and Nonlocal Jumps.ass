@@ -323,33 +323,33 @@ Dialogue: 0,0:26:52.64,0:26:54.64,English,,0,0,0,,被我们终止的子进程
 Dialogue: 0,0:26:55.56,0:27:02.28,English,,0,0,0,,Now this isn't strictly necessary because we're going to exit as soon as this fork12 function
 Dialogue: 0,0:27:02.80,0:27:06.58,English,,0,0,0,,Returns we're going to exit the code so but we're just being
 Dialogue: 0,0:27:07.38,0:27:11.90,English,,0,0,0,,You know careful here and maybe a little pedantic but
-Dialogue: 0,0:27:16.02,0:27:20.26,English,,0,0,0,,Okay now let's look at how we process receive signals 好的，那我们来看看进程是如何接收信号的
-Dialogue: 0,0:27:22.58,0:27:29.72,English,,0,0,0,,Now suppose process A is running along executing its user code and then 假设有一个进程 A，正在执行用户代码
-Dialogue: 0,0:27:30.48,0:27:34.94,English,,0,0,0,,There's a control passes into the kernel because of some exception 然后由于出现了异常，控制权转移给内核
-Dialogue: 0,0:27:36.12,0:27:40.36,English,,0,0,0,,Now that exception can be either a timer going off 这个异常可以是定时器到时
-Dialogue: 0,0:27:40.90,0:27:45.12,English,,0,0,0,,They've been interrupts or it can be a trap user calls a system call 可以是一个中断或一个陷阱，用户调用系统调用
-Dialogue: 0,0:27:45.76,0:27:50.50,English,,0,0,0,,Okay but it's always caused that the trap into the 但它通常用作陷阱
-Dialogue: 0,0:27:51.20,0:27:54.26,English,,0,0,0,,Or the transferring control into the kernel is always caused by some exception 控制权转移到内核经常就经常由一些异常引起
-Dialogue: 0,0:27:56.18,0:27:59.48,English,,0,0,0,,So at this point the kernel calls its scheduler function 在这里，内核调用它的调度函数
-Dialogue: 0,0:28:00.12,0:28:07.34,English,,0,0,0,,And it decides do a context switch from process A to process B 它决定做一个从进程 A 到进程 B 的上下文切换
-Dialogue: 0,0:28:09.46,0:28:15.50,English,,0,0,0,,And it gets processed B all set up and right before it returns from that exception 它在从异常返回之前会获取进程 B 的有关设置
-Dialogue: 0,0:28:16.26,0:28:24.24,English,,0,0,0,,And right before it's ready to pass control back to process the user code and process B 在它准备好将控制权返还给进程用户代码和进程 B 之前
-Dialogue: 0,0:28:25.30,0:28:29.34,English,,0,0,0,,It checks for any signals that any pending signals 它会检查所有待处理的信号
-Dialogue: 0,0:28:32.58,0:28:38.50,English,,0,0,0,,Okay and it does this by computing a bit vector pnb so pending nonblocked 它通过计算位向量 pnb 来做到这一点，使之不会阻塞
+Dialogue: 0,0:27:16.02,0:27:20.26,English,,0,0,0,,好的，那我们来看看进程是如何接收信号的
+Dialogue: 0,0:27:22.58,0:27:29.72,English,,0,0,0,,假设有一个进程 A，正在执行用户代码
+Dialogue: 0,0:27:30.48,0:27:34.94,English,,0,0,0,,然后由于出现了异常，控制权转移给内核
+Dialogue: 0,0:27:36.12,0:27:40.36,English,,0,0,0,,这个异常可以是定时器到时
+Dialogue: 0,0:27:40.90,0:27:45.12,English,,0,0,0,,可以是一个中断或一个陷阱，用户调用系统调用
+Dialogue: 0,0:27:45.76,0:27:50.50,English,,0,0,0,,但它通常用作陷阱
+Dialogue: 0,0:27:51.20,0:27:54.26,English,,0,0,0,,控制权转移到内核经常就经常由一些异常引起
+Dialogue: 0,0:27:56.18,0:27:59.48,English,,0,0,0,,在这里，内核调用它的调度函数
+Dialogue: 0,0:28:00.12,0:28:07.34,English,,0,0,0,,它决定做一个从进程 A 到进程 B 的上下文切换
+Dialogue: 0,0:28:09.46,0:28:15.50,English,,0,0,0,,它在从异常返回之前会获取进程 B 的有关设置
+Dialogue: 0,0:28:16.26,0:28:24.24,English,,0,0,0,,在它准备好将控制权返还给进程用户代码和进程 B 之前
+Dialogue: 0,0:28:25.30,0:28:29.34,English,,0,0,0,,它会检查所有待处理的信号
+Dialogue: 0,0:28:32.58,0:28:38.50,English,,0,0,0,,它通过计算位向量 pnb 来做到这一点，使之不会阻塞
 Dialogue: 0,0:28:39.42,0:28:42.58,English,,0,0,0,,Which is the logical and of the pending bit vector
-Dialogue: 0,0:28:44.00,0:28:46.48,English,,0,0,0,,And the inverse of the blocked bit vector 反转阻塞位向量
-Dialogue: 0,0:28:47.74,0:28:52.10,English,,0,0,0,,Okay so pnb is a list of all the pending signals that aren't blocked pnb 是所有未阻塞待处理信号的列表
-Dialogue: 0,0:28:53.34,0:28:56.08,English,,0,0,0,,Okay so these are all the pending signals that should be received 所以，所有的待处理信号都应该被接收了
-Dialogue: 0,0:28:59.12,0:29:02.84,English,,0,0,0,,Now if pnb is all zeros then there's no pending signals 如果 pub 全为 0，那么就是说没有待处理的信号
-Dialogue: 0,0:29:03.04,0:29:05.86,English,,0,0,0,,So it just returns it passes control back 只要返回，返还控制权就好
-Dialogue: 0,0:29:07.18,0:29:10.98,English,,0,0,0,,It passes control back to process B which can continue executing 它将控制权返还给进程 B，让它可以继续执行
-Dialogue: 0,0:29:11.64,0:29:14.18,English,,0,0,0,,However if pnb is nonzero then 然而，如果 pub 是非 0 的
-Dialogue: 0,0:29:15.10,0:29:19.70,English,,0,0,0,,It chooses the smallest nonzero bit in pnb 那么它会选择 pub 中最小的非零位
-Dialogue: 0,0:29:19.70,0:29:24.56,English,,0,0,0,,And it forces process p to receive that signal the corresponding signal 它会让进程 p 接收相应的信号
-Dialogue: 0,0:29:27.74,0:29:32.20,English,,0,0,0,,The receipt of the signal triggers some action in the process 这个信号的接收会引起这个进程的一些行为
-Dialogue: 0,0:29:36.24,0:29:44.34,English,,0,0,0,,And then we repeat that for all the nonzero signals k that are nonzero bits that are set in pnb 然后我们对 pub 中的每一个非零位对应的信号 k 重复此过程
-Dialogue: 0,0:29:44.78,0:29:47.60,English,,0,0,0,,And finally when we've gone all through all the nonzero bits 最后我们会处理完所有的非零位
-Dialogue: 0,0:29:48.14,0:29:56.70,English,,0,0,0,,Then we pass control to the next instruction in process p 接着我们将控制权转移给进程 p 的下一条指令
+Dialogue: 0,0:28:44.00,0:28:46.48,English,,0,0,0,,反转阻塞位向量
+Dialogue: 0,0:28:47.74,0:28:52.10,English,,0,0,0,,pnb 是所有未阻塞待处理信号的列表
+Dialogue: 0,0:28:53.34,0:28:56.08,English,,0,0,0,,所以，所有的待处理信号都应该被接收了
+Dialogue: 0,0:28:59.12,0:29:02.84,English,,0,0,0,,如果 pub 全为 0，那么就是说没有待处理的信号
+Dialogue: 0,0:29:03.04,0:29:05.86,English,,0,0,0,,只要返回，返还控制权就好
+Dialogue: 0,0:29:07.18,0:29:10.98,English,,0,0,0,,它将控制权返还给进程 B，让它可以继续执行
+Dialogue: 0,0:29:11.64,0:29:14.18,English,,0,0,0,,然而，如果 pub 是非 0 的
+Dialogue: 0,0:29:15.10,0:29:19.70,English,,0,0,0,,那么它会选择 pub 中最小的非零位
+Dialogue: 0,0:29:19.70,0:29:24.56,English,,0,0,0,,它会让进程 p 接收相应的信号
+Dialogue: 0,0:29:27.74,0:29:32.20,English,,0,0,0,,这个信号的接收会引起这个进程的一些行为
+Dialogue: 0,0:29:36.24,0:29:44.34,English,,0,0,0,,然后我们对 pub 中的每一个非零位对应的信号 k 重复此过程
+Dialogue: 0,0:29:44.78,0:29:47.60,English,,0,0,0,,最后我们会处理完所有的非零位
+Dialogue: 0,0:29:48.14,0:29:56.70,English,,0,0,0,,接着我们将控制权转移给进程 p 的下一条指令
 Dialogue: 0,0:30:00.72,0:30:03.96,English,,0,0,0,,所以每一个信号的接收都会触发一些行为
 Dialogue: 0,0:30:04.46,0:30:06.93,English,,0,0,0,,也包括进程的终止
 Dialogue: 0,0:30:07.86,0:30:11.40,English,,0,0,0,,线程在收到 sigcont 信号之前保持停止
@@ -357,113 +357,113 @@ Dialogue: 0,0:30:12.42,0:30:14.52,English,,0,0,0,,进程忽略这个信号
 Dialogue: 0,0:30:15.36,0:30:18.42,English,,0,0,0,,这里有一些预定义的默认行为
 Dialogue: 0,0:30:21.72,0:30:29.72,English,,0,0,0,,但我们可以使用一个叫做 signal 的系统调用来修改默认行为
 Dialogue: 0,0:30:31.66,0:30:37.28,English,,0,0,0,,Ok so we can...now signals a little that's another sort of misleading kind of term just like kill right because when we 所以我们可以。。。
-Dialogue: 0,0:30:37.74,0:30:40.50,English,,0,0,0,,When we send a signal to a process we don't always want to kill it 我们给一个进程发送信号时，并不是总是要 kill 掉它
+Dialogue: 0,0:30:37.74,0:30:40.50,English,,0,0,0,,我们给一个进程发送信号时，并不是总是要 kill 掉它
 Dialogue: 0,0:30:41.74,0:30:44.02,English,,0,0,0,,And signal doesn't actually signal anything
-Dialogue: 0,0:30:44.40,0:30:49.22,English,,0,0,0,,It just modifies the default action associated with some something 它可以修改为与默认操作相关的某些操作
-Dialogue: 0,0:30:50.74,0:30:55.02,English,,0,0,0,,Okay so if the signal function takes out a signal number(signum) 如果 signal 函数取出了一个信号数（signum）
+Dialogue: 0,0:30:44.40,0:30:49.22,English,,0,0,0,,它可以修改为与默认操作相关的某些操作
+Dialogue: 0,0:30:50.74,0:30:55.02,English,,0,0,0,,如果 signal 函数取出了一个信号数（signum）
 Dialogue: 0,0:30:56.90,0:31:01.98,English,,0,0,0,,And then specifies a change in the default action for that signal
 Dialogue: 0,0:31:04.16,0:31:07.46,English,,0,0,0,,And those default actions can be either to ignore the signal(sig_ign)
 Dialogue: 0,0:31:08.30,0:31:14.96,English,,0,0,0,,Ok ignore signals of type signal,revert to the default behavior for that signal
-Dialogue: 0,0:31:17.48,0:31:21.96,English,,0,0,0,,Or we can give it...or it can be the address of a user level signal handler 我们也可以给它一个。。。也可以是一个用户级信号处理函数的地址
-Dialogue: 0,0:31:22.64,0:31:26.38,English,,0,0,0,,Which is a function that we've declared in our C program 也就是那个我们在 C 程序中定义的函数
-Dialogue: 0,0:31:26.76,0:31:32.92,English,,0,0,0,,Ok there's nothing special about the function it has a certain prototype that has it takes a single argument 这个函数没什么特别的地方，它有一个明确声明了的信号参数
-Dialogue: 0,0:31:33.60,0:31:40.06,English,,0,0,0,,Which is the signal number so when that function gets called in response to receiving a signal  就是这个信号编号，所以当响应这个被接收到的信号时这个函数会被调用
-Dialogue: 0,0:31:41.24,0:31:44.02,English,,0,0,0,,That argument will be set to the signal number 然后这个参数会设置这个信号标号
-Dialogue: 0,0:31:47.80,0:31:54.54,English,,0,0,0,,So calling signal with a specifying a signal handler is called installing a handler 所以用指定的信号处理函数调用信号，被称作
-Dialogue: 0,0:31:55.42,0:31:59.68,English,,0,0,0,,And then executing the handlers referred to as catching or executing 然后将这个处理程序作为捕获或者执行运行
-Dialogue: 0,0:31:59.68,0:32:01.52,English,,0,0,0,,They were handling the signal 这就是信号的处理
-Dialogue: 0,0:32:03.78,0:32:06.64,English,,0,0,0,,And and this handler then is just like an exception handler 这些信号处理就像异常处理一样
-Dialogue: 0,0:32:06.66,0:32:12.56,English,,0,0,0,,When it returns it will be when it's executed it will interrupt the 当它返回时，它会。。当它执行后，它会中断
-Dialogue: 0,0:32:13.16,0:32:16.66,English,,0,0,0,,Whatever is currently executing in the process when it returns 当他返回时，不论这个进程执行到哪里
-Dialogue: 0,0:32:16.92,0:32:19.94,English,,0,0,0,,It will return back to that point and continue executing 它都会返回到这里并继续执行
-Dialogue: 0,0:32:22.74,0:32:26.74,English,,0,0,0,,Okay so here's a simple example of installing a handler 这是一个安装处理程序的例子
-Dialogue: 0,0:32:28.62,0:32:32.48,English,,0,0,0,,So here in main where we're going to install a sigint handler 在 main 里，我们来安装 sigint 的处理程序
-Dialogue: 0,0:32:34.92,0:32:38.80,English,,0,0,0,,Which is called sigint_handler which is defined up here 它叫做 sigint_handler，被定义在这
-Dialogue: 0,0:32:39.80,0:32:43.12,English,,0,0,0,,And the prototype for this function is returns nothing 这个函数的原型没有返回值
-Dialogue: 0,0:32:43.80,0:32:48.12,English,,0,0,0,,And it takes a single integer argument which is the signal number and returns nothing 它需要一个信号编号数字作为参数，并且没有返回值
-Dialogue: 0,0:32:50.76,0:32:52.42,English,,0,0,0,,Okay and after we install that handler 然后我们来安装它
+Dialogue: 0,0:31:17.48,0:31:21.96,English,,0,0,0,,我们也可以给它一个。。。也可以是一个用户级信号处理函数的地址
+Dialogue: 0,0:31:22.64,0:31:26.38,English,,0,0,0,,也就是那个我们在 C 程序中定义的函数
+Dialogue: 0,0:31:26.76,0:31:32.92,English,,0,0,0,,这个函数没什么特别的地方，它有一个明确声明了的信号参数
+Dialogue: 0,0:31:33.60,0:31:40.06,English,,0,0,0,,就是这个信号编号，所以当响应这个被接收到的信号时这个函数会被调用
+Dialogue: 0,0:31:41.24,0:31:44.02,English,,0,0,0,,然后这个参数会设置这个信号标号
+Dialogue: 0,0:31:47.80,0:31:54.54,English,,0,0,0,,所以用指定的信号处理函数调用信号，被称作
+Dialogue: 0,0:31:55.42,0:31:59.68,English,,0,0,0,,然后将这个处理程序作为捕获或者执行运行
+Dialogue: 0,0:31:59.68,0:32:01.52,English,,0,0,0,,这就是信号的处理
+Dialogue: 0,0:32:03.78,0:32:06.64,English,,0,0,0,,这些信号处理就像异常处理一样
+Dialogue: 0,0:32:06.66,0:32:12.56,English,,0,0,0,,当它返回时，它会。。当它执行后，它会中断
+Dialogue: 0,0:32:13.16,0:32:16.66,English,,0,0,0,,当他返回时，不论这个进程执行到哪里
+Dialogue: 0,0:32:16.92,0:32:19.94,English,,0,0,0,,它都会返回到这里并继续执行
+Dialogue: 0,0:32:22.74,0:32:26.74,English,,0,0,0,,这是一个安装处理程序的例子
+Dialogue: 0,0:32:28.62,0:32:32.48,English,,0,0,0,,在 main 里，我们来安装 sigint 的处理程序
+Dialogue: 0,0:32:34.92,0:32:38.80,English,,0,0,0,,它叫做 sigint_handler，被定义在这
+Dialogue: 0,0:32:39.80,0:32:43.12,English,,0,0,0,,这个函数的原型没有返回值
+Dialogue: 0,0:32:43.80,0:32:48.12,English,,0,0,0,,它需要一个信号编号作为参数，并且没有返回值
+Dialogue: 0,0:32:50.76,0:32:52.42,English,,0,0,0,,然后我们来挂载它
 Dialogue: 0,0:32:53.12,0:32:59.24,English,,0,0,0,,Then we're going to execute the pause this call which just waits for a signal handler to execute
 Dialogue: 0,0:32:59.48,0:33:03.20,English,,0,0,0,,Ok so pause terminates the current or suspends the current process
 Dialogue: 0,0:33:04.28,0:33:08.38,English,,0,0,0,,Until a signal is received and a handler executes in that process
 Dialogue: 0,0:33:08.92,0:33:10.68,English,,0,0,0,,And then pause then pause returns
 Dialogue: 0,0:33:13.36,0:33:16.36,English,,0,0,0,,So we're going to wait until the sigint happens
-Dialogue: 0,0:33:16.40,0:33:19.54,English,,0,0,0,,So sigint entry call is when we type ctrl-c 当我们按下 ctrl-c 时，sigint 开始执行
+Dialogue: 0,0:33:16.40,0:33:19.54,English,,0,0,0,,当我们按下 ctrl-c 时，sigint 开始执行
 Dialogue: 0,0:33:21.98,0:33:27.04,English,,0,0,0,,So when you're doing your bombs did you panic at some point and try to hit ctrl-c to get out of it
 Dialogue: 0,0:33:28.50,0:33:30.86,English,,0,0,0,,Okay so that snarky message you got that was
 Dialogue: 0,0:33:32.04,0:33:37.20,English,,0,0,0,,We did that by installing a sigint handler in your bomb
-Dialogue: 0,0:33:38.78,0:33:43.14,English,,0,0,0,,Okay so when you type ctrl-c that elicits a sigint 当你按下 ctrl-c 时，就会触发 sigint
-Dialogue: 0,0:33:43.60,0:33:51.60,English,,0,0,0,,When that sigint is received,we printed this message and then eventually let you exit 收到 sigint 信号后，我们输出一条信息然后退出
-Dialogue: 0,0:33:56.90,0:34:01.38,English,,0,0,0,,Now signals are another examples of concurrency 信号也是并发的一个例子
-Dialogue: 0,0:34:02.16,0:34:06.92,English,,0,0,0,,Now we've seen concurrency earlier in the form of processes 我们已经见到过进程的并发了
-Dialogue: 0,0:34:07.84,0:34:12.90,English,,0,0,0,,Right concurrent flows overlapping in time 并发流在时间上是重叠的
-Dialogue: 0,0:34:14.14,0:34:19.32,English,,0,0,0,,Okay logical flows overlapping in time by definition are concurrent 逻辑流
-Dialogue: 0,0:34:20.58,0:34:26.62,English,,0,0,0,,Now with processes the because they have separate address spaces 进程有它们各自的独立地址空间
-Dialogue: 0,0:34:26.84,0:34:29.46,English,,0,0,0,,Those concurrent flows never interfere with each other 并发流不会妨碍彼此
-Dialogue: 0,0:34:29.58,0:34:33.62,English,,0,0,0,,Right so in some sense processes are very easy to deal with 从某种意义上说，进程是很好处理的
-Dialogue: 0,0:34:34.10,0:34:40.18,English,,0,0,0,,And we don't really have to worry one process doesn't have to worry about being interfered with by another process 我们不必担心一个进程。。不必担心被其它进程影响
-Dialogue: 0,0:34:42.02,0:34:47.46,English,,0,0,0,,In fact you have to go to great lengths to share like to share things between processes 实际上，你必须想办法在进程之间共享东西
-Dialogue: 0,0:34:47.46,0:34:53.78,English,,0,0,0,,You have to use specific system calls in order to say share memory between two processes 为了在两个进程间共享内存，你得使用特定的系统调用
-Dialogue: 0,0:34:55.22,0:34:59.90,English,,0,0,0,,Now signals are another form of concurrency this is the second time in this class that 信号是并发的一种形式，这是这节课上第二次提到
-Dialogue: 0,0:35:01.42,0:35:03.08,English,,0,0,0,,That you've experienced concurrency 现在你已经对并发有概念了
-Dialogue: 0,0:35:03.98,0:35:08.22,English,,0,0,0,,And so a signal is just a concurrent flow,it's just a logical flow a sit 信号是一个并发流，
-Dialogue: 0,0:35:08.86,0:35:13.82,English,,0,0,0,,So a handler is just another logical flow that runs concurrently with your program 一个处理程序是你程序中并发执行的一个逻辑流
-Dialogue: 0,0:35:14.92,0:35:19.28,English,,0,0,0,,Right so we're...let's say we're executing a while loop in process A 所以。。让我们在进程 A 中执行一个 while 循环
-Dialogue: 0,0:35:20.76,0:35:22.90,English,,0,0,0,,Okay that while loop is executing 好的，while 循环开始了
-Dialogue: 0,0:35:23.46,0:35:25.56,English,,0,0,0,,And in process a receives the signal 进程收到了一个信号
-Dialogue: 0,0:35:26.54,0:35:29.22,English,,0,0,0,,Which causes a transfer of control to this handler 这使得控制权被转移给这个处理程序
-Dialogue: 0,0:35:31.84,0:35:35.30,English,,0,0,0,,This handler executes so this is a concurrent flow 这个处理程序是并发执行的
-Dialogue: 0,0:35:36.12,0:35:42.24,English,,0,0,0,,That overlaps in time with the while loop in process A eventually this handler returns 它与进程 A 中的 while 循环在时间上是重叠的，最终该处理程序返回
+Dialogue: 0,0:33:38.78,0:33:43.14,English,,0,0,0,,当你按下 ctrl-c 时，就会触发 sigint
+Dialogue: 0,0:33:43.60,0:33:51.60,English,,0,0,0,,收到 sigint 信号后，我们输出一条信息然后退出
+Dialogue: 0,0:33:56.90,0:34:01.38,English,,0,0,0,,信号也是并发的一个例子
+Dialogue: 0,0:34:02.16,0:34:06.92,English,,0,0,0,,我们已经见到过进程的并发了
+Dialogue: 0,0:34:07.84,0:34:12.90,English,,0,0,0,,并发流在时间上是重叠的
+Dialogue: 0,0:34:14.14,0:34:19.32,English,,0,0,0,,Okay logical flows overlapping in time by definition are concurrent
+Dialogue: 0,0:34:20.58,0:34:26.62,English,,0,0,0,,进程有它们各自的独立地址空间
+Dialogue: 0,0:34:26.84,0:34:29.46,English,,0,0,0,,并发流不会妨碍彼此
+Dialogue: 0,0:34:29.58,0:34:33.62,English,,0,0,0,,从某种意义上说，进程是很好处理的
+Dialogue: 0,0:34:34.10,0:34:40.18,English,,0,0,0,,我们不必担心一个进程。。不必担心被其它进程影响
+Dialogue: 0,0:34:42.02,0:34:47.46,English,,0,0,0,,实际上，你必须想办法在进程之间共享东西
+Dialogue: 0,0:34:47.46,0:34:53.78,English,,0,0,0,,为了在两个进程间共享内存，你得使用特定的系统调用
+Dialogue: 0,0:34:55.22,0:34:59.90,English,,0,0,0,,信号是并发的一种形式，这是这节课上第二次提到
+Dialogue: 0,0:35:01.42,0:35:03.08,English,,0,0,0,,现在你已经对并发有概念了
+Dialogue: 0,0:35:03.98,0:35:08.22,English,,0,0,0,,信号是一个并发流，
+Dialogue: 0,0:35:08.86,0:35:13.82,English,,0,0,0,,一个处理程序是你程序中并发执行的一个逻辑流
+Dialogue: 0,0:35:14.92,0:35:19.28,English,,0,0,0,,所以。。让我们在进程 A 中执行一个 while 循环
+Dialogue: 0,0:35:20.76,0:35:22.90,English,,0,0,0,,循环开始了
+Dialogue: 0,0:35:23.46,0:35:25.56,English,,0,0,0,,进程收到了一个信号
+Dialogue: 0,0:35:26.54,0:35:29.22,English,,0,0,0,,这使得控制权被转移给这个处理程序
+Dialogue: 0,0:35:31.84,0:35:35.30,English,,0,0,0,,这个处理程序是并发执行的
+Dialogue: 0,0:35:36.12,0:35:42.24,English,,0,0,0,,它与进程 A 中的 while 循环在时间上是重叠的，最终该处理程序返回
 Dialogue: 0,0:35:43.24,0:35:48.42,English,,0,0,0,,And we return for the back tip to back to process A
 Dialogue: 0,0:35:50.34,0:35:58.26,English,,0,0,0,,Now one of the reasons signals are so tricky is because of this overlapping concurrent flow
-Dialogue: 0,0:35:59.86,0:36:06.06,English,,0,0,0,,This concurrency because the signal handler runs in the same process  as the main program 因为这个信号处理程序与 main 程序运行在同一个进程里，所以我们说它是并发的
-Dialogue: 0,0:36:06.68,0:36:10.12,English,,0,0,0,,So it shares all the global variables of that program 所以它们共享程序中的所有全局变量
-Dialogue: 0,0:36:11.76,0:36:15.26,English,,0,0,0,,Okay so you're that signal handler is a function 信号处理程序是一个函数
-Dialogue: 0,0:36:15.26,0:36:21.54,English,,0,0,0,,That you've declared and it has access to all the state,all the global state in the program 你之前定义的，它可以访问所有的状态，程序中的所有全局状态
-Dialogue: 0,0:36:23.40,0:36:27.86,English,,0,0,0,,Okay and the existence of the shared global state can create real problems 全局状态共享的存在使得我们可以创建真正的问题
-Dialogue: 0,0:36:37.50,0:36:40.48,English,,0,0,0,,And we'll get into more details about some of those problems 接下来我们会讲更多关于这些问题的细节
-Dialogue: 0,0:36:42.08,0:36:49.90,English,,0,0,0,,So another way to look at these signal handlers disking as concurrent flows is using this context switch diagram 将这些信号处理程序看作并发流的另一种方式是用这个上下文切换图
-Dialogue: 0,0:36:50.62,0:36:53.32,English,,0,0,0,,So suppose we're executing in process A 假设我们执行一个进程 A
-Dialogue: 0,0:36:54.50,0:37:00.85,English,,0,0,0,,And now at some point a signal delivered to process  A 某时刻，一个信号被传递给进程 A
-Dialogue: 0,0:37:01.70,0:37:06.78,English,,0,0,0,,Now nothing happens right just the pending bit gets set in process A at this point 现在还什么都没有发生，现在只有进程 A 的待处理位被置位
-Dialogue: 0,0:37:08.64,0:37:12.52,English,,0,0,0,,Now at some point there's a transfer of control into the kernel 在某些时刻，控制权被转移给了内核
-Dialogue: 0,0:37:13.44,0:37:17.20,English,,0,0,0,,And the kernel decides to do a context switch from A to B 内核决定进行从 A 到 B 的上下文切换
-Dialogue: 0,0:37:18.08,0:37:22.34,English,,0,0,0,,And now B gets to run for a while there's another transfer of control to the kernel 现在 B 开始运行一段时间，这是另一个对内核控制权的转移
-Dialogue: 0,0:37:24.30,0:37:27.02,English,,0,0,0,,And the kernel decides to schedule process A 内核决定调度进程 A
-Dialogue: 0,0:37:28.62,0:37:32.90,English,,0,0,0,,And now right before it returns control to process A 在它将控制权返还给进程 A 之前
-Dialogue: 0,0:37:33.26,0:37:37.36,English,,0,0,0,,It notices that the pending bit for this signal is set 注意这时，此信号的未处理信号未是置位的
-Dialogue: 0,0:37:37.76,0:37:40.38,English,,0,0,0,,So it causes process A to receive that signal 所以进程 A 收到了这个信号
-Dialogue: 0,0:37:41.00,0:37:42.88,English,,0,0,0,,So that executes the handler code 然后执行处理程序
-Dialogue: 0,0:37:43.68,0:37:48.12,English,,0,0,0,,When the handler returns, it returns for brief briefly to the kernel 当处理程序返回，它会返回到内核去
-Dialogue: 0,0:37:48.18,0:37:53.76,English,,0,0,0,,Which then transfers control back to the the next instruction that the process was going to execute 然后控制权会被交给进程要执行的下一条指令
-Dialogue: 0,0:37:56.48,0:38:00.56,English,,0,0,0,,Now handlers are also tricky because they can be interrupted by other handlers 因为处理程序可以被其它处理程序中断，这使它很麻烦
-Dialogue: 0,0:38:01.34,0:38:06.56,English,,0,0,0,,So suppose we have our main program that catches a signal s 假如我们的 main 程序捕获到了一个信号 s
-Dialogue: 0,0:38:08.00,0:38:10.70,English,,0,0,0,,Which causes a transfer of control to handler S 我们得将控制权转移给 s 的处理程序
+Dialogue: 0,0:35:59.86,0:36:06.06,English,,0,0,0,,因为这个信号处理程序与 main 程序运行在同一个进程里，所以我们说它是并发的
+Dialogue: 0,0:36:06.68,0:36:10.12,English,,0,0,0,,所以它们共享程序中的所有全局变量
+Dialogue: 0,0:36:11.76,0:36:15.26,English,,0,0,0,,信号处理程序是一个函数
+Dialogue: 0,0:36:15.26,0:36:21.54,English,,0,0,0,,你之前定义的，它可以访问所有的状态，程序中的所有全局状态
+Dialogue: 0,0:36:23.40,0:36:27.86,English,,0,0,0,,全局状态共享的存在使得我们可以创建真正的问题
+Dialogue: 0,0:36:37.50,0:36:40.48,English,,0,0,0,,接下来我们会讲更多关于这些问题的细节
+Dialogue: 0,0:36:42.08,0:36:49.90,English,,0,0,0,,将这些信号处理程序看作并发流的另一种方式是用这个上下文切换图
+Dialogue: 0,0:36:50.62,0:36:53.32,English,,0,0,0,,假设我们执行一个进程 A
+Dialogue: 0,0:36:54.50,0:37:00.85,English,,0,0,0,,某时刻，一个信号被传递给进程 A
+Dialogue: 0,0:37:01.70,0:37:06.78,English,,0,0,0,,现在还什么都没有发生，现在只有进程 A 的待处理位被置位
+Dialogue: 0,0:37:08.64,0:37:12.52,English,,0,0,0,,在某些时刻，控制权被转移给了内核
+Dialogue: 0,0:37:13.44,0:37:17.20,English,,0,0,0,,内核决定进行从 A 到 B 的上下文切换
+Dialogue: 0,0:37:18.08,0:37:22.34,English,,0,0,0,,现在 B 开始运行一段时间，这是另一个对内核控制权的转移
+Dialogue: 0,0:37:24.30,0:37:27.02,English,,0,0,0,,内核决定调度进程 A
+Dialogue: 0,0:37:28.62,0:37:32.90,English,,0,0,0,,在它将控制权返还给进程 A 之前
+Dialogue: 0,0:37:33.26,0:37:37.36,English,,0,0,0,,注意这时，此信号的未处理信号未是置位的
+Dialogue: 0,0:37:37.76,0:37:40.38,English,,0,0,0,,所以进程 A 收到了这个信号
+Dialogue: 0,0:37:41.00,0:37:42.88,English,,0,0,0,,然后执行处理程序
+Dialogue: 0,0:37:43.68,0:37:48.12,English,,0,0,0,,当处理程序返回，它会返回到内核去
+Dialogue: 0,0:37:48.18,0:37:53.76,English,,0,0,0,,然后控制权会被交给进程要执行的下一条指令
+Dialogue: 0,0:37:56.48,0:38:00.56,English,,0,0,0,,因为处理程序可以被其它处理程序中断，这使它很麻烦
+Dialogue: 0,0:38:01.34,0:38:06.56,English,,0,0,0,,假如我们的 main 程序捕获到了一个信号 s
+Dialogue: 0,0:38:08.00,0:38:10.70,English,,0,0,0,,我们得将控制权转移给 s 的处理程序
 Dialogue: 0,0:38:11.44,0:38:13.76,English,,0,0,0,,And then we'll handler S did you have a question okay
-Dialogue: 0,0:38:15.24,0:38:19.00,English,,0,0,0,,Well handler S is executing 处理程序 s 执行完后
-Dialogue: 0,0:38:22.96,0:38:28.28,English,,0,0,0,,The program catches a signal t 程序又捕获了信号 t
-Dialogue: 0,0:38:30.62,0:38:35.78,English,,0,0,0,,Which causes a transfer of control to the handler first for t 那么控制权就得先转移给 t 的处理程序
+Dialogue: 0,0:38:15.24,0:38:19.00,English,,0,0,0,,处理程序 s 执行完后
+Dialogue: 0,0:38:22.96,0:38:28.28,English,,0,0,0,,程序又捕获了信号 t
+Dialogue: 0,0:38:30.62,0:38:35.78,English,,0,0,0,,那么控制权就得先转移给 t 的处理程序
 Dialogue: 0,0:38:36.38,0:38:39.30,English,,0,0,0,,And when at handler returns,it returns to the point to the 这个处理程序返回时，它返回到。。
 Dialogue: 0,0:38:40.36,0:38:45.80,English,,0,0,0,,To the to the instruction and handle or else that was where it was interrupted
-Dialogue: 0,0:38:46.36,0:38:50.50,English,,0,0,0,,And then handle or us continues its execution and eventually 然后处理程序或我们自己继续执行
-Dialogue: 0,0:38:50.50,0:38:54.34,English,,0,0,0,,Return back to the the point in the main program where it was interrupted 最终返回到 main 程序被中断的地方
-Dialogue: 0,0:38:58.70,0:39:02.61,English,,0,0,0,,Now signals that the kernel always blocks 内核的信号总会被一直阻塞
+Dialogue: 0,0:38:46.36,0:38:50.50,English,,0,0,0,,然后处理程序或我们自己继续执行
+Dialogue: 0,0:38:50.50,0:38:54.34,English,,0,0,0,,最终返回到 main 程序被中断的地方
+Dialogue: 0,0:38:58.70,0:39:02.61,English,,0,0,0,,内核的信号总会被一直阻塞
 Dialogue: 0,0:39:03.32,0:39:06.44,English,,0,0,0,,Pending signals of the type currently being handled right so
-Dialogue: 0,0:39:07.56,0:39:12.46,English,,0,0,0,,A handler for a signal of type t can't be interrupted 具有 t 信号类型的处理程序不能被中断
-Dialogue: 0,0:39:13.20,0:39:16.16,English,,0,0,0,,By the receipt of another signal of that same type 被其它具有相同类型的信号中断
-Dialogue: 0,0:39:16.96,0:39:20.98,English,,0,0,0,,Okay can be as I showed in the previous slide it can be interrupted by a signal of another type 它可以被我上一张幻灯片展示的，其它类型的信号中断
-Dialogue: 0,0:39:21.46,0:39:23.42,English,,0,0,0,,But not by a signal of the same type 但现在它们是同一类型的
-Dialogue: 0,0:39:23.88,0:39:28.12,English,,0,0,0,,So that's sort of an implicit form of blocking 
-Dialogue: 0,0:39:29.22,0:39:36.70,English,,0,0,0,,But there's the kernel also provides a system call that allows you to explicitly block and unblock signals
-Dialogue: 0,0:39:37.30,0:39:40.01,English,,0,0,0,,In the form of the sigprocmask function
-Dialogue: 0,0:39:41.96,0:39:48.66,English,,0,0,0,,And then there's associated so this allows you to block and unblock a set of signals
-Dialogue: 0,0:39:49.42,0:39:54.04,English,,0,0,0,,And then there some support functions that allow you to create those sets
-Dialogue: 0,0:39:55.40,0:39:58.34,English,,0,0,0,,So just think of these as bit vectors
+Dialogue: 0,0:39:07.56,0:39:12.46,English,,0,0,0,,具有 t 信号类型的处理程序不能被中断
+Dialogue: 0,0:39:13.20,0:39:16.16,English,,0,0,0,,被其它具有相同类型的信号中断
+Dialogue: 0,0:39:16.96,0:39:20.98,English,,0,0,0,,它可以被我上一张幻灯片展示的，其它类型的信号中断
+Dialogue: 0,0:39:21.46,0:39:23.42,English,,0,0,0,,但现在它们是同一类型的
+Dialogue: 0,0:39:23.88,0:39:28.12,English,,0,0,0,,这是隐式的阻塞
+Dialogue: 0,0:39:29.22,0:39:36.70,English,,0,0,0,,内核也提供一个系统调用，允许显式设置阻塞和解除阻塞
+Dialogue: 0,0:39:37.30,0:39:40.01,English,,0,0,0,,就是 sigprocmask 函数
+Dialogue: 0,0:39:41.96,0:39:48.66,English,,0,0,0,,它允许你阻塞或解除阻塞一组信号
+Dialogue: 0,0:39:49.42,0:39:54.04,English,,0,0,0,,And then there some support functions that allow you to create those sets 这是一些支持你创建这些位的函数
+Dialogue: 0,0:39:55.40,0:39:58.34,English,,0,0,0,,So just think of these as bit vectors 把它们当成位向量来看
 Dialogue: 0,0:39:58.38,0:40:05.34,English,,0,0,0,,And these functions will set in set and reset the bits and those those bit vectors
 Dialogue: 0,0:40:07.16,0:40:12.72,English,,0,0,0,,So let's see how we can use sigprocmasks to temporarily block and unblock a signal
 Dialogue: 0,0:40:13.32,0:40:16.00,English,,0,0,0,,So this is going to turn out to be very important for you
 Dialogue: 0,0:40:16.00,0:40:21.24,English,,0,0,0,,When you working on your shells that which is your next lab assignment okay
 Dialogue: 0,0:40:25.98,0:40:31.34,English,,0,0,0,,So what we do...we'll use sigemptyset to create an empty mask so this is a mask with all zeros
-Dialogue: 0,0:40:31.96,0:40:33.80,English,,0,0,0,,Okay with no elements in the set
+Dialogue: 0,0:40:31.96,0:40:33.80,English,,0,0,0,,Okay with no elements in the set 这个集合现在没有元素
 Dialogue: 0,0:40:34.80,0:40:39.46,English,,0,0,0,,And then we're going to add a single element to this set which is sigint
 Dialogue: 0,0:40:42.46,0:40:47.88,English,,0,0,0,,And now we temp...we have some code that we don't want to be interrupted by the seed of sigint
 Dialogue: 0,0:40:49.36,0:40:53.08,English,,0,0,0,,Okay so we want to temporarily block the receipt of sig n signals
