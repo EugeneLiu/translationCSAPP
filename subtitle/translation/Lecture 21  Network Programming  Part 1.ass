@@ -350,7 +350,7 @@ Dialogue: 0,0:13:11.70,0:13:17.46,Chinese,,0,0,0,,但当这个观点 -- 把你�
 Dialogue: 0,0:13:17.48,0:13:21.38,English,,0,0,0,,And packets are typically about a thousand to two thousand bytes
 Dialogue: 0,0:13:17.48,0:13:21.38,Chinese,,0,0,0,,数据包通常是 1000 到 2000 字节
 Dialogue: 0,0:13:22.36,0:13:27.72,English,,0,0,0,,And so if you have a longer message it chops it up into individual packets and sends it across
-Dialogue: 0,0:13:22.36,0:13:27.72,Chinese,,0,0,0,,所以如果你有一个较长的报文，它会被切分成许多单独的数据包，然后发送出去
+Dialogue: 0,0:13:22.36,0:13:27.72,Chinese,,0,0,0,,所以如果你有一条较长的报文，它会被切分成许多单独的数据包，然后发送出去
 Dialogue: 0,0:13:28.24,0:13:30.52,English,,0,0,0,,And all the communication occurs at the packet level
 Dialogue: 0,0:13:28.24,0:13:30.52,Chinese,,0,0,0,,而且所有的通信都发生在数据包这一层
 Dialogue: 0,0:13:31.16,0:13:33.76,English,,0,0,0,,That's different than the historic phone system
@@ -370,35 +370,35 @@ Dialogue: 0,0:13:58.94,0:14:03.42,Chinese,,0,0,0,,把报文从一个主机 A 发
 Dialogue: 0,0:14:03.80,0:14:05.86,English,,0,0,0,,What happens is we want to send a packet
 Dialogue: 0,0:14:03.80,0:14:05.86,Chinese,,0,0,0,,实际上发生的事是我们传递一个数据包
 Dialogue: 0,0:14:06.66,0:14:09.30,English,,0,0,0,,And that packet will contain some amount of data
-Dialogue: 0,0:14:06.66,0:14:09.30,Chinese,,0,0,0,,那个数据包包含一部分数据
+Dialogue: 0,0:14:06.66,0:14:09.30,Chinese,,0,0,0,,数据包中有一部分数据
 Dialogue: 0,0:14:10.32,0:14:15.04,English,,0,0,0,,And the idea of a packet communication then is you put little headers on
-
+Dialogue: 0,0:14:10.32,0:14:15.04,Chinese,,0,0,0,,数据包通信的概念就是在数据包上附上一个包头
 Dialogue: 0,0:14:15.34,0:14:20.80,English,,0,0,0,,That contain certain routing information see on the front of an envelope of a letter perhaps
-
+Dialogue: 0,0:14:15.34,0:14:20.80,Chinese,,0,0,0,,包头含有确切的路由信息，就好像信封之于信件
 Dialogue: 0,0:14:21.72,0:14:24.42,English,,0,0,0,,And so and at different points in the way
-
+Dialogue: 0,0:14:21.72,0:14:24.42,Chinese,,0,0,0,,然后数据包在发送过程的不同阶段
 Dialogue: 0,0:14:24.42,0:14:30.82,English,,0,0,0,,They'll have different numbers of headers and different protocols or formats for what those headers look like
-
+Dialogue: 0,0:14:24.42,0:14:30.82,Chinese,,0,0,0,,会有不同数量的包头，而且它们所使用的协议不是完全相同的
 Dialogue: 0,0:14:31.58,0:14:33.74,English,,0,0,0,,So in particular within
-
+Dialogue: 0,0:14:31.58,0:14:33.74,Chinese,,0,0,0,,尤其是在
 Dialogue: 0,0:14:34.92,0:14:37.10,English,,0,0,0,,I want to send a message and I'll
-
+Dialogue: 0,0:14:34.92,0:14:37.10,Chinese,,0,0,0,,我想要发送一条报文的时候
 Dialogue: 0,0:14:37.76,0:14:42.32,English,,0,0,0,,I'll do that and then the software that runs on my machine that handles this
-
+Dialogue: 0,0:14:37.76,0:14:42.32,Chinese,,0,0,0,,我只需要把他发出去，然后我电脑上的软件会帮我完成上述的步骤
 Dialogue: 0,0:14:42.76,0:14:50.06,English,,0,0,0,,Will put a header in front of that describes the internet routing
-
+Dialogue: 0,0:14:42.76,0:14:50.06,Chinese,,0,0,0,,它会帮我放上一个描述网络路由的包头
 Dialogue: 0,0:14:50.44,0:14:55.62,English,,0,0,0,,And then it will tack a header in front of that talks about the local area network routing that gets used
-
+Dialogue: 0,0:14:50.44,0:14:55.62,Chinese,,0,0,0,,以及一个描述本地路由的包头
 Dialogue: 0,0:14:56.42,0:15:02.06,English,,0,0,0,,And that's what's referred to as the a PH the packet header for the internet protocol
-
+Dialogue: 0,0:14:56.42,0:15:02.06,Chinese,,0,0,0,,这就是我们所说的互联网协议的包头(PH)
 Dialogue: 0,0:15:02.74,0:15:08.30,English,,0,0,0,,And FH1 the frame header for this particular message being sent within this local network
-
+Dialogue: 0,0:15:02.74,0:15:08.30,Chinese,,0,0,0,,而 FH1 则是指在本地网络中发送的特定消息的帧头
 Dialogue: 0,0:15:10.90,0:15:15.24,English,,0,0,0,,And then the network interface card or the adapter here
-
+Dialogue: 0,0:15:10.90,0:15:15.24,Chinese,,0,0,0,,接着网卡或适配器
 Dialogue: 0,0:15:16.10,0:15:23.48,English,,0,0,0,,Is then responsible for putting that out over this local communication of capability
-
+Dialogue: 0,0:15:16.10,0:15:23.48,Chinese,,0,0,0,,会负责在报文具有本地通信能力后，把它发送出去
 Dialogue: 0,0:15:23.78,0:15:31.44,English,,0,0,0,,And then that gets received at the other end by the network adapter at the receivers direction
-
+Dialogue: 0,0:15:23.78,0:15:31.44,Chinese,,0,0,0,,最后报文会被接收端的网络适配器接受
 Dialogue: 0,0:15:32.14,0:15:40.00,English,,0,0,0,,It will put up its own frame header on it to pass it in
 Dialogue: 0,0:15:40.94,0:15:42.94,English,,0,0,0,,And that then gets tripped off
 Dialogue: 0,0:15:43.80,0:15:48.58,English,,0,0,0,,So that all hosts be set sees is the the data that gets sent
