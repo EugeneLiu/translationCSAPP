@@ -390,65 +390,115 @@ Dialogue: 0,0:14:42.76,0:14:50.06,Chinese,,0,0,0,,它会帮我放上一个描述
 Dialogue: 0,0:14:50.44,0:14:55.62,English,,0,0,0,,And then it will tack a header in front of that talks about the local area network routing that gets used
 Dialogue: 0,0:14:50.44,0:14:55.62,Chinese,,0,0,0,,以及一个描述本地路由的包头
 Dialogue: 0,0:14:56.42,0:15:02.06,English,,0,0,0,,And that's what's referred to as the a PH the packet header for the internet protocol
-Dialogue: 0,0:14:56.42,0:15:02.06,Chinese,,0,0,0,,这就是我们所说的互联网协议的包头(PH)
+Dialogue: 0,0:14:56.42,0:15:02.06,Chinese,,0,0,0,,这就是我们所说的用于互联网协议的包头(PH)
 Dialogue: 0,0:15:02.74,0:15:08.30,English,,0,0,0,,And FH1 the frame header for this particular message being sent within this local network
 Dialogue: 0,0:15:02.74,0:15:08.30,Chinese,,0,0,0,,而 FH1 则是指在本地网络中发送的特定消息的帧头
 Dialogue: 0,0:15:10.90,0:15:15.24,English,,0,0,0,,And then the network interface card or the adapter here
-Dialogue: 0,0:15:10.90,0:15:15.24,Chinese,,0,0,0,,接着网卡或适配器
+Dialogue: 0,0:15:10.90,0:15:15.24,Chinese,,0,0,0,,接着网卡或适配器负责
 Dialogue: 0,0:15:16.10,0:15:23.48,English,,0,0,0,,Is then responsible for putting that out over this local communication of capability
-Dialogue: 0,0:15:16.10,0:15:23.48,Chinese,,0,0,0,,会负责在报文具有本地通信能力后，把它发送出去
+Dialogue: 0,0:15:16.10,0:15:23.48,Chinese,,0,0,0,,在报文具有本地通信能力后，把它发送出去
 Dialogue: 0,0:15:23.78,0:15:31.44,English,,0,0,0,,And then that gets received at the other end by the network adapter at the receivers direction
 Dialogue: 0,0:15:23.78,0:15:31.44,Chinese,,0,0,0,,最后报文会被接收端的网络适配器接受
 Dialogue: 0,0:15:32.14,0:15:40.00,English,,0,0,0,,It will put up its own frame header on it to pass it in
-Dialogue: 0,0:15:40.94,0:15:42.94,English,,0,0,0,,And that then gets tripped off
+Dialogue: 0,0:15:32.14,0:15:40.00,Chinese,,0,0,0,,适配器会在它上面放上自己的帧头以接收它
+Dialogue: 0,0:15:40.94,0:15:42.94,English,,0,0,0,,And that then gets stripped off
+Dialogue: 0,0:15:40.94,0:15:42.94,Chinese,,0,0,0,,之后它们(帧头)会被剥离
 Dialogue: 0,0:15:43.80,0:15:48.58,English,,0,0,0,,So that all hosts be set sees is the the data that gets sent
+Dialogue: 0,0:15:43.80,0:15:48.58,Chinese,,0,0,0,,所以最后所有的主机都只会看到数据部分
 Dialogue: 0,0:15:49.18,0:15:55.44,English,,0,0,0,,But this idea of putting headers in front and at times sort of what they call encapsulation that
+Dialogue: 0,0:15:49.18,0:15:55.44,Chinese,,0,0,0,,这种在数据包前添上包头的做法被叫做封装
 Dialogue: 0,0:15:55.93,0:16:02.50,English,,0,0,0,,I'll take this big packet and I'll just tack some more information on top to the front of it header information
+Dialogue: 0,0:15:55.93,0:16:02.50,Chinese,,0,0,0,,我拿到这个数据包之后就在它的最上层添上头信息
 Dialogue: 0,0:16:02.94,0:16:06.24,English,,0,0,0,,And I'll send through the rest of it just as a set of bytes
+Dialogue: 0,0:16:02.94,0:16:06.24,Chinese,,0,0,0,,然后我将把剩下的部分作为一组字节发送
 Dialogue: 0,0:16:14.24,0:16:18.92,English,,0,0,0,,So the internet that we know and love the capital I internet
+Dialogue: 0,0:16:14.24,0:16:18.92,Chinese,,0,0,0,,我们了解和喜爱的互联网是大写 I 的因特网
 Dialogue: 0,0:16:18.94,0:16:23.10,English,,0,0,0,,Then has a particular set of protocols that are you've probably heard the terms
+Dialogue: 0,0:16:18.94,0:16:23.10,Chinese,,0,0,0,,他有一些特殊的协议，你们可能已经听过这些术语了
 Dialogue: 0,0:16:23.94,0:16:26.54,English,,0,0,0,,One is called the IP the internet protocol
+Dialogue: 0,0:16:23.94,0:16:26.54,Chinese,,0,0,0,,其中有一个叫 IP 即互联网地址协议
 Dialogue: 0,0:16:26.92,0:16:33.16,English,,0,0,0,,Which is the one that defines ideas about how do you get how do you name hosts on the internet
+Dialogue: 0,0:16:26.92,0:16:33.16,Chinese,,0,0,0,,它定义了你们命名主机的方法
 Dialogue: 0,0:16:33.94,0:16:36.02,English,,0,0,0,,And how do you send packets
+Dialogue: 0,0:16:33.94,0:16:36.02,Chinese,,0,0,0,,和发送包的方法
 Dialogue: 0,0:16:36.64,0:16:40.76,English,,0,0,0,,And they're referred to sometimes is datagrams
+Dialogue: 0,0:16:36.64,0:16:40.76,Chinese,,0,0,0,,有时也把包叫做数据包
 Dialogue: 0,0:16:41.04,0:16:46.86,English,,0,0,0,,Meaning that a packet is just a single entity that gets sent from point A to point B
+Dialogue: 0,0:16:41.04,0:16:46.86,Chinese,,0,0,0,,意味着数据包只是一个从 A 点发往 B 点的实体
 Dialogue: 0,0:16:48.80,0:16:53.36,English,,0,0,0,,And the underlying IP doesn't guarantee delivery so
+Dialogue: 0,0:16:48.80,0:16:53.36,Chinese,,0,0,0,,而在底层的 IP 并不能保证包被成功传递
 Dialogue: 0,0:16:54.14,0:16:57.28,English,,0,0,0,,So it's based on what they call best
+Dialogue: 0,0:16:54.14,0:16:57.28,Chinese,,0,0,0,,它基于一种“尽力而为”传输机制
 Dialogue: 0,0:16:58.04,0:17:01.60,English,,0,0,0,,Effort communication meaning that at each step along the way
+Dialogue: 0,0:16:58.04,0:17:01.60,Chinese,,0,0,0,,意为在传输过程中的每个节点
 Dialogue: 0,0:17:02.34,0:17:06.94,English,,0,0,0,,If for example things are good then it will just send this packet along
+Dialogue: 0,0:17:02.34,0:17:06.94,Chinese,,0,0,0,,假如数据还是完好的话，那么传输将继续
 Dialogue: 0,0:17:06.94,0:17:08.82,English,,0,0,0,,If there's too much congestion
+Dialogue: 0,0:17:06.94,0:17:08.82,Chinese,,0,0,0,,如果线路太堵塞
 Dialogue: 0,0:17:09.34,0:17:13.46,English,,0,0,0,,There's been a you know somebody's turned on their microwave oven and
+Dialogue: 0,0:17:09.34,0:17:13.46,Chinese,,0,0,0,,比如有人启动了微波炉
 Dialogue: 0,0:17:14.06,0:17:16.66,English,,0,0,0,,It's set up some radio frequency interface interference
+Dialogue: 0,0:17:14.06,0:17:16.66,Chinese,,0,0,0,,就会产生一些射频接口干扰
 Dialogue: 0,0:17:17.24,0:17:22.06,English,,0,0,0,,Then at the IP level it just drops that packet and says whoops
+Dialogue: 0,0:17:17.24,0:17:22.06,Chinese,,0,0,0,,那么在 IP 层数据包就会丢失，然后说，啊，我搞砸了
 Dialogue: 0,0:17:22.88,0:17:26.48,English,,0,0,0,,I screwed up sorry it doesn't even say sorry it just does it silently
+Dialogue: 0,0:17:22.88,0:17:26.48,Chinese,,0,0,0,,它甚至不会道歉，只是默默的让数据包丢失
 Dialogue: 0,0:17:28.60,0:17:32.38,English,,0,0,0,,And then you can as a programmer make use of that very global level
+Dialogue: 0,0:17:28.60,0:17:32.38,Chinese,,0,0,0,,所以作为一个程序员，你应该利用好所有网络层次
 Dialogue: 0,0:17:32.42,0:17:36.76,English,,0,0,0,,So normally as a programmer you don't really want to program at that level
+Dialogue: 0,0:17:32.42,0:17:36.76,Chinese,,0,0,0,,但作为一个程序员，你通常不需要在那一个层面编程的
 Dialogue: 0,0:17:36.90,0:17:39.56,English,,0,0,0,,Because you'll send packets and they will get there
+Dialogue: 0,0:17:36.90,0:17:39.56,Chinese,,0,0,0,,因为你只需要发出数据包，然后它们就成功传输了
 Dialogue: 0,0:17:40.14,0:17:44.78,English,,0,0,0,,But you can if you want to and it's called UDP a protocol
+
 Dialogue: 0,0:17:44.86,0:17:47.76,English,,0,0,0,,It's just a small software layer over IP
+
 Dialogue: 0,0:17:47.76,0:17:49.16,English,,0,0,0,,And there's some applications
+
 Dialogue: 0,0:17:49.70,0:17:58.48,English,,0,0,0,,That you'll see for example in the computer game world where you want to send information really fast and if some information gets dropped it's not a big deal
+
 Dialogue: 0,0:17:58.78,0:18:00.56,English,,0,0,0,,That people actually program at that level
+
 Dialogue: 0,0:18:01.12,0:18:02.54,English,,0,0,0,,We won't really talk about that
+
 Dialogue: 0,0:18:02.54,0:18:11.78,English,,0,0,0,,The more common protocol that gets used and carries 99% of internet traffic is what's called TCP(transmission control protocol)
+
 Dialogue: 0,0:18:12.34,0:18:17.68,English,,0,0,0,,And that provides a reliable the equivalent of telephone connection
+
 Dialogue: 0,0:18:18.12,0:18:22.94,English,,0,0,0,,That I can reliably send data from point A to point B
+
 Dialogue: 0,0:18:24.18,0:18:25.46,English,,0,0,0,,As many bytes as I like
+
 Dialogue: 0,0:18:26.40,0:18:28.24,English,,0,0,0,,It's a guaranteed
+
 Dialogue: 0,0:18:28.92,0:18:32.36,English,,0,0,0,,Every it's sometimes fast and sometimes not but it's there
+
 Dialogue: 0,0:18:32.86,0:18:36.96,English,,0,0,0,,And it's built on top of the IP of this datagram
+
 Dialogue: 0,0:18:37.18,0:18:41.50,English,,0,0,0,,Meaning that it has to take whatever you're sending and slice it up into these single packets
+
 Dialogue: 0,0:18:42.24,0:18:46.30,English,,0,0,0,,If one of them doesn't get sent it will resend it until it gets there
+
 Dialogue: 0,0:18:46.84,0:18:54.02,English,,0,0,0,,They have to deal with the fact that packets can travel different paths and one can get ahead of the other in transmission
+
 Dialogue: 0,0:18:54.04,0:18:56.40,English,,0,0,0,,And so it has to reorder them in the correct sequence
+
 Dialogue: 0,0:18:56.98,0:18:59.24,English,,0,0,0,,And so there's a lot of stuff under it but
+
 Dialogue: 0,0:18:59.82,0:19:01.64,English,,0,0,0,,We'll just assume that it kind of works
+
 Dialogue: 0,0:19:02.40,0:19:06.34,English,,0,0,0,,And so you can just rely think about it is I have a stream connection
+
 Dialogue: 0,0:19:06.78,0:19:11.56,English,,0,0,0,,I can send from A to B and B can send a stream of data back to me
+
 Dialogue: 0,0:19:12.06,0:19:13.66,English,,0,0,0,,And we're all happy
+
 Dialogue: 0,0:19:15.20,0:19:18.04,English,,0,0,0,,And so that's the version that looks like file I/O
+
 Dialogue: 0,0:19:18.04,0:19:23.58,English,,0,0,0,,I just keep writing to a file and it's sending packets over the network to the other end
+
 Dialogue: 0,0:19:24.24,0:19:28.18,English,,0,0,0,,And then the other side can be sending stuff to me
+
 Dialogue: 0,0:19:28.54,0:19:31.66,English,,0,0,0,,And I'm just reading it and I'm just reading bytes of data
 Dialogue: 0,0:19:32.00,0:19:35.12,English,,0,0,0,,Not worrying about how that got broken up into individual packets
 Dialogue: 0,0:19:36.48,0:19:39.18,English,,0,0,0,,And so that's referred to as the sockets interface
