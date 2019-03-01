@@ -426,7 +426,7 @@ Dialogue: 0,0:16:36.64,0:16:40.76,Chinese,,0,0,0,,有时也把包叫做数据包
 Dialogue: 0,0:16:41.04,0:16:46.86,English,,0,0,0,,Meaning that a packet is just a single entity that gets sent from point A to point B
 Dialogue: 0,0:16:41.04,0:16:46.86,Chinese,,0,0,0,,意味着数据包只是一个从 A 点发往 B 点的实体
 Dialogue: 0,0:16:48.80,0:16:53.36,English,,0,0,0,,And the underlying IP doesn't guarantee delivery so
-Dialogue: 0,0:16:48.80,0:16:53.36,Chinese,,0,0,0,,而在底层的 IP 并不能保证包被成功传递
+Dialogue: 0,0:16:48.80,0:16:53.36,Chinese,,0,0,0,,而处于底层的 IP 并不能保证包被成功传递
 Dialogue: 0,0:16:54.14,0:16:57.28,English,,0,0,0,,So it's based on what they call best
 Dialogue: 0,0:16:54.14,0:16:57.28,Chinese,,0,0,0,,它基于一种“尽力而为”传输机制
 Dialogue: 0,0:16:58.04,0:17:01.60,English,,0,0,0,,Effort communication meaning that at each step along the way
@@ -446,37 +446,37 @@ Dialogue: 0,0:17:22.88,0:17:26.48,Chinese,,0,0,0,,它甚至不会道歉，只是
 Dialogue: 0,0:17:28.60,0:17:32.38,English,,0,0,0,,And then you can as a programmer make use of that very global level
 Dialogue: 0,0:17:28.60,0:17:32.38,Chinese,,0,0,0,,所以作为一个程序员，你应该利用好所有网络层次
 Dialogue: 0,0:17:32.42,0:17:36.76,English,,0,0,0,,So normally as a programmer you don't really want to program at that level
-Dialogue: 0,0:17:32.42,0:17:36.76,Chinese,,0,0,0,,但作为一个程序员，你通常不需要在那一个层面编程的
+Dialogue: 0,0:17:32.42,0:17:36.76,Chinese,,0,0,0,,但作为一个程序员，你通常不会想在那一个层面编程的
 Dialogue: 0,0:17:36.90,0:17:39.56,English,,0,0,0,,Because you'll send packets and they will get there
-Dialogue: 0,0:17:36.90,0:17:39.56,Chinese,,0,0,0,,因为你只需要发出数据包，然后它们就成功传输了
+Dialogue: 0,0:17:36.90,0:17:39.56,Chinese,,0,0,0,,因为你大部分情况下数据包都能正常传输
 Dialogue: 0,0:17:40.14,0:17:44.78,English,,0,0,0,,But you can if you want to and it's called UDP a protocol
-
+Dialogue: 0,0:17:40.14,0:17:44.78,Chinese,,0,0,0,,但如果你想的话，它叫做 UDP 协议
 Dialogue: 0,0:17:44.86,0:17:47.76,English,,0,0,0,,It's just a small software layer over IP
-
+Dialogue: 0,0:17:44.86,0:17:47.76,Chinese,,0,0,0,,它只是在 IP 层之上的一个小软件
 Dialogue: 0,0:17:47.76,0:17:49.16,English,,0,0,0,,And there's some applications
-
+Dialogue: 0,0:17:47.76,0:17:49.16,Chinese,,0,0,0,,而在一些应用中
 Dialogue: 0,0:17:49.70,0:17:58.48,English,,0,0,0,,That you'll see for example in the computer game world where you want to send information really fast and if some information gets dropped it's not a big deal
-
+Dialogue: 0,0:17:49.70,0:17:58.48,Chinese,,0,0,0,,举个例子，电脑游戏中，如果因为你想尽快发出消息，而导致有一些信息被你漏掉，那没什么大不了的
 Dialogue: 0,0:17:58.78,0:18:00.56,English,,0,0,0,,That people actually program at that level
-
+Dialogue: 0,0:17:58.78,0:18:00.56,Chinese,,0,0,0,,这就是 UDP 层编程的一个例子
 Dialogue: 0,0:18:01.12,0:18:02.54,English,,0,0,0,,We won't really talk about that
-
+Dialogue: 0,0:18:01.12,0:18:02.54,Chinese,,0,0,0,,我们不会讨论它
 Dialogue: 0,0:18:02.54,0:18:11.78,English,,0,0,0,,The more common protocol that gets used and carries 99% of internet traffic is what's called TCP(transmission control protocol)
-
+Dialogue: 0,0:18:02.54,0:18:11.78,Chinese,,0,0,0,,最常见的一种协议 -- 有超过 99 % 的网络流量都在通过它传输 -- 叫做TCP协议（传输控制协议）
 Dialogue: 0,0:18:12.34,0:18:17.68,English,,0,0,0,,And that provides a reliable the equivalent of telephone connection
-
+Dialogue: 0,0:18:12.34,0:18:17.68,Chinese,,0,0,0,,他提供了一种可靠的传输方式，相当于电话联系
 Dialogue: 0,0:18:18.12,0:18:22.94,English,,0,0,0,,That I can reliably send data from point A to point B
-
+Dialogue: 0,0:18:18.12,0:18:22.94,Chinese,,0,0,0,,我可以放心的从点 A 发送数据往点 B
 Dialogue: 0,0:18:24.18,0:18:25.46,English,,0,0,0,,As many bytes as I like
-
-Dialogue: 0,0:18:26.40,0:18:28.24,English,,0,0,0,,It's a guaranteed
-
-Dialogue: 0,0:18:28.92,0:18:32.36,English,,0,0,0,,Every it's sometimes fast and sometimes not but it's there
-
+Dialogue: 0,0:18:24.18,0:18:25.46,Chinese,,0,0,0,,任意字节的数据都可以
+Dialogue: 0,0:18:26.40,0:18:28.24,English,,0,0,0,,It's a guaranteed delivery
+Dialogue: 0,0:18:26.40,0:18:28.24,Chinese,,0,0,0,,它是有保证的传输
+Dialogue: 0,0:18:28.92,0:18:32.36,English,,0,0,0,,It's sometimes fast and sometimes not but it's there
+Dialogue: 0,0:18:28.92,0:18:32.36,Chinese,,0,0,0,,它有时会很快，有时也会较慢，但它总是稳定的
 Dialogue: 0,0:18:32.86,0:18:36.96,English,,0,0,0,,And it's built on top of the IP of this datagram
-
+Dialogue: 0,0:18:32.86,0:18:36.96,Chinese,,0,0,0,,而且它处于这个数据包的 IP 层之上
 Dialogue: 0,0:18:37.18,0:18:41.50,English,,0,0,0,,Meaning that it has to take whatever you're sending and slice it up into these single packets
-
+Dialogue: 0,0:18:37.18,0:18:41.50,Chinese,,0,0,0,,这意味着它必须接收你发送的所有数据并将其分割成这些单独的数据包
 Dialogue: 0,0:18:42.24,0:18:46.30,English,,0,0,0,,If one of them doesn't get sent it will resend it until it gets there
 
 Dialogue: 0,0:18:46.84,0:18:54.02,English,,0,0,0,,They have to deal with the fact that packets can travel different paths and one can get ahead of the other in transmission
