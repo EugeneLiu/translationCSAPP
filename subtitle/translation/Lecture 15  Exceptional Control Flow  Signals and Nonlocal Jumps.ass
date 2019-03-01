@@ -494,31 +494,31 @@ Dialogue: 0,0:43:12.62,0:43:17.18,English,,0,0,0,,Then it's going to encounter i
 Dialogue: 0,0:43:19.92,0:43:27.28,English,,0,0,0,,Okay so this the fact that it's easy to write signal handlers 实际上写信号处理程序很容易
 Dialogue: 0,0:43:27.30,0:43:32.04,English,,0,0,0,,That are unsafe is is is one aspect of that makes them tough to deal with 不安全是它们很难处理的一个方面
 Dialogue: 0,0:43:32.66,0:43:37.16,English,,0,0,0,,Another aspect is they have this funny semantics that signals aren't cued 另一个方面是它们有这种有趣的语义，信号没有被提示
-Dialogue: 0,0:43:38.04,0:43:40.60,English,,0,0,0,,And so if you're not really careful about this 如果你没有注意到
-Dialogue: 0,0:43:41.12,0:43:45.68,English,,0,0,0,,It's very easy to use the receipt of signals to count events 
-Dialogue: 0,0:43:46.76,0:43:49.94,English,,0,0,0,,And you can't do that if signals were cued you could use
-Dialogue: 0,0:43:50.12,0:43:54.34,English,,0,0,0,,You could use the receipt of a signal to count events in the system but you can't do it because
-Dialogue: 0,0:43:54.80,0:43:56.08,English,,0,0,0,,Their signals aren't cued
-Dialogue: 0,0:43:57.28,0:44:00.82,English,,0,0,0,,And then a third aspect of signals which makes them tough is that
-Dialogue: 0,0:44:01.66,0:44:05.18,English,,0,0,0,,They're not even portable across different versions of Linux
-Dialogue: 0,0:44:07.52,0:44:12.94,English,,0,0,0,,Okay so if you use solaris or some form of bsd it's not necessarily
-Dialogue: 0,0:44:13.24,0:44:16.70,English,,0,0,0,,The single handling semantics aren't necessarily the same as they are in Linux
-Dialogue: 0,0:44:17.82,0:44:21.36,English,,0,0,0,,Okay so we'll look at all three of these in a little more detail
-Dialogue: 0,0:44:21.36,0:44:24.34,English,,0,0,0,,And first we'll start with writing safe handlers
-Dialogue: 0,0:44:26.94,0:44:32.40,English,,0,0,0,,So let me give you some guidelines for how to write safe handlers
-Dialogue: 0,0:44:33.24,0:44:38.16,English,,0,0,0,,And this is just a collection of...
+Dialogue: 0,0:43:38.04,0:43:40.60,English,,0,0,0,,And so if you're not really careful about this 如果你没有小心对待
+Dialogue: 0,0:43:41.12,0:43:45.68,English,,0,0,0,,It's very easy to use the receipt of signals to count events 用收到信号的次数来对事件计数很容易
+Dialogue: 0,0:43:46.76,0:43:49.94,English,,0,0,0,,And you can't do that if signals were cued you could use 如果有信号提示，你就不能这么做了
+Dialogue: 0,0:43:50.12,0:43:54.34,English,,0,0,0,,You could use the receipt of a signal to count events in the system but you can't do it because 你可以用收到信号来统计系统中发生的事件，但你不能这么做
+Dialogue: 0,0:43:54.80,0:43:56.08,English,,0,0,0,,Their signals aren't cued 因为这些信号是不会提醒的
+Dialogue: 0,0:43:57.28,0:44:00.82,English,,0,0,0,,And then a third aspect of signals which makes them tough is that 第三方面是
+Dialogue: 0,0:44:01.66,0:44:05.18,English,,0,0,0,,They're not even portable across different versions of Linux 在不同版本的 Linux 上是不能移植的
+Dialogue: 0,0:44:07.52,0:44:12.94,English,,0,0,0,,Okay so if you use solaris or some form of bsd it's not necessarily 如果你用的是 solaris 或者 bsd 的某个版本，这不重要
+Dialogue: 0,0:44:13.24,0:44:16.70,English,,0,0,0,,The single handling semantics aren't necessarily the same as they are in Linux 信号处理程序的语义可以是与 Linux 不同的
+Dialogue: 0,0:44:17.82,0:44:21.36,English,,0,0,0,,Okay so we'll look at all three of these in a little more detail 我们来看这三个方面的更多细节
+Dialogue: 0,0:44:21.36,0:44:24.34,English,,0,0,0,,And first we'll start with writing safe handlers 首先我们得写安全的处理程序
+Dialogue: 0,0:44:26.94,0:44:32.40,English,,0,0,0,,So let me give you some guidelines for how to write safe handlers 让我给你点如何写安全的处理程序的参考
+Dialogue: 0,0:44:33.24,0:44:38.16,English,,0,0,0,,And this is just a collection of... 这是一个收藏。。
 Dialogue: 0,0:44:39.16,0:44:43.78,English,,0,0,0,,Collection of sort of collected wisdom from various sources
-Dialogue: 0,0:44:44.16,0:44:48.58,English,,0,0,0,,But it covers a lot of aspects of signal handlers
-Dialogue: 0,0:44:49.34,0:44:53.66,English,,0,0,0,,So the first guideline is to keep your handlers as simple as possible for example
-Dialogue: 0,0:44:54.04,0:44:58.94,English,,0,0,0,,The simplest possible handle I can think of just sets a global variable and then it returns
-Dialogue: 0,0:45:00.52,0:45:10.62,English,,0,0,0,,Okay and in fact cert the CMU cert provides guidelines for sort of compliant programs
-Dialogue: 0,0:45:11.38,0:45:17.88,English,,0,0,0,,And this is the only signal handler that they allow this is the only compliant signal handler
+Dialogue: 0,0:44:44.16,0:44:48.58,English,,0,0,0,,But it covers a lot of aspects of signal handlers 但是它涵盖了信号处理程序的很多方面
+Dialogue: 0,0:44:49.34,0:44:53.66,English,,0,0,0,,So the first guideline is to keep your handlers as simple as possible for example 第一个参考是，让你的处理程序尽可能的简单，这有一个例子
+Dialogue: 0,0:44:54.04,0:44:58.94,English,,0,0,0,,The simplest possible handle I can think of just sets a global variable and then it returns 我能想到的，最简单的处理程序就是设置一个全局变量然后返回
+Dialogue: 0,0:45:00.52,0:45:10.62,English,,0,0,0,,Okay and in fact cert the CMU cert provides guidelines for sort of compliant programs 事实上，CMU cert为兼容的程序提供了参考
+Dialogue: 0,0:45:11.38,0:45:17.88,English,,0,0,0,,And this is the only signal handler that they allow this is the only compliant signal handler 这是唯一一个兼容的信号处理程序
 Dialogue: 0,0:45:18.10,0:45:20.64,English,,0,0,0,,One that just sets a global variable and then returns
 Dialogue: 0,0:45:26.26,0:45:33.24,English,,0,0,0,,Okay guideline number one call only functions in your handlers that are that have this property of async-signals-safety
 Dialogue: 0,0:45:35.82,0:45:41.16,English,,0,0,0,,We'll look at this in a second but I want to point out that printf, sprintf,malloc,exit
 Dialogue: 0,0:45:42.18,0:45:45.64,English,,0,0,0,,Functions that are very common and commonly used are not safe
 Dialogue: 0,0:45:48.88,0:45:54.80,English,,0,0,0,,Okay guideline number two is to always save and restore errno on entry and exit
-Dialogue: 0,0:45:55.14,0:45:56.62,English,,0,0,0,,So you know errno is a global
+Dialogue: 0,0:45:55.14,0:45:56.62,English,,0,0,0,,So you know errno is a global 你知道 errno 是一个全局变量
 Dialogue: 0,0:45:57.40,0:46:01.44,English,,0,0,0,,Global variable that's set when there's whenever there's an error in a system-level function
 Dialogue: 0,0:46:02.56,0:46:06.42,English,,0,0,0,,So you need to save and restore it on entry and exit
 Dialogue: 0,0:46:06.70,0:46:10.86,English,,0,0,0,,So that it doesn't get overwritten if you're interrupted by another handler
