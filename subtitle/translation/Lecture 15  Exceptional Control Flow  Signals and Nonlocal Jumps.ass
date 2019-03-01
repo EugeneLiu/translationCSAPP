@@ -384,12 +384,12 @@ Dialogue: 0,0:32:43.80,0:32:48.12,English,,0,0,0,,它需要一个信号编号作
 Dialogue: 0,0:32:50.76,0:32:52.42,English,,0,0,0,,然后我们来挂载它
 Dialogue: 0,0:32:53.12,0:32:59.24,English,,0,0,0,,Then we're going to execute the pause this call which just waits for a signal handler to execute
 Dialogue: 0,0:32:59.48,0:33:03.20,English,,0,0,0,,Ok so pause terminates the current or suspends the current process
-Dialogue: 0,0:33:04.28,0:33:08.38,English,,0,0,0,,Until a signal is received and a handler executes in that process
-Dialogue: 0,0:33:08.92,0:33:10.68,English,,0,0,0,,And then pause then pause returns
-Dialogue: 0,0:33:13.36,0:33:16.36,English,,0,0,0,,So we're going to wait until the sigint happens
+Dialogue: 0,0:33:04.28,0:33:08.38,English,,0,0,0,,Until a signal is received and a handler executes in that process 直到接收到一个信号并且执行了它的处理程序
+Dialogue: 0,0:33:08.92,0:33:10.68,English,,0,0,0,,And then pause then pause returns 然后 pause 返回
+Dialogue: 0,0:33:13.36,0:33:16.36,English,,0,0,0,,So we're going to wait until the sigint happens 所以在收到 sigint 之前我们得先等等
 Dialogue: 0,0:33:16.40,0:33:19.54,English,,0,0,0,,当我们按下 ctrl-c 时，sigint 开始执行
 Dialogue: 0,0:33:21.98,0:33:27.04,English,,0,0,0,,So when you're doing your bombs did you panic at some point and try to hit ctrl-c to get out of it
-Dialogue: 0,0:33:28.50,0:33:30.86,English,,0,0,0,,Okay so that snarky message you got that was
+Dialogue: 0,0:33:28.50,0:33:30.86,English,,0,0,0,,Okay so that snarky message you got that was 所以你得到的 snarky 信息是
 Dialogue: 0,0:33:32.04,0:33:37.20,English,,0,0,0,,We did that by installing a sigint handler in your bomb
 Dialogue: 0,0:33:38.78,0:33:43.14,English,,0,0,0,,当你按下 ctrl-c 时，就会触发 sigint
 Dialogue: 0,0:33:43.60,0:33:51.60,English,,0,0,0,,收到 sigint 信号后，我们输出一条信息然后退出
@@ -458,44 +458,44 @@ Dialogue: 0,0:39:37.30,0:39:40.01,English,,0,0,0,,就是 sigprocmask 函数
 Dialogue: 0,0:39:41.96,0:39:48.66,English,,0,0,0,,它允许你阻塞或解除阻塞一组信号
 Dialogue: 0,0:39:49.42,0:39:54.04,English,,0,0,0,,And then there some support functions that allow you to create those sets 这是一些支持你创建这些位的函数
 Dialogue: 0,0:39:55.40,0:39:58.34,English,,0,0,0,,So just think of these as bit vectors 把它们当成位向量来看
-Dialogue: 0,0:39:58.38,0:40:05.34,English,,0,0,0,,And these functions will set in set and reset the bits and those those bit vectors
-Dialogue: 0,0:40:07.16,0:40:12.72,English,,0,0,0,,So let's see how we can use sigprocmasks to temporarily block and unblock a signal
-Dialogue: 0,0:40:13.32,0:40:16.00,English,,0,0,0,,So this is going to turn out to be very important for you
-Dialogue: 0,0:40:16.00,0:40:21.24,English,,0,0,0,,When you working on your shells that which is your next lab assignment okay
-Dialogue: 0,0:40:25.98,0:40:31.34,English,,0,0,0,,So what we do...we'll use sigemptyset to create an empty mask so this is a mask with all zeros
+Dialogue: 0,0:39:58.38,0:40:05.34,English,,0,0,0,,And these functions will set in set and reset the bits and those those bit vectors 这些函数可以置位或复位这些位向量里的位
+Dialogue: 0,0:40:07.16,0:40:12.72,English,,0,0,0,,So let's see how we can use sigprocmasks to temporarily block and unblock a signal 下面我们看看如何使用 sigprocmasks 来暂时阻塞或解除阻塞一个信号
+Dialogue: 0,0:40:13.32,0:40:16.00,English,,0,0,0,,So this is going to turn out to be very important for you 这很重要
+Dialogue: 0,0:40:16.00,0:40:21.24,English,,0,0,0,,When you working on your shells that which is your next lab assignment okay 你用 shell 干活的时候，下次作业你们就会用到
+Dialogue: 0,0:40:25.98,0:40:31.34,English,,0,0,0,,So what we do...we'll use sigemptyset to create an empty mask so this is a mask with all zeros 让我们来。。我们用 sigemptyset 来创建一个空的掩码，这是一个全为零的掩码
 Dialogue: 0,0:40:31.96,0:40:33.80,English,,0,0,0,,Okay with no elements in the set 这个集合现在没有元素
-Dialogue: 0,0:40:34.80,0:40:39.46,English,,0,0,0,,And then we're going to add a single element to this set which is sigint
-Dialogue: 0,0:40:42.46,0:40:47.88,English,,0,0,0,,And now we temp...we have some code that we don't want to be interrupted by the seed of sigint
-Dialogue: 0,0:40:49.36,0:40:53.08,English,,0,0,0,,Okay so we want to temporarily block the receipt of sig n signals
-Dialogue: 0,0:40:54.08,0:40:58.70,English,,0,0,0,,And we do it by calling sigprocmask with the command
-Dialogue: 0,0:40:59.20,0:41:02.56,English,,0,0,0,,Say I want to block I want to block the signals
-Dialogue: 0,0:41:03.84,0:41:08.78,English,,0,0,0,,That are spent that are in the set specified by mask
-Dialogue: 0,0:41:12.36,0:41:16.22,English,,0,0,0,,And I'll assign the so this will become my new mask
-Dialogue: 0,0:41:16.64,0:41:19.72,English,,0,0,0,,So this becomes the new blocked bit vector
+Dialogue: 0,0:40:34.80,0:40:39.46,English,,0,0,0,,And then we're going to add a single element to this set which is sigint 接下来我们添加一个 sigint 信号到这个集合中
+Dialogue: 0,0:40:42.46,0:40:47.88,English,,0,0,0,,And now we temp...we have some code that we don't want to be interrupted by the seed of sigint 我们暂时。。我们有一些不想被 sigint 中断的代码
+Dialogue: 0,0:40:49.36,0:40:53.08,English,,0,0,0,,Okay so we want to temporarily block the receipt of sig n signals 所以我们需要暂时阻塞掉 sigint 的接收
+Dialogue: 0,0:40:54.08,0:40:58.70,English,,0,0,0,,And we do it by calling sigprocmask with the command 那就需要在命令里使用 sigprocmask  调用
+Dialogue: 0,0:40:59.20,0:41:02.56,English,,0,0,0,,Say I want to block I want to block the signals 我想要阻塞这个
+Dialogue: 0,0:41:03.84,0:41:08.78,English,,0,0,0,,That are spent that are in the set specified by mask 掩码所指定的，集合中的信号
+Dialogue: 0,0:41:12.36,0:41:16.22,English,,0,0,0,,And I'll assign the so this will become my new mask 我会为这个集合重新赋值用作我们的新掩码
+Dialogue: 0,0:41:16.64,0:41:19.72,English,,0,0,0,,So this becomes the new blocked bit vector 这就是新的阻塞位向量
 Dialogue: 0,0:41:20.68,0:41:24.52,English,,0,0,0,,Okay or the not the this the new signal mask
-Dialogue: 0,0:41:24.62,0:41:31.28,English,,0,0,0,,And it makes a copy of the old one and stores it at the address specified in the third argument
-Dialogue: 0,0:41:32.82,0:41:35.50,English,,0,0,0,,So at this point after we returned from sigprocmask
-Dialogue: 0,0:41:36.04,0:41:38.50,English,,0,0,0,,Sigint signals are blocked and they won't be received
-Dialogue: 0,0:41:40.94,0:41:47.02,English,,0,0,0,,And then we...so we can execute this code knowing that we won't be interrupted by receipt of a sigint
-Dialogue: 0,0:41:49.56,0:41:57.20,English,,0,0,0,,And then we can restore the previous block set by using the sig_setmask in stopper ation
-Dialogue: 0,0:41:57.78,0:42:03.44,English,,0,0,0,,And passing in the previous mask that we saved up here when we initially blocks again
-Dialogue: 0,0:42:09.96,0:42:15.12,English,,0,0,0,,Okay so signals and signal handling is a really tricky business
-Dialogue: 0,0:42:15.54,0:42:17.48,English,,0,0,0,,And there's sort of three things that make them
-Dialogue: 0,0:42:18.82,0:42:21.44,English,,0,0,0,,So tricky and kind of nasty really
-Dialogue: 0,0:42:21.88,0:42:26.80,English,,0,0,0,,One is that you have to be very careful to write handlers that are safe
-Dialogue: 0,0:42:27.54,0:42:33.96,English,,0,0,0,,Okay so there's you can write signal handlers that are unsafe in the sense that they'll create a deadlock in your program
-Dialogue: 0,0:42:36.68,0:42:41.68,English,,0,0,0,,Okay or you can write signal handlers that will corrupt a global data structure
-Dialogue: 0,0:42:42.58,0:42:46.24,English,,0,0,0,,That's being modified by the main program
-Dialogue: 0,0:42:46.24,0:42:54.06,English,,0,0,0,,So I mean imagine your main programming is updating some data structure like a linked list
-Dialogue: 0,0:42:54.84,0:42:59.72,English,,0,0,0,,And right in the middle of updating that data structure when it's no longer consistent
-Dialogue: 0,0:43:01.44,0:43:04.02,English,,0,0,0,,The program gets interrupted by the receipt of a signal
+Dialogue: 0,0:41:24.62,0:41:31.28,English,,0,0,0,,And it makes a copy of the old one and stores it at the address specified in the third argument 它复制旧的阻塞位向量，并将其存储在第三个参数中指定的地址
+Dialogue: 0,0:41:32.82,0:41:35.50,English,,0,0,0,,So at this point after we returned from sigprocmask 这是我们从 sigprocmask 返回后的 point
+Dialogue: 0,0:41:36.04,0:41:38.50,English,,0,0,0,,Sigint signals are blocked and they won't be received sigint 信号被阻塞了，所以我们收不到它
+Dialogue: 0,0:41:40.94,0:41:47.02,English,,0,0,0,,And then we...so we can execute this code knowing that we won't be interrupted by receipt of a sigint 接下来。。。执行这段不会因为收到 sigint 而中断的代码
+Dialogue: 0,0:41:49.56,0:41:57.20,English,,0,0,0,,And then we can restore the previous block set by using the sig_setmask in stopper ation 我们可以在 stopper ation 使用 sig_setmask 来回复之前的阻塞集合
+Dialogue: 0,0:41:57.78,0:42:03.44,English,,0,0,0,,And passing in the previous mask that we saved up here when we initially blocks again 再次传递我们在阻塞开始时保存的掩码
+Dialogue: 0,0:42:09.96,0:42:15.12,English,,0,0,0,,Okay so signals and signal handling is a really tricky business 信号和信号的处理很麻烦
+Dialogue: 0,0:42:15.54,0:42:17.48,English,,0,0,0,,And there's sort of three things that make them 这是因为以下三点
+Dialogue: 0,0:42:18.82,0:42:21.44,English,,0,0,0,,So tricky and kind of nasty really 这非常难缠，说实话让人觉得有点烦
+Dialogue: 0,0:42:21.88,0:42:26.80,English,,0,0,0,,One is that you have to be very careful to write handlers that are safe 你得很小心的写处理程序才能保证安全
+Dialogue: 0,0:42:27.54,0:42:33.96,English,,0,0,0,,Okay so there's you can write signal handlers that are unsafe in the sense that they'll create a deadlock in your program 如果你写的处理程序不安全，那在你的程序中可能会出现死锁
+Dialogue: 0,0:42:36.68,0:42:41.68,English,,0,0,0,,Okay or you can write signal handlers that will corrupt a global data structure 你也可以把信号处理程序写进一个全局数据结构里
+Dialogue: 0,0:42:42.58,0:42:46.24,English,,0,0,0,,That's being modified by the main program 它可以在 main 程序中修改
+Dialogue: 0,0:42:46.24,0:42:54.06,English,,0,0,0,,So I mean imagine your main programming is updating some data structure like a linked list 我的意思是，假如你的 main 程序维护了某种类似链表的数据结构
+Dialogue: 0,0:42:54.84,0:42:59.72,English,,0,0,0,,And right in the middle of updating that data structure when it's no longer consistent 当这个数据结构不合适的时候，你可以更新它
+Dialogue: 0,0:43:01.44,0:43:04.02,English,,0,0,0,,The program gets interrupted by the receipt of a signal 这个程序在收到信号时会被中断
 Dialogue: 0,0:43:05.22,0:43:11.54,English,,0,0,0,,And if that signal handler is updating that same data structure reading that structure or modifying it
 Dialogue: 0,0:43:12.62,0:43:17.18,English,,0,0,0,,Then it's going to encounter it in an inconsistent state and and you're in trouble
-Dialogue: 0,0:43:19.92,0:43:27.28,English,,0,0,0,,Okay so this the fact that it's easy to write signal handlers
-Dialogue: 0,0:43:27.30,0:43:32.04,English,,0,0,0,,That are unsafe is is is one aspect of that makes them tough to deal with
-Dialogue: 0,0:43:32.66,0:43:37.16,English,,0,0,0,,Another aspect is they have this funny semantics that signals aren't cued
-Dialogue: 0,0:43:38.04,0:43:40.60,English,,0,0,0,,And so if you're not really careful about this
-Dialogue: 0,0:43:41.12,0:43:45.68,English,,0,0,0,,It's very easy to use the receipt of signals to count events
+Dialogue: 0,0:43:19.92,0:43:27.28,English,,0,0,0,,Okay so this the fact that it's easy to write signal handlers 实际上写信号处理程序很容易
+Dialogue: 0,0:43:27.30,0:43:32.04,English,,0,0,0,,That are unsafe is is is one aspect of that makes them tough to deal with 不安全是它们很难处理的一个方面
+Dialogue: 0,0:43:32.66,0:43:37.16,English,,0,0,0,,Another aspect is they have this funny semantics that signals aren't cued 另一个方面是它们有这种有趣的语义，信号没有被提示
+Dialogue: 0,0:43:38.04,0:43:40.60,English,,0,0,0,,And so if you're not really careful about this 如果你没有注意到
+Dialogue: 0,0:43:41.12,0:43:45.68,English,,0,0,0,,It's very easy to use the receipt of signals to count events 
 Dialogue: 0,0:43:46.76,0:43:49.94,English,,0,0,0,,And you can't do that if signals were cued you could use
 Dialogue: 0,0:43:50.12,0:43:54.34,English,,0,0,0,,You could use the receipt of a signal to count events in the system but you can't do it because
 Dialogue: 0,0:43:54.80,0:43:56.08,English,,0,0,0,,Their signals aren't cued
