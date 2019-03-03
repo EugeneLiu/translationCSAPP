@@ -406,7 +406,7 @@ Dialogue: 0,0:34:47.46,0:34:53.78,English,,0,0,0,,为了在两个进程间共享
 Dialogue: 0,0:34:55.22,0:34:59.90,English,,0,0,0,,信号是并发的一种形式，这是这节课上第二次提到
 Dialogue: 0,0:35:01.42,0:35:03.08,English,,0,0,0,,现在你已经对并发有概念了
 Dialogue: 0,0:35:03.98,0:35:08.22,English,,0,0,0,,信号是一个并发流，
-Dialogue: 0,0:35:08.86,0:35:13.82,English,,0,0,0,,一个处理程序是你程序中并发执行的一个逻辑流
+Dialogue: 0,0:35:08.86,0:35:13.82,English,,0,0,0,,一个处理程序是你程序中执行的一个并发逻辑流
 Dialogue: 0,0:35:14.92,0:35:19.28,English,,0,0,0,,所以。。让我们在进程 A 中执行一个 while 循环
 Dialogue: 0,0:35:20.76,0:35:22.90,English,,0,0,0,,循环开始了
 Dialogue: 0,0:35:23.46,0:35:25.56,English,,0,0,0,,进程收到了一个信号
@@ -486,7 +486,7 @@ Dialogue: 0,0:42:21.88,0:42:26.80,English,,0,0,0,,One is that you have to be ver
 Dialogue: 0,0:42:27.54,0:42:33.96,English,,0,0,0,,Okay so there's you can write signal handlers that are unsafe in the sense that they'll create a deadlock in your program 如果你写的处理程序不安全，那在你的程序中可能会出现死锁
 Dialogue: 0,0:42:36.68,0:42:41.68,English,,0,0,0,,Okay or you can write signal handlers that will corrupt a global data structure 你也可以把信号处理程序写进一个全局数据结构里
 Dialogue: 0,0:42:42.58,0:42:46.24,English,,0,0,0,,That's being modified by the main program 它可以在 main 程序中修改
-Dialogue: 0,0:42:46.24,0:42:54.06,English,,0,0,0,,So I mean imagine your main programming is updating some data structure like a linked list 我的意思是，假如你的 main 程序维护了某种类似链表的数据结构
+Dialogue: 0,0:42:46.24,0:42:54.06,English,,0,0,0,,So I mean imagine your main programming is updating some data structure like a linked list 我的意思是，假如你的 main 程序更新了某种类似链表的数据结构
 Dialogue: 0,0:42:54.84,0:42:59.72,English,,0,0,0,,And right in the middle of updating that data structure when it's no longer consistent 当这个数据结构不合适的时候，你可以更新它
 Dialogue: 0,0:43:01.44,0:43:04.02,English,,0,0,0,,The program gets interrupted by the receipt of a signal 这个程序在收到信号时会被中断
 Dialogue: 0,0:43:05.22,0:43:11.54,English,,0,0,0,,And if that signal handler is updating that same data structure reading that structure or modifying it
@@ -513,51 +513,51 @@ Dialogue: 0,0:44:49.34,0:44:53.66,English,,0,0,0,,So the first guideline is to k
 Dialogue: 0,0:44:54.04,0:44:58.94,English,,0,0,0,,The simplest possible handle I can think of just sets a global variable and then it returns 我能想到的，最简单的处理程序就是设置一个全局变量然后返回
 Dialogue: 0,0:45:00.52,0:45:10.62,English,,0,0,0,,Okay and in fact cert the CMU cert provides guidelines for sort of compliant programs 事实上，CMU cert为兼容的程序提供了参考
 Dialogue: 0,0:45:11.38,0:45:17.88,English,,0,0,0,,And this is the only signal handler that they allow this is the only compliant signal handler 这是唯一一个兼容的信号处理程序
-Dialogue: 0,0:45:18.10,0:45:20.64,English,,0,0,0,,One that just sets a global variable and then returns
+Dialogue: 0,0:45:18.10,0:45:20.64,English,,0,0,0,,One that just sets a global variable and then returns 仅仅设置了一个全局变量后就返回
 Dialogue: 0,0:45:26.26,0:45:33.24,English,,0,0,0,,Okay guideline number one call only functions in your handlers that are that have this property of async-signals-safety
-Dialogue: 0,0:45:35.82,0:45:41.16,English,,0,0,0,,We'll look at this in a second but I want to point out that printf, sprintf,malloc,exit
-Dialogue: 0,0:45:42.18,0:45:45.64,English,,0,0,0,,Functions that are very common and commonly used are not safe
-Dialogue: 0,0:45:48.88,0:45:54.80,English,,0,0,0,,Okay guideline number two is to always save and restore errno on entry and exit
+Dialogue: 0,0:45:35.82,0:45:41.16,English,,0,0,0,,We'll look at this in a second but I want to point out that printf, sprintf,malloc,exit 下面我们来看第二点，但我想指出的是，那些 printf, sprintf, malloc, exit 等
+Dialogue: 0,0:45:42.18,0:45:45.64,English,,0,0,0,,Functions that are very common and commonly used are not safe 非常常见和常用的功能是不安全的
+Dialogue: 0,0:45:48.88,0:45:54.80,English,,0,0,0,,Okay guideline number two is to always save and restore errno on entry and exit 参考的第二点内容是，每次进入和退出时都要保存并恢复 errno
 Dialogue: 0,0:45:55.14,0:45:56.62,English,,0,0,0,,So you know errno is a global 你知道 errno 是一个全局变量
-Dialogue: 0,0:45:57.40,0:46:01.44,English,,0,0,0,,Global variable that's set when there's whenever there's an error in a system-level function
-Dialogue: 0,0:46:02.56,0:46:06.42,English,,0,0,0,,So you need to save and restore it on entry and exit
-Dialogue: 0,0:46:06.70,0:46:10.86,English,,0,0,0,,So that it doesn't get overwritten if you're interrupted by another handler
-Dialogue: 0,0:46:15.92,0:46:18.32,English,,0,0,0,,Okay if you're accessing any shared data structures
+Dialogue: 0,0:45:57.40,0:46:01.44,English,,0,0,0,,Global variable that's set when there's whenever there's an error in a system-level function 这个全局变量在系统级函数出现错误时才会被赋值
+Dialogue: 0,0:46:02.56,0:46:06.42,English,,0,0,0,,So you need to save and restore it on entry and exit 所以在开始和结束时要把它保存和恢复
+Dialogue: 0,0:46:06.70,0:46:10.86,English,,0,0,0,,So that it doesn't get overwritten if you're interrupted by another handler 如果你被一个中断处理程序中断掉了，这使得它不会被覆盖掉
+Dialogue: 0,0:46:15.92,0:46:18.32,English,,0,0,0,,Okay if you're accessing any shared data structures 如果你访问某些共享的数据结构
 Dialogue: 0,0:46:19.00,0:46:25.24,English,,0,0,0,,Inside a signal handler that are also accessed by your main routine
-Dialogue: 0,0:46:25.34,0:46:29.16,English,,0,0,0,,Then you need to temporarily block signals while you access that data structure
-Dialogue: 0,0:46:29.80,0:46:31.98,English,,0,0,0,,Both in the main routine and your signal handler
-Dialogue: 0,0:46:32.86,0:46:35.43,English,,0,0,0,,Right and the reason for this is what I described earlier
-Dialogue: 0,0:46:36.04,0:46:39.88,English,,0,0,0,,If your main routine is updating that global data structure and then it gets interrupted
-Dialogue: 0,0:46:40.40,0:46:44.46,English,,0,0,0,,And the signal handler is reading that data structure it's going to find it in an inconsistent state
-Dialogue: 0,0:46:44.88,0:46:46.40,English,,0,0,0,,And bad things will happen
-Dialogue: 0,0:46:50.88,0:46:55.76,English,,0,0,0,,Okay you want to be sure to declare your any global variables that are shared between signal handlers
-Dialogue: 0,0:46:55.96,0:46:57.94,English,,0,0,0,,And the main routine as volatile
-Dialogue: 0,0:46:58.56,0:47:04.38,English,,0,0,0,,Okay the volatile attribute will prevent the compiler from putting that value in a register
-Dialogue: 0,0:47:07.62,0:47:09.96,English,,0,0,0,,So if you declare a global variable as volatile
-Dialogue: 0,0:47:10.58,0:47:14.58,English,,0,0,0,,It will always be reads and writes will always go to and from memory
-Dialogue: 0,0:47:15.94,0:47:22.76,English,,0,0,0,,Okay so this is very important right you might if you don't declare these global variables at volatile
-Dialogue: 0,0:47:22.86,0:47:28.22,English,,0,0,0,,And the compiler chooses to put one of those in a register
-Dialogue: 0,0:47:29.64,0:47:33.04,English,,0,0,0,,Then you may miss that variable being updated
-Dialogue: 0,0:47:33.06,0:47:37.68,English,,0,0,0,,So suppose your signal handlers is setting a global variable
-Dialogue: 0,0:47:39.26,0:47:44.74,English,,0,0,0,,And now suppose your main routine is spinning waiting for that global variable to get set
-Dialogue: 0,0:47:46.56,0:47:51.82,English,,0,0,0,,Well if it's in a register the write to that variable will just update the register
-Dialogue: 0,0:47:51.92,0:47:58.70,English,,0,0,0,,Right and so your main routine is in danger of just of spinning forever not seeing the change right
-Dialogue: 0,0:48:00.54,0:48:04.62,English,,0,0,0,,Okay so always use volatility so that they're not stored in registers
-Dialogue: 0,0:48:06.22,0:48:10.60,English,,0,0,0,,And then if you have fun if you have a special kind of global called a flag
-Dialogue: 0,0:48:11.18,0:48:19.22,English,,0,0,0,,Which by definition is a variable it's only read or written not incremented or updated it's just read or written
-Dialogue: 0,0:48:20.64,0:48:27.18,English,,0,0,0,,If you have a variable with that property then you can declare it with this sig_atomic_t tribute
-Dialogue: 0,0:48:28.72,0:48:34.46,English,,0,0,0,,And if you do that then the system guarantees that reads and writes to that variable will be atomic
-Dialogue: 0,0:48:34.68,0:48:39.22,English,,0,0,0,,So you don't have to in other words you don't have to protect accesses to the shared
-Dialogue: 0,0:48:39.82,0:48:43.58,English,,0,0,0,,To accesses or references to those global variables
-Dialogue: 0,0:48:44.52,0:48:53.56,English,,0,0,0,,Okay and so by atomic which means that the read or write of that flag will always happen in one uninterruptible step
+Dialogue: 0,0:46:25.34,0:46:29.16,English,,0,0,0,,Then you need to temporarily block signals while you access that data structure 在你访问这些数据结构时，你得临时阻塞一些信号
+Dialogue: 0,0:46:29.80,0:46:31.98,English,,0,0,0,,Both in the main routine and your signal handler main 程序和你的信号处理程序都得这么做
+Dialogue: 0,0:46:32.86,0:46:35.43,English,,0,0,0,,Right and the reason for this is what I described earlier 对的，原因是我之前描述过的
+Dialogue: 0,0:46:36.04,0:46:39.88,English,,0,0,0,,If your main routine is updating that global data structure and then it gets interrupted 如果你的 main 程序更新了这个全局数据结构，然后就被中断了
+Dialogue: 0,0:46:40.40,0:46:44.46,English,,0,0,0,,And the signal handler is reading that data structure it's going to find it in an inconsistent state 信号处理程序读取这个数据结构，就会发现它处于不一致状态
+Dialogue: 0,0:46:44.88,0:46:46.40,English,,0,0,0,,And bad things will happen 会导致坏事情
+Dialogue: 0,0:46:50.88,0:46:55.76,English,,0,0,0,,Okay you want to be sure to declare your any global variables that are shared between signal handlers 你得确认你所有的，在信号处理程序
+Dialogue: 0,0:46:55.96,0:46:57.94,English,,0,0,0,,And the main routine as volatile 和 main 程序间共享的全局变量被声明为 volatile
+Dialogue: 0,0:46:58.56,0:47:04.38,English,,0,0,0,,Okay the volatile attribute will prevent the compiler from putting that value in a register volatile 属性可以防止编译器将它的值放入寄存器中
+Dialogue: 0,0:47:07.62,0:47:09.96,English,,0,0,0,,So if you declare a global variable as volatile 所以如果你要声明一个全局变量为 volatile
+Dialogue: 0,0:47:10.58,0:47:14.58,English,,0,0,0,,It will always be reads and writes will always go to and from memory 那么它会始终通过内存读写
+Dialogue: 0,0:47:15.94,0:47:22.76,English,,0,0,0,,Okay so this is very important right you might if you don't declare these global variables at volatile 这非常重要，如果你在声明全部变量时不用 volatile
+Dialogue: 0,0:47:22.86,0:47:28.22,English,,0,0,0,,And the compiler chooses to put one of those in a register 那么编译器就会将它们放入寄存器中
+Dialogue: 0,0:47:29.64,0:47:33.04,English,,0,0,0,,Then you may miss that variable being updated 这可能使你无法获取变量的更新
+Dialogue: 0,0:47:33.06,0:47:37.68,English,,0,0,0,,So suppose your signal handlers is setting a global variable 假设你的信号处理程序正在设置一个全局变量
+Dialogue: 0,0:47:39.26,0:47:44.74,English,,0,0,0,,And now suppose your main routine is spinning waiting for that global variable to get set 现在假设你的 main 正在spinning，等待全局变量被设置
+Dialogue: 0,0:47:46.56,0:47:51.82,English,,0,0,0,,Well if it's in a register the write to that variable will just update the register 如果它是在寄存器里，写这个变量仅仅是写在寄存器里
+Dialogue: 0,0:47:51.92,0:47:58.70,English,,0,0,0,,Right and so your main routine is in danger of just of spinning forever not seeing the change right 这使得你的 main 程序永远也接收不到改变
+Dialogue: 0,0:48:00.54,0:48:04.62,English,,0,0,0,,Okay so always use volatility so that they're not stored in registers 使用 volatile 的变量可以让它不会被放入寄存器里
+Dialogue: 0,0:48:06.22,0:48:10.60,English,,0,0,0,,And then if you have fun if you have a special kind of global called a flag 接下来，如果你有一个有趣的，如果你有一个特殊的全局变量，我们叫它 flag
+Dialogue: 0,0:48:11.18,0:48:19.22,English,,0,0,0,,Which by definition is a variable it's only read or written not incremented or updated it's just read or written 它的定义是，它仅仅被读写，不会被增加，它只有读写操作
+Dialogue: 0,0:48:20.64,0:48:27.18,English,,0,0,0,,If you have a variable with that property then you can declare it with this sig_atomic_t tribute 如果你的变量具有这种性质，你可以用 sig_atomic_t 来声明它
+Dialogue: 0,0:48:28.72,0:48:34.46,English,,0,0,0,,And if you do that then the system guarantees that reads and writes to that variable will be atomic 如果你这样做了，系统会保证这个变量的读写操作是原子的
+Dialogue: 0,0:48:34.68,0:48:39.22,English,,0,0,0,,So you don't have to in other words you don't have to protect accesses to the shared 所以你不是非得，换句话说，你不需要保护对共享的访问
+Dialogue: 0,0:48:39.82,0:48:43.58,English,,0,0,0,,To accesses or references to those global variables 对这些全局变量的访问或引用
+Dialogue: 0,0:48:44.52,0:48:53.56,English,,0,0,0,,Okay and so by atomic which means that the read or write of that flag will always happen in one uninterruptible step 原子操作意味着，对这个 flag 的读写操作会发生在一个禁止中断的步骤中
 Dialogue: 0,0:48:54.86,0:48:58.12,English,,0,0,0,,Okay one uninterruptible load or store particular
-Dialogue: 0,0:49:00.16,0:49:03.94,English,,0,0,0,,Now in practice on most systems this sig_atomic_t is an int
+Dialogue: 0,0:49:00.16,0:49:03.94,English,,0,0,0,,Now in practice on most systems this sig_atomic_t is an int 在实践中，在大多数系统下，sig_atomic_t 是 int 类型的
 Dialogue: 0,0:49:05.80,0:49:12.00,English,,0,0,0,,So you can read or write an int with one one instruction okay so it's atomic
-Dialogue: 0,0:49:12.62,0:49:16.06,English,,0,0,0,,But if you want to be portable you declare it with sig_atomic_t
-Dialogue: 0,0:49:16.30,0:49:21.94,English,,0,0,0,,And then it'll work on none it will work on all systems
-Dialogue: 0,0:49:24.78,0:49:27.44,English,,0,0,0,,Okay we mentioned this property of a sync signal safety
-Dialogue: 0,0:49:28.66,0:49:32.66,English,,0,0,0,,Now a function is safe to be used inside of a signal handler
-Dialogue: 0,0:49:33.56,0:49:38.54,English,,0,0,0,,If it's either reentrant or if it can't be interrupted by signals
+Dialogue: 0,0:49:12.62,0:49:16.06,English,,0,0,0,,But if you want to be portable you declare it with sig_atomic_t 但如果你想要移植，你得用 sig_atomic_t 声明
+Dialogue: 0,0:49:16.30,0:49:21.94,English,,0,0,0,,And then it'll work on none it will work on all systems 它可以在。。在所有系统上工作
+Dialogue: 0,0:49:24.78,0:49:27.44,English,,0,0,0,,Okay we mentioned this property of a sync signal safety 我们是在同步信号安全里提到它的
+Dialogue: 0,0:49:28.66,0:49:32.66,English,,0,0,0,,Now a function is safe to be used inside of a signal handler 现在可以在信号处理函数中安全地使用函数了
+Dialogue: 0,0:49:33.56,0:49:38.54,English,,0,0,0,,If it's either reentrant or if it can't be interrupted by signals 如果它可重入或可以被信号中断
 Dialogue: 0,0:49:39.30,0:49:44.62,English,,0,0,0,,And will...a reentrant function as we'll see when we study threads is a function where all of its
 Dialogue: 0,0:49:45.16,0:49:48.20,English,,0,0,0,,All of the data that it accesses is on its own stack
 Dialogue: 0,0:49:50.64,0:49:56.06,English,,0,0,0,,Okay so no global variables no pointers to global variables everything's stored on the stack locally
