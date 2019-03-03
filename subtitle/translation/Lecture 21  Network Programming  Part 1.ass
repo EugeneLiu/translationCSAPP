@@ -478,27 +478,27 @@ Dialogue: 0,0:18:32.86,0:18:36.96,Chinese,,0,0,0,,而且它处于这个数据包
 Dialogue: 0,0:18:37.18,0:18:41.50,English,,0,0,0,,Meaning that it has to take whatever you're sending and slice it up into these single packets
 Dialogue: 0,0:18:37.18,0:18:41.50,Chinese,,0,0,0,,这意味着它必须接收你发送的所有数据并将其分割成这些单独的数据包
 Dialogue: 0,0:18:42.24,0:18:46.30,English,,0,0,0,,If one of them doesn't get sent it will resend it until it gets there
-
+Dialogue: 0,0:18:42.24,0:18:46.30,Chinese,,0,0,0,,如果有一个数据包没有被送达，它就会重复发送直到它被送达
 Dialogue: 0,0:18:46.84,0:18:54.02,English,,0,0,0,,They have to deal with the fact that packets can travel different paths and one can get ahead of the other in transmission
-
+Dialogue: 0,0:18:46.84,0:18:54.02,Chinese,,0,0,0,,他们还需要处理一个问题：数据包可以通过不同的路径传输，所以有些原本位于后面的数据包可能率先完成传送
 Dialogue: 0,0:18:54.04,0:18:56.40,English,,0,0,0,,And so it has to reorder them in the correct sequence
-
+Dialogue: 0,0:18:54.04,0:18:56.40,Chinese,,0,0,0,,所以我们需要将它们按正确的顺序重新排列
 Dialogue: 0,0:18:56.98,0:18:59.24,English,,0,0,0,,And so there's a lot of stuff under it but
-
+Dialogue: 0,0:18:56.98,0:18:59.24,Chinese,,0,0,0,,虽然这一步需要很多操作但
 Dialogue: 0,0:18:59.82,0:19:01.64,English,,0,0,0,,We'll just assume that it kind of works
-
+Dialogue: 0,0:18:59.82,0:19:01.64,Chinese,,0,0,0,,我们只要知道它起作用就行了
 Dialogue: 0,0:19:02.40,0:19:06.34,English,,0,0,0,,And so you can just rely think about it is I have a stream connection
-
+Dialogue: 0,0:19:02.40,0:19:06.34,Chinese,,0,0,0,,你们可以想象一下，我有一个串流连接
 Dialogue: 0,0:19:06.78,0:19:11.56,English,,0,0,0,,I can send from A to B and B can send a stream of data back to me
-
+Dialogue: 0,0:19:06.78,0:19:11.56,Chinese,,0,0,0,,我可以从 A 往 B 发东西然后 B 也可以反过来给我发送数据流
 Dialogue: 0,0:19:12.06,0:19:13.66,English,,0,0,0,,And we're all happy
-
+Dialogue: 0,0:19:12.06,0:19:13.66,Chinese,,0,0,0,,我们都会很高兴
 Dialogue: 0,0:19:15.20,0:19:18.04,English,,0,0,0,,And so that's the version that looks like file I/O
-
+Dialogue: 0,0:19:15.20,0:19:18.04,Chinese,,0,0,0,,所以这就是看起来像文件输入/输出的版本
 Dialogue: 0,0:19:18.04,0:19:23.58,English,,0,0,0,,I just keep writing to a file and it's sending packets over the network to the other end
-
+Dialogue: 0,0:19:18.04,0:19:23.58,Chinese,,0,0,0,,我只是持续向文件写入数据，然后它就不断向网络的另一端发送数据包
 Dialogue: 0,0:19:24.24,0:19:28.18,English,,0,0,0,,And then the other side can be sending stuff to me
-
+Dialogue: 0,0:19:24.24,0:19:28.18,Chinese,,0,0,0,,然后另一端也可以向我发送东西
 Dialogue: 0,0:19:28.54,0:19:31.66,English,,0,0,0,,And I'm just reading it and I'm just reading bytes of data
 Dialogue: 0,0:19:32.00,0:19:35.12,English,,0,0,0,,Not worrying about how that got broken up into individual packets
 Dialogue: 0,0:19:36.48,0:19:39.18,English,,0,0,0,,And so that's referred to as the sockets interface
