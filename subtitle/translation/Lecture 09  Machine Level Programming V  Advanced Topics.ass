@@ -28,15 +28,15 @@ Style: Chinese,Source Han Sans CN,34,&H00FBFD00,&H00FFFFFF,&H00362A28,&H00FFFFFF
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 0,0:00:00.00,0:00:04.82,English,,0,0,0,,This will be the last lecture on machine level programming
-Dialogue: 0,0:00:00.00,0:00:04.82,Chinese,,0,0,0,,这将会是关于机器级编程的最后一课
+Dialogue: 0,0:00:00.00,0:00:04.82,Chinese,,0,0,0,,这是关于机器级编程的最后一课
 Dialogue: 0,0:00:05.42,0:00:09.94,English,,0,0,0,,We call it advanced topics but think of it more as miscellaneous topics
 Dialogue: 0,0:00:05.42,0:00:09.94,Chinese,,0,0,0,,我们把它称之为高级主题，但觉得它更像是五花八门的主题
 Dialogue: 0,0:00:10.70,0:00:16.00,English,,0,0,0,,And I think most to you of course you know that your bomb lab due tonight
-Dialogue: 0,0:00:10.70,0:00:16.00,Chinese,,0,0,0,,你们应该都知道 bomb lab 将于今晚截止
+Dialogue: 0,0:00:10.70,0:00:16.00,Chinese,,0,0,0,,你们应该都知道 bomb 实验将于今晚截止
 Dialogue: 0,0:00:16.00,0:00:20.72,English,,0,0,0,,So you most year probably well into that or hopefully through it
 Dialogue: 0,0:00:16.00,0:00:20.72,Chinese,,0,0,0,,所以在那之前你们都应该完成这个实验
 Dialogue: 0,0:00:21.08,0:00:26.44,English,,0,0,0,,And then at midnight tonight the next lab will come out which is called attack lab
-Dialogue: 0,0:00:21.08,0:00:26.44,Chinese,,0,0,0,,下一个实验 ———— attack lab 将会在今晚推出
+Dialogue: 0,0:00:21.08,0:00:26.44,Chinese,,0,0,0,,下一个实验 ———— attack 实验将会在今晚推出
 Dialogue: 0,0:00:26.96,0:00:28.98,English,,0,0,0,,And there is a recitation about that yesterday
 Dialogue: 0,0:00:26.96,0:00:28.98,Chinese,,0,0,0,,昨天的习题课就是关于这个实验的
 Dialogue: 0,0:00:28.98,0:00:32.90,English,,0,0,0,,But this is a lab that's a new to the course
@@ -60,11 +60,11 @@ Dialogue: 0,0:01:05.10,0:01:07.88,Chinese,,0,0,0,,这样不方便我们做统计
 Dialogue: 0,0:01:09.56,0:01:16.94,English,,0,0,0,,So today what we'll talk about is a couple like I said it's miscellaneous topics but important topics
 Dialogue: 0,0:01:09.56,0:01:16.94,Chinese,,0,0,0,,今天我们要讨论的是几个杂乱但又十分重要的话题
 Dialogue: 0,0:01:17.00,0:01:25.52,English,,0,0,0,,One is just sort of what does the memory look like when you're running x86-64 programs
-Dialogue: 0,0:01:17.00,0:01:25.52,Chinese,,0,0,0,,一个是当运行x86-64的程序时内存是如何组织的
+Dialogue: 0,0:01:17.00,0:01:25.52,Chinese,,0,0,0,,一个是当运行 x86-64 的程序时内存是如何组织的
 Dialogue: 0,0:01:26.00,0:01:31.34,English,,0,0,0,,The other is a very important topic on security vulnerability called buffer overflows
 Dialogue: 0,0:01:26.00,0:01:31.34,Chinese,,0,0,0,,另一个是关于安全的话题，我们称之为缓冲区溢出
 Dialogue: 0,0:01:31.86,0:01:37.44,English,,0,0,0,,And in fact the attack lab will be precisely exploiting those security vulnerabilities
-Dialogue: 0,0:01:31.86,0:01:37.44,Chinese,,0,0,0,,实际上 attack lab 将会把这些安全问题都清晰地暴露出来
+Dialogue: 0,0:01:31.86,0:01:37.44,Chinese,,0,0,0,,实际上 attack 实验将会把这些安全问题都清晰地暴露出来
 Dialogue: 0,0:01:37.96,0:01:43.02,English,,0,0,0,,And then we'll look at unions,so far you've booked it arrays and structs and how they're organized
 Dialogue: 0,0:01:37.96,0:01:43.02,Chinese,,0,0,0,,之后我们将会讨论联合体，到目前为止你们已经了解了数组和结构体
 Dialogue: 0,0:01:43.72,0:01:45.90,English,,0,0,0,,And I want to compare that to unions
@@ -160,7 +160,7 @@ Dialogue: 0,0:06:44.82,0:06:48.58,Chinese,,0,0,0,,你们知道 10^18 是什么�
 Dialogue: 0,0:06:53.40,0:07:00.02,English,,0,0,0,,So just as a reference a company like google roughly
 Dialogue: 0,0:06:53.40,0:07:00.02,Chinese,,0,0,0,,这里我们以谷歌公司为例
 Dialogue: 0,0:07:00.46,0:07:04.10,English,,0,0,0,,It's probably it's total storage across the whole
-Dialogue: 0,0:07:04.90,0:07:08.70,English,,0,0,0,,Enterprise is measured in some small number of x bytes
+Dialogue: 0,0:07:04.90,0:07:08.70,English,,0,0,0,,Enterprise is measured in some small number of exabytes
 Dialogue: 0,0:07:04.90,0:07:08.70,Chinese,,0,0,0,,整个谷歌的存储是以 EB 为单位计量的
 Dialogue: 0,0:07:09.80,0:07:18.00,English,,0,0,0,,And it every day is getting several petabytes I don't know the numbers are of course secret
 Dialogue: 0,0:07:09.80,0:07:18.00,Chinese,,0,0,0,,每天都会产生好几 PB 的数据，我不知道具体是多少因为这是商业机密
