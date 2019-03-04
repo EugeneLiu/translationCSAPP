@@ -602,43 +602,43 @@ Dialogue: 0,0:53:28.94,0:53:31.42,English,,0,0,0,,And it consists of three reent
 Dialogue: 0,0:53:33.64,0:53:37.50,English,,0,0,0,,sio_puts prints string sio——puts 打印一个字符串
 Dialogue: 0,0:53:38.84,0:53:41.48,English,,0,0,0,,(sio_)putl prints a long (sio_)putl 打印一个 long
 Dialogue: 0,0:53:42.82,0:53:48.04,English,,0,0,0,,And sio_error prints a message and then exits sio_error 打印一条信息然后退出
-Dialogue: 0,0:53:50.82,0:53:55.92,English,,0,0,0,,Okay so you can safely use take my word for it you can safely use this in your signal handlers
-Dialogue: 0,0:53:56.54,0:54:01.94,English,,0,0,0,,So if we were going to rewrite our sigint_handler from the binary bomb
-Dialogue: 0,0:54:02.60,0:54:08.38,English,,0,0,0,,We could rewrite it like this and now we have every function is async-signal-safe
+Dialogue: 0,0:53:50.82,0:53:55.92,English,,0,0,0,,Okay so you can safely use take my word for it you can safely use this in your signal handlers 你可以安全地使用，相信我，你可以安全地在信号处理程序中使用它
+Dialogue: 0,0:53:56.54,0:54:01.94,English,,0,0,0,,So if we were going to rewrite our sigint_handler from the binary bomb 如果用这个库重写我们的 sigint 处理程序
+Dialogue: 0,0:54:02.60,0:54:08.38,English,,0,0,0,,We could rewrite it like this and now we have every function is async-signal-safe 重写的结果会是这个样子，那么现在我们所有的函数都是同步信号安全的了
 Dialogue: 0,0:54:11.60,0:54:16.58,English,,0,0,0,,All right now signals are also tucked because of this funky non cueing semantics
-Dialogue: 0,0:54:19.56,0:54:21.70,English,,0,0,0,,And so it's really easy to make mistakes
-Dialogue: 0,0:54:23.92,0:54:26.14,English,,0,0,0,,When you have an implicit assumption that
-Dialogue: 0,0:54:27.94,0:54:33.18,English,,0,0,0,,The that the receipt of a signal it can be used to count the occurrence of an event
-Dialogue: 0,0:54:34.82,0:54:38.32,English,,0,0,0,,So let's look at this, let's look at this example program
-Dialogue: 0,0:54:40.88,0:54:42.92,English,,0,0,0,,We install a sick child handler
+Dialogue: 0,0:54:19.56,0:54:21.70,English,,0,0,0,,And so it's really easy to make mistakes 所以这很容易出错
+Dialogue: 0,0:54:23.92,0:54:26.14,English,,0,0,0,,When you have an implicit assumption that 当你有一个隐式的 assumption
+Dialogue: 0,0:54:27.94,0:54:33.18,English,,0,0,0,,The that the receipt of a signal it can be used to count the occurrence of an event 接收到的信号可以用来统计事件发生的次数
+Dialogue: 0,0:54:34.82,0:54:38.32,English,,0,0,0,,So let's look at this, let's look at this example program 让我们看看这个例程
+Dialogue: 0,0:54:40.88,0:54:42.92,English,,0,0,0,,We install a sick child handler 我们挂载了 sigchild 的处理程序
 Dialogue: 0,0:54:43.92,0:54:49.40,English,,0,0,0,,Okay and this is actually this sort of close the loop member we talked about our example shell
-Dialogue: 0,0:54:49.96,0:54:53.38,English,,0,0,0,,We're wondering how are we going to reap those background children
-Dialogue: 0,0:54:53.76,0:54:57.42,English,,0,0,0,,Well we do it by installing a sick child handle like we're doing in this example
-Dialogue: 0,0:54:58.26,0:55:03.62,English,,0,0,0,,So this here we have a program that installs this sig child handler
-Dialogue: 0,0:55:04.28,0:55:08.86,English,,0,0,0,,And then it creates N different child processes
-Dialogue: 0,0:55:09.64,0:55:12.86,English,,0,0,0,,Where each child sleeps for a little bit and exits
-Dialogue: 0,0:55:17.02,0:55:22.16,English,,0,0,0,,And then it spins until the ccount variable becomes zero
-Dialogue: 0,0:55:23.86,0:55:29.16,English,,0,0,0,,That the parent, I'm sorry, the parent spins until the ccount variable becomes zero
-Dialogue: 0,0:55:30.76,0:55:40.32,English,,0,0,0,,Now in our child handler we have a global that's initialized to zero ccount
-Dialogue: 0,0:55:43.94,0:55:48.40,English,,0,0,0,,And then we wait,we're going to wait so this child,when the child handler gets called that means
-Dialogue: 0,0:55:48.84,0:55:51.14,English,,0,0,0,,It's called because we received a sig_child signal
-Dialogue: 0,0:55:53.30,0:55:58.52,English,,0,0,0,,Okay so in our handler we're going to reap that child by calling weight
-Dialogue: 0,0:56:00.04,0:56:03.60,English,,0,0,0,,And we're going to dec...will decrement ccount
-Dialogue: 0,0:56:04.00,0:56:10.56,English,,0,0,0,,Okay so once all of the children if then have been reaped ccount will be zero
-Dialogue: 0,0:56:10.56,0:56:13.88,English,,0,0,0,,And then the parent can exit this while loop
-Dialogue: 0,0:56:15.54,0:56:18.48,English,,0,0,0,,Okay now in this particular example N was 5
-Dialogue: 0,0:56:20.20,0:56:26.72,English,,0,0,0,,But will you run this code,we only the handle or only gets called twice
-Dialogue: 0,0:56:29.46,0:56:35.38,English,,0,0,0,,Okay so the the message handler reap child only gets executed twice right
-Dialogue: 0,0:56:35.38,0:56:37.76,English,,0,0,0,,Which means the handler was only called twice
-Dialogue: 0,0:56:38.04,0:56:42.62,English,,0,0,0,,We created five children,we terminated five children
-Dialogue: 0,0:56:43.58,0:56:45.16,English,,0,0,0,,But we only reaped two
-Dialogue: 0,0:56:47.26,0:56:51.94,English,,0,0,0,,Okay so that the problem is that when we the problem is that we assumed
-Dialogue: 0,0:56:52.76,0:56:54.84,English,,0,0,0,,That the receipt...
+Dialogue: 0,0:54:49.96,0:54:53.38,English,,0,0,0,,We're wondering how are we going to reap those background children 我们想知道如何回收那些在后台运行的子进程
+Dialogue: 0,0:54:53.76,0:54:57.42,English,,0,0,0,,Well we do it by installing a sick child handle like we're doing in this example 我们通过挂载 sigchild 处理程序来做到这一点，正如这个例子所示
+Dialogue: 0,0:54:58.26,0:55:03.62,English,,0,0,0,,So this here we have a program that installs this sig child handler 在这里，这个程序挂载了 sigchild 处理程序
+Dialogue: 0,0:55:04.28,0:55:08.86,English,,0,0,0,,And then it creates N different child processes 然后创建了 N 个不同的子进程
+Dialogue: 0,0:55:09.64,0:55:12.86,English,,0,0,0,,Where each child sleeps for a little bit and exits 每一个子进程 sleep 一段时间后退出
+Dialogue: 0,0:55:17.02,0:55:22.16,English,,0,0,0,,And then it spins until the ccount variable becomes zero 然后它 spin，直到 ccount 变量变为 0
+Dialogue: 0,0:55:23.86,0:55:29.16,English,,0,0,0,,That the parent, I'm sorry, the parent spins until the ccount variable becomes zero 还有父进程，我很抱歉，是父进程 spin 直到 ccount 变量变为 0
+Dialogue: 0,0:55:30.76,0:55:40.32,English,,0,0,0,,Now in our child handler we have a global that's initialized to zero ccount 此时在我们的子处理程序中，我们有一个初始化为零 ccount 的全局变量
+Dialogue: 0,0:55:43.94,0:55:48.40,English,,0,0,0,,And then we wait,we're going to wait so this child,when the child handler gets called that means 然后我们等待，我们等待这个子程序，当这个子处理程序被调用，这意味着
+Dialogue: 0,0:55:48.84,0:55:51.14,English,,0,0,0,,It's called because we received a sig_child signal 这说明我们收到了 sigchild 信号
+Dialogue: 0,0:55:53.30,0:55:58.52,English,,0,0,0,,Okay so in our handler we're going to reap that child by calling weight 所以在我们的处理程序中，我们通过调用 weight 来回收子进程
+Dialogue: 0,0:56:00.04,0:56:03.60,English,,0,0,0,,And we're going to dec...will decrement ccount 接下来我们。。将 ccount 减 1
+Dialogue: 0,0:56:04.00,0:56:10.56,English,,0,0,0,,Okay so once all of the children if then have been reaped ccount will be zero 一旦所有子进程都被回收，那么 ccount 将变为 0
+Dialogue: 0,0:56:10.56,0:56:13.88,English,,0,0,0,,And then the parent can exit this while loop 然后父进程就可以退出这个 while 循环
+Dialogue: 0,0:56:15.54,0:56:18.48,English,,0,0,0,,Okay now in this particular example N was 5 在这个例子中，N 是 5
+Dialogue: 0,0:56:20.20,0:56:26.72,English,,0,0,0,,But will you run this code,we only the handle or only gets called twice 但当你运行这代码，我们仅有的处理程序只被调用两次
+Dialogue: 0,0:56:29.46,0:56:35.38,English,,0,0,0,,Okay so the the message handler reap child only gets executed twice right 回收子进程的消息处理程序只执行两次
+Dialogue: 0,0:56:35.38,0:56:37.76,English,,0,0,0,,Which means the handler was only called twice 这意味着处理程序只被调用了两次
+Dialogue: 0,0:56:38.04,0:56:42.62,English,,0,0,0,,We created five children,we terminated five children 我们创建了五个子进程，我们也终止了五个子进程
+Dialogue: 0,0:56:43.58,0:56:45.16,English,,0,0,0,,But we only reaped two 但我们只回收了两次
+Dialogue: 0,0:56:47.26,0:56:51.94,English,,0,0,0,,Okay so that the problem is that when we the problem is that we assumed 所以问题是，问题是我们假设的
+Dialogue: 0,0:56:52.76,0:56:54.84,English,,0,0,0,,That the receipt... 回收。。。
 Dialogue: 0,0:56:56.94,0:57:03.36,English,,0,0,0,,The execution of the child handled our correspondent to the single receipt of a single sig_child signal
-Dialogue: 0,0:57:04.78,0:57:09.38,English,,0,0,0,,Okay when in reality there signals are true
-Dialogue: 0,0:57:10.40,0:57:15.90,English,,0,0,0,,We had in reality multiple sig_child signals were delivered to that child
-Dialogue: 0,0:57:15.90,0:57:19.10,English,,0,0,0,,Which kept overriding that at bit in the pending bit vector
-Dialogue: 0,0:57:20.26,0:57:26.68,English,,0,0,0,,And the delivery of those signals didn't cause any reaction in the process
+Dialogue: 0,0:57:04.78,0:57:09.38,English,,0,0,0,,Okay when in reality there signals are true 当现实中信号为真时
+Dialogue: 0,0:57:10.40,0:57:15.90,English,,0,0,0,,We had in reality multiple sig_child signals were delivered to that child 我们实际上有从子进程收到的多个 sigchild 信号
+Dialogue: 0,0:57:15.90,0:57:19.10,English,,0,0,0,,Which kept overriding that at bit in the pending bit vector 在待处理位向量上不断被覆盖
+Dialogue: 0,0:57:20.26,0:57:26.68,English,,0,0,0,,And the delivery of those signals didn't cause any reaction in the process 
 Dialogue: 0,0:57:26.68,0:57:30.00,English,,0,0,0,,Until that process was just about ready to be rescheduled
 Dialogue: 0,0:57:30.44,0:57:33.02,English,,0,0,0,,And only then was where was a signal received
 Dialogue: 0,0:57:33.92,0:57:37.84,English,,0,0,0,,But even though like say three signals were delivered only one was received
