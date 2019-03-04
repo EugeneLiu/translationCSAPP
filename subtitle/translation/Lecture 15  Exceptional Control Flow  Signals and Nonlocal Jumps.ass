@@ -456,189 +456,189 @@ Dialogue: 0,0:39:23.88,0:39:28.12,English,,0,0,0,,这是隐式的阻塞
 Dialogue: 0,0:39:29.22,0:39:36.70,English,,0,0,0,,内核也提供一个系统调用，允许显式设置阻塞和解除阻塞
 Dialogue: 0,0:39:37.30,0:39:40.01,English,,0,0,0,,就是 sigprocmask 函数
 Dialogue: 0,0:39:41.96,0:39:48.66,English,,0,0,0,,它允许你阻塞或解除阻塞一组信号
-Dialogue: 0,0:39:49.42,0:39:54.04,English,,0,0,0,,And then there some support functions that allow you to create those sets 这是一些支持你创建这些位的函数
-Dialogue: 0,0:39:55.40,0:39:58.34,English,,0,0,0,,So just think of these as bit vectors 把它们当成位向量来看
-Dialogue: 0,0:39:58.38,0:40:05.34,English,,0,0,0,,And these functions will set in set and reset the bits and those those bit vectors 这些函数可以置位或复位这些位向量里的位
-Dialogue: 0,0:40:07.16,0:40:12.72,English,,0,0,0,,So let's see how we can use sigprocmasks to temporarily block and unblock a signal 下面我们看看如何使用 sigprocmasks 来暂时阻塞或解除阻塞一个信号
-Dialogue: 0,0:40:13.32,0:40:16.00,English,,0,0,0,,So this is going to turn out to be very important for you 这很重要
-Dialogue: 0,0:40:16.00,0:40:21.24,English,,0,0,0,,When you working on your shells that which is your next lab assignment okay 你用 shell 干活的时候，下次作业你们就会用到
-Dialogue: 0,0:40:25.98,0:40:31.34,English,,0,0,0,,So what we do...we'll use sigemptyset to create an empty mask so this is a mask with all zeros 让我们来。。我们用 sigemptyset 来创建一个空的掩码，这是一个全为零的掩码
-Dialogue: 0,0:40:31.96,0:40:33.80,English,,0,0,0,,Okay with no elements in the set 这个集合现在没有元素
-Dialogue: 0,0:40:34.80,0:40:39.46,English,,0,0,0,,And then we're going to add a single element to this set which is sigint 接下来我们添加一个 sigint 信号到这个集合中
-Dialogue: 0,0:40:42.46,0:40:47.88,English,,0,0,0,,And now we temp...we have some code that we don't want to be interrupted by the seed of sigint 我们暂时。。我们有一些不想被 sigint 中断的代码
-Dialogue: 0,0:40:49.36,0:40:53.08,English,,0,0,0,,Okay so we want to temporarily block the receipt of sig n signals 所以我们需要暂时阻塞掉 sigint 的接收
-Dialogue: 0,0:40:54.08,0:40:58.70,English,,0,0,0,,And we do it by calling sigprocmask with the command 那就需要在命令里使用 sigprocmask  调用
-Dialogue: 0,0:40:59.20,0:41:02.56,English,,0,0,0,,Say I want to block I want to block the signals 我想要阻塞这个
-Dialogue: 0,0:41:03.84,0:41:08.78,English,,0,0,0,,That are spent that are in the set specified by mask 掩码所指定的，集合中的信号
-Dialogue: 0,0:41:12.36,0:41:16.22,English,,0,0,0,,And I'll assign the so this will become my new mask 我会为这个集合重新赋值用作我们的新掩码
-Dialogue: 0,0:41:16.64,0:41:19.72,English,,0,0,0,,So this becomes the new blocked bit vector 这就是新的阻塞位向量
+Dialogue: 0,0:39:49.42,0:39:54.04,English,,0,0,0,,这是一些支持你创建这些位的函数
+Dialogue: 0,0:39:55.40,0:39:58.34,English,,0,0,0,,把它们当成位向量来看
+Dialogue: 0,0:39:58.38,0:40:05.34,English,,0,0,0,,这些函数可以置位或复位这些位向量里的位
+Dialogue: 0,0:40:07.16,0:40:12.72,English,,0,0,0,,下面我们看看如何使用 sigprocmasks 来暂时阻塞或解除阻塞一个信号
+Dialogue: 0,0:40:13.32,0:40:16.00,English,,0,0,0,,这很重要
+Dialogue: 0,0:40:16.00,0:40:21.24,English,,0,0,0,,干活的时候，下次作业你们就会用到
+Dialogue: 0,0:40:25.98,0:40:31.34,English,,0,0,0,,让我们来。。我们用 sigemptyset 来创建一个空的掩码，这是一个全为零的掩码
+Dialogue: 0,0:40:31.96,0:40:33.80,English,,0,0,0,,这个集合现在没有元素
+Dialogue: 0,0:40:34.80,0:40:39.46,English,,0,0,0,,接下来我们添加一个 sigint 信号到这个集合中
+Dialogue: 0,0:40:42.46,0:40:47.88,English,,0,0,0,,我们暂时。。我们有一些不想被 sigint 中断的代码
+Dialogue: 0,0:40:49.36,0:40:53.08,English,,0,0,0,,所以我们需要暂时阻塞掉 sigint 的接收
+Dialogue: 0,0:40:54.08,0:40:58.70,English,,0,0,0,,那就需要在命令里使用 sigprocmask  调用
+Dialogue: 0,0:40:59.20,0:41:02.56,English,,0,0,0,,我想要阻塞这个
+Dialogue: 0,0:41:03.84,0:41:08.78,English,,0,0,0,,掩码所指定的，集合中的信号
+Dialogue: 0,0:41:12.36,0:41:16.22,English,,0,0,0,,我会为这个集合重新赋值用作我们的新掩码
+Dialogue: 0,0:41:16.64,0:41:19.72,English,,0,0,0,,这就是新的阻塞位向量
 Dialogue: 0,0:41:20.68,0:41:24.52,English,,0,0,0,,Okay or the not the this the new signal mask
-Dialogue: 0,0:41:24.62,0:41:31.28,English,,0,0,0,,And it makes a copy of the old one and stores it at the address specified in the third argument 它复制旧的阻塞位向量，并将其存储在第三个参数中指定的地址
-Dialogue: 0,0:41:32.82,0:41:35.50,English,,0,0,0,,So at this point after we returned from sigprocmask 这是我们从 sigprocmask 返回后的 point
-Dialogue: 0,0:41:36.04,0:41:38.50,English,,0,0,0,,Sigint signals are blocked and they won't be received sigint 信号被阻塞了，所以我们收不到它
-Dialogue: 0,0:41:40.94,0:41:47.02,English,,0,0,0,,And then we...so we can execute this code knowing that we won't be interrupted by receipt of a sigint 接下来。。。执行这段不会因为收到 sigint 而中断的代码
-Dialogue: 0,0:41:49.56,0:41:57.20,English,,0,0,0,,And then we can restore the previous block set by using the sig_setmask in stopper ation 我们可以在 stopper ation 使用 sig_setmask 来回复之前的阻塞集合
-Dialogue: 0,0:41:57.78,0:42:03.44,English,,0,0,0,,And passing in the previous mask that we saved up here when we initially blocks again 再次传递我们在阻塞开始时保存的掩码
-Dialogue: 0,0:42:09.96,0:42:15.12,English,,0,0,0,,Okay so signals and signal handling is a really tricky business 信号和信号的处理很麻烦
-Dialogue: 0,0:42:15.54,0:42:17.48,English,,0,0,0,,And there's sort of three things that make them 这是因为以下三点
-Dialogue: 0,0:42:18.82,0:42:21.44,English,,0,0,0,,So tricky and kind of nasty really 这非常难缠，说实话让人觉得有点烦
-Dialogue: 0,0:42:21.88,0:42:26.80,English,,0,0,0,,One is that you have to be very careful to write handlers that are safe 你得很小心的写处理程序才能保证安全
-Dialogue: 0,0:42:27.54,0:42:33.96,English,,0,0,0,,Okay so there's you can write signal handlers that are unsafe in the sense that they'll create a deadlock in your program 如果你写的处理程序不安全，那在你的程序中可能会出现死锁
-Dialogue: 0,0:42:36.68,0:42:41.68,English,,0,0,0,,Okay or you can write signal handlers that will corrupt a global data structure 你也可以把信号处理程序写进一个全局数据结构里
-Dialogue: 0,0:42:42.58,0:42:46.24,English,,0,0,0,,That's being modified by the main program 它可以在 main 程序中修改
-Dialogue: 0,0:42:46.24,0:42:54.06,English,,0,0,0,,So I mean imagine your main programming is updating some data structure like a linked list 我的意思是，假如你的 main 程序更新了某种类似链表的数据结构
-Dialogue: 0,0:42:54.84,0:42:59.72,English,,0,0,0,,And right in the middle of updating that data structure when it's no longer consistent 当这个数据结构不合适的时候，你可以更新它
-Dialogue: 0,0:43:01.44,0:43:04.02,English,,0,0,0,,The program gets interrupted by the receipt of a signal 这个程序在收到信号时会被中断
+Dialogue: 0,0:41:24.62,0:41:31.28,English,,0,0,0,,它复制旧的阻塞位向量，并将其存储在第三个参数中指定的地址
+Dialogue: 0,0:41:32.82,0:41:35.50,English,,0,0,0,,这是我们从 sigprocmask 返回后的 point
+Dialogue: 0,0:41:36.04,0:41:38.50,English,,0,0,0,,sigint 信号被阻塞了，所以我们收不到它
+Dialogue: 0,0:41:40.94,0:41:47.02,English,,0,0,0,,接下来。。。执行这段不会因为收到 sigint 而中断的代码
+Dialogue: 0,0:41:49.56,0:41:57.20,English,,0,0,0,,我们可以在 stopper ation 使用 sig_setmask 来回复之前的阻塞集合
+Dialogue: 0,0:41:57.78,0:42:03.44,English,,0,0,0,,再次传递我们在阻塞开始时保存的掩码
+Dialogue: 0,0:42:09.96,0:42:15.12,English,,0,0,0,,信号和信号的处理很麻烦
+Dialogue: 0,0:42:15.54,0:42:17.48,English,,0,0,0,,这是因为以下三点
+Dialogue: 0,0:42:18.82,0:42:21.44,English,,0,0,0,,这非常难缠，说实话让人觉得有点烦
+Dialogue: 0,0:42:21.88,0:42:26.80,English,,0,0,0,,你得很小心的写处理程序才能保证安全
+Dialogue: 0,0:42:27.54,0:42:33.96,English,,0,0,0,,如果你写的处理程序不安全，那在你的程序中可能会出现死锁
+Dialogue: 0,0:42:36.68,0:42:41.68,English,,0,0,0,,你也可以把信号处理程序写进一个全局数据结构里
+Dialogue: 0,0:42:42.58,0:42:46.24,English,,0,0,0,,它可以在 main 程序中修改
+Dialogue: 0,0:42:46.24,0:42:54.06,English,,0,0,0,,我的意思是，假如你的 main 程序更新了某种类似链表的数据结构
+Dialogue: 0,0:42:54.84,0:42:59.72,English,,0,0,0,,当这个数据结构不合适的时候，你可以更新它
+Dialogue: 0,0:43:01.44,0:43:04.02,English,,0,0,0,,这个程序在收到信号时会被中断
 Dialogue: 0,0:43:05.22,0:43:11.54,English,,0,0,0,,And if that signal handler is updating that same data structure reading that structure or modifying it
 Dialogue: 0,0:43:12.62,0:43:17.18,English,,0,0,0,,Then it's going to encounter it in an inconsistent state and and you're in trouble
-Dialogue: 0,0:43:19.92,0:43:27.28,English,,0,0,0,,Okay so this the fact that it's easy to write signal handlers 实际上写信号处理程序很容易
-Dialogue: 0,0:43:27.30,0:43:32.04,English,,0,0,0,,That are unsafe is is is one aspect of that makes them tough to deal with 不安全是它们很难处理的一个方面
-Dialogue: 0,0:43:32.66,0:43:37.16,English,,0,0,0,,Another aspect is they have this funny semantics that signals aren't cued 另一个方面是它们有这种有趣的语义，信号没有被提示
-Dialogue: 0,0:43:38.04,0:43:40.60,English,,0,0,0,,And so if you're not really careful about this 如果你没有小心对待
-Dialogue: 0,0:43:41.12,0:43:45.68,English,,0,0,0,,It's very easy to use the receipt of signals to count events 用收到信号的次数来对事件计数很容易
-Dialogue: 0,0:43:46.76,0:43:49.94,English,,0,0,0,,And you can't do that if signals were cued you could use 如果有信号提示，你就不能这么做了
-Dialogue: 0,0:43:50.12,0:43:54.34,English,,0,0,0,,You could use the receipt of a signal to count events in the system but you can't do it because 你可以用收到信号来统计系统中发生的事件，但你不能这么做
-Dialogue: 0,0:43:54.80,0:43:56.08,English,,0,0,0,,Their signals aren't cued 因为这些信号是不会提醒的
-Dialogue: 0,0:43:57.28,0:44:00.82,English,,0,0,0,,And then a third aspect of signals which makes them tough is that 第三方面是
-Dialogue: 0,0:44:01.66,0:44:05.18,English,,0,0,0,,They're not even portable across different versions of Linux 在不同版本的 Linux 上是不能移植的
-Dialogue: 0,0:44:07.52,0:44:12.94,English,,0,0,0,,Okay so if you use solaris or some form of bsd it's not necessarily 如果你用的是 solaris 或者 bsd 的某个版本，这不重要
-Dialogue: 0,0:44:13.24,0:44:16.70,English,,0,0,0,,The single handling semantics aren't necessarily the same as they are in Linux 信号处理程序的语义可以是与 Linux 不同的
-Dialogue: 0,0:44:17.82,0:44:21.36,English,,0,0,0,,Okay so we'll look at all three of these in a little more detail 我们来看这三个方面的更多细节
-Dialogue: 0,0:44:21.36,0:44:24.34,English,,0,0,0,,And first we'll start with writing safe handlers 首先我们得写安全的处理程序
-Dialogue: 0,0:44:26.94,0:44:32.40,English,,0,0,0,,So let me give you some guidelines for how to write safe handlers 让我给你点如何写安全的处理程序的参考
-Dialogue: 0,0:44:33.24,0:44:38.16,English,,0,0,0,,And this is just a collection of... 这是一个收藏。。
+Dialogue: 0,0:43:19.92,0:43:27.28,English,,0,0,0,,实际上写信号处理程序很容易
+Dialogue: 0,0:43:27.30,0:43:32.04,English,,0,0,0,,不安全是它们很难处理的一个方面
+Dialogue: 0,0:43:32.66,0:43:37.16,English,,0,0,0,,另一个方面是它们有这种有趣的语义，信号没有被提示
+Dialogue: 0,0:43:38.04,0:43:40.60,English,,0,0,0,,如果你没有小心对待
+Dialogue: 0,0:43:41.12,0:43:45.68,English,,0,0,0,,用收到信号的次数来对事件计数很容易
+Dialogue: 0,0:43:46.76,0:43:49.94,English,,0,0,0,,如果有信号提示，你就不能这么做了
+Dialogue: 0,0:43:50.12,0:43:54.34,English,,0,0,0,,你可以用收到信号来统计系统中发生的事件，但你不能这么做
+Dialogue: 0,0:43:54.80,0:43:56.08,English,,0,0,0,,因为这些信号是不会提醒的
+Dialogue: 0,0:43:57.28,0:44:00.82,English,,0,0,0,,第三方面是
+Dialogue: 0,0:44:01.66,0:44:05.18,English,,0,0,0,,在不同版本的 Linux 上是不能移植的
+Dialogue: 0,0:44:07.52,0:44:12.94,English,,0,0,0,,如果你用的是 solaris 或者 bsd 的某个版本，这不重要
+Dialogue: 0,0:44:13.24,0:44:16.70,English,,0,0,0,,信号处理程序的语义可以是与 Linux 不同的
+Dialogue: 0,0:44:17.82,0:44:21.36,English,,0,0,0,,我们来看这三个方面的更多细节
+Dialogue: 0,0:44:21.36,0:44:24.34,English,,0,0,0,,首先我们得写安全的处理程序
+Dialogue: 0,0:44:26.94,0:44:32.40,English,,0,0,0,,让我给你点如何写安全的处理程序的参考
+Dialogue: 0,0:44:33.24,0:44:38.16,English,,0,0,0,,这是一个收藏。。
 Dialogue: 0,0:44:39.16,0:44:43.78,English,,0,0,0,,Collection of sort of collected wisdom from various sources
-Dialogue: 0,0:44:44.16,0:44:48.58,English,,0,0,0,,But it covers a lot of aspects of signal handlers 但是它涵盖了信号处理程序的很多方面
-Dialogue: 0,0:44:49.34,0:44:53.66,English,,0,0,0,,So the first guideline is to keep your handlers as simple as possible for example 第一个参考是，让你的处理程序尽可能的简单，这有一个例子
-Dialogue: 0,0:44:54.04,0:44:58.94,English,,0,0,0,,The simplest possible handle I can think of just sets a global variable and then it returns 我能想到的，最简单的处理程序就是设置一个全局变量然后返回
-Dialogue: 0,0:45:00.52,0:45:10.62,English,,0,0,0,,Okay and in fact cert the CMU cert provides guidelines for sort of compliant programs 事实上，CMU cert为兼容的程序提供了参考
-Dialogue: 0,0:45:11.38,0:45:17.88,English,,0,0,0,,And this is the only signal handler that they allow this is the only compliant signal handler 这是唯一一个兼容的信号处理程序
-Dialogue: 0,0:45:18.10,0:45:20.64,English,,0,0,0,,One that just sets a global variable and then returns 仅仅设置了一个全局变量后就返回
+Dialogue: 0,0:44:44.16,0:44:48.58,English,,0,0,0,,但是它涵盖了信号处理程序的很多方面
+Dialogue: 0,0:44:49.34,0:44:53.66,English,,0,0,0,,第一个参考是，让你的处理程序尽可能的简单，这有一个例子
+Dialogue: 0,0:44:54.04,0:44:58.94,English,,0,0,0,,我能想到的，最简单的处理程序就是设置一个全局变量然后返回
+Dialogue: 0,0:45:00.52,0:45:10.62,English,,0,0,0,,事实上，CMU cert为兼容的程序提供了参考
+Dialogue: 0,0:45:11.38,0:45:17.88,English,,0,0,0,,这是唯一一个兼容的信号处理程序
+Dialogue: 0,0:45:18.10,0:45:20.64,English,,0,0,0,,仅仅设置了一个全局变量后就返回
 Dialogue: 0,0:45:26.26,0:45:33.24,English,,0,0,0,,Okay guideline number one call only functions in your handlers that are that have this property of async-signals-safety
-Dialogue: 0,0:45:35.82,0:45:41.16,English,,0,0,0,,We'll look at this in a second but I want to point out that printf, sprintf,malloc,exit 下面我们来看第二点，但我想指出的是，那些 printf, sprintf, malloc, exit 等
-Dialogue: 0,0:45:42.18,0:45:45.64,English,,0,0,0,,Functions that are very common and commonly used are not safe 非常常见和常用的功能是不安全的
-Dialogue: 0,0:45:48.88,0:45:54.80,English,,0,0,0,,Okay guideline number two is to always save and restore errno on entry and exit 参考的第二点内容是，每次进入和退出时都要保存并恢复 errno
-Dialogue: 0,0:45:55.14,0:45:56.62,English,,0,0,0,,So you know errno is a global 你知道 errno 是一个全局变量
-Dialogue: 0,0:45:57.40,0:46:01.44,English,,0,0,0,,Global variable that's set when there's whenever there's an error in a system-level function 这个全局变量在系统级函数出现错误时才会被赋值
-Dialogue: 0,0:46:02.56,0:46:06.42,English,,0,0,0,,So you need to save and restore it on entry and exit 所以在开始和结束时要把它保存和恢复
-Dialogue: 0,0:46:06.70,0:46:10.86,English,,0,0,0,,So that it doesn't get overwritten if you're interrupted by another handler 如果你被一个中断处理程序中断掉了，这使得它不会被覆盖掉
-Dialogue: 0,0:46:15.92,0:46:18.32,English,,0,0,0,,Okay if you're accessing any shared data structures 如果你访问某些共享的数据结构
+Dialogue: 0,0:45:35.82,0:45:41.16,English,,0,0,0,,下面我们来看第二点，但我想指出的是，那些 printf, sprintf, malloc, exit 等
+Dialogue: 0,0:45:42.18,0:45:45.64,English,,0,0,0,,非常常见和常用的功能是不安全的
+Dialogue: 0,0:45:48.88,0:45:54.80,English,,0,0,0,,参考的第二点内容是，每次进入和退出时都要保存并恢复 errno
+Dialogue: 0,0:45:55.14,0:45:56.62,English,,0,0,0,,你知道 errno 是一个全局变量
+Dialogue: 0,0:45:57.40,0:46:01.44,English,,0,0,0,,这个全局变量在系统级函数出现错误时才会被赋值
+Dialogue: 0,0:46:02.56,0:46:06.42,English,,0,0,0,,所以在开始和结束时要把它保存和恢复
+Dialogue: 0,0:46:06.70,0:46:10.86,English,,0,0,0,,如果你被一个中断处理程序中断掉了，这使得它不会被覆盖掉
+Dialogue: 0,0:46:15.92,0:46:18.32,English,,0,0,0,,如果你访问某些共享的数据结构
 Dialogue: 0,0:46:19.00,0:46:25.24,English,,0,0,0,,Inside a signal handler that are also accessed by your main routine
-Dialogue: 0,0:46:25.34,0:46:29.16,English,,0,0,0,,Then you need to temporarily block signals while you access that data structure 在你访问这些数据结构时，你得临时阻塞一些信号
-Dialogue: 0,0:46:29.80,0:46:31.98,English,,0,0,0,,Both in the main routine and your signal handler main 程序和你的信号处理程序都得这么做
-Dialogue: 0,0:46:32.86,0:46:35.43,English,,0,0,0,,Right and the reason for this is what I described earlier 对的，原因是我之前描述过的
-Dialogue: 0,0:46:36.04,0:46:39.88,English,,0,0,0,,If your main routine is updating that global data structure and then it gets interrupted 如果你的 main 程序更新了这个全局数据结构，然后就被中断了
-Dialogue: 0,0:46:40.40,0:46:44.46,English,,0,0,0,,And the signal handler is reading that data structure it's going to find it in an inconsistent state 信号处理程序读取这个数据结构，就会发现它处于不一致状态
-Dialogue: 0,0:46:44.88,0:46:46.40,English,,0,0,0,,And bad things will happen 会导致坏事情
-Dialogue: 0,0:46:50.88,0:46:55.76,English,,0,0,0,,Okay you want to be sure to declare your any global variables that are shared between signal handlers 你得确认你所有的，在信号处理程序
-Dialogue: 0,0:46:55.96,0:46:57.94,English,,0,0,0,,And the main routine as volatile 和 main 程序间共享的全局变量被声明为 volatile
-Dialogue: 0,0:46:58.56,0:47:04.38,English,,0,0,0,,Okay the volatile attribute will prevent the compiler from putting that value in a register volatile 属性可以防止编译器将它的值放入寄存器中
-Dialogue: 0,0:47:07.62,0:47:09.96,English,,0,0,0,,So if you declare a global variable as volatile 所以如果你要声明一个全局变量为 volatile
-Dialogue: 0,0:47:10.58,0:47:14.58,English,,0,0,0,,It will always be reads and writes will always go to and from memory 那么它会始终通过内存读写
-Dialogue: 0,0:47:15.94,0:47:22.76,English,,0,0,0,,Okay so this is very important right you might if you don't declare these global variables at volatile 这非常重要，如果你在声明全部变量时不用 volatile
-Dialogue: 0,0:47:22.86,0:47:28.22,English,,0,0,0,,And the compiler chooses to put one of those in a register 那么编译器就会将它们放入寄存器中
-Dialogue: 0,0:47:29.64,0:47:33.04,English,,0,0,0,,Then you may miss that variable being updated 这可能使你无法获取变量的更新
-Dialogue: 0,0:47:33.06,0:47:37.68,English,,0,0,0,,So suppose your signal handlers is setting a global variable 假设你的信号处理程序正在设置一个全局变量
-Dialogue: 0,0:47:39.26,0:47:44.74,English,,0,0,0,,And now suppose your main routine is spinning waiting for that global variable to get set 现在假设你的 main 正在spinning，等待全局变量被设置
-Dialogue: 0,0:47:46.56,0:47:51.82,English,,0,0,0,,Well if it's in a register the write to that variable will just update the register 如果它是在寄存器里，写这个变量仅仅是写在寄存器里
-Dialogue: 0,0:47:51.92,0:47:58.70,English,,0,0,0,,Right and so your main routine is in danger of just of spinning forever not seeing the change right 这使得你的 main 程序永远也接收不到改变
-Dialogue: 0,0:48:00.54,0:48:04.62,English,,0,0,0,,Okay so always use volatility so that they're not stored in registers 使用 volatile 的变量可以让它不会被放入寄存器里
-Dialogue: 0,0:48:06.22,0:48:10.60,English,,0,0,0,,And then if you have fun if you have a special kind of global called a flag 接下来，如果你有一个有趣的，如果你有一个特殊的全局变量，我们叫它 flag
-Dialogue: 0,0:48:11.18,0:48:19.22,English,,0,0,0,,Which by definition is a variable it's only read or written not incremented or updated it's just read or written 它的定义是，它仅仅被读写，不会被增加，它只有读写操作
-Dialogue: 0,0:48:20.64,0:48:27.18,English,,0,0,0,,If you have a variable with that property then you can declare it with this sig_atomic_t tribute 如果你的变量具有这种性质，你可以用 sig_atomic_t 来声明它
-Dialogue: 0,0:48:28.72,0:48:34.46,English,,0,0,0,,And if you do that then the system guarantees that reads and writes to that variable will be atomic 如果你这样做了，系统会保证这个变量的读写操作是原子的
-Dialogue: 0,0:48:34.68,0:48:39.22,English,,0,0,0,,So you don't have to in other words you don't have to protect accesses to the shared 所以你不是非得，换句话说，你不需要保护对共享的访问
-Dialogue: 0,0:48:39.82,0:48:43.58,English,,0,0,0,,To accesses or references to those global variables 对这些全局变量的访问或引用
-Dialogue: 0,0:48:44.52,0:48:53.56,English,,0,0,0,,Okay and so by atomic which means that the read or write of that flag will always happen in one uninterruptible step 原子操作意味着，对这个 flag 的读写操作会发生在一个禁止中断的步骤中
+Dialogue: 0,0:46:25.34,0:46:29.16,English,,0,0,0,,在你访问这些数据结构时，你得临时阻塞一些信号
+Dialogue: 0,0:46:29.80,0:46:31.98,English,,0,0,0,,程序和你的信号处理程序都得这么做
+Dialogue: 0,0:46:32.86,0:46:35.43,English,,0,0,0,,对的，原因是我之前描述过的
+Dialogue: 0,0:46:36.04,0:46:39.88,English,,0,0,0,,如果你的 main 程序更新了这个全局数据结构，然后就被中断了
+Dialogue: 0,0:46:40.40,0:46:44.46,English,,0,0,0,,信号处理程序读取这个数据结构，就会发现它处于不一致状态
+Dialogue: 0,0:46:44.88,0:46:46.40,English,,0,0,0,,会导致坏事情
+Dialogue: 0,0:46:50.88,0:46:55.76,English,,0,0,0,,你得确认你所有的，在信号处理程序
+Dialogue: 0,0:46:55.96,0:46:57.94,English,,0,0,0,,和 main 程序间共享的全局变量被声明为 volatile
+Dialogue: 0,0:46:58.56,0:47:04.38,English,,0,0,0,,属性可以防止编译器将它的值放入寄存器中
+Dialogue: 0,0:47:07.62,0:47:09.96,English,,0,0,0,,所以如果你要声明一个全局变量为 volatile
+Dialogue: 0,0:47:10.58,0:47:14.58,English,,0,0,0,,那么它会始终通过内存读写
+Dialogue: 0,0:47:15.94,0:47:22.76,English,,0,0,0,,这非常重要，如果你在声明全部变量时不用 volatile
+Dialogue: 0,0:47:22.86,0:47:28.22,English,,0,0,0,,那么编译器就会将它们放入寄存器中
+Dialogue: 0,0:47:29.64,0:47:33.04,English,,0,0,0,,这可能使你无法获取变量的更新
+Dialogue: 0,0:47:33.06,0:47:37.68,English,,0,0,0,,假设你的信号处理程序正在设置一个全局变量
+Dialogue: 0,0:47:39.26,0:47:44.74,English,,0,0,0,,现在假设你的 main 正在spinning，等待全局变量被设置
+Dialogue: 0,0:47:46.56,0:47:51.82,English,,0,0,0,,如果它是在寄存器里，写这个变量仅仅是写在寄存器里
+Dialogue: 0,0:47:51.92,0:47:58.70,English,,0,0,0,,这使得你的 main 程序永远也接收不到改变
+Dialogue: 0,0:48:00.54,0:48:04.62,English,,0,0,0,,使用 volatile 的变量可以让它不会被放入寄存器里
+Dialogue: 0,0:48:06.22,0:48:10.60,English,,0,0,0,,接下来，如果你有一个有趣的，如果你有一个特殊的全局变量，我们叫它 flag
+Dialogue: 0,0:48:11.18,0:48:19.22,English,,0,0,0,,它的定义是，它仅仅被读写，不会被增加，它只有读写操作
+Dialogue: 0,0:48:20.64,0:48:27.18,English,,0,0,0,,如果你的变量具有这种性质，你可以用 sig_atomic_t 来声明它
+Dialogue: 0,0:48:28.72,0:48:34.46,English,,0,0,0,,如果你这样做了，系统会保证这个变量的读写操作是原子的
+Dialogue: 0,0:48:34.68,0:48:39.22,English,,0,0,0,,所以你不是非得，换句话说，你不需要保护对共享的访问
+Dialogue: 0,0:48:39.82,0:48:43.58,English,,0,0,0,,对这些全局变量的访问或引用
+Dialogue: 0,0:48:44.52,0:48:53.56,English,,0,0,0,,原子操作意味着，对这个 flag 的读写操作会发生在一个禁止中断的步骤中
 Dialogue: 0,0:48:54.86,0:48:58.12,English,,0,0,0,,Okay one uninterruptible load or store particular
-Dialogue: 0,0:49:00.16,0:49:03.94,English,,0,0,0,,Now in practice on most systems this sig_atomic_t is an int 在实践中，在大多数系统下，sig_atomic_t 是 int 类型的
+Dialogue: 0,0:49:00.16,0:49:03.94,English,,0,0,0,,在实践中，在大多数系统下，sig_atomic_t 是 int 类型的
 Dialogue: 0,0:49:05.80,0:49:12.00,English,,0,0,0,,So you can read or write an int with one one instruction okay so it's atomic
-Dialogue: 0,0:49:12.62,0:49:16.06,English,,0,0,0,,But if you want to be portable you declare it with sig_atomic_t 但如果你想要移植，你得用 sig_atomic_t 声明
-Dialogue: 0,0:49:16.30,0:49:21.94,English,,0,0,0,,And then it'll work on none it will work on all systems 它可以在。。在所有系统上工作
-Dialogue: 0,0:49:24.78,0:49:27.44,English,,0,0,0,,Okay we mentioned this property of a sync signal safety 我们是在同步信号安全里提到它的
-Dialogue: 0,0:49:28.66,0:49:32.66,English,,0,0,0,,Now a function is safe to be used inside of a signal handler 现在可以在信号处理函数中安全地使用函数了
-Dialogue: 0,0:49:33.56,0:49:38.54,English,,0,0,0,,If it's either reentrant or if it can't be interrupted by signals 如果它可重入或可以被信号中断
-Dialogue: 0,0:49:39.30,0:49:44.62,English,,0,0,0,,And will...a reentrant function as we'll see when we study threads is a function where all of its 还有。。我们学习线程时会看到一个可重入函数，它的所有
-Dialogue: 0,0:49:45.16,0:49:48.20,English,,0,0,0,,All of the data that it accesses is on its own stack 它访问的所有数据都在自己的堆栈上
-Dialogue: 0,0:49:50.64,0:49:56.06,English,,0,0,0,,Okay so no global variables no pointers to global variables everything's stored on the stack locally 所以没有全局变量，没有指向全局变量的指针，所有东西都被保存在本地堆栈
-Dialogue: 0,0:49:58.00,0:50:00.42,English,,0,0,0,,Okay so that means you can be it's called reentrant 这意味着你可以。。这叫做可重入
-Dialogue: 0,0:50:00.42,0:50:03.36,English,,0,0,0,,Because you can write have multiple instances of that function 因为你可以写那个函数的多个实例
-Dialogue: 0,0:50:03.36,0:50:08.52,English,,0,0,0,,And they all have their own separate copies of all of the variables that they're using 它们使用的所有变量都有自己的副本
-Dialogue: 0,0:50:10.02,0:50:16.58,English,,0,0,0,,Now the posix standard guarantees 117 different functions to be a sync-signal-safe POSIX 标准确保了 117 个不同的函数是同步信号安全的
-Dialogue: 0,0:50:19.80,0:50:24.42,English,,0,0,0,,These include _exit,write,wait,waitpid,sleep,kill _exit, write, wait, waitpid, sleep, kill 都包含在内
-Dialogue: 0,0:50:25.52,0:50:30.81,English,,0,0,0,,But unfortunately there's some very popular functions that aren't on this list printf,sprintf 但不幸的是，有些常用函数并不在这个列表中，比如说 printf, sprintf
-Dialogue: 0,0:50:31.28,0:50:32.70,English,,0,0,0,,Things that you really want to use 你真正想看到的是
-Dialogue: 0,0:50:33.14,0:50:37.84,English,,0,0,0,,And in fact write is the only output function that's async-signal-safe 事实上，write 操作是唯一的同步信号安全的输出函数
-Dialogue: 0,0:50:41.06,0:50:43.14,English,,0,0,0,,So this is kind of a problem because 这是一个问题，因为
-Dialogue: 0,0:50:44.34,0:50:50.52,English,,0,0,0,,Especially when you know you something you'd often like your signal handlers to output information 特别是当你希望你的信号处理程序输出信息时
-Dialogue: 0,0:50:51.52,0:50:56.38,English,,0,0,0,,But you can't if you want to really be pedantic and careful you can't use printf in fact 如果你很 pedantic 而小心，那么你是不能用 printf 的
-Dialogue: 0,0:50:57.48,0:50:59.28,English,,0,0,0,,It's possible to write a program 写一个程序是可能的
-Dialogue: 0,0:51:00.46,0:51:04.16,English,,0,0,0,,And I'll try to...it's possible to write a program 下面我会尝试。。。写一个程序是可能的
-Dialogue: 0,0:51:05.12,0:51:09.24,English,,0,0,0,,That does a tight loop of printouts in the main routine  这里是一个 tight loop of printouts 在 main 中
-Dialogue: 0,0:51:10.96,0:51:18.32,English,,0,0,0,,And then a steady stream of interrupts which execute a handler which also does a printf 然后是一个稳定的中断流，它执行一个处理程序，也执行一个printf
-Dialogue: 0,0:51:22.94,0:51:28.70,English,,0,0,0,,The printf call has to acquire what's called a lock on the terminal printf 调用必须获得终端上所谓的锁
-Dialogue: 0,0:51:29.24,0:51:32.88,English,,0,0,0,,Okay each printf inside that library function 库函数中的每个 printf
-Dialogue: 0,0:51:33.70,0:51:40.06,English,,0,0,0,,It acquires a lock which means only one instance of printf can write to the terminal at a point in time 获得锁意味着同一时刻只能有一个 printf 的实例向中断进行写操作
-Dialogue: 0,0:51:40.90,0:51:44.94,English,,0,0,0,,If another function tries to acquire that lock it has to wait 如果有另一个函数尝试获得锁，那么它必须得等待
-Dialogue: 0,0:51:46.28,0:51:50.12,English,,0,0,0,,Until whatever function owns the lock releases it 直到拥有锁的函数释放它
-Dialogue: 0,0:51:50.84,0:51:58.30,English,,0,0,0,,Okay so a lock prevents a lock is a way for to get mutually exclusive access to two shared resources 锁防止。。锁是一种互斥访问两个共享资源的方法
-Dialogue: 0,0:51:59.68,0:52:04.90,English,,0,0,0,,So if we have a tight loop in our main routine with executing printf 如果我们在 main 中 tight loop 执行 printf
-Dialogue: 0,0:52:05.66,0:52:10.22,English,,0,0,0,,Imagine what happens if one of those printfs acquires a lock on the terminal 如果其中一个 printf 获得了终端的锁，想象一下会发生什么
-Dialogue: 0,0:52:10.68,0:52:16.18,English,,0,0,0,,And then gets interrupted not by the receipt of a signal 然后不被接收到的信号打断
-Dialogue: 0,0:52:16.88,0:52:20.58,English,,0,0,0,,Now within the signal handler it calls another printf 现在在信号处理程序中，它调用另一个 printf
-Dialogue: 0,0:52:22.08,0:52:26.88,English,,0,0,0,,And that printf tries to acquire that lock and it blocks forever 这个 printf 尝试获得这个锁，这会导致一直阻塞
-Dialogue: 0,0:52:27.10,0:52:32.28,English,,0,0,0,,Because nothing's going to release that lock because the main routine was interrupted by the handler 这是因为锁始终不会被释放，因为 main 被这个处理程序中断了
-Dialogue: 0,0:52:35.28,0:52:40.48,English,,0,0,0,,So you have what's called a classical condition called deadlock 这是死锁的经典情况
-Dialogue: 0,0:52:41.06,0:52:44.32,English,,0,0,0,,Which is we have a process waiting for an event that will never occur 我们有一个进程在等待一个永远不会发生的事件
-Dialogue: 0,0:52:44.36,0:52:50.48,English,,0,0,0,,In this case the the printf and the signal handler is waiting for a lock to be released that will never be released 这种情况下，printf 和信号处理程序 都在等待一个不会被释放的锁被释放
-Dialogue: 0,0:52:51.70,0:52:56.66,English,,0,0,0,,So it's interesting you can try this it's 这很有趣。。你可以试试。。
-Dialogue: 0,0:52:57.42,0:53:01.40,English,,0,0,0,,It's not too hard to to create this deadlock situation 创造这种死锁情况并非很难
-Dialogue: 0,0:53:02.90,0:53:05.74,English,,0,0,0,,So to deal with this I really didn't want to tell you guys 为了处理这种情况，我真的不想告诉你们
-Dialogue: 0,0:53:05.74,0:53:09.92,English,,0,0,0,,That you couldn't have any output in your programs and writes a very difficult thing to deal with 你不应该在你的程序中出现任何输出，并为它写一个很难的东西处理它
-Dialogue: 0,0:53:11.10,0:53:16.84,English,,0,0,0,,So I created a small little library called the safe I/O library 我做了一个很小的库，叫做安全 I/O 库
-Dialogue: 0,0:53:18.50,0:53:25.46,English,,0,0,0,,Consists of three routines and they're available to you in the csapp.c file 有三个例程，可以在 csapp.c 文件中找到它们
-Dialogue: 0,0:53:25.46,0:53:28.02,English,,0,0,0,,Which is distributed on the website 已经发布在网站上了
-Dialogue: 0,0:53:28.94,0:53:31.42,English,,0,0,0,,And it consists of three reentrant routines 它由三个可重入的例程组成
-Dialogue: 0,0:53:33.64,0:53:37.50,English,,0,0,0,,sio_puts prints string sio——puts 打印一个字符串
-Dialogue: 0,0:53:38.84,0:53:41.48,English,,0,0,0,,(sio_)putl prints a long (sio_)putl 打印一个 long
-Dialogue: 0,0:53:42.82,0:53:48.04,English,,0,0,0,,And sio_error prints a message and then exits sio_error 打印一条信息然后退出
-Dialogue: 0,0:53:50.82,0:53:55.92,English,,0,0,0,,Okay so you can safely use take my word for it you can safely use this in your signal handlers 你可以安全地使用，相信我，你可以安全地在信号处理程序中使用它
-Dialogue: 0,0:53:56.54,0:54:01.94,English,,0,0,0,,So if we were going to rewrite our sigint_handler from the binary bomb 如果用这个库重写我们的 sigint 处理程序
-Dialogue: 0,0:54:02.60,0:54:08.38,English,,0,0,0,,We could rewrite it like this and now we have every function is async-signal-safe 重写的结果会是这个样子，那么现在我们所有的函数都是同步信号安全的了
+Dialogue: 0,0:49:12.62,0:49:16.06,English,,0,0,0,,但如果你想要移植，你得用 sig_atomic_t 声明
+Dialogue: 0,0:49:16.30,0:49:21.94,English,,0,0,0,,它可以在。。在所有系统上工作
+Dialogue: 0,0:49:24.78,0:49:27.44,English,,0,0,0,,我们是在同步信号安全里提到它的
+Dialogue: 0,0:49:28.66,0:49:32.66,English,,0,0,0,,现在可以在信号处理函数中安全地使用函数了
+Dialogue: 0,0:49:33.56,0:49:38.54,English,,0,0,0,,如果它可重入或可以被信号中断
+Dialogue: 0,0:49:39.30,0:49:44.62,English,,0,0,0,,还有。。我们学习线程时会看到一个可重入函数，它的所有
+Dialogue: 0,0:49:45.16,0:49:48.20,English,,0,0,0,,它访问的所有数据都在自己的堆栈上
+Dialogue: 0,0:49:50.64,0:49:56.06,English,,0,0,0,,所以没有全局变量，没有指向全局变量的指针，所有东西都被保存在本地堆栈
+Dialogue: 0,0:49:58.00,0:50:00.42,English,,0,0,0,,这意味着你可以。。这叫做可重入
+Dialogue: 0,0:50:00.42,0:50:03.36,English,,0,0,0,,因为你可以写那个函数的多个实例
+Dialogue: 0,0:50:03.36,0:50:08.52,English,,0,0,0,,它们使用的所有变量都有自己的副本
+Dialogue: 0,0:50:10.02,0:50:16.58,English,,0,0,0,,POSIX 标准确保了 117 个不同的函数是同步信号安全的
+Dialogue: 0,0:50:19.80,0:50:24.42,English,,0,0,0,,_exit, write, wait, waitpid, sleep, kill 都包含在内
+Dialogue: 0,0:50:25.52,0:50:30.81,English,,0,0,0,,但不幸的是，有些常用函数并不在这个列表中，比如说 printf, sprintf
+Dialogue: 0,0:50:31.28,0:50:32.70,English,,0,0,0,,你真正想看到的是
+Dialogue: 0,0:50:33.14,0:50:37.84,English,,0,0,0,,事实上，write 操作是唯一的同步信号安全的输出函数
+Dialogue: 0,0:50:41.06,0:50:43.14,English,,0,0,0,,这是一个问题，因为
+Dialogue: 0,0:50:44.34,0:50:50.52,English,,0,0,0,,特别是当你希望你的信号处理程序输出信息时
+Dialogue: 0,0:50:51.52,0:50:56.38,English,,0,0,0,,如果你很 pedantic 而小心，那么你是不能用 printf 的
+Dialogue: 0,0:50:57.48,0:50:59.28,English,,0,0,0,,写一个程序是可能的
+Dialogue: 0,0:51:00.46,0:51:04.16,English,,0,0,0,,下面我会尝试。。。写一个程序是可能的
+Dialogue: 0,0:51:05.12,0:51:09.24,English,,0,0,0,,这里是一个 tight loop of printouts 在 main 中
+Dialogue: 0,0:51:10.96,0:51:18.32,English,,0,0,0,,然后是一个稳定的中断流，它执行一个处理程序，也执行一个printf
+Dialogue: 0,0:51:22.94,0:51:28.70,English,,0,0,0,,调用必须获得终端上所谓的锁
+Dialogue: 0,0:51:29.24,0:51:32.88,English,,0,0,0,,库函数中的每个 printf
+Dialogue: 0,0:51:33.70,0:51:40.06,English,,0,0,0,,获得锁意味着同一时刻只能有一个 printf 的实例向中断进行写操作
+Dialogue: 0,0:51:40.90,0:51:44.94,English,,0,0,0,,如果有另一个函数尝试获得锁，那么它必须得等待
+Dialogue: 0,0:51:46.28,0:51:50.12,English,,0,0,0,,直到拥有锁的函数释放它
+Dialogue: 0,0:51:50.84,0:51:58.30,English,,0,0,0,,锁防止。。锁是一种互斥访问两个共享资源的方法
+Dialogue: 0,0:51:59.68,0:52:04.90,English,,0,0,0,,如果我们在 main 中 tight loop 执行 printf
+Dialogue: 0,0:52:05.66,0:52:10.22,English,,0,0,0,,如果其中一个 printf 获得了终端的锁，想象一下会发生什么
+Dialogue: 0,0:52:10.68,0:52:16.18,English,,0,0,0,,然后不被接收到的信号打断
+Dialogue: 0,0:52:16.88,0:52:20.58,English,,0,0,0,,现在在信号处理程序中，它调用另一个 printf
+Dialogue: 0,0:52:22.08,0:52:26.88,English,,0,0,0,,这个 printf 尝试获得这个锁，这会导致一直阻塞
+Dialogue: 0,0:52:27.10,0:52:32.28,English,,0,0,0,,这是因为锁始终不会被释放，因为 main 被这个处理程序中断了
+Dialogue: 0,0:52:35.28,0:52:40.48,English,,0,0,0,,这是死锁的经典情况
+Dialogue: 0,0:52:41.06,0:52:44.32,English,,0,0,0,,我们有一个进程在等待一个永远不会发生的事件
+Dialogue: 0,0:52:44.36,0:52:50.48,English,,0,0,0,,这种情况下，printf 和信号处理程序 都在等待一个不会被释放的锁被释放
+Dialogue: 0,0:52:51.70,0:52:56.66,English,,0,0,0,,这很有趣。。你可以试试。。
+Dialogue: 0,0:52:57.42,0:53:01.40,English,,0,0,0,,创造这种死锁情况并非很难
+Dialogue: 0,0:53:02.90,0:53:05.74,English,,0,0,0,,为了处理这种情况，我真的不想告诉你们
+Dialogue: 0,0:53:05.74,0:53:09.92,English,,0,0,0,,你不应该在你的程序中出现任何输出，并为它写一个很难的东西处理它
+Dialogue: 0,0:53:11.10,0:53:16.84,English,,0,0,0,,我做了一个很小的库，叫做安全 I/O 库
+Dialogue: 0,0:53:18.50,0:53:25.46,English,,0,0,0,,有三个例程，可以在 csapp.c 文件中找到它们
+Dialogue: 0,0:53:25.46,0:53:28.02,English,,0,0,0,,已经发布在网站上了
+Dialogue: 0,0:53:28.94,0:53:31.42,English,,0,0,0,,它由三个可重入的例程组成
+Dialogue: 0,0:53:33.64,0:53:37.50,English,,0,0,0,,sio——puts 打印一个字符串
+Dialogue: 0,0:53:38.84,0:53:41.48,English,,0,0,0,,(sio_)putl 打印一个 long
+Dialogue: 0,0:53:42.82,0:53:48.04,English,,0,0,0,,sio_error 打印一条信息然后退出
+Dialogue: 0,0:53:50.82,0:53:55.92,English,,0,0,0,,你可以安全地使用，相信我，你可以安全地在信号处理程序中使用它
+Dialogue: 0,0:53:56.54,0:54:01.94,English,,0,0,0,,如果用这个库重写我们的 sigint 处理程序
+Dialogue: 0,0:54:02.60,0:54:08.38,English,,0,0,0,,重写的结果会是这个样子，那么现在我们所有的函数都是同步信号安全的了
 Dialogue: 0,0:54:11.60,0:54:16.58,English,,0,0,0,,All right now signals are also tucked because of this funky non cueing semantics
-Dialogue: 0,0:54:19.56,0:54:21.70,English,,0,0,0,,And so it's really easy to make mistakes 所以这很容易出错
-Dialogue: 0,0:54:23.92,0:54:26.14,English,,0,0,0,,When you have an implicit assumption that 当你有一个隐式的 assumption
-Dialogue: 0,0:54:27.94,0:54:33.18,English,,0,0,0,,The that the receipt of a signal it can be used to count the occurrence of an event 接收到的信号可以用来统计事件发生的次数
-Dialogue: 0,0:54:34.82,0:54:38.32,English,,0,0,0,,So let's look at this, let's look at this example program 让我们看看这个例程
-Dialogue: 0,0:54:40.88,0:54:42.92,English,,0,0,0,,We install a sick child handler 我们挂载了 sigchild 的处理程序
+Dialogue: 0,0:54:19.56,0:54:21.70,English,,0,0,0,,所以这很容易出错
+Dialogue: 0,0:54:23.92,0:54:26.14,English,,0,0,0,,当你有一个隐式的 assumption
+Dialogue: 0,0:54:27.94,0:54:33.18,English,,0,0,0,,接收到的信号可以用来统计事件发生的次数
+Dialogue: 0,0:54:34.82,0:54:38.32,English,,0,0,0,,让我们看看这个例程
+Dialogue: 0,0:54:40.88,0:54:42.92,English,,0,0,0,,我们挂载了 sigchild 的处理程序
 Dialogue: 0,0:54:43.92,0:54:49.40,English,,0,0,0,,Okay and this is actually this sort of close the loop member we talked about our example shell
-Dialogue: 0,0:54:49.96,0:54:53.38,English,,0,0,0,,We're wondering how are we going to reap those background children 我们想知道如何回收那些在后台运行的子进程
-Dialogue: 0,0:54:53.76,0:54:57.42,English,,0,0,0,,Well we do it by installing a sick child handle like we're doing in this example 我们通过挂载 sigchild 处理程序来做到这一点，正如这个例子所示
-Dialogue: 0,0:54:58.26,0:55:03.62,English,,0,0,0,,So this here we have a program that installs this sig child handler 在这里，这个程序挂载了 sigchild 处理程序
-Dialogue: 0,0:55:04.28,0:55:08.86,English,,0,0,0,,And then it creates N different child processes 然后创建了 N 个不同的子进程
-Dialogue: 0,0:55:09.64,0:55:12.86,English,,0,0,0,,Where each child sleeps for a little bit and exits 每一个子进程 sleep 一段时间后退出
-Dialogue: 0,0:55:17.02,0:55:22.16,English,,0,0,0,,And then it spins until the ccount variable becomes zero 然后它 spin，直到 ccount 变量变为 0
-Dialogue: 0,0:55:23.86,0:55:29.16,English,,0,0,0,,That the parent, I'm sorry, the parent spins until the ccount variable becomes zero 还有父进程，我很抱歉，是父进程 spin 直到 ccount 变量变为 0
-Dialogue: 0,0:55:30.76,0:55:40.32,English,,0,0,0,,Now in our child handler we have a global that's initialized to zero ccount 此时在我们的子处理程序中，我们有一个初始化为零 ccount 的全局变量
-Dialogue: 0,0:55:43.94,0:55:48.40,English,,0,0,0,,And then we wait,we're going to wait so this child,when the child handler gets called that means 然后我们等待，我们等待这个子程序，当这个子处理程序被调用，这意味着
-Dialogue: 0,0:55:48.84,0:55:51.14,English,,0,0,0,,It's called because we received a sig_child signal 这说明我们收到了 sigchild 信号
-Dialogue: 0,0:55:53.30,0:55:58.52,English,,0,0,0,,Okay so in our handler we're going to reap that child by calling weight 所以在我们的处理程序中，我们通过调用 weight 来回收子进程
-Dialogue: 0,0:56:00.04,0:56:03.60,English,,0,0,0,,And we're going to dec...will decrement ccount 接下来我们。。将 ccount 减 1
-Dialogue: 0,0:56:04.00,0:56:10.56,English,,0,0,0,,Okay so once all of the children if then have been reaped ccount will be zero 一旦所有子进程都被回收，那么 ccount 将变为 0
-Dialogue: 0,0:56:10.56,0:56:13.88,English,,0,0,0,,And then the parent can exit this while loop 然后父进程就可以退出这个 while 循环
-Dialogue: 0,0:56:15.54,0:56:18.48,English,,0,0,0,,Okay now in this particular example N was 5 在这个例子中，N 是 5
-Dialogue: 0,0:56:20.20,0:56:26.72,English,,0,0,0,,But will you run this code,we only the handle or only gets called twice 但当你运行这代码，我们仅有的处理程序只被调用两次
-Dialogue: 0,0:56:29.46,0:56:35.38,English,,0,0,0,,Okay so the the message handler reap child only gets executed twice right 回收子进程的消息处理程序只执行两次
-Dialogue: 0,0:56:35.38,0:56:37.76,English,,0,0,0,,Which means the handler was only called twice 这意味着处理程序只被调用了两次
-Dialogue: 0,0:56:38.04,0:56:42.62,English,,0,0,0,,We created five children,we terminated five children 我们创建了五个子进程，我们也终止了五个子进程
-Dialogue: 0,0:56:43.58,0:56:45.16,English,,0,0,0,,But we only reaped two 但我们只回收了两次
-Dialogue: 0,0:56:47.26,0:56:51.94,English,,0,0,0,,Okay so that the problem is that when we the problem is that we assumed 所以问题是，问题是我们假设的
-Dialogue: 0,0:56:52.76,0:56:54.84,English,,0,0,0,,That the receipt... 回收。。。
+Dialogue: 0,0:54:49.96,0:54:53.38,English,,0,0,0,,我们想知道如何回收那些在后台运行的子进程
+Dialogue: 0,0:54:53.76,0:54:57.42,English,,0,0,0,,我们通过挂载 sigchild 处理程序来做到这一点，正如这个例子所示
+Dialogue: 0,0:54:58.26,0:55:03.62,English,,0,0,0,,在这里，这个程序挂载了 sigchild 处理程序
+Dialogue: 0,0:55:04.28,0:55:08.86,English,,0,0,0,,然后创建了 N 个不同的子进程
+Dialogue: 0,0:55:09.64,0:55:12.86,English,,0,0,0,,每一个子进程 sleep 一段时间后退出
+Dialogue: 0,0:55:17.02,0:55:22.16,English,,0,0,0,,然后它 spin，直到 ccount 变量变为 0
+Dialogue: 0,0:55:23.86,0:55:29.16,English,,0,0,0,,还有父进程，我很抱歉，是父进程 spin 直到 ccount 变量变为 0
+Dialogue: 0,0:55:30.76,0:55:40.32,English,,0,0,0,,此时在我们的子处理程序中，我们有一个初始化为零 ccount 的全局变量
+Dialogue: 0,0:55:43.94,0:55:48.40,English,,0,0,0,,然后我们等待，我们等待这个子程序，当这个子处理程序被调用，这意味着
+Dialogue: 0,0:55:48.84,0:55:51.14,English,,0,0,0,,这说明我们收到了 sigchild 信号
+Dialogue: 0,0:55:53.30,0:55:58.52,English,,0,0,0,,所以在我们的处理程序中，我们通过调用 weight 来回收子进程
+Dialogue: 0,0:56:00.04,0:56:03.60,English,,0,0,0,,接下来我们。。将 ccount 减 1
+Dialogue: 0,0:56:04.00,0:56:10.56,English,,0,0,0,,一旦所有子进程都被回收，那么 ccount 将变为 0
+Dialogue: 0,0:56:10.56,0:56:13.88,English,,0,0,0,,然后父进程就可以退出这个 while 循环
+Dialogue: 0,0:56:15.54,0:56:18.48,English,,0,0,0,,在这个例子中，N 是 5
+Dialogue: 0,0:56:20.20,0:56:26.72,English,,0,0,0,,但当你运行这代码，我们仅有的处理程序只被调用两次
+Dialogue: 0,0:56:29.46,0:56:35.38,English,,0,0,0,,回收子进程的消息处理程序只执行两次
+Dialogue: 0,0:56:35.38,0:56:37.76,English,,0,0,0,,这意味着处理程序只被调用了两次
+Dialogue: 0,0:56:38.04,0:56:42.62,English,,0,0,0,,我们创建了五个子进程，我们也终止了五个子进程
+Dialogue: 0,0:56:43.58,0:56:45.16,English,,0,0,0,,但我们只回收了两次
+Dialogue: 0,0:56:47.26,0:56:51.94,English,,0,0,0,,所以问题是，问题是我们假设的
+Dialogue: 0,0:56:52.76,0:56:54.84,English,,0,0,0,,回收。。。
 Dialogue: 0,0:56:56.94,0:57:03.36,English,,0,0,0,,The execution of the child handled our correspondent to the single receipt of a single sig_child signal
-Dialogue: 0,0:57:04.78,0:57:09.38,English,,0,0,0,,Okay when in reality there signals are true 当现实中信号为真时
-Dialogue: 0,0:57:10.40,0:57:15.90,English,,0,0,0,,We had in reality multiple sig_child signals were delivered to that child 我们实际上有从子进程收到的多个 sigchild 信号
-Dialogue: 0,0:57:15.90,0:57:19.10,English,,0,0,0,,Which kept overriding that at bit in the pending bit vector 在待处理位向量上不断被覆盖
-Dialogue: 0,0:57:20.26,0:57:26.68,English,,0,0,0,,And the delivery of those signals didn't cause any reaction in the process 
+Dialogue: 0,0:57:04.78,0:57:09.38,English,,0,0,0,,当现实中信号为真时
+Dialogue: 0,0:57:10.40,0:57:15.90,English,,0,0,0,,我们实际上有从子进程收到的多个 sigchild 信号
+Dialogue: 0,0:57:15.90,0:57:19.10,English,,0,0,0,,在待处理位向量上不断被覆盖
+Dialogue: 0,0:57:20.26,0:57:26.68,English,,0,0,0,,And the delivery of those signals didn't cause any reaction in the process
 Dialogue: 0,0:57:26.68,0:57:30.00,English,,0,0,0,,Until that process was just about ready to be rescheduled
 Dialogue: 0,0:57:30.44,0:57:33.02,English,,0,0,0,,And only then was where was a signal received
 Dialogue: 0,0:57:33.92,0:57:37.84,English,,0,0,0,,But even though like say three signals were delivered only one was received
