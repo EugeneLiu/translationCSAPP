@@ -558,50 +558,50 @@ Dialogue: 0,0:49:16.30,0:49:21.94,English,,0,0,0,,And then it'll work on none it
 Dialogue: 0,0:49:24.78,0:49:27.44,English,,0,0,0,,Okay we mentioned this property of a sync signal safety 我们是在同步信号安全里提到它的
 Dialogue: 0,0:49:28.66,0:49:32.66,English,,0,0,0,,Now a function is safe to be used inside of a signal handler 现在可以在信号处理函数中安全地使用函数了
 Dialogue: 0,0:49:33.56,0:49:38.54,English,,0,0,0,,If it's either reentrant or if it can't be interrupted by signals 如果它可重入或可以被信号中断
-Dialogue: 0,0:49:39.30,0:49:44.62,English,,0,0,0,,And will...a reentrant function as we'll see when we study threads is a function where all of its
-Dialogue: 0,0:49:45.16,0:49:48.20,English,,0,0,0,,All of the data that it accesses is on its own stack
-Dialogue: 0,0:49:50.64,0:49:56.06,English,,0,0,0,,Okay so no global variables no pointers to global variables everything's stored on the stack locally
-Dialogue: 0,0:49:58.00,0:50:00.42,English,,0,0,0,,Okay so that means you can be it's called reentrant
-Dialogue: 0,0:50:00.42,0:50:03.36,English,,0,0,0,,Because you can write have multiple instances of that function
-Dialogue: 0,0:50:03.36,0:50:08.52,English,,0,0,0,,And they all have their own separate copies of all of the variables that they're using
-Dialogue: 0,0:50:10.02,0:50:16.58,English,,0,0,0,,Now the posix standard guarantees 117 different functions to be a sync-signal-safe
-Dialogue: 0,0:50:19.80,0:50:24.42,English,,0,0,0,,These include _exit,write,wait,waitpid,sleep,kill
-Dialogue: 0,0:50:25.52,0:50:30.81,English,,0,0,0,,But unfortunately there's some very popular functions that aren't on this list printf,sprintf
-Dialogue: 0,0:50:31.28,0:50:32.70,English,,0,0,0,,Things that you really want to use
-Dialogue: 0,0:50:33.14,0:50:37.84,English,,0,0,0,,And in fact write is the only output function that's async-signal-safe
-Dialogue: 0,0:50:41.06,0:50:43.14,English,,0,0,0,,So this is kind of a problem because
-Dialogue: 0,0:50:44.34,0:50:50.52,English,,0,0,0,,Especially when you know you something you'd often like your signal handlers to output information
-Dialogue: 0,0:50:51.52,0:50:56.38,English,,0,0,0,,But you can't if you want to really be pedantic and careful you can't use printf in fact
-Dialogue: 0,0:50:57.48,0:50:59.28,English,,0,0,0,,It's possible to write a program
-Dialogue: 0,0:51:00.46,0:51:04.16,English,,0,0,0,,And I'll try to...it's possible to write a program
-Dialogue: 0,0:51:05.12,0:51:09.24,English,,0,0,0,,That does a tight loop of printouts in the main routine
-Dialogue: 0,0:51:10.96,0:51:18.32,English,,0,0,0,,And then a steady stream of interrupts which execute a handler which also does a printf
-Dialogue: 0,0:51:22.94,0:51:28.70,English,,0,0,0,,The printf call has to acquire what's called a lock on the terminal
-Dialogue: 0,0:51:29.24,0:51:32.88,English,,0,0,0,,Okay each printf inside that library function
-Dialogue: 0,0:51:33.70,0:51:40.06,English,,0,0,0,,It acquires a lock which means only one instance of printf can write to the terminal at a point in time
-Dialogue: 0,0:51:40.90,0:51:44.94,English,,0,0,0,,If another function tries to acquire that lock it has to wait
-Dialogue: 0,0:51:46.28,0:51:50.12,English,,0,0,0,,Until whatever function owns the lock releases it
-Dialogue: 0,0:51:50.84,0:51:58.30,English,,0,0,0,,Okay so a lock prevents a lock is a way for to get mutually exclusive access to two shared resources
-Dialogue: 0,0:51:59.68,0:52:04.90,English,,0,0,0,,So if we have a tight loop in our main routine with executing printf
-Dialogue: 0,0:52:05.66,0:52:10.22,English,,0,0,0,,Imagine what happens if one of those printfs acquires a lock on the terminal
-Dialogue: 0,0:52:10.68,0:52:16.18,English,,0,0,0,,And then gets interrupted not by the receipt of a signal
-Dialogue: 0,0:52:16.88,0:52:20.58,English,,0,0,0,,Now within the signal handler it calls another printf
-Dialogue: 0,0:52:22.08,0:52:26.88,English,,0,0,0,,And that printf tries to acquire that lock and it blocks forever
-Dialogue: 0,0:52:27.10,0:52:32.28,English,,0,0,0,,Because nothing's going to release that lock because the main routine was interrupted by the handler
-Dialogue: 0,0:52:35.28,0:52:40.48,English,,0,0,0,,So you have what's called a classical condition called deadlock
-Dialogue: 0,0:52:41.06,0:52:44.32,English,,0,0,0,,Which is we have a process waiting for an event that will never occur
-Dialogue: 0,0:52:44.36,0:52:50.48,English,,0,0,0,,In this case the the printf and the signal handler is waiting for a lock to be released that will never be released
-Dialogue: 0,0:52:51.70,0:52:56.66,English,,0,0,0,,So it's interesting you can try this it's
-Dialogue: 0,0:52:57.42,0:53:01.40,English,,0,0,0,,It's not too hard to to create this deadlock situation
-Dialogue: 0,0:53:02.90,0:53:05.74,English,,0,0,0,,So to deal with this I really didn't want to tell you guys
-Dialogue: 0,0:53:05.74,0:53:09.92,English,,0,0,0,,That you couldn't have any output in your programs and writes a very difficult thing to deal with
-Dialogue: 0,0:53:11.10,0:53:16.84,English,,0,0,0,,So I created a small little library called the safe I/O library
-Dialogue: 0,0:53:18.50,0:53:25.46,English,,0,0,0,,Consists of three routines and they're available to you in the csapp.c file
-Dialogue: 0,0:53:25.46,0:53:28.02,English,,0,0,0,,Which is distributed on the website
-Dialogue: 0,0:53:28.94,0:53:31.42,English,,0,0,0,,And it consists of three reentrant routines
-Dialogue: 0,0:53:33.64,0:53:37.50,English,,0,0,0,,sio_puts prints string
-Dialogue: 0,0:53:38.84,0:53:41.48,English,,0,0,0,,(sio_)putl prints a long
-Dialogue: 0,0:53:42.82,0:53:48.04,English,,0,0,0,,And sio_error prints a message and then exits
+Dialogue: 0,0:49:39.30,0:49:44.62,English,,0,0,0,,And will...a reentrant function as we'll see when we study threads is a function where all of its 还有。。我们学习线程时会看到一个可重入函数，它的所有
+Dialogue: 0,0:49:45.16,0:49:48.20,English,,0,0,0,,All of the data that it accesses is on its own stack 它访问的所有数据都在自己的堆栈上
+Dialogue: 0,0:49:50.64,0:49:56.06,English,,0,0,0,,Okay so no global variables no pointers to global variables everything's stored on the stack locally 所以没有全局变量，没有指向全局变量的指针，所有东西都被保存在本地堆栈
+Dialogue: 0,0:49:58.00,0:50:00.42,English,,0,0,0,,Okay so that means you can be it's called reentrant 这意味着你可以。。这叫做可重入
+Dialogue: 0,0:50:00.42,0:50:03.36,English,,0,0,0,,Because you can write have multiple instances of that function 因为你可以写那个函数的多个实例
+Dialogue: 0,0:50:03.36,0:50:08.52,English,,0,0,0,,And they all have their own separate copies of all of the variables that they're using 它们使用的所有变量都有自己的副本
+Dialogue: 0,0:50:10.02,0:50:16.58,English,,0,0,0,,Now the posix standard guarantees 117 different functions to be a sync-signal-safe POSIX 标准确保了 117 个不同的函数是同步信号安全的
+Dialogue: 0,0:50:19.80,0:50:24.42,English,,0,0,0,,These include _exit,write,wait,waitpid,sleep,kill _exit, write, wait, waitpid, sleep, kill 都包含在内
+Dialogue: 0,0:50:25.52,0:50:30.81,English,,0,0,0,,But unfortunately there's some very popular functions that aren't on this list printf,sprintf 但不幸的是，有些常用函数并不在这个列表中，比如说 printf, sprintf
+Dialogue: 0,0:50:31.28,0:50:32.70,English,,0,0,0,,Things that you really want to use 你真正想看到的是
+Dialogue: 0,0:50:33.14,0:50:37.84,English,,0,0,0,,And in fact write is the only output function that's async-signal-safe 事实上，write 操作是唯一的同步信号安全的输出函数
+Dialogue: 0,0:50:41.06,0:50:43.14,English,,0,0,0,,So this is kind of a problem because 这是一个问题，因为
+Dialogue: 0,0:50:44.34,0:50:50.52,English,,0,0,0,,Especially when you know you something you'd often like your signal handlers to output information 特别是当你希望你的信号处理程序输出信息时
+Dialogue: 0,0:50:51.52,0:50:56.38,English,,0,0,0,,But you can't if you want to really be pedantic and careful you can't use printf in fact 如果你很 pedantic 而小心，那么你是不能用 printf 的
+Dialogue: 0,0:50:57.48,0:50:59.28,English,,0,0,0,,It's possible to write a program 写一个程序是可能的
+Dialogue: 0,0:51:00.46,0:51:04.16,English,,0,0,0,,And I'll try to...it's possible to write a program 下面我会尝试。。。写一个程序是可能的
+Dialogue: 0,0:51:05.12,0:51:09.24,English,,0,0,0,,That does a tight loop of printouts in the main routine  这里是一个 tight loop of printouts 在 main 中
+Dialogue: 0,0:51:10.96,0:51:18.32,English,,0,0,0,,And then a steady stream of interrupts which execute a handler which also does a printf 然后是一个稳定的中断流，它执行一个处理程序，也执行一个printf
+Dialogue: 0,0:51:22.94,0:51:28.70,English,,0,0,0,,The printf call has to acquire what's called a lock on the terminal printf 调用必须获得终端上所谓的锁
+Dialogue: 0,0:51:29.24,0:51:32.88,English,,0,0,0,,Okay each printf inside that library function 库函数中的每个 printf
+Dialogue: 0,0:51:33.70,0:51:40.06,English,,0,0,0,,It acquires a lock which means only one instance of printf can write to the terminal at a point in time 获得锁意味着同一时刻只能有一个 printf 的实例向中断进行写操作
+Dialogue: 0,0:51:40.90,0:51:44.94,English,,0,0,0,,If another function tries to acquire that lock it has to wait 如果有另一个函数尝试获得锁，那么它必须得等待
+Dialogue: 0,0:51:46.28,0:51:50.12,English,,0,0,0,,Until whatever function owns the lock releases it 直到拥有锁的函数释放它
+Dialogue: 0,0:51:50.84,0:51:58.30,English,,0,0,0,,Okay so a lock prevents a lock is a way for to get mutually exclusive access to two shared resources 锁防止。。锁是一种互斥访问两个共享资源的方法
+Dialogue: 0,0:51:59.68,0:52:04.90,English,,0,0,0,,So if we have a tight loop in our main routine with executing printf 如果我们在 main 中 tight loop 执行 printf
+Dialogue: 0,0:52:05.66,0:52:10.22,English,,0,0,0,,Imagine what happens if one of those printfs acquires a lock on the terminal 如果其中一个 printf 获得了终端的锁，想象一下会发生什么
+Dialogue: 0,0:52:10.68,0:52:16.18,English,,0,0,0,,And then gets interrupted not by the receipt of a signal 然后不被接收到的信号打断
+Dialogue: 0,0:52:16.88,0:52:20.58,English,,0,0,0,,Now within the signal handler it calls another printf 现在在信号处理程序中，它调用另一个 printf
+Dialogue: 0,0:52:22.08,0:52:26.88,English,,0,0,0,,And that printf tries to acquire that lock and it blocks forever 这个 printf 尝试获得这个锁，这会导致一直阻塞
+Dialogue: 0,0:52:27.10,0:52:32.28,English,,0,0,0,,Because nothing's going to release that lock because the main routine was interrupted by the handler 这是因为锁始终不会被释放，因为 main 被这个处理程序中断了
+Dialogue: 0,0:52:35.28,0:52:40.48,English,,0,0,0,,So you have what's called a classical condition called deadlock 这是死锁的经典情况
+Dialogue: 0,0:52:41.06,0:52:44.32,English,,0,0,0,,Which is we have a process waiting for an event that will never occur 我们有一个进程在等待一个永远不会发生的事件
+Dialogue: 0,0:52:44.36,0:52:50.48,English,,0,0,0,,In this case the the printf and the signal handler is waiting for a lock to be released that will never be released 这种情况下，printf 和信号处理程序 都在等待一个不会被释放的锁被释放
+Dialogue: 0,0:52:51.70,0:52:56.66,English,,0,0,0,,So it's interesting you can try this it's 这很有趣。。你可以试试。。
+Dialogue: 0,0:52:57.42,0:53:01.40,English,,0,0,0,,It's not too hard to to create this deadlock situation 创造这种死锁情况并非很难
+Dialogue: 0,0:53:02.90,0:53:05.74,English,,0,0,0,,So to deal with this I really didn't want to tell you guys 为了处理这种情况，我真的不想告诉你们
+Dialogue: 0,0:53:05.74,0:53:09.92,English,,0,0,0,,That you couldn't have any output in your programs and writes a very difficult thing to deal with 你不应该在你的程序中出现任何输出，并为它写一个很难的东西处理它
+Dialogue: 0,0:53:11.10,0:53:16.84,English,,0,0,0,,So I created a small little library called the safe I/O library 我做了一个很小的库，叫做安全 I/O 库
+Dialogue: 0,0:53:18.50,0:53:25.46,English,,0,0,0,,Consists of three routines and they're available to you in the csapp.c file 有三个例程，可以在 csapp.c 文件中找到它们
+Dialogue: 0,0:53:25.46,0:53:28.02,English,,0,0,0,,Which is distributed on the website 已经发布在网站上了
+Dialogue: 0,0:53:28.94,0:53:31.42,English,,0,0,0,,And it consists of three reentrant routines 它由三个可重入的例程组成
+Dialogue: 0,0:53:33.64,0:53:37.50,English,,0,0,0,,sio_puts prints string sio——puts 打印一个字符串
+Dialogue: 0,0:53:38.84,0:53:41.48,English,,0,0,0,,(sio_)putl prints a long (sio_)putl 打印一个 long
+Dialogue: 0,0:53:42.82,0:53:48.04,English,,0,0,0,,And sio_error prints a message and then exits sio_error 打印一条信息然后退出
 Dialogue: 0,0:53:50.82,0:53:55.92,English,,0,0,0,,Okay so you can safely use take my word for it you can safely use this in your signal handlers
 Dialogue: 0,0:53:56.54,0:54:01.94,English,,0,0,0,,So if we were going to rewrite our sigint_handler from the binary bomb
 Dialogue: 0,0:54:02.60,0:54:08.38,English,,0,0,0,,We could rewrite it like this and now we have every function is async-signal-safe
