@@ -638,65 +638,65 @@ Dialogue: 0,0:56:56.94,0:57:03.36,English,,0,0,0,,The execution of the child han
 Dialogue: 0,0:57:04.78,0:57:09.38,English,,0,0,0,,当现实中信号为真时
 Dialogue: 0,0:57:10.40,0:57:15.90,English,,0,0,0,,我们实际上有从子进程收到的多个 sigchild 信号
 Dialogue: 0,0:57:15.90,0:57:19.10,English,,0,0,0,,在待处理位向量上不断被覆盖
-Dialogue: 0,0:57:20.26,0:57:26.68,English,,0,0,0,,And the delivery of those signals didn't cause any reaction in the process
-Dialogue: 0,0:57:26.68,0:57:30.00,English,,0,0,0,,Until that process was just about ready to be rescheduled
-Dialogue: 0,0:57:30.44,0:57:33.02,English,,0,0,0,,And only then was where was a signal received
-Dialogue: 0,0:57:33.92,0:57:37.84,English,,0,0,0,,But even though like say three signals were delivered only one was received
-Dialogue: 0,0:57:41.04,0:57:43.80,English,,0,0,0,,Okay so you can't use events in this case we're using event
-Dialogue: 0,0:57:44.58,0:57:50.40,English,,0,0,0,,We're using signals to count events which in this case is the termination of a child
-Dialogue: 0,0:57:51.30,0:57:55.52,English,,0,0,0,,Okay so the receipt of a signal in this case
-Dialogue: 0,0:57:55.62,0:58:00.04,English,,0,0,0,,It only indicates that at least one child terminated
-Dialogue: 0,0:58:00.40,0:58:04.06,English,,0,0,0,,Right not one child terminated
-Dialogue: 0,0:58:05.36,0:58:10.60,English,,0,0,0,,All we can infer from the receipt of that signal is that at least one child has terminated
-Dialogue: 0,0:58:11.70,0:58:17.88,English,,0,0,0,,Okay so to fix that when we receive a sigchild
-Dialogue: 0,0:58:18.68,0:58:23.80,English,,0,0,0,,We have to put we have to put the wait,that's reaping on our children
-Dialogue: 0,0:58:24.36,0:58:26.62,English,,0,0,0,,We have to put that in a loop
-Dialogue: 0,0:58:27.30,0:58:29.48,English,,0,0,0,,So we have to assume that the receipt of a sigchild
-Dialogue: 0,0:58:29.80,0:58:34.16,English,,0,0,0,,If we get a sigchild there could be multiple terminated children
-Dialogue: 0,0:58:34.82,0:58:37.92,English,,0,0,0,,That we have to that we have to reap
-Dialogue: 0,0:58:38.68,0:58:42.78,English,,0,0,0,,And so we put that in this loop and we execute this loop
-Dialogue: 0,0:58:43.08,0:58:48.78,English,,0,0,0,,Until there's no more terminated children in which case wait will...
-Dialogue: 0,0:58:49.24,0:58:53.22,English,,0,0,0,,Will exit with an error code of -1 and a error know of a child
-Dialogue: 0,0:58:53.80,0:58:58.00,English,,0,0,0,,So this isn't really an error it's just means there's no more terminated children
+Dialogue: 0,0:57:20.26,0:57:26.68,English,,0,0,0,,And the delivery of those signals didn't cause any reaction in the process 这些信号的传递在这个过程中没有任何反应
+Dialogue: 0,0:57:26.68,0:57:30.00,English,,0,0,0,,Until that process was just about ready to be rescheduled 直到进程准备好调度
+Dialogue: 0,0:57:30.44,0:57:33.02,English,,0,0,0,,And only then was where was a signal received 直到那时，才会接收到一个信号
+Dialogue: 0,0:57:33.92,0:57:37.84,English,,0,0,0,,But even though like say three signals were delivered only one was received 尽管传递了三个信号，但是只有一个信号被接收
+Dialogue: 0,0:57:41.04,0:57:43.80,English,,0,0,0,,Okay so you can't use events in this case we're using event 在这种情况下你不能使用事件，我们在用事件。。。
+Dialogue: 0,0:57:44.58,0:57:50.40,English,,0,0,0,,We're using signals to count events which in this case is the termination of a child 我们用信号来统计事件，在这个例子中是子进程的终止
+Dialogue: 0,0:57:51.30,0:57:55.52,English,,0,0,0,,Okay so the receipt of a signal in this case 所以这种情况下接收到的信号
+Dialogue: 0,0:57:55.62,0:58:00.04,English,,0,0,0,,It only indicates that at least one child terminated 它仅仅表明至少有一个子进程被终止
+Dialogue: 0,0:58:00.40,0:58:04.06,English,,0,0,0,,Right not one child terminated 没错，不是一个被终止
+Dialogue: 0,0:58:05.36,0:58:10.60,English,,0,0,0,,All we can infer from the receipt of that signal is that at least one child has terminated 我们可以从接收到的信号推断出最少有一个子进程被终止了
+Dialogue: 0,0:58:11.70,0:58:17.88,English,,0,0,0,,Okay so to fix that when we receive a sigchild 当我们收到 sigchild 时 fix that
+Dialogue: 0,0:58:18.68,0:58:23.80,English,,0,0,0,,We have to put we have to put the wait,that's reaping on our children 我们必须让它等待，它会被我们的子进程回收
+Dialogue: 0,0:58:24.36,0:58:26.62,English,,0,0,0,,We have to put that in a loop 我们得让它进入循环
+Dialogue: 0,0:58:27.30,0:58:29.48,English,,0,0,0,,So we have to assume that the receipt of a sigchild 所以就得假设收到了 sigchild
+Dialogue: 0,0:58:29.80,0:58:34.16,English,,0,0,0,,If we get a sigchild there could be multiple terminated children 如果我们收到了 sigchild，那意味着可能有多个被终止的子进程
+Dialogue: 0,0:58:34.82,0:58:37.92,English,,0,0,0,,That we have to that we have to reap 我们不得不。。我们必须要回收
+Dialogue: 0,0:58:38.68,0:58:42.78,English,,0,0,0,,And so we put that in this loop and we execute this loop 所以我们把它放在这个循环里，运行它
+Dialogue: 0,0:58:43.08,0:58:48.78,English,,0,0,0,,Until there's no more terminated children in which case wait will... 直到没有被终止的子进程，这时候，
+Dialogue: 0,0:58:49.24,0:58:53.22,English,,0,0,0,,Will exit with an error code of -1 and a error know of a child wait 会以错误码 -1 返回，并且知道有一个子进程错误
+Dialogue: 0,0:58:53.80,0:58:58.00,English,,0,0,0,,So this isn't really an error it's just means there's no more terminated children 所以这不是一个真正的错误，这只是说明没有更多被终止的子进程了
 Dialogue: 0,0:58:58.00,0:59:03.30,English,,0,0,0,,So we check as long as if our errno naughty child then we have an error
 Dialogue: 0,0:59:03.82,0:59:06.72,English,,0,0,0,,Otherwise we terminated normally as we expect it
-Dialogue: 0,0:59:07.54,0:59:09.12,English,,0,0,0,,Now if we run this code
-Dialogue: 0,0:59:10.46,0:59:15.94,English,,0,0,0,,Now we we see that we reap all five children as as we should
-Dialogue: 0,0:59:18.70,0:59:23.30,English,,0,0,0,,Okay so let's the litany of problems with signals first
-Dialogue: 0,0:59:24.14,0:59:27.18,English,,0,0,0,,It's easy to write handlers that aren't safe
-Dialogue: 0,0:59:27.72,0:59:31.02,English,,0,0,0,,Second it's easy to get the semantics wrong third
-Dialogue: 0,0:59:32.30,0:59:35.88,English,,0,0,0,,They're often not even portable across different versions of UNIX
-Dialogue: 0,0:59:36.82,0:59:39.86,English,,0,0,0,,So there's some older systems I don't know if any
-Dialogue: 0,0:59:40.68,0:59:47.74,English,,0,0,0,,There's some earlier versions of UNIX that after you catch a signal it restores the default action
-Dialogue: 0,0:59:47.82,0:59:50.70,English,,0,0,0,,So you have to reinstall the handler every time
+Dialogue: 0,0:59:07.54,0:59:09.12,English,,0,0,0,,Now if we run this code 现在我们运行这段代码
+Dialogue: 0,0:59:10.46,0:59:15.94,English,,0,0,0,,Now we we see that we reap all five children as as we should 我们回收了全部五个应该被回收的子进程
+Dialogue: 0,0:59:18.70,0:59:23.30,English,,0,0,0,,Okay so let's the litany of problems with signals first 我们先来看看信号的一系列问题
+Dialogue: 0,0:59:24.14,0:59:27.18,English,,0,0,0,,It's easy to write handlers that aren't safe 写不安全的处理程序很容易
+Dialogue: 0,0:59:27.72,0:59:31.02,English,,0,0,0,,Second it's easy to get the semantics wrong third 第二，很容易发生语义错误
+Dialogue: 0,0:59:32.30,0:59:35.88,English,,0,0,0,,They're often not even portable across different versions of UNIX 第三，在不同版本的 UNIX 之间通常不是可移植的
+Dialogue: 0,0:59:36.82,0:59:39.86,English,,0,0,0,,So there's some older systems I don't know if any 有一些旧的系统，我不知道是否有
+Dialogue: 0,0:59:40.68,0:59:47.74,English,,0,0,0,,There's some earlier versions of UNIX that after you catch a signal it restores the default action 有一些早期版本的 UNIX，在捕捉到信号后，它会恢复默认操作，
+Dialogue: 0,0:59:47.82,0:59:50.70,English,,0,0,0,,So you have to reinstall the handler every time 所以你不得不每次都再挂载一次
 Dialogue: 0,0:59:51.64,0:59:57.64,English,,0,0,0,,Well every time a handler gets called you have to reinstall that handler by calling signal inside the handler itself
-Dialogue: 0,0:59:58.62,1:00:00.88,English,,0,0,0,,We don't have to do that for Linux systems
-Dialogue: 0,1:00:03.22,1:00:08.52,English,,0,0,0,,On some systems when you have so-called slow syscalls
-Dialogue: 0,1:00:09.66,1:00:10.70,English,,0,0,0,,For example read
-Dialogue: 0,1:00:11.96,1:00:13.54,English,,0,0,0,,You know if you do a read system call
-Dialogue: 0,1:00:15.38,1:00:18.68,English,,0,0,0,,The kernel doesn't wait around for that data to arrive
-Dialogue: 0,1:00:20.48,1:00:25.46,English,,0,0,0,,It you know it sends a request to the disk controller and that schedules another process
-Dialogue: 0,1:00:26.70,1:00:31.22,English,,0,0,0,,Right so in a way that the read call is sort of and then only when the data arrives
-Dialogue: 0,1:00:31.54,1:00:34.64,English,,0,0,0,,And the interrupt comes in announcing that the data arrives
-Dialogue: 0,1:00:35.14,1:00:38.92,English,,0,0,0,,Does that read call finish and then restore and return
-Dialogue: 0,1:00:39.58,1:00:43.86,English,,0,0,0,,So you can think of read is actually kind of broken up into two parts right
-Dialogue: 0,1:00:45.90,1:00:54.14,English,,0,0,0,,Then and so that functions like read these kind of functions are called slow syscalls
-Dialogue: 0,1:00:55.36,1:00:59.68,English,,0,0,0,,And on some systems if the process receives a signal
-Dialogue: 0,1:01:00.16,1:01:02.54,English,,0,0,0,,Before a slow system calls has finished
-Dialogue: 0,1:01:04.24,1:01:09.22,English,,0,0,0,,The kernel will just abort that system call and return from that system call with an error
-Dialogue: 0,1:01:09.92,1:01:14.54,English,,0,0,0,,Okay so from users point of view you're doing a read call
+Dialogue: 0,0:59:58.62,1:00:00.88,English,,0,0,0,,We don't have to do that for Linux systems 在 Linux 系统上我们不必如此
+Dialogue: 0,1:00:03.22,1:00:08.52,English,,0,0,0,,On some systems when you have so-called slow syscalls 在某些系统中，当有缓慢的系统调用时
+Dialogue: 0,1:00:09.66,1:00:10.70,English,,0,0,0,,For example read 比如说 read
+Dialogue: 0,1:00:11.96,1:00:13.54,English,,0,0,0,,You know if you do a read system call 你知道如果用系统调用 read
+Dialogue: 0,1:00:15.38,1:00:18.68,English,,0,0,0,,The kernel doesn't wait around for that data to arrive 内核不会数据到来
+Dialogue: 0,1:00:20.48,1:00:25.46,English,,0,0,0,,It you know it sends a request to the disk controller and that schedules another process 它会向磁盘控制器发送请求，然后调度到其它进程去
+Dialogue: 0,1:00:26.70,1:00:31.22,English,,0,0,0,,Right so in a way that the read call is sort of and then only when the data arrives 没错，read 只有在数据到达时才会被调用
+Dialogue: 0,1:00:31.54,1:00:34.64,English,,0,0,0,,And the interrupt comes in announcing that the data arrives 数据到达时会触发中断
+Dialogue: 0,1:00:35.14,1:00:38.92,English,,0,0,0,,Does that read call finish and then restore and return read
+Dialogue: 0,1:00:39.58,1:00:43.86,English,,0,0,0,,So you can think of read is actually kind of broken up into two parts right 你可以把 read 分为两部分来看
+Dialogue: 0,1:00:45.90,1:00:54.14,English,,0,0,0,,Then and so that functions like read these kind of functions are called slow syscalls 像 read 这样的函数被称作慢系统调用
+Dialogue: 0,1:00:55.36,1:00:59.68,English,,0,0,0,,And on some systems if the process receives a signal 在有些系统中，如果进程在慢系统调用结束前
+Dialogue: 0,1:01:00.16,1:01:02.54,English,,0,0,0,,Before a slow system calls has finished 收到了一个信号
+Dialogue: 0,1:01:04.24,1:01:09.22,English,,0,0,0,,The kernel will just abort that system call and return from that system call with an error 内核会中止该系统调用，并从该系统调用返回一个错误
+Dialogue: 0,1:01:09.92,1:01:14.54,English,,0,0,0,,Okay so from users point of view you're doing a read call 在用户的视角来看，你使用了 read 调用
 Dialogue: 0,1:01:15.22,1:01:19.64,English,,0,0,0,,And it returns with this e enter signal this e enter error
-Dialogue: 0,1:01:20.72,1:01:24.82,English,,0,0,0,,You did nothing wrong you just happen to have the bad luck of being interrupted by some signal
-Dialogue: 0,1:01:25.14,1:01:27.26,English,,0,0,0,,And so in your user code you have to check for that
-Dialogue: 0,1:01:27.32,1:01:33.34,English,,0,0,0,,And if a slow system call like read is interrupted by signal you have to redo it
+Dialogue: 0,1:01:20.72,1:01:24.82,English,,0,0,0,,You did nothing wrong you just happen to have the bad luck of being interrupted by some signal 你没有做错任何事情，你只是运气不太好，被信号中断了
+Dialogue: 0,1:01:25.14,1:01:27.26,English,,0,0,0,,And so in your user code you have to check for that 在你的用户代码中，你必须得检查它
+Dialogue: 0,1:01:27.32,1:01:33.34,English,,0,0,0,,And if a slow system call like read is interrupted by signal you have to redo it 如果有像 read 这样的慢系统调用被信号中断了，你必须得重新调用它
 Dialogue: 0,1:01:33.82,1:01:39.04,English,,0,0,0,,So you have to put which is really a pain right because you have to put these read calls in a loop
-Dialogue: 0,1:01:39.04,1:01:41.72,English,,0,0,0,,And keep looping until it succeeds
-Dialogue: 0,1:01:42.90,1:01:46.90,English,,0,0,0,,And finally some systems don't block signals of the type being handled right
-Dialogue: 0,1:01:48.92,1:01:52.32,English,,0,0,0,,So that the solution for this is a replacement for signal
-Dialogue: 0,1:01:52.32,1:01:54.32,English,,0,0,0,,So the problem is with the signal syscall
-Dialogue: 0,1:01:54.94,1:01:58.52,English,,0,0,0,,And the solution is a newer syscall called sigaction
-Dialogue: 0,1:01:59.00,1:02:02.32,English,,0,0,0,,Which provides a mechanism a replacement for signal
-Dialogue: 0,1:02:02.80,1:02:06.70,English,,0,0,0,,That provides a mechanism for portable and predictable signal handling
+Dialogue: 0,1:01:39.04,1:01:41.72,English,,0,0,0,,And keep looping until it succeeds 在成功前一直循环
+Dialogue: 0,1:01:42.90,1:01:46.90,English,,0,0,0,,And finally some systems don't block signals of the type being handled right 最后，一些系统不会阻塞正在处理类型的信号
+Dialogue: 0,1:01:48.92,1:01:52.32,English,,0,0,0,,So that the solution for this is a replacement for signal 解决方案是信号替换
+Dialogue: 0,1:01:52.32,1:01:54.32,English,,0,0,0,,So the problem is with the signal syscall 问题是系统调用 signal
+Dialogue: 0,1:01:54.94,1:01:58.52,English,,0,0,0,,And the solution is a newer syscall called sigaction 解决方法是一个叫做 sigaction 的系统调用
+Dialogue: 0,1:01:59.00,1:02:02.32,English,,0,0,0,,Which provides a mechanism a replacement for signal 它提供了信号替换的机制
+Dialogue: 0,1:02:02.80,1:02:06.70,English,,0,0,0,,That provides a mechanism for portable and predictable signal handling 它为可移植和可预测的信号处理提供了一种机制
 Dialogue: 0,1:02:07.54,1:02:14.18,English,,0,0,0,,And so what I've done is created a rapper called uppercase signal
 Dialogue: 0,1:02:15.76,1:02:19.56,English,,0,0,0,,That takes the same arguments as that the signal call
 Dialogue: 0,1:02:20.88,1:02:26.04,English,,0,0,0,,But inside it calls the sigaction function to get portable signal handling
