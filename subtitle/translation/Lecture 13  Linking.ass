@@ -36,891 +36,892 @@ Dialogue: 0,0:00:10.28,0:00:17.04,Chinese,,0,0,0,,从程序如何与硬件交互
 Dialogue: 0,0:00:17.70,0:00:23.38,English,,0,0,0,,And we're going to start that investigation by studying and learning about a process called linking
 Dialogue: 0,0:00:17.70,0:00:23.38,Chinese,,0,0,0,,我们将通过研究和弄懂一个叫做链接的过程开始
 Dialogue: 0,0:00:25.12,0:00:30.98,English,,0,0,0,,Which is how the system builds your programs ok
-Dialogue: 0,0:00:25.12,0:00:30.98,English,,0,0,0,,这能帮助你好好弄清楚系统是如何构建你的程序
+Dialogue: 0,0:00:25.12,0:00:30.98,Chinese,,0,0,0,,这能帮助你好好弄清楚系统是如何构建你的程序
 Dialogue: 0,0:00:33.26,0:00:35.92,English,,0,0,0,,So we're going to study the process of linking
-Dialogue: 0,0:00:33.26,0:00:35.92,English,,0,0,0,,所以我们要学习链接的过程
+Dialogue: 0,0:00:33.26,0:00:35.92,Chinese,,0,0,0,,所以我们要学习链接的过程
 Dialogue: 0,0:00:35.92,0:00:40.86,English,,0,0,0,,And then I'm going to show you a really cool technique called library interpositioning
-Dialogue: 0,0:00:35.92,0:00:40.86,English,,0,0,0,,然后我将向你展示一项非常酷的技术，称为库打桩技术
+Dialogue: 0,0:00:35.92,0:00:40.86,Chinese,,0,0,0,,然后我将向你展示一项非常酷的技术，称为库打桩技术
 Dialogue: 0,0:00:42.16,0:00:51.08,English,,0,0,0,,Which allows you to use linking to actually intercept on function calls in libraries like the standard C library
-Dialogue: 0,0:00:42.16,0:00:51.08,English,,0,0,0,,这允许你使用链接实际拦截像标准 C 库这样的库中的函数调用
+Dialogue: 0,0:00:42.16,0:00:51.08,Chinese,,0,0,0,,这允许你使用链接实际拦截像 C 标准库这样的库中的函数调用
 Dialogue: 0,0:00:51.66,0:00:56.38,English,,0,0,0,,So it's a very powerful and interesting technique and it's all enabled by by linking
-Dialogue: 0,0:00:51.66,0:00:56.38,English,,0,0,0,,所以它是一种非常强大而且有趣的技术，它通过链接实现
+Dialogue: 0,0:00:51.66,0:00:56.38,Chinese,,0,0,0,,所以它是一种非常强大而且有趣的技术，它通过链接实现
 Dialogue: 0,0:00:58.28,0:01:01.36,English,,0,0,0,,So let's start with a simple program
-Dialogue: 0,0:00:58.28,0:01:01.36,English,,0,0,0,,让我们从一个非常简单的程序开始吧
+Dialogue: 0,0:00:58.28,0:01:01.36,Chinese,,0,0,0,,让我们从一个非常简单的程序开始吧
 Dialogue: 0,0:01:02.54,0:01:07.84,English,,0,0,0,,This program consists of two modules a main.c and sum.c
-Dialogue: 0,0:01:02.54,0:01:07.84,English,,0,0,0,,这个程序里包含两个模块 main.c 和 sum.c
+Dialogue: 0,0:01:02.54,0:01:07.84,Chinese,,0,0,0,,这个程序里包含两个模块 main.c 和 sum.c
 Dialogue: 0,0:01:09.06,0:01:14.90,English,,0,0,0,,sum.c takes as an array as an argument and a length n
-Dialogue: 0,0:01:09.06,0:01:14.90,English,,0,0,0,,sum.c 将一个数组和一个长度 n 作为参数
+Dialogue: 0,0:01:09.06,0:01:14.90,Chinese,,0,0,0,,sum.c 将一个数组和一个长度 n 作为参数
 Dialogue: 0,0:01:15.54,0:01:21.60,English,,0,0,0,,And then it sums up the elements of that array and returns the sum  back to the caller
-Dialogue: 0,0:01:15.54,0:01:21.60,English,,0,0,0,,然后它计算了该数组中元素的总和并将总和返回给调用者
+Dialogue: 0,0:01:15.54,0:01:21.60,Chinese,,0,0,0,,然后它计算了该数组中元素的总和并将总和返回给调用者
 Dialogue: 0,0:01:23.48,0:01:26.21,English,,0,0,0,,main.c calls the sum function
-Dialogue: 0,0:01:23.48,0:01:26.21,English,,0,0,0,,main.c 调用了 sum 函数
+Dialogue: 0,0:01:23.48,0:01:26.21,Chinese,,0,0,0,,main.c 调用了 sum 函数
 Dialogue: 0,0:01:26.76,0:01:29.54,English,,0,0,0,,Using and passes it a two element array of ints
-Dialogue: 0,0:01:26.76,0:01:29.54,English,,0,0,0,,使用并传递一个两元素的 int 类型数组
+Dialogue: 0,0:01:26.76,0:01:29.54,Chinese,,0,0,0,,使用并传递一个两元素的 int 类型数组
 Dialogue: 0,0:01:31.20,0:01:35.78,English,,0,0,0,,And then returns the value received from some
-Dialogue: 0,0:01:31.20,0:01:35.78,English,,0,0,0,,然后返回了从其中收到的值
+Dialogue: 0,0:01:31.20,0:01:35.78,Chinese,,0,0,0,,然后返回了从其中收到的值
 Dialogue: 0,0:01:37.74,0:01:43.54,English,,0,0,0,,Yeah we that that's kind of an odd thing to do to return your exit status like that
-Dialogue: 0,0:01:37.74,0:01:43.54,English,,0,0,0,,是的，我们认为像这样返回退出状态是件奇怪的事情
+Dialogue: 0,0:01:37.74,0:01:43.54,Chinese,,0,0,0,,是的，我们认为像这样返回退出状态是件奇怪的事情
 Dialogue: 0,0:01:43.54,0:01:47.76,English,,0,0,0,,But we just did it so that the compiler wouldn't optimize away all of a code
-Dialogue: 0,0:01:43.54,0:01:47.76,English,,0,0,0,,但我们这样做，以便编译器不会优化掉所有代码
+Dialogue: 0,0:01:43.54,0:01:47.76,Chinese,,0,0,0,,但我们这样做，以便编译器不会优化掉所有代码
 Dialogue: 0,0:01:49.22,0:01:52.94,English,,0,0,0,,I know let's look at what happens if when we want to compile those those two modules
-Dialogue: 0,0:01:49.22,0:01:52.94,English,,0,0,0,,让我们来看看如果我们想要编译那两个模块会发生什么
+Dialogue: 0,0:01:49.22,0:01:52.94,Chinese,,0,0,0,,让我们来看看如果我们想要编译那两个模块会发生什么
 Dialogue: 0,0:01:55.44,0:01:58.74,English,,0,0,0,,For each of main.c and sum.c
-Dialogue: 0,0:01:55.44,0:01:58.74,English,,0,0,0,,对于每个 main.c 和 sum.c
+Dialogue: 0,0:01:55.44,0:01:58.74,Chinese,,0,0,0,,对于每个 main.c 和 sum.c
 Dialogue: 0,0:01:59.52,0:02:08.66,English,,0,0,0,,The GCC calls a series of translators on that,on those modules,on those .c files
-Dialogue: 0,0:01:59.52,0:02:08.66,English,,0,0,0,,GCC 会在这些模块上调用 .c 文件上的一系列翻译器
+Dialogue: 0,0:01:59.52,0:02:08.66,Chinese,,0,0,0,,GCC 会在这些模块上调用 .c 文件上的一系列翻译器
 Dialogue: 0,0:02:09.38,0:02:11.68,English,,0,0,0,,First calls the C preprocessor cpp
-Dialogue: 0,0:02:09.38,0:02:11.68,English,,0,0,0,,首先调用 C 预处理器 cpp(将 main.c 翻译成 ASCII 中间文件 main.i)
+Dialogue: 0,0:02:09.38,0:02:11.68,Chinese,,0,0,0,,首先调用 C 预处理器 cpp(将 main.c 翻译成 ASCII 中间文件 main.i)
 Dialogue: 0,0:02:14.30,0:02:18.82,English,,0,0,0,,Then it calls the compiler,the actual compiler which is cc1
-Dialogue: 0,0:02:14.30,0:02:18.82,English,,0,0,0,,然后它调用编译器，实际上使用的编译器是叫 cc1(将 main.i 翻译成 ASCII 汇编语言文件 main.s)
+Dialogue: 0,0:02:14.30,0:02:18.82,Chinese,,0,0,0,,然后它调用编译器，实际上使用的编译器是叫 cc1(将 main.i 翻译成 ASCII 汇编语言文件 main.s)
 Dialogue: 0,0:02:20.90,0:02:26.96,English,,0,0,0,,The compiler generates assembly which is then translated by the assembler as
-Dialogue: 0,0:02:20.90,0:02:26.96,English,,0,0,0,,编译器生成汇编程序，然后汇编器将其翻译
+Dialogue: 0,0:02:20.90,0:02:26.96,Chinese,,0,0,0,,编译器生成汇编程序，然后汇编器将其翻译
 Dialogue: 0,0:02:27.72,0:02:32.60,English,,0,0,0,,And resulting in a .o file called main.o
-Dialogue: 0,0:02:27.72,0:02:32.60,English,,0,0,0,,结果生成了一个 .o 文件,称为 main.o
+Dialogue: 0,0:02:27.72,0:02:32.60,Chinese,,0,0,0,,结果生成了一个 .o 文件,称为 main.o
 Dialogue: 0,0:02:33.26,0:02:36.24,English,,0,0,0,,Similar things happens for sum.c
-Dialogue: 0,0:02:33.26,0:02:36.24,English,,0,0,0,,sum.c 也发生了类似的事情
+Dialogue: 0,0:02:33.26,0:02:36.24,Chinese,,0,0,0,,sum.c 也发生了类似的事情
 Dialogue: 0,0:02:37.34,0:02:43.88,English,,0,0,0,,So after these three translators work on the code
-Dialogue: 0,0:02:37.34,0:02:43.88,English,,0,0,0,,在这三个翻译器处理完代码之后
+Dialogue: 0,0:02:37.34,0:02:43.88,Chinese,,0,0,0,,在这三个翻译器处理完代码之后
 Dialogue: 0,0:02:44.36,0:02:47.14,English,,0,0,0,,We have two object files two .o files
-Dialogue: 0,0:02:44.36,0:02:47.14,English,,0,0,0,,生成了两个 .o 格式目标文件
+Dialogue: 0,0:02:44.36,0:02:47.14,Chinese,,0,0,0,,生成了两个 .o 格式目标文件
 Dialogue: 0,0:02:48.86,0:02:51.54,English,,0,0,0,,The linker takes those those .o files
-Dialogue: 0,0:02:48.86,0:02:51.54,English,,0,0,0,,链接器取到这些 .o 格式目标文件
+Dialogue: 0,0:02:48.86,0:02:51.54,Chinese,,0,0,0,,链接器取到这些 .o 格式目标文件
 Dialogue: 0,0:02:52.18,0:03:04.66,English,,0,0,0,,And put some,links them together sort of smashes them together to form a single executable called that we can then run
-Dialogue: 0,0:02:52.18,0:03:04.66,English,,0,0,0,,然后放一些（必要的系统目标文件），将它们链接在一起，将它们拼凑在一起，创建一个单个的可执行文件然后运行
+Dialogue: 0,0:02:52.18,0:03:04.66,Chinese,,0,0,0,,将它们拼凑在一起，创建一个单个的可执行文件然后运行
+Dialogue: 0,0:02:52.18,0:03:04.66,Chinese,,0,0,0,,然后放一些（必要的系统目标文件），将它们链接在一起，
 Dialogue: 0,0:03:07.02,0:03:09.24,English,,0,0,0,,Then we can then load and run on the system
-Dialogue: 0,0:03:07.02,0:03:09.24,English,,0,0,0,,然后我们就可以加载并运行到系统上
+Dialogue: 0,0:03:07.02,0:03:09.24,Chinese,,0,0,0,,然后我们就可以加载并运行到系统上
 Dialogue: 0,0:03:11.36,0:03:15.42,English,,0,0,0,,So the main.c and sum.c they are called source files
-Dialogue: 0,0:03:11.36,0:03:15.42,English,,0,0,0,,所以 main.c 和 sum.c 被称为源文件
+Dialogue: 0,0:03:11.36,0:03:15.42,Chinese,,0,0,0,,所以 main.c 和 sum.c 被称为源文件
 Dialogue: 0,0:03:15.94,0:03:19.90,English,,0,0,0,,These .o files are object files that
-Dialogue: 0,0:03:15.94,0:03:19.90,English,,0,0,0,,这些 .o 文件
+Dialogue: 0,0:03:15.94,0:03:19.90,Chinese,,0,0,0,,这些 .o 文件
 Dialogue: 0,0:03:20.60,0:03:22.28,English,,0,0,0,,We are separately compiled
-Dialogue: 0,0:03:20.60,0:03:22.28,English,,0,0,0,,虽然是我们分开编译的目标文件
+Dialogue: 0,0:03:20.60,0:03:22.28,Chinese,,0,0,0,,虽然是我们分开编译的目标文件
 Dialogue: 0,0:03:23.18,0:03:25.64,English,,0,0,0,,But we call them relocatable object files
-Dialogue: 0,0:03:23.18,0:03:25.64,English,,0,0,0,,但我们还是要叫他们可重定位目标文件
+Dialogue: 0,0:03:23.18,0:03:25.64,Chinese,,0,0,0,,但我们还是要叫他们可重定位目标文件
 Dialogue: 0,0:03:25.74,0:03:33.32,English,,0,0,0,,Because they can be combined together to form the fully linked executable object file
-Dialogue: 0,0:03:25.74,0:03:33.32,English,,0,0,0,,因为它们可以组合在一起形成完全链接的可执行目标文件
+Dialogue: 0,0:03:25.74,0:03:33.32,Chinese,,0,0,0,,因为它们可以组合在一起形成完全链接的可执行目标文件
 Dialogue: 0,0:03:36.06,0:03:42.56,English,,0,0,0,,So why do we do it like this, you know why do we allow this so-called separate compilation
-Dialogue: 0,0:03:36.06,0:03:42.56,English,,0,0,0,,那为什么我们这样做呢，你知道为什么我们允许这种所谓的分开编译
+Dialogue: 0,0:03:36.06,0:03:42.56,Chinese,,0,0,0,,那为什么我们这样做呢，你知道为什么我们允许这种所谓的分离编译
 Dialogue: 0,0:03:42.62,0:03:48.50,English,,0,0,0,,You know why don't we just have like one big you know one big file that with all of code in it
-Dialogue: 0,0:03:42.62,0:03:48.50,English,,0,0,0,,你知道为什么我们不喜欢一个包含所有代码的大文件
+Dialogue: 0,0:03:42.62,0:03:48.50,Chinese,,0,0,0,,你知道为什么我们不喜欢一个包含所有代码的大文件
 Dialogue: 0,0:03:49.02,0:03:55.57,English,,0,0,0,,Well there's a couple reasons the first is is modularity so by allowing you to break your code into smaller pieces
-Dialogue: 0,0:03:49.02,0:03:55.57,English,,0,0,0,,有一些原因，首先是模块化，所以允许你将代码分解成更小的部分
+Dialogue: 0,0:03:49.02,0:03:55.57,Chinese,,0,0,0,,有一些原因，首先是模块化，允许你将代码分解成更小的部分
 Dialogue: 0,0:03:55.96,0:03:58.96,English,,0,0,0,,You can put related functions into separate source files
-Dialogue: 0,0:03:55.96,0:03:58.96,English,,0,0,0,,你可以将相关功能放入单独的源文件中
+Dialogue: 0,0:03:55.96,0:03:58.96,Chinese,,0,0,0,,你可以将相关功能放入单独的源文件中
 Dialogue: 0,0:03:59.30,0:04:01.58,English,,0,0,0,,You can define libraries of functions
-Dialogue: 0,0:03:59.30,0:04:01.58,English,,0,0,0,,你可以定义函数库
+Dialogue: 0,0:03:59.30,0:04:01.58,Chinese,,0,0,0,,你可以定义函数库
 Dialogue: 0,0:04:02.74,0:04:11.60,English,,0,0,0,,So it's just good technique and it allows you to kind of break your code up into nice modular pieces
-Dialogue: 0,0:04:02.74,0:04:11.60,English,,0,0,0,,所以这只是一种很好的技术，它可以让你将代码分解成很好的模块化部分
+Dialogue: 0,0:04:02.74,0:04:11.60,Chinese,,0,0,0,,所以这只是一种很好的技术，它可以让你将代码分解成很好的模块化的部分
 Dialogue: 0,0:04:13.54,0:04:15.10,English,,0,0,0,,The other reason is efficiency
-Dialogue: 0,0:04:13.54,0:04:15.10,English,,0,0,0,,另一个理由是效率
+Dialogue: 0,0:04:13.54,0:04:15.10,Chinese,,0,0,0,,另一个理由是效率
 Dialogue: 0,0:04:18.68,0:04:21.92,English,,0,0,0,,So if we've broken up our program into multiple chunks
-Dialogue: 0,0:04:18.68,0:04:21.92,English,,0,0,0,,所以如果我们把我们的程序分为多个块
+Dialogue: 0,0:04:18.68,0:04:21.92,Chinese,,0,0,0,,所以如果我们把我们的程序分为多个块
 Dialogue: 0,0:04:22.66,0:04:28.54,English,,0,0,0,,If we change and if we only need to change one of the chunks
-Dialogue: 0,0:04:22.66,0:04:28.54,English,,0,0,0,,如果我们改变，比如如果我们只需要更改其中一个块
+Dialogue: 0,0:04:22.66,0:04:28.54,Chinese,,0,0,0,,当我们改变，比如我们只需要更改其中一个块
 Dialogue: 0,0:04:29.26,0:04:33.06,English,,0,0,0,,We don't have to recompile the all the other modules
-Dialogue: 0,0:04:29.26,0:04:33.06,English,,0,0,0,,我们就没必要重新编译所有其他模块
+Dialogue: 0,0:04:29.26,0:04:33.06,Chinese,,0,0,0,,我们就没必要重新编译所有其他模块
 Dialogue: 0,0:04:33.28,0:04:38.50,English,,0,0,0,,Right we can just recompile the one module that we changed and then link them all together again
-Dialogue: 0,0:04:33.28,0:04:38.50,English,,0,0,0,,对，我们可以重新编译我们更改的一个模块，然后再将它们全部链接在一起
+Dialogue: 0,0:04:33.28,0:04:38.50,Chinese,,0,0,0,,对，我们可以重新编译我们更改的一个模块，然后再将它们全部链接在一起
 Dialogue: 0,0:04:38.58,0:04:44.26,English,,0,0,0,,Right so it's efficient in time it's also efficient in space
-Dialogue: 0,0:04:38.58,0:04:44.26,English,,0,0,0,,所以这在时间和空间上都是有效的
+Dialogue: 0,0:04:38.58,0:04:44.26,Chinese,,0,0,0,,所以这在时间和空间上都是有效的
 Dialogue: 0,0:04:44.26,0:04:51.64,English,,0,0,0,,Because you can take all of the functions in the standard C library you could put them all together
-Dialogue: 0,0:04:44.26,0:04:51.64,English,,0,0,0,,因为你可以使用标准 C 库中的所有功能，所以你可以将它们放在一起
+Dialogue: 0,0:04:44.26,0:04:51.64,Chinese,,0,0,0,,因为你可以使用 C 标准库中的所有功能，所以你可以将它们放在一起
 Dialogue: 0,0:04:52.14,0:04:57.86,English,,0,0,0,,But then the only functions that you actually get compiled and linked into your program are the ones that you actually call
-Dialogue: 0,0:04:52.14,0:04:57.86,English,,0,0,0,,但是，实际编译并链接到程序中的唯一函数是你实际调用的函数
+Dialogue: 0,0:04:52.14,0:04:57.86,Chinese,,0,0,0,,但是，实际编译并链接到程序中的唯一函数是你实际调用的函数
 Dialogue: 0,0:04:58.68,0:05:01.62,English,,0,0,0,,Ok so you can save space
-Dialogue: 0,0:04:58.68,0:05:01.62,English,,0,0,0,,好的，这样你就可以节省空间
+Dialogue: 0,0:04:58.68,0:05:01.62,Chinese,,0,0,0,,好的，这样你就可以节省空间
 Dialogue: 0,0:05:01.62,0:05:08.14,English,,0,0,0,,You don't you know normally you use only a small subset of the standard C functions
-Dialogue: 0,0:05:01.62,0:05:08.14,English,,0,0,0,,你通常不知道你其实只使用标准 C 函数的一小部分
+Dialogue: 0,0:05:01.62,0:05:08.14,Chinese,,0,0,0,,你通常不知道你其实只使用C 标准函数的一小部分
 Dialogue: 0,0:05:08.80,0:05:13.16,English,,0,0,0,,So there's no point in linking all of those functions into your code if you don't need them
-Dialogue: 0,0:05:08.80,0:05:13.16,English,,0,0,0,,因此，如果你不需要将所有这些功能链接到代码中，那就没有意义了
+Dialogue: 0,0:05:08.80,0:05:13.16,Chinese,,0,0,0,,因此，如果你不需要将所有这些功能链接到代码中，那就没有意义了
 Dialogue: 0,0:05:15.08,0:05:16.66,English,,0,0,0,,Alright so what do linkers do
-Dialogue: 0,0:05:15.08,0:05:16.66,English,,0,0,0,,好吧，那么链接器做了什么呢
+Dialogue: 0,0:05:15.08,0:05:16.66,Chinese,,0,0,0,,好吧，那么链接器做了什么呢
 Dialogue: 0,0:05:18.02,0:05:21.78,English,,0,0,0,,Well there's two main tasks that a linker performs
-Dialogue: 0,0:05:18.02,0:05:21.78,English,,0,0,0,,链接器执行的主要任务有两个
+Dialogue: 0,0:05:18.02,0:05:21.78,Chinese,,0,0,0,,链接器执行的主要任务有两个
 Dialogue: 0,0:05:23.28,0:05:25.82,English,,0,0,0,,The first is called simple resolution
-Dialogue: 0,0:05:23.28,0:05:25.82,English,,0,0,0,,第一个被称为简单解析（符号解析）
+Dialogue: 0,0:05:23.28,0:05:25.82,Chinese,,0,0,0,,第一个被称为简单解析（符号解析）
 Dialogue: 0,0:05:27.16,0:05:30.16,English,,0,0,0,,So programs define and reference symbols
-Dialogue: 0,0:05:27.16,0:05:30.16,English,,0,0,0,,为了程序定义和应用符号
+Dialogue: 0,0:05:27.16,0:05:30.16,Chinese,,0,0,0,,程序会定义和引用符号
 Dialogue: 0,0:05:30.44,0:05:37.10,English,,0,0,0,,Okay that what the linker refers to as symbols and these are global variables and functions
-Dialogue: 0,0:05:30.44,0:05:37.10,English,,0,0,0,,好的，链接器称为符号，这些是全局变量和函数
+Dialogue: 0,0:05:30.44,0:05:37.10,Chinese,,0,0,0,,好的，链接器称为符号，这些是全局变量和函数
 Dialogue: 0,0:05:37.62,0:05:44.40,English,,0,0,0,,Okay in the names and those objects they're referred to as a symbol
-Dialogue: 0,0:05:37.62,0:05:44.40,English,,0,0,0,,在名称和那些对象中，它们被称为符号
+Dialogue: 0,0:05:37.62,0:05:44.40,Chinese,,0,0,0,,在名称和那些对象中，它们被称为符号
 Dialogue: 0,0:05:44.46,0:05:52.28,English,,0,0,0,,So here we're declaring,we're defining a symbol called swap
-Dialogue: 0,0:05:44.46,0:05:52.28,English,,0,0,0,,第一行代码，我们在这里声明，我们正在定义一个名为swap的符号
+Dialogue: 0,0:05:44.46,0:05:52.28,Chinese,,0,0,0,,第一行代码，我们在这里声明，我们正在定义一个名为swap的符号
 Dialogue: 0,0:05:53.66,0:05:59.42,English,,0,0,0,,Here we're referring when we call swap, we're referring to that symbol
-Dialogue: 0,0:05:53.66,0:05:59.42,English,,0,0,0,,中间这行我们称之为 swap ，我们指的是那个符号
+Dialogue: 0,0:05:53.66,0:05:59.42,Chinese,,0,0,0,,中间这行我们称之为 swap ，我们指的是那个符号
 Dialogue: 0,0:05:59.44,0:06:01.30,English,,0,0,0,,Okay that's a reference to the symbol
-Dialogue: 0,0:05:59.44,0:06:01.30,English,,0,0,0,,是的，这是对符号的一种引用
+Dialogue: 0,0:05:59.44,0:06:01.30,Chinese,,0,0,0,,是的，这是对符号的一种引用
 Dialogue: 0,0:06:03.30,0:06:07.20,English,,0,0,0,,And here we're defining a pointer to an int called xp
-Dialogue: 0,0:06:03.30,0:06:07.20,English,,0,0,0,,最后一行，我们定义了一个指向名为 xp 的 int 类型指针
+Dialogue: 0,0:06:03.30,0:06:07.20,Chinese,,0,0,0,,最后一行，我们定义了一个指向名为 xp 的 int 类型指针
 Dialogue: 0,0:06:08.30,0:06:13.02,English,,0,0,0,,So we're defining xp and we're initializing it to the address of x
-Dialogue: 0,0:06:08.30,0:06:13.02,English,,0,0,0,,所以我们定义了 xp ，将它初始化为取 x 的地址
+Dialogue: 0,0:06:08.30,0:06:13.02,Chinese,,0,0,0,,所以我们定义了 xp ，将它初始化为取 x 的地址
 Dialogue: 0,0:06:13.02,0:06:15.52,English,,0,0,0,,So we're referring,that's a reference to x
-Dialogue: 0,0:06:13.02,0:06:15.52,English,,0,0,0,,这指的是，这是对 x 的引用
+Dialogue: 0,0:06:13.02,0:06:15.52,Chinese,,0,0,0,,这指的是，这是对 x 的引用
 Dialogue: 0,0:06:18.00,0:06:24.24,English,,0,0,0,,Okay so the symbol definitions are stored in the object file by the assembler
-Dialogue: 0,0:06:18.00,0:06:24.24,English,,0,0,0,,汇编器将符号定义存储在目标文件中
+Dialogue: 0,0:06:18.00,0:06:24.24,Chinese,,0,0,0,,汇编器将符号定义存储在目标文件中
 Dialogue: 0,0:06:25.32,0:06:28.52,English,,0,0,0,,In a symbol table which is an array of structs
-Dialogue: 0,0:06:25.32,0:06:28.52,English,,0,0,0,,在这个符号表里面，全是一系列结构数组
+Dialogue: 0,0:06:25.32,0:06:28.52,Chinese,,0,0,0,,在这个符号表里面，全是一系列结构数组
 Dialogue: 0,0:06:29.12,0:06:32.19,English,,0,0,0,,Where each structs contains information about the symbol
-Dialogue: 0,0:06:29.12,0:06:32.19,English,,0,0,0,,每个结构数组里面包含有关该符号的信息
+Dialogue: 0,0:06:29.12,0:06:32.19,Chinese,,0,0,0,,每个结构数组里面包含有关该符号的信息
 Dialogue: 0,0:06:32.58,0:06:37.54,English,,0,0,0,,Like the name of the symbol its size and where it's located
-Dialogue: 0,0:06:32.58,0:06:37.54,English,,0,0,0,,比如符号的名称，它的大小和位置等等信息
+Dialogue: 0,0:06:32.58,0:06:37.54,Chinese,,0,0,0,,比如符号的名称，它的大小和位置等等信息
 Dialogue: 0,0:06:40.54,0:06:46.78,English,,0,0,0,,Now what we mean by symbol resolution is that during the linker linking process
-Dialogue: 0,0:06:40.54,0:06:46.78,English,,0,0,0,,所以现在我们说符号解析的意思是在链接器链接过程中
+Dialogue: 0,0:06:40.54,0:06:46.78,Chinese,,0,0,0,,所以现在我们说符号解析的意思是在链接器链接过程中
 Dialogue: 0,0:06:47.58,0:06:54.94,English,,0,0,0,,The linker associates each symbol reference with exactly one symbol definition
-Dialogue: 0,0:06:47.58,0:06:54.94,English,,0,0,0,,链接器将每个符号引用与一个符号定义相关联
+Dialogue: 0,0:06:47.58,0:06:54.94,Chinese,,0,0,0,,链接器将每个符号引用与一个符号定义相关联
 Dialogue: 0,0:06:57.68,0:06:59.42,English,,0,0,0,,Okay so it's possible in multiple
-Dialogue: 0,0:06:57.68,0:06:59.42,English,,0,0,0,,好的，所以这可能有多个
+Dialogue: 0,0:06:57.68,0:06:59.42,Chinese,,0,0,0,,好的，所以这可能有多个
 Dialogue: 0,0:07:00.64,0:07:04.16,English,,0,0,0,,You know why is this an issue well it's possible like in multiple modules
-Dialogue: 0,0:07:00.64,0:07:04.16,English,,0,0,0,,这中间可能会有些问题，比如在多个模块中
+Dialogue: 0,0:07:00.64,0:07:04.16,Chinese,,0,0,0,,这中间可能会有些问题，比如在多个模块中
 Dialogue: 0,0:07:04.16,0:07:06.84,English,,0,0,0,,You may declare a global variable with the same name
-Dialogue: 0,0:07:04.16,0:07:06.84,English,,0,0,0,,你可能会声明一个有相同名称的全局变量
+Dialogue: 0,0:07:04.16,0:07:06.84,Chinese,,0,0,0,,你可能会声明一个有相同名称的全局变量
 Dialogue: 0,0:07:07.80,0:07:13.76,English,,0,0,0,,The linker has to decide which one of those definitions to use for all subsequent references
-Dialogue: 0,0:07:07.80,0:07:13.76,English,,0,0,0,,链接器必须决定将其中的某个定义用于所有后续引用
+Dialogue: 0,0:07:07.80,0:07:13.76,Chinese,,0,0,0,,链接器必须决定将其中的某个定义用于所有后续引用
 Dialogue: 0,0:07:16.70,0:07:21.74,English,,0,0,0,,Now once the linker is associated a unique object
-Dialogue: 0,0:07:16.70,0:07:21.74,English,,0,0,0,,一旦链接器和一个独一无二的目标建立联系
+Dialogue: 0,0:07:16.70,0:07:21.74,Chinese,,0,0,0,,一旦链接器和一个独一无二的目标建立联系
 Dialogue: 0,0:07:21.74,0:07:25.44,English,,0,0,0,,With each a unique symbol definition with each reference
-Dialogue: 0,0:07:21.74,0:07:25.44,English,,0,0,0,,每个引用都会有一个唯一的符号定义
+Dialogue: 0,0:07:21.74,0:07:25.44,Chinese,,0,0,0,,每个引用都会有一个唯一的符号定义
 Dialogue: 0,0:07:26.84,0:07:29.22,English,,0,0,0,,Then it does the second step which is relocation
-Dialogue: 0,0:07:26.84,0:07:29.22,English,,0,0,0,,然后它执行第二步，即重定位
+Dialogue: 0,0:07:26.84,0:07:29.22,Chinese,,0,0,0,,然后它执行第二步，即重定位
 Dialogue: 0,0:07:29.78,0:07:33.32,English,,0,0,0,,And during relocation it merges all of the modules together
-Dialogue: 0,0:07:29.78,0:07:33.32,English,,0,0,0,,在重定位期间，它会将所有模块合并在一起
+Dialogue: 0,0:07:29.78,0:07:33.32,Chinese,,0,0,0,,在重定位期间，它会将所有模块合并在一起
 Dialogue: 0,0:07:33.70,0:07:42.98,English,,0,0,0,,Into a single executable object module that can be directly loaded and executed on the system
-Dialogue: 0,0:07:33.70,0:07:42.98,English,,0,0,0,,进入单个可执行目标模块后，就可以直接在系统上加载和执行
+Dialogue: 0,0:07:33.70,0:07:42.98,Chinese,,0,0,0,,进入单个可执行目标模块后，就可以直接在系统上加载和执行
 Dialogue: 0,0:07:43.98,0:07:47.34,English,,0,0,0,,So when it does this merging
-Dialogue: 0,0:07:43.98,0:07:47.34,English,,0,0,0,,所以当它合并时
+Dialogue: 0,0:07:43.98,0:07:47.34,Chinese,,0,0,0,,所以当它合并时
 Dialogue: 0,0:07:50.16,0:07:57.04,English,,0,0,0,,It has to figure out where each symbol,each function and each variable is going to be stored
-Dialogue: 0,0:07:50.16,0:07:57.04,English,,0,0,0,,它必须弄清楚每个符号，每个函数和每个变量是要准备存储在哪
+Dialogue: 0,0:07:50.16,0:07:57.04,Chinese,,0,0,0,,它必须弄清楚每个符号，每个函数和每个变量是要准备存储在哪
 Dialogue: 0,0:07:57.92,0:07:59.16,English,,0,0,0,,And this is called relocation
-Dialogue: 0,0:07:57.92,0:07:59.16,English,,0,0,0,,这称为重定位
+Dialogue: 0,0:07:57.92,0:07:59.16,Chinese,,0,0,0,,这称为重定位
 Dialogue: 0,0:07:59.16,0:08:06.78,English,,0,0,0,,Because initially functions are just stored at some offset in their object module
-Dialogue: 0,0:07:59.16,0:08:06.78,English,,0,0,0,,因为最初的函数只是存储在其目标模块中的某个偏移处
+Dialogue: 0,0:07:59.16,0:08:06.78,Chinese,,0,0,0,,因为最初的函数只是存储在其目标模块中的某个偏移处
 Dialogue: 0,0:08:07.36,0:08:13.26,English,,0,0,0,,Right because that the linker doesn't know where those functions are actually going to be eventually a loaded into memory
-Dialogue: 0,0:08:07.36,0:08:13.26,English,,0,0,0,,正确，因为链接器不知道这些函数最终会被真正加载到内存中的哪个地方
+Dialogue: 0,0:08:07.36,0:08:13.26,Chinese,,0,0,0,,正确，因为链接器不知道这些函数最终会被真正加载到内存中的哪个地方
 Dialogue: 0,0:08:14.04,0:08:26.08,English,,0,0,0,,So before relocation the address of a function in the object module is just its offset in the module and similarly for data
-Dialogue: 0,0:08:14.04,0:08:26.08,English,,0,0,0,,所以在重定向前目标模块中的函数地址只是它在模块中的偏移量，对于数据也是如此
+Dialogue: 0,0:08:14.04,0:08:26.08,Chinese,,0,0,0,,所以在重定向前目标模块中的函数地址只是它在模块中的偏移量，对于数据也是如此
 Dialogue: 0,0:08:26.62,0:08:31.38,English,,0,0,0,,During the relocation step the linker decides on
-Dialogue: 0,0:08:26.62,0:08:31.38,English,,0,0,0,,在重定位步骤期间，链接器会决定
+Dialogue: 0,0:08:26.62,0:08:31.38,Chinese,,0,0,0,,在重定位步骤期间，链接器会决定
 Dialogue: 0,0:08:31.56,0:08:38.76,English,,0,0,0,,Where each symbol is going to be ultimately located in memory one at x,when the program executes
-Dialogue: 0,0:08:31.56,0:08:38.76,English,,0,0,0,,当程序执行时，每个符号最终将位于 x 中的存储区中的哪里
+Dialogue: 0,0:08:31.56,0:08:38.76,Chinese,,0,0,0,,当程序执行时，每个符号最终将位于 x 中的存储区中的哪里
 Dialogue: 0,0:08:39.54,0:08:45.48,English,,0,0,0,,And it binds that those absolute memory locations to the symbol
-Dialogue: 0,0:08:39.54,0:08:45.48,English,,0,0,0,,并且它将那些绝对存储器位置绑定到符号
+Dialogue: 0,0:08:39.54,0:08:45.48,Chinese,,0,0,0,,并且它将那些绝对存储器位置绑定到符号
 Dialogue: 0,0:08:45.98,0:08:49.74,English,,0,0,0,,And then it goes and looks at all the references to those symbols
-Dialogue: 0,0:08:45.98,0:08:49.74,English,,0,0,0,,然后它会继续向下执行并查看所有对这些符号的引用
+Dialogue: 0,0:08:45.98,0:08:49.74,Chinese,,0,0,0,,然后它会继续向下执行并查看所有对这些符号的引用
 Dialogue: 0,0:08:50.46,0:08:54.74,English,,0,0,0,,And it updates those references so that they now they point to the correct address
-Dialogue: 0,0:08:50.46,0:08:54.74,English,,0,0,0,,而且它它会更新那些引用，以便它们现在能指向正确的地址
+Dialogue: 0,0:08:50.46,0:08:54.74,Chinese,,0,0,0,,而且它它会更新那些引用，以便它们现在能指向正确的地址
 Dialogue: 0,0:08:55.54,0:08:57.72,English,,0,0,0,,Okay so figure out where stuff is going to go
-Dialogue: 0,0:08:55.54,0:08:57.72,English,,0,0,0,,好的，所以弄清楚原料要去哪里
+Dialogue: 0,0:08:55.54,0:08:57.72,Chinese,,0,0,0,,好的，所以弄清楚原料要去哪里
 Dialogue: 0,0:08:58.88,0:09:03.78,English,,0,0,0,,For each definition figure out where it's going to go and for each reference then update that reference
-Dialogue: 0,0:08:58.88,0:09:03.78,English,,0,0,0,,对于每个定义，找出它要去的位置以及每个引用，然后更新该引用
+Dialogue: 0,0:08:58.88,0:09:03.78,Chinese,,0,0,0,,对于每个定义，找出它要去的位置以及每个引用，然后更新该引用
 Dialogue: 0,0:09:03.78,0:09:06.14,English,,0,0,0,,So it now points to the right spot
-Dialogue: 0,0:09:03.78,0:09:06.14,English,,0,0,0,,所以它现在指向正确的位置
+Dialogue: 0,0:09:03.78,0:09:06.14,Chinese,,0,0,0,,所以它现在指向正确的位置
 Dialogue: 0,0:09:09.90,0:09:14.54,English,,0,0,0,,So let's look at what these...how these steps work in more detail
-Dialogue: 0,0:09:09.90,0:09:14.54,English,,0,0,0,,那么让我们来看看这些......这些步骤如何更详细地运作
+Dialogue: 0,0:09:09.90,0:09:14.54,Chinese,,0,0,0,,那么让我们来看看这些......这些步骤如何更详细地运作
 Dialogue: 0,0:09:14.92,0:09:18.22,English,,0,0,0,,Before that we need to define a few things
-Dialogue: 0,0:09:14.92,0:09:18.22,English,,0,0,0,,在那之前我们需要定义一些东西
+Dialogue: 0,0:09:14.92,0:09:18.22,Chinese,,0,0,0,,在那之前我们需要定义一些东西
 Dialogue: 0,0:09:19.80,0:09:23.34,English,,0,0,0,,So there's three kinds of object modules that I've alluded to
-Dialogue: 0,0:09:19.80,0:09:23.34,English,,0,0,0,,所以我提到了三种目标模块
+Dialogue: 0,0:09:19.80,0:09:23.34,Chinese,,0,0,0,,所以我提到了三种目标模块
 Dialogue: 0,0:09:24.18,0:09:29.72,English,,0,0,0,,There's the .o file which is a relocatable object module this is the output of the assembler
-Dialogue: 0,0:09:24.18,0:09:29.72,English,,0,0,0,,.o 文件是可重定位目标模块，这是汇编器的输出
+Dialogue: 0,0:09:24.18,0:09:29.72,Chinese,,0,0,0,,.o 文件是可重定位目标模块，这是汇编器的输出
 Dialogue: 0,0:09:30.50,0:09:33.40,English,,0,0,0,,And it's not a binary file
-Dialogue: 0,0:09:30.50,0:09:33.40,English,,0,0,0,,它不是一个二进制文件
+Dialogue: 0,0:09:30.50,0:09:33.40,Chinese,,0,0,0,,它不是一个二进制文件
 Dialogue: 0,0:09:34.00,0:09:39.34,English,,0,0,0,,But it's not in any form that can be directly loaded into memory
-Dialogue: 0,0:09:34.00,0:09:39.34,English,,0,0,0,,但它不能以任何形式直接加载到内存中
+Dialogue: 0,0:09:34.00,0:09:39.34,Chinese,,0,0,0,,但它不能以任何形式直接加载到内存中
 Dialogue: 0,0:09:39.34,0:09:43.60,English,,0,0,0,, It needs to be manipulated by the linker before it can be actually used
-Dialogue: 0,0:09:39.34,0:09:43.60,English,,0,0,0,, 在实际使用之前，需要由链接器对其进行操作
+Dialogue: 0,0:09:39.34,0:09:43.60,Chinese,,0,0,0,, 在实际使用之前，需要由链接器对其进行操作
 Dialogue: 0,0:09:44.64,0:09:48.48,English,,0,0,0,,There's the executable object file which is generated by the linker
-Dialogue: 0,0:09:44.64,0:09:48.48,English,,0,0,0,,由链接器生成的可执行目标文件
+Dialogue: 0,0:09:44.64,0:09:48.48,Chinese,,0,0,0,,由链接器生成的可执行目标文件
 Dialogue: 0,0:09:50.18,0:09:51.70,English,,0,0,0,,These is called a.out files
-Dialogue: 0,0:09:50.18,0:09:51.70,English,,0,0,0,,这被称为 a.out 文件
+Dialogue: 0,0:09:50.18,0:09:51.70,Chinese,,0,0,0,,这被称为 a.out 文件
 Dialogue: 0,0:09:51.72,0:09:57.06,English,,0,0,0,,Sometimes historically the very first Linux systems the executable
-Dialogue: 0,0:09:51.72,0:09:57.06,English,,0,0,0,,在历史上第一个Linux操作系统就是可执行的
+Dialogue: 0,0:09:51.72,0:09:57.06,Chinese,,0,0,0,,在历史上第一个Linux操作系统就是可执行的
 Dialogue: 0,0:09:57.06,0:10:04.36,English,,0,0,0,,This sort of the default name that they the developers of Unix used,the default name for their executables was a.out
-Dialogue: 0,0:09:57.06,0:10:04.36,English,,0,0,0,,这是Unix开发人员使用的默认名称，其可执行文件的默认名称是a.out
+Dialogue: 0,0:09:57.06,0:10:04.36,Chinese,,0,0,0,,这是Unix开发人员使用的默认名称，其可执行文件的默认名称是a.out
 Dialogue: 0,0:10:05.72,0:10:10.34,English,,0,0,0,,So that's just sort of a historical reason that it's called a.out
-Dialogue: 0,0:10:05.72,0:10:10.34,English,,0,0,0,,所以这只是一个历史原因所以它被称为a.out
+Dialogue: 0,0:10:05.72,0:10:10.34,Chinese,,0,0,0,,所以这只是一个历史原因所以它被称为a.out
 Dialogue: 0,0:10:10.96,0:10:16.60,English,,0,0,0,,And then there's another type of object file called a shared object file or .so file
-Dialogue: 0,0:10:10.96,0:10:16.60,English,,0,0,0,,然后是另一种称为共享目标文件或.so文件的目标文件
+Dialogue: 0,0:10:10.96,0:10:16.60,Chinese,,0,0,0,,然后是另一种称为共享目标文件或.so文件的目标文件
 Dialogue: 0,0:10:17.12,0:10:24.46,English,,0,0,0,,Which is a modern technique for creating shared libraries
-Dialogue: 0,0:10:17.12,0:10:24.46,English,,0,0,0,,这是一种用于创建共享库的现代技术
+Dialogue: 0,0:10:17.12,0:10:24.46,Chinese,,0,0,0,,这是一种用于创建共享库的现代技术
 Dialogue: 0,0:10:24.62,0:10:27.64,English,,0,0,0,,And we'll look at those,we'll look at those later today
-Dialogue: 0,0:10:24.62,0:10:27.64,English,,0,0,0,,那个我们之后再了解，将在今天晚些时候再学习了解
+Dialogue: 0,0:10:24.62,0:10:27.64,Chinese,,0,0,0,,那个我们之后再了解，将在今天晚些时候再学习了解
 Dialogue: 0,0:10:29.14,0:10:34.50,English,,0,0,0,,Now object modules come in a standard format called ELF format
-Dialogue: 0,0:10:29.14,0:10:34.50,English,,0,0,0,,现在，目标模块采用称为ELF格式的标准格式
+Dialogue: 0,0:10:29.14,0:10:34.50,Chinese,,0,0,0,,现在，目标模块采用称为ELF格式的标准格式
 Dialogue: 0,0:10:35.92,0:10:41.12,English,,0,0,0,,And it's a unified format for .o files for executables and for .so files
-Dialogue: 0,0:10:35.92,0:10:41.12,English,,0,0,0,,它是可执行文件，.so文件，.o文件的统一格式
+Dialogue: 0,0:10:35.92,0:10:41.12,Chinese,,0,0,0,,它是可执行文件，.so文件，.o文件的统一格式
 Dialogue: 0,0:10:41.12,0:10:45.34,English,,0,0,0,,They all use the same format,the same general format
-Dialogue: 0,0:10:41.12,0:10:45.34,English,,0,0,0,,他们都使用一样的格式，一样的通用的格式
+Dialogue: 0,0:10:41.12,0:10:45.34,Chinese,,0,0,0,,他们都使用一样的格式，一样的通用的格式
 Dialogue: 0,0:10:48.26,0:10:52.68,English,,0,0,0,,So this while these ELF binaries are
-Dialogue: 0,0:10:48.26,0:10:52.68,English,,0,0,0,,这就是这些 ELF 二进制文件
+Dialogue: 0,0:10:48.26,0:10:52.68,Chinese,,0,0,0,,这就是这些 ELF 二进制文件
 Dialogue: 0,0:10:53.48,0:10:55.58,English,,0,0,0,,Their binaries they're very structured
-Dialogue: 0,0:10:53.48,0:10:55.58,English,,0,0,0,,他们的二进制文件非常有条理
+Dialogue: 0,0:10:53.48,0:10:55.58,Chinese,,0,0,0,,他们的二进制文件非常有条理
 Dialogue: 0,0:10:56.02,0:10:58.14,English,,0,0,0,,Ok and they're broken up into sections
-Dialogue: 0,0:10:56.02,0:10:58.14,English,,0,0,0,,他们被分成几个部分
+Dialogue: 0,0:10:56.02,0:10:58.14,Chinese,,0,0,0,,他们被分成几个部分
 Dialogue: 0,0:10:58.94,0:11:08.02,English,,0,0,0,,The at the beginning is a header,that defines things like the size of the word the byte ordering
-Dialogue: 0,0:10:58.94,0:11:08.02,English,,0,0,0,,开头是一个头，它定义了（生成该文件系统的）字节顺序和字的大小
+Dialogue: 0,0:10:58.94,0:11:08.02,Chinese,,0,0,0,,开头是一个头，它定义了（生成该文件系统的）字节顺序和字的大小
 Dialogue: 0,0:11:08.46,0:11:12.46,English,,0,0,0,,Whether it's a .o,a .out or a .so
-Dialogue: 0,0:11:08.46,0:11:12.46,English,,0,0,0,,无论是 .o,.out 还是 .so 
+Dialogue: 0,0:11:08.46,0:11:12.46,Chinese,,0,0,0,,无论是 .o,.out 还是 .so 
 Dialogue: 0,0:11:12.90,0:11:19.12,English,,0,0,0,,So it just provides some sort of general information about this binary
-Dialogue: 0,0:11:12.90,0:11:19.12,English,,0,0,0,,它只是提供了关于这个二进制文件的一般信息
+Dialogue: 0,0:11:12.90,0:11:19.12,Chinese,,0,0,0,,它只是提供了关于这个二进制文件的一般信息
 Dialogue: 0,0:11:19.76,0:11:23.88,English,,0,0,0,,And then there's what's a so called segment header table which is
-Dialogue: 0,0:11:19.76,0:11:23.88,English,,0,0,0,,然后就是所谓的节头部表
+Dialogue: 0,0:11:19.76,0:11:23.88,Chinese,,0,0,0,,然后就是所谓的节头部表
 Dialogue: 0,0:11:24.74,0:11:28.10,English,,0,0,0,,It's only defined for the executable object files
-Dialogue: 0,0:11:24.74,0:11:28.10,English,,0,0,0,,它只在可执行目标文件中定义
+Dialogue: 0,0:11:24.74,0:11:28.10,Chinese,,0,0,0,,它只在可执行目标文件中定义
 Dialogue: 0,0:11:28.50,0:11:34.30,English,,0,0,0,,And indicates where all the different segments of the code are going to go in memory
-Dialogue: 0,0:11:28.50,0:11:34.30,English,,0,0,0,,并指出代码的所有不同段在内存中的位置
+Dialogue: 0,0:11:28.50,0:11:34.30,Chinese,,0,0,0,,并指出代码的所有不同段在内存中的位置
 Dialogue: 0,0:11:34.30,0:11:38.87,English,,0,0,0,,So where does your stack go, where do your shared libraries go
-Dialogue: 0,0:11:34.30,0:11:38.87,English,,0,0,0,,那么你的栈在哪里，你的共享库去了哪里
+Dialogue: 0,0:11:34.30,0:11:38.87,Chinese,,0,0,0,,那么你的栈在哪里，你的共享库去了哪里
 Dialogue: 0,0:11:38.87,0:11:42.96,English,,0,0,0,,Where does your that you're initialized and uninitialized data
-Dialogue: 0,0:11:38.87,0:11:42.96,English,,0,0,0,,你初始化数据和未初始化数据的位置在哪里
+Dialogue: 0,0:11:38.87,0:11:42.96,Chinese,,0,0,0,,你初始化数据和未初始化数据的位置在哪里
 Dialogue: 0,0:11:43.74,0:11:45.00,English,,0,0,0,,Where does your code go
-Dialogue: 0,0:11:43.74,0:11:45.00,English,,0,0,0,,你的代码去了哪里
+Dialogue: 0,0:11:43.74,0:11:45.00,Chinese,,0,0,0,,你的代码去了哪里
 Dialogue: 0,0:11:45.00,0:11:51.62,English,,0,0,0,,Right so all these various sections are defined in the segment header table
-Dialogue: 0,0:11:45.00,0:11:51.62,English,,0,0,0,,正确，因此所有这些不同的部分都在段头表中定义
+Dialogue: 0,0:11:45.00,0:11:51.62,Chinese,,0,0,0,,正确，因此所有这些不同的部分都在段头表中定义
 Dialogue: 0,0:11:52.60,0:11:59.60,English,,0,0,0,,And then there's the code itself which is called the .text section for sort of arcane historical reasons
-Dialogue: 0,0:11:52.60,0:11:59.60,English,,0,0,0,,然后是代码本身，出于某种神秘的历史原因它被称为.text部分
+Dialogue: 0,0:11:52.60,0:11:59.60,Chinese,,0,0,0,,然后是代码本身，出于某种神秘的历史原因它被称为.text部分
 Dialogue: 0,0:11:59.78,0:12:02.16,English,,0,0,0,,So .text is always code
-Dialogue: 0,0:11:59.78,0:12:02.16,English,,0,0,0,, .text 一般是代码
+Dialogue: 0,0:11:59.78,0:12:02.16,Chinese,,0,0,0,, .text 一般是代码
 Dialogue: 0,0:12:03.96,0:12:08.26,English,,0,0,0,,And then that's followed by read only data
-Dialogue: 0,0:12:03.96,0:12:08.26,English,,0,0,0,,然后是只读数据
+Dialogue: 0,0:12:03.96,0:12:08.26,Chinese,,0,0,0,,然后是只读数据
 Dialogue: 0,0:12:08.42,0:12:11.14,English,,0,0,0,,Such as the jump tables in switch statements
-Dialogue: 0,0:12:08.42,0:12:11.14,English,,0,0,0,,比如switch语句中的跳转表
+Dialogue: 0,0:12:08.42,0:12:11.14,Chinese,,0,0,0,,比如switch语句中的跳转表
 Dialogue: 0,0:12:12.52,0:12:20.02,English,,0,0,0,,So text and read only the .text and .rodata have the property that they're both read-only you don't write to them
-Dialogue: 0,0:12:12.52,0:12:20.02,English,,0,0,0,,因此，文本.text和只读.rodata具有以下属性：它们都是只读的，你不会写入它们
+Dialogue: 0,0:12:12.52,0:12:20.02,Chinese,,0,0,0,,因此，文本.text和只读.rodata具有以下属性：它们都是只读的，你不会写入它们
 Dialogue: 0,0:12:21.90,0:12:24.78,English,,0,0,0,,Then that's followed by the .data section
-Dialogue: 0,0:12:21.90,0:12:24.78,English,,0,0,0,,然后是.data部分
+Dialogue: 0,0:12:21.90,0:12:24.78,Chinese,,0,0,0,,然后是.data部分
 Dialogue: 0,0:12:24.96,0:12:29.98,English,,0,0,0,,Which is contains space for all of your initialized global variables
-Dialogue: 0,0:12:24.96,0:12:29.98,English,,0,0,0,,它包含了所有初始化全局变量的空间
+Dialogue: 0,0:12:24.96,0:12:29.98,Chinese,,0,0,0,,它包含了所有初始化全局变量的空间
 Dialogue: 0,0:12:31.06,0:12:33.44,English,,0,0,0,,And then there's a section called .bss
-Dialogue: 0,0:12:31.06,0:12:33.44,English,,0,0,0,,接下来是一个名为.bss的部分
+Dialogue: 0,0:12:31.06,0:12:33.44,Chinese,,0,0,0,,接下来是一个名为.bss的部分
 Dialogue: 0,0:12:33.56,0:12:41.36,English,,0,0,0,,Which defines the uninitialized global variables
-Dialogue: 0,0:12:33.56,0:12:41.36,English,,0,0,0,,它定义了未初始化的全局变量
+Dialogue: 0,0:12:33.56,0:12:41.36,Chinese,,0,0,0,,它定义了未初始化的全局变量
 Dialogue: 0,0:12:42.78,0:12:46.82,English,,0,0,0,,Now this doesn't actually take up any space because they're uninitialized droids
-Dialogue: 0,0:12:42.78,0:12:46.82,English,,0,0,0,,这个节实际上并没有占用任何实际的空间，因为它们仅仅是未初始化的占位符
+Dialogue: 0,0:12:42.78,0:12:46.82,Chinese,,0,0,0,,这个节实际上并没有占用任何实际的空间，因为它们仅仅是未初始化的占位符
 Dialogue: 0,0:12:48.10,0:12:50.76,English,,0,0,0,,Ok but there are entries in the symbol table for them
-Dialogue: 0,0:12:48.10,0:12:50.76,English,,0,0,0,,好的，但符号表中会有条目
+Dialogue: 0,0:12:48.10,0:12:50.76,Chinese,,0,0,0,,好的，但符号表中会有条目
 Dialogue: 0,0:12:51.34,0:12:57.30,English,,0,0,0,,And in it at when this program gets loaded these variables are going to need
-Dialogue: 0,0:12:51.34,0:12:57.30,English,,0,0,0,,在这个程序加载时会需要这些变量
+Dialogue: 0,0:12:51.34,0:12:57.30,Chinese,,0,0,0,,在这个程序加载时会需要这些变量
 Dialogue: 0,0:12:58.54,0:13:00.86,English,,0,0,0,,They're actually going to have to have space allocated for them
-Dialogue: 0,0:12:58.54,0:13:00.86,English,,0,0,0,,在这个时候就必须为他们分配空间
+Dialogue: 0,0:12:58.54,0:13:00.86,Chinese,,0,0,0,,在这个时候就必须为他们分配空间
 Dialogue: 0,0:13:01.70,0:13:08.26,English,,0,0,0,,.bss is another one of those sort of arcane names,that cope goes all the way back to the 60s
-Dialogue: 0,0:13:01.70,0:13:08.26,English,,0,0,0,,.bss 是另一种神秘的名字，应对可以追溯到60年代
+Dialogue: 0,0:13:01.70,0:13:08.26,Chinese,,0,0,0,,.bss 是另一种神秘的名字，应对可以追溯到60年代
 Dialogue: 0,0:13:08.78,0:13:11.94,English,,0,0,0,,For there was IBM instruction called the block started by symbol
-Dialogue: 0,0:13:08.78,0:13:11.94,English,,0,0,0,,那时候IBM指令将其称为块符号
+Dialogue: 0,0:13:08.78,0:13:11.94,Chinese,,0,0,0,,那时候IBM指令将其称为块符号
 Dialogue: 0,0:13:12.42,0:13:16.22,English,,0,0,0,,I think a better way to remember what it means is better save space
-Dialogue: 0,0:13:12.42,0:13:16.22,English,,0,0,0,,我认为理解它的意义最好的方式是 better save space (BSS)的缩写
+Dialogue: 0,0:13:12.42,0:13:16.22,Chinese,,0,0,0,,我认为理解它的意义最好的方式是 better save space (BSS)的缩写
 Dialogue: 0,0:13:16.66,0:13:21.66,English,,0,0,0,,Ok so you can,if you have a separate section for the uninitialized variable since uninitialized
-Dialogue: 0,0:13:16.66,0:13:21.66,English,,0,0,0,,好的，如果在未初始化过程开始时有一个单独的节用于未初始化的变量，你可以这样理解
+Dialogue: 0,0:13:16.66,0:13:21.66,Chinese,,0,0,0,,好的，如果在未初始化过程开始时有一个单独的节用于未初始化的变量，你可以这样理解
 Dialogue: 0,0:13:22.16,0:13:29.46,English,,0,0,0,,You don't have to...they don't have to consume any room in the .o file
-Dialogue: 0,0:13:22.16,0:13:29.46,English,,0,0,0,,他们不必占用.o文件中的任何空间
+Dialogue: 0,0:13:22.16,0:13:29.46,Chinese,,0,0,0,,他们不必占用.o文件中的任何空间
 Dialogue: 0,0:13:32.78,0:13:35.54,English,,0,0,0,,Ok there's also a section for the symbol table
-Dialogue: 0,0:13:32.78,0:13:35.54,English,,0,0,0,,好的接下来还有一个部分是针对符号表的
+Dialogue: 0,0:13:32.78,0:13:35.54,Chinese,,0,0,0,,好的接下来还有一个部分是针对符号表的
 Dialogue: 0,0:13:37.42,0:13:44.56,English,,0,0,0,,This contained like I said it's an array of structs for procedures global variables
-Dialogue: 0,0:13:37.42,0:13:44.56,English,,0,0,0,,就像我之前说的那样它包含程序全局变量的结构数组
+Dialogue: 0,0:13:37.42,0:13:44.56,Chinese,,0,0,0,,就像我之前说的那样它包含程序全局变量的结构数组
 Dialogue: 0,0:13:47.72,0:13:50.80,English,,0,0,0,,And anything defined with the static attribute
-Dialogue: 0,0:13:47.72,0:13:50.80,English,,0,0,0,,以及我们使用static属性定义的任何内容
+Dialogue: 0,0:13:47.72,0:13:50.80,Chinese,,0,0,0,,以及我们使用static属性定义的任何内容
 Dialogue: 0,0:13:53.02,0:13:57.68,English,,0,0,0,,And each one of these symbols gets an entry in the symbol table
-Dialogue: 0,0:13:53.02,0:13:57.68,English,,0,0,0,,并且这些符号中的每一个都在符号表中获得了一个条目
+Dialogue: 0,0:13:53.02,0:13:57.68,Chinese,,0,0,0,,并且这些符号中的每一个都在符号表中获得了一个条目
 Dialogue: 0,0:13:59.18,0:14:04.56,English,,0,0,0,,And then there's two sections called them that contain relocation info so this is the notes
-Dialogue: 0,0:13:59.18,0:14:04.56,English,,0,0,0,,然后有两个部分称为包含重定位信息的部分，称为记录
+Dialogue: 0,0:13:59.18,0:14:04.56,Chinese,,0,0,0,,然后有两个部分称为包含重定位信息的部分，称为记录
 Dialogue: 0,0:14:06.62,0:14:12.04,English,,0,0,0,,When that linker went and identified all the references to symbols it put a little note to see
-Dialogue: 0,0:14:06.62,0:14:12.04,English,,0,0,0,,当链接器去识别所有对符号的引用时，它就会记下一些记录
+Dialogue: 0,0:14:06.62,0:14:12.04,Chinese,,0,0,0,,当链接器去识别所有对符号的引用时，它就会记下一些记录
 Dialogue: 0,0:14:12.04,0:14:16.00,English,,0,0,0,,I'm going to have to remember to fix this the reference to this symbol up
-Dialogue: 0,0:14:12.04,0:14:16.00,English,,0,0,0,,我不得不记住去安排对这个符号的引用
+Dialogue: 0,0:14:12.04,0:14:16.00,Chinese,,0,0,0,,我不得不记住去安排对这个符号的引用
 Dialogue: 0,0:14:16.44,0:14:21.16,English,,0,0,0,,When I actually create the executable
-Dialogue: 0,0:14:16.44,0:14:21.16,English,,0,0,0,,在我实际创建可执行文件时
+Dialogue: 0,0:14:16.44,0:14:21.16,Chinese,,0,0,0,,在我实际创建可执行文件时
 Dialogue: 0,0:14:21.84,0:14:25.26,English,,0,0,0,,So a relocation entry is just like that the linker
-Dialogue: 0,0:14:21.84,0:14:25.26,English,,0,0,0,,所以重定向条目就像链接器一样
+Dialogue: 0,0:14:21.84,0:14:25.26,Chinese,,0,0,0,,所以重定向条目就像链接器一样
 Dialogue: 0,0:14:25.80,0:14:31.74,English,,0,0,0,,That it's a note that the assembler makes to the linker to say hey you're going to have to fix up this this reference
-Dialogue: 0,0:14:25.80,0:14:31.74,English,,0,0,0,,这是一个记录，汇编程序让链接器说“嘿”，你将不得不安排这个引用
+Dialogue: 0,0:14:25.80,0:14:31.74,Chinese,,0,0,0,,这是一个记录，汇编程序让链接器说“嘿”，你将不得不安排这个引用
 Dialogue: 0,0:14:31.74,0:14:38.16,English,,0,0,0,,Because I don't know I don't know where this symbol is actually going to be stored in memory when it's loaded
-Dialogue: 0,0:14:31.74,0:14:38.16,English,,0,0,0,,因为我不知道这个符号在加载时实际存储在内存中的位置
+Dialogue: 0,0:14:31.74,0:14:38.16,Chinese,,0,0,0,,因为我不知道这个符号在加载时实际存储在内存中的位置
 Dialogue: 0,0:14:41.56,0:14:43.72,English,,0,0,0,,Okay and then there's a debug section that contains
-Dialogue: 0,0:14:41.56,0:14:43.72,English,,0,0,0,,好的，接下来是调试部分
+Dialogue: 0,0:14:41.56,0:14:43.72,Chinese,,0,0,0,,好的，接下来是调试部分
 Dialogue: 0,0:14:45.32,0:14:54.22,English,,0,0,0,,Information that relates line numbers to in the source code to line numbers in the machine code
-Dialogue: 0,0:14:45.32,0:14:54.22,English,,0,0,0,,它包含了将源代码中的行号与机器代码中的行号相关联的信息
+Dialogue: 0,0:14:45.32,0:14:54.22,Chinese,,0,0,0,,它包含了将源代码中的行号与机器代码中的行号相关联的信息
 Dialogue: 0,0:14:55.10,0:14:59.40,English,,0,0,0,,Okay and so this is called .debug and this is what you get when you compile with -g
-Dialogue: 0,0:14:55.10,0:14:59.40,English,,0,0,0,,好的，所以这叫做 .debug，这是你用-g编译时得到的
+Dialogue: 0,0:14:55.10,0:14:59.40,Chinese,,0,0,0,,好的，所以这叫做 .debug，这是你用-g编译时得到的
 Dialogue: 0,0:14:59.98,0:15:06.04,English,,0,0,0,,And then there's a header table that tells you where all these different sections start
-Dialogue: 0,0:14:59.98,0:15:06.04,English,,0,0,0,,然后有一个节头表，告诉你所有这些不同部分的起始位置
+Dialogue: 0,0:14:59.98,0:15:06.04,Chinese,,0,0,0,,然后有一个节头表，告诉你所有这些不同部分的起始位置
 Dialogue: 0,0:15:08.20,0:15:11.34,English,,0,0,0,,Now to a linker there's three different kinds of symbols
-Dialogue: 0,0:15:08.20,0:15:11.34,English,,0,0,0,,现在我们说链接器有三种不同的符号
+Dialogue: 0,0:15:08.20,0:15:11.34,Chinese,,0,0,0,,现在我们说链接器有三种不同的符号
 Dialogue: 0,0:15:12.58,0:15:17.00,English,,0,0,0,,Global symbols are defined in some module m
-Dialogue: 0,0:15:12.58,0:15:17.00,English,,0,0,0,,全局符号在一些模块 m 中定义
+Dialogue: 0,0:15:12.58,0:15:17.00,Chinese,,0,0,0,,全局符号在一些模块 m 中定义
 Dialogue: 0,0:15:17.50,0:15:20.82,English,,0,0,0,,And they can be used by other modules
-Dialogue: 0,0:15:17.50,0:15:20.82,English,,0,0,0,,它们可以被其他模块使用
+Dialogue: 0,0:15:17.50,0:15:20.82,Chinese,,0,0,0,,它们可以被其他模块使用
 Dialogue: 0,0:15:21.08,0:15:27.14,English,,0,0,0,,Right so I mean did you notice when we...if we have a program that consists of multiple modules
-Dialogue: 0,0:15:21.08,0:15:27.14,English,,0,0,0,,是的，所以我的意思是你注意到我们......如果我们有一个由多个模块组成的程序
+Dialogue: 0,0:15:21.08,0:15:27.14,Chinese,,0,0,0,,是的，所以我的意思是你注意到我们......如果我们有一个由多个模块组成的程序
 Dialogue: 0,0:15:27.56,0:15:30.66,English,,0,0,0,,And we compile each one of those modules into a .o file
-Dialogue: 0,0:15:27.56,0:15:30.66,English,,0,0,0,,然后我们将每个模块编译成一个 .o 文件
+Dialogue: 0,0:15:27.56,0:15:30.66,Chinese,,0,0,0,,然后我们将每个模块编译成一个 .o 文件
 Dialogue: 0,0:15:32.18,0:15:37.42,English,,0,0,0,,Will be calling functions that aren't defined,that are defined by other modules right
-Dialogue: 0,0:15:32.18,0:15:37.42,English,,0,0,0,,将调用由其他模块正确定义的未定义的函数
+Dialogue: 0,0:15:32.18,0:15:37.42,Chinese,,0,0,0,,将调用由其他模块正确定义的未定义的函数
 Dialogue: 0,0:15:38.94,0:15:44.64,English,,0,0,0,,Okay so those,but there's no error though that the compiler doesn't throw an error
-Dialogue: 0,0:15:38.94,0:15:44.64,English,,0,0,0,,好吧那些，但是虽然编译器没有抛出错误
+Dialogue: 0,0:15:38.94,0:15:44.64,Chinese,,0,0,0,,好吧那些，但是虽然编译器没有抛出错误
 Dialogue: 0,0:15:44.64,0:15:48.44,English,,0,0,0,,Because it's assuming that those are defined in other modules and
-Dialogue: 0,0:15:44.64,0:15:48.44,English,,0,0,0,,因为它假设那些是在其他模块中定义的
+Dialogue: 0,0:15:44.64,0:15:48.44,Chinese,,0,0,0,,因为它假设那些是在其他模块中定义的
 Dialogue: 0,0:15:49.10,0:15:53.32,English,,0,0,0,,It assumes the linker will be able to find them in and determine the address
-Dialogue: 0,0:15:49.10,0:15:53.32,English,,0,0,0,,它假定链接器能够找到它们并确定地址
+Dialogue: 0,0:15:49.10,0:15:53.32,Chinese,,0,0,0,,它假定链接器能够找到它们并确定地址
 Dialogue: 0,0:15:54.40,0:16:04.06,English,,0,0,0,,So anything that's defined with that, any global,either global variable or function name
-Dialogue: 0,0:15:54.40,0:16:04.06,English,,0,0,0,,所以用任何全局变量或函数名定义的任何东西
+Dialogue: 0,0:15:54.40,0:16:04.06,Chinese,,0,0,0,,所以用任何全局变量或函数名定义的任何东西
 Dialogue: 0,0:16:04.46,0:16:08.82,English,,0,0,0,,That's defined without the static attribute is a global symbol
-Dialogue: 0,0:16:04.46,0:16:08.82,English,,0,0,0,,只要没有静态属性的定义那就是一个全局符号
+Dialogue: 0,0:16:04.46,0:16:08.82,Chinese,,0,0,0,,只要没有静态属性的定义那就是一个全局符号
 Dialogue: 0,0:16:10.92,0:16:14.92,English,,0,0,0,,Okay now and then external symbols are kind of the flip side of that
-Dialogue: 0,0:16:10.92,0:16:14.92,English,,0,0,0,,好的，然后外部符号就是其中的一种
+Dialogue: 0,0:16:10.92,0:16:14.92,Chinese,,0,0,0,,好的，然后外部符号就是其中的一种
 Dialogue: 0,0:16:15.08,0:16:19.12,English,,0,0,0,,External symbols are symbols that are referenced by some module
-Dialogue: 0,0:16:15.08,0:16:19.12,English,,0,0,0,,外部符号是某些模块引用的符号
+Dialogue: 0,0:16:15.08,0:16:19.12,Chinese,,0,0,0,,外部符号是某些模块引用的符号
 Dialogue: 0,0:16:19.44,0:16:21.54,English,,0,0,0,,But defined in some other module
-Dialogue: 0,0:16:19.44,0:16:21.54,English,,0,0,0,,但在其他一些模块中定义
+Dialogue: 0,0:16:19.44,0:16:21.54,Chinese,,0,0,0,,但在其他一些模块中定义
 Dialogue: 0,0:16:21.78,0:16:26.64,English,,0,0,0,,Okay so in a little running example
-Dialogue: 0,0:16:21.78,0:16:26.64,English,,0,0,0,,好吧，在这个小运行示例中
+Dialogue: 0,0:16:21.78,0:16:26.64,Chinese,,0,0,0,,好吧，在这个小运行示例中
 Dialogue: 0,0:16:27.08,0:16:32.66,English,,0,0,0,,When main.c code called the function some it was referencing an external symbol
-Dialogue: 0,0:16:27.08,0:16:32.66,English,,0,0,0,,当 main.c 代码调用函数时，它就会引用了一个外部符号
+Dialogue: 0,0:16:27.08,0:16:32.66,Chinese,,0,0,0,,当 main.c 代码调用函数时，它就会引用了一个外部符号
 Dialogue: 0,0:16:34.20,0:16:42.58,English,,0,0,0,,Okay and then there's local symbols and these are symbols that are defined and referenced within a module
-Dialogue: 0,0:16:34.20,0:16:42.58,English,,0,0,0,,好的，接下来我们介绍局部符号，这是在模块中定义和引用的符号
+Dialogue: 0,0:16:34.20,0:16:42.58,Chinese,,0,0,0,,好的，接下来我们介绍局部符号，这是在模块中定义和引用的符号
 Dialogue: 0,0:16:43.48,0:16:48.12,English,,0,0,0,,Okay and those you create that,this is not this is different from local variables
-Dialogue: 0,0:16:43.48,0:16:48.12,English,,0,0,0,,好的，那些是你创建的（程序里面的变量），它不同于局部变量
+Dialogue: 0,0:16:43.48,0:16:48.12,Chinese,,0,0,0,,好的，那些是你创建的（程序里面的变量），它不同于局部变量
 Dialogue: 0,0:16:48.12,0:16:56.52,English,,0,0,0,,Okay the linker you know local C variables are managed by the compiler on the stack
-Dialogue: 0,0:16:48.12,0:16:56.52,English,,0,0,0,,好的，你知道的，局部 C 程序变量的链接器是由堆栈上的编译器管理的
+Dialogue: 0,0:16:48.12,0:16:56.52,Chinese,,0,0,0,,好的，你知道的，局部 C 程序变量的链接器是由堆栈上的编译器管理的
 Dialogue: 0,0:16:57.08,0:17:01.38,English,,0,0,0,,Linker has no idea about local C variables
-Dialogue: 0,0:16:57.08,0:17:01.38,English,,0,0,0,,链接器它是不知道局部 C 程序的变量的
+Dialogue: 0,0:16:57.08,0:17:01.38,Chinese,,0,0,0,,链接器它是不知道局部 C 程序的变量的
 Dialogue: 0,0:17:01.90,0:17:04.32,English,,0,0,0,,Okay in this context when we talk about a local symbol
-Dialogue: 0,0:17:01.90,0:17:04.32,English,,0,0,0,,好的，在这种情况下当我们谈到一个局部符号
+Dialogue: 0,0:17:01.90,0:17:04.32,Chinese,,0,0,0,,好的，在这种情况下当我们谈到一个局部符号
 Dialogue: 0,0:17:04.92,0:17:12.66,English,,0,0,0,,We're talking about is either, is a global variable or function declared with the static attribute
-Dialogue: 0,0:17:04.92,0:17:12.66,English,,0,0,0,,实际上我们讨论的是，一个全局变量或用 static 属性声明的函数
+Dialogue: 0,0:17:04.92,0:17:12.66,Chinese,,0,0,0,,实际上我们讨论的是，一个全局变量或用 static 属性声明的函数
 Dialogue: 0,0:17:14.94,0:17:17.26,English,,0,0,0,,Whose that can only be referenced from within that module
-Dialogue: 0,0:17:14.94,0:17:17.26,English,,0,0,0,,那玩意只能从该模块中引用它
+Dialogue: 0,0:17:14.94,0:17:17.26,Chinese,,0,0,0,,那玩意只能从该模块中引用它
 Dialogue: 0,0:17:17.26,0:17:24.02,English,,0,0,0,,So we say that the scope of the a function or global variable defined with the static
-Dialogue: 0,0:17:17.26,0:17:24.02,English,,0,0,0,,所以我们说用 static 属性定义的函数或全局变量
+Dialogue: 0,0:17:17.26,0:17:24.02,Chinese,,0,0,0,,所以我们说用 static 属性定义的函数或全局变量
 Dialogue: 0,0:17:24.52,0:17:27.86,English,,0,0,0,,Attribute is limited to the module that it was defined in
-Dialogue: 0,0:17:24.52,0:17:27.86,English,,0,0,0,,其范围仅限于其定义的模块
+Dialogue: 0,0:17:24.52,0:17:27.86,Chinese,,0,0,0,,其范围仅限于其定义的模块
 Dialogue: 0,0:17:30.06,0:17:33.78,English,,0,0,0,,Okay so this is in C, this is how we do abstraction
-Dialogue: 0,0:17:30.06,0:17:33.78,English,,0,0,0,,好的，这就是在 C 语言里 ，这就是我们怎么进行抽象
+Dialogue: 0,0:17:30.06,0:17:33.78,Chinese,,0,0,0,,好的，这就是在 C 语言里 ，这就是我们怎么进行抽象
 Dialogue: 0,0:17:34.90,0:17:38.24,English,,0,0,0,,And this is how we can create sort of private functions that
-Dialogue: 0,0:17:34.90,0:17:38.24,English,,0,0,0,,以及这就是我们如何创建私有函数
+Dialogue: 0,0:17:34.90,0:17:38.24,Chinese,,0,0,0,,以及这就是我们如何创建私有函数
 Dialogue: 0,0:17:39.36,0:17:44.38,English,,0,0,0,,And private functions that can't be called from outside that module
-Dialogue: 0,0:17:39.36,0:17:44.38,English,,0,0,0,,并且是无法从该模块外部调用的私有函数
+Dialogue: 0,0:17:39.36,0:17:44.38,Chinese,,0,0,0,,并且是无法从该模块外部调用的私有函数
 Dialogue: 0,0:17:45.82,0:17:53.16,English,,0,0,0,,Okay so for instance if we want to make a library in C of functions, we want to make a collection of functions that
-Dialogue: 0,0:17:45.82,0:17:53.16,English,,0,0,0,,好的，例如，如果我们想在函数 C 中创建一个库，我们想要创建一个函数集合
+Dialogue: 0,0:17:45.82,0:17:53.16,Chinese,,0,0,0,,好的，例如，如果我们想在函数 C 中创建一个库，我们想要创建一个函数集合
 Dialogue: 0,0:17:53.61,0:17:57.94,English,,0,0,0,,Other programs can then call it link into their program and call
-Dialogue: 0,0:17:53.61,0:17:57.94,English,,0,0,0,,其他程序可以将其称为链接到他们程序和调用
+Dialogue: 0,0:17:53.61,0:17:57.94,Chinese,,0,0,0,,其他程序可以将其称为链接到他们程序和调用
 Dialogue: 0,0:17:58.86,0:18:07.52,English,,0,0,0,,The functions that we want to make visible to other programs are defined without the static attribute
-Dialogue: 0,0:17:58.86,0:18:07.52,English,,0,0,0,,我们希望对其他程序可见的函数是在没有加上 static 属性定义的
+Dialogue: 0,0:17:58.86,0:18:07.52,Chinese,,0,0,0,,我们希望对其他程序可见的函数是在没有加上 static 属性定义的
 Dialogue: 0,0:18:08.38,0:18:12.10,English,,0,0,0,,And the functions that we want to have private and just be internal
-Dialogue: 0,0:18:08.38,0:18:12.10,English,,0,0,0,,我们希望只是对于内部而言的
+Dialogue: 0,0:18:08.38,0:18:12.10,Chinese,,0,0,0,,我们希望只是对于内部而言的
 Dialogue: 0,0:18:12.76,0:18:15.36,English,,0,0,0,,We declare what the static attribute okay
-Dialogue: 0,0:18:12.76,0:18:15.36,English,,0,0,0,,我们声明 static 属性
+Dialogue: 0,0:18:12.76,0:18:15.36,Chinese,,0,0,0,,我们声明 static 属性
 Dialogue: 0,0:18:16.00,0:18:20.50,English,,0,0,0,,And that way we get abstraction and we get hiding information hiding
-Dialogue: 0,0:18:16.00,0:18:20.50,English,,0,0,0,,这样我们就可以抽象，并将我们希望隐藏的信息隐藏
+Dialogue: 0,0:18:16.00,0:18:20.50,Chinese,,0,0,0,,这样我们就可以抽象，并将我们希望隐藏的信息隐藏
 Dialogue: 0,0:18:20.98,0:18:26.86,English,,0,0,0,,And we're only exposing data and functions that we want to expose
-Dialogue: 0,0:18:20.98,0:18:26.86,English,,0,0,0,,我们只展示我们想要公开的数据和功能
+Dialogue: 0,0:18:20.98,0:18:26.86,Chinese,,0,0,0,,我们只展示我们想要公开的数据和功能
 Dialogue: 0,0:18:29.60,0:18:33.36,English,,0,0,0,,All right so let's look in detail how the symbol resolution step works
-Dialogue: 0,0:18:29.60,0:18:33.36,English,,0,0,0,,好的，接下来让我们详细了解符号解析步骤的工作原理
+Dialogue: 0,0:18:29.60,0:18:33.36,Chinese,,0,0,0,,好的，接下来让我们详细了解符号解析步骤的工作原理
 Dialogue: 0,0:18:34.02,0:18:38.36,English,,0,0,0,,We call a example program
-Dialogue: 0,0:18:34.02,0:18:38.36,English,,0,0,0,,我们来拜访一下这个例子程序
+Dialogue: 0,0:18:34.02,0:18:38.36,Chinese,,0,0,0,,我们来拜访一下这个例子程序
 Dialogue: 0,0:18:41.26,0:18:44.40,English,,0,0,0,,So here we're referencing a global called array
-Dialogue: 0,0:18:41.26,0:18:44.40,English,,0,0,0,,这里我们引用了一个全局调用数组
+Dialogue: 0,0:18:41.26,0:18:44.40,Chinese,,0,0,0,,这里我们引用了一个全局调用数组
 Dialogue: 0,0:18:45.94,0:18:50.26,English,,0,0,0,,That's defined within main.c
-Dialogue: 0,0:18:45.94,0:18:50.26,English,,0,0,0,,这个在 main.c 中定义
+Dialogue: 0,0:18:45.94,0:18:50.26,Chinese,,0,0,0,,这个在 main.c 中定义
 Dialogue: 0,0:18:54.20,0:18:56.60,English,,0,0,0,,Here we're defining main
-Dialogue: 0,0:18:54.20,0:18:56.60,English,,0,0,0,,在这里，我们定义了 main 函数
+Dialogue: 0,0:18:54.20,0:18:56.60,Chinese,,0,0,0,,在这里，我们定义了 main 函数
 Dialogue: 0,0:18:57.78,0:18:59.36,English,,0,0,0,,A global called main
-Dialogue: 0,0:18:57.78,0:18:59.36,English,,0,0,0,,一个全局调用 main 函数
+Dialogue: 0,0:18:57.78,0:18:59.36,Chinese,,0,0,0,,一个全局调用 main 函数
 Dialogue: 0,0:19:04.28,0:19:06.46,English,,0,0,0,,Here we're referencing a global called sum
-Dialogue: 0,0:19:04.28,0:19:06.46,English,,0,0,0,,在这里，我们引用一个全局调用 sum 函数
+Dialogue: 0,0:19:04.28,0:19:06.46,Chinese,,0,0,0,,在这里，我们引用一个全局调用 sum 函数
 Dialogue: 0,0:19:06.78,0:19:08.90,English,,0,0,0,,That's defined in sum.c
-Dialogue: 0,0:19:06.78,0:19:08.90,English,,0,0,0,,它定义在 sum.c 中间
+Dialogue: 0,0:19:06.78,0:19:08.90,Chinese,,0,0,0,,它定义在 sum.c 中间
 Dialogue: 0,0:19:11.10,0:19:17.34,English,,0,0,0,,And val is a local C variable on the stack and linker knows nothing about that okay
-Dialogue: 0,0:19:11.10,0:19:17.34,English,,0,0,0,,val是堆栈上的局部 C 变量，链接器实际上对其没有任何了解
+Dialogue: 0,0:19:11.10,0:19:17.34,Chinese,,0,0,0,,val是堆栈上的局部 C 变量，链接器实际上对其没有任何了解
 Dialogue: 0,0:19:20.00,0:19:23.58,English,,0,0,0,,Now loads i, s which are also local variables
-Dialogue: 0,0:19:20.00,0:19:23.58,English,,0,0,0,,现在加载i，s, 当然这两者也是局部变量
+Dialogue: 0,0:19:20.00,0:19:23.58,Chinese,,0,0,0,,现在加载i，s, 当然这两者也是局部变量
 Dialogue: 0,0:19:25.76,0:19:36.88,English,,0,0,0,,Now let's make sure that we understand the difference between local static C variables versus local non static C variables so
-Dialogue: 0,0:19:25.76,0:19:36.88,English,,0,0,0,,现在让我们确保我们理解了局部 static C 变量与本地非 static C变量之间的区别
+Dialogue: 0,0:19:25.76,0:19:36.88,Chinese,,0,0,0,,现在让我们确保我们理解了局部 static C 变量与本地非 static C变量之间的区别
 Dialogue: 0,0:19:39.74,0:19:44.12,English,,0,0,0,,Here we're defining a local static variable called int
-Dialogue: 0,0:19:39.74,0:19:44.12,English,,0,0,0,,这里我们定义一个类型为 int 的局部静态变量
+Dialogue: 0,0:19:39.74,0:19:44.12,Chinese,,0,0,0,,这里我们定义一个类型为 int 的局部静态变量
 Dialogue: 0,0:19:45.16,0:19:46.84,English,,0,0,0,,Within this function f
-Dialogue: 0,0:19:45.16,0:19:46.84,English,,0,0,0,,在这个函数 f 中
+Dialogue: 0,0:19:45.16,0:19:46.84,Chinese,,0,0,0,,在这个函数 f 中
 Dialogue: 0,0:19:48.46,0:19:53.40,English,,0,0,0,,Now because it's local, its scope is limited to this function
-Dialogue: 0,0:19:48.46,0:19:53.40,English,,0,0,0,,现在因为它是的局部，它的范围仅限于此功能
+Dialogue: 0,0:19:48.46,0:19:53.40,Chinese,,0,0,0,,现在因为它是的局部，它的范围仅限于此功能
 Dialogue: 0,0:19:53.40,0:19:58.88,English,,0,0,0,,So this variable x can only be referenced within function f
-Dialogue: 0,0:19:53.40,0:19:58.88,English,,0,0,0,,所以这个变量 x 只能在函数 f 中引用
+Dialogue: 0,0:19:53.40,0:19:58.88,Chinese,,0,0,0,,所以这个变量 x 只能在函数 f 中引用
 Dialogue: 0,0:20:01.06,0:20:07.10,English,,0,0,0,,And similarly for this definition of x in function g
-Dialogue: 0,0:20:01.06,0:20:07.10,English,,0,0,0,,类似于函数 g 中 x 的这个定义
+Dialogue: 0,0:20:01.06,0:20:07.10,Chinese,,0,0,0,,类似于函数 g 中 x 的这个定义
 Dialogue: 0,0:20:07.98,0:20:11.08,English,,0,0,0,,Can only be referenced by function g
-Dialogue: 0,0:20:07.98,0:20:11.08,English,,0,0,0,,只能被函数 g 引用
+Dialogue: 0,0:20:07.98,0:20:11.08,Chinese,,0,0,0,,只能被函数 g 引用
 Dialogue: 0,0:20:11.58,0:20:17.08,English,,0,0,0,,Now what's ,but because it's declared with the static attribute it's not stored on the stack
-Dialogue: 0,0:20:11.58,0:20:17.08,English,,0,0,0,,它是什么样的，但因为它是用静态属性声明的，所以它不存储在堆栈中
+Dialogue: 0,0:20:11.58,0:20:17.08,Chinese,,0,0,0,,它是什么样的，但因为它是用静态属性声明的，所以它不存储在堆栈中
 Dialogue: 0,0:20:17.78,0:20:22.18,English,,0,0,0,,It's actually stored in .data just like a global would be
-Dialogue: 0,0:20:17.78,0:20:22.18,English,,0,0,0,,它实际上存储在 .data 文件中，就像全局变量一样
+Dialogue: 0,0:20:17.78,0:20:22.18,Chinese,,0,0,0,,它实际上存储在 .data 文件中，就像全局变量一样
 Dialogue: 0,0:20:22.36,0:20:29.20,English,,0,0,0,,So it's like a global in the sense that it's actually stored in .data rather than the stack
-Dialogue: 0,0:20:22.36,0:20:29.20,English,,0,0,0,,所以它就像一个实际上存储在.data而不是堆栈中的全局变量
+Dialogue: 0,0:20:22.36,0:20:29.20,Chinese,,0,0,0,,所以它就像一个实际上存储在.data而不是堆栈中的全局变量
 Dialogue: 0,0:20:29.86,0:20:35.48,English,,0,0,0,,But it's like a local C variable in the sense that its scope is limited just to the function that it's defined in
-Dialogue: 0,0:20:29.86,0:20:35.48,English,,0,0,0,,但它就像一个局部 C 程序变量，因为它的范围仅限于它所定义的函数
+Dialogue: 0,0:20:29.86,0:20:35.48,Chinese,,0,0,0,,但它就像一个局部 C 程序变量，因为它的范围仅限于它所定义的函数
 Dialogue: 0,0:20:36.48,0:20:43.48,English,,0,0,0,,Okay so what the compiler will do it'll allocate space for each definition of x
-Dialogue: 0,0:20:36.48,0:20:43.48,English,,0,0,0,,好的，那么编译器会做什么呢，它将为每个 x 的定义分配空间
+Dialogue: 0,0:20:36.48,0:20:43.48,Chinese,,0,0,0,,好的，那么编译器会做什么呢，它将为每个 x 的定义分配空间
 Dialogue: 0,0:20:43.50,0:20:47.28,English,,0,0,0,,So this and it'll give it some name to disambiguate it
-Dialogue: 0,0:20:43.50,0:20:47.28,English,,0,0,0,,所以这样的话，它会给它赋予一些名称来消除它的歧义
+Dialogue: 0,0:20:43.50,0:20:47.28,Chinese,,0,0,0,,所以这样的话，它会给它赋予一些名称来消除它的歧义
 Dialogue: 0,0:20:47.28,0:20:49.56,English,,0,0,0,,So maybe it will call this one x.1
-Dialogue: 0,0:20:47.28,0:20:49.56,English,,0,0,0,,所以也许它会称之为x.1
+Dialogue: 0,0:20:47.28,0:20:49.56,Chinese,,0,0,0,,所以也许它会称之为x.1
 Dialogue: 0,0:20:49.98,0:20:51.82,English,,0,0,0,,And maybe this one x.2
-Dialogue: 0,0:20:49.98,0:20:51.82,English,,0,0,0,,也有可能叫x.2
+Dialogue: 0,0:20:49.98,0:20:51.82,Chinese,,0,0,0,,也有可能叫x.2
 Dialogue: 0,0:20:52.80,0:20:57.54,English,,0,0,0,,So these symbols are allocated in .data because
-Dialogue: 0,0:20:52.80,0:20:57.54,English,,0,0,0,,这些符号分配在在.data中，因为
+Dialogue: 0,0:20:52.80,0:20:57.54,Chinese,,0,0,0,,这些符号分配在在.data中，因为
 Dialogue: 0,0:20:57.94,0:21:04.18,English,,0,0,0,,Because they're initialized and they get symbol table entries just like any other symbol
-Dialogue: 0,0:20:57.94,0:21:04.18,English,,0,0,0,,因为它们已初始化并且像任何其他符号一样会获得符号表条目
+Dialogue: 0,0:20:57.94,0:21:04.18,Chinese,,0,0,0,,因为它们已初始化并且像任何其他符号一样会获得符号表条目
 Dialogue: 0,0:21:08.00,0:21:11.16,English,,0,0,0,,Okay so I said that during symbol resolution
-Dialogue: 0,0:21:08.00,0:21:11.16,English,,0,0,0,,好的，所以我在讲解符号解析期间说过
+Dialogue: 0,0:21:08.00,0:21:11.16,Chinese,,0,0,0,,好的，所以我在讲解符号解析期间说过
 Dialogue: 0,0:21:11.56,0:21:20.32,English,,0,0,0,,The linker associates each reference,each symbol reference to exactly one unique symbol definition
-Dialogue: 0,0:21:11.56,0:21:20.32,English,,0,0,0,,链接器和每个引用连接起来，每个符号引用与一个唯一的符号定义相关联
+Dialogue: 0,0:21:11.56,0:21:20.32,Chinese,,0,0,0,,链接器和每个引用连接起来，每个符号引用与一个唯一的符号定义相关联
 Dialogue: 0,0:21:21.58,0:21:25.72,English,,0,0,0,,Now how does it do that if there's multiple symbol definitions across all the modules
-Dialogue: 0,0:21:21.58,0:21:25.72,English,,0,0,0,,现在有一种情况，如果所有模块中有多个符号定义，它是如何做的呢
+Dialogue: 0,0:21:21.58,0:21:25.72,Chinese,,0,0,0,,现在有一种情况，如果所有模块中有多个符号定义，它是如何做的呢
 Dialogue: 0,0:21:27.64,0:21:35.32,English,,0,0,0,,So to understand this will define symbols as being either strong or weak
-Dialogue: 0,0:21:27.64,0:21:35.32,English,,0,0,0,,因此，要理解这种情况需要将把符号定义为强或弱
+Dialogue: 0,0:21:27.64,0:21:35.32,Chinese,,0,0,0,,因此，要理解这种情况需要将把符号定义为强或弱
 Dialogue: 0,0:21:35.78,0:21:43.86,English,,0,0,0,,So strong symbols are either procedures or function names or initialize global variables
-Dialogue: 0,0:21:35.78,0:21:43.86,English,,0,0,0,,过程，函数名称或已初始化的全局变量是强符号
+Dialogue: 0,0:21:35.78,0:21:43.86,Chinese,,0,0,0,,过程，函数名称或已初始化的全局变量是强符号
 Dialogue: 0,0:21:44.66,0:21:47.22,English,,0,0,0,,Weak symbols are uninitialized global variables
-Dialogue: 0,0:21:44.66,0:21:47.22,English,,0,0,0,,弱符号是未初始化的全局变量
+Dialogue: 0,0:21:44.66,0:21:47.22,Chinese,,0,0,0,,弱符号是未初始化的全局变量
 Dialogue: 0,0:21:49.18,0:21:54.62,English,,0,0,0,,Okay so int foo here is a strong symbol
-Dialogue: 0,0:21:49.18,0:21:54.62,English,,0,0,0,,好吧，所以这里的int foo是一个强有力的象征
+Dialogue: 0,0:21:49.18,0:21:54.62,Chinese,,0,0,0,,好吧，所以这里的int foo是一个强有力的象征
 Dialogue: 0,0:21:54.62,0:21:59.70,English,,0,0,0,,Because it's initialized,we're initializing it. p1 is strong by definition
-Dialogue: 0,0:21:54.62,0:21:59.70,English,,0,0,0,,因为它已初始化，我们正在初始化它。根据定义，p1是强符号
+Dialogue: 0,0:21:54.62,0:21:59.70,Chinese,,0,0,0,,因为它已初始化，我们正在初始化它。根据定义，p1是强符号
 Dialogue: 0,0:22:00.74,0:22:08.44,English,,0,0,0,,foo is weak in p2.c, this definition of foo is weak
-Dialogue: 0,0:22:00.74,0:22:08.44,English,,0,0,0,,p2.c 中的foo就是弱符号，这个定义的foo就是弱符号
+Dialogue: 0,0:22:00.74,0:22:08.44,Chinese,,0,0,0,,p2.c 中的foo就是弱符号，这个定义的foo就是弱符号
 Dialogue: 0,0:22:09.06,0:22:12.78,English,,0,0,0,,Because it's uninitialized and the definition of p2 is strong
-Dialogue: 0,0:22:09.06,0:22:12.78,English,,0,0,0,,因为它没有初始化，下面这个p2的定义的话就是强符号
+Dialogue: 0,0:22:09.06,0:22:12.78,Chinese,,0,0,0,,因为它没有初始化，下面这个p2的定义的话就是强符号
 Dialogue: 0,0:22:13.64,0:22:17.74,English,,0,0,0,,Okay so that the rules, the linker uses are the following
-Dialogue: 0,0:22:13.64,0:22:17.74,English,,0,0,0,,好的，链接器使用的规则如下
+Dialogue: 0,0:22:13.64,0:22:17.74,Chinese,,0,0,0,,好的，链接器使用的规则如下
 Dialogue: 0,0:22:19.34,0:22:22.34,English,,0,0,0,,Multiple strong symbols not allowed so that's an error
-Dialogue: 0,0:22:19.34,0:22:22.34,English,,0,0,0,,不允许有多个强符号，以免出现错误
+Dialogue: 0,0:22:19.34,0:22:22.34,Chinese,,0,0,0,,不允许有多个强符号，以免出现错误
 Dialogue: 0,0:22:24.14,0:22:30.34,English,,0,0,0,,Okay so that means that if across multiple modules we declare a function with the same name
-Dialogue: 0,0:22:24.14,0:22:30.34,English,,0,0,0,,好的，这意味着如果我们在多个模块中，声明一个具有相同名称的函数
+Dialogue: 0,0:22:24.14,0:22:30.34,Chinese,,0,0,0,,好的，这意味着如果我们在多个模块中，声明一个具有相同名称的函数
 Dialogue: 0,0:22:30.54,0:22:32.72,English,,0,0,0,,The linker will throw an error that's not allowed
-Dialogue: 0,0:22:30.54,0:22:32.72,English,,0,0,0,,链接器将抛出一个不允许的错误
+Dialogue: 0,0:22:30.54,0:22:32.72,Chinese,,0,0,0,,链接器将抛出一个不允许的错误
 Dialogue: 0,0:22:34.44,0:22:42.72,English,,0,0,0,,Given a strong symbol and multiple weak symbols if the linker will always choose the the strong symbol
-Dialogue: 0,0:22:34.44,0:22:42.72,English,,0,0,0,,如果链接器总是选择强符号，则给出强符号和多个弱符号
+Dialogue: 0,0:22:34.44,0:22:42.72,Chinese,,0,0,0,,如果链接器总是选择强符号，则给出强符号和多个弱符号
 Dialogue: 0,0:22:44.00,0:22:47.28,English,,0,0,0,,Now remember if we initialize a global variable
-Dialogue: 0,0:22:44.00,0:22:47.28,English,,0,0,0,,现在记住我们是否初始化了一个同名的全局变量
+Dialogue: 0,0:22:44.00,0:22:47.28,Chinese,,0,0,0,,现在记住我们是否初始化了一个同名的全局变量
 Dialogue: 0,0:22:50.94,0:22:56.18,English,,0,0,0,,And we if we declare an initialized global variable across multiple modules that's an error
-Dialogue: 0,0:22:50.94,0:22:56.18,English,,0,0,0,,如果我们在多个模块中声明一个同名的初始化的全局变量，那么我们就是一个错误
+Dialogue: 0,0:22:50.94,0:22:56.18,Chinese,,0,0,0,,如果我们在多个模块中声明一个同名的初始化的全局变量，那么我们就是一个错误
 Dialogue: 0,0:22:56.18,0:22:58.70,English,,0,0,0,,Because those are strong symbols okay by rule one
-Dialogue: 0,0:22:56.18,0:22:58.70,English,,0,0,0,,因为那些是强符号的第一条规则
+Dialogue: 0,0:22:56.18,0:22:58.70,Chinese,,0,0,0,,因为那些是强符号的第一条规则
 Dialogue: 0,0:22:59.02,0:23:03.90,English,,0,0,0,,But if we have one strong symbol and multiple weak symbols all with the same name
-Dialogue: 0,0:22:59.02,0:23:03.90,English,,0,0,0,,但是如果我们有一个强符号和多个弱符号具有相同的名称
+Dialogue: 0,0:22:59.02,0:23:03.90,Chinese,,0,0,0,,但是如果我们有一个强符号和多个弱符号具有相同的名称
 Dialogue: 0,0:23:04.52,0:23:06.92,English,,0,0,0,,Then the compiler will choose the strong symbol
-Dialogue: 0,0:23:04.52,0:23:06.92,English,,0,0,0,,然后编译器将选择强符号
+Dialogue: 0,0:23:04.52,0:23:06.92,Chinese,,0,0,0,,然后编译器将选择强符号
 Dialogue: 0,0:23:08.48,0:23:12.88,English,,0,0,0,,Okay and it will associate all references to that symbol will go to that strong symbol
-Dialogue: 0,0:23:08.48,0:23:12.88,English,,0,0,0,,好的，它将所有对该符号的引用关联到该强符号
+Dialogue: 0,0:23:08.48,0:23:12.88,Chinese,,0,0,0,,好的，它将所有对该符号的引用关联到该强符号
 Dialogue: 0,0:23:14.38,0:23:17.70,English,,0,0,0,,And if there's multiple weak symbols then it just picks an arbitrary one
-Dialogue: 0,0:23:14.38,0:23:17.70,English,,0,0,0,,如果有多个弱符号同名，那么它会从这些弱符号中任意选择一个
+Dialogue: 0,0:23:14.38,0:23:17.70,Chinese,,0,0,0,,如果有多个弱符号同名，那么它会从这些弱符号中任意选择一个
 Dialogue: 0,0:23:18.02,0:23:25.07,English,,0,0,0,,And this is we'll see can be problematic now you can override with this GCC flag called no common
-Dialogue: 0,0:23:18.02,0:23:25.07,English,,0,0,0,,这是我们将看到的，可能会有问题，现在你可以用这个名为no common的GCC标志覆盖
+Dialogue: 0,0:23:18.02,0:23:25.07,Chinese,,0,0,0,,这是我们将看到的，可能会有问题，现在你可以用这个名为no common的GCC标志覆盖
 Dialogue: 0,0:23:25.74,0:23:29.94,English,,0,0,0,,And if you declare your function with this no common argument
-Dialogue: 0,0:23:25.74,0:23:29.94,English,,0,0,0,,如果你用这个 no common的参数声明函数
+Dialogue: 0,0:23:25.74,0:23:29.94,Chinese,,0,0,0,,如果你用这个 no common的参数声明函数
 Dialogue: 0,0:23:31.86,0:23:35.40,English,,0,0,0,,Then multiple weak symbols will throw an error in a linker
-Dialogue: 0,0:23:31.86,0:23:35.40,English,,0,0,0,,然后多个弱符号将在链接器中抛出错误
+Dialogue: 0,0:23:31.86,0:23:35.40,Chinese,,0,0,0,,然后多个弱符号将在链接器中抛出错误
 Dialogue: 0,0:23:36.46,0:23:39.02,English,,0,0,0,,All right so why do we care about all this stuff well it turns out
-Dialogue: 0,0:23:36.46,0:23:39.02,English,,0,0,0,,好吧，为什么我们关心所有这些东西呢
+Dialogue: 0,0:23:36.46,0:23:39.02,Chinese,,0,0,0,,好吧，为什么我们关心所有这些东西呢
 Dialogue: 0,0:23:39.80,0:23:44.10,English,,0,0,0,,If you're not aware of this stuff you can run into some really serious problems
-Dialogue: 0,0:23:39.80,0:23:44.10,English,,0,0,0,,如果你不了解这些东西，你可能会遇到一些非常严重的问题
+Dialogue: 0,0:23:39.80,0:23:44.10,Chinese,,0,0,0,,如果你不了解这些东西，你可能会遇到一些非常严重的问题
 Dialogue: 0,0:23:44.12,0:23:47.40,English,,0,0,0,,That are just perplexing and confounding right so
-Dialogue: 0,0:23:44.12,0:23:47.40,English,,0,0,0,,这些东西容易令人困惑和混淆
+Dialogue: 0,0:23:44.12,0:23:47.40,Chinese,,0,0,0,,这些东西容易令人困惑和混淆
 Dialogue: 0,0:23:47.90,0:23:50.68,English,,0,0,0,,Linker errors are like the worst kind
-Dialogue: 0,0:23:47.90,0:23:50.68,English,,0,0,0,,链接器错误就是最糟糕的那种
+Dialogue: 0,0:23:47.90,0:23:50.68,Chinese,,0,0,0,,链接器错误就是最糟糕的那种
 Dialogue: 0,0:23:51.10,0:23:55.78,English,,0,0,0,,They're the hardest kind of debug because people aren't usually aware of what's going on inside their linkers
-Dialogue: 0,0:23:51.10,0:23:55.78,English,,0,0,0,,它们是最难调试的，因为人们通常不知道链接器的内部发生了什么
+Dialogue: 0,0:23:51.10,0:23:55.78,Chinese,,0,0,0,,它们是最难调试的，因为人们通常不知道链接器的内部发生了什么
 Dialogue: 0,0:23:57.64,0:24:02.26,English,,0,0,0,,And usually it's only like the very best programmers that really understand
-Dialogue: 0,0:23:57.64,0:24:02.26,English,,0,0,0,,而且通常只有最好的程序员真的理解里面发生了什么
+Dialogue: 0,0:23:57.64,0:24:02.26,Chinese,,0,0,0,,而且通常只有最好的程序员真的理解里面发生了什么
 Dialogue: 0,0:24:03.36,0:24:07.78,English,,0,0,0,,You know how these linkers work and what kind of errors they can throw and how to debug them
-Dialogue: 0,0:24:03.36,0:24:07.78,English,,0,0,0,,你知道这些链接器是如何工作的，它们可以抛出什么样的错误以及如何调试它们
+Dialogue: 0,0:24:03.36,0:24:07.78,Chinese,,0,0,0,,你知道这些链接器是如何工作的，它们可以抛出什么样的错误以及如何调试它们
 Dialogue: 0,0:24:08.36,0:24:13.80,English,,0,0,0,,So let me show you some examples of these kind of errors
-Dialogue: 0,0:24:08.36,0:24:13.80,English,,0,0,0,,那么让我向你展示一些这类错误的例子
+Dialogue: 0,0:24:08.36,0:24:13.80,Chinese,,0,0,0,,那么让我向你展示一些这类错误的例子
 Dialogue: 0,0:24:15.58,0:24:17.36,English,,0,0,0,,All right so we have a program
-Dialogue: 0,0:24:15.58,0:24:17.36,English,,0,0,0,,好的，我们有一个程序
+Dialogue: 0,0:24:15.58,0:24:17.36,Chinese,,0,0,0,,好的，我们有一个程序
 Dialogue: 0,0:24:18.24,0:24:22.96,English,,0,0,0,,We have two modules so each of these rectangles corresponds to a module
-Dialogue: 0,0:24:18.24,0:24:22.96,English,,0,0,0,,我们有两个模块，这里每个矩形窗口对应一个模块
+Dialogue: 0,0:24:18.24,0:24:22.96,Chinese,,0,0,0,,我们有两个模块，这里每个矩形窗口对应一个模块
 Dialogue: 0,0:24:23.84,0:24:26.58,English,,0,0,0,,And we're defining p1 in each module so
-Dialogue: 0,0:24:23.84,0:24:26.58,English,,0,0,0,,我们在每个模块中定义p1
+Dialogue: 0,0:24:23.84,0:24:26.58,Chinese,,0,0,0,,我们在每个模块中定义p1
 Dialogue: 0,0:24:28.54,0:24:31.28,English,,0,0,0,,That's two strong symbols that's an error
-Dialogue: 0,0:24:28.54,0:24:31.28,English,,0,0,0,,这里有两个强符号，因此出现了错误
+Dialogue: 0,0:24:28.54,0:24:31.28,Chinese,,0,0,0,,这里有两个强符号，因此出现了错误
 Dialogue: 0,0:24:34.38,0:24:40.34,English,,0,0,0,,Okay now here we've defining p1 and p2 so we're okay
-Dialogue: 0,0:24:34.38,0:24:40.34,English,,0,0,0,,好的，现在我们已经定义了p1和p2，这没有问题
+Dialogue: 0,0:24:34.38,0:24:40.34,Chinese,,0,0,0,,好的，现在我们已经定义了p1和p2，这没有问题
 Dialogue: 0,0:24:40.34,0:24:47.08,English,,0,0,0,,But now we've got two weak symbols both are integers variables called x
-Dialogue: 0,0:24:40.34,0:24:47.08,English,,0,0,0,,但现在我们有两个弱符号，都是整数变量，称为 x
+Dialogue: 0,0:24:40.34,0:24:47.08,Chinese,,0,0,0,,但现在我们有两个弱符号，都是整数变量，称为 x
 Dialogue: 0,0:24:48.92,0:24:58.12,English,,0,0,0,,So and if these modules are referencing x the linker will just pick it will just pick one of these to serve as the definition
-Dialogue: 0,0:24:48.92,0:24:58.12,English,,0,0,0,,因此，如果这些模块引用 x，链接器将只选择其中一个作为定义
+Dialogue: 0,0:24:48.92,0:24:58.12,Chinese,,0,0,0,,因此，如果这些模块引用 x，链接器将只选择其中一个作为定义
 Dialogue: 0,0:24:59.72,0:25:02.40,English,,0,0,0,,But is this really what you want
-Dialogue: 0,0:24:59.72,0:25:02.40,English,,0,0,0,,但这真的是你想要的结果吗
+Dialogue: 0,0:24:59.72,0:25:02.40,Chinese,,0,0,0,,但这真的是你想要的结果吗
 Dialogue: 0,0:25:03.60,0:25:09.38,English,,0,0,0,,Now in this case it doesn't really hurt anything because x is declared in both modules as an int
-Dialogue: 0,0:25:03.60,0:25:09.38,English,,0,0,0,,现在在这种情况下它并没有什么影响，因为 x 在两个模块中都被声明为int
+Dialogue: 0,0:25:03.60,0:25:09.38,Chinese,,0,0,0,,现在在这种情况下它并没有什么影响，因为 x 在两个模块中都被声明为int
 Dialogue: 0,0:25:10.12,0:25:15.06,English,,0,0,0,,All right so it'll just be some integer sized variable
-Dialogue: 0,0:25:10.12,0:25:15.06,English,,0,0,0,,所以它只是一个整数大小的变量
+Dialogue: 0,0:25:10.12,0:25:15.06,Chinese,,0,0,0,,所以它只是一个整数大小的变量
 Dialogue: 0,0:25:15.72,0:25:19.22,English,,0,0,0,,That and it'll be somewhere
-Dialogue: 0,0:25:15.72,0:25:19.22,English,,0,0,0,,它将在某个地方放着
+Dialogue: 0,0:25:15.72,0:25:19.22,Chinese,,0,0,0,,它将在某个地方放着
 Dialogue: 0,0:25:20.04,0:25:24.14,English,,0,0,0,,And but it doesn't really matter which one the linker chooses
-Dialogue: 0,0:25:20.04,0:25:24.14,English,,0,0,0,,但是链接器选择哪一个并不重要
+Dialogue: 0,0:25:20.04,0:25:24.14,Chinese,,0,0,0,,但是链接器选择哪一个并不重要
 Dialogue: 0,0:25:25.52,0:25:31.14,English,,0,0,0,,But we start to get into trouble if we declare these weak symbols with different types
-Dialogue: 0,0:25:25.52,0:25:31.14,English,,0,0,0,,但是如果我们用不同的类型声明这些弱符号，我们就遇到麻烦了
+Dialogue: 0,0:25:25.52,0:25:31.14,Chinese,,0,0,0,,但是如果我们用不同的类型声明这些弱符号，我们就遇到麻烦了
 Dialogue: 0,0:25:34.02,0:25:40.26,English,,0,0,0,,So here we've declared an int x in one module and a double x in another module
-Dialogue: 0,0:25:34.02,0:25:40.26,English,,0,0,0,,在这里，我们在一个模块中声明了一个 int x，在另一个模块中声明了一个 double x
+Dialogue: 0,0:25:34.02,0:25:40.26,Chinese,,0,0,0,,在这里，我们在一个模块中声明了一个 int x，在另一个模块中声明了一个 double x
 Dialogue: 0,0:25:42.32,0:25:50.28,English,,0,0,0,,So if we write to x, if the linker just arbitrarily chooses this,this symbol definition to use
-Dialogue: 0,0:25:42.32,0:25:50.28,English,,0,0,0,,当我们写入x时，如果链接器随意选择了这个，那么就使用此符号定义
+Dialogue: 0,0:25:42.32,0:25:50.28,Chinese,,0,0,0,,当我们写入x时，如果链接器随意选择了这个，那么就使用此符号定义
 Dialogue: 0,0:25:51.54,0:25:57.48,English,,0,0,0,,Now this is a symbol that of length 8 of size 8
-Dialogue: 0,0:25:51.54,0:25:57.48,English,,0,0,0,,这是长度为8的符号
+Dialogue: 0,0:25:51.54,0:25:57.48,Chinese,,0,0,0,,这是长度为8的符号
 Dialogue: 0,0:26:00.36,0:26:05.72,English,,0,0,0,,If we anywhere in this program,if the linker chooses that then, anywhere in the program
-Dialogue: 0,0:26:00.36,0:26:05.72,English,,0,0,0,,如果我们在这个程序中的任何地方，如果链接器选择程序中的任意地方
+Dialogue: 0,0:26:00.36,0:26:05.72,Chinese,,0,0,0,,如果我们在这个程序中的任何地方，如果链接器选择程序中的任意地方
 Dialogue: 0,0:26:06.30,0:26:14.70,English,,0,0,0,,Those references to x will be to this double word,this double word
-Dialogue: 0,0:26:06.30,0:26:14.70,English,,0,0,0,,那些对x的引用将是这个双字，这个双字
+Dialogue: 0,0:26:06.30,0:26:14.70,Chinese,,0,0,0,,那些对x的引用将是这个双字，这个双字
 Dialogue: 0,0:26:16.38,0:26:21.08,English,,0,0,0,,Even in this module if we reference x it'll be an 8-byte right
-Dialogue: 0,0:26:16.38,0:26:21.08,English,,0,0,0,,即使在这个模块中，如果我们引用x，它也将是一个8字节的
+Dialogue: 0,0:26:16.38,0:26:21.08,Chinese,,0,0,0,,即使在这个模块中，如果我们引用x，它也将是一个8字节的
 Dialogue: 0,0:26:21.10,0:26:25.06,English,,0,0,0,,So it will overwrite y with the
-Dialogue: 0,0:26:21.10,0:26:25.06,English,,0,0,0,,所以它会覆盖y
+Dialogue: 0,0:26:21.10,0:26:25.06,Chinese,,0,0,0,,所以它会覆盖y
 Dialogue: 0,0:26:29.20,0:26:30.22,English,,0,0,0,,Hi order excuse me
-Dialogue: 0,0:26:29.20,0:26:30.22,English,,0,0,0,,你有什么问题吗
+Dialogue: 0,0:26:29.20,0:26:30.22,Chinese,,0,0,0,,你有什么问题吗
 Dialogue: 0,0:26:31.54,0:26:38.80,English,,0,0,0,,[student speaking]
-Dialogue: 0,0:26:31.54,0:26:38.80,English,,0,0,0,,[学生在发言...]
+Dialogue: 0,0:26:31.54,0:26:38.80,Chinese,,0,0,0,,[学生在发言...]
 Dialogue: 0,0:26:38.84,0:26:44.68,English,,0,0,0,, Oh no it's completely,it's just pick one arbitrarily
-Dialogue: 0,0:26:38.84,0:26:44.68,English,,0,0,0,,噢它不完全是这样，它只是任意选择一个
+Dialogue: 0,0:26:38.84,0:26:44.68,Chinese,,0,0,0,,噢它不完全是这样，它只是任意选择一个
 Dialogue: 0,0:26:44.96,0:26:47.40,English,,0,0,0,,And you don't know
-Dialogue: 0,0:26:44.96,0:26:47.40,English,,0,0,0,,而且你不知道
+Dialogue: 0,0:26:44.96,0:26:47.40,Chinese,,0,0,0,,而且你不知道
 Dialogue: 0,0:26:47.92,0:26:48.52,English,,0,0,0,,I mean it
-Dialogue: 0,0:26:47.92,0:26:48.52,English,,0,0,0,,我的意思是
+Dialogue: 0,0:26:47.92,0:26:48.52,Chinese,,0,0,0,,我的意思是
 Dialogue: 0,0:26:53.44,0:27:01.92,English,,0,0,0,,Now this is here's a problem we've defined a strong symbol x because we've initializes
-Dialogue: 0,0:26:53.44,0:27:01.92,English,,0,0,0,,现在这是一个问题，我们已经定义了一个强符号x，因为我们已经初始化了
+Dialogue: 0,0:26:53.44,0:27:01.92,Chinese,,0,0,0,,现在这是一个问题，我们已经定义了一个强符号x，因为我们已经初始化了
 Dialogue: 0,0:27:01.92,0:27:13.58,English,,0,0,0,,So the linker will always,will associate all references to x to this integer sized this integer sized symbol
-Dialogue: 0,0:27:01.92,0:27:13.58,English,,0,0,0,,因此链接器将始终将对x的所有引用与此整数大小符号相关联
+Dialogue: 0,0:27:01.92,0:27:13.58,Chinese,,0,0,0,,因此链接器将始终将对x的所有引用与此整数大小符号相关联
 Dialogue: 0,0:27:16.74,0:27:17.80,English,,0,0,0,,So if we write
-Dialogue: 0,0:27:16.74,0:27:17.80,English,,0,0,0,,所以，如果我们写
+Dialogue: 0,0:27:16.74,0:27:17.80,Chinese,,0,0,0,,所以，如果我们写
 Dialogue: 0,0:27:30.52,0:27:34.14,English,,0,0,0,,Oh yeah right,so rights to x here
-Dialogue: 0,0:27:30.52,0:27:34.14,English,,0,0,0,,哦是的，对于x
+Dialogue: 0,0:27:30.52,0:27:34.14,Chinese,,0,0,0,,哦是的，对于x
 Dialogue: 0,0:27:36.14,0:27:40.68,English,,0,0,0,,This will be a double in this module but it will overwrite y in this module
-Dialogue: 0,0:27:36.14,0:27:40.68,English,,0,0,0,,这将是此模块中的两倍，但它将覆盖此模块中的y
+Dialogue: 0,0:27:36.14,0:27:40.68,Chinese,,0,0,0,,这将是此模块中的两倍，但它将覆盖此模块中的y
 Dialogue: 0,0:27:40.94,0:27:48.36,English,,0,0,0,,So that's really nasty
-Dialogue: 0,0:27:40.94,0:27:48.36,English,,0,0,0,,所以那真的很讨厌
+Dialogue: 0,0:27:40.94,0:27:48.36,Chinese,,0,0,0,,所以那真的很讨厌
 Dialogue: 0,0:27:48.76,0:27:51.60,English,,0,0,0,,And here we were defining a strong symbol x
-Dialogue: 0,0:27:48.76,0:27:51.60,English,,0,0,0,,在这我们正在定义一个强符号 x
+Dialogue: 0,0:27:48.76,0:27:51.60,Chinese,,0,0,0,,在这我们正在定义一个强符号 x
 Dialogue: 0,0:27:52.40,0:28:00.90,English,,0,0,0,,So references to x in the second module will always get it will refer to this initialized variable which might not
-Dialogue: 0,0:27:52.40,0:28:00.90,English,,0,0,0,,因此，在第二个模块中对x的引用的结果将得到它将引用这个初始化的变量
+Dialogue: 0,0:27:52.40,0:28:00.90,Chinese,,0,0,0,,因此，在第二个模块中对x的引用的结果将得到它将引用这个初始化的变量
 Dialogue: 0,0:28:01.68,0:28:04.42,English,,0,0,0,,So it might not be what you want right
-Dialogue: 0,0:28:01.68,0:28:04.42,English,,0,0,0,,所以它可能不是你想要的
+Dialogue: 0,0:28:01.68,0:28:04.42,Chinese,,0,0,0,,所以它可能不是你想要的
 Dialogue: 0,0:28:06.12,0:28:10.14,English,,0,0,0,,You may be assuming that it's uninitialized in your code
-Dialogue: 0,0:28:06.12,0:28:10.14,English,,0,0,0,,你可能认为它在你的代码中未初始化
+Dialogue: 0,0:28:06.12,0:28:10.14,Chinese,,0,0,0,,你可能认为它在你的代码中未初始化
 Dialogue: 0,0:28:12.22,0:28:16.46,English,,0,0,0,,Okay and then you get the, the ultimate nightmare scenario is suppose
-Dialogue: 0,0:28:12.22,0:28:16.46,English,,0,0,0,,好吧，然后你得到了，最终的噩梦场景就是，假设...嗯
+Dialogue: 0,0:28:12.22,0:28:16.46,Chinese,,0,0,0,,好吧，然后你得到了，最终的噩梦场景就是，假设...嗯
 Dialogue: 0,0:28:17.06,0:28:21.62,English,,0,0,0,,You know because we're following a standard ABI we can compile our code with multiple compilers
-Dialogue: 0,0:28:17.06,0:28:21.62,English,,0,0,0,,你知道，因为我们遵循标准的ABI，我们可以用多个编译器编译我们的代码
+Dialogue: 0,0:28:17.06,0:28:21.62,Chinese,,0,0,0,,你知道，因为我们遵循标准的ABI，我们可以用多个编译器编译我们的代码
 Dialogue: 0,0:28:22.20,0:28:24.80,English,,0,0,0,,And this actually happens in some , oh yes questions
-Dialogue: 0,0:28:22.20,0:28:24.80,English,,0,0,0,,这实际上发生在一些，嗯好的请你提问
+Dialogue: 0,0:28:22.20,0:28:24.80,Chinese,,0,0,0,,这实际上发生在一些，嗯好的请你提问
 Dialogue: 0,0:28:25.06,0:28:34.74,English,,0,0,0,,[student speaking]
-Dialogue: 0,0:28:25.06,0:28:34.74,English,,0,0,0,,[学生在发言]
+Dialogue: 0,0:28:25.06,0:28:34.74,Chinese,,0,0,0,,[学生在发言]
 Dialogue: 0,0:28:34.76,0:28:36.54,English,,0,0,0,,Oh yeah actually you're right
-Dialogue: 0,0:28:34.76,0:28:36.54,English,,0,0,0,,嗯是的你说的是对的
+Dialogue: 0,0:28:34.76,0:28:36.54,Chinese,,0,0,0,,嗯是的你说的是对的
 Dialogue: 0,0:28:37.40,0:28:41.58,English,,0,0,0,,It will still take preference and and you'll be writing a for by quantity
-Dialogue: 0,0:28:37.40,0:28:41.58,English,,0,0,0,,它仍然会优先考虑并且你将按数量编写
+Dialogue: 0,0:28:37.40,0:28:41.58,Chinese,,0,0,0,,它仍然会优先考虑并且你将按数量编写
 Dialogue: 0,0:28:41.58,0:28:45.02,English,,0,0,0,,Which is what you want so that slides not quite right
-Dialogue: 0,0:28:41.58,0:28:45.02,English,,0,0,0,,这是你想的，所以那个幻灯片上的不太正确
+Dialogue: 0,0:28:41.58,0:28:45.02,Chinese,,0,0,0,,这是你想的，所以那个幻灯片上的不太正确
 Dialogue: 0,0:28:45.50,0:28:55.50,English,,0,0,0,,So oh yeah what is the point of doing the static versus non static
-Dialogue: 0,0:28:45.50,0:28:55.50,English,,0,0,0,,（学生）所以哦，是的，处理静态与非静态的重点是什么
+Dialogue: 0,0:28:45.50,0:28:55.50,Chinese,,0,0,0,,（学生）所以哦，是的，处理静态与非静态的重点是什么
 Dialogue: 0,0:28:55.50,0:29:02.26,English,,0,0,0,,If it's always being referenced just locally in constantly what is the point of declaring  it's time
-Dialogue: 0,0:28:55.50,0:29:02.26,English,,0,0,0,,（学生）如果它总是不断的在被本地引用，那么什么是宣布它时间的点
+Dialogue: 0,0:28:55.50,0:29:02.26,Chinese,,0,0,0,,（学生）如果它总是不断的在被本地引用，那么什么是宣布它时间的点
 Dialogue: 0,0:29:02.60,0:29:05.56,English,,0,0,0,,-is it it stores it in like -no no no it's
-Dialogue: 0,0:29:02.60,0:29:05.56,English,,0,0,0,,（学生）是不是该把他存储起来  （教授）不不不，不是的
+Dialogue: 0,0:29:02.60,0:29:05.56,Chinese,,0,0,0,,（学生）是不是该把他存储起来  （教授）不不不，不是的
 Dialogue: 0,0:29:06.86,0:29:11.42,English,,0,0,0,,If you reference up if you reference a variable
-Dialogue: 0,0:29:06.86,0:29:11.42,English,,0,0,0,,如果引用变量，就会引用
+Dialogue: 0,0:29:06.86,0:29:11.42,Chinese,,0,0,0,,如果引用变量，就会引用
 Dialogue: 0,0:29:12.84,0:29:15.46,English,,0,0,0,,You mean so a variable is defined in your module
-Dialogue: 0,0:29:12.84,0:29:15.46,English,,0,0,0,,你的意思是在模块中定义一个变量
+Dialogue: 0,0:29:12.84,0:29:15.46,Chinese,,0,0,0,,你的意思是在模块中定义一个变量
 Dialogue: 0,0:29:16.04,0:29:22.70,English,,0,0,0,,And then you...with the static...right
-Dialogue: 0,0:29:16.04,0:29:22.70,English,,0,0,0,,然后你....用static....对吗
+Dialogue: 0,0:29:16.04,0:29:22.70,Chinese,,0,0,0,,然后你....用static....对吗
 Dialogue: 0,0:29:24.06,0:29:26.54,English,,0,0,0,,Oh they're both,they're both local
-Dialogue: 0,0:29:24.06,0:29:26.54,English,,0,0,0,,噢，他们都是，他们都是局部的
+Dialogue: 0,0:29:24.06,0:29:26.54,Chinese,,0,0,0,,噢，他们都是，他们都是局部的
 Dialogue: 0,0:29:26.98,0:29:31.30,English,,0,0,0,,So you do this if you want to value two to retain
-Dialogue: 0,0:29:26.98,0:29:31.30,English,,0,0,0,,因此，如果你想要保留两个值，请执行此操作
+Dialogue: 0,0:29:26.98,0:29:31.30,Chinese,,0,0,0,,因此，如果你想要保留两个值，请执行此操作
 Dialogue: 0,0:29:31.96,0:29:36.86,English,,0,0,0,,From if you want if you want that variable to retain value from invocation to invocation
-Dialogue: 0,0:29:31.96,0:29:36.86,English,,0,0,0,,如果你想要该变量保留从调用到调用的值
+Dialogue: 0,0:29:31.96,0:29:36.86,Chinese,,0,0,0,,如果你想要该变量保留从调用到调用的值
 Dialogue: 0,0:29:38.32,0:29:42.62,English,,0,0,0,,So suppose you it's usually a bad idea as we'll see when we study threads
-Dialogue: 0,0:29:38.32,0:29:42.62,English,,0,0,0,,所以假设你，这通常是一个坏主意，因为我们会在研究线程时看到
+Dialogue: 0,0:29:38.32,0:29:42.62,Chinese,,0,0,0,,所以假设你，这通常是一个坏主意，因为我们会在研究线程时看到
 Dialogue: 0,0:29:42.62,0:29:44.90,English,,0,0,0,,Because it makes your code non thread safe
-Dialogue: 0,0:29:42.62,0:29:44.90,English,,0,0,0,,因为这将使你的代码线程不安全
+Dialogue: 0,0:29:42.62,0:29:44.90,Chinese,,0,0,0,,因为这将使你的代码线程不安全
 Dialogue: 0,0:29:45.62,0:29:49.40,English,,0,0,0,,But like early like random number generators
-Dialogue: 0,0:29:45.62,0:29:49.40,English,,0,0,0,,但就像早期的随机数生成器一样
+Dialogue: 0,0:29:45.62,0:29:49.40,Chinese,,0,0,0,,但就像早期的随机数生成器一样
 Dialogue: 0,0:29:50.18,0:29:53.28,English,,0,0,0,,Would it would compute a pseudo-random number
-Dialogue: 0,0:29:50.18,0:29:53.28,English,,0,0,0,,它会计算一个伪随机数
+Dialogue: 0,0:29:50.18,0:29:53.28,Chinese,,0,0,0,,它会计算一个伪随机数
 Dialogue: 0,0:29:53.78,0:29:55.84,English,,0,0,0,,And then it would store it in a static variable
-Dialogue: 0,0:29:53.78,0:29:55.84,English,,0,0,0,,然后它会存储在一个静态变量里面
+Dialogue: 0,0:29:53.78,0:29:55.84,Chinese,,0,0,0,,然后它会存储在一个静态变量里面
 Dialogue: 0,0:29:56.28,0:30:01.30,English,,0,0,0,,And then use that as the the starting value for the next time you call that function
-Dialogue: 0,0:29:56.28,0:30:01.30,English,,0,0,0,,然后将其用作下次调用该函数时的起始值
+Dialogue: 0,0:29:56.28,0:30:01.30,Chinese,,0,0,0,,然后将其用作下次调用该函数时的起始值
 Dialogue: 0,0:30:01.74,0:30:06.70,English,,0,0,0,,So whenever you want values to persist across function invocation to reduce static
-Dialogue: 0,0:30:01.74,0:30:06.70,English,,0,0,0,,因此，无论何时你都希望值能被允许进行跨越函数调用以减少静态
+Dialogue: 0,0:30:01.74,0:30:06.70,Chinese,,0,0,0,,因此，无论何时你都希望值能被允许进行跨越函数调用以减少静态
 Dialogue: 0,0:30:07.26,0:30:25.04,English,,0,0,0,,Yes something really crash
-Dialogue: 0,0:30:07.26,0:30:25.04,English,,0,0,0,,（学生）某些事情真的崩溃了
+Dialogue: 0,0:30:07.26,0:30:25.04,Chinese,,0,0,0,,（学生）某些事情真的崩溃了
 Dialogue: 0,0:30:25.04,0:30:26.20,English,,0,0,0,,Well wait a minute let me...
-Dialogue: 0,0:30:25.04,0:30:26.20,English,,0,0,0,,等一下让我...
+Dialogue: 0,0:30:25.04,0:30:26.20,Chinese,,0,0,0,,等一下让我...
 Dialogue: 0,0:30:27.50,0:30:34.04,English,,0,0,0,,Let me get this straight writes to x and p2 will actually correspond to the memory
-Dialogue: 0,0:30:27.50,0:30:34.04,English,,0,0,0,,让我直接写入 x 和 p2， 这实际上将和内存链接起来
+Dialogue: 0,0:30:27.50,0:30:34.04,Chinese,,0,0,0,,让我直接写入 x 和 p2， 这实际上将和内存链接起来
 Dialogue: 0,0:30:34.30,0:30:40.78,English,,0,0,0,,Look that it will actually go to the memory location I'm sorry I need to amend that
-Dialogue: 0,0:30:34.30,0:30:40.78,English,,0,0,0,,看它实际上会进入内存位置，我很抱歉我需要修改它
+Dialogue: 0,0:30:34.30,0:30:40.78,Chinese,,0,0,0,,看它实际上会进入内存位置，我很抱歉我需要修改它
 Dialogue: 0,0:30:41.74,0:30:47.60,English,,0,0,0,,So writes to x in p2 will be 8 bytes
-Dialogue: 0,0:30:41.74,0:30:47.60,English,,0,0,0,,因此，在 p2 中写入 x 将是8个字节
+Dialogue: 0,0:30:41.74,0:30:47.60,Chinese,,0,0,0,,因此，在 p2 中写入 x 将是8个字节
 Dialogue: 0,0:30:47.64,0:30:51.32,English,,0,0,0,,Because the compiler you know the compiler knows that it's a double
-Dialogue: 0,0:30:47.64,0:30:51.32,English,,0,0,0,,因为编译器，你知道编译器会知道它是双精度的
+Dialogue: 0,0:30:47.64,0:30:51.32,Chinese,,0,0,0,,因为编译器，你知道编译器会知道它是双精度的
 Dialogue: 0,0:30:52.70,0:30:59.84,English,,0,0,0,,But it'll go to a memory location that's only 4 bytes
-Dialogue: 0,0:30:52.70,0:30:59.84,English,,0,0,0,,但它会进入一个只有4个字节的内存位置
+Dialogue: 0,0:30:52.70,0:30:59.84,Chinese,,0,0,0,,但它会进入一个只有4个字节的内存位置
 Dialogue: 0,0:31:00.54,0:31:03.32,English,,0,0,0,,Because x because the linker chose the strong symbol
-Dialogue: 0,0:31:00.54,0:31:03.32,English,,0,0,0,,因为x...因为链接器选择了强符号
+Dialogue: 0,0:31:00.54,0:31:03.32,Chinese,,0,0,0,,因为x...因为链接器选择了强符号
 Dialogue: 0,0:31:04.46,0:31:08.34,English,,0,0,0,,Okay so the rights to x and p2 will actually overwrite y
-Dialogue: 0,0:31:04.46,0:31:08.34,English,,0,0,0,,好的，正确的是 x 和 p2 实际上会覆盖y
+Dialogue: 0,0:31:04.46,0:31:08.34,Chinese,,0,0,0,,好的，正确的是 x 和 p2 实际上会覆盖y
 Dialogue: 0,0:31:12.98,0:31:14.06,English,,0,0,0,,I'm sorry yes question
-Dialogue: 0,0:31:12.98,0:31:14.06,English,,0,0,0,,对不起...好的，有人有问题
+Dialogue: 0,0:31:12.98,0:31:14.06,Chinese,,0,0,0,,对不起...好的，有人有问题
 Dialogue: 0,0:31:14.06,0:31:23.12,English,,0,0,0,,[student speaking]
-Dialogue: 0,0:31:14.06,0:31:23.12,English,,0,0,0,,[学生发言] 
+Dialogue: 0,0:31:14.06,0:31:23.12,Chinese,,0,0,0,,[学生发言] 
 Dialogue: 0,0:31:23.18,0:31:25.08,English,,0,0,0,,That's just usually the way it happens
-Dialogue: 0,0:31:23.18,0:31:25.08,English,,0,0,0,,它通常就是这样发生的
+Dialogue: 0,0:31:23.18,0:31:25.08,Chinese,,0,0,0,,它通常就是这样发生的
 Dialogue: 0,0:31:25.70,0:31:33.42,English,,0,0,0,,You know...[student speaking]
-Dialogue: 0,0:31:25.70,0:31:33.42,English,,0,0,0,,你知道...... [学生说话]
+Dialogue: 0,0:31:25.70,0:31:33.42,Chinese,,0,0,0,,你知道...... [学生说话]
 Dialogue: 0,0:31:33.46,0:31:38.46,English,,0,0,0,,No no no global variables go in data they don't go on the stack
-Dialogue: 0,0:31:33.46,0:31:38.46,English,,0,0,0,,不不不全局变量进入了数据，他们并没有进栈
+Dialogue: 0,0:31:33.46,0:31:38.46,Chinese,,0,0,0,,不不不全局变量进入了数据，他们并没有进栈
 Dialogue: 0,0:31:39.36,0:31:41.80,English,,0,0,0,,But usually if you define local variables in a function
-Dialogue: 0,0:31:39.36,0:31:41.80,English,,0,0,0,,但通常来说，如果你在函数中定义局部变量
+Dialogue: 0,0:31:39.36,0:31:41.80,Chinese,,0,0,0,,但通常来说，如果你在函数中定义局部变量
 Dialogue: 0,0:31:42.26,0:31:46.38,English,,0,0,0,,It will put them,it will allocate them one after the other on the stack
-Dialogue: 0,0:31:42.26,0:31:46.38,English,,0,0,0,,它会放置它们，它会将他们一个接一个地分配到栈上
+Dialogue: 0,0:31:42.26,0:31:46.38,Chinese,,0,0,0,,它会放置它们，它会将他们一个接一个地分配到栈上
 Dialogue: 0,0:31:49.68,0:31:55.66,English,,0,0,0,,Okay all right so all this discussion about
-Dialogue: 0,0:31:49.68,0:31:55.66,English,,0,0,0,,好的，所有这些讨论
+Dialogue: 0,0:31:49.68,0:31:55.66,Chinese,,0,0,0,,好的，所有这些讨论
 Dialogue: 0,0:31:57.52,0:32:01.38,English,,0,0,0,,These weird strong weak symbol rules that the linker have
-Dialogue: 0,0:31:57.52,0:32:01.38,English,,0,0,0,,有关链接器具有的这些奇怪的强弱符号规则
+Dialogue: 0,0:31:57.52,0:32:01.38,Chinese,,0,0,0,,有关链接器具有的这些奇怪的强弱符号规则
 Dialogue: 0,0:32:01.38,0:32:04.92,English,,0,0,0,,It's another reason to avoid global variables if you can
-Dialogue: 0,0:32:01.38,0:32:04.92,English,,0,0,0,,这是避免全局变量的另一个原因
+Dialogue: 0,0:32:01.38,0:32:04.92,Chinese,,0,0,0,,这是避免全局变量的另一个原因
 Dialogue: 0,0:32:07.32,0:32:12.40,English,,0,0,0,,Now if you need to declare a global see if you can declare it static
-Dialogue: 0,0:32:07.32,0:32:12.40,English,,0,0,0,,现在，如果你需要声明全局变量，请看看是否可以将其声明为 static
+Dialogue: 0,0:32:07.32,0:32:12.40,Chinese,,0,0,0,,现在，如果你需要声明全局变量，请看看是否可以将其声明为 static
 Dialogue: 0,0:32:12.40,0:32:16.08,English,,0,0,0,,Because that'll limited scope to the the module that it's declared in
-Dialogue: 0,0:32:12.40,0:32:16.08,English,,0,0,0,,因为那样会限制了它声明的模块的范围
+Dialogue: 0,0:32:12.40,0:32:16.08,Chinese,,0,0,0,,因为那样会限制了它声明的模块的范围
 Dialogue: 0,0:32:16.34,0:32:18.10,English,,0,0,0,,So that's a good idea if you can do it
-Dialogue: 0,0:32:16.34,0:32:18.10,English,,0,0,0,,如果你那样做的话，是个好主意
+Dialogue: 0,0:32:16.34,0:32:18.10,Chinese,,0,0,0,,如果你那样做的话，是个好主意
 Dialogue: 0,0:32:18.88,0:32:21.24,English,,0,0,0,,And if you define a global variable initialize it
-Dialogue: 0,0:32:18.88,0:32:21.24,English,,0,0,0,,如果你定义了一个全局变量，就把它初始化了
+Dialogue: 0,0:32:18.88,0:32:21.24,Chinese,,0,0,0,,如果你定义了一个全局变量，就把它初始化了
 Dialogue: 0,0:32:22.90,0:32:31.26,English,,0,0,0,,So that you'll find,you'll discover if you have multiple initialize global symbols with the same name in your code
-Dialogue: 0,0:32:22.90,0:32:31.26,English,,0,0,0,,所以你会发现，你会发现你的代码中是否有多个具有相同名称的初始化全局符号
+Dialogue: 0,0:32:22.90,0:32:31.26,Chinese,,0,0,0,,所以你会发现，你会发现你的代码中是否有多个具有相同名称的初始化全局符号
 Dialogue: 0,0:32:32.46,0:32:35.90,English,,0,0,0,,And then if you want to it's always good practice
-Dialogue: 0,0:32:32.46,0:32:35.90,English,,0,0,0,,如果你想要，它总是好的做法
+Dialogue: 0,0:32:32.46,0:32:35.90,Chinese,,0,0,0,,如果你想要，它总是好的做法
 Dialogue: 0,0:32:35.90,0:32:41.70,English,,0,0,0,,If you're referencing an external variable to tell the compiler about it by using the extern attribute
-Dialogue: 0,0:32:35.90,0:32:41.70,English,,0,0,0,,如果你正在引用外部变量，则通过使用 extern 属性告诉编译器
+Dialogue: 0,0:32:35.90,0:32:41.70,Chinese,,0,0,0,,如果你正在引用外部变量，则通过使用 extern 属性告诉编译器
 Dialogue: 0,0:32:44.94,0:32:46.29,English,,0,0,0,,All right
-Dialogue: 0,0:32:44.94,0:32:46.29,English,,0,0,0,,好的
+Dialogue: 0,0:32:44.94,0:32:46.29,Chinese,,0,0,0,,好的
 Dialogue: 0,0:32:46.74,0:32:53.48,English,,0,0,0,,So now at this point the linker has associated every symbol reference  with some simple definition
-Dialogue: 0,0:32:46.74,0:32:53.48,English,,0,0,0,,所以现在，链接器已经将每个符号引用与一些简单的定义相关联
+Dialogue: 0,0:32:46.74,0:32:53.48,Chinese,,0,0,0,,所以现在，链接器已经将每个符号引用与一些简单的定义相关联
 Dialogue: 0,0:32:54.70,0:32:59.56,English,,0,0,0,,Now it has to take all those object relocatable object files and smush them together
-Dialogue: 0,0:32:54.70,0:32:59.56,English,,0,0,0,,现在它必须获取所有这些对象可重定位目标文件并将它们组合在一起
+Dialogue: 0,0:32:54.70,0:32:59.56,Chinese,,0,0,0,,现在它必须获取所有这些对象可重定位目标文件并将它们组合在一起
 Dialogue: 0,0:32:59.80,0:33:03.84,English,,0,0,0,,And create like one big executable
-Dialogue: 0,0:32:59.80,0:33:03.84,English,,0,0,0,,并创建一个大的可执行文件
+Dialogue: 0,0:32:59.80,0:33:03.84,Chinese,,0,0,0,,并创建一个大的可执行文件
 Dialogue: 0,0:33:04.92,0:33:08.54,English,,0,0,0,,So suppose with our example a little running example
-Dialogue: 0,0:33:04.92,0:33:08.54,English,,0,0,0,,因此，假设我们拿一个小运行示例来举例
+Dialogue: 0,0:33:04.92,0:33:08.54,Chinese,,0,0,0,,因此，假设我们拿一个小运行示例来举例
 Dialogue: 0,0:33:09.72,0:33:18.32,English,,0,0,0,,Each main.o and sum.o contain a code and initialize data
-Dialogue: 0,0:33:09.72,0:33:18.32,English,,0,0,0,,每个 main.o 和 sum.o 都包含了代码并初始化数据
+Dialogue: 0,0:33:09.72,0:33:18.32,Chinese,,0,0,0,,每个 main.o 和 sum.o 都包含了代码并初始化数据
 Dialogue: 0,0:33:19.08,0:33:22.96,English,,0,0,0,,sum.o doesn't have any initialize data it just has code
-Dialogue: 0,0:33:19.08,0:33:22.96,English,,0,0,0,,sum.o 没有初始化数据，只有代码
+Dialogue: 0,0:33:19.08,0:33:22.96,Chinese,,0,0,0,,sum.o 没有初始化数据，只有代码
 Dialogue: 0,0:33:23.62,0:33:28.34,English,,0,0,0,,And then there's their system code that actually runs before and after your program so
-Dialogue: 0,0:33:23.62,0:33:28.34,English,,0,0,0,,然后是上面的系统代码，它实际上在你的程序之前和之后运行
+Dialogue: 0,0:33:23.62,0:33:28.34,Chinese,,0,0,0,,然后是上面的系统代码，它实际上在你的程序之前和之后运行
 Dialogue: 0,0:33:29.88,0:33:35.46,English,,0,0,0,,When your program run it actually starts executing a startup code from  from lib.c
-Dialogue: 0,0:33:29.88,0:33:35.46,English,,0,0,0,,程序运行时，它从lib.c开始执行启动代码
+Dialogue: 0,0:33:29.88,0:33:35.46,Chinese,,0,0,0,,程序运行时，它从lib.c开始执行启动代码
 Dialogue: 0,0:33:36.12,0:33:44.46,English,,0,0,0,,That that sort of initializes things and then the last thing that it does is it calls main and passes it rc and rv
-Dialogue: 0,0:33:36.12,0:33:44.46,English,,0,0,0,,它主要做这一类初始化的事情，然后它做的最后一件事是它调用 main 并传递 rc 和 rv 
+Dialogue: 0,0:33:36.12,0:33:44.46,Chinese,,0,0,0,,它主要做这一类初始化的事情，然后它做的最后一件事是它调用 main 并传递 rc 和 rv 
 Dialogue: 0,0:33:46.18,0:33:48.38,English,,0,0,0,,Okay and then when you're, when your program exits
-Dialogue: 0,0:33:46.18,0:33:48.38,English,,0,0,0,,好的，然后当你的程序退出时
+Dialogue: 0,0:33:46.18,0:33:48.38,Chinese,,0,0,0,,好的，然后当你的程序退出时
 Dialogue: 0,0:33:49.78,0:33:55.00,English,,0,0,0,,Well that's a cyst call,but if your program if your main function routine does a return
-Dialogue: 0,0:33:49.78,0:33:55.00,English,,0,0,0,,会有一个调用，但如果你的程序...如果你的主函数例程返回
+Dialogue: 0,0:33:49.78,0:33:55.00,Chinese,,0,0,0,,会有一个调用，但如果你的程序...如果你的主函数例程返回
 Dialogue: 0,0:33:55.46,0:33:59.54,English,,0,0,0,,Then it returns back to that startup code which then doesn't exit okay
-Dialogue: 0,0:33:55.46,0:33:59.54,English,,0,0,0,,然后它返回到那个启动代码，然后没退出
+Dialogue: 0,0:33:55.46,0:33:59.54,Chinese,,0,0,0,,然后它返回到那个启动代码，然后没退出
 Dialogue: 0,0:34:00.52,0:34:07.62,English,,0,0,0,,So this is just...so this this consists of of text and data as well
-Dialogue: 0,0:34:00.52,0:34:07.62,English,,0,0,0,,这包括文本和数据
+Dialogue: 0,0:34:00.52,0:34:07.62,Chinese,,0,0,0,,这包括文本和数据
 Dialogue: 0,0:34:09.10,0:34:13.16,English,,0,0,0,,And so when the linker relocates these object files
-Dialogue: 0,0:34:09.10,0:34:13.16,English,,0,0,0,,所以当链接器重定位这些目标文件时
+Dialogue: 0,0:34:09.10,0:34:13.16,Chinese,,0,0,0,,所以当链接器重定位这些目标文件时
 Dialogue: 0,0:34:15.28,0:34:20.84,English,,0,0,0,,It takes all of the code the text sections from each of the modules
-Dialogue: 0,0:34:15.28,0:34:20.84,English,,0,0,0,,它将所有代码都放在每个模块的文本部分中
+Dialogue: 0,0:34:15.28,0:34:20.84,Chinese,,0,0,0,,它将所有代码都放在每个模块的文本部分中
 Dialogue: 0,0:34:21.80,0:34:29.96,English,,0,0,0,,And puts them together contiguously init in the .text section for the executable object file
-Dialogue: 0,0:34:21.80,0:34:29.96,English,,0,0,0,,并将它们连续地放在可执行对象文件的.text部分中
+Dialogue: 0,0:34:21.80,0:34:29.96,Chinese,,0,0,0,,并将它们连续地放在可执行对象文件的.text部分中
 Dialogue: 0,0:34:30.30,0:34:34.42,English,,0,0,0,,Ok so it just puts them together in some order that it determines
-Dialogue: 0,0:34:30.30,0:34:34.42,English,,0,0,0,,它只是按照它确定的顺序将它们组合在一起
+Dialogue: 0,0:34:30.30,0:34:34.42,Chinese,,0,0,0,,它只是按照它确定的顺序将它们组合在一起
 Dialogue: 0,0:34:34.76,0:34:40.40,English,,0,0,0,,And it creates a combined .text section in the executable
-Dialogue: 0,0:34:34.76,0:34:40.40,English,,0,0,0,,它在可执行文件中创建了一个组合的.text部分
+Dialogue: 0,0:34:34.76,0:34:40.40,Chinese,,0,0,0,,它在可执行文件中创建了一个组合的.text部分
 Dialogue: 0,0:34:40.82,0:34:46.18,English,,0,0,0,,That contains all of the system code and the all of the all of the code defined in the modules
-Dialogue: 0,0:34:40.82,0:34:46.18,English,,0,0,0,,它包含所有系统代码和模块中定义的所有代码
+Dialogue: 0,0:34:40.82,0:34:46.18,Chinese,,0,0,0,,它包含所有系统代码和模块中定义的所有代码
 Dialogue: 0,0:34:46.84,0:34:51.24,English,,0,0,0,,And then it does the same thing with the data takes all the .data
-Dialogue: 0,0:34:46.84,0:34:51.24,English,,0,0,0,,然后它会对数据采用所有.data做同样的事情
+Dialogue: 0,0:34:46.84,0:34:51.24,Chinese,,0,0,0,,然后它会对数据采用所有.data做同样的事情
 Dialogue: 0,0:34:51.96,0:34:55.92,English,,0,0,0,,Sections from the various object files and puts them together
-Dialogue: 0,0:34:51.96,0:34:55.92,English,,0,0,0,,来自各种目标文件的部分并将它们放在一起
+Dialogue: 0,0:34:51.96,0:34:55.92,Chinese,,0,0,0,,来自各种目标文件的部分并将它们放在一起
 Dialogue: 0,0:34:56.42,0:35:00.62,English,,0,0,0,,In one combined .data section in the executable
-Dialogue: 0,0:34:56.42,0:35:00.62,English,,0,0,0,,在可执行文件中的一个组合的 .data 部分
+Dialogue: 0,0:34:56.42,0:35:00.62,Chinese,,0,0,0,,在可执行文件中的一个组合的 .data 部分
 Dialogue: 0,0:35:02.52,0:35:07.32,English,,0,0,0,,And it also emerges the symbol tables and in the debug information as well
-Dialogue: 0,0:35:02.52,0:35:07.32,English,,0,0,0,,它还会出现符号表和调试信息
+Dialogue: 0,0:35:02.52,0:35:07.32,Chinese,,0,0,0,,它还会出现符号表和调试信息
 Dialogue: 0,0:35:09.14,0:35:15.12,English,,0,0,0,,Now when it just the act the act of sort of
-Dialogue: 0,0:35:09.14,0:35:15.12,English,,0,0,0,,现在当它起作用
+Dialogue: 0,0:35:09.14,0:35:15.12,Chinese,,0,0,0,,现在当它起作用
 Dialogue: 0,0:35:15.64,0:35:19.98,English,,0,0,0,,Relocating these object files requires the linker
-Dialogue: 0,0:35:15.64,0:35:19.98,English,,0,0,0,,重定向这些目标文件需要链接器
+Dialogue: 0,0:35:15.64,0:35:19.98,Chinese,,0,0,0,,重定向这些目标文件需要链接器
 Dialogue: 0,0:35:20.56,0:35:23.54,English,,0,0,0,,To figure out where it's going to actually store these
-Dialogue: 0,0:35:20.56,0:35:23.54,English,,0,0,0,,来弄清楚它们实际存储在哪里
+Dialogue: 0,0:35:20.56,0:35:23.54,Chinese,,0,0,0,,来弄清楚它们实际存储在哪里
 Dialogue: 0,0:35:24.42,0:35:31.24,English,,0,0,0,,These different these different symbols when the system gets, when this program gets loaded
-Dialogue: 0,0:35:24.42,0:35:31.24,English,,0,0,0,,当程序加载时，这些不同的符号...
+Dialogue: 0,0:35:24.42,0:35:31.24,Chinese,,0,0,0,,当程序加载时，这些不同的符号...
 Dialogue: 0,0:35:31.26,0:35:36.00,English,,0,0,0,,So it has to pick an address for main that
-Dialogue: 0,0:35:31.26,0:35:36.00,English,,0,0,0,,所以它必须为 main 选择一个地址
+Dialogue: 0,0:35:31.26,0:35:36.00,Chinese,,0,0,0,,所以它必须为 main 选择一个地址
 Dialogue: 0,0:35:37.30,0:35:41.14,English,,0,0,0,,That function will start at some absolute address
-Dialogue: 0,0:35:37.30,0:35:41.14,English,,0,0,0,,以至于函数将从某个绝对地址开始
+Dialogue: 0,0:35:37.30,0:35:41.14,Chinese,,0,0,0,,以至于函数将从某个绝对地址开始
 Dialogue: 0,0:35:41.22,0:35:46.42,English,,0,0,0,,It's going to have... it's going to do the same for swap,so for all the all the data arrays right
-Dialogue: 0,0:35:41.22,0:35:46.42,English,,0,0,0,,它会对swap（）做同样的事情，以保证所有数组都是正确的
+Dialogue: 0,0:35:41.22,0:35:46.42,Chinese,,0,0,0,,它会对swap（）做同样的事情，以保证所有数组都是正确的
 Dialogue: 0,0:35:51.16,0:36:00.16,English,,0,0,0,,And but the problem is that when this code is compiled,the compiler doesn't know what addresses the linker is going to pick
-Dialogue: 0,0:35:51.16,0:36:00.16,English,,0,0,0,,但问题是，当编译此代码时，编译器不知道链接器将选择哪些地址
+Dialogue: 0,0:35:51.16,0:36:00.16,Chinese,,0,0,0,,但问题是，当编译此代码时，编译器不知道链接器将选择哪些地址
 Dialogue: 0,0:36:02.40,0:36:09.10,English,,0,0,0,,So the compiler creates these reminders to the linker called relocation entries
-Dialogue: 0,0:36:02.40,0:36:09.10,English,,0,0,0,,因此，编译器会向称为重定位条目的链接器创建这些提醒
+Dialogue: 0,0:36:02.40,0:36:09.10,Chinese,,0,0,0,,因此，编译器会向称为重定位条目的链接器创建这些提醒
 Dialogue: 0,0:36:09.10,0:36:13.84,English,,0,0,0,,Which are then stored in the relocation sections of the the object file
-Dialogue: 0,0:36:09.10,0:36:13.84,English,,0,0,0,,然后将其存储在目标文件的重定位部分中
+Dialogue: 0,0:36:09.10,0:36:13.84,Chinese,,0,0,0,,然后将其存储在目标文件的重定位部分中
 Dialogue: 0,0:36:14.94,0:36:20.22,English,,0,0,0,,And these relocation entries are instructions to the linker that's something
-Dialogue: 0,0:36:14.94,0:36:20.22,English,,0,0,0,,这些重定位条目是链接器的指令
+Dialogue: 0,0:36:14.94,0:36:20.22,Chinese,,0,0,0,,这些重定位条目是链接器的指令
 Dialogue: 0,0:36:21.62,0:36:24.88,English,,0,0,0,,That there's a reference to a symbol that's going to have to be patched up
-Dialogue: 0,0:36:21.62,0:36:24.88,English,,0,0,0,,有一个符号的引用必须要修改
+Dialogue: 0,0:36:21.62,0:36:24.88,Chinese,,0,0,0,,有一个符号的引用必须要修改
 Dialogue: 0,0:36:25.48,0:36:30.98,English,,0,0,0,,When the the code is actually relocated and merged into the executable
-Dialogue: 0,0:36:25.48,0:36:30.98,English,,0,0,0,,在代码实际重定位并合并到可执行文件中时
+Dialogue: 0,0:36:25.48,0:36:30.98,Chinese,,0,0,0,,在代码实际重定位并合并到可执行文件中时
 Dialogue: 0,0:36:32.42,0:36:36.24,English,,0,0,0,,So let's look at a couple of these a couple of examples so in
-Dialogue: 0,0:36:32.42,0:36:36.24,English,,0,0,0,,让我们看看其中的几个例子
+Dialogue: 0,0:36:32.42,0:36:36.24,Chinese,,0,0,0,,让我们看看其中的几个例子
 Dialogue: 0,0:36:37.04,0:36:44.38,English,,0,0,0,,Our in our main.c module there was a reference to this global symbol called array
-Dialogue: 0,0:36:37.04,0:36:44.38,English,,0,0,0,,我们在 main.c 模块中引用了一个名为array的全局符号
+Dialogue: 0,0:36:37.04,0:36:44.38,Chinese,,0,0,0,,我们在 main.c 模块中引用了一个名为array的全局符号
 Dialogue: 0,0:36:46.58,0:36:52.06,English,,0,0,0,,Okay and then there was also a reference to this global symbol sum which is the function
-Dialogue: 0,0:36:46.58,0:36:52.06,English,,0,0,0,,好的，然后还有一个引用，全局符号 sum， 这是一个函数
+Dialogue: 0,0:36:46.58,0:36:52.06,Chinese,,0,0,0,,好的，然后还有一个引用，全局符号 sum， 这是一个函数
 Dialogue: 0,0:36:53.54,0:36:57.32,English,,0,0,0,,So the compiler creates two relocation entries
-Dialogue: 0,0:36:53.54,0:36:57.32,English,,0,0,0,,因此编译器会创建两个重定位条目
+Dialogue: 0,0:36:53.54,0:36:57.32,Chinese,,0,0,0,,因此编译器会创建两个重定位条目
 Dialogue: 0,0:36:57.90,0:37:00.84,English,,0,0,0,,The first one for the reference to the array a
-Dialogue: 0,0:36:57.90,0:37:00.84,English,,0,0,0,,第一个用于引用数组 a
+Dialogue: 0,0:36:57.90,0:37:00.84,Chinese,,0,0,0,,第一个用于引用数组 a
 Dialogue: 0,0:37:01.58,0:37:06.30,English,,0,0,0,,So here we're moving member %edi is the first argument
-Dialogue: 0,0:37:01.58,0:37:06.30,English,,0,0,0,,所以这里我们正在传送的成员 ％edi 是第一个参数
+Dialogue: 0,0:37:01.58,0:37:06.30,Chinese,,0,0,0,,所以这里我们正在传送的成员 ％edi 是第一个参数
 Dialogue: 0,0:37:07.00,0:37:12.18,English,,0,0,0,,So remember a sum function takes the address of the of array
-Dialogue: 0,0:37:07.00,0:37:12.18,English,,0,0,0,,所以请记住 sum 函数获取数组的地址
+Dialogue: 0,0:37:07.00,0:37:12.18,Chinese,,0,0,0,,所以请记住 sum 函数获取数组的地址
 Dialogue: 0,0:37:12.68,0:37:15.50,English,,0,0,0,,Of the input array as its argument
-Dialogue: 0,0:37:12.68,0:37:15.50,English,,0,0,0,,输入数组作为其参数
+Dialogue: 0,0:37:12.68,0:37:15.50,Chinese,,0,0,0,,输入数组作为其参数
 Dialogue: 0,0:37:16.92,0:37:27.00,English,,0,0,0,,So this move we're moving the address of the array into %edi for the first argument
-Dialogue: 0,0:37:16.92,0:37:27.00,English,,0,0,0,,因此，我们将第一个参数的数组地址传送到 ％edi 中
+Dialogue: 0,0:37:16.92,0:37:27.00,Chinese,,0,0,0,,因此，我们将第一个参数的数组地址传送到 ％edi 中
 Dialogue: 0,0:37:27.92,0:37:30.36,English,,0,0,0,,But the compiler doesn't know what that address is going to be
-Dialogue: 0,0:37:27.92,0:37:30.36,English,,0,0,0,,但编译器不知道该地址会是什么
+Dialogue: 0,0:37:27.92,0:37:30.36,Chinese,,0,0,0,,但编译器不知道该地址会是什么
 Dialogue: 0,0:37:31.24,0:37:34.56,English,,0,0,0,,Right so it just it just it just
-Dialogue: 0,0:37:31.24,0:37:34.56,English,,0,0,0,,是的，它只是...
+Dialogue: 0,0:37:31.24,0:37:34.56,Chinese,,0,0,0,,是的，它只是...
 Dialogue: 0,0:37:35.84,0:37:42.58,English,,0,0,0,,It just moves in an immediate value of 0 into %edi temporarily right so you can see this is all zeros
-Dialogue: 0,0:37:35.84,0:37:42.58,English,,0,0,0,,它只是暂时把立即数值 $0x0 传送到 ％edi ，所以你可以看到这是全零
+Dialogue: 0,0:37:35.84,0:37:42.58,Chinese,,0,0,0,,它只是暂时把立即数值 $0x0 传送到 ％edi ，所以你可以看到这是全零
 Dialogue: 0,0:37:43.96,0:37:50.02,English,,0,0,0,,The bf is the mov instruction and then there's all zeros for now
-Dialogue: 0,0:37:43.96,0:37:50.02,English,,0,0,0,,bf 是 mov 指令，然后后面全都是 0
+Dialogue: 0,0:37:43.96,0:37:50.02,Chinese,,0,0,0,,bf 是 mov 指令，然后后面全都是 0
 Dialogue: 0,0:37:51.82,0:37:57.92,English,,0,0,0,,And then it places this relocation entry in the relocation section of main.o
-Dialogue: 0,0:37:51.82,0:37:57.92,English,,0,0,0,,然后它将此重定位条目放在main.o的重定位部分中
+Dialogue: 0,0:37:51.82,0:37:57.92,Chinese,,0,0,0,,然后它将此重定位条目放在main.o的重定位部分中
 Dialogue: 0,0:37:58.64,0:38:03.44,English,,0,0,0,,And it says to the linker at offset a
-Dialogue: 0,0:37:58.64,0:38:03.44,English,,0,0,0,,它在偏移量 a 处告知链接器
+Dialogue: 0,0:37:58.64,0:38:03.44,Chinese,,0,0,0,,它在偏移量 a 处告知链接器
 Dialogue: 0,0:38:04.96,0:38:09.58,English,,0,0,0,,So these let me remind you these are main.o
-Dialogue: 0,0:38:04.96,0:38:09.58,English,,0,0,0,,所以这些提醒你们这些是main.o模块
+Dialogue: 0,0:38:04.96,0:38:09.58,Chinese,,0,0,0,,所以这些提醒你们这些是main.o模块
 Dialogue: 0,0:38:10.52,0:38:13.90,English,,0,0,0,,Module only contains one function
-Dialogue: 0,0:38:10.52,0:38:13.90,English,,0,0,0,,这个模块只包含一个函数
+Dialogue: 0,0:38:10.52,0:38:13.90,Chinese,,0,0,0,,这个模块只包含一个函数
 Dialogue: 0,0:38:14.92,0:38:22.96,English,,0,0,0,,So that function starts that offsets zero in the code section of the module in the .text section of the module
-Dialogue: 0,0:38:14.92,0:38:22.96,English,,0,0,0,,因此，该函数在模块的.text部分的模块的代码部分偏移为零的地方开始
+Dialogue: 0,0:38:14.92,0:38:22.96,Chinese,,0,0,0,,因此，该函数在模块的.text部分的模块的代码部分偏移为零的地方开始
 Dialogue: 0,0:38:23.90,0:38:28.84,English,,0,0,0,,If there were other functions in this module they would follow immediately after
-Dialogue: 0,0:38:23.90,0:38:28.84,English,,0,0,0,,如果此模块中还有其他功能，则会立即跟进
+Dialogue: 0,0:38:23.90,0:38:28.84,Chinese,,0,0,0,,如果此模块中还有其他功能，则会立即跟进
 Dialogue: 0,0:38:29.48,0:38:36.98,English,,0,0,0,,Ok and it so you can see what the compiler it's just generating offsets of these instructions
-Dialogue: 0,0:38:29.48,0:38:36.98,English,,0,0,0,,好的，所以你可以看到编译器只是生成这些指令的偏移量
+Dialogue: 0,0:38:29.48,0:38:36.98,Chinese,,0,0,0,,好的，所以你可以看到编译器只是生成这些指令的偏移量
 Dialogue: 0,0:38:37.62,0:38:39.92,English,,0,0,0,,From the beginning of the .text section
-Dialogue: 0,0:38:37.62,0:38:39.92,English,,0,0,0,,从.text部分开始
+Dialogue: 0,0:38:37.62,0:38:39.92,Chinese,,0,0,0,,从.text部分开始
 Dialogue: 0,0:38:41.02,0:38:46.50,English,,0,0,0,,And it includes this relocation entry which says to the linker hey
-Dialogue: 0,0:38:41.02,0:38:46.50,English,,0,0,0,,它包括这个重定位条目，它跟链接器打招呼
+Dialogue: 0,0:38:41.02,0:38:46.50,Chinese,,0,0,0,,它包括这个重定位条目，它跟链接器打招呼
 Dialogue: 0,0:38:46.98,0:38:54.38,English,,0,0,0,,When you're relocating main.o add offset a in this .text section
-Dialogue: 0,0:38:46.98,0:38:54.38,English,,0,0,0,,当你重新定位 main.o 时，在此 .text 部分中添加偏移量 a
+Dialogue: 0,0:38:46.98,0:38:54.38,Chinese,,0,0,0,,当你重新定位 main.o 时，在此 .text 部分中添加偏移量 a
 Dialogue: 0,0:38:55.48,0:39:03.36,English,,0,0,0,,You've got a reference,a reference to an array in the form of a 32-bit address
-Dialogue: 0,0:38:55.48,0:39:03.36,English,,0,0,0,,你有一个32位地址形式的数组引用
+Dialogue: 0,0:38:55.48,0:39:03.36,Chinese,,0,0,0,,你有一个32位地址形式的数组引用
 Dialogue: 0,0:39:04.52,0:39:11.40,English,,0,0,0,,Ok so that,so eventually the linker is going to have to patch up these
-Dialogue: 0,0:39:04.52,0:39:11.40,English,,0,0,0,,好的，那么，最终链接器将不得不修改它们
+Dialogue: 0,0:39:04.52,0:39:11.40,Chinese,,0,0,0,,好的，那么，最终链接器将不得不修改它们
 Dialogue: 0,0:39:12.28,0:39:15.04,English,,0,0,0,,So this is address , this is address a
-Dialogue: 0,0:39:12.28,0:39:15.04,English,,0,0,0,,所以这是地址a
+Dialogue: 0,0:39:12.28,0:39:15.04,Chinese,,0,0,0,,所以这是地址a
 Dialogue: 0,0:39:15.04,0:39:18.30,English,,0,0,0,,It's going to have to patch up the four bytes starting at address a
-Dialogue: 0,0:39:15.04,0:39:18.30,English,,0,0,0,,它必须修改从地址a开始的四个字节
+Dialogue: 0,0:39:15.04,0:39:18.30,Chinese,,0,0,0,,它必须修改从地址a开始的四个字节
 Dialogue: 0,0:39:19.82,0:39:24.76,English,,0,0,0,,With the absolute address of the symbol array
-Dialogue: 0,0:39:19.82,0:39:24.76,English,,0,0,0,,地址a使用符号数组的绝对地址
+Dialogue: 0,0:39:19.82,0:39:24.76,Chinese,,0,0,0,,地址a使用符号数组的绝对地址
 Dialogue: 0,0:39:28.58,0:39:38.70,English,,0,0,0,,And then similarly the reference to,the reference to,this the reference to this function sum
-Dialogue: 0,0:39:28.58,0:39:38.70,English,,0,0,0,,然后类似地引用这个函数的sum
+Dialogue: 0,0:39:28.58,0:39:38.70,Chinese,,0,0,0,,然后类似地引用这个函数的sum
 Dialogue: 0,0:39:39.72,0:39:44.28,English,,0,0,0,,The compiler has no idea where sum actually will end up
-Dialogue: 0,0:39:39.72,0:39:44.28,English,,0,0,0,,编译器不知道 sum 实际上会在哪里结束
+Dialogue: 0,0:39:39.72,0:39:44.28,Chinese,,0,0,0,,编译器不知道 sum 实际上会在哪里结束
 Dialogue: 0,0:39:44.28,0:39:49.24,English,,0,0,0,,It doesn't even know what module it's in or even if it's, even if it is defined in a module
-Dialogue: 0,0:39:44.28,0:39:49.24,English,,0,0,0,,即使 sum 是在模块中定义的，编译器甚至不知道它所在的模块，甚至它是什么模块
+Dialogue: 0,0:39:44.28,0:39:49.24,Chinese,,0,0,0,,即使 sum 是在模块中定义的，编译器甚至不知道它所在的模块，甚至它是什么模块
 Dialogue: 0,0:39:49.94,0:39:55.48,English,,0,0,0,,So in this case it just it does a call with all zeros
-Dialogue: 0,0:39:49.94,0:39:55.48,English,,0,0,0,,所以在这种情况下它只能用全零来调用
+Dialogue: 0,0:39:49.94,0:39:55.48,Chinese,,0,0,0,,所以在这种情况下它只能用全零来调用
 Dialogue: 0,0:39:58.14,0:40:01.72,English,,0,0,0,,And then it adds this relocation entry that says to the linker
-Dialogue: 0,0:39:58.14,0:40:01.72,English,,0,0,0,,然后它添加了对链接器通告的重定位条目
+Dialogue: 0,0:39:58.14,0:40:01.72,Chinese,,0,0,0,,然后它添加了对链接器通告的重定位条目
 Dialogue: 0,0:40:03.10,0:40:16.16,English,,0,0,0,,At offset f you've got a four byte pc-relative reference to a function,to assemble called sum
-Dialogue: 0,0:40:03.10,0:40:16.16,English,,0,0,0,,在偏移量f处，你有一个四字节的pc相对引用，用于汇总调用sum
+Dialogue: 0,0:40:03.10,0:40:16.16,Chinese,,0,0,0,,在偏移量f处，你有一个四字节的pc相对引用，用于汇总调用sum
 Dialogue: 0,0:40:17.78,0:40:23.66,English,,0,0,0,,And then it this is sort of a arcane detail that but and it includes
-Dialogue: 0,0:40:17.78,0:40:23.66,English,,0,0,0,,然后，这有一个神奇的细节，
+Dialogue: 0,0:40:17.78,0:40:23.66,Chinese,,0,0,0,,然后，这有一个神奇的细节，
 Dialogue: 0,0:40:24.24,0:40:27.96,English,,0,0,0,,There's an option to include a bias in the in the offset
-Dialogue: 0,0:40:24.24,0:40:27.96,English,,0,0,0,,可以选择在偏移中包含偏差
+Dialogue: 0,0:40:24.24,0:40:27.96,Chinese,,0,0,0,,可以选择在偏移中包含偏差
 Dialogue: 0,0:40:28.66,0:40:36.26,English,,0,0,0,,And since we're using since calls are always resolved using pc-relative addressing
-Dialogue: 0,0:40:28.66,0:40:36.26,English,,0,0,0,,因为我们正在使用，因为调用总是使用pc相对寻址来解决
+Dialogue: 0,0:40:28.66,0:40:36.26,Chinese,,0,0,0,,因为我们正在使用，因为调用总是使用pc相对寻址来解决
 Dialogue: 0,0:40:36.78,0:40:43.18,English,,0,0,0,,The value that's going to be placed here at these four bytes that offset f
-Dialogue: 0,0:40:36.78,0:40:43.18,English,,0,0,0,,将在偏移f的四个字节处放置的值
+Dialogue: 0,0:40:36.78,0:40:43.18,Chinese,,0,0,0,,将在偏移f的四个字节处放置的值
 Dialogue: 0,0:40:43.70,0:40:48.40,English,,0,0,0,,Is going to be an offset from the current %rip value or program or counter value
-Dialogue: 0,0:40:43.70,0:40:48.40,English,,0,0,0,,将是当前 ％rip 值或程序或计数器值的偏移量
+Dialogue: 0,0:40:43.70,0:40:48.40,Chinese,,0,0,0,,将是当前 ％rip 值或程序或计数器值的偏移量
 Dialogue: 0,0:40:49.44,0:40:53.66,English,,0,0,0,,And since the program counter always points to the nest get next instruction
-Dialogue: 0,0:40:49.44,0:40:53.66,English,,0,0,0,,并且由于程序计数器总是指向嵌套获取下一条指令
+Dialogue: 0,0:40:49.44,0:40:53.66,Chinese,,0,0,0,,并且由于程序计数器总是指向嵌套获取下一条指令
 Dialogue: 0,0:40:55.66,0:40:59.18,English,,0,0,0,,It includes this which is four bytes away it includes this
-Dialogue: 0,0:40:55.66,0:40:59.18,English,,0,0,0,,它包括四个字节，它包括这个
+Dialogue: 0,0:40:55.66,0:40:59.18,Chinese,,0,0,0,,它包括四个字节，它包括这个
 Dialogue: 0,0:40:59.54,0:41:01.40,English,,0,0,0,,This offset of minus four
-Dialogue: 0,0:40:59.54,0:41:01.40,English,,0,0,0,,这个偏移量减去四
+Dialogue: 0,0:40:59.54,0:41:01.40,Chinese,,0,0,0,,这个偏移量减去四
 Dialogue: 0,0:41:02.96,0:41:11.22,English,,0,0,0,,So I talked about it in detail in the book if you really want to know how this works
-Dialogue: 0,0:41:02.96,0:41:11.22,English,,0,0,0,,所以如果你真的想知道它是如何工作的，我会在书中详细讨论它
+Dialogue: 0,0:41:02.96,0:41:11.22,Chinese,,0,0,0,,所以如果你真的想知道它是如何工作的，我会在书中详细讨论它
 Dialogue: 0,0:41:11.32,0:41:17.98,English,,0,0,0,,But just the point here is that there's enough information for the linker to actually fill in the right address
-Dialogue: 0,0:41:11.32,0:41:17.98,English,,0,0,0,,但这里的重点是链接器有足够的信息来实际填充正确的地址
+Dialogue: 0,0:41:11.32,0:41:17.98,Chinese,,0,0,0,,但这里的重点是链接器有足够的信息来实际填充正确的地址
 Dialogue: 0,0:41:18.98,0:41:21.34,English,,0,0,0,,So now if we look at the relocated .text section
-Dialogue: 0,0:41:18.98,0:41:21.34,English,,0,0,0,,现在，如果我们查看重定位的.text部分
+Dialogue: 0,0:41:18.98,0:41:21.34,Chinese,,0,0,0,,现在，如果我们查看重定位的.text部分
 Dialogue: 0,0:41:21.34,0:41:27.64,English,,0,0,0,,if we compile this code into an executable and then we use objdump to disassemble it
-Dialogue: 0,0:41:21.34,0:41:27.64,English,,0,0,0,,如果我们将此代码编译为可执行文件，然后我们使用objdump来反汇编它
+Dialogue: 0,0:41:21.34,0:41:27.64,Chinese,,0,0,0,,如果我们将此代码编译为可执行文件，然后我们使用objdump来反汇编它
 Dialogue: 0,0:41:28.52,0:41:34.36,English,,0,0,0,,Then what you see is this reference here
-Dialogue: 0,0:41:28.52,0:41:34.36,English,,0,0,0,,那么你看到的就是这里的引用
+Dialogue: 0,0:41:28.52,0:41:34.36,Chinese,,0,0,0,,那么你看到的就是这里的引用
 Dialogue: 0,0:41:34.36,0:41:38.58,English,,0,0,0,,Where we move the address of the address of a into %edi
-Dialogue: 0,0:41:34.36,0:41:38.58,English,,0,0,0,,我们将该地址传送到 ％edi 
+Dialogue: 0,0:41:34.36,0:41:38.58,Chinese,,0,0,0,,我们将该地址传送到 ％edi 
 Dialogue: 0,0:41:39.96,0:41:50.20,English,,0,0,0,,Those four bytes which were original zero have now been updated with the actual address of array in memory at runtime
-Dialogue: 0,0:41:39.96,0:41:50.20,English,,0,0,0,,这四个一开始为零的字节现在已经在运行时用内存中数组的实际地址更新
+Dialogue: 0,0:41:39.96,0:41:50.20,Chinese,,0,0,0,,这四个一开始为零的字节现在已经在运行时用内存中数组的实际地址更新
 Dialogue: 0,0:41:50.70,0:41:57.60,English,,0,0,0,,Okay so the linkers decided that the array is going to go at address 0x601018
-Dialogue: 0,0:41:50.70,0:41:57.60,English,,0,0,0,,好的，所以链接器决定数组将会在地址0x601018处
+Dialogue: 0,0:41:50.70,0:41:57.60,Chinese,,0,0,0,,好的，所以链接器决定数组将会在地址0x601018处
 Dialogue: 0,0:41:58.46,0:42:06.54,English,,0,0,0,,And then it's actually patched that the four bytes in the cup in the in the move instruction with that absolute address
-Dialogue: 0,0:41:58.46,0:42:06.54,English,,0,0,0,,然后它实际上修改了 mov 指令中该绝对地址中的四个字节
+Dialogue: 0,0:41:58.46,0:42:06.54,Chinese,,0,0,0,,然后它实际上修改了 mov 指令中该绝对地址中的四个字节
 Dialogue: 0,0:42:08.90,0:42:12.28,English,,0,0,0,,And the call to sum is...it's also been updated
-Dialogue: 0,0:42:08.90,0:42:12.28,English,,0,0,0,,对sum的调用是......它也被更新了
+Dialogue: 0,0:42:08.90,0:42:12.28,Chinese,,0,0,0,,对sum的调用是......它也被更新了
 Dialogue: 0,0:42:13.18,0:42:15.02,English,,0,0,0,,But this one's interesting right that
-Dialogue: 0,0:42:13.18,0:42:15.02,English,,0,0,0,,这很有趣
+Dialogue: 0,0:42:13.18,0:42:15.02,Chinese,,0,0,0,,这很有趣
 Dialogue: 0,0:42:15.46,0:42:22.04,English,,0,0,0,,So the address it's been updated with the pc relative address of five
-Dialogue: 0,0:42:15.46,0:42:22.04,English,,0,0,0,,所以用pc的相对地址为5来更新它的地址
+Dialogue: 0,0:42:15.46,0:42:22.04,Chinese,,0,0,0,,所以用pc的相对地址为5来更新它的地址
 Dialogue: 0,0:42:23.42,0:42:25.42,English,,0,0,0,,Okay so when this program runs
-Dialogue: 0,0:42:23.42,0:42:25.42,English,,0,0,0,,好的，所以当这个程序运行时
+Dialogue: 0,0:42:23.42,0:42:25.42,Chinese,,0,0,0,,好的，所以当这个程序运行时
 Dialogue: 0,0:42:27.34,0:42:28.98,English,,0,0,0,,This call instruction
-Dialogue: 0,0:42:27.34,0:42:28.98,English,,0,0,0,,调用指令
+Dialogue: 0,0:42:27.34,0:42:28.98,Chinese,,0,0,0,,调用指令
 Dialogue: 0,0:42:30.54,0:42:39.68,English,,0,0,0,,What it will do when it when it determines when it computes the absolute address of the function sum
-Dialogue: 0,0:42:30.54,0:42:39.68,English,,0,0,0,,当它确定何时计算函数 sum 的绝对地址时它会做什么？
+Dialogue: 0,0:42:30.54,0:42:39.68,Chinese,,0,0,0,,当它确定何时计算函数 sum 的绝对地址时它会做什么？
 Dialogue: 0,0:42:40.84,0:42:49.10,English,,0,0,0,,It will take...
-Dialogue: 0,0:42:40.84,0:42:49.10,English,,0,0,0,,他将
+Dialogue: 0,0:42:40.84,0:42:49.10,Chinese,,0,0,0,,他将
 Dialogue: 0,0:42:49.26,0:43:00.36,English,,0,0,0,,It will take the current value of the program counter which is the next instruction so 0x4004e3
-Dialogue: 0,0:42:49.26,0:43:00.36,English,,0,0,0,,它将采用程序计数器的当前值，即下一条指令0x4004e3
+Dialogue: 0,0:42:49.26,0:43:00.36,Chinese,,0,0,0,,它将采用程序计数器的当前值，即下一条指令0x4004e3
 Dialogue: 0,0:43:01.44,0:43:07.42,English,,0,0,0,,And it will add to it whatever value is in this immediate field
-Dialogue: 0,0:43:01.44,0:43:07.42,English,,0,0,0,,它将增加它在这个区域的任何值
+Dialogue: 0,0:43:01.44,0:43:07.42,Chinese,,0,0,0,,它将增加它在这个区域的任何值
 Dialogue: 0,0:43:08.16,0:43:13.84,English,,0,0,0,,Okay which is a two's comp... interpret it as a two's complement integer so it can go
-Dialogue: 0,0:43:08.16,0:43:13.84,English,,0,0,0,,好的，这是一个二..把它解释为一个二进制补码整数，所以它可以
+Dialogue: 0,0:43:08.16,0:43:13.84,Chinese,,0,0,0,,好的，这是一个二..把它解释为一个二进制补码整数，所以它可以
 Dialogue: 0,0:43:14.76,0:43:18.22,English,,0,0,0,,It can be relative you can go - or +
-Dialogue: 0,0:43:14.76,0:43:18.22,English,,0,0,0,,它可以是相对的，你可以去 - 或 +
+Dialogue: 0,0:43:14.76,0:43:18.22,Chinese,,0,0,0,,它可以是相对的，你可以去 - 或 +
 Dialogue: 0,0:43:18.88,0:43:28.44,English,,0,0,0,,In this case it's saying that the function that you want to call is at 0x4004e3 + 5
-Dialogue: 0,0:43:18.88,0:43:28.44,English,,0,0,0,,在这种情况下，它表示你要调用的函数是在 0x4004e3 + 5
+Dialogue: 0,0:43:18.88,0:43:28.44,Chinese,,0,0,0,,在这种情况下，它表示你要调用的函数是在 0x4004e3 + 5
 Dialogue: 0,0:43:29.54,0:43:34.66,English,,0,0,0,,Which is 0x4004e8 which is the address of sum
-Dialogue: 0,0:43:29.54,0:43:34.66,English,,0,0,0,,就是0x4004e8，这是 sum 的地址
+Dialogue: 0,0:43:29.54,0:43:34.66,Chinese,,0,0,0,,就是0x4004e8，这是 sum 的地址
 Dialogue: 0,0:43:35.80,0:43:40.38,English,,0,0,0,,Okay and so the linker does that the compiler has all the smarts
-Dialogue: 0,0:43:35.80,0:43:40.38,English,,0,0,0,,好了，所以链接器做的是，编译器有这些智慧
+Dialogue: 0,0:43:35.80,0:43:40.38,Chinese,,0,0,0,,好了，所以链接器做的是，编译器有这些智慧
 Dialogue: 0,0:43:40.38,0:43:43.46,English,,0,0,0,,The compiler computed the relocation entry
-Dialogue: 0,0:43:40.38,0:43:43.46,English,,0,0,0,,编译器计算了重定位条目
+Dialogue: 0,0:43:40.38,0:43:43.46,Chinese,,0,0,0,,编译器计算了重定位条目
 Dialogue: 0,0:43:43.70,0:43:49.02,English,,0,0,0,,The linker is just blindly going through each of those relocation entries and just doing what it's told
-Dialogue: 0,0:43:43.70,0:43:49.02,English,,0,0,0,,链接器只是盲目地浏览每个重定位条目，只是按照它所说的去做
+Dialogue: 0,0:43:43.70,0:43:49.02,Chinese,,0,0,0,,链接器只是盲目地浏览每个重定位条目，只是按照它所说的去做
 Dialogue: 0,0:43:50.44,0:43:58.74,English,,0,0,0,,Okay but the next result is that now all of these these references have been patched up with valid absolute addresses
-Dialogue: 0,0:43:50.44,0:43:58.74,English,,0,0,0,,好的，但接下来的结果是，现在所有这些引用都已使用有效的绝对地址进行了修补
+Dialogue: 0,0:43:50.44,0:43:58.74,Chinese,,0,0,0,,好的，但接下来的结果是，现在所有这些引用都已使用有效的绝对地址进行了修补
 Dialogue: 0,0:44:04.90,0:44:08.34,English,,0,0,0,,Now once the linkers created an object file
-Dialogue: 0,0:44:04.90,0:44:08.34,English,,0,0,0,,现在，一旦链接器创建了一个目标文件
+Dialogue: 0,0:44:04.90,0:44:08.34,Chinese,,0,0,0,,现在，一旦链接器创建了一个目标文件
 Dialogue: 0,0:44:10.20,0:44:13.92,English,,0,0,0,,That object file can be loaded the code and data
-Dialogue: 0,0:44:10.20,0:44:13.92,English,,0,0,0,,该对象文件可以加载代码和数据
+Dialogue: 0,0:44:10.20,0:44:13.92,Chinese,,0,0,0,,该对象文件可以加载代码和数据
 Dialogue: 0,0:44:13.92,0:44:18.80,English,,0,0,0,,And that object file can be loaded directly into memory with no further modification
-Dialogue: 0,0:44:13.92,0:44:18.80,English,,0,0,0,,并且该对象文件可以直接加载到内存中而无需进一步修改
+Dialogue: 0,0:44:13.92,0:44:18.80,Chinese,,0,0,0,,并且该对象文件可以直接加载到内存中而无需进一步修改
 Dialogue: 0,0:44:20.32,0:44:29.72,English,,0,0,0,,Ok so the if you look at all of the read-only sections in the executable
-Dialogue: 0,0:44:20.32,0:44:29.72,English,,0,0,0,,好的，如果你查看可执行文件中的所有只读部分
+Dialogue: 0,0:44:20.32,0:44:29.72,Chinese,,0,0,0,,好的，如果你查看可执行文件中的所有只读部分
 Dialogue: 0,0:44:30.62,0:44:33.60,English,,0,0,0,,So there's this .init section which
-Dialogue: 0,0:44:30.62,0:44:33.60,English,,0,0,0,,所以有这个.init部分
+Dialogue: 0,0:44:30.62,0:44:33.60,Chinese,,0,0,0,,所以有这个.init部分
 Dialogue: 0,0:44:35.40,0:44:41.18,English,,0,0,0,,We're not to worry about that, all the code is in the .text and things like jump tables are in .rodata
 Dialogue: 0,0:44:35.40,0:44:41.18,Chinese,,0,0,0,,我们不用担心，所有代码都在.text中，跳转表之类的东西都在.rodata中
 Dialogue: 0,0:44:43.58,0:44:48.18,English,,0,0,0,,All of this data can be loaded directly into memory as is
