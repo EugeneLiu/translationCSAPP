@@ -128,7 +128,7 @@ Dialogue: 0,0:04:03.66,0:04:08.90,Chinese,,0,0,0,,我们不会讨论硬件
 Dialogue: 0,0:04:08.90,0:04:13.16,English,,0,0,0,,But what's most interesting from it is that
 Dialogue: 0,0:04:08.90,0:04:13.16,Chinese,,0,0,0,,但最有趣的是
 Dialogue: 0,0:04:14.44,0:04:18.36,English,,0,0,0,,It looks to your computer like an I/O device
-Dialogue: 0,0:04:14.44,0:04:18.36,Chinese,,0,0,0,,它对你的计算机来说就像一个输入/输出设备
+Dialogue: 0,0:04:14.44,0:04:18.36,Chinese,,0,0,0,,它对你的计算机来说就像一个 I/O 设备
 Dialogue: 0,0:04:19.00,0:04:23.92,English,,0,0,0,,And in fact the UNIX uh api for dealing with networks
 Dialogue: 0,0:04:19.00,0:04:23.92,Chinese,,0,0,0,,实际上, UNIX 用于网络处理的 api
 Dialogue: 0,0:04:24.38,0:04:25.68,English,,0,0,0,,Makes it look like a file
@@ -148,7 +148,7 @@ Dialogue: 0,0:04:44.92,0:04:47.92,Chinese,,0,0,0,,向一个叫做网络的虚拟
 Dialogue: 0,0:04:48.72,0:04:52.14,English,,0,0,0,,And if you want...when you're receiving data you do it by reading
 Dialogue: 0,0:04:48.72,0:04:52.14,Chinese,,0,0,0,,如果你想...当你接收数据时，你通过读取文件来实现
 Dialogue: 0,0:04:52.28,0:04:56.48,English,,0,0,0,,So just as several weeks ago I gave the lecture on I/O
-Dialogue: 0,0:04:52.28,0:04:56.48,Chinese,,0,0,0,,所以几周前我讲输入/输出
+Dialogue: 0,0:04:52.28,0:04:56.48,Chinese,,0,0,0,,所以就像几周前我讲 I/O 时说的
 Dialogue: 0,0:04:57.18,0:05:00.56,English,,0,0,0,,It turns out that it's extremely relevant to network programming
 Dialogue: 0,0:04:57.18,0:05:00.56,Chinese,,0,0,0,,事实证明它与网络编程非常相关
 Dialogue: 0,0:05:00.56,0:05:08.48,English,,0,0,0,,That's the basic model that was created by the early developers of the sort of standard UNIX
@@ -188,7 +188,7 @@ Dialogue: 0,0:06:25.06,0:06:31.32,English,,0,0,0,,比如 At&t，它可以接入�
 Dialogue: 0,0:06:31.66,0:06:36.40,English,,0,0,0,,And then there's another set of network connections hosted by the supercomputing center
 Dialogue: 0,0:06:31.66,0:06:36.40,English,,0,0,0,,此外还有一些网络连接由超级计算中心托管
 Dialogue: 0,0:06:36.70,0:06:43.28,English,,0,0,0,,That give you access to what's called internet2 which is the resource that's used for communicating among universities
-Dialogue: 0,0:06:36.70,0:06:43.28,Chinese,,0,0,0,,它们可以让你访问 internet2，这是用于大学之间交流的资源
+Dialogue: 0,0:06:36.70,0:06:43.28,Chinese,,0,0,0,,它们可以让你访问 internet2，这是用于大学之间交流的网络
 Dialogue: 0,0:06:43.98,0:06:48.61,English,,0,0,0,,So underneath you know when you're doing your networking stuff
 Dialogue: 0,0:06:43.98,0:06:48.61,Chinese,,0,0,0,,所以至少你要知道当你在网络上做一些事情时
 Dialogue: 0,0:06:48.61,0:06:52.06,English,,0,0,0,,There's this amazingly complex combination of things going on
@@ -218,7 +218,7 @@ Dialogue: 0,0:07:41.40,0:07:49.54,Chinese,,0,0,0,,大多数人都知道这指的
 Dialogue: 0,0:07:51.44,0:07:53.84,English,,0,0,0,,And that's good enough for the purpose of this course
 Dialogue: 0,0:07:51.44,0:07:53.84,Chinese,,0,0,0,,这对于这门课来说已经足够了
 Dialogue: 0,0:07:53.84,0:07:57.56,English,,0,0,0,,We're not going to talk much about other possible designs one might have for a network
-Dialogue: 0,0:07:53.84,0:07:57.56,Chinese,,0,0,0,,我们不会讨论部分网络可能使用的另一些网络设计结构
+Dialogue: 0,0:07:53.84,0:07:57.56,Chinese,,0,0,0,,我们不会讨论部分网络可能使用的另一些结构
 Dialogue: 0,0:07:58.60,0:08:04.76,English,,0,0,0,,So most of the low level networking is supported by something called Ethernet
 Dialogue: 0,0:07:58.60,0:08:04.76,Chinese,,0,0,0,,大部分低级网络是由以太网支持的
 Dialogue: 0,0:08:05.22,0:08:08.76,English,,0,0,0,,And the term Ethernet actually has evolved tremendously over time
@@ -244,7 +244,7 @@ Dialogue: 0,0:08:43.88,0:08:49.80,Chinese,,0,0,0,,所以机器就像一个聚会
 Dialogue: 0,0:08:50.40,0:08:59.38,English,,0,0,0,,And in fact the original first version the Ethernet did that by everyone interacting over a single cable
 Dialogue: 0,0:08:50.40,0:08:59.38,Chinese,,0,0,0,,事实上，以太网最初的版本是通过每个人用一根电缆进行交互来实现的
 Dialogue: 0,0:08:59.70,0:09:02.00,English,,0,0,0,,Carrying essentially radio signals and
-Dialogue: 0,0:08:59.70,0:09:02.00,Chinese,,0,0,0,,这些电缆携带了无线电信号
+Dialogue: 0,0:08:59.70,0:09:02.00,Chinese,,0,0,0,,这些电缆主要携带了无线电信号
 Dialogue: 0,0:09:02.44,0:09:06.10,English,,0,0,0,,And similarly when you're in this room using a wireless internet
 Dialogue: 0,0:09:02.44,0:09:06.10,Chinese,,0,0,0,,同样的，当你在这个房间里使用无线网的时候
 Dialogue: 0,0:09:06.98,0:09:09.60,English,,0,0,0,,A wireless internet is sort of like a hub and that
@@ -252,13 +252,13 @@ Dialogue: 0,0:09:06.98,0:09:09.60,Chinese,,0,0,0,,无线网就像一个集线器
 Dialogue: 0,0:09:10.30,0:09:15.88,English,,0,0,0,,All the packets that you're sending all across the room
 Dialogue: 0,0:09:10.30,0:09:15.88,Chinese,,0,0,0,,你在房间里发送的所有数据包
 Dialogue: 0,0:09:15.88,0:09:21.30,English,,0,0,0,,They're all sort of making use of the same radio frequencies the same communication channel
-Dialogue: 0,0:09:15.88,0:09:21.30,Chinese,,0,0,0,,它们都使用相同的无线电频率，相同的通信信道
+Dialogue: 0,0:09:15.88,0:09:21.30,Chinese,,0,0,0,,它们都使用相同的无线电频率，相同的信道
 Dialogue: 0,0:09:21.64,0:09:28.80,English,,0,0,0,,And there's a protocol for how they detect when two messages get set at the same time and therefore interfere with each other
-Dialogue: 0,0:09:21.64,0:09:28.80,Chinese,,0,0,0,,有一个协议用于检测当两条报文同时被发出时，是否会因此相互干扰
+Dialogue: 0,0:09:21.64,0:09:28.80,Chinese,,0,0,0,,所以会有一个协议用于检测，两条报文是否会因为同时被发出而相互干扰
 Dialogue: 0,0:09:29.44,0:09:34.38,English,,0,0,0,,So that can only sort of scale up to maybe at most a hundred different
 Dialogue: 0,0:09:29.44,0:09:34.38,Chinese,,0,0,0,,因此无线网最多只能扩展到同时让 100 台不同的
 Dialogue: 0,0:09:36.68,0:09:41.02,English,,0,0,0,,Hosts communicating because they're all sharing a single communication channel
-Dialogue: 0,0:09:36.68,0:09:41.02,Chinese,,0,0,0,,主机通信，是因为它们共享一个通信通道
+Dialogue: 0,0:09:36.68,0:09:41.02,Chinese,,0,0,0,,主机通信，这是因为它们共享一个通信通道
 Dialogue: 0,0:09:41.78,0:09:46.68,English,,0,0,0,,Now in the wired world what's evolved is usually when you buy a box
 Dialogue: 0,0:09:41.78,0:09:46.68,Chinese,,0,0,0,,在有线通信中，区别是，当你买一个“盒子”时
 Dialogue: 0,0:09:47.48,0:09:49.32,English,,0,0,0,,Or you get one from your cable company
@@ -270,9 +270,9 @@ Dialogue: 0,0:09:59.16,0:10:01.68,Chinese,,0,0,0,,它不会向所有人广播
 Dialogue: 0,0:10:01.70,0:10:04.38,English,,0,0,0,,It selectively tries to guess
 Dialogue: 0,0:10:01.70,0:10:04.38,Chinese,,0,0,0,,它有选择地猜测
 Dialogue: 0,0:10:05.12,0:10:08.74,English,,0,0,0,,Is this particular message bound for this particular host
-Dialogue: 0,0:10:05.12,0:10:08.74,Chinese,,0,0,0,,这个特定的报文是发送到这个特定的主机的吗
+Dialogue: 0,0:10:05.12,0:10:08.74,Chinese,,0,0,0,,这条报文是发送到这个特定的主机的吗
 Dialogue: 0,0:10:09.48,0:10:11.94,English,,0,0,0,,And only send to that one
-Dialogue: 0,0:10:09.48,0:10:11.94,Chinese,,0,0,0,,然后只发送到那台主机上
+Dialogue: 0,0:10:09.48,0:10:11.94,Chinese,,0,0,0,,然后只发送到那台特定的主机上
 Dialogue: 0,0:10:12.34,0:10:14.86,English,,0,0,0,,And as you know you can take these and wire up
 Dialogue: 0,0:10:12.34,0:10:14.86,Chinese,,0,0,0,,正如你们所知，你们可以把它们连接起来
 Dialogue: 0,0:10:15.36,0:10:18.82,English,,0,0,0,,I think about up to 6 levels deep in an hub
@@ -280,7 +280,7 @@ Dialogue: 0,0:10:15.36,0:10:18.82,Chinese,,0,0,0,,我觉得在一个集线器中
 Dialogue: 0,0:10:19.48,0:10:24.66,English,,0,0,0,,And basically create a network of wired connections
 Dialogue: 0,0:10:19.48,0:10:24.66,Chinese,,0,0,0,,基本上，只要建立一个有线连接的网络
 Dialogue: 0,0:10:25.18,0:10:27.60,English,,0,0,0,,And they'll all get from one to the other somehow
-Dialogue: 0,0:10:25.18,0:10:27.60,Chinese,,0,0,0,,它们就会以某种方式从一个区域连接到另一个区域
+Dialogue: 0,0:10:25.18,0:10:27.60,Chinese,,0,0,0,,它们就会以某种方式从一个网络连接到另一个网络
 Dialogue: 0,0:10:28.82,0:10:35.23,English,,0,0,0,,And then after that it gets more complicated you can add more sophisticated types of switch on top of it
 Dialogue: 0,0:10:28.82,0:10:35.23,Chinese,,0,0,0,,之后当它变得更复杂时，你可以在顶层添加更复杂的交换机
 Dialogue: 0,0:10:35.90,0:10:40.52,English,,0,0,0,,But so the general idea of even an Ethernet is actually a fairly complex thing
@@ -308,23 +308,23 @@ Dialogue: 0,0:11:23.24,0:11:29.08,Chinese,,0,0,0,,基于有已知地址的寻址
 Dialogue: 0,0:11:29.08,0:11:30.50,English,,0,0,0,,That you're trying to send to
 Dialogue: 0,0:11:29.08,0:11:30.50,Chinese,,0,0,0,,最终到达你的目标主机
 Dialogue: 0,0:11:30.96,0:11:36.90,English,,0,0,0,,And it will hub through multiple routers to get from one place to the other
-Dialogue: 0,0:11:30.96,0:11:36.90,Chinese,,0,0,0,,它将通过多个路由，器集线器从一个地方移动到另一个地方
+Dialogue: 0,0:11:30.96,0:11:36.90,Chinese,,0,0,0,,它将通过多个路由器，器集线器从一个地方移动到另一个地方
 Dialogue: 0,0:11:36.92,0:11:38.90,English,,0,0,0,,And that's true whether it's on campus
 Dialogue: 0,0:11:36.92,0:11:38.90,Chinese,,0,0,0,,所以它会四处跃迁，无论是在校园里
 Dialogue: 0,0:11:40.88,0:11:44.35,English,,0,0,0,,Or whether it's hopping all the way around the world
 Dialogue: 0,0:11:40.88,0:11:44.35,Chinese,,0,0,0,,还是在世界各地
 Dialogue: 0,0:11:45.04,0:11:50.82,English,,0,0,0,,And so again there's this huge body of information and knowledge about how that routing works
-Dialogue: 0,0:11:45.04,0:11:50.82,Chinese,,0,0,0,,所以会有许多关于路由是如何工作
+Dialogue: 0,0:11:45.04,0:11:50.82,Chinese,,0,0,0,,所以会有许多用于解答路由器是如何工作
 Dialogue: 0,0:11:50.94,0:11:52.62,English,,0,0,0,,And how its reliable and all that
-Dialogue: 0,0:11:50.94,0:11:52.62,Chinese,,0,0,0,,为什么可靠的知识点
+Dialogue: 0,0:11:50.94,0:11:52.62,Chinese,,0,0,0,,它为什么可靠等问题的知识
 Dialogue: 0,0:11:53.16,0:11:56.64,English,,0,0,0,,But we're going to just assume that somebody else has figured that out
-Dialogue: 0,0:11:53.16,0:11:56.64,Chinese,,0,0,0,,但是我们假设其他人已经解决了
+Dialogue: 0,0:11:53.16,0:11:56.64,Chinese,,0,0,0,,但是我们假设其他人已经解决了这些问题
 Dialogue: 0,0:11:57.02,0:12:01.86,English,,0,0,0,,And our job as programmers is just to be able to communicate from one host to another
 Dialogue: 0,0:11:57.02,0:12:01.86,Chinese,,0,0,0,,作为程序员，我们的工作只是实现在主机之间进行通信
 Dialogue: 0,0:12:06.42,0:12:10.42,English,,0,0,0,,And so how could you design a system where all these diverse systems
 Dialogue: 0,0:12:06.42,0:12:10.42,Chinese,,0,0,0,,那么你如何设计一个系统，让所有这些不同的系统
 Dialogue: 0,0:12:10.42,0:12:22.00,English,,0,0,0,,Made by computers made by different manufacturers operating under different countries with different telecommunications bodies governing bodies and so forth
-Dialogue: 0,0:12:10.42,0:12:22.00,Chinese,,0,0,0,,这些在不同的计算机上运行，由不同的厂商发行，由不同国家电信机构经营的系统
+Dialogue: 0,0:12:10.42,0:12:22.00,Chinese,,0,0,0,,这些在不同的计算机上运行，由不同的厂商发行，由不同国家的电信机构经营的系统
 Dialogue: 0,0:12:22.00,0:12:23.80,English,,0,0,0,,How can they all work with each other
 Dialogue: 0,0:12:22.00,0:12:23.80,Chinese,,0,0,0,,怎么能让它们互相协同工作
 Dialogue: 0,0:12:24.38,0:12:29.34,English,,0,0,0,,And the requirement is you have to have a protocol you have to have some common set of conventions
@@ -334,7 +334,7 @@ Dialogue: 0,0:12:30.02,0:12:33.18,Chinese,,0,0,0,,比如报文应该是什么格
 Dialogue: 0,0:12:33.66,0:12:39.48,English,,0,0,0,,What happens if one of them doesn't make it how do you recover from that and so forth
 Dialogue: 0,0:12:33.66,0:12:39.48,Chinese,,0,0,0,,如果其中一个报文没有成功发送你怎样恢复它们，等等
 Dialogue: 0,0:12:44.14,0:12:49.46,English,,0,0,0,,And so what does a protocol include well it has to include some way of naming things so that
-Dialogue: 0,0:12:44.14,0:12:49.46,Chinese,,0,0,0,,那么协议包括什么呢?事实上，它必须包含一些命名的方式
+Dialogue: 0,0:12:44.14,0:12:49.46,Chinese,,0,0,0,,那么协议包括什么呢? 事实上，它必须包含一些命名规则
 Dialogue: 0,0:12:49.94,0:12:53.08,English,,0,0,0,,If I want to send to some host I have some way of designating
 Dialogue: 0,0:12:49.94,0:12:53.08,Chinese,,0,0,0,,如果我想向某台主机发送报文，我得有一些方法
 Dialogue: 0,0:12:53.52,0:12:54.80,English,,0,0,0,,Who that host is
@@ -360,7 +360,7 @@ Dialogue: 0,0:13:35.22,0:13:37.36,Chinese,,0,0,0,,电话系统是一个以线路
 Dialogue: 0,0:13:37.76,0:13:45.30,English,,0,0,0,,If I was calling somebody there is a dedicated wire set of wires maintained by the phone company
 Dialogue: 0,0:13:37.76,0:13:45.30,Chinese,,0,0,0,,如果我打电话给某人,会有一组由电话公司维护的专用线路
 Dialogue: 0,0:13:45.78,0:13:49.16,English,,0,0,0,,That would be reserved and locked down for our own use
-Dialogue: 0,0:13:45.78,0:13:49.16,Chinese,,0,0,0,,被保留和锁定，供我们使用
+Dialogue: 0,0:13:45.78,0:13:49.16,Chinese,,0,0,0,,被保留和锁定，仅供我们使用
 Dialogue: 0,0:13:49.56,0:13:51.38,English,,0,0,0,,During the entire duration of that phone call
 Dialogue: 0,0:13:49.56,0:13:51.38,Chinese,,0,0,0,,在整个通话过程中都是如此
 Dialogue: 0,0:13:56.62,0:13:57.56,English,,0,0,0,,So
@@ -368,11 +368,11 @@ Dialogue: 0,0:13:56.62,0:13:57.56,Chinese,,0,0,0,,那么
 Dialogue: 0,0:13:58.94,0:14:03.42,English,,0,0,0,,To get them from one host say A to B
 Dialogue: 0,0:13:58.94,0:14:03.42,Chinese,,0,0,0,,把报文从一个主机 A 发往另一个主机 B
 Dialogue: 0,0:14:03.80,0:14:05.86,English,,0,0,0,,What happens is we want to send a packet
-Dialogue: 0,0:14:03.80,0:14:05.86,Chinese,,0,0,0,,实际上发生的事是我们传递一个数据包
+Dialogue: 0,0:14:03.80,0:14:05.86,Chinese,,0,0,0,,实际上发生的事是我们想传递一个数据包
 Dialogue: 0,0:14:06.66,0:14:09.30,English,,0,0,0,,And that packet will contain some amount of data
 Dialogue: 0,0:14:06.66,0:14:09.30,Chinese,,0,0,0,,数据包中有一部分数据
 Dialogue: 0,0:14:10.32,0:14:15.04,English,,0,0,0,,And the idea of a packet communication then is you put little headers on
-Dialogue: 0,0:14:10.32,0:14:15.04,Chinese,,0,0,0,,数据包通信的概念就是在数据包上附上一个包头
+Dialogue: 0,0:14:10.32,0:14:15.04,Chinese,,0,0,0,,数据包通信的思想就是在数据包上附上一个包头
 Dialogue: 0,0:14:15.34,0:14:20.80,English,,0,0,0,,That contain certain routing information see on the front of an envelope of a letter perhaps
 Dialogue: 0,0:14:15.34,0:14:20.80,Chinese,,0,0,0,,包头含有确切的路由信息，就好像信封之于信件
 Dialogue: 0,0:14:21.72,0:14:24.42,English,,0,0,0,,And so and at different points in the way
@@ -380,7 +380,7 @@ Dialogue: 0,0:14:21.72,0:14:24.42,Chinese,,0,0,0,,然后数据包在发送过程
 Dialogue: 0,0:14:24.42,0:14:30.82,English,,0,0,0,,They'll have different numbers of headers and different protocols or formats for what those headers look like
 Dialogue: 0,0:14:24.42,0:14:30.82,Chinese,,0,0,0,,会有不同数量的包头，而且它们所使用的协议不是完全相同的
 Dialogue: 0,0:14:31.58,0:14:33.74,English,,0,0,0,,So in particular within
-Dialogue: 0,0:14:31.58,0:14:33.74,Chinese,,0,0,0,,尤其是在
+Dialogue: 0,0:14:31.58,0:14:33.74,Chinese,,0,0,0,,所以当
 Dialogue: 0,0:14:34.92,0:14:37.10,English,,0,0,0,,I want to send a message and I'll
 Dialogue: 0,0:14:34.92,0:14:37.10,Chinese,,0,0,0,,我想要发送一条报文的时候
 Dialogue: 0,0:14:37.76,0:14:42.32,English,,0,0,0,,I'll do that and then the software that runs on my machine that handles this
@@ -388,11 +388,11 @@ Dialogue: 0,0:14:37.76,0:14:42.32,Chinese,,0,0,0,,我只需要把他发出去，
 Dialogue: 0,0:14:42.76,0:14:50.06,English,,0,0,0,,Will put a header in front of that describes the internet routing
 Dialogue: 0,0:14:42.76,0:14:50.06,Chinese,,0,0,0,,它会帮我放上一个描述网络路由的包头
 Dialogue: 0,0:14:50.44,0:14:55.62,English,,0,0,0,,And then it will tack a header in front of that talks about the local area network routing that gets used
-Dialogue: 0,0:14:50.44,0:14:55.62,Chinese,,0,0,0,,以及一个描述本地路由的包头
+Dialogue: 0,0:14:50.44,0:14:55.62,Chinese,,0,0,0,,以及一个描述主机路由的包头
 Dialogue: 0,0:14:56.42,0:15:02.06,English,,0,0,0,,And that's what's referred to as the a PH the packet header for the internet protocol
-Dialogue: 0,0:14:56.42,0:15:02.06,Chinese,,0,0,0,,这就是我们所说的用于互联网协议的包头(PH)
+Dialogue: 0,0:14:56.42,0:15:02.06,Chinese,,0,0,0,,这就是我们所说的基于互联网协议的包头(PH)
 Dialogue: 0,0:15:02.74,0:15:08.30,English,,0,0,0,,And FH1 the frame header for this particular message being sent within this local network
-Dialogue: 0,0:15:02.74,0:15:08.30,Chinese,,0,0,0,,而 FH1 则是指在本地网络中发送的特定消息的帧头
+Dialogue: 0,0:15:02.74,0:15:08.30,Chinese,,0,0,0,,而 FH1 则是指在主机网络中发送的特定消息的帧头
 Dialogue: 0,0:15:10.90,0:15:15.24,English,,0,0,0,,And then the network interface card or the adapter here
 Dialogue: 0,0:15:10.90,0:15:15.24,Chinese,,0,0,0,,接着网卡或适配器负责
 Dialogue: 0,0:15:16.10,0:15:23.48,English,,0,0,0,,Is then responsible for putting that out over this local communication of capability
@@ -412,7 +412,7 @@ Dialogue: 0,0:15:55.93,0:16:02.50,Chinese,,0,0,0,,我拿到这个数据包之后
 Dialogue: 0,0:16:02.94,0:16:06.24,English,,0,0,0,,And I'll send through the rest of it just as a set of bytes
 Dialogue: 0,0:16:02.94,0:16:06.24,Chinese,,0,0,0,,然后我将把剩下的部分作为一组字节发送
 Dialogue: 0,0:16:14.24,0:16:18.92,English,,0,0,0,,So the internet that we know and love the capital I internet
-Dialogue: 0,0:16:14.24,0:16:18.92,Chinese,,0,0,0,,我们了解和喜爱的互联网是大写 I 的因特网
+Dialogue: 0,0:16:14.24,0:16:18.92,Chinese,,0,0,0,,我们了解和喜爱的网络是大写 I 的因特网
 Dialogue: 0,0:16:18.94,0:16:23.10,English,,0,0,0,,Then has a particular set of protocols that are you've probably heard the terms
 Dialogue: 0,0:16:18.94,0:16:23.10,Chinese,,0,0,0,,他有一些特殊的协议，你们可能已经听过这些术语了
 Dialogue: 0,0:16:23.94,0:16:26.54,English,,0,0,0,,One is called the IP the internet protocol
@@ -440,7 +440,7 @@ Dialogue: 0,0:17:09.34,0:17:13.46,Chinese,,0,0,0,,比如有人启动了微波炉
 Dialogue: 0,0:17:14.06,0:17:16.66,English,,0,0,0,,It's set up some radio frequency interface interference
 Dialogue: 0,0:17:14.06,0:17:16.66,Chinese,,0,0,0,,就会产生一些射频接口干扰
 Dialogue: 0,0:17:17.24,0:17:22.06,English,,0,0,0,,Then at the IP level it just drops that packet and says whoops
-Dialogue: 0,0:17:17.24,0:17:22.06,Chinese,,0,0,0,,那么在 IP 层数据包就会丢失，然后说，啊，我搞砸了
+Dialogue: 0,0:17:17.24,0:17:22.06,Chinese,,0,0,0,,那么在 IP 层数据包就会丢失，然后它会说，啊，我搞砸了
 Dialogue: 0,0:17:22.88,0:17:26.48,English,,0,0,0,,I screwed up sorry it doesn't even say sorry it just does it silently
 Dialogue: 0,0:17:22.88,0:17:26.48,Chinese,,0,0,0,,它甚至不会道歉，只是默默的让数据包丢失
 Dialogue: 0,0:17:28.60,0:17:32.38,English,,0,0,0,,And then you can as a programmer make use of that very global level
@@ -448,9 +448,9 @@ Dialogue: 0,0:17:28.60,0:17:32.38,Chinese,,0,0,0,,所以作为一个程序员，
 Dialogue: 0,0:17:32.42,0:17:36.76,English,,0,0,0,,So normally as a programmer you don't really want to program at that level
 Dialogue: 0,0:17:32.42,0:17:36.76,Chinese,,0,0,0,,但作为一个程序员，你通常不会想在那一个层面编程的
 Dialogue: 0,0:17:36.90,0:17:39.56,English,,0,0,0,,Because you'll send packets and they will get there
-Dialogue: 0,0:17:36.90,0:17:39.56,Chinese,,0,0,0,,因为你大部分情况下数据包都能正常传输
+Dialogue: 0,0:17:36.90,0:17:39.56,Chinese,,0,0,0,,因为大部分情况下数据包都能正常传输
 Dialogue: 0,0:17:40.14,0:17:44.78,English,,0,0,0,,But you can if you want to and it's called UDP a protocol
-Dialogue: 0,0:17:40.14,0:17:44.78,Chinese,,0,0,0,,但如果你想的话，它叫做 UDP 协议
+Dialogue: 0,0:17:40.14,0:17:44.78,Chinese,,0,0,0,,但如果你想了解的话，它叫做 UDP 协议
 Dialogue: 0,0:17:44.86,0:17:47.76,English,,0,0,0,,It's just a small software layer over IP
 Dialogue: 0,0:17:44.86,0:17:47.76,Chinese,,0,0,0,,它只是在 IP 层之上的一个小软件
 Dialogue: 0,0:17:47.76,0:17:49.16,English,,0,0,0,,And there's some applications
@@ -462,9 +462,9 @@ Dialogue: 0,0:17:58.78,0:18:00.56,Chinese,,0,0,0,,这就是 UDP 层编程的一�
 Dialogue: 0,0:18:01.12,0:18:02.54,English,,0,0,0,,We won't really talk about that
 Dialogue: 0,0:18:01.12,0:18:02.54,Chinese,,0,0,0,,我们不会讨论它
 Dialogue: 0,0:18:02.54,0:18:11.78,English,,0,0,0,,The more common protocol that gets used and carries 99% of internet traffic is what's called TCP(transmission control protocol)
-Dialogue: 0,0:18:02.54,0:18:11.78,Chinese,,0,0,0,,最常见的一种协议 -- 有超过 99 % 的网络流量都在通过它传输 -- 叫做TCP协议（传输控制协议）
+Dialogue: 0,0:18:02.54,0:18:11.78,Chinese,,0,0,0,,更常见的一种协议 -- 有超过 99 % 的网络流量都在通过它传输 -- 叫做TCP协议（传输控制协议）
 Dialogue: 0,0:18:12.34,0:18:17.68,English,,0,0,0,,And that provides a reliable the equivalent of telephone connection
-Dialogue: 0,0:18:12.34,0:18:17.68,Chinese,,0,0,0,,他提供了一种可靠的传输方式，相当于电话联系
+Dialogue: 0,0:18:12.34,0:18:17.68,Chinese,,0,0,0,,他提供了一种和电话连接一样可靠的传输方式
 Dialogue: 0,0:18:18.12,0:18:22.94,English,,0,0,0,,That I can reliably send data from point A to point B
 Dialogue: 0,0:18:18.12,0:18:22.94,Chinese,,0,0,0,,我可以放心的从点 A 发送数据往点 B
 Dialogue: 0,0:18:24.18,0:18:25.46,English,,0,0,0,,As many bytes as I like
@@ -474,7 +474,7 @@ Dialogue: 0,0:18:26.40,0:18:28.24,Chinese,,0,0,0,,它是有保证的传输
 Dialogue: 0,0:18:28.92,0:18:32.36,English,,0,0,0,,It's sometimes fast and sometimes not but it's there
 Dialogue: 0,0:18:28.92,0:18:32.36,Chinese,,0,0,0,,它有时会很快，有时也会较慢，但它总是稳定的
 Dialogue: 0,0:18:32.86,0:18:36.96,English,,0,0,0,,And it's built on top of the IP of this datagram
-Dialogue: 0,0:18:32.86,0:18:36.96,Chinese,,0,0,0,,而且它处于这个数据包的 IP 层之上
+Dialogue: 0,0:18:32.86,0:18:36.96,Chinese,,0,0,0,,它处于数据包的 IP 层之上
 Dialogue: 0,0:18:37.18,0:18:41.50,English,,0,0,0,,Meaning that it has to take whatever you're sending and slice it up into these single packets
 Dialogue: 0,0:18:37.18,0:18:41.50,Chinese,,0,0,0,,这意味着它必须接收你发送的所有数据并将其分割成这些单独的数据包
 Dialogue: 0,0:18:42.24,0:18:46.30,English,,0,0,0,,If one of them doesn't get sent it will resend it until it gets there
@@ -494,61 +494,111 @@ Dialogue: 0,0:19:06.78,0:19:11.56,Chinese,,0,0,0,,我可以从 A 往 B 发东西
 Dialogue: 0,0:19:12.06,0:19:13.66,English,,0,0,0,,And we're all happy
 Dialogue: 0,0:19:12.06,0:19:13.66,Chinese,,0,0,0,,我们都会很高兴
 Dialogue: 0,0:19:15.20,0:19:18.04,English,,0,0,0,,And so that's the version that looks like file I/O
-Dialogue: 0,0:19:15.20,0:19:18.04,Chinese,,0,0,0,,所以这就是看起来像文件输入/输出的版本
+Dialogue: 0,0:19:15.20,0:19:18.04,Chinese,,0,0,0,,这就是把它想象成文件 I/O 的版本
 Dialogue: 0,0:19:18.04,0:19:23.58,English,,0,0,0,,I just keep writing to a file and it's sending packets over the network to the other end
 Dialogue: 0,0:19:18.04,0:19:23.58,Chinese,,0,0,0,,我只是持续向文件写入数据，然后它就不断向网络的另一端发送数据包
 Dialogue: 0,0:19:24.24,0:19:28.18,English,,0,0,0,,And then the other side can be sending stuff to me
-Dialogue: 0,0:19:24.24,0:19:28.18,Chinese,,0,0,0,,然后另一端也可以向我发送东西
+Dialogue: 0,0:19:24.24,0:19:28.18,Chinese,,0,0,0,,然后另一端也可以向我发送数据
 Dialogue: 0,0:19:28.54,0:19:31.66,English,,0,0,0,,And I'm just reading it and I'm just reading bytes of data
+Dialogue: 0,0:19:28.54,0:19:31.66,Chinese,,0,0,0,,我只用读取数据
 Dialogue: 0,0:19:32.00,0:19:35.12,English,,0,0,0,,Not worrying about how that got broken up into individual packets
+Dialogue: 0,0:19:32.00,0:19:35.12,Chinese,,0,0,0,,不用关心它是怎么被分解成独立的数据包的
 Dialogue: 0,0:19:36.48,0:19:39.18,English,,0,0,0,,And so that's referred to as the sockets interface
+Dialogue: 0,0:19:36.48,0:19:39.18,Chinese,,0,0,0,,这被称为套接字接口
 Dialogue: 0,0:19:39.78,0:19:43.32,English,,0,0,0,,And you'll hear the term socket programming and that's exactly what we're talking about
+Dialogue: 0,0:19:39.78,0:19:43.32,Chinese,,0,0,0,,你会听到套接字编程这个术语，这这就是我们要讲的内容
 Dialogue: 0,0:19:48.58,0:19:56.00,English,,0,0,0,,And so from a sort of software system
+Dialogue: 0,0:19:48.58,0:19:56.00,Chinese,,0,0,0,,从软件系统
 Dialogue: 0,0:19:56.08,0:19:58.44,English,,0,0,0,,Than software hardware system then
+Dialogue: 0,0:19:56.08,0:19:58.44,Chinese,,0,0,0,,和软硬件系统层面观察
 Dialogue: 0,0:19:58.90,0:20:03.26,English,,0,0,0,,The client and the server are both implemented as application programs
+Dialogue: 0,0:19:58.90,0:20:03.26,Chinese,,0,0,0,,客户端和服务器都是以应用程序的形式
 Dialogue: 0,0:20:03.74,0:20:07.18,English,,0,0,0,,At the respective endpoints on their hosts
+Dialogue: 0,0:20:03.74,0:20:07.18,Chinese,,0,0,0,,在其主机上的相应端点处被实现的
 Dialogue: 0,0:20:08.18,0:20:17.82,English,,0,0,0,,And they make use of software and libraries that run at some combination of the user level and at the kernel level
+Dialogue: 0,0:20:08.18,0:20:17.82,Chinese,,0,0,0,,它们使用的软件和库运行在用户态和内核态的某种组合上
 Dialogue: 0,0:20:18.40,0:20:20.86,English,,0,0,0,,And therefore I have access to direct resources
+Dialogue: 0,0:20:18.40,0:20:20.86,Chinese,,0,0,0,,因此我可以访问直接的资源
 Dialogue: 0,0:20:21.56,0:20:22.78,English,,0,0,0,,And so
-Dialogue: 0,0:20:24.88,0:20:31.26,English,,0,0,0,,I is a program or an application programmer then make use of this software api
+Dialogue: 0,0:20:21.56,0:20:22.78,Chinese,,0,0,0,,然后
+Dialogue: 0,0:20:24.88,0:20:31.26,English,,0,0,0,,I as a programmer or an application programmer then make use of this software api
+Dialogue: 0,0:20:24.88,0:20:31.26,Chinese,,0,0,0,,我作为一个应用程序员利用这个软件 api
 Dialogue: 0,0:20:31.54,0:20:33.64,English,,0,0,0,,That lets me do socket programming
+Dialogue: 0,0:20:31.54,0:20:33.64,Chinese,,0,0,0,,它可以让我进行套接字编程
 Dialogue: 0,0:20:34.12,0:20:38.84,English,,0,0,0,,And it's based on gives directly supports TCP/IP
+Dialogue: 0,0:20:34.12,0:20:38.84,Chinese,,0,0,0,,而且对 TCP/IP 提供直接的支持
 Dialogue: 0,0:20:42.90,0:20:48.04,English,,0,0,0,,So first of all we're going to talk most of the time about what's called IPV4
+Dialogue: 0,0:20:42.90,0:20:48.04,Chinese,,0,0,0,,那么首先我们先了解一下在大多数时候，什么叫做 IPV4
 Dialogue: 0,0:20:48.80,0:20:55.80,English,,0,0,0,,A version 4 which is the one that's been running for since the 1980s I think early 1980s
-Dialogue: 0,0:20:56.58,0:21:04.10,English,,0,0,0,,And is this the standard and we'll talk very only mentioned very briefly the idea of what's called IPV6
+Dialogue: 0,0:20:48.80,0:20:55.80,Chinese,,0,0,0,,那是一个自 20 世纪 80 年代起实施的第四版协议
+Dialogue: 0,0:20:56.58,0:21:04.10,English,,0,0,0,,And it's the standard and we'll talk very only mentioned very briefly the idea of what's called IPV6
+Dialogue: 0,0:20:56.58,0:21:04.10,Chinese,,0,0,0,,而且是现行标准，然后我们只会简要的提一下 IPV6 的概念
 Dialogue: 0,0:21:04.76,0:21:07.16,English,,0,0,0,,Which is sort of a next-generation version
+Dialogue: 0,0:21:04.76,0:21:07.16,Chinese,,0,0,0,,它则是下一代技术
 Dialogue: 0,0:21:08.00,0:21:12.80,English,,0,0,0,,So the idea of a IPV4 and this is now we're talking about IP
+Dialogue: 0,0:21:08.00,0:21:12.80,Chinese,,0,0,0,,那么 IPV4，也即我们现在所说的 IP 的思想就是
 Dialogue: 0,0:21:13.36,0:21:18.60,English,,0,0,0,,And and this is true of TCP as well is that an address is actually just 32 bits
+Dialogue: 0,0:21:13.36,0:21:18.60,Chinese,,0,0,0,,一个只有 32 位的地址，这个思想对 TCP 也适用
 Dialogue: 0,0:21:20.92,0:21:24.28,English,,0,0,0,,But it's usually expressed in what they call dotted decimal form
+Dialogue: 0,0:21:20.92,0:21:24.28,Chinese,,0,0,0,,通常这个思想被叫做”点分十进制“格式
 Dialogue: 0,0:21:24.54,0:21:26.44,English,,0,0,0,,And you've seen these addresses before
+Dialogue: 0,0:21:24.54,0:21:26.44,Chinese,,0,0,0,,这类地址你之前已经见过了
 Dialogue: 0,0:21:26.86,0:21:29.86,English,,0,0,0,,That it's 4 decimal numbers
+Dialogue: 0,0:21:26.86,0:21:29.86,Chinese,,0,0,0,,它有四个十进制数
 Dialogue: 0,0:21:30.50,0:21:33.52,English,,0,0,0,,And they can only range between 0 and 255
+Dialogue: 0,0:21:30.50,0:21:33.52,Chinese,,0,0,0,,这四个数的范围只能在 0 和 255 之间
 Dialogue: 0,0:21:34.32,0:21:37.74,English,,0,0,0,,Because each one of them is a single bytes worth of information
+Dialogue: 0,0:21:34.32,0:21:37.74,Chinese,,0,0,0,,因为他它们中的每一个数都只能由一个字节的信息描述
 Dialogue: 0,0:21:37.76,0:21:40.36,English,,0,0,0,,So we're used to writing things in hex now in this course
+Dialogue: 0,0:21:37.76,0:21:40.36,Chinese,,0,0,0,,在这个课程中，我们曾用 16 进制表示过这些数字
 Dialogue: 0,0:21:40.86,0:21:44.96,English,,0,0,0,,But we're going to write it as each byte is written as a decimal digit
+Dialogue: 0,0:21:40.86,0:21:44.96,Chinese,,0,0,0,,但以后我们将把它们书写成十进制格式
 Dialogue: 0,0:21:45.78,0:21:49.50,English,,0,0,0,,And they're actually passed and stored in
+
 Dialogue: 0,0:21:49.82,0:21:53.34,English,,0,0,0,,What's called network byte order which is big endian byte order
+
 Dialogue: 0,0:21:54.04,0:21:58.10,English,,0,0,0,,And so we have to worry about the whole big endian vs. good endian thing
+
 Dialogue: 0,0:21:58.54,0:22:00.02,English,,0,0,0,,When we're doing network programming
+
 Dialogue: 0,0:22:01.26,0:22:07.14,English,,0,0,0,,And you can actually learn a lot there's a whole levels of how the different bytes mean
+
 Dialogue: 0,0:22:07.14,0:22:13.30,English,,0,0,0,,But for example any ip address it starts with 128.2.  is at CMU
+
 Dialogue: 0,0:22:15.86,0:22:18.24,English,,0,0,0,,I think and then
+
 Dialogue: 0,0:22:19.14,0:22:24.34,English,,0,0,0,,And so essentially CMU owns that part of the IP address space
+
 Dialogue: 0,0:22:26.02,0:22:29.98,English,,0,0,0,,Which if you think about that's approximately 2^64
+
 Dialogue: 0,0:22:31.02,0:22:41.52,English,,0,0,0,,2 to the...no,not 2^6,2^16 different IP addresses available for use by campus
+
 Dialogue: 0,0:22:46.96,0:22:50.62,English,,0,0,0,,And as I mentioned there's a newer version called IPv6
+
 Dialogue: 0,0:22:50.86,0:22:54.84,English,,0,0,0,,That gives you a 128-bit addresses
+
 Dialogue: 0,0:22:55.52,0:23:01.30,English,,0,0,0,,You can imagine actually that if you think about how many nodes are there in the internet
+
 Dialogue: 0,0:23:01.42,0:23:07.10,English,,0,0,0,,If a 4 byte address is only to the 32 so that's 4 billion
+
 Dialogue: 0,0:23:08.50,0:23:12.96,English,,0,0,0,,And I don't know about you but I have a lot of different things that use IP
+
 Dialogue: 0,0:23:12.96,0:23:18.28,English,,0,0,0,,I have a phone,I have two laptops,I have a couple desktops
+
 Dialogue: 0,0:23:19.10,0:23:25.86,English,,0,0,0,,So if all of..if every one of us used multiple IP addresses then actually the world would be out of them right
+
 Dialogue: 0,0:23:25.86,0:23:30.12,English,,0,0,0,,There's seven billion people in the world not all of whom have access to the internet
+
 Dialogue: 0,0:23:30.18,0:23:31.70,English,,0,0,0,,But a large fraction of them do
+
 Dialogue: 0,0:23:32.40,0:23:39.58,English,,0,0,0,,And so there's a whole kind of crazy way of dealing with the multitude of possible IP addresses
+
 Dialogue: 0,0:23:40.18,0:23:44.20,English,,0,0,0,,So the obvious thing would be well let's just allocate a lot more addresses
+
 Dialogue: 0,0:23:44.46,0:23:49.92,English,,0,0,0,,And jump let's just skip 64 bits and go right to 128 and that's the idea behind IPv6
+
 Dialogue: 0,0:23:50.58,0:23:56.44,English,,0,0,0,,But quite honestly this has been one of those technologies that's been out there for over 15 years
+
 Dialogue: 0,0:23:57.00,0:24:01.48,English,,0,0,0,,And still has a very low level of adoption so
 Dialogue: 0,0:24:02.52,0:24:05.08,English,,0,0,0,,It's still a future technology
 Dialogue: 0,0:24:06.40,0:24:12.36,English,,0,0,0,,People have basically figured out all these crazy schemes to make use of just stick within the 4 byte limit
