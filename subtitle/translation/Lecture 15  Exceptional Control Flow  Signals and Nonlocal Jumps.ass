@@ -702,87 +702,87 @@ Dialogue: 0,1:02:15.76,1:02:19.56,English,,0,0,0,,That takes the same arguments 
 Dialogue: 0,1:02:20.88,1:02:26.04,English,,0,0,0,,But inside it calls the sigaction function to get portable signal handling
 Dialogue: 0,1:02:27.44,1:02:32.22,English,,0,0,0,,And so it's not really important to go into detail about this
 Dialogue: 0,1:02:34.22,1:02:42.78,English,,0,0,0,,The point is in your code you always want to call Signal using the  rapper that provided in csapp.c
-Dialogue: 0,1:02:43.28,1:02:47.26,English,,0,0,0,,And then if you do that then you'll always block signals of the typing
-Dialogue: 0,1:02:47.70,1:02:50.84,English,,0,0,0,,Handle the system will automatically restart
-Dialogue: 0,1:02:52.02,1:02:55.28,English,,0,0,0,,Slow syscalls that have been interrupted by by signals
-Dialogue: 0,1:02:58.60,1:03:00.84,English,,0,0,0,,Okay so fortunately there's an easy fix for this
-Dialogue: 0,1:03:04.48,1:03:06.74,English,,0,0,0,,Now let's finish up with them
-Dialogue: 0,1:03:08.78,1:03:11.60,English,,0,0,0,,There's some interesting I mentioned that signals are difficult
-Dialogue: 0,1:03:11.60,1:03:14.56,English,,0,0,0,,Because of these the fact that they're concurrent flows
+Dialogue: 0,1:02:43.28,1:02:47.26,English,,0,0,0,,And then if you do that then you'll always block signals of the typing 如果你这样做了，那么这种类型的信号就会一直被阻塞
+Dialogue: 0,1:02:47.70,1:02:50.84,English,,0,0,0,,Handle the system will automatically restart 系统会自动重启
+Dialogue: 0,1:02:52.02,1:02:55.28,English,,0,0,0,,Slow syscalls that have been interrupted by by signals 慢系统调用会被信号中断
+Dialogue: 0,1:02:58.60,1:03:00.84,English,,0,0,0,,Okay so fortunately there's an easy fix for this 幸运的是有个简单的解决方法
+Dialogue: 0,1:03:04.48,1:03:06.74,English,,0,0,0,,Now let's finish up with them 让我们做个总结
+Dialogue: 0,1:03:08.78,1:03:11.60,English,,0,0,0,,There's some interesting I mentioned that signals are difficult 我提到过，一些有趣的事情信号是很难的
+Dialogue: 0,1:03:11.60,1:03:14.56,English,,0,0,0,,Because of these the fact that they're concurrent flows 因为它们是并发流
 Dialogue: 0,1:03:15.10,1:03:20.36,English,,0,0,0,,So I want to look at some sort of subtle issues that you can run into because of this concurrency
-Dialogue: 0,1:03:21.98,1:03:26.56,English,,0,0,0,,And I want to talk about how to identify those errors and how to fix them
-Dialogue: 0,1:03:31.20,1:03:35.60,English,,0,0,0,,So here's a program that this is like a simple shell program
-Dialogue: 0,1:03:36.40,1:03:41.58,English,,0,0,0,,That maintains a jobs list right so every time it creates a new child
-Dialogue: 0,1:03:42.30,1:03:48.04,English,,0,0,0,,It adds it to the jobs list and every time that child terminates it removes it from the jobs list
-Dialogue: 0,1:03:51.06,1:04:01.76,English,,0,0,0,,Okay so our simple show just in a loop it just creates a child and then executes the program within that child
-Dialogue: 0,1:04:02.46,1:04:09.72,English,,0,0,0,,And then in the parent it correctly blocks all of the signals temporarily while it adds the job to the job queue
-Dialogue: 0,1:04:12.60,1:04:16.26,English,,0,0,0,,And then it unblocks and then it unblocks those signals
-Dialogue: 0,1:04:17.78,1:04:22.76,English,,0,0,0,,Okay so this is correct and that it's protecting access to this the shared job queue
-Dialogue: 0,1:04:25.76,1:04:31.88,English,,0,0,0,,Because job queue is also manipulated by the sick child handler
-Dialogue: 0,1:04:32.06,1:04:37.68,English,,0,0,0,,So when a child terminates and the parent receives the sigchild
-Dialogue: 0,1:04:38.26,1:04:40.54,English,,0,0,0,,This handler runs
-Dialogue: 0,1:04:41.98,1:04:47.02,English,,0,0,0,,And this handler goes through and it reaps all of the children potentially terminated children
-Dialogue: 0,1:04:47.82,1:04:52.42,English,,0,0,0,,And then for each one it deletes that job from the job queue
-Dialogue: 0,1:04:52.92,1:04:57.66,English,,0,0,0,,All right so here's a classic case we have two concurrent flows our main routine
-Dialogue: 0,1:04:58.44,1:05:00.74,English,,0,0,0,,And our signal handler
-Dialogue: 0,1:05:01.82,1:05:06.50,English,,0,0,0,,They're each accessing a shared data structure in this case the job queue
-Dialogue: 0,1:05:08.78,1:05:16.62,English,,0,0,0,,Okay and they're there correctly blocking signals while they update this this job queue
-Dialogue: 0,1:05:19.12,1:05:23.26,English,,0,0,0,,But this program has a really subtle and nasty bug in it
-Dialogue: 0,1:05:25.42,1:05:26.58,English,,0,0,0,,Can you see what it is
-Dialogue: 0,1:05:30.60,1:05:32.26,English,,0,0,0,,What's the sequence of events that would
-Dialogue: 0,1:05:33.58,1:05:36.50,English,,0,0,0,,Cause this program to fail
-Dialogue: 0,1:05:40.82,1:05:41.34,English,,0,0,0,,Yes
-Dialogue: 0,1:05:47.22,1:05:52.58,English,,0,0,0,,Exactly that's exactly it,so is it possible that the the child process
-Dialogue: 0,1:05:53.34,1:05:58.02,English,,0,0,0,,Could terminate before the parent has a chance to add that job to the queue and the answer is yes
-Dialogue: 0,1:05:58.66,1:06:04.78,English,,0,0,0,,Right we you cannot make any assumptions about the execution ordering of the child in the process
-Dialogue: 0,1:06:05.14,1:06:06.40,English,,0,0,0,,Or about how long they run right
-Dialogue: 0,1:06:06.78,1:06:09.42,English,,0,0,0,,So it's very possible
+Dialogue: 0,1:03:21.98,1:03:26.56,English,,0,0,0,,And I want to talk about how to identify those errors and how to fix them 我想讲讲如何验证错误并解决它们
+Dialogue: 0,1:03:31.20,1:03:35.60,English,,0,0,0,,So here's a program that this is like a simple shell program 这有个程序，一个简单的 shell 程序
+Dialogue: 0,1:03:36.40,1:03:41.58,English,,0,0,0,,That maintains a jobs list right so every time it creates a new child 它维护了一个工作列表，因此每次它创建一个新的子进程时
+Dialogue: 0,1:03:42.30,1:03:48.04,English,,0,0,0,,It adds it to the jobs list and every time that child terminates it removes it from the jobs list 会将它加入工作列表中，每当子进程终止，从工作列表中将其移除
+Dialogue: 0,1:03:51.06,1:04:01.76,English,,0,0,0,,Okay so our simple show just in a loop it just creates a child and then executes the program within that child 我们简单的展示了，在一个循环中，它创建一个子进程，然后在这个子进程中执行程序
+Dialogue: 0,1:04:02.46,1:04:09.72,English,,0,0,0,,And then in the parent it correctly blocks all of the signals temporarily while it adds the job to the job queue 在父进程中，在它将工作加入到工作队列中时，它会临时阻塞所有信号，
+Dialogue: 0,1:04:12.60,1:04:16.26,English,,0,0,0,,And then it unblocks and then it unblocks those signals 接着解除这些信号的阻塞
+Dialogue: 0,1:04:17.78,1:04:22.76,English,,0,0,0,,Okay so this is correct and that it's protecting access to this the shared job queue 这没错，它保护对共享工作队列的访问
+Dialogue: 0,1:04:25.76,1:04:31.88,English,,0,0,0,,Because job queue is also manipulated by the sick child handler 因为工作队列受 sigchild 处理程序控制
+Dialogue: 0,1:04:32.06,1:04:37.68,English,,0,0,0,,So when a child terminates and the parent receives the sigchild 所以当子进程终止时，父进程会收到 sigchild
+Dialogue: 0,1:04:38.26,1:04:40.54,English,,0,0,0,,This handler runs 这个处理程序开始运行后
+Dialogue: 0,1:04:41.98,1:04:47.02,English,,0,0,0,,And this handler goes through and it reaps all of the children potentially terminated children 处理程序开始执行，回收所有子进程，终止的子进程
+Dialogue: 0,1:04:47.82,1:04:52.42,English,,0,0,0,,And then for each one it deletes that job from the job queue 将每个子进程对应的工作从国内工作队列中删除
+Dialogue: 0,1:04:52.92,1:04:57.66,English,,0,0,0,,All right so here's a classic case we have two concurrent flows our main routine 对的，这是在 main 中有两个并发流的经典例子
+Dialogue: 0,1:04:58.44,1:05:00.74,English,,0,0,0,,And our signal handler 还有我们的信号处理程序
+Dialogue: 0,1:05:01.82,1:05:06.50,English,,0,0,0,,They're each accessing a shared data structure in this case the job queue 每次访问一个共享数据结构，在这里是工作队列
+Dialogue: 0,1:05:08.78,1:05:16.62,English,,0,0,0,,Okay and they're there correctly blocking signals while they update this this job queue 当它们更新工作队列时，它们会阻塞信号
+Dialogue: 0,1:05:19.12,1:05:23.26,English,,0,0,0,,But this program has a really subtle and nasty bug in it 但是这个程序有一个非常微妙和令人讨厌的 bug
+Dialogue: 0,1:05:25.42,1:05:26.58,English,,0,0,0,,Can you see what it is 你能找到它吗
+Dialogue: 0,1:05:30.60,1:05:32.26,English,,0,0,0,,What's the sequence of events that would 事件队列应该是什么样的
+Dialogue: 0,1:05:33.58,1:05:36.50,English,,0,0,0,,Cause this program to fail 注意程序的最后
+Dialogue: 0,1:05:40.82,1:05:41.34,English,,0,0,0,,Yes 是的
+Dialogue: 0,1:05:47.22,1:05:52.58,English,,0,0,0,,Exactly that's exactly it,so is it possible that the the child process 非常正确，可能是，是子进程
+Dialogue: 0,1:05:53.34,1:05:58.02,English,,0,0,0,,Could terminate before the parent has a chance to add that job to the queue and the answer is yes 在父进程将工作添加到工作队列中之前子进程可能就终止了，答案是可能的
+Dialogue: 0,1:05:58.66,1:06:04.78,English,,0,0,0,,Right we you cannot make any assumptions about the execution ordering of the child in the process 你不能对子进程的执行顺序做任何假设
+Dialogue: 0,1:06:05.14,1:06:06.40,English,,0,0,0,,Or about how long they run right 还有它们会运行多长时间
+Dialogue: 0,1:06:06.78,1:06:09.42,English,,0,0,0,,So it's very possible 它有很多可能性
 Dialogue: 0,1:06:10.10,1:06:16.20,English,,0,0,0,,That the child can connect after the four control returns to the child instead of the parent
-Dialogue: 0,1:06:16.76,1:06:22.90,English,,0,0,0,,And then the child terminates before the parent ever has a chance to add that job to the job queue
-Dialogue: 0,1:06:23.38,1:06:30.10,English,,0,0,0,,So now what's happened is that the child is deleting
-Dialogue: 0,1:06:30.92,1:06:35.43,English,,0,0,0,,A deleting a job that hasn't been added to the job queue right
-Dialogue: 0,1:06:35.62,1:06:40.30,English,,0,0,0,,Now when the parent finally gets around to running it adds that job to the job queue
-Dialogue: 0,1:06:40.58,1:06:42.06,English,,0,0,0,,And that job will never be deleted
-Dialogue: 0,1:06:43.96,1:06:50.42,English,,0,0,0,,Right so this is the kind of subtle nasty horrible kind of bug that you run into
-Dialogue: 0,1:06:50.78,1:06:52.46,English,,0,0,0,,When you're dealing with concurrency
-Dialogue: 0,1:06:53.00,1:06:56.06,English,,0,0,0,,Trying to keep track of all of these interleaving of events
-Dialogue: 0,1:06:56.82,1:06:58.78,English,,0,0,0,,Can just make your head explode all right
-Dialogue: 0,1:06:59.62,1:07:04.90,English,,0,0,0,,Now and it happens and sig... it happens with any kind of concurrency
-Dialogue: 0,1:07:05.30,1:07:09.82,English,,0,0,0,,Where you have concurrent flows accessing shared resources and signal handlers are no different
+Dialogue: 0,1:06:16.76,1:06:22.90,English,,0,0,0,,And then the child terminates before the parent ever has a chance to add that job to the job queue 接着子进程会在父进程将其添加到工作队列之前终止
+Dialogue: 0,1:06:23.38,1:06:30.10,English,,0,0,0,,So now what's happened is that the child is deleting 这意味着子进程被删除了
+Dialogue: 0,1:06:30.92,1:06:35.43,English,,0,0,0,,A deleting a job that hasn't been added to the job queue right 一个被删除的工作没有被添加到工作队列中过
+Dialogue: 0,1:06:35.62,1:06:40.30,English,,0,0,0,,Now when the parent finally gets around to running it adds that job to the job queue 这时候父进程终于获得了机会将这个工作添加到工作队列中
+Dialogue: 0,1:06:40.58,1:06:42.06,English,,0,0,0,,And that job will never be deleted 这个工作永远不会被删除
+Dialogue: 0,1:06:43.96,1:06:50.42,English,,0,0,0,,Right so this is the kind of subtle nasty horrible kind of bug that you run into 所以这是一种微妙的，令人讨厌的，可怕的，你会遇到的 bug
+Dialogue: 0,1:06:50.78,1:06:52.46,English,,0,0,0,,When you're dealing with concurrency 当你处理并发时
+Dialogue: 0,1:06:53.00,1:06:56.06,English,,0,0,0,,Trying to keep track of all of these interleaving of events 试图追踪所有这些交错的事件
+Dialogue: 0,1:06:56.82,1:06:58.78,English,,0,0,0,,Can just make your head explode all right 这只会让你头皮发麻
+Dialogue: 0,1:06:59.62,1:07:04.90,English,,0,0,0,,Now and it happens and sig... it happens with any kind of concurrency 它会发生。。发生在任何情况的并发下
+Dialogue: 0,1:07:05.30,1:07:09.82,English,,0,0,0,,Where you have concurrent flows accessing shared resources and signal handlers are no different 当你有并发流访问共享资源时，信号处理函数没什么不同
 Dialogue: 0,1:07:10.68,1:07:15.88,English,,0,0,0,,Now we'll look at principled ways where we can deal with this kind of sharing when we study threads later on
-Dialogue: 0,1:07:17.34,1:07:22.16,English,,0,0,0,,But I just want to point this out to him scare you a little bit
-Dialogue: 0,1:07:23.34,1:07:24.96,English,,0,0,0,,All right so here's how we would fix that
-Dialogue: 0,1:07:27.28,1:07:37.74,English,,0,0,0,,What we have to do is somehow avoid the possibility of the child handle or executing
-Dialogue: 0,1:07:38.38,1:07:43.28,English,,0,0,0,,Before the parent can add the corresponding job to the job queue
-Dialogue: 0,1:07:44.18,1:07:48.54,English,,0,0,0,,Now we can't control whether the child executes first or the parent execute first
-Dialogue: 0,1:07:49.62,1:07:51.74,English,,0,0,0,,And we can't control how long the child runs
-Dialogue: 0,1:07:52.50,1:07:58.10,English,,0,0,0,,But we can control when the the sigchild handler runs because we can block signals
-Dialogue: 0,1:07:58.81,1:08:00.84,English,,0,0,0,,Okay so what we'll do
-Dialogue: 0,1:08:02.44,1:08:04.34,English,,0,0,0,,We'll modify our program
-Dialogue: 0,1:08:07.36,1:08:12.88,English,,0,0,0,,We'll use sigprocmask to block sigchild signals before we create the child
-Dialogue: 0,1:08:14.50,1:08:19.44,English,,0,0,0,,Okay so at this point after this invocation of sigproc,sigchild, signals are blocked
-Dialogue: 0,1:08:21.64,1:08:23.32,English,,0,0,0,,Okay then we create the child
-Dialogue: 0,1:08:24.68,1:08:27.54,English,,0,0,0,,And before we do execev
-Dialogue: 0,1:08:27.90,1:08:34.30,English,,0,0,0,,Since we don't know that child may may need to reap its children right we don't know if it
-Dialogue: 0,1:08:34.82,1:08:42.82,English,,0,0,0,,By default children inherit the the blocked a bit vector of their parents okay so when this child runs
-Dialogue: 0,1:08:44.60,1:08:51.74,English,,0,0,0,,After it returns from fork at this point right after the fork sigchild is blocked in the child as well right
-Dialogue: 0,1:08:52.34,1:08:55.28,English,,0,0,0,,So if we didn't do anything if and the child created children
-Dialogue: 0,1:08:56.74,1:09:01.58,English,,0,0,0,,And tried to reap you know reap them with a sick child handle that sick child handler wouldn't run right
-Dialogue: 0,1:09:01.60,1:09:02.44,English,,0,0,0,,So that would be a problem
-Dialogue: 0,1:09:03.42,1:09:08.30,English,,0,0,0,,So in the child before we execute that the program itself we unblock sigchild
-Dialogue: 0,1:09:09.16,1:09:11.60,English,,0,0,0,,And this was an example that I was alluding to last time
-Dialogue: 0,1:09:12.40,1:09:19.44,English,,0,0,0,,How it's useful sometimes to separate creating processes with executing programs right then
-Dialogue: 0,1:09:20.72,1:09:27.52,English,,0,0,0,,So this allows us to get our signal mask set up the way we want it before we run our program in the child
-Dialogue: 0,1:09:29.34,1:09:33.82,English,,0,0,0,,So now even if the child terminates early
-Dialogue: 0,1:09:36.26,1:09:43.94,English,,0,0,0,,The sigchild handler won't run until after we've added the job to the to the job queue
-Dialogue: 0,1:09:44.42,1:09:49.74,English,,0,0,0,,Because we don't unblock sigchild until after the until after we call a job
-Dialogue: 0,1:09:57.82,1:09:58.98,English,,0,0,0,,Okay now there's another
-Dialogue: 0,1:09:59.26,1:10:04.40,English,,0,0,0,,So this sort of scenario be very relevant to you when you do your shell lab
-Dialogue: 0,1:10:05.10,1:10:08.52,English,,0,0,0,,Okay so you want to be careful not to make that mistake
-Dialogue: 0,1:10:12.28,1:10:15.84,English,,0,0,0,,Another thing that you're going to need to do in your shell lab
-Dialogue: 0,1:10:16.92,1:10:20.22,English,,0,0,0,,Now you remember in our simple our simple shell example we did the wait
-Dialogue: 0,1:10:20.74,1:10:24.65,English,,0,0,0,,Inside the main routine so we waited for foreground jobs using wait
-Dialogue: 0,1:10:25.48,1:10:31.28,English,,0,0,0,,But now in a real shell we're going to have our sigchild handler do all the all the wait call all the waits
+Dialogue: 0,1:07:17.34,1:07:22.16,English,,0,0,0,,But I just want to point this out to him scare you a little bit 但我想指出，这可能让你们有点害怕
+Dialogue: 0,1:07:23.34,1:07:24.96,English,,0,0,0,,All right so here's how we would fix that 好的，马么我们咋解决这个问题呢
+Dialogue: 0,1:07:27.28,1:07:37.74,English,,0,0,0,,What we have to do is somehow avoid the possibility of the child handle or executing 我们必须得，得以某种方式消除子处理程序
+Dialogue: 0,1:07:38.38,1:07:43.28,English,,0,0,0,,Before the parent can add the corresponding job to the job queue 在父进程将对应的工作添加到工作队列之前执行的可能性
+Dialogue: 0,1:07:44.18,1:07:48.54,English,,0,0,0,,Now we can't control whether the child executes first or the parent execute first 我们无法控制是子进程先执行还是父进程先执行
+Dialogue: 0,1:07:49.62,1:07:51.74,English,,0,0,0,,And we can't control how long the child runs 也没办法控制子进程运行多久
+Dialogue: 0,1:07:52.50,1:07:58.10,English,,0,0,0,,But we can control when the the sigchild handler runs because we can block signals 但我们可以控制 sigchild 处理程序何时运行，因为我们可以阻塞信号
+Dialogue: 0,1:07:58.81,1:08:00.84,English,,0,0,0,,Okay so what we'll do 我们会
+Dialogue: 0,1:08:02.44,1:08:04.34,English,,0,0,0,,We'll modify our program 修改我们的程序
+Dialogue: 0,1:08:07.36,1:08:12.88,English,,0,0,0,,We'll use sigprocmask to block sigchild signals before we create the child 我们用 sigprocmask 在创建子进程之前阻塞 sigchild 信号
+Dialogue: 0,1:08:14.50,1:08:19.44,English,,0,0,0,,Okay so at this point after this invocation of sigproc,sigchild, signals are blocked 在调用 sigproc，sigchild 之后，信号被阻塞了
+Dialogue: 0,1:08:21.64,1:08:23.32,English,,0,0,0,,Okay then we create the child 接着我们创建子进程
+Dialogue: 0,1:08:24.68,1:08:27.54,English,,0,0,0,,And before we do execev 在 execev 之前
+Dialogue: 0,1:08:27.90,1:08:34.30,English,,0,0,0,,Since we don't know that child may may need to reap its children right we don't know if it 因为我们不知道这个子进程是否需要回收它的子进程，我们不知道它是否
+Dialogue: 0,1:08:34.82,1:08:42.82,English,,0,0,0,,By default children inherit the the blocked a bit vector of their parents okay so when this child runs  默认情况下，子进程会继承它父进程的阻塞位向量，所以子进程运行时
+Dialogue: 0,1:08:44.60,1:08:51.74,English,,0,0,0,,After it returns from fork at this point right after the fork sigchild is blocked in the child as well right 在它从 fork 返回之后，在 fork 之后，sigchild 在子进程中被阻塞
+Dialogue: 0,1:08:52.34,1:08:55.28,English,,0,0,0,,So if we didn't do anything if and the child created children 如果我们什么也不做，并且子进程创建了一个子进程
+Dialogue: 0,1:08:56.74,1:09:01.58,English,,0,0,0,,And tried to reap you know reap them with a sick child handle that sick child handler wouldn't run right 并且尝试回收，通过 sigchild 处理程序回收，但 sigchild 处理程序无法正确运行
+Dialogue: 0,1:09:01.60,1:09:02.44,English,,0,0,0,,So that would be a problem 这是个问题
+Dialogue: 0,1:09:03.42,1:09:08.30,English,,0,0,0,,So in the child before we execute that the program itself we unblock sigchild 所以在子进程中，在我们执行那个程序自身之前，我们得解除对 sigchild 的阻塞
+Dialogue: 0,1:09:09.16,1:09:11.60,English,,0,0,0,,And this was an example that I was alluding to last time 这是我上次说到的例子
+Dialogue: 0,1:09:12.40,1:09:19.44,English,,0,0,0,,How it's useful sometimes to separate creating processes with executing programs right then 有时候将创建线程与执行程序分开有什么用
+Dialogue: 0,1:09:20.72,1:09:27.52,English,,0,0,0,,So this allows us to get our signal mask set up the way we want it before we run our program in the child 这允许我们获取我们的信号掩码，在子进程中执行我们的程序之前，将它设置为我们想要的样子
+Dialogue: 0,1:09:29.34,1:09:33.82,English,,0,0,0,,So now even if the child terminates early 所以尽管子进程被提前终止
+Dialogue: 0,1:09:36.26,1:09:43.94,English,,0,0,0,,The sigchild handler won't run until after we've added the job to the to the job queue sigchild 处理程序在我们将其添加到工作队列中之前是不会运行的
+Dialogue: 0,1:09:44.42,1:09:49.74,English,,0,0,0,,Because we don't unblock sigchild until after the until after we call a job 因为直到调用工作之后，我们才解除对 sigchild 的阻塞
+Dialogue: 0,1:09:57.82,1:09:58.98,English,,0,0,0,,Okay now there's another 好了，这是另一个
+Dialogue: 0,1:09:59.26,1:10:04.40,English,,0,0,0,,So this sort of scenario be very relevant to you when you do your shell lab 这种情况和你在做 shell 实验时非常相似
+Dialogue: 0,1:10:05.10,1:10:08.52,English,,0,0,0,,Okay so you want to be careful not to make that mistake 你想要小心，不出任何错误
+Dialogue: 0,1:10:12.28,1:10:15.84,English,,0,0,0,,Another thing that you're going to need to do in your shell lab 你们在 shell 实验中需要做的另一件事
+Dialogue: 0,1:10:16.92,1:10:20.22,English,,0,0,0,,Now you remember in our simple our simple shell example we did the wait 想想在我们的示例 shell 中，我们用了 wait
+Dialogue: 0,1:10:20.74,1:10:24.65,English,,0,0,0,,Inside the main routine so we waited for foreground jobs using wait 在 main 中，我们用 wait 等待前台工作
+Dialogue: 0,1:10:25.48,1:10:31.28,English,,0,0,0,,But now in a real shell we're going to have our sigchild handler do all the all the wait call all the waits 
 Dialogue: 0,1:10:32.28,1:10:37.58,English,,0,0,0,,And so we can't put the weight has to go in the sigchild handler can't go in the main routine
 Dialogue: 0,1:10:40.48,1:10:45.66,English,,0,0,0,,Okay so high if we can't put a weight in the main routine
 Dialogue: 0,1:10:46.88,1:10:50.88,English,,0,0,0,,How are we going to detect that our foreground job is finished
