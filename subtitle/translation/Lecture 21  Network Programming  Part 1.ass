@@ -600,54 +600,103 @@ Dialogue: 0,0:23:44.46,0:23:49.92,Chinese,,0,0,0,,让我们从 64 位地址直�
 Dialogue: 0,0:23:50.58,0:23:56.44,English,,0,0,0,,But quite honestly this has been one of those technologies that's been out there for over 15 years
 Dialogue: 0,0:23:50.58,0:23:56.44,Chinese,,0,0,0,,但说实话，这是一项已经存在了 15 年的技术
 Dialogue: 0,0:23:57.00,0:24:01.48,English,,0,0,0,,And still has a very low level of adoption so
+Dialogue: 0,0:23:57.00,0:24:01.48,Chinese,,0,0,0,,而且被应用程度仍然很低
 Dialogue: 0,0:24:02.52,0:24:05.08,English,,0,0,0,,It's still a future technology
+Dialogue: 0,0:24:02.52,0:24:05.08,Chinese,,0,0,0,,所以它仍是一项未来的技术
 Dialogue: 0,0:24:06.40,0:24:12.36,English,,0,0,0,,People have basically figured out all these crazy schemes to make use of just stick within the 4 byte limit
+Dialogue: 0,0:24:06.40,0:24:12.36,Chinese,,0,0,0,,人们基本上已经想出了所有只需要 4 字节位置的疯狂的方案
 Dialogue: 0,0:24:20.04,0:24:26.80,English,,0,0,0,,Okay so let's start talking the program the sort of programmer perspective on this
+Dialogue: 0,0:24:20.04,0:24:26.80,Chinese,,0,0,0,,好的，那么我们开始讨论程序员对此的理解吧
 Dialogue: 0,0:24:27.74,0:24:34.32,English,,0,0,0,,And this is one area where you'll wish you weren't programming in C
+Dialogue: 0,0:24:27.74,0:24:34.32,Chinese,,0,0,0,,那么这是一个你希望你不需要用 C 语言来编程的领域
 Dialogue: 0,0:24:34.42,0:24:35.56,English,,0,0,0,,But you are
+Dialogue: 0,0:24:34.42,0:24:35.56,Chinese,,0,0,0,,但你需要
 Dialogue: 0,0:24:36.10,0:24:38.72,English,,0,0,0,,So there's a lot of really crufty stuff
+Dialogue: 0,0:24:36.10,0:24:38.72,Chinese,,0,0,0,,这里有很多混乱的东西
 Dialogue: 0,0:24:38.72,0:24:46.83,English,,0,0,0,,And it was all developed most of the software protocols were conceived before C even was what it is today
+Dialogue: 0,0:24:38.72,0:24:46.83,Chinese,,0,0,0,,大多数软件协议在现在这个版本的 C 语言出现之前就被构思好了
 Dialogue: 0,0:24:47.58,0:24:51.40,English,,0,0,0,,So like the Kernighan and Ritchie book you have is called the second edition
+Dialogue: 0,0:24:47.58,0:24:51.40,Chinese,,0,0,0,,就像你们使用的 Kernighan 和 Ritchie 的书（《C 程序设计语言》）是第二版
 Dialogue: 0,0:24:51.40,0:24:55.14,English,,0,0,0,,And it's based on what was called ANSI C or ISO C
+Dialogue: 0,0:24:51.40,0:24:55.14,Chinese,,0,0,0,,它是基于一个叫做 ANSI C 或是 ISO C 的协议的
 Dialogue: 0,0:24:55.76,0:25:00.50,English,,0,0,0,,But these all date before that they date back to the original Kernighan and Ritchie
+Dialogue: 0,0:24:55.76,0:25:00.50,Chinese,,0,0,0,,它的历史以追溯到 Kernighan 和 Ritchie 的书最早出版的时代
 Dialogue: 0,0:25:00.50,0:25:04.42,English,,0,0,0,,So for example void* did not exist in that era
-Dialogue: 0,0:25:04.80,0:25:07.48,English,,0,0,0,,And so you use char * as a generic pointer
+Dialogue: 0,0:25:00.50,0:25:04.42,Chinese,,0,0,0,,举个例子，那个时代还没有 void*
+Dialogue: 0,0:25:04.80,0:25:07.48,English,,0,0,0,,And so you use char* as a generic pointer
+Dialogue: 0,0:25:04.80,0:25:07.48,Chinese,,0,0,0,,所以你使用 char* 作为空类型指针
 Dialogue: 0,0:25:08.24,0:25:11.36,English,,0,0,0,,And so there's just a lot of stuff in this programming
+Dialogue: 0,0:25:08.24,0:25:11.36,Chinese,,0,0,0,,所以你会觉得网络编程中有许多
 Dialogue: 0,0:25:11.76,0:25:16.72,English,,0,0,0,,Interface where you go wow that is really crufty and that that truth is yes you're right
+Dialogue: 0,0:25:11.76,0:25:16.72,Chinese,,0,0,0,,接口很混乱，实际上你是对的
 Dialogue: 0,0:25:17.64,0:25:20.80,English,,0,0,0,,So in particular there's a lot of different structures that are defined and
+
 Dialogue: 0,0:25:20.80,0:25:23.98,English,,0,0,0,,One of them is called an in_addr which means internet address
+
 Dialogue: 0,0:25:24.64,0:25:28.12,English,,0,0,0,,And it's just defined to be a 32-bit unsigned number
+
 Dialogue: 0,0:25:30.00,0:25:32.88,English,,0,0,0,,And in general as I mentioned there
+
 Dialogue: 0,0:25:33.02,0:25:39.78,English,,0,0,0,,The so called network byte order whoever designed the original protocols was a fan of big endian addressing
+
 Dialogue: 0,0:25:39.90,0:25:46.40,English,,0,0,0,,And so that's what it is even though actually most of the machines that are out there in this world are little endian
+
 Dialogue: 0,0:25:46.96,0:25:50.86,English,,0,0,0,,And so there's a set of standard library functions
+
 Dialogue: 0,0:25:50.86,0:25:54.46,English,,0,0,0,,That you use to convert between network order and host order
+
 Dialogue: 0,0:25:55.00,0:26:01.64,English,,0,0,0,,And the idea of it is now if I run my software on a little endian or a big endian machine
+
 Dialogue: 0,0:26:02.10,0:26:04.44,English,,0,0,0,,These functions will do the right thing
+
 Dialogue: 0,0:26:04.46,0:26:07.10,English,,0,0,0,,So if I just use these standard libraries
+
 Dialogue: 0,0:26:07.50,0:26:12.62,English,,0,0,0,,Then I don't have to worry about porting it every time I change the word ordering of a machine
+
 Dialogue: 0,0:26:13.46,0:26:16.08,English,,0,0,0,,One of the things you'll notice here is
+
 Dialogue: 0,0:26:16.48,0:26:25.24,English,,0,0,0,,There is no function to convert 64-bit data between a network order and host order so
+
 Dialogue: 0,0:26:25.98,0:26:31.40,English,,0,0,0,,I don't know what people do when I do it I just write my own saw,my own to do it
+
 Dialogue: 0,0:26:32.92,0:26:35.86,English,,0,0,0,,Or I don't because I know my other end is a little endian machine
+
 Dialogue: 0,0:26:37.42,0:26:47.06,English,,0,0,0,,So anyways these are already some functions you'll start seeing for that look like network conversion software
+
 Dialogue: 0,0:26:50.70,0:26:54.99,English,,0,0,0,,And as I mentioned the addresses are written in a dotted decimal form
+
 Dialogue: 0,0:26:55.52,0:26:58.36,English,,0,0,0,,And it's also big endian
+
 Dialogue: 0,0:26:58.38,0:27:03.64,English,,0,0,0,,So if I were to write in hex 128 is of course 0x80
+
 Dialogue: 0,0:27:03.68,0:27:07.32,English,,0,0,0,,So that's the most significant byte of the IP address
+
 Dialogue: 0,0:27:11.14,0:27:18.38,English,,0,0,0,,And then there is a set of functions api calls you can use to convert between this dotted decimal format
+
 Dialogue: 0,0:27:18.48,0:27:23.56,English,,0,0,0,,And the actual just a 32-bit unsigned int
+
 Dialogue: 0,0:27:25.16,0:27:27.46,English,,0,0,0,,And actually it used to be there is
+
 Dialogue: 0,0:27:27.90,0:27:31.66,English,,0,0,0,,You might see some older presentations where they use different names for this
+
 Dialogue: 0,0:27:31.80,0:27:35.48,English,,0,0,0,,But the most recent version api calls this
+
 Dialogue: 0,0:27:36.32,0:27:42.48,English,,0,0,0,,The presentation version the dotted decimal they referred to it as a presentation
+
 Dialogue: 0,0:27:45.32,0:27:50.92,English,,0,0,0,,Then you can look up the and it's in the book to what the calls to these look like
+
 Dialogue: 0,0:27:53.24,0:27:56.40,English,,0,0,0,,But you probably don't or very seldom
+
 Dialogue: 0,0:27:58.02,0:27:59.96,English,,0,0,0,,When you're thinking about I want to go to Google
+
 Dialogue: 0,0:27:59.98,0:28:05.26,English,,0,0,0,,You don't think about what its IP address is you just go to www.google.com
+
 Dialogue: 0,0:28:06.08,0:28:09.58,English,,0,0,0,,And for everything you do you refer to it by this
+
 Dialogue: 0,0:28:10.24,0:28:15.83,English,,0,0,0,,It would have referred called internet domain names which is a hierarchical naming system
+
 Dialogue: 0,0:28:16.40,0:28:21.74,English,,0,0,0,,Whereas you know there's .edu is for educational institutions
+
 Dialogue: 0,0:28:22.14,0:28:23.90,English,,0,0,0,,.com is for commercial
 Dialogue: 0,0:28:24.08,0:28:30.66,English,,0,0,0,,.net is general networking of many countries have their own suffix
 Dialogue: 0,0:28:30.82,0:28:35.18,English,,0,0,0,,So you know .de is for Germany and so forth
