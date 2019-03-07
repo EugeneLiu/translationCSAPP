@@ -527,16 +527,16 @@ Dialogue: 0,0:20:31.54,0:20:33.64,English,,0,0,0,,That lets me do socket program
 Dialogue: 0,0:20:31.54,0:20:33.64,Chinese,,0,0,0,,它可以让我进行套接字编程
 Dialogue: 0,0:20:34.12,0:20:38.84,English,,0,0,0,,And it's based on gives directly supports TCP/IP
 Dialogue: 0,0:20:34.12,0:20:38.84,Chinese,,0,0,0,,而且对 TCP/IP 提供直接的支持
-Dialogue: 0,0:20:42.90,0:20:48.04,English,,0,0,0,,So first of all we're going to talk most of the time about what's called IPV4
-Dialogue: 0,0:20:42.90,0:20:48.04,Chinese,,0,0,0,,那么首先我们先了解一下在大多数时候，什么叫做 IPV4
+Dialogue: 0,0:20:42.90,0:20:48.04,English,,0,0,0,,So first of all we're going to talk most of the time about what's called IPv4
+Dialogue: 0,0:20:42.90,0:20:48.04,Chinese,,0,0,0,,那么首先我们先了解一下在大多数时候，什么叫做 IPv4
 Dialogue: 0,0:20:48.80,0:20:55.80,English,,0,0,0,,A version 4 which is the one that's been running for since the 1980s I think early 1980s
-Dialogue: 0,0:20:48.80,0:20:55.80,Chinese,,0,0,0,,那是一个自 20 世纪 80 年代起实施的第四版协议
-Dialogue: 0,0:20:56.58,0:21:04.10,English,,0,0,0,,And it's the standard and we'll talk very only mentioned very briefly the idea of what's called IPV6
-Dialogue: 0,0:20:56.58,0:21:04.10,Chinese,,0,0,0,,而且是现行标准，然后我们只会简要的提一下 IPV6 的概念
+Dialogue: 0,0:20:48.80,0:20:55.80,Chinese,,0,0,0,,那是一个自 20 世纪 80 年代起实施的第四代互联网协议
+Dialogue: 0,0:20:56.58,0:21:04.10,English,,0,0,0,,And it's the standard and we'll talk very only mentioned very briefly the idea of what's called IPv6
+Dialogue: 0,0:20:56.58,0:21:04.10,Chinese,,0,0,0,,而且是现行标准，然后我们只会简要的提一下 IPv6 的概念
 Dialogue: 0,0:21:04.76,0:21:07.16,English,,0,0,0,,Which is sort of a next-generation version
 Dialogue: 0,0:21:04.76,0:21:07.16,Chinese,,0,0,0,,它则是下一代技术
-Dialogue: 0,0:21:08.00,0:21:12.80,English,,0,0,0,,So the idea of a IPV4 and this is now we're talking about IP
-Dialogue: 0,0:21:08.00,0:21:12.80,Chinese,,0,0,0,,那么 IPV4，也即我们现在所说的 IP 的思想就是
+Dialogue: 0,0:21:08.00,0:21:12.80,English,,0,0,0,,So the idea of a IPv4 and this is now we're talking about IP
+Dialogue: 0,0:21:08.00,0:21:12.80,Chinese,,0,0,0,,那么 IPv4，也即我们现在所说的 IP 的思想就是
 Dialogue: 0,0:21:13.36,0:21:18.60,English,,0,0,0,,And and this is true of TCP as well is that an address is actually just 32 bits
 Dialogue: 0,0:21:13.36,0:21:18.60,Chinese,,0,0,0,,一个只有 32 位的地址，这个思想对 TCP 也适用
 Dialogue: 0,0:21:20.92,0:21:24.28,English,,0,0,0,,But it's usually expressed in what they call dotted decimal form
@@ -544,7 +544,7 @@ Dialogue: 0,0:21:20.92,0:21:24.28,Chinese,,0,0,0,,通常这个思想被叫做”
 Dialogue: 0,0:21:24.54,0:21:26.44,English,,0,0,0,,And you've seen these addresses before
 Dialogue: 0,0:21:24.54,0:21:26.44,Chinese,,0,0,0,,这类地址你之前已经见过了
 Dialogue: 0,0:21:26.86,0:21:29.86,English,,0,0,0,,That it's 4 decimal numbers
-Dialogue: 0,0:21:26.86,0:21:29.86,Chinese,,0,0,0,,它有四个十进制数
+Dialogue: 0,0:21:26.86,0:21:29.86,Chinese,,0,0,0,,它有 4 个十进制数
 Dialogue: 0,0:21:30.50,0:21:33.52,English,,0,0,0,,And they can only range between 0 and 255
 Dialogue: 0,0:21:30.50,0:21:33.52,Chinese,,0,0,0,,这四个数的范围只能在 0 和 255 之间
 Dialogue: 0,0:21:34.32,0:21:37.74,English,,0,0,0,,Because each one of them is a single bytes worth of information
@@ -554,51 +554,51 @@ Dialogue: 0,0:21:37.76,0:21:40.36,Chinese,,0,0,0,,在这个课程中，我们曾
 Dialogue: 0,0:21:40.86,0:21:44.96,English,,0,0,0,,But we're going to write it as each byte is written as a decimal digit
 Dialogue: 0,0:21:40.86,0:21:44.96,Chinese,,0,0,0,,但以后我们将把它们书写成十进制格式
 Dialogue: 0,0:21:45.78,0:21:49.50,English,,0,0,0,,And they're actually passed and stored in
-
+Dialogue: 0,0:21:45.78,0:21:49.50,Chinese,,0,0,0,,事实上，它们以一种叫
 Dialogue: 0,0:21:49.82,0:21:53.34,English,,0,0,0,,What's called network byte order which is big endian byte order
-
+Dialogue: 0,0:21:49.82,0:21:53.34,Chinese,,0,0,0,,网络字节序的顺序被传递和储存，这种顺序是一种大端字节序
 Dialogue: 0,0:21:54.04,0:21:58.10,English,,0,0,0,,And so we have to worry about the whole big endian vs. good endian thing
-
+Dialogue: 0,0:21:54.04,0:21:58.10,Chinese,,0,0,0,,所以我们应考虑大端字节顺序
 Dialogue: 0,0:21:58.54,0:22:00.02,English,,0,0,0,,When we're doing network programming
-
+Dialogue: 0,0:21:58.54,0:22:00.02,Chinese,,0,0,0,,在网络编程中的好处
 Dialogue: 0,0:22:01.26,0:22:07.14,English,,0,0,0,,And you can actually learn a lot there's a whole levels of how the different bytes mean
-
-Dialogue: 0,0:22:07.14,0:22:13.30,English,,0,0,0,,But for example any ip address it starts with 128.2.  is at CMU
-
+Dialogue: 0,0:22:01.26,0:22:07.14,Chinese,,0,0,0,,另外你会了解到 IP 地址的四段字节都代表了不同层次的信息
+Dialogue: 0,0:22:07.14,0:22:13.30,English,,0,0,0,,But for example any ip address it starts with 128.2 is at CMU
+Dialogue: 0,0:22:07.14,0:22:13.30,Chinese,,0,0,0,,举个例子，任何以 128.2 开头的 IP 地址都在 CMU
 Dialogue: 0,0:22:15.86,0:22:18.24,English,,0,0,0,,I think and then
-
+Dialogue: 0,0:22:15.86,0:22:18.24,Chinese,,0,0,0,,我想本质上就是
 Dialogue: 0,0:22:19.14,0:22:24.34,English,,0,0,0,,And so essentially CMU owns that part of the IP address space
-
+Dialogue: 0,0:22:19.14,0:22:24.34,Chinese,,0,0,0,,CMU 拥有这部分IP地址空间
 Dialogue: 0,0:22:26.02,0:22:29.98,English,,0,0,0,,Which if you think about that's approximately 2^64
-
-Dialogue: 0,0:22:31.02,0:22:41.52,English,,0,0,0,,2 to the...no,not 2^6,2^16 different IP addresses available for use by campus
-
+Dialogue: 0,0:22:26.02,0:22:29.98,Chinese,,0,0,0,,这个空间大概包含了 2^64 个 IP 地址
+Dialogue: 0,0:22:31.02,0:22:41.52,English,,0,0,0,,2 to the...no,not 2^64,2^16 different IP addresses available for use by campus
+Dialogue: 0,0:22:31.02,0:22:41.52,Chinese,,0,0,0,,不对，不是 2^64，是 2^16 个给校园用户使用的不同 IP 地址
 Dialogue: 0,0:22:46.96,0:22:50.62,English,,0,0,0,,And as I mentioned there's a newer version called IPv6
-
+Dialogue: 0,0:22:46.96,0:22:50.62,Chinese,,0,0,0,,就像我提到过的，有一个新版的互联网协议叫做 IPV6 协议
 Dialogue: 0,0:22:50.86,0:22:54.84,English,,0,0,0,,That gives you a 128-bit addresses
-
+Dialogue: 0,0:22:50.86,0:22:54.84,Chinese,,0,0,0,,它会给你一个 128 位的地址
 Dialogue: 0,0:22:55.52,0:23:01.30,English,,0,0,0,,You can imagine actually that if you think about how many nodes are there in the internet
-
-Dialogue: 0,0:23:01.42,0:23:07.10,English,,0,0,0,,If a 4 byte address is only to the 32 so that's 4 billion
-
+Dialogue: 0,0:22:55.52,0:23:01.30,Chinese,,0,0,0,,你们可以试着猜测一下互联网上到底有多少个节点
+Dialogue: 0,0:23:01.42,0:23:07.10,English,,0,0,0,,If a 4 byte address is only 2^32 so that's 4 billion
+Dialogue: 0,0:23:01.42,0:23:07.10,Chinese,,0,0,0,,如果地址是 4 字节的，那么就只有 2^32 个也即 40 亿个节点
 Dialogue: 0,0:23:08.50,0:23:12.96,English,,0,0,0,,And I don't know about you but I have a lot of different things that use IP
-
+Dialogue: 0,0:23:08.50,0:23:12.96,Chinese,,0,0,0,,我不知道你们是怎么样的，但我有许多不同的东西要用到 IP 地址
 Dialogue: 0,0:23:12.96,0:23:18.28,English,,0,0,0,,I have a phone,I have two laptops,I have a couple desktops
-
+Dialogue: 0,0:23:12.96,0:23:18.28,Chinese,,0,0,0,,我有一台手机，两台笔记本电脑还有几台台式机
 Dialogue: 0,0:23:19.10,0:23:25.86,English,,0,0,0,,So if all of..if every one of us used multiple IP addresses then actually the world would be out of them right
-
+Dialogue: 0,0:23:19.10,0:23:25.86,Chinese,,0,0,0,,所以如果我们每个人都要用到多个 IP 地址那么实际上世界上所需要的 IP 地址就超额了对吧
 Dialogue: 0,0:23:25.86,0:23:30.12,English,,0,0,0,,There's seven billion people in the world not all of whom have access to the internet
-
+Dialogue: 0,0:23:25.86,0:23:30.12,Chinese,,0,0,0,,地球上有 70 亿人，虽然不是所有人都会使用网络
 Dialogue: 0,0:23:30.18,0:23:31.70,English,,0,0,0,,But a large fraction of them do
-
+Dialogue: 0,0:23:30.18,0:23:31.70,Chinese,,0,0,0,,但有很大一部分都是会使用网络的
 Dialogue: 0,0:23:32.40,0:23:39.58,English,,0,0,0,,And so there's a whole kind of crazy way of dealing with the multitude of possible IP addresses
-
+Dialogue: 0,0:23:32.40,0:23:39.58,Chinese,,0,0,0,,所以现在有一种疯狂的方式来解决大量可能需要的 IP 地址
 Dialogue: 0,0:23:40.18,0:23:44.20,English,,0,0,0,,So the obvious thing would be well let's just allocate a lot more addresses
-
+Dialogue: 0,0:23:40.18,0:23:44.20,Chinese,,0,0,0,,很明显，我们需要分配更多地址
 Dialogue: 0,0:23:44.46,0:23:49.92,English,,0,0,0,,And jump let's just skip 64 bits and go right to 128 and that's the idea behind IPv6
-
+Dialogue: 0,0:23:44.46,0:23:49.92,Chinese,,0,0,0,,让我们从 64 位地址直接跳到 128 位地址就是 IPv6 背后的想法
 Dialogue: 0,0:23:50.58,0:23:56.44,English,,0,0,0,,But quite honestly this has been one of those technologies that's been out there for over 15 years
-
+Dialogue: 0,0:23:50.58,0:23:56.44,Chinese,,0,0,0,,但说实话，这是一项已经存在了 15 年的技术
 Dialogue: 0,0:23:57.00,0:24:01.48,English,,0,0,0,,And still has a very low level of adoption so
 Dialogue: 0,0:24:02.52,0:24:05.08,English,,0,0,0,,It's still a future technology
 Dialogue: 0,0:24:06.40,0:24:12.36,English,,0,0,0,,People have basically figured out all these crazy schemes to make use of just stick within the 4 byte limit
