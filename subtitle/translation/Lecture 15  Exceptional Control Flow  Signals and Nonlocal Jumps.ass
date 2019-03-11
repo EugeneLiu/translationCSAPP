@@ -780,109 +780,109 @@ Dialogue: 0,1:09:57.82,1:09:58.98,English,,0,0,0,,好了，这是另一个
 Dialogue: 0,1:09:59.26,1:10:04.40,English,,0,0,0,,这种情况和你在做 shell 实验时非常相似
 Dialogue: 0,1:10:05.10,1:10:08.52,English,,0,0,0,,你想要小心，不出任何错误
 Dialogue: 0,1:10:12.28,1:10:15.84,English,,0,0,0,,你们在 shell 实验中需要做的另一件事
-Dialogue: 0,1:10:16.92,1:10:20.22,English,,0,0,0,,Now you remember in our simple our simple shell example we did the wait 想想在我们的示例 shell 中，我们用了 wait
-Dialogue: 0,1:10:20.74,1:10:24.65,English,,0,0,0,,Inside the main routine so we waited for foreground jobs using wait 在 main 中，我们用 wait 等待前台工作
-Dialogue: 0,1:10:25.48,1:10:31.28,English,,0,0,0,,But now in a real shell we're going to have our sigchild handler do all the all the wait call all the waits
-Dialogue: 0,1:10:32.28,1:10:37.58,English,,0,0,0,,And so we can't put the weight has to go in the sigchild handler can't go in the main routine
-Dialogue: 0,1:10:40.48,1:10:45.66,English,,0,0,0,,Okay so high if we can't put a weight in the main routine
-Dialogue: 0,1:10:46.88,1:10:50.88,English,,0,0,0,,How are we going to detect that our foreground job is finished
-Dialogue: 0,1:10:56.50,1:11:01.42,English,,0,0,0,,Okay so somehow so what we could do?we could define in the sigchild handler
-Dialogue: 0,1:11:03.00,1:11:05.16,English,,0,0,0,,When we read the foreground job
-Dialogue: 0,1:11:06.84,1:11:10.42,English,,0,0,0,,Right we've created a foreground job when we read that foreground job
-Dialogue: 0,1:11:11.18,1:11:14.92,English,,0,0,0,,We could set this global flag
-Dialogue: 0,1:11:16.02,1:11:18.48,English,,0,0,0,,We could declare the process this process id
-Dialogue: 0,1:11:19.14,1:11:21.98,English,,0,0,0,,A variable pid as a global flag
-Dialogue: 0,1:11:22.64,1:11:27.86,English,,0,0,0,,And then just assign the process id of the foreground job
-Dialogue: 0,1:11:29.50,1:11:34.06,English,,0,0,0,,Okay so this is an example of a handler it just all it does it sets a flag and then exits
-Dialogue: 0,1:11:38.92,1:11:45.56,English,,0,0,0,,And then in our main routine,okay we want to block sigchild just by just like before
-Dialogue: 0,1:11:45.94,1:11:51.24,English,,0,0,0,,Okay to avoid that race condition between the parent and the child
-Dialogue: 0,1:11:53.48,1:11:55.42,English,,0,0,0,,And then we create the child
-Dialogue: 0,1:11:57.40,1:12:01.54,English,,0,0,0,,And then in the and then the parent we set pid to zero
-Dialogue: 0,1:12:03.92,1:12:05.70,English,,0,0,0,,Okay then we unblock sigchild
-Dialogue: 0,1:12:07.30,1:12:11.76,English,,0,0,0,,And then we wait for the sick child handler to run and set pid to nonzero
-Dialogue: 0,1:12:15.56,1:12:18.34,English,,0,0,0,,Okay everybody see that I mean this so this is correct right
-Dialogue: 0,1:12:19.70,1:12:21.30,English,,0,0,0,,But it's extremely wasteful right
+Dialogue: 0,1:10:16.92,1:10:20.22,English,,0,0,0,,想想在我们的示例 shell 中，我们用了 wait
+Dialogue: 0,1:10:20.74,1:10:24.65,English,,0,0,0,,在 main 中，我们用 wait 等待前台工作
+Dialogue: 0,1:10:25.48,1:10:31.28,English,,0,0,0,,但在一个实际的 shell 中我们将让 sigchild 处理程序执行所有的 wait 调用
+Dialogue: 0,1:10:32.28,1:10:37.58,English,,0,0,0,,所以我们不能把权重放到 sigchild 处理程序中，不能放到 main 程序中
+Dialogue: 0,1:10:40.48,1:10:45.66,English,,0,0,0,,如果我们不能在 main 程序中增加一个权重的话
+Dialogue: 0,1:10:46.88,1:10:50.88,English,,0,0,0,,该如何检测前台工作已完成呢
+Dialogue: 0,1:10:56.50,1:11:01.42,English,,0,0,0,,那么我们能做什么呢？我们可以在 sigchild 处理程序中定义
+Dialogue: 0,1:11:03.00,1:11:05.16,English,,0,0,0,,让我们读取前台进程时
+Dialogue: 0,1:11:06.84,1:11:10.42,English,,0,0,0,,没错，当我们读取前台进程时会创建另一个前台进程
+Dialogue: 0,1:11:11.18,1:11:14.92,English,,0,0,0,,我们可以设置这个全局 flag
+Dialogue: 0,1:11:16.02,1:11:18.48,English,,0,0,0,,我们可以检测这个进程，进程 id
+Dialogue: 0,1:11:19.14,1:11:21.98,English,,0,0,0,,变量 pid 作为全局 flag
+Dialogue: 0,1:11:22.64,1:11:27.86,English,,0,0,0,,然后分配前台工作的进程 id
+Dialogue: 0,1:11:29.50,1:11:34.06,English,,0,0,0,,这里是一个处理程序例子，它设置 flag 后退出
+Dialogue: 0,1:11:38.92,1:11:45.56,English,,0,0,0,,在我们的 main 程序中，我们想要像之前那样阻塞 sigchild
+Dialogue: 0,1:11:45.94,1:11:51.24,English,,0,0,0,,为了避免父进程和子进程之间的竞争条件
+Dialogue: 0,1:11:53.48,1:11:55.42,English,,0,0,0,,我们创建这个子进程
+Dialogue: 0,1:11:57.40,1:12:01.54,English,,0,0,0,,然后我们将它的父进程的 pid 设置为零
+Dialogue: 0,1:12:03.92,1:12:05.70,English,,0,0,0,,然后解除对 sigchild 的阻塞
+Dialogue: 0,1:12:07.30,1:12:11.76,English,,0,0,0,,然后我们等待 sigchild 处理程序运行，将这个 pid 设置为非零
+Dialogue: 0,1:12:15.56,1:12:18.34,English,,0,0,0,,大家都看到了，我的意思是，这没错
+Dialogue: 0,1:12:19.70,1:12:21.30,English,,0,0,0,,但这是非常浪费的
 Dialogue: 0,1:12:21.64,1:12:29.96,English,,0,0,0,,We're spinning...we're using valuable processor cycles in this tight spin loop
-Dialogue: 0,1:12:30.14,1:12:33.74,English,,0,0,0,,Just executing over and over and over and over and over and over, for who knows how long
-Dialogue: 0,1:12:35.14,1:12:38.72,English,,0,0,0,,Okay so that's not a good solution alright
-Dialogue: 0,1:12:38.80,1:12:41.86,English,,0,0,0,,So let's look at a couple other things we might consider
-Dialogue: 0,1:12:42.64,1:12:46.30,English,,0,0,0,,And that have been considered by generations of 213 students
-Dialogue: 0,1:12:49.70,1:12:54.92,English,,0,0,0,,So one thing you might think well I'll just instead of just putting a semicolon here
-Dialogue: 0,1:12:55.50,1:12:56.62,English,,0,0,0,,I'll pause
-Dialogue: 0,1:12:58.56,1:13:02.06,English,,0,0,0,,And then I'll wait for the sigchild handler to run
-Dialogue: 0,1:13:03.44,1:13:05.34,English,,0,0,0,,And then I'll go back up and I'll check
-Dialogue: 0,1:13:06.26,1:13:07.44,English,,0,0,0,,I'll check pid again
-Dialogue: 0,1:13:08.80,1:13:11.64,English,,0,0,0,,Now you have to put this in a loop it still has to be in a loop
-Dialogue: 0,1:13:12.56,1:13:16.72,English,,0,0,0,,Because we have other signal handlers in our program we have a sigint handler
-Dialogue: 0,1:13:17.72,1:13:22.50,English,,0,0,0,,So it might be if we do the pause here and this again comes in and say get sigint handler runs
-Dialogue: 0,1:13:24.02,1:13:27.14,English,,0,0,0,,That would cause us to exit the pause function and go back up
-Dialogue: 0,1:13:27.36,1:13:29.80,English,,0,0,0,,So we have to keep checking pid because we're not sure
-Dialogue: 0,1:13:30.66,1:13:37.66,English,,0,0,0,,We have to keep checking for the specific signal handler sigchild handler to run instead of other handlers that might run
-Dialogue: 0,1:13:39.32,1:13:41.28,English,,0,0,0,,But this is actually wrong
-Dialogue: 0,1:13:44.36,1:13:47.74,English,,0,0,0,,Because it has a race can you see what the race is
-Dialogue: 0,1:13:54.54,1:13:58.62,English,,0,0,0,,What's wrong with this there's a good chance that this thing will block forever
-Dialogue: 0,1:14:03.50,1:14:15.92,English,,0,0,0,,Yes
-Dialogue: 0,1:14:16.06,1:14:20.46,English,,0,0,0,,Yeah that's so the problem with this is like
-Dialogue: 0,1:14:20.90,1:14:26.12,English,,0,0,0,,So if the signal is received after pid is checked
-Dialogue: 0,1:14:27.00,1:14:28.66,English,,0,0,0,,But before the pause executes
-Dialogue: 0,1:14:29.54,1:14:31.82,English,,0,0,0,,Okay which is possible right
-Dialogue: 0,1:14:33.14,1:14:35.76,English,,0,0,0,,It's unlikely but it's possible
-Dialogue: 0,1:14:37.54,1:14:41.52,English,,0,0,0,,If that signal is arrives here
-Dialogue: 0,1:14:42.62,1:14:45.36,English,,0,0,0,,Then the handler will set pid to nonzero and
-Dialogue: 0,1:14:46.08,1:14:47.82,English,,0,0,0,,Then we'll execute the pause
-Dialogue: 0,1:14:49.00,1:14:53.32,English,,0,0,0,,And the pause will be blocked forever waiting for a signal that will never arrive right
-Dialogue: 0,1:14:53.84,1:14:56.14,English,,0,0,0,,Because the sigchild signal already already came
+Dialogue: 0,1:12:30.14,1:12:33.74,English,,0,0,0,,只是一遍又一遍又一遍又一遍又一遍又一遍地执行，鬼知道会用多久
+Dialogue: 0,1:12:35.14,1:12:38.72,English,,0,0,0,,所以这不是一个优秀的解决方法
+Dialogue: 0,1:12:38.80,1:12:41.86,English,,0,0,0,,让我们看看其它一些我们该考虑的事情
+Dialogue: 0,1:12:42.64,1:12:46.30,English,,0,0,0,,好几届 213 的学生都考虑过
+Dialogue: 0,1:12:49.70,1:12:54.92,English,,0,0,0,,你必须考虑的一件事是，我就不写分号了
+Dialogue: 0,1:12:55.50,1:12:56.62,English,,0,0,0,,我会 pause
+Dialogue: 0,1:12:58.56,1:13:02.06,English,,0,0,0,,接着等待 sigchild 信号处理程序运行
+Dialogue: 0,1:13:03.44,1:13:05.34,English,,0,0,0,,接着返回并检查
+Dialogue: 0,1:13:06.26,1:13:07.44,English,,0,0,0,,再次检查 pid
+Dialogue: 0,1:13:08.80,1:13:11.64,English,,0,0,0,,现在你必须把它放入一个循环中，仍然是一个循环
+Dialogue: 0,1:13:12.56,1:13:16.72,English,,0,0,0,,因为我们有其它的信号处理程序，在程序里还有个 sigint 处理程序
+Dialogue: 0,1:13:17.72,1:13:22.50,English,,0,0,0,,如果我们在这里暂停，这个会进来，也就是 sigint 处理程序运行
+Dialogue: 0,1:13:24.02,1:13:27.14,English,,0,0,0,,这将导致我们退出暂停函数并返回
+Dialogue: 0,1:13:27.36,1:13:29.80,English,,0,0,0,,我们不得不持续检查 pid，因为我们不确定
+Dialogue: 0,1:13:30.66,1:13:37.66,English,,0,0,0,,我们必须不断检查要运行的特定信号处理程序，sigchild 处理程序，而不是可能运行的其他处理程序
+Dialogue: 0,1:13:39.32,1:13:41.28,English,,0,0,0,,但这实际上是错误的
+Dialogue: 0,1:13:44.36,1:13:47.74,English,,0,0,0,,因为这就出现了竞争，你能发现是什么竞争吗
+Dialogue: 0,1:13:54.54,1:13:58.62,English,,0,0,0,,这里有什么问题？这东西很有可能会永远阻塞
+Dialogue: 0,1:14:03.50,1:14:15.92,English,,0,0,0,,是的
+Dialogue: 0,1:14:16.06,1:14:20.46,English,,0,0,0,,这就是问题所在
+Dialogue: 0,1:14:20.90,1:14:26.12,English,,0,0,0,,因此，如果在 pid 检查后接收到信号
+Dialogue: 0,1:14:27.00,1:14:28.66,English,,0,0,0,,但在 pause 执行之前
+Dialogue: 0,1:14:29.54,1:14:31.82,English,,0,0,0,,哪个会是对的
+Dialogue: 0,1:14:33.14,1:14:35.76,English,,0,0,0,,这是不可能的，但这个是可能的
+Dialogue: 0,1:14:37.54,1:14:41.52,English,,0,0,0,,当这个信号到达
+Dialogue: 0,1:14:42.62,1:14:45.36,English,,0,0,0,,处理程序会将 pid 设置为非零
+Dialogue: 0,1:14:46.08,1:14:47.82,English,,0,0,0,,然后我们再执行 pause
+Dialogue: 0,1:14:49.00,1:14:53.32,English,,0,0,0,,pause 会一直阻塞，等待一个永远不会正确到达的信号
+Dialogue: 0,1:14:53.84,1:14:56.14,English,,0,0,0,,因为 sigchild 信号已经过来了
 Dialogue: 0,1:14:57.56,1:14:58.80,English,,0,0,0,,Very subtle right
-Dialogue: 0,1:15:00.28,1:15:03.42,English,,0,0,0,,So this code looks okay it looks benign but it's wrong
-Dialogue: 0,1:15:04.46,1:15:08.48,English,,0,0,0,,And your program would just hang forever
-Dialogue: 0,1:15:09.60,1:15:11.26,English,,0,0,0,,So we say well okay that's no good
-Dialogue: 0,1:15:11.80,1:15:16.36,English,,0,0,0,,We could replace the pause with asleep so we could say let's check pid
-Dialogue: 0,1:15:17.26,1:15:22.52,English,,0,0,0,,And then sleep for some predetermined amount of time in this case one second
-Dialogue: 0,1:15:24.68,1:15:26.98,English,,0,0,0,,And then go back up and check pid again
-Dialogue: 0,1:15:28.42,1:15:34.00,English,,0,0,0,,So this while this is correct it's way too slow right we're asking the system to wait for a second which is an eternity
-Dialogue: 0,1:15:35.10,1:15:40.02,English,,0,0,0,,And there's forms of sleep nanosecond where you can wait instead of units of seconds
-Dialogue: 0,1:15:40.02,1:15:41.76,English,,0,0,0,,You can wait in units of nanoseconds
-Dialogue: 0,1:15:42.26,1:15:44.32,English,,0,0,0,,But that what value do you use right
-Dialogue: 0,1:15:45.16,1:15:51.48,English,,0,0,0,,If it's it that so that's if you choose a value that's too large then you have this problem the slowness problem
-Dialogue: 0,1:15:51.82,1:15:54.90,English,,0,0,0,,If you choose a sleep time that's too small
-Dialogue: 0,1:15:55.30,1:15:57.64,English,,0,0,0,,Then you have the other problem that it's inefficient
-Dialogue: 0,1:15:59.20,1:16:01.14,English,,0,0,0,,So the solution is to use sigsuspend
-Dialogue: 0,1:16:03.04,1:16:05.70,English,,0,0,0,,Which is the last thing we're going to look at today
-Dialogue: 0,1:16:06.84,1:16:11.58,English,,0,0,0,,So sigsuspend is a function that takes a signal mask
-Dialogue: 0,1:16:12.94,1:16:17.64,English,,0,0,0,,And it's equivalent to an uninterruptible version of these three statements
-Dialogue: 0,1:16:18.88,1:16:23.40,English,,0,0,0,,So we block the signals that are specified in the signal mask
-Dialogue: 0,1:16:25.18,1:16:27.46,English,,0,0,0,,And then it's atomic in the sense that
-Dialogue: 0,1:16:30.28,1:16:36.22,English,,0,0,0,,After that this these two statements can't be interrupted they're always executed together
-Dialogue: 0,1:16:37.28,1:16:39.34,English,,0,0,0,,Okay so we blocked these signals
-Dialogue: 0,1:16:40.34,1:16:41.84,English,,0,0,0,,And then we execute the pause
+Dialogue: 0,1:15:00.28,1:15:03.42,English,,0,0,0,,这段代码看起来不错，看起来是挺好的，但实际上是错误的
+Dialogue: 0,1:15:04.46,1:15:08.48,English,,0,0,0,,你的程序会永远挂起
+Dialogue: 0,1:15:09.60,1:15:11.26,English,,0,0,0,,所以我们认为这还是不行
+Dialogue: 0,1:15:11.80,1:15:16.36,English,,0,0,0,,我们可以用 asleep 替换 pause，这样我们就可以检查 pid
+Dialogue: 0,1:15:17.26,1:15:22.52,English,,0,0,0,,然后 sleep 一段时间，这里是一秒钟
+Dialogue: 0,1:15:24.68,1:15:26.98,English,,0,0,0,,然后返回，再次检查 pid
+Dialogue: 0,1:15:28.42,1:15:34.00,English,,0,0,0,,虽然没错，但是速度太慢了，我们要求系统固定等待一秒钟
+Dialogue: 0,1:15:35.10,1:15:40.02,English,,0,0,0,,还有一种形式的 sleep 是纳秒级的，你可以等待，但不是以秒为单位
+Dialogue: 0,1:15:40.02,1:15:41.76,English,,0,0,0,,你可以以纳秒为单位等待
+Dialogue: 0,1:15:42.26,1:15:44.32,English,,0,0,0,,但你得选择一个合适的值
+Dialogue: 0,1:15:45.16,1:15:51.48,English,,0,0,0,,如果你选用了一个太大的值，那会导致程序出现运行缓慢的问题
+Dialogue: 0,1:15:51.82,1:15:54.90,English,,0,0,0,,如果选用的值太小
+Dialogue: 0,1:15:55.30,1:15:57.64,English,,0,0,0,,就会出现效率过低的情况
+Dialogue: 0,1:15:59.20,1:16:01.14,English,,0,0,0,,解决方法是使用 sigsuspend
+Dialogue: 0,1:16:03.04,1:16:05.70,English,,0,0,0,,就是我们昨天最后介绍的
+Dialogue: 0,1:16:06.84,1:16:11.58,English,,0,0,0,,是一个接受信号掩码的函数
+Dialogue: 0,1:16:12.94,1:16:17.64,English,,0,0,0,,它等价于这三条指令的不可中断版本
+Dialogue: 0,1:16:18.88,1:16:23.40,English,,0,0,0,,我们阻塞信号掩码中指定的信号
+Dialogue: 0,1:16:25.18,1:16:27.46,English,,0,0,0,,从这个意义上说，它是原子的
+Dialogue: 0,1:16:30.28,1:16:36.22,English,,0,0,0,,之后这两条指令不能被中断，它们总是一起执行
+Dialogue: 0,1:16:37.28,1:16:39.34,English,,0,0,0,,我们阻塞了这些信号
+Dialogue: 0,1:16:40.34,1:16:41.84,English,,0,0,0,,然后执行 pause
 Dialogue: 0,1:16:44.08,1:16:45.30,English,,0,0,0,,Okay so there's no chance
-Dialogue: 0,1:16:46.18,1:16:51.60,English,,0,0,0,,Of a signal interrupting this program in between the sigprocmask and the pause
-Dialogue: 0,1:16:54.58,1:16:58.74,English,,0,0,0,,Okay and then when a signal does come in and
-Dialogue: 0,1:17:00.28,1:17:05.80,English,,0,0,0,,The execution of the handle or causes pause to exit then we set the mask back to what it was before
-Dialogue: 0,1:17:08.34,1:17:10.82,English,,0,0,0,,Okay so the proper way then to wait for a signal
-Dialogue: 0,1:17:11.74,1:17:13.88,English,,0,0,0,,Is to use sigsuspend in the following way
-Dialogue: 0,1:17:14.82,1:17:16.52,English,,0,0,0,,So here's our here's our program again
-Dialogue: 0,1:17:17.82,1:17:20.80,English,,0,0,0,,We before we create the child we block sigchild
-Dialogue: 0,1:17:21.54,1:17:22.78,English,,0,0,0,,Then we create the child
-Dialogue: 0,1:17:23.96,1:17:26.42,English,,0,0,0,,And now we're going to wait for the sigchild to be received
-Dialogue: 0,1:17:27.72,1:17:29.48,English,,0,0,0,,Now sigchild is still blocked
-Dialogue: 0,1:17:30.26,1:17:34.90,English,,0,0,0,,Okay so there's no danger of the sigchild handler running
-Dialogue: 0,1:17:35.42,1:17:38.26,English,,0,0,0,,Okay so we set that global variable to zero
-Dialogue: 0,1:17:39.74,1:17:44.52,English,,0,0,0,,And then while it's while it's nonzero we repeatedly call sigsuspend
-Dialogue: 0,1:17:46.22,1:17:48.48,English,,0,0,0,,And sigsuspend is using the previous mask
-Dialogue: 0,1:17:49.02,1:17:51.76,English,,0,0,0,,That was set up here so sigsuspend is using the mask
-Dialogue: 0,1:17:52.50,1:17:54.53,English,,0,0,0,,Where sigchild is unblocked
-Dialogue: 0,1:17:55.42,1:18:01.48,English,,0,0,0,,Okay when we entered this first sigprocmask,sigchild was unblocked
-Dialogue: 0,1:18:03.32,1:18:08.70,English,,0,0,0,,So this allows inside the sigsuspend sigchild is unblocked
-Dialogue: 0,1:18:09.80,1:18:15.42,English,,0,0,0,,Okay so it allows for the handler now to be received or to be executed
-Dialogue: 0,1:18:17.16,1:18:21.20,English,,0,0,0,,Okay so in and it does it safely because of the...
-Dialogue: 0,1:18:21.72,1:18:24.84,English,,0,0,0,, The atomic nature of those those first two instructions
-Dialogue: 0,1:18:27.44,1:18:33.16,English,,0,0,0,,So once the so it's possible that implicit pause inside of sigchild
-Dialogue: 0,1:18:33.16,1:18:37.02,English,,0,0,0,,Could be interrupted by say another signal like sigint
-Dialogue: 0,1:18:38.28,1:18:42.60,English,,0,0,0,,Okay in which case we'd loop back up we notice that pid was still zero
-Dialogue: 0,1:18:42.96,1:18:47.18,English,,0,0,0,,And we go back into sigsuspend with sigchild unblocked
-Dialogue: 0,1:18:47.56,1:18:50.16,English,,0,0,0,,Okay so that makes sense to everybody
-Dialogue: 0,1:18:50.16,1:18:55.42,English,,0,0,0,,And now so this is exactly the behavior we want where we're not wasting resources but we've eliminated the race
-Dialogue: 0,1:18:59.28,1:19:04.44,English,,0,0,0,,Okay so that's it for today if you're interested nonlocal jumps are this weird thing in C
-Dialogue: 0,1:19:04.94,1:19:08.92,English,,0,0,0,,That allows a function to return to some other function that didn't call it
-Dialogue: 0,1:19:11.14,1:19:17.37,English,,0,0,0,,Okay but it's described in your textbook and also in some additional slides here if you if you're interested
+Dialogue: 0,1:16:46.18,1:16:51.60,English,,0,0,0,,在 sigprocmask 和 pause 之间中断程序的信号
+Dialogue: 0,1:16:54.58,1:16:58.74,English,,0,0,0,,接着当有信号过来
+Dialogue: 0,1:17:00.28,1:17:05.80,English,,0,0,0,,处理程序的执行会导致 pause 退出，然后我们将掩码设置回原来的值
+Dialogue: 0,1:17:08.34,1:17:10.82,English,,0,0,0,,正确的方法是等待信号
+Dialogue: 0,1:17:11.74,1:17:13.88,English,,0,0,0,,按照以下方式使用 sigsuspend
+Dialogue: 0,1:17:14.82,1:17:16.52,English,,0,0,0,,这是我们的程序
+Dialogue: 0,1:17:17.82,1:17:20.80,English,,0,0,0,,但在我们创建子进程前，得先阻塞 sigchild
+Dialogue: 0,1:17:21.54,1:17:22.78,English,,0,0,0,,然后再创建子进程
+Dialogue: 0,1:17:23.96,1:17:26.42,English,,0,0,0,,现在我们要等待 sigchild 被接收
+Dialogue: 0,1:17:27.72,1:17:29.48,English,,0,0,0,,还是被阻塞的
+Dialogue: 0,1:17:30.26,1:17:34.90,English,,0,0,0,,没有 sigchild 处理程序运行的危险
+Dialogue: 0,1:17:35.42,1:17:38.26,English,,0,0,0,,我们将这个全局变量设置为零
+Dialogue: 0,1:17:39.74,1:17:44.52,English,,0,0,0,,当它是非零的时候我们反复调用 sigsuspend
+Dialogue: 0,1:17:46.22,1:17:48.48,English,,0,0,0,,sigsuspend 使用的是之前的掩码
+Dialogue: 0,1:17:49.02,1:17:51.76,English,,0,0,0,,这是在这里设置的，所以 sigsuspend 用的是
+Dialogue: 0,1:17:52.50,1:17:54.53,English,,0,0,0,,解除 sigchild 阻塞的掩码
+Dialogue: 0,1:17:55.42,1:18:01.48,English,,0,0,0,,当我们进入第一个 sigprocmask 时，sigchild 被解除阻塞
+Dialogue: 0,1:18:03.32,1:18:08.70,English,,0,0,0,,这允许在 sigsuspend 内解除 sigchild 的阻塞
+Dialogue: 0,1:18:09.80,1:18:15.42,English,,0,0,0,,这允许处理程序可在此时被接收或执行
+Dialogue: 0,1:18:17.16,1:18:21.20,English,,0,0,0,,它是安全的，因为
+Dialogue: 0,1:18:21.72,1:18:24.84,English,,0,0,0,,前两条指令的原子性
+Dialogue: 0,1:18:27.44,1:18:33.16,English,,0,0,0,,一旦，这是有可能的，在 sigchild 内隐式 pause
+Dialogue: 0,1:18:33.16,1:18:37.02,English,,0,0,0,,就有可能被另一个信号打断，比如sigint
+Dialogue: 0,1:18:38.28,1:18:42.60,English,,0,0,0,,在这种情况下，我们会进行循环，我们注意到 pid 仍然是零
+Dialogue: 0,1:18:42.96,1:18:47.18,English,,0,0,0,,回到 sigchild 被解除阻塞的 sigsuspend
+Dialogue: 0,1:18:47.56,1:18:50.16,English,,0,0,0,,大家都能理解
+Dialogue: 0,1:18:50.16,1:18:55.42,English,,0,0,0,,这正是我们想要的行为，我们没有浪费资源，但我们已经消除了竞争
+Dialogue: 0,1:18:59.28,1:19:04.44,English,,0,0,0,,好了，今天就讲到这里，如果你感兴趣的话，非局部跳跃是 C 语言中很奇怪的东西
+Dialogue: 0,1:19:04.94,1:19:08.92,English,,0,0,0,,这允许函数返回到没有调用它的其它函数
+Dialogue: 0,1:19:11.14,1:19:17.37,English,,0,0,0,,但是课本上有描述，如果你感兴趣的话，还可以在这里的一些附加幻灯片上看到
