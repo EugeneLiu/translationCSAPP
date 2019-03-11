@@ -11,14 +11,14 @@ PlayResY: 720
 
 [Aegisub Project Garbage]
 Last Style Storage: Default
-Audio File: C:/Users/xqit/Desktop/csapp/Lecture 16 System Level I-O.mp4
-Video File: C:/Users/xqit/Desktop/csapp/Lecture 16 System Level I-O.mp4
+Audio File: C:/Users/xqit/Desktop/backup/csapp/Lecture 16 System Level I-O.mp4
+Video File: C:/Users/xqit/Desktop/backup/csapp/Lecture 16 System Level I-O.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 0.500000
-Scroll Position: 689
-Active Line: 695
-Video Position: 55463
+Scroll Position: 826
+Active Line: 837
+Video Position: 66893
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -520,11 +520,11 @@ Dialogue: 0,0:21:56.56,0:21:58.42,Chinese,,0,0,0,,在底层操作中这个函数
 Dialogue: 0,0:21:59.22,0:22:01.27,English,,0,0,0,,And it's given a file descriptor
 Dialogue: 0,0:21:59.22,0:22:01.27,Chinese,,0,0,0,,会给它分配一个文件描述符
 Dialogue: 0,0:22:01.70,0:22:04.18,English,,0,0,0,,You provided a pointer to a buffer
-Dialogue: 0,0:22:01.70,0:22:04.18,Chinese,,0,0,0,,你需要提供一个指向缓存区的指针
+Dialogue: 0,0:22:01.70,0:22:04.18,Chinese,,0,0,0,,你需要提供一个指向缓冲区的指针
 Dialogue: 0,0:22:04.64,0:22:09.30,English,,0,0,0,,That's you've had to allocate either statically or via malloc
-Dialogue: 0,0:22:04.64,0:22:09.30,Chinese,,0,0,0,,缓存区可以通过静态分配或通过 malloc 分配
+Dialogue: 0,0:22:04.64,0:22:09.30,Chinese,,0,0,0,,缓冲区可以通过静态分配或通过 malloc 分配
 Dialogue: 0,0:22:10.12,0:22:15.82,English,,0,0,0,,And you also specify how long that buffer is  so that it can't overflow that buffer
-Dialogue: 0,0:22:10.12,0:22:15.82,Chinese,,0,0,0,,并且你还需要指定缓存区的长度，避免溢出
+Dialogue: 0,0:22:10.12,0:22:15.82,Chinese,,0,0,0,,并且你还需要指定缓冲区的长度，避免溢出
 Dialogue: 0,0:22:16.74,0:22:21.96,English,,0,0,0,,And read,just means read as many bytes as you feel like
 Dialogue: 0,0:22:16.74,0:22:21.96,Chinese,,0,0,0,,read 的意思是你想读多少就读多少
 Dialogue: 0,0:22:22.86,0:22:25.06,English,,0,0,0,,But no more than the number I tell you to
@@ -554,7 +554,7 @@ Dialogue: 0,0:23:15.88,0:23:20.64,Chinese,,0,0,0,,因为在实际情况下，它
 Dialogue: 0,0:23:21.86,0:23:23.27,English,,0,0,0,,It will read at least one
 Dialogue: 0,0:23:21.86,0:23:23.27,Chinese,,0,0,0,,它至少读入一个字节
 Dialogue: 0,0:23:23.90,0:23:26.68,English,,0,0,0,,And it won't read any more than that buffer is
-Dialogue: 0,0:23:23.90,0:23:26.68,Chinese,,0,0,0,,最多读入等于缓存区长度的字节数
+Dialogue: 0,0:23:23.90,0:23:26.68,Chinese,,0,0,0,,最多读入等于缓冲区长度的字节数
 Dialogue: 0,0:23:27.12,0:23:29.48,English,,0,0,0,,But the number between that might be variable
 Dialogue: 0,0:23:27.12,0:23:29.48,Chinese,,0,0,0,,但介于二者之间的字节数是不一定的
 Dialogue: 0,0:23:30.02,0:23:35.94,English,,0,0,0,,And so when it reads less than that the number of maximum number bytes you specify
@@ -584,11 +584,11 @@ Dialogue: 0,0:24:30.34,0:24:32.26,Chinese,,0,0,0,,如果返回一个负数，则
 Dialogue: 0,0:24:39.06,0:24:42.80,English,,0,0,0,,So as I mentioned if it reads fewer than the number of bytes you specify
 Dialogue: 0,0:24:39.06,0:24:42.80,Chinese,,0,0,0,,正如我之前提到的，如果读入的字节数少于你指定的最长字节数
 Dialogue: 0,0:24:42.82,0:24:46.62,English,,0,0,0,,That's referred to as a short count and I'll talk about why that would occur
-Dialogue: 0,0:24:42.82,0:24:46.62,Chinese,,0,0,0,,这种情况被称为短读，我稍后会解释为什么会这样
+Dialogue: 0,0:24:42.82,0:24:46.62,Chinese,,0,0,0,,这种情况被称为不足值，我稍后会解释为什么会这样
 Dialogue: 0,0:24:48.26,0:24:54.46,English,,0,0,0,,Writing is sort of the same idea that you provide a file descriptor you provide a buffer
-Dialogue: 0,0:24:48.26,0:24:54.46,Chinese,,0,0,0,,写文件和读文件差不多，都需要提供一个文件描述符、一个缓存区
+Dialogue: 0,0:24:48.26,0:24:54.46,Chinese,,0,0,0,,写文件和读文件差不多，都需要提供一个文件描述符、一个缓冲区
 Dialogue: 0,0:24:54.78,0:24:57.94,English,,0,0,0,,Where the the data that you want to write out is stored
-Dialogue: 0,0:24:54.78,0:24:57.94,Chinese,,0,0,0,,缓存区用于存储你要写出的数据
+Dialogue: 0,0:24:54.78,0:24:57.94,Chinese,,0,0,0,,缓冲区用于存储你要写出的数据
 Dialogue: 0,0:24:58.56,0:25:01.98,English,,0,0,0,,And you give up how many bytes long do you want your write to be
 Dialogue: 0,0:24:58.56,0:25:01.98,Chinese,,0,0,0,,你不能想写多长就写多长
 Dialogue: 0,0:25:03.30,0:25:11.52,English,,0,0,0,,And it will write some number of bytes to the output at least one and no more than n bytes
@@ -722,150 +722,150 @@ Dialogue: 0,0:30:35.36,0:30:39.04,Chinese,,0,0,0,,但大家仍然可以看到我
 Dialogue: 0,0:30:39.50,0:30:42.12,English,,0,0,0,,And it's reading 1 and writing 1 in this loop
 Dialogue: 0,0:30:39.50,0:30:42.12,Chinese,,0,0,0,,被 1 个字节地读、1 个字节地写，循环往复
 Dialogue: 0,0:30:48.76,0:30:53.44,English,,0,0,0,,So let's see Ctrl-d to get out of it back to the code
-Dialogue: 0,0:30:48.76,0:30:53.44,Chinese,,0,0,0,,Ctrl-d 退出，回到那段代码
+Dialogue: 0,0:30:48.76,0:30:53.44,Chinese,,0,0,0,,Ctrl-d 退出，回到代码
 Dialogue: 0,0:31:02.26,0:31:05.24,English,,0,0,0,,So what's this short count business why would that occur
-Dialogue: 0,0:31:02.26,0:31:05.24,Chinese,,0,0,0,,那么这个短期业务的原因是什么呢？
-Dialogue: 0,0:31:05.90,0:31:09.40,English,,0,0,0,,Well there's a couple ones as I mentioned if you counter an end-of-file
-Dialogue: 0,0:31:05.90,0:31:09.40,Chinese,,0,0,0,,如果你反击文件结尾，我提到了几个
-Dialogue: 0,0:31:09.66,0:31:13.58,English,,0,0,0,,You're not going to read in however many bytes you are given for the buffer
-Dialogue: 0,0:31:09.66,0:31:13.58,Chinese,,0,0,0,,你不会读取为缓冲区提供的字节数
+Dialogue: 0,0:31:02.26,0:31:05.24,Chinese,,0,0,0,,那么为什么会出现不足值
+Dialogue: 0,0:31:05.90,0:31:09.40,English,,0,0,0,,Well there's a couple of ones as I mentioned if you counter an end-of-file
+Dialogue: 0,0:31:05.90,0:31:09.40,Chinese,,0,0,0,,我提到过如果你遇到文件结尾
+Dialogue: 0,0:31:09.66,0:31:13.58,English,,0,0,0,,You're not gonna read in however many bytes you are given for the buffer
+Dialogue: 0,0:31:09.66,0:31:13.58,Chinese,,0,0,0,,此时不论你设定的缓冲区有多少个字节，你都会停止读入
 Dialogue: 0,0:31:15.08,0:31:18.52,English,,0,0,0,,If you are reading text lines from a terminal
 Dialogue: 0,0:31:15.08,0:31:18.52,Chinese,,0,0,0,,如果你正在从终端读取文本行
 Dialogue: 0,0:31:19.98,0:31:24.02,English,,0,0,0,,The terminal handler will just send a line
-Dialogue: 0,0:31:19.98,0:31:24.02,Chinese,,0,0,0,,终端处理程序只发送一行
+Dialogue: 0,0:31:19.98,0:31:24.02,Chinese,,0,0,0,,终端处理器每次只会发送一行文字
 Dialogue: 0,0:31:24.22,0:31:27.74,English,,0,0,0,,It's worth at a time with the newline character terminating it
-Dialogue: 0,0:31:24.22,0:31:27.74,Chinese,,0,0,0,,一次使用换行符终止它是值得的
+Dialogue: 0,0:31:24.22,0:31:27.74,Chinese,,0,0,0,,遇到新行字符就会停止读入
 Dialogue: 0,0:31:28.38,0:31:31.34,English,,0,0,0,,If you're reading or writing a network packet
-Dialogue: 0,0:31:28.38,0:31:31.34,Chinese,,0,0,0,,如果你正在读取或写入网络数据包
+Dialogue: 0,0:31:28.38,0:31:31.34,Chinese,,0,0,0,,如果读或写的对象是网络数据包
 Dialogue: 0,0:31:31.96,0:31:36.14,English,,0,0,0,,The way...network packets work is that or messages
-Dialogue: 0,0:31:31.96,0:31:36.14,Chinese,,0,0,0,,网络数据包的工作方式就是那个或消息
+Dialogue: 0,0:31:31.96,0:31:36.14,Chinese,,0,0,0,,网络数据包与信息的处理方式类似
 Dialogue: 0,0:31:36.14,0:31:39.48,English,,0,0,0,,If you have a big long message it's broken into smaller chunks
-Dialogue: 0,0:31:36.14,0:31:39.48,Chinese,,0,0,0,,如果你有一个很长的消息，它会分成更小的块
+Dialogue: 0,0:31:36.14,0:31:39.48,Chinese,,0,0,0,,如果你有一条很长的信息，它会被分割成多个数据块
 Dialogue: 0,0:31:42.86,0:31:45.38,English,,0,0,0,,Typically about a thousand bytes or so question
-Dialogue: 0,0:31:42.86,0:31:45.38,Chinese,,0,0,0,,通常大约一千字节左右的问题
+Dialogue: 0,0:31:42.86,0:31:45.38,Chinese,,0,0,0,,每一块通常约 1000 个字节。有什么问题吗？
 Dialogue: 0,0:31:45.38,0:31:52.64,English,,0,0,0,,[student speaking]
-Dialogue: 0,0:31:45.38,0:31:52.64,Chinese,,0,0,0,,[学生说话]
+Dialogue: 0,0:31:45.38,0:31:52.64,Chinese,,0,0,0,,[学生提问]
 Dialogue: 0,0:31:52.66,0:31:56.68,English,,0,0,0,,If you are trying to read from an end-of-file return 0
-Dialogue: 0,0:31:52.66,0:31:56.68,Chinese,,0,0,0,,如果你尝试从文件结束返回0读取
+Dialogue: 0,0:31:52.66,0:31:56.68,Chinese,,0,0,0,,如果从文件结尾开始读取，则返回 0
 Dialogue: 0,0:32:01.12,0:32:05.00,English,,0,0,0,,Um is that a short count it's a really short count yes but it's not a negative
-Dialogue: 0,0:32:01.12,0:32:05.00,Chinese,,0,0,0,,嗯，这是一个简短的计数，它是一个非常简短的计数是，但它不是负面的
-Dialogue: 0,0:32:06.68,0:32:10.38,English,,0,0,0,,Yes so as it says here if you encounter an inter file
-Dialogue: 0,0:32:06.68,0:32:10.38,Chinese,,0,0,0,,是的，因为它在这里说如果你遇到一个inter文件
+Dialogue: 0,0:32:01.12,0:32:05.00,Chinese,,0,0,0,,这种情况是不是不足值？是，它确实是不足值，但不会返回负值
+Dialogue: 0,0:32:06.68,0:32:10.38,English,,0,0,0,,Yes so as it says here if you encounter an end-of-file
+Dialogue: 0,0:32:06.68,0:32:10.38,Chinese,,0,0,0,,是的，正如这里提到的遇到文件结尾的情况
 Dialogue: 0,0:32:11.54,0:32:14.86,English,,0,0,0,,It will actually there's two things actually it's a really good question
-Dialogue: 0,0:32:11.54,0:32:14.86,Chinese,,0,0,0,,实际上有两件事实际上它是一个非常好的问题
+Dialogue: 0,0:32:11.54,0:32:14.86,Chinese,,0,0,0,,这里实际上有两步。这是一个非常好的问题
 Dialogue: 0,0:32:15.28,0:32:21.08,English,,0,0,0,,If you're like near the end of a file you have a hundred bytes left and you say read 200
-Dialogue: 0,0:32:15.28,0:32:21.08,Chinese,,0,0,0,,如果你想要接近文件的末尾，那么你剩下一百个字节，你就说200
+Dialogue: 0,0:32:15.28,0:32:21.08,Chinese,,0,0,0,,如果你接近文件结尾，假设还剩 100 个字节，你命令读入 200 个字节
 Dialogue: 0,0:32:22.14,0:32:24.32,English,,0,0,0,,Your first call to read will come back and
-Dialogue: 0,0:32:22.14,0:32:24.32,Chinese,,0,0,0,,你的第一次阅读电话会回来
+Dialogue: 0,0:32:22.14,0:32:24.32,Chinese,,0,0,0,,你的第一次读入调用将
 Dialogue: 0,0:32:24.78,0:32:28.56,English,,0,0,0,,Get 100 character it would say 100 and it will get that number
-Dialogue: 0,0:32:24.78,0:32:28.56,Chinese,,0,0,0,,获得100个字符，它会说100，它将获得该数字
+Dialogue: 0,0:32:24.78,0:32:28.56,Chinese,,0,0,0,,读入 100 个字符并返回 100
 Dialogue: 0,0:32:29.12,0:32:32.80,English,,0,0,0,,And then you call again the second time and it will return zero
-Dialogue: 0,0:32:29.12,0:32:32.80,Chinese,,0,0,0,,然后你第二次再次打电话，它将返回零
+Dialogue: 0,0:32:29.12,0:32:32.80,Chinese,,0,0,0,,然后你再进行第二次调用，它将返回 0
 Dialogue: 0,0:32:33.18,0:32:36.28,English,,0,0,0,,And so that's how you actually detect the true end of file
-Dialogue: 0,0:32:33.18,0:32:36.28,Chinese,,0,0,0,,这就是你实际检测文件真实结束的方式
+Dialogue: 0,0:32:33.18,0:32:36.28,Chinese,,0,0,0,,这就是你实际检测到文件真实结尾的方式
 Dialogue: 0,0:32:36.78,0:32:41.08,English,,0,0,0,,As opposed to you know some other reason you might have gotten a short count is if that
-Dialogue: 0,0:32:36.78,0:32:41.08,Chinese,,0,0,0,,相反，如果你知道其他原因，那么你可能会得到一个简短的计数
-Dialogue: 0,0:32:41.46,0:32:45.30,English,,0,0,0,,You actually get a read of 0 the only case you'll get at 4 is an end of file
-Dialogue: 0,0:32:41.46,0:32:45.30,Chinese,,0,0,0,,你实际得到的读数为0，你得到的唯一一个案例就是文件的结尾
+Dialogue: 0,0:32:36.78,0:32:41.08,Chinese,,0,0,0,,这也是出现不足值的唯一原因
+Dialogue: 0,0:32:41.46,0:32:45.30,English,,0,0,0,,You actually get a read of 0 the only case you'll get that for is an end-of-file
+Dialogue: 0,0:32:41.46,0:32:45.30,Chinese,,0,0,0,,如果你得到的返回值为 0，说明你到达文件结尾
 Dialogue: 0,0:32:45.56,0:32:48.56,English,,0,0,0,,So that's a good question thanks
-Dialogue: 0,0:32:45.56,0:32:48.56,Chinese,,0,0,0,,所以这是一个很好的问题，谢谢
-Dialogue: 0,0:32:50.08,0:32:55.98,English,,0,0,0,,So again if over the internet typically packets are round a thousand bytes
-Dialogue: 0,0:32:50.08,0:32:55.98,Chinese,,0,0,0,,因此，如果通过互联网，通常数据包是一千个字节
+Dialogue: 0,0:32:45.56,0:32:48.56,Chinese,,0,0,0,,你提了一个很好的问题，谢谢
+Dialogue: 0,0:32:50.08,0:32:55.98,English,,0,0,0,,So again if over the internet typically packets are around a thousand bytes
+Dialogue: 0,0:32:50.08,0:32:55.98,Chinese,,0,0,0,,回到我们刚才讲的内容，通过互联网发送的数据包通常约为 1000 个字节
 Dialogue: 0,0:32:55.98,0:33:02.36,English,,0,0,0,,It's actually depends on where it's gone through what layers in the protocols it's gone through
-Dialogue: 0,0:32:55.98,0:33:02.36,Chinese,,0,0,0,,它实际上取决于它经历了协议中的哪些层
-Dialogue: 0,0:33:02.36,0:33:08.40,English,,0,0,0,,But 1500 bytes is actually the the standard what they call minimum transmission unit
-Dialogue: 0,0:33:02.36,0:33:08.40,Chinese,,0,0,0,,但1500字节实际上是他们称之为最小传输单元的标准
-Dialogue: 0,0:33:08.88,0:33:12.26,English,,0,0,0,,So if you have a big long file we'll come back in blocks like that
-Dialogue: 0,0:33:08.88,0:33:12.26,Chinese,,0,0,0,,因此，如果你有一个很长的文件，我们会像这样回来
+Dialogue: 0,0:32:55.98,0:33:02.36,Chinese,,0,0,0,,实际长度取决于它要通过的是协议中的哪一层
+Dialogue: 0,0:33:02.36,0:33:08.40,English,,0,0,0,,But 1500 bytes is actually the standard what they call minimum transmission unit
+Dialogue: 0,0:33:02.36,0:33:08.40,Chinese,,0,0,0,,但标准是 1500 个字节，这就是所谓的最小传输单元
+Dialogue: 0,0:33:08.88,0:33:12.26,English,,0,0,0,,So if you have a big long file it will come back in blocks like that
+Dialogue: 0,0:33:08.88,0:33:12.26,Chinese,,0,0,0,,因此，如果你有一个又大又长的文件，它就会被分割成那样的数据块
 Dialogue: 0,0:33:12.86,0:33:15.40,English,,0,0,0,,And if you're trying to read into a larger buffer
-Dialogue: 0,0:33:12.86,0:33:15.40,Chinese,,0,0,0,,如果你想要读入更大的缓冲区
+Dialogue: 0,0:33:12.86,0:33:15.40,Chinese,,0,0,0,,如果你想将该文件读入一个较大的缓冲区
 Dialogue: 0,0:33:15.88,0:33:18.71,English,,0,0,0,,It will typically come back in chunks
-Dialogue: 0,0:33:15.88,0:33:18.71,Chinese,,0,0,0,,它通常会以块状回归
+Dialogue: 0,0:33:15.88,0:33:18.71,Chinese,,0,0,0,,它通常也会以数据块的形式读入
 Dialogue: 0,0:33:19.32,0:33:19.84,English,,0,0,0,,Question
-Dialogue: 0,0:33:19.32,0:33:19.84,Chinese,,0,0,0,,题
+Dialogue: 0,0:33:19.32,0:33:19.84,Chinese,,0,0,0,,有什么问题？
 Dialogue: 0,0:33:19.86,0:33:24.44,English,,0,0,0,,[student speaking]
-Dialogue: 0,0:33:19.86,0:33:24.44,Chinese,,0,0,0,,[学生说话]
+Dialogue: 0,0:33:19.86,0:33:24.44,Chinese,,0,0,0,,[学生提问]
 Dialogue: 0,0:33:25.92,0:33:27.38,English,,0,0,0,,No in other words you
-Dialogue: 0,0:33:25.92,0:33:27.38,Chinese,,0,0,0,,不，换句话说你
+Dialogue: 0,0:33:25.92,0:33:27.38,Chinese,,0,0,0,,不，没有标准的缓冲区大小
 Dialogue: 0,0:33:27.88,0:33:35.38,English,,0,0,0,,And again if you're writing code you shouldn't expect any number particularly it will be dependent on the implementation
-Dialogue: 0,0:33:27.88,0:33:35.38,Chinese,,0,0,0,,再次，如果你正在编写代码，你不应该期望任何数字，特别是它将取决于实现
+Dialogue: 0,0:33:27.88,0:33:35.38,Chinese,,0,0,0,,换言之，你在写代码时不用考虑具体的字节数限制，它将取决于代码的实现
 Dialogue: 0,0:33:35.38,0:33:43.54,English,,0,0,0,,[student speaking]
-Dialogue: 0,0:33:35.38,0:33:43.54,Chinese,,0,0,0,,[学生说话]
+Dialogue: 0,0:33:35.38,0:33:43.54,Chinese,,0,0,0,,[学生提问]
 Dialogue: 0,0:33:43.54,0:33:48.10,English,,0,0,0,,No because I'm only reading or writing one character at a time right
-Dialogue: 0,0:33:43.54,0:33:48.10,Chinese,,0,0,0,,不，因为我一次只能读或写一个字
-Dialogue: 0,0:33:49.42,0:33:57.70,English,,0,0,0,,So I guess you're asking what if I like spent a week typing characters in a really long string and hit return
-Dialogue: 0,0:33:49.42,0:33:57.70,Chinese,,0,0,0,,所以我想你问的是，如果我喜欢花一个星期在一个非常长的字符串中键入字符并点击返回
+Dialogue: 0,0:33:43.54,0:33:48.10,Chinese,,0,0,0,,不，因为我每次只能读或写一个字符，对吗？
+Dialogue: 0,0:33:49.42,0:33:57.70,English,,0,0,0,,So I guess you're asking what if I like spend a week typing characters in a really long string and hit return
+Dialogue: 0,0:33:49.42,0:33:57.70,Chinese,,0,0,0,,我想你问的是要是我喜欢花一周的时间键入一长串的字符串后再点击回车呢
 Dialogue: 0,0:33:58.10,0:34:01.10,English,,0,0,0,,I don't know if you try it let me know the answer
-Dialogue: 0,0:33:58.10,0:34:01.10,Chinese,,0,0,0,,我不知道你是否尝试过让我知道答案
+Dialogue: 0,0:33:58.10,0:34:01.10,Chinese,,0,0,0,,我不知道，你试过后请告诉我答案
 Dialogue: 0,0:34:03.90,0:34:09.20,English,,0,0,0,,But it won't cause an error but that part believe me they've really gone through that code a lot of times
-Dialogue: 0,0:34:03.90,0:34:09.20,Chinese,,0,0,0,,但它不会导致错误，但那部分相信我他们已经很多次经历过这段代码
-Dialogue: 0,0:34:09.64,0:34:14.10,English,,0,0,0,,And and gotten RID of all those lurking buffer overflow vulnerabilities in the code
-Dialogue: 0,0:34:09.64,0:34:14.10,Chinese,,0,0,0,,并且在代码中获得了所有那些潜伏缓冲区溢出漏洞的RID
-Dialogue: 0,0:34:15.00,0:34:17.04,English,,0,0,0,,But will let you do it I don't actually know but
-Dialogue: 0,0:34:15.00,0:34:17.04,Chinese,,0,0,0,,但是会让你这样做我实际上并不知道但是
+Dialogue: 0,0:34:03.90,0:34:09.20,Chinese,,0,0,0,,它不会导致错误，但相信我：这段代码他们已经试过很多次
+Dialogue: 0,0:34:09.64,0:34:14.10,English,,0,0,0,,And gotten rid of all those lurking buffer overflow vulnerabilities in the code
+Dialogue: 0,0:34:09.64,0:34:14.10,Chinese,,0,0,0,,也经历并克服了代码中存在的无数个缓冲区溢出漏洞
+Dialogue: 0,0:34:15.00,0:34:17.04,English,,0,0,0,,But we'll let you do it I don't actually know
+Dialogue: 0,0:34:15.00,0:34:17.04,Chinese,,0,0,0,,但我本人没有亲自尝试过，也不反对你去尝试
 Dialogue: 0,0:34:18.02,0:34:22.72,English,,0,0,0,,But within the you should write your code again expecting short counts as a possibility
-Dialogue: 0,0:34:18.02,0:34:22.72,Chinese,,0,0,0,,但在你应该编写你的代码再次期待短计数作为一种可能性
+Dialogue: 0,0:34:18.02,0:34:22.72,Chinese,,0,0,0,,编写代码时应该考虑到可能出现不足值
 Dialogue: 0,0:34:23.04,0:34:26.98,English,,0,0,0,,And by the way that's one of the the headaches of using this low-level I/O is
-Dialogue: 0,0:34:23.04,0:34:26.98,Chinese,,0,0,0,,顺便说一句，使用这种低级I / O的麻烦之一就是
-Dialogue: 0,0:34:27.40,0:34:32.14,English,,0,0,0,,Is dealing with short counts is not is often sort of a nuisance of an application level
-Dialogue: 0,0:34:27.40,0:34:32.14,Chinese,,0,0,0,,处理短计数通常不是一种应用程序级别的麻烦
-Dialogue: 0,0:34:33.26,0:34:42.46,English,,0,0,0,,So you don't you usually package this up this kind of low-level file I/O into other libraries that you're calling
-Dialogue: 0,0:34:33.26,0:34:42.46,Chinese,,0,0,0,,因此，你通常不会将此类低级文件I / O打包到你正在调用的其他库中
-Dialogue: 0,0:34:42.46,0:34:46.88,English,,0,0,0,,It's only where are we demonstrating this is the sort of lowest level in the stack
-Dialogue: 0,0:34:42.46,0:34:46.88,Chinese,,0,0,0,,它只是我们在哪里展示这是堆栈中的最低级别
+Dialogue: 0,0:34:23.04,0:34:26.98,Chinese,,0,0,0,,顺便说一句，使用这种底层 I/O 的麻烦之一就是
+Dialogue: 0,0:34:27.40,0:34:32.14,English,,0,0,0,,Is dealing with short counts it's not it's often sort of a nuisance of an application level
+Dialogue: 0,0:34:27.40,0:34:32.14,Chinese,,0,0,0,,处理不足值。这通常是一种应用程序级别的麻烦
+Dialogue: 0,0:34:33.26,0:34:42.46,English,,0,0,0,,So you don't you usually package this kind of low-level file I/O into other libraries that you're calling
+Dialogue: 0,0:34:33.26,0:34:42.46,Chinese,,0,0,0,,因此你通常会将此类底层 I/O 文件打包到你正在调用的其他库中
+Dialogue: 0,0:34:42.46,0:34:46.88,English,,0,0,0,,It's only where we're demonstrating this is the sort of lowest level in the stack
+Dialogue: 0,0:34:42.46,0:34:46.88,Chinese,,0,0,0,,只不过我们在堆栈的最底层加以展示而已
 Dialogue: 0,0:34:52.26,0:34:55.22,English,,0,0,0,,And writing also can give you a short count
-Dialogue: 0,0:34:52.26,0:34:55.22,Chinese,,0,0,0,,写作也可以给你一个简短的数字
+Dialogue: 0,0:34:52.26,0:34:55.22,Chinese,,0,0,0,,写也会出现不足值
 Dialogue: 0,0:34:55.32,0:35:01.32,English,,0,0,0,,For example if you're sending packets over a network it will only send as many as is that packet can hold
-Dialogue: 0,0:34:55.32,0:35:01.32,Chinese,,0,0,0,,例如，如果你通过网络发送数据包，它将只发送数据包可以容纳的数量
+Dialogue: 0,0:34:55.32,0:35:01.32,Chinese,,0,0,0,,例如：当你通过网络发送数据包时，它只会发送每个包可以容纳的字节数
 Dialogue: 0,0:35:01.90,0:35:06.80,English,,0,0,0,,And then return back to you and you have to keep pumping them out to send the different packets
-Dialogue: 0,0:35:01.90,0:35:06.80,Chinese,,0,0,0,,然后返回给你，你必须继续抽出来发送不同的数据包
+Dialogue: 0,0:35:01.90,0:35:06.80,Chinese,,0,0,0,,然后返回给你，你必须不停把它们抽取出来逐包发送
 Dialogue: 0,0:35:07.90,0:35:13.76,English,,0,0,0,,And so usually when you write code that uses this goal of while you have to anticipate these short counts
-Dialogue: 0,0:35:07.90,0:35:13.76,Chinese,,0,0,0,,因此，通常当你编写使用此目标的代码时，你必须预测这些短计数
+Dialogue: 0,0:35:07.90,0:35:13.76,Chinese,,0,0,0,,因此，通常当你在编写使用 while 目标的代码时，你必须预测到不足值的产生
 Dialogue: 0,0:35:15.90,0:35:21.64,English,,0,0,0,,So professor O'Halloran wrote a package called RIO
-Dialogue: 0,0:35:15.90,0:35:21.64,Chinese,,0,0,0,,所以O'Halloran教授写了一个名为RIO的软件包
+Dialogue: 0,0:35:15.90,0:35:21.64,Chinese,,0,0,0,,对此，O'Halloran 教授写了一个名为 RIO 的软件包
 Dialogue: 0,0:35:22.06,0:35:27.52,English,,0,0,0,,And you'll...for now we'll just talk about what this package is
-Dialogue: 0,0:35:22.06,0:35:27.52,Chinese,,0,0,0,,你会......现在我们只谈谈这个包装是什么
-Dialogue: 0,0:35:27.52,0:35:32.68,English,,0,0,0,,This is a package that you're really going to want to use for the final web for the course
-Dialogue: 0,0:35:27.52,0:35:32.68,Chinese,,0,0,0,,这是一个你真正想要用于课程最终网络的软件包
+Dialogue: 0,0:35:22.06,0:35:27.52,Chinese,,0,0,0,,现在我们只谈谈这个软件包是什么
+Dialogue: 0,0:35:27.52,0:35:32.68,English,,0,0,0,,This is a package that you really gonna want to use for the final lab for the course
+Dialogue: 0,0:35:27.52,0:35:32.68,Chinese,,0,0,0,,该软件包非常适用于本课程的最终实验
 Dialogue: 0,0:35:33.20,0:35:39.20,English,,0,0,0,,And so for right now it's more of a high-level here's an example of code that uses low-level I/O
-Dialogue: 0,0:35:33.20,0:35:39.20,Chinese,,0,0,0,,所以现在它更像是一个高级别，这是一个使用低级I / O的代码示例
+Dialogue: 0,0:35:33.20,0:35:39.20,Chinese,,0,0,0,,截至目前我们遇到的大部分都属于高级，现在我们要讲的是使用低级 I/O 的代码
 Dialogue: 0,0:35:39.68,0:35:42.96,English,,0,0,0,,And packages up in a way that makes it a little bit more palatable
-Dialogue: 0,0:35:39.68,0:35:42.96,Chinese,,0,0,0,,并以一种让它更适合的方式打包
+Dialogue: 0,0:35:39.68,0:35:42.96,Chinese,,0,0,0,,只是进行了更好的封装，让人更容易接受
 Dialogue: 0,0:35:43.84,0:35:47.36,English,,0,0,0,,So RIO provides actually a number of different, two different
-Dialogue: 0,0:35:43.84,0:35:47.36,Chinese,,0,0,0,,所以RIO实际上提供了许多不同的，两种不同的
+Dialogue: 0,0:35:43.84,0:35:47.36,Chinese,,0,0,0,,RIO 实际上提供了许多不同的
 Dialogue: 0,0:35:49.66,0:35:51.64,English,,0,0,0,,Well actually three
-Dialogue: 0,0:35:49.66,0:35:51.64,Chinese,,0,0,0,,其实好吧三个
+Dialogue: 0,0:35:49.66,0:35:51.64,Chinese,,0,0,0,,准确来说
 Dialogue: 0,0:35:52.48,0:36:00.60,English,,0,0,0,,Two different levels of interface to this file I/O
-Dialogue: 0,0:35:52.48,0:36:00.60,Chinese,,0,0,0,,此文件I / O的两个不同级别的接口
+Dialogue: 0,0:35:52.48,0:36:00.60,Chinese,,0,0,0,,是两种不同级别的 I/O 文件接口
 Dialogue: 0,0:36:00.96,0:36:06.06,English,,0,0,0,,The lowest one is basically just a fairly small wrapper around
-Dialogue: 0,0:36:00.96,0:36:06.06,Chinese,,0,0,0,,最低的基本上只是一个相当小的包装
+Dialogue: 0,0:36:00.96,0:36:06.06,Chinese,,0,0,0,,最低级的接口基本上只是一个相当小的封装
 Dialogue: 0,0:36:08.46,0:36:12.00,English,,0,0,0,,The the existing the I/O  reads and writes you saw
-Dialogue: 0,0:36:08.46,0:36:12.00,Chinese,,0,0,0,,你看到的现有I / O读写
+Dialogue: 0,0:36:08.46,0:36:12.00,Chinese,,0,0,0,,对你之前看到的现有 I/O 读和写的封装
 Dialogue: 0,0:36:12.46,0:36:14.60,English,,0,0,0,,That will handle the short count issue
-Dialogue: 0,0:36:12.46,0:36:14.60,Chinese,,0,0,0,,这将处理短计数问题
-Dialogue: 0,0:36:15.16,0:36:21.62,English,,0,0,0,,And so when you say with RIO if you make a call to the read end function and you say some number of bytes
-Dialogue: 0,0:36:15.16,0:36:21.62,Chinese,,0,0,0,,所以当你用RIO说你是否调用了read end函数并且你说了一些字节数
+Dialogue: 0,0:36:12.46,0:36:14.60,Chinese,,0,0,0,,以此解决不足值问题
+Dialogue: 0,0:36:15.16,0:36:21.62,English,,0,0,0,,And so when you say with RIO if you make a call to the readn function and you say some number of bytes
+Dialogue: 0,0:36:15.16,0:36:21.62,Chinese,,0,0,0,,例如，如果你用 RIO 调用 readn 函数并指定某个字节数
 Dialogue: 0,0:36:22.40,0:36:27.08,English,,0,0,0,,Then that function will not return until it's read that number of bytes
-Dialogue: 0,0:36:22.40,0:36:27.08,Chinese,,0,0,0,,然后，在读取该字节数之前，该函数不会返回
+Dialogue: 0,0:36:22.40,0:36:27.08,Chinese,,0,0,0,,则在读完该字节数之前函数不会返回
 Dialogue: 0,0:36:27.20,0:36:33.56,English,,0,0,0,,So better be careful that many bytes are there if it's a network socket or a file
-Dialogue: 0,0:36:27.20,0:36:33.56,Chinese,,0,0,0,,因此，如果是网络套接字或文件，请注意许多字节
+Dialogue: 0,0:36:27.20,0:36:33.56,Chinese,,0,0,0,,在处理包含很多字节的网络套接字或文件时需要多加注意
 Dialogue: 0,0:36:33.82,0:36:37.52,English,,0,0,0,,Well because it will flag an error message
-Dialogue: 0,0:36:33.82,0:36:37.52,Chinese,,0,0,0,,好吧因为它会标记错误信息
-Dialogue: 0,0:36:37.52,0:36:44.44,English,,0,0,0,,If it's...what will actually hang up if it's a network connection waiting to read the bytes
-Dialogue: 0,0:36:37.52,0:36:44.44,Chinese,,0,0,0,,如果它是......如果它是一个等待读取字节的网络连接，它实际上会挂起
-Dialogue: 0,0:36:45.18,0:36:49.08,English,,0,0,0,,Or return an error if it hits a none to file what it's not expecting
-Dialogue: 0,0:36:45.18,0:36:49.08,Chinese,,0,0,0,,如果它遇到无，则返回错误以提交它不期望的内容
-Dialogue: 0,0:36:49.64,0:36:54.02,English,,0,0,0,,And similarly with write n is sort of a wrapper around the write function
-Dialogue: 0,0:36:49.64,0:36:54.02,Chinese,,0,0,0,,类似于write n是一种围绕write函数的包装器
-Dialogue: 0,0:36:54.36,0:36:59.34,English,,0,0,0,,That we'll deal with...just loop until the short counts are taken care of
-Dialogue: 0,0:36:54.36,0:36:59.34,Chinese,,0,0,0,,我们将处理......只是循环直到短计数被处理
-Dialogue: 0,0:37:00.70,0:37:06.26,English,,0,0,0,,And then there is a another class of of I/O that's called buffered I/O
-Dialogue: 0,0:37:00.70,0:37:06.26,Chinese,,0,0,0,,然后还有另一类I / O称为缓冲I / O.
+Dialogue: 0,0:36:33.82,0:36:37.52,Chinese,,0,0,0,,因为它将标记错误信息
+Dialogue: 0,0:36:37.52,0:36:44.44,English,,0,0,0,,If it's...will actually hang up if it's a network connection waiting to read the bytes
+Dialogue: 0,0:36:37.52,0:36:44.44,Chinese,,0,0,0,,实际上，对于网络连接，它将挂起并等待
+Dialogue: 0,0:36:45.18,0:36:49.08,English,,0,0,0,,Or return an error if it hits an end of file what it's not expecting
+Dialogue: 0,0:36:45.18,0:36:49.08,Chinese,,0,0,0,,如果出乎意料地读到文件结尾，则将返回错误
+Dialogue: 0,0:36:49.64,0:36:54.02,English,,0,0,0,,And similarly with writen is sort of a wrapper around the write function
+Dialogue: 0,0:36:49.64,0:36:54.02,Chinese,,0,0,0,,类似地，writen 也是一种对 write 函数的封装
+Dialogue: 0,0:36:54.36,0:36:59.34,English,,0,0,0,,That will deal with...just loop until the short counts are taken care of
+Dialogue: 0,0:36:54.36,0:36:59.34,Chinese,,0,0,0,,它会一直循环直到不足值问题被解决
+Dialogue: 0,0:37:00.70,0:37:06.26,English,,0,0,0,,And then there is another class of of I/O that's called buffered I/O
+Dialogue: 0,0:37:00.70,0:37:06.26,Chinese,,0,0,0,,此外还有另一类 I/O 即带缓冲的 I/O
 Dialogue: 0,0:37:06.78,0:37:09.18,English,,0,0,0,,And this is what you really want to use in practice
-Dialogue: 0,0:37:06.78,0:37:09.18,Chinese,,0,0,0,,这就是你真正想要在实践中使用的东西
-Dialogue: 0,0:37:09.74,0:37:15.20,English,,0,0,0,,And what you mostly use with the standard UNIX I/O at functions
-Dialogue: 0,0:37:09.74,0:37:15.20,Chinese,,0,0,0,,你最常使用的是标准UNIX I / O函数
-Dialogue: 0,0:37:15.72,0:37:20.26,English,,0,0,0,,You want to within the the user code build up a little buffer of
+Dialogue: 0,0:37:06.78,0:37:09.18,Chinese,,0,0,0,,这类 I/O 在实践中经常用到
+Dialogue: 0,0:37:09.74,0:37:15.20,English,,0,0,0,,And what you mostly use with the standard UNIX I/O functions
+Dialogue: 0,0:37:09.74,0:37:15.20,Chinese,,0,0,0,,也最常用于与标准 UNIX I/O 函数嵌套使用
+Dialogue: 0,0:37:15.72,0:37:20.26,English,,0,0,0,,Is it you want to within the the user code build up a little buffer of
 Dialogue: 0,0:37:15.72,0:37:20.26,Chinese,,0,0,0,,你想在用户代码中建立一个小缓冲区
 Dialogue: 0,0:37:20.90,0:37:26.94,English,,0,0,0,,Of bytes that have either been read in but not yet consumed by the application program
 Dialogue: 0,0:37:20.90,0:37:26.94,Chinese,,0,0,0,,已读入但尚未被应用程序使用的字节数
