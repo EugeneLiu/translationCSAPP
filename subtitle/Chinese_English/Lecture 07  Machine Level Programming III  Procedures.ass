@@ -591,7 +591,7 @@ Dialogue: 0,0:25:43.56,0:25:45.56,English,,0,0,0,,And it's pretty straightforwar
 Dialogue: 0,0:25:43.56,0:25:45.56,Chinese,,0,0,0,,而且非常简单
 Dialogue: 0,0:25:46.00,0:25:50.56,English,,0,0,0,,To get an example that shows passing arguments
 Dialogue: 0,0:25:46.00,0:25:50.56,Chinese,,0,0,0,,为了获取一个显示传递参数的示例
-Dialogue: 0,0:25:50.56,0:25:54.80,English,,0,0,0,,You have a function with at least 7 arguments which is pretty messy to do
+Dialogue: 0,0:25:50.56,0:25:54.80,English,,0,0,0,,You have to have a function with at least 7 arguments which is pretty messy to do
 Dialogue: 0,0:25:50.56,0:25:54.80,Chinese,,0,0,0,,需要一个至少有 7 个参数的函数，这是非常混乱的
 Dialogue: 0,0:25:54.80,0:25:57.08,English,,0,0,0,,So I won't do it but there's examples in the book
 Dialogue: 0,0:25:54.80,0:25:57.08,Chinese,,0,0,0,,所以我不会这样做，但书中有例子
@@ -603,7 +603,7 @@ Dialogue: 0,0:26:06.84,0:26:11.00,English,,0,0,0,,And now the third part of it i
 Dialogue: 0,0:26:06.84,0:26:11.00,Chinese,,0,0,0,,现在它的第三部分又来了
 Dialogue: 0,0:26:11.00,0:26:14.08,English,,0,0,0,,What if there's some local data that we need to make use of
 Dialogue: 0,0:26:11.00,0:26:14.08,Chinese,,0,0,0,,如果有一些我们需要使用的本地数据怎么办？
-Dialogue: 0,0:26:14.76,0:26:22.84,English,,0,0,0,,And so to get that idea across I have bring another concept which is called the stack frame
+Dialogue: 0,0:26:14.76,0:26:22.84,English,,0,0,0,,And so to get that idea across I have to bring in another concept which is called the stack frame
 Dialogue: 0,0:26:14.76,0:26:22.84,Chinese,,0,0,0,,因此，为了使你们理解，我引入了另一个叫做栈帧的概念
 Dialogue: 0,0:26:23.58,0:26:29.88,English,,0,0,0,,And so this is a particular allocation pattern that's used in memory and as I mentioned earlier
 Dialogue: 0,0:26:23.58,0:26:29.88,Chinese,,0,0,0,,所以这是一个用在内存中的特别分配模式，正如之前我提到的
@@ -642,7 +642,7 @@ Dialogue: 0,0:27:58.70,0:28:04.06,Chinese,,0,0,0,,因此，我们用于特定 ca
 Dialogue: 0,0:28:07.44,0:28:17.48,English,,0,0,0,,And to be sort of more technical we'll say that it's a frame for a particular instance of a procedure a particular call to a procedure
 Dialogue: 0,0:28:07.44,0:28:17.48,Chinese,,0,0,0,, 更技术性地说，它是特定过程调用的框架
 Dialogue: 0,0:28:19.16,0:28:24.28,English,,0,0,0,,So just imagine we had a set of functions one called "yoo"
-Dialogue: 0,0:28:19.16,0:28:24.28,Chinese,,0,0,0,,所以想象一下我们有一组叫做 "yoo" 的函数
+Dialogue: 0,0:28:19.16,0:28:24.28,Chinese,,0,0,0,,所以想象一下我们有一组函数，其中有一个名为 "yoo" 的函数
 Dialogue: 0,0:28:24.86,0:28:26.72,English,,0,0,0,,Which calls a function called "who"
 Dialogue: 0,0:28:24.86,0:28:26.72,Chinese,,0,0,0,,调用了 "who" 函数
 Dialogue: 0,0:28:27.30,0:28:32.42,English,,0,0,0,,And "who" has multiple calls to another function called "amI"
@@ -802,7 +802,7 @@ Dialogue: 0,0:35:17.84,0:35:20.32,Chinese,,0,0,0,,我们已经看到当你调用
 Dialogue: 0,0:35:20.76,0:35:23.60,English,,0,0,0,,It will push the return address onto the stack
 Dialogue: 0,0:35:20.76,0:35:23.60,Chinese,,0,0,0,,它会将返回地址压入栈
 Dialogue: 0,0:35:24.30,0:35:29.72,English,,0,0,0,,So before our function even starts all this information would be on the stack
-Dialogue: 0,0:35:24.30,0:35:29.72,Chinese,,0,0,0,,所以在我们的函数开始之前，所有这些信息都将在堆栈中
+Dialogue: 0,0:35:24.30,0:35:29.72,Chinese,,0,0,0,,所以在我们的函数开始执行之前，所有这些信息都将在堆栈中
 Dialogue: 0,0:35:30.96,0:35:37.40,English,,0,0,0,,Now if there's a if this particular if we're making use of a base pointer
 Dialogue: 0,0:35:30.96,0:35:37.40,Chinese,,0,0,0,,如果我们正在使用基指针，那么如果有这个特殊情况的话
 Dialogue: 0,0:35:37.68,0:35:41.26,English,,0,0,0,,Then we have to have some way where to store the old value of the base pointer
@@ -844,7 +844,7 @@ Dialogue: 0,0:36:56.08,0:36:58.20,Chinese,,0,0,0,,所以这个函数需要一个
 Dialogue: 0,0:36:58.22,0:37:02.38,English,,0,0,0,,One argument is a pointer and another is a an integer value
 Dialogue: 0,0:36:58.22,0:37:02.38,Chinese,,0,0,0,,一个参数是指针，另一个是整型
 Dialogue: 0,0:37:03.26,0:37:09.88,English,,0,0,0,,And you can see what it does is it dereferences that pointer to get a value called x
-Dialogue: 0,0:37:03.26,0:37:09.88,Chinese,,0,0,0,,你可以看到它的作用是它从指针中获取 x 的值
+Dialogue: 0,0:37:03.26,0:37:09.88,Chinese,,0,0,0,,你可以看到它的作用是对指针解引用获取 x 的值
 Dialogue: 0,0:37:11.20,0:37:17.94,English,,0,0,0,,It computes a value y by summing x and the value passed to it
 Dialogue: 0,0:37:11.20,0:37:17.94,Chinese,,0,0,0,,它通过将 x 和传递给它的值相加来计算值 y
 Dialogue: 0,0:37:18.56,0:37:20.84,English,,0,0,0,,It stores y back at p
@@ -862,12 +862,12 @@ Dialogue: 0,0:37:40.88,0:37:46.44,Chinese,,0,0,0,,并且它会将值放在 ％ra
 Dialogue: 0,0:37:47.48,0:37:56.76,English,,0,0,0,,And then it will increment %rsi which has the value called val here initially and now it has the value of x + val
 Dialogue: 0,0:37:47.48,0:37:56.76,Chinese,,0,0,0,,然后它将增加 ％rsi，其最初具有名为 val 的值，现在它具有 x+val 的值
 Dialogue: 0,0:37:58.08,0:38:07.48,English,,0,0,0,,And then it will store that in...the value pointed to by p
-Dialogue: 0,0:37:58.08,0:38:07.48,Chinese,,0,0,0,,然后它会将其存储在 p 指向的值中
+Dialogue: 0,0:37:58.08,0:38:07.48,Chinese,,0,0,0,,然后它会将其存储在 p 指向的内存中
 Dialogue: 0,0:38:08.14,0:38:12.76,English,,0,0,0,,And it will do a return,so you see these three instructions do all the different parts of this
 Dialogue: 0,0:38:08.14,0:38:12.76,Chinese,,0,0,0,,它会返回，所以你看到这三个指令完成了所有不同的部分
 Dialogue: 0,0:38:13.54,0:38:18.06,English,,0,0,0,,And as this shows in general also you know register usage
 Dialogue: 0,0:38:13.54,0:38:18.06,Chinese,,0,0,0,,而且，这一般表明你也知道寄存器的使用情况
-Dialogue: 0,0:38:18.32,0:38:21.02,English,,0,0,0,,By the way to document this when you're looking at code
+Dialogue: 0,0:38:18.32,0:38:21.02,English,,0,0,0,,It's handed by the way to document this when you're looking at code
 Dialogue: 0,0:38:18.32,0:38:21.02,Chinese,,0,0,0,,当你查看代码时，请记录下来
 Dialogue: 0,0:38:21.94,0:38:27.02,English,,0,0,0,,%rdi is the first argument %rsi gets used initially it's val
 Dialogue: 0,0:38:21.94,0:38:27.02,Chinese,,0,0,0,,％rdi 是第一个参数，％rsi 最初的值是 val
@@ -885,8 +885,8 @@ Dialogue: 0,0:39:00.68,0:39:08.18,English,,0,0,0,,And it's going to create a val
 Dialogue: 0,0:39:00.68,0:39:08.18,Chinese,,0,0,0,,它将创建一个名为 v1 的值，并且必须生成一个指向该值的指针
 Dialogue: 0,0:39:08.98,0:39:13.12,English,,0,0,0,,So what that means is v1 can't just stay in a register
 Dialogue: 0,0:39:08.98,0:39:13.12,Chinese,,0,0,0,,那么这意味着 v1 不能只保存在寄存器中
-Dialogue: 0,0:39:13.12,0:39:20.98,English,,0,0,0,,Because you can't create an address of a register,it has to be stored in memory somewhere so that you can create a pointer an address of it
-Dialogue: 0,0:39:13.12,0:39:20.98,Chinese,,0,0,0,,因为你无法创建寄存器的地址，所以必须将其存储在内存的某处，这样你就可以创建一个指向它的地址
+Dialogue: 0,0:39:13.12,0:39:20.98,English,,0,0,0,,Because you can't create an address of a register,it has to be stored in memory somewhere so that you can create a pointer and address of it
+Dialogue: 0,0:39:13.12,0:39:20.98,Chinese,,0,0,0,,因为你无法创建寄存器的地址，所以必须将其存储在内存的某处，这样你就可以创建一个指针指向它的地址
 Dialogue: 0,0:39:21.58,0:39:25.58,English,,0,0,0,,And where is it stored? well it puts it in the stack
 Dialogue: 0,0:39:21.58,0:39:25.58,Chinese,,0,0,0,,那么它存在哪里呢？在栈中
 Dialogue: 0,0:39:26.54,0:39:29.78,English,,0,0,0,,So how does it find space on the stack while allocates
@@ -897,12 +897,12 @@ Dialogue: 0,0:39:34.62,0:39:45.98,English,,0,0,0,,But you see that this red code
 Dialogue: 0,0:39:34.62,0:39:45.98,Chinese,,0,0,0,,你看到这个红色的代码会生成两条指令，其一是在栈中分配 16 字节的空间
 Dialogue: 0,0:39:46.78,0:39:53.76,English,,0,0,0,,And the other is to store $15213 at offset eight from the stack pointer
 Dialogue: 0,0:39:46.78,0:39:53.76,Chinese,,0,0,0,,其二是在离栈指针的偏移量为 8 的地方存储常数 15213
-Dialogue: 0,0:39:54.46,0:40:02.32,English,,0,0,0,,And as will often see the the program often allocates more space on the stack than it really needs to
-Dialogue: 0,0:39:54.46,0:40:02.32,Chinese,,0,0,0,,并且通常会看到程序经常在栈上分配比实际需要更多的空间
+Dialogue: 0,0:39:54.46,0:40:02.32,English,,0,0,0,,And as we often see the the program often allocates more space on the stack than it really needs to
+Dialogue: 0,0:39:54.46,0:40:02.32,Chinese,,0,0,0,,并且我们通常会看到程序经常在栈上分配比实际需要更多的空间
 Dialogue: 0,0:40:02.82,0:40:11.38,English,,0,0,0,,And there's some conventions about trying to keep addresses on aligned in various ways
 Dialogue: 0,0:40:02.82,0:40:11.38,Chinese,,0,0,0,,并且有一些关于尝试以各种方式保持地址对齐的约定
 Dialogue: 0,0:40:11.56,0:40:18.10,English,,0,0,0,,That are sort of obscure and we you should just kind of not worry about the fact there's unused space and functions
-Dialogue: 0,0:40:11.56,0:40:18.10,Chinese,,0,0,0,,这有点模糊，你不必担心有未使用的空间和功能
+Dialogue: 0,0:40:11.56,0:40:18.10,Chinese,,0,0,0,,这有点模糊，但是我们不必担心有未使用的空间和功能
 Dialogue: 0,0:40:18.10,0:40:24.58,English,,0,0,0,,Because they do it the reasons for doing it are...
 Dialogue: 0,0:40:18.10,0:40:24.58,Chinese,,0,0,0,,因为他们这样做的原因是......
 Dialogue: 0,0:40:26.16,0:40:31.12,English,,0,0,0,,Maybe interesting to some but not really ones you need to understand at this point
@@ -950,7 +950,7 @@ Dialogue: 0,0:42:21.66,0:42:28.44,Chinese,,0,0,0,,编译器喜欢这个的原因
 Dialogue: 0,0:42:30.04,0:42:33.96,English,,0,0,0,,Um so just you have to get used to these kind of things
 Dialogue: 0,0:42:30.04,0:42:33.96,Chinese,,0,0,0,,嗯所以你必须习惯这些事情
 Dialogue: 0,0:42:34.46,0:42:38.40,English,,0,0,0,,So that's setting up argument the the second argument to the call
-Dialogue: 0,0:42:34.46,0:42:38.40,Chinese,,0,0,0,,这就是设置调用的第二个参数的过程
+Dialogue: 0,0:42:34.46,0:42:38.40,Chinese,,0,0,0,,这就是设置此次函数调用的第二个参数的过程
 Dialogue: 0,0:42:39.88,0:42:49.61,English,,0,0,0,,But the first argument it's using this instruction lea or leaq for what it's supposed to be used for,which is to create pointers
 Dialogue: 0,0:42:39.88,0:42:49.61,Chinese,,0,0,0,,但是它的第一个参数是使用这个指令lea或leaq用于它本来应该做的，即创建指针
 Dialogue: 0,0:42:50.22,0:42:54.82,English,,0,0,0,,Remember we talked about this instruction often getting used just to add two numbers
