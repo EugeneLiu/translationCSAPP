@@ -614,13 +614,13 @@ Dialogue: 0,0:24:34.42,0:24:35.56,Chinese,,0,0,0,,但你需要
 Dialogue: 0,0:24:36.10,0:24:38.72,English,,0,0,0,,So there's a lot of really crufty stuff
 Dialogue: 0,0:24:36.10,0:24:38.72,Chinese,,0,0,0,,这里有很多混乱的东西
 Dialogue: 0,0:24:38.72,0:24:46.83,English,,0,0,0,,And it was all developed most of the software protocols were conceived before C even was what it is today
-Dialogue: 0,0:24:38.72,0:24:46.83,Chinese,,0,0,0,,大多数软件协议在现在这个版本的 C 语言出现之前就被构思好了
+Dialogue: 0,0:24:38.72,0:24:46.83,Chinese,,0,0,0,,大多数软件协议在现在如今使用的 C 语言出现之前就被构思好了
 Dialogue: 0,0:24:47.58,0:24:51.40,English,,0,0,0,,So like the Kernighan and Ritchie book you have is called the second edition
-Dialogue: 0,0:24:47.58,0:24:51.40,Chinese,,0,0,0,,就像你们使用的 Kernighan 和 Ritchie 的书（《C 程序设计语言》）是第二版
+Dialogue: 0,0:24:47.58,0:24:51.40,Chinese,,0,0,0,,（就像你们使用的 Kernighan 和 Ritchie 的书（《C 程序设计语言》）是第二版）
 Dialogue: 0,0:24:51.40,0:24:55.14,English,,0,0,0,,And it's based on what was called ANSI C or ISO C
 Dialogue: 0,0:24:51.40,0:24:55.14,Chinese,,0,0,0,,它是基于一个叫做 ANSI C 或是 ISO C 的协议的
 Dialogue: 0,0:24:55.76,0:25:00.50,English,,0,0,0,,But these all date before that they date back to the original Kernighan and Ritchie
-Dialogue: 0,0:24:55.76,0:25:00.50,Chinese,,0,0,0,,它的历史以追溯到 Kernighan 和 Ritchie 的书最早出版的时代
+Dialogue: 0,0:24:55.76,0:25:00.50,Chinese,,0,0,0,,它的历史以追溯到 Kernighan 和 Ritchie 的书首次出版的时代
 Dialogue: 0,0:25:00.50,0:25:04.42,English,,0,0,0,,So for example void* did not exist in that era
 Dialogue: 0,0:25:00.50,0:25:04.42,Chinese,,0,0,0,,举个例子，那个时代还没有 void*
 Dialogue: 0,0:25:04.80,0:25:07.48,English,,0,0,0,,And so you use char* as a generic pointer
@@ -630,35 +630,35 @@ Dialogue: 0,0:25:08.24,0:25:11.36,Chinese,,0,0,0,,所以你会觉得网络编程
 Dialogue: 0,0:25:11.76,0:25:16.72,English,,0,0,0,,Interface where you go wow that is really crufty and that that truth is yes you're right
 Dialogue: 0,0:25:11.76,0:25:16.72,Chinese,,0,0,0,,接口很混乱，实际上你是对的
 Dialogue: 0,0:25:17.64,0:25:20.80,English,,0,0,0,,So in particular there's a lot of different structures that are defined and
-
+Dialogue: 0,0:25:17.64,0:25:20.80,Chinese,,0,0,0,,特别是有它定义了很多不同的结构体
 Dialogue: 0,0:25:20.80,0:25:23.98,English,,0,0,0,,One of them is called an in_addr which means internet address
-
+Dialogue: 0,0:25:20.80,0:25:23.98,Chinese,,0,0,0,,其中有一个叫做“in_addr”的关于网络地址的结构体
 Dialogue: 0,0:25:24.64,0:25:28.12,English,,0,0,0,,And it's just defined to be a 32-bit unsigned number
-
+Dialogue: 0,0:25:24.64,0:25:28.12,Chinese,,0,0,0,,它定义了一个 32 位无符号数
 Dialogue: 0,0:25:30.00,0:25:32.88,English,,0,0,0,,And in general as I mentioned there
-
+Dialogue: 0,0:25:30.00,0:25:32.88,Chinese,,0,0,0,,就像我刚才所说的
 Dialogue: 0,0:25:33.02,0:25:39.78,English,,0,0,0,,The so called network byte order whoever designed the original protocols was a fan of big endian addressing
-
+Dialogue: 0,0:25:33.02,0:25:39.78,Chinese,,0,0,0,,最初协议中的的网络字节序的设计者一定是个喜欢大端字节序处理的人
 Dialogue: 0,0:25:39.90,0:25:46.40,English,,0,0,0,,And so that's what it is even though actually most of the machines that are out there in this world are little endian
-
+Dialogue: 0,0:25:39.90,0:25:46.40,Chinese,,0,0,0,,而且这就是即使世界上大部分机器都是用的小端字节序，网络字节序仍用大端字节序的原因
 Dialogue: 0,0:25:46.96,0:25:50.86,English,,0,0,0,,And so there's a set of standard library functions
-
+Dialogue: 0,0:25:46.96,0:25:50.86,Chinese,,0,0,0,,另外，有许多标准库函数供你使用
 Dialogue: 0,0:25:50.86,0:25:54.46,English,,0,0,0,,That you use to convert between network order and host order
-
+Dialogue: 0,0:25:50.86,0:25:54.46,Chinese,,0,0,0,,以实现网络字节顺序和主机字节顺序的转换
 Dialogue: 0,0:25:55.00,0:26:01.64,English,,0,0,0,,And the idea of it is now if I run my software on a little endian or a big endian machine
-
+Dialogue: 0,0:25:55.00,0:26:01.64,Chinese,,0,0,0,,因此不论我在大端字节序或是小端字节序的机器上运行网络软件时
 Dialogue: 0,0:26:02.10,0:26:04.44,English,,0,0,0,,These functions will do the right thing
-
+Dialogue: 0,0:26:02.10,0:26:04.44,Chinese,,0,0,0,,这些函数都会让我的机器正常运行
 Dialogue: 0,0:26:04.46,0:26:07.10,English,,0,0,0,,So if I just use these standard libraries
-
+Dialogue: 0,0:26:04.46,0:26:07.10,Chinese,,0,0,0,,所以即使我只使用这些标准库
 Dialogue: 0,0:26:07.50,0:26:12.62,English,,0,0,0,,Then I don't have to worry about porting it every time I change the word ordering of a machine
-
+Dialogue: 0,0:26:07.50,0:26:12.62,Chinese,,0,0,0,,我都不用担心每次机器的字节顺序改变时需要手动转换
 Dialogue: 0,0:26:13.46,0:26:16.08,English,,0,0,0,,One of the things you'll notice here is
-
+Dialogue: 0,0:26:13.46,0:26:16.08,Chinese,,0,0,0,,在此你可能会注意到一件事
 Dialogue: 0,0:26:16.48,0:26:25.24,English,,0,0,0,,There is no function to convert 64-bit data between a network order and host order so
-
-Dialogue: 0,0:26:25.98,0:26:31.40,English,,0,0,0,,I don't know what people do when I do it I just write my own saw,my own to do it
-
+Dialogue: 0,0:26:16.48,0:26:25.24,Chinese,,0,0,0,,这些函数中没有用于转化 64 位数据的函数
+Dialogue: 0,0:26:25.98,0:26:31.40,English,,0,0,0,,I don't know what people do when I do it I just write my own thought,my own functions to do it
+Dialogue: 0,0:26:25.98,0:26:31.40,Chinese,,0,0,0,,我不知道人们都是怎么做的，但对我来说，我会编写自己的函数来实现它
 Dialogue: 0,0:26:32.92,0:26:35.86,English,,0,0,0,,Or I don't because I know my other end is a little endian machine
 
 Dialogue: 0,0:26:37.42,0:26:47.06,English,,0,0,0,,So anyways these are already some functions you'll start seeing for that look like network conversion software
