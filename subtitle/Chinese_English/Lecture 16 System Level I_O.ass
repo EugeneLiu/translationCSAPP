@@ -16,9 +16,9 @@ Video File: C:/Users/xqit/Desktop/backup/csapp/Lecture 16 System Level I-O.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 0.500000
-Scroll Position: 826
-Active Line: 837
-Video Position: 66893
+Scroll Position: 900
+Active Line: 907
+Video Position: 72611
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -858,83 +858,83 @@ Dialogue: 0,0:36:45.18,0:36:49.08,Chinese,,0,0,0,,如果出乎意料地读到文
 Dialogue: 0,0:36:49.64,0:36:54.02,English,,0,0,0,,And similarly with writen is sort of a wrapper around the write function
 Dialogue: 0,0:36:49.64,0:36:54.02,Chinese,,0,0,0,,类似地，writen 也是一种对 write 函数的封装
 Dialogue: 0,0:36:54.36,0:36:59.34,English,,0,0,0,,That will deal with...just loop until the short counts are taken care of
-Dialogue: 0,0:36:54.36,0:36:59.34,Chinese,,0,0,0,,它会一直循环直到不足值问题被解决
+Dialogue: 0,0:36:54.36,0:36:59.34,Chinese,,0,0,0,,它会一直循环直到解决不足值问题
 Dialogue: 0,0:37:00.70,0:37:06.26,English,,0,0,0,,And then there is another class of of I/O that's called buffered I/O
 Dialogue: 0,0:37:00.70,0:37:06.26,Chinese,,0,0,0,,此外还有另一类 I/O 即带缓冲的 I/O
 Dialogue: 0,0:37:06.78,0:37:09.18,English,,0,0,0,,And this is what you really want to use in practice
 Dialogue: 0,0:37:06.78,0:37:09.18,Chinese,,0,0,0,,这类 I/O 在实践中经常用到
 Dialogue: 0,0:37:09.74,0:37:15.20,English,,0,0,0,,And what you mostly use with the standard UNIX I/O functions
-Dialogue: 0,0:37:09.74,0:37:15.20,Chinese,,0,0,0,,也最常用于与标准 UNIX I/O 函数嵌套使用
+Dialogue: 0,0:37:09.74,0:37:15.20,Chinese,,0,0,0,,也最常与标准 UNIX I/O 函数嵌套使用
 Dialogue: 0,0:37:15.72,0:37:20.26,English,,0,0,0,,Is it you want to within the the user code build up a little buffer of
-Dialogue: 0,0:37:15.72,0:37:20.26,Chinese,,0,0,0,,你想在用户代码中建立一个小缓冲区
+Dialogue: 0,0:37:15.72,0:37:20.26,Chinese,,0,0,0,,其作用是在用户代码中建立一个小的缓冲区
 Dialogue: 0,0:37:20.90,0:37:26.94,English,,0,0,0,,Of bytes that have either been read in but not yet consumed by the application program
-Dialogue: 0,0:37:20.90,0:37:26.94,Chinese,,0,0,0,,已读入但尚未被应用程序使用的字节数
+Dialogue: 0,0:37:20.90,0:37:26.94,Chinese,,0,0,0,,用来存放已读入但尚未被应用程序使用的字节
 Dialogue: 0,0:37:27.38,0:37:31.02,English,,0,0,0,,Or you accumulate some number of bytes in your program
-Dialogue: 0,0:37:27.38,0:37:31.02,Chinese,,0,0,0,,或者你在程序中累积了一些字节数
+Dialogue: 0,0:37:27.38,0:37:31.02,Chinese,,0,0,0,,或用来存放程序中一些待输出的字节
 Dialogue: 0,0:37:31.18,0:37:35.56,English,,0,0,0,,Before it's actually shoved out into the file or out onto the network
-Dialogue: 0,0:37:31.18,0:37:35.56,Chinese,,0,0,0,,在它真正推入文件或进入网络之前
-Dialogue: 0,0:37:38.12,0:37:46.90,English,,0,0,0,,And there's two versions of that one is a text oriented wine oriented I/O and the other is just a byte oriented I/O
-Dialogue: 0,0:37:38.12,0:37:46.90,Chinese,,0,0,0,,还有两个版本，一个是面向文本的面向葡萄酒的I / O，另一个是面向字节的I / O.
-Dialogue: 0,0:37:50.12,0:37:55.62,English,,0,0,0,,So let's go through the what the functions are and actually look at the code for them
-Dialogue: 0,0:37:50.12,0:37:55.62,Chinese,,0,0,0,,那么让我们来看看函数是什么，并实际查看它们的代码
-Dialogue: 0,0:37:56.04,0:38:00.04,English,,0,0,0,,So as I mentioned the ones called read and write n are just very thin
-Dialogue: 0,0:37:56.04,0:38:00.04,Chinese,,0,0,0,,因此，正如我所提到的那样，读取和写入n非常薄
+Dialogue: 0,0:37:31.18,0:37:35.56,Chinese,,0,0,0,,未来你会将这部分字节放入文件或网络中
+Dialogue: 0,0:37:38.12,0:37:46.90,English,,0,0,0,,And there's two versions of that one is a text oriented line oriented I/O and the other is just a byte oriented I/O
+Dialogue: 0,0:37:38.12,0:37:46.90,Chinese,,0,0,0,,它又分为两种，一种是文本导向的 I/O，另一种是字节导向的 I/O
+Dialogue: 0,0:37:50.12,0:37:55.62,English,,0,0,0,,So let's go through what the functions are and actually look at the code for them
+Dialogue: 0,0:37:50.12,0:37:55.62,Chinese,,0,0,0,,那么让我们来具体看一看函数及相关的代码
+Dialogue: 0,0:37:56.04,0:38:00.04,English,,0,0,0,,So as I mentioned the ones called readn and writen are just very same
+Dialogue: 0,0:37:56.04,0:38:00.04,Chinese,,0,0,0,,正如我所提到的那样，readn 和 whiten
 Dialogue: 0,0:38:00.04,0:38:03.82,English,,0,0,0,,They have the same general semantics as the read and write
-Dialogue: 0,0:38:00.04,0:38:03.82,Chinese,,0,0,0,,它们具有与读取和写入相同的通用语义
+Dialogue: 0,0:38:00.04,0:38:03.82,Chinese,,0,0,0,,它们的语义与 read 和 write 大体相同
 Dialogue: 0,0:38:04.32,0:38:06.12,English,,0,0,0,,But they deal with the short count issue
-Dialogue: 0,0:38:04.32,0:38:06.12,Chinese,,0,0,0,,但他们处理的是短期问题
-Dialogue: 0,0:38:06.98,0:38:09.68,English,,0,0,0,,So let's actually take a look at read n
-Dialogue: 0,0:38:06.98,0:38:09.68,Chinese,,0,0,0,,那么让我们实际看一下阅读n
-Dialogue: 0,0:38:11.20,0:38:14.90,English,,0,0,0,,So again read n is given a file descriptor
-Dialogue: 0,0:38:11.20,0:38:14.90,Chinese,,0,0,0,,所以再次读取n给出一个文件描述符
+Dialogue: 0,0:38:04.32,0:38:06.12,Chinese,,0,0,0,,但他们处理的是不足值问题
+Dialogue: 0,0:38:06.98,0:38:09.68,English,,0,0,0,,So let's actually take a look at readn
+Dialogue: 0,0:38:06.98,0:38:09.68,Chinese,,0,0,0,,让我们先来看一看 readn
+Dialogue: 0,0:38:11.20,0:38:14.90,English,,0,0,0,,So again readn is given a file descriptor
+Dialogue: 0,0:38:11.20,0:38:14.90,Chinese,,0,0,0,,使用 readn 函数也需要指定一个文件描述符
 Dialogue: 0,0:38:15.72,0:38:18.40,English,,0,0,0,,A destination buffer
-Dialogue: 0,0:38:15.72,0:38:18.40,Chinese,,0,0,0,,目标缓冲区
+Dialogue: 0,0:38:15.72,0:38:18.40,Chinese,,0,0,0,,一个目标缓冲区
 Dialogue: 0,0:38:19.96,0:38:25.28,English,,0,0,0,,And a indication of how many characters
-Dialogue: 0,0:38:19.96,0:38:25.28,Chinese,,0,0,0,,并指示有多少个字符
+Dialogue: 0,0:38:19.96,0:38:25.28,Chinese,,0,0,0,,以及字符数
 Dialogue: 0,0:38:25.52,0:38:29.24,English,,0,0,0,,How many bytes it's supposed to read and it's supposed to
-Dialogue: 0,0:38:25.52,0:38:29.24,Chinese,,0,0,0,,它应该读取多少字节，它应该是
-Dialogue: 0,0:38:36.48,0:38:43.46,English,,0,0,0,,It's supposed to return...I guess it will return either a negative number if there's an error 0
-Dialogue: 0,0:38:36.48,0:38:43.46,Chinese,,0,0,0,,它应该返回...我想如果出现错误0，它将返回一个负数
-Dialogue: 0,0:38:43.48,0:38:45.98,English,,0,0,0,,If it's at an end of file
-Dialogue: 0,0:38:43.48,0:38:45.98,Chinese,,0,0,0,,如果它在文件的末尾
+Dialogue: 0,0:38:25.52,0:38:29.24,Chinese,,0,0,0,,这里的字符数指的是它应该读取的字节数以及
+Dialogue: 0,0:38:36.48,0:38:43.46,English,,0,0,0,,It's supposed to return...I guess it will return either a negative number if there's an error 
+Dialogue: 0,0:38:36.48,0:38:43.46,Chinese,,0,0,0,,它应该返回的返回值...我想如果出错，返回负值
+Dialogue: 0,0:38:43.48,0:38:45.98,English,,0,0,0,,0 if it's at an end of file
+Dialogue: 0,0:38:43.48,0:38:45.98,Chinese,,0,0,0,,如果遇到文件末尾 EOF，返回 0
 Dialogue: 0,0:38:49.62,0:38:51.48,English,,0,0,0,,Or the number of bytes read
 Dialogue: 0,0:38:49.62,0:38:51.48,Chinese,,0,0,0,,或者读取的字节数
 Dialogue: 0,0:38:51.48,0:38:55.70,English,,0,0,0,,So I guess I was a little bit I should have been more careful
-Dialogue: 0,0:38:51.48,0:38:55.70,Chinese,,0,0,0,,所以我想我有一点我应该更加小心
+Dialogue: 0,0:38:51.48,0:38:55.70,Chinese,,0,0,0,,我想我...我应该更小心一点
 Dialogue: 0,0:38:55.70,0:39:00.12,English,,0,0,0,,If it hits an end of file partway through it will return a short count
-Dialogue: 0,0:38:55.70,0:39:00.12,Chinese,,0,0,0,,如果它在中途到达文件的末尾，它将返回一个简短的计数
+Dialogue: 0,0:38:55.70,0:39:00.12,Chinese,,0,0,0,,如果它在中途遇到 EOF，它将返回不足值
 Dialogue: 0,0:39:00.74,0:39:03.74,English,,0,0,0,,But that's the only case it won't return a short count
-Dialogue: 0,0:39:00.74,0:39:03.74,Chinese,,0,0,0,,但这是唯一不会返回短数的情况
+Dialogue: 0,0:39:00.74,0:39:03.74,Chinese,,0,0,0,,但那是唯一返回不足值的情况。在其他情况下，
 Dialogue: 0,0:39:04.32,0:39:06.12,English,,0,0,0,,If there really it could have read more bytes
-Dialogue: 0,0:39:04.32,0:39:06.12,Chinese,,0,0,0,,如果它确实可以读取更多字节
+Dialogue: 0,0:39:04.32,0:39:06.12,Chinese,,0,0,0,,如果它还可以继续读，就不会返回不足值
 Dialogue: 0,0:39:07.24,0:39:13.70,English,,0,0,0,,So the main loop here you see is it keeps calling read over and over again until it's happy
-Dialogue: 0,0:39:07.24,0:39:13.70,Chinese,,0,0,0,,所以你看到的主循环是它一直反复阅读，直到它开心
+Dialogue: 0,0:39:07.24,0:39:13.70,Chinese,,0,0,0,,所以可以看到这里的一个主要循环是它会不停调用 read
 Dialogue: 0,0:39:14.72,0:39:18.18,English,,0,0,0,,Ah one way it can be happy as if it's read as many bytes
-Dialogue: 0,0:39:14.72,0:39:18.18,Chinese,,0,0,0,,啊，一种方式，它可以很高兴，好像它被读取多个字节
+Dialogue: 0,0:39:14.72,0:39:18.18,Chinese,,0,0,0,,直到读的字节数
 Dialogue: 0,0:39:18.44,0:39:21.86,English,,0,0,0,,As it was supposed to write read in the first place
-Dialogue: 0,0:39:18.44,0:39:21.86,Chinese,,0,0,0,,因为它应该首先写入读取
+Dialogue: 0,0:39:18.44,0:39:21.86,Chinese,,0,0,0,,等于一开始指定要读的字节数
 Dialogue: 0,0:39:23.12,0:39:26.34,English,,0,0,0,,The other is that if it hits an error code
-Dialogue: 0,0:39:23.12,0:39:26.34,Chinese,,0,0,0,,另一个是如果它遇到错误代码
+Dialogue: 0,0:39:23.12,0:39:26.34,Chinese,,0,0,0,,另外，如果它遇到出错代码
 Dialogue: 0,0:39:28.52,0:39:29.70,English,,0,0,0,,And you'll notice that
-Dialogue: 0,0:39:28.52,0:39:29.70,Chinese,,0,0,0,,你会注意到的
+Dialogue: 0,0:39:28.52,0:39:29.70,Chinese,,0,0,0,,你会注意到
 Dialogue: 0,0:39:37.86,0:39:43.14,English,,0,0,0,,Oh and that there's some subtlety of tracking which type of error that is
-Dialogue: 0,0:39:37.86,0:39:43.14,Chinese,,0,0,0,,哦，跟踪哪种类型的错误有一些微妙之处
+Dialogue: 0,0:39:37.86,0:39:43.14,Chinese,,0,0,0,,虽然对出错类型的追踪比较微妙
 Dialogue: 0,0:39:43.24,0:39:47.90,English,,0,0,0,,But in general the common cases it will return the negative number indicating an error
-Dialogue: 0,0:39:43.24,0:39:47.90,Chinese,,0,0,0,,但一般情况下，它会返回表示错误的负数
+Dialogue: 0,0:39:43.24,0:39:47.90,Chinese,,0,0,0,,但通常情况下，它会返回表示出错的负值
 Dialogue: 0,0:39:49.62,0:39:54.46,English,,0,0,0,,If the number read is zero
-Dialogue: 0,0:39:49.62,0:39:54.46,Chinese,,0,0,0,,如果读取的数字为零
-Dialogue: 0,0:39:55.34,0:39:57.26,English,,0,0,0,,Then that indicated an into file
-Dialogue: 0,0:39:55.34,0:39:57.26,Chinese,,0,0,0,,然后，这表明一个文件
+Dialogue: 0,0:39:49.62,0:39:54.46,Chinese,,0,0,0,,如果 nread 为 0
+Dialogue: 0,0:39:55.34,0:39:57.26,English,,0,0,0,,Then that indicated an end-of-file
+Dialogue: 0,0:39:55.34,0:39:57.26,Chinese,,0,0,0,,则表示 EOF
 Dialogue: 0,0:39:58.36,0:40:02.94,English,,0,0,0,,And so what it will return is as many bytes as it's read
-Dialogue: 0,0:39:58.36,0:40:02.94,Chinese,,0,0,0,,因此它将返回的内容与读取的字节数一样多
+Dialogue: 0,0:39:58.36,0:40:02.94,Chinese,,0,0,0,,在这种情况下，它将返回已读的字节数
 Dialogue: 0,0:40:03.30,0:40:05.04,English,,0,0,0,,So return the short count
-Dialogue: 0,0:40:03.30,0:40:05.04,Chinese,,0,0,0,,所以返回短计数
+Dialogue: 0,0:40:03.30,0:40:05.04,Chinese,,0,0,0,,即返回不足值
 Dialogue: 0,0:40:06.49,0:40:14.18,English,,0,0,0,,And here it's just saying okay I've read this number of bytes and increment and decrement the right values
-Dialogue: 0,0:40:06.49,0:40:14.18,Chinese,,0,0,0,,在这里它只是说我没有读过这个字节数并增加和减少正确的值
+Dialogue: 0,0:40:06.49,0:40:14.18,Chinese,,0,0,0,,这里的意思是我已经读了这么多的字节数，通过 -= 和 += 更新相应变量
 Dialogue: 0,0:40:14.24,0:40:20.04,English,,0,0,0,,So the point is it will keep looping keep doing reads until it either gets the number of bytes it should
-Dialogue: 0,0:40:14.24,0:40:20.04,Chinese,,0,0,0,,所以重点是它会保持循环继续执行读取，直到它获得它应该的字节数
+Dialogue: 0,0:40:14.24,0:40:20.04,Chinese,,0,0,0,,这段代码的核心是它会不断循环不断执行读操作，直到读完应该读的字节数
 Dialogue: 0,0:40:20.34,0:40:23.00,English,,0,0,0,,It hits an error or it encounters an end-of-file
-Dialogue: 0,0:40:20.34,0:40:23.00,Chinese,,0,0,0,,它遇到错误或遇到文件结束
+Dialogue: 0,0:40:20.34,0:40:23.00,Chinese,,0,0,0,,或出错或遇到 EOF
 Dialogue: 0,0:40:25.62,0:40:30.50,English,,0,0,0,,And you'll see it has its checking for all these different error conditions for every call
 Dialogue: 0,0:40:25.62,0:40:30.50,Chinese,,0,0,0,,并且你会看到它检查每个呼叫的所有这些不同的错误条件
 Dialogue: 0,0:40:32.72,0:40:35.30,English,,0,0,0,,It makes so this code by the way is sort of typical that
