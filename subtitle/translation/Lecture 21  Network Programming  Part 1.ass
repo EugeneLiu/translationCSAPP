@@ -660,149 +660,255 @@ Dialogue: 0,0:26:16.48,0:26:25.24,Chinese,,0,0,0,,这些函数中没有用于转
 Dialogue: 0,0:26:25.98,0:26:31.40,English,,0,0,0,,I don't know what people do when I do it I just write my own thought,my own functions to do it
 Dialogue: 0,0:26:25.98,0:26:31.40,Chinese,,0,0,0,,我不知道人们都是怎么做的，但对我来说，我会编写自己的函数来实现它
 Dialogue: 0,0:26:32.92,0:26:35.86,English,,0,0,0,,Or I don't because I know my other end is a little endian machine
-
+Dialogue: 0,0:26:32.92,0:26:35.86,Chinese,,0,0,0,,我也可能不会这么做因为另一端的机器是小端字节序的
 Dialogue: 0,0:26:37.42,0:26:47.06,English,,0,0,0,,So anyways these are already some functions you'll start seeing for that look like network conversion software
-
+Dialogue: 0,0:26:37.42,0:26:47.06,Chinese,,0,0,0,,不管怎样，这里是一些你会遇到的已经存在的函数，它们看起来就像网络转换软件一样
 Dialogue: 0,0:26:50.70,0:26:54.99,English,,0,0,0,,And as I mentioned the addresses are written in a dotted decimal form
-
+Dialogue: 0,0:26:50.70,0:26:54.99,Chinese,,0,0,0,,就像我提到的，这些地址是以点分十进制的格式书写的
 Dialogue: 0,0:26:55.52,0:26:58.36,English,,0,0,0,,And it's also big endian
-
+Dialogue: 0,0:26:55.52,0:26:58.36,Chinese,,0,0,0,,它也是大端结尾的
 Dialogue: 0,0:26:58.38,0:27:03.64,English,,0,0,0,,So if I were to write in hex 128 is of course 0x80
-
+Dialogue: 0,0:26:58.38,0:27:03.64,Chinese,,0,0,0,,所以假如我要用 16 进制书写，128 就是 0x80
 Dialogue: 0,0:27:03.68,0:27:07.32,English,,0,0,0,,So that's the most significant byte of the IP address
-
+Dialogue: 0,0:27:03.68,0:27:07.32,Chinese,,0,0,0,,这是 IP 地址最重要的字节
 Dialogue: 0,0:27:11.14,0:27:18.38,English,,0,0,0,,And then there is a set of functions api calls you can use to convert between this dotted decimal format
-
+Dialogue: 0,0:27:11.14,0:27:18.38,Chinese,,0,0,0,,接下来是一些函数 / api 调用你可以用于点分十进制
 Dialogue: 0,0:27:18.48,0:27:23.56,English,,0,0,0,,And the actual just a 32-bit unsigned int
-
+Dialogue: 0,0:27:18.48,0:27:23.56,Chinese,,0,0,0,,和 32 位无符号整形间的转换
 Dialogue: 0,0:27:25.16,0:27:27.46,English,,0,0,0,,And actually it used to be there is
-
+Dialogue: 0,0:27:25.16,0:27:27.46,Chinese,,0,0,0,,实际上，它们曾是
 Dialogue: 0,0:27:27.90,0:27:31.66,English,,0,0,0,,You might see some older presentations where they use different names for this
-
+Dialogue: 0,0:27:27.90,0:27:31.66,Chinese,,0,0,0,,在一些旧的演示文稿上，你可能见过它们的不同名称
 Dialogue: 0,0:27:31.80,0:27:35.48,English,,0,0,0,,But the most recent version api calls this
-
+Dialogue: 0,0:27:31.80,0:27:35.48,Chinese,,0,0,0,,但最新的版本中，api 调用的是
 Dialogue: 0,0:27:36.32,0:27:42.48,English,,0,0,0,,The presentation version the dotted decimal they referred to it as a presentation
-
-Dialogue: 0,0:27:45.32,0:27:50.92,English,,0,0,0,,Then you can look up the and it's in the book to what the calls to these look like
-
+Dialogue: 0,0:27:36.32,0:27:42.48,Chinese,,0,0,0,,这里所演示的，以点分十进制表达的 IP 地址
+Dialogue: 0,0:27:45.32,0:27:50.92,English,,0,0,0,,And you can look up the and it's in the book too what the calls to these look like
+Dialogue: 0,0:27:45.32,0:27:50.92,Chinese,,0,0,0,,你也可以在书上查找，书上有这些调用的格式
 Dialogue: 0,0:27:53.24,0:27:56.40,English,,0,0,0,,But you probably don't or very seldom
-
+Dialogue: 0,0:27:53.24,0:27:56.40,Chinese,,0,0,0,,你可能从未或是很少
 Dialogue: 0,0:27:58.02,0:27:59.96,English,,0,0,0,,When you're thinking about I want to go to Google
-
+Dialogue: 0,0:27:58.02,0:27:59.96,Chinese,,0,0,0,,想过当你想访问 Google 的时候
 Dialogue: 0,0:27:59.98,0:28:05.26,English,,0,0,0,,You don't think about what its IP address is you just go to www.google.com
-
+Dialogue: 0,0:27:59.98,0:28:05.26,Chinese,,0,0,0,,你并不会思考它的 IP 地址是多少，而是直接访问 www.google.com
 Dialogue: 0,0:28:06.08,0:28:09.58,English,,0,0,0,,And for everything you do you refer to it by this
-
+Dialogue: 0,0:28:06.08,0:28:09.58,Chinese,,0,0,0,,而且当你访问其它网站时你都会用到这些
 Dialogue: 0,0:28:10.24,0:28:15.83,English,,0,0,0,,It would have referred called internet domain names which is a hierarchical naming system
-
+Dialogue: 0,0:28:10.24,0:28:15.83,Chinese,,0,0,0,,它叫做域名，是一个分级命名系统
 Dialogue: 0,0:28:16.40,0:28:21.74,English,,0,0,0,,Whereas you know there's .edu is for educational institutions
-
+Dialogue: 0,0:28:16.40,0:28:21.74,Chinese,,0,0,0,,就像你知道的 .edu 是给教育机构使用的
 Dialogue: 0,0:28:22.14,0:28:23.90,English,,0,0,0,,.com is for commercial
-Dialogue: 0,0:28:24.08,0:28:30.66,English,,0,0,0,,.net is general networking of many countries have their own suffix
+Dialogue: 0,0:28:22.14,0:28:23.90,Chinese,,0,0,0,,.com 是用于商业的
+Dialogue: 0,0:28:24.08,0:28:30.66,English,,0,0,0,,.net is general networking uh many countries have their own suffix
+Dialogue: 0,0:28:24.08,0:28:30.66,Chinese,,0,0,0,,.net 就是一般的网络，很多国家都有自己的后缀
 Dialogue: 0,0:28:30.82,0:28:35.18,English,,0,0,0,,So you know .de is for Germany and so forth
+Dialogue: 0,0:28:30.82,0:28:35.18,Chinese,,0,0,0,,就像你知道的，.de是德国的，等等
 Dialogue: 0,0:28:35.70,0:28:38.50,English,,0,0,0,,And so those are called the first level domain names
+Dialogue: 0,0:28:35.70,0:28:38.50,Chinese,,0,0,0,,这些叫做一级域名
 Dialogue: 0,0:28:38.82,0:28:41.46,English,,0,0,0,,And then there's a hierarchical naming structure under that
+Dialogue: 0,0:28:38.82,0:28:41.46,Chinese,,0,0,0,,而这之下是一个分层的命名结构
 Dialogue: 0,0:28:42.50,0:28:43.40,English,,0,0,0,,And
+Dialogue: 0,0:28:42.50,0:28:43.40,Chinese,,0,0,0,,然后
 Dialogue: 0,0:28:45.60,0:28:49.14,English,,0,0,0,,There's actually an interesting question of okay
+Dialogue: 0,0:28:45.60,0:28:49.14,Chinese,,0,0,0,,实际上这里有个有趣的问题
 Dialogue: 0,0:28:49.14,0:28:58.72,English,,0,0,0,,How do I then map from those hierarchical names those domain names into this dotted decimal or the 32 bit IP address
+Dialogue: 0,0:28:49.14,0:28:58.72,Chinese,,0,0,0,,我如何从这些域名映射到点分十进制或是 32 位的 IP 地址
 Dialogue: 0,0:29:00.24,0:29:07.94,English,,0,0,0,,And the job of that is by a very large distributed system called the DNS the domain name system
+Dialogue: 0,0:29:00.24,0:29:07.94,Chinese,,0,0,0,,其实这些工作是由一个非常大的分布式系统来完成的，它叫做 DNS ，即域名系统
 Dialogue: 0,0:29:08.42,0:29:14.66,English,,0,0,0,,Where the only sort of centrally managed part of it is at the top level
+Dialogue: 0,0:29:08.42,0:29:14.66,Chinese,,0,0,0,,它唯一的核心管理模块在最顶层
 Dialogue: 0,0:29:15.26,0:29:18.08,English,,0,0,0,,So for each of these first level domain names
+Dialogue: 0,0:29:15.26,0:29:18.08,Chinese,,0,0,0,,对于每一个一级域名
 Dialogue: 0,0:29:18.20,0:29:28.60,English,,0,0,0,,There's a collection a very large collection of machines that keep track of all the IP addresses
+Dialogue: 0,0:29:18.20,0:29:28.60,Chinese,,0,0,0,,有一个非常大的机器集合用于跟踪所有
 Dialogue: 0,0:29:29.22,0:29:32.60,English,,0,0,0,,That map to one of those first level domain names
+Dialogue: 0,0:29:29.22,0:29:32.60,Chinese,,0,0,0,,映射到这些一级域名的 IP 地址
 Dialogue: 0,0:29:32.96,0:29:36.46,English,,0,0,0,,And then for example CMU maintains its own naming authority
+Dialogue: 0,0:29:32.96,0:29:36.46,Chinese,,0,0,0,,举个例子， CMU 拥有它自己的命名权
 Dialogue: 0,0:29:36.90,0:29:41.30,English,,0,0,0,,So anything that says something .cmu.edu
+Dialogue: 0,0:29:36.90,0:29:41.30,Chinese,,0,0,0,,对于任何 xxx.cmu.edu 形式的域名
 Dialogue: 0,0:29:41.70,0:29:45.42,English,,0,0,0,,There's local DNS servers within CMU
+Dialogue: 0,0:29:41.70,0:29:45.42,Chinese,,0,0,0,,CMU中有一些本地 DNS 服务器
 Dialogue: 0,0:29:45.82,0:29:50.38,English,,0,0,0,,That are picking apart ok where should you know
+Dialogue: 0,0:29:45.82,0:29:50.38,Chinese,,0,0,0,,帮你分离出一些...你知道的
 Dialogue: 0,0:29:51.10,0:29:57.92,English,,0,0,0,,If I say cs.cum.edu what would be the IP address for that
+Dialogue: 0,0:29:51.10,0:29:57.92,Chinese,,0,0,0,,比如说我要知道 cs.cmu.edu 对应的 IP 地址
 Dialogue: 0,0:30:00.22,0:30:05.72,English,,0,0,0,,Well and it's actually pretty interesting how this is managed because it's all it's totally decentralized
+Dialogue: 0,0:30:00.22,0:30:05.72,Chinese,,0,0,0,,事实上，这一步是如何完成的非常有趣，因为它是完全分散的
 Dialogue: 0,0:30:05.72,0:30:12.48,English,,0,0,0,,There's a whole set of protocols that govern how naming is done
+Dialogue: 0,0:30:05.72,0:30:12.48,Chinese,,0,0,0,,有一整套协议控制如何命名
 Dialogue: 0,0:30:15.84,0:30:19.28,English,,0,0,0,,But conceptually we can think of it as just this big database
+Dialogue: 0,0:30:15.84,0:30:19.28,Chinese,,0,0,0,,但从概念上讲，我们可以把它想象成一个
 Dialogue: 0,0:30:19.40,0:30:20.74,English,,0,0,0,,That gives me a mapping
+Dialogue: 0,0:30:19.40,0:30:20.74,Chinese,,0,0,0,,给我特定映射的巨型数据库
 Dialogue: 0,0:30:21.46,0:30:27.98,English,,0,0,0,,Where I can give a domain name and it will get back to me a one or more IP addresses
+Dialogue: 0,0:30:21.46,0:30:27.98,Chinese,,0,0,0,,如果我给它一个域名，它会返回一个或多个 IP 地址给我
 Dialogue: 0,0:30:28.44,0:30:31.92,English,,0,0,0,,I can give an IP address and it will come back with one or more domain names
+Dialogue: 0,0:30:28.44,0:30:31.92,Chinese,,0,0,0,,我也可以给它一个 IP 地址，它会返回一个或多个域名
 Dialogue: 0,0:30:37.68,0:30:40.92,English,,0,0,0,,Oh and so there's actually an application you can run
+Dialogue: 0,0:30:37.68,0:30:40.92,Chinese,,0,0,0,,哦，实际上你可以运行一个程序
 Dialogue: 0,0:30:41.58,0:30:45.38,English,,0,0,0,,On most machines called nslookup and there's another one called dig
+Dialogue: 0,0:30:41.58,0:30:45.38,Chinese,,0,0,0,,它在大部分机器上叫做 nslookup ，还有一个叫 dig 的程序
 Dialogue: 0,0:30:46.02,0:30:49.88,English,,0,0,0,,That you can use to find basically probe the DNS
+Dialogue: 0,0:30:46.02,0:30:49.88,Chinese,,0,0,0,,你可以用它们来探测 DNS
 Dialogue: 0,0:30:50.46,0:30:56.60,English,,0,0,0,,And find in either direction you can look at the given a domain name you can find its IP address
+Dialogue: 0,0:30:50.46,0:30:56.60,Chinese,,0,0,0,,给一个的域名，你会得到它的 IP 地址
 Dialogue: 0,0:30:57.14,0:30:59.56,English,,0,0,0,,Given an IP address you can find its domain name
-Dialogue: 0,0:31:01.70,0:31:04.24,English,,0,0,0,,And we also I'll show you some code that
+Dialogue: 0,0:30:57.14,0:30:59.56,Chinese,,0,0,0,,给一个 IP 地址你就可以找到它的域名
+Dialogue: 0,0:31:01.70,0:31:04.24,English,,0,0,0,,And we'll so I'll show you some code that
+Dialogue: 0,0:31:01.70,0:31:04.24,Chinese,,0,0,0,,我将给你们展示一些代码
 Dialogue: 0,0:31:05.62,0:31:08.54,English,,0,0,0,,Just as an example of how you do the programming
+Dialogue: 0,0:31:05.62,0:31:08.54,Chinese,,0,0,0,,它是一个教你们如何编程的示例
 Dialogue: 0,0:31:08.98,0:31:12.48,English,,0,0,0,,I'll just show that momentarily called hostname
+Dialogue: 0,0:31:08.98,0:31:12.48,Chinese,,0,0,0,,我将显示那个暂时命名为 hostname 的东西
 Dialogue: 0,0:31:14.12,0:31:17.04,English,,0,0,0,,So just some examples
+Dialogue: 0,0:31:14.12,0:31:17.04,Chinese,,0,0,0,,接下来是一些例子
 Dialogue: 0,0:31:29.72,0:31:37.68,English,,0,0,0,,You know if I look up some address like the website for the computer science school computer science
+Dialogue: 0,0:31:29.72,0:31:37.68,Chinese,,0,0,0,,比如我查询一些地址，比如计算机科学学院的网址
 Dialogue: 0,0:31:38.54,0:31:40.00,English,,0,0,0,,Using nslookup
+Dialogue: 0,0:31:38.54,0:31:40.00,Chinese,,0,0,0,,用 nslookup
 Dialogue: 0,0:31:40.70,0:31:42.72,English,,0,0,0,,It comes back can people see this okay
+Dialogue: 0,0:31:40.70,0:31:42.72,Chinese,,0,0,0,,它会返回...你们能看到吗？
 Dialogue: 0,0:31:44.16,0:31:45.62,English,,0,0,0,,Doing it bigger?It's okay
-Dialogue: 0,0:31:46.28,0:31:50.70,English,,0,0,0,,So this is what nslookup like and this stuff here just tells you
-Dialogue: 0,0:31:51.46,0:31:59.50,English,,0,0,0,,You know who where was the actual directory entry in the which DNS  server actually gave this information back
+Dialogue: 0,0:31:44.16,0:31:45.62,Chinese,,0,0,0,,把它放大好吗？可以了
+Dialogue: 0,0:31:46.28,0:31:50.70,English,,0,0,0,,So this is what nslookup looks like and this stuff here just tells you
+Dialogue: 0,0:31:46.28,0:31:50.70,Chinese,,0,0,0,,所以这就是 nslookup 的样子，它刚刚告诉你
+Dialogue: 0,0:31:51.46,0:31:59.50,English,,0,0,0,,You know who where was the actual directory entry in the which DNS server actually gave these information back
+Dialogue: 0,0:31:51.46,0:31:59.50,Chinese,,0,0,0,,哪个 DNS 服务器实际返回了这些信息
 Dialogue: 0,0:32:00.28,0:32:02.00,English,,0,0,0,,And it says that
+Dialogue: 0,0:32:00.28,0:32:02.00,Chinese,,0,0,0,,它还说了
 Dialogue: 0,0:32:03.02,0:32:15.34,English,,0,0,0,,www.cs.cum is actually a synonym for a weirder one called WEB-LB.SRV.cum.edu
+Dialogue: 0,0:32:03.02,0:32:15.34,Chinese,,0,0,0,,www.cs.cum 实际上是一个更奇怪的域名 WEB-LB.SRV.cum.edu 的代名词
 Dialogue: 0,0:32:15.74,0:32:19.38,English,,0,0,0,,And its IP address is 128.2 like you'd expect
+Dialogue: 0,0:32:15.74,0:32:19.38,Chinese,,0,0,0,,它的 IP 地址是以 128.2 开头的就像你们猜测的那样
 Dialogue: 0,0:32:19.80,0:32:21.42,English,,0,0,0,,217.13
+Dialogue: 0,0:32:19.80,0:32:21.42,Chinese,,0,0,0,,接着是 217.13
 Dialogue: 0,0:32:23.16,0:32:25.88,English,,0,0,0,,And of course that works not just at CMU but I can
+Dialogue: 0,0:32:23.16,0:32:25.88,Chinese,,0,0,0,,当然，它不仅适用于 CMU ，我也可以
 Dialogue: 0,0:32:29.94,0:32:33.18,English,,0,0,0,,You know go ask about what Stanford is up to
-Dialogue: 0,0:32:35.64,0:32:42.56,English,,0,0,0,,And it will come back and its IP addresses of something 171.64
+Dialogue: 0,0:32:29.94,0:32:33.18,Chinese,,0,0,0,,用它查询斯坦福大学计算机系域名的相关信息
+Dialogue: 0,0:32:35.64,0:32:42.56,English,,0,0,0,,And it will come back and its IP address is something 171.64
+Dialogue: 0,0:32:35.64,0:32:42.56,Chinese,,0,0,0,,它会返回它的 IP 地址，171.64 开头的一些东西
 Dialogue: 0,0:32:45.84,0:32:49.76,English,,0,0,0,,And that's been managed by that and you'll see again it's
+Dialogue: 0,0:32:45.84,0:32:49.76,Chinese,,0,0,0,,这个域名是由那个 DNS 服务器管理的，你会再次看到
 Dialogue: 0,0:32:50.38,0:32:57.03,English,,0,0,0,,I asked for www.cs.stanford.edu it said well the real name of that is cs.stanford.edu
+Dialogue: 0,0:32:50.38,0:32:57.03,Chinese,,0,0,0,,我问了 www.cs.stanford.edu，而它的真名是 cs.stanford.edu
 Dialogue: 0,0:32:57.32,0:33:00.48,English,,0,0,0,,And this actually is a point that the
+Dialogue: 0,0:32:57.32,0:33:00.48,Chinese,,0,0,0,,这实际上是一个关键点
 Dialogue: 0,0:33:01.42,0:33:04.36,English,,0,0,0,,The mapping between domain names
+Dialogue: 0,0:33:01.42,0:33:04.36,Chinese,,0,0,0,,域名和
 Dialogue: 0,0:33:05.76,0:33:08.12,English,,0,0,0,,And internet addresses is not one-to-one
+Dialogue: 0,0:33:05.76,0:33:08.12,Chinese,,0,0,0,,网络地址间的映射不是一一对应的
 Dialogue: 0,0:33:08.22,0:33:12.02,English,,0,0,0,,You can have multiple domain names that refer to the same internet address
+
 Dialogue: 0,0:33:13.70,0:33:18.70,English,,0,0,0,,But you can also have multiple internet addresses
+
 Dialogue: 0,0:33:22.66,0:33:23.36,English,,0,0,0,,Excuse me
+
 Dialogue: 0,0:33:30.16,0:33:31.18,English,,0,0,0,,That's weird
+
 Dialogue: 0,0:33:36.98,0:33:42.10,English,,0,0,0,,So like twitter.com when I ask for it it comes back with four different addresses
+
 Dialogue: 0,0:33:45.88,0:33:49.56,English,,0,0,0,,And if I do the exact same thing again
+
 Dialogue: 0,0:33:51.46,0:33:53.28,English,,0,0,0,,Mmm came back but yeah
+
 Dialogue: 0,0:33:53.80,0:33:55.62,English,,0,0,0,,You see it came back with
+
 Dialogue: 0,0:33:57.68,0:34:00.22,English,,0,0,0,,The same no not even the same addresses
+
 Dialogue: 0,0:34:02.08,0:34:08.86,English,,0,0,0,,It came back for example here the one that ends with .6 that wasn't in that first was
+
 Dialogue: 0,0:34:09.22,0:34:13.98,English,,0,0,0,,So it came back with a slightly different set of addresses and a somewhat different order
+
 Dialogue: 0,0:34:14.32,0:34:17.92,English,,0,0,0,,And the idea of that is that actually has multiple servers
+
 Dialogue: 0,0:34:17.96,0:34:22.18,English,,0,0,0,,So when I send to twitter.com or Google or any of these major servers
+
 Dialogue: 0,0:34:22.58,0:34:26.62,English,,0,0,0,,There's not just one place in the internet that's handling everybody's google traffic
+
 Dialogue: 0,0:34:26.62,0:34:29.70,English,,0,0,0,,Through thousands of places spread around the world
+
 Dialogue: 0,0:34:30.18,0:34:35.88,English,,0,0,0,,And the way they get you there is by playing tricks with the DNS
+
 Dialogue: 0,0:34:36.74,0:34:41.98,English,,0,0,0,,That Google is constantly sending updates to the it maintains its own DNS servers
+
 Dialogue: 0,0:34:42.40,0:34:43.98,English,,0,0,0,,So it's constantly changing them
+
 Dialogue: 0,0:34:43.98,0:34:48.34,English,,0,0,0,,And it will actually give you different addresses depending on where in the world you're located as well
+
 Dialogue: 0,0:34:48.76,0:34:53.80,English,,0,0,0,,To try and provide a server that's sort of reasonably close to you geographically so
+
 Dialogue: 0,0:34:54.86,0:34:58.60,English,,0,0,0,,There's all just all kinds of tricks that happen through DNS
+
 Dialogue: 0,0:34:58.68,0:35:04.62,English,,0,0,0,,That is part of the way they can sort of manage this huge set of addresses
+
 Dialogue: 0,0:35:08.20,0:35:12.46,English,,0,0,0,,And then there's some other domain names that don't have any IP address
+
 Dialogue: 0,0:35:13.34,0:35:17.02,English,,0,0,0,,That they're somewhere in the hierarchy that hierarchical naming system
+
 Dialogue: 0,0:35:17.02,0:35:19.80,English,,0,0,0,,But they're not actually referring to a particular host
+
 Dialogue: 0,0:35:21.10,0:35:23.96,English,,0,0,0,,So it's a multi multi mapping
+
 Dialogue: 0,0:35:27.13,0:35:32.14,English,,0,0,0,,In the...the api set reflects
+
 Dialogue: 0,0:35:40.16,0:35:44.00,English,,0,0,0,,It so this is just going what I told you they sometimes one-to-one
+
 Dialogue: 0,0:35:44.06,0:35:47.28,English,,0,0,0,,Sometimes many domain names refer to the same address
+
 Dialogue: 0,0:35:48.20,0:35:53.12,English,,0,0,0,,Sometimes of one name maps to multiple addresses that change over time
+
 Dialogue: 0,0:35:53.96,0:35:57.10,English,,0,0,0,,And then there's some where it's a valid name
+
 Dialogue: 0,0:35:57.42,0:36:01.20,English,,0,0,0,,But it doesn't have an IP address it doesn't have a host associated with a question
+
 Dialogue: 0,0:36:01.34,0:36:10.52,English,,0,0,0,,[student speaking]
+
 Dialogue: 0,0:36:10.52,0:36:12.80,English,,0,0,0,,How do I get...how do you get your own IP address
+
 Dialogue: 0,0:36:13.66,0:36:17.48,English,,0,0,0,,Well all you have to beg borrow or you have to either borrow or buy them
+
 Dialogue: 0,0:36:17.70,0:36:24.36,English,,0,0,0,,So for example at CMU there is some number of what they call statically allocated ip addresses
+
 Dialogue: 0,0:36:24.38,0:36:31.20,English,,0,0,0,,Where it's just fixed assigned to that machine and you can register form and request them through computing services
+
 Dialogue: 0,0:36:32.76,0:36:38.44,English,,0,0,0,,But most you don't have that most you get one that's I signed dynamically
+
 Dialogue: 0,0:36:38.52,0:36:43.42,English,,0,0,0,,So there's a pool of addresses that you basically they call them leasing
+
 Dialogue: 0,0:36:43.42,0:36:45.62,English,,0,0,0,,That you are assigned with for a while
+
 Dialogue: 0,0:36:46.26,0:36:49.92,English,,0,0,0,,And then but it could possibly be reassigned to someone else
+
 Dialogue: 0,0:36:53.06,0:36:54.68,English,,0,0,0,,And that's part of the way it can manage
+
 Dialogue: 0,0:36:55.30,0:36:57.54,English,,0,0,0,,You know somewhat limited set of IP addresses
+
 Dialogue: 0,0:37:03.24,0:37:07.88,English,,0,0,0,,So the idea of like I said that the main
+
 Dialogue: 0,0:37:15.02,0:37:19.50,English,,0,0,0,,A way we'll think about it is in terms of what's called TCP
+
 Dialogue: 0,0:37:20.18,0:37:22.36,English,,0,0,0,,And it says connection oriented protocol
+
 Dialogue: 0,0:37:22.36,0:37:27.42,English,,0,0,0,,Where I establish a connection from one host establishes a connection to another host
+
 Dialogue: 0,0:37:28.18,0:37:34.52,English,,0,0,0,,And they can communicate to each other sending arbitrarily long streams of bytes to each other
+
 Dialogue: 0,0:37:35.30,0:37:39.44,English,,0,0,0,,And so the connection is then two hosts that can talk to each other
+
 Dialogue: 0,0:37:39.78,0:37:42.86,English,,0,0,0,,And each of those endpoints is referred to as a socket
+
 Dialogue: 0,0:37:46.42,0:37:50.26,English,,0,0,0,,And so I can and a socket is both an IP address
+
 Dialogue: 0,0:37:51.24,0:37:52.82,English,,0,0,0,,And what's called a port number
+
 Dialogue: 0,0:37:52.92,0:37:58.22,English,,0,0,0,,So there's a 16 byte, 16 bit number for every connection
+
 Dialogue: 0,0:37:58.66,0:38:00.50,English,,0,0,0,,That's referred to as its port
+
 Dialogue: 0,0:38:00.96,0:38:04.98,English,,0,0,0,,And the reason for that is just because I'm talking to a particular machine
+
 Dialogue: 0,0:38:05.44,0:38:08.12,English,,0,0,0,,That machine can support different services
 Dialogue: 0,0:38:08.12,0:38:14.06,English,,0,0,0,,It can provide SSH connections it can provide FTP connections
 Dialogue: 0,0:38:14.06,0:38:18.04,English,,0,0,0,,It can host a mail server,it can host a web server
