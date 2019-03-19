@@ -16,9 +16,9 @@ Video File: C:/Users/xqit/Desktop/backup/csapp/Lecture 16 System Level I-O.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 0.500000
-Scroll Position: 1199
-Active Line: 1205
-Video Position: 98025
+Scroll Position: 1299
+Active Line: 1307
+Video Position: 105515
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -247,7 +247,7 @@ Dialogue: 0,0:09:44.86,0:09:52.04,English,,0,0,0,,And there's some class of appl
 Dialogue: 0,0:09:44.86,0:09:52.04,Chinese,,0,0,0,,有一类应用程序会区分文本文件和二进制文件
 Dialogue: 0,0:09:53.06,0:09:56.68,English,,0,0,0,,Not really at the operating system level but more higher levels
 Dialogue: 0,0:09:53.06,0:09:56.68,Chinese,,0,0,0,,不一定是在操作系统层级，也可能在更高层级
-Dialogue: 0,0:09:57.16,0:10:05.64,English,,0,0,0,,And the main difference with that is it a text file should only have the standard characters of ASCII
+Dialogue: 0,0:09:57.16,0:10:05.64,English,,0,0,0,,And the main difference with that is that a text file should only have the standard characters of ASCII
 Dialogue: 0,0:09:57.16,0:10:05.64,Chinese,,0,0,0,,二者的主要区别在于文本文件应该只包含标准的 ASCII 字符
 Dialogue: 0,0:10:06.18,0:10:13.36,English,,0,0,0,,Or another class would be various encodings that allow you to do encodings of non-English alphabets
 Dialogue: 0,0:10:06.18,0:10:13.36,Chinese,,0,0,0,,或者是各种可以对非英语字母进行编码的编码
@@ -549,7 +549,7 @@ Dialogue: 0,0:23:05.22,0:23:10.30,English,,0,0,0,,On that particular network con
 Dialogue: 0,0:23:05.22,0:23:10.30,Chinese,,0,0,0,,新的内容进入该网络连接，它又会读入一定数量的字节
 Dialogue: 0,0:23:11.42,0:23:15.48,English,,0,0,0,,That have been sent to it and I'm being vague by saying some number
 Dialogue: 0,0:23:11.42,0:23:15.48,Chinese,,0,0,0,,在这里，我说的“一定数量”是泛指
-Dialogue: 0,0:23:15.88,0:23:20.64,English,,0,0,0,,Because the truth is it there's no guarantee it will read any fixed number of bytes
+Dialogue: 0,0:23:15.88,0:23:20.64,English,,0,0,0,,Because the truth is that there's no guarantee it will read any fixed number of bytes
 Dialogue: 0,0:23:15.88,0:23:20.64,Chinese,,0,0,0,,因为在实际情况下，它读入的字节数不是固定的
 Dialogue: 0,0:23:21.86,0:23:23.27,English,,0,0,0,,It will read at least one
 Dialogue: 0,0:23:21.86,0:23:23.27,Chinese,,0,0,0,,它至少读入一个字节
@@ -865,7 +865,7 @@ Dialogue: 0,0:37:06.78,0:37:09.18,English,,0,0,0,,And this is what you really wa
 Dialogue: 0,0:37:06.78,0:37:09.18,Chinese,,0,0,0,,这类 I/O 在实践中经常用到
 Dialogue: 0,0:37:09.74,0:37:15.20,English,,0,0,0,,And what you mostly use with the standard UNIX I/O functions
 Dialogue: 0,0:37:09.74,0:37:15.20,Chinese,,0,0,0,,也最常与标准 UNIX I/O 函数嵌套使用
-Dialogue: 0,0:37:15.72,0:37:20.26,English,,0,0,0,,Is it you want to within the the user code build up a little buffer of
+Dialogue: 0,0:37:15.72,0:37:20.26,English,,0,0,0,,Is that you want to within the the user code build up a little buffer of
 Dialogue: 0,0:37:15.72,0:37:20.26,Chinese,,0,0,0,,其作用是在用户代码中建立一个小的缓冲区
 Dialogue: 0,0:37:20.90,0:37:26.94,English,,0,0,0,,Of bytes that have either been read in but not yet consumed by the application program
 Dialogue: 0,0:37:20.90,0:37:26.94,Chinese,,0,0,0,,用来存放已读入但尚未被应用程序使用的字节
@@ -1007,7 +1007,7 @@ Dialogue: 0,0:43:16.88,0:43:20.30,English,,0,0,0,,And the way this is implemente
 Dialogue: 0,0:43:16.88,0:43:20.30,Chinese,,0,0,0,,实现的方式想一想
 Dialogue: 0,0:43:20.36,0:43:22.18,English,,0,0,0,,It's not too hard to do
 Dialogue: 0,0:43:20.36,0:43:22.18,Chinese,,0,0,0,,其实并不难
-Dialogue: 0,0:43:22.46,0:43:29.88,English,,0,0,0,,Is it associated with every file connection then is a file descriptor
+Dialogue: 0,0:43:22.46,0:43:29.88,English,,0,0,0,,Is that associated with every file connection then is a file descriptor
 Dialogue: 0,0:43:22.46,0:43:29.88,Chinese,,0,0,0,,每个文件连接都有一个相关联的文件描述符
 Dialogue: 0,0:43:31.48,0:43:34.60,English,,0,0,0,,Account that tells you how many bytes
 Dialogue: 0,0:43:31.48,0:43:34.60,Chinese,,0,0,0,,这个描述符会告诉你
@@ -1234,109 +1234,109 @@ Dialogue: 0,0:54:21.74,0:54:27.32,Chinese,,0,0,0,,总之每个打开文件都会
 Dialogue: 0,0:54:27.50,0:54:31.40,English,,0,0,0,,And this table as I said is shared across the whole operating system
 Dialogue: 0,0:54:27.50,0:54:31.40,Chinese,,0,0,0,,而这个文件表由整个操作系统共享
 Dialogue: 0,0:54:32.90,0:54:38.26,English,,0,0,0,,And then associated with every file is called a v-node
-Dialogue: 0,0:54:32.90,0:54:38.26,Chinese,,0,0,0,,然后与每个文件关联称为v节点
+Dialogue: 0,0:54:32.90,0:54:38.26,Chinese,,0,0,0,,每个文件还有一个与之相关的 v-node
 Dialogue: 0,0:54:38.40,0:54:40.20,English,,0,0,0,,Which stands for virtual node
-Dialogue: 0,0:54:38.40,0:54:40.20,Chinese,,0,0,0,,其中代表虚拟节点
+Dialogue: 0,0:54:38.40,0:54:40.20,Chinese,,0,0,0,,即虚拟节点
 Dialogue: 0,0:54:40.50,0:54:46.64,English,,0,0,0,,And this is where that contains the sort of information about this file
-Dialogue: 0,0:54:40.50,0:54:46.64,Chinese,,0,0,0,,这是包含有关此文件的信息的地方
-Dialogue: 0,0:54:46.90,0:54:53.60,English,,0,0,0,,In particular where is it stored on this information that you can get from stat and things like that
-Dialogue: 0,0:54:46.90,0:54:53.60,Chinese,,0,0,0,,特别是在哪里存储了这些信息，你可以从stat和类似的东西中获得
+Dialogue: 0,0:54:40.50,0:54:46.64,Chinese,,0,0,0,,其中包含了文件的相关信息
+Dialogue: 0,0:54:46.90,0:54:53.60,English,,0,0,0,,In particular where it is stored this information that you can get from stat and things like that
+Dialogue: 0,0:54:46.90,0:54:53.60,Chinese,,0,0,0,,特别是文件的存储位置以及从 stat 中能够获取的信息等等
 Dialogue: 0,0:54:54.84,0:54:58.82,English,,0,0,0,,How big it is and things like that
-Dialogue: 0,0:54:54.84,0:54:58.82,Chinese,,0,0,0,,它有多大和类似的东西
+Dialogue: 0,0:54:54.84,0:54:58.82,Chinese,,0,0,0,,文件的大小等等
 Dialogue: 0,0:54:59.72,0:55:06.86,English,,0,0,0,,So that's for every file in the system actually has a v-node entry
-Dialogue: 0,0:54:59.72,0:55:06.86,Chinese,,0,0,0,,因此系统中的每个文件实际上都有一个v节点条目
+Dialogue: 0,0:54:59.72,0:55:06.86,Chinese,,0,0,0,,实际上系统中的每个文件不论是否打开
 Dialogue: 0,0:55:07.26,0:55:08.67,English,,0,0,0,,Whether it's open or closed
-Dialogue: 0,0:55:07.26,0:55:08.67,Chinese,,0,0,0,,无论是开放还是封闭
+Dialogue: 0,0:55:07.26,0:55:08.67,Chinese,,0,0,0,,都有其对应的 v-node 表表项
 Dialogue: 0,0:55:09.56,0:55:11.72,English,,0,0,0,,Now this can get complicated
-Dialogue: 0,0:55:09.56,0:55:11.72,Chinese,,0,0,0,,现在这可能会变得复杂
+Dialogue: 0,0:55:09.56,0:55:11.72,Chinese,,0,0,0,,这个解释起来可能会比较复杂
 Dialogue: 0,0:55:12.88,0:55:17.74,English,,0,0,0,,So for example if within a single program you call open twice on the same function
-Dialogue: 0,0:55:12.88,0:55:17.74,Chinese,,0,0,0,,因此，例如，如果在单个程序中，你在同一函数上调用open两次
+Dialogue: 0,0:55:12.88,0:55:17.74,Chinese,,0,0,0,,举个例子，如果你在某个程序中用同一个函数调用 open 两次
 Dialogue: 0,0:55:19.02,0:55:21.40,English,,0,0,0,,You'll actually get two different file descriptors
-Dialogue: 0,0:55:19.02,0:55:21.40,Chinese,,0,0,0,,你实际上会得到两个不同的文件描述符
+Dialogue: 0,0:55:19.02,0:55:21.40,Chinese,,0,0,0,,你会得到两个不同的文件描述符
 Dialogue: 0,0:55:22.82,0:55:28.80,English,,0,0,0,,And you'll be able to access that same file and have two different positions in it
-Dialogue: 0,0:55:22.82,0:55:28.80,Chinese,,0,0,0,,并且你将能够访问该文件并在其中具有两个不同的位置
+Dialogue: 0,0:55:22.82,0:55:28.80,Chinese,,0,0,0,,你能够访问同一个文件并得到两个不同的文件位置
 Dialogue: 0,0:55:28.94,0:55:34.32,English,,0,0,0,,Then it makes sense if you imagine you're reading from a file
-Dialogue: 0,0:55:28.94,0:55:34.32,Chinese,,0,0,0,,如果你想象你正在从一个文件中读取它就有意义了
+Dialogue: 0,0:55:28.94,0:55:34.32,Chinese,,0,0,0,,简单来说：想象你正在读一个文件
 Dialogue: 0,0:55:35.42,0:55:41.16,English,,0,0,0,,And you might want to read from two different positions in that file
-Dialogue: 0,0:55:35.42,0:55:41.16,Chinese,,0,0,0,,你可能希望从该文件中的两个不同位置读取
+Dialogue: 0,0:55:35.42,0:55:41.16,Chinese,,0,0,0,,你希望在同一个程序中从该文件的两个不同位置读取
 Dialogue: 0,0:55:41.16,0:55:44.40,English,,0,0,0,,Within the same program and you can do that that's perfectly legal
-Dialogue: 0,0:55:41.16,0:55:44.40,Chinese,,0,0,0,,在同一个程序中，你可以做到完全合法
+Dialogue: 0,0:55:41.16,0:55:44.40,Chinese,,0,0,0,,你可以这样做，这是完全合法的
 Dialogue: 0,0:55:45.06,0:55:50.16,English,,0,0,0,,You just call open twice and that will keep track of two different positions
-Dialogue: 0,0:55:45.06,0:55:50.16,Chinese,,0,0,0,,你只需要打开两次，这将跟踪两个不同的位置
+Dialogue: 0,0:55:45.06,0:55:50.16,Chinese,,0,0,0,,你只需要调用两次 open，生成两个不同的文件位置
 Dialogue: 0,0:55:51.54,0:55:55.89,English,,0,0,0,,So the point is these file descriptors might be referring to the same file
-Dialogue: 0,0:55:51.54,0:55:55.89,Chinese,,0,0,0,,所以关键是这些文件描述符可能指的是同一个文件
+Dialogue: 0,0:55:51.54,0:55:55.89,Chinese,,0,0,0,,总之这些文件描述符可能引用的是同一个文件
 Dialogue: 0,0:55:56.34,0:55:58.98,English,,0,0,0,,But they're actually at different positions within the file
-Dialogue: 0,0:55:56.34,0:55:58.98,Chinese,,0,0,0,,但他们实际上处于档案中的不同位置
+Dialogue: 0,0:55:56.34,0:55:58.98,Chinese,,0,0,0,,但实际上它们的文件位置不同
 Dialogue: 0,0:55:59.34,0:56:05.38,English,,0,0,0,,And that can happen also if you've opened a file for both reading and for writing
-Dialogue: 0,0:55:59.34,0:56:05.38,Chinese,,0,0,0,,如果你已经为阅读和写作打开了一个文件，那也会发生这种情况
+Dialogue: 0,0:55:59.34,0:56:05.38,Chinese,,0,0,0,,此外，如果你打开一个文件进行读和写
 Dialogue: 0,0:56:05.74,0:56:11.18,English,,0,0,0,,And you're writing ahead and then reading characters bytes that have already been written
-Dialogue: 0,0:56:05.74,0:56:11.18,Chinese,,0,0,0,,然后你要提前写，然后读取已经写过的字符字节
+Dialogue: 0,0:56:05.74,0:56:11.18,Chinese,,0,0,0,,并且写在前读在后，也会发生这种情况
 Dialogue: 0,0:56:12.04,0:56:12.90,English,,0,0,0,,That makes sense
-Dialogue: 0,0:56:12.04,0:56:12.90,Chinese,,0,0,0,,这就说得通了
+Dialogue: 0,0:56:12.04,0:56:12.90,Chinese,,0,0,0,,这就不难理解了
 Dialogue: 0,0:56:13.42,0:56:17.22,English,,0,0,0,,It's not such a good idea to have two different write
-Dialogue: 0,0:56:13.42,0:56:17.22,Chinese,,0,0,0,,有两个不同的写法并不是一个好主意
+Dialogue: 0,0:56:13.42,0:56:17.22,Chinese,,0,0,0,,不建议对同一个文件
 Dialogue: 0,0:56:18.32,0:56:24.50,English,,0,0,0,,File opens that are writing simultaneously you can mess up the file pretty badly that way
-Dialogue: 0,0:56:18.32,0:56:24.50,Chinese,,0,0,0,,文件打开同时写入你可以非常糟糕地弄乱文件
+Dialogue: 0,0:56:18.32,0:56:24.50,Chinese,,0,0,0,,两次调用 open 进行写操作，因为这样文件会变得很乱
 Dialogue: 0,0:56:24.92,0:56:27.86,English,,0,0,0,,But there's nothing in the operating system that prevents you from doing that
-Dialogue: 0,0:56:24.92,0:56:27.86,Chinese,,0,0,0,,但是操作系统中没有任何东西阻止你这样做
+Dialogue: 0,0:56:24.92,0:56:27.86,Chinese,,0,0,0,,但是操作系统不会阻止你这样做
 Dialogue: 0,0:56:28.82,0:56:34.66,English,,0,0,0,,So it's not a good idea but it's a legal operation
-Dialogue: 0,0:56:28.82,0:56:34.66,Chinese,,0,0,0,,所以这不是一个好主意，但这是一个合法的操作
+Dialogue: 0,0:56:28.82,0:56:34.66,Chinese,,0,0,0,,虽然不建议这么做，但这是合法的操作
 Dialogue: 0,0:56:35.84,0:56:41.88,English,,0,0,0,,So that's the point is you have to distinguish at what level is sharing taking place and you see that
-Dialogue: 0,0:56:35.84,0:56:41.88,Chinese,,0,0,0,,所以重点是你必须区分共享发生的程度和你看到的程度
+Dialogue: 0,0:56:35.84,0:56:41.88,Chinese,,0,0,0,,所以重点是你们必须识别共享发生在哪一个级别
 Dialogue: 0,0:56:43.89,0:56:53.20,English,,0,0,0,,If you have two different table entries sharing one file
-Dialogue: 0,0:56:43.89,0:56:53.20,Chinese,,0,0,0,,如果有两个不同的表条目共享一个文件
+Dialogue: 0,0:56:43.89,0:56:53.20,Chinese,,0,0,0,,如果有两个不同的表项共享一个文件
 Dialogue: 0,0:56:53.64,0:56:57.88,English,,0,0,0,,Then that what's different there is that you can be working at different file positions
-Dialogue: 0,0:56:53.64,0:56:57.88,Chinese,,0,0,0,,那么有什么不同之处在于你可以在不同的文件位置工作
-Dialogue: 0,0:57:00.68,0:57:04.20,English,,0,0,0,,Uh similarly of course the more common thing is
-Dialogue: 0,0:57:00.68,0:57:04.20,Chinese,,0,0,0,,呃同样当然更常见的是
-Dialogue: 0,0:57:06.30,0:57:09.85,English,,0,0,0,,You have two different open files in there refer to different files
-Dialogue: 0,0:57:06.30,0:57:09.85,Chinese,,0,0,0,,你有两个不同的打开文件，参考不同的文件
+Dialogue: 0,0:56:53.64,0:56:57.88,Chinese,,0,0,0,,则它们可能引用的是不同的文件位置
+Dialogue: 0,0:57:00.68,0:57:04.20,English,,0,0,0,,Similarly of course the more common thing is
+Dialogue: 0,0:57:00.68,0:57:04.20,Chinese,,0,0,0,,当然更常见的是
+Dialogue: 0,0:57:06.30,0:57:09.85,English,,0,0,0,,You have two different open files and they're referring to different files
+Dialogue: 0,0:57:06.30,0:57:09.85,Chinese,,0,0,0,,你有两个不同的打开文件，它们引用不同的文件
 Dialogue: 0,0:57:10.74,0:57:13.48,English,,0,0,0,,But now and this is where life gets exciting
-Dialogue: 0,0:57:10.74,0:57:13.48,Chinese,,0,0,0,,但现在，这就是生活变得令人兴奋的地方
+Dialogue: 0,0:57:10.74,0:57:13.48,Chinese,,0,0,0,,现在有意思的地方来了
 Dialogue: 0,0:57:13.98,0:57:18.46,English,,0,0,0,,If you call fork you remember about fork that it spawns a child
-Dialogue: 0,0:57:13.98,0:57:18.46,Chinese,,0,0,0,,如果你调用fork，你会记得它生成一个孩子的fork
+Dialogue: 0,0:57:13.98,0:57:18.46,Chinese,,0,0,0,,如果你调用 fork，我讲过 fork 会生成一个子进程
 Dialogue: 0,0:57:19.86,0:57:23.88,English,,0,0,0,,But that child inherits a lot of information from its parent
-Dialogue: 0,0:57:19.86,0:57:23.88,Chinese,,0,0,0,,但那个孩子从父母那里继承了很多信息
+Dialogue: 0,0:57:19.86,0:57:23.88,Chinese,,0,0,0,,子进程从父进程那里继承了很多信息
 Dialogue: 0,0:57:23.98,0:57:25.58,English,,0,0,0,,And one of the things it inherits
-Dialogue: 0,0:57:23.98,0:57:25.58,Chinese,,0,0,0,,它继承的一件事
+Dialogue: 0,0:57:23.98,0:57:25.58,Chinese,,0,0,0,,其中之一是
 Dialogue: 0,0:57:26.22,0:57:30.28,English,,0,0,0,,Is its descriptor table it gets a replica of that descriptor table
-Dialogue: 0,0:57:26.22,0:57:30.28,Chinese,,0,0,0,,它的描述符表是否获得该描述符表的副本
+Dialogue: 0,0:57:26.22,0:57:30.28,Chinese,,0,0,0,,父进程的描述符表，子进程会获得该描述符表的副本
 Dialogue: 0,0:57:31.54,0:57:34.09,English,,0,0,0,,And so now both the parent and the child
-Dialogue: 0,0:57:31.54,0:57:34.09,Chinese,,0,0,0,,现在既是父母也是孩子
+Dialogue: 0,0:57:31.54,0:57:34.09,Chinese,,0,0,0,,所以父子进程
 Dialogue: 0,0:57:34.88,0:57:38.94,English,,0,0,0,,Have identical entries in their descriptor table
-Dialogue: 0,0:57:34.88,0:57:38.94,Chinese,,0,0,0,,在描述符表中有相同的条目
+Dialogue: 0,0:57:34.88,0:57:38.94,Chinese,,0,0,0,,有相同的描述符表表项
 Dialogue: 0,0:57:38.94,0:57:40.78,English,,0,0,0,,And so they're sharing files
-Dialogue: 0,0:57:38.94,0:57:40.78,Chinese,,0,0,0,,所以他们共享文件
+Dialogue: 0,0:57:38.94,0:57:40.78,Chinese,,0,0,0,,所以它们共享文件
 Dialogue: 0,0:57:41.32,0:57:45.06,English,,0,0,0,,But not at the file level but at the open file table
-Dialogue: 0,0:57:41.32,0:57:45.06,Chinese,,0,0,0,,但不是在文件级别，而是在打开文件表中
+Dialogue: 0,0:57:41.32,0:57:45.06,Chinese,,0,0,0,,但不是在文件级别而是在打开文件表级别共享
 Dialogue: 0,0:57:45.72,0:57:49.18,English,,0,0,0,,And what that means is if the parent does a read
-Dialogue: 0,0:57:45.72,0:57:49.18,Chinese,,0,0,0,,这意味着如果父母进行阅读
+Dialogue: 0,0:57:45.72,0:57:49.18,Chinese,,0,0,0,,这意味着如果父进程进行读操作
 Dialogue: 0,0:57:49.66,0:57:51.94,English,,0,0,0,,It'll bump along the file position
-Dialogue: 0,0:57:49.66,0:57:51.94,Chinese,,0,0,0,,它会沿文件位置碰撞
-Dialogue: 0,0:57:52.44,0:57:54.18,English,,0,0,0,,And if the child now doesn't read
-Dialogue: 0,0:57:52.44,0:57:54.18,Chinese,,0,0,0,,如果孩子现在不读
+Dialogue: 0,0:57:49.66,0:57:51.94,Chinese,,0,0,0,,它会沿文件位置前进
+Dialogue: 0,0:57:52.44,0:57:54.18,English,,0,0,0,,And if the child now does a read
+Dialogue: 0,0:57:52.44,0:57:54.18,Chinese,,0,0,0,,如果此时子进程再进行读操作
 Dialogue: 0,0:57:55.22,0:57:59.16,English,,0,0,0,,It will see oh this from this new position
-Dialogue: 0,0:57:55.22,0:57:59.16,Chinese,,0,0,0,,它将从这个新职位看到哦
+Dialogue: 0,0:57:55.22,0:57:59.16,Chinese,,0,0,0,,它将从这个新位置读起
 Dialogue: 0,0:57:59.72,0:58:02.58,English,,0,0,0,,So you can see why the exam problems get really interesting
-Dialogue: 0,0:57:59.72,0:58:02.58,Chinese,,0,0,0,,所以你可以看到为什么考试问题变得非常有趣
+Dialogue: 0,0:57:59.72,0:58:02.58,Chinese,,0,0,0,,可想而知为什么考题会变得非常有意思
 Dialogue: 0,0:58:03.29,0:58:08.44,English,,0,0,0,,That will keep track of all these different possibilities
-Dialogue: 0,0:58:03.29,0:58:08.44,Chinese,,0,0,0,,这将跟踪所有这些不同的可能性
+Dialogue: 0,0:58:03.29,0:58:08.44,Chinese,,0,0,0,,它会记录下所有这些不同的可能性
 Dialogue: 0,0:58:08.86,0:58:09.98,English,,0,0,0,,And they'll do different things
-Dialogue: 0,0:58:08.86,0:58:09.98,Chinese,,0,0,0,,他们会做不同的事情
-Dialogue: 0,0:58:11.82,0:58:14.28,English,,0,0,0,,And so
-Dialogue: 0,0:58:11.82,0:58:14.28,Chinese,,0,0,0,,所以
+Dialogue: 0,0:58:08.86,0:58:09.98,Chinese,,0,0,0,,它们会做不同的事情
+Dialogue: 0,0:58:11.82,0:58:14.28,English,,0,0,0,,And so...
+Dialogue: 0,0:58:11.82,0:58:14.28,Chinese,,0,0,0,,所以.....
 Dialogue: 0,0:58:14.82,0:58:20.64,English,,0,0,0,,And then of course the parent or the child can start opening and closing their own files as well and that will get very messy
-Dialogue: 0,0:58:14.82,0:58:20.64,Chinese,,0,0,0,,当然，父母或孩子也可以开始打开和关闭他们自己的文件，这将变得非常混乱
+Dialogue: 0,0:58:14.82,0:58:20.64,Chinese,,0,0,0,,当然父进程或子进程可以打开和关闭它们自己的文件，但会变得非常混乱
 Dialogue: 0,0:58:21.16,0:58:25.10,English,,0,0,0,,And here's what you see the reason for having reference counts here that
-Dialogue: 0,0:58:21.16,0:58:25.10,Chinese,,0,0,0,,这就是你在这里看到引用计数的原因
+Dialogue: 0,0:58:21.16,0:58:25.10,Chinese,,0,0,0,,这就是为什么这里会有引用计数
 Dialogue: 0,0:58:26.64,0:58:29.68,English,,0,0,0,,If you have a lot of forking going on
-Dialogue: 0,0:58:26.64,0:58:29.68,Chinese,,0,0,0,,如果你有很多分叉的话
-Dialogue: 0,0:58:30.66,0:58:36.64,English,,0,0,0,,Then you can create multiple pointers to this a table entry
-Dialogue: 0,0:58:30.66,0:58:36.64,Chinese,,0,0,0,,然后，你可以创建指向此表条目的多个指针
-Dialogue: 0,0:58:37.14,0:58:44.20,English,,0,0,0,,And in order to really really close the file each of these has to call closed
-Dialogue: 0,0:58:37.14,0:58:44.20,Chinese,,0,0,0,,并且为了真正关闭文件，每个文件都必须调用关闭
+Dialogue: 0,0:58:26.64,0:58:29.68,Chinese,,0,0,0,,如果 fork 太多
+Dialogue: 0,0:58:30.66,0:58:36.64,English,,0,0,0,,Then you can create multiple pointers to this table entry
+Dialogue: 0,0:58:30.66,0:58:36.64,Chinese,,0,0,0,,你可以创建多个指针指向此表项
+Dialogue: 0,0:58:37.14,0:58:44.20,English,,0,0,0,,And in order to really really close the file each of these has to call close
+Dialogue: 0,0:58:37.14,0:58:44.20,Chinese,,0,0,0,,如果要真正关闭文件，每个指针都必须调用 close 
 Dialogue: 0,0:58:45.60,0:58:50.38,English,,0,0,0,,Before the file is truly truly closed from an operating system perspective
-Dialogue: 0,0:58:45.60,0:58:50.38,Chinese,,0,0,0,,在从操作系统角度真正真正关闭文件之前
+Dialogue: 0,0:58:45.60,0:58:50.38,Chinese,,0,0,0,,才能从操作系统的角度真正关闭文件
 Dialogue: 0,0:58:55.52,0:59:03.58,English,,0,0,0,,So there's other fun things that make a wife interesting too and contribute to the exam problem possibilities
 Dialogue: 0,0:58:55.52,0:59:03.58,Chinese,,0,0,0,,所以还有其他有趣的东西让妻子也很有趣并且有助于考试问题的可能性
 Dialogue: 0,0:59:04.08,0:59:05.90,English,,0,0,0,,What is it called dup2
