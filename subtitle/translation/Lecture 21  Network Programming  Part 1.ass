@@ -904,29 +904,29 @@ Dialogue: 0,0:37:46.42,0:37:50.26,Chinese,,0,0,0,,socket 包括了 IP 地址和
 Dialogue: 0,0:37:51.24,0:37:52.82,English,,0,0,0,,And what's called a port number
 Dialogue: 0,0:37:51.24,0:37:52.82,Chinese,,0,0,0,,端口号
 Dialogue: 0,0:37:52.92,0:37:58.22,English,,0,0,0,,So there's a 16 byte, 16 bit number for every connection
-Dialogue: 0,0:37:52.92,0:37:58.22,Chinese,,0,0,0,,
+Dialogue: 0,0:37:52.92,0:37:58.22,Chinese,,0,0,0,,对于每一个连接都有一个 16 位的数字
 Dialogue: 0,0:37:58.66,0:38:00.50,English,,0,0,0,,That's referred to as its port
-Dialogue: 0,0:37:58.66,0:38:00.50,Chinese,,0,0,0,,
+Dialogue: 0,0:37:58.66,0:38:00.50,Chinese,,0,0,0,,它们被称为端口号
 Dialogue: 0,0:38:00.96,0:38:04.98,English,,0,0,0,,And the reason for that is just because I'm talking to a particular machine
-Dialogue: 0,0:38:00.96,0:38:04.98,Chinese,,0,0,0,,
+Dialogue: 0,0:38:00.96,0:38:04.98,Chinese,,0,0,0,,需要它的原因是当我和一台特定的机器通信时
 Dialogue: 0,0:38:05.44,0:38:08.12,English,,0,0,0,,That machine can support different services
-Dialogue: 0,0:38:05.44,0:38:08.12,Chinese,,0,0,0,,
+Dialogue: 0,0:38:05.44,0:38:08.12,Chinese,,0,0,0,,它会提供许多不同的服务
 Dialogue: 0,0:38:08.12,0:38:14.06,English,,0,0,0,,It can provide SSH connections it can provide FTP connections
-Dialogue: 0,0:38:08.12,0:38:14.06,Chinese,,0,0,0,,
+Dialogue: 0,0:38:08.12,0:38:14.06,Chinese,,0,0,0,,比如说 SSH 服务，FTP 服务
 Dialogue: 0,0:38:14.06,0:38:18.04,English,,0,0,0,,It can host a mail server,it can host a web server
-Dialogue: 0,0:38:14.06,0:38:18.04,Chinese,,0,0,0,,
+Dialogue: 0,0:38:14.06,0:38:18.04,Chinese,,0,0,0,,它也可以作为邮件服务器或是网络服务器
 Dialogue: 0,0:38:18.62,0:38:22.68,English,,0,0,0,,So a particular machine might have a multitude of different services
-Dialogue: 0,0:38:18.62,0:38:22.68,Chinese,,0,0,0,,
+Dialogue: 0,0:38:18.62,0:38:22.68,Chinese,,0,0,0,,所以一台机器可能有大量不同的服务
 Dialogue: 0,0:38:23.10,0:38:26.88,English,,0,0,0,,And so those are differentiated from each other with what are called port numbers
-Dialogue: 0,0:38:23.10,0:38:26.88,Chinese,,0,0,0,,
-Dialogue: 0,0:38:27.44,0:38:33.04,English,,0,0,0,,And similarly isaac client might have connections to dozens of hosts going at any given time
-Dialogue: 0,0:38:27.44,0:38:33.04,Chinese,,0,0,0,,
+Dialogue: 0,0:38:23.10,0:38:26.88,Chinese,,0,0,0,,而它们会通过端口号进行区分
+Dialogue: 0,0:38:27.44,0:38:33.04,English,,0,0,0,,And similarly as a client might have connections to dozens of hosts going at any given time
+Dialogue: 0,0:38:27.44,0:38:33.04,Chinese,,0,0,0,,同样的，客户机可能同时和几十台主机连接
 Dialogue: 0,0:38:33.56,0:38:38.12,English,,0,0,0,,I'm cruising the web I'm you know doing all that different stuff
-Dialogue: 0,0:38:33.56,0:38:38.12,Chinese,,0,0,0,,
-Dialogue: 0,0:38:38.52,0:38:42.40,English,,0,0,0,,And that's all differentiated the client end that there's different ports
-Dialogue: 0,0:38:38.52,0:38:42.40,Chinese,,0,0,0,,
+Dialogue: 0,0:38:33.56,0:38:38.12,Chinese,,0,0,0,,我在网上冲浪或是干一些不同的事
+Dialogue: 0,0:38:38.52,0:38:42.40,English,,0,0,0,,And that's all differentiated the client and that there's different ports
+Dialogue: 0,0:38:38.52,0:38:42.40,Chinese,,0,0,0,,每个服务都有区别，提供各个服务的端口也不一样
 Dialogue: 0,0:38:42.40,0:38:46.72,English,,0,0,0,,Associated with your different programs that are running
-Dialogue: 0,0:38:42.40,0:38:46.72,Chinese,,0,0,0,,
+Dialogue: 0,0:38:42.40,0:38:46.72,Chinese,,0,0,0,,到底是哪个端口和你运行的程序有关
 Dialogue: 0,0:38:47.92,0:38:51.52,English,,0,0,0,,And so a port then is a 16-bit integer
 Dialogue: 0,0:38:47.92,0:38:51.52,Chinese,,0,0,0,,
 Dialogue: 0,0:38:51.94,0:38:56.74,English,,0,0,0,,That identifies which particular endpoint is
