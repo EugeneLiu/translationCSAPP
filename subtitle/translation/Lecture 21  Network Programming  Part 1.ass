@@ -798,111 +798,111 @@ Dialogue: 0,0:32:57.32,0:33:00.48,Chinese,,0,0,0,,这实际上是一个关键点
 Dialogue: 0,0:33:01.42,0:33:04.36,English,,0,0,0,,The mapping between domain names
 Dialogue: 0,0:33:01.42,0:33:04.36,Chinese,,0,0,0,,域名和
 Dialogue: 0,0:33:05.76,0:33:08.12,English,,0,0,0,,And internet addresses is not one-to-one
-Dialogue: 0,0:33:05.76,0:33:08.12,Chinese,,0,0,0,,网络地址间的映射不是一一对应的
+Dialogue: 0,0:33:05.76,0:33:08.12,Chinese,,0,0,0,,IP 地址间的映射不是一一对应的
 Dialogue: 0,0:33:08.22,0:33:12.02,English,,0,0,0,,You can have multiple domain names that refer to the same internet address
-Dialogue: 0,0:33:08.22,0:33:12.02,Chinese,,0,0,0,,
+Dialogue: 0,0:33:08.22,0:33:12.02,Chinese,,0,0,0,,可以有多个域名对应同一个 IP 地址
 Dialogue: 0,0:33:13.70,0:33:18.70,English,,0,0,0,,But you can also have multiple internet addresses
-Dialogue: 0,0:33:13.70,0:33:18.70,Chinese,,0,0,0,,
+Dialogue: 0,0:33:13.70,0:33:18.70,Chinese,,0,0,0,,但你也可以有多个 IP 地址
 Dialogue: 0,0:33:22.66,0:33:23.36,English,,0,0,0,,Excuse me
-Dialogue: 0,0:33:22.66,0:33:23.36,Chinese,,0,0,0,,
+Dialogue: 0,0:33:22.66,0:33:23.36,Chinese,,0,0,0,,稍等一下
 Dialogue: 0,0:33:30.16,0:33:31.18,English,,0,0,0,,That's weird
-Dialogue: 0,0:33:30.16,0:33:31.18,Chinese,,0,0,0,,
+Dialogue: 0,0:33:30.16,0:33:31.18,Chinese,,0,0,0,,有点问题
 Dialogue: 0,0:33:36.98,0:33:42.10,English,,0,0,0,,So like twitter.com when I ask for it it comes back with four different addresses
-Dialogue: 0,0:33:36.98,0:33:42.10,Chinese,,0,0,0,,
+Dialogue: 0,0:33:36.98,0:33:42.10,Chinese,,0,0,0,,那么，比如像 twitter.com，当我查询他的 IP 地址时，他返回了四个不同的地址
 Dialogue: 0,0:33:45.88,0:33:49.56,English,,0,0,0,,And if I do the exact same thing again
-Dialogue: 0,0:33:45.88,0:33:49.56,Chinese,,0,0,0,,
+Dialogue: 0,0:33:45.88,0:33:49.56,Chinese,,0,0,0,,如果我再重复一次
 Dialogue: 0,0:33:51.46,0:33:53.28,English,,0,0,0,,Mmm came back but yeah
-Dialogue: 0,0:33:51.46,0:33:53.28,Chinese,,0,0,0,,
+Dialogue: 0,0:33:51.46,0:33:53.28,Chinese,,0,0,0,,Mmm 是的
 Dialogue: 0,0:33:53.80,0:33:55.62,English,,0,0,0,,You see it came back with
-Dialogue: 0,0:33:53.80,0:33:55.62,Chinese,,0,0,0,,
+Dialogue: 0,0:33:53.80,0:33:55.62,Chinese,,0,0,0,,你可以看到它返回了
 Dialogue: 0,0:33:57.68,0:34:00.22,English,,0,0,0,,The same no not even the same addresses
-Dialogue: 0,0:33:57.68,0:34:00.22,Chinese,,0,0,0,,
+Dialogue: 0,0:33:57.68,0:34:00.22,Chinese,,0,0,0,,不完全相同的地址
 Dialogue: 0,0:34:02.08,0:34:08.86,English,,0,0,0,,It came back for example here the one that ends with .6 that wasn't in that first was
-Dialogue: 0,0:34:02.08,0:34:08.86,Chinese,,0,0,0,,
+Dialogue: 0,0:34:02.08,0:34:08.86,Chinese,,0,0,0,,比如说这次返回的 .6 结尾的地址在前一次没有出现
 Dialogue: 0,0:34:09.22,0:34:13.98,English,,0,0,0,,So it came back with a slightly different set of addresses and a somewhat different order
-Dialogue: 0,0:34:09.22,0:34:13.98,Chinese,,0,0,0,,
+Dialogue: 0,0:34:09.22,0:34:13.98,Chinese,,0,0,0,,所以它返回了一组有轻微不同的地址，而且它的返回顺序也变了
 Dialogue: 0,0:34:14.32,0:34:17.92,English,,0,0,0,,And the idea of that is that actually has multiple servers
-Dialogue: 0,0:34:14.32,0:34:17.92,Chinese,,0,0,0,,
+Dialogue: 0,0:34:14.32,0:34:17.92,Chinese,,0,0,0,,这个现象的原因实际是它有许多的服务器
 Dialogue: 0,0:34:17.96,0:34:22.18,English,,0,0,0,,So when I send to twitter.com or Google or any of these major servers
-Dialogue: 0,0:34:17.96,0:34:22.18,Chinese,,0,0,0,,
+Dialogue: 0,0:34:17.96,0:34:22.18,Chinese,,0,0,0,,因此当我请求访问 twitter.com 或是 Google 或是任何主流网站
 Dialogue: 0,0:34:22.58,0:34:26.62,English,,0,0,0,,There's not just one place in the internet that's handling everybody's google traffic
-Dialogue: 0,0:34:22.58,0:34:26.62,Chinese,,0,0,0,,
-Dialogue: 0,0:34:26.62,0:34:29.70,English,,0,0,0,,Through thousands of places spread around the world
-Dialogue: 0,0:34:26.62,0:34:29.70,Chinese,,0,0,0,,
+Dialogue: 0,0:34:22.58,0:34:26.62,Chinese,,0,0,0,,网络中有不止一处位置处理每个人的 google 流量
+Dialogue: 0,0:34:26.62,0:34:29.70,English,,0,0,0,,There's thousands of places spread around the world
+Dialogue: 0,0:34:26.62,0:34:29.70,Chinese,,0,0,0,,它们分布在全球的上千个地点
 Dialogue: 0,0:34:30.18,0:34:35.88,English,,0,0,0,,And the way they get you there is by playing tricks with the DNS
-Dialogue: 0,0:34:30.18,0:34:35.88,Chinese,,0,0,0,,
+Dialogue: 0,0:34:30.18,0:34:35.88,Chinese,,0,0,0,,而把你分配到哪台服务器是由 DNS 决定的
 Dialogue: 0,0:34:36.74,0:34:41.98,English,,0,0,0,,That Google is constantly sending updates to the it maintains its own DNS servers
-Dialogue: 0,0:34:36.74,0:34:41.98,Chinese,,0,0,0,,
+Dialogue: 0,0:34:36.74,0:34:41.98,Chinese,,0,0,0,,Google 持续的对它的 DNS 服务器进行升级
 Dialogue: 0,0:34:42.40,0:34:43.98,English,,0,0,0,,So it's constantly changing them
-Dialogue: 0,0:34:42.40,0:34:43.98,Chinese,,0,0,0,,
+Dialogue: 0,0:34:42.40,0:34:43.98,Chinese,,0,0,0,,它持续的改变它们
 Dialogue: 0,0:34:43.98,0:34:48.34,English,,0,0,0,,And it will actually give you different addresses depending on where in the world you're located as well
-Dialogue: 0,0:34:43.98,0:34:48.34,Chinese,,0,0,0,,
+Dialogue: 0,0:34:43.98,0:34:48.34,Chinese,,0,0,0,,然后 DNS 会根据你在世界上的位置给你不同的网络地址
 Dialogue: 0,0:34:48.76,0:34:53.80,English,,0,0,0,,To try and provide a server that's sort of reasonably close to you geographically so
-Dialogue: 0,0:34:48.76,0:34:53.80,Chinese,,0,0,0,,
+Dialogue: 0,0:34:48.76,0:34:53.80,Chinese,,0,0,0,,并尽可能让一台最靠近你的地理位置的服务器为你提供服务
 Dialogue: 0,0:34:54.86,0:34:58.60,English,,0,0,0,,There's all just all kinds of tricks that happen through DNS
-Dialogue: 0,0:34:54.86,0:34:58.60,Chinese,,0,0,0,,
+Dialogue: 0,0:34:54.86,0:34:58.60,Chinese,,0,0,0,,这就是 DNS 的所有作用
 Dialogue: 0,0:34:58.68,0:35:04.62,English,,0,0,0,,That is part of the way they can sort of manage this huge set of addresses
-Dialogue: 0,0:34:58.68,0:35:04.62,Chinese,,0,0,0,,
+Dialogue: 0,0:34:58.68,0:35:04.62,Chinese,,0,0,0,,这就是它们处理如此庞大的地址集合的方式
 Dialogue: 0,0:35:08.20,0:35:12.46,English,,0,0,0,,And then there's some other domain names that don't have any IP address
-Dialogue: 0,0:35:08.20,0:35:12.46,Chinese,,0,0,0,,
+Dialogue: 0,0:35:08.20,0:35:12.46,Chinese,,0,0,0,,当然，也有一些域名不映射任何 IP 地址
 Dialogue: 0,0:35:13.34,0:35:17.02,English,,0,0,0,,That they're somewhere in the hierarchy that hierarchical naming system
-Dialogue: 0,0:35:13.34,0:35:17.02,Chinese,,0,0,0,,
+Dialogue: 0,0:35:13.34,0:35:17.02,Chinese,,0,0,0,,它们在分级命名系统的某个地方
 Dialogue: 0,0:35:17.02,0:35:19.80,English,,0,0,0,,But they're not actually referring to a particular host
-Dialogue: 0,0:35:17.02,0:35:19.80,Chinese,,0,0,0,,
-Dialogue: 0,0:35:21.10,0:35:23.96,English,,0,0,0,,So it's a multi multi mapping
-Dialogue: 0,0:35:21.10,0:35:23.96,Chinese,,0,0,0,,
+Dialogue: 0,0:35:17.02,0:35:19.80,Chinese,,0,0,0,,但它们不对应一个特定的主机
+Dialogue: 0,0:35:21.10,0:35:23.96,English,,0,0,0,,So it's a multi-multi mapping
+Dialogue: 0,0:35:21.10,0:35:23.96,Chinese,,0,0,0,,所以映射是多对多的
 Dialogue: 0,0:35:27.13,0:35:32.14,English,,0,0,0,,In the...the api set reflects
-Dialogue: 0,0:35:27.13,0:35:32.14,Chinese,,0,0,0,,
+Dialogue: 0,0:35:27.13,0:35:32.14,Chinese,,0,0,0,,api 集合反映了这一点
 Dialogue: 0,0:35:40.16,0:35:44.00,English,,0,0,0,,It so this is just going what I told you they sometimes one-to-one
-Dialogue: 0,0:35:40.16,0:35:44.00,Chinese,,0,0,0,,
+Dialogue: 0,0:35:40.16,0:35:44.00,Chinese,,0,0,0,,这就是我刚刚讲的它们有时一一对应
 Dialogue: 0,0:35:44.06,0:35:47.28,English,,0,0,0,,Sometimes many domain names refer to the same address
-Dialogue: 0,0:35:44.06,0:35:47.28,Chinese,,0,0,0,,
-Dialogue: 0,0:35:48.20,0:35:53.12,English,,0,0,0,,Sometimes of one name maps to multiple addresses that change over time
-Dialogue: 0,0:35:48.20,0:35:53.12,Chinese,,0,0,0,,
+Dialogue: 0,0:35:44.06,0:35:47.28,Chinese,,0,0,0,,有时许多域名对应同一个地址
+Dialogue: 0,0:35:48.20,0:35:53.12,English,,0,0,0,,Sometimes one name maps to multiple addresses that change over time
+Dialogue: 0,0:35:48.20,0:35:53.12,Chinese,,0,0,0,,有时一个域名对应多个地址，而这些地址时刻都在变化
 Dialogue: 0,0:35:53.96,0:35:57.10,English,,0,0,0,,And then there's some where it's a valid name
-Dialogue: 0,0:35:53.96,0:35:57.10,Chinese,,0,0,0,,
+Dialogue: 0,0:35:53.96,0:35:57.10,Chinese,,0,0,0,,也有一些合法域名
 Dialogue: 0,0:35:57.42,0:36:01.20,English,,0,0,0,,But it doesn't have an IP address it doesn't have a host associated with a question
-Dialogue: 0,0:35:57.42,0:36:01.20,Chinese,,0,0,0,,
+Dialogue: 0,0:35:57.42,0:36:01.20,Chinese,,0,0,0,,不对应任何 IP 地址，因为它没有关联一台主机。有问题吗？
 Dialogue: 0,0:36:01.34,0:36:10.52,English,,0,0,0,,[student speaking]
-Dialogue: 0,0:36:01.34,0:36:10.52,Chinese,,0,0,0,,
-Dialogue: 0,0:36:10.52,0:36:12.80,English,,0,0,0,,How do I get...how do you get your own IP address
-Dialogue: 0,0:36:10.52,0:36:12.80,Chinese,,0,0,0,,
+Dialogue: 0,0:36:01.34,0:36:10.52,Chinese,,0,0,0,,[学生提问]
+Dialogue: 0,0:36:10.52,0:36:12.80,English,,0,0,0,,Oh how do I get...how do you get your own IP address
+Dialogue: 0,0:36:10.52,0:36:12.80,Chinese,,0,0,0,,好的，你怎么得到你自己的 IP 地址对吧
 Dialogue: 0,0:36:13.66,0:36:17.48,English,,0,0,0,,Well all you have to beg borrow or you have to either borrow or buy them
-Dialogue: 0,0:36:13.66,0:36:17.48,Chinese,,0,0,0,,
+Dialogue: 0,0:36:13.66,0:36:17.48,Chinese,,0,0,0,,你需要做的只是租借或者买下一个
 Dialogue: 0,0:36:17.70,0:36:24.36,English,,0,0,0,,So for example at CMU there is some number of what they call statically allocated ip addresses
-Dialogue: 0,0:36:17.70,0:36:24.36,Chinese,,0,0,0,,
+Dialogue: 0,0:36:17.70,0:36:24.36,Chinese,,0,0,0,,举个例子，CMU 有一定数量的静态分配的 IP 地址
 Dialogue: 0,0:36:24.38,0:36:31.20,English,,0,0,0,,Where it's just fixed assigned to that machine and you can register form and request them through computing services
-Dialogue: 0,0:36:24.38,0:36:31.20,Chinese,,0,0,0,,
+Dialogue: 0,0:36:24.38,0:36:31.20,Chinese,,0,0,0,,它固定分配给一些机器，假如你需要用它们完成一些计算机相关的项目，你可以填表申请
 Dialogue: 0,0:36:32.76,0:36:38.44,English,,0,0,0,,But most you don't have that most you get one that's I signed dynamically
-Dialogue: 0,0:36:32.76,0:36:38.44,Chinese,,0,0,0,,
+Dialogue: 0,0:36:32.76,0:36:38.44,Chinese,,0,0,0,,但你们中的大部分人都是得不到那部分 IP 地址的，大多数时候你们得到的 IP 地址都是动态的
 Dialogue: 0,0:36:38.52,0:36:43.42,English,,0,0,0,,So there's a pool of addresses that you basically they call them leasing
-Dialogue: 0,0:36:38.52,0:36:43.42,Chinese,,0,0,0,,
+Dialogue: 0,0:36:38.52,0:36:43.42,Chinese,,0,0,0,,有一个地址池提供租借服务
 Dialogue: 0,0:36:43.42,0:36:45.62,English,,0,0,0,,That you are assigned with for a while
-Dialogue: 0,0:36:43.42,0:36:45.62,Chinese,,0,0,0,,
+Dialogue: 0,0:36:43.42,0:36:45.62,Chinese,,0,0,0,,它们在一定的时间内会分配给你
 Dialogue: 0,0:36:46.26,0:36:49.92,English,,0,0,0,,And then but it could possibly be reassigned to someone else
-Dialogue: 0,0:36:46.26,0:36:49.92,Chinese,,0,0,0,,
+Dialogue: 0,0:36:46.26,0:36:49.92,Chinese,,0,0,0,,但它们也可能被分配给其他人
 Dialogue: 0,0:36:53.06,0:36:54.68,English,,0,0,0,,And that's part of the way it can manage
-Dialogue: 0,0:36:53.06,0:36:54.68,Chinese,,0,0,0,,
+Dialogue: 0,0:36:53.06,0:36:54.68,Chinese,,0,0,0,,这就是为什么
 Dialogue: 0,0:36:55.30,0:36:57.54,English,,0,0,0,,You know somewhat limited set of IP addresses
-Dialogue: 0,0:36:55.30,0:36:57.54,Chinese,,0,0,0,,
+Dialogue: 0,0:36:55.30,0:36:57.54,Chinese,,0,0,0,,IP 地址数量有限的情况下每个人都有机会使用
 Dialogue: 0,0:37:03.24,0:37:07.88,English,,0,0,0,,So the idea of like I said that the main
-Dialogue: 0,0:37:03.24,0:37:07.88,Chinese,,0,0,0,,
-Dialogue: 0,0:37:15.02,0:37:19.50,English,,0,0,0,,A way we'll think about it is in terms of what's called TCP
-Dialogue: 0,0:37:15.02,0:37:19.50,Chinese,,0,0,0,,
+Dialogue: 0,0:37:03.24,0:37:07.88,Chinese,,0,0,0,,就像我说的我们进行网络连接时
+Dialogue: 0,0:37:15.02,0:37:19.50,English,,0,0,0,,Uh way we'll think about it is in terms of what's called TCP
+Dialogue: 0,0:37:15.02,0:37:19.50,Chinese,,0,0,0,,利用的主要方式叫做 TCP
 Dialogue: 0,0:37:20.18,0:37:22.36,English,,0,0,0,,And it says connection oriented protocol
-Dialogue: 0,0:37:20.18,0:37:22.36,Chinese,,0,0,0,,
+Dialogue: 0,0:37:20.18,0:37:22.36,Chinese,,0,0,0,,它是一种面向连接的协议
 Dialogue: 0,0:37:22.36,0:37:27.42,English,,0,0,0,,Where I establish a connection from one host establishes a connection to another host
-Dialogue: 0,0:37:22.36,0:37:27.42,Chinese,,0,0,0,,
+Dialogue: 0,0:37:22.36,0:37:27.42,Chinese,,0,0,0,,一台主机创建一个通向另一台主机的连接
 Dialogue: 0,0:37:28.18,0:37:34.52,English,,0,0,0,,And they can communicate to each other sending arbitrarily long streams of bytes to each other
-Dialogue: 0,0:37:28.18,0:37:34.52,Chinese,,0,0,0,,
+Dialogue: 0,0:37:28.18,0:37:34.52,Chinese,,0,0,0,,它们可以通过给对方发送任意长度的字节流实现相互间的通信
 Dialogue: 0,0:37:35.30,0:37:39.44,English,,0,0,0,,And so the connection is then two hosts that can talk to each other
-Dialogue: 0,0:37:35.30,0:37:39.44,Chinese,,0,0,0,,
+Dialogue: 0,0:37:35.30,0:37:39.44,Chinese,,0,0,0,,因此连接就是两台主机间的交流
 Dialogue: 0,0:37:39.78,0:37:42.86,English,,0,0,0,,And each of those endpoints is referred to as a socket
-Dialogue: 0,0:37:39.78,0:37:42.86,Chinese,,0,0,0,,
+Dialogue: 0,0:37:39.78,0:37:42.86,Chinese,,0,0,0,,连接的每一端都是一个 socket
 Dialogue: 0,0:37:46.42,0:37:50.26,English,,0,0,0,,And so I can and a socket is both an IP address
-Dialogue: 0,0:37:46.42,0:37:50.26,Chinese,,0,0,0,,
+Dialogue: 0,0:37:46.42,0:37:50.26,Chinese,,0,0,0,,socket 包括了 IP 地址和
 Dialogue: 0,0:37:51.24,0:37:52.82,English,,0,0,0,,And what's called a port number
-Dialogue: 0,0:37:51.24,0:37:52.82,Chinese,,0,0,0,,
+Dialogue: 0,0:37:51.24,0:37:52.82,Chinese,,0,0,0,,端口号
 Dialogue: 0,0:37:52.92,0:37:58.22,English,,0,0,0,,So there's a 16 byte, 16 bit number for every connection
 Dialogue: 0,0:37:52.92,0:37:58.22,Chinese,,0,0,0,,
 Dialogue: 0,0:37:58.66,0:38:00.50,English,,0,0,0,,That's referred to as its port
