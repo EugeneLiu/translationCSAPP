@@ -922,37 +922,37 @@ Dialogue: 0,0:38:23.10,0:38:26.88,Chinese,,0,0,0,,而它们会通过端口号进
 Dialogue: 0,0:38:27.44,0:38:33.04,English,,0,0,0,,And similarly as a client might have connections to dozens of hosts going at any given time
 Dialogue: 0,0:38:27.44,0:38:33.04,Chinese,,0,0,0,,同样的，客户机可能同时和几十台主机连接
 Dialogue: 0,0:38:33.56,0:38:38.12,English,,0,0,0,,I'm cruising the web I'm you know doing all that different stuff
-Dialogue: 0,0:38:33.56,0:38:38.12,Chinese,,0,0,0,,我在网上冲浪或是干一些不同的事
+Dialogue: 0,0:38:33.56,0:38:38.12,Chinese,,0,0,0,,我在网上冲浪或是干其它事
 Dialogue: 0,0:38:38.52,0:38:42.40,English,,0,0,0,,And that's all differentiated the client and that there's different ports
-Dialogue: 0,0:38:38.52,0:38:42.40,Chinese,,0,0,0,,每个服务都有区别，提供各个服务的端口也不一样
+Dialogue: 0,0:38:38.52,0:38:42.40,Chinese,,0,0,0,,每个客户端的情况都不一样，提供各个服务的端口也不一样
 Dialogue: 0,0:38:42.40,0:38:46.72,English,,0,0,0,,Associated with your different programs that are running
-Dialogue: 0,0:38:42.40,0:38:46.72,Chinese,,0,0,0,,到底是哪个端口和你运行的程序有关
+Dialogue: 0,0:38:42.40,0:38:46.72,Chinese,,0,0,0,,到底是哪个端口提供服务和你运行的程序有关
 Dialogue: 0,0:38:47.92,0:38:51.52,English,,0,0,0,,And so a port then is a 16-bit integer
-Dialogue: 0,0:38:47.92,0:38:51.52,Chinese,,0,0,0,,
+Dialogue: 0,0:38:47.92,0:38:51.52,Chinese,,0,0,0,,端口就是一个 16 位的整数
 Dialogue: 0,0:38:51.94,0:38:56.74,English,,0,0,0,,That identifies which particular endpoint is
-Dialogue: 0,0:38:51.94,0:38:56.74,Chinese,,0,0,0,,
-Dialogue: 0,0:38:56.88,0:39:00.40,English,,0,0,0,,Being communicated with it either the client side of the server side
-Dialogue: 0,0:38:56.88,0:39:00.40,Chinese,,0,0,0,,
+Dialogue: 0,0:38:51.94,0:38:56.74,Chinese,,0,0,0,,它标识了到底是哪个特定的端点在跟它通信
+Dialogue: 0,0:38:56.88,0:39:00.40,English,,0,0,0,,Being communicated with it either the client side or the server side
+Dialogue: 0,0:38:56.88,0:39:00.40,Chinese,,0,0,0,,到底是客户端还是服务端在跟它通信
 Dialogue: 0,0:39:01.06,0:39:04.10,English,,0,0,0,,And typically at the client side these are assigned dynamically
-Dialogue: 0,0:39:01.06,0:39:04.10,Chinese,,0,0,0,,
-Dialogue: 0,0:39:04.50,0:39:06.80,English,,0,0,0,,And the referred to as ephemeral ports meaning
-Dialogue: 0,0:39:04.50,0:39:06.80,Chinese,,0,0,0,,
+Dialogue: 0,0:39:01.06,0:39:04.10,Chinese,,0,0,0,,特别地，在客户端上端口是动态分配的
+Dialogue: 0,0:39:04.50,0:39:06.80,English,,0,0,0,,And they referred to as ephemeral ports meaning
+Dialogue: 0,0:39:04.50,0:39:06.80,Chinese,,0,0,0,,它们被叫做临时端口
 Dialogue: 0,0:39:06.80,0:39:11.96,English,,0,0,0,,They only are assigned for the limited duration that you have a connection with that
-Dialogue: 0,0:39:06.80,0:39:11.96,Chinese,,0,0,0,,
+Dialogue: 0,0:39:06.80,0:39:11.96,Chinese,,0,0,0,,它们只会在一定的时间内被分配，通常是有连接需要使用它们时
 Dialogue: 0,0:39:12.60,0:39:14.76,English,,0,0,0,,That you're maintaining that connection
-Dialogue: 0,0:39:12.60,0:39:14.76,Chinese,,0,0,0,,
+Dialogue: 0,0:39:12.60,0:39:14.76,Chinese,,0,0,0,,或是你要维持一个连接时
 Dialogue: 0,0:39:15.38,0:39:19.18,English,,0,0,0,,And then there has to be some way if I'm going to contact
-Dialogue: 0,0:39:15.38,0:39:19.18,Chinese,,0,0,0,,
+Dialogue: 0,0:39:15.38,0:39:19.18,Chinese,,0,0,0,,那么，肯定会有一种方法让我联系
 Dialogue: 0,0:39:19.50,0:39:26.38,English,,0,0,0,,And I want to know the dns will tell me what the IP address is of say google.com
-Dialogue: 0,0:39:19.50,0:39:26.38,Chinese,,0,0,0,,
+Dialogue: 0,0:39:19.50,0:39:26.38,Chinese,,0,0,0,,比如如果我想知道 google.com 的 IP 地址，DNS 会告诉我
 Dialogue: 0,0:39:26.92,0:39:28.88,English,,0,0,0,,But I have to know that
-Dialogue: 0,0:39:26.92,0:39:28.88,Chinese,,0,0,0,,
+Dialogue: 0,0:39:26.92,0:39:28.88,Chinese,,0,0,0,,但我其实想知道
 Dialogue: 0,0:39:29.62,0:39:38.42,English,,0,0,0,,Am I communicating with its web service which is port 80 or https secure socket is a different report number
-Dialogue: 0,0:39:29.62,0:39:38.42,Chinese,,0,0,0,,
+Dialogue: 0,0:39:29.62,0:39:38.42,Chinese,,0,0,0,,我到底是在使用 80 端口上的网络服务还是其它某个端口上的 https 服务
 Dialogue: 0,0:39:38.80,0:39:40.84,English,,0,0,0,,So which service I'm asking for
-Dialogue: 0,0:39:38.80,0:39:40.84,Chinese,,0,0,0,,
+Dialogue: 0,0:39:38.80,0:39:40.84,Chinese,,0,0,0,,到底是哪个服务呢
 Dialogue: 0,0:39:41.30,0:39:44.38,English,,0,0,0,,And there's a standard list what are called well-known ports
-Dialogue: 0,0:39:41.30,0:39:44.38,Chinese,,0,0,0,,
+Dialogue: 0,0:39:41.30,0:39:44.38,Chinese,,0,0,0,,其实有一串标准端口号，它们被称为公认端口
 Dialogue: 0,0:39:45.08,0:39:52.58,English,,0,0,0,,That are that I can contact at the server end to get the particular service I'm looking for
 Dialogue: 0,0:39:45.08,0:39:52.58,Chinese,,0,0,0,,
 Dialogue: 0,0:39:54.14,0:39:58.38,English,,0,0,0,,And those are assigned there's a big waste of port assignments
