@@ -504,9 +504,9 @@ Dialogue: 0,0:19:28.54,0:19:31.66,Chinese,,0,0,0,,我只用读取数据
 Dialogue: 0,0:19:32.00,0:19:35.12,English,,0,0,0,,Not worrying about how that got broken up into individual packets
 Dialogue: 0,0:19:32.00,0:19:35.12,Chinese,,0,0,0,,不用关心它是怎么被分解成独立的数据包的
 Dialogue: 0,0:19:36.48,0:19:39.18,English,,0,0,0,,And so that's referred to as the sockets interface
-Dialogue: 0,0:19:36.48,0:19:39.18,Chinese,,0,0,0,,这被称为套接字接口
+Dialogue: 0,0:19:36.48,0:19:39.18,Chinese,,0,0,0,,它被称为 socket 接口
 Dialogue: 0,0:19:39.78,0:19:43.32,English,,0,0,0,,And you'll hear the term socket programming and that's exactly what we're talking about
-Dialogue: 0,0:19:39.78,0:19:43.32,Chinese,,0,0,0,,你会听到套接字编程这个术语，这这就是我们要讲的内容
+Dialogue: 0,0:19:39.78,0:19:43.32,Chinese,,0,0,0,,你会听到 socket 编程这个术语，这这就是我们要讲的内容
 Dialogue: 0,0:19:48.58,0:19:56.00,English,,0,0,0,,And so from a sort of software system
 Dialogue: 0,0:19:48.58,0:19:56.00,Chinese,,0,0,0,,从软件系统
 Dialogue: 0,0:19:56.08,0:19:58.44,English,,0,0,0,,Than software hardware system then
@@ -1000,105 +1000,105 @@ Dialogue: 0,0:42:11.94,0:42:17.42,Chinese,,0,0,0,,它是伴随着互联网的演
 Dialogue: 0,0:42:20.48,0:42:24.34,English,,0,0,0,,So socket then as I said is certain logically one end
 Dialogue: 0,0:42:20.48,0:42:24.34,Chinese,,0,0,0,,socket 其实是逻辑层面上的一个端点
 Dialogue: 0,0:42:24.60,0:42:26.02,English,,0,0,0,,One of the two ends of a connection
-Dialogue: 0,0:42:24.60,0:42:26.02,Chinese,,
+Dialogue: 0,0:42:24.60,0:42:26.02,Chinese,,0,0,0,,连接的某一端
 Dialogue: 0,0:42:27.12,0:42:31.88,English,,0,0,0,,And from an application point of view you'll see it as a file descriptor
-Dialogue: 0,0:42:27.12,0:42:31.88,Chinese,,
+Dialogue: 0,0:42:27.12,0:42:31.88,Chinese,,0,0,0,,另外，如果从应用程序的角度，你可以把它看做一个文件描述符
 Dialogue: 0,0:42:32.52,0:42:37.22,English,,0,0,0,,Just the low-level file stuff that you've already seen that you can do reading and writing from
-Dialogue: 0,0:42:32.52,0:42:37.22,Chinese,,
+Dialogue: 0,0:42:32.52,0:42:37.22,Chinese,,0,0,0,,即系统底层可以让你进行读写操作的文件，你们之前已经见过了
 Dialogue: 0,0:42:37.96,0:42:38.34,English,,0,0,0,,Um
-Dialogue: 0,0:42:37.96,0:42:38.34,Chinese,,
+Dialogue: 0,0:42:37.96,0:42:38.34,Chinese,,0,0,0,,嗯
 Dialogue: 0,0:42:40.10,0:42:47.40,English,,0,0,0,,And so that's the sort of mental model that is provided by the socket interface
-Dialogue: 0,0:42:40.10,0:42:47.40,Chinese,,
+Dialogue: 0,0:42:40.10,0:42:47.40,Chinese,,0,0,0,,那么它就是 socket 接口提供的一种关键模型
 Dialogue: 0,0:42:50.66,0:42:54.96,English,,0,0,0,,But it's a very different you know the actual implementation of network
-Dialogue: 0,0:42:50.66,0:42:54.96,Chinese,,
+Dialogue: 0,0:42:50.66,0:42:54.96,Chinese,,0,0,0,,但当你真正实现网络项目的时候，它们还是有很大区别的
 Dialogue: 0,0:42:55.46,0:42:57.10,English,,0,0,0,,When you write to a socket
-Dialogue: 0,0:42:55.46,0:42:57.10,Chinese,,
+Dialogue: 0,0:42:55.46,0:42:57.10,Chinese,,0,0,0,,当你对 socket 文档进行写入时
 Dialogue: 0,0:42:57.56,0:43:01.20,English,,0,0,0,,It's firing up all kinds of network stuff whereas you write to a disk
-Dialogue: 0,0:42:57.56,0:43:01.20,Chinese,,
+Dialogue: 0,0:42:57.56,0:43:01.20,Chinese,,0,0,0,,它会启动各种与网络有关的东西，就像你对磁盘写入时
 Dialogue: 0,0:43:01.84,0:43:03.82,English,,0,0,0,,It's operating a disk controller
-Dialogue: 0,0:43:01.84,0:43:03.82,Chinese,,
-Dialogue: 0,0:43:03.88,0:43:08.10,English,,0,0,0,,So at the hardware level and even at the lower levels of software they're very different beasts
-Dialogue: 0,0:43:03.88,0:43:08.10,Chinese,,
+Dialogue: 0,0:43:01.84,0:43:03.82,Chinese,,0,0,0,,会操作一个磁盘控制器一样
+Dialogue: 0,0:43:03.88,0:43:08.10,English,,0,0,0,,So at the hardware level and even at the lower levels of software they're very different beings
+Dialogue: 0,0:43:03.88,0:43:08.10,Chinese,,0,0,0,,虽然在硬件层面或是软件底层它们的本质有很大的区别
 Dialogue: 0,0:43:08.72,0:43:11.64,English,,0,0,0,,But you as an application programmer see some commonality there
-Dialogue: 0,0:43:08.72,0:43:11.64,Chinese,,
+Dialogue: 0,0:43:08.72,0:43:11.64,Chinese,,0,0,0,,但你作为一个应用程序员需要看到它们的一些共同点
 Dialogue: 0,0:43:12.90,0:43:15.84,English,,0,0,0,,Okay so let's jump right into the API
-Dialogue: 0,0:43:12.90,0:43:15.84,Chinese,,
+Dialogue: 0,0:43:12.90,0:43:15.84,Chinese,,0,0,0,,好的，那么我们直接进入 API 的部分吧
 Dialogue: 0,0:43:16.52,0:43:20.74,English,,0,0,0,,And again this is a place where you'll wish you were programming in a language
-Dialogue: 0,0:43:16.52,0:43:20.74,Chinese,,
+Dialogue: 0,0:43:16.52,0:43:20.74,Chinese,,0,0,0,,在这个部分你是会想要使用含有“类”方法
 Dialogue: 0,0:43:20.94,0:43:24.40,English,,0,0,0,,That had a type hierarchy
-Dialogue: 0,0:43:20.94,0:43:24.40,Chinese,,
+Dialogue: 0,0:43:20.94,0:43:24.40,Chinese,,0,0,0,,的语言来编程的
 Dialogue: 0,0:43:24.60,0:43:26.58,English,,0,0,0,,But you aren't,you're programming in C
-Dialogue: 0,0:43:24.60,0:43:26.58,Chinese,,
-Dialogue: 0,0:43:29.22,0:43:34.26,English,,0,0,0,,There's a type, there's a zillion struck's that you kind of have to get familiar with
-Dialogue: 0,0:43:29.22,0:43:34.26,Chinese,,
+Dialogue: 0,0:43:24.60,0:43:26.58,Chinese,,0,0,0,,但你并不能用，你得用 C 语言来编程
+Dialogue: 0,0:43:29.22,0:43:34.26,English,,0,0,0,,There's a type, there's a zillion structs that you kind of have to get familiar with
+Dialogue: 0,0:43:29.22,0:43:34.26,Chinese,,0,0,0,,你需要熟悉这里的许多结构体
 Dialogue: 0,0:43:34.26,0:43:40.14,English,,0,0,0,,But one's called a sockaddr and basically it's just a 16 bytes worth of stuff
-Dialogue: 0,0:43:34.26,0:43:40.14,Chinese,,
+Dialogue: 0,0:43:34.26,0:43:40.14,Chinese,,0,0,0,,其中一个叫做 sockaddr，它本质上只是一个 16 字节的东西
 Dialogue: 0,0:43:40.96,0:43:45.20,English,,0,0,0,,Where the only thing that's special here is that the leading two bytes
-Dialogue: 0,0:43:40.96,0:43:45.20,Chinese,,
-Dialogue: 0,0:43:45.84,0:43:48.24,English,,0,0,0,,A designate what type of socket this is
-Dialogue: 0,0:43:45.84,0:43:48.24,Chinese,,
+Dialogue: 0,0:43:40.96,0:43:45.20,Chinese,,0,0,0,,唯一特殊的地方就是头两个字节
+Dialogue: 0,0:43:45.84,0:43:48.24,English,,0,0,0,,Designate what type of socket this is
+Dialogue: 0,0:43:45.84,0:43:48.24,Chinese,,0,0,0,,指明了这个 socket 是什么类型的
 Dialogue: 0,0:43:48.62,0:43:51.72,English,,0,0,0,,And particularly be different whether it's a TCP socket
-Dialogue: 0,0:43:48.62,0:43:51.72,Chinese,,
+Dialogue: 0,0:43:48.62,0:43:51.72,Chinese,,0,0,0,,举个例子，他到底是 TCP socket
 Dialogue: 0,0:43:52.10,0:43:57.06,English,,0,0,0,,An IPv6 socket a UDP socket
-Dialogue: 0,0:43:52.10,0:43:57.06,Chinese,,
+Dialogue: 0,0:43:52.10,0:43:57.06,Chinese,,0,0,0,,还是 IPv6 socket，或是 UDP socket
 Dialogue: 0,0:43:57.06,0:43:59.02,English,,0,0,0,,And all those will have different numbers
-Dialogue: 0,0:43:57.06,0:43:59.02,Chinese,,
+Dialogue: 0,0:43:57.06,0:43:59.02,Chinese,,0,0,0,,他们都会有不同的数字
 Dialogue: 0,0:43:59.60,0:44:04.08,English,,0,0,0,,A different constant in there that tells you which type of socket it is
-Dialogue: 0,0:43:59.60,0:44:04.08,Chinese,,
+Dialogue: 0,0:43:59.60,0:44:04.08,Chinese,,0,0,0,,有一个常量告诉你它到底是哪种类型的 socket
 Dialogue: 0,0:44:04.58,0:44:10.08,English,,0,0,0,,And then the high level the sockets in a lot of the programs don't need to know
-Dialogue: 0,0:44:04.58,0:44:10.08,Chinese,,
+Dialogue: 0,0:44:04.58,0:44:10.08,Chinese,,0,0,0,,但是在很多高级程序不需要知道 socket 的类型
 Dialogue: 0,0:44:10.46,0:44:12.60,English,,0,0,0,,You know which type of connection this is
-Dialogue: 0,0:44:10.46,0:44:12.60,Chinese,,
+Dialogue: 0,0:44:10.46,0:44:12.60,Chinese,,0,0,0,,这到底是哪种连接
 Dialogue: 0,0:44:12.72,0:44:16.58,English,,0,0,0,,They can just deal with they basically call other software to deal with that
-Dialogue: 0,0:44:12.72,0:44:16.58,Chinese,,
+Dialogue: 0,0:44:12.72,0:44:16.58,Chinese,,0,0,0,,它们基本上会调用其它软件来解决这个问题
 Dialogue: 0,0:44:17.78,0:44:20.34,English,,0,0,0,,So that's why it's referred to as being families specific
-Dialogue: 0,0:44:17.78,0:44:20.34,Chinese,,
+Dialogue: 0,0:44:17.78,0:44:20.34,Chinese,,0,0,0,,这就是为什么它被称为特殊族
 Dialogue: 0,0:44:22.06,0:44:28.50,English,,0,0,0,,And then the socket stuff isn't even necessarily referred to the internet the Internet
-Dialogue: 0,0:44:22.06,0:44:28.50,Chinese,,
-Dialogue: 0,0:44:29.10,0:44:34.02,English,,0,0,0,,And so there's a more specific one called a socket or underscore in
-Dialogue: 0,0:44:29.10,0:44:34.02,Chinese,,
+Dialogue: 0,0:44:22.06,0:44:28.50,Chinese,,0,0,0,,这些东西对因特网来说并不必要
+Dialogue: 0,0:44:29.10,0:44:34.02,English,,0,0,0,,And so there's a more specific one called a sockaddr_in
+Dialogue: 0,0:44:29.10,0:44:34.02,Chinese,,0,0,0,,还有一个更特殊的结构体叫做 sockaddr_in
 Dialogue: 0,0:44:34.98,0:44:39.42,English,,0,0,0,,That is used for IPv4 sockets
-Dialogue: 0,0:44:34.98,0:44:39.42,Chinese,,
-Dialogue: 0,0:44:42.22,0:44:43.52,English,,0,0,0,,Well not IPv6
-Dialogue: 0,0:44:42.22,0:44:43.52,Chinese,,
+Dialogue: 0,0:44:34.98,0:44:39.42,Chinese,,0,0,0,,它用于 IPv4 socket
+Dialogue: 0,0:44:42.22,0:44:43.52,English,,0,0,0,,Not IPv6
+Dialogue: 0,0:44:42.22,0:44:43.52,Chinese,,0,0,0,,而不是 IPv6
 Dialogue: 0,0:44:43.58,0:44:49.22,English,,0,0,0,,And so in particular it fills in fields one is called the port which as I mentioned is 16 bits
-Dialogue: 0,0:44:43.58,0:44:49.22,Chinese,,
+Dialogue: 0,0:44:43.58,0:44:49.22,Chinese,,0,0,0,,它包含了许多字段，其中有一个是关于端口的，我提到过它是 16 位的
 Dialogue: 0,0:44:49.96,0:44:51.92,English,,0,0,0,,And then the IP address
-Dialogue: 0,0:44:49.96,0:44:51.92,Chinese,,
+Dialogue: 0,0:44:49.96,0:44:51.92,Chinese,,0,0,0,,它之后是有关 IP 地址的字段
 Dialogue: 0,0:44:52.54,0:44:56.16,English,,0,0,0,,The 4 byte IP address both of which are in
-Dialogue: 0,0:44:52.54,0:44:56.16,Chinese,,
+Dialogue: 0,0:44:52.54,0:44:56.16,Chinese,,0,0,0,,4 字节的 IP 地址字段
 Dialogue: 0,0:44:57.04,0:45:00.82,English,,0,0,0,,Even if you're running the software on a x86 machine
-Dialogue: 0,0:44:57.04,0:45:00.82,Chinese,,
+Dialogue: 0,0:44:57.04,0:45:00.82,Chinese,,0,0,0,,即使你在 x86 机器上运行这个软件
 Dialogue: 0,0:45:00.82,0:45:03.56,English,,0,0,0,,These should be in big endian order
-Dialogue: 0,0:45:00.82,0:45:03.56,Chinese,,
+Dialogue: 0,0:45:00.82,0:45:03.56,Chinese,,0,0,0,,它俩都应该是大端字节序的
 Dialogue: 0,0:45:05.16,0:45:08.86,English,,0,0,0,,And you'll see that this is what I mean that this is sort of a
-Dialogue: 0,0:45:05.16,0:45:08.86,Chinese,,
+Dialogue: 0,0:45:05.16,0:45:08.86,Chinese,,0,0,0,,你会发现这就是我说的
 Dialogue: 0,0:45:09.16,0:45:13.38,English,,0,0,0,,C version of subtyping if you know something like C++ or java
-Dialogue: 0,0:45:09.16,0:45:13.38,Chinese,,
+Dialogue: 0,0:45:09.16,0:45:13.38,Chinese,,0,0,0,,C 语言的一种子类，如果你了解 C++ 或者 java
 Dialogue: 0,0:45:13.58,0:45:16.56,English,,0,0,0,,Or you know a language with type inheritance
-Dialogue: 0,0:45:13.58,0:45:16.56,Chinese,,
+Dialogue: 0,0:45:13.58,0:45:16.56,Chinese,,0,0,0,,或者任何一个有类型继承的语言的话
 Dialogue: 0,0:45:17.28,0:45:25.48,English,,0,0,0,,That you can think of it as a sockaddr_in a sort of a subclass of a sockaddr
-Dialogue: 0,0:45:17.28,0:45:25.48,Chinese,,
+Dialogue: 0,0:45:17.28,0:45:25.48,Chinese,,0,0,0,,你可以把 sockaddr_in 看做 sockaddr 的一个子类
 Dialogue: 0,0:45:25.90,0:45:28.68,English,,0,0,0,,Right it has more information it's compatible with
-Dialogue: 0,0:45:25.90,0:45:28.68,Chinese,,
+Dialogue: 0,0:45:25.90,0:45:28.68,Chinese,,0,0,0,,对吧，它兼容 socket
 Dialogue: 0,0:45:28.74,0:45:32.12,English,,0,0,0,,But has more information than a socket
-Dialogue: 0,0:45:28.74,0:45:32.12,Chinese,,
+Dialogue: 0,0:45:28.74,0:45:32.12,Chinese,,0,0,0,,但是比 socket 有更多的信息
 Dialogue: 0,0:45:33.56,0:45:38.00,English,,0,0,0,,And then there's another type of for IPv6 has a different kind of
-Dialogue: 0,0:45:33.56,0:45:38.00,Chinese,,
+Dialogue: 0,0:45:33.56,0:45:38.00,Chinese,,0,0,0,,
 Dialogue: 0,0:45:38.42,0:45:41.14,English,,0,0,0,,Struck that they fill in for its information
-Dialogue: 0,0:45:38.42,0:45:41.14,Chinese,,
+Dialogue: 0,0:45:38.42,0:45:41.14,Chinese,,0,0,0,,
 Dialogue: 0,0:45:42.36,0:45:46.38,English,,0,0,0,,And then they pat it out with 8 bytes of zeros
-Dialogue: 0,0:45:42.36,0:45:46.38,Chinese,,
+Dialogue: 0,0:45:42.36,0:45:46.38,Chinese,,0,0,0,,
 Dialogue: 0,0:45:47.04,0:45:50.48,English,,0,0,0,,Just because this particular protocol doesn't require the full 16 bytes
-Dialogue: 0,0:45:47.04,0:45:50.48,Chinese,,
+Dialogue: 0,0:45:47.04,0:45:50.48,Chinese,,0,0,0,,
 Dialogue: 0,0:45:53.92,0:46:03.42,English,,0,0,0,,Okay so this is sort of what it looks like to operate a full-blown Client-server system from a programmers perspective
-Dialogue: 0,0:45:53.92,0:46:03.42,Chinese,,
+Dialogue: 0,0:45:53.92,0:46:03.42,Chinese,,0,0,0,,
 Dialogue: 0,0:46:03.94,0:46:09.96,English,,0,0,0,,And we're going to for the rest of today and all of Thursday go through all these steps
-Dialogue: 0,0:46:03.94,0:46:09.96,Chinese,,
+Dialogue: 0,0:46:03.94,0:46:09.96,Chinese,,0,0,0,,
 Dialogue: 0,0:46:10.36,0:46:15.84,English,,0,0,0,,And you as a programmer are actually going to have to understand each of these steps
-Dialogue: 0,0:46:10.36,0:46:15.84,Chinese,,
+Dialogue: 0,0:46:10.36,0:46:15.84,Chinese,,0,0,0,,
 Dialogue: 0,0:46:16.00,0:46:19.56,English,,0,0,0,,What they do?what they mean?And how to use them
-Dialogue: 0,0:46:16.00,0:46:19.56,Chinese,,
+Dialogue: 0,0:46:16.00,0:46:19.56,Chinese,,0,0,0,,
 Dialogue: 0,0:46:19.82,0:46:23.42,English,,0,0,0,,The good news is there's some pretty standard patterns here
 Dialogue: 0,0:46:23.44,0:46:31.98,English,,0,0,0,,And so you can often grab some existing code say out of the book to use that will make this not as painful as it might look
 Dialogue: 0,0:46:33.76,0:46:37.18,English,,0,0,0,,So but the overall idea of this this picture then is
