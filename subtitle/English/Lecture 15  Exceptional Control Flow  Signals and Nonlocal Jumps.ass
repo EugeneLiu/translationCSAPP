@@ -697,11 +697,11 @@ Dialogue: 0,1:01:52.32,1:01:54.32,English,,0,0,0,,So the problem is with the sig
 Dialogue: 0,1:01:54.94,1:01:58.52,English,,0,0,0,,And the solution is a newer syscall called sigaction
 Dialogue: 0,1:01:59.00,1:02:02.32,English,,0,0,0,,Which provides a mechanism a replacement for signal
 Dialogue: 0,1:02:02.80,1:02:06.70,English,,0,0,0,,That provides a mechanism for portable and predictable signal handling
-Dialogue: 0,1:02:07.54,1:02:14.18,English,,0,0,0,,And so what I've done is created a rapper called uppercase signal
+Dialogue: 0,1:02:07.54,1:02:14.18,English,,0,0,0,,And so what I've done is created a wrapper called uppercase signal
 Dialogue: 0,1:02:15.76,1:02:19.56,English,,0,0,0,,That takes the same arguments as that the signal call
 Dialogue: 0,1:02:20.88,1:02:26.04,English,,0,0,0,,But inside it calls the sigaction function to get portable signal handling
 Dialogue: 0,1:02:27.44,1:02:32.22,English,,0,0,0,,And so it's not really important to go into detail about this
-Dialogue: 0,1:02:34.22,1:02:42.78,English,,0,0,0,,The point is in your code you always want to call Signal using the  rapper that provided in csapp.c
+Dialogue: 0,1:02:34.22,1:02:42.78,English,,0,0,0,,The point is in your code you always want to call Signal using the  wrapper that provided in csapp.c
 Dialogue: 0,1:02:43.28,1:02:47.26,English,,0,0,0,,And then if you do that then you'll always block signals of the typing
 Dialogue: 0,1:02:47.70,1:02:50.84,English,,0,0,0,,Handle the system will automatically restart
 Dialogue: 0,1:02:52.02,1:02:55.28,English,,0,0,0,,Slow syscalls that have been interrupted by by signals
