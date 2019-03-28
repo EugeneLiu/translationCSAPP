@@ -172,7 +172,7 @@ Dialogue: 0,0:12:21.58,0:12:27.00,English,,0,0,0,,So this is a way to do things 
 Dialogue: 0,0:12:27.60,0:12:32.88,English,,0,0,0,,If you want to set a timeout value and you're doing some some some work and
 Dialogue: 0,0:12:33.28,0:12:39.76,English,,0,0,0,,You want to guard against that that work taking exceptionally long time, you can use sigalrm to set a timeout
 Dialogue: 0,0:12:40.64,0:12:46.72,English,,0,0,0,,And then a very important one is as we'll see that would be very important for our shell is the sigchild signal
-Dialogue: 0,0:12:47.30,0:12:54.48,English,,0,0,0,,Which the colonel sends to a parent every time one of its children terminates or stops
+Dialogue: 0,0:12:47.30,0:12:54.48,English,,0,0,0,,Which the kernel sends to a parent every time one of its children terminates or stops
 Dialogue: 0,0:12:55.48,0:12:57.90,English,,0,0,0,,Okay so this as we'll see now
 Dialogue: 0,0:12:58.44,0:13:02.58,English,,0,0,0,,We'll see this is how we're going...this is how a shell that is going to actually reap
 Dialogue: 0,0:13:02.66,0:13:08.40,English,,0,0,0,,It's all of its children right is by taking advantage of the sigchild signal
@@ -220,7 +220,7 @@ Dialogue: 0,0:17:02.22,0:17:04.00,English,,0,0,0,,And then we continue
 Dialogue: 0,0:17:04.24,0:17:08.70,English,,0,0,0,,Okay so it's just like kind of like an interrupt right we just temporarily pause
 Dialogue: 0,0:17:09.36,0:17:16.22,English,,0,0,0,,What we're doing in our code to execute this handler before just continuing on
 Dialogue: 0,0:17:18.98,0:17:21.16,English,,0,0,0,,Okay now we say that a signal is pending
-Dialogue: 0,0:17:21.80,0:17:25.98,English,,0,0,0,,If it's been sent by the colonel but not you have received
+Dialogue: 0,0:17:21.80,0:17:25.98,English,,0,0,0,,If it's been sent by the kernel but not you have received
 Dialogue: 0,0:17:27.98,0:17:34.92,English,,0,0,0,,Okay so if at any given point in time there can only be one pending signal of any particular type
 Dialogue: 0,0:17:36.84,0:17:40.70,English,,0,0,0,,Okay so this has very important consequences for using signals
 Dialogue: 0,0:17:40.70,0:17:47.32,English,,0,0,0,,Because you can't cue signals up right at any point in time there's there can only be one pending sigchild
@@ -234,13 +234,13 @@ Dialogue: 0,0:18:13.62,0:18:16.42,English,,0,0,0,,Okay now it can't stop signals
 Dialogue: 0,0:18:17.04,0:18:23.76,English,,0,0,0,,But it can stop the process from having to react to the route to that signal when it's received
 Dialogue: 0,0:18:27.84,0:18:34.10,English,,0,0,0,,Okay so block signals can be delivered but they won't be received until the signals unblocked
 Dialogue: 0,0:18:38.88,0:18:41.30,English,,0,0,0,,And pending signals are received at most once
-Dialogue: 0,0:18:46.34,0:18:49.36,English,,0,0,0,,Now the colonel keeps track of these pending and blocked
+Dialogue: 0,0:18:46.34,0:18:49.36,English,,0,0,0,,Now the kernel keeps track of these pending and blocked
 Dialogue: 0,0:18:49.90,0:18:54.42,English,,0,0,0,,Signals in bit vectors that will call pending and blocked
 Dialogue: 0,0:18:55.24,0:18:58.62,English,,0,0,0,,And pending represents the set of pending signals
 Dialogue: 0,0:18:58.74,0:19:04.24,English,,0,0,0,,Right where each bit in the pending bit vector corresponds to some particular signal
 Dialogue: 0,0:19:04.84,0:19:07.06,English,,0,0,0,,Okay so this is why they can't be queued right because
 Dialogue: 0,0:19:08.18,0:19:12.38,English,,0,0,0,,There's only one bit for any signal key,there's only one bit in the bit vector
-Dialogue: 0,0:19:12.84,0:19:18.00,English,,0,0,0,,And if we...and when we deliver a signal we're just setting will set that bit the colonel will set that bit
+Dialogue: 0,0:19:12.84,0:19:18.00,English,,0,0,0,,And if we...and when we deliver a signal we're just setting will set that bit the kernel will set that bit
 Dialogue: 0,0:19:18.30,0:19:24.26,English,,0,0,0,,We deliver another signal of the same type, it'll just set that bit again which has no effect
 Dialogue: 0,0:19:26.80,0:19:32.68,English,,0,0,0,,Now the kernel sets that the bit in pending when the signals delivered and it clears it
 Dialogue: 0,0:19:32.80,0:19:34.18,English,,0,0,0,,When the signals received
@@ -446,7 +446,7 @@ Dialogue: 0,0:38:36.38,0:38:39.30,English,,0,0,0,,And when at handler returns,it
 Dialogue: 0,0:38:40.36,0:38:45.80,English,,0,0,0,,To the to the instruction and handle or else that was where it was interrupted
 Dialogue: 0,0:38:46.36,0:38:50.50,English,,0,0,0,,And then handle or us continues its execution and eventually
 Dialogue: 0,0:38:50.50,0:38:54.34,English,,0,0,0,,Return back to the the point in the main program where it was interrupted
-Dialogue: 0,0:38:58.70,0:39:02.61,English,,0,0,0,,Now signals that the colonel always blocks
+Dialogue: 0,0:38:58.70,0:39:02.61,English,,0,0,0,,Now signals that the kernel always blocks
 Dialogue: 0,0:39:03.32,0:39:06.44,English,,0,0,0,,Pending signals of the type currently being handled right so
 Dialogue: 0,0:39:07.56,0:39:12.46,English,,0,0,0,,A handler for a signal of type t can't be interrupted
 Dialogue: 0,0:39:13.20,0:39:16.16,English,,0,0,0,,By the receipt of another signal of that same type
@@ -610,10 +610,10 @@ Dialogue: 0,0:54:19.56,0:54:21.70,English,,0,0,0,,And so it's really easy to mak
 Dialogue: 0,0:54:23.92,0:54:26.14,English,,0,0,0,,When you have an implicit assumption that
 Dialogue: 0,0:54:27.94,0:54:33.18,English,,0,0,0,,The that the receipt of a signal it can be used to count the occurrence of an event
 Dialogue: 0,0:54:34.82,0:54:38.32,English,,0,0,0,,So let's look at this, let's look at this example program
-Dialogue: 0,0:54:40.88,0:54:42.92,English,,0,0,0,,We install a sick child handler
+Dialogue: 0,0:54:40.88,0:54:42.92,English,,0,0,0,,We install a sigchild handler
 Dialogue: 0,0:54:43.92,0:54:49.40,English,,0,0,0,,Okay and this is actually this sort of close the loop member we talked about our example shell
 Dialogue: 0,0:54:49.96,0:54:53.38,English,,0,0,0,,We're wondering how are we going to reap those background children
-Dialogue: 0,0:54:53.76,0:54:57.42,English,,0,0,0,,Well we do it by installing a sick child handle like we're doing in this example
+Dialogue: 0,0:54:53.76,0:54:57.42,English,,0,0,0,,Well we do it by installing a sigchild handle like we're doing in this example
 Dialogue: 0,0:54:58.26,0:55:03.62,English,,0,0,0,,So this here we have a program that installs this sig child handler
 Dialogue: 0,0:55:04.28,0:55:08.86,English,,0,0,0,,And then it creates N different child processes
 Dialogue: 0,0:55:09.64,0:55:12.86,English,,0,0,0,,Where each child sleeps for a little bit and exits
@@ -621,7 +621,7 @@ Dialogue: 0,0:55:17.02,0:55:22.16,English,,0,0,0,,And then it spins until the cc
 Dialogue: 0,0:55:23.86,0:55:29.16,English,,0,0,0,,That the parent, I'm sorry, the parent spins until the ccount variable becomes zero
 Dialogue: 0,0:55:30.76,0:55:40.32,English,,0,0,0,,Now in our child handler we have a global that's initialized to zero ccount
 Dialogue: 0,0:55:43.94,0:55:48.40,English,,0,0,0,,And then we wait,we're going to wait so this child,when the child handler gets called that means
-Dialogue: 0,0:55:48.84,0:55:51.14,English,,0,0,0,,It's called because we received a sig_child signal
+Dialogue: 0,0:55:48.84,0:55:51.14,English,,0,0,0,,It's called because we received a sigchild signal
 Dialogue: 0,0:55:53.30,0:55:58.52,English,,0,0,0,,Okay so in our handler we're going to reap that child by calling weight
 Dialogue: 0,0:56:00.04,0:56:03.60,English,,0,0,0,,And we're going to dec...will decrement ccount
 Dialogue: 0,0:56:04.00,0:56:10.56,English,,0,0,0,,Okay so once all of the children if then have been reaped ccount will be zero
@@ -634,9 +634,9 @@ Dialogue: 0,0:56:38.04,0:56:42.62,English,,0,0,0,,We created five children,we te
 Dialogue: 0,0:56:43.58,0:56:45.16,English,,0,0,0,,But we only reaped two
 Dialogue: 0,0:56:47.26,0:56:51.94,English,,0,0,0,,Okay so that the problem is that when we the problem is that we assumed
 Dialogue: 0,0:56:52.76,0:56:54.84,English,,0,0,0,,That the receipt...
-Dialogue: 0,0:56:56.94,0:57:03.36,English,,0,0,0,,The execution of the child handled our correspondent to the single receipt of a single sig_child signal
+Dialogue: 0,0:56:56.94,0:57:03.36,English,,0,0,0,,The execution of the child handled our correspondent to the single receipt of a single sigchild signal
 Dialogue: 0,0:57:04.78,0:57:09.38,English,,0,0,0,,Okay when in reality there signals are true
-Dialogue: 0,0:57:10.40,0:57:15.90,English,,0,0,0,,We had in reality multiple sig_child signals were delivered to that child
+Dialogue: 0,0:57:10.40,0:57:15.90,English,,0,0,0,,We had in reality multiple sigchild signals were delivered to that child
 Dialogue: 0,0:57:15.90,0:57:19.10,English,,0,0,0,,Which kept overriding that at bit in the pending bit vector
 Dialogue: 0,0:57:20.26,0:57:26.68,English,,0,0,0,,And the delivery of those signals didn't cause any reaction in the process
 Dialogue: 0,0:57:26.68,0:57:30.00,English,,0,0,0,,Until that process was just about ready to be rescheduled
@@ -658,7 +658,7 @@ Dialogue: 0,0:58:38.68,0:58:42.78,English,,0,0,0,,And so we put that in this loo
 Dialogue: 0,0:58:43.08,0:58:48.78,English,,0,0,0,,Until there's no more terminated children in which case wait will...
 Dialogue: 0,0:58:49.24,0:58:53.22,English,,0,0,0,,Will exit with an error code of -1 and a error know of a child
 Dialogue: 0,0:58:53.80,0:58:58.00,English,,0,0,0,,So this isn't really an error it's just means there's no more terminated children
-Dialogue: 0,0:58:58.00,0:59:03.30,English,,0,0,0,,So we check as long as if our errno naughty child then we have an error
+Dialogue: 0,0:58:58.00,0:59:03.30,English,,0,0,0,,So we check as long as if our errno not echild then we have an error
 Dialogue: 0,0:59:03.82,0:59:06.72,English,,0,0,0,,Otherwise we terminated normally as we expect it
 Dialogue: 0,0:59:07.54,0:59:09.12,English,,0,0,0,,Now if we run this code
 Dialogue: 0,0:59:10.46,0:59:15.94,English,,0,0,0,,Now we we see that we reap all five children as as we should
@@ -685,7 +685,7 @@ Dialogue: 0,1:00:55.36,1:00:59.68,English,,0,0,0,,And on some systems if the pro
 Dialogue: 0,1:01:00.16,1:01:02.54,English,,0,0,0,,Before a slow system calls has finished
 Dialogue: 0,1:01:04.24,1:01:09.22,English,,0,0,0,,The kernel will just abort that system call and return from that system call with an error
 Dialogue: 0,1:01:09.92,1:01:14.54,English,,0,0,0,,Okay so from users point of view you're doing a read call
-Dialogue: 0,1:01:15.22,1:01:19.64,English,,0,0,0,,And it returns with this e enter signal this e enter error
+Dialogue: 0,1:01:15.22,1:01:19.64,English,,0,0,0,,And it returns with this eintr signal this eintr error
 Dialogue: 0,1:01:20.72,1:01:24.82,English,,0,0,0,,You did nothing wrong you just happen to have the bad luck of being interrupted by some signal
 Dialogue: 0,1:01:25.14,1:01:27.26,English,,0,0,0,,And so in your user code you have to check for that
 Dialogue: 0,1:01:27.32,1:01:33.34,English,,0,0,0,,And if a slow system call like read is interrupted by signal you have to redo it
@@ -718,7 +718,7 @@ Dialogue: 0,1:03:51.06,1:04:01.76,English,,0,0,0,,Okay so our simple show just i
 Dialogue: 0,1:04:02.46,1:04:09.72,English,,0,0,0,,And then in the parent it correctly blocks all of the signals temporarily while it adds the job to the job queue
 Dialogue: 0,1:04:12.60,1:04:16.26,English,,0,0,0,,And then it unblocks and then it unblocks those signals
 Dialogue: 0,1:04:17.78,1:04:22.76,English,,0,0,0,,Okay so this is correct and that it's protecting access to this the shared job queue
-Dialogue: 0,1:04:25.76,1:04:31.88,English,,0,0,0,,Because job queue is also manipulated by the sick child handler
+Dialogue: 0,1:04:25.76,1:04:31.88,English,,0,0,0,,Because job queue is also manipulated by the sigchild handler
 Dialogue: 0,1:04:32.06,1:04:37.68,English,,0,0,0,,So when a child terminates and the parent receives the sigchild
 Dialogue: 0,1:04:38.26,1:04:40.54,English,,0,0,0,,This handler runs
 Dialogue: 0,1:04:41.98,1:04:47.02,English,,0,0,0,,And this handler goes through and it reaps all of the children potentially terminated children
@@ -767,7 +767,7 @@ Dialogue: 0,1:08:27.90,1:08:34.30,English,,0,0,0,,Since we don't know that child
 Dialogue: 0,1:08:34.82,1:08:42.82,English,,0,0,0,,By default children inherit the the blocked a bit vector of their parents okay so when this child runs
 Dialogue: 0,1:08:44.60,1:08:51.74,English,,0,0,0,,After it returns from fork at this point right after the fork sigchild is blocked in the child as well right
 Dialogue: 0,1:08:52.34,1:08:55.28,English,,0,0,0,,So if we didn't do anything if and the child created children
-Dialogue: 0,1:08:56.74,1:09:01.58,English,,0,0,0,,And tried to reap you know reap them with a sick child handle that sick child handler wouldn't run right
+Dialogue: 0,1:08:56.74,1:09:01.58,English,,0,0,0,,And tried to reap you know reap them with a sigchild handle that sigchild handler wouldn't run right
 Dialogue: 0,1:09:01.60,1:09:02.44,English,,0,0,0,,So that would be a problem
 Dialogue: 0,1:09:03.42,1:09:08.30,English,,0,0,0,,So in the child before we execute that the program itself we unblock sigchild
 Dialogue: 0,1:09:09.16,1:09:11.60,English,,0,0,0,,And this was an example that I was alluding to last time
@@ -799,7 +799,7 @@ Dialogue: 0,1:11:45.94,1:11:51.24,English,,0,0,0,,Okay to avoid that race condit
 Dialogue: 0,1:11:53.48,1:11:55.42,English,,0,0,0,,And then we create the child
 Dialogue: 0,1:11:57.40,1:12:01.54,English,,0,0,0,,And then in the and then the parent we set pid to zero
 Dialogue: 0,1:12:03.92,1:12:05.70,English,,0,0,0,,Okay then we unblock sigchild
-Dialogue: 0,1:12:07.30,1:12:11.76,English,,0,0,0,,And then we wait for the sick child handler to run and set pid to nonzero
+Dialogue: 0,1:12:07.30,1:12:11.76,English,,0,0,0,,And then we wait for the sigchild handler to run and set pid to nonzero
 Dialogue: 0,1:12:15.56,1:12:18.34,English,,0,0,0,,Okay everybody see that I mean this so this is correct right
 Dialogue: 0,1:12:19.70,1:12:21.30,English,,0,0,0,,But it's extremely wasteful right
 Dialogue: 0,1:12:21.64,1:12:29.96,English,,0,0,0,,We're spinning...we're using valuable processor cycles in this tight spin loop
