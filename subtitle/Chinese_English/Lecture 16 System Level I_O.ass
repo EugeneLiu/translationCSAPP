@@ -15,10 +15,10 @@ Audio File: C:/Users/xqit/Desktop/backup/csapp/Lecture 16 System Level I-O.mp4
 Video File: C:/Users/xqit/Desktop/backup/csapp/Lecture 16 System Level I-O.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
-Video Zoom Percent: 0.500000
-Scroll Position: 1532
-Active Line: 1536
-Video Position: 125266
+Video Zoom Percent: 0.625000
+Scroll Position: 193
+Active Line: 201
+Video Position: 16148
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -30,205 +30,205 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 0,0:00:00.00,0:00:02.00,English,,0,0,0,,Good afternoon everyone
 Dialogue: 0,0:00:00.00,0:00:02.00,Chinese,,0,0,0,,大家下午好
 Dialogue: 0,0:00:03.10,0:00:07.70,English,,0,0,0,,So I apologize I have to I'm going to sit mostly through this lecture
-Dialogue: 0,0:00:03.10,0:00:07.70,Chinese,,0,0,0,,抱歉，这节课我可能大部分时间都得坐着讲
+Dialogue: 0,0:00:03.10,0:00:07.70,Chinese,,0,0,0,,抱歉这节课我可能大部分时间都得坐着讲
 Dialogue: 0,0:00:07.70,0:00:10.00,English,,0,0,0,,I managed to do something to my knee yesterday
 Dialogue: 0,0:00:07.70,0:00:10.00,Chinese,,0,0,0,,昨天我的膝盖出了点问题
 Dialogue: 0,0:00:10.05,0:00:13.12,English,,0,0,0,,And I'm having trouble moving around very much
-Dialogue: 0,0:00:10.05,0:00:13.12,Chinese,,0,0,0,,所以现在不便过多走动
+Dialogue: 0,0:00:10.05,0:00:13.12,Chinese,,0,0,0,,所以不便过多走动
 Dialogue: 0,0:00:13.86,0:00:18.56,English,,0,0,0,,But today what we're going to talk about is input/output
-Dialogue: 0,0:00:13.86,0:00:18.56,Chinese,,0,0,0,,今天我们要讨论的是输入/输出
+Dialogue: 0,0:00:13.86,0:00:18.56,Chinese,,0,0,0,,今天我们要讨论的话题是输入/输出
 Dialogue: 0,0:00:18.60,0:00:23.52,English,,0,0,0,,What it looks like from the programmers' perspective
-Dialogue: 0,0:00:18.60,0:00:23.52,Chinese,,0,0,0,,从程序员的角度来讨论它是什么样的
+Dialogue: 0,0:00:18.60,0:00:23.52,Chinese,,0,0,0,,我们要从程序员的角度来讨论这个话题
 Dialogue: 0,0:00:24.62,0:00:33.72,English,,0,0,0,,And this is a you've already learned sort of a lot of the standard Unix libraries for like printf and scanf
-Dialogue: 0,0:00:24.62,0:00:33.72,Chinese,,0,0,0,,大家对于许多标准的 Unix 库已经有所了解，比如 printf 和 scanf
+Dialogue: 0,0:00:24.62,0:00:33.72,Chinese,,0,0,0,,大家已经学过很多标准的 Unix 库，如 printf 和 scanf
 Dialogue: 0,0:00:34.26,0:00:37.30,English,,0,0,0,,And those routines and we'll talk about them a little but
-Dialogue: 0,0:00:34.26,0:00:37.30,Chinese,,0,0,0,,还有其他例程等等，我们会稍微谈谈它们
+Dialogue: 0,0:00:34.26,0:00:37.30,Chinese,,0,0,0,,以及例程等，我们这节课也会有所涉及
 Dialogue: 0,0:00:37.68,0:00:40.68,English,,0,0,0,,What we'll first talk about is actually lower level I/O
-Dialogue: 0,0:00:37.68,0:00:40.68,Chinese,,0,0,0,,首先要谈的是低级 I/O
+Dialogue: 0,0:00:37.68,0:00:40.68,Chinese,,0,0,0,,我们今天首先要讲的是低级 I/O
 Dialogue: 0,0:00:40.68,0:00:44.40,English,,0,0,0,,Stuff that is directly interfacing to the operating system
-Dialogue: 0,0:00:40.68,0:00:44.40,Chinese,,0,0,0,,直接对接操作系统的 I/O
+Dialogue: 0,0:00:40.68,0:00:44.40,Chinese,,0,0,0,,这些是直接面向操作系统的接口
 Dialogue: 0,0:00:45.26,0:00:47.94,English,,0,0,0,,And this is what you're going to need to learn about
-Dialogue: 0,0:00:45.26,0:00:47.94,Chinese,,0,0,0,,这就是大家需要了解的内容
+Dialogue: 0,0:00:45.26,0:00:47.94,Chinese,,0,0,0,,也是大家要学的内容
 Dialogue: 0,0:00:48.78,0:00:55.82,English,,0,0,0,,Partly some of this material you're going to need for the next lab that comes out at midnight tonight the Shell Lab
-Dialogue: 0,0:00:48.78,0:00:55.82,Chinese,,0,0,0,,其中有些材料是下次实验中需要用到的，即今晚午夜发布的 Shell Lab 实验
+Dialogue: 0,0:00:48.78,0:00:55.82,Chinese,,0,0,0,,其中有些是将于今晚12点开放的 Shell Lab 实验中需要用到的
 Dialogue: 0,0:00:56.48,0:00:58.32,English,,0,0,0,,And you'll need to
-Dialogue: 0,0:00:56.48,0:00:58.32,Chinese,,0,0,0,,而且大家需要
+Dialogue: 0,0:00:56.48,0:00:58.32,Chinese,,0,0,0,,而且
 Dialogue: 0,0:00:58.96,0:01:07.72,English,,0,0,0,,Also you'll be revisiting this at several other labs along the course including the final lab, the Web Proxy Lab
-Dialogue: 0,0:00:58.96,0:01:07.72,Chinese,,0,0,0,,本门课程的其他几个实验中也需要用到本节课的内容，包括最后的 Web Proxy Lab 实验
+Dialogue: 0,0:00:58.96,0:01:07.72,Chinese,,0,0,0,,之后的其他几个实验也要用到本节课的内容，包括最后的 Web Proxy Lab 实验
 Dialogue: 0,0:01:07.86,0:01:17.08,English,,0,0,0,,So this is sort of where we're really digging down deeply into this type of programming you do
-Dialogue: 0,0:01:07.86,0:01:17.08,Chinese,,0,0,0,,我们需要对此进行深入研究
+Dialogue: 0,0:01:07.86,0:01:17.08,Chinese,,0,0,0,,我们有必要对此进行深入研究
 Dialogue: 0,0:01:17.08,0:01:23.54,English,,0,0,0,,If you're writing system software things that are very just barely above the operating system level
-Dialogue: 0,0:01:17.08,0:01:23.54,Chinese,,0,0,0,,因为这有助于大家编写层级略高于操作系统的系统软件
+Dialogue: 0,0:01:17.08,0:01:23.54,Chinese,,0,0,0,,这有助于大家编写级别略高于操作系统的系统软件
 Dialogue: 0,0:01:24.00,0:01:32.38,English,,0,0,0,,And I know for myself learning this material I actually learned this material from 213
-Dialogue: 0,0:01:24.00,0:01:32.38,Chinese,,0,0,0,,我自己也从 213 学过这些材料
+Dialogue: 0,0:01:24.00,0:01:32.38,Chinese,,0,0,0,,这些内容我是从课程 213 学的
 Dialogue: 0,0:01:32.38,0:01:36.50,English,,0,0,0,,My co-author David O'Halloran is one who knew this stuff already
-Dialogue: 0,0:01:32.38,0:01:36.50,Chinese,,0,0,0,,我的合著者 David O'Halloran 是了解这些的人
+Dialogue: 0,0:01:32.38,0:01:36.50,Chinese,,0,0,0,,我的合著者 David O'Halloran 对此非常熟悉
 Dialogue: 0,0:01:36.78,0:01:38.12,English,,0,0,0,,He wrote that part of the book
 Dialogue: 0,0:01:36.78,0:01:38.12,Chinese,,0,0,0,,他编写了书中的相关部分
 Dialogue: 0,0:01:38.46,0:01:40.74,English,,0,0,0,,I learned it by reading the book just like you are
-Dialogue: 0,0:01:38.46,0:01:40.74,Chinese,,0,0,0,,我也是像大家一样，通过读这本书才学到的
+Dialogue: 0,0:01:38.46,0:01:40.74,Chinese,,0,0,0,,我也像大家一样，通过这本书学习这些
 Dialogue: 0,0:01:41.04,0:01:46.14,English,,0,0,0,,But I found it actually very useful to know a variety of different other situations
-Dialogue: 0,0:01:41.04,0:01:46.14,Chinese,,0,0,0,,但我发现同时去了解我所处的许多其他情形
+Dialogue: 0,0:01:41.04,0:01:46.14,Chinese,,0,0,0,,我觉得能够了解这些不同的情形
 Dialogue: 0,0:01:46.14,0:01:47.51,English,,0,0,0,,I've been in in the meantime
-Dialogue: 0,0:01:46.14,0:01:47.51,Chinese,,0,0,0,,实际上很有用
+Dialogue: 0,0:01:46.14,0:01:47.51,Chinese,,0,0,0,,是很有用的
 Dialogue: 0,0:01:47.51,0:01:52.56,English,,0,0,0,,This is quite a few years ago and so I think it's worth understanding
-Dialogue: 0,0:01:49.96,0:01:52.56,Chinese,,0,0,0,,这是好几年前的事了。总之，我认为该内容值得我们去了解
+Dialogue: 0,0:01:49.96,0:01:52.56,Chinese,,0,0,0,,当然这是好几年前了。总之，我认为这些内容值得大家学习
 Dialogue: 0,0:01:53.20,0:01:56.00,English,,0,0,0,,And I'll also mention this kind of material usually is taught
-Dialogue: 0,0:01:53.20,0:01:56.00,Chinese,,0,0,0,,这种材料通常以授课的方式呈现
+Dialogue: 0,0:01:53.20,0:01:56.00,Chinese,,0,0,0,,这些内容通常只会在课堂上讲到
 Dialogue: 0,0:01:56.10,0:02:00.18,English,,0,0,0,,You don't really see it covered in most books
-Dialogue: 0,0:01:56.10,0:02:00.18,Chinese,,0,0,0,,因为大多数书籍中不会涉及这部分内容
+Dialogue: 0,0:01:56.10,0:02:00.18,Chinese,,0,0,0,,大多数书籍并不会涉及
 Dialogue: 0,0:02:01.14,0:02:06.06,English,,0,0,0,,Except for ones that are really oriented toward system programmers and are fairly arcane
-Dialogue: 0,0:02:01.14,0:02:06.06,Chinese,,0,0,0,,除非是真正面向系统程序员编写的书籍，但这些书籍读起来相当深奥
-Dialogue: 0,0:02:06.64,0:02:10.14,English,,0,0,0,,Or you try and learn it by reading man pages
-Dialogue: 0,0:02:06.64,0:02:10.14,Chinese,,0,0,0,,大家可能也会在手册页中看到对相关内容的阐释
+Dialogue: 0,0:02:01.14,0:02:06.06,Chinese,,0,0,0,,除非是真正面向系统程序员编写的书籍，但这些书相当深奥
+Dialogue: 0,0:02:06.64,0:02:10.14,English,,0,0,0,,Or you try and learn it by reading man. pages
+Dialogue: 0,0:02:06.64,0:02:10.14,Chinese,,0,0,0,,有时候手册里也会有
 Dialogue: 0,0:02:10.26,0:02:17.86,English,,0,0,0,,And that's a fairly cryptic way to try and understand sort of a set of abstractions provided by an API
-Dialogue: 0,0:02:10.26,0:02:17.86,Chinese,,0,0,0,,但这不过是对 API 中各种抽象现象的含糊描述罢了
+Dialogue: 0,0:02:10.26,0:02:17.86,Chinese,,0,0,0,,但不过是以一种晦涩的方式去解释 API 中各种抽象的概念
 Dialogue: 0,0:02:18.08,0:02:19.52,English,,0,0,0,,So I hope you'll find this useful
-Dialogue: 0,0:02:18.08,0:02:19.52,Chinese,,0,0,0,,所以我希望大家会发现本节课很有用
+Dialogue: 0,0:02:18.08,0:02:19.52,Chinese,,0,0,0,,所以我希望大家会觉得本节课很有帮助
 Dialogue: 0,0:02:22.68,0:02:27.00,English,,0,0,0,,So what we'll talk about then is that what I mentioned this low-level I/O that
-Dialogue: 0,0:02:22.68,0:02:27.00,Chinese,,0,0,0,,言归正传，我们今天要讨论的是我之前提到的低级 I/O
+Dialogue: 0,0:02:22.68,0:02:27.00,Chinese,,0,0,0,,所以今天我们要讲低级 I/O
 Dialogue: 0,0:02:27.34,0:02:31.68,English,,0,0,0,,I supported by Unix and other related operating systems
-Dialogue: 0,0:02:27.34,0:02:31.68,Chinese,,0,0,0,,用 Unix 和其他相关的操作系统来支持的低级 I/O
+Dialogue: 0,0:02:27.34,0:02:31.68,Chinese,,0,0,0,,Unix 和其他相关的操作系统都支持这个功能
 Dialogue: 0,0:02:32.36,0:02:36.34,English,,0,0,0,,And then a package called RIO which stands for robust I/O
-Dialogue: 0,0:02:32.36,0:02:36.34,Chinese,,0,0,0,,然后我们会讨论用来对 I/O 进行维稳加固的软件包 RIO
+Dialogue: 0,0:02:32.36,0:02:36.34,Chinese,,0,0,0,,然后会讲 RIO，一种健壮的  I/O 包
 Dialogue: 0,0:02:37.10,0:02:45.42,English,,0,0,0,,And you will actually not be using this package until the last lab for the course the proxy lab
-Dialogue: 0,0:02:37.10,0:02:45.42,Chinese,,0,0,0,,虽然大家只有在最后的 Proxy Lab 实验中才会用到它
+Dialogue: 0,0:02:37.10,0:02:45.42,Chinese,,0,0,0,,虽然 RIO 包只有到最后的 Proxy Lab 实验中才会
 Dialogue: 0,0:02:45.90,0:02:47.74,English,,0,0,0,,At which time you'll use it a lot
-Dialogue: 0,0:02:45.90,0:02:47.74,Chinese,,0,0,0,,而且是经常用到它
+Dialogue: 0,0:02:45.90,0:02:47.74,Chinese,,0,0,0,,频繁用到
 Dialogue: 0,0:02:48.30,0:02:50.38,English,,0,0,0,,But it's worth looking at and partly
-Dialogue: 0,0:02:48.30,0:02:50.38,Chinese,,0,0,0,,但仍然值得我们在本节课中讨论，部分原因是
+Dialogue: 0,0:02:48.30,0:02:50.38,Chinese,,0,0,0,,但这节课还是有必要讲一讲
 Dialogue: 0,0:02:50.86,0:02:53.80,English,,0,0,0,,It's in the book it's well documented in the book
-Dialogue: 0,0:02:50.86,0:02:53.80,Chinese,,0,0,0,,本书对其进行了很好的讲解
+Dialogue: 0,0:02:50.86,0:02:53.80,Chinese,,0,0,0,,本书中说得很详尽
 Dialogue: 0,0:02:54.34,0:02:58.24,English,,0,0,0,,And if you really want to understand how software works or a system works
-Dialogue: 0,0:02:54.34,0:02:58.24,Chinese,,0,0,0,,如果大家真的想了解软件或系统的工作原理
+Dialogue: 0,0:02:54.34,0:02:58.24,Chinese,,0,0,0,,如果大家真正想了解软件或系统是怎么工作的
 Dialogue: 0,0:02:58.74,0:03:04.28,English,,0,0,0,,The best thing you can do is if you...if there's good quality source code to look at and study
-Dialogue: 0,0:02:58.74,0:03:04.28,Chinese,,0,0,0,,最好的方式就是看并学习优质的源代码
+Dialogue: 0,0:02:58.74,0:03:04.28,Chinese,,0,0,0,,最好的方式就是学习优质的源代码
 Dialogue: 0,0:03:04.56,0:03:06.22,English,,0,0,0,,You can learn a lot from doing that
-Dialogue: 0,0:03:04.56,0:03:06.22,Chinese,,0,0,0,,大家可以从中学到很多东西
+Dialogue: 0,0:03:04.56,0:03:06.22,Chinese,,0,0,0,,大家可以从中学到很多
 Dialogue: 0,0:03:06.22,0:03:12.57,English,,0,0,0,,And I really recommend for that chapter in the book that you go ahead and study all of the code
-Dialogue: 0,0:03:06.22,0:03:12.57,Chinese,,0,0,0,,我真心建议大家去阅读本书中的那一章，研究构成 RIO 的所有代码
+Dialogue: 0,0:03:06.22,0:03:12.57,Chinese,,0,0,0,,建议大家真要去读一读书中关于 RIO 包的章节，学习其中的所有代码
 Dialogue: 0,0:03:12.86,0:03:15.24,English,,0,0,0,,That makes up RIO. It's not a huge amount
-Dialogue: 0,0:03:12.86,0:03:15.24,Chinese,,0,0,0,,代码不会很多
+Dialogue: 0,0:03:12.86,0:03:15.24,Chinese,,0,0,0,,代码不多
 Dialogue: 0,0:03:15.84,0:03:19.82,English,,0,0,0,,And just get an appreciation for the subtleties involved in
-Dialogue: 0,0:03:15.84,0:03:19.82,Chinese,,0,0,0,,只需要去体会在处理不同情形时的微妙之处即可
+Dialogue: 0,0:03:15.84,0:03:19.82,Chinese,,0,0,0,,只用去体会不同代码的细微差别
 Dialogue: 0,0:03:19.82,0:03:24.72,English,,0,0,0,,How you deal with errors, how you deal with exceptional conditions and things like that
-Dialogue: 0,0:03:19.82,0:03:24.72,Chinese,,0,0,0,,包括如何处理错误、如何异常情况等等
+Dialogue: 0,0:03:19.82,0:03:24.72,Chinese,,0,0,0,,学习它们包括如何处理出错、异常情况等
 Dialogue: 0,0:03:26.16,0:03:33.04,English,,0,0,0,,And then we'll talk some about how files are represented the sort of various data structures behind files
-Dialogue: 0,0:03:26.16,0:03:33.04,Chinese,,0,0,0,,然后我们将讨论文件的表述方式，即文件背后的各种数据结构
+Dialogue: 0,0:03:26.16,0:03:33.04,Chinese,,0,0,0,,然后我们会讲文件是如何被描述的，如文件相关的数据结构
 Dialogue: 0,0:03:33.60,0:03:37.82,English,,0,0,0,,How they support standard I/O and I/O redirection in Unix
-Dialogue: 0,0:03:33.60,0:03:37.78,Chinese,,0,0,0,,它们如何在 Unix 中支持标准 I/O 和 I/O 重定向
+Dialogue: 0,0:03:33.60,0:03:37.78,Chinese,,0,0,0,,这些结构在 Unix 中如何支持标准 I/O 和 I/O 重定向
 Dialogue: 0,0:03:38.66,0:03:43.72,English,,0,0,0,,And we'll also talk about the so-called buffered I/O
-Dialogue: 0,0:03:38.66,0:03:43.72,Chinese,,0,0,0,,我们还将讨论所谓的缓冲 I/O
+Dialogue: 0,0:03:38.66,0:03:43.72,Chinese,,0,0,0,,我们还会讲到带缓冲的 I/O
 Dialogue: 0,0:03:43.72,0:03:47.64,English,,0,0,0,,The I/O that you're more familiar with in C when you use printf and scanf
-Dialogue: 0,0:03:43.72,0:03:47.64,Chinese,,0,0,0,,它常见于 C 语言中的 printf 和 scanf 函数
+Dialogue: 0,0:03:43.72,0:03:47.64,Chinese,,0,0,0,,大家可能比较熟悉的是 C 语言中的 printf 和 scanf 函数
 Dialogue: 0,0:03:49.86,0:03:56.45,English,,0,0,0,,So Unix actually has a much simpler and more unified view of I/O than any other operating system and it's
-Dialogue: 0,0:03:49.86,0:03:56.45,Chinese,,0,0,0,,Unix 实际上拥有所有操纵系统中最简单、最统一的 I/O 视图
+Dialogue: 0,0:03:49.86,0:03:56.45,Chinese,,0,0,0,,比起其他操作系统，Unix 中的 I/O 更简单且更一致
 Dialogue: 0,0:03:56.45,0:03:58.90,English,,0,0,0,,One of the nice design features of it
-Dialogue: 0,0:03:56.45,0:03:58.90,Chinese,,0,0,0,,它的其中一个设计优点是
+Dialogue: 0,0:03:56.45,0:03:58.90,Chinese,,0,0,0,,它的一个设计优点是
 Dialogue: 0,0:03:59.56,0:04:03.74,English,,0,0,0,,Is that a lot of abstractions are built into the notion of a file
-Dialogue: 0,0:03:59.56,0:04:03.74,Chinese,,0,0,0,,将许多抽象的事务嵌入文件的概念中
+Dialogue: 0,0:03:59.56,0:04:03.74,Chinese,,0,0,0,,用文件来描述很多抽象的事物
 Dialogue: 0,0:04:04.36,0:04:06.80,English,,0,0,0,,And a file is really just a sequence of bytes
-Dialogue: 0,0:04:04.36,0:04:06.80,Chinese,,0,0,0,,而文件实际上只是一个字节序列
+Dialogue: 0,0:04:04.36,0:04:06.80,Chinese,,0,0,0,,文件实际上只是一个字节序列
 Dialogue: 0,0:04:07.60,0:04:17.10,English,,0,0,0,,And in Unix does not distinguish between different classes of files unlike, say windows or earlier versions the macintosh operating system
-Dialogue: 0,0:04:07.60,0:04:17.10,Chinese,,0,0,0,,在 Unix 中不区分不同类别的文件，这与 Windows 或早期版本的 macintosh 操作系统不同
+Dialogue: 0,0:04:07.60,0:04:17.10,Chinese,,0,0,0,,与 windows 或早期的 macintosh 操作系统不同，Unix 不区分文件类别
 Dialogue: 0,0:04:17.32,0:04:18.76,English,,0,0,0,,It just thinks them as bytes
-Dialogue: 0,0:04:17.32,0:04:18.76,Chinese,,0,0,0,,Unix 只是把文件看作字节
+Dialogue: 0,0:04:17.32,0:04:18.76,Chinese,,0,0,0,,只是把文件看作字节
 Dialogue: 0,0:04:18.82,0:04:25.94,English,,0,0,0,,And the operating system level has essentially no understanding of a more detailed structure inside of a file
-Dialogue: 0,0:04:18.82,0:04:25.94,Chinese,,0,0,0,,操作系统层级基本上不了解文件内部的详细结构
+Dialogue: 0,0:04:18.82,0:04:25.94,Chinese,,0,0,0,,操作系统基本上不了解文件内部的详细结构
 Dialogue: 0,0:04:27.44,0:04:33.15,English,,0,0,0,,And one of the things it does is a file is normally originally thought of as
-Dialogue: 0,0:04:27.44,0:04:33.15,Chinese,,0,0,0,,通常文件最初被视作
+Dialogue: 0,0:04:27.44,0:04:33.15,Chinese,,0,0,0,,它通常把文件看作
 Dialogue: 0,0:04:33.78,0:04:39.78,English,,0,0,0,,Something that's stored on say a disk drive or some other external storage device
 Dialogue: 0,0:04:33.78,0:04:39.78,Chinese,,0,0,0,,存储在磁盘驱动器或其他外部存储设备上的某个东西
 Dialogue: 0,0:04:40.52,0:04:44.94,English,,0,0,0,,And that you open you read it or write it you close it
-Dialogue: 0,0:04:40.52,0:04:44.94,Chinese,,0,0,0,,通过打开、读写、关闭
+Dialogue: 0,0:04:40.52,0:04:44.94,Chinese,,0,0,0,,可以对其执行打开、读写、关闭
 Dialogue: 0,0:04:45.36,0:04:47.30,English,,0,0,0,,Those sort of standard operations
-Dialogue: 0,0:04:45.36,0:04:47.30,Chinese,,0,0,0,,等等这样一系列的标准操作来执行
+Dialogue: 0,0:04:45.36,0:04:47.30,Chinese,,0,0,0,,等一系列标准操作
 Dialogue: 0,0:04:47.76,0:04:57.62,English,,0,0,0,,But Unix also use the notion of a file to represent many other different  things including for example the devices
-Dialogue: 0,0:04:47.76,0:04:57.62,Chinese,,0,0,0,,但 Unix 也会用文件的概念来表示许多其他不同的东西，例如
+Dialogue: 0,0:04:47.76,0:04:57.62,Chinese,,0,0,0,,Unix 也会用文件来描述很多其他不同的事物，如
 Dialogue: 0,0:04:58.16,0:05:05.38,English,,0,0,0,,That are the I/O devices that are connected to a particular machine the TTY stands for teletype
-Dialogue: 0,0:04:58.16,0:05:05.38,Chinese,,0,0,0,,连接到特定机器上的 I/O 设备。譬如 TTY 代表电传打字机
+Dialogue: 0,0:04:58.16,0:05:05.38,Chinese,,0,0,0,,连接到某台机器上的 I/O 设备。例如，用 TTY 来代表电传打字机
 Dialogue: 0,0:05:06.00,0:05:14.42,English,,0,0,0,,Which is an antique terminology for how people used to actually interface typewriters to computers
-Dialogue: 0,0:05:06.00,0:05:14.42,Chinese,,0,0,0,,这是一种古老的术语，过去计算机界面中常常用此来表示打字机
+Dialogue: 0,0:05:06.00,0:05:14.42,Chinese,,0,0,0,,这种说法比较古老，过去人们用它来描述打字机与计算机的接口
 Dialogue: 0,0:05:15.10,0:05:21.92,English,,0,0,0,,The other thing that are viewed as like files are the network connections what are known as sockets
-Dialogue: 0,0:05:15.10,0:05:21.92,Chinese,,0,0,0,,另一个被看作文件的是网络连接，即套接字
+Dialogue: 0,0:05:15.10,0:05:21.92,Chinese,,0,0,0,,另一个是网络连接，俗称套接字
 Dialogue: 0,0:05:22.46,0:05:26.16,English,,0,0,0,,And when you do communication over the Internet
-Dialogue: 0,0:05:22.46,0:05:26.16,Chinese,,0,0,0,,当跨互联网进行通信时
+Dialogue: 0,0:05:22.46,0:05:26.16,Chinese,,0,0,0,,当我们通过互联网进行通信时
 Dialogue: 0,0:05:26.56,0:05:30.74,English,,0,0,0,,You do it by you send a message by writing to a socket
-Dialogue: 0,0:05:26.56,0:05:30.74,Chinese,,0,0,0,,我们通过调用套接字来发送消息
+Dialogue: 0,0:05:26.56,0:05:30.74,Chinese,,0,0,0,,消息是写入套接字来发送的
 Dialogue: 0,0:05:31.32,0:05:36.78,English,,0,0,0,,And you accept incoming communication by reading from a socket
-Dialogue: 0,0:05:31.32,0:05:36.78,Chinese,,0,0,0,,并通过读取套接字中的内容来接收消息
+Dialogue: 0,0:05:31.32,0:05:36.78,Chinese,,0,0,0,,并从套接字读出来接收的
 Dialogue: 0,0:05:36.80,0:05:42.36,English,,0,0,0,,And so the same low-level API is the same
-Dialogue: 0,0:05:36.80,0:05:42.36,Chinese,,0,0,0,,对于低级 API 来说也是如此
+Dialogue: 0,0:05:36.80,0:05:42.36,Chinese,,0,0,0,,低级 API 中也是如此
 Dialogue: 0,0:05:42.36,0:05:48.22,English,,0,0,0,,Whether you're reading or writing files on your disk drive or sending packets over the internet
-Dialogue: 0,0:05:42.36,0:05:48.22,Chinese,,0,0,0,,无论是在磁盘驱动器上读文件还是写文件，还是通过互联网发送数据包
+Dialogue: 0,0:05:42.36,0:05:48.22,Chinese,,0,0,0,,在磁盘驱动器上读或写文件以及通过互联网发送数据包
 Dialogue: 0,0:05:54.76,0:06:01.68,English,,0,0,0,,So the core operations then associated with files of course are opening and closing them and reading and writing them
-Dialogue: 0,0:05:54.76,0:06:01.68,Chinese,,0,0,0,,与文件相关的核心操作是打开和关闭以及读和写
+Dialogue: 0,0:05:54.76,0:06:01.68,Chinese,,0,0,0,,都基于文件的打开、读写和关闭这些核心操作
 Dialogue: 0,0:06:03.06,0:06:07.76,English,,0,0,0,,The other sort of attribute that's associated with most but not all files
-Dialogue: 0,0:06:03.06,0:06:07.76,Chinese,,0,0,0,,与大多数但不是所有文件相关联的另一种属性是
+Dialogue: 0,0:06:03.06,0:06:07.76,Chinese,,0,0,0,,大多数文件还有另一种属性——文件位置
 Dialogue: 0,0:06:08.22,0:06:12.22,English,,0,0,0,,Is what's called the file position so if again if you imagine
-Dialogue: 0,0:06:08.22,0:06:12.22,Chinese,,0,0,0,,「文件位置」。大家设想一下：
+Dialogue: 0,0:06:08.22,0:06:12.22,Chinese,,0,0,0,,大家设想一下
 Dialogue: 0,0:06:12.52,0:06:17.25,English,,0,0,0,,When you're reading from a file you don't want to always start at the beginning every time you do a read
-Dialogue: 0,0:06:12.52,0:06:17.25,Chinese,,0,0,0,,当从文件中读取数据时，没有人希望每次读取总是从头开始
+Dialogue: 0,0:06:12.52,0:06:17.25,Chinese,,0,0,0,,在读文件时，都不希望总是从头开始
 Dialogue: 0,0:06:17.31,0:06:20.74,English,,0,0,0,,You read some data and then you read some more data
-Dialogue: 0,0:06:17.31,0:06:20.74,Chinese,,0,0,0,,而是希望可以接着上次结束的地方继续读取
+Dialogue: 0,0:06:17.31,0:06:20.74,Chinese,,0,0,0,,而是先读一部分，接着再读一部分
 Dialogue: 0,0:06:20.74,0:06:25.40,English,,0,0,0,,And so that's tracked by a file position which is just a counter
-Dialogue: 0,0:06:20.74,0:06:25.40,Chinese,,0,0,0,,这时候便会用到文件位置的追踪，文件位置只是一种计数器
-Dialogue: 0,0:06:25.66,0:06:31.56,English,,0,0,0,,That says how many bytes have been written read from this file so far
-Dialogue: 0,0:06:25.66,0:06:31.56,Chinese,,0,0,0,,标记到目前为止已从该文件中读取了多少字节
+Dialogue: 0,0:06:20.74,0:06:25.40,Chinese,,0,0,0,,这时候就会用到文件位置来追踪，它相当于一种计数器
+Dialogue: 0,0:06:25.66,0:06:31.56,English,,0,0,0,,That says how many bytes have been read from this file so far
+Dialogue: 0,0:06:25.66,0:06:31.56,Chinese,,0,0,0,,记录了截至目前已读的文件字节数
 Dialogue: 0,0:06:31.58,0:06:32.94,English,,0,0,0,,So that I know where to go
-Dialogue: 0,0:06:31.58,0:06:32.94,Chinese,,0,0,0,,这样一来便知道接下来要从哪里开始
+Dialogue: 0,0:06:31.58,0:06:32.94,Chinese,,0,0,0,,于是接下来就知道从哪里开始读
 Dialogue: 0,0:06:33.84,0:06:40.70,English,,0,0,0,,You can actually even alter that value with a various classes operation called seeking
-Dialogue: 0,0:06:33.84,0:06:40.70,Chinese,,0,0,0,,实际上，你甚至可以使用 seek 操作来改变该数值
+Dialogue: 0,0:06:33.84,0:06:40.70,Chinese,,0,0,0,,我们甚至可以执行 seek 操作来改变文件位置的值
 Dialogue: 0,0:06:41.06,0:06:44.94,English,,0,0,0,,Which is just a way of changing the file pointer the position pointer
-Dialogue: 0,0:06:41.06,0:06:44.94,Chinese,,0,0,0,,这只是一种改变文件位置指针的方法
+Dialogue: 0,0:06:41.06,0:06:44.94,Chinese,,0,0,0,,从而改变文件位置指针的指向
 Dialogue: 0,0:06:45.96,0:06:48.64,English,,0,0,0,,Now that doesn't work too well if your input is a terminal
-Dialogue: 0,0:06:45.96,0:06:48.64,Chinese,,0,0,0,,该方法不太适用于输入是终端的情形
+Dialogue: 0,0:06:45.96,0:06:48.64,Chinese,,0,0,0,,但如果是基于终端的输入，该方法则不太适用
 Dialogue: 0,0:06:49.06,0:06:56.05,English,,0,0,0,,Where you can't move, you can't sort of back up and have recover data
-Dialogue: 0,0:06:49.06,0:06:56.05,Chinese,,0,0,0,,因为该情形下你无法移动，无法备份和恢复
+Dialogue: 0,0:06:49.06,0:06:56.05,Chinese,,0,0,0,,因为无法移动、备份和恢复先前已经读入的数据
 Dialogue: 0,0:06:56.05,0:07:01.96,English,,0,0,0,,That was presented to it earlier or jump ahead and start accepting data that hasn't been typed yet
-Dialogue: 0,0:06:56.05,0:07:01.96,Chinese,,0,0,0,,之前已经提交过的数据，而且也无法提前接收还未输入的数据
+Dialogue: 0,0:06:56.05,0:07:01.96,Chinese,,0,0,0,,也无法提前接收还未键入的数据
 Dialogue: 0,0:07:02.36,0:07:06.20,English,,0,0,0,,So there's some kinds of files have a file position and seeking
-Dialogue: 0,0:07:02.36,0:07:06.20,Chinese,,0,0,0,,所以有些文件有文件位置和搜索
+Dialogue: 0,0:07:02.36,0:07:06.20,Chinese,,0,0,0,,所以有些文件有文件位置和 seek 操作
 Dialogue: 0,0:07:06.54,0:07:08.96,English,,0,0,0,,And others don't similar to a network socket
-Dialogue: 0,0:07:06.54,0:07:08.96,Chinese,,0,0,0,,另一些文件则没有，类似于网络套接字
+Dialogue: 0,0:07:06.54,0:07:08.96,Chinese,,0,0,0,,有些文件没有，如网络套接字
 Dialogue: 0,0:07:08.96,0:07:16.68,English,,0,0,0,,You can't jump a socket for it in time you can only read or write the particular packets as they come in
-Dialogue: 0,0:07:08.96,0:07:16.68,Chinese,,0,0,0,,你无法在时间上进行跳转，只能在特定数据包进入时对其进行读或写操作
+Dialogue: 0,0:07:08.96,0:07:16.68,Chinese,,0,0,0,,你无法在时间上进行跳转，只能在数据包进入时对其进行读或写
 Dialogue: 0,0:07:18.98,0:07:22.59,English,,0,0,0,,But in general think of it then as the file position
-Dialogue: 0,0:07:18.98,0:07:22.59,Chinese,,0,0,0,,总的来说，我们把它看作文件位置
+Dialogue: 0,0:07:18.98,0:07:22.59,Chinese,,0,0,0,,总之，可以把文件位置
 Dialogue: 0,0:07:22.94,0:07:26.70,English,,0,0,0,,As part of the data associated with an open file
-Dialogue: 0,0:07:22.94,0:07:26.70,Chinese,,0,0,0,,看作与打开的文件相关联的数据的一部分
+Dialogue: 0,0:07:22.94,0:07:26.70,Chinese,,0,0,0,,当作与打开文件相关联的数据的一部分
 Dialogue: 0,0:07:27.06,0:07:30.30,English,,0,0,0,,That tells me how far along in this file have I read or written
-Dialogue: 0,0:07:27.06,0:07:30.30,Chinese,,0,0,0,,借此获悉目前文件读取或写入的进程
+Dialogue: 0,0:07:27.06,0:07:30.30,Chinese,,0,0,0,,记录了文件已经读或写到的位置
 Dialogue: 0,0:07:34.58,0:07:41.82,English,,0,0,0,,And then again the files are because there's all these different things they're sort of unified in this file abstraction
-Dialogue: 0,0:07:34.58,0:07:41.82,Chinese,,0,0,0,,这一抽象的概念将形形色色的文件统一起来
+Dialogue: 0,0:07:34.58,0:07:41.82,Chinese,,0,0,0,,关于文件，其实我们是把很多不同的事物统一抽象成了文件
 Dialogue: 0,0:07:41.82,0:07:43.58,English,,0,0,0,,But obviously there's differences
-Dialogue: 0,0:07:41.82,0:07:43.58,Chinese,,0,0,0,,但显然文件与文件之间存在差异
+Dialogue: 0,0:07:41.82,0:07:43.58,Chinese,,0,0,0,,但这些事物各不相同
 Dialogue: 0,0:07:44.10,0:07:46.44,English,,0,0,0,,And different attributes to them and so
-Dialogue: 0,0:07:44.10,0:07:46.44,Chinese,,0,0,0,,和不同的属性
+Dialogue: 0,0:07:44.10,0:07:46.44,Chinese,,0,0,0,,有不同的属性
 Dialogue: 0,0:07:47.80,0:07:51.08,English,,0,0,0,,There's sort of many different categories and subcategories
-Dialogue: 0,0:07:47.80,0:07:51.08,Chinese,,0,0,0,,因此文件分属许多不同的大类和子类
+Dialogue: 0,0:07:47.80,0:07:51.08,Chinese,,0,0,0,,因此就有了不同的文件类别和子类别
 Dialogue: 0,0:07:51.10,0:07:57.24,English,,0,0,0,,But the ones we'll think about are regular files just think of things that are on a disk drive
-Dialogue: 0,0:07:51.10,0:07:57.24,Chinese,,0,0,0,,但是我们今天只考虑磁盘驱动器上的普通文件
+Dialogue: 0,0:07:51.10,0:07:57.24,Chinese,,0,0,0,,今天我们只讲普通文件，一类放在磁盘驱动器上的文件
 Dialogue: 0,0:07:57.28,0:08:06.66,English,,0,0,0,,Directories which is a...directory is considered a type of file meaning the data that's in there is just enough as a file
-Dialogue: 0,0:07:57.28,0:08:06.66,Chinese,,0,0,0,,目录被视为一种文件，意味着其中的数据仅足够作为文件
+Dialogue: 0,0:07:57.28,0:08:06.66,Chinese,,0,0,0,,还有目录，一类仅其中的数据便足以作为文件的文件
 Dialogue: 0,0:08:07.02,0:08:11.82,English,,0,0,0,,But of course it's a special kind of file and that it actually does have an interpretation
-Dialogue: 0,0:08:07.02,0:08:11.82,Chinese,,0,0,0,,但当然这是一种特殊的文件
+Dialogue: 0,0:08:07.02,0:08:11.82,Chinese,,0,0,0,,这是一类特殊的文件
 Dialogue: 0,0:08:11.82,0:08:17.06,English,,0,0,0,,That entries in that file describe the locations and attributes of other files
 Dialogue: 0,0:08:11.82,0:08:17.06,Chinese,,0,0,0,,此类文件中的条目描述了其他文件的位置和属性
 Dialogue: 0,0:08:18.64,0:08:23.66,English,,0,0,0,,And then as I mentioned the term socket is a connection to a network
-Dialogue: 0,0:08:18.64,0:08:23.66,Chinese,,0,0,0,,还有我之前提到的作为网络连接的套接字
+Dialogue: 0,0:08:18.64,0:08:23.66,Chinese,,0,0,0,,再有就是作为网络连接的套接字，我们之前提到过
 Dialogue: 0,0:08:24.24,0:08:28.30,English,,0,0,0,,And it's both for sending and for receiving messages over the network
-Dialogue: 0,0:08:24.24,0:08:28.30,Chinese,,0,0,0,,其作用是发送和接收网络消息
+Dialogue: 0,0:08:24.24,0:08:28.30,Chinese,,0,0,0,,它用来发送和接收网络消息
 Dialogue: 0,0:08:29.38,0:08:32.16,English,,0,0,0,,There's other files that we won't really talk about
-Dialogue: 0,0:08:29.38,0:08:32.16,Chinese,,0,0,0,,有一些文件我们今天不会讨论到
+Dialogue: 0,0:08:29.38,0:08:32.16,Chinese,,0,0,0,,有些文件我们今天不会讲到
 Dialogue: 0,0:08:32.34,0:08:37.06,English,,0,0,0,,For example when you pipe when you from one application to another
-Dialogue: 0,0:08:32.34,0:08:37.06,Chinese,,0,0,0,,例如在两两应用程序之间传送数据时会用到的通道文件
+Dialogue: 0,0:08:32.34,0:08:37.06,Chinese,,0,0,0,,例如，用于在应用程序之间传送数据的通道文件
 Dialogue: 0,0:08:37.66,0:08:46.82,English,,0,0,0,,That's both the output of the first program and the input of the second are special types of files called pipes
-Dialogue: 0,0:08:37.66,0:08:46.82,Chinese,,0,0,0,,通道文件也是一类特殊文件，既是前一个程序的输出，也是后一个程序的输入
+Dialogue: 0,0:08:37.66,0:08:46.82,Chinese,,0,0,0,,这是一类特殊的文件，既是前一程序的输出，也是后一程序的输入
 Dialogue: 0,0:08:47.50,0:08:57.58,English,,0,0,0,,And they're handled by writing is putting something into the pipe and reading is to take something out of that pipe
-Dialogue: 0,0:08:47.50,0:08:57.58,Chinese,,0,0,0,,处理方式有写——在其中放入数据；和读——从其中取出数据
+Dialogue: 0,0:08:47.50,0:08:57.58,Chinese,,0,0,0,,这类文件可以写和读，写就是在其中放入数据，读就是从其中取出数据
 Dialogue: 0,0:08:58.24,0:09:01.74,English,,0,0,0,,A similar something called a symbolic link which is just a way that
-Dialogue: 0,0:08:58.24,0:09:01.74,Chinese,,0,0,0,,再如符号链接，通过这类文件
+Dialogue: 0,0:08:58.24,0:09:01.74,Chinese,,0,0,0,,又如符号链接，通过这类文件
 Dialogue: 0,0:09:01.74,0:09:04.76,English,,0,0,0,,You can have multiple names for a file
 Dialogue: 0,0:09:01.74,0:09:04.76,Chinese,,0,0,0,,一个文件可以有多个名称
 Dialogue: 0,0:09:04.76,0:09:14.94,English,,0,0,0,,And pointers to a file that aren't really without having to make separate copies of a file
