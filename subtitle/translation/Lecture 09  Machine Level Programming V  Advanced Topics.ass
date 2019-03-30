@@ -14,10 +14,10 @@ Audio File: ../../../../Desktop/../Library/Application Support/Aegisub/recovered
 Video File: ../../../../Desktop/../Library/Application Support/Aegisub/recovered/../../../../Desktop/csapp/Lecture 09  Machine Level Programming V  Advanced Topics.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
-Video Zoom Percent: 0.937500
-Scroll Position: 1494
-Active Line: 1507
-Video Position: 140706
+Video Zoom Percent: 2.062500
+Scroll Position: 209
+Active Line: 215
+Video Position: 21570
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -45,9 +45,9 @@ Dialogue: 0,0:00:33.36,0:00:37.50,Chinese,,0,0,0,,它和我们之前在这一章
 Dialogue: 0,0:00:37.64,0:00:41.60,English,,0,0,0,,But it's been updated and changed in significant ways
 Dialogue: 0,0:00:37.64,0:00:41.60,Chinese,,0,0,0,,但是我们对它做出了许多改进
 Dialogue: 0,0:00:41.70,0:00:49.88,English,,0,0,0,,So we're actually when you have labs like we do in this course with this many students
-Dialogue: 0,0:00:41.70,0:00:49.88,Chinese,,0,0,0,,这么多人使用这个新的实验
+Dialogue: 0,0:00:41.70,0:00:49.88,Chinese,,0,0,0,,就像这门课其他实验一样，你和其他很多同学使用这个实验
 Dialogue: 0,0:00:49.88,0:00:51.90,English,,0,0,0,,There's a lot of things can go wrong
-Dialogue: 0,0:00:49.88,0:00:51.90,Chinese,,0,0,0,,有很多地方可能会出问题
+Dialogue: 0,0:00:49.88,0:00:51.90,Chinese,,0,0,0,,但这个实验有可能会出问题
 Dialogue: 0,0:00:51.90,0:00:55.96,English,,0,0,0,,So we're going to keep a close eye on how things are going
 Dialogue: 0,0:00:51.90,0:00:55.96,Chinese,,0,0,0,,因此我们将会密切关注事情的发展
 Dialogue: 0,0:00:55.96,0:00:59.70,English,,0,0,0,,But I'd encourage you, you only have a week and a half to do this next lab
@@ -68,10 +68,10 @@ Dialogue: 0,0:01:37.96,0:01:43.02,English,,0,0,0,,And then we'll look at unions,
 Dialogue: 0,0:01:37.96,0:01:43.02,Chinese,,0,0,0,,之后我们将会讨论联合体，到目前为止你们已经了解了数组和结构体
 Dialogue: 0,0:01:43.72,0:01:45.90,English,,0,0,0,,And I want to compare that to unions
 Dialogue: 0,0:01:43.72,0:01:45.90,Chinese,,0,0,0,,我会把这些和联合体进行比较
-Dialogue: 0,0:01:47.88,0:01:53.82,English,,0,0,0,,So let's talk about memory then. As I said at the beginning early in the course
-Dialogue: 0,0:01:47.88,0:01:53.82,Chinese,,0,0,0,,现在我们开始讨论内存
-Dialogue: 0,0:01:54.26,0:01:57.68,English,,0,0,0,,Conceptually a memory is just a big array of bytes
-Dialogue: 0,0:01:54.26,0:01:57.68,Chinese,,0,0,0,,从概念上来说，内存就是一个很大的字节数组
+Dialogue: 0,0:01:47.88,0:01:51.04,English,,0,0,0,,So let's talk about memory then
+Dialogue: 0,0:01:47.88,0:01:51.04,Chinese,,0,0,0,,现在我们开始讨论内存
+Dialogue: 0,0:01:51.04,0:01:57.68,English,,0,0,0,, As I said at the beginning early in the course, conceptually a memory is just a big array of bytes
+Dialogue: 0,0:01:51.04,0:01:57.68,Chinese,,0,0,0,,我在这门课的开始就讲过， 从概念上来说「内存」就是一个很大的字节数组
 Dialogue: 0,0:01:58.46,0:02:03.44,English,,0,0,0,,And that's the view of this the machine level programmer
 Dialogue: 0,0:01:58.46,0:02:03.44,Chinese,,0,0,0,,在机器级编程的程序员眼里看来是这样
 Dialogue: 0,0:02:03.72,0:02:05.84,English,,0,0,0,,Even though it's not the actual implementation
@@ -85,11 +85,11 @@ Dialogue: 0,0:02:16.60,0:02:27.52,Chinese,,0,0,0,,但它的内部实现很复杂
 Dialogue: 0,0:02:28.00,0:02:35.88,English,,0,0,0,,And to what's called DRAM which stands for dynamic RAM the when you buy memory for your processor its DRAM
 Dialogue: 0,0:02:28.00,0:02:35.88,Chinese,,0,0,0,,当你为你的处理器购买内存时就是 DRAM ，或者说动态随机存取存储器
 Dialogue: 0,0:02:36.98,0:02:48.27,English,,0,0,0,,Um so as you know in x86-64 we're working with machines that nominally have addresses can be up to 64 bits long
-Dialogue: 0,0:02:36.98,0:02:48.27,Chinese,,0,0,0,,x86-64 机器的地址在名义上讲有 64 位
+Dialogue: 0,0:02:36.98,0:02:48.27,Chinese,,0,0,0,,正如你所了解的 x86-64 机器的地址在名义上讲有 64 位
 Dialogue: 0,0:02:48.66,0:02:52.22,English,,0,0,0,,And if you work out the numbers remember I told you at the beginning of the course
-Dialogue: 0,0:02:48.66,0:02:52.22,Chinese,,0,0,0,,你们可以算一下 2^64 有多大
-Dialogue: 0,0:02:52.22,0:03:03.22,English,,0,0,0,,You can estimate how big a number like to the 64 is by remembering that 1024 and a thousand are very close to each other
-Dialogue: 0,0:02:52.22,0:03:03.22,Chinese,,0,0,0,,通过记住 1024 和 1000 彼此非常接近，你可以估计 64 位数字有多大
+Dialogue: 0,0:02:48.66,0:02:52.22,Chinese,,0,0,0,,如果你们记得这门课开始我讲的内容，就可以算一下这个数有多大
+Dialogue: 0,0:02:52.22,0:03:03.22,English,,0,0,0,,You can estimate how big a number like to the 64 is by remembering that 1024 and 1000 are very close to each other
+Dialogue: 0,0:02:52.22,0:03:03.22,Chinese,,0,0,0,,通过观察 1024 和 1000 非常接近，你可以估计 2^64 有多大
 Dialogue: 0,0:03:03.22,0:03:07.66,English,,0,0,0,,So 2^10 is roughly the same as 10^3
 Dialogue: 0,0:03:03.22,0:03:07.66,Chinese,,0,0,0,,因此 2^10 可以近似地看作是 10^3
 Dialogue: 0,0:03:08.52,0:03:11.48,English,,0,0,0,,So you take 64 and you think 60
@@ -99,11 +99,11 @@ Dialogue: 0,0:03:11.48,0:03:21.04,Chinese,,0,0,0,,因此 2^60 就是 (2^10)^6，
 Dialogue: 0,0:03:22.28,0:03:27.00,English,,0,0,0,,And then you add the four to that that's 2^4 and 16
 Dialogue: 0,0:03:22.28,0:03:27.00,Chinese,,0,0,0,,再乘以 2^4 也就是16
 Dialogue: 0,0:03:27.00,0:03:30.58,English,,0,0,0,,So it's around 16*10^18 bytes
-Dialogue: 0,0:03:27.00,0:03:30.58,Chinese,,0,0,0,,这个数字 64 的机支持的内存大约是 16*10^18 字节
-Dialogue: 0,0:03:31.64,0:03:40.26,English,,0,0,0,,So if you were to go off and look online on amazon for DRAM chips
-Dialogue: 0,0:03:31.64,0:03:40.26,Chinese,,0,0,0,,如果你在亚马逊上购买这么大的内存
-Dialogue: 0,0:03:40.26,0:03:44.74,English,,0,0,0,,And try to buy that much memory you'd find you're spending a lot of money
-Dialogue: 0,0:03:40.26,0:03:44.74,Chinese,,0,0,0,,将会花费你很大的一笔钱
+Dialogue: 0,0:03:27.00,0:03:30.58,Chinese,,0,0,0,,所以 64 为机器支持的内存大约是 16*10^18 字节
+Dialogue: 0,0:03:31.64,0:03:42.50,English,,0,0,0,,So if you were to go off and look online on Amazon for DRAM chips and try to buy that much memory 
+Dialogue: 0,0:03:31.64,0:03:42.50,Chinese,,0,0,0,,如果你打算在亚马逊上购买这么大的内存
+Dialogue: 0,0:03:43.12,0:03:44.74,English,,0,0,0,,You'd find you're spending a lot of money
+Dialogue: 0,0:03:43.12,0:03:44.74,Chinese,,0,0,0,,你会发现这是一笔巨款
 Dialogue: 0,0:03:45.66,0:03:52.60,English,,0,0,0,,More than you I don't know the numbers but it would be a lot of memory money
 Dialogue: 0,0:03:45.66,0:03:52.60,Chinese,,0,0,0,,虽然我不知道是多少但肯定价格不菲
 Dialogue: 0,0:03:53.06,0:03:55.16,English,,0,0,0,,And so you basically can't do it nowadays
@@ -112,7 +112,7 @@ Dialogue: 0,0:03:56.12,0:04:00.48,English,,0,0,0,,Tend to the and so...
 Dialogue: 0,0:04:02.28,0:04:09.72,English,,0,0,0,,Right now the machines limit you to actually only 47 bits worth of address in the address space
 Dialogue: 0,0:04:02.28,0:04:09.72,Chinese,,0,0,0,,现在 64 位机器会限制只使用 47 位的地址
 Dialogue: 0,0:04:10.54,0:04:19.28,English,,0,0,0,,I'll and so 2^47 again work that out that's like 256*10^12
-Dialogue: 0,0:04:10.54,0:04:19.28,Chinese,,0,0,0,,大概计算一下就是 128*10^12 字节
+Dialogue: 0,0:04:10.54,0:04:19.28,Chinese,,0,0,0,,大概计算一下就是 256*10^12 字节
 Dialogue: 0,0:04:19.28,0:04:21.82,English,,0,0,0,,So it's 256 terabytes
 Dialogue: 0,0:04:19.28,0:04:21.82,Chinese,,0,0,0,,也就是 256 TB
 Dialogue: 0,0:04:23.16,0:04:26.86,English,,0,0,0,,And as you know you can buy a disk drive now that has 8 terabytes
@@ -125,7 +125,7 @@ Dialogue: 0,0:04:38.12,0:04:45.70,English,,0,0,0,,And so even that's a huge numb
 Dialogue: 0,0:04:38.12,0:04:45.70,Chinese,,0,0,0,,即便如此，一些超级计算机确实有这么大的内存
 Dialogue: 0,0:04:45.70,0:04:51.76,English,,0,0,0,,But the point is that the hardware of today limits you to 47 bits worth of address
 Dialogue: 0,0:04:45.70,0:04:51.76,Chinese,,0,0,0,,不过我想说的是，如今的硬件限制我们只能使用 47 位的地址
-Dialogue: 0,0:04:52.56,0:04:58.18,English,,0,0,0,,But that's not really a real limitation in terms of of of actual machines
+Dialogue: 0,0:04:52.56,0:04:58.18,English,,0,0,0,,But that's not really a real limitation in terms of actual machines
 Dialogue: 0,0:04:52.56,0:04:58.18,Chinese,,0,0,0,,但这实际上并不是真正的限制
 Dialogue: 0,0:04:58.32,0:05:03.12,English,,0,0,0,,And what will happen is memory prices get cheaper and the technology gets better
 Dialogue: 0,0:04:58.32,0:05:03.12,Chinese,,0,0,0,,随着技术的进步，内存也会越来越便宜
@@ -139,7 +139,7 @@ Dialogue: 0,0:05:27.76,0:05:35.56,English,,0,0,0,,I can tell I need to scribble 
 Dialogue: 0,0:05:27.76,0:05:35.56,Chinese,,0,0,0,,这么说你们可能没什么概念，我在本子上写一下
 Dialogue: 0,0:05:36.88,0:05:49.88,English,,0,0,0,,So let's try
 Dialogue: 0,0:05:36.88,0:05:49.88,Chinese,,0,0,0,,让我们试试
-Dialogue: 0,0:05:50.20,0:05:53.96,English,,0,0,0,,Ok
+Dialogue: 0,0:05:53.28,0:05:53.96,English,,0,0,0,,Ok
 Dialogue: 0,0:05:55.32,0:06:06.21,English,,0,0,0,,Okay so remember I said before to 2^64 is about equal to 16*10^18
 Dialogue: 0,0:05:55.32,0:06:06.21,Chinese,,0,0,0,,我刚才说过， 2^64 近似等于 16*10^18
 Dialogue: 0,0:06:09.20,0:06:17.82,English,,0,0,0,,And 2^47 is 128*10^12
@@ -209,7 +209,7 @@ Dialogue: 0,0:09:49.96,0:10:00.77,Chinese,,0,0,0,,如果你试图使用栈指针
 Dialogue: 0,0:10:01.60,0:10:09.10,English,,0,0,0,,That was outside of the range of this 8 megabyte range you'd get a segmentation fault
 Dialogue: 0,0:10:01.60,0:10:09.10,Chinese,,0,0,0,,将会产生一个段错误
 Dialogue: 0,0:10:10.40,0:10:17.74,English,,0,0,0,,And then down at the lower addresses what comes in what gets put into your program are the parts of the code
-Dialogue: 0,0:10:10.40,0:10:17.74,Chinese,,0,0,0,,最下方的是存放的是代码
+Dialogue: 0,0:10:10.40,0:10:17.74,Chinese,,0,0,0,,往下更下方的地址是你的程序存放的是代码的地方
 Dialogue: 0,0:10:17.74,0:10:20.60,English,,0,0,0,,That that come out of the executable file
 Dialogue: 0,0:10:17.74,0:10:20.60,Chinese,,0,0,0,,它来自于可执行文件
 Dialogue: 0,0:10:20.94,0:10:28.36,English,,0,0,0,,And so there's a section and we'll talk more,when we talk about linking actually about the way out of the memory and the different regions of it
@@ -238,11 +238,10 @@ Dialogue: 0,0:11:26.16,0:11:37.76,Chinese,,0,0,0,,还有一个地方也是存放
 Dialogue: 0,0:11:38.28,0:11:40.98,English,,0,0,0,,Our own library code they're stored off on disk
 Dialogue: 0,0:11:38.28,0:11:40.98,Chinese,,0,0,0,,库代码被存储在磁盘上
 Dialogue: 0,0:11:40.98,0:11:48.16,English,,0,0,0,,And they get brought in they get linked into your program when it first starts executing by a process known as dynamic linking
-Dialogue: 0,0:11:40.98,0:11:48.16,Chinese,,0,0,0,,当程序开始执行的时候它们被动态地加载进来
+Dialogue: 0,0:11:40.98,0:11:48.16,Chinese,,0,0,0,,当程序开始执行之初会把它们加载到你的程序当中，称之为「动态加载」
 Dialogue: 0,0:11:48.32,0:11:51.74,English,,0,0,0,,Which we'll talk about later in the course too with the linking
 Dialogue: 0,0:11:48.32,0:11:51.74,Chinese,,0,0,0,,我们会在之后的课程中学习有关动态链接的内容
-Dialogue: 0,0:11:52.38,0:11:54.74,English,,0,0,0,,And what you'll find in general is that
-Dialogue: 0,0:11:55.30,0:11:59.02,English,,0,0,0,,Allocations will tend to be either at these very low addresses
+Dialogue: 0,0:11:52.38,0:11:59.02,English,,0,0,0,,And what you'll find in general is that allocations will tend to be either at these very low addresses
 Dialogue: 0,0:11:52.38,0:11:59.02,Chinese,,0,0,0,,应用程序有时会分配低地址的空间
 Dialogue: 0,0:11:59.38,0:12:03.74,English,,0,0,0,,Or these very high addresses as your program is running
 Dialogue: 0,0:11:59.38,0:12:03.74,Chinese,,0,0,0,,有时又会分配高地址的空间
