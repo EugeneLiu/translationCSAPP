@@ -1092,7 +1092,7 @@ Dialogue: 0,0:45:42.36,0:45:46.38,Chinese,,0,0,0,,之后这里会用 8 字节的
 Dialogue: 0,0:45:47.04,0:45:50.48,English,,0,0,0,,Just because this particular protocol doesn't require the full 16 bytes
 Dialogue: 0,0:45:47.04,0:45:50.48,Chinese,,0,0,0,,因为这个协议并不需要用完 16 个字节
 Dialogue: 0,0:45:53.92,0:46:03.42,English,,0,0,0,,Okay so this is sort of what it looks like to operate a full-blown Client-server system from a programmers perspective
-Dialogue: 0,0:45:53.92,0:46:03.42,Chinese,,0,0,0,,所以，这就是程序员对操作一个成熟的客户机-服务器系统是怎么样的的理解
+Dialogue: 0,0:45:53.92,0:46:03.42,Chinese,,0,0,0,,这就是程序员对操作一个完整的客户机-服务器系统的流程的理解
 Dialogue: 0,0:46:03.94,0:46:09.96,English,,0,0,0,,And we're going to for the rest of today and all of Thursday go through all these steps
 Dialogue: 0,0:46:03.94,0:46:09.96,Chinese,,0,0,0,,在这节课的剩余时间和周四的整节课上，我们将一步步实现整个过程
 Dialogue: 0,0:46:10.36,0:46:15.84,English,,0,0,0,,And you as a programmer are actually going to have to understand each of these steps
@@ -1100,112 +1100,218 @@ Dialogue: 0,0:46:10.36,0:46:15.84,Chinese,,0,0,0,,而你们作为程序员必须
 Dialogue: 0,0:46:16.00,0:46:19.56,English,,0,0,0,,What they do?what they mean?And how to use them
 Dialogue: 0,0:46:16.00,0:46:19.56,Chinese,,0,0,0,,每一步在做什么？它们为什么要这么做？怎么利用它们？
 Dialogue: 0,0:46:19.82,0:46:23.42,English,,0,0,0,,The good news is there's some pretty standard patterns here
+Dialogue: 0,0:46:19.82,0:46:23.42,Chinese,,0,0,0,,好消息是一些最基本的模块已经是现成的了
 Dialogue: 0,0:46:23.44,0:46:31.98,English,,0,0,0,,And so you can often grab some existing code say out of the book to use that will make this not as painful as it might look
+Dialogue: 0,0:46:23.44,0:46:31.98,Chinese,,0,0,0,,你们可以从书本之外的一些地方找到现存的代码并使用它们，这会使这一部分没有想象中的那么痛苦
 Dialogue: 0,0:46:33.76,0:46:37.18,English,,0,0,0,,So but the overall idea of this this picture then is
-Dialogue: 0,0:46:39.28,0:46:41.52,English,,0,0,0,,Sorry kick it used to fit my remote doesn't work
+Dialogue: 0,0:46:33.76,0:46:37.18,Chinese,,0,0,0,,从整体上理解这个图片
+Dialogue: 0,0:46:39.28,0:46:41.52,English,,0,0,0,,Sorry can't get use the fast way my remote doesn't work
+Dialogue: 0,0:46:39.28,0:46:41.52,Chinese,,0,0,0,,不好意思，遥控坏了
 Dialogue: 0,0:46:45.16,0:46:49.96,English,,0,0,0,,On the the right hand side refers to the steps that the server has to go through
+Dialogue: 0,0:46:45.16,0:46:49.96,Chinese,,0,0,0,,图片的右半部分是服务器需要处理的步骤
 Dialogue: 0,0:46:50.32,0:46:52.54,English,,0,0,0,,And the left hand side is what the client does
+Dialogue: 0,0:46:50.32,0:46:52.54,Chinese,,0,0,0,,左半部分则是客户端要处理的步骤
 Dialogue: 0,0:46:53.14,0:46:57.68,English,,0,0,0,,So the upper right is what it takes to set up a server
+Dialogue: 0,0:46:53.14,0:46:57.68,Chinese,,0,0,0,,右上角是设置一个服务器的步骤
 Dialogue: 0,0:46:58.00,0:47:01.60,English,,0,0,0,,That is then a program that's running there
-Dialogue: 0,0:47:02.04,0:47:07.34,English,,0,0,0,,Ready to receive connections  from a client and perform various services
+Dialogue: 0,0:46:58.00,0:47:01.60,Chinese,,0,0,0,,它上面有一个程序在运行
+Dialogue: 0,0:47:02.04,0:47:07.34,English,,0,0,0,,Ready to receive connections from a client and perform various services
+Dialogue: 0,0:47:02.04,0:47:07.34,Chinese,,0,0,0,,准备接受客户端发送的连接请求并提供各种服务
 Dialogue: 0,0:47:09.48,0:47:15.76,English,,0,0,0,,And so obviously before the client can do anything the server has to exist
+Dialogue: 0,0:47:09.48,0:47:15.76,Chinese,,0,0,0,,很显然，有了服务器之后客户端才能工作
 Dialogue: 0,0:47:15.86,0:47:18.16,English,,0,0,0,,So that has to be the first step in setting things up
+Dialogue: 0,0:47:15.86,0:47:18.16,Chinese,,0,0,0,,所以这是创建整个系统的第一步
 Dialogue: 0,0:47:19.64,0:47:25.60,English,,0,0,0,,And then we have to...we'll fire up a cert a client that will make use of this service
+Dialogue: 0,0:47:19.64,0:47:25.60,Chinese,,0,0,0,,接着我们要启动一台使用这些服务的客户机
 Dialogue: 0,0:47:26.90,0:47:29.14,English,,0,0,0,,And then there'll be what's referred to as a session
+Dialogue: 0,0:47:26.90,0:47:29.14,Chinese,,0,0,0,,接下来有一个叫做会话的部分
 Dialogue: 0,0:47:29.16,0:47:33.68,English,,0,0,0,,Meaning a kind of back and forth communication between the client and server
+Dialogue: 0,0:47:29.16,0:47:33.68,Chinese,,0,0,0,,它指的是客户端和服务器之间来回通信
 Dialogue: 0,0:47:33.68,0:47:38.08,English,,0,0,0,,Doing whatever they're going to do,this is not specific to any particular application
-Dialogue: 0,0:47:38.76,0:47:44.76,English,,0,0,0,,And like I said it will involve you'll see rio_ remember those who are reliable I/O
+Dialogue: 0,0:47:33.68,0:47:38.08,Chinese,,0,0,0,,并完成它们要做的事，任何应用程序都需要这个部分
+Dialogue: 0,0:47:38.76,0:47:44.76,English,,0,0,0,,And like I said it will involve you'll see rio_ remember those were reliable I/O
+Dialogue: 0,0:47:38.76,0:47:44.76,Chinese,,0,0,0,,它包括了 rio_ 开头的多个函数，你们应该还记得我们讲过
 Dialogue: 0,0:47:45.32,0:47:48.66,English,,0,0,0,,Functions we talked about as part of the UNIX I/O
-Dialogue: 0,0:47:49.64,0:47:59.66,English,,0,0,0,,So it's a way to read and write in a room and handle some of the quirks of low-level I/O
+Dialogue: 0,0:47:45.32,0:47:48.66,Chinese,,0,0,0,,它们是 UNIX I/O 系统中的一部分可靠的 I/O 函数
+Dialogue: 0,0:47:49.64,0:47:59.66,English,,0,0,0,,So it's a way to read and write in a rom and handle some of the quirks of low-level I/O
+Dialogue: 0,0:47:49.64,0:47:59.66,Chinese,,0,0,0,,可以用于读写 rom 并处理一些底层 I/O 的操作
 Dialogue: 0,0:47:59.68,0:48:03.25,English,,0,0,0,,But basically this is sending and receiving messages over the internet
-Dialogue: 0,0:48:04.76,0:48:06.12,English,,0,0,0,,And then once that's done
+Dialogue: 0,0:48:04.76,0:48:06.12,English,,0,0,0,,And then once that's 
+Dialogue: 0,0:48:04.76,0:48:06.12,Chinese,,0,
 Dialogue: 0,0:48:07.30,0:48:12.22,English,,0,0,0,,Typically then the client will close its connection sort of equivalent of hanging up its phone
+Dialogue: 0,0:48:07.30,0:48:12.22,Chinese,,0,0,0,,
 Dialogue: 0,0:48:13.02,0:48:14.70,English,,0,0,0,,And say ok I'm done
+Dialogue: 0,0:48:13.02,0:48:14.70,Chinese,,0,0,0,,
 Dialogue: 0,0:48:15.12,0:48:21.56,English,,0,0,0,,And then sometime later or maybe never depending on what kind of web you know service this is
+Dialogue: 0,0:48:15.12,0:48:21.56,Chinese,,0,0,0,,
 Dialogue: 0,0:48:22.10,0:48:24.54,English,,0,0,0,,If the server wants to shut down
+Dialogue: 0,0:48:22.10,0:48:24.54,Chinese,,0,0,0,,
 Dialogue: 0,0:48:24.54,0:48:29.90,English,,0,0,0,,It has its own a collection of calls that it makes to stop that service
+Dialogue: 0,0:48:24.54,0:48:29.90,Chinese,,0,0,0,,
 Dialogue: 0,0:48:31.22,0:48:36.64,English,,0,0,0,,So anyways just to kind of give you the landscape of what this picture means
+Dialogue: 0,0:48:31.22,0:48:36.64,Chinese,,0,0,0,,
 Dialogue: 0,0:48:41.08,0:48:43.78,English,,0,0,0,,So we're going to sort of jump into
+Dialogue: 0,0:48:41.08,0:48:43.78,Chinese,,0,0,0,,
 Dialogue: 0,0:48:45.21,0:48:48.30,English,,0,0,0,,The middle this the top level up and we'll focus
+Dialogue: 0,0:48:45.21,0:48:48.30,Chinese,,0,0,0,,
 Dialogue: 0,0:48:52.06,0:48:53.84,English,,0,0,0,,Actually which will we focus on
+Dialogue: 0,0:48:52.06,0:48:53.84,Chinese,,0,0,0,,
 Dialogue: 0,0:48:54.42,0:48:56.90,English,,0,0,0,,Well we'll talk to some level in parallel
+Dialogue: 0,0:48:54.42,0:48:56.90,Chinese,,0,0,0,,
 Dialogue: 0,0:48:58.26,0:49:03.12,English,,0,0,0,,Because there's a lot of commonality as you can see between what goes on with the server and what goes on with the client
+Dialogue: 0,0:48:58.26,0:49:03.12,Chinese,,0,0,0,,
 Dialogue: 0,0:49:07.88,0:49:12.64,English,,0,0,0,,Yeah and so actually the top level call this one called getaddrinfo is the way that
+Dialogue: 0,0:49:07.88,0:49:12.64,Chinese,,0,0,0,,
 Dialogue: 0,0:49:13.16,0:49:14.34,English,,0,0,0,,It sort of...
+Dialogue: 0,0:49:13.16,0:49:14.34,Chinese,,0,0,0,,
 Dialogue: 0,0:49:18.14,0:49:25.90,English,,0,0,0,,Initiate things and actually does the lookup to map from a domain name to a IP address
+Dialogue: 0,0:49:18.14,0:49:25.90,Chinese,,0,0,0,,
 Dialogue: 0,0:49:26.52,0:49:27.76,English,,0,0,0,,So we'll cover that later
+Dialogue: 0,0:49:26.52,0:49:27.76,Chinese,,0,0,0,,
 Dialogue: 0,0:49:28.28,0:49:35.14,English,,0,0,0,,So the first step in on either side then and creating a connection is a call to a function called socket
+Dialogue: 0,0:49:28.28,0:49:35.14,Chinese,,0,0,0,,
 Dialogue: 0,0:49:37.76,0:49:42.82,English,,0,0,0,,And the reason I wanted to blackboard was to help you keep track of this
+Dialogue: 0,0:49:37.76,0:49:42.82,Chinese,,0,0,0,,
 Dialogue: 0,0:50:05.84,0:50:08.96,English,,0,0,0,,So the first call is a doesn't do much
+Dialogue: 0,0:50:05.84,0:50:08.96,Chinese,,0,0,0,,
 Dialogue: 0,0:50:09.36,0:50:12.84,English,,0,0,0,,Oh and that's why the function call is socket
+Dialogue: 0,0:50:09.36,0:50:12.84,Chinese,,0,0,0,,
 Dialogue: 0,0:50:13.38,0:50:14.48,English,,0,0,0,,But the
+Dialogue: 0,0:50:13.38,0:50:14.48,Chinese,,0,0,0,,
 Dialogue: 0,0:50:17.72,0:50:19.52,English,,0,0,0,,It only happens within the application
+Dialogue: 0,0:50:17.72,0:50:19.52,Chinese,,0,0,0,,
 Dialogue: 0,0:50:19.52,0:50:24.64,English,,0,0,0,,It doesn't make a use of any part of the operating system doesn't send anything over the network
+Dialogue: 0,0:50:19.52,0:50:24.64,Chinese,,0,0,0,,
 Dialogue: 0,0:50:25.12,0:50:28.86,English,,0,0,0,,And the idea is to basically say hey I want to create a socket
+Dialogue: 0,0:50:25.12,0:50:28.86,Chinese,,0,0,0,,
 Dialogue: 0,0:50:31.08,0:50:33.66,English,,0,0,0,,And it's given three arguments
+Dialogue: 0,0:50:31.08,0:50:33.66,Chinese,,0,0,0,,
 Dialogue: 0,0:50:34.18,0:50:37.10,English,,0,0,0,,The first two which is AF_INET
+Dialogue: 0,0:50:34.18,0:50:37.10,Chinese,,0,0,0,,
 Dialogue: 0,0:50:37.14,0:50:45.44,English,,0,0,0,,All these upper case on names are constants that are built in or included in the various .h files that
+Dialogue: 0,0:50:37.14,0:50:45.44,Chinese,,0,0,0,,
 Dialogue: 0,0:50:45.52,0:50:47.28,English,,0,0,0,,That you include in writing this code
+Dialogue: 0,0:50:45.52,0:50:47.28,Chinese,,0,0,0,,
 Dialogue: 0,0:50:47.64,0:50:53.62,English,,0,0,0,,And AF_INET just means it's a IPv4 so 32-bit addresses
+Dialogue: 0,0:50:47.64,0:50:53.62,Chinese,,0,0,0,,
 Dialogue: 0,0:50:54.66,0:50:58.52,English,,0,0,0,,And then the second parameter is says you want a SOCK_STREAM
+Dialogue: 0,0:50:54.66,0:50:58.52,Chinese,,0,0,0,,
 Dialogue: 0,0:50:58.92,0:51:01.14,English,,0,0,0,,And that refers to a TCP connection
+Dialogue: 0,0:50:58.92,0:51:01.14,Chinese,,0,0,0,,
 Dialogue: 0,0:51:01.18,0:51:07.68,English,,0,0,0,,It's referred to as a stream connection because like I said you get to send as many bytes as you like a stream of bytes
+Dialogue: 0,0:51:01.18,0:51:07.68,Chinese,,0,0,0,,
 Dialogue: 0,0:51:08.24,0:51:09.82,English,,0,0,0,,Either direction
+Dialogue: 0,0:51:08.24,0:51:09.82,Chinese,,0,0,0,,
 Dialogue: 0,0:51:10.94,0:51:12.08,English,,0,0,0,,And then
+Dialogue: 0,0:51:10.94,0:51:12.08,Chinese,,0,0,0,,
 Dialogue: 0,0:51:15.94,0:51:18.86,English,,0,0,0,,Zero protocol
+Dialogue: 0,0:51:15.94,0:51:18.86,Chinese,,0,0,0,,
 Dialogue: 0,0:51:18.92,0:51:22.36,English,,0,0,0,,Well I guess it must not be very interesting because I set it to zero
+Dialogue: 0,0:51:18.92,0:51:22.36,Chinese,,0,0,0,,
 Dialogue: 0,0:51:23.32,0:51:26.16,English,,0,0,0,,So we don't need to do anything in this particular case
+Dialogue: 0,0:51:23.32,0:51:26.16,Chinese,,0,0,0,,
 Dialogue: 0,0:51:27.14,0:51:29.02,English,,0,0,0,,There are man pages on this by the way which
+Dialogue: 0,0:51:27.14,0:51:29.02,Chinese,,0,0,0,,
 Dialogue: 0,0:51:29.72,0:51:33.68,English,,0,0,0,,If you just tried to learn all sockets programming by reading men pages you'd go crazy
+Dialogue: 0,0:51:29.72,0:51:33.68,Chinese,,0,0,0,,
 Dialogue: 0,0:51:33.68,0:51:37.28,English,,0,0,0,,But once you kind of have the idea of it the man pages are pretty useful
+Dialogue: 0,0:51:33.68,0:51:37.28,Chinese,,0,0,0,,
 Dialogue: 0,0:51:39.82,0:51:41.48,English,,0,0,0,,And then the next part
+Dialogue: 0,0:51:39.82,0:51:41.48,Chinese,,0,0,0,,
 Dialogue: 0,0:51:42.82,0:51:48.16,English,,0,0,0,,You'll see,we're looking only now on the server side is called bind
+Dialogue: 0,0:51:42.82,0:51:48.16,Chinese,,0,0,0,,
 Dialogue: 0,0:51:50.24,0:51:51.12,English,,0,0,0,,And
+Dialogue: 0,0:51:50.24,0:51:51.12,Chinese,,0,0,0,,
 Dialogue: 0,0:51:58.64,0:52:02.60,English,,0,0,0,,What bind does then is that specific then to a server
+Dialogue: 0,0:51:58.64,0:52:02.60,Chinese,,0,0,0,,
 Dialogue: 0,0:52:03.32,0:52:07.08,English,,0,0,0,,And now this is a make this interfaces to the kernel
+Dialogue: 0,0:52:03.32,0:52:07.08,Chinese,,0,0,0,,
 Dialogue: 0,0:52:07.10,0:52:10.38,English,,0,0,0,,It says I want to
+Dialogue: 0,0:52:07.10,0:52:10.38,Chinese,,0,0,0,,
 Dialogue: 0,0:52:20.65,0:52:23.02,English,,0,0,0,,Designate which IP address
+Dialogue: 0,0:52:20.65,0:52:23.02,Chinese,,0,0,0,,
 Dialogue: 0,0:52:24.46,0:52:27.92,English,,0,0,0,,And let me just...
+Dialogue: 0,0:52:24.46,0:52:27.92,Chinese,,0,0,0,,
 Dialogue: 0,0:52:29.10,0:52:32.86,English,,0,0,0,,So I'm going to cheat a little bit and let me by making sure I don't say anything that's not true
+Dialogue: 0,0:52:29.10,0:52:32.86,Chinese,,0,0,0,,
 Dialogue: 0,0:52:34.80,0:52:36.54,English,,0,0,0,,Yeah I'm right sorry
+Dialogue: 0,0:52:34.80,0:52:36.54,Chinese,,0,0,0,,
 Dialogue: 0,0:52:37.14,0:52:38.36,English,,0,0,0,,I just want to make sure
+Dialogue: 0,0:52:37.14,0:52:38.36,Chinese,,0,0,0,,
 Dialogue: 0,0:52:39.12,0:52:40.62,English,,0,0,0,,Bind actually
+Dialogue: 0,0:52:39.12,0:52:40.62,Chinese,,0,0,0,,
 Dialogue: 0,0:52:43.72,0:52:44.42,English,,0,0,0,,Tells you
+Dialogue: 0,0:52:43.72,0:52:44.42,Chinese,,0,0,0,,
 Dialogue: 0,0:52:47.20,0:52:48.34,English,,0,0,0,,Oh excuse me
+Dialogue: 0,0:52:47.20,0:52:48.34,Chinese,,0,0,0,,
 Dialogue: 0,0:52:48.92,0:52:52.62,English,,0,0,0,,You'll see that a socket the call to socket returns an int
+Dialogue: 0,0:52:48.92,0:52:52.62,Chinese,,0,0,0,,
 Dialogue: 0,0:52:53.30,0:52:57.28,English,,0,0,0,,But it's what it's returning is a file descriptor remember we said that
+Dialogue: 0,0:52:53.30,0:52:57.28,Chinese,,0,0,0,,
 Dialogue: 0,0:52:57.82,0:53:04.90,English,,0,0,0,,If you refer to a file a low-level file just by an integer id typically a small integer value
+Dialogue: 0,0:52:57.82,0:53:04.90,Chinese,,0,0,0,,
 Dialogue: 0,0:53:05.32,0:53:08.74,English,,0,0,0,,There's some standard ones for standard in,standard out,standard error
+Dialogue: 0,0:53:05.32,0:53:08.74,Chinese,,0,0,0,,
 Dialogue: 0,0:53:09.08,0:53:11.30,English,,0,0,0,,And then beyond that they're just assigned incrementally
+Dialogue: 0,0:53:09.08,0:53:11.30,Chinese,,0,0,0,,
 Dialogue: 0,0:53:12.02,0:53:14.18,English,,0,0,0,,So socket will return a number
+Dialogue: 0,0:53:12.02,0:53:14.18,Chinese,,0,0,0,,
 Dialogue: 0,0:53:14.72,0:53:18.48,English,,0,0,0,,That you then refer used to refer to this as a file
+Dialogue: 0,0:53:14.72,0:53:18.48,Chinese,,0,0,0,,
 Dialogue: 0,0:53:20.48,0:53:27.44,English,,0,0,0,,So bind then you've pass in that the name of your socket file descriptor
+Dialogue: 0,0:53:20.48,0:53:27.44,Chinese,,0,0,0,,
 Dialogue: 0,0:53:27.92,0:53:33.60,English,,0,0,0,,And you provide a whether is a socketaddr int
+Dialogue: 0,0:53:27.92,0:53:33.60,Chinese,,0,0,0,,
 Dialogue: 0,0:53:38.78,0:53:41.62,English,,0,0,0,,SA and I'm using the the notation
+Dialogue: 0,0:53:38.78,0:53:41.62,Chinese,,0,0,0,,
 Dialogue: 0,0:53:42.12,0:53:46.50,English,,0,0,0,,SA as a shortcut for sockaddr struct sockaddr
+Dialogue: 0,0:53:42.12,0:53:46.50,Chinese,,0,0,0,,
 Dialogue: 0,0:53:49.56,0:53:52.54,English,,0,0,0,,And then you have to also say what the length of the address is
+Dialogue: 0,0:53:49.56,0:53:52.54,Chinese,,0,0,0,,
 Dialogue: 0,0:53:52.62,0:53:55.44,English,,0,0,0,,So in the case of IPv4 that would be four
+Dialogue: 0,0:53:52.62,0:53:55.44,Chinese,,0,0,0,,
 Dialogue: 0,0:53:56.42,0:53:59.38,English,,0,0,0,,But you don't usually use that number directly there's a
+Dialogue: 0,0:53:56.42,0:53:59.38,Chinese,,0,0,0,,
 Dialogue: 0,0:54:00.00,0:54:04.24,English,,0,0,0,,We'll talk about it but that top-level call called gedit or addr info
+Dialogue: 0,0:54:00.00,0:54:04.24,Chinese,,0,0,0,,
 Dialogue: 0,0:54:04.24,0:54:11.02,English,,0,0,0,,As a relatively new api that was created and in this addition to the book but not in previous ones
+Dialogue: 0,0:54:04.24,0:54:11.02,Chinese,,0,0,0,,
 Dialogue: 0,0:54:11.40,0:54:17.44,English,,0,0,0,,Become the now the standard way that you get all the parameters that you're supposed to pass into all these different calls
+Dialogue: 0,0:54:11.40,0:54:17.44,Chinese,,0,0,0,,
 Dialogue: 0,0:54:18.02,0:54:25.44,English,,0,0,0,,And the idea of it then is it's a pretty small adjustment to then write code that's good for either IPv4 or IPv6
+Dialogue: 0,0:54:18.02,0:54:25.44,Chinese,,0,0,0,,
 Dialogue: 0,0:54:28.48,0:54:33.60,English,,0,0,0,,So you don't normally give the actual number from that you get it from another place and passage it
+Dialogue: 0,0:54:28.48,0:54:33.60,Chinese,,0,0,0,,
 Dialogue: 0,0:54:38.70,0:54:40.02,English,,0,0,0,,So binding then
+Dialogue: 0,0:54:38.70,0:54:40.02,Chinese,,0,0,0,,
 Dialogue: 0,0:54:44.74,0:54:47.66,English,,0,0,0,,It's a kernel call
+Dialogue: 0,0:54:44.74,0:54:47.66,Chinese,,0,0,0,,
 Dialogue: 0,0:55:03.76,0:55:06.00,English,,0,0,0,,That designates which particular service
+Dialogue: 0,0:55:03.76,0:55:06.00,Chinese,,0,0,0,,
 Dialogue: 0,0:55:06.68,0:55:09.36,English,,0,0,0,,This program is going to be hosting
+Dialogue: 0,0:55:06.68,0:55:09.36,Chinese,,0,0,0,,
 Dialogue: 0,0:55:10.43,0:55:13.66,English,,0,0,0,,But which will be the server for and that's given by its port number
+Dialogue: 0,0:55:10.43,0:55:13.66,Chinese,,0,0,0,,
 Dialogue: 0,0:55:23.88,0:55:26.54,English,,0,0,0,,And then the next step is to
+Dialogue: 0,0:55:23.88,0:55:26.54,Chinese,,0,0,0,,
 Dialogue: 0,0:55:27.66,0:55:30.68,English,,0,0,0,,To listen and that's just a call that says
+Dialogue: 0,0:55:27.66,0:55:30.68,Chinese,,0,0,0,,
 Dialogue: 0,0:55:41.02,0:55:47.48,English,,0,0,0,,That will now convert this socket to a listening socket which you need as a server
+Dialogue: 0,0:55:41.02,0:55:47.48,Chinese,,0,0,0,,
 Dialogue: 0,0:55:55.44,0:55:58.56,English,,0,0,0,,So it's a way of telling the kernel that this will be
+Dialogue: 0,0:55:55.44,0:55:58.56,Chinese,,0,0,0,,
 Dialogue: 0,0:56:00.46,0:56:01.60,English,,0,0,0,,It will be a server sar
+Dialogue: 0,0:56:00.46,0:56:01.60,Chinese,,0,0,0,,
 Dialogue: 0,0:56:07.80,0:56:11.80,English,,0,0,0,,So obviously bind and listen are related ideas
+Dialogue: 0,0:56:07.80,0:56:11.80,Chinese,,0,0,0,,
 Dialogue: 0,0:56:11.94,0:56:18.86,English,,0,0,0,,But you have to do both steps and in that particular order to create a listening socket or one for a server
+Dialogue: 0,0:56:11.94,0:56:18.86,Chinese,,0,0,0,,
 Dialogue: 0,0:56:22.80,0:56:27.24,English,,0,0,0,,And then the final part of that to operate us is to say except
+Dialogue: 0,0:56:22.80,0:56:27.24,Chinese,,0,0,0,,
 Dialogue: 0,0:56:33.46,0:56:34.24,English,,0,0,0,,And
+Dialogue: 0,0:56:33.46,0:56:34.24,Chinese,,0,0,0,,
 Dialogue: 0,0:56:39.68,0:56:45.72,English,,0,0,0,,Oh that means okay now we've established this now I'm actually ready to receive phone calls
+Dialogue: 0,0:56:39.68,0:56:45.72,Chinese,,0,0,0,,
 Dialogue: 0,0:56:46.24,0:56:49.46,English,,0,0,0,,Is essentially what it says is this is the final step to say
 Dialogue: 0,0:56:50.08,0:56:53.68,English,,0,0,0,,Okay this one's ready to accept connection requests
 Dialogue: 0,0:56:54.88,0:56:56.58,English,,0,0,0,,It has a similar
