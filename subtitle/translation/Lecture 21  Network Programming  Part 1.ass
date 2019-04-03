@@ -1110,7 +1110,7 @@ Dialogue: 0,0:46:39.28,0:46:41.52,Chinese,,0,0,0,,不好意思，遥控坏了
 Dialogue: 0,0:46:45.16,0:46:49.96,English,,0,0,0,,On the the right hand side refers to the steps that the server has to go through
 Dialogue: 0,0:46:45.16,0:46:49.96,Chinese,,0,0,0,,图片的右半部分是服务器需要处理的步骤
 Dialogue: 0,0:46:50.32,0:46:52.54,English,,0,0,0,,And the left hand side is what the client does
-Dialogue: 0,0:46:50.32,0:46:52.54,Chinese,,0,0,0,,左半部分则是客户端要处理的步骤
+Dialogue: 0,0:46:50.32,0:46:52.54,Chinese,,0,0,0,,左半部分则是客户机要处理的步骤
 Dialogue: 0,0:46:53.14,0:46:57.68,English,,0,0,0,,So the upper right is what it takes to set up a server
 Dialogue: 0,0:46:53.14,0:46:57.68,Chinese,,0,0,0,,右上角是设置一个服务器的步骤
 Dialogue: 0,0:46:58.00,0:47:01.60,English,,0,0,0,,That is then a program that's running there
@@ -1118,7 +1118,7 @@ Dialogue: 0,0:46:58.00,0:47:01.60,Chinese,,0,0,0,,它上面有一个程序在运
 Dialogue: 0,0:47:02.04,0:47:07.34,English,,0,0,0,,Ready to receive connections from a client and perform various services
 Dialogue: 0,0:47:02.04,0:47:07.34,Chinese,,0,0,0,,准备接受客户端发送的连接请求并提供各种服务
 Dialogue: 0,0:47:09.48,0:47:15.76,English,,0,0,0,,And so obviously before the client can do anything the server has to exist
-Dialogue: 0,0:47:09.48,0:47:15.76,Chinese,,0,0,0,,很显然，有了服务器之后客户端才能工作
+Dialogue: 0,0:47:09.48,0:47:15.76,Chinese,,0,0,0,,很显然，有了服务器之后客户机才能利用它
 Dialogue: 0,0:47:15.86,0:47:18.16,English,,0,0,0,,So that has to be the first step in setting things up
 Dialogue: 0,0:47:15.86,0:47:18.16,Chinese,,0,0,0,,所以这是创建整个系统的第一步
 Dialogue: 0,0:47:19.64,0:47:25.60,English,,0,0,0,,And then we have to...we'll fire up a cert a client that will make use of this service
@@ -1126,7 +1126,7 @@ Dialogue: 0,0:47:19.64,0:47:25.60,Chinese,,0,0,0,,接着我们要启动一台使
 Dialogue: 0,0:47:26.90,0:47:29.14,English,,0,0,0,,And then there'll be what's referred to as a session
 Dialogue: 0,0:47:26.90,0:47:29.14,Chinese,,0,0,0,,接下来有一个叫做会话的部分
 Dialogue: 0,0:47:29.16,0:47:33.68,English,,0,0,0,,Meaning a kind of back and forth communication between the client and server
-Dialogue: 0,0:47:29.16,0:47:33.68,Chinese,,0,0,0,,它指的是客户端和服务器之间来回通信
+Dialogue: 0,0:47:29.16,0:47:33.68,Chinese,,0,0,0,,它指的是客户机和服务器之间来回通信
 Dialogue: 0,0:47:33.68,0:47:38.08,English,,0,0,0,,Doing whatever they're going to do,this is not specific to any particular application
 Dialogue: 0,0:47:33.68,0:47:38.08,Chinese,,0,0,0,,并完成它们要做的事，任何应用程序都需要这个部分
 Dialogue: 0,0:47:38.76,0:47:44.76,English,,0,0,0,,And like I said it will involve you'll see rio_ remember those were reliable I/O
@@ -1136,30 +1136,31 @@ Dialogue: 0,0:47:45.32,0:47:48.66,Chinese,,0,0,0,,它们是 UNIX I/O 系统中�
 Dialogue: 0,0:47:49.64,0:47:59.66,English,,0,0,0,,So it's a way to read and write in a rom and handle some of the quirks of low-level I/O
 Dialogue: 0,0:47:49.64,0:47:59.66,Chinese,,0,0,0,,可以用于读写 rom 并处理一些底层 I/O 的操作
 Dialogue: 0,0:47:59.68,0:48:03.25,English,,0,0,0,,But basically this is sending and receiving messages over the internet
-Dialogue: 0,0:48:04.76,0:48:06.12,English,,0,0,0,,And then once that's 
-Dialogue: 0,0:48:04.76,0:48:06.12,Chinese,,0,
+Dialogue: 0,0:47:59.68,0:48:03.25,Chinese,,0,0,0,,但它们主要还是用于发送和接受网络上的信息
+Dialogue: 0,0:48:04.76,0:48:06.12,English,,0,0,0,,And then once that's done
+Dialogue: 0,0:48:04.76,0:48:06.12,Chinese,,0,0,0,,上述部分都完成之后
 Dialogue: 0,0:48:07.30,0:48:12.22,English,,0,0,0,,Typically then the client will close its connection sort of equivalent of hanging up its phone
-Dialogue: 0,0:48:07.30,0:48:12.22,Chinese,,0,0,0,,
+Dialogue: 0,0:48:07.30,0:48:12.22,Chinese,,0,0,0,,客户机就会结束它的连接，就像挂电话一样
 Dialogue: 0,0:48:13.02,0:48:14.70,English,,0,0,0,,And say ok I'm done
-Dialogue: 0,0:48:13.02,0:48:14.70,Chinese,,0,0,0,,
+Dialogue: 0,0:48:13.02,0:48:14.70,Chinese,,0,0,0,,相当于在说“我完成了”
 Dialogue: 0,0:48:15.12,0:48:21.56,English,,0,0,0,,And then sometime later or maybe never depending on what kind of web you know service this is
-Dialogue: 0,0:48:15.12,0:48:21.56,Chinese,,0,0,0,,
+Dialogue: 0,0:48:15.12,0:48:21.56,Chinese,,0,0,0,,在一些情况下，当然你可能永远都遇不到这些情况，它们是否出现取决于服务器到底在运行哪种服务
 Dialogue: 0,0:48:22.10,0:48:24.54,English,,0,0,0,,If the server wants to shut down
-Dialogue: 0,0:48:22.10,0:48:24.54,Chinese,,0,0,0,,
+Dialogue: 0,0:48:22.10,0:48:24.54,Chinese,,0,0,0,,如果服务器想要主动结束连接
 Dialogue: 0,0:48:24.54,0:48:29.90,English,,0,0,0,,It has its own a collection of calls that it makes to stop that service
-Dialogue: 0,0:48:24.54,0:48:29.90,Chinese,,0,0,0,,
+Dialogue: 0,0:48:24.54,0:48:29.90,Chinese,,0,0,0,,它会有自己的命令集让它停止相应的服务
 Dialogue: 0,0:48:31.22,0:48:36.64,English,,0,0,0,,So anyways just to kind of give you the landscape of what this picture means
-Dialogue: 0,0:48:31.22,0:48:36.64,Chinese,,0,0,0,,
+Dialogue: 0,0:48:31.22,0:48:36.64,Chinese,,0,0,0,,不管怎样，你们应该对这幅图片有一个大致的了解了
 Dialogue: 0,0:48:41.08,0:48:43.78,English,,0,0,0,,So we're going to sort of jump into
-Dialogue: 0,0:48:41.08,0:48:43.78,Chinese,,0,0,0,,
-Dialogue: 0,0:48:45.21,0:48:48.30,English,,0,0,0,,The middle this the top level up and we'll focus
-Dialogue: 0,0:48:45.21,0:48:48.30,Chinese,,0,0,0,,
+Dialogue: 0,0:48:41.08,0:48:43.78,Chinese,,0,0,0,,我们接下来将直接学习
+Dialogue: 0,0:48:45.21,0:48:48.30,English,,0,0,0,,The middle this the top level and we'll focus
+Dialogue: 0,0:48:45.21,0:48:48.30,Chinese,,0,0,0,,最顶端这个部分还是...
 Dialogue: 0,0:48:52.06,0:48:53.84,English,,0,0,0,,Actually which will we focus on
-Dialogue: 0,0:48:52.06,0:48:53.84,Chinese,,0,0,0,,
+Dialogue: 0,0:48:52.06,0:48:53.84,Chinese,,0,0,0,,我们到底要讲哪个部分
 Dialogue: 0,0:48:54.42,0:48:56.90,English,,0,0,0,,Well we'll talk to some level in parallel
-Dialogue: 0,0:48:54.42,0:48:56.90,Chinese,,0,0,0,,
+Dialogue: 0,0:48:54.42,0:48:56.90,Chinese,,0,0,0,,好吧，我们会一行一行的学习
 Dialogue: 0,0:48:58.26,0:49:03.12,English,,0,0,0,,Because there's a lot of commonality as you can see between what goes on with the server and what goes on with the client
-Dialogue: 0,0:48:58.26,0:49:03.12,Chinese,,0,0,0,,
+Dialogue: 0,0:48:58.26,0:49:03.12,Chinese,,0,0,0,,因为这样你就可以看到客户机和服务器上运行的程序的共同点
 Dialogue: 0,0:49:07.88,0:49:12.64,English,,0,0,0,,Yeah and so actually the top level call this one called getaddrinfo is the way that
 Dialogue: 0,0:49:07.88,0:49:12.64,Chinese,,0,0,0,,
 Dialogue: 0,0:49:13.16,0:49:14.34,English,,0,0,0,,It sort of...
