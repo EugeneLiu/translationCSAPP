@@ -1162,55 +1162,55 @@ Dialogue: 0,0:48:54.42,0:48:56.90,Chinese,,0,0,0,,好吧，我们会一行一行
 Dialogue: 0,0:48:58.26,0:49:03.12,English,,0,0,0,,Because there's a lot of commonality as you can see between what goes on with the server and what goes on with the client
 Dialogue: 0,0:48:58.26,0:49:03.12,Chinese,,0,0,0,,因为这样你就可以看到客户机和服务器上运行的程序的共同点
 Dialogue: 0,0:49:07.88,0:49:12.64,English,,0,0,0,,Yeah and so actually the top level call this one called getaddrinfo is the way that
-Dialogue: 0,0:49:07.88,0:49:12.64,Chinese,,0,0,0,,
+Dialogue: 0,0:49:07.88,0:49:12.64,Chinese,,0,0,0,,最上方的 getaddrinfo 模块
 Dialogue: 0,0:49:13.16,0:49:14.34,English,,0,0,0,,It sort of...
-Dialogue: 0,0:49:13.16,0:49:14.34,Chinese,,0,0,0,,
+Dialogue: 0,0:49:13.16,0:49:14.34,Chinese,,0,0,0,,它算是
 Dialogue: 0,0:49:18.14,0:49:25.90,English,,0,0,0,,Initiate things and actually does the lookup to map from a domain name to a IP address
-Dialogue: 0,0:49:18.14,0:49:25.90,Chinese,,0,0,0,,
+Dialogue: 0,0:49:18.14,0:49:25.90,Chinese,,0,0,0,,整个流程的开端，它实际上是用于查找从域名到 IP 地址的映射
 Dialogue: 0,0:49:26.52,0:49:27.76,English,,0,0,0,,So we'll cover that later
-Dialogue: 0,0:49:26.52,0:49:27.76,Chinese,,0,0,0,,
+Dialogue: 0,0:49:26.52,0:49:27.76,Chinese,,0,0,0,,我之后会详细说明
 Dialogue: 0,0:49:28.28,0:49:35.14,English,,0,0,0,,So the first step in on either side then and creating a connection is a call to a function called socket
-Dialogue: 0,0:49:28.28,0:49:35.14,Chinese,,0,0,0,,
+Dialogue: 0,0:49:28.28,0:49:35.14,Chinese,,0,0,0,,所以客户机和服务器的要做的第一步都是通过调用 socket 函数来创建连接
 Dialogue: 0,0:49:37.76,0:49:42.82,English,,0,0,0,,And the reason I wanted to blackboard was to help you keep track of this
-Dialogue: 0,0:49:37.76,0:49:42.82,Chinese,,0,0,0,,
+Dialogue: 0,0:49:37.76,0:49:42.82,Chinese,,0,0,0,,为了方便你们记录，我会把这些内容写到黑板上
 Dialogue: 0,0:50:05.84,0:50:08.96,English,,0,0,0,,So the first call is a doesn't do much
-Dialogue: 0,0:50:05.84,0:50:08.96,Chinese,,0,0,0,,
+Dialogue: 0,0:50:05.84,0:50:08.96,Chinese,,0,0,0,,第一个调用实际上作用不大
 Dialogue: 0,0:50:09.36,0:50:12.84,English,,0,0,0,,Oh and that's why the function call is socket
-Dialogue: 0,0:50:09.36,0:50:12.84,Chinese,,0,0,0,,
+Dialogue: 0,0:50:09.36,0:50:12.84,Chinese,,0,0,0,,因此这个函数被称为 socket
 Dialogue: 0,0:50:13.38,0:50:14.48,English,,0,0,0,,But the
-Dialogue: 0,0:50:13.38,0:50:14.48,Chinese,,0,0,0,,
+Dialogue: 0,0:50:13.38,0:50:14.48,Chinese,,0,0,0,,但
 Dialogue: 0,0:50:17.72,0:50:19.52,English,,0,0,0,,It only happens within the application
-Dialogue: 0,0:50:17.72,0:50:19.52,Chinese,,0,0,0,,
+Dialogue: 0,0:50:17.72,0:50:19.52,Chinese,,0,0,0,,它只在这个应用内部起作用
 Dialogue: 0,0:50:19.52,0:50:24.64,English,,0,0,0,,It doesn't make a use of any part of the operating system doesn't send anything over the network
-Dialogue: 0,0:50:19.52,0:50:24.64,Chinese,,0,0,0,,
+Dialogue: 0,0:50:19.52,0:50:24.64,Chinese,,0,0,0,,它不会使用操作系统，也不会往网络上发送任何内容
 Dialogue: 0,0:50:25.12,0:50:28.86,English,,0,0,0,,And the idea is to basically say hey I want to create a socket
-Dialogue: 0,0:50:25.12,0:50:28.86,Chinese,,0,0,0,,
+Dialogue: 0,0:50:25.12,0:50:28.86,Chinese,,0,0,0,,这一步只是为了创建一个 socket
 Dialogue: 0,0:50:31.08,0:50:33.66,English,,0,0,0,,And it's given three arguments
-Dialogue: 0,0:50:31.08,0:50:33.66,Chinese,,0,0,0,,
-Dialogue: 0,0:50:34.18,0:50:37.10,English,,0,0,0,,The first two which is AF_INET
-Dialogue: 0,0:50:34.18,0:50:37.10,Chinese,,0,0,0,,
+Dialogue: 0,0:50:31.08,0:50:33.66,Chinese,,0,0,0,,它有三个参数
+Dialogue: 0,0:50:34.18,0:50:37.10,English,,0,0,0,,The first which is AF_INET
+Dialogue: 0,0:50:34.18,0:50:37.10,Chinese,,0,0,0,,第一个参数叫 AF_INET
 Dialogue: 0,0:50:37.14,0:50:45.44,English,,0,0,0,,All these upper case on names are constants that are built in or included in the various .h files that
-Dialogue: 0,0:50:37.14,0:50:45.44,Chinese,,0,0,0,,
+Dialogue: 0,0:50:37.14,0:50:45.44,Chinese,,0,0,0,,所有字母大写的参数都是包含在各种 .h 文件里的常量
 Dialogue: 0,0:50:45.52,0:50:47.28,English,,0,0,0,,That you include in writing this code
-Dialogue: 0,0:50:45.52,0:50:47.28,Chinese,,0,0,0,,
+Dialogue: 0,0:50:45.52,0:50:47.28,Chinese,,0,0,0,,你们写代码的时候应该包含这些头文件
 Dialogue: 0,0:50:47.64,0:50:53.62,English,,0,0,0,,And AF_INET just means it's a IPv4 so 32-bit addresses
-Dialogue: 0,0:50:47.64,0:50:53.62,Chinese,,0,0,0,,
+Dialogue: 0,0:50:47.64,0:50:53.62,Chinese,,0,0,0,,AF_INET 告诉我们它是一个 32 位的 IPv4 地址
 Dialogue: 0,0:50:54.66,0:50:58.52,English,,0,0,0,,And then the second parameter is says you want a SOCK_STREAM
-Dialogue: 0,0:50:54.66,0:50:58.52,Chinese,,0,0,0,,
+Dialogue: 0,0:50:54.66,0:50:58.52,Chinese,,0,0,0,,第二个参数 SOCK_STREAM
 Dialogue: 0,0:50:58.92,0:51:01.14,English,,0,0,0,,And that refers to a TCP connection
-Dialogue: 0,0:50:58.92,0:51:01.14,Chinese,,0,0,0,,
+Dialogue: 0,0:50:58.92,0:51:01.14,Chinese,,0,0,0,,表明了这个连接是一个 TCP 连接
 Dialogue: 0,0:51:01.18,0:51:07.68,English,,0,0,0,,It's referred to as a stream connection because like I said you get to send as many bytes as you like a stream of bytes
-Dialogue: 0,0:51:01.18,0:51:07.68,Chinese,,0,0,0,,
+Dialogue: 0,0:51:01.18,0:51:07.68,Chinese,,0,0,0,,它也被称为流连接，因为你可以发送任意字节数据流
 Dialogue: 0,0:51:08.24,0:51:09.82,English,,0,0,0,,Either direction
-Dialogue: 0,0:51:08.24,0:51:09.82,Chinese,,0,0,0,,
+Dialogue: 0,0:51:08.24,0:51:09.82,Chinese,,0,0,0,,而且是双向的
 Dialogue: 0,0:51:10.94,0:51:12.08,English,,0,0,0,,And then
-Dialogue: 0,0:51:10.94,0:51:12.08,Chinese,,0,0,0,,
+Dialogue: 0,0:51:10.94,0:51:12.08,Chinese,,0,0,0,,下一个参数
 Dialogue: 0,0:51:15.94,0:51:18.86,English,,0,0,0,,Zero protocol
-Dialogue: 0,0:51:15.94,0:51:18.86,Chinese,,0,0,0,,
+Dialogue: 0,0:51:15.94,0:51:18.86,Chinese,,0,0,0,,则是 0
 Dialogue: 0,0:51:18.92,0:51:22.36,English,,0,0,0,,Well I guess it must not be very interesting because I set it to zero
-Dialogue: 0,0:51:18.92,0:51:22.36,Chinese,,0,0,0,,
+Dialogue: 0,0:51:18.92,0:51:22.36,Chinese,,0,0,0,,嗯，它可能不是很有趣，因为我把它设成了 0
 Dialogue: 0,0:51:23.32,0:51:26.16,English,,0,0,0,,So we don't need to do anything in this particular case
-Dialogue: 0,0:51:23.32,0:51:26.16,Chinese,,0,0,0,,
+Dialogue: 0,0:51:23.32,0:51:26.16,Chinese,,0,0,0,,我们在这个例子中不用做任何操作
 Dialogue: 0,0:51:27.14,0:51:29.02,English,,0,0,0,,There are man pages on this by the way which
 Dialogue: 0,0:51:27.14,0:51:29.02,Chinese,,0,0,0,,
 Dialogue: 0,0:51:29.72,0:51:33.68,English,,0,0,0,,If you just tried to learn all sockets programming by reading men pages you'd go crazy
