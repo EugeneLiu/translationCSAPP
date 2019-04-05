@@ -16,9 +16,9 @@ Video File: C:/Users/xqit/Desktop/backup/csapp/Lecture 16 System Level I-O.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 0.625000
-Scroll Position: 946
-Active Line: 955
-Video Position: 76237
+Scroll Position: 1068
+Active Line: 1073
+Video Position: 87263
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -976,7 +976,7 @@ Dialogue: 0,0:41:56.32,0:42:00.92,Chinese,,0,0,0,,这样做的好处是不用每
 Dialogue: 0,0:42:00.92,0:42:03.88,English,,0,0,0,,And asking for one character small number of characters
 Dialogue: 0,0:42:00.92,0:42:03.88,Chinese,,0,0,0,,都调用一次操作系统
 Dialogue: 0,0:42:05.02,0:42:11.78,English,,0,0,0,,They called the operating system says give me pretty much as many characters as you've got up to some limit
-Dialogue: 0,0:42:05.02,0:42:11.78,Chinese,,0,0,0,,而是我先调用一次，把若干字符先缓存起来
+Dialogue: 0,0:42:05.02,0:42:11.78,Chinese,,0,0,0,,而是我先调用一次，把若干字符缓存起来
 Dialogue: 0,0:42:12.68,0:42:16.36,English,,0,0,0,,And then I'll just go away and let the application program
 Dialogue: 0,0:42:12.68,0:42:16.36,Chinese,,0,0,0,,后续应用程序只需要
 Dialogue: 0,0:42:16.50,0:42:20.76,English,,0,0,0,,Sort of pull these out a couple of bytes at a time
@@ -984,123 +984,123 @@ Dialogue: 0,0:42:16.50,0:42:20.76,Chinese,,0,0,0,,每次从缓冲区中提取
 Dialogue: 0,0:42:21.22,0:42:25.80,English,,0,0,0,,But I won't bug the operating system to do it I being the RIO function
 Dialogue: 0,0:42:21.22,0:42:25.80,Chinese,,0,0,0,,避免我再去调用操作系统，“我”指 RIO 函数
 Dialogue: 0,0:42:27.00,0:42:32.52,English,,0,0,0,,And the way it does it is by just keeping a pointer that indicates
-Dialogue: 0,0:42:27.00,0:42:32.52,Chinese,,0,0,0,,它的方式是通过指针来指示
+Dialogue: 0,0:42:27.00,0:42:32.52,Chinese,,0,0,0,,这个过程是借助指针来完成的
 Dialogue: 0,0:42:32.96,0:42:35.26,English,,0,0,0,,What part of the the bytes
-Dialogue: 0,0:42:32.96,0:42:35.26,Chinese,,0,0,0,,字节的哪一部分
+Dialogue: 0,0:42:32.96,0:42:35.26,Chinese,,0,0,0,,指针所指向的位置
 Dialogue: 0,0:42:35.42,0:42:42.28,English,,0,0,0,,That I've already brought in from the operating system call
-Dialogue: 0,0:42:35.42,0:42:42.28,Chinese,,0,0,0,,已经通过调用操作系统引入
+Dialogue: 0,0:42:35.42,0:42:42.28,Chinese,,0,0,0,,标明了我已经通过调用操作系统读到缓冲区
 Dialogue: 0,0:42:42.66,0:42:46.16,English,,0,0,0,,But haven't been supplied yet to the application program
-Dialogue: 0,0:42:42.66,0:42:46.16,Chinese,,0,0,0,,但尚未提供给应用程序
+Dialogue: 0,0:42:42.66,0:42:46.16,Chinese,,0,0,0,,但还未读出到应用程序的字节段的起始点
 Dialogue: 0,0:42:46.74,0:42:52.52,English,,0,0,0,,And so in this sort of larger picture of things if you imagine you're walking through a file
-Dialogue: 0,0:42:46.74,0:42:52.52,Chinese,,0,0,0,,想象一下你正在穿过一个文件
+Dialogue: 0,0:42:46.74,0:42:52.52,Chinese,,0,0,0,,从一个文件的角度来考虑
 Dialogue: 0,0:42:54.38,0:43:00.20,English,,0,0,0,,At any given point in time this buffer will represent some a range in that file
-Dialogue: 0,0:42:54.38,0:43:00.20,Chinese,,0,0,0,,缓冲区代表在任何给定的时间点该文件中的某些区间
+Dialogue: 0,0:42:54.38,0:43:00.20,Chinese,,0,0,0,,缓冲区就代表某个时间点上该文件中的一段字节
 Dialogue: 0,0:43:00.56,0:43:05.24,English,,0,0,0,,Where the green is the stuff that's already been read by the application program
-Dialogue: 0,0:43:00.56,0:43:05.24,Chinese,,0,0,0,,绿色代表应用程序已经读过的部分
+Dialogue: 0,0:43:00.56,0:43:05.24,Chinese,,0,0,0,,绿色区域表示已经被应用程序读过的部分
 Dialogue: 0,0:43:05.82,0:43:08.64,English,,0,0,0,,The pink is the stuff that's been read
-Dialogue: 0,0:43:05.82,0:43:08.64,Chinese,,0,0,0,,粉红色代表
+Dialogue: 0,0:43:05.82,0:43:08.64,Chinese,,0,0,0,,粉红色区域表示
 Dialogue: 0,0:43:09.00,0:43:11.56,English,,0,0,0,,But from the operating system out of a file
-Dialogue: 0,0:43:09.00,0:43:11.56,Chinese,,0,0,0,,已经通过操作系统从文件中读出
+Dialogue: 0,0:43:09.00,0:43:11.56,Chinese,,0,0,0,,已经通过调用操作系统从该文件中读出
 Dialogue: 0,0:43:12.00,0:43:14.68,English,,0,0,0,,But not yet read by the application program
-Dialogue: 0,0:43:12.00,0:43:14.68,Chinese,,0,0,0,,但应用程序还没读过的部分
+Dialogue: 0,0:43:12.00,0:43:14.68,Chinese,,0,0,0,,但还未被应用程序读过的部分
 Dialogue: 0,0:43:16.88,0:43:20.30,English,,0,0,0,,And the way this is implemented once you think about it
-Dialogue: 0,0:43:16.88,0:43:20.30,Chinese,,0,0,0,,实现的方式想一想
+Dialogue: 0,0:43:16.88,0:43:20.30,Chinese,,0,0,0,,稍加思索，就会发现这个操作实现起来
 Dialogue: 0,0:43:20.36,0:43:22.18,English,,0,0,0,,It's not too hard to do
 Dialogue: 0,0:43:20.36,0:43:22.18,Chinese,,0,0,0,,其实并不难
 Dialogue: 0,0:43:22.46,0:43:29.88,English,,0,0,0,,Is that associated with every file connection then is a file descriptor
-Dialogue: 0,0:43:22.46,0:43:29.88,Chinese,,0,0,0,,每个文件连接都有一个相关联的文件描述符
+Dialogue: 0,0:43:22.46,0:43:29.88,Chinese,,0,0,0,,每个文件都对应一个文件描述符
 Dialogue: 0,0:43:31.48,0:43:34.60,English,,0,0,0,,A count that tells you how many bytes
-Dialogue: 0,0:43:31.48,0:43:34.60,Chinese,,0,0,0,,这个描述符会告诉你
+Dialogue: 0,0:43:31.48,0:43:34.60,Chinese,,0,0,0,,一个计数——
 Dialogue: 0,0:43:35.32,0:43:38.16,English,,0,0,0,,There are that have not been read yet
-Dialogue: 0,0:43:35.32,0:43:38.16,Chinese,,0,0,0,,还有多少字节没有读
+Dialogue: 0,0:43:35.32,0:43:38.16,Chinese,,0,0,0,,告诉你还有多少字节未读
 Dialogue: 0,0:43:39.34,0:43:46.68,English,,0,0,0,,A pointer to where this changeover is
-Dialogue: 0,0:43:39.34,0:43:46.68,Chinese,,0,0,0,,有一个指针，指向已读未读的分割点
+Dialogue: 0,0:43:39.34,0:43:46.68,Chinese,,0,0,0,,一个指针——分割已读与未读区域
 Dialogue: 0,0:43:47.20,0:43:52.98,English,,0,0,0,,And then the actual storage of the buffer itself
-Dialogue: 0,0:43:47.20,0:43:52.98,Chinese,,0,0,0,,然后是缓冲区本身的实际存储空间
+Dialogue: 0,0:43:47.20,0:43:52.98,Chinese,,0,0,0,,以及缓冲区本身的实际存储空间
 Dialogue: 0,0:43:53.02,0:43:56.18,English,,0,0,0,,The characters allocated the bytes allocated to the buffer itself
-Dialogue: 0,0:43:53.02,0:43:56.18,Chinese,,0,0,0,,即分配给缓冲区本身的字符字节
+Dialogue: 0,0:43:53.02,0:43:56.18,Chinese,,0,0,0,,也就是分配给缓冲区的字节数
 Dialogue: 0,0:44:00.38,0:44:08.18,English,,0,0,0,,And so here's an example then of using RIO to do this echo that
-Dialogue: 0,0:44:00.38,0:44:08.18,Chinese,,0,0,0,,这是一个使用 RIO 边读边写的例子
+Dialogue: 0,0:44:00.38,0:44:08.18,Chinese,,0,0,0,,来看一个用 RIO 函数边读边写的例子
 Dialogue: 0,0:44:08.30,0:44:17.78,English,,0,0,0,,You first read a line, and reading a line means it will look for and stop at a line feed character
-Dialogue: 0,0:44:08.30,0:44:17.78,Chinese,,0,0,0,,先读一行文本，所谓读一行是指读到遇到换行符为止
+Dialogue: 0,0:44:08.30,0:44:17.78,Chinese,,0,0,0,,它会先读入一行文本，直到遇到换行符为止
 Dialogue: 0,0:44:18.68,0:44:20.37,English,,0,0,0,,And writing it back out
-Dialogue: 0,0:44:18.68,0:44:20.37,Chinese,,0,0,0,,再把读的文本写出来
+Dialogue: 0,0:44:18.68,0:44:20.37,Chinese,,0,0,0,,再把读入的文本写出来
 Dialogue: 0,0:44:20.68,0:44:32.42,English,,0,0,0,,And again if you do the demo of this code
 Dialogue: 0,0:44:20.68,0:44:32.42,Chinese,,0,0,0,,我们来演示一下这段代码
 Dialogue: 0,0:44:48.96,0:44:56.64,English,,0,0,0,,It's a little again you get...let me just trace writes because it's a little hard to see the reads here hard to figure out with...
-Dialogue: 0,0:44:48.96,0:44:56.64,Chinese,,0,0,0,,同样也会看到......我们只追踪写操作，因为要查看读操作有点困难
+Dialogue: 0,0:44:48.96,0:44:56.64,Chinese,,0,0,0,,同样也会看到......方便起见，我们只追踪写操作
 Dialogue: 0,0:45:04.94,0:45:06.64,English,,0,0,0,,So you'll see that it's
-Dialogue: 0,0:45:04.94,0:45:06.64,Chinese,,0,0,0,,可以看到它
+Dialogue: 0,0:45:04.94,0:45:06.64,Chinese,,0,0,0,,可以看到
 Dialogue: 0,0:45:08.94,0:45:13.34,English,,0,0,0,,Read the whole line and now it's done at the operating system level
-Dialogue: 0,0:45:08.94,0:45:13.34,Chinese,,0,0,0,,读完了一整行，读完后在操作系统层面
+Dialogue: 0,0:45:08.94,0:45:13.34,Chinese,,0,0,0,,它在操作系统层面现在已经读完了一整行
 Dialogue: 0,0:45:13.74,0:45:21.34,English,,0,0,0,,It's written just one chunk's worth one call to the operating system's write function
-Dialogue: 0,0:45:13.74,0:45:21.34,Chinese,,0,0,0,,调用操作系统的 write 函数，调用一次写一块
+Dialogue: 0,0:45:13.74,0:45:21.34,Chinese,,0,0,0,,然后调用操作系统的 write 函数写了一整行
 Dialogue: 0,0:45:25.48,0:45:27.66,English,,0,0,0,,Instead of byte by byte
-Dialogue: 0,0:45:25.48,0:45:27.66,Chinese,,0,0,0,,而不是逐字节地写
+Dialogue: 0,0:45:25.48,0:45:27.66,Chinese,,0,0,0,,而不是逐个字节地写
 Dialogue: 0,0:45:38.92,0:45:42.18,English,,0,0,0,,Okay so again I'm not going to go through all the code
-Dialogue: 0,0:45:38.92,0:45:42.18,Chinese,,0,0,0,,我不打算讲所有的代码
+Dialogue: 0,0:45:38.92,0:45:42.18,Chinese,,0,0,0,,这段代码的其他部分我就不再讲了
 Dialogue: 0,0:45:42.18,0:45:45.16,English,,0,0,0,,But it's actually worth your while to do this
-Dialogue: 0,0:45:42.18,0:45:45.16,Chinese,,0,0,0,,但确实值得一试
+Dialogue: 0,0:45:42.18,0:45:45.16,Chinese,,0,0,0,,但确实值得大家去试一试
 Dialogue: 0,0:45:45.58,0:45:51.82,English,,0,0,0,,And by the way I've actually done some applications where I took the RIO code I want to add some features to it
-Dialogue: 0,0:45:45.58,0:45:51.82,Chinese,,0,0,0,,顺便说一下，我实际上进行了一些尝试，因为我想在 RIO 代码的基础上添加一些功能
+Dialogue: 0,0:45:45.58,0:45:51.82,Chinese,,0,0,0,,顺便说一下，我自己也试了试，基于 RIO 代码自行添加了一些功能
 Dialogue: 0,0:45:52.42,0:45:57.66,English,,0,0,0,,But it's a very useful starting point to be able to build your own customized routines
-Dialogue: 0,0:45:52.42,0:45:57.66,Chinese,,0,0,0,,这对于构建自己的自定义例程来说是一个非常有用的起点
+Dialogue: 0,0:45:52.42,0:45:57.66,Chinese,,0,0,0,,对于创建自定义例程来说，这确实是一个很不错的起点
 Dialogue: 0,0:45:59.42,0:46:02.24,English,,0,0,0,,Okay so let's talk about some other parts of files
-Dialogue: 0,0:45:59.42,0:46:02.24,Chinese,,0,0,0,,现在让我们来谈谈文件的其他部分
+Dialogue: 0,0:45:59.42,0:46:02.24,Chinese,,0,0,0,,现在来讲讲文件的其他部分
 Dialogue: 0,0:46:04.02,0:46:08.70,English,,0,0,0,,One is that associated with a file is what they call metadata
-Dialogue: 0,0:46:04.02,0:46:08.70,Chinese,,0,0,0,,一个是与文件相关联的称之为元数据的事物
+Dialogue: 0,0:46:04.02,0:46:08.70,Chinese,,0,0,0,,一个是文件元数据
 Dialogue: 0,0:46:10.08,0:46:14.56,English,,0,0,0,,So the data are the actual contents of the file actual bytes inside that file
-Dialogue: 0,0:46:10.08,0:46:14.56,Chinese,,0,0,0,,数据是指文件的实际内容文件中实际包含的字节
+Dialogue: 0,0:46:10.08,0:46:14.56,Chinese,,0,0,0,,所谓元数据，是指文件中实际包含的数据信息
 Dialogue: 0,0:46:14.96,0:46:18.40,English,,0,0,0,,But there's a whole bunch of other stuff that's associated with the file
-Dialogue: 0,0:46:14.96,0:46:18.40,Chinese,,0,0,0,,但是还有很多其他与文件相关联的事物
+Dialogue: 0,0:46:14.96,0:46:18.40,Chinese,,0,0,0,,这些信息有很多，包括
 Dialogue: 0,0:46:20.02,0:46:22.22,English,,0,0,0,,Information about what type of file it is
-Dialogue: 0,0:46:20.02,0:46:22.22,Chinese,,0,0,0,,有关文件类型的信息
+Dialogue: 0,0:46:20.02,0:46:22.22,Chinese,,0,0,0,,关于文件类型的信息
 Dialogue: 0,0:46:22.74,0:46:27.30,English,,0,0,0,,What protection read/write/execute protections it has
-Dialogue: 0,0:46:22.74,0:46:27.30,Chinese,,0,0,0,,有关文件保护类型读/写/执行保护的信息
+Dialogue: 0,0:46:22.74,0:46:27.30,Chinese,,0,0,0,,关于文件保护类型的信息，比如读/写/执行保护等
 Dialogue: 0,0:46:30.06,0:46:33.64,English,,0,0,0,,Some information about the ownership of that file
-Dialogue: 0,0:46:30.06,0:46:33.64,Chinese,,0,0,0,,有关文件所有权的信息
+Dialogue: 0,0:46:30.06,0:46:33.64,Chinese,,0,0,0,,关于文件所有权的信息
 Dialogue: 0,0:46:34.04,0:46:39.46,English,,0,0,0,,What type it is and also the times associated with it
-Dialogue: 0,0:46:34.04,0:46:39.46,Chinese,,0,0,0,,它是什么类型以及与之相关的时间
+Dialogue: 0,0:46:34.04,0:46:39.46,Chinese,,0,0,0,,比如类型和时间——
 Dialogue: 0,0:46:39.46,0:46:44.08,English,,0,0,0,,When was it created, when was it last accessed and when was it last modified
-Dialogue: 0,0:46:39.46,0:46:44.08,Chinese,,0,0,0,,什么时候创建，最后一次访问是什么时候，最后一次修改是什么时候等等
+Dialogue: 0,0:46:39.46,0:46:44.08,Chinese,,0,0,0,,文件创建时间、最后一次访问时间、最后一次修改时间等
 Dialogue: 0,0:46:44.66,0:46:51.38,English,,0,0,0,,So that's known as metadata and every file has that kind of information associated with it
-Dialogue: 0,0:46:44.66,0:46:51.38,Chinese,,0,0,0,,这就是元数据，每个文件都有这种与之相关联的信息
+Dialogue: 0,0:46:44.66,0:46:51.38,Chinese,,0,0,0,,这些都属于元数据，每个文件中都有
 Dialogue: 0,0:46:51.94,0:46:55.50,English,,0,0,0,,And you can actually and it's in a data structure called a stat
-Dialogue: 0,0:46:51.94,0:46:55.50,Chinese,,0,0,0,,这种信息存放在叫做 stat 的数据结构中
+Dialogue: 0,0:46:51.94,0:46:55.50,Chinese,,0,0,0,,它们被存放在
 Dialogue: 0,0:46:59.10,0:47:00.25,English,,0,0,0,,Data structure
-Dialogue: 0,0:46:59.10,0:47:00.25,Chinese,,0,0,0,,stat 数据结构
+Dialogue: 0,0:46:59.10,0:47:00.25,Chinese,,0,0,0,,stat 数据结构中
 Dialogue: 0,0:47:00.68,0:47:11.88,English,,0,0,0,,And you can if you want to write code that then sort of probes the directory structure of a file system
-Dialogue: 0,0:47:00.68,0:47:11.88,Chinese,,0,0,0,,如果你想编写代码来探测文件系统的目录结构，你可以
+Dialogue: 0,0:47:00.68,0:47:11.88,Chinese,,0,0,0,,如果想写代码来查看文件系统的目录结构
 Dialogue: 0,0:47:12.38,0:47:15.06,English,,0,0,0,,You can make a call to the stat function
-Dialogue: 0,0:47:12.38,0:47:15.06,Chinese,,0,0,0,,你可以调用 stat 函数
+Dialogue: 0,0:47:12.38,0:47:15.06,Chinese,,0,0,0,,可以调用 stat 函数
 Dialogue: 0,0:47:15.18,0:47:20.08,English,,0,0,0,,And it's given the pathname of the file you want to stat
-Dialogue: 0,0:47:15.18,0:47:20.08,Chinese,,0,0,0,,在函数中给出你想要 stat 的文件的路径名
+Dialogue: 0,0:47:15.18,0:47:20.08,Chinese,,0,0,0,,为此，需要给出想要 stat 的文件的路径名
 Dialogue: 0,0:47:20.66,0:47:27.34,English,,0,0,0,,And then a pointer to one of these stat data structures and then that
-Dialogue: 0,0:47:20.66,0:47:27.34,Chinese,,0,0,0,,并给出指向其中一个 stat 数据结构的指针
+Dialogue: 0,0:47:20.66,0:47:27.34,Chinese,,0,0,0,,以及指向其中一个 stat 数据结构的指针
 Dialogue: 0,0:47:27.96,0:47:32.50,English,,0,0,0,,Data structure will get filled in by the information for this particular file
-Dialogue: 0,0:47:27.96,0:47:32.50,Chinese,,0,0,0,,文件的信息就会填入该指向的数据结构
+Dialogue: 0,0:47:27.96,0:47:32.50,Chinese,,0,0,0,,这样一来，文件信息就会填入该指针指向的 stat 数据结构
 Dialogue: 0,0:47:32.90,0:47:36.86,English,,0,0,0,,And then you can test various attributes about that file
-Dialogue: 0,0:47:32.90,0:47:36.86,Chinese,,0,0,0,,然后你便可以测试文件的各种属性
+Dialogue: 0,0:47:32.90,0:47:36.86,Chinese,,0,0,0,,然后便可以测试文件的各种属性
 Dialogue: 0,0:47:37.30,0:47:41.32,English,,0,0,0,,And say basically get the information
-Dialogue: 0,0:47:37.30,0:47:41.32,Chinese,,0,0,0,,而且基本上可以获得
+Dialogue: 0,0:47:37.30,0:47:41.32,Chinese,,0,0,0,,并获得存放在该 stat 数据结构中
 Dialogue: 0,0:47:42.10,0:47:44.48,English,,0,0,0,,That's stored here
-Dialogue: 0,0:47:42.10,0:47:44.48,Chinese,,0,0,0,,存在 stat 数据结构中的全部信息
+Dialogue: 0,0:47:42.10,0:47:44.48,Chinese,,0,0,0,,几乎所有信息
 Dialogue: 0,0:47:44.58,0:47:47.78,English,,0,0,0,,And there's all these nasty compile time constants
-Dialogue: 0,0:47:44.58,0:47:47.78,Chinese,,0,0,0,,还有这些讨厌的编译时常量
+Dialogue: 0,0:47:44.58,0:47:47.78,Chinese,,0,0,0,,这里需要用到编译时常量或宏
 Dialogue: 0,0:47:47.90,0:47:57.20,English,,0,0,0,,That you use or macros that you use to look at and examine these metadata
-Dialogue: 0,0:47:47.90,0:47:57.20,Chinese,,0,0,0,,或宏，它们的作用是用来查看和检查这些元数据
+Dialogue: 0,0:47:47.90,0:47:57.20,Chinese,,0,0,0,,它们可以用来查看并检查这些元数据
 Dialogue: 0,0:48:04.70,0:48:07.18,English,,0,0,0,,So here's an example I will do it but
-Dialogue: 0,0:48:04.70,0:48:07.18,Chinese,,0,0,0,,举一个例子
+Dialogue: 0,0:48:04.70,0:48:07.18,Chinese,,0,0,0,,举个例子
 Dialogue: 0,0:48:07.20,0:48:10.98,English,,0,0,0,,But it's a function called statcheck it's in the same directory
-Dialogue: 0,0:48:07.20,0:48:10.98,Chinese,,0,0,0,,如果调用处于同一目录下的 statcheck 函数
+Dialogue: 0,0:48:07.20,0:48:10.98,Chinese,,0,0,0,,如果调用处于同一目录下的 statcheck 函数来检查某文件
 Dialogue: 0,0:48:11.54,0:48:16.30,English,,0,0,0,,And so if you check some file or typically say well it's a regular file
-Dialogue: 0,0:48:11.54,0:48:16.30,Chinese,,0,0,0,,来检查某个文件，通常是某个普通文件
+Dialogue: 0,0:48:11.54,0:48:16.30,Chinese,,0,0,0,,通常是普通文件
 Dialogue: 0,0:48:16.84,0:48:18.92,English,,0,0,0,,And yes you're allowed to read it
-Dialogue: 0,0:48:16.84,0:48:18.92,Chinese,,0,0,0,,它会显示 yes，表示你可以读这个文件
+Dialogue: 0,0:48:16.84,0:48:18.92,Chinese,,0,0,0,,它会显示 yes，表示可以读该文件
 Dialogue: 0,0:48:19.34,0:48:28.46,English,,0,0,0,,But now if I call chmod to eliminate set all the protections to zero
-Dialogue: 0,0:48:19.34,0:48:28.46,Chinese,,0,0,0,,但如果我用 chmod 命令将所有保护设置为 0
+Dialogue: 0,0:48:19.34,0:48:28.46,Chinese,,0,0,0,,但如果用 chmod 将所有保护设为 0
 Dialogue: 0,0:48:28.76,0:48:30.76,English,,0,0,0,,It'll say no you can't read it now
-Dialogue: 0,0:48:28.76,0:48:30.76,Chinese,,0,0,0,,它会显示 no，表示你现在不可以读这个文件
+Dialogue: 0,0:48:28.76,0:48:30.76,Chinese,,0,0,0,,它会显示 no，表示不可以读该文件
 Dialogue: 0,0:48:32.90,0:48:37.72,English,,0,0,0,,And so again that's just making use of this data here
 Dialogue: 0,0:48:32.90,0:48:37.72,Chinese,,0,0,0,,这是关于如何使用这些数据的例子
 Dialogue: 0,0:48:39.46,0:48:44.04,English,,0,0,0,,So now this is the part that gets a lot more tricky
