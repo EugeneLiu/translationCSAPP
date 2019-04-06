@@ -16,9 +16,9 @@ Video File: C:/Users/xqit/Desktop/backup/csapp/Lecture 16 System Level I-O.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 0.625000
-Scroll Position: 1068
-Active Line: 1073
-Video Position: 87263
+Scroll Position: 1560
+Active Line: 1567
+Video Position: 127332
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -1102,73 +1102,73 @@ Dialogue: 0,0:48:19.34,0:48:28.46,Chinese,,0,0,0,,但如果用 chmod 将所有�
 Dialogue: 0,0:48:28.76,0:48:30.76,English,,0,0,0,,It'll say no you can't read it now
 Dialogue: 0,0:48:28.76,0:48:30.76,Chinese,,0,0,0,,它会显示 no，表示不可以读该文件
 Dialogue: 0,0:48:32.90,0:48:37.72,English,,0,0,0,,And so again that's just making use of this data here
-Dialogue: 0,0:48:32.90,0:48:37.72,Chinese,,0,0,0,,这是关于如何使用这些数据的例子
+Dialogue: 0,0:48:32.90,0:48:37.72,Chinese,,0,0,0,,元数据及其运用我们就讲到这里
 Dialogue: 0,0:48:39.46,0:48:44.04,English,,0,0,0,,So now this is the part that gets a lot more tricky
-Dialogue: 0,0:48:39.46,0:48:44.04,Chinese,,0,0,0,,现在到更棘手的部分
+Dialogue: 0,0:48:39.46,0:48:44.04,Chinese,,0,0,0,,接下来讲所有文件信息是如何在程序中表示的
 Dialogue: 0,0:48:44.46,0:48:49.74,English,,0,0,0,,Is how our files how are all this information about file is actually represented by the programs
-Dialogue: 0,0:48:44.46,0:48:49.74,Chinese,,0,0,0,,我们的文件是如何......所有关于文件的信息是如何在程序中表示的
+Dialogue: 0,0:48:44.46,0:48:49.74,Chinese,,0,0,0,,该部分是一个难点
 Dialogue: 0,0:48:49.78,0:48:50.40,English,,0,0,0,,[Question]
 Dialogue: 0,0:48:49.78,0:48:50.40,Chinese,,0,0,0,,【请讲】
 Dialogue: 0,0:48:50.40,0:48:53.28,Chinese,,0,0,0,,[Student speaking]
-Dialogue: 0,0:48:50.40,0:48:53.28,Chinese,,0,0,0,,[学生提问]
+Dialogue: 0,0:48:50.40,0:48:53.28,Chinese,,0,0,0,,【学生提问】
 Dialogue: 0,0:48:53.28,0:48:56.65,Chinese,,0,0,0,,Yes stat just...
-Dialogue: 0,0:48:53.28,0:48:56.65,Chinese,,0,0,0,,好，stat 是......
+Dialogue: 0,0:48:53.28,0:48:56.65,Chinese,,0,0,0,,好，stat 仅仅是......
 Dialogue: 0,0:49:07.82,0:49:10.40,English,,0,0,0,,I'll tell you one way you can find out what stat does
-Dialogue: 0,0:49:07.82,0:49:10.40,Chinese,,0,0,0,,有一种方法可以找出 stat 的作用
+Dialogue: 0,0:49:07.82,0:49:10.40,Chinese,,0,0,0,,有一种方法可以让大家找出 stat 的作用
 Dialogue: 0,0:49:13.32,0:49:15.24,English,,0,0,0,,If you say man 2 stat
 Dialogue: 0,0:49:13.32,0:49:15.24,Chinese,,0,0,0,,在这里键入 man 2 stat
 Dialogue: 0,0:49:16.58,0:49:18.80,English,,0,0,0,,You'll get more than you want to know
-Dialogue: 0,0:49:16.58,0:49:18.80,Chinese,,0,0,0,,你不仅会得到你的答案，还会学到更多
+Dialogue: 0,0:49:16.58,0:49:18.80,Chinese,,0,0,0,,问题就会迎刃而解，而且还会了解到更多知识
 Dialogue: 0,0:49:19.42,0:49:22.96,English,,0,0,0,,So in general you know if you say man stat
 Dialogue: 0,0:49:19.42,0:49:22.96,Chinese,,0,0,0,,一般来说，如果键入 man stat
 Dialogue: 0,0:49:27.10,0:49:33.08,English,,0,0,0,,It'll give a Unix command that you can use to stat a file
-Dialogue: 0,0:49:27.10,0:49:33.08,Chinese,,0,0,0,,它将为你提供可用于 stat 文件的 Unix 命令
+Dialogue: 0,0:49:27.10,0:49:33.08,Chinese,,0,0,0,,它会显示一条 Unix 命令，用于 stat 文件
 Dialogue: 0,0:49:33.74,0:49:36.26,English,,0,0,0,,So I can say stat dot
-Dialogue: 0,0:49:33.74,0:49:36.26,Chinese,,0,0,0,,我还可以键入 stat .
+Dialogue: 0,0:49:33.74,0:49:36.26,Chinese,,0,0,0,,还可以键入 stat .
 Dialogue: 0,0:49:39.94,0:49:43.28,English,,0,0,0,,And it will print out some information about a file
-Dialogue: 0,0:49:39.94,0:49:43.28,Chinese,,0,0,0,,它将打印出一些有关文件的信息
+Dialogue: 0,0:49:39.94,0:49:43.28,Chinese,,0,0,0,,它会打印出一些文件信息
 Dialogue: 0,0:49:45.56,0:49:48.52,English,,0,0,0,,In this case my local directory let's see
-Dialogue: 0,0:49:45.56,0:49:48.52,Chinese,,0,0,0,,在这种情况下，我的本地目录让我们看看
+Dialogue: 0,0:49:45.56,0:49:48.52,Chinese,,0,0,0,,如果回到本地目录
 Dialogue: 0,0:49:51.66,0:49:54.32,English,,0,0,0,,I can stat any file
-Dialogue: 0,0:49:51.66,0:49:54.32,Chinese,,0,0,0,,我可以 stat 任何文件
+Dialogue: 0,0:49:51.66,0:49:54.32,Chinese,,0,0,0,,stat 任何文件
 Dialogue: 0,0:49:54.88,0:49:59.60,English,,0,0,0,,Here and it will print out some cryptic information about it
-Dialogue: 0,0:49:54.88,0:49:59.60,Chinese,,0,0,0,,它将打印出一些加密的相关信息
+Dialogue: 0,0:49:54.88,0:49:59.60,Chinese,,0,0,0,,它会打印出关于该文件的一些加密信息
 Dialogue: 0,0:50:01.94,0:50:04.12,English,,0,0,0,,But if you say man 2 stat
 Dialogue: 0,0:50:01.94,0:50:04.12,Chinese,,0,0,0,,但如果键入 man 2 stat
 Dialogue: 0,0:50:04.82,0:50:09.08,English,,0,0,0,,The Unix man pages are divided into different categories
-Dialogue: 0,0:50:04.82,0:50:09.08,Chinese,,0,0,0,,由于 Unix 手册页分为不同的章节
+Dialogue: 0,0:50:04.82,0:50:09.08,Chinese,,0,0,0,,由于 Unix 手册包含不同的章节
 Dialogue: 0,0:50:10.34,0:50:13.00,English,,0,0,0,,And things that our system calls
-Dialogue: 0,0:50:10.34,0:50:13.00,Chinese,,0,0,0,,而系统要调用的内容
+Dialogue: 0,0:50:10.34,0:50:13.00,Chinese,,0,0,0,,而 Unix 系统库要调用的内容
 Dialogue: 0,0:50:13.76,0:50:20.00,English,,0,0,0,,Unix system library calls are typically in section 2 of the man pages
-Dialogue: 0,0:50:13.76,0:50:20.00,Chinese,,0,0,0,,Unix 系统库要调用的内容通常位于手册页的第二章节
+Dialogue: 0,0:50:13.76,0:50:20.00,Chinese,,0,0,0,,通常位于该手册的第二章
 Dialogue: 0,0:50:20.78,0:50:22.97,English,,0,0,0,,And so that will return information about it
-Dialogue: 0,0:50:20.78,0:50:22.97,Chinese,,0,0,0,,所以键入 man 2 stat 将返回第二部分的相关内容
+Dialogue: 0,0:50:20.78,0:50:22.97,Chinese,,0,0,0,,所以键入 man 2 stat 将返回该章的相关信息
 Dialogue: 0,0:50:23.48,0:50:28.74,English,,0,0,0,,But the main point of it is stat is then a function that you call
-Dialogue: 0,0:50:23.48,0:50:28.74,Chinese,,0,0,0,,总之 stat 是一个可供调用的函数
+Dialogue: 0,0:50:23.48,0:50:28.74,Chinese,,0,0,0,,总之， stat 是一个可供调用的函数
 Dialogue: 0,0:50:28.74,0:50:32.38,English,,0,0,0,,Where you give it a path name and a pointer to a buffer that you want it
-Dialogue: 0,0:50:28.74,0:50:32.38,Chinese,,0,0,0,,给它指定一个路径名和一个指向缓冲区的指针
+Dialogue: 0,0:50:28.74,0:50:32.38,Chinese,,0,0,0,,给它一个路径名和一个指向缓冲区的指针后
 Dialogue: 0,0:50:33.00,0:50:41.94,English,,0,0,0,,And it will then fill in the contents the buffer with the information about that particular file
-Dialogue: 0,0:50:33.00,0:50:41.94,Chinese,,0,0,0,,它将把有关文件的信息
+Dialogue: 0,0:50:33.00,0:50:41.94,Chinese,,0,0,0,,它会把文件信息
 Dialogue: 0,0:50:42.62,0:50:49.26,English,,0,0,0,,And the form that it fills it in is one of these data structures called a struct stat
-Dialogue: 0,0:50:42.62,0:50:49.26,Chinese,,0,0,0,,以数据结构 struct stat 的形式填入缓冲区中
+Dialogue: 0,0:50:42.62,0:50:49.26,Chinese,,0,0,0,,以 struct stat 数据结构的方式填入缓冲区中
 Dialogue: 0,0:50:50.64,0:50:57.10,English,,0,0,0,,And that's pretty typical of a lot of these functions is that they have some predefined struct
-Dialogue: 0,0:50:50.64,0:50:57.10,Chinese,,0,0,0,,这些函数的一个典型特征是它们有一些预定义的 struct
+Dialogue: 0,0:50:50.64,0:50:57.10,Chinese,,0,0,0,,这些函数的一个典型特征是它们含有一些预定义的 struct
 Dialogue: 0,0:50:57.96,0:51:01.96,English,,0,0,0,,And if you want to get the...if you want to get information you pa...
-Dialogue: 0,0:50:57.96,0:51:01.96,Chinese,,0,0,0,,如果你想获取这些信息
+Dialogue: 0,0:50:57.96,0:51:01.96,Chinese,,0,0,0,,如果想获得信息
 Dialogue: 0,0:51:01.96,0:51:05.02,English,,0,0,0,,You allocate one of those struts you pass a pointer to it
-Dialogue: 0,0:51:01.96,0:51:05.02,Chinese,,0,0,0,,你可以先分配一个 struct，再指定一个指向该 struct 的指针
+Dialogue: 0,0:51:01.96,0:51:05.02,Chinese,,0,0,0,,可以先分配一个 struct，再传一个指针给该它
 Dialogue: 0,0:51:05.46,0:51:08.38,English,,0,0,0,,And then the library function will fill in the details
-Dialogue: 0,0:51:05.46,0:51:08.38,Chinese,,0,0,0,,库函数就会将具体信息填入该 struct
+Dialogue: 0,0:51:05.46,0:51:08.38,Chinese,,0,0,0,,库函数就会将文件信息填入该 struct
 Dialogue: 0,0:51:09.30,0:51:11.28,English,,0,0,0,,[T: Does that make sense] [S: Yeah] [T: Okay]
 Dialogue: 0,0:51:09.30,0:51:11.28,Chinese,,0,0,0,,【明白了吗？】【明白了】【好】
 Dialogue: 0,0:51:23.46,0:51:28.76,English,,0,0,0,,Okay so now let's look at some of the internal data structures that
-Dialogue: 0,0:51:23.46,0:51:28.76,Chinese,,0,0,0,,好的，现在让我们来看看一些内部数据结构
+Dialogue: 0,0:51:23.46,0:51:28.76,Chinese,,0,0,0,,现在来看一看由操作系统维护的与程序中文件相关的
 Dialogue: 0,0:51:29.47,0:51:34.14,English,,0,0,0,,The operating system maintains regarding the files associated with a program
-Dialogue: 0,0:51:29.47,0:51:34.14,Chinese,,0,0,0,,这些数据结构与程序中的文件相关，由操作系统维护
+Dialogue: 0,0:51:29.47,0:51:34.14,Chinese,,0,0,0,,一些内部数据结构
 Dialogue: 0,0:51:34.60,0:51:39.10,English,,0,0,0,,And this is a source of really nasty exam problems
-Dialogue: 0,0:51:34.60,0:51:39.10,Chinese,,0,0,0,,大家请注意这是考试的难点
+Dialogue: 0,0:51:34.60,0:51:39.10,Chinese,,0,0,0,,请注意这是考试的难点
 Dialogue: 0,0:51:39.10,0:51:44.18,English,,0,0,0,,I'll just warn you, so you're going to want to read this part of the book carefully
-Dialogue: 0,0:51:39.10,0:51:44.18,Chinese,,0,0,0,,你们一定要仔细阅读这部分内容
+Dialogue: 0,0:51:39.10,0:51:44.18,Chinese,,0,0,0,,大家一定要仔细阅读书中有关这部分的内容
 Dialogue: 0,0:51:44.78,0:51:47.66,English,,0,0,0,,Study the practice problems look at the old exams
 Dialogue: 0,0:51:44.78,0:51:47.66,Chinese,,0,0,0,,研究习题、看看历次的考题
 Dialogue: 0,0:51:47.66,0:51:51.92,English,,0,0,0,,Because I can guarantee you're going to get some of these on the final that's a promise
@@ -1176,19 +1176,19 @@ Dialogue: 0,0:51:47.66,0:51:51.92,Chinese,,0,0,0,,我保证期末考试中肯定
 Dialogue: 0,0:51:53.02,0:51:56.16,English,,0,0,0,,And they can be infinitely obscure so
 Dialogue: 0,0:51:53.02,0:51:56.16,Chinese,,0,0,0,,这些题目可能会很难懂
 Dialogue: 0,0:51:56.98,0:51:58.94,English,,0,0,0,,We can we can torch you with these
-Dialogue: 0,0:51:56.98,0:51:58.94,Chinese,,0,0,0,,但是你们可以从中得到启发
+Dialogue: 0,0:51:56.98,0:51:58.94,Chinese,,0,0,0,,但是可以从中受到启发
 Dialogue: 0,0:51:59.84,0:52:06.12,English,,0,0,0,,So that the main point is that associated with any executing process
-Dialogue: 0,0:51:59.84,0:52:06.12,Chinese,,0,0,0,,对于任何执行进程
+Dialogue: 0,0:51:59.84,0:52:06.12,Chinese,,0,0,0,,讲到内部数据结构，对于任何执行进程
 Dialogue: 0,0:52:06.16,0:52:09.70,English,,0,0,0,,Which you can think of a process as a running program
-Dialogue: 0,0:52:06.16,0:52:09.70,Chinese,,0,0,0,,在这里我们可以把进程想成一个正在运行的程序
+Dialogue: 0,0:52:06.16,0:52:09.70,Chinese,,0,0,0,,在这里我们可以把进程看成一个正在运行的程序
 Dialogue: 0,0:52:11.16,0:52:17.32,English,,0,0,0,,Is something called the descriptor table
-Dialogue: 0,0:52:11.16,0:52:17.32,Chinese,,0,0,0,,每个进程都有与之相关的描述符表
+Dialogue: 0,0:52:11.16,0:52:17.32,Chinese,,0,0,0,,都有与之相关的描述符表
 Dialogue: 0,0:52:17.90,0:52:19.46,English,,0,0,0,,And what that contains is
-Dialogue: 0,0:52:17.90,0:52:19.46,Chinese,,0,0,0,,每一个打开文件的
+Dialogue: 0,0:52:17.90,0:52:19.46,Chinese,,0,0,0,,对于每个打开文件
 Dialogue: 0,0:52:19.94,0:52:23.12,English,,0,0,0,,For every open file that you have
-Dialogue: 0,0:52:19.94,0:52:23.12,Chinese,,0,0,0,,描述符表都包含
+Dialogue: 0,0:52:19.94,0:52:23.12,Chinese,,0,0,0,,描述符表都含有一个表项
 Dialogue: 0,0:52:24.02,0:52:28.30,English,,0,0,0,,It has a pointer to a data structure called
-Dialogue: 0,0:52:24.02,0:52:28.30,Chinese,,0,0,0,,一个指向数据结构的指针
+Dialogue: 0,0:52:24.02,0:52:28.30,Chinese,,0,0,0,,指向该文件的数据结构
 Dialogue: 0,0:52:29.32,0:52:34.04,English,,0,0,0,,An entry in a table that's maintained by the operating system globally
 Dialogue: 0,0:52:29.32,0:52:34.04,Chinese,,0,0,0,,该数据结构是文件表中的一个表项，由操作系统进行全局维护
 Dialogue: 0,0:52:36.66,0:52:41.52,English,,0,0,0,,Which describes each of the open files
@@ -1196,191 +1196,191 @@ Dialogue: 0,0:52:36.66,0:52:41.52,Chinese,,0,0,0,,它描述了每个打开文件
 Dialogue: 0,0:52:42.30,0:52:48.16,English,,0,0,0,,Actually each every time a file is opened
 Dialogue: 0,0:52:42.30,0:52:48.16,Chinese,,0,0,0,,实际上每打开一个文件
 Dialogue: 0,0:52:48.40,0:52:53.90,English,,0,0,0,,That allocates a record in this open file table
-Dialogue: 0,0:52:48.40,0:52:53.90,Chinese,,0,0,0,,都会在该打开的文件表中分配一条记录
+Dialogue: 0,0:52:48.40,0:52:53.90,Chinese,,0,0,0,,都会在打开文件表中分配一个表项
 Dialogue: 0,0:52:56.38,0:53:02.58,English,,0,0,0,,And so as I mentioned file descriptors 0, 1 and 2 have specific meanings
 Dialogue: 0,0:52:56.38,0:53:02.58,Chinese,,0,0,0,,正如我之前提到的，文件描述符 0、1、2 有其特定的含义
 Dialogue: 0,0:53:03.14,0:53:09.74,English,,0,0,0,,And the other files are other ones that you've opened during the course of your program execution and have not yet closed
-Dialogue: 0,0:53:03.14,0:53:09.74,Chinese,,0,0,0,,其他描述符指代程序执行过程中打开但尚未关闭的其他文件
+Dialogue: 0,0:53:03.14,0:53:09.74,Chinese,,0,0,0,,除它们以外的其他描述符代表在程序执行过程中打开但还未关闭的其他文件
 Dialogue: 0,0:53:11.00,0:53:20.23,English,,0,0,0,,So that's so each of these then is a reference to a particular open file
-Dialogue: 0,0:53:11.00,0:53:20.23,Chinese,,0,0,0,,这些描述符每个都指代一个特定的打开文件
+Dialogue: 0,0:53:11.00,0:53:20.23,Chinese,,0,0,0,,每个文件表表项都是对某个打开文件的引用
 Dialogue: 0,0:53:20.60,0:53:23.58,English,,0,0,0,,And it gives information about that file
-Dialogue: 0,0:53:20.60,0:53:23.58,Chinese,,0,0,0,,它提供了文件的有关信息
+Dialogue: 0,0:53:20.60,0:53:23.58,Chinese,,0,0,0,,它给出了关于该文件的信息
 Dialogue: 0,0:53:24.54,0:53:27.16,English,,0,0,0,,And it also gives the position in the file that
-Dialogue: 0,0:53:24.54,0:53:27.16,Chinese,,0,0,0,,它还给出了文件位置
+Dialogue: 0,0:53:24.54,0:53:27.16,Chinese,,0,0,0,,还给出了文件位置
 Dialogue: 0,0:53:27.30,0:53:30.62,English,,0,0,0,,Currently is that I told you every time you open a file there's
-Dialogue: 0,0:53:27.30,0:53:30.62,Chinese,,0,0,0,,这个位置就是我之前提到的你每次打开一个文件
+Dialogue: 0,0:53:27.30,0:53:30.62,Chinese,,0,0,0,,文件位置我之前提到过：每打开一个文件
 Dialogue: 0,0:53:31.16,0:53:32.50,English,,0,0,0,,For a regular file at least
-Dialogue: 0,0:53:31.16,0:53:32.50,Chinese,,0,0,0,,一个普通文件
+Dialogue: 0,0:53:31.16,0:53:32.50,Chinese,,0,0,0,,至少每打开一个普通文件
 Dialogue: 0,0:53:32.94,0:53:37.68,English,,0,0,0,,There's an associated position of where in the file was your last read or write
-Dialogue: 0,0:53:32.94,0:53:37.68,Chinese,,0,0,0,,会有一个相关的位置指向你上一次读或写的结束位置
+Dialogue: 0,0:53:32.94,0:53:37.68,Chinese,,0,0,0,,都会有一个文件位置，指向最后一次读或写结束的地方
 Dialogue: 0,0:53:38.46,0:53:40.10,English,,0,0,0,,Or where would you be your next read or write
-Dialogue: 0,0:53:38.46,0:53:40.10,Chinese,,0,0,0,,或者下一次读或写的起始位置
+Dialogue: 0,0:53:38.46,0:53:40.10,Chinese,,0,0,0,,或者下一次读或写起始的地方
 Dialogue: 0,0:53:41.34,0:53:42.64,English,,0,0,0,,And so that's the file pos
 Dialogue: 0,0:53:41.34,0:53:42.64,Chinese,,0,0,0,,这就是文件位置
 Dialogue: 0,0:53:44.10,0:53:49.32,English,,0,0,0,,And there's also a reference count which is used by the operating system to keep track of
-Dialogue: 0,0:53:44.10,0:53:49.32,Chinese,,0,0,0,,描述符表还包含一个引用计数，操作系统用它来进行追踪
+Dialogue: 0,0:53:44.10,0:53:49.32,Chinese,,0,0,0,,文件表表项中还含有一个引用计数
 Dialogue: 0,0:53:50.90,0:53:57.50,English,,0,0,0,,Because we'll see it's possible to have multiple processes sharing
-Dialogue: 0,0:53:50.90,0:53:57.50,Chinese,,0,0,0,,因为可能会有多个进程共享
+Dialogue: 0,0:53:50.90,0:53:57.50,Chinese,,0,0,0,,由于打开文件表中的一个表项
 Dialogue: 0,0:53:58.50,0:54:00.90,English,,0,0,0,,An entry in this open file table and
-Dialogue: 0,0:53:58.50,0:54:00.90,Chinese,,0,0,0,,同一张打开的文件表的表项
+Dialogue: 0,0:53:58.50,0:54:00.90,Chinese,,0,0,0,,可能由多个进程共享
 Dialogue: 0,0:54:01.20,0:54:06.66,English,,0,0,0,,It uses this reference count which is a standard way of keeping track of memory allocation
-Dialogue: 0,0:54:01.20,0:54:06.66,Chinese,,0,0,0,,所以使用引用计数来追踪内存分配，这是标准的做法
+Dialogue: 0,0:54:01.20,0:54:06.66,Chinese,,0,0,0,,所以引用计数被操作系统用来追踪内存分配
 Dialogue: 0,0:54:07.32,0:54:13.24,English,,0,0,0,,To know when it no longer needs that entry when there's been enough
-Dialogue: 0,0:54:07.32,0:54:13.24,Chinese,,0,0,0,,什么时候不再需要表项呢
+Dialogue: 0,0:54:07.32,0:54:13.24,Chinese,,0,0,0,,从而知道什么时候不再需要该表项
 Dialogue: 0,0:54:14.92,0:54:20.18,English,,0,0,0,,When the file is no longer accessible and therefore this entry is not needed
-Dialogue: 0,0:54:14.92,0:54:20.18,Chinese,,0,0,0,,当文件不再可供访问时，则不再需要表项
+Dialogue: 0,0:54:14.92,0:54:20.18,Chinese,,0,0,0,,比如文件不可访问时
 Dialogue: 0,0:54:21.74,0:54:27.32,English,,0,0,0,,So for every one of your open files that will have an entry in this table
-Dialogue: 0,0:54:21.74,0:54:27.32,Chinese,,0,0,0,,总之每个打开文件都会在文件表中有一个指向其的表项
+Dialogue: 0,0:54:21.74,0:54:27.32,Chinese,,0,0,0,,总之每个打开文件在文件表中都会有一个对应的表项
 Dialogue: 0,0:54:27.50,0:54:31.40,English,,0,0,0,,And this table as I said is shared across the whole operating system
 Dialogue: 0,0:54:27.50,0:54:31.40,Chinese,,0,0,0,,而这个文件表由整个操作系统共享
 Dialogue: 0,0:54:32.90,0:54:38.26,English,,0,0,0,,And then associated with every file is called v-node
-Dialogue: 0,0:54:32.90,0:54:38.26,Chinese,,0,0,0,,每个文件还有一个与之相关的 v-node
+Dialogue: 0,0:54:32.90,0:54:38.26,Chinese,,0,0,0,,此外，每个文件还有一个与之相关的 v-node
 Dialogue: 0,0:54:38.40,0:54:40.20,English,,0,0,0,,Which stands for virtual node
-Dialogue: 0,0:54:38.40,0:54:40.20,Chinese,,0,0,0,,即虚拟节点
+Dialogue: 0,0:54:38.40,0:54:40.20,Chinese,,0,0,0,,这是虚拟节点
 Dialogue: 0,0:54:40.50,0:54:46.64,English,,0,0,0,,And this is where that contains the sort of information about this file
-Dialogue: 0,0:54:40.50,0:54:46.64,Chinese,,0,0,0,,其中包含了文件的相关信息
+Dialogue: 0,0:54:40.50,0:54:46.64,Chinese,,0,0,0,,其中包含
 Dialogue: 0,0:54:46.90,0:54:53.60,English,,0,0,0,,In particular where it is stored this information that you can get from stat and things like that
-Dialogue: 0,0:54:46.90,0:54:53.60,Chinese,,0,0,0,,特别是文件的存储位置以及从 stat 中能够获取的信息等等
+Dialogue: 0,0:54:46.90,0:54:53.60,Chinese,,0,0,0,,可以从 stat 中获得的文件信息，比如文件存储的位置
 Dialogue: 0,0:54:54.84,0:54:58.82,English,,0,0,0,,How big it is and things like that
-Dialogue: 0,0:54:54.84,0:54:58.82,Chinese,,0,0,0,,文件的大小等等
+Dialogue: 0,0:54:54.84,0:54:58.82,Chinese,,0,0,0,,文件的大小等
 Dialogue: 0,0:54:59.72,0:55:06.86,English,,0,0,0,,So that's for every file in the system actually has a v-node entry
 Dialogue: 0,0:54:59.72,0:55:06.86,Chinese,,0,0,0,,实际上系统中的每个文件不论是否打开
 Dialogue: 0,0:55:07.26,0:55:08.67,English,,0,0,0,,Whether it's open or closed
-Dialogue: 0,0:55:07.26,0:55:08.67,Chinese,,0,0,0,,都有其对应的 v-node 表表项
+Dialogue: 0,0:55:07.26,0:55:08.67,Chinese,,0,0,0,,都在 v-node 表中有一个对应的表项
 Dialogue: 0,0:55:09.56,0:55:11.72,English,,0,0,0,,Now this can get complicated
-Dialogue: 0,0:55:09.56,0:55:11.72,Chinese,,0,0,0,,这个解释起来可能会比较复杂
+Dialogue: 0,0:55:09.56,0:55:11.72,Chinese,,0,0,0,,接下来要讲的内容比较复杂
 Dialogue: 0,0:55:12.88,0:55:17.74,English,,0,0,0,,So for example if within a single program you call open twice on the same function
 Dialogue: 0,0:55:12.88,0:55:17.74,Chinese,,0,0,0,,举个例子，如果你在某个程序中用同一个函数调用 open 两次
 Dialogue: 0,0:55:19.02,0:55:21.40,English,,0,0,0,,You'll actually get two different file descriptors
 Dialogue: 0,0:55:19.02,0:55:21.40,Chinese,,0,0,0,,你会得到两个不同的文件描述符
 Dialogue: 0,0:55:22.82,0:55:28.80,English,,0,0,0,,And you'll be able to access that same file and have two different positions in it
-Dialogue: 0,0:55:22.82,0:55:28.80,Chinese,,0,0,0,,你能够访问同一个文件并得到两个不同的文件位置
+Dialogue: 0,0:55:22.82,0:55:28.80,Chinese,,0,0,0,,两个文件描述符都能让你访问同一个文件并形成两个不同的文件位置
 Dialogue: 0,0:55:28.94,0:55:34.32,English,,0,0,0,,Then it makes sense if you imagine you're reading from a file
-Dialogue: 0,0:55:28.94,0:55:34.32,Chinese,,0,0,0,,简单来说：想象你正在读一个文件
+Dialogue: 0,0:55:28.94,0:55:34.32,Chinese,,0,0,0,,简单来说：假设你正在读一个文件
 Dialogue: 0,0:55:35.42,0:55:41.16,English,,0,0,0,,And you might want to read from two different positions in that file
 Dialogue: 0,0:55:35.42,0:55:41.16,Chinese,,0,0,0,,你希望在同一个程序中从该文件的两个不同位置读取
 Dialogue: 0,0:55:41.16,0:55:44.40,English,,0,0,0,,Within the same program and you can do that that's perfectly legal
-Dialogue: 0,0:55:41.16,0:55:44.40,Chinese,,0,0,0,,你可以这样做，这是完全合法的
+Dialogue: 0,0:55:41.16,0:55:44.40,Chinese,,0,0,0,,这样做是可以的，也是完全合法的
 Dialogue: 0,0:55:45.06,0:55:50.16,English,,0,0,0,,You just call open twice and that will keep track of two different positions
-Dialogue: 0,0:55:45.06,0:55:50.16,Chinese,,0,0,0,,你只需要调用两次 open，生成两个不同的文件位置
+Dialogue: 0,0:55:45.06,0:55:50.16,Chinese,,0,0,0,,这时候你只需要调用两次 open，形成两个不同的文件位置
 Dialogue: 0,0:55:51.54,0:55:55.89,English,,0,0,0,,So the point is these file descriptors might be referring to the same file
-Dialogue: 0,0:55:51.54,0:55:55.89,Chinese,,0,0,0,,总之这些文件描述符可能引用的是同一个文件
+Dialogue: 0,0:55:51.54,0:55:55.89,Chinese,,0,0,0,,总之不同的文件描述符可能引用的是同一个文件
 Dialogue: 0,0:55:56.34,0:55:58.98,English,,0,0,0,,But they're actually at different positions within the file
-Dialogue: 0,0:55:56.34,0:55:58.98,Chinese,,0,0,0,,但实际上它们的文件位置不同
+Dialogue: 0,0:55:56.34,0:55:58.98,Chinese,,0,0,0,,只是文件位置可能不同
 Dialogue: 0,0:55:59.34,0:56:05.38,English,,0,0,0,,And that can happen also if you've opened a file for both reading and for writing
-Dialogue: 0,0:55:59.34,0:56:05.38,Chinese,,0,0,0,,此外，如果你打开一个文件进行读和写
+Dialogue: 0,0:55:59.34,0:56:05.38,Chinese,,0,0,0,,此外，如果你打开一个文件同时进行读写操作
 Dialogue: 0,0:56:05.74,0:56:11.18,English,,0,0,0,,And you're writing ahead and then reading characters bytes that have already been written
-Dialogue: 0,0:56:05.74,0:56:11.18,Chinese,,0,0,0,,并且写在前读在后，也会发生这种情况
+Dialogue: 0,0:56:05.74,0:56:11.18,Chinese,,0,0,0,,并且是先写后读，也会发生这种情况
 Dialogue: 0,0:56:12.04,0:56:12.90,English,,0,0,0,,That makes sense
-Dialogue: 0,0:56:12.04,0:56:12.90,Chinese,,0,0,0,,这就不难理解了
+Dialogue: 0,0:56:12.04,0:56:12.90,Chinese,,0,0,0,,道理是类似的
 Dialogue: 0,0:56:13.42,0:56:17.22,English,,0,0,0,,It's not such a good idea to have two different write
-Dialogue: 0,0:56:13.42,0:56:17.22,Chinese,,0,0,0,,不建议对同一个文件
+Dialogue: 0,0:56:13.42,0:56:17.22,Chinese,,0,0,0,,但不建议在对文件进行写操作时
 Dialogue: 0,0:56:18.32,0:56:24.50,English,,0,0,0,,File opens that are writing simultaneously you can mess up the file pretty badly that way
-Dialogue: 0,0:56:18.32,0:56:24.50,Chinese,,0,0,0,,两次调用 open 进行写操作，因为这样文件会变得很乱
+Dialogue: 0,0:56:18.32,0:56:24.50,Chinese,,0,0,0,,两次调用 open，因为这样会让文件变得很乱
 Dialogue: 0,0:56:24.92,0:56:27.86,English,,0,0,0,,But there's nothing in the operating system that prevents you from doing that
-Dialogue: 0,0:56:24.92,0:56:27.86,Chinese,,0,0,0,,但是操作系统不会阻止你这样做
+Dialogue: 0,0:56:24.92,0:56:27.86,Chinese,,0,0,0,,不过操作系统不会阻止你这样做
 Dialogue: 0,0:56:28.82,0:56:34.66,English,,0,0,0,,So it won't it's not a good idea but it's a legal operation
-Dialogue: 0,0:56:28.82,0:56:34.66,Chinese,,0,0,0,,虽然不建议这么做，但这是合法的操作
+Dialogue: 0,0:56:28.82,0:56:34.66,Chinese,,0,0,0,,虽然不建议，但这是合法操作
 Dialogue: 0,0:56:35.84,0:56:41.88,English,,0,0,0,,So that's the point is you have to distinguish at what level is sharing taking place and you see that
-Dialogue: 0,0:56:35.84,0:56:41.88,Chinese,,0,0,0,,所以重点是你们必须识别共享发生在哪一个级别
+Dialogue: 0,0:56:35.84,0:56:41.88,Chinese,,0,0,0,,我们必须弄清楚共享发生在什么级别
 Dialogue: 0,0:56:43.89,0:56:53.20,English,,0,0,0,,If you have two different table entries sharing one file
-Dialogue: 0,0:56:43.89,0:56:53.20,Chinese,,0,0,0,,如果有两个不同的表项共享一个文件
+Dialogue: 0,0:56:43.89,0:56:53.20,Chinese,,0,0,0,,如果两个不同的描述符表表项共同引用一个文件
 Dialogue: 0,0:56:53.64,0:56:57.88,English,,0,0,0,,Then that what's different there is that you can be working at different file positions
-Dialogue: 0,0:56:53.64,0:56:57.88,Chinese,,0,0,0,,则它们可能引用的是不同的文件位置
+Dialogue: 0,0:56:53.64,0:56:57.88,Chinese,,0,0,0,,这说明可能是有两个不同的文件位置
 Dialogue: 0,0:57:00.68,0:57:04.20,English,,0,0,0,,Similarly of course the more common thing is
-Dialogue: 0,0:57:00.68,0:57:04.20,Chinese,,0,0,0,,当然更常见的是
+Dialogue: 0,0:57:00.68,0:57:04.20,Chinese,,0,0,0,,当然更常见的情况是
 Dialogue: 0,0:57:06.30,0:57:09.85,English,,0,0,0,,You have two different open files and they're referring to different files
-Dialogue: 0,0:57:06.30,0:57:09.85,Chinese,,0,0,0,,你有两个不同的打开文件，它们引用不同的文件
+Dialogue: 0,0:57:06.30,0:57:09.85,Chinese,,0,0,0,,两个不同的描述符表表项引用两个不同的打开文件
 Dialogue: 0,0:57:10.74,0:57:13.48,English,,0,0,0,,But now and this is where life gets exciting
-Dialogue: 0,0:57:10.74,0:57:13.48,Chinese,,0,0,0,,现在有意思的地方来了
+Dialogue: 0,0:57:10.74,0:57:13.48,Chinese,,0,0,0,,有意思的是
 Dialogue: 0,0:57:13.98,0:57:18.46,English,,0,0,0,,If you call fork you remember about fork that it spawns a child
-Dialogue: 0,0:57:13.98,0:57:18.46,Chinese,,0,0,0,,如果你调用 fork，我讲过 fork 会生成一个子进程
+Dialogue: 0,0:57:13.98,0:57:18.46,Chinese,,0,0,0,,如果调用 fork——我讲过 fork 会创建一个子进程
 Dialogue: 0,0:57:19.86,0:57:23.88,English,,0,0,0,,But that child inherits a lot of information from its parent
-Dialogue: 0,0:57:19.86,0:57:23.88,Chinese,,0,0,0,,子进程从父进程那里继承了很多信息
+Dialogue: 0,0:57:19.86,0:57:23.88,Chinese,,0,0,0,,子进程会继承父进程的很多信息
 Dialogue: 0,0:57:23.98,0:57:25.58,English,,0,0,0,,And one of the things it inherits
-Dialogue: 0,0:57:23.98,0:57:25.58,Chinese,,0,0,0,,其中之一是
+Dialogue: 0,0:57:23.98,0:57:25.58,Chinese,,0,0,0,,其中包括描述符表
 Dialogue: 0,0:57:26.22,0:57:30.28,English,,0,0,0,,Is its descriptor table it gets a replica of that descriptor table
-Dialogue: 0,0:57:26.22,0:57:30.28,Chinese,,0,0,0,,父进程的描述符表，子进程会获得该描述符表的副本
+Dialogue: 0,0:57:26.22,0:57:30.28,Chinese,,0,0,0,,子进程会获得父进程描述符表的副本
 Dialogue: 0,0:57:31.54,0:57:34.09,English,,0,0,0,,And so now both the parent and the child
 Dialogue: 0,0:57:31.54,0:57:34.09,Chinese,,0,0,0,,所以父子进程
 Dialogue: 0,0:57:34.88,0:57:38.94,English,,0,0,0,,Have identical entries in their descriptor table
-Dialogue: 0,0:57:34.88,0:57:38.94,Chinese,,0,0,0,,有相同的描述符表表项
+Dialogue: 0,0:57:34.88,0:57:38.94,Chinese,,0,0,0,,就会有相同的描述符表表项
 Dialogue: 0,0:57:38.94,0:57:40.78,English,,0,0,0,,And so they're sharing files
 Dialogue: 0,0:57:38.94,0:57:40.78,Chinese,,0,0,0,,所以它们共享文件
 Dialogue: 0,0:57:41.32,0:57:45.06,English,,0,0,0,,But not at the file level but at the open file table
-Dialogue: 0,0:57:41.32,0:57:45.06,Chinese,,0,0,0,,但不是在文件级别而是在打开文件表级别共享
+Dialogue: 0,0:57:41.32,0:57:45.06,Chinese,,0,0,0,,但这时候的共享不是文件级别而是打开文件表级别的共享
 Dialogue: 0,0:57:45.72,0:57:49.18,English,,0,0,0,,And what that means is if the parent does a read
 Dialogue: 0,0:57:45.72,0:57:49.18,Chinese,,0,0,0,,这意味着如果父进程进行读操作
 Dialogue: 0,0:57:49.66,0:57:51.94,English,,0,0,0,,It'll bump along the file position
-Dialogue: 0,0:57:49.66,0:57:51.94,Chinese,,0,0,0,,它会沿文件位置前进
+Dialogue: 0,0:57:49.66,0:57:51.94,Chinese,,0,0,0,,文件位置前移
 Dialogue: 0,0:57:52.44,0:57:54.18,English,,0,0,0,,And if the child now does a read
 Dialogue: 0,0:57:52.44,0:57:54.18,Chinese,,0,0,0,,如果此时子进程再进行读操作
 Dialogue: 0,0:57:55.22,0:57:59.16,English,,0,0,0,,It will see this from this new position
 Dialogue: 0,0:57:55.22,0:57:59.16,Chinese,,0,0,0,,它将从这个新位置读起
 Dialogue: 0,0:57:59.72,0:58:02.58,English,,0,0,0,,So you can see why the exam problems get really interesting
-Dialogue: 0,0:57:59.72,0:58:02.58,Chinese,,0,0,0,,可想而知为什么考题会变得非常有意思
+Dialogue: 0,0:57:59.72,0:58:02.58,Chinese,,0,0,0,,这么多的可能性
 Dialogue: 0,0:58:03.29,0:58:08.44,English,,0,0,0,,That will keep track of all these different possibilities
-Dialogue: 0,0:58:03.29,0:58:08.44,Chinese,,0,0,0,,因为会涵盖所有这些不同的可能性
+Dialogue: 0,0:58:03.29,0:58:08.44,Chinese,,0,0,0,,这么多的情况
 Dialogue: 0,0:58:08.86,0:58:09.98,English,,0,0,0,,And they'll do different things
-Dialogue: 0,0:58:08.86,0:58:09.98,Chinese,,0,0,0,,以及不同的情况
+Dialogue: 0,0:58:08.86,0:58:09.98,Chinese,,0,0,0,,考题自然就有意思了
 Dialogue: 0,0:58:11.82,0:58:14.28,English,,0,0,0,,And so
 Dialogue: 0,0:58:11.82,0:58:14.28,Chinese,,0,0,0,,所以.....
 Dialogue: 0,0:58:14.82,0:58:20.64,English,,0,0,0,,And then of course the parent or the child can start opening and closing their own files as well and that will get very messy
-Dialogue: 0,0:58:14.82,0:58:20.64,Chinese,,0,0,0,,当然父进程或子进程可以打开和关闭它们自己的文件，但会变得非常混乱
+Dialogue: 0,0:58:14.82,0:58:20.64,Chinese,,0,0,0,,当然父进程或子进程可以自行打开和关闭文件，但这会变得非常混乱
 Dialogue: 0,0:58:21.16,0:58:25.10,English,,0,0,0,,And here's what you see the reason for having reference counts here that
-Dialogue: 0,0:58:21.16,0:58:25.10,Chinese,,0,0,0,,这就是为什么这里会有引用计数
+Dialogue: 0,0:58:21.16,0:58:25.10,Chinese,,0,0,0,,所以必须用到引用计数
 Dialogue: 0,0:58:26.64,0:58:29.68,English,,0,0,0,,If you have a lot of forking going on
 Dialogue: 0,0:58:26.64,0:58:29.68,Chinese,,0,0,0,,如果 fork 太多
 Dialogue: 0,0:58:30.66,0:58:36.64,English,,0,0,0,,Then you can create multiple pointers to this table entry
-Dialogue: 0,0:58:30.66,0:58:36.64,Chinese,,0,0,0,,你可以创建多个指针指向此表项
+Dialogue: 0,0:58:30.66,0:58:36.64,Chinese,,0,0,0,,就可能会有多个指针指向同一个文件表表项
 Dialogue: 0,0:58:37.14,0:58:44.20,English,,0,0,0,,And in order to really really close the file each of these has to call close
-Dialogue: 0,0:58:37.14,0:58:44.20,Chinese,,0,0,0,,如果要真正关闭文件，每个进程都必须调用 close
+Dialogue: 0,0:58:37.14,0:58:44.20,Chinese,,0,0,0,,如果此时要关闭文件，所有进程都必须调用 close
 Dialogue: 0,0:58:45.60,0:58:50.38,English,,0,0,0,,Before the file is truly truly closed from an operating system perspective
-Dialogue: 0,0:58:45.60,0:58:50.38,Chinese,,0,0,0,,才能从操作系统的角度真正关闭文件
+Dialogue: 0,0:58:45.60,0:58:50.38,Chinese,,0,0,0,,才能从操作系统的角度真正关闭它
 Dialogue: 0,0:58:55.52,0:59:03.58,English,,0,0,0,,So there's other fun things that make life interesting too and contribute to the exam problem possibilities
-Dialogue: 0,0:58:55.52,0:59:03.58,Chinese,,0,0,0,,还有其他有趣的事情，它们让生活变得有趣，也增加了考题的可能性
+Dialogue: 0,0:58:55.52,0:59:03.58,Chinese,,0,0,0,,还有其他有意思的内容，生活因它们而变得多姿多彩，考题也因它们而充满无限可能
 Dialogue: 0,0:59:04.08,0:59:05.90,English,,0,0,0,,One is a call called dup2
-Dialogue: 0,0:59:04.08,0:59:05.90,Chinese,,0,0,0,,其中一个叫做 dup2
+Dialogue: 0,0:59:04.08,0:59:05.90,Chinese,,0,0,0,,其中之一是 dup2
 Dialogue: 0,0:59:06.98,0:59:09.48,English,,0,0,0,,And the purpose of dup2 is to
-Dialogue: 0,0:59:06.98,0:59:09.48,Chinese,,0,0,0,,其目的是
+Dialogue: 0,0:59:06.98,0:59:09.48,Chinese,,0,0,0,,dup2 用于
 Dialogue: 0,0:59:13.16,0:59:20.04,English,,0,0,0,,[Excuse me] duplicate an entry in the descriptor table
-Dialogue: 0,0:59:13.16,0:59:20.04,Chinese,,0,0,0,,【不好意思】复制描述符表的表项
+Dialogue: 0,0:59:13.16,0:59:20.04,Chinese,,0,0,0,,【抱歉】复制描述符表表项
 Dialogue: 0,0:59:20.68,0:59:29.14,English,,0,0,0,,And the most common use of that is I/O redirection that either greater or less than sign to either
-Dialogue: 0,0:59:20.68,0:59:29.14,Chinese,,0,0,0,,该函数最常见的用途是 I/O 重定向，用 > 或 < 符号
+Dialogue: 0,0:59:20.68,0:59:29.14,Chinese,,0,0,0,,它最常见的用途是 I/O 重定向
 Dialogue: 0,0:59:29.36,0:59:33.18,English,,0,0,0,,Redirect read the instead of from standard input from the file
-Dialogue: 0,0:59:29.36,0:59:33.18,Chinese,,0,0,0,,将标准输入的读重定向到文件
+Dialogue: 0,0:59:29.36,0:59:33.18,Chinese,,0,0,0,,用 > 符号表示将从标准输入读重定向到从文件读
 Dialogue: 0,0:59:34.02,0:59:38.22,English,,0,0,0,,Or instead of writing to standard output to write to a file
-Dialogue: 0,0:59:34.02,0:59:38.22,Chinese,,0,0,0,,或者将标准输出的写重定向到文件
+Dialogue: 0,0:59:34.02,0:59:38.22,Chinese,,0,0,0,,用 < 符号表示将写出到标准输出重定向到写出到文件
 Dialogue: 0,0:59:38.86,0:59:43.76,English,,0,0,0,,And the way the operating system actually implements that is shortly after starting the program
-Dialogue: 0,0:59:38.86,0:59:43.76,Chinese,,0,0,0,,操作系统使用该函数的方式是在程序启动后不久
+Dialogue: 0,0:59:38.86,0:59:43.76,Chinese,,0,0,0,,具体实现方法是：操作系统会在程序启动后不久
 Dialogue: 0,0:59:44.42,0:59:46.50,English,,0,0,0,,It will call dup2
 Dialogue: 0,0:59:44.42,0:59:46.50,Chinese,,0,0,0,,调用 dup2
 Dialogue: 0,0:59:48.52,1:00:01.30,English,,0,0,0,,To make it so that the file descriptor 1 is not the standard output for this process
-Dialogue: 0,0:59:48.52,1:00:01.30,Chinese,,0,0,0,,从而使文件描述符 1 不再是此进程的标准输出
+Dialogue: 0,0:59:48.52,1:00:01.30,Chinese,,0,0,0,,从而使此进程的标准输出
 Dialogue: 0,1:00:01.34,1:00:04.74,English,,0,0,0,,But it's actually the original standard output
-Dialogue: 0,1:00:01.34,1:00:04.74,Chinese,,0,0,0,,最初的标准输出
+Dialogue: 0,1:00:01.34,1:00:04.74,Chinese,,0,0,0,,不再是最初的标准输出——文件描述符 1
 Dialogue: 0,1:00:04.74,1:00:09.56,English,,0,0,0,,But it's actually a descriptor for the file that it's supposed to write to
-Dialogue: 0,1:00:04.74,1:00:09.56,Chinese,,0,0,0,,而是待写出文件的描述符
+Dialogue: 0,1:00:04.74,1:00:09.56,Chinese,,0,0,0,,而是待写出到文件的描述符
 Dialogue: 0,1:00:09.88,1:00:12.24,English,,0,0,0,,And same way if it's doing input redirection
 Dialogue: 0,1:00:09.88,1:00:12.24,Chinese,,0,0,0,,输入重定向也同样如此
 Dialogue: 0,1:00:14.16,1:00:16.40,English,,0,0,0,,But you can call dup2 yourself
-Dialogue: 0,1:00:14.16,1:00:16.40,Chinese,,0,0,0,,但你也可以自己调用 dup2
+Dialogue: 0,1:00:14.16,1:00:16.40,Chinese,,0,0,0,,你自己也可以调用 dup2 完成重定向
 Dialogue: 0,1:00:16.90,1:00:20.60,English,,0,0,0,,And do these kind of things and there's actually good reasons for doing so
-Dialogue: 0,1:00:16.90,1:00:20.60,Chinese,,0,0,0,,完成重定向，并且这样做很合理
+Dialogue: 0,1:00:16.90,1:00:20.60,Chinese,,0,0,0,,这样做是非常合理的
 Dialogue: 0,1:00:26.88,1:00:29.50,English,,0,0,0,,So in particular imagine I open the file
-Dialogue: 0,1:00:26.88,1:00:29.50,Chinese,,0,0,0,,举个例子，我先打开文件 A
+Dialogue: 0,1:00:26.88,1:00:29.50,Chinese,,0,0,0,,比如，我先打开文件 A
 Dialogue: 0,1:00:29.92,1:00:33.94,English,,0,0,0,,And standard output points to the sort of normal thing
-Dialogue: 0,1:00:29.92,1:00:33.94,Chinese,,0,0,0,,标准输出像往常一样指向此表项
+Dialogue: 0,1:00:29.92,1:00:33.94,Chinese,,0,0,0,,标准输出会像往常一样指向此文件表表项
 Dialogue: 0,1:00:36.84,1:00:40.28,English,,0,0,0,,And I open a new file I call it B
 Dialogue: 0,1:00:36.84,1:00:40.28,Chinese,,0,0,0,,我再打开一个新的文件 B
 Dialogue: 0,1:00:41.18,1:00:42.58,English,,0,0,0,,And then I call dup2
 Dialogue: 0,1:00:41.18,1:00:42.58,Chinese,,0,0,0,,接着调用 dup2
 Dialogue: 0,1:00:42.96,1:00:43.52,English,,0,0,0,,[Excuse me]
-Dialogue: 0,1:00:42.96,1:00:43.52,Chinese,,0,0,0,,【不好意思】
+Dialogue: 0,1:00:42.96,1:00:43.52,Chinese,,0,0,0,,【抱歉】
 Dialogue: 0,1:00:44.04,1:00:48.54,English,,0,0,0,,And now what both file descriptor 1 and file descriptor 4 are sharing
-Dialogue: 0,1:00:44.04,1:00:48.54,Chinese,,0,0,0,,现在文件描述符 1 和文件描述符 4 共享
+Dialogue: 0,1:00:44.04,1:00:48.54,Chinese,,0,0,0,,现在文件描述符 1 和文件描述符 4 共享此文件表表项
 Dialogue: 0,1:00:48.92,1:00:52.68,English,,0,0,0,,This entry in the file table and you see the reference count of 2
-Dialogue: 0,1:00:48.92,1:00:52.68,Chinese,,0,0,0,,此文件表表项，引用计数显示为 2
+Dialogue: 0,1:00:48.92,1:00:52.68,Chinese,,0,0,0,,引用计数显示为 2
 Dialogue: 0,1:00:53.90,1:00:56.50,English,,0,0,0,,And so in order to really close it then
 Dialogue: 0,1:00:53.90,1:00:56.50,Chinese,,0,0,0,,如果要真正关闭它
 Dialogue: 0,1:00:56.88,1:01:02.34,English,,0,0,0,,What would typically happen at this point is this happens before
@@ -1388,15 +1388,15 @@ Dialogue: 0,1:00:56.88,1:01:02.34,Chinese,,0,0,0,,通常需要在它启动程序
 Dialogue: 0,1:01:02.34,1:01:06.02,English,,0,0,0,,It starts your program you'd want to close file descriptor 4
 Dialogue: 0,1:01:02.34,1:01:06.02,Chinese,,0,0,0,,关闭文件描述符 4
 Dialogue: 0,1:01:10.30,1:01:15.18,English,,0,0,0,,And in fact there's a lot of bugs you can make by not closing files
-Dialogue: 0,1:01:10.30,1:01:15.18,Chinese,,0,0,0,,如果不关闭文件，可能会出现很多漏洞
+Dialogue: 0,1:01:10.30,1:01:15.18,Chinese,,0,0,0,,否则可能会引起很多漏洞
 Dialogue: 0,1:01:15.60,1:01:19.80,English,,0,0,0,,It's easy to make mistakes when you have multiple entries in these tables
-Dialogue: 0,1:01:15.60,1:01:19.80,Chinese,,0,0,0,,表项存在共享时很容易出错
+Dialogue: 0,1:01:15.60,1:01:19.80,Chinese,,0,0,0,,因为文件表表项存在被共享时很容易出错
 Dialogue: 0,1:01:19.90,1:01:25.32,English,,0,0,0,,[Yes] [Student speaking]
 Dialogue: 0,1:01:19.90,1:01:25.32,Chinese,,0,0,0,,【请讲】 【学生提问】
 Dialogue: 0,1:01:25.42,1:01:30.70,English,,0,0,0,,No, if I call close this one it just decrements this reference count
 Dialogue: 0,1:01:25.42,1:01:30.70,Chinese,,0,0,0,,不会，如果调用 close 函数关闭文件，只会减少引用计数
 Dialogue: 0,1:01:31.16,1:01:33.02,English,,0,0,0,,But this remains a valid entry here
-Dialogue: 0,1:01:31.16,1:01:33.02,Chinese,,0,0,0,,但这仍然是一条有效的表项
+Dialogue: 0,1:01:31.16,1:01:33.02,Chinese,,0,0,0,,但这仍会是一个有效的表项
 Dialogue: 0,1:01:33.02,1:01:38.70,English,,0,0,0,,[student speaking]
 Dialogue: 0,1:01:33.02,1:01:38.70,Chinese,,0,0,0,,【学生提问】
 Dialogue: 0,1:01:38.74,1:01:48.48,English,,0,0,0,,Yes but dup2 will decrement the reference count of the original
@@ -1408,13 +1408,13 @@ Dialogue: 0,1:01:57.74,1:01:59.22,Chinese,,0,0,0,,所以 dup2 是......
 Dialogue: 0,1:02:01.54,1:02:06.78,English,,0,0,0,,I want what I refer to for example file descriptor
 Dialogue: 0,1:02:01.54,1:02:06.78,Chinese,,0,0,0,,例如
 Dialogue: 0,1:02:08.86,1:02:15.46,English,,0,0,0,,I want file descriptor 4 to become what I can use to and refer to with file descriptor 1 here
-Dialogue: 0,1:02:08.86,1:02:15.46,Chinese,,0,0,0,,如果想用文件描述符 1 引用文件描述符 4
+Dialogue: 0,1:02:08.86,1:02:15.46,Chinese,,0,0,0,,如果想用文件描述符 1 引用文件描述符 4 指向的文件
 Dialogue: 0,1:02:16.14,1:02:19.12,English,,0,0,0,,It will actually decrement the reference count
-Dialogue: 0,1:02:16.14,1:02:19.12,Chinese,,0,0,0,,dup2 将先关闭 newfd 原先指向的文件，减少该文件的引用计数
+Dialogue: 0,1:02:16.14,1:02:19.12,Chinese,,0,0,0,,dup2 会先关闭文件描述符 1 原先指向的文件，减少该文件的引用计数
 Dialogue: 0,1:02:19.76,1:02:23.70,English,,0,0,0,,Of this before it done does the copy
 Dialogue: 0,1:02:19.76,1:02:23.70,Chinese,,0,0,0,,然后再进行复制操作
 Dialogue: 0,1:02:24.76,1:02:32.52,English,,0,0,0,,Otherwise it will create like an orphan in this table right
-Dialogue: 0,1:02:24.76,1:02:32.52,Chinese,,0,0,0,,如果不关，引用计数就不会为 0，内核就无法释放它，对吧
+Dialogue: 0,1:02:24.76,1:02:32.52,Chinese,,0,0,0,,如果不关，内核就无法释放它，对吧
 Dialogue: 0,1:02:37.22,1:02:43.40,English,,0,0,0,,So anyways dup2 also is a powerful but dangerous mechanism
 Dialogue: 0,1:02:37.22,1:02:43.40,Chinese,,0,0,0,,总之 dup2 是一个强大但危险的机制
 Dialogue: 0,1:02:44.96,1:02:49.58,English,,0,0,0,,So now finally let me just mention the much more common I/O that
@@ -1438,7 +1438,7 @@ Dialogue: 0,1:03:19.16,1:03:26.46,Chinese,,0,0,0,,它用缓冲来进行 I/O 操�
 Dialogue: 0,1:03:27.60,1:03:30.80,English,,0,0,0,,So just it is an example
 Dialogue: 0,1:03:27.60,1:03:30.80,Chinese,,0,0,0,,例如
 Dialogue: 0,1:03:45.30,1:03:48.14,English,,0,0,0,,Here's some code that calls printf
-Dialogue: 0,1:03:45.30,1:03:48.14,Chinese,,0,0,0,,这是一段调用 printf 的代码
+Dialogue: 0,1:03:45.30,1:03:48.14,Chinese,,0,0,0,,这段代码调用 printf 函数
 Dialogue: 0,1:03:48.74,1:03:51.82,English,,0,0,0,,One character at a time to print the word hello
 Dialogue: 0,1:03:48.74,1:03:51.82,Chinese,,0,0,0,,打印单词 hello，一次打印一个字符
 Dialogue: 0,1:03:54.22,1:03:57.20,English,,0,0,0,,But if I run that and I strace it
@@ -1454,9 +1454,9 @@ Dialogue: 0,1:04:18.96,1:04:23.56,Chinese,,0,0,0,,把写的内容打印输出
 Dialogue: 0,1:04:24.36,1:04:32.10,English,,0,0,0,,Usually that happens automatically actually if you printf a line feed it will flush it
 Dialogue: 0,1:04:24.36,1:04:32.10,Chinese,,0,0,0,,通常如果 printf 换行符，它将自动 flush
 Dialogue: 0,1:04:33.08,1:04:36.52,English,,0,0,0,,So but that I think that call to fflush is probably redundant here
-Dialogue: 0,1:04:33.08,1:04:36.52,Chinese,,0,0,0,,所以我认为在这里不调用 fflush 也可以
+Dialogue: 0,1:04:33.08,1:04:36.52,Chinese,,0,0,0,,所以我想在这里不调用 fflush 也可以
 Dialogue: 0,1:04:44.16,1:04:53.10,English,,0,0,0,,So and so that's the benefit, so buffered I/O is much more efficient
-Dialogue: 0,1:04:44.16,1:04:53.10,Chinese,,0,0,0,,综上所述，带缓冲的 I/O 效率因为有缓冲的缘故
+Dialogue: 0,1:04:44.16,1:04:53.10,Chinese,,0,0,0,,综上所述，带缓冲的 I/O 因为有缓冲的缘故
 Dialogue: 0,1:04:53.10,1:04:55.60,English,,0,0,0,,Because of the buffering
 Dialogue: 0,1:04:53.10,1:04:55.60,Chinese,,0,0,0,,效率会更高
 Dialogue: 0,1:05:00.76,1:05:07.12,English,,0,0,0,,So as a result we've now seen three different types of I/O
@@ -1466,9 +1466,9 @@ Dialogue: 0,1:05:07.12,1:05:11.74,Chinese,,0,0,0,,一个是低级的 Unix I/O
 Dialogue: 0,1:05:12.12,1:05:16.40,English,,0,0,0,,You saw this package that was written specifically for the book and for the course called RIO
 Dialogue: 0,1:05:12.12,1:05:16.40,Chinese,,0,0,0,,另一个是专门为本书及本课程编写的 RIO 包
 Dialogue: 0,1:05:16.80,1:05:18.74,English,,0,0,0,,And then there's a much larger
-Dialogue: 0,1:05:16.80,1:05:18.74,Chinese,,0,0,0,,最后是由 Unix 标准库提供的更多、
+Dialogue: 0,1:05:16.80,1:05:18.74,Chinese,,0,0,0,,最后是由 Unix 标准库提供的标准 I/O 函数
 Dialogue: 0,1:05:19.14,1:05:25.50,English,,0,0,0,,And in fact richer set of I/O functions provided by the Unix standard library
-Dialogue: 0,1:05:19.14,1:05:25.50,Chinese,,0,0,0,,更丰富的标准 I/O 函数
+Dialogue: 0,1:05:19.14,1:05:25.50,Chinese,,0,0,0,,这种函数数量更多、类型也更丰富
 Dialogue: 0,1:05:26.10,1:05:31.86,English,,0,0,0,,So you might ask a couple of questions one is why the heck did you write this when you've already got that
 Dialogue: 0,1:05:26.10,1:05:31.86,Chinese,,0,0,0,,这里你们可能会有疑问，既然已经有了标准库提供的函数，为什么还要自己去写
 Dialogue: 0,1:05:32.80,1:05:36.46,English,,0,0,0,,If Unix provides buffered I/O why did you do it yourself
@@ -1486,7 +1486,7 @@ Dialogue: 0,1:05:52.86,1:05:57.96,Chinese,,0,0,0,,因此 RIO 函数主要是用�
 Dialogue: 0,1:05:59.04,1:06:05.62,English,,0,0,0,,The other thing is these do not coexist very well buffered I/O with a RIO I/O
 Dialogue: 0,1:05:59.04,1:06:05.62,Chinese,,0,0,0,,此外，带缓冲的 I/O 与 RIO I/O 不能很好地共存
 Dialogue: 0,1:06:05.62,1:06:09.60,English,,0,0,0,,Because they each maintain their own buffers and they don't know about each other
-Dialogue: 0,1:06:05.62,1:06:09.60,Chinese,,0,0,0,,因为它们各自都有自己的缓冲区，彼此之间互不了解
+Dialogue: 0,1:06:05.62,1:06:09.60,Chinese,,0,0,0,,因为它们各自有自己的缓冲区，彼此之间互不了解
 Dialogue: 0,1:06:09.96,1:06:11.40,English,,0,0,0,,And they get terribly confused
 Dialogue: 0,1:06:09.96,1:06:11.40,Chinese,,0,0,0,,还会相互干扰
 Dialogue: 0,1:06:11.88,1:06:16.88,English,,0,0,0,,So you kind of have to pick one or the other with respect to any particular I/O connection
@@ -1494,7 +1494,7 @@ Dialogue: 0,1:06:11.88,1:06:16.88,Chinese,,0,0,0,,所以在对某个 I/O 连接�
 Dialogue: 0,1:06:17.16,1:06:18.86,English,,0,0,0,,And don't try to mix and match them
 Dialogue: 0,1:06:17.16,1:06:18.86,Chinese,,0,0,0,,切忌混用和匹配使用
 Dialogue: 0,1:06:22.38,1:06:29.42,English,,0,0,0,,So like I said Unix I/O then the low-level stuff from an application perspective
-Dialogue: 0,1:06:22.38,1:06:29.42,Chinese,,0,0,0,,接下来看看每种 I/O 各自的优缺点。首先是低级的 I/O，从应用程序的角度
+Dialogue: 0,1:06:22.38,1:06:29.42,Chinese,,0,0,0,,接下来是每种 I/O 各自的优缺点。首先是低级的 I/O，从应用程序的角度
 Dialogue: 0,1:06:29.42,1:06:33.92,English,,0,0,0,,It's like really painful to use especially with short counts and error codes
 Dialogue: 0,1:06:29.42,1:06:33.92,Chinese,,0,0,0,,它不是很好用，存在不足值、出错代码等
 Dialogue: 0,1:06:34.58,1:06:35.70,English,,0,0,0,,And all that stuff
@@ -1502,7 +1502,7 @@ Dialogue: 0,1:06:34.58,1:06:35.70,Chinese,,0,0,0,,诸多缺陷
 Dialogue: 0,1:06:38.92,1:06:43.86,English,,0,0,0,,So in general you want to either write your own package or use some other package around it
 Dialogue: 0,1:06:38.92,1:06:43.86,Chinese,,0,0,0,,所以一般来说需要自己编写程序包或者用其他程序包对它进行封装
 Dialogue: 0,1:06:44.40,1:06:49.84,English,,0,0,0,,And so as I said standard I/O it gives you printf and scanf and all these nice features
-Dialogue: 0,1:06:44.40,1:06:49.84,Chinese,,0,0,0,,然后是标准 I/O，它提供了 printf、scanf等很多不错的功能
+Dialogue: 0,1:06:44.40,1:06:49.84,Chinese,,0,0,0,,然后是标准 I/O，它提供了 printf、scanf 等很多不错的函数
 Dialogue: 0,1:06:50.10,1:06:52.84,English,,0,0,0,,It's uniform it exists on all systems
 Dialogue: 0,1:06:50.10,1:06:52.84,Chinese,,0,0,0,,它是统一的，所有系统中都有
 Dialogue: 0,1:06:53.34,1:06:55.10,English,,0,0,0,,It's reasonably standardized
@@ -1512,41 +1512,41 @@ Dialogue: 0,1:07:01.02,1:07:06.34,Chinese,,0,0,0,,所以标准 I/O 最常用于
 Dialogue: 0,1:07:06.40,1:07:09.18,English,,0,0,0,,Day-to-day uses of files
 Dialogue: 0,1:07:06.40,1:07:09.18,Chinese,,0,0,0,,日常文件的使用
 Dialogue: 0,1:07:10.60,1:07:15.64,English,,0,0,0,,Use that raw I/O for low-level stuff like when you have to
-Dialogue: 0,1:07:10.60,1:07:15.64,Chinese,,0,0,0,,我会用 Unix I/O 完成一些低级操作
+Dialogue: 0,1:07:10.60,1:07:15.64,Chinese,,0,0,0,,Unix I/O 适合用来完成一些低级操作
 Dialogue: 0,1:07:16.10,1:07:19.42,English,,0,0,0,,And partly it turns out signals are not
 Dialogue: 0,1:07:16.10,1:07:19.42,Chinese,,0,0,0,,比如编写信号处理程序
 Dialogue: 0,1:07:20.16,1:07:23.68,English,,0,0,0,,You shouldn't use standard I/O when you're writing signal handlers
-Dialogue: 0,1:07:20.16,1:07:23.68,Chinese,,0,0,0,,此时不应使用标准 I/O
+Dialogue: 0,1:07:20.16,1:07:23.68,Chinese,,0,0,0,,此时不应该用标准 I/O
 Dialogue: 0,1:07:24.32,1:07:29.00,English,,0,0,0,,And then the RIO you're going to find useful for in particular for doing networking
 Dialogue: 0,1:07:24.32,1:07:29.00,Chinese,,0,0,0,,RIO 非常适用于网络操作
 Dialogue: 0,1:07:29.92,1:07:38.28,English,,0,0,0,,One other thing that you should one bug that students do over and over again in this course
-Dialogue: 0,1:07:29.92,1:07:38.28,Chinese,,0,0,0,,学生们在这门课程中常犯的一个错误是
+Dialogue: 0,1:07:29.92,1:07:38.28,Chinese,,0,0,0,,有一点大家需要注意
 Dialogue: 0,1:07:38.84,1:07:44.50,English,,0,0,0,,Is they try to do a line oriented I/O on things that aren't lines
-Dialogue: 0,1:07:38.84,1:07:44.50,Chinese,,0,0,0,,尝试对没有行概念的文件进行行导向的 I/O 操作
+Dialogue: 0,1:07:38.84,1:07:44.50,Chinese,,0,0,0,,不能对没有行概念的文件进行基于行的 I/O 操作
 Dialogue: 0,1:07:45.02,1:07:47.42,English,,0,0,0,,So like a jpeg image or something like that
 Dialogue: 0,1:07:45.02,1:07:47.42,Chinese,,0,0,0,,比如 jpeg 格式的图片等
 Dialogue: 0,1:07:47.84,1:07:50.56,English,,0,0,0,,And the reason that's important is that these functions
-Dialogue: 0,1:07:47.84,1:07:50.56,Chinese,,0,0,0,,主要是因为这些函数
+Dialogue: 0,1:07:47.84,1:07:50.56,Chinese,,0,0,0,,这主要是因为这些函数
 Dialogue: 0,1:07:51.30,1:07:56.30,English,,0,0,0,,treat the end of line character 0xa as a very special character
-Dialogue: 0,1:07:51.30,1:07:56.30,Chinese,,0,0,0,,在处理行尾字符 0xa 这个特殊的字符时
-Dialogue: 0,1:07:56.42,1:08:02.06,English,,0,0,0,,They'll stop reading or something like that or if it's going between windows and Unix
-Dialogue: 0,1:07:56.42,1:08:02.06,Chinese,,0,0,0,,会停止读入，或者如果是在 Windows 和 Unix 之间进行切换
+Dialogue: 0,1:07:51.30,1:07:56.30,Chinese,,0,0,0,,在处理新行符 0xa 这个特殊字符时会停止读入
+Dialogue: 0,1:07:56.42,1:08:02.06,English,,0,0,0,,They'll stop reading or something like that or if it's going between Windows and Unix
+Dialogue: 0,1:07:56.42,1:08:02.06,Chinese,,0,0,0,,或者如果是在 Windows 操作系统下
 Dialogue: 0,1:08:02.14,1:08:07.90,English,,0,0,0,,It will actually change one from line feed to carriage return line feed
-Dialogue: 0,1:08:02.14,1:08:07.90,Chinese,,0,0,0,,会从换行符切成回车和换行符
+Dialogue: 0,1:08:02.14,1:08:07.90,Chinese,,0,0,0,,在处理回车换行符时会停止读入
 Dialogue: 0,1:08:08.42,1:08:12.82,English,,0,0,0,,Same way functions like strlen and strcpy will stop when they hit a null byte
-Dialogue: 0,1:08:08.42,1:08:12.82,Chinese,,0,0,0,,同样地，strlen、strcpy 等函数在遇到空字节时会停止
+Dialogue: 0,1:08:08.42,1:08:12.82,Chinese,,0,0,0,,同样地，strlen、strcpy 等函数在遇到空字节时会停止操作
 Dialogue: 0,1:08:13.54,1:08:17.84,English,,0,0,0,,And that's not what you want to do when these are network packets you're trying to send out
-Dialogue: 0,1:08:13.54,1:08:17.84,Chinese,,0,0,0,,在发送网络数据包时，你可不想遇到这种情况
+Dialogue: 0,1:08:13.54,1:08:17.84,Chinese,,0,0,0,,在发送网络数据包时，这是一定要避免发生的情况
 Dialogue: 0,1:08:19.38,1:08:24.73,English,,0,0,0,,So be careful some of the functions you've used a lot and you're very familiar with
-Dialogue: 0,1:08:19.38,1:08:24.73,Chinese,,0,0,0,,所以要谨慎，因为有时候你经常使用而且非常熟悉的一些功能
+Dialogue: 0,1:08:19.38,1:08:24.73,Chinese,,0,0,0,,所以要小心谨慎，有时候你经常使用而且非常熟悉的一些函数
 Dialogue: 0,1:08:25.44,1:08:31.76,English,,0,0,0,,May be completely inappropriate for things where you're doing binary data
 Dialogue: 0,1:08:25.44,1:08:31.76,Chinese,,0,0,0,,也许完全不适用于你当下的操作，比如二进制数据
 Dialogue: 0,1:08:32.36,1:08:35.54,English,,0,0,0,,Or you're communicating over networks and things like that
-Dialogue: 0,1:08:32.36,1:08:35.54,Chinese,,0,0,0,,或网络通讯等等
+Dialogue: 0,1:08:32.36,1:08:35.54,Chinese,,0,0,0,,或网络通讯等
 Dialogue: 0,1:08:35.56,1:08:40.88,English,,0,0,0,,So be sure you understand what you're doing when you start to use these kind of functions
-Dialogue: 0,1:08:35.56,1:08:40.88,Chinese,,0,0,0,,所以在用这些函数前先弄清楚要做什么
+Dialogue: 0,1:08:35.56,1:08:40.88,Chinese,,0,0,0,,所以在使用这些函数前先想清楚要做什么
 Dialogue: 0,1:08:43.60,1:08:46.42,English,,0,0,0,,So those of you really want to know this stuff
-Dialogue: 0,1:08:43.60,1:08:46.42,Chinese,,0,0,0,,如果想更进一步了解
+Dialogue: 0,1:08:43.60,1:08:46.42,Chinese,,0,0,0,,如果大家想更进一步了解相关内容
 Dialogue: 0,1:08:47.20,1:08:50.10,English,,0,0,0,,There's a fellow named Richard Stevens who unfortunately died
 Dialogue: 0,1:08:47.20,1:08:50.10,Chinese,,0,0,0,,向大家推荐理查德史蒂文斯写的一套书
 Dialogue: 0,1:08:53.08,1:08:54.74,English,,0,0,0,,A while quite a while ago
@@ -1558,13 +1558,13 @@ Dialogue: 0,1:09:04.56,1:09:10.70,Chinese,,0,0,0,,让这套经典著作得以延
 Dialogue: 0,1:09:11.26,1:09:15.84,English,,0,0,0,,So and if you really want to know how this stuff works you want to be the ace programmer
 Dialogue: 0,1:09:11.26,1:09:15.84,Chinese,,0,0,0,,所以如果你很想知道具体的运作原理，想成为一名王牌程序员
 Dialogue: 0,1:09:16.44,1:09:18.20,English,,0,0,0,,These books are the best you can get
-Dialogue: 0,1:09:16.44,1:09:18.20,Chinese,,0,0,0,,这套书是你最好的资料
+Dialogue: 0,1:09:16.44,1:09:18.20,Chinese,,0,0,0,,这套书是你可以参考的最好资料
 Dialogue: 0,1:09:18.22,1:09:24.52,English,,0,0,0,,But I'll also warn you your bookshelf will become very heavy laden because there's
-Dialogue: 0,1:09:18.22,1:09:24.52,Chinese,,0,0,0,,但我得告诉你们，这套书是个大部头
+Dialogue: 0,1:09:18.22,1:09:24.52,Chinese,,0,0,0,,但我必须告诉你们，这套书是个大部头
 Dialogue: 0,1:09:25.06,1:09:30.16,English,,0,0,0,,There's the volumes one two and three and then there's networking books and
 Dialogue: 0,1:09:25.06,1:09:30.16,Chinese,,0,0,0,,有一、二、三卷，还有几本讲网络的
 Dialogue: 0,1:09:30.24,1:09:33.36,English,,0,0,0,,Stevens is like an encyclopedic reference
-Dialogue: 0,1:09:30.24,1:09:33.36,Chinese,,0,0,0,,就像是一套百科全书
+Dialogue: 0,1:09:30.24,1:09:33.36,Chinese,,0,0,0,,就像一套百科全书
 Dialogue: 0,1:09:33.46,1:09:37.96,English,,0,0,0,,But they're excellent books if you really want to understand something  read Stevens
 Dialogue: 0,1:09:33.46,1:09:37.96,Chinese,,0,0,0,,但这是一套优秀的书，如果你真的想深入研究，就去读史蒂文斯
 Dialogue: 0,1:09:39.02,1:09:47.04,English,,0,0,0,,And there's another book that is just specific to Linux that's fairly nice and somewhat it's very detailed
@@ -1572,7 +1572,7 @@ Dialogue: 0,1:09:39.02,1:09:47.04,Chinese,,0,0,0,,还有另一本专门针对 Li
 Dialogue: 0,1:09:47.64,1:09:54.98,English,,0,0,0,,But since it's only trying to deal with Linux it's a little bit less weird than trying to read Stevens
 Dialogue: 0,1:09:47.64,1:09:54.98,Chinese,,0,0,0,,但因为它只针对 Linux，所以读起来比史蒂文斯的书更轻松
 Dialogue: 0,1:09:55.02,1:10:01.46,English,,0,0,0,,Because Stevens will say in this version of Unix it works this way in this version it works that way and blah blah blah
-Dialogue: 0,1:09:55.02,1:10:01.46,Chinese,,0,0,0,,在史蒂文斯的书中，它会讲到在这个版本的 Unix 中是这样的，在另一个版本中又是那样的等等
+Dialogue: 0,1:09:55.02,1:10:01.46,Chinese,,0,0,0,,在史蒂文斯的书中，它会讲到在这个版本的 Unix 中是这样，在另一个版本中又是那样等
 Dialogue: 0,1:10:01.50,1:10:03.48,English,,0,0,0,,And it's all different and it will drive you crazy
 Dialogue: 0,1:10:01.50,1:10:03.48,Chinese,,0,0,0,,读起来让人抓狂
 Dialogue: 0,1:10:04.44,1:10:07.22,English,,0,0,0,,But Stevens is still it's an outstanding set of books
@@ -1582,16 +1582,16 @@ Dialogue: 0,1:10:08.10,1:10:10.54,Chinese,,0,0,0,,好......
 Dialogue: 0,1:10:11.60,1:10:13.90,English,,0,0,0,,This is an example and I'm not going to go through it
 Dialogue: 0,1:10:11.60,1:10:13.90,Chinese,,0,0,0,,这只是一个例子，我不打算讲它
 Dialogue: 0,1:10:13.90,1:10:17.78,English,,0,0,0,,But these are the kind of things that we use to torture students that you
-Dialogue: 0,1:10:13.90,1:10:17.78,Chinese,,0,0,0,,这是我们用来折磨学生的题目之一
+Dialogue: 0,1:10:13.90,1:10:17.78,Chinese,,0,0,0,,这是我们用来折腾学生的一个题目
 Dialogue: 0,1:10:18.30,1:10:22.42,English,,0,0,0,,Open some file descriptors and you do some dups and you do
 Dialogue: 0,1:10:18.30,1:10:22.42,Chinese,,0,0,0,,打开一些文件描述符，然后做一些 dup
 Dialogue: 0,1:10:23.10,1:10:29.50,English,,0,0,0,,Some forks and so you end up with a real spaghetti for all the pointers
-Dialogue: 0,1:10:23.10,1:10:29.50,Chinese,,0,0,0,,一些 fork，最终得到各种指针
+Dialogue: 0,1:10:23.10,1:10:29.50,Chinese,,0,0,0,,一些 fork，最后得到各种指针
 Dialogue: 0,1:10:29.50,1:10:33.42,English,,0,0,0,,What's shared and what's not shared and then you ask what will this print
-Dialogue: 0,1:10:29.50,1:10:33.42,Chinese,,0,0,0,,一些共享，一些不共享，最后问打印结果是什么
+Dialogue: 0,1:10:29.50,1:10:33.42,Chinese,,0,0,0,,有些共享，有些不共享，最后问打印的结果是什么
 Dialogue: 0,1:10:33.86,1:10:38.28,English,,0,0,0,,And of course you'll have to trace through in great detail what's really going on
-Dialogue: 0,1:10:33.86,1:10:38.28,Chinese,,0,0,0,,当然，你必须仔细追踪才能知道到底发生了什么
+Dialogue: 0,1:10:33.86,1:10:38.28,Chinese,,0,0,0,,当然，你必须仔细捋一捋才能知道到底发生了什么
 Dialogue: 0,1:10:39.10,1:10:43.62,English,,0,0,0,,So those are in the book and I recommend you work on some of those
 Dialogue: 0,1:10:39.10,1:10:43.62,Chinese,,0,0,0,,这些题目在书里都有，我建议你们去研究其中的一些
 Dialogue: 0,1:10:44.40,1:10:45.82,English,,0,0,0,,Ok that'll do us for today then
-Dialogue: 0,1:10:44.40,1:10:45.82,Chinese,,0,0,0,,那么这节课就到此结束
+Dialogue: 0,1:10:44.40,1:10:45.82,Chinese,,0,0,0,,这节课就到此结束
