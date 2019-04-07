@@ -1676,86 +1676,86 @@ Dialogue: 0,1:12:41.96,1:12:45.36,Chinese,,0,0,0,,或是一个指向
 Dialogue: 0,1:12:45.82,1:12:49.58,English,,0,0,0,,To a this linked list data structure I showed before
 Dialogue: 0,1:12:45.82,1:12:49.58,Chinese,,0,0,0,,我之前展示过的，由 addrinfo 结构体构成的链表的指针
 Dialogue: 0,1:12:52.76,1:12:54.96,English,,0,0,0,,And now I can step through that list
-Dialogue: 0,1:12:52.76,1:12:54.96,Chinese,,0,0,0,,
+Dialogue: 0,1:12:52.76,1:12:54.96,Chinese,,0,0,0,,现在我可以遍历这个链表
 Dialogue: 0,1:12:55.94,1:13:03.24,English,,0,0,0,,Using standard linked list code and make calls to the getnameinfo function which will return back domain names
-Dialogue: 0,1:12:55.94,1:13:03.24,Chinese,,0,0,0,,
-Dialogue: 0,1:13:07.38,1:13:13.76,English,,0,0,0,,And then when it's all done I have to free up that whisk that got returned otherwise all great memory stuff
-Dialogue: 0,1:13:07.38,1:13:13.76,Chinese,,0,0,0,,
+Dialogue: 0,1:12:55.94,1:13:03.24,Chinese,,0,0,0,,使用标准链表并调用 getnameinfo 函数，它会返回域名
+Dialogue: 0,1:13:07.38,1:13:13.76,English,,0,0,0,,And then when it's all done I have to free up that list that got returned otherwise all great memory stuff
+Dialogue: 0,1:13:07.38,1:13:13.76,Chinese,,0,0,0,,当这些都完成后，我会释放那个链表占用的内存空间
 Dialogue: 0,1:13:14.78,1:13:16.66,English,,0,0,0,,So just as a demo
-Dialogue: 0,1:13:14.78,1:13:16.66,Chinese,,0,0,0,,
+Dialogue: 0,1:13:14.78,1:13:16.66,Chinese,,0,0,0,,那么我展示一下
 Dialogue: 0,1:13:26.98,1:13:27.92,English,,0,0,0,,What I'm
-Dialogue: 0,1:13:26.98,1:13:27.92,Chinese,,0,0,0,,
-Dialogue: 0,1:13:31.60,1:13:32.86,English,,0,0,0,,On oh host info sorry
-Dialogue: 0,1:13:31.60,1:13:32.86,Chinese,,0,0,0,,
+Dialogue: 0,1:13:26.98,1:13:27.92,Chinese,,0,0,0,,那个程序在哪
+Dialogue: 0,1:13:31.60,1:13:32.86,English,,0,0,0,,On hostinfo sorry
+Dialogue: 0,1:13:31.60,1:13:32.86,Chinese,,0,0,0,,哦，应该叫 hostinfo
 Dialogue: 0,1:13:38.24,1:13:41.38,English,,0,0,0,,Ah so you can think of it this is like
-Dialogue: 0,1:13:38.24,1:13:41.38,Chinese,,0,0,0,,
+Dialogue: 0,1:13:38.24,1:13:41.38,Chinese,,0,0,0,,你们可以把这当做
 Dialogue: 0,1:13:42.70,1:13:47.16,English,,0,0,0,,A not very fancy implementation of nslookup
-Dialogue: 0,1:13:42.70,1:13:47.16,Chinese,,0,0,0,,
+Dialogue: 0,1:13:42.70,1:13:47.16,Chinese,,0,0,0,,nslookup 的简易版
 Dialogue: 0,1:13:49.34,1:13:54.04,English,,0,0,0,,So the kind of stuff we already saw before but let's
-Dialogue: 0,1:13:49.34,1:13:54.04,Chinese,,0,0,0,,
+Dialogue: 0,1:13:49.34,1:13:54.04,Chinese,,0,0,0,,下面要展示的内容我们之前已经见过了，让我们再看一下
 Dialogue: 0,1:13:58.50,1:14:02.80,English,,0,0,0,,All it's returning are the different addresses and one of the things that I found curious is
-Dialogue: 0,1:13:58.50,1:14:02.80,Chinese,,0,0,0,,
+Dialogue: 0,1:13:58.50,1:14:02.80,Chinese,,0,0,0,,它返回的是不同的地址，然而我发现有一点很奇怪
 Dialogue: 0,1:14:04.04,1:14:06.68,English,,0,0,0,,It returns them in the same order all the time
-Dialogue: 0,1:14:04.04,1:14:06.68,Chinese,,0,0,0,,
+Dialogue: 0,1:14:04.04,1:14:06.68,Chinese,,0,0,0,,它总是以相同的顺序返回它们
 Dialogue: 0,1:14:09.82,1:14:12.78,English,,0,0,0,,Instead of within a slow cup it kept changing it
-Dialogue: 0,1:14:09.82,1:14:12.78,Chinese,,0,0,0,,
+Dialogue: 0,1:14:09.82,1:14:12.78,Chinese,,0,0,0,,而不是不停地改变顺序
 Dialogue: 0,1:14:13.50,1:14:15.94,English,,0,0,0,,And I think that has to do with caching
-Dialogue: 0,1:14:13.50,1:14:15.94,Chinese,,0,0,0,,
+Dialogue: 0,1:14:13.50,1:14:15.94,Chinese,,0,0,0,,我认为这与缓存有关
 Dialogue: 0,1:14:24.48,1:14:25.68,English,,0,0,0,,No that changed
-Dialogue: 0,1:14:24.48,1:14:25.68,Chinese,,0,0,0,,
+Dialogue: 0,1:14:24.48,1:14:25.68,Chinese,,0,0,0,,仍然没有改变
 Dialogue: 0,1:14:28.36,1:14:31.54,English,,0,0,0,,I know it's kind of interesting if it's
-Dialogue: 0,1:14:28.36,1:14:31.54,Chinese,,0,0,0,,
-Dialogue: 0,1:14:32.28,1:14:36.98,English,,0,0,0,,It you might want to play with this code, it's kind of you can see what's going on in different places
-Dialogue: 0,1:14:32.28,1:14:36.98,Chinese,,0,0,0,,
+Dialogue: 0,1:14:28.36,1:14:31.54,Chinese,,0,0,0,,这很有趣
+Dialogue: 0,1:14:32.28,1:14:36.98,English,,0,0,0,,Ah you might want to play with this code, it's kind of you can see what's going on in different places
+Dialogue: 0,1:14:32.28,1:14:36.98,Chinese,,0,0,0,,你们可能想玩这些代码，你们可以看到不同网址的输出的区别
 Dialogue: 0,1:14:44.02,1:14:47.10,English,,0,0,0,,And so you can see though that it's
-Dialogue: 0,1:14:44.02,1:14:47.10,Chinese,,0,0,0,,
+Dialogue: 0,1:14:44.02,1:14:47.10,Chinese,,0,0,0,,那么你们可以看到
 Dialogue: 0,1:14:47.52,1:14:50.40,English,,0,0,0,,Basically getting the same kind of information
-Dialogue: 0,1:14:47.52,1:14:50.40,Chinese,,0,0,0,,
-Dialogue: 0,1:14:50.68,1:14:55.46,English,,0,0,0,,That you would from nslookup it's really just creating the DNS server to do this
-Dialogue: 0,1:14:50.68,1:14:55.46,Chinese,,0,0,0,,
+Dialogue: 0,1:14:47.52,1:14:50.40,Chinese,,0,0,0,,它基本上在返回
+Dialogue: 0,1:14:50.68,1:14:55.46,English,,0,0,0,,That you would find from nslookup it's really just crewing the DNS server to do this
+Dialogue: 0,1:14:50.68,1:14:55.46,Chinese,,0,0,0,,和 nslookup 一样的信息，这些操作实际上就是通过 DNS 服务器来完成的
 Dialogue: 0,1:14:56.60,1:14:59.22,English,,0,0,0,,But that's the start of what some of this code looks like
-Dialogue: 0,1:14:56.60,1:14:59.22,Chinese,,0,0,0,,
+Dialogue: 0,1:14:56.60,1:14:59.22,Chinese,,0,0,0,,那么这就是这些代码的作用
 Dialogue: 0,1:15:10.52,1:15:12.32,English,,0,0,0,,One of the things you
-Dialogue: 0,1:15:10.52,1:15:12.32,Chinese,,0,0,0,,
+Dialogue: 0,1:15:10.52,1:15:12.32,Chinese,,0,0,0,,有一件事你...
 Dialogue: 0,1:15:12.44,1:15:16.78,English,,0,0,0,,By the way when you're writing your own code,you often make use of what's called localhost
-Dialogue: 0,1:15:12.44,1:15:16.78,Chinese,,0,0,0,,
+Dialogue: 0,1:15:12.44,1:15:16.78,Chinese,,0,0,0,,顺便说一下，当你们编写自己的代码时，经常会用到 localhost
 Dialogue: 0,1:15:17.36,1:15:20.48,English,,0,0,0,,And that always just refers to the machine that you're running on it
-Dialogue: 0,1:15:17.36,1:15:20.48,Chinese,,0,0,0,,
+Dialogue: 0,1:15:17.36,1:15:20.48,Chinese,,0,0,0,,它们只和你运行程序的机器有关
 Dialogue: 0,1:15:20.50,1:15:22.88,English,,0,0,0,,Always has this particular IP address
-Dialogue: 0,1:15:20.50,1:15:22.88,Chinese,,0,0,0,,
+Dialogue: 0,1:15:20.50,1:15:22.88,Chinese,,0,0,0,,而且总是这个特定的 IP 地址
 Dialogue: 0,1:15:22.98,1:15:27.00,English,,0,0,0,,So that address just refers to the machine and as a programmer
-Dialogue: 0,1:15:22.98,1:15:27.00,Chinese,,0,0,0,,
+Dialogue: 0,1:15:22.98,1:15:27.00,Chinese,,0,0,0,,所以这个地址指的就是你的机器，而作为一个程序员
 Dialogue: 0,1:15:27.54,1:15:29.58,English,,0,0,0,,You do all your testing on one machine
-Dialogue: 0,1:15:27.54,1:15:29.58,Chinese,,0,0,0,,
+Dialogue: 0,1:15:27.54,1:15:29.58,Chinese,,0,0,0,,你应该在一台机器上完成所有测试
 Dialogue: 0,1:15:29.96,1:15:34.56,English,,0,0,0,,You just set up both the client and the server on the same machine and play with it so
-Dialogue: 0,1:15:29.96,1:15:34.56,Chinese,,0,0,0,,
+Dialogue: 0,1:15:29.96,1:15:34.56,Chinese,,0,0,0,,你们应该在同一台机器上同时设置服务器和客户端并调试它们
 Dialogue: 0,1:15:35.60,1:15:40.12,English,,0,0,0,,Localhost is a very useful way of doing code development
-Dialogue: 0,1:15:35.60,1:15:40.12,Chinese,,0,0,0,,
-Dialogue: 0,1:15:42.88,1:15:47.80,English,,0,0,0,,And if this shows you can request host info for others
-Dialogue: 0,1:15:42.88,1:15:47.80,Chinese,,0,0,0,,
-Dialogue: 0,1:15:50.06,1:15:52.80,English,,0,0,0,,Thanksgiving and you can also by the way
-Dialogue: 0,1:15:50.06,1:15:52.80,Chinese,,0,0,0,,
+Dialogue: 0,1:15:35.60,1:15:40.12,Chinese,,0,0,0,,而 localhost 就是一个很好的测试用例
+Dialogue: 0,1:15:42.88,1:15:47.80,English,,0,0,0,,And if this shows you can request hostinfo for others
+Dialogue: 0,1:15:42.88,1:15:47.80,Chinese,,0,0,0,,这里的输出结果表明你也可以用 hostinfo 查看一些其它网站的信息
+Dialogue: 0,1:15:50.06,1:15:52.80,English,,0,0,0,,Thanks Kevin and you can also by the way
+Dialogue: 0,1:15:50.06,1:15:52.80,Chinese,,0,0,0,,谢谢你 Kevin，然后你们还可以
 Dialogue: 0,1:15:58.48,1:16:00.86,English,,0,0,0,,Always give a dotted decimal address
-Dialogue: 0,1:15:58.48,1:16:00.86,Chinese,,0,0,0,,
+Dialogue: 0,1:15:58.48,1:16:00.86,Chinese,,0,0,0,,输入一个点分十进制地址
 Dialogue: 0,1:16:08.78,1:16:10.04,English,,0,0,0,,And I'm just making it up here
-Dialogue: 0,1:16:08.78,1:16:10.04,Chinese,,0,0,0,,
+Dialogue: 0,1:16:08.78,1:16:10.04,Chinese,,0,0,0,,也就是我正在做的事
 Dialogue: 0,1:16:11.54,1:16:14.64,English,,0,0,0,,What and it's not very interesting because it returns back the same address
-Dialogue: 0,1:16:11.54,1:16:14.64,Chinese,,0,0,0,,
+Dialogue: 0,1:16:11.54,1:16:14.64,Chinese,,0,0,0,,这并不有趣，因为它返回了一样的地址
 Dialogue: 0,1:16:17.84,1:16:19.94,English,,0,0,0,,It's more interesting to run nslookup on that
-Dialogue: 0,1:16:17.84,1:16:19.94,Chinese,,0,0,0,,
+Dialogue: 0,1:16:17.84,1:16:19.94,Chinese,,0,0,0,,在 nslookup 中输入这段地址会更有趣
 Dialogue: 0,1:16:27.82,1:16:28.68,English,,0,0,0,,So
-Dialogue: 0,1:16:27.82,1:16:28.68,Chinese,,0,0,0,,
+Dialogue: 0,1:16:27.82,1:16:28.68,Chinese,,0,0,0,,那么
 Dialogue: 0,1:16:29.76,1:16:32.16,English,,0,0,0,,That just gives you a sense
-Dialogue: 0,1:16:29.76,1:16:32.16,Chinese,,0,0,0,,
-Dialogue: 0,1:16:32.46,1:16:36.90,English,,0,0,0,,And as you've seen this code is pretty messy stuff to work with there's a lot of struck
-Dialogue: 0,1:16:32.46,1:16:36.90,Chinese,,0,0,0,,
+Dialogue: 0,1:16:29.76,1:16:32.16,Chinese,,0,0,0,,这应该给了你们一点灵感
+Dialogue: 0,1:16:32.46,1:16:36.90,English,,0,0,0,,And as you've seen this code is pretty messy stuff to work with there's a lot of structs
+Dialogue: 0,1:16:32.46,1:16:36.90,Chinese,,0,0,0,,正如你们看到的，这段代码处理起来相当混乱，有许多结构体
 Dialogue: 0,1:16:36.98,1:16:40.31,English,,0,0,0,,So you have to initialize,you don't initialize you pass pointers
-Dialogue: 0,1:16:36.98,1:16:40.31,Chinese,,0,0,0,,
+Dialogue: 0,1:16:36.98,1:16:40.31,Chinese,,0,0,0,,需要被初始化，但你不需要初始化你传递的指针
 Dialogue: 0,1:16:40.68,1:16:42.72,English,,0,0,0,,And so the code always looks a bit crufty
-Dialogue: 0,1:16:40.68,1:16:42.72,Chinese,,0,0,0,,
+Dialogue: 0,1:16:40.68,1:16:42.72,Chinese,,0,0,0,,因此代码看起来总是有点混乱
 Dialogue: 0,1:16:42.72,1:16:46.82,English,,0,0,0,,But that sort of the the interfaces it exists
-Dialogue: 0,1:16:42.72,1:16:46.82,Chinese,,0,0,0,,
+Dialogue: 0,1:16:42.72,1:16:46.82,Chinese,,0,0,0,,但是那种接口是存在的
 Dialogue: 0,1:16:47.16,1:16:49.12,English,,0,0,0,,And you'll just have to get somewhat comfortable with it
-Dialogue: 0,1:16:47.16,1:16:49.12,Chinese,,0,0,0,,
+Dialogue: 0,1:16:47.16,1:16:49.12,Chinese,,0,0,0,,所以你们必须要适应它
 Dialogue: 0,1:16:49.74,1:16:53.32,English,,0,0,0,,So that will do us for today then thanks
-Dialogue: 0,1:16:49.74,1:16:53.32,Chinese,,0,0,0,,
+Dialogue: 0,1:16:49.74,1:16:53.32,Chinese,,0,0,0,,以上就是我们这节课的全部内容，谢谢大家
