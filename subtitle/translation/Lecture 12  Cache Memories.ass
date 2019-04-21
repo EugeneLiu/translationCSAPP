@@ -278,7 +278,7 @@ Dialogue: 0,0:11:33.16,0:11:36.46,Chinese,,0,0,0,,使用它作为组的索引
 Dialogue: 0,0:11:42.00,0:11:44.94,English,,0,0,0,,And then it just ignores all the other the sets
 Dialogue: 0,0:11:42.00,0:11:44.94,Chinese,,0,0,0,,只是忽略了所有其他的组
 Dialogue: 0,0:11:45.62,0:11:50.65,English,,0,0,0,,If the block we're looking for is...is in the cache it's going to be in this inset number one
-Dialogue: 0,0:11:45.62,0:11:50.65,Chinese,,0,0,0,,如果我们正在寻找的块是...在缓存中它将在这个插入的第一个 flag
+Dialogue: 0,0:11:45.62,0:11:50.65,Chinese,,0,0,0,,如果我们正在寻找的块是...在缓存中它将在这个插入的第一个
 Dialogue: 0,0:11:51.50,0:11:54.84,English,,0,0,0,,Then it does the comparison of the tag bits and the valid bits
 Dialogue: 0,0:11:51.50,0:11:54.84,Chinese,,0,0,0,,然后它进行标记位和有效位的比较
 Dialogue: 0,0:11:55.42,0:11:58.64,English,,0,0,0,,And assume that they assume that valid bits on and that it matches
@@ -490,7 +490,7 @@ Dialogue: 0,0:23:10.78,0:23:15.42,Chinese,,0,0,0,,这就像是某种东西......
 Dialogue: 0,0:23:17.32,0:23:19.46,English,,0,0,0,,And so that actually is the limit that's why..
 Dialogue: 0,0:23:17.32,0:23:19.46,Chinese,,0,0,0,,所以这实际上是限制的原因
 Dialogue: 0,0:23:19.56,0:23:25.04,English,,0,0,0,,I mean because in general right that if you take this to the limit there's just one set
-Dialogue: 0,0:23:19.56,0:23:25.04,Chinese,,0,0,0,,意思是说，通常情况下，如果你把要求电路特别便宜，那么只能存在一个组 flag
+Dialogue: 0,0:23:19.56,0:23:25.04,Chinese,,0,0,0,,意思是说，通常情况下，如果你把要求电路特别便宜，那么只能存在一个组 
 Dialogue: 0,0:23:26.36,0:23:32.24,English,,0,0,0,,With there's just...we call that a fully associative cache so there's just one set
 Dialogue: 0,0:23:26.36,0:23:32.24,Chinese,,0,0,0,,我们称之为「全相联高速缓存」，因此只有一个组
 Dialogue: 0,0:23:33.08,0:23:35.74,English,,0,0,0,,And now any block...a block can go anywhere
@@ -502,7 +502,7 @@ Dialogue: 0,0:23:39.66,0:23:44.74,Chinese,,0,0,0,,但由于完全关联搜索的
 Dialogue: 0,0:23:45.10,0:23:53.22,English,,0,0,0,,Those are very rare in fact we do see we'll see fully associative caches but their software caches
 Dialogue: 0,0:23:45.10,0:23:53.22,Chinese,,0,0,0,,实际情况中，它是非常罕见的。我们确实会看到全相联高速缓存，除非是在软件级别的缓存中
 Dialogue: 0,0:23:54.70,0:23:59.12,English,,0,0,0,,Okay so in software,so the complexity the hardware
-Dialogue: 0,0:23:54.70,0:23:59.12,Chinese,,0,0,0,,好的，在软件中，硬件的复杂性 flag
+Dialogue: 0,0:23:54.70,0:23:59.12,Chinese,,0,0,0,,好的，在软件中，硬件的复杂性 
 Dialogue: 0,0:23:59.90,0:24:03.40,English,,0,0,0,,And sort of doesn't
 Dialogue: 0,0:23:59.90,0:24:03.40,Chinese,,0,0,0,,而
 Dialogue: 0,0:24:05.22,0:24:12.06,English,,0,0,0,,Doesn't it's not worth the complexity of the hardware for the penalty of having a lower associativity
@@ -512,7 +512,7 @@ Dialogue: 0,0:24:12.78,0:24:16.24,Chinese,,0,0,0,,但是稍后我们研究虚拟
 Dialogue: 0,0:24:17.20,0:24:23.74,English,,0,0,0,,In a virtual memory system the DRAM serves as a cache for data stored on the disk
 Dialogue: 0,0:24:17.20,0:24:23.74,Chinese,,0,0,0,,在虚拟存储器系统中，DRAM 作为存储在磁盘上的数据的高速缓存
 Dialogue: 0,0:24:24.78,0:24:28.04,English,,0,0,0,,And as we saw last time the penalty for a miss
-Dialogue: 0,0:24:24.78,0:24:28.04,Chinese,,0,0,0,,正如我们上次看到的未命中 flag
+Dialogue: 0,0:24:24.78,0:24:28.04,Chinese,,0,0,0,,正如我们上次看到的未命中
 Dialogue: 0,0:24:28.88,0:24:32.22,English,,0,0,0,,If you have a cache on DRAM and you miss and you have to go to disk
 Dialogue: 0,0:24:28.88,0:24:32.22,Chinese,,0,0,0,,如果你在DRAM上有一个缓存, 但你未命中，你必须转到磁盘
 Dialogue: 0,0:24:32.96,0:24:34.68,English,,0,0,0,,The penalty is huge for that
@@ -526,7 +526,7 @@ Dialogue: 0,0:24:51.52,0:24:54.40,Chinese,,0,0,0,,当我们学习虚拟内存时
 Dialogue: 0,0:24:54.60,0:24:56.22,English,,0,0,0,,But you're right you'll see in real systems
 Dialogue: 0,0:24:54.60,0:24:56.22,Chinese,,0,0,0,,无疑，你会在真实的系统中看到它
 Dialogue: 0,0:24:56.70,0:25:01.16,English,,0,0,0,,Nowadays that the number goes up right because feature sizes are going down and
-Dialogue: 0,0:24:56.70,0:25:01.16,Chinese,,0,0,0,,现今，数目在快速增加，因为在减少 flag
+Dialogue: 0,0:24:56.70,0:25:01.16,Chinese,,0,0,0,,现今，数目在快速增加，因为特征尺寸在减少
 Dialogue: 0,0:25:01.56,0:25:04.86,English,,0,0,0,,Designers can afford to implement more expensive hardware
 Dialogue: 0,0:25:01.56,0:25:04.86,Chinese,,0,0,0,,设计人员可以负担得起更昂贵的硬件
 Dialogue: 0,0:25:04.86,0:25:12.02,English,,0,0,0,,But the largest associativity are Intel systems that I know of is 16-way associative L3 caches
@@ -570,12 +570,12 @@ Dialogue: 0,0:26:32.62,0:26:34.74,English,,0,0,0,,And I actually don't know the 
 Dialogue: 0,0:26:32.62,0:26:34.74,Chinese,,0,0,0,,实际上，而我并不知道具体细节
 Dialogue: 0,0:26:35.90,0:26:39.36,English,,0,0,0,,It may...I guess there...it could ask for just...
 Dialogue: 0,0:26:35.90,0:26:39.36,Chinese,,0,0,0,,它可能......我猜...它可以要求......
-Dialogue: 0,0:26:40.42,0:26:48.84,English,,0,0,0,,there could just be a default sighs 【flag】 maybe it's always a 64-byte word and then the processor extracts that the current bits
+Dialogue: 0,0:26:40.42,0:26:48.84,English,,0,0,0,,there could just be a default sighs  maybe it's always a 64-byte word and then the processor extracts that the current bits
 Dialogue: 0,0:26:40.42,0:26:48.84,Chinese,,0,0,0,,这可能是一个，它总是一个 64 位，然后处理器提取当前比特位
 Dialogue: 0,0:26:48.84,0:26:51.68,English,,0,0,0,,I actually don't know the details of that
 Dialogue: 0,0:26:48.84,0:26:51.68,Chinese,,0,0,0,,我实际上不知道那个细节
 Dialogue: 0,0:26:51.98,0:26:59.10,English,,0,0,0,,But it either comes in on the request or there's a standard size that the processor then parses out
-Dialogue: 0,0:26:51.98,0:26:59.10,Chinese,,0,0,0,,但它要么在请求中，要么处理器解析标准大小 flag
+Dialogue: 0,0:26:51.98,0:26:59.10,Chinese,,0,0,0,,但它要么在请求中，要么处理器解析标准大小
 Dialogue: 0,0:27:01.46,0:27:05.00,English,,0,0,0,,We'll just assume that the cache knows the what size to return yes
 Dialogue: 0,0:27:01.46,0:27:05.00,Chinese,,0,0,0,,我们假设缓存知道返回的大小
 Dialogue: 0,0:27:05.22,0:27:08.80,English,,0,0,0,,[student speaking]
@@ -935,7 +935,7 @@ Dialogue: 0,0:41:43.08,0:41:47.60,Chinese,,0,0,0,,由于 L2 稍微大一点，�
 Dialogue: 0,0:41:48.14,0:41:55.10,English,,0,0,0,,If L2 can't find it,it sends a request to L3 to see if they can find the data in L3
 Dialogue: 0,0:41:48.14,0:41:55.10,Chinese,,0,0,0,,如果 L2 无法找到它，它会向 L3 发送请求，以查看它们是否可以在 L3 中找到数据
 Dialogue: 0,0:41:55.88,0:41:59.62,English,,0,0,0,,If L3 can't find it then it gives up and it goes off chip to memory
-Dialogue: 0,0:41:55.88,0:41:59.62,Chinese,,0,0,0,,如果 L3 中也找不到它，那么它就会放弃，它会从芯片到内存中消失 flag
+Dialogue: 0,0:41:55.88,0:41:59.62,Chinese,,0,0,0,,如果 L3 中也找不到它，那么它就会放弃，它会从芯片到内存中消失
 Dialogue: 0,0:42:00.46,0:42:03.88,English,,0,0,0,,Yes question
 Dialogue: 0,0:42:00.46,0:42:03.88,Chinese,,0,0,0,,请说你的问题
 Dialogue: 0,0:42:03.92,0:42:09.32,English,,0,0,0,,Yes name memory is this that's it's the DRAM built of DRAM chips
@@ -1040,7 +1040,7 @@ Dialogue: 0,0:47:05.02,0:47:09.94,English,,0,0,0,,Lets you manipulate caches and
 Dialogue: 0,0:47:05.02,0:47:09.94,Chinese,,0,0,0,,去允许你操作缓存和组装机器代码程序
 Dialogue: 0,0:47:11.72,0:47:16.32,English,,0,0,0,,So that it all happens behind the scenes automatically in hardware
 Dialogue: 0,0:47:11.72,0:47:16.32,Chinese,,0,0,0,,这一切都在硬件中自动在幕后执行
-Dialogue: 0,0:47:17.42,0:47:21.26,English,,0,0,0,,But if you know how kit..flag.if you know about the existence of caches
+Dialogue: 0,0:47:17.42,0:47:21.26,English,,0,0,0,,But if you know how kit...if you know about the existence of caches
 Dialogue: 0,0:47:17.42,0:47:21.26,Chinese,,0,0,0,,如果你知道缓存的存在
 Dialogue: 0,0:47:21.26,0:47:24.18,English,,0,0,0,,And you have this general idea of how you can work how they work
 Dialogue: 0,0:47:21.26,0:47:24.18,Chinese,,0,0,0,,而且你对它们的工作方式有了一个大概的了解
@@ -1383,7 +1383,7 @@ Dialogue: 0,1:02:37.96,1:02:40.84,Chinese,,0,0,0,,它识别出为步长为 1 的
 Dialogue: 0,1:02:41.58,1:02:46.36,English,,0,0,0,,And then it's aggressively prefetching from L3 into L2
 Dialogue: 0,1:02:41.58,1:02:46.36,Chinese,,0,0,0,,然后它积极地从 L3 预存取到 L2
 Dialogue: 0,1:02:46.90,1:02:51.04,English,,0,0,0,,So that those so it's fetching ahead of time it's anticipating
-Dialogue: 0,1:02:46.90,1:02:51.04,Chinese,,0,0,0,,那些提前取出的东西 flag
+Dialogue: 0,1:02:46.90,1:02:51.04,Chinese,,0,0,0,,那些提前取出的东西
 Dialogue: 0,1:02:51.04,1:02:54.52,English,,0,0,0,,It's saying look I've gotten five stride-1 references in a row
 Dialogue: 0,1:02:51.04,1:02:54.52,Chinese,,0,0,0,,它说我已经连续五次引用步长为 1
 Dialogue: 0,1:02:55.14,1:02:58.10,English,,0,0,0,,I'm going to go grab a whole bunch of blocks and load them all up
@@ -1399,7 +1399,7 @@ Dialogue: 0,1:03:09.94,1:03:12.58,Chinese,,0,0,0,,英特尔工程师总是在努
 Dialogue: 0,1:03:13.14,1:03:20.70,English,,0,0,0,,And maybe by the time the time we do the next the next edition of the memory mountain
 Dialogue: 0,1:03:13.14,1:03:20.70,Chinese,,0,0,0,,也许到我们下一版本的存储器山的时候
 Dialogue: 0,1:03:22.12,1:03:26.78,English,,0,0,0,,Those systems will recognize stride-2 and you know other stride pattarns two
-Dialogue: 0,1:03:22.12,1:03:26.78,Chinese,,0,0,0,,那些系统将识别步长-2  flag
+Dialogue: 0,1:03:22.12,1:03:26.78,Chinese,,0,0,0,,那些系统将识别步长2 
 Dialogue: 0,1:03:27.72,1:03:31.04,English,,0,0,0,,But from this data it appears that it's only recognizing stride-1
 Dialogue: 0,1:03:27.72,1:03:31.04,Chinese,,0,0,0,,但从这些数据来看，它似乎只是认识到了步长为 1
 Dialogue: 0,1:03:36.16,1:03:44.42,English,,0,0,0,,Ok so you can real...you we can improve the spatial and temporal locality of our programs
@@ -1507,11 +1507,11 @@ Dialogue: 0,1:08:02.42,1:08:08.68,Chinese,,0,0,0,,你可以看到 i，j，k 和 
 Dialogue: 0,1:08:09.72,1:08:13.86,English,,0,0,0,,k,i,j has 0.5 misses and j,k,i has 2 misses
 Dialogue: 0,1:08:09.72,1:08:13.86,Chinese,,0,0,0,,k，i，j 有 0.5 个未命中，j，k，i 有 2 个未命中
 Dialogue: 0,1:08:15.06,1:08:20.92,English,,0,0,0,,So clearly it looks like k,i,j and its brethren are the best option
-Dialogue: 0,1:08:15.06,1:08:20.92,Chinese,,0,0,0,,很明显，看起来k，i，j 及其兄弟是最好的选择 flag
+Dialogue: 0,1:08:15.06,1:08:20.92,Chinese,,0,0,0,,很明显，看起来k，i，j 及其兄弟是最好的选择
 Dialogue: 0,1:08:20.92,1:08:25.56,English,,0,0,0,,The only difference is that k,i,j has this additional store
 Dialogue: 0,1:08:20.92,1:08:25.56,Chinese,,0,0,0,,唯一的区别是 k，i，j 有这个额外的储存
 Dialogue: 0,1:08:25.56,1:08:29.54,English,,0,0,0,,So there might be a question that is that going to create is that going to slow things down
-Dialogue: 0,1:08:25.56,1:08:29.54,Chinese,,0,0,0,,因此，可能存在一个问题，即创造的是减慢速度 flag
+Dialogue: 0,1:08:25.56,1:08:29.54,Chinese,,0,0,0,,因此，可能存在一个问题，即创造的是减慢速度
 Dialogue: 0,1:08:30.74,1:08:37.20,English,,0,0,0,,Well it turns out in systems in any kind storage systems rights
 Dialogue: 0,1:08:30.74,1:08:37.20,Chinese,,0,0,0,,在任何类型的存储系统权利系统中都证明了这一点
 Dialogue: 0,1:08:37.74,1:08:39.46,English,,0,0,0,,Are much easier to deal with them reads
@@ -1523,7 +1523,7 @@ Dialogue: 0,1:08:44.28,1:08:47.32,Chinese,,0,0,0,,写操作比读取操作更为
 Dialogue: 0,1:08:53.06,1:08:57.26,English,,0,0,0,,I mean yes
 Dialogue: 0,1:08:53.06,1:08:57.26,Chinese,,0,0,0,,是的
 Dialogue: 0,1:08:57.28,1:09:02.78,English,,0,0,0,,That's exactly so you can you have options you can do you can write back defer you can defer writing
-Dialogue: 0,1:08:57.28,1:09:02.78,Chinese,,0,0,0,,这就是你可以做的选择，你可以写回来推迟你可以推迟写作 flag
+Dialogue: 0,1:08:57.28,1:09:02.78,Chinese,,0,0,0,,这就是你可以做的选择，你可以写回来推迟你可以推迟写
 Dialogue: 0,1:09:03.60,1:09:07.04,English,,0,0,0,,Until the value that you're written is actually used
 Dialogue: 0,1:09:03.60,1:09:07.04,Chinese,,0,0,0,,直到你实际使用的值
 Dialogue: 0,1:09:07.38,1:09:09.04,English,,0,0,0,,But when you read an item you're stuck
@@ -1531,7 +1531,7 @@ Dialogue: 0,1:09:07.38,1:09:09.04,Chinese,,0,0,0,,但是当你读到一元素时
 Dialogue: 0,1:09:10.02,1:09:12.64,English,,0,0,0,,You can't do anything until you get that data
 Dialogue: 0,1:09:10.02,1:09:12.64,Chinese,,0,0,0,,在获得该数据之前，你无法做任何事情
 Dialogue: 0,1:09:13.08,1:09:17.30,English,,0,0,0,,So it turns out that writes don't really that this additional store doesn't really hurt us
-Dialogue: 0,1:09:13.08,1:09:17.30,Chinese,,0,0,0,,事实证明，写操作并不是 真的这个额外的   商店并没有真正伤害我们
+Dialogue: 0,1:09:13.08,1:09:17.30,Chinese,,0,0,0,,事实证明，写操作并不是， 真的这个额外的存储并没有真正影响到我们
 Dialogue: 0,1:09:18.54,1:09:22.22,English,,0,0,0,,And so when we measure these on a modern system
 Dialogue: 0,1:09:18.54,1:09:22.22,Chinese,,0,0,0,,当我们在现代系统上测量这些时
 Dialogue: 0,1:09:22.66,1:09:29.34,English,,0,0,0,,You can see that that the k,i,j which has the the fewest number of misses
@@ -1579,7 +1579,7 @@ Dialogue: 0,1:11:03.60,1:11:06.04,Chinese,,0,0,0,,然后我在这里使用显式
 Dialogue: 0,1:11:06.30,1:11:11.22,English,,0,0,0,,So here at c[i*n+j] this is n matrix
 Dialogue: 0,1:11:06.30,1:11:11.22,Chinese,,0,0,0,,这里在 c[i * n + j] 这是 n 矩阵
 Dialogue: 0,1:11:11.22,1:11:16.30,English,,0,0,0,,So what I'm doing is...I'm accessing the I'm computing where the I throw starts
-Dialogue: 0,1:11:11.22,1:11:16.30,Chinese,,0,0,0,,我正在做的是...... flag
+Dialogue: 0,1:11:11.22,1:11:16.30,Chinese,,0,0,0,,我正在做的是......
 Dialogue: 0,1:11:16.92,1:11:21.66,English,,0,0,0,,And then I'm going to the j column of that row and then accessing that element
 Dialogue: 0,1:11:16.92,1:11:21.66,Chinese,,0,0,0,,然后我将转到该行的j列，然后访问该元素
 Dialogue: 0,1:11:27.50,1:11:30.08,English,,0,0,0,,All right so let's...but it's the same idea as before
