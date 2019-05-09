@@ -11,28 +11,28 @@ PlayResY: 720
 
 [Aegisub Project Garbage]
 Last Style Storage: Default
-Audio File: C:/Users/Win/Desktop/csapp/Lecture 11  The Memory Hierarchy.mp4
-Video File: C:/Users/Win/Desktop/csapp/Lecture 11  The Memory Hierarchy.mp4
+Audio File: ../../../../Desktop/csapp/Lecture 11  The Memory Hierarchy.mp4
+Video File: ../../../../Desktop/csapp/Lecture 11  The Memory Hierarchy.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
-Video Zoom Percent: 0.500000
-Scroll Position: 1641
-Active Line: 1646
-Video Position: 135410
+Video Zoom Percent: 1.000000
+Scroll Position: 1495
+Active Line: 1501
+Video Position: 123465
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: English,Source Han Sans CN,30,&H00FFFFFF,&H00412A2C,&H00412A2C,&H00412A2C,0,0,0,0,100,100,0,0,1,2.2,1,2,10,10,10,1
-Style: Chinese,Source Han Sans CN,34,&H00FBFD00,&H00FFFFFF,&H00362A28,&H00FFFFFF,0,0,0,0,100,100,0,0,1,2,0.2,2,10,10,10,1
+Style: English,Noto Sans CJK SC Black,30,&H00FFFFFF,&H00412A2C,&H00412A2C,&H00412A2C,0,0,0,0,100,100,0,0,1,1.5,1.2,2,10,10,10,1
+Style: Chinese,Noto Sans CJK SC Black,40,&H00FFFF00,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1.2,1.2,2,10,10,10,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 0,0:00:00.00,0:00:02.08,English,,0,0,0,,All right good afternoon everybody
 Dialogue: 0,0:00:00.00,0:00:02.08,Chinese,,0,0,0,,大家下午好
 Dialogue: 0,0:00:03.26,0:00:04.76,English,,0,0,0,,Welcome!good to see you
-Dialogue: 0,0:00:03.26,0:00:04.76,Chinese,,0,0,0,,欢迎！很高兴见到你
+Dialogue: 0,0:00:03.26,0:00:04.76,Chinese,,0,0,0,,欢迎！很高兴见到你们
 Dialogue: 0,0:00:05.88,0:00:07.98,English,,0,0,0,,Hope you all have started your attack labs
-Dialogue: 0,0:00:05.88,0:00:07.98,Chinese,,0,0,0,,希望你们已经开始你们的攻击实验作业
+Dialogue: 0,0:00:05.88,0:00:07.98,Chinese,,0,0,0,,希望你们已经开始你们的「attack labs」
 Dialogue: 0,0:00:09.30,0:00:14.06,English,,0,0,0,,Everybody started? be a good time to start I think
 Dialogue: 0,0:00:09.30,0:00:14.06,Chinese,,0,0,0,,每个人都开始了吗？我想现在是个好时候开始了
 Dialogue: 0,0:00:15.52,0:00:20.06,English,,0,0,0,,Anyway I hope you're enjoying it, that's a that's a new one this semester that's
@@ -40,7 +40,7 @@ Dialogue: 0,0:00:15.52,0:00:20.06,Chinese,,0,0,0,,不管怎样，希望你们喜
 Dialogue: 0,0:00:20.60,0:00:24.24,English,,0,0,0,,I think really interesting and modern and current
 Dialogue: 0,0:00:20.60,0:00:24.24,Chinese,,0,0,0,,我认为这个实验非常有趣，也很新鲜很前卫
 Dialogue: 0,0:00:26.36,0:00:28.34,English,,0,0,0,,Okay today we're going to...
-Dialogue: 0,0:00:26.36,0:00:28.34,Chinese,,0,0,0,,好的。今天我们要讲的是……
+Dialogue: 0,0:00:26.36,0:00:28.34,Chinese,,0,0,0,,今天我们要讲的是……
 Dialogue: 0,0:00:29.64,0:00:32.18,English,,0,0,0,,Today we're going to talk about something called the memory hierarchy
 Dialogue: 0,0:00:29.64,0:00:32.18,Chinese,,0,0,0,,今天我们要讲的话题是关于存储器层次结构的
 Dialogue: 0,0:00:32.84,0:00:36.92,English,,0,0,0,,Now so far in the class we've thought of memory
@@ -106,7 +106,7 @@ Dialogue: 0,0:03:04.78,0:03:11.20,Chinese,,0,0,0,,所以 SRAM 的成本会高得
 Dialogue: 0,0:03:11.48,0:03:15.08,English,,0,0,0,,Because they're more complex each cell is more complex
 Dialogue: 0,0:03:11.48,0:03:15.08,Chinese,,0,0,0,,因为 SRAM 的每一个存储单元都比 DRAM 复杂的多
 Dialogue: 0,0:03:15.34,0:03:21.28,English,,0,0,0,,But they're also much faster like ten order magnitude faster than DRAMs
-Dialogue: 0,0:03:15.34,0:03:21.28,Chinese,,0,0,0,,但 SRAM 的速度也比 DRAM 快十个数量级
+Dialogue: 0,0:03:15.34,0:03:21.28,Chinese,,0,0,0,,但 SRAM 的速度也比 DRAM 快一个数量级
 Dialogue: 0,0:03:21.90,0:03:24.84,English,,0,0,0,,And they have there's some other properties too like
 Dialogue: 0,0:03:21.90,0:03:24.84,Chinese,,0,0,0,,他俩也有一些其他的性质
 Dialogue: 0,0:03:25.52,0:03:28.88,English,,0,0,0,,SRAM constantly,a DRAM constantly needs to be refreshed
@@ -322,7 +322,7 @@ Dialogue: 0,0:13:43.28,0:13:49.94,Chinese,,0,0,0,,每一个磁道包含很多个
 Dialogue: 0,0:13:50.70,0:13:58.98,English,,0,0,0,,So typically 512,512 bits, oh I'm sorry bytes
 Dialogue: 0,0:13:50.70,0:13:58.98,Chinese,,0,0,0,,典型地，一个扇区存储 512 个 bit...... 不好意思，是 512 个字节
 Dialogue: 0,0:14:01.06,0:14:04.26,English,,0,0,0,,And in the set of these tracks are separated by gaps
-Dialogue: 0,0:14:01.06,0:14:04.26,Chinese,,0,0,0,,在这些*磁道*之间有一些空隙（注：这里口误，应为扇区之间）
+Dialogue: 0,0:14:01.06,0:14:04.26,Chinese,,0,0,0,,在这些「磁道」之间有一些空隙（注：这里口误，应为扇区之间）
 Dialogue: 0,0:14:04.96,0:14:09.00,English,,0,0,0,,That these gaps like right here that don't contain data
 Dialogue: 0,0:14:04.96,0:14:09.00,Chinese,,0,0,0,,这些空隙是不保存数据的
 Dialogue: 0,0:14:12.72,0:14:17.40,English,,0,0,0,,Now platters are aligned on top of each other on the spindle
@@ -530,7 +530,7 @@ Dialogue: 0,0:22:35.14,0:22:40.34,Chinese,,0,0,0,,这是一个伺服系统，是
 Dialogue: 0,0:22:40.36,0:22:42.82,English,,0,0,0,,And that that takes time
 Dialogue: 0,0:22:40.36,0:22:42.82,Chinese,,0,0,0,,这就要花时间
 Dialogue: 0,0:22:43.34,0:22:50.64,English,,0,0,0,,And it's on the order of three to nine milliseconds and this has been true for decades
-Dialogue: 0,0:22:43.34,0:22:50.64,Chinese,,0,0,0,,它大约在3到9毫秒之间，这已经存在了几十年
+Dialogue: 0,0:22:43.34,0:22:50.64,Chinese,,0,0,0,,它大约在 3 到 9 毫秒之间，这已经存在了几十年
 Dialogue: 0,0:22:50.86,0:22:53.84,English,,0,0,0,,Right so this this value is not changing right
 Dialogue: 0,0:22:50.86,0:22:53.84,Chinese,,0,0,0,,这个值是改不了的
 Dialogue: 0,0:22:53.84,0:22:56.66,English,,0,0,0,,There's just sort of fundamental mechanical limits
@@ -576,7 +576,7 @@ Dialogue: 0,0:24:40.24,0:24:45.42,Chinese,,0,0,0,,所以 DRAM 比 SRAM 慢一个
 Dialogue: 0,0:24:47.18,0:24:50.70,English,,0,0,0,,But disk is 40,000 times slower than SRAM
 Dialogue: 0,0:24:47.18,0:24:50.70,Chinese,,0,0,0,,但是磁盘比 SRAM 慢 40,000 倍
 Dialogue: 0,0:24:51.32,0:24:54.06,English,,0,0,0,,So that's 4,000 orders of magnitude difference
-Dialogue: 0,0:24:51.32,0:24:54.06,Chinese,,0,0,0,,这就是 4,000 个数量级的差异
+Dialogue: 0,0:24:51.32,0:24:54.06,Chinese,,0,0,0,,这就是 4,000 倍的差异
 Dialogue: 0,0:24:54.94,0:25:01.42,English,,0,0,0,,That's huge and it's it's 250 times orders of magnitude slower than DRAMs
 Dialogue: 0,0:24:54.94,0:25:01.42,Chinese,,0,0,0,,这个时间差是非常巨大的，它比 DRAM 慢 250 倍
 Dialogue: 0,0:25:02.82,0:25:07.30,English,,0,0,0,,So the there's a big gap between DRAM and SRAM
@@ -1190,7 +1190,7 @@ Dialogue: 0,0:52:52.24,0:52:54.76,Chinese,,0,0,0,,我现在提出以下问题
 Dialogue: 0,0:52:55.54,0:52:59.46,English,,0,0,0,,Can you based on this sort of qualitative idea that
 Dialogue: 0,0:52:55.54,0:52:59.46,Chinese,,0,0,0,,你能否基于这种定性观念
 Dialogue: 0,0:53:00.14,0:53:04.24,English,,0,0,0,,This idea that you want you want to try to get a stride one reference pattern
-Dialogue: 0,0:53:00.14,0:53:04.24,Chinese,,0,0,0,,这个观念是你最好需要尝试使用步长为1的访问模式
+Dialogue: 0,0:53:00.14,0:53:04.24,Chinese,,0,0,0,,这个观念是你最好需要尝试使用步长为 1 的访问模式
 Dialogue: 0,0:53:05.34,0:53:11.40,English,,0,0,0,,Okay so how would you permute these given this inner body
 Dialogue: 0,0:53:05.34,0:53:11.40,Chinese,,0,0,0,,给出这个循环体，你要怎么置换
 Dialogue: 0,0:53:12.48,0:53:19.38,English,,0,0,0,,a[k][i][j] how would you permute these loop indices to give stride one reference pattern
@@ -1404,7 +1404,7 @@ Dialogue: 0,1:02:24.76,1:02:28.90,Chinese,,0,0,0,,并且这个内存被划分为
 Dialogue: 0,1:02:29.84,1:02:36.36,English,,0,0,0,,That's the way cache is at nearly near the upper part of the hierarchy work
 Dialogue: 0,1:02:29.84,1:02:36.36,Chinese,,0,0,0,,这就是接近存储器层次结构上层的缓存的工作方式
 Dialogue: 0,1:02:37.02,1:02:43.58,English,,0,0,0,,Now at the lower levels like if you're accessing data say from a web server
-Dialogue: 0,1:02:37.02,1:02:43.58,Chinese,,0,0,0,,若处于较低级别，就像你从Web服务器访问数据一样
+Dialogue: 0,1:02:37.02,1:02:43.58,Chinese,,0,0,0,,若处于较低级别，就像你从 Web 服务器访问数据一样
 Dialogue: 0,1:02:43.92,1:02:47.40,English,,0,0,0,,Then the the data is partitioned into files typically
 Dialogue: 0,1:02:43.92,1:02:47.40,Chinese,,0,0,0,,在这个例子中，通常将数据划分为文件
 Dialogue: 0,1:02:47.40,1:02:53.14,English,,0,0,0,,Okay but it upper levels the data is partitioned into blocks so just suppose this is main memory
@@ -1444,7 +1444,7 @@ Dialogue: 0,1:04:28.56,1:04:35.36,Chinese,,0,0,0,,现在假设 CPU 请求第 10 
 Dialogue: 0,1:04:35.94,1:04:39.90,English,,0,0,0,,That gets copied up and and we overwrite that that block
 Dialogue: 0,1:04:35.94,1:04:39.90,Chinese,,0,0,0,,这样第 10 块会被复制，又覆盖掉缓存中的那个（第 14）块
 Dialogue: 0,1:04:41.00,1:04:46.70,English,,0,0,0,,Now the whole idea of storing it in the cache is that we're hoping that the program that's executing on the CPU
-Dialogue: 0,1:04:41.00,1:04:46.70,Chinese,,0,0,0,,现在将块复制到缓存中的想法是，我们希望在CPU上执行的程序
+Dialogue: 0,1:04:41.00,1:04:46.70,Chinese,,0,0,0,,现在将块复制到缓存中的想法是，我们希望在 CPU 上执行的程序
 Dialogue: 0,1:04:47.14,1:04:49.80,English,,0,0,0,,Will reuse one of those blocks we just spent all the time
 Dialogue: 0,1:04:47.14,1:04:49.80,Chinese,,0,0,0,,将重用我们复制到高速缓存中的一个块
 Dialogue: 0,1:04:50.26,1:04:55.78,English,,0,0,0,,We went to all this trouble to copy it from memory to to this cache  and we know that's slow
@@ -1520,7 +1520,7 @@ Dialogue: 0,1:07:55.42,1:08:00.96,Chinese,,0,0,0,,那么自然容量仅有 4 个
 Dialogue: 0,1:08:01.44,1:08:07.52,English,,0,0,0,,So we're going to get misses right we would need a bigger cache to be able to satisfy and store those eight blocks
 Dialogue: 0,1:08:01.44,1:08:07.52,Chinese,,0,0,0,,因此，我们将会遇到容量不命中，我们需要更大的缓存才能存储这 8 个块
 Dialogue: 0,1:08:08.02,1:08:13.40,English,,0,0,0,,And if we had a big enough cache then we get good hit rate right if we could store all the blocks
-Dialogue: 0,1:08:08.02,1:08:13.40,Chinese,,0,0,0,,如果我们有足够大的缓存，那么就会有良好的命中率，
+Dialogue: 0,1:08:08.02,1:08:13.40,Chinese,,0,0,0,,如果我们有足够大的缓存，那么就会有良好的命中率
 Dialogue: 0,1:08:14.42,1:08:23.02,English,,0,0,0,,In our cache then we then the cache could take advantage of the spatial and temporal locality within that program
 Dialogue: 0,1:08:14.42,1:08:23.02,Chinese,,0,0,0,,如果我们可以在缓存中存储所有块，然后缓存可以利用该程序中的空间和时间局部性
 Dialogue: 0,1:08:24.00,1:08:28.96,English,,0,0,0,,So in general what we call this set of blocks at any point in time when a program is running
@@ -1528,7 +1528,7 @@ Dialogue: 0,1:08:24.00,1:08:28.96,Chinese,,0,0,0,,所以一般来说，在程序
 Dialogue: 0,1:08:29.50,1:08:34.73,English,,0,0,0,,We call the set of blocks that are sort of being accessed over and over again the working set
 Dialogue: 0,1:08:29.50,1:08:34.73,Chinese,,0,0,0,,我们将这一些不断被程序访问的块称之为工作集（working set）
 Dialogue: 0,1:08:35.48,1:08:42.14,English,,0,0,0,,And so your working set and the working set will change you know as you go from loop to loop  from function to function
-Dialogue: 0,1:08:35.48,1:08:42.14,Chinese,,0,0,0,,工作集是会改变的，当你的程序从一个循环 执行到另一个循环，从一个函数到另一个函数时
+Dialogue: 0,1:08:35.48,1:08:42.14,Chinese,,0,0,0,,工作集是会改变的，当你的程序从一个循环执行到另一个循环，从一个函数到另一个函数时
 Dialogue: 0,1:08:42.74,1:08:45.41,English,,0,0,0,,But at a point in time in your program when
 Dialogue: 0,1:08:42.74,1:08:45.41,Chinese,,0,0,0,,但是在程序执行中的某个时间点
 Dialogue: 0,1:08:46.28,1:08:51.30,English,,0,0,0,,It you have this idea of a working set which is sort of the blocks that you need to have stored in your cache
