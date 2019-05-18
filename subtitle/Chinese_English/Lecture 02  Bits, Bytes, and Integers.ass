@@ -181,8 +181,8 @@ Dialogue: 0,0:07:13.80,0:07:17.68,English,,0,0,0,, Sometimes people call it a ch
 Dialogue: 0,0:07:13.80,0:07:17.68,Chinese,,0,0,0,,有时候人们称它为一个 char 类型的值是 1 个字节
 Dialogue: 0,0:07:17.88,0:07:20.66,English,,0,0,0,,A short is 16 bits
 Dialogue: 0,0:07:17.88,0:07:20.66,Chinese,,0,0,0,,short 是 16 位
-Dialogue: 0,0:07:21.58,0:07:29.76,English,,0,0,0,,An int is 32 and if you want to get all 64 bits you have to declare it to be along
-Dialogue: 0,0:07:21.58,0:07:29.76,Chinese,,0,0,0,,一个 int 是 32 位，如果你想获得所有的都是 64 位，你必须声明它是一致的
+Dialogue: 0,0:07:21.58,0:07:29.76,English,,0,0,0,,An int is 32 and if you want to get all 64 bits you have to declare it to be a long
+Dialogue: 0,0:07:21.58,0:07:29.76,Chinese,,0,0,0,,一个 int 是 32 位，如果你想获得所有的都是 64 位，你必须声明它是一个 long
 Dialogue: 0,0:07:32.20,0:07:39.34,English,,0,0,0,,And then again there's two different representations of floating-point there's 4 byte or 32 bit of floating-point numbers and 64 bit
 Dialogue: 0,0:07:32.20,0:07:39.34,Chinese,,0,0,0,,同样，浮点表示也有两种不同表示方法，4 个字节( 32 位)和 64 位两种浮点数
 Dialogue: 0,0:07:39.84,0:07:47.48,English,,0,0,0,,There's also a slightly obscure holdover from ancient days of floating-point
