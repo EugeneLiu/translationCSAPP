@@ -11,19 +11,19 @@ PlayResY: 720
 
 [Aegisub Project Garbage]
 Last Style Storage: Default
-Audio File: Lecture 19 - Dynamic Memory Allocation - Basic Concepts-d69a8072-3d23-4604-8081-0edeba33bb52.mp4
-Video File: Lecture 19 - Dynamic Memory Allocation - Basic Concepts-d69a8072-3d23-4604-8081-0edeba33bb52.mp4
+Audio File: csapp/Lecture 19  Dynamic Memory Allocation  Basic Concepts.mp4
+Video File: csapp/Lecture 19  Dynamic Memory Allocation  Basic Concepts.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
-Video Zoom Percent: 1.250000
-Scroll Position: 1526
-Active Line: 1541
-Video Position: 119010
+Video Zoom Percent: 1.000000
+Scroll Position: 1534
+Active Line: 1537
+Video Position: 118614
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: English,Noto Sans CJK SC,30,&H00FFFFFF,&H00412A2C,&H00412A2C,&H00412A2C,-1,0,0,0,100,100,0,0,1,2.2,1,2,10,10,10,1
-Style: Chinese,Noto Sans CJK SC,34,&H00FBFD00,&H00FFFFFF,&H00362A28,&H00FFFFFF,-1,0,0,0,100,100,0,0,1,2,0.2,2,10,10,10,1
+Style: English,Noto Sans CJK SC Black,30,&H00FFFFFF,&H00412A2C,&H00412A2C,&H00412A2C,0,0,0,0,100,100,0,0,1,1.5,1.2,2,10,10,10,1
+Style: Chinese,Noto Sans CJK SC Black,40,&H00FFFF00,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1.2,1.2,2,10,10,10,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -96,7 +96,7 @@ Dialogue: 0,0:03:03.92,0:03:11.42,Chinese,,0,0,0,,释放内存的负担从应用
 Dialogue: 0,0:03:12.04,0:03:16.86,English,,0,0,0,,And it frees this memory implicitly sort of behind the scenes using a process called garbage collection
 Dialogue: 0,0:03:12.04,0:03:16.86,Chinese,,0,0,0,,并且它使用称为垃圾收集的过程隐式地释放了这些内存
 Dialogue: 0,0:03:18.24,0:03:26.18,English,,0,0,0,,Okay so languages like java,ML,Lisp they all do implicit they all support in close at allocators
-Dialogue: 0,0:03:18.24,0:03:26.18,Chinese,,0,0,0,,所以像 Java, ML, Lisp这样的语言都支持隐式分配器
+Dialogue: 0,0:03:18.24,0:03:26.18,Chinese,,0,0,0,,所以像 Java, ML, Lisp 这样的语言都支持隐式分配器
 Dialogue: 0,0:03:26.78,0:03:30.82,English,,0,0,0,,Now today we're going to discuss explicit memory allocators
 Dialogue: 0,0:03:26.78,0:03:30.82,Chinese,,0,0,0,,今天我们要讨论一下显式分配器
 Dialogue: 0,0:03:31.24,0:03:35.38,English,,0,0,0,,On Thursday we'll get into implicit allocators and how they work
@@ -132,7 +132,7 @@ Dialogue: 0,0:04:51.46,0:04:54.36,Chinese,,0,0,0,,然后将该块放到可用内
 Dialogue: 0,0:04:55.50,0:04:57.72,English,,0,0,0,,Now there's some other functions
 Dialogue: 0,0:04:55.50,0:04:57.72,Chinese,,0,0,0,,现在还有其他一些功能
 Dialogue: 0,0:04:59.60,0:05:05.88,English,,0,0,0,,Calloc is a version of malloc that gives you an initialized block of memory that's initialized to 0
-Dialogue: 0,0:04:59.60,0:05:05.88,Chinese,,0,0,0,,calloc 是 malloc 的另一个版本，它为你提供初始化为0的初始化内存块
+Dialogue: 0,0:04:59.60,0:05:05.88,Chinese,,0,0,0,,calloc 是 malloc 的另一个版本，它为你提供初始化为 0 的初始化内存块
 Dialogue: 0,0:05:06.78,0:05:13.48,English,,0,0,0,,And realloc. You can malloc a block and then call realloc to change the size of that previously allocated block
 Dialogue: 0,0:05:06.78,0:05:13.48,Chinese,,0,0,0,,你可以 malloc 一个块，然后调用 realloc 来改变以前分配的块的大小
 Dialogue: 0,0:05:14.86,0:05:20.52,English,,0,0,0,,And then there's a function called 'sbrk' which is used internally by allocators to grow and shrink the heap
@@ -228,7 +228,7 @@ Dialogue: 0,0:08:55.04,0:09:00.88,Chinese,,0,0,0,,所以首先我们调用 mallo
 Dialogue: 0,0:09:03.88,0:09:06.14,English,,0,0,0,,And that gives us a pointer p1
 Dialogue: 0,0:09:03.88,0:09:06.14,Chinese,,0,0,0,,这给了我们一个指针「p1」
 Dialogue: 0,0:09:06.14,0:09:09.32,English,,0,0,0,,Then we call malloc again to get a 5 words block
-Dialogue: 0,0:09:06.14,0:09:09.32,Chinese,,0,0,0,,然后我们再次调用 malloc 来获得一个5字大小的块
+Dialogue: 0,0:09:06.14,0:09:09.32,Chinese,,0,0,0,,然后我们再次调用 malloc 来获得一个 5 字大小的块
 Dialogue: 0,0:09:09.44,0:09:14.40,English,,0,0,0,,So it just takes it one of the free words and allocates it
 Dialogue: 0,0:09:09.44,0:09:14.40,Chinese,,0,0,0,,所以它只需要空闲字中的一部分并分配它
 Dialogue: 0,0:09:15.58,0:09:17.94,English,,0,0,0,,We call malloc again to get a 6 words block
@@ -360,7 +360,7 @@ Dialogue: 0,0:14:40.98,0:14:44.50,Chinese,,0,0,0,,因此，如果我们使用 10
 Dialogue: 0,0:14:45.12,0:14:50.10,English,,0,0,0,,We're requesting a block that has a payload that's at least size 10
 Dialogue: 0,0:14:45.12,0:14:50.10,Chinese,,0,0,0,,我们要求一个有效载荷至少为 10 大小的块
 Dialogue: 0,0:14:50.98,0:14:53.76,English,,0,0,0,,And the 10 bytes that we request that are called the payload
-Dialogue: 0,0:14:50.98,0:14:53.76,Chinese,,0,0,0,,我们请求的10个字节称为有效负载
+Dialogue: 0,0:14:50.98,0:14:53.76,Chinese,,0,0,0,,我们请求的 10 个字节称为有效负载
 Dialogue: 0,0:14:54.18,0:14:57.06,English,,0,0,0,,Everything else in that block is overhead
 Dialogue: 0,0:14:54.18,0:14:57.06,Chinese,,0,0,0,,该块中的其他所有内容都是开销
 Dialogue: 0,0:15:00.74,0:15:04.66,English,,0,0,0,,So after we've run a sequence of requests
@@ -404,7 +404,7 @@ Dialogue: 0,0:16:40.44,0:16:45.78,Chinese,,0,0,0,,这使它无法获得完美的
 Dialogue: 0,0:16:46.22,0:16:49.64,English,,0,0,0,,Now one obvious thing is that since blocks have to be aligned
 Dialogue: 0,0:16:46.22,0:16:49.64,Chinese,,0,0,0,,一个显而易见的事情是，因为块必须对齐
 Dialogue: 0,0:16:50.78,0:16:56.14,English,,0,0,0,,To some you know if they're 16-byte aligned then blocks have to start on 16 byte boundaries
-Dialogue: 0,0:16:50.78,0:16:56.14,Chinese,,0,0,0,,如果它们是16字节对齐的，那么块必须以 16 字节边界开始
+Dialogue: 0,0:16:50.78,0:16:56.14,Chinese,,0,0,0,,如果它们是 16 字节对齐的，那么块必须以 16 字节边界开始
 Dialogue: 0,0:16:56.14,0:16:58.32,English,,0,0,0,,And they have to be at least 16 bytes
 Dialogue: 0,0:16:56.14,0:16:58.32,Chinese,,0,0,0,,它们必须至少为 16 个字节
 Dialogue: 0,0:16:58.96,0:17:01.64,English,,0,0,0,,So if you were to request a payload of 2 bytes
@@ -786,7 +786,7 @@ Dialogue: 0,0:32:31.62,0:32:34.14,Chinese,,0,0,0,,16 (=) 10000
 Dialogue: 0,0:32:35.72,0:32:38.50,English,,0,0,0,,24 (=) 11000
 Dialogue: 0,0:32:35.72,0:32:38.50,Chinese,,0,0,0,,24 (=) 11000
 Dialogue: 0,0:32:38.64,0:32:40.58,English,,0,0,0,,Right so there any 8 byte
-Dialogue: 0,0:32:38.64,0:32:40.58,Chinese,,0,0,0,,所以任何8字节
+Dialogue: 0,0:32:38.64,0:32:40.58,Chinese,,0,0,0,,所以任何 8 字节
 Dialogue: 0,0:32:42.80,0:32:50.38,English,,0,0,0,,Any 8 byte aligned block has to be size 8 and it has to start on address that's a multiple of 8 all right
 Dialogue: 0,0:32:42.80,0:32:50.38,Chinese,,0,0,0,,任何 8 字节对齐的块必须是大小为 8，它的地址必须是 8 的倍数
 Dialogue: 0,0:32:51.28,0:32:57.00,English,,0,0,0,,So the size of that block will always have
