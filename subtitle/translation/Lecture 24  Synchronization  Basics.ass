@@ -16,9 +16,9 @@ Video File: ../../../../Desktop/csapp/Lecture 24  Synchronization  Basics.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 0.875000
-Scroll Position: 1274
-Active Line: 1277
-Video Position: 100790
+Scroll Position: 1187
+Active Line: 1191
+Video Position: 93764
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -82,9 +82,9 @@ Dialogue: 0,0:02:15.90,0:02:20.20,Chinese,,0,0,0,,所以你可能需要创建一
 Dialogue: 0,0:02:21.30,0:02:24.04,English,,0,0,0,,You might partition the domain amongst a set of those workers
 Dialogue: 0,0:02:21.30,0:02:24.04,Chinese,,0,0,0,,每个工作线程只负责金属板的一个区域的仿真
 Dialogue: 0,0:02:24.84,0:02:27.90,English,,0,0,0,,And then each one of these phases is a time step
-Dialogue: 0,0:02:24.84,0:02:27.90,Chinese,,0,0,0,,然后，每一阶段代表一个时间步骤
+Dialogue: 0,0:02:24.84,0:02:27.90,Chinese,,0,0,0,,然后，每一阶段代表一个时间点
 Dialogue: 0,0:02:28.94,0:02:34.24,English,,0,0,0,,And then so once all the workers have finished a time step then they can advance to the next time step
-Dialogue: 0,0:02:28.94,0:02:34.24,Chinese,,0,0,0,,所以，只有所有的工作线程完成了一个时间步骤，才可以进入到下一个时间步骤
+Dialogue: 0,0:02:28.94,0:02:34.24,Chinese,,0,0,0,,所以，只有所有的工作线程完成了一个时间点，才可以进入到下一个时间点
 Dialogue: 0,0:02:36.30,0:02:39.00,English,,0,0,0,,And so sorry I don't know why,I didn't think of it
 Dialogue: 0,0:02:36.30,0:02:39.00,Chinese,,0,0,0,,对不起，我不知道为什么上次课我没想到这个例子
 Dialogue: 0,0:02:39.52,0:02:41.76,English,,0,0,0,,That's a that's an important reason why you'd want this
@@ -120,11 +120,11 @@ Dialogue: 0,0:03:42.72,0:03:49.28,Chinese,,0,0,0,,这些线程是独立运行的
 Dialogue: 0,0:03:49.80,0:03:54.14,English,,0,0,0,,But as soon as they introduce sharing then we have to be careful
 Dialogue: 0,0:03:49.80,0:03:54.14,Chinese,,0,0,0,,但是一旦线程之间共享资源，我们就必须小心
 Dialogue: 0,0:03:56.24,0:04:00.58,English,,0,0,0,,Okay so to understand how to synchronize threads we first need to have a clear idea
-Dialogue: 0,0:03:56.24,0:04:00.58,Chinese,,0,0,0,,好，了解线程同步之间，我们首先需要对
+Dialogue: 0,0:03:56.24,0:04:00.58,Chinese,,0,0,0,,好，了解线程同步之前，我们首先需要
 Dialogue: 0,0:04:01.02,0:04:05.20,English,,0,0,0,,Of what we mean by sharing in in threaded C programs
 Dialogue: 0,0:04:01.02,0:04:05.20,Chinese,,0,0,0,,知道什么是线程中的资源共享
 Dialogue: 0,0:04:06.54,0:04:13.96,English,,0,0,0,,So the answer is not as simple as global variables are shared and stack variables are not shared
-Dialogue: 0,0:04:06.54,0:04:13.96,Chinese,,0,0,0,,答案并不是像全局变量是共享的，栈变量是不共享向的这些简单
+Dialogue: 0,0:04:06.54,0:04:13.96,Chinese,,0,0,0,,答案并不是像“全局变量是共享的，栈变量是不共享的”这样简单
 Dialogue: 0,0:04:18.70,0:04:23.66,English,,0,0,0,,Okay so with instead what we x is shared
 Dialogue: 0,0:04:18.70,0:04:23.66,Chinese,,0,0,0,,好的，如果资源x是共享的
 Dialogue: 0,0:04:23.66,0:04:28.50,English,,0,0,0,,If only multiple threads reference some instance so that that variable x
@@ -144,25 +144,25 @@ Dialogue: 0,0:04:50.06,0:04:53.38,Chinese,,0,0,0,,第二，变量实例如何映
 Dialogue: 0,0:04:55.24,0:05:00.35,English,,0,0,0,,And then third how many threads might be referencing those the instances of those variables
 Dialogue: 0,0:04:55.24,0:05:00.35,Chinese,,0,0,0,,第三个，有多少线程引用这些实例
 Dialogue: 0,0:05:00.64,0:05:03.84,English,,0,0,0,,Okay so we'll look at each of those now in turn each of those three questions
-Dialogue: 0,0:05:00.64,0:05:03.84,Chinese,,0,0,0,,好的，我们现在依次看看这三个问题中的每个问题
+Dialogue: 0,0:05:00.64,0:05:03.84,Chinese,,0,0,0,,好的，我们现在依次来解决这三个问题
 Dialogue: 0,0:05:05.62,0:05:07.48,English,,0,0,0,,Okay so first is that the memory model
 Dialogue: 0,0:05:05.62,0:05:07.48,Chinese,,0,0,0,,首先是内存模型
 Dialogue: 0,0:05:10.32,0:05:15.23,English,,0,0,0,,The conceptual model is a little bit different from the operational model the way it really works
-Dialogue: 0,0:05:10.32,0:05:15.23,Chinese,,0,0,0,,概念模型与实际运作方式略有不同
+Dialogue: 0,0:05:10.32,0:05:15.23,Chinese,,0,0,0,,概念模型与真实系统略有不同
 Dialogue: 0,0:05:15.56,0:05:16.78,English,,0,0,0,,Okay so conceptually
 Dialogue: 0,0:05:15.56,0:05:16.78,Chinese,,0,0,0,,从概念上讲
 Dialogue: 0,0:05:17.42,0:05:21.40,English,,0,0,0,,We have multiple threads that run in the context of a single process
 Dialogue: 0,0:05:17.42,0:05:21.40,Chinese,,0,0,0,,我们有多个线程在单个进程的上下文中运行
 Dialogue: 0,0:05:22.38,0:05:26.90,English,,0,0,0,,Okay and some of that context is shared and some of its not shared
-Dialogue: 0,0:05:22.38,0:05:26.90,Chinese,,0,0,0,,进程上下文中，有些是共享的，有些是不共享的
+Dialogue: 0,0:05:22.38,0:05:26.90,Chinese,,0,0,0,,有些进程上下文是共享的，有些不是共享的
 Dialogue: 0,0:05:27.02,0:05:35.30,English,,0,0,0,,So each thread has its own separate thread id,stack,stack pointer,program counter,condition codes,general-purpose registers
-Dialogue: 0,0:05:27.02,0:05:35.30,Chinese,,0,0,0,,每个线程都有自己独立的线程id，堆栈，堆栈指针，程序计数器，条件代码，通用寄存器
+Dialogue: 0,0:05:27.02,0:05:35.30,Chinese,,0,0,0,,每个线程都有自己独立的线程id，栈，栈指针，程序计数器，条件码，通用目的的寄存器值
 Dialogue: 0,0:05:36.60,0:05:43.78,English,,0,0,0,,And then they all share the remaining process context which is data structures that the kernel maintains
-Dialogue: 0,0:05:36.60,0:05:43.78,Chinese,,0,0,0,,然后它们共享剩余的由内核维护的进程上下文
+Dialogue: 0,0:05:36.60,0:05:43.78,Chinese,,0,0,0,,然后线程共享剩余的进程上下文，进程上下文由内核维护
 Dialogue: 0,0:05:44.34,0:05:53.74,English,,0,0,0,,For the threads the virtual data structures to support the virtual memory system open files install signal handlers and so forth
 Dialogue: 0,0:05:44.34,0:05:53.74,Chinese,,0,0,0,,如虚拟内存系统中的数据结构，打开的文件描述符，信号处理程序等等
 Dialogue: 0,0:05:55.24,0:05:59.24,English,,0,0,0,,So that's the conceptual model and that if that were really enforced
-Dialogue: 0,0:05:55.24,0:05:59.24,Chinese,,0,0,0,,这就是概念模型，如果实际的系统是这样实现的话
+Dialogue: 0,0:05:55.24,0:05:59.24,Chinese,,0,0,0,,这是概念模型，如果实际的系统是这样实现的话
 Dialogue: 0,0:05:59.26,0:06:01.36,English,,0,0,0,,It would be nice it would make things simpler for us
 Dialogue: 0,0:05:59.26,0:06:01.36,Chinese,,0,0,0,,那很好，因为它会让事情变的更简单
 Dialogue: 0,0:06:01.42,0:06:05.60,English,,0,0,0,,But unfortunately in real life this model is not strictly enforced
@@ -172,7 +172,7 @@ Dialogue: 0,0:06:07.30,0:06:13.00,Chinese,,0,0,0,,实际上，虽然寄存器值
 Dialogue: 0,0:06:13.02,0:06:14.42,English,,0,0,0,,So that part is good
 Dialogue: 0,0:06:13.02,0:06:14.42,Chinese,,0,0,0,,这部分是好的
 Dialogue: 0,0:06:15.72,0:06:21.64,English,,0,0,0,,But since the threads share the address space,a thread can access the the memory the stack
-Dialogue: 0,0:06:15.72,0:06:21.64,Chinese,,0,0,0,,但由于线程共享地址空间，因此线程可以访问栈的内存
+Dialogue: 0,0:06:15.72,0:06:21.64,Chinese,,0,0,0,,但由于线程共享地址空间，因此线程可以访问所有的栈
 Dialogue: 0,0:06:21.90,0:06:24.86,English,,0,0,0,,One thread can access the stack of an another thread
 Dialogue: 0,0:06:21.90,0:06:24.86,Chinese,,0,0,0,,一个线程可以访问另一个线程的栈
 Dialogue: 0,0:06:25.18,0:06:32.76,English,,0,0,0,,Okay so although conceptually these stacks are separate and distinct and in private they're really not
@@ -184,21 +184,21 @@ Dialogue: 0,0:06:38.18,0:06:42.28,Chinese,,0,0,0,,这是一个例子，我们会
 Dialogue: 0,0:06:42.96,0:06:47.88,English,,0,0,0,,Of how this one thread can access the stack of another thread
 Dialogue: 0,0:06:42.96,0:06:47.88,Chinese,,0,0,0,,一个线程如何访问另一个线程的栈
 Dialogue: 0,0:06:48.54,0:06:51.54,English,,0,0,0,,So here we're defining a global variable called pointer
-Dialogue: 0,0:06:48.54,0:06:51.54,Chinese,,0,0,0,,所以这里我们定义一个名为pointer的全局变量
+Dialogue: 0,0:06:48.54,0:06:51.54,Chinese,,0,0,0,,所以这里我们定义一个名为ptr的全局变量
 Dialogue: 0,0:06:52.62,0:06:54.10,English,,0,0,0,,Which is a char **
 Dialogue: 0,0:06:52.62,0:06:54.10,Chinese,,0,0,0,,类型为char **
 Dialogue: 0,0:06:55.26,0:07:01.62,English,,0,0,0,,And then in the main routine on were declaring a local variable called messages which contains
-Dialogue: 0,0:06:55.26,0:07:01.62,Chinese,,0,0,0,,然后在主例程中声明一个名为messages的局部变量
+Dialogue: 0,0:06:55.26,0:07:01.62,Chinese,,0,0,0,,然后在主线程中声明一个名为msgs的局部变量
 Dialogue: 0,0:07:02.32,0:07:05.30,English,,0,0,0,,It's a two element array which contains a couple strings
-Dialogue: 0,0:07:02.32,0:07:05.30,Chinese,,0,0,0,,是一个字符串数组，包含两个字符串
+Dialogue: 0,0:07:02.32,0:07:05.30,Chinese,,0,0,0,,msgs是一个字符串数组，包含两个字符串
 Dialogue: 0,0:07:07.20,0:07:11.18,English,,0,0,0,,Which these will be printed out by the threads that we're going to create
-Dialogue: 0,0:07:07.20,0:07:11.18,Chinese,,0,0,0,,我们将要创建的线程来打印这两个字符串
+Dialogue: 0,0:07:07.20,0:07:11.18,Chinese,,0,0,0,,我们要创建两个线程来打印这两个字符串
 Dialogue: 0,0:07:12.22,0:07:17.28,English,,0,0,0,,And then we assign the global pointer to the address of the array messages
-Dialogue: 0,0:07:12.22,0:07:17.28,Chinese,,0,0,0,,然后我们将全局指针分配给数组消息的地址
+Dialogue: 0,0:07:12.22,0:07:17.28,Chinese,,0,0,0,,然后我们让ptr = msgs
 Dialogue: 0,0:07:17.92,0:07:21.16,English,,0,0,0,,Okay so now pointer points to messages
-Dialogue: 0,0:07:17.92,0:07:21.16,Chinese,,0,0,0,,现在让ptr指向msgs
+Dialogue: 0,0:07:17.92,0:07:21.16,Chinese,,0,0,0,,现在，ptr指向了msgs
 Dialogue: 0,0:07:22.66,0:07:25.56,English,,0,0,0,,And then we create in a loop we create two threads
-Dialogue: 0,0:07:22.66,0:07:25.56,Chinese,,0,0,0,,然后我们使用循环，创建两个线程
+Dialogue: 0,0:07:22.66,0:07:25.56,Chinese,,0,0,0,,然后我们循环创建两个线程
 Dialogue: 0,0:07:27.66,0:07:30.76,English,,0,0,0,,Each of which executes this routine called thread
 Dialogue: 0,0:07:27.66,0:07:30.76,Chinese,,0,0,0,,每个线程执行一个名为thread的函数
 Dialogue: 0,0:07:31.64,0:07:34.24,English,,0,0,0,,And and we're passing an argument
@@ -210,21 +210,21 @@ Dialogue: 0,0:07:42.16,0:07:43.58,Chinese,,0,0,0,,然后我们把循环索引 i 
 Dialogue: 0,0:07:44.32,0:07:47.66,English,,0,0,0,,Okay so this is an example we talked about this last time
 Dialogue: 0,0:07:44.32,0:07:47.66,Chinese,,0,0,0,,好的，这和我们上次讲的例子一样
 Dialogue: 0,0:07:49.24,0:07:51.76,English,,0,0,0,,It's kind of...it's this is perfectly okay there's no race
-Dialogue: 0,0:07:49.24,0:07:51.76,Chinese,,0,0,0,,这有点......这是完全可以的，没有竞争
+Dialogue: 0,0:07:49.24,0:07:51.76,Chinese,,0,0,0,,这有点奇怪，但这样做是没问题的，不会产生竞争
 Dialogue: 0,0:07:52.38,0:07:58.82,English,,0,0,0,,But it's a little weird because we're going to take this index i and cast it to a generic pointer
 Dialogue: 0,0:07:52.38,0:07:58.82,Chinese,,0,0,0,,但它有点奇怪，因为我们把索引 i 强制转换成了一个void *类型
 Dialogue: 0,0:08:03.22,0:08:07.02,English,,0,0,0,,Okay and then after we create these threads then we'll exit the main thread
-Dialogue: 0,0:08:03.22,0:08:07.02,Chinese,,0,0,0,,然后在创建这些线程之后，我们将退出主线程
+Dialogue: 0,0:08:03.22,0:08:07.02,Chinese,,0,0,0,,然后在创建这些线程之后，我们退出主线程
 Dialogue: 0,0:08:09.44,0:08:17.08,English,,0,0,0,,Now each the thread routine dereferences its argument to get the local the local thread id
 Dialogue: 0,0:08:09.44,0:08:17.08,Chinese,,0,0,0,,每个线程将参数强制转换成long类型，得到线程id
 Dialogue: 0,0:08:17.96,0:08:21.40,English,,0,0,0,,And then it declares a static variable count
 Dialogue: 0,0:08:17.96,0:08:21.40,Chinese,,0,0,0,,然后它声明了一个静态变量cnt
 Dialogue: 0,0:08:21.42,0:08:25.68,English,,0,0,0,,That we're going to use to count how many times this thread routine is called inside of a thread
-Dialogue: 0,0:08:21.42,0:08:25.68,Chinese,,0,0,0,,我们将使用cnt来统计线程被调用的次数
+Dialogue: 0,0:08:21.42,0:08:25.68,Chinese,,0,0,0,,我们用cnt来统计线程被调用的次数
 Dialogue: 0,0:08:27.38,0:08:33.66,English,,0,0,0,,And then it just prints a simple message from identifying that giving the local thread id
-Dialogue: 0,0:08:27.38,0:08:33.66,Chinese,,0,0,0,,然后它只是简单的打印一个消息
+Dialogue: 0,0:08:27.38,0:08:33.66,Chinese,,0,0,0,,然后它只是简单的根据myid
 Dialogue: 0,0:08:35.04,0:08:40.42,English,,0,0,0,,And then the message indexed by myid
-Dialogue: 0,0:08:35.04,0:08:40.42,Chinese,,0,0,0,,消息为线程ID对应的msgs中的字符串
+Dialogue: 0,0:08:35.04,0:08:40.42,Chinese,,0,0,0,,打印msgs中的字符串
 Dialogue: 0,0:08:40.90,0:08:42.90,English,,0,0,0,,So pointer points to messages
 Dialogue: 0,0:08:40.90,0:08:42.90,Chinese,,0,0,0,,因为ptr指向msgs
 Dialogue: 0,0:08:43.00,0:08:46.40,English,,0,0,0,,So thread zero will print "hello from foo"
@@ -238,23 +238,23 @@ Dialogue: 0,0:08:58.80,0:08:59.46,Chinese,,0,0,0,,然后
 Dialogue: 0,0:09:02.36,0:09:07.62,English,,0,0,0,,Although it doesn't you would it looks like we're accessing this global variable pointer
 Dialogue: 0,0:09:02.36,0:09:07.62,Chinese,,0,0,0,,这里看上去我们访问的是一个全局的指针变量ptr
 Dialogue: 0,0:09:08.02,0:09:14.46,English,,0,0,0,,But since that was assigned to be the address of the local variable on the main thread stack
-Dialogue: 0,0:09:08.02,0:09:14.46,Chinese,,0,0,0,,但是因为ptr指向了msgs，main线程中的一个存储在栈上的本地变量
+Dialogue: 0,0:09:08.02,0:09:14.46,Chinese,,0,0,0,,但是因为ptr指向了msgs，msgs是存储在主线程栈上的一个局部变量
 Dialogue: 0,0:09:15.10,0:09:23.26,English,,0,0,0,,We've got this these peer threads accessing local variables on the main thread stack okay
-Dialogue: 0,0:09:15.10,0:09:23.26,Chinese,,0,0,0,,所以我们这里访问了main线程中栈上的局部变量
+Dialogue: 0,0:09:15.10,0:09:23.26,Chinese,,0,0,0,,所以我们这里访问了主线程栈上的局部变量
 Dialogue: 0,0:09:23.36,0:09:28.22,English,,0,0,0,,So that I just this is not it you never want to do this as a very bad practice
 Dialogue: 0,0:09:23.36,0:09:28.22,Chinese,,0,0,0,,这种做法不好，在实际编程中最好不要这样做
 Dialogue: 0,0:09:28.22,0:09:30.96,English,,0,0,0,,But I...it's a kind of thing that can happen sometimes
-Dialogue: 0,0:09:28.22,0:09:30.96,Chinese,,0,0,0,,但有时候我们这样做了
+Dialogue: 0,0:09:28.22,0:09:30.96,Chinese,,0,0,0,,但有时候我们也会这样做，但我们还没有意识到
 Dialogue: 0,0:09:33.84,0:09:39.28,English,,0,0,0,,By accident you know if you forget that pointer actually was assigned to you know some stack address
-Dialogue: 0,0:09:33.84,0:09:39.28,Chinese,,0,0,0,,因为忘记了指针实际上指向了一个栈地址
+Dialogue: 0,0:09:33.84,0:09:39.28,Chinese,,0,0,0,,比如你忘记了ptr实际上指向了一个栈地址
 Dialogue: 0,0:09:41.08,0:09:46.60,English,,0,0,0,,Okay so the second question that is how do we map variable instances to memory
 Dialogue: 0,0:09:41.08,0:09:46.60,Chinese,,0,0,0,,好的，第二个问题是我们如何将变量实例映射到内存
 Dialogue: 0,0:09:47.10,0:09:50.16,English,,0,0,0,,Now we looked at this when we studied linking
 Dialogue: 0,0:09:47.10,0:09:50.16,Chinese,,0,0,0,,讲链接那节课时，我们学过了这个
 Dialogue: 0,0:09:50.16,0:09:54.78,English,,0,0,0,,But let's just review this quickly again to make sure that it's clear to you
-Dialogue: 0,0:09:50.16,0:09:54.78,Chinese,,0,0,0,,让我们再次快速回顾一下
+Dialogue: 0,0:09:50.16,0:09:54.78,Chinese,,0,0,0,,让我们快速回顾一下
 Dialogue: 0,0:09:56.80,0:10:01.38,English,,0,0,0,,So global variables are variables that are referenced outside of a function
-Dialogue: 0,0:09:56.80,0:10:01.38,Chinese,,0,0,0,,全局变量是在函数外的变量
+Dialogue: 0,0:09:56.80,0:10:01.38,Chinese,,0,0,0,,全局变量是定义在函数外的变量
 Dialogue: 0,0:10:03.00,0:10:08.08,English,,0,0,0,,And virtual memory the linker when it does symbol resolution make sure that
 Dialogue: 0,0:10:03.00,0:10:08.08,Chinese,,0,0,0,,链接器在进行符号解析时确保
 Dialogue: 0,0:10:08.08,0:10:12.50,English,,0,0,0,,There's exactly one instance of every global variable in virtual memory
@@ -272,17 +272,17 @@ Dialogue: 0,0:10:39.30,0:10:42.70,Chinese,,0,0,0,,如果变量在函数内部声
 Dialogue: 0,0:10:44.28,0:10:49.06,English,,0,0,0,,Then the scope of that variable is limited to that function meaning no other function can access it
 Dialogue: 0,0:10:44.28,0:10:49.06,Chinese,,0,0,0,,然后该变量的范围仅限于该函数，即没有其他函数可以访问它
 Dialogue: 0,0:10:50.56,0:10:55.66,English,,0,0,0,,But that static variable is stored along with all the other local variables
-Dialogue: 0,0:10:50.56,0:10:55.66,Chinese,,0,0,0,,但是，该静态变量与所有其他全局（原文是局部）变量一起存储
+Dialogue: 0,0:10:50.56,0:10:55.66,Chinese,,0,0,0,,但是，该静态变量与所有其他全局（原文是局部）变量存储在一起
 Dialogue: 0,0:10:55.70,0:11:04.14,English,,0,0,0,,So there's any static variable declared inside of a function has exactly one instance in memory
 Dialogue: 0,0:10:55.70,0:11:04.14,Chinese,,0,0,0,,因此，在函数内部声明的任何静态变量在内存中只有一个实例
 Dialogue: 0,0:11:04.96,0:11:10.66,English,,0,0,0,,And if you were to have say multiple functions that declared (the same) a static variable with the same name
-Dialogue: 0,0:11:04.96,0:11:10.66,Chinese,,0,0,0,,如果多个函数声明（相同）一个具有相同名称的静态变量
+Dialogue: 0,0:11:04.96,0:11:10.66,Chinese,,0,0,0,,如果多个函数声明一个具有相同名称的静态变量
 Dialogue: 0,0:11:11.30,0:11:14.44,English,,0,0,0,,The compiler would disambiguate those somehow
 Dialogue: 0,0:11:11.30,0:11:14.44,Chinese,,0,0,0,,编译器会以某种方式消除歧义
 Dialogue: 0,0:11:14.44,0:11:17.24,English,,0,0,0,,It would append some kind of unique
 Dialogue: 0,0:11:14.44,0:11:17.24,Chinese,,0,0,0,,它会附加某种唯一的标识
 Dialogue: 0,0:11:19.10,0:11:20.80,English,,0,0,0,,It would somehow make that name unique
-Dialogue: 0,0:11:19.10,0:11:20.80,Chinese,,0,0,0,,它会以某种方式使这个变量名独一无二
+Dialogue: 0,0:11:19.10,0:11:20.80,Chinese,,0,0,0,,或它会以某种方式使这个变量名独一无二
 Dialogue: 0,0:11:24.48,0:11:30.14,English,,0,0,0,,Okay so what recall how all these different types of variable instances are mapped into memory
 Dialogue: 0,0:11:24.48,0:11:30.14,Chinese,,0,0,0,,那么回想一下所有这些不同类型的变量实例是如何映射到内存的
 Dialogue: 0,0:11:31.86,0:11:35.38,English,,0,0,0,,Okay pointer is a global variable
@@ -292,7 +292,7 @@ Dialogue: 0,0:11:35.38,0:11:40.16,Chinese,,0,0,0,,所以地址空间中有一个
 Dialogue: 0,0:11:42.72,0:11:45.56,English,,0,0,0,,And it's stored in the data segment
 Dialogue: 0,0:11:42.72,0:11:45.56,Chinese,,0,0,0,,它存储在数据段中
 Dialogue: 0,0:11:50.54,0:11:57.40,English,,0,0,0,,i and messages are examples of local variables to main
-Dialogue: 0,0:11:50.54,0:11:57.40,Chinese,,0,0,0,,i 和 msgs 是main上的局部变量
+Dialogue: 0,0:11:50.54,0:11:57.40,Chinese,,0,0,0,,i 和 msgs 是主线程上的局部变量
 Dialogue: 0,0:11:58.44,0:12:05.12,English,,0,0,0,,So there's one instance of these stored on the stack of main stack
 Dialogue: 0,0:11:58.44,0:12:05.12,Chinese,,0,0,0,,所以主线程的栈上存储这些变量的实例
 Dialogue: 0,0:12:06.22,0:12:12.08,English,,0,0,0,,And we'll denote those with this notation we'll say variable i
@@ -308,13 +308,13 @@ Dialogue: 0,0:12:30.34,0:12:32.48,Chinese,,0,0,0,,实际上，因为有两个这
 Dialogue: 0,0:12:32.74,0:12:39.62,English,,0,0,0,,There's there's now there are in memory there's there's two instances of myid one for each stack
 Dialogue: 0,0:12:32.74,0:12:39.62,Chinese,,0,0,0,,所有有两个myid的实例，一个线程有一个
 Dialogue: 0,0:12:40.54,0:12:43.38,English,,0,0,0,,Okay associated with the stack associated with each thread
-Dialogue: 0,0:12:40.54,0:12:43.38,Chinese,,0,0,0,,每个线程都有一个相关联的栈
+Dialogue: 0,0:12:40.54,0:12:43.38,Chinese,,0,0,0,,因为每个线程都有一个相关联的栈
 Dialogue: 0,0:12:45.28,0:12:49.52,English,,0,0,0,,So myid.p0 is stored on peer thread 0's stack
-Dialogue: 0,0:12:45.28,0:12:49.52,Chinese,,0,0,0,,所以，myid.p0表示存储在对等线程0的栈上的mypid实例
+Dialogue: 0,0:12:45.28,0:12:49.52,Chinese,,0,0,0,,所以，myid.p0表示存储在线程0的栈上的mypid实例
 Dialogue: 0,0:12:50.26,0:12:54.64,English,,0,0,0,,And myid.p1 is stored on peer thread 1's stack
-Dialogue: 0,0:12:50.26,0:12:54.64,Chinese,,0,0,0,,myid.p1表示存储在对等线程1的栈上的myid实例
+Dialogue: 0,0:12:50.26,0:12:54.64,Chinese,,0,0,0,,myid.p1表示存储在线程1的栈上的myid实例
 Dialogue: 0,0:12:59.20,0:13:07.68,English,,0,0,0,,Ok and now this counter variable the static counter variable has just exactly one instance in virtual memory
-Dialogue: 0,0:12:59.20,0:13:07.68,Chinese,,0,0,0,,好了，现在这个静态cnt变量在虚拟内存中只有一个实例
+Dialogue: 0,0:12:59.20,0:13:07.68,Chinese,,0,0,0,,好了，静态变量cnt在虚拟内存中只有一个实例
 Dialogue: 0,0:13:07.98,0:13:13.02,English,,0,0,0,,And it sits in the data segment along with the other global variables like like pointer
 Dialogue: 0,0:13:07.98,0:13:13.02,Chinese,,0,0,0,,它和其他全局变量一样位于数据段中，如ptr
 Dialogue: 0,0:13:17.34,0:13:18.62,English,,0,0,0,,Okay now so the question is
@@ -378,13 +378,13 @@ Dialogue: 0,0:15:37.60,0:15:39.90,Chinese,,0,0,0,,这些变量中的哪些是共
 Dialogue: 0,0:15:42.28,0:15:44.74,English,,0,0,0,,So it's really straightforward with yeah
 Dialogue: 0,0:15:42.28,0:15:44.74,Chinese,,0,0,0,,这真的很直白
 Dialogue: 0,0:15:50.56,0:15:55.88,English,,0,0,0,,Okay so the question is discount count as a share variable and answer is yes
-Dialogue: 0,0:15:50.56,0:15:55.88,Chinese,,0,0,0,,cnt变量肯定是共享的
+Dialogue: 0,0:15:50.56,0:15:55.88,Chinese,,0,0,0,,变量cnt肯定是共享的
 Dialogue: 0,0:15:56.70,0:15:59.10,English,,0,0,0,,Because it's declared static
 Dialogue: 0,0:15:56.70,0:15:59.10,Chinese,,0,0,0,,因为它被定义为静态的
 Dialogue: 0,0:15:59.86,0:16:03.66,English,,0,0,0,,It's there's one instance of it in virtual memory
 Dialogue: 0,0:15:59.86,0:16:03.66,Chinese,,0,0,0,,它在虚拟内存中的只有一个实例
 Dialogue: 0,0:16:04.94,0:16:08.82,English,,0,0,0,,And each of the threads references that instance
-Dialogue: 0,0:16:04.94,0:16:08.82,Chinese,,0,0,0,,线程0和线程1都引用该实例
+Dialogue: 0,0:16:04.94,0:16:08.82,Chinese,,0,0,0,,且线程0和线程1都引用该实例
 Dialogue: 0,0:16:09.40,0:16:13.12,English,,0,0,0,,Okay so it's shared,it's really like a global variable
 Dialogue: 0,0:16:09.40,0:16:13.12,Chinese,,0,0,0,,所以它是共享的，它真的像一个全局变量
 Dialogue: 0,0:16:13.76,0:16:16.86,English,,0,0,0,,It's just a scope is limited to the...
@@ -404,13 +404,13 @@ Dialogue: 0,0:16:44.98,0:16:48.38,Chinese,,0,0,0,,所以ptr是共享的，cnt不
 Dialogue: 0,0:16:50.92,0:16:56.10,English,,0,0,0,,Oh no count is shared because it's it's referenced by peer thread zero and peer thread one
 Dialogue: 0,0:16:50.92,0:16:56.10,Chinese,,0,0,0,,抱歉，cnt是共享的，因为它被线程0和线程1引用
 Dialogue: 0,0:16:58.42,0:17:01.62,English,,0,0,0,,I's not shared because it's only referenced by main
-Dialogue: 0,0:16:58.42,0:17:01.62,Chinese,,0,0,0,,i 是不共享的，因为它仅由主线程引用
+Dialogue: 0,0:16:58.42,0:17:01.62,Chinese,,0,0,0,,i 不是共享的，因为它仅被主线程引用
 Dialogue: 0,0:17:02.98,0:17:03.38,English,,0,0,0,,So
 Dialogue: 0,0:17:02.98,0:17:03.38,Chinese,,0,0,0,,所以
 Dialogue: 0,0:17:07.94,0:17:11.76,English,,0,0,0,,Messages is access referenced by all three threads so it's shared
 Dialogue: 0,0:17:07.94,0:17:11.76,Chinese,,0,0,0,,msgs被三个线程引用，因此msgs是共享的
 Dialogue: 0,0:17:12.78,0:17:18.60,English,,0,0,0,,But myid is not shared because it's only referenced by exactly one thread
-Dialogue: 0,0:17:12.78,0:17:18.60,Chinese,,0,0,0,,但myid没有共享，因为它只由一个线程引用
+Dialogue: 0,0:17:12.78,0:17:18.60,Chinese,,0,0,0,,但myid没有共享，因为它只被一个线程引用
 Dialogue: 0,0:17:19.02,0:17:28.22,English,,0,0,0,,Okay so pointer count and messages are the shared variables in this program and the others are not share
 Dialogue: 0,0:17:19.02,0:17:28.22,Chinese,,0,0,0,,好的，所以这个程序中ptr，msgs，cnt是共享的，其他的变量是不共享的
 Dialogue: 0,0:17:28.66,0:17:28.86,English,,0,0,0,,Yes
@@ -420,9 +420,9 @@ Dialogue: 0,0:17:29.32,0:17:35.74,Chinese,,0,0,0,,[学生提问]
 Dialogue: 0,0:17:35.74,0:17:37.86,English,,0,0,0,,So if you declared my ideas static
 Dialogue: 0,0:17:35.74,0:17:37.86,Chinese,,0,0,0,,如果把myid定义为静态变量
 Dialogue: 0,0:17:38.82,0:17:41.92,English,,0,0,0,,With the second process of overridden it yeah that would be a race
-Dialogue: 0,0:17:38.82,0:17:41.92,Chinese,,0,0,0,,第二个线程改变myid的值，这里产生了竞争
+Dialogue: 0,0:17:38.82,0:17:41.92,Chinese,,0,0,0,,第二个线程会改变myid的值，这里产生了竞争
 Dialogue: 0,0:17:43.44,0:17:47.44,English,,0,0,0,,Okay so that would...we just depend on which thread executed first
-Dialogue: 0,0:17:43.44,0:17:47.44,Chinese,,0,0,0,,所以运行的结果取决于那个线程先执行
+Dialogue: 0,0:17:43.44,0:17:47.44,Chinese,,0,0,0,,所以运行的结果取决于哪个线程先执行
 Dialogue: 0,0:17:48.16,0:17:50.32,English,,0,0,0,,So you would really wouldn't want to do that
 Dialogue: 0,0:17:48.16,0:17:50.32,Chinese,,0,0,0,,所以在实际的代码中不要这样做
 Dialogue: 0,0:17:55.38,0:18:00.26,English,,0,0,0,,Okay so we have a very clear notion now of what we mean by sharing
@@ -440,7 +440,7 @@ Dialogue: 0,0:18:25.72,0:18:29.72,Chinese,,0,0,0,,这个程序被称为bad count
 Dialogue: 0,0:18:31.28,0:18:39.58,English,,0,0,0,,But what we want to do is we want to create a bunch of threads or a number of threads
 Dialogue: 0,0:18:31.28,0:18:39.58,Chinese,,0,0,0,,我们想要做的是创建多个线程
 Dialogue: 0,0:18:40.46,0:18:44.18,English,,0,0,0,,And each of those threads will increment a global variable called count
-Dialogue: 0,0:18:40.46,0:18:44.18,Chinese,,0,0,0,,每个线程都会增加全局变量count的值
+Dialogue: 0,0:18:40.46,0:18:44.18,Chinese,,0,0,0,,每个线程都会增加全局变量cnt的值
 Dialogue: 0,0:18:45.00,0:18:47.04,English,,0,0,0,,Some number of times the same number of times
 Dialogue: 0,0:18:45.00,0:18:47.04,Chinese,,0,0,0,,并且增加的次数相等
 Dialogue: 0,0:18:49.26,0:18:55.02,English,,0,0,0,,Okay so we pass in the number of iterations as the first argument
@@ -468,7 +468,7 @@ Dialogue: 0,0:19:46.90,0:19:50.60,Chinese,,0,0,0,,我们回来看看我们的程
 Dialogue: 0,0:19:50.98,0:19:55.88,English,,0,0,0,,We create two threads by with two distinct calls to two pthread create
 Dialogue: 0,0:19:50.98,0:19:55.88,Chinese,,0,0,0,,我们调用了两次pthread_create函数，创建了两个线程
 Dialogue: 0,0:19:57.42,0:20:02.76,English,,0,0,0,,Each of these threads will run the the thread routine called thread
-Dialogue: 0,0:19:57.42,0:20:02.76,Chinese,,0,0,0,,每个线程都将运行名为thread的函数
+Dialogue: 0,0:19:57.42,0:20:02.76,Chinese,,0,0,0,,每个线程都将执行名为thread的函数
 Dialogue: 0,0:20:03.36,0:20:08.50,English,,0,0,0,,And it will pass and as an argument the address of the number of iterations that it should
 Dialogue: 0,0:20:03.36,0:20:08.50,Chinese,,0,0,0,,并将niters的地址作为参数传递给了thread函数
 Dialogue: 0,0:20:09.34,0:20:10.18,English,,0,0,0,,That it should iterate
@@ -542,9 +542,9 @@ Dialogue: 0,0:22:42.38,0:22:45.32,Chinese,,0,0,0,,这看上去是对的，到底
 Dialogue: 0,0:22:47.64,0:22:53.22,English,,0,0,0,,And since this is threading,since this is concurrent concurrent programming,especially since it's threaded programming
 Dialogue: 0,0:22:47.64,0:22:53.22,Chinese,,0,0,0,,因为这里使用了线程，因为这是并发编程，是基于线程的并发编程
 Dialogue: 0,0:22:53.56,0:22:56.98,English,,0,0,0,,What there's the odd lots of subtle things can go wrong
-Dialogue: 0,0:22:53.56,0:22:56.98,Chinese,,0,0,0,,很多细微的事情都会出错
+Dialogue: 0,0:22:53.56,0:22:56.98,Chinese,,0,0,0,,很多小事都会导致结果出错
 Dialogue: 0,0:22:56.98,0:23:00.30,English,,0,0,0,,So it turns out this program has a really serious bug
-Dialogue: 0,0:22:56.98,0:23:00.30,Chinese,,0,0,0,,实际上，这个程序有一个非常严重的错误
+Dialogue: 0,0:22:56.98,0:23:00.30,Chinese,,0,0,0,,实际上，这个程序有一个非常严重的bug
 Dialogue: 0,0:23:01.52,0:23:03.48,English,,0,0,0,,Okay because when we run it
 Dialogue: 0,0:23:01.52,0:23:03.48,Chinese,,0,0,0,,因为当我们运行它
 Dialogue: 0,0:23:06.24,0:23:08.40,English,,0,0,0,,When we run it on a Linux box
@@ -566,7 +566,7 @@ Dialogue: 0,0:23:32.74,0:23:35.90,Chinese,,0,0,0,,好的，要理解为什么会
 Dialogue: 0,0:23:37.60,0:23:39.64,English,,0,0,0,,For this counter loop so that
 Dialogue: 0,0:23:37.60,0:23:39.64,Chinese,,0,0,0,,循环部分对应的汇编代码如下
 Dialogue: 0,0:23:41.06,0:23:45.94,English,,0,0,0,,We want to...we need to look at the the assembly language for this counter loop in the thread routine
-Dialogue: 0,0:23:41.06,0:23:45.94,Chinese,,0,0,0,,我们需要检查循环计数这一部分的汇编代码
+Dialogue: 0,0:23:41.06,0:23:45.94,Chinese,,0,0,0,,我们只需要检查循环这一部分的汇编代码
 Dialogue: 0,0:23:48.22,0:23:50.34,English,,0,0,0,,So we'll break it up into three chunks that
 Dialogue: 0,0:23:48.22,0:23:50.34,Chinese,,0,0,0,,所以我们将它分成三个块
 Dialogue: 0,0:23:51.12,0:23:53.90,English,,0,0,0,,The first chunk is sort of getting ready for the loop
@@ -574,15 +574,15 @@ Dialogue: 0,0:23:51.12,0:23:53.90,Chinese,,0,0,0,,第一个块是为循环做好
 Dialogue: 0,0:23:54.26,0:24:01.60,English,,0,0,0,,We'll call that the head and we'll denote it as H(i)  for thread i
 Dialogue: 0,0:23:54.26,0:24:01.60,Chinese,,0,0,0,,我们称之为Head，线程 i Head块记为H(i)
 Dialogue: 0,0:24:04.94,0:24:12.84,English,,0,0,0,,And then we'll isolate on these three instructions that are directly related to incrementing count
-Dialogue: 0,0:24:04.94,0:24:12.84,Chinese,,0,0,0,,然后我们将与cnt++直接相关的指令分开
+Dialogue: 0,0:24:04.94,0:24:12.84,Chinese,,0,0,0,,然后我们将与cnt++直接相关的指令分为几个部分
 Dialogue: 0,0:24:14.08,0:24:16.22,English,,0,0,0,,Okay so you see the first instruction moves
-Dialogue: 0,0:24:14.08,0:24:16.22,Chinese,,0,0,0,,第一条指令移动
+Dialogue: 0,0:24:14.08,0:24:16.22,Chinese,,0,0,0,,第一条指令是mov指令
 Dialogue: 0,0:24:16.66,0:24:22.50,English,,0,0,0,,It loads the global of the value and global variable count into register %rdx
-Dialogue: 0,0:24:16.66,0:24:22.50,Chinese,,0,0,0,,第一条指令将cnt的值加载到寄存器％rdx中
+Dialogue: 0,0:24:16.66,0:24:22.50,Chinese,,0,0,0,,它将cnt的值加载到寄存器％rdx中
 Dialogue: 0,0:24:24.14,0:24:25.72,English,,0,0,0,,So will denote that as L(i)
 Dialogue: 0,0:24:24.14,0:24:25.72,Chinese,,0,0,0,,我们将其表示为L（i）
 Dialogue: 0,0:24:27.54,0:24:30.18,English,,0,0,0,,Next it increments %rdx
-Dialogue: 0,0:24:27.54,0:24:30.18,Chinese,,0,0,0,,下一条指令增加％rdx
+Dialogue: 0,0:24:27.54,0:24:30.18,Chinese,,0,0,0,,下一条指令增加％rdx的值
 Dialogue: 0,0:24:31.52,0:24:35.98,English,,0,0,0,,And we'll denote that U(i) for update so it updates %rdx
 Dialogue: 0,0:24:31.52,0:24:35.98,Chinese,,0,0,0,,这是更新％rdx，我们将其表示为U（i）
 Dialogue: 0,0:24:37.14,0:24:42.92,English,,0,0,0,,And then it stores the value the updated value of %rdx into count
@@ -592,7 +592,7 @@ Dialogue: 0,0:24:43.42,0:24:48.06,Chinese,,0,0,0,,也就是更新cnt的内存地
 Dialogue: 0,0:24:50.00,0:24:50.44,English,,0,0,0,,And
 Dialogue: 0,0:24:50.00,0:24:50.44,Chinese,,0,0,0,,然后
 Dialogue: 0,0:24:53.32,0:24:58.94,English,,0,0,0,,And then the rest of...the rest of this loop is getting ready for the to do the next iteration
-Dialogue: 0,0:24:53.32,0:24:58.94,Chinese,,0,0,0,,然这个循环的其余部分的功能是，为下一次迭代做好准备
+Dialogue: 0,0:24:53.32,0:24:58.94,Chinese,,0,0,0,,这个循环的其余部分的功能是，为下一次迭代做好准备
 Dialogue: 0,0:24:59.70,0:25:02.32,English,,0,0,0,,It's not directly related to incrementing count
 Dialogue: 0,0:24:59.70,0:25:02.32,Chinese,,0,0,0,,它与cnt的值没有直接关系
 Dialogue: 0,0:25:02.32,0:25:06.38,English,,0,0,0,,So we'll just sort of group this all together and refer to it as T(i) for tail
@@ -604,7 +604,7 @@ Dialogue: 0,0:25:13.60,0:25:17.56,Chinese,,0,0,0,,让我们来看......
 Dialogue: 0,0:25:18.22,0:25:21.94,English,,0,0,0,,How this how these two threads might be executed
 Dialogue: 0,0:25:18.22,0:25:21.94,Chinese,,0,0,0,,这两个线程可能的执行顺序
 Dialogue: 0,0:25:22.12,0:25:27.38,English,,0,0,0,,And remember in general we can't assume that there's any specific interleaving
-Dialogue: 0,0:25:22.12,0:25:27.38,Chinese,,0,0,0,,记住，一般来说，我们不能假设有任何特定的交错
+Dialogue: 0,0:25:22.12,0:25:27.38,Chinese,,0,0,0,,记住，一般来说，我们不能假设任何特定的顺序
 Dialogue: 0,0:25:27.40,0:25:30.08,English,,0,0,0,,So any interleaving of these two threads is possible
 Dialogue: 0,0:25:27.40,0:25:30.08,Chinese,,0,0,0,,因此，这两个线程的任何交错都是可能的
 Dialogue: 0,0:25:30.18,0:25:33.32,English,,0,0,0,,No matter how remote it might seem
@@ -612,7 +612,7 @@ Dialogue: 0,0:25:30.18,0:25:33.32,Chinese,,0,0,0,,无论它看起来多么遥远
 Dialogue: 0,0:25:34.90,0:25:38.80,English,,0,0,0,,So let's look at one example let's say we're executing on a single core
 Dialogue: 0,0:25:34.90,0:25:38.80,Chinese,,0,0,0,,让我们看一个例子，假设我们在一个单核的计算机上执行
 Dialogue: 0,0:25:38.80,0:25:40.98,English,,0,0,0,,So we're only going to do one instruction at a time
-Dialogue: 0,0:25:38.80,0:25:40.98,Chinese,,0,0,0,,所以我们一次只会执行一个指令
+Dialogue: 0,0:25:38.80,0:25:40.98,Chinese,,0,0,0,,所以我们一次只会执行一条指令
 Dialogue: 0,0:25:43.00,0:25:43.54,English,,0,0,0,,And
 Dialogue: 0,0:25:43.00,0:25:43.54,Chinese,,0,0,0,,然后
 Dialogue: 0,0:25:45.84,0:25:50.36,English,,0,0,0,,In this column will show which thread is executing so either thread 1 or thread 2
@@ -626,11 +626,11 @@ Dialogue: 0,0:26:02.02,0:26:07.20,Chinese,,0,0,0,,然后此列显示线程1的�
 Dialogue: 0,0:26:08.34,0:26:11.46,English,,0,0,0,,And this column shows the value of %rdx for thread number 2
 Dialogue: 0,0:26:08.34,0:26:11.46,Chinese,,0,0,0,,此列显示线程2的％rdx值
 Dialogue: 0,0:26:11.66,0:26:19.28,English,,0,0,0,,Right since that the kernel keeps separate copies of all the general-purpose registers the for each thread these can be different
-Dialogue: 0,0:26:11.66,0:26:19.28,Chinese,,0,0,0,,因为内核为每个线程都维护了一个所有通用寄存器的副本，因此对于每个线程，这些副本可以是不同的
+Dialogue: 0,0:26:11.66,0:26:19.28,Chinese,,0,0,0,,因为内核为每个线程都维护了一个所有通用寄存器的副本，相当于每个线程都有独立的寄存器
 Dialogue: 0,0:26:22.60,0:26:25.56,English,,0,0,0,,Okay and then this last column shows the value of count in memory
 Dialogue: 0,0:26:22.60,0:26:25.56,Chinese,,0,0,0,,好的，然后最后一列显示内存中cnt的值
 Dialogue: 0,0:26:27.90,0:26:30.82,English,,0,0,0,,So let's start executing
-Dialogue: 0,0:26:27.90,0:26:30.82,Chinese,,0,0,0,,所以让我们开始执行
+Dialogue: 0,0:26:27.90,0:26:30.82,Chinese,,0,0,0,,我们开始执行代码
 Dialogue: 0,0:26:30.92,0:26:33.06,English,,0,0,0,,So initially count is equal to 0
 Dialogue: 0,0:26:30.92,0:26:33.06,Chinese,,0,0,0,,最初cnt等于0
 Dialogue: 0,0:26:34.16,0:26:38.90,English,,0,0,0,,And thread one gets the kernel schedules thread 1
@@ -670,7 +670,7 @@ Dialogue: 0,0:28:00.50,0:28:03.84,Chinese,,0,0,0,,而cnt等于2，这是我们�
 Dialogue: 0,0:28:04.18,0:28:06.74,English,,0,0,0,,Ok so this so this is ok
 Dialogue: 0,0:28:04.18,0:28:06.74,Chinese,,0,0,0,,好的，所以运行的结果是正确的
 Dialogue: 0,0:28:07.38,0:28:11.60,English,,0,0,0,,And notice how...so this is actually this is an inner leaving that works
-Dialogue: 0,0:28:07.38,0:28:11.60,Chinese,,0,0,0,,实际上线程交错的其中一种情况
+Dialogue: 0,0:28:07.38,0:28:11.60,Chinese,,0,0,0,,实际上，这只是线程交错的其中一种情况
 Dialogue: 0,0:28:11.88,0:28:13.08,English,,0,0,0,,Ok we get the correct value
 Dialogue: 0,0:28:11.88,0:28:13.08,Chinese,,0,0,0,,这次我们得到的结果是正确的
 Dialogue: 0,0:28:14.12,0:28:16.02,English,,0,0,0,,And notice how I...
@@ -680,7 +680,7 @@ Dialogue: 0,0:28:19.08,0:28:23.14,Chinese,,0,0,0,,我实际上将参与更新cnt
 Dialogue: 0,0:28:24.66,0:28:29.76,English,,0,0,0,,And it will call that,we'll call those 3 instructions a critical section and I've color-coded them
 Dialogue: 0,0:28:24.66,0:28:29.76,Chinese,,0,0,0,,我们将这3条指令称为临界区，并使用了不同颜色进行区分
 Dialogue: 0,0:28:29.78,0:28:32.02,English,,0,0,0,,So you can easily keep track of them
-Dialogue: 0,0:28:29.78,0:28:32.02,Chinese,,0,0,0,,因此，你可以轻松的发现它们
+Dialogue: 0,0:28:29.78,0:28:32.02,Chinese,,0,0,0,,因此，你可以轻松的找到它们
 Dialogue: 0,0:28:34.08,0:28:39.10,English,,0,0,0,,Alright let's look...now let's look at another another interleaving which is feasible right
 Dialogue: 0,0:28:34.08,0:28:39.10,Chinese,,0,0,0,,现在让我们看看另一个可能的交错
 Dialogue: 0,0:28:40.24,0:28:43.04,English,,0,0,0,,But in this case it results in the wrong value
@@ -768,11 +768,11 @@ Dialogue: 0,0:31:47.36,0:31:51.10,Chinese,,0,0,0,,也可能把这3个指令序�
 Dialogue: 0,0:31:51.64,0:31:52.62,English,,0,0,0,,But the problem is that
 Dialogue: 0,0:31:51.64,0:31:52.62,Chinese,,0,0,0,,但问题是
 Dialogue: 0,0:31:53.68,0:31:59.86,English,,0,0,0,,It's loading into register then incrementing and then saving
-Dialogue: 0,0:31:53.68,0:31:59.86,Chinese,,0,0,0,,它加载到寄存器然后递增然后保存
+Dialogue: 0,0:31:53.68,0:31:59.86,Chinese,,0,0,0,,这里cnt会加载到寄存器，然后在寄存器递增，然后保存到内存
 Dialogue: 0,0:31:59.88,0:32:01.78,English,,0,0,0,,So that the problem comes about because
 Dialogue: 0,0:31:59.88,0:32:01.78,Chinese,,0,0,0,,因此，问题就出现了
 Dialogue: 0,0:32:02.26,0:32:02.64,English,,0,0,0,,We can
-Dialogue: 0,0:32:02.26,0:32:02.64,Chinese,,0,0,0,,我们可以
+Dialogue: 0,0:32:02.26,0:32:02.64,Chinese,,0,0,0,,嗯
 Dialogue: 0,0:32:05.08,0:32:10.02,English,,0,0,0,,This thread can be interrupted before it finishes this three-step sequence
 Dialogue: 0,0:32:05.08,0:32:10.02,Chinese,,0,0,0,,在加载、更新、写回的过程中，
 Dialogue: 0,0:32:10.02,0:32:12.20,English,,0,0,0,,This load modify store sequence
@@ -782,11 +782,11 @@ Dialogue: 0,0:32:12.98,0:32:13.28,Chinese,,0,0,0,,请讲
 Dialogue: 0,0:32:13.66,0:32:21.36,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:32:13.66,0:32:21.36,Chinese,,0,0,0,,[学生提问]
 Dialogue: 0,0:32:21.36,0:32:24.86,English,,0,0,0,,It would wait yeah so it that's right yeah I guess I wasn't clear it
-Dialogue: 0,0:32:21.36,0:32:24.86,Chinese,,0,0,0,,它会等待，所以这是正确的是的，我想我没有把volatile关键字讲清楚
+Dialogue: 0,0:32:21.36,0:32:24.86,Chinese,,0,0,0,,我想我没有把volatile关键字讲清楚
 Dialogue: 0,0:32:25.63,0:32:28.66,English,,0,0,0,,It prevents it from being stored permanently in a register right so
-Dialogue: 0,0:32:25.63,0:32:28.66,Chinese,,0,0,0,,volatile可以防止变量永久存储在寄存器中
+Dialogue: 0,0:32:25.63,0:32:28.66,Chinese,,0,0,0,,volatile可以防止变量永久存储在寄存器中（如循环执行完了再将cnt的值写回）
 Dialogue: 0,0:32:29.42,0:32:34.24,English,,0,0,0,,It may have to be loaded into a register but then it'll be written back
-Dialogue: 0,0:32:29.42,0:32:34.24,Chinese,,0,0,0,,volatile修饰的变量可能要加载到寄存器中，但紧接着变量将被写回到内存
+Dialogue: 0,0:32:29.42,0:32:34.24,Chinese,,0,0,0,,volatile修饰的变量可以被加载到寄存器中，但紧接着该变量的值要被写回到内存
 Dialogue: 0,0:32:36.02,0:32:39.52,English,,0,0,0,,Okay whereas the the compiler would have the option like we've seen it with local variables
 Dialogue: 0,0:32:36.02,0:32:39.52,Chinese,,0,0,0,,编译器在处理语句的时候有多种选择，如对于局部变量来说
 Dialogue: 0,0:32:40.16,0:32:43.44,English,,0,0,0,,Right the compiler just it never allocates stack space
@@ -844,7 +844,7 @@ Dialogue: 0,0:34:36.12,0:34:38.50,Chinese,,0,0,0,,然后我们执行H（1）
 Dialogue: 0,0:34:39.70,0:34:42.21,English,,0,0,0,,So that's represented by this ACK here
 Dialogue: 0,0:34:39.70,0:34:42.21,Chinese,,0,0,0,,对应于这一条边
 Dialogue: 0,0:34:43.18,0:34:47.64,English,,0,0,0,,So this position this point right here represents the state where
-Dialogue: 0,0:34:43.18,0:34:47.64,Chinese,,0,0,0,,所以这个点代表的状态位
+Dialogue: 0,0:34:43.18,0:34:47.64,Chinese,,0,0,0,,所以这个点代表的状态是
 Dialogue: 0,0:34:48.26,0:34:52.94,English,,0,0,0,,We've executed H,we finished executing H(1) in thread 1
 Dialogue: 0,0:34:48.26,0:34:52.94,Chinese,,0,0,0,,在线程1中已经完成了H（1）的执行
 Dialogue: 0,0:34:52.94,0:34:56.18,English,,0,0,0,,But we haven't yet executed any instructions in thread 2
@@ -1020,31 +1020,31 @@ Dialogue: 0,0:42:27.14,0:42:30.56,Chinese,,0,0,0,,因为在循环中，我们只
 Dialogue: 0,0:42:32.86,0:42:35.12,English,,0,0,0,,But as we...and we're not making any system calls
 Dialogue: 0,0:42:32.86,0:42:35.12,Chinese,,0,0,0,,循环中，我们没有进行任何系统调用
 Dialogue: 0,0:42:35.28,0:42:42.30,English,,0,0,0,,Right so there's nothing that, there's nothing...we're not passing control back into the kernel ourselves
-Dialogue: 0,0:42:35.28,0:42:42.30,Chinese,,0,0,0,,所以，我们并没有将控制权转移到内核
+Dialogue: 0,0:42:35.28,0:42:42.30,Chinese,,0,0,0,,所以，在程序中我们并没有将控制权转移到内核
 Dialogue: 0,0:42:43.14,0:42:47.68,English,,0,0,0,,So the only way the kernel is going to get access is if the timer interrupts goes off
 Dialogue: 0,0:42:43.14,0:42:47.68,Chinese,,0,0,0,,因此，陷入内核的唯一方法就是产生了一个定时器中断
 Dialogue: 0,0:42:48.86,0:42:51.28,English,,0,0,0,,So if we're doing a very small number of iterations
 Dialogue: 0,0:42:48.86,0:42:51.28,Chinese,,0,0,0,,因此，如果我们进行的迭代次数非常少
 Dialogue: 0,0:42:52.22,0:42:57.00,English,,0,0,0,,The probability that you know say here's the timer interval it's going off at intervals like this
-Dialogue: 0,0:42:52.22,0:42:57.00,Chinese,,0,0,0,,你知道的概率在这里说的是它会以这样的间隔发生的定时器间隔
+Dialogue: 0,0:42:52.22,0:42:57.00,Chinese,,0,0,0,,在循环执行期间发生时钟中断的可能性很小，因为时钟中断是固定时间产生一次
 Dialogue: 0,0:42:58.10,0:43:01.86,English,,0,0,0,,Here this the probability we'd have to
-Dialogue: 0,0:42:58.10,0:43:01.86,Chinese,,0,0,0,,这就是我们必须达到的概率
+Dialogue: 0,0:42:58.10,0:43:01.86,Chinese,,0,0,0,,如果我们想得到错误的运行结果
 Dialogue: 0,0:43:02.60,0:43:08.94,English,,0,0,0,,That's thread would have to been scheduled right before a timer interrupts will go off or to interrupt that one or two iterations
-Dialogue: 0,0:43:02.60,0:43:08.94,Chinese,,0,0,0,,在计时器中断将关闭或中断一次或两次迭代之前，必须安排该线程
+Dialogue: 0,0:43:02.60,0:43:08.94,Chinese,,0,0,0,,线程必须要在时钟中断发生前执行一两次循环
 Dialogue: 0,0:43:09.86,0:43:11.36,English,,0,0,0,,So it turns out we have to schedule
-Dialogue: 0,0:43:09.86,0:43:11.36,Chinese,,0,0,0,,事实证明我们必须安排
+Dialogue: 0,0:43:09.86,0:43:11.36,Chinese,,0,0,0,,事实上
 Dialogue: 0,0:43:12.12,0:43:16.70,English,,0,0,0,,We have to call this function with a lot of within interrupts being fairly large
-Dialogue: 0,0:43:12.12,0:43:16.70,Chinese,,0,0,0,,如果我们用一个大的数字去调用这个函数，则执行的时间会变长
+Dialogue: 0,0:43:12.12,0:43:16.70,Chinese,,0,0,0,,如果我们用一个大的数字去调用这个函数，让执行的时间变长
 Dialogue: 0,0:43:17.28,0:43:22.52,English,,0,0,0,,So that the probability of the timer interrupts going off during that
-Dialogue: 0,0:43:17.28,0:43:22.52,Chinese,,0,0,0,,则在执行过程中发生定时器中断的可能性
+Dialogue: 0,0:43:17.28,0:43:22.52,Chinese,,0,0,0,,数字越大，执行过程中发生定时器中断的可能性
 Dialogue: 0,0:43:23.34,0:43:28.60,English,,0,0,0,,During that during that loop but gets increasingly large,that makes sense
-Dialogue: 0,0:43:23.34,0:43:28.60,Chinese,,0,0,0,,变得越来越大，大概就是这样一个分析
+Dialogue: 0,0:43:23.34,0:43:28.60,Chinese,,0,0,0,,就越大，大概就是这样一个分析
 Dialogue: 0,0:43:36.16,0:43:39.26,English,,0,0,0,,So the classic solution from this comes from the early 1960s
 Dialogue: 0,0:43:36.16,0:43:39.26,Chinese,,0,0,0,,同步问题的经典解决方案来自20世纪60年代早期
 Dialogue: 0,0:43:39.26,0:43:46.38,English,,0,0,0,,One of the most famous computer scientists is a dutchman named as Edsger Dijkstra
 Dialogue: 0,0:43:39.26,0:43:46.38,Chinese,,0,0,0,,由一位最著名的计算机科学家之一，一名叫Edsger Dijkstra的荷兰人
 Dialogue: 0,0:43:47.38,0:43:53.38,English,,0,0,0,,And he came up with the classical first solution to this problem which is what we're going to look at
-Dialogue: 0,0:43:47.38,0:43:53.38,Chinese,,0,0,0,,他提出了这个问题的第一个解决方案，这就是我们今天要学的内容
+Dialogue: 0,0:43:47.38,0:43:53.38,Chinese,,0,0,0,,他提出了这个问题的第一个解决方案，也就是我们今天要学的内容
 Dialogue: 0,0:43:54.18,0:43:57.60,English,,0,0,0,,Okay and it's still the first it's it's fundamental and very general purpose
 Dialogue: 0,0:43:54.18,0:43:57.60,Chinese,,0,0,0,,这个解决方案是非常基础的
 Dialogue: 0,0:43:57.60,0:44:01.76,English,,0,0,0,,And there's been many iterations and variations on this idea
@@ -1052,7 +1052,7 @@ Dialogue: 0,0:43:57.60,0:44:01.76,Chinese,,0,0,0,,这个解决方案经过许多
 Dialogue: 0,0:44:02.74,0:44:08.00,English,,0,0,0,,But semaphores were the first and classic solution which we'll look at
 Dialogue: 0,0:44:02.74,0:44:08.00,Chinese,,0,0,0,,但我们将要学习的信号量是这个问题的第一个，也是经典的，解决方案
 Dialogue: 0,0:44:11.38,0:44:17.58,English,,0,0,0,,Okay so a semaphore is a non-negative global integer
-Dialogue: 0,0:44:11.38,0:44:17.58,Chinese,,0,0,0,,好的，所以信号量是一个非负的全局整数
+Dialogue: 0,0:44:11.38,0:44:17.58,Chinese,,0,0,0,,好的，信号量是一个非负的全局整数
 Dialogue: 0,0:44:17.68,0:44:24.14,English,,0,0,0,,That's used as a synchronization variable by to kernel functions called P and V
 Dialogue: 0,0:44:17.68,0:44:24.14,Chinese,,0,0,0,,信号量作为同步的变量，被两个内核函数p和v操作
 Dialogue: 0,0:44:27.12,0:44:28.98,English,,0,0,0,,Our two system calls called P and V
@@ -1060,15 +1060,15 @@ Dialogue: 0,0:44:27.12,0:44:28.98,Chinese,,0,0,0,,两个系统调用叫做P和V.
 Dialogue: 0,0:44:32.38,0:44:36.60,English,,0,0,0,,These P and V are correspond to the dutch words
 Dialogue: 0,0:44:32.38,0:44:36.60,Chinese,,0,0,0,,P和V对应于荷兰语Proberen（测试）和Verhogen（增加）
 Dialogue: 0,0:44:38.74,0:44:43.72,English,,0,0,0,,But we just call them P and V right you just have to learn what they do
-Dialogue: 0,0:44:38.74,0:44:43.72,Chinese,,0,0,0,,但我们只是称他们为P和V，你只需要了解这两个函数作用
+Dialogue: 0,0:44:38.74,0:44:43.72,Chinese,,0,0,0,,我们简称为P和V，你只需要了解这两个函数作用
 Dialogue: 0,0:44:46.74,0:44:51.06,English,,0,0,0,,So each of these takes as an argument a semaphore
-Dialogue: 0,0:44:46.74,0:44:51.06,Chinese,,0,0,0,,因此，则两个函数都以信号量作为参数
+Dialogue: 0,0:44:46.74,0:44:51.06,Chinese,,0,0,0,,这两个函数都以信号量作为参数
 Dialogue: 0,0:44:52.84,0:44:56.82,English,,0,0,0,,And the P operation has the following semantics
 Dialogue: 0,0:44:52.84,0:44:56.82,Chinese,,0,0,0,,并且P操作具有以下语义
 Dialogue: 0,0:44:58.28,0:45:00.54,English,,0,0,0,,If s is nonzero
 Dialogue: 0,0:44:58.28,0:45:00.54,Chinese,,0,0,0,,如果s不为零
 Dialogue: 0,0:45:02.30,0:45:04.96,English,,0,0,0,,Then decrement it by 1 and return immediately
-Dialogue: 0,0:45:02.30,0:45:04.96,Chinese,,0,0,0,,然后将其减1并立即返回
+Dialogue: 0,0:45:02.30,0:45:04.96,Chinese,,0,0,0,,将其减1并立即返回
 Dialogue: 0,0:45:07.68,0:45:10.60,English,,0,0,0,,And this test if it that it's nonzero
 Dialogue: 0,0:45:07.68,0:45:10.60,Chinese,,0,0,0,,如果信号量是非零的
 Dialogue: 0,0:45:11.38,0:45:13.16,English,,0,0,0,,And the decrement occur atomically
@@ -1110,7 +1110,7 @@ Dialogue: 0,0:46:38.50,0:46:41.44,Chinese,,0,0,0,,这些线程在执行P操作�
 Dialogue: 0,0:46:43.06,0:46:47.32,English,,0,0,0,,And then it restarts exactly one of those threads in some indeterminate order
 Dialogue: 0,0:46:43.06,0:46:47.32,Chinese,,0,0,0,,然后它以某种不确定的顺序重新启动其中一个线程
 Dialogue: 0,0:46:47.44,0:46:50.68,English,,0,0,0,,Okay in some order that you can't,you can't assume
-Dialogue: 0,0:46:47.44,0:46:50.68,Chinese,,0,0,0,,按照某种顺序，所以你不能假设安装某种顺序
+Dialogue: 0,0:46:47.44,0:46:50.68,Chinese,,0,0,0,,按照某种顺序，所以你不能假设按照某种顺序
 Dialogue: 0,0:46:51.10,0:46:54.90,English,,0,0,0,,It just picks one using some selection algorithm
 Dialogue: 0,0:46:51.10,0:46:54.90,Chinese,,0,0,0,,内核使用某种选择算法从队列中选择一个线程
 Dialogue: 0,0:46:56.38,0:47:05.64,English,,0,0,0,,And it and then it it it unblocks the suspended  the suspended process
@@ -1172,7 +1172,7 @@ Dialogue: 0,0:49:39.62,0:49:47.62,Chinese,,0,0,0,,因此，我们为程序中的
 Dialogue: 0,0:49:48.98,0:49:53.80,English,,0,0,0,,So in this case count,we have count,so we have one shared variable that we're concerned about
 Dialogue: 0,0:49:48.98,0:49:53.80,Chinese,,0,0,0,,在我们这个程序中，我们只关心cnt这个共享变量
 Dialogue: 0,0:49:54.42,0:49:57.76,English,,0,0,0,,So we'll create one new text that will call mutex
-Dialogue: 0,0:49:54.42,0:49:57.76,Chinese,,0,0,0,,因此，我们只创建一个称为mutex的互斥量
+Dialogue: 0,0:49:54.42,0:49:57.76,Chinese,,0,0,0,,因此，我们只创建一个称为mutex的互斥锁
 Dialogue: 0,0:49:59.00,0:50:03.48,English,,0,0,0,,And then you surround the critical section with respect to count
 Dialogue: 0,0:49:59.00,0:50:03.48,Chinese,,0,0,0,,然后使用P V操作将临界区操作cnt的部分保护起来
 Dialogue: 0,0:50:04.20,0:50:10.94,English,,0,0,0,,With P, you call P then you execute the critical section and then you call V
@@ -1192,7 +1192,7 @@ Dialogue: 0,0:50:42.52,0:50:50.38,Chinese,,0,0,0,,如果进程持有互斥锁，
 Dialogue: 0,0:50:53.26,0:50:56.80,English,,0,0,0,,So mutexes and binary semaphore s are always initialized to 1
 Dialogue: 0,0:50:53.26,0:50:56.80,Chinese,,0,0,0,,因此，互斥量和二进制信号量始终初始化为1
 Dialogue: 0,0:50:57.20,0:51:02.98,English,,0,0,0,,Accounting semaphore and the mutex is used for mutual exclusion
-Dialogue: 0,0:50:57.20,0:51:02.98,Chinese,,0,0,0,,和互斥锁用于互斥
+Dialogue: 0,0:50:57.20,0:51:02.98,Chinese,,0,0,0,,互斥锁用于互斥
 Dialogue: 0,0:51:03.00,0:51:06.58,English,,0,0,0,,But you can also use semaphores to count sort of events in the system
 Dialogue: 0,0:51:03.00,0:51:06.58,Chinese,,0,0,0,,但还有一种信号量叫做counting semaphore，它可以用来对系统的事件计数
 Dialogue: 0,0:51:07.80,0:51:15.98,English,,0,0,0,,And often times for those accounting semaphores have sort of non values that are greater than 1
@@ -1214,11 +1214,11 @@ Dialogue: 0,0:51:48.42,0:51:51.36,Chinese,,0,0,0,,在cnt++前调用P，在cnt++�
 Dialogue: 0,0:51:54.28,0:51:57.24,English,,0,0,0,,And if we do that we always get the right answer
 Dialogue: 0,0:51:54.28,0:51:57.24,Chinese,,0,0,0,,如果我们这样做，我们总能得到正确的答案
 Dialogue: 0,0:52:00.52,0:52:03.46,English,,0,0,0,,But you know P&V are system calls
-Dialogue: 0,0:52:00.52,0:52:03.46,Chinese,,0,0,0,,但是因为P＆V是系统调用
+Dialogue: 0,0:52:00.52,0:52:03.46,Chinese,,0,0,0,,但是因为P和V是系统调用
 Dialogue: 0,0:52:03.99,0:52:05.46,English,,0,0,0,,So there's overhead associated with these
 Dialogue: 0,0:52:03.99,0:52:05.46,Chinese,,0,0,0,,因此，P V操作是有较大的开销的
 Dialogue: 0,0:52:05.46,0:52:06.28,English,,0,0,0,,So they're not free
-Dialogue: 0,0:52:05.46,0:52:06.28,Chinese,,0,0,0,,使用P V进行同步操作不是没有代码的
+Dialogue: 0,0:52:05.46,0:52:06.28,Chinese,,0,0,0,,使用P V进行同步不是没有代价的
 Dialogue: 0,0:52:06.48,0:52:11.84,English,,0,0,0,,In fact they're orders of magnitude this program runs two orders of magnitude slower than the incorrect buggy version
 Dialogue: 0,0:52:06.48,0:52:11.84,Chinese,,0,0,0,,事实上，这个程序比错误的版本慢了两个数量级
 Dialogue: 0,0:52:13.56,0:52:15.60,English,,0,0,0,,All right so so why do these mutex work
