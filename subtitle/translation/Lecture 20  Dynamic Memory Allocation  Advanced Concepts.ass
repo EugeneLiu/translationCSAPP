@@ -11,19 +11,19 @@ PlayResY: 720
 
 [Aegisub Project Garbage]
 Last Style Storage: Default
-Audio File: Lecture 20 - Dynamic Memory Allocation - Advanced Concepts-3efacbed-aa6d-4d18-b354-24cdc453e1e8.mp4
-Video File: Lecture 20 - Dynamic Memory Allocation - Advanced Concepts-3efacbed-aa6d-4d18-b354-24cdc453e1e8.mp4
+Audio File: ../../../../Desktop/csapp/Lecture 20  Dynamic Memory Allocation  Advanced Concepts.mp4
+Video File: ../../../../Desktop/csapp/Lecture 20  Dynamic Memory Allocation  Advanced Concepts.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
-Video Zoom Percent: 1.875000
-Scroll Position: 2078
-Active Line: 2082
-Video Position: 146417
+Video Zoom Percent: 1.125000
+Scroll Position: 2054
+Active Line: 2057
+Video Position: 143616
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: English,Source Han Sans CN,30,&H00FFFFFF,&H00412A2C,&H00412A2C,&H00412A2C,0,0,0,0,100,100,0,0,1,2.2,1,2,10,10,10,1
-Style: Chinese,Noto Sans CJK SC,34,&H00FBFD00,&H00FFFFFF,&H00362A28,&H00FFFFFF,0,0,0,0,100,100,0,0,1,2,0.2,2,10,10,10,1
+Style: English,Noto Sans CJK SC Black,30,&H00FFFFFF,&H00412A2C,&H00412A2C,&H00412A2C,0,0,0,0,100,100,0,0,1,1.5,1.2,2,10,10,10,1
+Style: Chinese,Noto Sans CJK SC Black,40,&H00FFFF00,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1.2,1.2,2,10,10,10,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -58,7 +58,7 @@ Dialogue: 0,0:01:27.78,0:01:30.00,Chinese,,0,0,0,,所有有效载荷的总和
 Dialogue: 0,0:01:32.06,0:01:33.72,English,,0,0,0,,After k+1 requests
 Dialogue: 0,0:01:32.06,0:01:33.72,Chinese,,0,0,0,,在 k+1 请求之后
 Dialogue: 0,0:01:37.44,0:01:40.82,English,,0,0,0,,Okay so what we're trying to do with this pk measure
-Dialogue: 0,0:01:37.44,0:01:40.82,Chinese,,0,0,0,,我们正在尝试用这个 p(k) 
+Dialogue: 0,0:01:37.44,0:01:40.82,Chinese,,0,0,0,,我们正在尝试用这个 p(k)
 Dialogue: 0,0:01:41.36,0:01:44.56,English,,0,0,0,,This aggregate payload is at any point in time so
 Dialogue: 0,0:01:41.36,0:01:44.56,Chinese,,0,0,0,,此聚合有效负载在任何时间点都是如此
 Dialogue: 0,0:01:45.36,0:01:48.00,English,,0,0,0,,As we execute requests one after the other
@@ -92,7 +92,7 @@ Dialogue: 0,0:02:49.44,0:02:49.86,Chinese,,0,0,0,,好的
 Dialogue: 0,0:02:51.14,0:03:00.34,English,,0,0,0,,And so to measure a P(k) memory utilization
 Dialogue: 0,0:02:51.14,0:03:00.34,Chinese,,0,0,0,,因此，要测量 P(k) 内存利用率
 Dialogue: 0,0:03:05.98,0:03:09.96,English,,0,0,0,,After K+1 requests
-Dialogue: 0,0:03:05.98,0:03:09.96,Chinese,,0,0,0,,在 K+1请求之后
+Dialogue: 0,0:03:05.98,0:03:09.96,Chinese,,0,0,0,,在 K+1 请求之后
 Dialogue: 0,0:03:12.44,0:03:13.84,English,,0,0,0,,Which will denote U(k)
 Dialogue: 0,0:03:12.44,0:03:13.84,Chinese,,0,0,0,,哪个将表示 U(k)
 Dialogue: 0,0:03:15.58,0:03:17.46,English,,0,0,0,,That's going to be equal to
@@ -155,13 +155,15 @@ Dialogue: 0,0:05:20.02,0:05:27.24,Chinese,,0,0,0,,但是 H(k) 是变化，它取
 Dialogue: 0,0:05:28.36,0:05:29.50,English,,0,0,0,,Okay yes question
 Dialogue: 0,0:05:28.36,0:05:29.50,Chinese,,0,0,0,,好的，是的问题
 Dialogue: 0,0:05:29.50,0:05:34.52,English,,0,0,0,,[student speaking]
+Dialogue: 0,0:05:29.50,0:05:34.52,Chinese,,0,0,0,,学生提问
 Dialogue: 0,0:05:34.52,0:05:37.56,English,,0,0,0,,So what we're doing is at any point in time
 Dialogue: 0,0:05:34.52,0:05:37.56,Chinese,,0,0,0,,所以我们正在做的是在任何时间
 Dialogue: 0,0:05:38.82,0:05:41.04,English,,0,0,0,,After we're after k+1 requests
 Dialogue: 0,0:05:38.82,0:05:41.04,Chinese,,0,0,0,,在我们完成 k+1 次请求之后
 Dialogue: 0,0:05:41.76,0:05:46.80,English,,0,0,0,,We're evaluating the utilization of a heap up till that point so it should be k
-Dialogue: 0,0:05:41.76,0:05:46.80,Chinese,,0,0,0,,我们正在评估堆的利用率，直到那时它应该是k
+Dialogue: 0,0:05:41.76,0:05:46.80,Chinese,,0,0,0,,我们正在评估堆的利用率，直到那时它应该是 k
 Dialogue: 0,0:05:46.80,0:05:52.16,English,,0,0,0,,[student speaking]
+Dialogue: 0,0:05:46.80,0:05:52.16,Chinese,,0,0,0,,学生提问
 Dialogue: 0,0:05:52.16,0:05:54.32,English,,0,0,0,,For i <=k
 Dialogue: 0,0:05:52.16,0:05:54.32,Chinese,,0,0,0,,for i <= k
 Dialogue: 0,0:05:57.48,0:05:58.38,English,,0,0,0,,Oh I'm sorry
@@ -257,6 +259,7 @@ Dialogue: 0,0:09:42.72,0:09:45.64,Chinese,,0,0,0,,这种地址有序结构
 Dialogue: 0,0:09:47.32,0:09:51.68,English,,0,0,0,,These blocks can be sort of scattered anywhere in memory
 Dialogue: 0,0:09:47.32,0:09:51.68,Chinese,,0,0,0,,这些块可以分散在内存中的任何位置
 Dialogue: 0,0:09:51.78,0:09:57.10,English,,0,0,0,,[student speaking]
+Dialogue: 0,0:09:51.78,0:09:57.10,Chinese,,0,0,0,,学生提问
 Dialogue: 0,0:09:57.12,0:09:59.12,English,,0,0,0,,Oh yeah so this is after several
 Dialogue: 0,0:09:57.12,0:09:59.12,Chinese,,0,0,0,,哦，是的，所以这是几次之后
 Dialogue: 0,0:09:59.78,0:10:03.98,English,,0,0,0,,You know just sort of indefinite number of malloc and frees and
@@ -264,6 +267,7 @@ Dialogue: 0,0:09:59.78,0:10:03.98,Chinese,,0,0,0,,你知道一些无限数量的
 Dialogue: 0,0:10:04.84,0:10:05.42,English,,0,0,0,,Yes
 Dialogue: 0,0:10:04.84,0:10:05.42,Chinese,,0,0,0,,是
 Dialogue: 0,0:10:05.42,0:10:09.64,English,,0,0,0,,[student speaking]
+Dialogue: 0,0:10:05.42,0:10:09.64,Chinese,,0,0,0,,学生提问
 Dialogue: 0,0:10:09.64,0:10:10.82,English,,0,0,0,,Oh yeah good question
 Dialogue: 0,0:10:09.64,0:10:10.82,Chinese,,0,0,0,,哦，是的好问题
 Dialogue: 0,0:10:11.32,0:10:15.90,English,,0,0,0,,So the question is what would happen if you free to a block that was in between two free blocks
@@ -273,6 +277,7 @@ Dialogue: 0,0:10:16.62,0:10:20.62,Chinese,,0,0,0,,你必须合并它有点棘手
 Dialogue: 0,0:10:21.30,0:10:25.04,English,,0,0,0,,Good now allocating oh yes questions
 Dialogue: 0,0:10:21.30,0:10:25.04,Chinese,,0,0,0,,什么问题？
 Dialogue: 0,0:10:25.04,0:10:31.62,English,,0,0,0,,[student speaking]
+Dialogue: 0,0:10:25.04,0:10:31.62,Chinese,,0,0,0,,学生提问
 Dialogue: 0,0:10:31.66,0:10:33.68,English,,0,0,0,,So the question is what happens with locality
 Dialogue: 0,0:10:31.66,0:10:33.68,Chinese,,0,0,0,,所以问题是局部会发生什么
 Dialogue: 0,0:10:34.38,0:10:37.50,English,,0,0,0,,So you still get block locality
@@ -306,6 +311,7 @@ Dialogue: 0,0:11:38.08,0:11:41.32,Chinese,,0,0,0,,因为分配器会走那个空
 Dialogue: 0,0:11:42.44,0:11:42.90,English,,0,0,0,,Question
 Dialogue: 0,0:11:42.44,0:11:42.90,Chinese,,0,0,0,,问题？
 Dialogue: 0,0:11:42.94,0:12:08.90,English,,0,0,0,,[student speaking]
+Dialogue: 0,0:11:42.94,0:12:08.90,Chinese,,0,0,0,,学生提问
 Dialogue: 0,0:12:08.90,0:12:09.84,English,,0,0,0,,That's a really good question
 Dialogue: 0,0:12:08.90,0:12:09.84,Chinese,,0,0,0,,这是一个非常好的问题
 Dialogue: 0,0:12:09.84,0:12:15.38,English,,0,0,0,,So the question is could would it be possible for an application to give hints to the allocator
@@ -378,6 +384,7 @@ Dialogue: 0,0:15:03.34,0:15:09.68,Chinese,,0,0,0,,如果它总是那样合并那
 Dialogue: 0,0:15:11.64,0:15:12.38,English,,0,0,0,,Yeah it's question
 Dialogue: 0,0:15:11.64,0:15:12.38,Chinese,,0,0,0,,是的，问题？
 Dialogue: 0,0:15:12.38,0:15:18.08,English,,0,0,0,,[student speaking]
+Dialogue: 0,0:15:12.38,0:15:18.08,Chinese,,0,0,0,,学生提问
 Dialogue: 0,0:15:18.08,0:15:22.32,English,,0,0,0,,Oh you'll see when it comes into play when we free a block
 Dialogue: 0,0:15:18.08,0:15:22.32,Chinese,,0,0,0,,哦，当我们释放一块时，你会看到它会发挥作用
 Dialogue: 0,0:15:23.36,0:15:25.22,English,,0,0,0,,Because you have to sort of stitch up
@@ -397,6 +404,7 @@ Dialogue: 0,0:15:46.16,0:15:50.90,Chinese,,0,0,0,,所以它需要从列表的开
 Dialogue: 0,0:15:55.34,0:15:56.98,English,,0,0,0,,And there are questions these are good yes question
 Dialogue: 0,0:15:55.34,0:15:56.98,Chinese,,0,0,0,,有问题这些都是好问题
 Dialogue: 0,0:15:57.04,0:16:05.86,English,,0,0,0,,[student speaking]
+Dialogue: 0,0:15:57.04,0:16:05.86,Chinese,,0,0,0,,学生提问
 Dialogue: 0,0:16:05.88,0:16:07.68,English,,0,0,0,,Okay so the question is for memory utilization
 Dialogue: 0,0:16:05.88,0:16:07.68,Chinese,,0,0,0,,好的，问题是内存利用率
 Dialogue: 0,0:16:07.68,0:16:11.68,English,,0,0,0,,How does the header and footer count towards memory utilization
@@ -412,11 +420,13 @@ Dialogue: 0,0:16:27.84,0:16:33.20,Chinese,,0,0,0,,来估算利用率或计算我
 Dialogue: 0,0:16:33.56,0:16:37.54,English,,0,0,0,,So anything that's not payload sorry is overhead
 Dialogue: 0,0:16:33.56,0:16:37.54,Chinese,,0,0,0,,所以任何不是有效载荷的东西都是开销
 Dialogue: 0,0:16:37.54,0:16:47.60,English,,0,0,0,,[student speaking]
+Dialogue: 0,0:16:37.54,0:16:47.60,Chinese,,0,0,0,,学生提问
 Dialogue: 0,0:16:47.60,0:16:51.38,English,,0,0,0,,So we had...if all of payloads were one word and overhead
 Dialogue: 0,0:16:47.60,0:16:51.38,Chinese,,0,0,0,,如果所有有效载荷都是一个，开销也是一个字
 Dialogue: 0,0:16:51.88,0:16:54.76,English,,0,0,0,,Was one word then there'd be 50%
 Dialogue: 0,0:16:51.88,0:16:54.76,Chinese,,0,0,0,,那么利用率就是 50％
 Dialogue: 0,0:16:59.30,0:17:09.10,English,,0,0,0,,Yes [student speaking]
+Dialogue: 0,0:16:59.30,0:17:09.10,Chinese,,0,0,0,,学生提问
 Dialogue: 0,0:17:09.10,0:17:11.76,English,,0,0,0,,Yeah so the question is do you still need a boundary tag if you have
 Dialogue: 0,0:17:09.10,0:17:11.76,Chinese,,0,0,0,,是的，问题是你是否还需要一个边界标签
 Dialogue: 0,0:17:12.34,0:17:17.24,English,,0,0,0,,These next and previous pointers and the answer is yes absolutely
@@ -426,6 +436,7 @@ Dialogue: 0,0:17:17.34,0:17:18.90,Chinese,,0,0,0,,你会马上到原因
 Dialogue: 0,0:17:21.06,0:17:21.62,English,,0,0,0,,Yes
 Dialogue: 0,0:17:21.06,0:17:21.62,Chinese,,0,0,0,,是
 Dialogue: 0,0:17:21.68,0:17:32.52,English,,0,0,0,,[student speaking]
+Dialogue: 0,0:17:21.68,0:17:32.52,Chinese,,0,0,0,,学生提问
 Dialogue: 0,0:17:32.60,0:17:33.94,English,,0,0,0,,Okay that's a really good question
 Dialogue: 0,0:17:32.60,0:17:33.94,Chinese,,0,0,0,,好的，这是一个非常好的问题
 Dialogue: 0,0:17:33.94,0:17:37.86,English,,0,0,0,,So you know what do you do if you have next in previous pointers
@@ -439,13 +450,13 @@ Dialogue: 0,0:17:49.08,0:17:50.58,Chinese,,0,0,0,,施加最小块大小
 Dialogue: 0,0:17:51.65,0:17:58.74,English,,0,0,0,,So if you have a one word header,one word footer,one prev ,one word next
 Dialogue: 0,0:17:51.65,0:17:58.74,Chinese,,0,0,0,,因此，如果你有一个字大小头部，一字大小脚部，一字大小下一个、上一个指针
 Dialogue: 0,0:17:59.68,0:18:02.62,English,,0,0,0,,Then your minimum block sizes is 4 bytes
-Dialogue: 0,0:17:59.68,0:18:02.62,Chinese,,0,0,0,,然后你的最小块大小为4个字节
+Dialogue: 0,0:17:59.68,0:18:02.62,Chinese,,0,0,0,,然后你的最小块大小为 4 个字节
 Dialogue: 0,0:18:02.86,0:18:05.60,English,,0,0,0,,And that would be with a zero size payload
 Dialogue: 0,0:18:02.86,0:18:05.60,Chinese,,0,0,0,,这将是零大小的有效载荷
 Dialogue: 0,0:18:06.64,0:18:10.60,English,,0,0,0,,So you can never allocate a block smaller than your minimum block size
 Dialogue: 0,0:18:06.64,0:18:10.60,Chinese,,0,0,0,,因此，你永远不能分配小于最小块大小的块
 Dialogue: 0,0:18:10.88,0:18:13.04,English,,0,0,0,,So that's very good very good question
-Dialogue: 0,0:18:10.88,0:18:13.04,Chinese,,0,0,0,,所以这是一个非常好的非常好的问题
+Dialogue: 0,0:18:10.88,0:18:13.04,Chinese,,0,0,0,,所以这是一个非常好的问题
 Dialogue: 0,0:18:14.42,0:18:16.62,English,,0,0,0,,So it makes a difference right even though
 Dialogue: 0,0:18:14.42,0:18:16.62,Chinese,,0,0,0,,所以尽管如此，它确实有所作为
 Dialogue: 0,0:18:18.48,0:18:24.28,English,,0,0,0,,It looks like we're getting these pointers here for free
@@ -455,12 +466,13 @@ Dialogue: 0,0:18:25.22,0:18:29.08,Chinese,,0,0,0,,但我们不是，因为这个
 Dialogue: 0,0:18:29.22,0:18:29.68,English,,0,0,0,,Yes
 Dialogue: 0,0:18:29.22,0:18:29.68,Chinese,,0,0,0,,是
 Dialogue: 0,0:18:29.68,0:19:08.42,English,,0,0,0,,[student speaking]
+Dialogue: 0,0:18:29.68,0:19:08.42,Chinese,,0,0,0,,学生提问
 Dialogue: 0,0:19:08.84,0:19:10.02,English,,0,0,0,,Yeah okay so...
 Dialogue: 0,0:19:08.84,0:19:10.02,Chinese,,0,0,0,,是的，好吧......
 Dialogue: 0,0:19:12.68,0:19:16.40,English,,0,0,0,,The question is can you just get one large block and then split it up
 Dialogue: 0,0:19:12.68,0:19:16.40,Chinese,,0,0,0,,问题是你可以得到一个大块然后将其拆分
 Dialogue: 0,0:19:16.66,0:19:21.60,English,,0,0,0,,And I guess you're assuming that the request would be 4 equally sized objects
-Dialogue: 0,0:19:16.66,0:19:21.60,Chinese,,0,0,0,,而且我猜你假设这个请求是4个大小相同的对象
+Dialogue: 0,0:19:16.66,0:19:21.60,Chinese,,0,0,0,,而且我猜你假设这个请求是 4 个大小相同的对象
 Dialogue: 0,0:19:22.86,0:19:25.02,English,,0,0,0,,And that's a really good strategy actually
 Dialogue: 0,0:19:22.86,0:19:25.02,Chinese,,0,0,0,,这实际上是一个非常好的策略
 Dialogue: 0,0:19:25.32,0:19:31.70,English,,0,0,0,,So if you think that your workload is going to have
@@ -496,6 +508,7 @@ Dialogue: 0,0:20:27.64,0:20:31.40,Chinese,,0,0,0,,现在有一个通用的分配
 Dialogue: 0,0:20:31.76,0:20:33.54,English,,0,0,0,,What's going to be requested that
 Dialogue: 0,0:20:31.76,0:20:33.54,Chinese,,0,0,0,,有什么样子的请求
 Dialogue: 0,0:20:34.76,0:20:42.06,English,,0,0,0,,[student speaking]
+Dialogue: 0,0:20:34.76,0:20:42.06,Chinese,,0,0,0,,学生提问
 Dialogue: 0,0:20:42.38,0:20:46.96,English,,0,0,0,,Absolutely you could do that,you can make general assumptions about the  sort of behavior of your programs
 Dialogue: 0,0:20:42.38,0:20:46.96,Chinese,,0,0,0,,绝对可以这样做，你可以对程序的行为进行一般性的假设
 Dialogue: 0,0:20:46.96,0:20:52.74,English,,0,0,0,,And you know you could run traces or like in the case of malloc lab you could look at the traces
@@ -517,11 +530,13 @@ Dialogue: 0,0:21:20.30,0:21:22.98,Chinese,,0,0,0,,你的工作是我们在系统
 Dialogue: 0,0:21:23.78,0:21:24.22,English,,0,0,0,,Yes
 Dialogue: 0,0:21:23.78,0:21:24.22,Chinese,,0,0,0,,是
 Dialogue: 0,0:21:26.42,0:21:43.22,English,,0,0,0,,[student speaking]
+Dialogue: 0,0:21:26.42,0:21:43.22,Chinese,,0,0,0,,学生提问
 Dialogue: 0,0:21:43.34,0:21:45.50,English,,0,0,0,,Oh oh so the question is why can't we...
 Dialogue: 0,0:21:43.34,0:21:45.50,Chinese,,0,0,0,,哦，哦，问题是为什么我们不能......
 Dialogue: 0,0:21:46.26,0:21:51.22,English,,0,0,0,,Why can't we sort of have separate areas of the heap for the pointers  and the payloads all right
 Dialogue: 0,0:21:46.26,0:21:51.22,Chinese,,0,0,0,,为什么我们不能为指针和有效负载分别拥有堆的独立区域
 Dialogue: 0,0:21:51.98,0:22:00.86,English,,0,0,0,,[student speaking]
+Dialogue: 0,0:21:51.98,0:22:00.86,Chinese,,0,0,0,,学生提问
 Dialogue: 0,0:22:00.86,0:22:04.90,English,,0,0,0,,Oh so the question is why not,why can't we split up payloads
 Dialogue: 0,0:22:00.86,0:22:04.90,Chinese,,0,0,0,,哦，好的，问题是为什么我们不能拆分有效载荷
 Dialogue: 0,0:22:06.18,0:22:08.00,English,,0,0,0,,And link them together with pointers
@@ -629,7 +644,7 @@ Dialogue: 0,0:25:39.74,0:25:43.52,Chinese,,0,0,0,,这非常快，它们具有非
 Dialogue: 0,0:25:44.16,0:25:47.78,English,,0,0,0,,And there's even though ordered lists are I think
 Dialogue: 0,0:25:44.16,0:25:47.78,Chinese,,0,0,0,,我认为即使有序列表也是如此
 Dialogue: 0,0:25:48.52,0:25:54.00,English,,0,0,0,,It's usually nlog(n) to update an order tree a binary ordered tree
-Dialogue: 0,0:25:48.52,0:25:54.00,Chinese,,0,0,0,,通常使用 nlog (n) 更新二叉有序树
+Dialogue: 0,0:25:48.52,0:25:54.00,Chinese,,0,0,0,,通常使用 nlog(n) 更新二叉有序树
 Dialogue: 0,0:25:54.46,0:25:56.84,English,,0,0,0,,The constant factors can be quite large
 Dialogue: 0,0:25:54.46,0:25:56.84,Chinese,,0,0,0,,常数因素可能非常大
 Dialogue: 0,0:25:56.84,0:26:01.46,English,,0,0,0,,And so usually get nailed up with the constant factors of maintaining the tree
@@ -761,7 +776,7 @@ Dialogue: 0,0:30:48.04,0:30:49.26,Chinese,,0,0,0,,这只是空闲清单的一部
 Dialogue: 0,0:30:49.98,0:30:53.84,English,,0,0,0,,And so a route points just the first block in the list and then eventually
 Dialogue: 0,0:30:49.98,0:30:53.84,Chinese,,0,0,0,,因此，路线仅指向列表中的第一个块，然后最终指向
 Dialogue: 0,0:30:56.10,0:31:00.80,English,,0,0,0,,You get to this free block which points to this free block which points to this free block
-Dialogue: 0,0:30:56.10,0:31:00.80,Chinese,,0,0,0,,你到达这个空闲区块，指向这个空闲区块，指向这个空闲街区
+Dialogue: 0,0:30:56.10,0:31:00.80,Chinese,,0,0,0,,你到达这个空闲区块，指向这个空闲区块，指向这个空闲块
 Dialogue: 0,0:31:02.28,0:31:04.06,English,,0,0,0,,Ok so what we have to do then
 Dialogue: 0,0:31:02.28,0:31:04.06,Chinese,,0,0,0,,那么我们必须做什么呢
 Dialogue: 0,0:31:05.26,0:31:11.06,English,,0,0,0,,Is we have to coalesce these two blocks into one big free block
@@ -869,7 +884,7 @@ Dialogue: 0,0:35:08.50,0:35:10.62,Chinese,,0,0,0,,我们是否把它放在列表
 Dialogue: 0,0:35:10.68,0:35:14.02,English,,0,0,0,,Or if we splice it or if we leave it there
 Dialogue: 0,0:35:10.68,0:35:14.02,Chinese,,0,0,0,,或者如果我们拼接它或者我们把它留在那里
 Dialogue: 0,0:35:17.84,0:35:19.86,English,,0,0,0,,And now case 4 is the
-Dialogue: 0,0:35:17.84,0:35:19.86,Chinese,,0,0,0,,而现在案例4就是
+Dialogue: 0,0:35:17.84,0:35:19.86,Chinese,,0,0,0,,而现在案例 4 就是
 Dialogue: 0,0:35:20.80,0:35:24.92,English,,0,0,0,,That's the case where both the predecessor and successor blocks are free
 Dialogue: 0,0:35:20.80,0:35:24.92,Chinese,,0,0,0,,这是前驱和后继块都是空闲的情况
 Dialogue: 0,0:35:26.14,0:35:34.26,English,,0,0,0,,So we have to apply the same splicing technique to both the predecessor block
@@ -899,7 +914,7 @@ Dialogue: 0,0:36:30.30,0:36:31.86,Chinese,,0,0,0,,但我保证
 Dialogue: 0,0:36:32.78,0:36:33.68,English,,0,0,0,,Some the hardest
 Dialogue: 0,0:36:32.78,0:36:33.68,Chinese,,0,0,0,,对于有些人，这里是最难的
 Dialogue: 0,0:36:34.46,0:36:36.40,English,,0,0,0,,It's only like 200 lines of code
-Dialogue: 0,0:36:34.46,0:36:36.40,Chinese,,0,0,0,,它只有200行代码
+Dialogue: 0,0:36:34.46,0:36:36.40,Chinese,,0,0,0,,它只有 200 行代码
 Dialogue: 0,0:36:36.48,0:36:38.40,English,,0,0,0,,But some of the hardest code you'll have to write because
 Dialogue: 0,0:36:36.48,0:36:38.40,Chinese,,0,0,0,,但是你必须编写一些最难的代码，因为
 Dialogue: 0,0:36:40.58,0:36:45.24,English,,0,0,0,,You're sort of free of the c's types us that you have to do everything by explicitly casting
@@ -1076,8 +1091,8 @@ Dialogue: 0,0:42:53.92,0:42:57.24,English,,0,0,0,,On you know a single free list
 Dialogue: 0,0:42:53.92,0:42:57.24,Chinese,,0,0,0,,一个包含所有不同大小类的空闲列表
 Dialogue: 0,0:42:58.08,0:43:03.26,English,,0,0,0,,Okay so search is faster so that increases increases throughput
 Dialogue: 0,0:42:58.08,0:43:03.26,Chinese,,0,0,0,,好的，所以搜索更快，以便增加吞吐量
-Dialogue: 0,0:43:03.84,0:43:06.90,English,,0,0,0,,But the big thing about seflist allocator is that
-Dialogue: 0,0:43:03.84,0:43:06.90,Chinese,,0,0,0,,但是关于 seflist 分配器的重要一点是
+Dialogue: 0,0:43:03.84,0:43:06.90,English,,0,0,0,,But the big thing about seglist allocator is that
+Dialogue: 0,0:43:03.84,0:43:06.90,Chinese,,0,0,0,,但是关于 Seglist 分配器的重要一点是
 Dialogue: 0,0:43:07.50,0:43:12.20,English,,0,0,0,,Like we talked about before they approximate best fit without sacrificing performance
 Dialogue: 0,0:43:07.50,0:43:12.20,Chinese,,0,0,0,,就像我们之前谈到的那样，它们在不牺牲性能的情况下接近最佳匹配
 Dialogue: 0,0:43:12.90,0:43:17.00,English,,0,0,0,,Right before if we wanted to do best fit on a single a free list
@@ -1097,6 +1112,7 @@ Dialogue: 0,0:43:34.46,0:43:38.06,Chinese,,0,0,0,,你知道这是如何提高内
 Dialogue: 0,0:43:38.70,0:43:39.28,English,,0,0,0,,Yes
 Dialogue: 0,0:43:38.70,0:43:39.28,Chinese,,0,0,0,,是
 Dialogue: 0,0:43:39.28,0:43:51.44,English,,0,0,0,,[student speaking]
+Dialogue: 0,0:43:39.28,0:43:51.44,Chinese,,0,0,0,,学生提问
 Dialogue: 0,0:43:51.44,0:43:52.68,English,,0,0,0,,Oh yeah yeah good question
 Dialogue: 0,0:43:51.44,0:43:52.68,Chinese,,0,0,0,,哦，是的好问题
 Dialogue: 0,0:43:52.68,0:43:56.62,English,,0,0,0,,So the question is break constant time
@@ -1124,14 +1140,15 @@ Dialogue: 0,0:44:29.02,0:44:33.50,Chinese,,0,0,0,,但是如果分配太大的块
 Dialogue: 0,0:44:34.10,0:44:36.94,English,,0,0,0,,So it's a trade-off,it's another one of these space-time trade-offs
 Dialogue: 0,0:44:34.10,0:44:36.94,Chinese,,0,0,0,,所以这是一个权衡，这是另一个时空权衡
 Dialogue: 0,0:44:37.68,0:44:38.04,English,,0,0,0,,Question
-Dialogue: 0,0:44:37.68,0:44:38.04,Chinese,,0,0,0,,题
+Dialogue: 0,0:44:37.68,0:44:38.04,Chinese,,0,0,0,,请讲
 Dialogue: 0,0:44:38.04,0:44:40.90,English,,0,0,0,,[student speaking]
+Dialogue: 0,0:44:38.04,0:44:40.90,Chinese,,0,0,0,,学生提问
 Dialogue: 0,0:44:40.96,0:44:42.54,English,,0,0,0,,So where do you store this array of free lists
 Dialogue: 0,0:44:40.96,0:44:42.54,Chinese,,0,0,0,,那么你在哪里存储这个空闲列表数组
 Dialogue: 0,0:44:44.06,0:44:45.70,English,,0,0,0,,So you store it in the beginning of the heap
 Dialogue: 0,0:44:44.06,0:44:45.70,Chinese,,0,0,0,,所以你将它存储在堆的开头
 Dialogue: 0,0:44:48.90,0:44:51.54,English,,0,0,0,,Yeah in fact for your malloc lab we require you to do that
-Dialogue: 0,0:44:48.90,0:44:51.54,Chinese,,0,0,0,,事实上，对于你的 malloc 实验室，我们要求你这样做
+Dialogue: 0,0:44:48.90,0:44:51.54,Chinese,,0,0,0,,事实上，对于你的 malloc lab，我们要求你这样做
 Dialogue: 0,0:44:52.18,0:44:52.66,English,,0,0,0,,We don't know
 Dialogue: 0,0:44:52.18,0:44:52.66,Chinese,,0,0,0,,我们不知道
 Dialogue: 0,0:44:53.14,0:44:54.28,English,,0,0,0,,And the reason is we can't
@@ -1149,9 +1166,9 @@ Dialogue: 0,0:45:18.22,0:45:23.46,Chinese,,0,0,0,,经典参考文献可以使用
 Dialogue: 0,0:45:25.28,0:45:29.06,English,,0,0,0,,And there's also this great paper which you can get from the books website
 Dialogue: 0,0:45:25.28,0:45:29.06,Chinese,,0,0,0,,还有这篇很棒的论文，你可以从书籍网站上获得
 Dialogue: 0,0:45:29.74,0:45:32.28,English,,0,0,0,,From 1995 that does a survey of
-Dialogue: 0,0:45:29.74,0:45:32.28,Chinese,,0,0,0,,从1995年开始进行调查
+Dialogue: 0,0:45:29.74,0:45:32.28,Chinese,,0,0,0,,从 1995 年开始进行调查
 Dialogue: 0,0:45:33.38,0:45:36.06,English,,0,0,0,,You know literate dozens and dozens of techniques like
-Dialogue: 0,0:45:33.38,0:45:36.06,Chinese,,0,0,0,,你知道有数十种技术和数十种技术
+Dialogue: 0,0:45:33.38,0:45:36.06,Chinese,,0,0,0,,你知道有数十种技术
 Dialogue: 0,0:45:36.10,0:45:37.86,English,,0,0,0,,We're just scratching the surface here
 Dialogue: 0,0:45:36.10,0:45:37.86,Chinese,,0,0,0,,我们只是在这里摸索表面
 Dialogue: 0,0:45:38.36,0:45:39.92,English,,0,0,0,,So if you're really interested in this stuff
@@ -1209,7 +1226,7 @@ Dialogue: 0,0:47:25.20,0:47:30.00,Chinese,,0,0,0,,好吧，你可以在所有不
 Dialogue: 0,0:47:30.52,0:47:34.74,English,,0,0,0,,And there's there's there's also variants available for C
 Dialogue: 0,0:47:30.52,0:47:34.74,Chinese,,0,0,0,,而且还有可用于 C 的变体
 Dialogue: 0,0:47:34.74,0:47:38.36,English,,0,0,0,,But because of C's pointer properties
-Dialogue: 0,0:47:34.74,0:47:38.36,Chinese,,0,0,0,,但是因为C的指针属性
+Dialogue: 0,0:47:34.74,0:47:38.36,Chinese,,0,0,0,,但是因为 C 的指针属性
 Dialogue: 0,0:47:38.96,0:47:42.96,English,,0,0,0,,That the garbage collectors for C are conservative in the sense
 Dialogue: 0,0:47:38.96,0:47:42.96,Chinese,,0,0,0,,从某种意义上说，C 的垃圾收集器是保守的
 Dialogue: 0,0:47:42.96,0:47:45.24,English,,0,0,0,,That there's some blocks won't be freed
@@ -1447,7 +1464,7 @@ Dialogue: 0,0:55:55.86,0:55:58.58,Chinese,,0,0,0,,所以它们不是我们维护
 Dialogue: 0,0:55:58.58,0:56:02.36,English,,0,0,0,,These are just pointers that the application has put into those blocks
 Dialogue: 0,0:55:58.58,0:56:02.36,Chinese,,0,0,0,,这些只是应用程序放入这些块的指针
 Dialogue: 0,0:56:03.62,0:56:08.08,English,,0,0,0,,So here we have the root pointing to this the central block
-Dialogue: 0,0:56:03.62,0:56:08.08,Chinese,,0,0,0,,.所以这里我们有根指向这个中心块
+Dialogue: 0,0:56:03.62,0:56:08.08,Chinese,,0,0,0,,所以这里我们有根指向这个中心块
 Dialogue: 0,0:56:08.94,0:56:12.96,English,,0,0,0,,And then there's a pointer that points to this block
 Dialogue: 0,0:56:08.94,0:56:12.96,Chinese,,0,0,0,,然后有一个指向这个块的指针
 Dialogue: 0,0:56:12.96,0:56:15.62,English,,0,0,0,,And there's another pointer that points to this block and
@@ -1471,7 +1488,7 @@ Dialogue: 0,0:56:49.60,0:56:55.28,Chinese,,0,0,0,,应用程序调用 new 来获�
 Dialogue: 0,0:56:57.28,0:57:00.94,English,,0,0,0,,It calls read(b,i) to read location i of block b
 Dialogue: 0,0:56:57.28,0:57:00.94,Chinese,,0,0,0,,它调用 read(b, i) 来读取块 b 的位置 i
 Dialogue: 0,0:57:01.74,0:57:08.14,English,,0,0,0,,And it uses write(b,i,v) to write a value v into location i of block b
-Dialogue: 0,0:57:01.74,0:57:08.14,Chinese,,0,0,0,,并且它使用 write(b, i, v) 将值 v 写入块 b 的位置 i 
+Dialogue: 0,0:57:01.74,0:57:08.14,Chinese,,0,0,0,,并且它使用 write(b, i, v) 将值 v 写入块 b 的位置 i
 Dialogue: 0,0:57:09.08,0:57:13.06,English,,0,0,0,,Then each block will have a header word which will address as b[-1]
 Dialogue: 0,0:57:09.08,0:57:13.06,Chinese,,0,0,0,,然后每个块将有一个头部字，其地址为 b[-1]
 Dialogue: 0,0:57:16.64,0:57:18.24,English,,0,0,0,,And then the garbage collector has
@@ -1609,7 +1626,7 @@ Dialogue: 0,1:02:10.86,1:02:16.14,Chinese,,0,0,0,,所以我打算用一些与内
 Dialogue: 0,1:02:16.66,1:02:24.28,English,,0,0,0,,Some of the perils and pitfalls that that we can run into with with with memory related operations or operations on memory
 Dialogue: 0,1:02:16.66,1:02:24.28,Chinese,,0,0,0,,内存操作可能会遇到的一些危险和陷阱来帮助大家
 Dialogue: 0,1:02:25.24,1:02:29.82,English,,0,0,0,,And opera errors errors involving memory
-Dialogue: 0,1:02:25.24,1:02:29.82,Chinese,,0,0,0,,涉及内存的的错误是 
+Dialogue: 0,1:02:25.24,1:02:29.82,Chinese,,0,0,0,,涉及内存的的错误是
 Dialogue: 0,1:02:30.10,1:02:35.70,English,,0,0,0,,Are the worst the worst kinds of bugs to try to find out
 Dialogue: 0,1:02:30.10,1:02:35.70,Chinese,,0,0,0,,最糟糕的一种漏洞
 Dialogue: 0,1:02:36.96,1:02:39.98,English,,0,0,0,,And the reason is that they're distant in both space and time
@@ -1681,7 +1698,7 @@ Dialogue: 0,1:04:52.70,1:04:56.02,Chinese,,0,0,0,,因为使用这些运算符声
 Dialogue: 0,1:04:56.70,1:05:01.08,English,,0,0,0,,And so my copy of k and r is it has a dog-eared at page 53
 Dialogue: 0,1:04:56.70,1:05:01.08,Chinese,,0,0,0,,此内容在 k&r 第53页
 Dialogue: 0,1:05:01.48,1:05:04.34,English,,0,0,0,,This table comes from page 53 of K&R
-Dialogue: 0,1:05:01.48,1:05:04.34,Chinese,,0,0,0,,此表来自 K&R的第53页
+Dialogue: 0,1:05:01.48,1:05:04.34,Chinese,,0,0,0,,此表来自 K&R 的第 53 页
 Dialogue: 0,1:05:05.12,1:05:09.22,English,,0,0,0,,And you should have a paper clip or have that folded over for reference
 Dialogue: 0,1:05:05.12,1:05:09.22,Chinese,,0,0,0,,你应该有一个回形针或将它折叠起来作为参考
 Dialogue: 0,1:05:10.66,1:05:12.42,English,,0,0,0,,Now the thing to notice is that
@@ -1717,7 +1734,7 @@ Dialogue: 0,1:06:11.66,1:06:15.90,Chinese,,0,0,0,,构造一个英语句子，准
 Dialogue: 0,1:06:17.04,1:06:20.54,English,,0,0,0,,What that definition of the pointer means
 Dialogue: 0,1:06:17.04,1:06:20.54,Chinese,,0,0,0,,指针的定义意味着什么
 Dialogue: 0,1:06:21.48,1:06:25.32,English,,0,0,0,,Okay and if you're interested it's in the K&R are in section 5.12
-Dialogue: 0,1:06:21.48,1:06:25.32,Chinese,,0,0,0,,好的，如果你对 K&R 感兴趣，请参阅第5.12节
+Dialogue: 0,1:06:21.48,1:06:25.32,Chinese,,0,0,0,,好的，如果你对 K&R 感兴趣，请参阅第 5.12 节
 Dialogue: 0,1:06:26.38,1:06:28.60,English,,0,0,0,,But I'll explain it to you now
 Dialogue: 0,1:06:26.38,1:06:28.60,Chinese,,0,0,0,,但我现在会向你解释
 Dialogue: 0,1:06:29.80,1:06:33.58,English,,0,0,0,,Now I don't know how much in this class you're going to remember
@@ -1863,7 +1880,7 @@ Dialogue: 0,1:12:26.26,1:12:27.64,Chinese,,0,0,0,,好的，所以你去那里
 Dialogue: 0,1:12:28.22,1:12:30.06,English,,0,0,0,,Now you know now you understand pointers
 Dialogue: 0,1:12:28.22,1:12:30.06,Chinese,,0,0,0,,现在你知道了解你的指针
 Dialogue: 0,1:12:30.32,1:12:34.82,English,,0,0,0,,Simple as can be and all you need is page 53 of K&R is a handy reference
-Dialogue: 0,1:12:30.32,1:12:34.82,Chinese,,0,0,0,,尽可能简单，所需要的只是 K&R 的第53页是一个方便的参考
+Dialogue: 0,1:12:30.32,1:12:34.82,Chinese,,0,0,0,,尽可能简单，所需要的只是 K&R 的第 53 页是一个方便的参考
 Dialogue: 0,1:12:36.24,1:12:39.36,English,,0,0,0,,All right so let's we'll take the last five minutes and I'll show you some
 Dialogue: 0,1:12:36.24,1:12:39.36,Chinese,,0,0,0,,好吧，让我们在最后五分钟，我会告诉你一些
 Dialogue: 0,1:12:40.70,1:12:42.40,English,,0,0,0,,Some of the ways you can trip yourself up
@@ -1879,7 +1896,7 @@ Dialogue: 0,1:12:56.82,1:13:02.96,Chinese,,0,0,0,,所以 scanf 不知道把数�
 Dialogue: 0,1:13:04.52,1:13:07.68,English,,0,0,0,,Okay another common mistake is to read uninitialized memory
 Dialogue: 0,1:13:04.52,1:13:07.68,Chinese,,0,0,0,,好的另一个常见错误是读取未初始化的内存
 Dialogue: 0,1:13:07.68,1:13:10.90,English,,0,0,0,,So suit you can't really assume that your heap data is initialized to 0
-Dialogue: 0,1:13:07.68,1:13:10.90,Chinese,,0,0,0,,因此，你不能真正假设你的堆数据初始化为0
+Dialogue: 0,1:13:07.68,1:13:10.90,Chinese,,0,0,0,,因此，你不能真正假设你的堆数据初始化为 0
 Dialogue: 0,1:13:11.96,1:13:16.82,English,,0,0,0,,So here we're we're malloc an array of an int
 Dialogue: 0,1:13:11.96,1:13:16.82,Chinese,,0,0,0,,所以这里我们是 malloc 一个 int 的数组
 Dialogue: 0,1:13:17.24,1:13:18.72,English,,0,0,0,,And then we're going through and we're doing
@@ -1911,7 +1928,7 @@ Dialogue: 0,1:14:10.42,1:14:12.06,Chinese,,0,0,0,,哪条线路有问题
 Dialogue: 0,1:14:17.72,1:14:19.26,English,,0,0,0,,This one or this one
 Dialogue: 0,1:14:17.72,1:14:19.26,Chinese,,0,0,0,,这一个或这一个
 Dialogue: 0,1:14:20.76,1:14:23.42,English,,0,0,0,,The first one right because we really want size event star
-Dialogue: 0,1:14:20.76,1:14:23.42,Chinese,,0,0,0,,第一个，因为我们真的想要是 「*」 
+Dialogue: 0,1:14:20.76,1:14:23.42,Chinese,,0,0,0,,第一个，因为我们真的想要是 「*」
 Dialogue: 0,1:14:24.40,1:14:29.30,English,,0,0,0,,Right so we're erroneous incorrectly assuming that int are the same sizes as pointers
 Dialogue: 0,1:14:24.40,1:14:29.30,Chinese,,0,0,0,,是的，所以我们错误地认为 int 与指针的大小相同
 Dialogue: 0,1:14:30.84,1:14:32.26,English,,0,0,0,,This is a classic
@@ -1957,7 +1974,7 @@ Dialogue: 0,1:15:48.16,1:15:51.08,Chinese,,0,0,0,,如果你将 int* 递增一
 Dialogue: 0,1:15:51.60,1:15:53.42,English,,0,0,0,,It actually increments it by 4
 Dialogue: 0,1:15:51.60,1:15:53.42,Chinese,,0,0,0,,它实际上将它增加4
 Dialogue: 0,1:15:54.20,1:15:55.36,English,,0,0,0,,Because that's the size of an int
-Dialogue: 0,1:15:54.20,1:15:55.36,Chinese,,0,0,0,,因为那是int的大小
+Dialogue: 0,1:15:54.20,1:15:55.36,Chinese,,0,0,0,,因为那是 int 的大小
 Dialogue: 0,1:15:58.04,1:16:00.24,English,,0,0,0,,He's got that's a really important distinction
 Dialogue: 0,1:15:58.04,1:16:00.24,Chinese,,0,0,0,,他有这个非常重要的区别
 Dialogue: 0,1:16:00.86,1:16:03.14,English,,0,0,0,,And so people will often
@@ -2067,7 +2084,7 @@ Dialogue: 0,1:19:36.96,1:19:39.48,Chinese,,0,0,0,,那块将永远留在那里因
 Dialogue: 0,1:19:43.58,1:19:47.20,English,,0,0,0,,Okay so there's a number of ways to deal with memory bugs
 Dialogue: 0,1:19:43.58,1:19:47.20,Chinese,,0,0,0,,好的，有很多方法可以处理内存错误
 Dialogue: 0,1:19:47.20,1:19:51.86,English,,0,0,0,,GDB is sometimes good at least it'll tell you where a segfault occurs
-Dialogue: 0,1:19:47.20,1:19:51.86,Chinese,,0,0,0,,GDB有时候很好，它至少可以告诉你 segfault 发生在哪里
+Dialogue: 0,1:19:47.20,1:19:51.86,Chinese,,0,0,0,,GDB 有时候很好，它至少可以告诉你 segfault 发生在哪里
 Dialogue: 0,1:19:52.52,1:19:54.48,English,,0,0,0,,Then you got to track down what the right that
 Dialogue: 0,1:19:52.52,1:19:54.48,Chinese,,0,0,0,,然后你必须找到正确的
 Dialogue: 0,1:19:55.22,1:19:56.78,English,,0,0,0,,Sort of caused that segfault
@@ -2075,7 +2092,7 @@ Dialogue: 0,1:19:55.22,1:19:56.78,Chinese,,0,0,0,,排序导致了段错误的位
 Dialogue: 0,1:19:58.64,1:19:59.92,English,,0,0,0,,The best thing you can do
 Dialogue: 0,1:19:58.64,1:19:59.92,Chinese,,0,0,0,,你能做的最好的事情
 Dialogue: 0,1:20:00.56,1:20:06.18,English,,0,0,0,,But GDB falls down whenever you're doing manipulation of complex data structures
-Dialogue: 0,1:20:00.56,1:20:06.18,Chinese,,0,0,0,,但是，只要你正在操纵复杂的数据结构，GDB 就会崩溃 
+Dialogue: 0,1:20:00.56,1:20:06.18,Chinese,,0,0,0,,但是，只要你正在操纵复杂的数据结构，GDB 就会崩溃
 Dialogue: 0,1:20:06.82,1:20:09.54,English,,0,0,0,,It's just simple sort of looking one instruction at a time
 Dialogue: 0,1:20:06.82,1:20:09.54,Chinese,,0,0,0,,它只是简单地一次查看一条指令
 Dialogue: 0,1:20:10.00,1:20:14.74,English,,0,0,0,,What you really need to do is identify any complex data structure like a heap for example
