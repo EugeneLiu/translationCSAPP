@@ -15,15 +15,15 @@ Audio File: ../../../../Desktop/csapp/Lecture 20  Dynamic Memory Allocation  Adv
 Video File: ../../../../Desktop/csapp/Lecture 20  Dynamic Memory Allocation  Advanced Concepts.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
-Video Zoom Percent: 1.125000
-Scroll Position: 2054
-Active Line: 2057
-Video Position: 143616
+Video Zoom Percent: 0.875000
+Scroll Position: 2117
+Active Line: 2137
+Video Position: 148461
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: English,Noto Sans CJK SC Black,30,&H00FFFFFF,&H00412A2C,&H00412A2C,&H00412A2C,0,0,0,0,100,100,0,0,1,1.5,1.2,2,10,10,10,1
-Style: Chinese,Noto Sans CJK SC Black,40,&H00FFFF00,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1.2,1.2,2,10,10,10,1
+Style: Chinese,Noto Sans CJK SC Black,50,&H00FFFF00,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1.2,1.2,2,10,10,10,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -126,6 +126,7 @@ Dialogue: 0,0:04:16.84,0:04:23.30,Chinese,,0,0,0,,我们最好用 P(K) 来除以
 Dialogue: 0,0:04:23.72,0:04:25.08,English,,0,0,0,,Okay so yes
 Dialogue: 0,0:04:23.72,0:04:25.08,Chinese,,0,0,0,,好的，是的
 Dialogue: 0,0:04:25.08,0:04:29.82,English,,0,0,0,,[student speaking]
+Dialogue: 0,0:04:25.08,0:04:29.82,Chinese,,0,0,0,,学生提问
 Dialogue: 0,0:04:31.12,0:04:34.56,English,,0,0,0,,Well that the allocator keeps track of of how big the heap
 Dialogue: 0,0:04:31.12,0:04:34.56,Chinese,,0,0,0,,那么分配器会跟踪堆的大小
 Dialogue: 0,0:04:35.92,0:04:36.96,English,,0,0,0,,So that's pretty easy right
@@ -367,6 +368,7 @@ Dialogue: 0,0:14:12.42,0:14:16.62,Chinese,,0,0,0,,如果有我不知道他们，
 Dialogue: 0,0:14:20.30,0:14:20.82,English,,0,0,0,,Yes
 Dialogue: 0,0:14:20.30,0:14:20.82,Chinese,,0,0,0,,是
 Dialogue: 0,0:14:20.82,0:14:39.14,English,,0,0,0,,[student speaking]
+Dialogue: 0,0:14:20.82,0:14:39.14,Chinese,,0,0,0,,学生提问
 Dialogue: 0,0:14:39.14,0:14:43.76,English,,0,0,0,,Oh well so the question is what if you ended up with a free block
 Dialogue: 0,0:14:39.14,0:14:43.76,Chinese,,0,0,0,,哦，那么问题就是如果你最终得到了一个空闲区块
 Dialogue: 0,0:14:44.22,0:14:47.40,English,,0,0,0,,That's a single block surrounded by 2 allocated blocks
@@ -1120,19 +1122,19 @@ Dialogue: 0,0:43:52.68,0:43:56.62,Chinese,,0,0,0,,所以问题是是打破常数
 Dialogue: 0,0:43:57.12,0:43:58.68,English,,0,0,0,,It is but it's very expensive
 Dialogue: 0,0:43:57.12,0:43:58.68,Chinese,,0,0,0,,这是非常昂贵的
 Dialogue: 0,0:43:59.32,0:44:03.80,English,,0,0,0,,So it's a syscall so it has to pass from user space into the kernel that involves
-Dialogue: 0,0:43:59.32,0:44:03.80,Chinese,,0,0,0,,所以它是一个系统调用，所以它必须从用户空间传递到涉及的内核
+Dialogue: 0,0:43:59.32,0:44:03.80,Chinese,,0,0,0,,所以它是一个系统调用，所以它必须从用户空间传递到内核
 Dialogue: 0,0:44:04.56,0:44:06.54,English,,0,0,0,,Changing contacts changing stacks
-Dialogue: 0,0:44:04.56,0:44:06.54,Chinese,,0,0,0,,更改联系人更改堆栈
+Dialogue: 0,0:44:04.56,0:44:06.54,Chinese,,0,0,0,,更改调用人更改堆栈
 Dialogue: 0,0:44:08.04,0:44:08.82,English,,0,0,0,,So syscalls
 Dialogue: 0,0:44:08.04,0:44:08.82,Chinese,,0,0,0,,系统调用
 Dialogue: 0,0:44:10.32,0:44:15.70,English,,0,0,0,,Generally you can count on syscall being like several hundred microseconds
 Dialogue: 0,0:44:10.32,0:44:15.70,Chinese,,0,0,0,,一般来说，你可以指望系统调用几百微秒
 Dialogue: 0,0:44:16.52,0:44:18.54,English,,0,0,0,,Okay it's a non-trivial overhead
-Dialogue: 0,0:44:16.52,0:44:18.54,Chinese,,0,0,0,,好吧，这是一个非常重要的开销
+Dialogue: 0,0:44:16.52,0:44:18.54,Chinese,,0,0,0,,但这是一个非常大的开销
 Dialogue: 0,0:44:20.24,0:44:22.10,English,,0,0,0,,And so in that case you wouldn't want
 Dialogue: 0,0:44:20.24,0:44:22.10,Chinese,,0,0,0,,所以在这种情况下
 Dialogue: 0,0:44:22.10,0:44:25.36,English,,0,0,0,,You want to amortize the cost of the break
-Dialogue: 0,0:44:22.10,0:44:25.36,Chinese,,0,0,0,,你想摊还休息的费用
+Dialogue: 0,0:44:22.10,0:44:25.36,Chinese,,0,0,0,,你要分摊中断的开销
 Dialogue: 0,0:44:25.96,0:44:28.26,English,,0,0,0,,By allocating is somewhat larger chunk
 Dialogue: 0,0:44:25.96,0:44:28.26,Chinese,,0,0,0,,通过分配是一个更大的块
 Dialogue: 0,0:44:29.02,0:44:33.50,English,,0,0,0,,But you have to be careful if you allocate too large of a chunk then your memory utilization goes down
@@ -1162,7 +1164,7 @@ Dialogue: 0,0:45:03.46,0:45:05.12,Chinese,,0,0,0,,所以它应该在堆的开头
 Dialogue: 0,0:45:13.20,0:45:17.40,English,,0,0,0,,Okay there's an allocators have been around forever and
 Dialogue: 0,0:45:13.20,0:45:17.40,Chinese,,0,0,0,,好的，分配器已经永远存在了
 Dialogue: 0,0:45:18.22,0:45:23.46,English,,0,0,0,,That the the classic references can use 1973 text
-Dialogue: 0,0:45:18.22,0:45:23.46,Chinese,,0,0,0,,经典参考文献可以使用1973文本
+Dialogue: 0,0:45:18.22,0:45:23.46,Chinese,,0,0,0,,经典参考文献可以追溯到 1973
 Dialogue: 0,0:45:25.28,0:45:29.06,English,,0,0,0,,And there's also this great paper which you can get from the books website
 Dialogue: 0,0:45:25.28,0:45:29.06,Chinese,,0,0,0,,还有这篇很棒的论文，你可以从书籍网站上获得
 Dialogue: 0,0:45:29.74,0:45:32.28,English,,0,0,0,,From 1995 that does a survey of
@@ -1196,13 +1198,13 @@ Dialogue: 0,0:46:24.24,0:46:27.82,Chinese,,0,0,0,,所以永远不能再引用的
 Dialogue: 0,0:46:28.94,0:46:30.18,English,,0,0,0,,And then free up those blocks
 Dialogue: 0,0:46:28.94,0:46:30.18,Chinese,,0,0,0,,然后释放那些块
 Dialogue: 0,0:46:32.78,0:46:38.44,English,,0,0,0,,Okay so what's garbage well here's an example we have a function foo  that malloc 128 bytes
-Dialogue: 0,0:46:32.78,0:46:38.44,Chinese,,0,0,0,,好的，这里有什么垃圾好的例子我们有一个函数 foo，即 malloc 128 字节
+Dialogue: 0,0:46:32.78,0:46:38.44,Chinese,,0,0,0,,那有什么垃圾？举个例子，我们有一个函数 foo 里面使用 malloc 分配了 128 字节
 Dialogue: 0,0:46:39.26,0:46:41.72,English,,0,0,0,,It stores the address in this pointer p
-Dialogue: 0,0:46:39.26,0:46:41.72,Chinese,,0,0,0,,它将地址存储在该指针p中
+Dialogue: 0,0:46:39.26,0:46:41.72,Chinese,,0,0,0,,它将地址存储在该指针 p 中
 Dialogue: 0,0:46:42.88,0:46:45.86,English,,0,0,0,,And then at some point when it returns from foo
-Dialogue: 0,0:46:42.88,0:46:45.86,Chinese,,0,0,0,,然后在从foo返回的某个时刻
+Dialogue: 0,0:46:42.88,0:46:45.86,Chinese,,0,0,0,,然后返回
 Dialogue: 0,0:46:46.64,0:46:50.26,English,,0,0,0,,This pointer is lost forever right because p is a local variable on the stack
-Dialogue: 0,0:46:46.64,0:46:50.26,Chinese,,0,0,0,,这个指针永远丢失，因为p是堆栈上的局部变量
+Dialogue: 0,0:46:46.64,0:46:50.26,Chinese,,0,0,0,,这个指针永远丢失，因为 p 是堆栈上的局部变量
 Dialogue: 0,0:46:50.98,0:46:53.46,English,,0,0,0,,So once this function returns
 Dialogue: 0,0:46:50.98,0:46:53.46,Chinese,,0,0,0,,一旦这个函数返回
 Dialogue: 0,0:46:54.14,0:46:59.10,English,,0,0,0,,That the block of memory pointed to by p is garbage can never be referenced again
@@ -1234,15 +1236,15 @@ Dialogue: 0,0:47:42.96,0:47:45.24,Chinese,,0,0,0,,有一些块将不会被释放
 Dialogue: 0,0:47:45.48,0:47:48.42,English,,0,0,0,,There's some garbage blocks that won't be free
 Dialogue: 0,0:47:45.48,0:47:48.42,Chinese,,0,0,0,,有些垃圾块不会释放
 Dialogue: 0,0:47:48.42,0:47:54.72,English,,0,0,0,,Because the allocator can't determine that they are indeed garbage
-Dialogue: 0,0:47:48.42,0:47:54.72,Chinese,,0,0,0,,因为分配器无法确定它们确实是垃圾
+Dialogue: 0,0:47:48.42,0:47:54.72,Chinese,,0,0,0,,因为分配器无法确定它们是垃圾
 Dialogue: 0,0:47:55.10,0:47:57.42,English,,0,0,0,,So it has to be careful when it whenever there's a doubt
 Dialogue: 0,0:47:55.10,0:47:57.42,Chinese,,0,0,0,,因此，只要有疑问，就必须小心
 Dialogue: 0,0:47:58.08,0:48:02.94,English,,0,0,0,,It it leaves it doesn't reclaim the allocated block
-Dialogue: 0,0:47:58.08,0:48:02.94,Chinese,,0,0,0,,它不回收分配的块
+Dialogue: 0,0:47:58.08,0:48:02.94,Chinese,,0,0,0,,所以不会回收这些分配的块
 Dialogue: 0,0:48:07.04,0:48:12.16,English,,0,0,0,,So it gets to this question of like how does the memory manager know when memory can be free
 Dialogue: 0,0:48:07.04,0:48:12.16,Chinese,,0,0,0,,所以有这样一个问题，内存管理器如何知道内存何时可以被释放
 Dialogue: 0,0:48:13.18,0:48:15.52,English,,0,0,0,,And you know if we knew
-Dialogue: 0,0:48:13.18,0:48:15.52,Chinese,,0,0,0,,而且你知道我们是否知道
+Dialogue: 0,0:48:13.18,0:48:15.52,Chinese,,0,0,0,,而且
 Dialogue: 0,0:48:16.50,0:48:19.44,English,,0,0,0,,If somehow we knew we could predict all of the future requests
 Dialogue: 0,0:48:16.50,0:48:19.44,Chinese,,0,0,0,,如果以某种方式我们知道我们可以预测所有未来的请求
 Dialogue: 0,0:48:20.28,0:48:24.94,English,,0,0,0,,And then if we knew that there were no future requests access that block then we could free it
@@ -1250,7 +1252,7 @@ Dialogue: 0,0:48:20.28,0:48:24.94,Chinese,,0,0,0,,然后，如果我们知道将
 Dialogue: 0,0:48:25.62,0:48:26.88,English,,0,0,0,,Okay but we can't predict that
 Dialogue: 0,0:48:25.62,0:48:26.88,Chinese,,0,0,0,,好的，但我们无法预测
 Dialogue: 0,0:48:28.64,0:48:29.64,English,,0,0,0,,Okay so we have to
-Dialogue: 0,0:48:28.64,0:48:29.64,Chinese,,0,0,0,,所以我们必须这样做
+Dialogue: 0,0:48:28.64,0:48:29.64,Chinese,,0,0,0,,所以我们可以......
 Dialogue: 0,0:48:31.66,0:48:32.94,English,,0,0,0,,But if there's no pointers
 Dialogue: 0,0:48:31.66,0:48:32.94,Chinese,,0,0,0,,但如果没有指针
 Dialogue: 0,0:48:33.48,0:48:37.44,English,,0,0,0,,If no pointers exist to a particular block then we know that it can't be accessed
@@ -1290,7 +1292,7 @@ Dialogue: 0,0:49:45.92,0:49:49.78,Chinese,,0,0,0,,如果它指向一个块的内
 Dialogue: 0,0:49:50.92,0:49:52.80,English,,0,0,0,,You know how do we know how big that block is
 Dialogue: 0,0:49:50.92,0:49:52.80,Chinese,,0,0,0,,你知道我们怎么知道那个块有多大
 Dialogue: 0,0:49:53.24,0:49:58.14,English,,0,0,0,,All right so it has to point to the beginning of the block where the header  tells us the size and
-Dialogue: 0,0:49:53.24,0:49:58.14,Chinese,,0,0,0,,好吧所以它必须指向块的开头，头部告诉我们大小和
+Dialogue: 0,0:49:53.24,0:49:58.14,Chinese,,0,0,0,,所以它必须指向块的开头，头部告诉我们块大小
 Dialogue: 0,0:50:00.98,0:50:03.14,English,,0,0,0,,The and there can't be a way to hide pointers
 Dialogue: 0,0:50:00.98,0:50:03.14,Chinese,,0,0,0,,并且没有办法隐藏指针
 Dialogue: 0,0:50:03.14,0:50:06.66,English,,0,0,0,,The point that the property of being a pointer has to be some kind of static
@@ -1304,17 +1306,17 @@ Dialogue: 0,0:50:13.04,0:50:15.60,Chinese,,0,0,0,,如果你正在考虑究竟如
 Dialogue: 0,0:50:15.60,0:50:18.76,English,,0,0,0,,So those are some of the challenges that they present
 Dialogue: 0,0:50:15.60,0:50:18.76,Chinese,,0,0,0,,所以这些是他们提出的一些挑战
 Dialogue: 0,0:50:19.38,0:50:25.54,English,,0,0,0,,And because of that this is this been a the history of research and garbage collectors is old
-Dialogue: 0,0:50:19.38,0:50:25.54,Chinese,,0,0,0,,而正因为如此，这是研究它的历史，垃圾手机非常古老
+Dialogue: 0,0:50:19.38,0:50:25.54,Chinese,,0,0,0,,而正因为如此，这是研究它的历史，垃圾回收是一个非常古老问题
 Dialogue: 0,0:50:26.00,0:50:28.04,English,,0,0,0,,Its ancient and ongoing
 Dialogue: 0,0:50:26.00,0:50:28.04,Chinese,,0,0,0,,它古老而持续
 Dialogue: 0,0:50:28.14,0:50:32.74,English,,0,0,0,,It's still it's still ongoing today particularly in the context of parallel programs
-Dialogue: 0,0:50:28.14,0:50:32.74,Chinese,,0,0,0,,它仍然在今天仍在继续，特别是在并行程序的背景下
+Dialogue: 0,0:50:28.14,0:50:32.74,Chinese,,0,0,0,,今天仍在继续研究，特别是在并行程序的背景下
 Dialogue: 0,0:50:32.78,0:50:36.44,English,,0,0,0,,And garbage collecting programs that are running multiple threads
-Dialogue: 0,0:50:32.78,0:50:36.44,Chinese,,0,0,0,,垃圾收集程序运行多个线程
+Dialogue: 0,0:50:32.78,0:50:36.44,Chinese,,0,0,0,,程序运行多个线程进行垃圾回收
 Dialogue: 0,0:50:37.10,0:50:38.50,English,,0,0,0,,So there's a whole bunch of these things
 Dialogue: 0,0:50:37.10,0:50:38.50,Chinese,,0,0,0,,所以这里有很多东西
 Dialogue: 0,0:50:40.24,0:50:43.00,English,,0,0,0,,That people have looked at going all the way back to 1960
-Dialogue: 0,0:50:40.24,0:50:43.00,Chinese,,0,0,0,,人们已经看到了一直追溯到1960年
+Dialogue: 0,0:50:40.24,0:50:43.00,Chinese,,0,0,0,,人们研究它的历史能一直追溯到 1960 年
 Dialogue: 0,0:50:44.44,0:50:47.34,English,,0,0,0,,Today we'll look at we'll look at the simplest
 Dialogue: 0,0:50:44.44,0:50:47.34,Chinese,,0,0,0,,今天我们来看看最简单的
 Dialogue: 0,0:50:48.06,0:50:50.18,English,,0,0,0,,What one of the simpler variants called mark-and-sweep
@@ -1322,7 +1324,7 @@ Dialogue: 0,0:50:48.06,0:50:50.18,Chinese,,0,0,0,,其中之一称为「标记和
 Dialogue: 0,0:50:50.40,0:50:51.94,English,,0,0,0,,And we won't discuss the rest
 Dialogue: 0,0:50:50.40,0:50:51.94,Chinese,,0,0,0,,我们不会讨论其余的问题
 Dialogue: 0,0:50:52.58,0:50:57.12,English,,0,0,0,,But if you're interested in them there's a pretty good book that describes that describes these things
-Dialogue: 0,0:50:52.58,0:50:57.12,Chinese,,0,0,0,,但是，如果你对它们感兴趣，那么有一本非常好的书可以描述这些内容
+Dialogue: 0,0:50:52.58,0:50:57.12,Chinese,,0,0,0,,但是，如果你对它们感兴趣，有一本非常好的书介绍这些内容
 Dialogue: 0,0:51:00.24,0:51:01.86,English,,0,0,0,,All right so how do we build an allocator
 Dialogue: 0,0:51:00.24,0:51:01.86,Chinese,,0,0,0,,好的，我们如何建立一个分配器
 Dialogue: 0,0:51:02.66,0:51:05.16,English,,0,0,0,,So we start by viewing memory as a directed graph
@@ -1406,7 +1408,7 @@ Dialogue: 0,0:53:41.30,0:53:45.18,Chinese,,0,0,0,,而且你只是以完全相同
 Dialogue: 0,0:53:45.70,0:53:48.40,English,,0,0,0,,By whatever different definition you want to use of running out of space
 Dialogue: 0,0:53:45.70,0:53:48.40,Chinese,,0,0,0,,通过任何不同的定义，你希望使空间不足
 Dialogue: 0,0:53:48.40,0:53:51.78,English,,0,0,0,,Maybe you have some kind of maximum heap size you're willing to use
-Dialogue: 0,0:53:48.40,0:53:51.78,Chinese,,0,0,0,,也许你有一些你愿意使用的最大大小的堆
+Dialogue: 0,0:53:48.40,0:53:51.78,Chinese,,0,0,0,,也许你愿意使用的最大的堆
 Dialogue: 0,0:53:52.16,0:53:55.40,English,,0,0,0,,Or at some point the os will just stop giving you virtual memory
 Dialogue: 0,0:53:52.16,0:53:55.40,Chinese,,0,0,0,,或者在某些时候，操作系统将停止为你提供虚拟内存
 Dialogue: 0,0:53:56.94,0:53:58.08,English,,0,0,0,,When you run out of space
@@ -1421,14 +1423,14 @@ Dialogue: 0,0:54:12.06,0:54:14.14,English,,0,0,0,,So we can denote one of those 
 Dialogue: 0,0:54:12.06,0:54:14.14,Chinese,,0,0,0,,所以我们可以将其中一个表示为标记位
 Dialogue: 0,0:54:15.42,0:54:17.48,English,,0,0,0,,And then we are garbage collection
 Dialogue: 0,0:54:15.42,0:54:17.48,Chinese,,0,0,0,,然后我们是垃圾收集
-Dialogue: 0,0:54:20.30,0:54:24.28,English,,0,0,0,,Our garbage collection phase when we run out of space consists of 2
-Dialogue: 0,0:54:20.30,0:54:24.28,Chinese,,0,0,0,,当我们用完空间时，我们的垃圾收集阶段包括2
-Dialogue: 0,0:54:25.22,0:54:28.86,English,,0,0,0,,Two different sub phases one is the mark phase which starts at all the roots
-Dialogue: 0,0:54:25.22,0:54:28.86,Chinese,,0,0,0,,两个不同的子阶段之一是从所有根开始的标记阶段
+Dialogue: 0,0:54:20.30,0:54:26.28,English,,0,0,0,,Our garbage collection phase when we run out of space consists of two different sub phases
+Dialogue: 0,0:54:20.30,0:54:26.28,Chinese,,0,0,0,,当我们用完空间时，我们的垃圾回收包括两个不同的子阶段
+Dialogue: 0,0:54:26.28,0:54:28.86,English,,0,0,0,, One is the mark phase which starts at all the roots
+Dialogue: 0,0:54:26.28,0:54:28.86,Chinese,,0,0,0,,之一是从所有根节点开始的标记
 Dialogue: 0,0:54:29.66,0:54:32.88,English,,0,0,0,,And then and it just traverses this from the roots
 Dialogue: 0,0:54:29.66,0:54:32.88,Chinese,,0,0,0,,然后它只是从根结点上穿过它
 Dialogue: 0,0:54:32.88,0:54:36.00,English,,0,0,0,,It traverses the set of of nodes
-Dialogue: 0,0:54:32.88,0:54:36.00,Chinese,,0,0,0,,它遍历节点集
+Dialogue: 0,0:54:32.88,0:54:36.00,Chinese,,0,0,0,,遍历所有节点
 Dialogue: 0,0:54:36.00,0:54:39.90,English,,0,0,0,,That are reachable from the root and it sets the mark bit in each one of those nodes
 Dialogue: 0,0:54:36.00,0:54:39.90,Chinese,,0,0,0,,可从根访问，并在每个节点中设置标记位
 Dialogue: 0,0:54:40.60,0:54:47.54,English,,0,0,0,,Okay and then once after you finish marking all of the reachable blocks
@@ -1438,9 +1440,9 @@ Dialogue: 0,0:54:47.96,0:54:51.36,Chinese,,0,0,0,,然后从堆的最开始扫描
 Dialogue: 0,0:54:52.26,0:54:57.30,English,,0,0,0,,And you look for all allocated blocks that aren't marked
 Dialogue: 0,0:54:52.26,0:54:57.30,Chinese,,0,0,0,,并且查找未标记的所有已分配块
 Dialogue: 0,0:54:58.36,0:55:00.78,English,,0,0,0,,So they're not marked they're not reachable in their garbage
-Dialogue: 0,0:54:58.36,0:55:00.78,Chinese,,0,0,0,,所以它们没有标记，它们是垃圾，没有办法遍历到
+Dialogue: 0,0:54:58.36,0:55:00.78,Chinese,,0,0,0,,所以它们没有标记没有办法遍历到几点就是垃圾
 Dialogue: 0,0:55:02.88,0:55:10.96,English,,0,0,0,,So first, you do a search from the roots
-Dialogue: 0,0:55:02.88,0:55:10.96,Chinese,,0,0,0,,首先，你从根源搜索
+Dialogue: 0,0:55:02.88,0:55:10.96,Chinese,,0,0,0,,首先，你从根节点开始搜索
 Dialogue: 0,0:55:10.98,0:55:12.94,English,,0,0,0,,And then you do a sweep of the entire heap
 Dialogue: 0,0:55:10.98,0:55:12.94,Chinese,,0,0,0,,然后你扫描整个堆
 Dialogue: 0,0:55:18.14,0:55:22.52,English,,0,0,0,,So let's say before the marks
@@ -1464,7 +1466,7 @@ Dialogue: 0,0:55:55.86,0:55:58.58,Chinese,,0,0,0,,所以它们不是我们维护
 Dialogue: 0,0:55:58.58,0:56:02.36,English,,0,0,0,,These are just pointers that the application has put into those blocks
 Dialogue: 0,0:55:58.58,0:56:02.36,Chinese,,0,0,0,,这些只是应用程序放入这些块的指针
 Dialogue: 0,0:56:03.62,0:56:08.08,English,,0,0,0,,So here we have the root pointing to this the central block
-Dialogue: 0,0:56:03.62,0:56:08.08,Chinese,,0,0,0,,所以这里我们有根指向这个中心块
+Dialogue: 0,0:56:03.62,0:56:08.08,Chinese,,0,0,0,,这里我们有根指向这个中心块
 Dialogue: 0,0:56:08.94,0:56:12.96,English,,0,0,0,,And then there's a pointer that points to this block
 Dialogue: 0,0:56:08.94,0:56:12.96,Chinese,,0,0,0,,然后有一个指向这个块的指针
 Dialogue: 0,0:56:12.96,0:56:15.62,English,,0,0,0,,And there's another pointer that points to this block and
@@ -1474,7 +1476,7 @@ Dialogue: 0,0:56:16.18,0:56:18.76,Chinese,,0,0,0,,并且此块中有一个指针
 Dialogue: 0,0:56:20.72,0:56:22.00,English,,0,0,0,,So after we do the mark
 Dialogue: 0,0:56:20.72,0:56:22.00,Chinese,,0,0,0,,所以在我们做了标记之后
 Dialogue: 0,0:56:22.78,0:56:25.96,English,,0,0,0,,And we search this we search these and then
-Dialogue: 0,0:56:22.78,0:56:25.96,Chinese,,0,0,0,,我们搜索这个搜索这些然后
+Dialogue: 0,0:56:22.78,0:56:25.96,Chinese,,0,0,0,,我们搜索这些之后
 Dialogue: 0,0:56:26.52,0:56:30.58,English,,0,0,0,,All of the reachable blocks have the mark bit set which is denoted by pink
 Dialogue: 0,0:56:26.52,0:56:30.58,Chinese,,0,0,0,,所有可到达的块都具有标记位设置，其由粉红色表示
 Dialogue: 0,0:56:31.80,0:56:36.56,English,,0,0,0,,And so then the the blocks that aren't marked then we can free
@@ -1482,9 +1484,9 @@ Dialogue: 0,0:56:31.80,0:56:36.56,Chinese,,0,0,0,,然后那些没有标记的块
 Dialogue: 0,0:56:38.74,0:56:39.82,English,,0,0,0,,And return to the free list
 Dialogue: 0,0:56:38.74,0:56:39.82,Chinese,,0,0,0,,并返回空闲列表
 Dialogue: 0,0:56:43.32,0:56:48.48,English,,0,0,0,,Okay so let's look at the assumptions for a simple implementation just to make sure this is clear
-Dialogue: 0,0:56:43.32,0:56:48.48,Chinese,,0,0,0,,好的，让我们看一下简单实现的假设，让大家更清楚
+Dialogue: 0,0:56:43.32,0:56:48.48,Chinese,,0,0,0,,好的，让我们看一下这个假设的简单实现，能让大家更清楚
 Dialogue: 0,0:56:49.60,0:56:55.28,English,,0,0,0,,So the application calls new to get a pointer to a block with all the values cleared
-Dialogue: 0,0:56:49.60,0:56:55.28,Chinese,,0,0,0,,应用程序调用 new 来获取指向块的指针，并清除所有值
+Dialogue: 0,0:56:49.60,0:56:55.28,Chinese,,0,0,0,,应用程序调用 new 来获取指针指向清除所有值内存块
 Dialogue: 0,0:56:57.28,0:57:00.94,English,,0,0,0,,It calls read(b,i) to read location i of block b
 Dialogue: 0,0:56:57.28,0:57:00.94,Chinese,,0,0,0,,它调用 read(b, i) 来读取块 b 的位置 i
 Dialogue: 0,0:57:01.74,0:57:08.14,English,,0,0,0,,And it uses write(b,i,v) to write a value v into location i of block b
@@ -1534,15 +1536,15 @@ Dialogue: 0,0:58:42.62,0:58:45.08,Chinese,,0,0,0,,如果没有设置，那么我
 Dialogue: 0,0:58:45.94,0:58:48.38,English,,0,0,0,,And then we look at each word in the block
 Dialogue: 0,0:58:45.94,0:58:48.38,Chinese,,0,0,0,,然后我们看看块中的每个字
 Dialogue: 0,0:58:51.36,0:58:54.36,English,,0,0,0,,And we recursively call mark on each one of those words
-Dialogue: 0,0:58:51.36,0:58:54.36,Chinese,,0,0,0,,我们递归地在每个单词上调用标记
-Dialogue: 0,0:58:54.84,0:58:58.48,English,,0,0,0,,Now each one of those words may or may not be a pointer right so if it's not a pointer
-Dialogue: 0,0:58:54.84,0:58:58.48,Chinese,,0,0,0,,那么这些字中的每一个都可能是也可能不是指针
-Dialogue: 0,0:58:59.40,0:59:02.80,English,,0,0,0,,Then mark will just return instantly immediately
-Dialogue: 0,0:58:59.40,0:59:02.80,Chinese,,0,0,0,,如果它不是执政，然后马上返回
+Dialogue: 0,0:58:51.36,0:58:54.36,Chinese,,0,0,0,,我们递归地在每个字上调用标记
+Dialogue: 0,0:58:54.84,0:58:57.06,English,,0,0,0,,Now each one of those words may or may not be a pointer right 
+Dialogue: 0,0:58:54.84,0:58:57.06,Chinese,,0,0,0,,那么这些字中的每一个都可能是也可能不是指针
+Dialogue: 0,0:58:57.16,0:59:02.80,English,,0,0,0,,So if it's not a pointer then mark will just return instantly immediately
+Dialogue: 0,0:58:57.16,0:59:02.80,Chinese,,0,0,0,,如果它不是指针，标记后马上返回
 Dialogue: 0,0:59:03.50,0:59:07.42,English,,0,0,0,,If it is a pointer then it will continue the recursive depth first search
 Dialogue: 0,0:59:03.50,0:59:07.42,Chinese,,0,0,0,,如果它是一个指针，那么它将继续递归深度优先搜索
 Dialogue: 0,0:59:09.16,0:59:14.52,English,,0,0,0,,Okay so does that make make sense it's just the familiar def first graph traversal bit
-Dialogue: 0,0:59:09.16,0:59:14.52,Chinese,,0,0,0,,理解了吗？这就是大家熟悉的深度优先的图搜索
+Dialogue: 0,0:59:09.16,0:59:14.52,Chinese,,0,0,0,,理解了吗？这就是大家熟悉图的深度优先搜索算法
 Dialogue: 0,0:59:16.28,0:59:17.32,English,,0,0,0,,That we all know about
 Dialogue: 0,0:59:16.28,0:59:17.32,Chinese,,0,0,0,,我们都知道
 Dialogue: 0,0:59:19.76,0:59:25.50,English,,0,0,0,,Okay and then the sweep, sweep takes a pointer to the beginning of the heap
@@ -1564,7 +1566,7 @@ Dialogue: 0,0:59:57.50,0:59:59.12,Chinese,,0,0,0,,然后继续直到结束
 Dialogue: 0,1:00:05.44,1:00:07.56,English,,0,0,0,,Okay so how do we do such a thing in C right
 Dialogue: 0,1:00:05.44,1:00:07.56,Chinese,,0,0,0,,那么我们如何在 C 中做这样的事情吧
 Dialogue: 0,1:00:07.56,1:00:12.26,English,,0,0,0,,Because all of these assumptions I've made don't hold and C right you can't tell a pointer from a null pointer
-Dialogue: 0,1:00:07.56,1:00:12.26,Chinese,,0,0,0,,因为我所做的所有这些假设不一定对，在C 中你不能区分空指针的指针
+Dialogue: 0,1:00:07.56,1:00:12.26,Chinese,,0,0,0,,因为我所做的所有这些假设不一定对，在 C 中你不能区分指向空指针的指针
 Dialogue: 0,1:00:12.82,1:00:14.10,English,,0,0,0,,Pointers can point anywhere
 Dialogue: 0,1:00:12.82,1:00:14.10,Chinese,,0,0,0,,指针可以指向任何地方
 Dialogue: 0,1:00:17.60,1:00:20.76,English,,0,0,0,,So what you could do so the big issue is that
@@ -1574,7 +1576,7 @@ Dialogue: 0,1:00:22.42,1:00:23.80,Chinese,,0,0,0,,如果我们得到一些值
 Dialogue: 0,1:00:26.92,1:00:31.80,English,,0,0,0,,It even if it is a pointer it could point right into the middle of the block
 Dialogue: 0,1:00:26.92,1:00:31.80,Chinese,,0,0,0,,即使它是指针，它也可以指向块的中间
 Dialogue: 0,1:00:34.84,1:00:35.76,English,,0,0,0,,So given that
-Dialogue: 0,1:00:34.84,1:00:35.76,Chinese,,0,0,0,,所以考虑到了
+Dialogue: 0,1:00:34.84,1:00:35.76,Chinese,,0,0,0,,考虑到这些
 Dialogue: 0,1:00:36.44,1:00:40.24,English,,0,0,0,,So first of all we don't know if that value really is a pointer it could just be a big integer
 Dialogue: 0,1:00:36.44,1:00:40.24,Chinese,,0,0,0,,首先，我们不知道该值是否真的是指针，它可能只是一个大整数
 Dialogue: 0,1:00:40.98,1:00:44.14,English,,0,0,0,,But it also could be a pointer that's pointing into some data structure
@@ -1594,7 +1596,7 @@ Dialogue: 0,1:01:04.72,1:01:09.34,Chinese,,0,0,0,,我们会搜索那个二叉树
 Dialogue: 0,1:01:09.50,1:01:14.26,English,,0,0,0,,If it falls within the the beginning and end of some allocated block
 Dialogue: 0,1:01:09.50,1:01:14.26,Chinese,,0,0,0,,如果它属于某个已分配块的开头和结尾
 Dialogue: 0,1:01:15.50,1:01:18.92,English,,0,0,0,,Okay if that condition is true then we assume that it's
-Dialogue: 0,1:01:15.50,1:01:18.92,Chinese,,0,0,0,,好的，如果那个条件是真的
+Dialogue: 0,1:01:15.50,1:01:18.92,Chinese,,0,0,0,,如果那个条件是真的
 Dialogue: 0,1:01:19.42,1:01:21.74,English,,0,0,0,,Pointing that that's a pointer to an allocated block
 Dialogue: 0,1:01:19.42,1:01:21.74,Chinese,,0,0,0,,我们假设它这个指针指向已分配块
 Dialogue: 0,1:01:22.24,1:01:25.04,English,,0,0,0,,And we assume that block is reachable
@@ -1610,21 +1612,21 @@ Dialogue: 0,1:01:37.04,1:01:40.20,Chinese,,0,0,0,,但它实际上可能不是指
 Dialogue: 0,1:01:40.70,1:01:41.78,English,,0,0,0,,It points to is garbage
 Dialogue: 0,1:01:40.70,1:01:41.78,Chinese,,0,0,0,,它指的是垃圾
 Dialogue: 0,1:01:42.14,1:01:48.52,English,,0,0,0,,Right so what with this scheme we would leave some non reachable blocks
-Dialogue: 0,1:01:42.14,1:01:48.52,Chinese,,0,0,0,,是的，所以使用这个方案我们会留下一些不可访问的块
+Dialogue: 0,1:01:42.14,1:01:48.52,Chinese,,0,0,0,,所以使用这个方案我们会留下一些不可访问的块
 Dialogue: 0,1:01:50.22,1:01:54.54,English,,0,0,0,,We will indicate that some non reachable blocks are really reachable
 Dialogue: 0,1:01:50.22,1:01:54.54,Chinese,,0,0,0,,我们将指出一些不可到访问的块确实可以访问
 Dialogue: 0,1:01:57.52,1:01:58.30,English,,0,0,0,,Okay so
-Dialogue: 0,1:01:57.52,1:01:58.30,Chinese,,0,0,0,,可以，然后呢
+Dialogue: 0,1:01:57.52,1:01:58.30,Chinese,,0,0,0,,然后
 Dialogue: 0,1:02:00.20,1:02:04.16,English,,0,0,0,,So once now that we've got this great tool to dynamically allocate memory
-Dialogue: 0,1:02:00.20,1:02:04.16,Chinese,,0,0,0,,所以，一旦我们有了这个动态分配内存的好工具
+Dialogue: 0,1:02:00.20,1:02:04.16,Chinese,,0,0,0,,一旦我们有了这个动态分配内存的好工具
 Dialogue: 0,1:02:06.12,1:02:07.46,English,,0,0,0,,We can use it in our programs
 Dialogue: 0,1:02:06.12,1:02:07.46,Chinese,,0,0,0,,我们可以在我们的程序中使用它
 Dialogue: 0,1:02:08.06,1:02:10.64,English,,0,0,0,,And shoot ourselves in the foot in all different kinds of ways
 Dialogue: 0,1:02:08.06,1:02:10.64,Chinese,,0,0,0,,并且用各种各样的方式给自己带来一些麻烦
 Dialogue: 0,1:02:10.86,1:02:16.14,English,,0,0,0,,Okay so I'm going to try to help  help you out here by identifying
 Dialogue: 0,1:02:10.86,1:02:16.14,Chinese,,0,0,0,,所以我打算用一些与内存相关的操作或者
-Dialogue: 0,1:02:16.66,1:02:24.28,English,,0,0,0,,Some of the perils and pitfalls that that we can run into with with with memory related operations or operations on memory
-Dialogue: 0,1:02:16.66,1:02:24.28,Chinese,,0,0,0,,内存操作可能会遇到的一些危险和陷阱来帮助大家
+Dialogue: 0,1:02:16.66,1:02:24.28,English,,0,0,0,,Some of the perils and pitfalls that that we can run into with memory related operations or operations on memory
+Dialogue: 0,1:02:16.66,1:02:24.28,Chinese,,0,0,0,,内存操作可能会遇到的一些危险和陷阱
 Dialogue: 0,1:02:25.24,1:02:29.82,English,,0,0,0,,And opera errors errors involving memory
 Dialogue: 0,1:02:25.24,1:02:29.82,Chinese,,0,0,0,,涉及内存的的错误是
 Dialogue: 0,1:02:30.10,1:02:35.70,English,,0,0,0,,Are the worst the worst kinds of bugs to try to find out
@@ -1650,21 +1652,21 @@ Dialogue: 0,1:03:10.32,1:03:12.98,Chinese,,0,0,0,,当下，你可能运行正确
 Dialogue: 0,1:03:13.18,1:03:16.36,English,,0,0,0,,And then eons later other some read and it fails
 Dialogue: 0,1:03:13.18,1:03:16.36,Chinese,,0,0,0,,然后很久以后其他人运行了一遍就失败了
 Dialogue: 0,1:03:16.80,1:03:21.06,English,,0,0,0,,Right so this is a fundamental thing that makes memory related bugs just so nasty
-Dialogue: 0,1:03:16.80,1:03:21.06,Chinese,,0,0,0,,对，所以这个基本的东西使内存相关的错误只是如此讨厌
+Dialogue: 0,1:03:16.80,1:03:21.06,Chinese,,0,0,0,,所以这个基本的东西使内存相关的错误如此讨厌
 Dialogue: 0,1:03:23.76,1:03:28.42,English,,0,0,0,,And another thing that makes them hard to deal with
 Dialogue: 0,1:03:23.76,1:03:28.42,Chinese,,0,0,0,,另一件让他们难以应对的事情
 Dialogue: 0,1:03:28.88,1:03:33.16,English,,0,0,0,,Is people's misunderstanding and misuse of pointers right
-Dialogue: 0,1:03:28.88,1:03:33.16,Chinese,,0,0,0,,是人们对指针的误解和误用是对的
+Dialogue: 0,1:03:28.88,1:03:33.16,Chinese,,0,0,0,,是人们对指针的误解和误用
 Dialogue: 0,1:03:33.16,1:03:35.26,English,,0,0,0,,So usually an erroneous right is some is
 Dialogue: 0,1:03:33.16,1:03:35.26,Chinese,,0,0,0,,所以通常一些错误就是
 Dialogue: 0,1:03:36.08,1:03:41.72,English,,0,0,0,,Some either a misunderstanding of pointers or an improperly initialized pointer
 Dialogue: 0,1:03:36.08,1:03:41.72,Chinese,,0,0,0,,有些是对指针的误解或者是指针初始化不正确
 Dialogue: 0,1:03:42.10,1:03:43.98,English,,0,0,0,,So it all boils down to these pointers
-Dialogue: 0,1:03:42.10,1:03:43.98,Chinese,,0,0,0,,所以这一切归结为这些指针
+Dialogue: 0,1:03:42.10,1:03:43.98,Chinese,,0,0,0,,这一切归结为指针
 Dialogue: 0,1:03:48.10,1:03:51.10,English,,0,0,0,,Okay and so I'm going to show you how to understand pointers
 Dialogue: 0,1:03:48.10,1:03:51.10,Chinese,,0,0,0,,好的，我将向你展示如何理解指针
 Dialogue: 0,1:03:52.76,1:03:53.98,English,,0,0,0,,Okay for the first time in your lives
-Dialogue: 0,1:03:52.76,1:03:53.98,Chinese,,0,0,0,,好的，这是你生命中的第一次
+Dialogue: 0,1:03:52.76,1:03:53.98,Chinese,,0,0,0,,这是你生命中的第一次
 Dialogue: 0,1:03:56.76,1:03:58.64,English,,0,0,0,,I don't know about you but when I learned C
 Dialogue: 0,1:03:56.76,1:03:58.64,Chinese,,0,0,0,,我不了解你，但是当我学习 C 时
 Dialogue: 0,1:04:01.28,1:04:02.38,English,,0,0,0,,I learned about pointers
@@ -1680,13 +1682,13 @@ Dialogue: 0,1:04:16.48,1:04:18.02,Chinese,,0,0,0,,我知道 int* p
 Dialogue: 0,1:04:18.66,1:04:24.48,English,,0,0,0,,Open bracket closed bracket was also an array just a different way to  express that array
 Dialogue: 0,1:04:18.66,1:04:24.48,Chinese,,0,0,0,,左括号和右括号也是另一种表达数组的方式
 Dialogue: 0,1:04:24.48,1:04:28.76,English,,0,0,0,,So I had a small handful of pointers types that I could deal with
-Dialogue: 0,1:04:24.48,1:04:28.76,Chinese,,0,0,0,,所以我有一些我可以处理的指针类型
+Dialogue: 0,1:04:24.48,1:04:28.76,Chinese,,0,0,0,,我有一些我可以处理的指针类型
 Dialogue: 0,1:04:29.36,1:04:33.98,English,,0,0,0,,But I had no underlying understanding of what that meant or anything was just pure pattern matching
 Dialogue: 0,1:04:29.36,1:04:33.98,Chinese,,0,0,0,,但我对这意味着什么并不了解，或者只是简单的模式识别
 Dialogue: 0,1:04:34.98,1:04:36.68,English,,0,0,0,,And I'll bet you that's the way you do it too
 Dialogue: 0,1:04:34.98,1:04:36.68,Chinese,,0,0,0,,而且我敢打赌你也是这样做的
 Dialogue: 0,1:04:38.40,1:04:40.28,English,,0,0,0,,All right but that's all going to change today
-Dialogue: 0,1:04:38.40,1:04:40.28,Chinese,,0,0,0,,好吧，但今天一切都会改变
+Dialogue: 0,1:04:38.40,1:04:40.28,Chinese,,0,0,0,,但今天一切都会改变
 Dialogue: 0,1:04:41.90,1:04:42.58,English,,0,0,0,,All right so
 Dialogue: 0,1:04:41.90,1:04:42.58,Chinese,,0,0,0,,好的
 Dialogue: 0,1:04:43.94,1:04:45.84,English,,0,0,0,,In order to really understand pointers
@@ -1696,7 +1698,7 @@ Dialogue: 0,1:04:46.80,1:04:51.54,Chinese,,0,0,0,,你需要了解 C 中各种运
 Dialogue: 0,1:04:52.70,1:04:56.02,English,,0,0,0,,Because the pointer types are declared using these operators
 Dialogue: 0,1:04:52.70,1:04:56.02,Chinese,,0,0,0,,因为使用这些运算符声明指针类型
 Dialogue: 0,1:04:56.70,1:05:01.08,English,,0,0,0,,And so my copy of k and r is it has a dog-eared at page 53
-Dialogue: 0,1:04:56.70,1:05:01.08,Chinese,,0,0,0,,此内容在 k&r 第53页
+Dialogue: 0,1:04:56.70,1:05:01.08,Chinese,,0,0,0,,此内容在 k&r 第 53 页
 Dialogue: 0,1:05:01.48,1:05:04.34,English,,0,0,0,,This table comes from page 53 of K&R
 Dialogue: 0,1:05:01.48,1:05:04.34,Chinese,,0,0,0,,此表来自 K&R 的第 53 页
 Dialogue: 0,1:05:05.12,1:05:09.22,English,,0,0,0,,And you should have a paper clip or have that folded over for reference
@@ -1706,7 +1708,7 @@ Dialogue: 0,1:05:10.66,1:05:12.42,Chinese,,0,0,0,,现在需要注意的是
 Dialogue: 0,1:05:13.62,1:05:18.46,English,,0,0,0,,Function and array and then and these struct these various struct operators
 Dialogue: 0,1:05:13.62,1:05:18.46,Chinese,,0,0,0,,函数和数组然后和这些结构这些各种 struct 运算符
 Dialogue: 0,1:05:18.96,1:05:21.46,English,,0,0,0,,Have the highest priority,highest precedence
-Dialogue: 0,1:05:18.96,1:05:21.46,Chinese,,0,0,0,,拥有最高优先级，最高优先级
+Dialogue: 0,1:05:18.96,1:05:21.46,Chinese,,0,0,0,,拥有最高优先级
 Dialogue: 0,1:05:23.86,1:05:29.58,English,,0,0,0,,And that that's followed by unary operators so the star this is the dereference operator
 Dialogue: 0,1:05:23.86,1:05:29.58,Chinese,,0,0,0,,接下来是一元运算符，所以 「*」 就是解除引用运算符
 Dialogue: 0,1:05:29.58,1:05:32.46,English,,0,0,0,,And then the address of operator
@@ -1716,9 +1718,9 @@ Dialogue: 0,1:05:33.60,1:05:36.00,Chinese,,0,0,0,,它们在
 Dialogue: 0,1:05:37.34,1:05:40.76,English,,0,0,0,,The highest precedence operators
 Dialogue: 0,1:05:37.34,1:05:40.76,Chinese,,0,0,0,,最高优先级运算符的后面
 Dialogue: 0,1:05:41.34,1:05:47.58,English,,0,0,0,,And then the binary versions of operators you know that you use in arithmetic operations are below those
-Dialogue: 0,1:05:41.34,1:05:47.58,Chinese,,0,0,0,,然后，你知道在算术运算中使用的运算符的二进制版本的优先级低于这些运算符
+Dialogue: 0,1:05:41.34,1:05:47.58,Chinese,,0,0,0,,你知道在算术运算中使用的运算符的二进制版本的优先级低于这些运算符
 Dialogue: 0,1:05:48.72,1:05:49.74,English,,0,0,0,,Okay so just remember
-Dialogue: 0,1:05:48.72,1:05:49.74,Chinese,,0,0,0,,好的，所以请记住
+Dialogue: 0,1:05:48.72,1:05:49.74,Chinese,,0,0,0,,所以请记住
 Dialogue: 0,1:05:50.64,1:05:54.46,English,,0,0,0,,That function and array is higher than *
 Dialogue: 0,1:05:50.64,1:05:54.46,Chinese,,0,0,0,,该函数和数组的优先级高于 *
 Dialogue: 0,1:05:56.80,1:05:58.16,English,,0,0,0,,That too deep the dereference
@@ -1734,17 +1736,17 @@ Dialogue: 0,1:06:11.66,1:06:15.90,Chinese,,0,0,0,,构造一个英语句子，准
 Dialogue: 0,1:06:17.04,1:06:20.54,English,,0,0,0,,What that definition of the pointer means
 Dialogue: 0,1:06:17.04,1:06:20.54,Chinese,,0,0,0,,指针的定义意味着什么
 Dialogue: 0,1:06:21.48,1:06:25.32,English,,0,0,0,,Okay and if you're interested it's in the K&R are in section 5.12
-Dialogue: 0,1:06:21.48,1:06:25.32,Chinese,,0,0,0,,好的，如果你对 K&R 感兴趣，请参阅第 5.12 节
+Dialogue: 0,1:06:21.48,1:06:25.32,Chinese,,0,0,0,,如果你对 K&R 感兴趣，请参阅第 5.12 节
 Dialogue: 0,1:06:26.38,1:06:28.60,English,,0,0,0,,But I'll explain it to you now
 Dialogue: 0,1:06:26.38,1:06:28.60,Chinese,,0,0,0,,但我现在会向你解释
 Dialogue: 0,1:06:29.80,1:06:33.58,English,,0,0,0,,Now I don't know how much in this class you're going to remember
-Dialogue: 0,1:06:29.80,1:06:33.58,Chinese,,0,0,0,,现在我不知道你会记得这堂课多少钱
+Dialogue: 0,1:06:29.80,1:06:33.58,Chinese,,0,0,0,,现在我不知道你会在这堂中学到多少
 Dialogue: 0,1:06:34.74,1:06:38.66,English,,0,0,0,,Okay but I guarantee you're going to remember this as the day you finally understood pointers okay
-Dialogue: 0,1:06:34.74,1:06:38.66,Chinese,,0,0,0,,好的，但我保证你会记住这一天，因为你终于理解指针好了
+Dialogue: 0,1:06:34.74,1:06:38.66,Chinese,,0,0,0,,但我保证你会记住这一天，因为你终于理解指针了
 Dialogue: 0,1:06:38.82,1:06:39.06,English,,0,0,0,,So all
 Dialogue: 0,1:06:38.82,1:06:39.06,Chinese,,0,0,0,,所以
 Dialogue: 0,1:06:43.37,1:06:44.45,English,,0,0,0,,Right so here's how it works
-Dialogue: 0,1:06:43.37,1:06:44.45,Chinese,,0,0,0,,对，所以这是它的工作原理
+Dialogue: 0,1:06:43.37,1:06:44.45,Chinese,,0,0,0,,这是它的工作原理
 Dialogue: 0,1:06:45.28,1:06:49.62,English,,0,0,0,,You always start it the this is a definition of a pointer some kind
 Dialogue: 0,1:06:45.28,1:06:49.62,Chinese,,0,0,0,,你总是这样开始，这是某种指针的定义
 Dialogue: 0,1:06:50.80,1:06:54.52,English,,0,0,0,,You always start with the variable name
@@ -1756,7 +1758,7 @@ Dialogue: 0,1:07:03.08,1:07:06.46,Chinese,,0,0,0,,然后，你在该变量名称
 Dialogue: 0,1:07:06.54,1:07:08.66,English,,0,0,0,,And you choose the one that has the highest precedence
 Dialogue: 0,1:07:06.54,1:07:08.66,Chinese,,0,0,0,,并且你选择具有最高优先级的那个
 Dialogue: 0,1:07:10.66,1:07:15.86,English,,0,0,0,,Okay so we start with the variable so we say p  is a
-Dialogue: 0,1:07:10.66,1:07:15.86,Chinese,,0,0,0,,好的，所以我们从变量开始，所以我们说 p 是一个
+Dialogue: 0,1:07:10.66,1:07:15.86,Chinese,,0,0,0,,我们从变量开始，所以我们说 p 是一个
 Dialogue: 0,1:07:17.04,1:07:18.62,English,,0,0,0,,Then we look to the left and the right
 Dialogue: 0,1:07:17.04,1:07:18.62,Chinese,,0,0,0,,然后我们向左看和向右看
 Dialogue: 0,1:07:18.62,1:07:22.36,English,,0,0,0,,There's nothing to the right but there's a there's a pointer symbol to the left
@@ -1768,29 +1770,29 @@ Dialogue: 0,1:07:25.66,1:07:30.32,Chinese,,0,0,0,,并没有更多，然后我们
 Dialogue: 0,1:07:31.06,1:07:33.58,English,,0,0,0,,So p is a pointer to an int
 Dialogue: 0,1:07:31.06,1:07:33.58,Chinese,,0,0,0,,所以 p 是指向 int 的指针
 Dialogue: 0,1:07:43.70,1:07:44.76,English,,0,0,0,,Right so p is
-Dialogue: 0,1:07:43.70,1:07:44.76,Chinese,,0,0,0,,对，所以 p 是
+Dialogue: 0,1:07:43.70,1:07:44.76,Chinese,,0,0,0,,所以 p 是
 Dialogue: 0,1:07:46.50,1:07:50.76,English,,0,0,0,,P is a pointer to some integer in memory okay
 Dialogue: 0,1:07:46.50,1:07:50.76,Chinese,,0,0,0,,P 是指向内存中某个整数的指针
 Dialogue: 0,1:07:50.94,1:07:52.44,English,,0,0,0,,So we all know that one that's pretty easy
-Dialogue: 0,1:07:50.94,1:07:52.44,Chinese,,0,0,0,,所以我们都知道这很容易
+Dialogue: 0,1:07:50.94,1:07:52.44,Chinese,,0,0,0,,这个非常简单
 Dialogue: 0,1:07:53.64,1:07:54.64,English,,0,0,0,,Okay what about the next one
-Dialogue: 0,1:07:53.64,1:07:54.64,Chinese,,0,0,0,,好的下一个呢
+Dialogue: 0,1:07:53.64,1:07:54.64,Chinese,,0,0,0,,下一个呢
 Dialogue: 0,1:07:56.04,1:07:57.76,English,,0,0,0,,You've probably seen something like this
-Dialogue: 0,1:07:56.04,1:07:57.76,Chinese,,0,0,0,,你可能已经看过这样的事了
+Dialogue: 0,1:07:56.04,1:07:57.76,Chinese,,0,0,0,,你可能已经见过像这样的东西了
 Dialogue: 0,1:07:59.32,1:08:02.24,English,,0,0,0,,Some programs declare our v using this notation
 Dialogue: 0,1:07:59.32,1:08:02.24,Chinese,,0,0,0,,有些程序使用这种表示法声明我们的 v
 Dialogue: 0,1:08:04.34,1:08:06.92,English,,0,0,0,,And so this you can have an optional size or not
 Dialogue: 0,1:08:04.34,1:08:06.92,Chinese,,0,0,0,,所以你可以有一个可选尺寸
 Dialogue: 0,1:08:10.38,1:08:13.80,English,,0,0,0,,So we always star out we say p is a
-Dialogue: 0,1:08:10.38,1:08:13.80,Chinese,,0,0,0,,所以我们总是出演我们说 p 是一个
+Dialogue: 0,1:08:10.38,1:08:13.80,Chinese,,0,0,0,,所以我们说 p 是一个
 Dialogue: 0,1:08:15.22,1:08:17.69,English,,0,0,0,,Well now in this case there's operators to the left and the right
-Dialogue: 0,1:08:15.22,1:08:17.69,Chinese,,0,0,0,,那么现在在这种情况下，左侧和右侧都有操作员
+Dialogue: 0,1:08:15.22,1:08:17.69,Chinese,,0,0,0,,现在在这种情况下，左侧和右侧都有操作符
 Dialogue: 0,1:08:18.04,1:08:24.86,English,,0,0,0,,Remember the array operator has higher precedence than the dereferencing operator the pointer operators
-Dialogue: 0,1:08:18.04,1:08:24.86,Chinese,,0,0,0,,请记住，数组运算符的优先级高于指针运算符的解除引用运算符
+Dialogue: 0,1:08:18.04,1:08:24.86,Chinese,,0,0,0,,请记住，数组运算符的优先级高于指针运算符
 Dialogue: 0,1:08:24.88,1:08:34.20,English,,0,0,0,,So we say so p is an array 13 array of size 13  of
 Dialogue: 0,1:08:24.88,1:08:34.20,Chinese,,0,0,0,,所以我们说 p 是一个大小为 13 的数组
 Dialogue: 0,1:08:35.64,1:08:39.04,English,,0,0,0,,So there's nothing more so we go to the left of pointers
-Dialogue: 0,1:08:35.64,1:08:39.04,Chinese,,0,0,0,,没有更多的东西，所以我们去指针的左边
+Dialogue: 0,1:08:35.64,1:08:39.04,Chinese,,0,0,0,,右边没有更多的东西，所以我们去指针的左边
 Dialogue: 0,1:08:39.56,1:08:44.10,English,,0,0,0,,So p is an array 13 of pointers to ints
 Dialogue: 0,1:08:39.56,1:08:44.10,Chinese,,0,0,0,,所以 p 是一个由 13 个指向 int 的指针组成的数组
 Dialogue: 0,1:08:51.08,1:08:58.46,English,,0,0,0,,So p is an array of 13 pointers
@@ -1800,13 +1802,13 @@ Dialogue: 0,1:09:00.42,1:09:04.02,Chinese,,0,0,0,,每个都指向一个 int
 Dialogue: 0,1:09:05.14,1:09:07.62,English,,0,0,0,,Right in this case p is just the name of the array
 Dialogue: 0,1:09:05.14,1:09:07.62,Chinese,,0,0,0,,在这种情况下，p 就是数组的名称
 Dialogue: 0,1:09:08.32,1:09:09.78,English,,0,0,0,,So by default p
-Dialogue: 0,1:09:08.32,1:09:09.78,Chinese,,0,0,0,,所以默认情况下
+Dialogue: 0,1:09:08.32,1:09:09.78,Chinese,,0,0,0,,默认情况下
 Dialogue: 0,1:09:10.62,1:09:14.50,English,,0,0,0,,P is equivalent is the address of the array
 Dialogue: 0,1:09:10.62,1:09:14.50,Chinese,,0,0,0,,p 等价于数组的地址
 Dialogue: 0,1:09:14.70,1:09:21.42,English,,0,0,0,,When you reference an array name you're addressing your dressing the address of the first element
 Dialogue: 0,1:09:14.70,1:09:21.42,Chinese,,0,0,0,,当你引用数组名称时，你正在寻找第一个元素的地址
 Dialogue: 0,1:09:23.84,1:09:24.96,English,,0,0,0,,Okay how about the next one
-Dialogue: 0,1:09:23.84,1:09:24.96,Chinese,,0,0,0,,好的，下一个怎么样
+Dialogue: 0,1:09:23.84,1:09:24.96,Chinese,,0,0,0,,下一个怎么样
 Dialogue: 0,1:09:27.22,1:09:30.96,English,,0,0,0,,Here we're being if we put parentheses around things then we can be explicit
 Dialogue: 0,1:09:27.22,1:09:30.96,Chinese,,0,0,0,,我们在这里，如果我们把括号放在事物周围，那么我们可以是明确的
 Dialogue: 0,1:09:31.22,1:09:32.44,English,,0,0,0,,Okay and this is a good practice
@@ -1816,7 +1818,7 @@ Dialogue: 0,1:09:33.60,1:09:34.94,Chinese,,0,0,0,,所以我们在这里说 p
 Dialogue: 0,1:09:35.52,1:09:38.00,English,,0,0,0,,And we have to look at this one first because of the parentheses
 Dialogue: 0,1:09:35.52,1:09:38.00,Chinese,,0,0,0,,由于括号，我们必须首先看一下这个
 Dialogue: 0,1:09:39.30,1:09:43.02,English,,0,0,0,,So p is an array[13] of pointers to ints
-Dialogue: 0,1:09:39.30,1:09:43.02,Chinese,,0,0,0,,所以 p 是一个指向由13个指向 int 的指针所构成的数组
+Dialogue: 0,1:09:39.30,1:09:43.02,Chinese,,0,0,0,,p 是一个指向由 13 个指向 int 的指针所构成的数组
 Dialogue: 0,1:09:43.28,1:09:44.26,English,,0,0,0,,So that's the same thing
 Dialogue: 0,1:09:43.28,1:09:44.26,Chinese,,0,0,0,,所以这是一回事
 Dialogue: 0,1:09:44.80,1:09:46.36,English,,0,0,0,,And here we're just being more explicit
@@ -1824,11 +1826,11 @@ Dialogue: 0,1:09:44.80,1:09:46.36,Chinese,,0,0,0,,在这里，我们只是更明
 Dialogue: 0,1:09:47.38,1:09:48.86,English,,0,0,0,,Now what about **p
 Dialogue: 0,1:09:47.38,1:09:48.86,Chinese,,0,0,0,,现在怎么样 **p
 Dialogue: 0,1:09:50.70,1:09:55.22,English,,0,0,0,,So p is a pointer to a pointer to an int
-Dialogue: 0,1:09:50.70,1:09:55.22,Chinese,,0,0,0,,所以 p 是指向 int 的指针的指针
+Dialogue: 0,1:09:50.70,1:09:55.22,Chinese,,0,0,0,,p 是指向 int 的指针的指针
 Dialogue: 0,1:09:56.84,1:09:58.58,English,,0,0,0,,Okay so this is a different type of array
-Dialogue: 0,1:09:56.84,1:09:58.58,Chinese,,0,0,0,,好的，所以这是一种不同类型的数组
+Dialogue: 0,1:09:56.84,1:09:58.58,Chinese,,0,0,0,,这是一种不同类型的数组
 Dialogue: 0,1:10:02.10,1:10:09.38,English,,0,0,0,,So p is a pointer to a pointer to an int
-Dialogue: 0,1:10:02.10,1:10:09.38,Chinese,,0,0,0,,所以 p 是指向 int 指针的指针
+Dialogue: 0,1:10:02.10,1:10:09.38,Chinese,,0,0,0,,p 是指向 int 指针的指针
 Dialogue: 0,1:10:10.90,1:10:13.30,English,,0,0,0,,Okay and
 Dialogue: 0,1:10:10.90,1:10:13.30,Chinese,,0,0,0,,好的
 Dialogue: 0,1:10:15.16,1:10:17.46,English,,0,0,0,,And typically so this is another way to do arrays
@@ -1836,15 +1838,15 @@ Dialogue: 0,1:10:15.16,1:10:17.46,Chinese,,0,0,0,,通常这是另一种产生数
 Dialogue: 0,1:10:20.66,1:10:23.60,English,,0,0,0,,So the same way the char* points to a string
 Dialogue: 0,1:10:20.66,1:10:23.60,Chinese,,0,0,0,,所以 char* 指向字符串的方式相同
 Dialogue: 0,1:10:27.18,1:10:31.72,English,,0,0,0,,It points to a pointer but then you can index on that
-Dialogue: 0,1:10:27.18,1:10:31.72,Chinese,,0,0,0,,它指向一个指针，但然后你可以索引它
+Dialogue: 0,1:10:27.18,1:10:31.72,Chinese,,0,0,0,,它指向一个指针，然后你可以索引它
 Dialogue: 0,1:10:32.38,1:10:36.86,English,,0,0,0,,Each one of those then points corresponds to a pointer
 Dialogue: 0,1:10:32.38,1:10:36.86,Chinese,,0,0,0,,其中每一个指向对应的指针
 Dialogue: 0,1:10:40.70,1:10:42.02,English,,0,0,0,,Whoops okay
-Dialogue: 0,1:10:40.70,1:10:42.02,Chinese,,0,0,0,,哎呀好吧
+Dialogue: 0,1:10:40.70,1:10:42.02,Chinese,,0,0,0,,哎呀
 Dialogue: 0,1:10:43.98,1:10:48.46,English,,0,0,0,,Here's another one now p because and because of the parentheses we have to go left
 Dialogue: 0,1:10:43.98,1:10:48.42,Chinese,,0,0,0,,这是另一个，p 因为括号我们必须到左边
 Dialogue: 0,1:10:48.46,1:11:02.06,English,,0,0,0,,So p is a pointer to an array[13] of ints
-Dialogue: 0,1:10:48.46,1:11:02.06,Chinese,,0,0,0,,所以 p 是一个指向大小为 13 的 int 型数组的指针
+Dialogue: 0,1:10:48.46,1:11:02.06,Chinese,,0,0,0,,p 是一个指向大小为 13 的 int 型数组的指针
 Dialogue: 0,1:11:11.84,1:11:12.92,English,,0,0,0,,Right now what about this one
 Dialogue: 0,1:11:11.84,1:11:12.92,Chinese,,0,0,0,,现在怎么样呢
 Dialogue: 0,1:11:14.62,1:11:21.00,English,,0,0,0,,f is a function is...it a function or a pointer
@@ -1852,7 +1854,7 @@ Dialogue: 0,1:11:14.62,1:11:21.00,Chinese,,0,0,0,,f 是一个函数，它是一�
 Dialogue: 0,1:11:22.78,1:11:24.84,English,,0,0,0,,f is a function right because of the precedence
 Dialogue: 0,1:11:22.78,1:11:24.84,Chinese,,0,0,0,,由于优先权，f 是一个函数
 Dialogue: 0,1:11:25.44,1:11:30.26,English,,0,0,0,,So f is a function returning pointer to int
-Dialogue: 0,1:11:25.44,1:11:30.26,Chinese,,0,0,0,,所以 f 是一个返回 int 指针的函数
+Dialogue: 0,1:11:25.44,1:11:30.26,Chinese,,0,0,0,,f 是一个返回 int 指针的函数
 Dialogue: 0,1:11:32.70,1:11:33.76,English,,0,0,0,,Ok so if we go
 Dialogue: 0,1:11:32.70,1:11:33.76,Chinese,,0,0,0,,好的
 Dialogue: 0,1:11:35.98,1:11:37.18,English,,0,0,0,,If we go p=f
@@ -1866,39 +1868,39 @@ Dialogue: 0,1:11:52.64,1:11:56.20,Chinese,,0,0,0,,我打算这样做，让我们
 Dialogue: 0,1:11:57.46,1:12:01.66,English,,0,0,0,,Totally ridiculous case just so you can see that this algorithm works
 Dialogue: 0,1:11:57.46,1:12:01.66,Chinese,,0,0,0,,完全荒谬的情况，只是让你可以看到这个算法的工作原理
 Dialogue: 0,1:12:02.58,1:12:07.96,English,,0,0,0,,All right so x is an array of pointers
-Dialogue: 0,1:12:02.58,1:12:07.96,Chinese,,0,0,0,,好吧所以 x 是一个指针数组
+Dialogue: 0,1:12:02.58,1:12:07.96,Chinese,,0,0,0,,x 是一个指针数组
 Dialogue: 0,1:12:09.72,1:12:14.62,English,,0,0,0,,To functions returning pointers
 Dialogue: 0,1:12:09.72,1:12:14.62,Chinese,,0,0,0,,返回指针的函数
-Dialogue: 0,1:12:16.26,1:12:17.56,English,,0,0,0,,To an array five events
-Dialogue: 0,1:12:16.26,1:12:17.56,Chinese,,0,0,0,,一个阵列五个事件
+Dialogue: 0,1:12:16.26,1:12:17.56,English,,0,0,0,,To an array five int
+Dialogue: 0,1:12:16.26,1:12:17.56,Chinese,,0,0,0,,指向 int 类型长度为 5 的数组
 Dialogue: 0,1:12:19.44,1:12:21.68,English,,0,0,0,,And if you ever use anything like that in your code
 Dialogue: 0,1:12:19.44,1:12:21.68,Chinese,,0,0,0,,如果你在代码中使用过类似的东西
 Dialogue: 0,1:12:22.72,1:12:23.44,English,,0,0,0,,Shame on you
 Dialogue: 0,1:12:22.72,1:12:23.44,Chinese,,0,0,0,,真丢脸
 Dialogue: 0,1:12:26.26,1:12:27.64,English,,0,0,0,,All right so there you go so that's
-Dialogue: 0,1:12:26.26,1:12:27.64,Chinese,,0,0,0,,好的，所以你去那里
+Dialogue: 0,1:12:26.26,1:12:27.64,Chinese,,0,0,0,,所以你打算怎么做
 Dialogue: 0,1:12:28.22,1:12:30.06,English,,0,0,0,,Now you know now you understand pointers
-Dialogue: 0,1:12:28.22,1:12:30.06,Chinese,,0,0,0,,现在你知道了解你的指针
+Dialogue: 0,1:12:28.22,1:12:30.06,Chinese,,0,0,0,,现在你了解了指针
 Dialogue: 0,1:12:30.32,1:12:34.82,English,,0,0,0,,Simple as can be and all you need is page 53 of K&R is a handy reference
-Dialogue: 0,1:12:30.32,1:12:34.82,Chinese,,0,0,0,,尽可能简单，所需要的只是 K&R 的第 53 页是一个方便的参考
+Dialogue: 0,1:12:30.32,1:12:34.82,Chinese,,0,0,0,,尽可能简单，你可以参考 K&R 的第 53 页
 Dialogue: 0,1:12:36.24,1:12:39.36,English,,0,0,0,,All right so let's we'll take the last five minutes and I'll show you some
-Dialogue: 0,1:12:36.24,1:12:39.36,Chinese,,0,0,0,,好吧，让我们在最后五分钟，我会告诉你一些
+Dialogue: 0,1:12:36.24,1:12:39.36,Chinese,,0,0,0,,好吧，让我们在最后五分钟，我会告诉你们一些
 Dialogue: 0,1:12:40.70,1:12:42.40,English,,0,0,0,,Some of the ways you can trip yourself up
 Dialogue: 0,1:12:40.70,1:12:42.40,Chinese,,0,0,0,,一些你可以绊倒自己的方法
 Dialogue: 0,1:12:43.04,1:12:44.22,English,,0,0,0,,When you're accessing memory
 Dialogue: 0,1:12:43.04,1:12:44.22,Chinese,,0,0,0,,当你访问内存时
 Dialogue: 0,1:12:44.82,1:12:47.04,English,,0,0,0,,Okay so first is the classic scanf bug
-Dialogue: 0,1:12:44.82,1:12:47.04,Chinese,,0,0,0,,好吧首先是经典的 scanf 错误
+Dialogue: 0,1:12:44.82,1:12:47.04,Chinese,,0,0,0,,首先是经典的 scanf 错误
 Dialogue: 0,1:12:47.12,1:12:55.44,English,,0,0,0,,You probably all done this where you forget to pass it the address of a variable instead you pass it the address
-Dialogue: 0,1:12:47.12,1:12:55.44,Chinese,,0,0,0,,你可能都做到了这一点，你忘记传递变量的地址，而不是传递地址
+Dialogue: 0,1:12:47.12,1:12:55.44,Chinese,,0,0,0,,你可能都做到了这一点，你忘记传递变量的地址
 Dialogue: 0,1:12:56.82,1:13:02.96,English,,0,0,0,,So scanf doesn't know where to put the you know put the data
 Dialogue: 0,1:12:56.82,1:13:02.96,Chinese,,0,0,0,,所以 scanf 不知道把数据放在哪里
 Dialogue: 0,1:13:04.52,1:13:07.68,English,,0,0,0,,Okay another common mistake is to read uninitialized memory
-Dialogue: 0,1:13:04.52,1:13:07.68,Chinese,,0,0,0,,好的另一个常见错误是读取未初始化的内存
+Dialogue: 0,1:13:04.52,1:13:07.68,Chinese,,0,0,0,,另一个常见错误是读取未初始化的内存
 Dialogue: 0,1:13:07.68,1:13:10.90,English,,0,0,0,,So suit you can't really assume that your heap data is initialized to 0
-Dialogue: 0,1:13:07.68,1:13:10.90,Chinese,,0,0,0,,因此，你不能真正假设你的堆数据初始化为 0
+Dialogue: 0,1:13:07.68,1:13:10.90,Chinese,,0,0,0,,你不能真正假设你的堆数据初始化为 0
 Dialogue: 0,1:13:11.96,1:13:16.82,English,,0,0,0,,So here we're we're malloc an array of an int
-Dialogue: 0,1:13:11.96,1:13:16.82,Chinese,,0,0,0,,所以这里我们是 malloc 一个 int 的数组
+Dialogue: 0,1:13:11.96,1:13:16.82,Chinese,,0,0,0,,这里我们使用 malloc 分配一个 int 的数组
 Dialogue: 0,1:13:17.24,1:13:18.72,English,,0,0,0,,And then we're going through and we're doing
 Dialogue: 0,1:13:17.24,1:13:18.72,Chinese,,0,0,0,,我们正在做
 Dialogue: 0,1:13:19.12,1:13:20.78,English,,0,0,0,,We're updating this vector
@@ -1908,41 +1910,41 @@ Dialogue: 0,1:13:21.54,1:13:24.82,Chinese,,0,0,0,,这个 y 矢量我们正在读
 Dialogue: 0,1:13:25.54,1:13:29.90,English,,0,0,0,,We're taking y[i] = y[i] + a[i][j]*x[j]
 Dialogue: 0,1:13:25.54,1:13:29.90,Chinese,,0,0,0,,我们使 y [i] = y [i] + a [i] [j] * x [j]
 Dialogue: 0,1:13:30.42,1:13:37.68,English,,0,0,0,,Okay so we're using we're assuming that y that malloc returns memory that's all zeros
-Dialogue: 0,1:13:30.42,1:13:37.68,Chinese,,0,0,0,,好的，所以我们正在使用我们假设那个malloc返回全部为零的内存
+Dialogue: 0,1:13:30.42,1:13:37.68,Chinese,,0,0,0,,所以我们正在使用我们假设那个 malloc 返回全部为零的内存
 Dialogue: 0,1:13:38.22,1:13:39.06,English,,0,0,0,,So that'll get you
-Dialogue: 0,1:13:38.22,1:13:39.06,Chinese,,0,0,0,,所以这会让你
+Dialogue: 0,1:13:38.22,1:13:39.06,Chinese,,0,0,0,,这会让你
 Dialogue: 0,1:13:42.30,1:13:46.34,English,,0,0,0,,It's also easy to allocate the wrong sized object
 Dialogue: 0,1:13:42.30,1:13:46.34,Chinese,,0,0,0,,分配错误大小的对象也很容易
 Dialogue: 0,1:13:47.08,1:13:48.26,English,,0,0,0,,So here we want to create
-Dialogue: 0,1:13:47.08,1:13:48.26,Chinese,,0,0,0,,所以我们想在这里创建
+Dialogue: 0,1:13:47.08,1:13:48.26,Chinese,,0,0,0,,我们想在这里创建
 Dialogue: 0,1:13:49.60,1:13:54.48,English,,0,0,0,,An array of n pointers of n pointers to ints
 Dialogue: 0,1:13:49.60,1:13:54.48,Chinese,,0,0,0,,一组 n 个指针，指向 int 的 n 个指针
 Dialogue: 0,1:13:56.06,1:13:58.88,English,,0,0,0,,Okay and then for each one we want to allocate m ints
-Dialogue: 0,1:13:56.06,1:13:58.88,Chinese,,0,0,0,,好的，然后我们想要分配 m 个整数
+Dialogue: 0,1:13:56.06,1:13:58.88,Chinese,,0,0,0,,然后我们想要分配 m 个整数
 Dialogue: 0,1:13:59.04,1:14:01.86,English,,0,0,0,,All right so this work we're creating a two-dimensional array
-Dialogue: 0,1:13:59.04,1:14:01.86,Chinese,,0,0,0,,好的，所以这项工作我们正在创建一个二维数组
+Dialogue: 0,1:13:59.04,1:14:01.86,Chinese,,0,0,0,,这项工作我们正在创建一个二维数组
 Dialogue: 0,1:14:03.64,1:14:05.40,English,,0,0,0,,And can you see the mistake which
 Dialogue: 0,1:14:03.64,1:14:05.40,Chinese,,0,0,0,,你能看出错误吗？
 Dialogue: 0,1:14:10.42,1:14:12.06,English,,0,0,0,,Which line is buggy this one
-Dialogue: 0,1:14:10.42,1:14:12.06,Chinese,,0,0,0,,哪条线路有问题
+Dialogue: 0,1:14:10.42,1:14:12.06,Chinese,,0,0,0,,哪一行有问题
 Dialogue: 0,1:14:17.72,1:14:19.26,English,,0,0,0,,This one or this one
 Dialogue: 0,1:14:17.72,1:14:19.26,Chinese,,0,0,0,,这一个或这一个
-Dialogue: 0,1:14:20.76,1:14:23.42,English,,0,0,0,,The first one right because we really want size event star
-Dialogue: 0,1:14:20.76,1:14:23.42,Chinese,,0,0,0,,第一个，因为我们真的想要是 「*」
+Dialogue: 0,1:14:20.76,1:14:23.42,English,,0,0,0,,The first one right because we really want size int star
+Dialogue: 0,1:14:20.76,1:14:23.42,Chinese,,0,0,0,,第一行！因为我们想要是 int *
 Dialogue: 0,1:14:24.40,1:14:29.30,English,,0,0,0,,Right so we're erroneous incorrectly assuming that int are the same sizes as pointers
-Dialogue: 0,1:14:24.40,1:14:29.30,Chinese,,0,0,0,,是的，所以我们错误地认为 int 与指针的大小相同
+Dialogue: 0,1:14:24.40,1:14:29.30,Chinese,,0,0,0,,我们错误地认为 int 与指针的大小相同
 Dialogue: 0,1:14:30.84,1:14:32.26,English,,0,0,0,,This is a classic
-Dialogue: 0,1:14:30.84,1:14:32.26,Chinese,,0,0,0,,这是经典之作
+Dialogue: 0,1:14:30.84,1:14:32.26,Chinese,,0,0,0,,这是非常经典的错误
 Dialogue: 0,1:14:33.60,1:14:36.10,English,,0,0,0,,On this this assumption is true for 32-bit code
-Dialogue: 0,1:14:33.60,1:14:36.10,Chinese,,0,0,0,,对此，这种假设适用于32位代码
+Dialogue: 0,1:14:33.60,1:14:36.10,Chinese,,0,0,0,,对此，这种假设适用于 32 位代码
 Dialogue: 0,1:14:36.24,1:14:39.60,English,,0,0,0,,Ints and pointers are the same size but it's not true for 64-bit
-Dialogue: 0,1:14:36.24,1:14:39.60,Chinese,,0,0,0,,Ints和指针的大小相同，但对于64位则不然
+Dialogue: 0,1:14:36.24,1:14:39.60,Chinese,,0,0,0,,Ints 和指针的大小相同，但对于 64 位则不然
 Dialogue: 0,1:14:40.06,1:14:47.82,English,,0,0,0,,And so this is why when you...when people port 32-bit code to 64-bit machine a lot of times it breaks
 Dialogue: 0,1:14:40.06,1:14:47.82,Chinese,,0,0,0,,所以这就是为什么当人们将 32 位代码移植到 64 位机器时很多时候它会中断
 Dialogue: 0,1:14:48.20,1:14:49.50,English,,0,0,0,,Because they have this assumption
 Dialogue: 0,1:14:48.20,1:14:49.50,Chinese,,0,0,0,,因为他们有这个假设
 Dialogue: 0,1:14:51.28,1:14:54.42,English,,0,0,0,,Okay another way you it's easy to overwrite memory
-Dialogue: 0,1:14:51.28,1:14:54.42,Chinese,,0,0,0,,好的另一种方式是你很容易覆盖内存
+Dialogue: 0,1:14:51.28,1:14:54.42,Chinese,,0,0,0,,另一种方式是你很容易覆盖内存
 Dialogue: 0,1:14:55.28,1:14:59.18,English,,0,0,0,,So here we're creating correctly creating this array
 Dialogue: 0,1:14:55.28,1:14:59.18,Chinese,,0,0,0,,所以我们正在创建这个数组
 Dialogue: 0,1:14:59.56,1:15:02.74,English,,0,0,0,,But then when we create each of the sub arrays
@@ -1966,13 +1968,13 @@ Dialogue: 0,1:15:28.84,1:15:30.02,Chinese,,0,0,0,,这样会让你陷入困境
 Dialogue: 0,1:15:32.34,1:15:35.88,English,,0,0,0,,Another another classic mistake is misunderstanding pointer arithmetic
 Dialogue: 0,1:15:32.34,1:15:35.88,Chinese,,0,0,0,,另一个经典错误是误解指针算术
 Dialogue: 0,1:15:36.57,1:15:38.16,English,,0,0,0,,All right so if you increment a pointer
-Dialogue: 0,1:15:36.57,1:15:38.16,Chinese,,0,0,0,,好吧，如果你增加一个指针
+Dialogue: 0,1:15:36.57,1:15:38.16,Chinese,,0,0,0,,如果你增加一个指针
 Dialogue: 0,1:15:41.22,1:15:46.90,English,,0,0,0,,Then it's incremented by the size of the object that pointer points to
 Dialogue: 0,1:15:41.22,1:15:46.90,Chinese,,0,0,0,,然后它增加指针所指向的对象的大小
 Dialogue: 0,1:15:48.16,1:15:51.08,English,,0,0,0,,Right so if you increment an int *  by one
-Dialogue: 0,1:15:48.16,1:15:51.08,Chinese,,0,0,0,,如果你将 int* 递增一
+Dialogue: 0,1:15:48.16,1:15:51.08,Chinese,,0,0,0,,如果你将 int* 递增 1
 Dialogue: 0,1:15:51.60,1:15:53.42,English,,0,0,0,,It actually increments it by 4
-Dialogue: 0,1:15:51.60,1:15:53.42,Chinese,,0,0,0,,它实际上将它增加4
+Dialogue: 0,1:15:51.60,1:15:53.42,Chinese,,0,0,0,,它实际上将它增加 4
 Dialogue: 0,1:15:54.20,1:15:55.36,English,,0,0,0,,Because that's the size of an int
 Dialogue: 0,1:15:54.20,1:15:55.36,Chinese,,0,0,0,,因为那是 int 的大小
 Dialogue: 0,1:15:58.04,1:16:00.24,English,,0,0,0,,He's got that's a really important distinction
@@ -1980,7 +1982,7 @@ Dialogue: 0,1:15:58.04,1:16:00.24,Chinese,,0,0,0,,他有这个非常重要的区
 Dialogue: 0,1:16:00.86,1:16:03.14,English,,0,0,0,,And so people will often
 Dialogue: 0,1:16:00.86,1:16:03.14,Chinese,,0,0,0,,所以人们会经常这样
 Dialogue: 0,1:16:03.94,1:16:07.22,English,,0,0,0,,So here it's assuming that incrementing so p is a pointer
-Dialogue: 0,1:16:03.94,1:16:07.22,Chinese,,0,0,0,,所以这里假设递增所以 p 是一个指针
+Dialogue: 0,1:16:03.94,1:16:07.22,Chinese,,0,0,0,,所以这里假设递增，因为 p 是一个指针
 Dialogue: 0,1:16:07.84,1:16:12.00,English,,0,0,0,,And the programmer here assumed that he wants to increment the pointer to sort of traverse it
 Dialogue: 0,1:16:07.84,1:16:12.00,Chinese,,0,0,0,,并且程序员在这里假设他想要将指针递增以达到遍历数组的目的
 Dialogue: 0,1:16:12.36,1:16:15.40,English,,0,0,0,,An array so he doesn't understand pointer arithmetic
@@ -1988,7 +1990,7 @@ Dialogue: 0,1:16:12.36,1:16:15.40,Chinese,,0,0,0,,他不懂指针算术
 Dialogue: 0,1:16:16.00,1:16:21.04,English,,0,0,0,,And so to get to the next int increments  p by size int
 Dialogue: 0,1:16:16.00,1:16:21.04,Chinese,,0,0,0,,所以要通过 size(int) 来获得下一个 int 增量 p
 Dialogue: 0,1:16:21.62,1:16:24.68,English,,0,0,0,,Okay this will really increment it by 16 not by 4
-Dialogue: 0,1:16:21.62,1:16:24.68,Chinese,,0,0,0,,好吧，这 会增加 16 而不是 4
+Dialogue: 0,1:16:21.62,1:16:24.68,Chinese,,0,0,0,,这会增加 16 而不是 4
 Dialogue: 0,1:16:27.70,1:16:30.72,English,,0,0,0,,Okay overriding memory that's a really nasty one
 Dialogue: 0,1:16:27.70,1:16:30.72,Chinese,,0,0,0,,好内存覆盖是一个非常讨厌的
 Dialogue: 0,1:16:31.60,1:16:38.96,English,,0,0,0,,And a lot of times this can happen if you don't understand the precedence of the operators
@@ -2000,17 +2002,17 @@ Dialogue: 0,1:16:40.66,1:16:44.76,Chinese,,0,0,0,,所以这是一堆不是我们
 Dialogue: 0,1:16:45.38,1:16:48.30,English,,0,0,0,,And this is a function to delete from a heap
 Dialogue: 0,1:16:45.38,1:16:48.30,Chinese,,0,0,0,,这是一个从堆中删除的功能
 Dialogue: 0,1:16:48.30,1:16:50.84,English,,0,0,0,,And this actually is from my own code I have to admit
-Dialogue: 0,1:16:48.30,1:16:50.84,Chinese,,0,0,0,,我不得不承认这实际上来自我自己的代码
+Dialogue: 0,1:16:48.30,1:16:50.84,Chinese,,0,0,0,,我必须得承认这其实是来自我自己的代码
 Dialogue: 0,1:16:52.44,1:16:57.44,English,,0,0,0,,And so I want to delete in it an element
 Dialogue: 0,1:16:52.44,1:16:57.44,Chinese,,0,0,0,,我想在其中删除一个元素
 Dialogue: 0,1:16:58.78,1:17:00.62,English,,0,0,0,,I want to delete the first element of the heap
 Dialogue: 0,1:16:58.78,1:17:00.62,Chinese,,0,0,0,,我想删除堆的第一个元素
 Dialogue: 0,1:17:01.18,1:17:03.20,English,,0,0,0,,Right and then I want to reify it
-Dialogue: 0,1:17:01.18,1:17:03.20,Chinese,,0,0,0,,是的，然后我想要实现它
+Dialogue: 0,1:17:01.18,1:17:03.20,Chinese,,0,0,0,,后我想要实现它
 Dialogue: 0,1:17:04.10,1:17:06.98,English,,0,0,0,,Okay so I and then I want to return, I want to return that
-Dialogue: 0,1:17:04.10,1:17:06.98,Chinese,,0,0,0,,好的，所以然后我想返回这个
+Dialogue: 0,1:17:04.10,1:17:06.98,Chinese,,0,0,0,,然后我想返回这个
 Dialogue: 0,1:17:07.68,1:17:09.90,English,,0,0,0,,So I get the first element the heap
-Dialogue: 0,1:17:07.68,1:17:09.90,Chinese,,0,0,0,,所以我得到堆的第一个元素
+Dialogue: 0,1:17:07.68,1:17:09.90,Chinese,,0,0,0,,我得到堆的第一个元素
 Dialogue: 0,1:17:10.98,1:17:14.62,English,,0,0,0,,I decreased the size of the heap
 Dialogue: 0,1:17:10.98,1:17:14.62,Chinese,,0,0,0,,我减小了堆的大小
 Dialogue: 0,1:17:15.11,1:17:18.58,English,,0,0,0,,I take the last element and make that the first element
@@ -2026,7 +2028,7 @@ Dialogue: 0,1:17:34.00,1:17:35.92,Chinese,,0,0,0,,而当这个功能终止时
 Dialogue: 0,1:17:35.92,1:17:42.76,English,,0,0,0,,When this function return size should be updated size as a pointer the value that it points to you should be decremented
 Dialogue: 0,1:17:35.92,1:17:42.76,Chinese,,0,0,0,,当这个函数返回 size 所指向的值会被更新，它将会减少
 Dialogue: 0,1:17:43.22,1:17:44.06,English,,0,0,0,,Okay that's our intent
-Dialogue: 0,1:17:43.22,1:17:44.06,Chinese,,0,0,0,,好的，这是我们的意图
+Dialogue: 0,1:17:43.22,1:17:44.06,Chinese,,0,0,0,,这是我们的意图
 Dialogue: 0,1:17:44.74,1:17:47.72,English,,0,0,0,,And we do it right here with the *size--
 Dialogue: 0,1:17:44.74,1:17:47.72,Chinese,,0,0,0,,我们就在这里用 *size--
 Dialogue: 0,1:17:47.72,1:17:50.58,English,,0,0,0,,So what we want to do is we want to dereference size
@@ -2034,7 +2036,7 @@ Dialogue: 0,1:17:47.72,1:17:50.58,Chinese,,0,0,0,,所以我们想做的是我们
 Dialogue: 0,1:17:51.76,1:17:53.20,English,,0,0,0,,And then decrement that value
 Dialogue: 0,1:17:51.76,1:17:53.20,Chinese,,0,0,0,,然后递减该值
 Dialogue: 0,1:17:54.36,1:18:02.92,English,,0,0,0,,But because the unary minus minus has higher of precedence than then the dereference
-Dialogue: 0,1:17:54.36,1:18:02.92,Chinese,,0,0,0,,但是因为一元减负的优先级高于取消引用的优先级
+Dialogue: 0,1:17:54.36,1:18:02.92,Chinese,,0,0,0,,但是因为「一元减」的优先级高于取消引用的优先级
 Dialogue: 0,1:18:03.70,1:18:06.74,English,,0,0,0,,What we're really doing is we're decrementing the pointer
 Dialogue: 0,1:18:03.70,1:18:06.74,Chinese,,0,0,0,,我们真正在做的是我们减少指针
 Dialogue: 0,1:18:07.16,1:18:09.04,English,,0,0,0,,And then dereferencing the value that's
@@ -2042,17 +2044,17 @@ Dialogue: 0,1:18:07.16,1:18:09.04,Chinese,,0,0,0,,然后解除引用的值
 Dialogue: 0,1:18:10.30,1:18:14.78,English,,0,0,0,,One word less than a size variable
 Dialogue: 0,1:18:10.30,1:18:14.78,Chinese,,0,0,0,,一个小于 size 一字的变量
 Dialogue: 0,1:18:15.00,1:18:16.24,English,,0,0,0,,All right so these are nasty
-Dialogue: 0,1:18:15.00,1:18:16.24,Chinese,,0,0,0,,好吧所以这些都很讨厌
+Dialogue: 0,1:18:15.00,1:18:16.24,Chinese,,0,0,0,,这些都很讨厌
 Dialogue: 0,1:18:16.92,1:18:18.94,English,,0,0,0,,And it would have been much cleaner
 Dialogue: 0,1:18:16.92,1:18:18.94,Chinese,,0,0,0,,它本来会更简洁
 Dialogue: 0,1:18:20.02,1:18:26.16,English,,0,0,0,,If I had just put parentheses around like I intended just parentheses star sized parentheses
 Dialogue: 0,1:18:20.02,1:18:26.16,Chinese,,0,0,0,,如果我只是把括号括起来，就像我打算用圆括号星号括起来一样
 Dialogue: 0,1:18:27.98,1:18:32.96,English,,0,0,0,,Alright another way you can mess up is referencing forgetting the local variables disappear
-Dialogue: 0,1:18:27.98,1:18:32.96,Chinese,,0,0,0,,好吧另一种方法你可以搞砸是引用忘记局部变量消失
+Dialogue: 0,1:18:27.98,1:18:32.96,Chinese,,0,0,0,,另一种方法你可以搞砸是引用忘记局部变量消失
 Dialogue: 0,1:18:33.68,1:18:38.16,English,,0,0,0,,So if you have a function that returns an address of a local variable no good
 Dialogue: 0,1:18:33.68,1:18:38.16,Chinese,,0,0,0,,所以如果你有一个函数返回一个局部变量的地址，这一点都不好
 Dialogue: 0,1:18:38.76,1:18:40.40,English,,0,0,0,,Okay no good at all
-Dialogue: 0,1:18:38.76,1:18:40.40,Chinese,,0,0,0,,好吧，一点也不好
+Dialogue: 0,1:18:38.76,1:18:40.40,Chinese,,0,0,0,,一点也不好
 Dialogue: 0,1:18:41.46,1:18:46.36,English,,0,0,0,,It might be okay for a while until somebody another function reuses that space
 Dialogue: 0,1:18:41.46,1:18:46.36,Chinese,,0,0,0,,一段时间可能没关系，直到某人有另一个功能重用该空间
 Dialogue: 0,1:18:46.84,1:18:51.02,English,,0,0,0,,That could be a return address it could be another functions local variable
@@ -2064,11 +2066,11 @@ Dialogue: 0,1:18:59.32,1:19:02.26,Chinese,,0,0,0,,现在你从现在对 malloc �
 Dialogue: 0,1:19:02.64,1:19:07.36,English,,0,0,0,,That free actually writes to the heap right it's coalescing it's changing pointers
 Dialogue: 0,1:19:02.64,1:19:07.36,Chinese,,0,0,0,,这个 free 实际上写入了堆，它正在合并它正在改变的指针
 Dialogue: 0,1:19:07.86,1:19:09.36,English,,0,0,0,,It's changing size block sizes
-Dialogue: 0,1:19:07.86,1:19:09.36,Chinese,,0,0,0,,它正在改变大小块大小
+Dialogue: 0,1:19:07.86,1:19:09.36,Chinese,,0,0,0,,它正在改变块大小
 Dialogue: 0,1:19:10.02,1:19:13.78,English,,0,0,0,,So if you free a block that's already been freed terrible things will happen
-Dialogue: 0,1:19:10.02,1:19:13.78,Chinese,,0,0,0,,因此，如果你释放一块已经被释放的块，那么可怕的事情就会发生
+Dialogue: 0,1:19:10.02,1:19:13.78,Chinese,,0,0,0,,如果你释放一块已经被释放的块，那么可怕的事情就会发生
 Dialogue: 0,1:19:17.36,1:19:21.78,English,,0,0,0,,Another thing you can do wrong is to reference a block you forget that you freed a block and then you reference
-Dialogue: 0,1:19:17.36,1:19:21.78,Chinese,,0,0,0,,你可以做错的另一件事是引用一个块，你忘了你释放了一个块然后你引用
+Dialogue: 0,1:19:17.36,1:19:21.78,Chinese,,0,0,0,,你可能做错的另一件事是引用一个块，你忘了你释放了一个块然后你引用
 Dialogue: 0,1:19:22.04,1:19:24.24,English,,0,0,0,,It so here we free of this block x
 Dialogue: 0,1:19:22.04,1:19:24.24,Chinese,,0,0,0,,在这里我们释放了这个块 x
 Dialogue: 0,1:19:25.02,1:19:26.32,English,,0,0,0,,And then we're referencing it here
@@ -2082,7 +2084,7 @@ Dialogue: 0,1:19:34.86,1:19:36.40,Chinese,,0,0,0,,然后函数返回
 Dialogue: 0,1:19:36.96,1:19:39.48,English,,0,0,0,,That block will stay there forever right because it's garbage
 Dialogue: 0,1:19:36.96,1:19:39.48,Chinese,,0,0,0,,那块将永远留在那里因为它是垃圾
 Dialogue: 0,1:19:43.58,1:19:47.20,English,,0,0,0,,Okay so there's a number of ways to deal with memory bugs
-Dialogue: 0,1:19:43.58,1:19:47.20,Chinese,,0,0,0,,好的，有很多方法可以处理内存错误
+Dialogue: 0,1:19:43.58,1:19:47.20,Chinese,,0,0,0,,有很多方法可以处理内存错误
 Dialogue: 0,1:19:47.20,1:19:51.86,English,,0,0,0,,GDB is sometimes good at least it'll tell you where a segfault occurs
 Dialogue: 0,1:19:47.20,1:19:51.86,Chinese,,0,0,0,,GDB 有时候很好，它至少可以告诉你 segfault 发生在哪里
 Dialogue: 0,1:19:52.52,1:19:54.48,English,,0,0,0,,Then you got to track down what the right that
@@ -2104,7 +2106,7 @@ Dialogue: 0,1:20:21.08,1:20:22.34,Chinese,,0,0,0,,然后你写一个函数
 Dialogue: 0,1:20:22.68,1:20:27.34,English,,0,0,0,,That iterates over that structure that data structure and checks that all those they're invariants are true
 Dialogue: 0,1:20:22.68,1:20:27.34,Chinese,,0,0,0,,迭代数据结构时，检查所有那些不变量的结构是否为真
 Dialogue: 0,1:20:28.06,1:20:30.34,English,,0,0,0,,So for example in it
-Dialogue: 0,1:20:28.06,1:20:30.34,Chinese,,0,0,0,,例如，在其中
+Dialogue: 0,1:20:28.06,1:20:30.34,Chinese,,0,0,0,,例如
 Dialogue: 0,1:20:31.14,1:20:34.50,English,,0,0,0,,And in allocator one of the invariance is that there should be no
 Dialogue: 0,1:20:31.14,1:20:34.50,Chinese,,0,0,0,,在分配器中，其中一个不变性是
 Dialogue: 0,1:20:35.52,1:20:37.82,English,,0,0,0,,That there should never be two contiguous free blocks
@@ -2114,19 +2116,19 @@ Dialogue: 0,1:20:38.14,1:20:44.52,Chinese,,0,0,0,,所以你的一致性检查器
 Dialogue: 0,1:20:45.26,1:20:50.36,English,,0,0,0,,Or another invariant is that every free block should be in a free list somewhere
 Dialogue: 0,1:20:45.26,1:20:50.36,Chinese,,0,0,0,,或者另一个不变量是每个空闲块应该在某个地方的空闲列表中
 Dialogue: 0,1:20:51.32,1:20:57.04,English,,0,0,0,,Right so you would up your consistency checker would scan the heap count the number of free blocks
-Dialogue: 0,1:20:51.32,1:20:57.04,Chinese,,0,0,0,,是的，所以你想你的一致性检查器将扫描堆计数空闲块的数量
+Dialogue: 0,1:20:51.32,1:20:57.04,Chinese,,0,0,0,,你想你的一致性检查器将扫描堆计数空闲块的数量
 Dialogue: 0,1:20:57.56,1:20:59.44,English,,0,0,0,,And then scan the free list and make sure
 Dialogue: 0,1:20:57.56,1:20:59.44,Chinese,,0,0,0,,然后扫描空闲列表并确保
 Dialogue: 0,1:20:59.80,1:21:03.32,English,,0,0,0,,That the number of blocks in the free list is the same as the number of free blocks
 Dialogue: 0,1:20:59.80,1:21:03.32,Chinese,,0,0,0,,空闲列表中的块数与空闲块的数量相同
 Dialogue: 0,1:21:04.24,1:21:07.58,English,,0,0,0,,Okay so this idea of a consistency checker is something you'll use in your malloc lab
-Dialogue: 0,1:21:04.24,1:21:07.58,Chinese,,0,0,0,,好的，所以我们会在 malloc  lab 中使用一致性检查器
+Dialogue: 0,1:21:04.24,1:21:07.58,Chinese,,0,0,0,,我们会在 malloc  lab 中使用一致性检查器
 Dialogue: 0,1:21:07.80,1:21:13.92,English,,0,0,0,,But it's something it's also something you should use whenever you're updating any kind of complex data structure
 Dialogue: 0,1:21:07.80,1:21:13.92,Chinese,,0,0,0,,但是，无论何时更新任何类型的复杂数据结构，都应该使用它
 Dialogue: 0,1:21:16.08,1:21:20.04,English,,0,0,0,,And you know about valgrind but the great thing about these heap checkers
 Dialogue: 0,1:21:16.08,1:21:20.04,Chinese,,0,0,0,,你知道 valgrind，但关于这些堆检查器
 Dialogue: 0,1:21:20.54,1:21:22.10,English,,0,0,0,,Ok I'm passionate about heap checkers
-Dialogue: 0,1:21:20.54,1:21:22.10,Chinese,,0,0,0,,好吧，我对堆检查器很有热情
+Dialogue: 0,1:21:20.54,1:21:22.10,Chinese,,0,0,0,,我对堆检查器很有热情
 Dialogue: 0,1:21:23.15,1:21:24.26,English,,0,0,0,,Or consistency checkers
 Dialogue: 0,1:21:23.15,1:21:24.26,Chinese,,0,0,0,,或一致性检查员
 Dialogue: 0,1:21:25.28,1:21:29.38,English,,0,0,0,,The really powerful thing about them is you write them to run silently
@@ -2136,9 +2138,9 @@ Dialogue: 0,1:21:30.64,1:21:35.48,Chinese,,0,0,0,,除非他们发现违反不变
 Dialogue: 0,1:21:36.50,1:21:40.12,English,,0,0,0,,If you write your consistency checker like this then you can use it like a probe
 Dialogue: 0,1:21:36.50,1:21:40.12,Chinese,,0,0,0,,如果你像这样编写一致性检查器，那么你可以像探测器一样使用它
 Dialogue: 0,1:21:40.94,1:21:42.30,English,,0,0,0,,So your program crashes
-Dialogue: 0,1:21:40.94,1:21:42.30,Chinese,,0,0,0,,所以你的程序崩溃了
+Dialogue: 0,1:21:40.94,1:21:42.30,Chinese,,0,0,0,,你的程序崩溃了
 Dialogue: 0,1:21:43.22,1:21:47.54,English,,0,0,0,,So you do it you use this heap checker to do a binary search to isolate the cause
-Dialogue: 0,1:21:43.22,1:21:47.54,Chinese,,0,0,0,,所以你这样做，你使用这个堆检查器进行二进制搜索，以找出原因
+Dialogue: 0,1:21:43.22,1:21:47.54,Chinese,,0,0,0,,你这样做，你使用这个堆检查器进行二进制搜索，以找出原因
 Dialogue: 0,1:21:48.30,1:21:52.42,English,,0,0,0,,So you know you put your heap checker here
 Dialogue: 0,1:21:48.30,1:21:52.42,Chinese,,0,0,0,,所以你知道你把堆检查器放在这里
 Dialogue: 0,1:21:52.96,1:21:54.06,English,,0,0,0,,Everything is ok
@@ -2156,7 +2158,7 @@ Dialogue: 0,1:22:06.98,1:22:09.44,Chinese,,0,0,0,,你可以继续缩小范围，
 Dialogue: 0,1:22:09.96,1:22:12.92,English,,0,0,0,,Surgical probe that you can use to to track down bugs
 Dialogue: 0,1:22:09.96,1:22:12.92,Chinese,,0,0,0,,你可以用来追踪错误的手术探针
 Dialogue: 0,1:22:14.28,1:22:15.76,English,,0,0,0,,And so that's if you do this like it's
-Dialogue: 0,1:22:14.28,1:22:15.76,Chinese,,0,0,0,,所以，如果你像这样做的话
+Dialogue: 0,1:22:14.28,1:22:15.76,Chinese,,0,0,0,,如果你像这样做的话
 Dialogue: 0,1:22:17.06,1:22:20.60,English,,0,0,0,,I don't know how anybody debugs malloc without this kind of tool
 Dialogue: 0,1:22:17.06,1:22:20.60,Chinese,,0,0,0,,我不知道有没有人在没有这种工具的情况下调试 malloc
 Dialogue: 0,1:22:24.92,1:22:26.70,English,,0,0,0,,Okay so that's it for today
