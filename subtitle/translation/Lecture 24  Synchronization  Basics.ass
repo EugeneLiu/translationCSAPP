@@ -16,14 +16,14 @@ Video File: ../../../../Desktop/csapp/Lecture 24  Synchronization  Basics.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 1.125000
-Scroll Position: 1271
-Active Line: 1287
-Video Position: 101393
+Scroll Position: 1275
+Active Line: 1285
+Video Position: 101235
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: English,Noto Sans CJK SC Black,30,&H00FFFFFF,&H00412A2C,&H00412A2C,&H00412A2C,0,0,0,0,100,100,0,0,1,1.5,1.2,2,10,10,10,1
-Style: Chinese,Noto Sans CJK SC Black,40,&H00FFFF00,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1.2,1.2,2,10,10,10,1
+Style: Chinese,Noto Sans CJK SC Black,50,&H00FFFF00,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1.2,1.2,2,10,10,10,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -126,7 +126,7 @@ Dialogue: 0,0:04:01.02,0:04:05.20,Chinese,,0,0,0,,知道什么是线程中的资
 Dialogue: 0,0:04:06.54,0:04:13.96,English,,0,0,0,,So the answer is not as simple as global variables are shared and stack variables are not shared
 Dialogue: 0,0:04:06.54,0:04:13.96,Chinese,,0,0,0,,答案并不是像「全局变量是共享的，栈变量是不共享的」这样简单
 Dialogue: 0,0:04:18.70,0:04:23.66,English,,0,0,0,,Okay so with instead what we x is shared
-Dialogue: 0,0:04:18.70,0:04:23.66,Chinese,,0,0,0,,好的，如果资源 x 是共享的
+Dialogue: 0,0:04:18.70,0:04:23.66,Chinese,,0,0,0,,如果资源 x 是共享的
 Dialogue: 0,0:04:23.66,0:04:28.50,English,,0,0,0,,If only multiple threads reference some instance so that that variable x
 Dialogue: 0,0:04:23.66,0:04:28.50,Chinese,,0,0,0,,当且仅当有多个线程引用资源 x 的某个实例
 Dialogue: 0,0:04:29.51,0:04:34.00,English,,0,0,0,,All right so if only one thread is accessing a particular variable
@@ -230,7 +230,7 @@ Dialogue: 0,0:08:40.90,0:08:42.90,Chinese,,0,0,0,,因为 ptr 指向 msgs
 Dialogue: 0,0:08:43.00,0:08:46.40,English,,0,0,0,,So thread zero will print "hello from foo"
 Dialogue: 0,0:08:43.00,0:08:46.40,Chinese,,0,0,0,,所以线程零将打印「hello from foo」
 Dialogue: 0,0:08:47.32,0:08:50.44,English,,0,0,0,,And thread 1 will print "hello from bar"
-Dialogue: 0,0:08:47.32,0:08:50.44,Chinese,,0,0,0,,并且线程1将打印「hello from bar」
+Dialogue: 0,0:08:47.32,0:08:50.44,Chinese,,0,0,0,,并且线程 1 将打印「hello from bar」
 Dialogue: 0,0:08:51.86,0:08:55.92,English,,0,0,0,,And then we increment the pre increment the counter variable
 Dialogue: 0,0:08:51.86,0:08:55.92,Chinese,,0,0,0,,然后我们把 cnt 的值 +1
 Dialogue: 0,0:08:58.80,0:08:59.46,English,,0,0,0,,Okay so
@@ -586,7 +586,7 @@ Dialogue: 0,0:24:27.54,0:24:30.18,Chinese,,0,0,0,,下一条指令增加 ％rdx �
 Dialogue: 0,0:24:31.52,0:24:35.98,English,,0,0,0,,And we'll denote that U(i) for update so it updates %rdx
 Dialogue: 0,0:24:31.52,0:24:35.98,Chinese,,0,0,0,,这是更新 ％rdx，我们将其表示为 U(i)
 Dialogue: 0,0:24:37.14,0:24:42.92,English,,0,0,0,,And then it stores the value the updated value of %rdx into count
-Dialogue: 0,0:24:37.14,0:24:42.92,Chinese,,0,0,0,,然后下一条指令将 ％rdx 的更新值存储到 cnt 中 
+Dialogue: 0,0:24:37.14,0:24:42.92,Chinese,,0,0,0,,然后下一条指令将 ％rdx 的更新值存储到 cnt 中
 Dialogue: 0,0:24:43.42,0:24:48.06,English,,0,0,0,,Okay so into the location associated with the global variable count
 Dialogue: 0,0:24:43.42,0:24:48.06,Chinese,,0,0,0,,也就是更新 cnt 的内存地址上的内容
 Dialogue: 0,0:24:50.00,0:24:50.44,English,,0,0,0,,And
@@ -708,7 +708,7 @@ Dialogue: 0,0:29:24.98,0:29:29.92,Chinese,,0,0,0,,当线程 2 加载其 cnt 值�
 Dialogue: 0,0:29:29.92,0:29:33.44,English,,0,0,0,,Now it's copy and %rdx is 0
 Dialogue: 0,0:29:29.92,0:29:33.44,Chinese,,0,0,0,,cnt 为 0，所以线程 2 的 ％rdx 副本为 0
 Dialogue: 0,0:29:34.60,0:29:39.72,English,,0,0,0,,Now at this point the kernel reschedules thread 1 to execute so thread 1 does it store
-Dialogue: 0,0:29:34.60,0:29:39.72,Chinese,,0,0,0,,现在，此时内核重新安排线程1执行，因此线程1会存储它
+Dialogue: 0,0:29:34.60,0:29:39.72,Chinese,,0,0,0,,现在，此时内核重新安排线程 1 执行，因此线程 1 会存储它
 Dialogue: 0,0:29:40.88,0:29:43.98,English,,0,0,0,,Of its copy of %rdx into count
 Dialogue: 0,0:29:40.88,0:29:43.98,Chinese,,0,0,0,,将 ％rdx 的副本值更新到 cnt 中
 Dialogue: 0,0:29:44.96,0:29:48.16,English,,0,0,0,,And then finishes executing it the tail instruction
@@ -722,7 +722,7 @@ Dialogue: 0,0:29:58.46,0:30:01.60,Chinese,,0,0,0,,所以现在 ％rdx 从 0 变�
 Dialogue: 0,0:30:03.18,0:30:06.12,English,,0,0,0,,And then it stores that value into count
 Dialogue: 0,0:30:03.18,0:30:06.12,Chinese,,0,0,0,,然后它将该值更新到 cnt 中
 Dialogue: 0,0:30:06.80,0:30:10.44,English,,0,0,0,,So all we've done is we've overwritten count out a value 1
-Dialogue: 0,0:30:06.80,0:30:10.44,Chinese,,0,0,0,,这一步所做的就是将 cnt 的值更新为 1 
+Dialogue: 0,0:30:06.80,0:30:10.44,Chinese,,0,0,0,,这一步所做的就是将 cnt 的值更新为 1
 Dialogue: 0,0:30:11.06,0:30:12.80,English,,0,0,0,,And we've overwritten it with a value of 1
 Dialogue: 0,0:30:11.06,0:30:12.80,Chinese,,0,0,0,,我们让 cnt 的值为 1
 Dialogue: 0,0:30:13.82,0:30:17.72,English,,0,0,0,,So when we finish execution of these two threads count has the wrong value
@@ -751,7 +751,7 @@ Dialogue: 0,0:31:02.04,0:31:11.32,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:31:02.04,0:31:11.32,Chinese,,0,0,0,,[学生提问]
 Dialogue: 0,0:31:11.34,0:31:13.72,English,,0,0,0,,Well no okay so the question is would would
 Dialogue: 0,0:31:11.34,0:31:13.72,Chinese,,0,0,0,,他的问题是
-Dialogue: 0,0:31:14.90,0:31:15.60,English,,0,0,0,,i or count 
+Dialogue: 0,0:31:14.90,0:31:15.60,English,,0,0,0,,i or count
 Dialogue: 0,0:31:14.90,0:31:15.60,Chinese,,0,0,0,,i 还是 cnt
 Dialogue: 0,0:31:22.10,0:31:26.10,English,,0,0,0,,If we...okay it is defined as volatile
 Dialogue: 0,0:31:22.10,0:31:26.10,Chinese,,0,0,0,,cnt 被定义为 volatile
@@ -856,7 +856,7 @@ Dialogue: 0,0:35:01.98,0:35:05.08,Chinese,,0,0,0,,程序当前的执行状态
 Dialogue: 0,0:35:06.06,0:35:11.02,English,,0,0,0,,So for example this state right here represents the state where thread 1
 Dialogue: 0,0:35:06.06,0:35:11.02,Chinese,,0,0,0,,例如 PPT 上红色的这个点，代表了
 Dialogue: 0,0:35:11.34,0:35:13.60,English,,0,0,0,,Has completed a completed L1
-Dialogue: 0,0:35:11.34,0:35:13.60,Chinese,,0,0,0,,线程 1 已经完成了 L1
+Dialogue: 0,0:35:11.34,0:35:13.60,Chinese,,0,0,0,,线程 1 已经完成了 L(1)
 Dialogue: 0,0:35:14.24,0:35:17.16,English,,0,0,0,,And thread 2 is completed S(2)
 Dialogue: 0,0:35:14.24,0:35:17.16,Chinese,,0,0,0,,线程 2 完成 S(2)
 Dialogue: 0,0:35:22.30,0:35:28.16,English,,0,0,0,,And now the execution of a program is modeled as a transition from one state to the other
@@ -1050,7 +1050,7 @@ Dialogue: 0,0:43:54.18,0:43:57.60,Chinese,,0,0,0,,这个解决方案是非常基
 Dialogue: 0,0:43:57.60,0:44:01.76,English,,0,0,0,,And there's been many iterations and variations on this idea
 Dialogue: 0,0:43:57.60,0:44:01.76,Chinese,,0,0,0,,这个解决方案经过许多迭代，有一些其他的版本
 Dialogue: 0,0:44:02.74,0:44:08.00,English,,0,0,0,,But semaphores were the first and classic solution which we'll look at
-Dialogue: 0,0:44:02.74,0:44:08.00,Chinese,,0,0,0,,但我们将要学习的信号量是这个问题的第一个，也是经典的，解决方案
+Dialogue: 0,0:44:02.74,0:44:08.00,Chinese,,0,0,0,,但我们将要学习的信号量是这个问题的第一个，也是经典的解决方案
 Dialogue: 0,0:44:11.38,0:44:17.58,English,,0,0,0,,Okay so a semaphore is a non-negative global integer
 Dialogue: 0,0:44:11.38,0:44:17.58,Chinese,,0,0,0,,好的，信号量是一个非负的全局整数
 Dialogue: 0,0:44:17.68,0:44:24.14,English,,0,0,0,,That's used as a synchronization variable by to kernel functions called P and V
@@ -1066,7 +1066,7 @@ Dialogue: 0,0:44:46.74,0:44:51.06,Chinese,,0,0,0,,这两个函数都以信号量
 Dialogue: 0,0:44:52.84,0:44:56.82,English,,0,0,0,,And the P operation has the following semantics
 Dialogue: 0,0:44:52.84,0:44:56.82,Chinese,,0,0,0,,并且 P 操作具有以下语义
 Dialogue: 0,0:44:58.28,0:45:00.54,English,,0,0,0,,If s is nonzero
-Dialogue: 0,0:44:58.28,0:45:00.54,Chinese,,0,0,0,,如果 S 不为零
+Dialogue: 0,0:44:58.28,0:45:00.54,Chinese,,0,0,0,,如果 s 不为零
 Dialogue: 0,0:45:02.30,0:45:04.96,English,,0,0,0,,Then decrement it by 1 and return immediately
 Dialogue: 0,0:45:02.30,0:45:04.96,Chinese,,0,0,0,,将其减 1 并立即返回
 Dialogue: 0,0:45:07.68,0:45:10.60,English,,0,0,0,,And this test if it that it's nonzero
@@ -1238,7 +1238,7 @@ Dialogue: 0,0:52:54.90,0:52:57.94,Chinese,,0,0,0,,你会得到这些信号量的
 Dialogue: 0,0:52:57.96,0:53:03.12,English,,0,0,0,,So here we initialize the semaphore at the origin we initialized it to 1
 Dialogue: 0,0:52:57.96,0:53:03.12,Chinese,,0,0,0,,原点的信号量初始化为 1
 Dialogue: 0,0:53:03.14,0:53:10.16,English,,0,0,0,,So the value of a semaphore at the origin is 1
-Dialogue: 0,0:53:03.14,0:53:10.16,Chinese,,0,0,0,,因此，原点信号量的值为1
+Dialogue: 0,0:53:03.14,0:53:10.16,Chinese,,0,0,0,,因此，原点信号量的值为 1
 Dialogue: 0,0:53:11.38,0:53:13.10,English,,0,0,0,,And let's say we just move along
 Dialogue: 0,0:53:11.38,0:53:13.10,Chinese,,0,0,0,,然后程序开始执行
 Dialogue: 0,0:53:13.12,0:53:14.78,English,,0,0,0,,So we're just executing thread 1
@@ -1250,7 +1250,7 @@ Dialogue: 0,0:53:19.02,0:53:25.04,Chinese,,0,0,0,,然后我们执行 P 操作，
 Dialogue: 0,0:53:25.50,0:53:28.76,English,,0,0,0,,So now the semaphore value becomes 0
 Dialogue: 0,0:53:25.50,0:53:28.76,Chinese,,0,0,0,,所以现在信号量变为 0
 Dialogue: 0,0:53:29.56,0:53:33.02,English,,0,0,0,,And it remains zero until we execute the V
-Dialogue: 0,0:53:29.56,0:53:33.02,Chinese,,0,0,0,,在我们执行 V 之前信号量一直保持为零
+Dialogue: 0,0:53:29.56,0:53:33.02,Chinese,,0,0,0,,在我们执行 V 之前信号量一直保持为 0
 Dialogue: 0,0:53:33.72,0:53:35.60,English,,0,0,0,,And when we finished executing the V
 Dialogue: 0,0:53:33.72,0:53:35.60,Chinese,,0,0,0,,当我们完成 V 操作
 Dialogue: 0,0:53:36.44,0:53:38.38,English,,0,0,0,,The semaphore now is 1 again
@@ -1298,20 +1298,20 @@ Dialogue: 0,0:55:36.96,0:55:37.98,Chinese,,0,0,0,,对这一点有什么疑问吗
 Dialogue: 0,0:55:41.20,0:55:43.60,English,,0,0,0,,I explained it so clearly that there's no questions
 Dialogue: 0,0:55:41.20,0:55:43.60,Chinese,,0,0,0,,看来我解释得很清楚，大家都没有问题
 Dialogue: 0,0:55:48.50,0:55:54.02,English,,0,0,0,,All right good well you get to go...you get to leave early then work on your malloc lab
-Dialogue: 0,0:55:48.50,0:55:54.02,Chinese,,0,0,0,,好的，你们可以下课，然后完成 malloc 实验了
+Dialogue: 0,0:55:48.50,0:55:54.02,Chinese,,0,0,0,,好的，你们可以下课，然后完成 malloc lab 了
 Dialogue: 0,0:55:54.86,0:55:55.52,English,,0,0,0,,So
 Dialogue: 0,0:55:54.86,0:55:55.52,Chinese,,0,0,0,,所以
 Dialogue: 0,0:55:57.56,0:55:58.80,English,,0,0,0,,All right so
 Dialogue: 0,0:55:57.56,0:55:58.80,Chinese,,0,0,0,,好的
 Dialogue: 0,0:55:59.64,0:56:04.04,English,,0,0,0,,We'll see you Monday we're going to look at sort of some advanced topics
-Dialogue: 0,0:55:59.64,0:56:04.04,Chinese,,0,0,0,,那我们下周一见，下周一我们要学习同步的一些高级主题
+Dialogue: 0,0:55:59.64,0:56:04.04,Chinese,,0,0,0,,那我们下周一见，下周一我们要学习「同步」的一些高级主题
 Dialogue: 0,0:56:04.06,0:56:06.92,English,,0,0,0,,This was like, first introduction to synchronization
 Dialogue: 0,0:56:04.06,0:56:06.92,Chinese,,0,0,0,,这节课只是对同步进行了简单介绍
 Dialogue: 0,0:56:07.36,0:56:12.10,English,,0,0,0,,On Tuesday we'll look at more advanced topics in synchronization in ways
-Dialogue: 0,0:56:07.36,0:56:12.10,Chinese,,0,0,0,,周二，我们会介绍同步的一些高级主题
+Dialogue: 0,0:56:07.36,0:56:12.10,Chinese,,0,0,0,,周二，我们会介绍「同步」的一些高级主题
 Dialogue: 0,0:56:12.20,0:56:13.96,English,,0,0,0,,Ways that you can use semaphores for to
 Dialogue: 0,0:56:12.20,0:56:13.96,Chinese,,0,0,0,,主要是使用信号量
 Dialogue: 0,0:56:14.50,0:56:19.20,English,,0,0,0,,Provide other more interests other interesting kinds of synchronization for your programs
-Dialogue: 0,0:56:14.50,0:56:19.20,Chinese,,0,0,0,,来为你的程序提供一些同步
+Dialogue: 0,0:56:14.50,0:56:19.20,Chinese,,0,0,0,,来为你的程序提供一些「同步」
 Dialogue: 0,0:56:19.76,0:56:20.54,English,,0,0,0,,Okay
 Dialogue: 0,0:56:19.76,0:56:20.54,Chinese,,0,0,0,,好的
