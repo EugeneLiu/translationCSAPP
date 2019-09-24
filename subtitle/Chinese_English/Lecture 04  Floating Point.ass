@@ -11,14 +11,14 @@ PlayResY: 720
 
 [Aegisub Project Garbage]
 Last Style Storage: Default
-Audio File: ../../../../Desktop/Lecture 04.mp4
-Video File: ../../../../Desktop/Lecture 04.mp4
+Audio File: ../../../../Desktop/Lecture 04  Floating Point.mp4
+Video File: ../../../../Desktop/Lecture 04  Floating Point.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
-Video Zoom Percent: 1.000000
-Scroll Position: 1515
-Active Line: 1531
-Video Position: 128387
+Video Zoom Percent: 0.500000
+Scroll Position: 1326
+Active Line: 1349
+Video Position: 111063
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -228,7 +228,7 @@ Dialogue: 0,0:09:38.74,0:09:42.20,Chinese,,0,0,0,,它编码了 E
 Dialogue: 0,0:09:43.24,0:09:47.70,English,,0,0,0,,But it's not identical to E,it encodes E, we'll see how that works
 Dialogue: 0,0:09:43.24,0:09:47.70,Chinese,,0,0,0,,但编码表示的值与 E的值不同，它只是编码了 E ，我们会看到它是如何起效的
 Dialogue: 0,0:09:48.18,0:09:54.54,English,,0,0,0,,And then the frac. And then that's followed the remaining bits are the the frac field
-Dialogue: 0,0:09:48.18,0:09:54.54,Chinese,,0,0,0,,后面剩下的比特位是尾数（frac）字段
+Dialogue: 0,0:09:48.18,0:09:54.54,Chinese,,0,0,0,,后面剩下的比特位是尾数（frac）域
 Dialogue: 0,0:09:55.96,0:09:59.38,English,,0,0,0,,which encodes M but isn't identical to M
 Dialogue: 0,0:09:55.96,0:09:59.38,Chinese,,0,0,0,,它编码了 M 但与 M 不完全相同
 Dialogue: 0,0:10:02.02,0:10:09.46,English,,0,0,0,,Now we are...IEEE floating point has provides two different kinds of floating-point
@@ -378,7 +378,7 @@ Dialogue: 0,0:16:39.64,0:16:43.04,Chinese,,0,0,0,,那是 1.111......
 Dialogue: 0,0:16:47.08,0:16:50.64,English,,0,0,0,,So let's look at an example
 Dialogue: 0,0:16:47.08,0:16:50.64,Chinese,,0,0,0,,那么让我们看一个例子
 Dialogue: 0,0:16:51.82,0:17:01.12,English,,0,0,0,,So let's look at how we would encode 15213 which our favorite number In two's complement in floating point
-Dialogue: 0,0:16:51.82,0:17:01.12,Chinese,,0,0,0,,那么让我们来看看如何使用浮点数的方式来编码我们最喜欢的数字 15213 
+Dialogue: 0,0:16:51.82,0:17:01.12,Chinese,,0,0,0,,那么让我们来看看如何使用浮点数的方式来编码我们最喜欢的数字 15213
 Dialogue: 0,0:17:02.52,0:17:05.22,English,,0,0,0,,So the if we represent that so it's an integer
 Dialogue: 0,0:17:02.52,0:17:05.22,Chinese,,0,0,0,,如果我们使用这种发式表达它，它就是一个整数
 Dialogue: 0,0:17:06.60,0:17:15.34,English,,0,0,0,,And we represent it using these bits take my word for it correspond to the integer 15213
@@ -466,9 +466,9 @@ Dialogue: 0,0:20:38.22,0:20:43.88,Chinese,,0,0,0,,那么最大的值就是记住
 Dialogue: 0,0:20:45.72,0:20:48.94,English,,0,0,0,,Right so the largest value would be 2^8-1
 Dialogue: 0,0:20:45.72,0:20:48.94,Chinese,,0,0,0,,正确，因此最大值为 2^8-1
 Dialogue: 0,0:20:51.04,0:20:55.32,English,,0,0,0,,So okay so the largest value would be 01111...
-Dialogue: 0,0:20:51.04,0:20:55.32,Chinese,,0,0,0,,好吧所以最大的值是 01111......
+Dialogue: 0,0:20:51.04,0:20:55.32,Chinese,,0,0,0,,好吧所以最大的值是1111....\N（译者注：最大值为11111111，老师此处讲解错误）
 Dialogue: 0,0:20:55.32,0:20:57.20,English,,0,0,0,,0 followed by 7 ones
-Dialogue: 0,0:20:55.32,0:20:57.20,Chinese,,0,0,0,,0 后跟 7 个 1
+Dialogue: 0,0:20:55.32,0:20:57.20,Chinese,,0,0,0,,（译者注：最大值为11111111，老师此处讲解错误）
 Dialogue: 0,0:20:59.88,0:21:03.62,English,,0,0,0,,So that's a 2^8-1 is ...
 Dialogue: 0,0:20:59.88,0:21:03.62,Chinese,,0,0,0,,那是 2^8-1 是......
 Dialogue: 0,0:21:03.64,0:21:13.06,English,,0,0,0,,255 good
@@ -638,11 +638,11 @@ Dialogue: 0,0:28:59.56,0:29:03.88,Chinese,,0,0,0,,只做三位二进制补码系
 Dialogue: 0,0:29:03.88,0:29:07.08,English,,0,0,0,,You know imagine just have a system with two's complement of three bits
 Dialogue: 0,0:29:03.88,0:29:07.08,Chinese,,0,0,0,,你想象一下，系统有二进制三位补码
 Dialogue: 0,0:29:07.68,0:29:11.68,English,,0,0,0,,And then you can just enumerate all those all the possibilities and you can see
-Dialogue: 0,0:29:07.68,0:29:11.68,Chinese,,0,0,0,,然后你可以列举所有可能性，你可以看到
+Dialogue: 0,0:29:07.68,0:29:11.68,Chinese,,0,0,0,,接着你可以枚举所有可能的情况
 Dialogue: 0,0:29:12.38,0:29:17.96,English,,0,0,0,,And then you see where you know the Tmin is actually one greater than Tmax
-Dialogue: 0,0:29:12.38,0:29:17.96,Chinese,,0,0,0,,然后你会看到你知道 Tmin 实际上比 Tmax 更大的地方
+Dialogue: 0,0:29:12.38,0:29:17.96,Chinese,,0,0,0,,然后你会发现Tmin （的编码）实际上比 Tmax（的编码） 大一
 Dialogue: 0,0:29:17.96,0:29:22.58,English,,0,0,0,,You know so if you add one to Tmax it actually overflows into Tmin
-Dialogue: 0,0:29:17.96,0:29:22.58,Chinese,,0,0,0,,你知道如果你在 Tmax 中添加 1，它实际上会溢出到 Tmin
+Dialogue: 0,0:29:17.96,0:29:22.58,Chinese,,0,0,0,,如果将Tmax（的编码）加 1，就会溢出从而变成Tmin（的编码）\N （译者注：3:011编码加一后变为-4:100）
 Dialogue: 0,0:29:25.20,0:29:29.98,English,,0,0,0,,Similar thing for floating point it's...I would really encourage you to do this
 Dialogue: 0,0:29:25.20,0:29:29.98,Chinese,,0,0,0,,浮点数也有类似的事情......我真的很鼓励你们这样做
 Dialogue: 0,0:29:29.98,0:29:36.80,English,,0,0,0,,Just try some simple examples with a sort of tyent with a small number  of exp and frack bits
@@ -652,11 +652,11 @@ Dialogue: 0,0:29:37.32,0:29:43.48,Chinese,,0,0,0,,所以在这种情况下，我
 Dialogue: 0,0:29:43.50,0:29:47.58,English,,0,0,0,,That has 4 exp bits and three frack bits
 Dialogue: 0,0:29:43.50,0:29:47.58,Chinese,,0,0,0,,它有 4 个 exp 位和 3 个 frac 位
 Dialogue: 0,0:29:48.64,0:29:51.48,English,,0,0,0,,As always the sign bit is the most significant bit
-Dialogue: 0,0:29:48.64,0:29:51.48,Chinese,,0,0,0,,一如既往，符号位是最重要的位
+Dialogue: 0,0:29:48.64,0:29:51.48,Chinese,,0,0,0,,符号位是最高有效位
 Dialogue: 0,0:29:52.04,0:29:54.20,English,,0,0,0,,Followed by exp followed by frac
 Dialogue: 0,0:29:52.04,0:29:54.20,Chinese,,0,0,0,,其次是 exp，然后是 frac
 Dialogue: 0,0:29:55.92,0:30:03.08,English,,0,0,0,,Okay so this is identical to IEEE floating point except for the size of that  exp in fractals
-Dialogue: 0,0:29:55.92,0:30:03.08,Chinese,,0,0,0,,好的，除了exp，frac 的位数外，这与 IEEE 浮点相同
+Dialogue: 0,0:29:55.92,0:30:03.08,Chinese,,0,0,0,,除了exp，frac 的位数外，其他都与IEEE 浮点数标准完全相同
 Dialogue: 0,0:30:04.42,0:30:10.72,English,,0,0,0,,So it's actually small enough that we can now just enumerate these values
 Dialogue: 0,0:30:04.42,0:30:10.72,Chinese,,0,0,0,,所以它实际上足够小，小到我们可以枚举这些值
 Dialogue: 0,0:30:11.56,0:30:22.96,English,,0,0,0,,And now you can, you can start to see why these weird definitions for the exponent in the denominator
@@ -728,7 +728,7 @@ Dialogue: 0,0:33:11.08,0:33:19.74,Chinese,,0,0,0,,这些数字通过递增 frac�
 Dialogue: 0,0:33:20.12,0:33:23.78,English,,0,0,0,,We're increasing the numbers by 1/512
 Dialogue: 0,0:33:20.12,0:33:23.78,Chinese,,0,0,0,,我们将这个数字增加了 1/512
 Dialogue: 0,0:33:26.32,0:33:33.34,English,,0,0,0,,Now the largest denorm in this number system is the case where the frac field is all ones
-Dialogue: 0,0:33:26.32,0:33:33.34,Chinese,,0,0,0,,现在，这个数字系统中最大的变形就是 frac 是全 1
+Dialogue: 0,0:33:26.32,0:33:33.34,Chinese,,0,0,0,,当frac 域全 1的时候，非规格化数取得最大值
 Dialogue: 0,0:33:34.48,0:33:44.68,English,,0,0,0,,And so this encodes 1/2+1/4+1/8 which is 7/8
 Dialogue: 0,0:33:34.48,0:33:44.68,Chinese,,0,0,0,,所以这编码为1/2 + 1/4 + 1/8，即7/8
 Dialogue: 0,0:33:44.68,0:33:52.90,English,,0,0,0,,And then our value is 7/8*2^-6(1/64) =7/512
@@ -750,7 +750,7 @@ Dialogue: 0,0:34:35.34,0:34:38.08,Chinese,,0,0,0,,那么在这种情况下指数
 Dialogue: 0,0:34:40.50,0:34:46.50,English,,0,0,0,,1-7,the bias is -6
 Dialogue: 0,0:34:40.50,0:34:46.50,Chinese,,0,0,0,,1-7，偏置为 -6
 Dialogue: 0,0:34:46.52,0:34:57.08,English,,0,0,0,, So lower in hold,it's the same exponent as the previous denormalized number
-Dialogue: 0,0:34:46.52,0:34:57.08,Chinese,,0,0,0,,因此指数保持不变，它与先前非标规格化的值的指数相同
+Dialogue: 0,0:34:46.52,0:34:57.08,Chinese,,0,0,0,,因此指数保持不变，它与先前非规格化值的指数相同
 Dialogue: 0,0:34:57.50,0:35:00.72,English,,0,0,0,,So this is actually very clever by the IEEE folks
 Dialogue: 0,0:34:57.50,0:35:00.72,Chinese,,0,0,0,,所以说 IEEE 的家伙们实际上非常聪明
 Dialogue: 0,0:35:01.10,0:35:06.54,English,,0,0,0,,Because you get the spirit,you get this nice smooth transition from denorm to normalize
@@ -770,17 +770,17 @@ Dialogue: 0,0:35:49.06,0:35:59.70,Chinese,,0,0,0,,代表是 1.000，这是 8/8*2
 Dialogue: 0,0:35:59.80,0:36:05.72,English,,0,0,0,,So we've made this nice smooth transition from 7/512 to 8/512
 Dialogue: 0,0:35:59.80,0:36:05.72,Chinese,,0,0,0,,所以我们已经实现了从 7/512 到 8/512 的平滑过渡
 Dialogue: 0,0:36:07.28,0:36:08.82,English,,0,0,0,,And how do one more
-Dialogue: 0,0:36:07.28,0:36:08.82,Chinese,,0,0,0,,又如何做一个
+Dialogue: 0,0:36:07.28,0:36:08.82,Chinese,,0,0,0,,下一个该如何进行呢
 Dialogue: 0,0:36:08.82,0:36:09.90,English,,0,0,0,, I don't want to
-Dialogue: 0,0:36:08.82,0:36:09.90,Chinese,,0,0,0,,我不想
+Dialogue: 0,0:36:08.82,0:36:09.90,Chinese,,0,0,0,,我其实不枚举了:)
 Dialogue: 0,0:36:10.60,0:36:15.46,English,,0,0,0,,So if we bump keeping the exp field 1
-Dialogue: 0,0:36:10.60,0:36:15.46,Chinese,,0,0,0,,因此，如果我们保持 exp 字段 1
+Dialogue: 0,0:36:10.60,0:36:15.46,Chinese,,0,0,0,,我们让exp值继续为1
 Dialogue: 0,0:36:15.46,0:36:17.94,English,,0,0,0,,If we bump our frac field from 0 to 1
 Dialogue: 0,0:36:15.46,0:36:17.94,Chinese,,0,0,0,,如果我们将我们的 frac 从 0 增加到 1
-Dialogue: 0,0:36:18.86,0:36:31.12,English,,0,0,0,,Now this represents the the significant of 1.0, 1.001
-Dialogue: 0,0:36:18.86,0:36:31.12,Chinese,,0,0,0,,现在这代表了 1.001 的重要性
+Dialogue: 0,0:36:18.86,0:36:31.12,English,,0,0,0,,Now this represents the the significant of 1.001
+Dialogue: 0,0:36:18.86,0:36:31.12,Chinese,,0,0,0,,这表示1.001（而不是0.001，因为规格化值有隐藏的1）
 Dialogue: 0,0:36:32.92,0:36:36.66,English,,0,0,0,,Which is 8/8+1/8
-Dialogue: 0,0:36:32.92,0:36:36.66,Chinese,,0,0,0,,这是 8/8+1/8
+Dialogue: 0,0:36:32.92,0:36:36.66,Chinese,,0,0,0,,十进制值是 8/8+1/8
 Dialogue: 0,0:36:38.48,0:36:48.10,English,,0,0,0,,So that's 9/8 times...and then the value is 9/8*2^-6(1/64) which is equal to 9/512
 Dialogue: 0,0:36:38.48,0:36:48.10,Chinese,,0,0,0,,最终值为 9/8*2^-6（1/64），等于 9/512
 Dialogue: 0,0:36:48.54,0:36:52.07,English,,0,0,0,,Okay
@@ -788,11 +788,11 @@ Dialogue: 0,0:36:48.54,0:36:52.07,Chinese,,0,0,0,,好的
 Dialogue: 0,0:36:52.44,0:36:53.68,English,,0,0,0,,Any questions about that?
 Dialogue: 0,0:36:52.44,0:36:53.68,Chinese,,0,0,0,,对此有任何疑问？
 Dialogue: 0,0:36:59.42,0:37:00.44,English,,0,0,0,,Question back here
-Dialogue: 0,0:36:59.42,0:37:00.44,Chinese,,0,0,0,,回答这里
+Dialogue: 0,0:36:59.42,0:37:00.44,Chinese,,0,0,0,,
 Dialogue: 0,0:37:00.74,0:37:04.68,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:37:00.74,0:37:04.68,Chinese,,0,0,0,,[学生说话]
 Dialogue: 0,0:37:04.68,0:37:09.68,English,,0,0,0,,Okay the question is why do you choose the bias that to be 2^(k-1) - 1
-Dialogue: 0,0:37:04.68,0:37:09.68,Chinese,,0,0,0,,好的问题是为什么你选择偏置为 2^(k-1)-1
+Dialogue: 0,0:37:04.68,0:37:09.68,Chinese,,0,0,0,,好的问题是为什么你选择偏置值为 2^(k-1)-1
 Dialogue: 0,0:37:10.04,0:37:13.16,English,,0,0,0,,Well go back to my finger diagram here
 Dialogue: 0,0:37:10.04,0:37:13.16,Chinese,,0,0,0,,那么回到我的手指图
 Dialogue: 0,0:37:13.78,0:37:18.46,English,,0,0,0,, so this is the range of exp fields that you want to
@@ -800,9 +800,9 @@ Dialogue: 0,0:37:13.78,0:37:18.46,Chinese,,0,0,0,,所以这是你想要的 exp �
 Dialogue: 0,0:37:18.82,0:37:22.14,English,,0,0,0,,This is the range of E that you want to represent with 0 in the middle
 Dialogue: 0,0:37:18.82,0:37:22.14,Chinese,,0,0,0,,你希望 E 范围的中位数是 0
 Dialogue: 0,0:37:23.54,0:37:26.96,English,,0,0,0,,Okay and so you want to bias
-Dialogue: 0,0:37:23.54,0:37:26.96,Chinese,,0,0,0,,所以你想要偏置值
+Dialogue: 0,0:37:23.54,0:37:26.96,Chinese,,0,0,0,,所以你需要进行偏置
 Dialogue: 0,0:37:26.96,0:37:32.62,English,,0,0,0,,So that this is halfway，the smallest exponent is halfway to 0
-Dialogue: 0,0:37:26.96,0:37:32.62,Chinese,,0,0,0,,因此，这是中间，最小的指数是 0 的一半
+Dialogue: 0,0:37:26.96,0:37:32.62,Chinese,,0,0,0,,这是E范围的一半的，最小的指数和0距离为E范围的一半
 Dialogue: 0,0:37:34.36,0:37:36.20,English,,0,0,0,,So you want the bias to shift it up
 Dialogue: 0,0:37:34.36,0:37:36.20,Chinese,,0,0,0,,所以你希望偏置值能够改变它
 Dialogue: 0,0:37:36.20,0:37:42.86,English,,0,0,0,,So it's the smallest value of exp corresponds to the smallest exponent
@@ -812,7 +812,7 @@ Dialogue: 0,0:37:43.56,0:37:51.70,Chinese,,0,0,0,,对，所以 2^(k-1)-1 只给�
 Dialogue: 0,0:37:53.40,0:37:53.76,English,,0,0,0,,Okay
 Dialogue: 0,0:37:53.40,0:37:53.76,Chinese,,0,0,0,,好的
 Dialogue: 0,0:37:56.58,0:37:57.84,English,,0,0,0,,That's good.Any other questions?
-Dialogue: 0,0:37:56.58,0:37:57.84,Chinese,,0,0,0,,那很好。还有其他问题吗？
+Dialogue: 0,0:37:56.58,0:37:57.84,Chinese,,0,0,0,,这个问题很棒。还有其他问题吗？
 Dialogue: 0,0:38:05.20,0:38:10.74,English,,0,0,0,,Okay if we take a little smaller six bit format same thing as we did before
 Dialogue: 0,0:38:05.20,0:38:10.74,Chinese,,0,0,0,,好的，如果我们采用与之前相同的六位格式
 Dialogue: 0,0:38:10.74,0:38:14.20,English,,0,0,0,,Just different numbers of bits in exp and frac
@@ -984,7 +984,7 @@ Dialogue: 0,0:44:30.22,0:44:37.66,Chinese,,0,0,0,,所以这里的想法是，如
 Dialogue: 0,0:44:37.94,0:44:43.61,English,,0,0,0,,If you have a value that's more than halfway between two dollar amounts you round up
 Dialogue: 0,0:44:37.94,0:44:43.61,Chinese,,0,0,0,,如果你的值超过两美元的一半，那么你就会向上舍入
 Dialogue: 0,0:44:44.38,0:44:50.60,English,,0,0,0,,The route that nearest even part comes when you have something that's exactly halfway
-Dialogue: 0,0:44:44.38,0:44:50.60,Chinese,,0,0,0,,向偶数舍入可以区分正好在中间的部门
+Dialogue: 0,0:44:44.38,0:44:50.60,Chinese,,0,0,0,,向偶数舍入可以区分正好在中间的部分
 Dialogue: 0,0:44:51.50,0:44:54.28,English,,0,0,0,, Then what you do is you round towards the nearest even number
 Dialogue: 0,0:44:51.50,0:44:54.28,Chinese,,0,0,0,,然后你要做的是你向最近的偶数舍入
 Dialogue: 0,0:44:56.44,0:44:59.76,English,,0,0,0,, Okay so in this example a dollar forty
@@ -1024,7 +1024,7 @@ Dialogue: 0,0:46:15.00,0:46:19.80,Chinese,,0,0,0,,但是我们假设我们想要
 Dialogue: 0,0:46:20.60,0:46:22.26,English,,0,0,0,,The default round to even mode
 Dialogue: 0,0:46:20.60,0:46:22.26,Chinese,,0,0,0,,使用默认的二进制向偶数舍入
 Dialogue: 0,0:46:23.02,0:46:31.00,English,,0,0,0,,So we want to round to the the nearest hundredth is this second position this
-Dialogue: 0,0:46:23.02,0:46:31.00,Chinese,,0,0,0,,所以我们想要舍入到最接近的百分位是第二个位置
+Dialogue: 0,0:46:23.02,0:46:31.00,Chinese,,0,0,0,,我们想要舍入到百分位
 Dialogue: 0,0:46:31.66,0:46:33.68,English,,0,0,0,,First do we have tenths then hundreds
 Dialogue: 0,0:46:31.66,0:46:33.68,Chinese,,0,0,0,,首先，我们有十分位，然后是百分位
 Dialogue: 0,0:46:35.24,0:46:39.44,English,,0,0,0,,So if we have a value 7.8949999
@@ -1298,7 +1298,7 @@ Dialogue: 0,0:58:20.76,0:58:23.22,Chinese,,0,0,0,,有一些位用来表示 3.14
 Dialogue: 0,0:58:23.78,0:58:25.78,English,,0,0,0,,You know there's bits way out here that represent
 Dialogue: 0,0:58:23.78,0:58:25.78,Chinese,,0,0,0,,你已经知道表示的方式了
 Dialogue: 0,0:58:26.38,0:58:28.46,English,,0,0,0,,There's one bit out here that represents 2^10
-Dialogue: 0,0:58:26.38,0:58:28.46,Chinese,,0,0,0,,有一个位表示 2^10
+Dialogue: 0,0:58:26.38,0:58:28.46,Chinese,,0,0,0,,有一些位表示 2^10
 Dialogue: 0,0:58:28.46,0:58:32.20,English,,0,0,0,,Then there's a few bits here they represent 3.14
 Dialogue: 0,0:58:28.46,0:58:32.20,Chinese,,0,0,0,,还需要有一些位代表 3.14
 Dialogue: 0,0:58:32.92,0:58:36.30,English,,0,0,0,,And there's just not enough we don't have enough bits to represent all those
@@ -1324,7 +1324,7 @@ Dialogue: 0,0:59:18.26,0:59:22.18,Chinese,,0,0,0,,浮点数一般都有逆元（
 Dialogue: 0,0:59:22.56,0:59:24.50,English,,0,0,0,,You can take for any number there's
 Dialogue: 0,0:59:22.56,0:59:24.50,Chinese,,0,0,0,,你可以使用任何数字
 Dialogue: 0,0:59:24.58,0:59:30.80,English,,0,0,0,, There's an inverse that will give you zero when you add it together and you get monotonicity
-Dialogue: 0,0:59:24.58,0:59:30.80,Chinese,,0,0,0,,有一个相反数使两个数相加为 0，浮点数假发也满足单调性
+Dialogue: 0,0:59:24.58,0:59:30.80,Chinese,,0,0,0,,有一个相反数使两个数相加为 0，浮点数也满足单调性
 Dialogue: 0,0:59:31.44,0:59:36.64,English,,0,0,0,,Monotonicity between values except of course for infinities and ends
 Dialogue: 0,0:59:31.44,0:59:36.64,Chinese,,0,0,0,,值之间的单调性直到无穷大结束
 Dialogue: 0,0:59:37.44,0:59:41.42,English,,0,0,0,,Now multiplication has... it's similar
@@ -1376,7 +1376,7 @@ Dialogue: 0,1:01:35.64,1:01:38.90,Chinese,,0,0,0,,我们不能保会一直以完
 Dialogue: 0,1:01:39.34,1:01:41.54,English,,0,0,0,,But we never ran into a problem with this because
 Dialogue: 0,1:01:39.34,1:01:41.54,Chinese,,0,0,0,,但是我们从来没有遇到过这个问题，因为
 Dialogue: 0,1:01:42.08,1:01:45.70,English,,0,0,0,,Nature and generally in general is kind of smooth right that
-Dialogue: 0,1:01:42.08,1:01:45.70,Chinese,,0,0,0,,自然界中的变化通常是不连续的
+Dialogue: 0,1:01:42.08,1:01:45.70,Chinese,,0,0,0,,自然界中的变化通常是连续的
 Dialogue: 0,1:01:46.56,1:01:50.92,English,,0,0,0,,If you look at the,you know if one part of the ground is shaking like this and
 Dialogue: 0,1:01:46.56,1:01:50.92,Chinese,,0,0,0,,如果你看一下，你会知道地面的一部分是否像这样摇晃
 Dialogue: 0,1:01:50.92,1:01:54.72,English,,0,0,0,,You look at the next part it might be shaking a little more or a little less
@@ -1514,7 +1514,7 @@ Dialogue: 0,1:08:57.56,1:08:59.50,Chinese,,0,0,0,,答案是肯定的因为我们
 Dialogue: 0,1:09:02.22,1:09:07.10,English,,0,0,0,,Okay how about 2/3 == 2/3.0
 Dialogue: 0,1:09:02.22,1:09:07.10,Chinese,,0,0,0,,2/3==2/3.0 的真值为 1 吗
 Dialogue: 0,1:09:08.16,1:09:10.66,English,,0,0,0,,No because 2/3 is 0
-Dialogue: 0,1:09:08.16,1:09:10.66,Chinese,,0,0,0,,它俩不相等，因为 2/3 是 0 
+Dialogue: 0,1:09:08.16,1:09:10.66,Chinese,,0,0,0,,它俩不相等，因为 2/3 是 0
 Dialogue: 0,1:09:12.72,1:09:20.50,English,,0,0,0,,And 2/3.0 is a is a floating point value 2/3 the floating point representation of 2/3
 Dialogue: 0,1:09:12.72,1:09:20.50,Chinese,,0,0,0,,而 2/3.0 是一个浮点数 2/3
 Dialogue: 0,1:09:21.82,1:09:25.72,English,,0,0,0,, Okay how about if the double d is less than 0
