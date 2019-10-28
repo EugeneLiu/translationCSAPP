@@ -171,7 +171,7 @@ Dialogue: 0,0:06:25.80,0:06:28.66,Chinese,,0,0,0,,这些通常由算术指令通
 Dialogue: 0,0:06:29.28,0:06:36.98,English,,0,0,0,,The sign flag(SF) is said if the value just computed as a one in the most significant bit meaning it's a negative value
 Dialogue: 0,0:06:29.28,0:06:36.98,Chinese,,0,0,0,,运算结果最高有效位为 1 （说明结果是负值），符号标志（SF）会被置 1
 Dialogue: 0,0:06:37.60,0:06:44.04,English,,0,0,0,,And the overflow flag(OF) is a two's complement version of overflow
-Dialogue: 0,0:06:37.60,0:06:44.04,Chinese,,0,0,0,,溢出标志（OF）是表示有符号数运算溢出的位（译注：CF表示无符号数运算溢出位）
+Dialogue: 0,0:06:37.60,0:06:44.04,Chinese,,0,0,0,,溢出标志（OF）是表示有符号数运算溢出的位\N（译注：CF表示无符号数运算溢出位）
 Dialogue: 0,0:06:44.64,0:06:51.88,English,,0,0,0,,So in particular if you remember from data lab, how do you know if addition of two values is overflowed
 Dialogue: 0,0:06:44.64,0:06:51.88,Chinese,,0,0,0,,如果你还记得data lab（数据实验）,你是如何确定两个数相加是否溢出的呢
 Dialogue: 0,0:06:52.00,0:06:57.30,English,,0,0,0,,If the signs of the operands are the same,but the sign of the result is different than that
@@ -197,7 +197,7 @@ Dialogue: 0,0:07:47.78,0:07:53.54,Chinese,,0,0,0,,有一些特殊指令，它们
 Dialogue: 0,0:07:53.54,0:07:57.72,English,,0,0,0,,And the one that you'll see is especially it's called compare CMP
 Dialogue: 0,0:07:53.54,0:07:57.72,Chinese,,0,0,0,,你们在 ppt 上看到的那个 cmp（compare）就是其中一个
 Dialogue: 0,0:07:58.34,0:08:07.34,English,,0,0,0,,And by the way the queue at the end of these is all just a reflection of their operating on 64-bit words,quadword as I said
-Dialogue: 0,0:07:58.34,0:08:07.34,Chinese,,0,0,0,,顺便说一句，以 q 结尾的指令表示对 64 位数据进行操作，也就是我说的 quadword（四字）
+Dialogue: 0,0:07:58.34,0:08:07.34,Chinese,,0,0,0,,顺便说一句，以 q 结尾的指令表示对 64 位数据进行操作，\N也就是我说的 quadword（四字）
 Dialogue: 0,0:08:07.88,0:08:16.40,English,,0,0,0,,So the comparison is sort of like a subtraction instruction except that you don't do anything with the result
 Dialogue: 0,0:08:07.88,0:08:16.40,Chinese,,0,0,0,,cmp 指令和减法指令几乎一样，但是cmp指令不会对得到的结果做任何操作
 Dialogue: 0,0:08:17.20,0:08:21.56,English,,0,0,0,,Normal subtraction instruction is like x minus equals y
@@ -273,7 +273,7 @@ Dialogue: 0,0:11:06.60,0:11:13.40,Chinese,,0,0,0,,两个参数都相同，所以
 Dialogue: 0,0:11:14.24,0:11:20.34,English,,0,0,0,,Where so that you're just any register to itself and one property the end operation is
 Dialogue: 0,0:11:14.24,0:11:20.34,Chinese,,0,0,0,,两个参数是相同的寄存器
 Dialogue: 0,0:11:21.12,0:11:27.10,English,,0,0,0,,It's what they test item potent adding ending two things the same things together gives you that same thing
-Dialogue: 0,0:11:21.12,0:11:27.10,Chinese,,0,0,0,,这就是test功能强大的地方，可以把两个参数用一个相同的参数来替代得到（测试）一个参数的效果
+Dialogue: 0,0:11:21.12,0:11:27.10,Chinese,,0,0,0,,这就是test功能强大的地方，可以把两个参数用一个相同的参数，\N来替代得到（测试）一个参数的效果
 Dialogue: 0,0:11:31.62,0:11:33.46,English,,0,0,0,,So we can see these
 Dialogue: 0,0:11:31.62,0:11:33.46,Chinese,,0,0,0,,所以我们可以看到这些
 Dialogue: 0,0:11:33.46,0:11:35.46,English,,0,0,0,,And now
@@ -311,7 +311,7 @@ Dialogue: 0,0:12:47.62,0:12:51.10,Chinese,,0,0,0,,最近的指令做了什么事
 Dialogue: 0,0:12:51.10,0:12:58.44,English,,0,0,0,,was it a arithmetic instruction or a set instruction or a test instruction or a compare instruction
 Dialogue: 0,0:12:51.10,0:12:58.44,Chinese,,0,0,0,,它是算术指令？set 指令？ test指令？亦或是 cmp 指令？
 Dialogue: 0,0:12:59.12,0:13:05.52,English,,0,0,0,,And as you can see there's they're all based on some logical combination of these condition codes
-Dialogue: 0,0:12:59.12,0:13:05.52,Chinese,,0,0,0,,正如你 ppt 上所看到的，set 指令都基于这些条件码的逻辑组合而进行设置的
+Dialogue: 0,0:12:59.12,0:13:05.52,Chinese,,0,0,0,,正如你 ppt 上所看到的，set 指令都基于\N这些条件码的逻辑组合而进行设置的
 Dialogue: 0,0:13:06.04,0:13:10.04,English,,0,0,0,,That correspond to what the names imply
 Dialogue: 0,0:13:06.04,0:13:10.04,Chinese,,0,0,0,,这些逻辑组合和 set 指令的名字相一致
 Dialogue: 0,0:13:10.44,0:13:17.06,English,,0,0,0,,So for example the sets instruction is true,if the sign flag is true
@@ -391,11 +391,11 @@ Dialogue: 0,0:16:39.14,0:16:42.16,Chinese,,0,0,0,,所以我思考时是以正常
 Dialogue: 0,0:16:42.16,0:16:45.30,English,,0,0,0,,That the actual comparison is made rather than the way they're listed
 Dialogue: 0,0:16:42.16,0:16:45.30,Chinese,,0,0,0,,进行比较而不是以汇编代码中的参数顺序
 Dialogue: 0,0:16:45.98,0:16:50.04,English,,0,0,0,,So I always do that when I'm looking at code to help me flip those two around
-Dialogue: 0,0:16:45.98,0:16:50.04,Chinese,,0,0,0,,因此当我阅读代码时我一直会这么做，这可以帮助我以正常的顺序进行思考
+Dialogue: 0,0:16:45.98,0:16:50.04,Chinese,,0,0,0,,因此当我阅读代码时我一直会这么做，\N这可以帮助我以正常的顺序进行思考
 Dialogue: 0,0:16:52.46,0:16:58.18,English,,0,0,0,,And then here's our instruction.So that compare instruction set these four condition code register
 Dialogue: 0,0:16:52.46,0:16:58.18,Chinese,,0,0,0,,然后这是我们的指令。所以cmp指令设置这四个条件码寄存器
 Dialogue: 0,0:16:58.78,0:17:06.58,English,,0,0,0,,And now the setg sets... Now set this single byte register,the lowest byte of %rax to 1
-Dialogue: 0,0:16:58.78,0:17:06.58,Chinese,,0,0,0,,现在 setg 设置...现在设置会这个单字节寄存器（%al），即 ％rax 的最低字节为 1
+Dialogue: 0,0:16:58.78,0:17:06.58,Chinese,,0,0,0,,现在 setg 设置...现在设置会这个单字节寄存器（%al），\N即 ％rax 的最低字节为 1
 Dialogue: 0,0:17:06.62,0:17:11.00,English,,0,0,0,,If the result was the comparison was greater
 Dialogue: 0,0:17:06.62,0:17:11.00,Chinese,,0,0,0,,如果比较的结果是大于（x>y）的话
 Dialogue: 0,0:17:12.24,0:17:16.24,English,,0,0,0,,So according to this rule
@@ -437,9 +437,9 @@ Dialogue: 0,0:18:45.40,0:18:48.96,Chinese,,0,0,0,,结果是 32 位的结果
 Dialogue: 0,0:18:49.76,0:18:53.72,English,,0,0,0,,It will add zeros to the remaining 32 bits of the register
 Dialogue: 0,0:18:49.76,0:18:53.72,Chinese,,0,0,0,,它会把寄存器的其余 32 位设置为 0
 Dialogue: 0,0:18:55.04,0:18:59.28,English,,0,0,0,,And it's different for example the byte level operations only affect the bytes
-Dialogue: 0,0:18:55.04,0:18:59.28,Chinese,,0,0,0,,并且它是不同的，例如字节级操作仅影响要设置的那个字节位置（而不会设置其他位）
+Dialogue: 0,0:18:55.04,0:18:59.28,Chinese,,0,0,0,,并且它是不同的，例如字节级操作仅影响\N要设置的那个字节位置（而不会设置其他位）
 Dialogue: 0,0:18:59.52,0:19:07.20,English,,0,0,0,,The two byte or operations like what you'd have if the data type were short
-Dialogue: 0,0:18:59.52,0:19:07.20,Chinese,,0,0,0,,如果数据（操作数）类型是 short，那么两个字节或操作就像你所想的一样
+Dialogue: 0,0:18:59.52,0:19:07.20,Chinese,,0,0,0,,如果数据（操作数）类型是 short，\N那么两个字节或操作就像你所想的一样
 Dialogue: 0,0:19:07.66,0:19:09.08,English,,0,0,0,,Only affect those two bytes
 Dialogue: 0,0:19:07.66,0:19:09.08,Chinese,,0,0,0,,只会影响要操作的那两个字节
 Dialogue: 0,0:19:09.72,0:19:13.22,English,,0,0,0,,But the four byte instructions set the upper bytes to 0
@@ -447,7 +447,7 @@ Dialogue: 0,0:19:09.72,0:19:13.22,Chinese,,0,0,0,,但是四字节指令会将剩
 Dialogue: 0,0:19:13.78,0:19:18.28,English,,0,0,0,,And that was some somebody at AMD and I don't know who it is
 Dialogue: 0,0:19:13.78,0:19:18.28,Chinese,,0,0,0,,这是 AMD 的某些人设定的规则，具体我不知道是谁
 Dialogue: 0,0:19:18.88,0:19:23.40,English,,0,0,0,,Decided this was a good idea and it might be a good idea but it's really confusing
-Dialogue: 0,0:19:18.88,0:19:23.40,Chinese,,0,0,0,,认为这是一个好主意（并最终决定采用），这可能是一个好主意，但它确实很让人费解
+Dialogue: 0,0:19:18.88,0:19:23.40,Chinese,,0,0,0,,认为这是一个好主意（并最终决定采用），\N这可能是一个好主意，但它确实很让人费解
 Dialogue: 0,0:19:24.84,0:19:29.16,English,,0,0,0,,But that's something you'll have to just sort of remember in the back your mind
 Dialogue: 0,0:19:24.84,0:19:29.16,Chinese,,0,0,0,,但是你必须想起这个规则
 Dialogue: 0,0:19:29.16,0:19:30.70,English,,0,0,0,,When you see things like this
@@ -543,7 +543,7 @@ Dialogue: 0,0:23:09.40,0:23:13.68,Chinese,,0,0,0,,因此通常在汇编代码中
 Dialogue: 0,0:23:13.98,0:23:17.24,English,,0,0,0,,What's to the left of that is called a label
 Dialogue: 0,0:23:13.98,0:23:17.24,Chinese,,0,0,0,,那么左边的内容叫做标签
 Dialogue: 0,0:23:17.62,0:23:23.50,English,,0,0,0,,And it's just a tag that it's only visible in the assembly code, it's not actually in the object code
-Dialogue: 0,0:23:17.62,0:23:23.50,Chinese,,0,0,0,,它只是一个标签，它只在汇编代码中可见，它实际上并不在目标代码中
+Dialogue: 0,0:23:17.62,0:23:23.50,Chinese,,0,0,0,,它只是一个标签，它只在汇编代码中可见，\N它实际上并不在目标代码中
 Dialogue: 0,0:23:24.10,0:23:32.16,English,,0,0,0,,That will later I'll be used to compute an address for determining that will encode
 Dialogue: 0,0:23:24.10,0:23:32.16,Chinese,,0,0,0,,稍后我会计算目的地址，这地址将用于编码
 Dialogue: 0,0:23:32.16,0:23:34.62,English,,0,0,0,,Where this jump will actually land
@@ -599,7 +599,7 @@ Dialogue: 0,0:25:35.66,0:25:38.00,Chinese,,0,0,0,,你会用新的结果覆盖第
 Dialogue: 0,0:25:38.88,0:25:41.36,English,,0,0,0,,So this is a pretty typical pattern you'll see
 Dialogue: 0,0:25:38.88,0:25:41.36,Chinese,,0,0,0,,这是一个非常典型的模式，你会看到
 Dialogue: 0,0:25:41.86,0:25:48.46,English,,0,0,0,,You move some value into a register and then you into %rax is very common
-Dialogue: 0,0:25:41.86,0:25:48.46,Chinese,,0,0,0,,你将一些值移动到一个寄存器中，然后你（把结果）移动到 ％rax，这很常见
+Dialogue: 0,0:25:41.86,0:25:48.46,Chinese,,0,0,0,,你将一些值移动到一个寄存器中，\N然后你（把结果）移动到 ％rax，这很常见
 Dialogue: 0,0:25:48.74,0:25:55.52,English,,0,0,0,,And then you do some arithmetic operation with that register as a destination to kind of update it
 Dialogue: 0,0:25:48.74,0:25:55.52,Chinese,,0,0,0,,然后，你使用该寄存器进行一些算术运算并用结果更新它
 Dialogue: 0,0:25:57.10,0:26:00.88,English,,0,0,0,,If it's like if you're writing in C if all the time you had to write sort of
@@ -651,7 +651,7 @@ Dialogue: 0,0:27:43.80,0:27:45.64,Chinese,,0,0,0,,这个代码有点过时了
 Dialogue: 0,0:27:46.92,0:27:48.62,English,,0,0,0,,So I should have said return result
 Dialogue: 0,0:27:46.92,0:27:48.62,Chinese,,0,0,0,,所以我应该说返回结果
 Dialogue: 0,0:27:49.06,0:27:53.78,English,,0,0,0,,But another version would be to have done a goto down to here and return the result from there
-Dialogue: 0,0:27:49.06,0:27:53.78,Chinese,,0,0,0,,但另一个版本是在这里完成到这（译注：应该是指到goto done）并从那里返回结果
+Dialogue: 0,0:27:49.06,0:27:53.78,Chinese,,0,0,0,,但另一个版本是在这里完成到这\N（译注：应该是指到goto done）并从那里返回结果
 Dialogue: 0,0:27:54.40,0:27:56.82,English,,0,0,0,,And you'll see different compilers generate in different forms
 Dialogue: 0,0:27:54.40,0:27:56.82,Chinese,,0,0,0,,你会看到不同的编译器生成不同的形式
 Dialogue: 0,0:27:58.66,0:28:02.30,English,,0,0,0,,So I'm going to typically use this way of presenting code
@@ -705,7 +705,7 @@ Dialogue: 0,0:30:01.92,0:30:05.20,Chinese,,0,0,0,,我们已经编译好的 else 
 Dialogue: 0,0:30:06.02,0:30:11.64,English,,0,0,0,,And if it that test fails here, so that the original test condition holds
 Dialogue: 0,0:30:06.02,0:30:11.64,Chinese,,0,0,0,,如果测试失败，那么原始测试条件成立
 Dialogue: 0,0:30:12.38,0:30:18.78,English,,0,0,0,,Then we'll stick in whatever code it takes to to compute the then expression(Then_Expr)
-Dialogue: 0,0:30:12.38,0:30:18.78,Chinese,,0,0,0,,然后我们将坚持使用无论原来是怎样的代码来计算 then 表达式（Then_Expr）
+Dialogue: 0,0:30:12.38,0:30:18.78,Chinese,,0,0,0,,然后我们将坚持使用无论原来是怎样的代码\N来计算 then 表达式（Then_Expr）
 Dialogue: 0,0:30:19.34,0:30:24.12,English,,0,0,0,,And then we'll merge back together in the case you saw where it's just a single little function
 Dialogue: 0,0:30:19.34,0:30:24.12,Chinese,,0,0,0,,然后，在你看到它只是一个小函数的情况下，我们将合并在一起
 Dialogue: 0,0:30:24.46,0:30:27.24,English,,0,0,0,,We can just call a rep here and get out of the thing
@@ -739,7 +739,7 @@ Dialogue: 0,0:31:30.92,0:31:35.24,Chinese,,0,0,0,,但是你会在代码中看到
 Dialogue: 0,0:31:35.38,0:31:38.90,English,,0,0,0,,It's sort of an optimization called conditional move
 Dialogue: 0,0:31:35.38,0:31:38.90,Chinese,,0,0,0,,这是一种称为条件移动的优化
 Dialogue: 0,0:31:40.06,0:31:45.50,English,,0,0,0,,And it's bit non-intuitive from a software developer's perspective why you'd ever want to do this
-Dialogue: 0,0:31:40.06,0:31:45.50,Chinese,,0,0,0,,从软件开发人员的角度来看，不明白为什么想要这样做，因为这有点不直观
+Dialogue: 0,0:31:40.06,0:31:45.50,Chinese,,0,0,0,,从软件开发人员的角度来看，不明白为什么想要这样做，\N因为这有点不直观
 Dialogue: 0,0:31:46.04,0:31:51.40,English,,0,0,0,,The basic idea is I'm going to compute both them then and the else the values they'd produce
 Dialogue: 0,0:31:46.04,0:31:51.40,Chinese,,0,0,0,,基本思想是是我把 then 代码和 else 都执行得到两个结果
 Dialogue: 0,0:31:52.12,0:31:54.62,English,,0,0,0,,And only after that I choose which one I use
@@ -809,7 +809,7 @@ Dialogue: 0,0:34:23.04,0:34:27.24,Chinese,,0,0,0,,这并不需要暂停整个处
 Dialogue: 0,0:34:28.22,0:34:30.60,English,,0,0,0,,So that's my long explanation for
 Dialogue: 0,0:34:28.22,0:34:30.60,Chinese,,0,0,0,,我用了很长时间来解释
 Dialogue: 0,0:34:31.26,0:34:37.14,English,,0,0,0,,And if you don't want to understand that I'll just say well just trust me, it's a good idea sometimes
-Dialogue: 0,0:34:31.26,0:34:37.14,Chinese,,0,0,0,,如果你不想明白，我也可以理解，但是你要相信我，这是个提高效率的好方法
+Dialogue: 0,0:34:31.26,0:34:37.14,Chinese,,0,0,0,,如果你不想明白，我也可以理解，但是你要相信我，\N这是个提高效率的好方法
 Dialogue: 0,0:34:40.60,0:34:47.72,English,,0,0,0,,So the the general pattern then if I use the same idea is I want to compute both results
 Dialogue: 0,0:34:40.60,0:34:47.72,Chinese,,0,0,0,,如果我采用同样的思想，那么通常的处理方法是计算出两个结果
 Dialogue: 0,0:34:47.72,0:34:52.92,English,,0,0,0,,And I'll call the result and this is an eval this is eval the eval value
@@ -821,11 +821,11 @@ Dialogue: 0,0:34:55.66,0:35:01.38,Chinese,,0,0,0,,我会做这个测试然后用
 Dialogue: 0,0:35:01.38,0:35:05.82,English,,0,0,0,,That says I'll copy the value of eval to result
 Dialogue: 0,0:35:01.38,0:35:05.82,Chinese,,0,0,0,,这就是说我会将 eval 的值复制到结果中
 Dialogue: 0,0:35:06.40,0:35:10.60,English,,0,0,0,,But only if my condition holds so that's why it's called a conditional move
-Dialogue: 0,0:35:06.40,0:35:10.60,Chinese,,0,0,0,,但只有当我的条件成立时才会这样做，所以这就是为什么它被称为有条件的举动
+Dialogue: 0,0:35:06.40,0:35:10.60,Chinese,,0,0,0,,但只有当我的条件成立时才会这样做，\N所以这就是为什么它被称为有条件的举动
 Dialogue: 0,0:35:12.82,0:35:14.86,English,,0,0,0,,Then we'll see this is the code
 Dialogue: 0,0:35:12.82,0:35:14.86,Chinese,,0,0,0,,这是汇编代码
 Dialogue: 0,0:35:15.02,0:35:19.16,English,,0,0,0,,By the way you saw my original version, starting to have to jump back
-Dialogue: 0,0:35:15.02,0:35:19.16,Chinese,,0,0,0,,顺便说一句，你看到我原来的版本，开始不得不跳回来（译注：回到前面的ppt）
+Dialogue: 0,0:35:15.02,0:35:19.16,Chinese,,0,0,0,,顺便说一句，你看到我原来的版本，\N开始不得不跳回来（译注：回到前面的ppt）
 Dialogue: 0,0:35:19.84,0:35:26.92,English,,0,0,0,,I had to explicitly tell the GCC don't put use conditional moves
 Dialogue: 0,0:35:19.84,0:35:26.92,Chinese,,0,0,0,,我不得不明确告诉 GCC 不要使用条件移动
 Dialogue: 0,0:35:27.36,0:35:29.93,English,,0,0,0,,Because it really wants to a very badly
@@ -843,7 +843,7 @@ Dialogue: 0,0:35:48.54,0:35:54.16,Chinese,,0,0,0,,它执行了之前你所看到
 Dialogue: 0,0:35:55.26,0:36:00.18,English,,0,0,0,,It's doing a comparison and then here is the conditional mov instruction
 Dialogue: 0,0:35:55.26,0:36:00.18,Chinese,,0,0,0,,它正在进行比较，然后是条件 mov 指令
 Dialogue: 0,0:36:00.86,0:36:08.88,English,,0,0,0,,cmov in this case the L here is not a word size,it's the less than or equal to a direction
-Dialogue: 0,0:36:00.86,0:36:08.88,Chinese,,0,0,0,,在这种情况下，这里的 l 不是表示字大小，而是小于或等价于一个方向
+Dialogue: 0,0:36:00.86,0:36:08.88,Chinese,,0,0,0,,在这种情况下，这里的 l 不是表示字大小，\N而是小于或等价于一个方向
 Dialogue: 0,0:36:09.38,0:36:15.18,English,,0,0,0,,So in the case the that I need the red value basically
 Dialogue: 0,0:36:09.38,0:36:15.18,Chinese,,0,0,0,,所以在我需要红色值的情况下
 Dialogue: 0,0:36:15.78,0:36:19.18,English,,0,0,0,,You saw the the red value is stored in register %rdx
@@ -863,19 +863,19 @@ Dialogue: 0,0:36:52.36,0:36:57.68,Chinese,,0,0,0,,一个是进行两种计算可
 Dialogue: 0,0:36:57.68,0:37:01.50,English,,0,0,0,,If you have to like crack a password in one and
 Dialogue: 0,0:36:57.68,0:37:01.50,Chinese,,0,0,0,,如果你不得不在一个（分支）中破解密码
 Dialogue: 0,0:37:01.98,0:37:06.26,English,,0,0,0,,You know find the nth prime number and another you probably don't want to do both of those
-Dialogue: 0,0:37:01.98,0:37:06.26,Chinese,,0,0,0,,你要找到第n个素数和另一个素数，你可能不想把这两个素数都算法出来（找素数耗费时间）
+Dialogue: 0,0:37:01.98,0:37:06.26,Chinese,,0,0,0,,你要找到第n个素数和另一个素数，\N你可能不想把这两个素数都算法出来（找素数耗费时间）
 Dialogue: 0,0:37:06.98,0:37:11.18,English,,0,0,0,,So in general in that case
 Dialogue: 0,0:37:06.98,0:37:11.18,Chinese,,0,0,0,,所以一般来说就是这种情况
 Dialogue: 0,0:37:11.72,0:37:14.86,English,,0,0,0,,And so the and you'll notice GCC will only do this
 Dialogue: 0,0:37:11.72,0:37:14.86,Chinese,,0,0,0,,所以你会注意到 GCC 只会这样做
 Dialogue: 0,0:37:15.24,0:37:19.96,English,,0,0,0,,If both branches are fairly straightforward computations that they're trying to do
-Dialogue: 0,0:37:15.24,0:37:19.96,Chinese,,0,0,0,,如果两个分支都是简单直接的计算，他们会试图使用 conditional move 进行优化
+Dialogue: 0,0:37:15.24,0:37:19.96,Chinese,,0,0,0,,如果两个分支都是简单直接的计算，\N他们会试图使用 conditional move 进行优化
 Dialogue: 0,0:37:20.90,0:37:23.32,English,,0,0,0,,And there's some times when you just plain can't do it
 Dialogue: 0,0:37:20.90,0:37:23.32,Chinese,,0,0,0,,而有些时候，你只是单纯地无法做到这一点
 Dialogue: 0,0:37:23.92,0:37:27.34,English,,0,0,0,,So for example if you're using a conditional to guard
 Dialogue: 0,0:37:23.92,0:37:27.34,Chinese,,0,0,0,,因此，例如你使用条件来保证
 Dialogue: 0,0:37:27.88,0:37:33.58,English,,0,0,0,,Whether a pointer can be dereferenced or not because it's a null pointer potentially a null pointer
-Dialogue: 0,0:37:27.88,0:37:33.58,Chinese,,0,0,0,,是否可以取消引用指针，因为它是一个空指针，可能是一个空指针
+Dialogue: 0,0:37:27.88,0:37:33.58,Chinese,,0,0,0,,是否可以取消引用指针，因为它是一个空指针，\N可能是一个空指针
 Dialogue: 0,0:37:34.00,0:37:37.56,English,,0,0,0,,Then you really don't want to try that null pointer dereference
 Dialogue: 0,0:37:34.00,0:37:37.56,Chinese,,0,0,0,,那你真的不会想对空指针解引用
 Dialogue: 0,0:37:39.96,0:37:44.22,English,,0,0,0,,Just for a way to save some time
@@ -913,7 +913,7 @@ Dialogue: 0,0:38:53.00,0:38:59.26,Chinese,,0,0,0,,关键字是 do，然后你会
 Dialogue: 0,0:38:59.90,0:39:05.41,English,,0,0,0,,And then there's a test at the end that tells you whether to keep repeating this loop
 Dialogue: 0,0:38:59.90,0:39:05.41,Chinese,,0,0,0,,然后在最后进行测试，告诉你是否继续重复此循环
 Dialogue: 0,0:39:05.88,0:39:10.08,English,,0,0,0,,So it sort of flips a normal while loop you have the conditional test at the front
-Dialogue: 0,0:39:05.88,0:39:10.08,Chinese,,0,0,0,,与正常的 while 循环相比，do-while 有一点倒过来的感觉，while 是先进行条件判断
+Dialogue: 0,0:39:05.88,0:39:10.08,Chinese,,0,0,0,,与正常的 while 循环相比，do-while 有一点倒过来的感觉，\N while 是先进行条件判断
 Dialogue: 0,0:39:10.46,0:39:11.94,English,,0,0,0,,And here you have it at the end
 Dialogue: 0,0:39:10.46,0:39:11.94,Chinese,,0,0,0,,但 do-while 是在最后进行条件判断
 Dialogue: 0,0:39:15.84,0:39:20.52,English,,0,0,0,,So it turns out if we think in terms of goto that's a pretty straightforward thing to replace this
@@ -1005,7 +1005,7 @@ Dialogue: 0,0:43:13.98,0:43:18.10,Chinese,,0,0,0,,它做了一个转换，我称
 Dialogue: 0,0:43:18.48,0:43:22.40,English,,0,0,0,,These are by the way my own names you won't find them in any other document
 Dialogue: 0,0:43:18.48,0:43:22.40,Chinese,,0,0,0,,这是我自己使用的术语，其他地方没有这个名词
 Dialogue: 0,0:43:24.32,0:43:33.68,English,,0,0,0,,But what the idea of it is imagine again I have a while loop of this form where there's a test in the body to execute
-Dialogue: 0,0:43:24.32,0:43:33.68,Chinese,,0,0,0,,但是它的想法是再次想象我有一个这种形式的 while 循环，其中有一个测试在循环体中执行
+Dialogue: 0,0:43:24.32,0:43:33.68,Chinese,,0,0,0,,但是它的想法是再次想象我有一个这种形式的 while 循环，\N其中有一个测试在循环体中执行
 Dialogue: 0,0:43:34.26,0:43:40.38,English,,0,0,0,,Well what out the problem I have to do compared to before is some I've to execute the test before I start
 Dialogue: 0,0:43:34.26,0:43:40.38,Chinese,,0,0,0,,但是与之前的 do-while 循环相比，我需要在进行
 Dialogue: 0,0:43:41.13,0:43:42.68,English,,0,0,0,,The first iteration of the loop
@@ -1021,7 +1021,7 @@ Dialogue: 0,0:43:59.72,0:44:09.34,Chinese,,0,0,0,,所以这是一个例子......
 Dialogue: 0,0:44:09.78,0:44:13.10,English,,0,0,0,,So I've written the popcount function using a while loop this time
 Dialogue: 0,0:44:09.78,0:44:13.10,Chinese,,0,0,0,,所以我这次使用 while 循环编写了 popcount 函数
 Dialogue: 0,0:44:14.90,0:44:19.88,English,,0,0,0,,It turns out whether you use do-while or while loop, you'll get the same result in this particular function
-Dialogue: 0,0:44:14.90,0:44:19.88,Chinese,,0,0,0,,事实证明，无论你使用 do-while 还是 while 循环，你都会在这个函数中得到相同的结果
+Dialogue: 0,0:44:14.90,0:44:19.88,Chinese,,0,0,0,,事实证明，无论你使用 do-while 还是 while 循环，\N你都会在这个函数中得到相同的结果
 Dialogue: 0,0:44:21.18,0:44:29.84,English,,0,0,0,,And you'll see the way it looks is,it jumps to the test portion of the code
 Dialogue: 0,0:44:21.18,0:44:29.84,Chinese,,0,0,0,,它会跳转到代码的测试部分
 Dialogue: 0,0:44:30.38,0:44:35.67,English,,0,0,0,,And then if that holds it then actually starts in the first execution of the loop
@@ -1033,7 +1033,7 @@ Dialogue: 0,0:44:38.78,0:44:45.02,Chinese,,0,0,0,,它执行循环体然后进行
 Dialogue: 0,0:44:49.26,0:44:53.72,English,,0,0,0,,Oh and then there's a second method which is in some ways more traditional
 Dialogue: 0,0:44:49.26,0:44:53.72,Chinese,,0,0,0,,第二种方法在某些方面更传统
 Dialogue: 0,0:44:54.42,0:45:00.28,English,,0,0,0,,And you'll find that if you use optimization one(-o1) which is a fairly useful thing to do in practice
-Dialogue: 0,0:44:54.42,0:45:00.28,Chinese,,0,0,0,,你会发现，如果你使用 -O1 优化级别，这在实际编程中是一件非常有用的事情
+Dialogue: 0,0:44:54.42,0:45:00.28,Chinese,,0,0,0,,你会发现，如果你使用 -O1 优化级别，\N这在实际编程中是一件非常有用的事情
 Dialogue: 0,0:45:00.48,0:45:06.90,English,,0,0,0,,So just to show you that,instead of deciding which one I was going to show you I decided to show you both
 Dialogue: 0,0:45:00.48,0:45:06.90,Chinese,,0,0,0,,我不打算选择一种进行讲解，我会对两种方式都进行讲解
 Dialogue: 0,0:45:09.30,0:45:15.64,English,,0,0,0,,And the idea of that is to do a essentially to take a while loop and turn it into a do-while loop
@@ -1143,7 +1143,7 @@ Dialogue: 0,0:50:01.74,0:50:03.64,Chinese,,0,0,0,,也许这很明显，也许不
 Dialogue: 0,0:50:04.26,0:50:07.32,English,,0,0,0,,The switch statement on the other hand is a totally different beast
 Dialogue: 0,0:50:04.26,0:50:07.32,Chinese,,0,0,0,,switch 语句则完全不同
 Dialogue: 0,0:50:07.98,0:50:14.76,English,,0,0,0,,And I want to show you that because there's no counterpart in normal C code of how you'd even think about it
-Dialogue: 0,0:50:07.98,0:50:14.76,Chinese,,0,0,0,,而且我想告诉你，因为正常的 C 代码中没有对应的操作时你如何考虑这个问题（译注：应该是指 bomb lab的内容）
+Dialogue: 0,0:50:07.98,0:50:14.76,Chinese,,0,0,0,,而且我想告诉你，因为正常的 C 代码中没有对应的操作时\N你如何考虑这个问题（译注：应该是指 bomb lab的内容）
 Dialogue: 0,0:50:16.24,0:50:21.10,English,,0,0,0,,And it's fairly a little bit harder to do cipher
 Dialogue: 0,0:50:16.24,0:50:21.10,Chinese,,0,0,0,,密码管理起来相当困难
 Dialogue: 0,0:50:21.58,0:50:23.42,English,,0,0,0,,And you're going to have to do it in the bomb lab
@@ -1177,9 +1177,9 @@ Dialogue: 0,0:51:22.10,0:51:28.70,Chinese,,0,0,0,,这是编程语言历史上最
 Dialogue: 0,0:51:28.70,0:51:31.42,English,,0,0,0,,And it's been the cause of more and more
 Dialogue: 0,0:51:28.70,0:51:31.42,Chinese,,0,0,0,,这导致了越来越多的 bug
 Dialogue: 0,0:51:31.98,0:51:37.58,English,,0,0,0,,You know heartbreak and bugs that nobody could understand than any other single part of the language
-Dialogue: 0,0:51:31.98,0:51:37.58,Chinese,,0,0,0,,你知道 C 语言的除了这部分，没有任何其他单一部分，能让人有无法理解的心碎和错误
+Dialogue: 0,0:51:31.98,0:51:37.58,Chinese,,0,0,0,,你知道 C 语言的除了这部分，没有任何其他单一部分，\N能让人有无法理解的心碎和错误
 Dialogue: 0,0:51:38.50,0:51:43.88,English,,0,0,0,,And for some bizarre reason they've kept it alive even into java and all these other languages
-Dialogue: 0,0:51:38.50,0:51:43.88,Chinese,,0,0,0,,而且由于一些奇怪的原因，他们甚至将这种设计保留在 java 和所有其他语言中
+Dialogue: 0,0:51:38.50,0:51:43.88,Chinese,,0,0,0,,而且由于一些奇怪的原因，他们甚至将这种设计\N保留在 java 和所有其他语言中
 Dialogue: 0,0:51:44.80,0:51:49.12,English,,0,0,0,,That fixed a lot of the worst parts you know the most dangerous parts of C
 Dialogue: 0,0:51:44.80,0:51:49.12,Chinese,,0,0,0,,这保留了你知道的 C 语言中最危险部分中许多最糟糕的部分
 Dialogue: 0,0:51:49.12,0:51:50.78,English,,0,0,0,,But somehow they kept this future
@@ -1263,11 +1263,11 @@ Dialogue: 0,0:54:53.58,0:54:56.62,Chinese,,0,0,0,,然后我将使用这个非常
 Dialogue: 0,0:54:57.40,0:55:04.36,English,,0,0,0,,Which is a sort of like it's as if you...it's like a ray indexing
 Dialogue: 0,0:54:57.40,0:55:04.36,Chinese,,0,0,0,,这有点像你......它就像一个 ray indexing
 Dialogue: 0,0:55:04.54,0:55:13.46,English,,0,0,0,,So if you think of a ray indexing it means you can grab a value out of the middle of some you know array
-Dialogue: 0,0:55:04.54,0:55:13.46,Chinese,,0,0,0,,因此，如果你考虑 ray indexing，则意味着你可以从某些已知数组的中间获取值
+Dialogue: 0,0:55:04.54,0:55:13.46,Chinese,,0,0,0,,因此，如果你考虑 ray indexing，\N则意味着你可以从某些已知数组的中间获取值
 Dialogue: 0,0:55:13.52,0:55:18.48,English,,0,0,0,,Some set of values without having to step through them one by one
 Dialogue: 0,0:55:13.52,0:55:18.48,Chinese,,0,0,0,,不必遍历寻找
 Dialogue: 0,0:55:19.30,0:55:27.30,English,,0,0,0,,And it's the same idea here that I will take my value and use that to figure out directly
-Dialogue: 0,0:55:19.30,0:55:27.30,Chinese,,0,0,0,,switch 的机器码也用了同样的思想，我会用我的例子来让你们弄明白原理
+Dialogue: 0,0:55:19.30,0:55:27.30,Chinese,,0,0,0,,switch 的机器码也用了同样的思想，\N我会用我的例子来让你们弄明白原理
 Dialogue: 0,0:55:27.92,0:55:31.16,English,,0,0,0,,Where I should jump to a block of code
 Dialogue: 0,0:55:27.92,0:55:31.16,Chinese,,0,0,0,,我应该跳到一个代码块
 Dialogue: 0,0:55:31.62,0:55:34.58,English,,0,0,0,,Without having to step through a bunch of other conditions
@@ -1285,7 +1285,7 @@ Dialogue: 0,0:56:00.22,0:56:05.02,Chinese,,0,0,0,,这需要点时间，因为我
 Dialogue: 0,0:56:06.96,0:56:10.56,English,,0,0,0,,So here's my example I've got three arguments
 Dialogue: 0,0:56:06.96,0:56:10.56,Chinese,,0,0,0,,这是我的例子，我有三个参数
 Dialogue: 0,0:56:11.00,0:56:19.70,English,,0,0,0,,So just remember I told you are %rdi and %rsi for the first two arguments,the third argument is in %rdx
-Dialogue: 0,0:56:11.00,0:56:19.70,Chinese,,0,0,0,,前讲过，要牢记，前两个参数分别存在 ％rdi 和 ％rsi，第三个参数存在 ％rdx
+Dialogue: 0,0:56:11.00,0:56:19.70,Chinese,,0,0,0,,前讲过，要牢记，前两个参数分别存在 ％rdi 和 ％rsi，\N第三个参数存在 ％rdx
 Dialogue: 0,0:56:21.48,0:56:25.70,English,,0,0,0,,And here's the beginning of the switch code
 Dialogue: 0,0:56:21.48,0:56:25.70,Chinese,,0,0,0,,这是 switch 机器码的开始
 Dialogue: 0,0:56:26.80,0:56:31.00,English,,0,0,0,,It's just making a copy of argument z here for some reason
@@ -1303,7 +1303,7 @@ Dialogue: 0,0:56:58.42,0:57:02.82,Chinese,,0,0,0,,所以它有点代替了默认
 Dialogue: 0,0:57:02.82,0:57:06.82,English,,0,0,0,,The cases that are either x is too small or x is too large
 Dialogue: 0,0:57:02.82,0:57:06.82,Chinese,,0,0,0,,x 的情况太小或 x 太大
 Dialogue: 0,0:57:07.34,0:57:13.64,English,,0,0,0,,And I should mention there's a clever trick there if you look at 'ja' means jump above
-Dialogue: 0,0:57:07.34,0:57:13.64,Chinese,,0,0,0,,我应该提一下，这儿有一个聪明的伎俩，「ja」意思是 jump above
+Dialogue: 0,0:57:07.34,0:57:13.64,Chinese,,0,0,0,,我应该提一下，这儿有一个聪明的伎俩，\N「ja」意思是 jump above
 Dialogue: 0,0:57:13.98,0:57:17.16,English,,0,0,0,,That's the unsigned comparison
 Dialogue: 0,0:57:13.98,0:57:17.16,Chinese,,0,0,0,,这是无符号比较
 Dialogue: 0,0:57:17.64,0:57:24.48,English,,0,0,0,,And what it's making use of is our result that you remember that if a number is negative
@@ -1435,7 +1435,7 @@ Dialogue: 0,1:02:58.64,1:03:09.52,Chinese,,0,0,0,,比如这，它把两个连续
 Dialogue: 0,1:03:11.32,1:03:14.10,English,,0,0,0,,And it had to do these separately
 Dialogue: 0,1:03:11.32,1:03:14.10,Chinese,,0,0,0,,它必须分开做这些
 Dialogue: 0,1:03:14.12,1:03:22.84,English,,0,0,0,,Because remember w was not set before I entered the this these code blocks it deferred setting that
-Dialogue: 0,1:03:14.12,1:03:22.84,Chinese,,0,0,0,,因为在我进入这些代码块之前 w 没有被赋值为 1，也就是说，w 被推迟赋值了
+Dialogue: 0,1:03:14.12,1:03:22.84,Chinese,,0,0,0,,因为在我进入这些代码块之前 w 没有被赋值为 1，\N也就是说，w 被推迟赋值了
 Dialogue: 0,1:03:23.30,1:03:26.42,English,,0,0,0,,And here I hit case three and all of a sudden I actually need
 Dialogue: 0,1:03:23.30,1:03:26.42,Chinese,,0,0,0,,当直接进入 case 3 时，突然间我真的需要
 Dialogue: 0,1:03:26.80,1:03:29.16,English,,0,0,0,,Whatever w was which was one
@@ -1499,7 +1499,7 @@ Dialogue: 0,1:05:37.20,1:05:41.06,Chinese,,0,0,0,,在默认情况下， w 被赋
 Dialogue: 0,1:05:41.94,1:05:44.66,English,,0,0,0,,So anyways I've actually shown you all the code box
 Dialogue: 0,1:05:41.94,1:05:44.66,Chinese,,0,0,0,,我已经向你们展示了所有的代码块
 Dialogue: 0,1:05:44.88,1:05:50.62,English,,0,0,0,,But I've shown you one by one, but they're just all kind of strung in the file and in no particular order
-Dialogue: 0,1:05:44.88,1:05:50.62,Chinese,,0,0,0,,只不过我是逐一向你们展示，将它们串起来就形成了文件，并没有特别的顺序
+Dialogue: 0,1:05:44.88,1:05:50.62,Chinese,,0,0,0,,只不过我是逐一向你们展示，将它们串起来就形成了文件，\N并没有特别的顺序
 Dialogue: 0,1:05:51.14,1:05:52.93,English,,0,0,0,,It doesn't matter what order they are
 Dialogue: 0,1:05:51.14,1:05:52.93,Chinese,,0,0,0,,它们的顺序无关紧要
 Dialogue: 0,1:05:53.38,1:05:54.04,English,,0,0,0,,Yes
@@ -1519,7 +1519,7 @@ Dialogue: 0,1:06:32.72,1:06:35.36,Chinese,,0,0,0,,这通常是你看到的方式
 Dialogue: 0,1:06:36.28,1:06:42.36,English,,0,0,0,,Whatever range of values you give it has to figure out the smallest and the largest one set up
 Dialogue: 0,1:06:36.28,1:06:42.36,Chinese,,0,0,0,,无论你给的值是多少，都必须找出最小值和最大值
 Dialogue: 0,1:06:42.54,1:06:48.90,English,,0,0,0,,So it goes to the default case if it's out of that range and then set up a table for the values within that range
-Dialogue: 0,1:06:42.54,1:06:48.90,Chinese,,0,0,0,,如果它超出该范围，则进入默认情况（default），然后为该范围内的值设置表
+Dialogue: 0,1:06:42.54,1:06:48.90,Chinese,,0,0,0,,如果它超出该范围，则进入默认情况（default），\N然后为该范围内的值设置表
 Dialogue: 0,1:06:49.34,1:06:50.06,English,,0,0,0,,Question
 Dialogue: 0,1:06:49.34,1:06:50.06,Chinese,,0,0,0,,问吧
 Dialogue: 0,1:06:50.24,1:06:58.52,English,,0,0,0,,...
@@ -1537,7 +1537,7 @@ Dialogue: 0,1:07:17.02,1:07:20.76,Chinese,,0,0,0,,或者它会做类似的事情
 Dialogue: 0,1:07:21.74,1:07:25.02,English,,0,0,0,,Another question I see,yes
 Dialogue: 0,1:07:21.74,1:07:25.02,Chinese,,0,0,0,,提问吧
 Dialogue: 0,1:07:25.62,1:07:32.20,English,,0,0,0,,....yeah so you can go from zero to a million ....
-Dialogue: 0,1:07:25.62,1:07:32.20,Chinese,,0,0,0,,如果只有 case 0 和 case 1000000 两种，难道中间的所有值都要建表吗
+Dialogue: 0,1:07:25.62,1:07:32.20,Chinese,,0,0,0,,如果只有 case 0 和 case 1000000 两种，\N难道中间的所有值都要建表吗
 Dialogue: 0,1:07:33.12,1:07:36.34,English,,0,0,0,,Yeah they could be you could go zero in a million and nothing in between right
 Dialogue: 0,1:07:33.12,1:07:36.34,Chinese,,0,0,0,,是的，存在这种情况
 Dialogue: 0,1:07:36.86,1:07:42.10,English,,0,0,0,,So you'd have two cases you really don't want a million entry table for just two cases
@@ -1547,7 +1547,7 @@ Dialogue: 0,1:07:42.66,1:07:44.80,Chinese,,0,0,0,,所以会变成 if-else 代码
 Dialogue: 0,1:07:45.28,1:07:48.24,English,,0,0,0,,But the clever thing it will do if you know binary search
 Dialogue: 0,1:07:45.28,1:07:48.24,Chinese,,0,0,0,,但是会聪明一点的建立 if-else 代码，如果你了解二分搜索
 Dialogue: 0,1:07:49.38,1:07:54.82,English,,0,0,0,,It relies on the fact that it knows in advance all the values and it will actually set up a tree of if felts is
-Dialogue: 0,1:07:49.38,1:07:54.82,Chinese,,0,0,0,,它依赖于这样一个事实：它事先知道所有的值，它实际上会建立一个 if-else 树
+Dialogue: 0,1:07:49.38,1:07:54.82,Chinese,,0,0,0,,它依赖于这样一个事实：它事先知道所有的值，\N它实际上会建立一个 if-else 树
 Dialogue: 0,1:07:55.58,1:08:02.16,English,,0,0,0,,So really it will do it, if you want to thank algorithmically it does it with a logarithmic number of tests
 Dialogue: 0,1:07:55.58,1:08:02.16,Chinese,,0,0,0,,它真的会这样做，这能够让时间复杂度变为 log2(n)
 Dialogue: 0,1:08:02.88,1:08:07.16,English,,0,0,0,,Rather than a linear number of tests
@@ -1681,7 +1681,7 @@ Dialogue: 0,1:12:58.42,1:13:04.90,Chinese,,0,0,0,,主要是由这些基本原语
 Dialogue: 0,1:13:05.94,1:13:08.36,English,,0,0,0,,And that's generally true that what we see is
 Dialogue: 0,1:13:05.94,1:13:08.36,Chinese,,0,0,0,,我们所看到的情况通常都是正确的
 Dialogue: 0,1:13:09.80,1:13:15.02,English,,0,0,0,,You know when you go from C code to machine code you often have to kind of piece together various
-Dialogue: 0,1:13:09.80,1:13:15.02,Chinese,,0,0,0,,你知道当你从 C 代码转到机器代码时，你经常要把各种各样底层指令组合起来
+Dialogue: 0,1:13:09.80,1:13:15.02,Chinese,,0,0,0,,你知道当你从 C 代码转到机器代码时，\N你经常要把各种各样底层指令组合起来
 Dialogue: 0,1:13:15.70,1:13:19.38,English,,0,0,0,,Low-level instructions to implement some higher-level construct
 Dialogue: 0,1:13:15.70,1:13:19.38,Chinese,,0,0,0,,实现某些更高级别的指令
 Dialogue: 0,1:13:22.38,1:13:25.72,English,,0,0,0,,And so we've seen these all in different form stone
