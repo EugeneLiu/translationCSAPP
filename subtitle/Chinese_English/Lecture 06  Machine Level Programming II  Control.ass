@@ -15,10 +15,10 @@ Audio File: ../../../../Desktop/csapp/Lecture 06  Machine Level Programming II  
 Video File: ../../../../Desktop/csapp/Lecture 06  Machine Level Programming II  Control.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
-Video Zoom Percent: 1.125000
-Scroll Position: 1664
-Active Line: 1665
-Video Position: 131694
+Video Zoom Percent: 1.000000
+Scroll Position: 1628
+Active Line: 1641
+Video Position: 130016
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -54,7 +54,7 @@ Dialogue: 0,0:01:00.70,0:01:06.46,Chinese,,0,0,0,,因此实际上这两节课（
 Dialogue: 0,0:01:07.02,0:01:10.16,English,,0,0,0,,You'll learn a lot more at recitation on Monday
 Dialogue: 0,0:01:07.02,0:01:10.16,Chinese,,0,0,0,,周一的复习课你学到了更多内容
 Dialogue: 0,0:01:10.16,0:01:14.20,English,,0,0,0,,Either in person or if you're viewing the recorded version of that
-Dialogue: 0,0:01:10.16,0:01:14.20,Chinese,,0,0,0,,无论你是亲自上课或者还是在观看录制版本
+Dialogue: 0,0:01:10.16,0:01:14.20,Chinese,,0,0,0,,无论你是亲自上课或者还是在观看录制视频
 Dialogue: 0,0:01:14.64,0:01:17.54,English,,0,0,0,,That will help you move along on bomb lab
 Dialogue: 0,0:01:14.64,0:01:17.54,Chinese,,0,0,0,,都将有助于你进行 bomb lab
 Dialogue: 0,0:01:18.00,0:01:23.14,English,,0,0,0,,Like all the labs in this course,at least the first two, we give you a fair amount of time for them
@@ -128,7 +128,7 @@ Dialogue: 0,0:04:33.28,0:04:37.66,Chinese,,0,0,0,,还有另一个寄存器，他
 Dialogue: 0,0:04:40.54,0:04:43.42,English,,0,0,0,,It means that...the %rip means instruction pointer
 Dialogue: 0,0:04:40.54,0:04:43.42,Chinese,,0,0,0,,％rip 的含义是指令指针（instruction pointer）
 Dialogue: 0,0:04:43.90,0:04:47.74,English,,0,0,0,,In IA32 is called a %eip and now it's called %rip
-Dialogue: 0,0:04:43.90,0:04:47.74,Chinese,,0,0,0,,就像 %rax 的前身是 %eax
+Dialogue: 0,0:04:43.90,0:04:47.74,Chinese,,0,0,0,,在 IA32 中我们叫它为 %eip 现在我们叫它为 %rip
 Dialogue: 0,0:04:47.74,0:04:50.84,English,,0,0,0,,Just like the registry used to be %eax and now it's %rax
 Dialogue: 0,0:04:47.74,0:04:50.84,Chinese,,0,0,0,,就像以前的寄存器是 ％eax，现在它是 ％rax
 Dialogue: 0,0:04:52.06,0:04:56.52,English,,0,0,0,,So all it contains is the address of the currently executing instruction
@@ -176,7 +176,7 @@ Dialogue: 0,0:06:25.80,0:06:28.66,Chinese,,0,0,0,,这些通常由算术指令通
 Dialogue: 0,0:06:29.28,0:06:36.98,English,,0,0,0,,The sign flag(SF) is said if the value just computed as a one in the most significant bit meaning it's a negative value
 Dialogue: 0,0:06:29.28,0:06:36.98,Chinese,,0,0,0,,运算结果最高有效位为 1 （说明结果是负值），符号标志（SF）会被置 1
 Dialogue: 0,0:06:37.60,0:06:44.04,English,,0,0,0,,And the overflow flag(OF) is a two's complement version of overflow
-Dialogue: 0,0:06:37.60,0:06:44.04,Chinese,,0,0,0,,溢出标志（OF）是表示有符号数运算溢出的位\N（译注：CF表示无符号数运算溢出位）
+Dialogue: 0,0:06:37.60,0:06:44.04,Chinese,,0,0,0,,溢出标志（OF）是表示有符号数运算溢出的位（译注：CF表示无符号数运算溢出位）
 Dialogue: 0,0:06:44.64,0:06:51.88,English,,0,0,0,,So in particular if you remember from data lab, how do you know if addition of two values is overflowed
 Dialogue: 0,0:06:44.64,0:06:51.88,Chinese,,0,0,0,,如果你还记得 data lab，你是如何确定两个数相加是否溢出的呢？
 Dialogue: 0,0:06:52.00,0:06:57.30,English,,0,0,0,,If the signs of the operands are the same,but the sign of the result is different than that
@@ -184,7 +184,7 @@ Dialogue: 0,0:06:52.00,0:06:57.30,Chinese,,0,0,0,,如果操作数的符号相同
 Dialogue: 0,0:06:57.80,0:07:03.66,English,,0,0,0,,So either you added two positive numbers and got a negative result.That was a positive overflow
 Dialogue: 0,0:06:57.80,0:07:03.66,Chinese,,0,0,0,,要么你是两个正数相加而得到了一个负数结果。这是正溢出
 Dialogue: 0,0:07:03.66,0:07:08.53,English,,0,0,0,,Or you added two negative numbers and got a negative result.That's negative overflow
-Dialogue: 0,0:07:03.66,0:07:08.53,Chinese,,0,0,0,,要么你是两个负数相加而得到了正数结果。这是负溢出\N（译注：英文字幕说得到负数结果是老师口误）
+Dialogue: 0,0:07:03.66,0:07:08.53,Chinese,,0,0,0,,要么你是两个负数相加而得到了正数结果。这是负溢出（译注：英文字幕说得到负数结果是老师口误）
 Dialogue: 0,0:07:08.90,0:07:13.35,English,,0,0,0,,You can't overflow if the two arguments are of opposite signs.right?
 Dialogue: 0,0:07:08.90,0:07:13.35,Chinese,,0,0,0,,如果两个参数（即操作数）的符号相反，你就不会溢出。
 Dialogue: 0,0:07:14.24,0:07:21.48,English,,0,0,0,,So those four flags get,set as a sort of normal activity by many of the instructions
@@ -206,7 +206,7 @@ Dialogue: 0,0:07:58.34,0:08:07.34,Chinese,,0,0,0,,顺便说一句，以 q 结尾
 Dialogue: 0,0:08:07.88,0:08:16.40,English,,0,0,0,,So the comparison is sort of like a subtraction instruction except that you don't do anything with the result
 Dialogue: 0,0:08:07.88,0:08:16.40,Chinese,,0,0,0,,cmp 指令和减法指令几乎一样，但是 cmp 指令不会对得到的结果做任何操作
 Dialogue: 0,0:08:17.20,0:08:21.56,English,,0,0,0,,Normal subtraction instruction is like x minus equals y
-Dialogue: 0,0:08:17.20,0:08:21.56,Chinese,,0,0,0,,正常的减法指令（sub）类似于 x-=y
+Dialogue: 0,0:08:17.20,0:08:21.56,Chinese,,0,0,0,,正常的减法指令（sub）类似于 x -= y
 Dialogue: 0,0:08:22.52,0:08:26.76,English,,0,0,0,,It will read two numbers but then it will store the result wherever x is stored
 Dialogue: 0,0:08:22.52,0:08:26.76,Chinese,,0,0,0,,它将读取两个数字，随后将运算结果赋给 x
 Dialogue: 0,0:08:28.08,0:08:33.40,English,,0,0,0,,But compare just takes these two values does the subtraction and doesn't do anything with the result
@@ -258,7 +258,7 @@ Dialogue: 0,0:10:19.26,0:10:25.82,Chinese,,0,0,0,,test 指令唯一的目的是�
 Dialogue: 0,0:10:26.04,0:10:31.26,English,,0,0,0,,Condition codes is the test instruction and this is typically used the compare as
 Dialogue: 0,0:10:26.04,0:10:31.26,Chinese,,0,0,0,,条件码在 test 指令中通常用于比较
 Dialogue: 0,0:10:31.42,0:10:34.80,English,,0,0,0,,You'd think it's when you have two values and you want to compare them to each other
-Dialogue: 0,0:10:31.42,0:10:34.80,Chinese,,0,0,0,,当你有两个值并希望它们相互比较的时候，你会使用cmp指令
+Dialogue: 0,0:10:31.42,0:10:34.80,Chinese,,0,0,0,,当你有两个值并希望它们相互比较的时候，你会使用 cmp 指令
 Dialogue: 0,0:10:35.30,0:10:39.44,English,,0,0,0,,And the test is if you really just have one value and you want to see what it's like is
 Dialogue: 0,0:10:35.30,0:10:39.44,Chinese,,0,0,0,,当你只有一个值，你想看看它是什么样的时，test 指令就派上用场了
 Dialogue: 0,0:10:39.64,0:10:43.96,English,,0,0,0,,It's zero is negative, those are the main things you care about
@@ -277,8 +277,8 @@ Dialogue: 0,0:11:06.60,0:11:13.40,English,,0,0,0,,Where both arguments are the s
 Dialogue: 0,0:11:06.60,0:11:13.40,Chinese,,0,0,0,,两个参数都相同，所以是 testq ％rax, ％rax
 Dialogue: 0,0:11:14.24,0:11:20.34,English,,0,0,0,,Where so that you're just any register to itself and one property the end operation is
 Dialogue: 0,0:11:14.24,0:11:20.34,Chinese,,0,0,0,,两个参数是相同的寄存器
-Dialogue: 0,0:11:21.12,0:11:27.10,English,,0,0,0,,It's what they test item potent adding ending two things the same things together gives you that same thing
-Dialogue: 0,0:11:21.12,0:11:27.10,Chinese,,0,0,0,,这就是test功能强大的地方，可以把两个参数用一个相同的参数，来替代得到（测试）一个参数的效果
+Dialogue: 0,0:11:21.12,0:11:27.10,English,,0,0,0,,It's what they test item potent ending two things the same things together gives you that same thing
+Dialogue: 0,0:11:21.12,0:11:27.10,Chinese,,0,0,0,,这就是test功能强大的地方，可以跟两个相同的参数，来替代得到（测试）一个参数的效果
 Dialogue: 0,0:11:31.62,0:11:33.46,English,,0,0,0,,So we can see these
 Dialogue: 0,0:11:31.62,0:11:33.46,Chinese,,0,0,0,,所以我们可以看到这些
 Dialogue: 0,0:11:33.46,0:11:35.46,English,,0,0,0,,And now
@@ -926,7 +926,7 @@ Dialogue: 0,0:39:15.84,0:39:20.52,Chinese,,0,0,0,,因此，如果用 goto 替换
 Dialogue: 0,0:39:22.14,0:39:28.54,English,,0,0,0,,With a code that will do a test and if the test holds it will jump back
 Dialogue: 0,0:39:22.14,0:39:28.54,Chinese,,0,0,0,,使用代码进行测试，如果测试成功，它将跳回
 Dialogue: 0,0:39:29.00,0:39:33.26,English,,0,0,0,,And say ok a reacts acute that part of the program I was just in
-Dialogue: 0,0:39:29.00,0:39:33.26,Chinese,,0,0,0,,并且说好的是，我刚刚参与的程序部分反应非常强烈
+Dialogue: 0,0:39:29.00,0:39:33.26,Chinese,,0,0,0,,并且说好的是，我调用的程序返回了
 Dialogue: 0,0:39:34.08,0:39:43.24,English,,0,0,0,,So it sets up a loop where you can think of it's literally a loop of control flow going round and round
 Dialogue: 0,0:39:34.08,0:39:43.24,Chinese,,0,0,0,,它设置了一个循环，你可以想到它实际上是一个循环的控制流程
 Dialogue: 0,0:39:46.44,0:39:51.48,English,,0,0,0,,And by the way this is actually a same useful function it's called popcount sometimes
@@ -1137,7 +1137,7 @@ Dialogue: 0,0:49:15.86,0:49:22.12,English,,0,0,0,,And just throw away this guard
 Dialogue: 0,0:49:15.86,0:49:22.12,Chinese,,0,0,0,,然后摒弃保护代码
 Dialogue: 0,0:49:22.84,0:49:23.78,English,,0,0,0,,So...
 Dialogue: 0,0:49:22.84,0:49:23.78,Chinese,,0,0,0,,嗯......
-Dialogue: 0,0:49:24.62,0:49:32.24,English,,0,0,0,,So that I believe the main reason why this is the transformation that gets used with the -O1 optimization level is 
+Dialogue: 0,0:49:24.62,0:49:32.24,English,,0,0,0,,So that I believe the main reason why this is the transformation that gets used with the -O1 optimization level is
 Dialogue: 0,0:49:24.62,0:49:32.24,Chinese,,0,0,0,,所以我相信这是使用 -O1 级别优化的主要原因
 Dialogue: 0,0:49:32.36,0:49:35.54,English,,0,0,0,,Often times it doesn't need this initial test
 Dialogue: 0,0:49:32.36,0:49:35.54,Chinese,,0,0,0,,通常它不需要这个初始测试
@@ -1350,7 +1350,7 @@ Dialogue: 0,0:58:59.58,0:59:02.46,Chinese,,0,0,0,,所以我不会在代码块中
 Dialogue: 0,0:59:03.18,0:59:05.68,English,,0,0,0,,So just we'll have to keep track of that here
 Dialogue: 0,0:59:03.18,0:59:05.68,Chinese,,0,0,0,,所以我们必须在这里跟踪它
 Dialogue: 0,0:59:06.56,0:59:10.90,English,,0,0,0,,Okay so this is the magic instruction
-Dialogue: 0,0:59:06.56,0:59:10.90,Chinese,,0,0,0,,好的，这是魔术指令
+Dialogue: 0,0:59:06.56,0:59:10.90,Chinese,,0,0,0,,好的，这是「magic instruction」
 Dialogue: 0,0:59:12.24,0:59:16.20,English,,0,0,0,,And now if we look...this is all assembly code
 Dialogue: 0,0:59:12.24,0:59:16.20,Chinese,,0,0,0,,现在，如果我们看...这是所有汇编代码
 Dialogue: 0,0:59:17.16,0:59:19.32,English,,0,0,0,,You'll see this is the actual jump table
@@ -1668,7 +1668,7 @@ Dialogue: 0,1:12:02.66,1:12:06.12,Chinese,,0,0,0,,我们对我们想要了解的
 Dialogue: 0,1:12:06.12,1:12:09.40,English,,0,0,0,,How we could actually implement it as a program if we ever had to do so
 Dialogue: 0,1:12:06.12,1:12:09.40,Chinese,,0,0,0,,如果我们不得不这样做，我们如何才能真正实现它
 Dialogue: 0,1:12:13.84,1:12:15.94,English,,0,0,0,,So and
-Dialogue: 0,1:12:13.84,1:12:15.94,Chinese,,0,0,0,,所以和
+Dialogue: 0,1:12:13.84,1:12:15.94,Chinese,,0,0,0,,嗯
 Dialogue: 0,1:12:17.42,1:12:23.38,English,,0,0,0,,So just in general that the main thing you see is that there's a fairly limited bag of tricks
 Dialogue: 0,1:12:17.42,1:12:23.38,Chinese,,0,0,0,,一般来说，你看到的主要内容是有一套相当有限的技巧
 Dialogue: 0,1:12:23.92,1:12:28.42,English,,0,0,0,,For which the program implements constructs
