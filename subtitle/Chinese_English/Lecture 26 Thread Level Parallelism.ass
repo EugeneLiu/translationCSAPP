@@ -156,71 +156,71 @@ Dialogue: 0,0:04:57.04,0:04:58.96,Chinese,,0,0,0,,那是真的在一块芯片上
 Dialogue: 0,0:04:59.66,0:05:03.28,English,,0,0,0,,There's multiple independent CPUs
 Dialogue: 0,0:04:59.66,0:05:03.28,Chinese,,0,0,0,,有多个独立的CPU
 Dialogue: 0,0:05:04.72,0:05:09.32,English,,0,0,0,,And each of them has some part of the cache hierarchy
-Dialogue: 0,0:05:04.72,0:05:09.32,Chinese,,0,0,0,,并且它们中的每一个都具有缓存层次结构的一部分
+Dialogue: 0,0:05:04.72,0:05:09.32,Chinese,,0,0,0,,并且它们每一个都具有缓存结构的一部分
 Dialogue: 0,0:05:10.44,0:05:15.28,English,,0,0,0,,Which is private to that particular core
-Dialogue: 0,0:05:10.44,0:05:15.28,Chinese,,0,0,0,,这部分缓存是对每个特定CPU私有的
+Dialogue: 0,0:05:10.44,0:05:15.28,Chinese,,0,0,0,,这部分缓存是对每个CPU是私有的
 Dialogue: 0,0:05:15.94,0:05:20.04,English,,0,0,0,,And then there is another part of the cache hierarchy that's shared across cores
-Dialogue: 0,0:05:15.94,0:05:20.04,Chinese,,0,0,0,,然后是跨核心共享的缓存层次结构的另一部分
+Dialogue: 0,0:05:15.94,0:05:20.04,Chinese,,0,0,0,,然后这部分是共享的缓存结构
 Dialogue: 0,0:05:20.60,0:05:23.66,English,,0,0,0,,And then they all have a common interface to main memory
 Dialogue: 0,0:05:20.60,0:05:23.66,Chinese,,0,0,0,,然后他们都有一个与主内存的通用接口
 Dialogue: 0,0:05:25.28,0:05:28.34,English,,0,0,0,,So if these cores are running and this is what happens a lot is
 Dialogue: 0,0:05:25.28,0:05:28.34,Chinese,,0,0,0,,因此，如果这些核心正在运行，那么就会发生很多事情
 Dialogue: 0,0:05:28.42,0:05:32.28,English,,0,0,0,,They're running programs that are completely independent have nothing to do with each
-Dialogue: 0,0:05:28.42,0:05:32.28,Chinese,,0,0,0,,他们运行完全独立的程序与每个程序无关
+Dialogue: 0,0:05:28.42,0:05:32.28,Chinese,,0,0,0,,他们运行各自完全独立，互不相关的程序
 Dialogue: 0,0:05:32.78,0:05:36.90,English,,0,0,0,,Other then they more or less just exist and run and they're happy as can be
-Dialogue: 0,0:05:32.78,0:05:36.90,Chinese,,0,0,0,,除此之外，他们或多或少只是存在和运行，他们很高兴
+Dialogue: 0,0:05:32.78,0:05:36.90,Chinese,,0,0,0,,除此之外，他们各自存在和运行着
 Dialogue: 0,0:05:36.90,0:05:40.06,English,,0,0,0,,They are caching parts of their own state
-Dialogue: 0,0:05:36.90,0:05:40.06,Chinese,,0,0,0,,他们正在缓存他们自己州的一部分
+Dialogue: 0,0:05:36.90,0:05:40.06,Chinese,,0,0,0,,他们缓存着各自的状态
 Dialogue: 0,0:05:40.70,0:05:49.42,English,,0,0,0,,And you know sometimes this cache will get polluted by the junk from other programs in terms of performance
-Dialogue: 0,0:05:40.70,0:05:49.42,Chinese,,0,0,0,,而且你知道有时这个缓存会被性能方面的其他程序的垃圾污染
+Dialogue: 0,0:05:40.70,0:05:49.42,Chinese,,0,0,0,,而且在性能方面，有时这个缓存会其他程序的垃圾污染
 Dialogue: 0,0:05:49.66,0:05:51.74,English,,0,0,0,,But it will matter with functionality
-Dialogue: 0,0:05:49.66,0:05:51.74,Chinese,,0,0,0,,但这对功能很重要
+Dialogue: 0,0:05:49.66,0:05:51.74,Chinese,,0,0,0,,但这对功能性也有影响
 Dialogue: 0,0:05:52.46,0:05:56.52,English,,0,0,0,,The trick when you're trying to do multi-core programming as a parallel computing thing
-Dialogue: 0,0:05:52.46,0:05:56.52,Chinese,,0,0,0,,当你尝试将多核编程作为并行计算的东西时的诀窍
+Dialogue: 0,0:05:52.46,0:05:56.52,Chinese,,0,0,0,,当你使用多核程序来进行并行计算时，诀窍是
 Dialogue: 0,0:05:56.62,0:06:05.30,English,,0,0,0,,Somehow getting all these cores working on parts of different parts of a single problem in a way that
-Dialogue: 0,0:05:56.62,0:06:05.30,Chinese,,0,0,0,,以某种方式让所有这些核心以一种方式处理单个问题的不同部分的某些部分
+Dialogue: 0,0:05:56.62,0:06:05.30,Chinese,,0,0,0,,通过某种方式，让这些核心处理单个问题的不同部分
 Dialogue: 0,0:06:06.52,0:06:09.12,English,,0,0,0,,Makes it so that you get the performance out of it
-Dialogue: 0,0:06:06.52,0:06:09.12,Chinese,,0,0,0,,这样做可以让你获得性能
+Dialogue: 0,0:06:06.52,0:06:09.12,Chinese,,0,0,0,,从而获得所需性能
 Dialogue: 0,0:06:09.16,0:06:13.72,English,,0,0,0,,They don't spend all their time basically arguing with each other about who has access to what
-Dialogue: 0,0:06:09.16,0:06:13.72,Chinese,,0,0,0,,他们并没有把所有的时间花在基本上互相争论谁可以访问什么
+Dialogue: 0,0:06:09.16,0:06:13.72,Chinese,,0,0,0,,他们并没有把所有的时间花在争论谁可以访问什么
 Dialogue: 0,0:06:14.70,0:06:18.70,English,,0,0,0,,And also they're not stepping over each other and messing up each other's state
-Dialogue: 0,0:06:14.70,0:06:18.70,Chinese,,0,0,0,,而且他们也没有踩到对方，弄乱对方的状态
+Dialogue: 0,0:06:14.70,0:06:18.70,Chinese,,0,0,0,,而且他们也没有干扰对方，弄乱对方的状态
 Dialogue: 0,0:06:22.22,0:06:28.78,English,,0,0,0,,So hyper threading is a little bit more into the deep works of how a processor operates
-Dialogue: 0,0:06:22.22,0:06:28.78,Chinese,,0,0,0,,因此，超线程更多地涉及处理器运行的深层工作
+Dialogue: 0,0:06:22.22,0:06:28.78,Chinese,,0,0,0,,因此，超线程更多涉及到一些底层工作，如处理器如何运行
 Dialogue: 0,0:06:29.46,0:06:35.06,English,,0,0,0,,You'll recall from the lecture on a performance or what's chapter 5 of the book
-Dialogue: 0,0:06:29.46,0:06:35.06,Chinese,,0,0,0,,你将从讲座中回忆一下表演或本书的第5章
+Dialogue: 0,0:06:29.46,0:06:35.06,Chinese,,0,0,0,,你可以回忆下之前的视频或者查看书的第五章
 Dialogue: 0,0:06:35.76,0:06:43.86,English,,0,0,0,,That a modern microprocessor looks absolutely nothing like the model that you get by looking at assembly code instructions
-Dialogue: 0,0:06:35.76,0:06:43.86,Chinese,,0,0,0,,现代微处理器看起来绝对不像通过查看汇编代码指令获得的模型
+Dialogue: 0,0:06:35.76,0:06:43.86,Chinese,,0,0,0,,现代微处理器看起来绝对不像汇编代码那样
 Dialogue: 0,0:06:44.00,0:06:47.20,English,,0,0,0,,The model of assembly code is you execute one instruction
 Dialogue: 0,0:06:44.00,0:06:47.20,Chinese,,0,0,0,,汇编代码的模型是执行一条指令
 Dialogue: 0,0:06:47.78,0:06:50.65,English,,0,0,0,,Then you execute the next one then you execute the next one
 Dialogue: 0,0:06:47.78,0:06:50.65,Chinese,,0,0,0,,然后执行下一个，然后执行下一个
-Dialogue: 0,0:06:51.02,0:06:52.86,English,,0,0,0,,Modern prostitutes don't do that at all
-Dialogue: 0,0:06:51.02,0:06:52.86,Chinese,,0,0,0,,现代妓女根本不这样做
+Dialogue: 0,0:06:51.02,0:06:52.86,English,,0,0,0,,Modern processors don't do that at all
+Dialogue: 0,0:06:51.02,0:06:52.86,Chinese,,0,0,0,,现代处理器根本不这样做
 Dialogue: 0,0:06:53.34,0:06:59.00,English,,0,0,0,,They haven't done it for...well they haven't done it that way for 30 years
 Dialogue: 0,0:06:53.34,0:06:59.00,Chinese,,0,0,0,,他们没有这样做......他们30年来没有这样做过
 Dialogue: 0,0:06:59.60,0:07:04.06,English,,0,0,0,,And since 1995 so since 20 years
 Dialogue: 0,0:06:59.60,0:07:04.06,Chinese,,0,0,0,,自1995年以来，自20年以来
 Dialogue: 0,0:07:04.60,0:07:06.60,English,,0,0,0,,They do it in this totally different way
-Dialogue: 0,0:07:04.60,0:07:06.60,Chinese,,0,0,0,,他们以完全不同的方式做到这一点
+Dialogue: 0,0:07:04.60,0:07:06.60,Chinese,,0,0,0,,他们以完全不同的方式来设计处理器结构
 Dialogue: 0,0:07:07.04,0:07:12.28,English,,0,0,0,,Which is sometimes referred to as out of order processing and so just real quickly
-Dialogue: 0,0:07:07.04,0:07:12.28,Chinese,,0,0,0,,这有时被称为无序处理，因此只是快速实现
-Dialogue: 0,0:07:13.14,0:07:16.36,English,,0,0,0,,But the basic idea is on the processor chip
-Dialogue: 0,0:07:13.14,0:07:16.36,Chinese,,0,0,0,,但基本思路是在处理器芯片上
+Dialogue: 0,0:07:07.04,0:07:12.28,Chinese,,0,0,0,,这有时被称为无序处理
+Dialogue: 0,0:07:13.14,0:07:16.36,English,,0,0,0,,The the basic idea is on the processor chip
+Dialogue: 0,0:07:13.14,0:07:16.36,Chinese,,0,0,0,,基本思路是在处理器芯片上
 Dialogue: 0,0:07:16.36,0:07:20.78,English,,0,0,0,,There's multiple functional units that are capable of doing different types of operation
 Dialogue: 0,0:07:16.36,0:07:20.78,Chinese,,0,0,0,,有多个功能单元能够执行不同类型的操作
 Dialogue: 0,0:07:21.24,0:07:26.76,English,,0,0,0,,There's ones for integer arithmetic these ones for floating-point arithmetic and so forth
-Dialogue: 0,0:07:21.24,0:07:26.76,Chinese,,0,0,0,,有一些用于整数运算，这些用于浮点运算等等
+Dialogue: 0,0:07:21.24,0:07:26.76,Chinese,,0,0,0,,有一些用于整数运算，有些用于浮点运算等等
 Dialogue: 0,0:07:27.14,0:07:32.76,English,,0,0,0,,And then there's separate blocks that interface to the memory actually to the cache memories
-Dialogue: 0,0:07:27.14,0:07:32.76,Chinese,,0,0,0,,然后是单独的块，它们实际上与高速缓存存储器连接
+Dialogue: 0,0:07:27.14,0:07:32.76,Chinese,,0,0,0,,然后这些单独的块，它们实际上与高速缓存存储器连接
 Dialogue: 0,0:07:33.38,0:07:38.96,English,,0,0,0,,And they're both loading meaning reading from the memory and storing writing out to memory
-Dialogue: 0,0:07:33.38,0:07:38.96,Chinese,,0,0,0,,而且它们都是从内存中读取意义并将写入存储到内存中
+Dialogue: 0,0:07:33.38,0:07:38.96,Chinese,,0,0,0,,而且它们都是从内存中读取数据并将写入到内存中
 Dialogue: 0,0:07:39.76,0:07:43.14,English,,0,0,0,,But these units are sort of operate independently
-Dialogue: 0,0:07:39.76,0:07:43.14,Chinese,,0,0,0,,但这些单位有点独立运作
+Dialogue: 0,0:07:39.76,0:07:43.14,Chinese,,0,0,0,,但这些单位块有点像独立运作
 Dialogue: 0,0:07:43.60,0:07:50.88,English,,0,0,0,,And what happens is there's a block of logic which is actually enormous with huge block of logic in an x86 processor
 Dialogue: 0,0:07:43.60,0:07:50.88,Chinese,,0,0,0,,接下来会发生的是，在x86处理器中存在大量逻辑块，其中存在巨大的逻辑块
 Dialogue: 0,0:07:51.44,0:07:54.40,English,,0,0,0,,That reads the instructions out of the instruction stream
-Dialogue: 0,0:07:51.44,0:07:54.40,Chinese,,0,0,0,,它从指令流中读取指令
+Dialogue: 0,0:07:51.44,0:07:54.40,Chinese,,0,0,0,,它从指令流中读取指令//
 Dialogue: 0,0:07:54.86,0:08:01.16,English,,0,0,0,,Rips them apart into little pieces keeps track of data dependencies and control dependencies
 Dialogue: 0,0:07:54.86,0:08:01.16,Chinese,,0,0,0,,将它们分成小块可以跟踪数据依赖性并控制依赖性
 Dialogue: 0,0:08:01.66,0:08:07.92,English,,0,0,0,,And then schedules all the various operations in your program on these different functional units
