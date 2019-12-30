@@ -220,91 +220,91 @@ Dialogue: 0,0:07:39.76,0:07:43.14,Chinese,,0,0,0,,但这些单位块有点像独
 Dialogue: 0,0:07:43.60,0:07:50.88,English,,0,0,0,,And what happens is there's a block of logic which is actually enormous with huge block of logic in an x86 processor
 Dialogue: 0,0:07:43.60,0:07:50.88,Chinese,,0,0,0,,接下来会发生的是，在x86处理器中存在大量逻辑块，其中存在巨大的逻辑块
 Dialogue: 0,0:07:51.44,0:07:54.40,English,,0,0,0,,That reads the instructions out of the instruction stream
-Dialogue: 0,0:07:51.44,0:07:54.40,Chinese,,0,0,0,,它从指令流中读取指令//
-Dialogue: 0,0:07:54.86,0:08:01.16,English,,0,0,0,,Rips them apart into little pieces keeps track of data dependencies and control dependencies
-Dialogue: 0,0:07:54.86,0:08:01.16,Chinese,,0,0,0,,将它们分成小块可以跟踪数据依赖性并控制依赖性
+Dialogue: 0,0:07:51.44,0:07:54.40,Chinese,,0,0,0,,它从指令流中读取指令
+Dialogue: 0,0:07:54.86,0:08:01.16,English,,0,0,0,,Rips them apart into little pieces， keeps track of data dependencies and control dependencies
+Dialogue: 0,0:07:54.86,0:08:01.16,Chinese,,0,0,0,,将它们分成小，并可以跟踪数据依赖性和控制依赖性
 Dialogue: 0,0:08:01.66,0:08:07.92,English,,0,0,0,,And then schedules all the various operations in your program on these different functional units
-Dialogue: 0,0:08:01.66,0:08:07.92,Chinese,,0,0,0,,然后在这些不同的功能单元上安排程序中的所有各种操作
-Dialogue: 0,0:08:08.02,0:08:14.70,English,,0,0,0,,So we talked some about that of in the context of how can you write up program that will sort of maximize
-Dialogue: 0,0:08:08.02,0:08:14.70,Chinese,,0,0,0,,所以我们在如何编写可以最大化的程序的背景下讨论了一些
+Dialogue: 0,0:08:01.66,0:08:07.92,Chinese,,0,0,0,,然后在这些不同的功能单元上，分配程序的各自操作指令
+Dialogue: 0,0:08:08.02,0:08:14.70,English,,0,0,0,,So we talked some about that of in the context of how can you write up program that chenguwill sort of maximize
+Dialogue: 0,0:08:08.02,0:08:14.70,Chinese,,0,0,0,,所以我们之前就如何编写程序来最大化处理器
 Dialogue: 0,0:08:15.78,0:08:21.64,English,,0,0,0,,How much is going on down here by writing your code in a particular ways
-Dialogue: 0,0:08:15.78,0:08:21.64,Chinese,,0,0,0,,通过以特定方式编写代码，在这里发生了多少事情
+Dialogue: 0,0:08:15.78,0:08:21.64,Chinese,,0,0,0,,这一内容讨论过
 Dialogue: 0,0:08:22.62,0:08:26.22,English,,0,0,0,,So all this is an introduction to say
-Dialogue: 0,0:08:22.62,0:08:26.22,Chinese,,0,0,0,,所以这一切都是介绍
+Dialogue: 0,0:08:22.62,0:08:26.22,Chinese,,0,0,0,,所以这一切都是介绍说
 Dialogue: 0,0:08:26.60,0:08:29.26,English,,0,0,0,,This is how you have to understand what hyper threading is
-Dialogue: 0,0:08:26.60,0:08:29.26,Chinese,,0,0,0,,这就是你必须了解超线程是什么的方法
+Dialogue: 0,0:08:26.60,0:08:29.26,Chinese,,0,0,0,,你必须了解超线程是怎样的
 Dialogue: 0,0:08:30.82,0:08:35.46,English,,0,0,0,,So in a single execution mode there's basically one instruction decoder
-Dialogue: 0,0:08:30.82,0:08:35.46,Chinese,,0,0,0,,因此，在单个执行模式中，基本上有一个指令解码器
+Dialogue: 0,0:08:30.82,0:08:35.46,Chinese,,0,0,0,,因此，在单个执行单元中，基本上都有一个指令解码器
 Dialogue: 0,0:08:36.54,0:08:40.76,English,,0,0,0,,And it has its own set of state here its own program counter
-Dialogue: 0,0:08:36.54,0:08:40.76,Chinese,,0,0,0,,它有自己的状态集合，这里有自己的程序计数器
+Dialogue: 0,0:08:36.54,0:08:40.76,Chinese,,0,0,0,,它有自己的状态集合，有自己的程序计数器
 Dialogue: 0,0:08:41.18,0:08:46.76,English,,0,0,0,,Its own queue of operations that it's already decoded and haven't completed yet
-Dialogue: 0,0:08:41.18,0:08:46.76,Chinese,,0,0,0,,它自己的操作队列已经解码但尚未完成
-Dialogue: 0,0:08:47.34,0:08:53.84,English,,0,0,0,,It has its own set of registers they're actually not registers like you'd expect they're highly virtualized registers
-Dialogue: 0,0:08:47.34,0:08:53.84,Chinese,,0,0,0,,它有自己的一组寄存器，它们实际上不是寄存器，就像你期望它们是高度虚拟化的寄存器一样
+Dialogue: 0,0:08:41.18,0:08:46.76,Chinese,,0,0,0,,有自己已经解码但未执行的操作队列
+Dialogue: 0,0:08:47.34,0:08:53.84,English,,0,0,0,,It has its own set of registers they're actually not registers like you'd expect， they're highly virtualized registers
+Dialogue: 0,0:08:47.34,0:08:53.84,Chinese,,0,0,0,,它有自己的一组寄存器，它们实际上不是你想的那种寄存器，而是一种高度虚拟化的寄存器
 Dialogue: 0,0:08:54.52,0:09:01.84,English,,0,0,0,,But all this state is there to help to service the execution of one thread of execution
-Dialogue: 0,0:08:54.52,0:09:01.84,Chinese,,0,0,0,,但是所有这些状态都有助于为一个执行线程的执行提供服务
+Dialogue: 0,0:08:54.52,0:09:01.84,Chinese,,0,0,0,,但是所有这些状态都是为了帮助执行程序的某一个线程
 Dialogue: 0,0:09:02.82,0:09:05.26,English,,0,0,0,,With hyper threading basically what you do is
-Dialogue: 0,0:09:02.82,0:09:05.26,Chinese,,0,0,0,,基于超线程，你所做的就是
+Dialogue: 0,0:09:02.82,0:09:05.26,Chinese,,0,0,0,,超线程的基本思想是
 Dialogue: 0,0:09:05.82,0:09:12.78,English,,0,0,0,,The idea that is to say 90% of all programs don't really make use of all these functional units
-Dialogue: 0,0:09:05.82,0:09:12.78,Chinese,,0,0,0,,这个想法就是说90％的程序都没有真正利用所有这些功能单元
+Dialogue: 0,0:09:05.82,0:09:12.78,Chinese,,0,0,0,,90％的程序都没有完全利用所有这些功能单元
 Dialogue: 0,0:09:12.94,0:09:16.86,English,,0,0,0,,Especially if you're blocking on a load
-Dialogue: 0,0:09:12.94,0:09:16.86,Chinese,,0,0,0,,特别是如果你在负载上阻塞
+Dialogue: 0,0:09:12.94,0:09:16.86,Chinese,,0,0,0,,特别是因为缓存缺失
 Dialogue: 0,0:09:16.86,0:09:19.16,English,,0,0,0,,Because there's a miss in a cache
-Dialogue: 0,0:09:16.86,0:09:19.16,Chinese,,0,0,0,,因为缓存中有遗漏
+Dialogue: 0,0:09:16.86,0:09:19.16,Chinese,,0,0,0,,而导致负载阻塞时
 Dialogue: 0,0:09:19.86,0:09:24.00,English,,0,0,0,,Then all these arithmetic units are sitting there without anything useful work to do
-Dialogue: 0,0:09:19.86,0:09:24.00,Chinese,,0,0,0,,然后所有这些算术单元都坐在那里没有任何有用的工作要做
+Dialogue: 0,0:09:19.86,0:09:24.00,Chinese,,0,0,0,,所有这些算术单元都处于空闲状态
 Dialogue: 0,0:09:25.52,0:09:28.20,English,,0,0,0,,Oh and so why don't we just double up
-Dialogue: 0,0:09:25.52,0:09:28.20,Chinese,,0,0,0,,哦，为什么我们不加倍
+Dialogue: 0,0:09:25.52,0:09:28.20,Chinese,,0,0,0,,所以我们为什么不加倍
 Dialogue: 0,0:09:29.06,0:09:32.46,English,,0,0,0,,Or quadruple upper K times up
-Dialogue: 0,0:09:29.06,0:09:32.46,Chinese,,0,0,0,,或者向上翻两倍K次
+Dialogue: 0,0:09:29.06,0:09:32.46,Chinese,,0,0,0,,或者翻K倍
 Dialogue: 0,0:09:33.04,0:09:39.54,English,,0,0,0,,The state associated with the decoding and control parts of the program
-Dialogue: 0,0:09:33.04,0:09:39.54,Chinese,,0,0,0,,与程序的解码和控制部分相关联的状态
+Dialogue: 0,0:09:33.04,0:09:39.54,Chinese,,0,0,0,,与程序的解码和控制部分相关联的状态区域
 Dialogue: 0,0:09:40.12,0:09:42.34,English,,0,0,0,,So that you can have multiple threads running
 Dialogue: 0,0:09:40.12,0:09:42.34,Chinese,,0,0,0,,这样你就可以运行多个线程
 Dialogue: 0,0:09:43.68,0:09:46.56,English,,0,0,0,,And sharing these functional units among each other
 Dialogue: 0,0:09:43.68,0:09:46.56,Chinese,,0,0,0,,并在彼此之间共享这些功能单元
 Dialogue: 0,0:09:46.64,0:09:52.32,English,,0,0,0,,So they're operating really independently their states are not intertwined
-Dialogue: 0,0:09:46.64,0:09:52.32,Chinese,,0,0,0,,因此，他们真正独立运作，他们的状态不是交织在一起的
+Dialogue: 0,0:09:46.64,0:09:52.32,Chinese,,0,0,0,,因此，他们真正地独立运行，他们的状态区域不是交织在一起的
 Dialogue: 0,0:09:52.90,0:09:59.24,English,,0,0,0,,But they're sort of making more use of the available hardware for performing functions
-Dialogue: 0,0:09:52.90,0:09:59.24,Chinese,,0,0,0,,但它们更多地利用可用的硬件来执行功能
+Dialogue: 0,0:09:52.90,0:09:59.24,Chinese,,0,0,0,,但他们某种程度上能更多的使用可用硬件来执行函数
 Dialogue: 0,0:09:59.56,0:10:02.32,English,,0,0,0,,And so that's called hyper threading that's an Intel term
-Dialogue: 0,0:09:59.56,0:10:02.32,Chinese,,0,0,0,,因此，这称为超线程，这是英特尔术语
+Dialogue: 0,0:09:59.56,0:10:02.32,Chinese,,0,0,0,,因此，这称为超线程，是英特尔术语
 Dialogue: 0,0:10:02.90,0:10:06.78,English,,0,0,0,,You also sometimes hear call SMT simultaneous multi-threading
-Dialogue: 0,0:10:02.90,0:10:06.78,Chinese,,0,0,0,,你有时也会听到SMT同时多线程的呼叫
+Dialogue: 0,0:10:02.90,0:10:06.78,Chinese,,0,0,0,,有时也被称为SMT-同步多线程
 Dialogue: 0,0:10:07.58,0:10:11.46,English,,0,0,0,,And in my experience and we'll see here the numbers
-Dialogue: 0,0:10:07.58,0:10:11.46,Chinese,,0,0,0,,根据我的经验，我们会在这里看到数字
+Dialogue: 0,0:10:07.58,0:10:11.46,Chinese,,0,0,0,,根据我的经验，接下来我们将看到数据
 Dialogue: 0,0:10:11.98,0:10:13.72,English,,0,0,0,,It doesn't really make that big a difference
-Dialogue: 0,0:10:11.98,0:10:13.72,Chinese,,0,0,0,,它并没有真正发挥重要作用
+Dialogue: 0,0:10:11.98,0:10:13.72,Chinese,,0,0,0,,它并没有发挥很大的作用
 Dialogue: 0,0:10:14.00,0:10:19.72,English,,0,0,0,,But it turns out to be in the sort of large picture things
 Dialogue: 0,0:10:14.00,0:10:19.72,Chinese,,0,0,0,,但事实证明，这是一种大局观
-Dialogue: 0,0:10:20.16,0:10:24.60,English,,0,0,0,,A relatively inexpensive feature for them to throw on to processors and so they do
-Dialogue: 0,0:10:20.16,0:10:24.60,Chinese,,0,0,0,,一个相对便宜的功能，他们可以投入到处理器，所以他们这样做
-Dialogue: 0,0:10:25.28,0:10:32.30,English,,0,0,0,,And so nowadays at least with an x86 processor usually have to weigh hyper-threading in them
-Dialogue: 0,0:10:25.28,0:10:32.30,Chinese,,0,0,0,,因此，现在至少使用x86处理器通常需要权衡其中的超线程
+Dialogue: 0,0:10:20.16,0:10:24.60,English,,0,0,0,,A relatively inexpensive feature for them to throw on to processors and so they do it
+Dialogue: 0,0:10:20.16,0:10:24.60,Chinese,,0,0,0,,能往处理器中加入一个相对便宜的特性时，便添加了
+Dialogue: 0,0:10:25.28,0:10:32.30,English,,0,0,0,,And so nowadays at least with an x86 processor usually have 2-way hyper-threading in them
+Dialogue: 0,0:10:25.28,0:10:32.30,Chinese,,0,0,0,,因此，现在至少使用x86处理器通常有双向超线程
 Dialogue: 0,0:10:34.02,0:10:40.64,English,,0,0,0,,So given that if you look at our shark machines which are a little bit old there's sort of 2010 era machine
-Dialogue: 0,0:10:34.02,0:10:40.64,Chinese,,0,0,0,,因此，如果你看看我们的鲨鱼机器有点旧，那就是2010年代的机器
+Dialogue: 0,0:10:34.02,0:10:40.64,Chinese,,0,0,0,,因此，如果你看到鲨鱼机器的配置，那是2010年代的机器
 Dialogue: 0,0:10:41.10,0:10:43.92,English,,0,0,0,,But they were high-end machines in their day
 Dialogue: 0,0:10:41.10,0:10:43.92,Chinese,,0,0,0,,但他们当时是高端机器
 Dialogue: 0,0:10:43.92,0:10:47.20,English,,0,0,0,,And so they still actually are more powerful than
-Dialogue: 0,0:10:43.92,0:10:47.20,Chinese,,0,0,0,,所以它们实际上仍然比它更强大
+Dialogue: 0,0:10:43.92,0:10:47.20,Chinese,,0,0,0,,所以它们实际上仍比
 Dialogue: 0,0:10:47.72,0:10:53.56,English,,0,0,0,,What you'd buy as say a desktop and way more powerful than as a laptop that you'd get today
-Dialogue: 0,0:10:47.72,0:10:53.56,Chinese,,0,0,0,,你买的东西就像桌面一样，比你今天得到的笔记本电脑更强大
+Dialogue: 0,0:10:47.72,0:10:53.56,Chinese,,0,0,0,,如今你买的台式机或者笔记本更强大
 Dialogue: 0,0:10:53.56,0:10:55.54,English,,0,0,0,,So they're actually pretty decent machines
 Dialogue: 0,0:10:53.56,0:10:55.54,Chinese,,0,0,0,,所以他们实际上是相当不错的机器
 Dialogue: 0,0:10:55.92,0:11:02.00,English,,0,0,0,,And actually we'll talk next time about why computers aren't a lot faster than they were five years ago
 Dialogue: 0,0:10:55.92,0:11:02.00,Chinese,,0,0,0,,实际上，我们下次会谈到为什么计算机不比五年前快得多
 Dialogue: 0,0:11:02.00,0:11:04.10,English,,0,0,0,,That's actually an interesting technology thing
 Dialogue: 0,0:11:02.00,0:11:04.10,Chinese,,0,0,0,,这实际上是一项有趣的技术
-Dialogue: 0,0:11:05.18,0:11:12.22,English,,0,0,0,,So that their server class machines so they have multiple cores
-Dialogue: 0,0:11:05.18,0:11:12.22,Chinese,,0,0,0,,这样他们的服务器类机器就可以拥有多个内核
+Dialogue: 0,0:11:05.18,0:11:12.22,English,,0,0,0,,So they are server class machines so they have multiple cores
+Dialogue: 0,0:11:05.18,0:11:12.22,Chinese,,0,0,0,,鲨鱼机器是服务器类机器，有多个内核
 Dialogue: 0,0:11:12.80,0:11:23.54,English,,0,0,0,,And they have eight of them which is a lot you can buy ten core machines x86 machines on a single chip
-Dialogue: 0,0:11:12.80,0:11:23.54,Chinese,,0,0,0,,他们有八个，你可以在一个芯片上购买十台核心机器x86机器
+Dialogue: 0,0:11:12.80,0:11:23.54,Chinese,,0,0,0,,他们有八个核心，你可以购买在一个芯片上有十台核心机器的x86机器
 Dialogue: 0,0:11:23.60,0:11:25.14,English,,0,0,0,,But I don't think you can get more yet
-Dialogue: 0,0:11:23.60,0:11:25.14,Chinese,,0,0,0,,但我认为你还没有得到更多
+Dialogue: 0,0:11:23.60,0:11:25.14,Chinese,,0,0,0,,但我觉得你应该买不到比10更多的了
 Dialogue: 0,0:11:25.36,0:11:29.16,English,,0,0,0,,So these were fairly advanced machine of their day
 Dialogue: 0,0:11:25.36,0:11:29.16,Chinese,,0,0,0,,所以这些都是当时相当先进的机器
 Dialogue: 0,0:11:29.16,0:11:31.50,English,,0,0,0,,And they also have two-way hyper threading
-Dialogue: 0,0:11:29.16,0:11:31.50,Chinese,,0,0,0,,而且他们也有双向超线程
+Dialogue: 0,0:11:29.16,0:11:31.50,Chinese,,0,0,0,,而且他们也有双向超线程//
 Dialogue: 0,0:11:32.64,0:11:33.52,English,,0,0,0,,So in theory
 Dialogue: 0,0:11:32.64,0:11:33.52,Chinese,,0,0,0,,所以在理论上
 Dialogue: 0,0:11:36.96,0:11:40.34,English,,0,0,0,,You should be able to get sixteen independent threads running
