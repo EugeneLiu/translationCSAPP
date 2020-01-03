@@ -1,0 +1,228 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a one-line script
+      run: echo Hello, world!
+    - name: Run a multi-line script
+      run: |
+        echo Add other actions to build,
+        echo test, and deploy your project.
+
+Dialogue: 0,0:01:41.36,0:01:44.56,English,,0,0,0,,This aggregate payload is at any point in time so
+
+Dialogue: 0,0:01:41.36,0:01:44.56,Chinese,,0,0,0,,此聚合任何时间点都是有效负载
+
+
+Dialogue: 0,0:01:45.36,0:01:48.00,English,,0,0,0,,As we execute requests one after the other
+
+Dialogue: 0,0:01:45.36,0:01:48.00,Chinese,,0,0,0,,当我们一个接一个地执行请求
+
+
+Dialogue: 0,0:01:57.34,0:01:59.62,English,,0,0,0,,Then the size of the payloads will increase
+
+Dialogue: 0,0:01:57.34,0:01:59.62,Chinese,,0,0,0,,有效载荷的大小也将增加
+
+
+Dialogue: 0,0:02:10.28,0:02:14.90,English,,0,0,0,,The aggregate the sum of all the payloads is going to be increasing and decreasing
+
+Dialogue: 0,0:02:10.28,0:02:14.90,Chinese,,0,0,0,,聚合总和将会增加和减少
+
+
+Dialogue: 0,0:02:27.58,0:02:29.18,English,,0,0,0,,Where we're allowed to compact blocks
+
+Dialogue: 0,0:02:27.58,0:02:29.18,Chinese,,0,0,0,,甚至可以被我们允许压缩成块
+
+
+Dialogue: 0,0:02:29.52,0:02:34.92,English,,0,0,0,,So the sum of all of the payloads is the minimum possible heap size
+
+Dialogue: 0,0:02:29.52,0:02:34.92,Chinese,,0,0,0,,因此，所有有效负载的总和差不多是堆容量
+
+
+Dialogue: 0,0:02:43.02,0:02:46.50,English,,0,0,0,,Okay so it's very very aggressive and it's impossible to achieve
+
+Dialogue: 0,0:02:43.02,0:02:46.50,Chinese,,0,0,0,,这是非常完美的，但是无法实现
+
+
+Dialogue: 0,0:03:15.58,0:03:17.46,English,,0,0,0,,That's going to be equal to
+
+Dialogue: 0,0:03:15.58,0:03:17.46,Chinese,,0,0,0,,这将等于  在i<=k中所有的有效负载除以k+1个请求后的堆大小的最大值
+
+Dialogue: 0,0:03:18.28,0:03:20.82,English,,0,0,0,,The max
+
+Dialogue: 0,0:03:18.28,0:03:20.82,Chinese,,0,0,0,,最大
+
+Dialogue: 0,0:03:24.56,0:03:26.80,English,,0,0,0,,For all i <=k
+
+Dialogue: 0,0:03:24.56,0:03:26.80,Chinese,,0,0,0,,对于所有 i <= k
+（建议合在一起）
+
+
+Dialogue: 0,0:03:46.50,0:03:48.38,English,,0,0,0,,We're remembering the high-water mark
+
+Dialogue: 0,0:03:46.50,0:03:48.38,Chinese,,0,0,0,,我们记作高水线
+
+Dialogue: 0,0:03:49.36,0:03:51.90,English,,0,0,0,,You know as our aggregate payloads
+
+Dialogue: 0,0:03:49.36,0:03:51.90,Chinese,,0,0,0,,当聚集有效负载
+
+Dialogue: 0,0:03:52.78,0:03:55.72,English,,0,0,0,,Increase and decrease we're remembering the high-water mark
+
+Dialogue: 0,0:03:52.78,0:03:55.72,Chinese,,0,0,0,,增加或减少高水线时
+
+
+Dialogue: 0,0:03:56.16,0:04:00.72,English,,0,0,0,,Right so that was sort of the worst that was like the biggest set of payloads that we had
+
+Dialogue: 0,0:03:56.16,0:04:00.72,Chinese,,0,0,0,,这是最糟糕的，好似获得有效载荷最大值一样
+
+
+Dialogue: 0,0:04:01.42,0:04:07.66,English,,0,0,0,,And then so the max is remembering that high-water mark
+
+Dialogue: 0,0:04:01.42,0:04:07.66,Chinese,,0,0,0,,最大值就是这个高水线
+
+
+Dialogue: 0,0:05:20.02,0:05:27.24,English,,0,0,0,,But what varies is H(k) and that depends on how efficient your allocator is using the heap storage
+
+Dialogue: 0,0:05:20.02,0:05:27.24,Chinese,,0,0,0,,但是 H(k) 是变量，它取决于分配器使用堆存储的效率
+
+
+Dialogue: 0,0:05:28.36,0:05:29.50,English,,0,0,0,,Okay yes question
+
+Dialogue: 0,0:05:28.36,0:05:29.50,Chinese,,0,0,0,,好的，请问
+
+
+Dialogue: 0,0:05:34.52,0:05:37.56,English,,0,0,0,,So what we're doing is at any point in time
+
+Dialogue: 0,0:05:34.52,0:05:37.56,Chinese,,0,0,0,,所以我们做的是在任何时间
+
+
+Dialogue: 0,0:05:41.76,0:05:46.80,English,,0,0,0,,We're evaluating the utilization of a heap up till that point so it should be k
+
+Dialogue: 0,0:05:41.76,0:05:46.80,Chinese,,0,0,0,,我们要评估堆的利用率直到到 k
+
+
+Dialogue: 0,0:06:36.06,0:06:41.64,English,,0,0,0,,Okay all right so last time we looked at some simple the basics of dynamic storage allocation
+
+Dialogue: 0,0:06:36.06,0:06:41.64,Chinese,,0,0,0,,好的，上次我们看一下简单的动态存储分配的基础知识
+
+
+
+Dialogue: 0,0:06:59.02,0:07:03.58,English,,0,0,0,,And we'll just look at one,just one very simple kind of garbage collector
+
+Dialogue: 0,0:06:59.02,0:07:03.58,Chinese,,0,0,0,,我们仅看一个，只是一个非常简单的垃圾
+
+
+Dialogue: 0,0:07:03.58,0:07:06.84,English,,0,0,0,,But it will give you an idea of what that means
+
+Dialogue: 0,0:07:03.58,0:07:06.84,Chinese,,0,0,0,,但它会让你知道这个概念是什么
+
+
+Dialogue: 0,0:07:10.42,0:07:13.78,English,,0,0,0,,We'll finish up by looking at all the ways you can get yourself into trouble
+
+Dialogue: 0,0:07:10.42,0:07:13.78,Chinese,,0,0,0,,我们将通过  在使用动态分配储存空间过程中可能遇到的问题
+
+Dialogue: 0,0:07:30.42,0:07:33.60,English,,0,0,0,,Try to alert you to those so you don't do them in your programs
+
+Dialogue: 0,0:07:30.42,0:07:33.60,Chinese,,0,0,0,,尽量提醒你，以免在程序中执行这操作
+
+Dialogue: 0,0:07:44.60,0:07:52.92,English,,0,0,0,,Okay so we looked at how to store a free list in this sort of implicit form by just walking the entire heap
+
+Dialogue: 0,0:07:44.60,0:07:52.92,Chinese,,0,0,0,,好的，我们着眼于如何通过执行完整堆来存储这种隐式形式的空闲列表
+
+Dialogue: 0,0:08:11.02,0:08:13.86,English,,0,0,0,,So the idea with an explicit free list is that
+
+Dialogue: 0,0:08:11.02,0:08:13.86,Chinese,,0,0,0,,因此，显式空闲列表的概念是
+
+Dialogue: 0,0:09:22.00,0:09:25.54,English,,0,0,0,,And it has a 4 word pointer that points to some other link
+
+Dialogue: 0,0:09:22.00,0:09:25.54,Chinese,,0,0,0,,它有一个 4 字节指针指向其他链接
+
+Dialogue: 0,0:09:57.12,0:09:59.12,English,,0,0,0,,Oh yeah so this is after several
+
+Dialogue: 0,0:09:57.12,0:09:59.12,Chinese,,0,0,0,,哦，是的，多次之后
+
+
+Dialogue: 0,0:10:09.64,0:10:10.82,English,,0,0,0,,Oh yeah good question
+
+Dialogue: 0,0:10:09.64,0:10:10.82,Chinese,,0,0,0,,哦，好问题
+
+Dialogue: 0,0:10:16.62,0:10:20.62,English,,0,0,0,,And so you have to coalesce it gets a little tricky and I'll show you in a second
+
+Dialogue: 0,0:10:16.62,0:10:20.62,Chinese,,0,0,0,,你必须合并它，有点棘手，我立刻给你看
+
+Dialogue: 0,0:10:50.82,0:10:54.40,English,,0,0,0,,If you could keep them all contiguous right
+
+Dialogue: 0,0:10:50.82,0:10:54.40,Chinese,,0,0,0,,如果你能保持它们所有的连续性
+
+Dialogue: 0,0:11:14.46,0:11:18.16,English,,0,0,0,,If you're walking that list,if you hit one free block
+
+Dialogue: 0,0:11:14.46,0:11:18.16,Chinese,,0,0,0,,如果你正在运行这个列表，指定一个空闲块
+
+Dialogue: 0,0:11:38.08,0:11:41.32,English,,0,0,0,,Because the allocator would be walking that free list
+
+Dialogue: 0,0:11:38.08,0:11:41.32,Chinese,,0,0,0,,因为分配器会执行那个空闲列表
+
+Dialogue: 0,0:12:21.70,0:12:23.94,English,,0,0,0,,The the answer you absolutely could
+
+Dialogue: 0,0:12:21.70,0:12:23.94,Chinese,,0,0,0,,答案是你绝对可以
+
+Dialogue: 0,0:13:51.20,0:13:54.12,English,,0,0,0,,That's good question any other questions wizard yes
+
+Dialogue: 0,0:13:51.20,0:13:54.12,Chinese,,0,0,0,,这是一个很好的问题，其他问题？
+
+
+Dialogue: 0,0:14:48.06,0:14:53.32,English,,0,0,0,,Well in fact I mean that's one of the invariants that a good allocate has to maintain
+
+Dialogue: 0,0:14:48.06,0:14:53.32,Chinese,,0,0,0,,事实上，我的意思是，这是一个好的分配必须保持的恒量之一
+
+
+Dialogue: 0,0:15:55.34,0:15:56.98,English,,0,0,0,,And there are questions these are good yes question
+
+Dialogue: 0,0:15:55.34,0:15:56.98,Chinese,,0,0,0,,这些问题都是好问题
+
+
+Dialogue: 0,0:18:25.22,0:18:29.08,English,,0,0,0,,But we're not really because of this minimum block size requirement
+
+Dialogue: 0,0:18:25.22,0:18:29.08,Chinese,,0,0,0,,但并不是，因为这个是最小的块大小要求
+
+Dialogue: 0,0:19:44.60,0:19:48.30,English,,0,0,0,,And and they're allocating nodes dynamically and those nodes are the same size
+
+Dialogue: 0,0:19:44.60,0:19:48.30,Chinese,,0,0,0,,并且他们正在动态分配节点，这些节点的大小相同
+
+Dialogue: 0,0:20:07.40,0:20:10.22,English,,0,0,0,,And then and you also has a side effect you'll get that contiguous
+
+Dialogue: 0,0:20:07.40,0:20:10.22,Chinese,,0,0,0,,然后，你也得到一个负作用
+
+Dialogue: 0,0:20:46.96,0:20:52.74,English,,0,0,0,,And you know you could run traces or like in the case of malloc lab you could look at the traces
+
+Dialogue: 0,0:20:46.96,0:20:52.74,Chinese,,0,0,0,,并且你知道你可以在 malloc 实验的情况下运行跟踪或类似的东西，你可以看看记录
+
+
+Dialogue: 0,0:21:08.02,0:21:11.00,English,,0,0,0,,But you can look at a trace and say whom there's an interesting pattern here
+
+Dialogue: 0,0:21:08.02,0:21:11.00,Chinese,,0,0,0,,但是你可以看一下这个记录，感叹这是一个有趣的模式
+
+
+Dialogue: 0,0:21:16.02,0:21:20.02,English,,0,0,0,,And that would just and that's perfectly valid that's just like taking advantage of
+
+Dialogue: 0,0:21:16.02,0:21:20.02,Chinese,,0,0,0,,这是完美和有效的，就像利用它一样
+
+
+Dialogue: 0,0:27:49.74,0:27:53.48,English,,0,0,0,,Hit those one after the other and optimize only for the things that are necessary
+
+Dialogue: 0,0:27:49.74,0:27:53.48,Chinese,,0,0,0,,然后一个接一个地操作那些有必要的事物进行优化
+
+
+Dialogue: 0,0:44:34.10,0:44:36.94,English,,0,0,0,,So it's a trade-off,it's another one of these space-time trade-offs
+
+Dialogue: 0,0:44:34.10,0:44:36.94,Chinese,,0,0,0,,所以这是一个权衡，这是另一个空间选择
+
+
+
