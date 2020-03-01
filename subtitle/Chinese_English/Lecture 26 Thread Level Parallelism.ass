@@ -304,245 +304,245 @@ Dialogue: 0,0:11:23.60,0:11:25.14,Chinese,,0,0,0,,但我觉得你应该买不到
 Dialogue: 0,0:11:25.36,0:11:29.16,English,,0,0,0,,So these were fairly advanced machine of their day
 Dialogue: 0,0:11:25.36,0:11:29.16,Chinese,,0,0,0,,所以这些都是当时相当先进的机器
 Dialogue: 0,0:11:29.16,0:11:31.50,English,,0,0,0,,And they also have two-way hyper threading
-Dialogue: 0,0:11:29.16,0:11:31.50,Chinese,,0,0,0,,而且他们也有双向超线程//
+Dialogue: 0,0:11:29.16,0:11:31.50,Chinese,,0,0,0,,而且他们也有双向超线程
 Dialogue: 0,0:11:32.64,0:11:33.52,English,,0,0,0,,So in theory
 Dialogue: 0,0:11:32.64,0:11:33.52,Chinese,,0,0,0,,所以在理论上
 Dialogue: 0,0:11:36.96,0:11:40.34,English,,0,0,0,,You should be able to get sixteen independent threads running
 Dialogue: 0,0:11:36.96,0:11:40.34,Chinese,,0,0,0,,你应该能够运行16个独立的线程
 Dialogue: 0,0:11:40.62,0:11:44.72,English,,0,0,0,,Sort of 16 way parallelism potentially out of a program
-Dialogue: 0,0:11:40.62,0:11:44.72,Chinese,,0,0,0,,可能超出程序的16路并行性
+Dialogue: 0,0:11:40.62,0:11:44.72,Chinese,,0,0,0,,或者说在一个程序上运行16个并行线程
 Dialogue: 0,0:11:44.74,0:11:50.36,English,,0,0,0,,If you can keep everything working and keep bad things from happening
-Dialogue: 0,0:11:44.74,0:11:50.36,Chinese,,0,0,0,,如果你能保持一切正常运转并防止坏事发生
+Dialogue: 0,0:11:44.74,0:11:50.36,Chinese,,0,0,0,,如果你能没有出错的正常运行的化
 Dialogue: 0,0:11:55.18,0:12:01.94,English,,0,0,0,,So let's give a really trivial application one that should be very simple to make run in parallel
-Dialogue: 0,0:11:55.18,0:12:01.94,Chinese,,0,0,0,,因此，让我们给出一个非常简单的应用程序，它应该非常简单地并行运行
+Dialogue: 0,0:11:55.18,0:12:01.94,Chinese,,0,0,0,,接下来我们来看一个能够并行运行的简单程序
 Dialogue: 0,0:12:02.42,0:12:07.74,English,,0,0,0,,That says imaginary we want to sum up the numbers between 0 and n-1
-Dialogue: 0,0:12:02.42,0:12:07.74,Chinese,,0,0,0,,这就是假想我们想要总结0和n-1之间的数字
+Dialogue: 0,0:12:02.42,0:12:07.74,Chinese,,0,0,0,,假设我们要求0到n-1的数字和
 Dialogue: 0,0:12:07.74,0:12:12.38,English,,0,0,0,,Which is by the way a really stupid thing to do because there's a very simple closed-form formula for it
-Dialogue: 0,0:12:07.74,0:12:12.38,Chinese,,0,0,0,,这是一个非常愚蠢的事情，因为它有一个非常简单的封闭形式公式
+Dialogue: 0,0:12:07.74,0:12:12.38,Chinese,,0,0,0,,这是一个非常愚蠢的事情，因为它有一个非常简单的公式可以计算
 Dialogue: 0,0:12:13.28,0:12:15.58,English,,0,0,0,,Which is good in the sense it will let us check our work
-Dialogue: 0,0:12:13.28,0:12:15.58,Chinese,,0,0,0,,从某种意义上说，它会让我们检查我们的工作
+Dialogue: 0,0:12:13.28,0:12:15.58,Chinese,,0,0,0,,当然这个公式可以用来帮我们检查正确性
 Dialogue: 0,0:12:15.76,0:12:18.36,English,,0,0,0,,But it's a completely stupid application
-Dialogue: 0,0:12:15.76,0:12:18.36,Chinese,,0,0,0,,但这是一个完全愚蠢的应用程序
+Dialogue: 0,0:12:15.76,0:12:18.36,Chinese,,0,0,0,,但这是一个非常愚蠢的程序
 Dialogue: 0,0:12:19.00,0:12:21.02,English,,0,0,0,,But it just shows you this idea
-Dialogue: 0,0:12:19.00,0:12:21.02,Chinese,,0,0,0,,但它只是向你展示了这个想法
+Dialogue: 0,0:12:19.00,0:12:21.02,Chinese,,0,0,0,,只是为了解释并行性的思想
 Dialogue: 0,0:12:21.74,0:12:24.44,English,,0,0,0,,And so what we're just going to do is block off
-Dialogue: 0,0:12:21.74,0:12:24.44,Chinese,,0,0,0,,所以我们要做的就是阻止
+Dialogue: 0,0:12:21.74,0:12:24.44,Chinese,,0,0,0,,所以我们要做的就是分块
 Dialogue: 0,0:12:24.98,0:12:31.68,English,,0,0,0,,If we have n way parallelism we're just going to split a range of numbers n ways
-Dialogue: 0,0:12:24.98,0:12:31.68,Chinese,,0,0,0,,如果我们有n路并行性，那么我们就会分道扬弃一系列数字
-Dialogue: 0,0:12:32.58,0:12:37.60,English,,0,0,0,,And just have a single threads sum up one n of the numbers
-Dialogue: 0,0:12:32.58,0:12:37.60,Chinese,,0,0,0,,只需要一个线程就可以总结出一个数字
+Dialogue: 0,0:12:24.98,0:12:31.68,Chinese,,0,0,0,,如果我们有n个并行线路，则我们将这组数分割成n份
+Dialogue: 0,0:12:32.58,0:12:37.60,English,,0,0,0,,And just have a single threads sum up one nth of the numbers
+Dialogue: 0,0:12:32.58,0:12:37.60,Chinese,,0,0,0,,只需要一个线程对1/n的数求和
 Dialogue: 0,0:12:38.20,0:12:43.50,English,,0,0,0,,And then they'll collectively sum together the result in some way or another
-Dialogue: 0,0:12:38.20,0:12:43.50,Chinese,,0,0,0,,然后他们将以某种方式将结果汇总在一起
+Dialogue: 0,0:12:38.20,0:12:43.50,Chinese,,0,0,0,,然后他们将以某种方式将结果加起来
 Dialogue: 0,0:12:43.82,0:12:46.42,English,,0,0,0,,So this is about as easy a parallel program as you could imagine
-Dialogue: 0,0:12:43.82,0:12:46.42,Chinese,,0,0,0,,所以这就像你想象的那样简单的并行程序
+Dialogue: 0,0:12:43.82,0:12:46.42,Chinese,,0,0,0,,所以这就是一个很简单的并行程序
 Dialogue: 0,0:12:47.84,0:12:53.54,English,,0,0,0,,So let's do a 1 version which is said well gee understand how to use threads
-Dialogue: 0,0:12:47.84,0:12:53.54,Chinese,,0,0,0,,所以，让我们做一个版本，据说geee了解如何使用线程
+Dialogue: 0,0:12:47.84,0:12:53.54,Chinese,,0,0,0,,如果我们知道怎样使用线程，信号量，互斥等概念
 Dialogue: 0,0:12:54.20,0:12:58.90,English,,0,0,0,,Pthreads and  know about these things called semaphores or mutual exclusion
-Dialogue: 0,0:12:54.20,0:12:58.90,Chinese,,0,0,0,,Pthreads并了解这些称为信号量或互斥的事物
+Dialogue: 0,0:12:54.20,0:12:58.90,Chinese,,0,0,0,,我们可以写出该程序的版本1
 Dialogue: 0,0:12:59.42,0:13:04.58,English,,0,0,0,,So what I'll do is just all I'll have one place in memory
-Dialogue: 0,0:12:59.42,0:13:04.58,Chinese,,0,0,0,,所以我要做的就是我将在记忆中占有一席之地
+Dialogue: 0,0:12:59.42,0:13:04.58,Chinese,,0,0,0,,首先我们在内存中分配一个空间
 Dialogue: 0,0:13:04.58,0:13:08.14,English,,0,0,0,,Where I'm collecting the sum over all n values
-Dialogue: 0,0:13:04.58,0:13:08.14,Chinese,,0,0,0,,我在哪里收集所有n个值的总和
+Dialogue: 0,0:13:04.58,0:13:08.14,Chinese,,0,0,0,,在那里储存来自N个线程的元素和
 Dialogue: 0,0:13:08.88,0:13:11.86,English,,0,0,0,,And for a thread to be able to add to that
-Dialogue: 0,0:13:08.88,0:13:11.86,Chinese,,0,0,0,,并且一个线程能够添加到那个
+Dialogue: 0,0:13:08.88,0:13:11.86,Chinese,,0,0,0,,每个线程都能增加它的值
 Dialogue: 0,0:13:12.10,0:13:19.28,English,,0,0,0,,If it will lock it it will get a mutual exclusive access to it increment it and then unlock it
-Dialogue: 0,0:13:12.10,0:13:19.28,Chinese,,0,0,0,,如果它将锁定它，它将获得一个互斥的访问权限，然后将其解锁
+Dialogue: 0,0:13:12.10,0:13:19.28,Chinese,,0,0,0,,如果它将锁定它，它将获得互斥的访问权限，然后将其解锁
 Dialogue: 0,0:13:19.40,0:13:24.66,English,,0,0,0,,And we'll just let all the threads go helter-skelter locking and unlocking this
-Dialogue: 0,0:13:19.40,0:13:24.66,Chinese,,0,0,0,,而且我们只是让所有的线程都进行helter-skelter锁定和解锁
+Dialogue: 0,0:13:19.40,0:13:24.66,Chinese,,0,0,0,,让所有的线程都进行慌乱地锁定和解锁
 Dialogue: 0,0:13:25.72,0:13:27.52,English,,0,0,0,,So the code for that's pretty easy to write it
-Dialogue: 0,0:13:25.72,0:13:27.52,Chinese,,0,0,0,,因此，编写代码非常容易
+Dialogue: 0,0:13:25.72,0:13:27.52,Chinese,,0,0,0,,因此这个代码很容易写
 Dialogue: 0,0:13:27.86,0:13:36.46,English,,0,0,0,,It's a here's the code of course all threaded code looks a lot messier than you think it should but
-Dialogue: 0,0:13:27.86,0:13:36.46,Chinese,,0,0,0,,这是一个代码，当然所有线程代码看起来都比你想象的要麻烦得多
+Dialogue: 0,0:13:27.86,0:13:36.46,Chinese,,0,0,0,,当然所有线程代码看起来都比你想象的要麻烦得多
 Dialogue: 0,0:13:37.12,0:13:39.32,English,,0,0,0,,In the end it's a fairly straightforward code
-Dialogue: 0,0:13:37.12,0:13:39.32,Chinese,,0,0,0,,最后，它是一个相当简单的代码
+Dialogue: 0,0:13:37.12,0:13:39.32,Chinese,,0,0,0,,但它看上去仍是一个相当简单的代码
 Dialogue: 0,0:13:40.16,0:13:41.32,English,,0,0,0,,So in particular
-Dialogue: 0,0:13:40.16,0:13:41.32,Chinese,,0,0,0,,特别是
+Dialogue: 0,0:13:40.16,0:13:41.32,Chinese,,0,0,0,,具体来说
 Dialogue: 0,0:13:42.96,0:13:44.46,English,,0,0,0,,This is the thread routine is
 Dialogue: 0,0:13:42.96,0:13:44.46,Chinese,,0,0,0,,这是线程例程
 Dialogue: 0,0:13:46.12,0:13:55.02,English,,0,0,0,,Passing through this weird vargp structure that you do with threads
-Dialogue: 0,0:13:46.12,0:13:55.02,Chinese,,0,0,0,,通过这个奇怪的vargp结构，你用线程做
+Dialogue: 0,0:13:46.12,0:13:55.02,Chinese,,0,0,0,,通过这个奇怪的vargp结构
 Dialogue: 0,0:13:55.26,0:13:58.20,English,,0,0,0,,The way you pass arguments to a thread routine
-Dialogue: 0,0:13:55.26,0:13:58.20,Chinese,,0,0,0,,将参数传递给线程例程的方式
+Dialogue: 0,0:13:55.26,0:13:58.20,Chinese,,0,0,0,,你将参数传递给线程例程
 Dialogue: 0,0:13:58.60,0:14:02.84,English,,0,0,0,,But basically it's figuring out where is the start and end range of the numbers
-Dialogue: 0,0:13:58.60,0:14:02.84,Chinese,,0,0,0,,但基本上它正在弄清楚数字的起点和终点范围在哪里
+Dialogue: 0,0:13:58.60,0:14:02.84,Chinese,,0,0,0,,基本上它的作用是弄清楚数字的开始和结束区域
 Dialogue: 0,0:14:03.56,0:14:09.52,English,,0,0,0,,Then adding for all i between the start before the end
-Dialogue: 0,0:14:03.56,0:14:09.52,Chinese,,0,0,0,,然后在结束前的开始之间添加所有i
+Dialogue: 0,0:14:03.56,0:14:09.52,Chinese,,0,0,0,,并在这个区间内添加所有的i
 Dialogue: 0,0:14:10.10,0:14:14.88,English,,0,0,0,,I'll lock that acquire a semaphore lock
-Dialogue: 0,0:14:10.10,0:14:14.88,Chinese,,0,0,0,,我将锁定获取信号量锁定
+Dialogue: 0,0:14:10.10,0:14:14.88,Chinese,,0,0,0,,我将得到一个信号量锁定
 Dialogue: 0,0:14:15.64,0:14:19.08,English,,0,0,0,,I'll increment this global sum and then I'll release the lock
-Dialogue: 0,0:14:15.64,0:14:19.08,Chinese,,0,0,0,,我将增加这个全局总和，然后我将释放锁定
+Dialogue: 0,0:14:15.64,0:14:19.08,Chinese,,0,0,0,,然后增加这个全局总和，然后释放锁定
 Dialogue: 0,0:14:20.66,0:14:23.56,English,,0,0,0,,Okay so pretty much the style of code that you've been working with
-Dialogue: 0,0:14:20.66,0:14:23.56,Chinese,,0,0,0,,好的，你一直在使用的代码风格
+Dialogue: 0,0:14:20.66,0:14:23.56,Chinese,,0,0,0,,这是我们很熟悉的代码风格
 Dialogue: 0,0:14:25.10,0:14:27.92,English,,0,0,0,,And what you find is actually this is really a bad idea
-Dialogue: 0,0:14:25.10,0:14:27.92,Chinese,,0,0,0,,你发现的实际上这是一个坏主意
+Dialogue: 0,0:14:25.10,0:14:27.92,Chinese,,0,0,0,,这其实是个坏主意
 Dialogue: 0,0:14:28.92,0:14:30.40,English,,0,0,0,,So running as a single thread
-Dialogue: 0,0:14:28.92,0:14:30.40,Chinese,,0,0,0,,所以作为单个线程运行
+Dialogue: 0,0:14:28.92,0:14:30.40,Chinese,,0,0,0,,如果是单线程运行
 Dialogue: 0,0:14:31.22,0:14:33.04,English,,0,0,0,,It takes 51 seconds to do that
-Dialogue: 0,0:14:31.22,0:14:33.04,Chinese,,0,0,0,,这需要51秒
+Dialogue: 0,0:14:31.22,0:14:33.04,Chinese,,0,0,0,,需要51秒来完成
 Dialogue: 0,0:14:33.04,0:14:37.04,English,,0,0,0,,It would be by the way if you didn't lock and unlock because it's only one thread
-Dialogue: 0,0:14:33.04,0:14:37.04,Chinese,,0,0,0,,顺便说一句，如果你没有锁定和解锁，因为它只是一个线程
+Dialogue: 0,0:14:33.04,0:14:37.04,Chinese,,0,0,0,,顺便说一句，如果你没有使用锁定和解锁，因为它只是一个线程
 Dialogue: 0,0:14:37.04,0:14:40.60,English,,0,0,0,,You'd blow this away it would take just a couple seconds so
-Dialogue: 0,0:14:37.04,0:14:40.60,Chinese,,0,0,0,,你要把它吹走，这只需要几秒钟
+Dialogue: 0,0:14:37.04,0:14:40.60,Chinese,,0,0,0,,你会惊讶地发现这仅需要几秒钟
 Dialogue: 0,0:14:41.30,0:14:44.02,English,,0,0,0,,And then you see as you add more threads it actually gets worse
-Dialogue: 0,0:14:41.30,0:14:44.02,Chinese,,0,0,0,,然后，当你添加更多线程时，你会发现它实际上变得更糟
+Dialogue: 0,0:14:41.30,0:14:44.02,Chinese,,0,0,0,,当添加了更多地线程时，时间会越慢
 Dialogue: 0,0:14:44.80,0:14:47.60,English,,0,0,0,,And especially if you jump from one to two
-Dialogue: 0,0:14:44.80,0:14:47.60,Chinese,,0,0,0,,特别是如果你从一到两跳
+Dialogue: 0,0:14:44.80,0:14:47.60,Chinese,,0,0,0,,特别是如果你一个线程变成两个时
 Dialogue: 0,0:14:48.12,0:14:51.32,English,,0,0,0,,You increase by a factor nine how much time  it takes
 Dialogue: 0,0:14:48.12,0:14:51.32,Chinese,,0,0,0,,你增加了9倍的时间
 Dialogue: 0,0:14:52.78,0:14:58.04,English,,0,0,0,,And it always starts to get better as you get up into eight threads and then it gets worse again
-Dialogue: 0,0:14:52.78,0:14:58.04,Chinese,,0,0,0,,当你进入八个线程然后它再次变得更糟时，它总是开始变得更好
+Dialogue: 0,0:14:52.78,0:14:58.04,Chinese,,0,0,0,,当你增加到第八个线程时，耗时会少一点，但继续增加，耗时仍会越来越多
 Dialogue: 0,0:14:59.04,0:15:06.28,English,,0,0,0,,So the reason is that locking unlocking is a very time-consuming task
-Dialogue: 0,0:14:59.04,0:15:06.28,Chinese,,0,0,0,,所以原因是锁定解锁是一项非常耗时的任务
+Dialogue: 0,0:14:59.04,0:15:06.28,Chinese,,0,0,0,,因为锁定解锁是一项非常耗时的任务
 Dialogue: 0,0:15:06.30,0:15:07.88,English,,0,0,0,,And basically you can think of...
-Dialogue: 0,0:15:06.30,0:15:07.88,Chinese,,0,0,0,,基本上你可以想到......
+Dialogue: 0,0:15:06.30,0:15:07.88,Chinese,,0,0,0,,你可以这样设想......
 Dialogue: 0,0:15:09.90,0:15:15.40,English,,0,0,0,,If you have that map of the multi-core processors with all their private caches in one shared cache
-Dialogue: 0,0:15:09.90,0:15:15.40,Chinese,,0,0,0,,如果你拥有多核处理器的映射，并将其所有私有缓存放在一个共享缓存中
+Dialogue: 0,0:15:09.90,0:15:15.40,Chinese,,0,0,0,,如果你有一个多核处理器，所有核地私有缓存都是一块共有的缓存区
 Dialogue: 0,0:15:16.10,0:15:22.30,English,,0,0,0,,These threads are basically fighting with each other for control for that one memory address
-Dialogue: 0,0:15:16.10,0:15:22.30,Chinese,,0,0,0,,这些线程基本上是相互争斗以控制那个存储器地址
+Dialogue: 0,0:15:16.10,0:15:22.30,Chinese,,0,0,0,,这些线程会去互相争夺这块
 Dialogue: 0,0:15:22.48,0:15:25.90,English,,0,0,0,,That they that they're incrementing
-Dialogue: 0,0:15:22.48,0:15:25.90,Chinese,,0,0,0,,他们说他们正在增加
+Dialogue: 0,0:15:22.48,0:15:25.90,Chinese,,0,0,0,,他们正在增加地址的内存区域
 Dialogue: 0,0:15:26.48,0:15:31.14,English,,0,0,0,,And it has to grab the control away from one core to your the core
-Dialogue: 0,0:15:26.48,0:15:31.14,Chinese,,0,0,0,,它必须将控制从一个核心转移到核心
+Dialogue: 0,0:15:26.48,0:15:31.14,Chinese,,0,0,0,,控制权从一个核心抢到了
 Dialogue: 0,0:15:31.62,0:15:35.44,English,,0,0,0,,That's accessing it do the lock unlock
-Dialogue: 0,0:15:31.62,0:15:35.44,Chinese,,0,0,0,,那是访问它做锁定解锁
+Dialogue: 0,0:15:31.62,0:15:35.44,Chinese,,0,0,0,,另一个正在锁定和解锁的核心
 Dialogue: 0,0:15:35.98,0:15:39.60,English,,0,0,0,,And then it gets grabbed back for it so it's a miserable performance for cache
-Dialogue: 0,0:15:35.98,0:15:39.60,Chinese,,0,0,0,,然后它会被抢回去，所以它对缓存来说是一个悲惨的表现
+Dialogue: 0,0:15:35.98,0:15:39.60,Chinese,,0,0,0,,然后它又被被抢回去，这对于缓存来说是很糟糕的
 Dialogue: 0,0:15:40.24,0:15:42.80,English,,0,0,0,,Huge overhead for the semaphore activities
-Dialogue: 0,0:15:40.24,0:15:42.80,Chinese,,0,0,0,,信号量活动的巨大开销
+Dialogue: 0,0:15:40.24,0:15:42.80,Chinese,,0,0,0,,信号量活动有巨大的开销
 Dialogue: 0,0:15:43.36,0:15:45.42,English,,0,0,0,,And just really a bad thing all around
-Dialogue: 0,0:15:43.36,0:15:45.42,Chinese,,0,0,0,,而且真的是一件坏事
+Dialogue: 0,0:15:43.36,0:15:45.42,Chinese,,0,0,0,,是一件非常糟糕的事
 Dialogue: 0,0:15:45.44,0:15:51.31,English,,0,0,0,,And so lesson one is semaphores or mutexes are very expensive
-Dialogue: 0,0:15:45.44,0:15:51.31,Chinese,,0,0,0,,所以第一课是信号量或互斥量非常昂贵
+Dialogue: 0,0:15:45.44,0:15:51.31,Chinese,,0,0,0,,这告诉我们信号量或者说互斥量是非常昂贵的
 Dialogue: 0,0:15:52.06,0:15:54.90,English,,0,0,0,,And if you're trying to do low level parallelism
-Dialogue: 0,0:15:52.06,0:15:54.90,Chinese,,0,0,0,,如果你正在尝试做低级并行
+Dialogue: 0,0:15:52.06,0:15:54.90,Chinese,,0,0,0,,如果你正在尝试做一些低级的并发处理
 Dialogue: 0,0:15:54.90,0:15:58.90,English,,0,0,0,,You don't want fine-grained locking at that level otherwise
-Dialogue: 0,0:15:54.90,0:15:58.90,Chinese,,0,0,0,,你不希望在该级别进行细粒度锁定
+Dialogue: 0,0:15:54.90,0:15:58.90,Chinese,,0,0,0,,你不想做一些很细分的锁定和解锁
 Dialogue: 0,0:15:59.02,0:16:00.32,English,,0,0,0,,You're just completely sunk
-Dialogue: 0,0:15:59.02,0:16:00.32,Chinese,,0,0,0,,你刚完全沉没了
+Dialogue: 0,0:15:59.02,0:16:00.32,Chinese,,0,0,0,,不然你的程序很慢
 Dialogue: 0,0:16:00.50,0:16:02.92,English,,0,0,0,,And so that's not the way to do it
-Dialogue: 0,0:16:00.50,0:16:02.92,Chinese,,0,0,0,,所以这不是做到这一点的方式
+Dialogue: 0,0:16:00.50,0:16:02.92,Chinese,,0,0,0,,这不是并发的正确使用方式
 Dialogue: 0,0:16:03.34,0:16:08.78,English,,0,0,0,,I won't go into it but there's quite a bit of literature about what they call lock free synchronization
-Dialogue: 0,0:16:03.34,0:16:08.78,Chinese,,0,0,0,,我不会进入它，但有很多关于他们称之为无锁同步的文献
+Dialogue: 0,0:16:03.34,0:16:08.78,Chinese,,0,0,0,,我不会详细展开，但有很多关于“无锁同步”的文献
 Dialogue: 0,0:16:09.24,0:16:12.20,English,,0,0,0,,Which is a way to avoid semaphores but get the effect
-Dialogue: 0,0:16:09.24,0:16:12.20,Chinese,,0,0,0,,这是一种避免信号量但获得效果的方法
+Dialogue: 0,0:16:09.24,0:16:12.20,Chinese,,0,0,0,,这是一种避免信号量但获得想要效果的方法
 Dialogue: 0,0:16:12.78,0:16:15.00,English,,0,0,0,,And they wouldn't work in this context either those
-Dialogue: 0,0:16:12.78,0:16:15.00,Chinese,,0,0,0,,他们不会在这种情况下工作
+Dialogue: 0,0:16:12.78,0:16:15.00,Chinese,,0,0,0,,那种方法也不会在我们这种情况下使用
 Dialogue: 0,0:16:15.54,0:16:17.36,English,,0,0,0,,Just if you've ever heard that term
-Dialogue: 0,0:16:15.54,0:16:17.36,Chinese,,0,0,0,,就好像你曾经听过那个词
+Dialogue: 0,0:16:15.54,0:16:17.36,Chinese,,0,0,0,,如果你们听说过那个词
 Dialogue: 0,0:16:17.74,0:16:19.54,English,,0,0,0,,Those are generally designed for
 Dialogue: 0,0:16:17.74,0:16:19.54,Chinese,,0,0,0,,这些通常是为
 Dialogue: 0,0:16:20.30,0:16:25.80,English,,0,0,0,,Examples where you expect relatively little contention between the threads
-Dialogue: 0,0:16:20.30,0:16:25.80,Chinese,,0,0,0,,你期望线程之间争用相对较少的示例
+Dialogue: 0,0:16:20.30,0:16:25.80,Chinese,,0,0,0,,那些进程存在很少的冲突的情况设计
 Dialogue: 0,0:16:25.80,0:16:30.30,English,,0,0,0,,And so you try and be optimistic and then roll back if something bad happens
-Dialogue: 0,0:16:25.80,0:16:30.30,Chinese,,0,0,0,,所以你试着保持乐观，然后如果发生了不好的事情就回滚
+Dialogue: 0,0:16:25.80,0:16:30.30,Chinese,,0,0,0,,所以你假设不会产生冲突，然后如果发生了不好的事情就返回
 Dialogue: 0,0:16:31.90,0:16:33.52,English,,0,0,0,,This is a case where nope
-Dialogue: 0,0:16:31.90,0:16:33.52,Chinese,,0,0,0,,这是一个不流行的案例
+Dialogue: 0,0:16:31.90,0:16:33.52,Chinese,,0,0,0,,我们这个案例是
 Dialogue: 0,0:16:33.78,0:16:38.24,English,,0,0,0,,All those threads are going to be pounding that one memory location and they're really fighting for it
-Dialogue: 0,0:16:33.78,0:16:38.24,Chinese,,0,0,0,,所有这些线程都将冲击一个内存位置，他们真的在争取它
+Dialogue: 0,0:16:33.78,0:16:38.24,Chinese,,0,0,0,,所有这些线程都将冲击一个内存位置，他们真的都在争夺它
 Dialogue: 0,0:16:38.30,0:16:41.10,English,,0,0,0,,And so there is no good solution to that problem
 Dialogue: 0,0:16:38.30,0:16:41.10,Chinese,,0,0,0,,所以这个问题没有很好的解决方案
 Dialogue: 0,0:16:43.70,0:16:47.48,English,,0,0,0,,The other thing I'll point out is this jump here shows you that
-Dialogue: 0,0:16:43.70,0:16:47.48,Chinese,,0,0,0,,我要指出的另一件事就是这里的跳转向你展示了这一点
+Dialogue: 0,0:16:43.70,0:16:47.48,Chinese,,0,0,0,,我要指出的另一件事就是：从8线程变成16线程告诉了我们
 Dialogue: 0,0:16:48.20,0:16:50.76,English,,0,0,0,,Hyper threading isn't really helping us here
 Dialogue: 0,0:16:48.20,0:16:50.76,Chinese,,0,0,0,,超线程并不能真正帮助我们
 Dialogue: 0,0:16:52.42,0:16:55.88,English,,0,0,0,,Going from the fact that we slowed down from 8 to 16
-Dialogue: 0,0:16:52.42,0:16:55.88,Chinese,,0,0,0,,从我们从8减速到16的事实
+Dialogue: 0,0:16:52.42,0:16:55.88,Chinese,,0,0,0,,8线程变成16线程，速度更慢
 Dialogue: 0,0:16:55.88,0:16:59.16,English,,0,0,0,,Means we can't really make use of 16 threads in this application
 Dialogue: 0,0:16:55.88,0:16:59.16,Chinese,,0,0,0,,意味着我们无法在此应用程序中真正使用16个线程
 Dialogue: 0,0:16:59.68,0:17:01.60,English,,0,0,0,,8 threads are better than 4
 Dialogue: 0,0:16:59.68,0:17:01.60,Chinese,,0,0,0,,8个线程比4个好
 Dialogue: 0,0:17:02.06,0:17:06.74,English,,0,0,0,,But obviously all that's kind of a waste of time because this is just really a bad idea all around
-Dialogue: 0,0:17:02.06,0:17:06.74,Chinese,,0,0,0,,但显然所有这些都浪费时间，因为这实际上是一个坏主意
+Dialogue: 0,0:17:02.06,0:17:06.74,Chinese,,0,0,0,,但显然所有这些都浪费时间，因为线程这样设计本身是个很糟糕的主意
 Dialogue: 0,0:17:08.38,0:17:08.72,English,,0,0,0,,So
 Dialogue: 0,0:17:08.38,0:17:08.72,Chinese,,0,0,0,,所以
 Dialogue: 0,0:17:09.56,0:17:11.14,English,,0,0,0,,Let's do something different
-Dialogue: 0,0:17:09.56,0:17:11.14,Chinese,,0,0,0,,让我们做点不同的事情
+Dialogue: 0,0:17:09.56,0:17:11.14,Chinese,,0,0,0,,让我们来尝试另一种方法
 Dialogue: 0,0:17:11.18,0:17:17.06,English,,0,0,0,,Let's have each of them accumulate their own sum for their own sub range
-Dialogue: 0,0:17:11.18,0:17:17.06,Chinese,,0,0,0,,让我们每个人为自己的子范围累积自己的总和
+Dialogue: 0,0:17:11.18,0:17:17.06,Chinese,,0,0,0,,让所有的线程在它们的子范围内累加自己的和
 Dialogue: 0,0:17:18.60,0:17:22.16,English,,0,0,0,,And we'll give up so we'll have an array of accumulators
-Dialogue: 0,0:17:18.60,0:17:22.16,Chinese,,0,0,0,,我们会放弃，所以我们将有一系列累加器
+Dialogue: 0,0:17:18.60,0:17:22.16,Chinese,,0,0,0,,所以我们将一个累加器数组
 Dialogue: 0,0:17:23.12,0:17:29.72,English,,0,0,0,,Where the each thread is incrementing only a one element of this array
-Dialogue: 0,0:17:23.12,0:17:29.72,Chinese,,0,0,0,,每个线程只递增此数组的一个元素
+Dialogue: 0,0:17:23.12,0:17:29.72,Chinese,,0,0,0,,每个线程只增加此数组的一个元素
 Dialogue: 0,0:17:30.56,0:17:33.38,English,,0,0,0,,So they're not fighting with each other directly for it
-Dialogue: 0,0:17:30.56,0:17:33.38,Chinese,,0,0,0,,所以他们不是直接相互争斗
+Dialogue: 0,0:17:30.56,0:17:33.38,Chinese,,0,0,0,,所以他们不是直接在相互争斗数组的使用权
 Dialogue: 0,0:17:33.58,0:17:38.96,English,,0,0,0,,But they are fighting for if you think about it for the same cache line
-Dialogue: 0,0:17:33.58,0:17:38.96,Chinese,,0,0,0,,但是如果你考虑同一个缓存行，他们就会为之奋斗
+Dialogue: 0,0:17:33.58,0:17:38.96,Chinese,,0,0,0,,但是它们仍然在争夺这个缓存
 Dialogue: 0,0:17:39.84,0:17:43.92,English,,0,0,0,,Because an array is typically stored and so it's not totally nice
-Dialogue: 0,0:17:39.84,0:17:43.92,Chinese,,0,0,0,,因为数组通常是存储的，所以它不是很好
+Dialogue: 0,0:17:39.84,0:17:43.92,Chinese,,0,0,0,,因为数组通常是存储的存储的，所有它不是很好
 Dialogue: 0,0:17:45.70,0:17:48.68,English,,0,0,0,,Ah but this it gives you a pointer to this idea
-Dialogue: 0,0:17:45.70,0:17:48.68,Chinese,,0,0,0,,啊，但它给你一个指向这个想法的指针
+Dialogue: 0,0:17:45.70,0:17:48.68,Chinese,,0,0,0,,但这我们提供了一个思路
 Dialogue: 0,0:17:48.80,0:17:52.14,English,,0,0,0,,If we could sort of move into a private state
-Dialogue: 0,0:17:48.80,0:17:52.14,Chinese,,0,0,0,,如果我们可以进入私人状态
+Dialogue: 0,0:17:48.80,0:17:52.14,Chinese,,0,0,0,,如果我们可以进入私有状态
 Dialogue: 0,0:17:52.88,0:17:55.86,English,,0,0,0,,The stuff that we're making the most direct access to
-Dialogue: 0,0:17:52.88,0:17:55.86,Chinese,,0,0,0,,我们最直接访问的东西
+Dialogue: 0,0:17:52.88,0:17:55.86,Chinese,,0,0,0,,我们能够直接访问的东西
 Dialogue: 0,0:17:56.68,0:17:58.40,English,,0,0,0,,Then we'll get better performance
-Dialogue: 0,0:17:56.68,0:17:58.40,Chinese,,0,0,0,,然后我们会获得更好的表现
+Dialogue: 0,0:17:56.68,0:17:58.40,Chinese,,0,0,0,,我们会获得更好的表现
 Dialogue: 0,0:17:59.68,0:18:01.44,English,,0,0,0,,So this is the thread routine
-Dialogue: 0,0:17:59.68,0:18:01.44,Chinese,,0,0,0,,所以这是线程例程
+Dialogue: 0,0:17:59.68,0:18:01.44,Chinese,,0,0,0,,所以这是我们的线程例程
 Dialogue: 0,0:18:01.96,0:18:05.12,English,,0,0,0,,And that the point is that there's some global array called psum
-Dialogue: 0,0:18:01.96,0:18:05.12,Chinese,,0,0,0,,而关键在于有一些名为psum的全局数组
+Dialogue: 0,0:18:01.96,0:18:05.12,Chinese,,0,0,0,,该程序的关键是有叫做psum的全局数组
 Dialogue: 0,0:18:05.12,0:18:10.80,English,,0,0,0,,But it's only incrementing the part of it that sort of assigned to this particular thread
-Dialogue: 0,0:18:05.12,0:18:10.80,Chinese,,0,0,0,,但它只是增加了它分配给这个特定线程的部分
+Dialogue: 0,0:18:05.12,0:18:10.80,Chinese,,0,0,0,,它只增加分配给某一特定线程的数组元素
 Dialogue: 0,0:18:12.92,0:18:15.44,English,,0,0,0,,And here you do see a performance improvement right
 Dialogue: 0,0:18:12.92,0:18:15.44,Chinese,,0,0,0,,在这里，你确实看到了正确的性能提升
 Dialogue: 0,0:18:15.56,0:18:19.78,English,,0,0,0,,So one thread takes 5 seconds remember before it was 58
-Dialogue: 0,0:18:15.56,0:18:19.78,Chinese,,0,0,0,,所以一个线程需要5秒才能记住58
+Dialogue: 0,0:18:15.56,0:18:19.78,Chinese,,0,0,0,,所以一个线程需要5秒而不是之前的58秒
 Dialogue: 0,0:18:19.92,0:18:25.16,English,,0,0,0,,So that shows you just the advantage of the cost of semaphores
 Dialogue: 0,0:18:19.92,0:18:25.16,Chinese,,0,0,0,,这样就向你展示了信号量成本的优势
 Dialogue: 0,0:18:25.66,0:18:27.14,English,,0,0,0,,Right there is a factor of 10
 Dialogue: 0,0:18:25.66,0:18:27.14,Chinese,,0,0,0,,对，有10倍
 Dialogue: 0,0:18:27.74,0:18:33.12,English,,0,0,0,,And you see you are actually getting an improvement all across the line including up to 16 threads
-Dialogue: 0,0:18:27.74,0:18:33.12,Chinese,,0,0,0,,而且你看到你实际上在整个生产线上都得到了改进，包括最多16个线程
+Dialogue: 0,0:18:27.74,0:18:33.12,Chinese,,0,0,0,,观察整个线条，你会发现所有的情况都有改善，包括16线程的情况
 Dialogue: 0,0:18:33.14,0:18:34.50,English,,0,0,0,,You're still getting an improvement
 Dialogue: 0,0:18:33.14,0:18:34.50,Chinese,,0,0,0,,你还在改进
-Dialogue: 0,0:18:35.02,0:18:38.14,English,,0,0,0,,It would flatten out should have just shown the number 432
-Dialogue: 0,0:18:35.02,0:18:38.14,Chinese,,0,0,0,,如果只是显示数字432就会变平
+Dialogue: 0,0:18:35.02,0:18:38.14,English,,0,0,0,,It would flatten out should have just shown the number for 32
+Dialogue: 0,0:18:35.02,0:18:38.14,Chinese,,0,0,0,,这里会变扁平（如果我展示32线程的情况）
 Dialogue: 0,0:18:38.14,0:18:40.02,English,,0,0,0,,But it would flatten out at this point
-Dialogue: 0,0:18:38.14,0:18:40.02,Chinese,,0,0,0,,但在这一点上它会变得扁平化
+Dialogue: 0,0:18:38.14,0:18:40.02,Chinese,,0,0,0,,线条会在之后变得扁平
 Dialogue: 0,0:18:40.56,0:18:43.78,English,,0,0,0,,But it actually is getting some advantage out of hyper-threading as well
-Dialogue: 0,0:18:40.56,0:18:43.78,Chinese,,0,0,0,,但它实际上也从超线程中获得了一些优势
+Dialogue: 0,0:18:40.56,0:18:43.78,Chinese,,0,0,0,,但它实际上也从超线程中获得了一些增速
 Dialogue: 0,0:18:45.34,0:18:48.14,English,,0,0,0,,So that's good it's not an amazing speed up
-Dialogue: 0,0:18:45.34,0:18:48.14,Chinese,,0,0,0,,所以这很好，它不是一个惊人的加速
+Dialogue: 0,0:18:45.34,0:18:48.14,Chinese,,0,0,0,,这很好，但这也不是一个惊人的加速
 Dialogue: 0,0:18:48.46,0:18:57.48,English,,0,0,0,,So you can think of what they call the speed up is the performance of it running on a single core versus the performance on n cores
 Dialogue: 0,0:18:48.46,0:18:57.48,Chinese,,0,0,0,,所以你可以想到他们所谓的加速是它在单核上运行的性能与n核上的性能相比
 Dialogue: 0,0:18:57.48,0:19:00.30,English,,0,0,0,,And in the ideal case it goes n times faster
 Dialogue: 0,0:18:57.48,0:19:00.30,Chinese,,0,0,0,,在理想情况下，它的速度提高了n倍
 Dialogue: 0,0:19:00.94,0:19:02.28,English,,0,0,0,,And we're not quite hitting that
-Dialogue: 0,0:19:00.94,0:19:02.28,Chinese,,0,0,0,,我们并没有那么做
+Dialogue: 0,0:19:00.94,0:19:02.28,Chinese,,0,0,0,,我们并没有达到那种性能
 Dialogue: 0,0:19:05.90,0:19:12.04,English,,0,0,0,,Well but here's if you've already learned that it's generally bad to be accumulating into a memory
-Dialogue: 0,0:19:05.90,0:19:12.04,Chinese,,0,0,0,,好吧，但是如果你已经知道积累到记忆中通常是不好的
+Dialogue: 0,0:19:05.90,0:19:12.04,Chinese,,0,0,0,,但如果你知道了，直接在共享内存中累加是不好的
 Dialogue: 0,0:19:12.58,0:19:15.50,English,,0,0,0,,And so why not do the thing we learned before
-Dialogue: 0,0:19:12.58,0:19:15.50,Chinese,,0,0,0,,那么为什么不做我们之前学到的东西呢
+Dialogue: 0,0:19:12.58,0:19:15.50,Chinese,,0,0,0,,那么为什么试一下我们之前学到的东西呢
 Dialogue: 0,0:19:15.90,0:19:20.50,English,,0,0,0,,Which is you accumulate in a register and you only update the memory when you're done with that
-Dialogue: 0,0:19:15.90,0:19:20.50,Chinese,,0,0,0,,你在寄存器中累积的是什么，只有在完成后才能更新内存
+Dialogue: 0,0:19:15.90,0:19:20.50,Chinese,,0,0,0,,现在寄存器内累加，再将结果更新好内存中
 Dialogue: 0,0:19:21.30,0:19:24.76,English,,0,0,0,,So let's just do that and I'll call that the local version
 Dialogue: 0,0:19:21.30,0:19:24.76,Chinese,,0,0,0,,所以，让我们这样做，我会称之为本地版本
 Dialogue: 0,0:19:25.20,0:19:28.60,English,,0,0,0,,I'll just increment a sum which is a local variable
-Dialogue: 0,0:19:25.20,0:19:28.60,Chinese,,0,0,0,,我只是增加一个本地变量的总和
+Dialogue: 0,0:19:25.20,0:19:28.60,Chinese,,0,0,0,,我将增加一个本地变量sum
 Dialogue: 0,0:19:29.06,0:19:30.46,English,,0,0,0,,And only when I'm done
 Dialogue: 0,0:19:29.06,0:19:30.46,Chinese,,0,0,0,,只有当我完成了
 Dialogue: 0,0:19:31.24,0:19:35.30,English,,0,0,0,,Then I'll store it in the global array
-Dialogue: 0,0:19:31.24,0:19:35.30,Chinese,,0,0,0,,然后我将它存储在全局数组中
+Dialogue: 0,0:19:31.24,0:19:35.30,Chinese,,0,0,0,,我把它它存储在全局数组中
 Dialogue: 0,0:19:37.14,0:19:40.52,English,,0,0,0,,Okay so it's functionally equivalent to the one we just showed
 Dialogue: 0,0:19:37.14,0:19:40.52,Chinese,,0,0,0,,好的，它在功能上等同于我们刚刚展示的那个
 Dialogue: 0,0:19:40.52,0:19:46.18,English,,0,0,0,,We're just moving instead of accumulating in a global array we're accumulating in a register
-Dialogue: 0,0:19:40.52,0:19:46.18,Chinese,,0,0,0,,我们只是移动而不是累积在我们正在寄存器中累积的全局数组中
+Dialogue: 0,0:19:40.52,0:19:46.18,Chinese,,0,0,0,,我们仅仅把现在寄存器中累加和移动到全局数组中
 Dialogue: 0,0:19:47.30,0:19:49.92,English,,0,0,0,,And here you see a pretty big performance improvement
-Dialogue: 0,0:19:47.30,0:19:49.92,Chinese,,0,0,0,,在这里，你可以看到相当大的性能提升
+Dialogue: 0,0:19:47.30,0:19:49.92,Chinese,,0,0,0,,这样，你可以看到相当大的性能提升
 Dialogue: 0,0:19:51.18,0:20:00.04,English,,0,0,0,,So blue is what we showed with the global array,red or orange is what's this local variable
-Dialogue: 0,0:19:51.18,0:20:00.04,Chinese,,0,0,0,,所以蓝色是我们用全局数组显示的，红色或橙色是这个局部变量
+Dialogue: 0,0:19:51.18,0:20:00.04,Chinese,,0,0,0,,所以蓝色是我们用全局数组的，红色或橙色是局部变量
 Dialogue: 0,0:20:00.76,0:20:04.56,English,,0,0,0,,And so you see it's actually interesting we're getting a performance improvement
-Dialogue: 0,0:20:00.76,0:20:04.56,Chinese,,0,0,0,,所以你看到它真的很有趣我们正在获得性能提升
+Dialogue: 0,0:20:00.76,0:20:04.56,Chinese,,0,0,0,,你会看到我们得到了很有趣的性能提升
 Dialogue: 0,0:20:05.38,0:20:11.12,English,,0,0,0,,As well although it bottoms out at eight
-Dialogue: 0,0:20:05.38,0:20:11.12,Chinese,,0,0,0,,尽管它在8点达到最低点
+Dialogue: 0,0:20:05.38,0:20:11.12,Chinese,,0,0,0,,尽管它在8线程达到最低点
 Dialogue: 0,0:20:11.28,0:20:13.89,English,,0,0,0,,And it actually gets worse when you go to sixteen
-Dialogue: 0,0:20:11.28,0:20:13.89,Chinese,,0,0,0,,当你去十六岁时，它实际上会变得更糟
+Dialogue: 0,0:20:11.28,0:20:13.89,Chinese,,0,0,0,,在16线程时，它实际上会变得更糟
 Dialogue: 0,0:20:14.44,0:20:17.24,English,,0,0,0,,And this is showing that hyper-threading isn't really helping here
 Dialogue: 0,0:20:14.44,0:20:17.24,Chinese,,0,0,0,,这表明超线程在这方面并没有真正帮助
 Dialogue: 0,0:20:17.24,0:20:21.98,English,,0,0,0,,Because basically the single thread is just accumulating
-Dialogue: 0,0:20:17.24,0:20:21.98,Chinese,,0,0,0,,因为基本上单线程只是累积
+Dialogue: 0,0:20:17.24,0:20:21.98,Chinese,,0,0,0,,因为基本上，单线程只是在累加
 Dialogue: 0,0:20:22.68,0:20:27.22,English,,0,0,0,,As fast as it can and adding to a register
-Dialogue: 0,0:20:22.68,0:20:27.22,Chinese,,0,0,0,,尽可能快地添加到寄存器中
+Dialogue: 0,0:20:22.68,0:20:27.22,Chinese,,0,0,0,,尽可能快地把数加到寄存器上
 Dialogue: 0,0:20:27.64,0:20:32.54,English,,0,0,0,,And so it's making pretty good use of what functional units it uses and putting multiple threads
 Dialogue: 0,0:20:27.64,0:20:32.54,Chinese,,0,0,0,,因此，它正在很好地利用它使用的功能单元并放置多个线程
 Dialogue: 0,0:20:33.02,0:20:34.50,English,,0,0,0,,Sharing it isn't really helping
