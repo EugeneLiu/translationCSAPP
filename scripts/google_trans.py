@@ -1,3 +1,4 @@
+import re
 import pathlib
 import gevent
 from gevent.pool import Pool
@@ -8,6 +9,8 @@ global des_file
 count = 0
 global translator
 translator = Translator(service_urls=['translate.google.cn'])
+global re_text
+re_text = re.compile(u"([\u2000-\u206F\u3000-\u303F\u4E00-\u9FBF\uFF00-\uFFEF]+)", re.VERBOSE)
 
 def tran_sub(line):
     global des_file
@@ -25,6 +28,19 @@ def tran_sub(line):
         des_file.write(c_line)
     else:
         des_file.write(line.encode('utf-8'))
+
+
+def format_sub(line):
+    global re_text
+    if line.startswith('Dialogue'):
+        head_str, text = tuple(line.rsplit(',,', 1))
+        if 'Chinese' in head_str:
+            text = text.decode('utf-8')
+            format_text = re_text.sub(r' \1 ', text).strip()
+            des_file.write(',,'.join([head_str, format_text.encode('utf-8') + '\n']))
+    else:
+        des_file.write(line)
+
 
 def main():
     sou_path = u"/Users/eugene/workspace/translationCSAPP/subtitle/English/"
