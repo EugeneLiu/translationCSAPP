@@ -16,9 +16,9 @@ Video File: ../../../../Desktop/csapp/Lecture 26 Thread Level Parallelism.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 1.000000
-Scroll Position: 750
-Active Line: 763
-Video Position: 55725
+Scroll Position: 1000
+Active Line: 1017
+Video Position: 75783
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -762,7 +762,7 @@ Dialogue: 0,0:29:29.76,0:29:32.80,Chinese,,0,0,0,,但我只是想做一个非常
 Dialogue: 0,0:29:34.16,0:29:36.68,English,,0,0,0,,So quicksort is for example the
 Dialogue: 0,0:29:34.16,0:29:36.68,Chinese,,0,0,0,,快速排序是......
 Dialogue: 0,0:29:40.78,0:29:43.70,English,,0,0,0,,The C library program qsort is quicksort
-Dialogue: 0,0:29:40.78,0:29:43.70,Chinese,,0,0,0,,C 语言标准库函数 qsort 就是「快排」
+Dialogue: 0,0:29:40.78,0:29:43.70,Chinese,,0,0,0,,C 语言库函数 qsort 就是「快排」
 Dialogue: 0,0:29:43.70,0:29:50.72,English,,0,0,0,, it was invented in the early 1960s or 1950s by a guy named Tony Hoare
 Dialogue: 0,0:29:43.70,0:29:50.72,Chinese,,0,0,0,,它大概是在上世纪 50， 60 年代由「东尼・霍尔」发明的
 Dialogue: 0,0:29:51.58,0:29:55.12,English,,0,0,0,,Who also founded a lot of the fundamental logic of program
@@ -789,268 +789,262 @@ Dialogue: 0,0:30:46.86,0:30:49.34,English,,0,0,0,,One nice thing about it is,it 
 Dialogue: 0,0:30:46.86,0:30:49.34,Chinese,,0,0,0,,快排有一个好处是它可以在「原地」完成排序
 Dialogue: 0,0:30:49.34,0:30:57.36,English,,0,0,0,,Meaning if you have an array of data you can do this all just by swapping elements around and not have to use any extra space
 Dialogue: 0,0:30:49.34,0:30:57.36,Chinese,,0,0,0,,意思是如果你要对数组进行排序，你可以通过交换元素来完成，而不需要额外的空间
-Dialogue: 0,0:30:57.50,0:30:59.44,English,,0,0,0,,Which you would for example with merge sort
-Dialogue: 0,0:30:57.50,0:30:59.44,Chinese,,0,0,0,,以合并排序为例
+Dialogue: 0,0:30:57.36,0:30:59.44,English,,0,0,0,,Which you would for example with merge sort
+Dialogue: 0,0:30:57.36,0:30:59.44,Chinese,,0,0,0,,「归并排序」需要额外的空间
 Dialogue: 0,0:31:00.14,0:31:05.28,English,,0,0,0,,So this is a fairly simple algorithm and just to visualize it then
-Dialogue: 0,0:31:00.14,0:31:05.28,Chinese,,0,0,0,,所以这是一个相当简单的算法，然后只是想象它
+Dialogue: 0,0:31:00.14,0:31:05.28,Chinese,,0,0,0,,所以「快排」是一个相当简单的算法
 Dialogue: 0,0:31:06.06,0:31:09.62,English,,0,0,0,,You have some block of data X array and you want to sort it
-Dialogue: 0,0:31:06.06,0:31:09.62,Chinese,,0,0,0,,你有一些数据块 X 阵列，你想要对它进行排序
+Dialogue: 0,0:31:06.06,0:31:09.62,Chinese,,0,0,0,,想象一下，你有一个数组 X ，想要对它进行排序
 Dialogue: 0,0:31:09.70,0:31:13.70,English,,0,0,0,,So you pick an element called the pivot and there's various strategies for doing that
-Dialogue: 0,0:31:09.70,0:31:13.70,Chinese,,0,0,0,,所以你选择了一个名为 pi v ot 的元素，并且有各种策略可以做到这一点
+Dialogue: 0,0:31:09.70,0:31:13.70,Chinese,,0,0,0,,然后你选出一个基准元素 p，挑选基准元素有很多策略
 Dialogue: 0,0:31:14.88,0:31:19.42,English,,0,0,0,,And now you just subdivide X into three parts
-Dialogue: 0,0:31:14.88,0:31:19.42,Chinese,,0,0,0,,现在你只需将 X 细分为三个部分
-Dialogue: 0,0:31:19.56,0:31:24.52,English,,0,0,0,,L the left hand P the right hand meaning less and greater than p
-Dialogue: 0,0:31:19.56,0:31:24.52,Chinese,,0,0,0,, L 左手 P 右手意味着小于和大于 p
+Dialogue: 0,0:31:14.88,0:31:19.42,Chinese,,0,0,0,,现在你只需将数组 X 分为三个部分
+Dialogue: 0,0:31:19.56,0:31:24.52,English,,0,0,0,,L the left hand, other right hand meaning less and greater than p
+Dialogue: 0,0:31:19.56,0:31:24.52,Chinese,,0,0,0,,p 左边的 L 小于 p，右边的 R 大于 p
 Dialogue: 0,0:31:25.06,0:31:26.82,English,,0,0,0,,And then you place p in the middle
 Dialogue: 0,0:31:25.06,0:31:26.82,Chinese,,0,0,0,,然后你把 p 放在中间
 Dialogue: 0,0:31:27.78,0:31:33.48,English,,0,0,0,,And then you recursively when you're doing this for in a sequential code
-Dialogue: 0,0:31:27.78,0:31:33.48,Chinese,,0,0,0,,然后，当你在顺序代码中执行此操作时递归
+Dialogue: 0,0:31:27.78,0:31:33.48,Chinese,,0,0,0,,然后，你可以在顺序执行代码中进行递归操作
 Dialogue: 0,0:31:33.48,0:31:39.03,English,,0,0,0,,You'll pick one of these two usually leftmost or rightmost whatever doesn't really matter
-Dialogue: 0,0:31:33.48,0:31:39.03,Chinese,,0,0,0,,你会选择这两个中的一个通常最左边或最右边的任何无关紧要的东西
+Dialogue: 0,0:31:33.48,0:31:39.03,Chinese,,0,0,0,,然后你在 L 中选择一个基准，通常是最左边的或者最右边的元素，也可以是其中任意一个元素
 Dialogue: 0,0:31:39.40,0:31:46.57,English,,0,0,0,,And you'll recursively you apply the same method to the left side and
-Dialogue: 0,0:31:39.40,0:31:46.57,Chinese,,0,0,0,,并且你将递归地将相同的方法应用于左侧和
+Dialogue: 0,0:31:39.40,0:31:46.57,Chinese,,0,0,0,,并且使用同样的方法对左边的元素进行递归
 Dialogue: 0,0:31:46.86,0:31:51.96,English,,0,0,0,,And ultimately after enough recursions you get to the point where L has been sorted
-Dialogue: 0,0:31:46.86,0:31:51.96,Chinese,,0,0,0,,并且最终在经过足够的递归后，你将达到 L 已经排序的程度
-Dialogue: 0,0:31:52.24,0:31:55.22,English,,0,0,0,,And that's shown in this kind of a swishy color thing
-Dialogue: 0,0:31:52.24,0:31:55.22,Chinese,,0,0,0,,这就是这种闪闪发光的颜色
-Dialogue: 0,0:31:55.76,0:31:57.04,English,,0,0,0,,And call that L'
-Dialogue: 0,0:31:55.76,0:31:57.04,Chinese,,0,0,0,,并称之为 L '
+Dialogue: 0,0:31:46.86,0:31:51.96,Chinese,,0,0,0,,最终，递归完成后 ，L 就已排好序了
+Dialogue: 0,0:31:52.24,0:31:57.04,English,,0,0,0,,And that's shown in this kind of a swishy color thing and call that L'
+Dialogue: 0,0:31:52.24,0:31:57.04,Chinese,,0,0,0,,这里用这种闪闪发光的颜色表示并称之为 L'
 Dialogue: 0,0:31:57.98,0:31:59.30,English,,0,0,0,,And same with
-Dialogue: 0,0:31:57.98,0:31:59.30,Chinese,,0,0,0,,同样的
+Dialogue: 0,0:31:57.98,0:31:59.30,Chinese,,0,0,0,,同样
 Dialogue: 0,0:32:03.86,0:32:07.16,English,,0,0,0,,You'll do the same thing now with the right hand side
-Dialogue: 0,0:32:03.86,0:32:07.16,Chinese,,0,0,0,,你现在用右手做同样的事情
+Dialogue: 0,0:32:03.86,0:32:07.16,Chinese,,0,0,0,,同样在右边也是如此
 Dialogue: 0,0:32:07.62,0:32:10.14,English,,0,0,0,,And when you're done this is usually done in place
-Dialogue: 0,0:32:07.62,0:32:10.14,Chinese,,0,0,0,,当你完成这项工作通常是在适当的地方完成的
-Dialogue: 0,0:32:10.28,0:32:16.52,English,,0,0,0,,So you just the L part works on one array part of the array and the are part on another
-Dialogue: 0,0:32:10.28,0:32:16.52,Chinese,,0,0,0,,所以你只是 L 部分在数组的一个数组部分上工作，而在另一部分的数组部分
+Dialogue: 0,0:32:07.62,0:32:10.14,Chinese,,0,0,0,,通常会在原地完成所有的事情
+Dialogue: 0,0:32:10.28,0:32:16.52,English,,0,0,0,,So you just the L part works on one array part of the array and the are other part on another
+Dialogue: 0,0:32:10.28,0:32:16.52,Chinese,,0,0,0,,L 就在原来的数组中完成了排序，另一边也是在原数组中完成
 Dialogue: 0,0:32:16.94,0:32:18.38,English,,0,0,0,,And when you're done they're in sorted order
-Dialogue: 0,0:32:16.94,0:32:18.38,Chinese,,0,0,0,,当你完成它们时，它们按顺序排列
+Dialogue: 0,0:32:16.94,0:32:18.38,Chinese,,0,0,0,,当你完成时，整个数组就是排好序的了
 Dialogue: 0,0:32:20.26,0:32:23.18,English,,0,0,0,,The very simple sort and generally has very good performance
-Dialogue: 0,0:32:20.26,0:32:23.18,Chinese,,0,0,0,,非常简单的排序，通常具有非常好的性能
+Dialogue: 0,0:32:20.26,0:32:23.18,Chinese,,0,0,0,,这是非常简单的排序算法，而且大多是情况性能非常好
 Dialogue: 0,0:32:24.64,0:32:30.54,English,,0,0,0,,So this is what the code for it looks like which is usually you have is a special case
-Dialogue: 0,0:32:24.64,0:32:30.54,Chinese,,0,0,0,,所以这就是它的代码看起来通常你有一个特例
+Dialogue: 0,0:32:24.64,0:32:30.54,Chinese,,0,0,0,,这是一个段「快排」的代码，其中有两个特殊情况
 Dialogue: 0,0:32:30.54,0:32:31.94,English,,0,0,0,,If there's only one or two elements
-Dialogue: 0,0:32:30.54,0:32:31.94,Chinese,,0,0,0,,如果只有一个或两个元素
+Dialogue: 0,0:32:30.54,0:32:31.94,Chinese,,0,0,0,,就是在只有一两个元素的时候
 Dialogue: 0,0:32:33.04,0:32:35.28,English,,0,0,0,,And then you do this partitioning
-Dialogue: 0,0:32:33.04,0:32:35.28,Chinese,,0,0,0,,然后你做这个分区
+Dialogue: 0,0:32:33.04,0:32:35.28,Chinese,,0,0,0,,除此之外你要分区处理
 Dialogue: 0,0:32:35.28,0:32:41.50,English,,0,0,0,,So this routine of splitting it between the left and the right hand part is handled by a function called partition
-Dialogue: 0,0:32:35.28,0:32:41.50,Chinese,,0,0,0,,因此，在左手和右手之间分割它的这个例程由一个称为分区的函数处理
-Dialogue: 0,0:32:42.36,0:32:46.22,English,,0,0,0,,And then if there's more than one element in the left side
-Dialogue: 0,0:32:42.36,0:32:46.22,Chinese,,0,0,0,,然后，如果左侧有多个元素
-Dialogue: 0,0:32:46.22,0:32:51.92,English,,0,0,0,,You sort that and if there's more than one element in the right hand side you sort that
-Dialogue: 0,0:32:46.22,0:32:51.92,Chinese,,0,0,0,,你可以对它进行排序，如果右侧有多个元素，则可以对其进行排序
+Dialogue: 0,0:32:35.28,0:32:41.50,Chinese,,0,0,0,,这里有一个函数 partition 会把它分成左右两部分
+Dialogue: 0,0:32:42.36,0:32:48.10,English,,0,0,0,,And then if there's more than one element in the left side you sort that 
+Dialogue: 0,0:32:42.36,0:32:48.10,Chinese,,0,0,0,,如果左边的元素大于 1 的话，继续进行递归
+Dialogue: 0,0:32:48.72,0:32:51.92,English,,0,0,0,,And if there's more than one element in the right hand side you sort that 
+Dialogue: 0,0:32:48.72,0:32:51.92,Chinese,,0,0,0,,同样，如果右边也大于 1 个元素的话，就继续对它进行排序
 Dialogue: 0,0:32:53.68,0:32:58.66,English,,0,0,0,,And then when all these recursions are done then the array is sorted
-Dialogue: 0,0:32:53.68,0:32:58.66,Chinese,,0,0,0,,然后，当完成所有这些递归之后，对数组进行排序
+Dialogue: 0,0:32:53.68,0:32:58.66,Chinese,,0,0,0,,当所有的递归完成之后，数组就排序好了
 Dialogue: 0,0:32:59.30,0:33:04.04,English,,0,0,0,,So pretty typical code and we won't go in the trickiest part writing the code is
-Dialogue: 0,0:32:59.30,0:33:04.04,Chinese,,0,0,0,,所以非常典型的代码，我们不会进入编写代码的最棘手的部分
-Dialogue: 0,0:33:04.12,0:33:06.96,English,,0,0,0,,How do you make this partitioning go fast
-Dialogue: 0,0:33:04.12,0:33:06.96,Chinese,,0,0,0,,你如何让这个分区变得更快
-Dialogue: 0,0:33:07.70,0:33:10.18,English,,0,0,0,,But I won't go into that just imagine it happens
-Dialogue: 0,0:33:07.70,0:33:10.18,Chinese,,0,0,0,,但我不会想到它只是想象它会发生
+Dialogue: 0,0:32:59.30,0:33:04.04,Chinese,,0,0,0,,这是非常典型的快排代码，这里并没有写最难部分的代码
+Dialogue: 0,0:33:04.12,0:33:10.18,English,,0,0,0,,How do you make this partitioning go fast But I won't go into that just imagine it happens
+Dialogue: 0,0:33:04.12,0:33:10.18,Chinese,,0,0,0,,如何让 partition 变得更快？我这里不会深入，你们可以思考一下
 Dialogue: 0,0:33:11.74,0:33:15.90,English,,0,0,0,,So this algorithm actually has a natural version of parallelism
-Dialogue: 0,0:33:11.74,0:33:15.90,Chinese,,0,0,0,,所以这个算法实际上有一个自然版本的并行性
+Dialogue: 0,0:33:11.74,0:33:15.90,Chinese,,0,0,0,,实际上这个算法有一个自然版的并行化算法
 Dialogue: 0,0:33:16.28,0:33:20.58,English,,0,0,0,,Which is in my sequential version I was sorting both first the left
-Dialogue: 0,0:33:16.28,0:33:20.58,Chinese,,0,0,0,,在我的顺序版本中，我首先在左边排序
-Dialogue: 0,0:33:20.72,0:33:24.98,English,,0,0,0,,And then the left of the left and the left of the left of the left and kind of working my way
-Dialogue: 0,0:33:20.72,0:33:24.98,Chinese,,0,0,0,,然后是左边左边左边的左边，有点像我一样
+Dialogue: 0,0:33:16.28,0:33:20.58,Chinese,,0,0,0,,在我的顺序版本中，我首先对左边排序
+Dialogue: 0,0:33:20.72,0:33:24.98,English,,0,0,0,,And then the left,the left and the left,the left,the left and kind of working my way
+Dialogue: 0,0:33:20.72,0:33:24.98,Chinese,,0,0,0,,然后向左，向左，向左，向左......就像这样
 Dialogue: 0,0:33:25.40,0:33:27.50,English,,0,0,0,,Until I got that whole array sorted
-Dialogue: 0,0:33:25.40,0:33:27.50,Chinese,,0,0,0,,直到我得到整个数组排序
+Dialogue: 0,0:33:25.40,0:33:27.50,Chinese,,0,0,0,,直到整个数组排好序
 Dialogue: 0,0:33:27.78,0:33:30.44,English,,0,0,0,,And then I was coming back and I was working on the right
-Dialogue: 0,0:33:27.78,0:33:30.44,Chinese,,0,0,0,,然后我回来了，我正在努力
+Dialogue: 0,0:33:27.78,0:33:30.44,Chinese,,0,0,0,,然后我回来对右边进行排序
 Dialogue: 0,0:33:30.44,0:33:33.82,English,,0,0,0,,And then the left part of the right and the left to the left to the right and blah blah blah
 Dialogue: 0,0:33:30.44,0:33:33.82,Chinese,,0,0,0,,然后是右边的左边部分和左边的左边部分，等等等等等等
 Dialogue: 0,0:33:34.44,0:33:37.54,English,,0,0,0,,And doing these recursions because the way the codes written
-Dialogue: 0,0:33:34.44,0:33:37.54,Chinese,,0,0,0,,并且因为编写代码的方式进行这些递归
+Dialogue: 0,0:33:34.44,0:33:37.54,Chinese,,0,0,0,,然后按照代码的方进行递归
 Dialogue: 0,0:33:40.18,0:33:44.50,English,,0,0,0,,Right I am doing the full sort of the left-hand part
-Dialogue: 0,0:33:40.18,0:33:44.50,Chinese,,0,0,0,,对，我正在完成左手部分
+Dialogue: 0,0:33:40.18,0:33:44.50,Chinese,,0,0,0,,这里我正在排序左边的部分
 Dialogue: 0,0:33:45.16,0:33:49.60,English,,0,0,0,,And only after that is sorted then I'm doing the complete sort of the right-hand part
-Dialogue: 0,0:33:45.16,0:33:49.60,Chinese,,0,0,0,,只有在那之后才进行排序，然后我就完成了右手部分
+Dialogue: 0,0:33:45.16,0:33:49.60,Chinese,,0,0,0,,只有在左边的部分排序好了之后，我才能进行右边部分
 Dialogue: 0,0:33:49.78,0:33:56.94,English,,0,0,0,,So the point is it's an algorithm where I'm working just on one part of the array of the time
-Dialogue: 0,0:33:49.78,0:33:56.94,Chinese,,0,0,0,,所以重点是它是一种算法，我只是在一部分时间上工作
+Dialogue: 0,0:33:49.78,0:33:56.94,Chinese,,0,0,0,,这个算法的重点是同一时间我只能对一部分进行排序
 Dialogue: 0,0:33:58.10,0:34:01.86,English,,0,0,0,,But there's a very natural recursion of parallelism here that says
-Dialogue: 0,0:33:58.10,0:34:01.86,Chinese,,0,0,0,,但是这里有一个非常自然的并行递归
+Dialogue: 0,0:33:58.10,0:34:01.86,Chinese,,0,0,0,,但是这里有一个非常自然想法就是并行递归
 Dialogue: 0,0:34:02.30,0:34:05.84,English,,0,0,0,,Okay I've got two parts they each need to be sorted
-Dialogue: 0,0:34:02.30,0:34:05.84,Chinese,,0,0,0,,好的，我有两个部分，他们每个都需要分类
+Dialogue: 0,0:34:02.30,0:34:05.84,Chinese,,0,0,0,,好的，我有两个部分，他们每个都需要排序
 Dialogue: 0,0:34:06.28,0:34:10.76,English,,0,0,0,,Let me just fire off two threads and let them do with that
-Dialogue: 0,0:34:06.28,0:34:10.76,Chinese,,0,0,0,,让我开始关闭两个线程并让它们做到这一点
-Dialogue: 0,0:34:12.30,0:34:16.54,English,,0,0,0,,And that's the so it's what you call divide and conquer parallelism
-Dialogue: 0,0:34:12.30,0:34:16.54,Chinese,,0,0,0,,这就是你所谓的分裂并征服并行性
+Dialogue: 0,0:34:06.28,0:34:10.76,Chinese,,0,0,0,,让我开启两个线程来处理
+Dialogue: 0,0:34:12.30,0:34:16.54,English,,0,0,0,,And that's the...So it's what you call divide and conquer parallelism
+Dialogue: 0,0:34:12.30,0:34:16.54,Chinese,,0,0,0,,这称为并行「分治」
 Dialogue: 0,0:34:16.60,0:34:20.38,English,,0,0,0,,It's a very natural kind of parallelism it shows up in this code
-Dialogue: 0,0:34:16.60,0:34:20.38,Chinese,,0,0,0,,这是一种非常自然的并行性，它出现在这段代码中
+Dialogue: 0,0:34:16.60,0:34:20.38,Chinese,,0,0,0,,想这里展示的的一样，这是一种非常自然的并行性
 Dialogue: 0,0:34:23.40,0:34:26.68,English,,0,0,0,,So basically I'll do the same thing as before all at
-Dialogue: 0,0:34:23.40,0:34:26.68,Chinese,,0,0,0,,所以基本上我会做同样的事情
+Dialogue: 0,0:34:23.40,0:34:26.68,Chinese,,0,0,0,,所以一开始我会做同样的事情
 Dialogue: 0,0:34:26.90,0:34:31.44,English,,0,0,0,,The top level will be a purely sequential process of partitioning
-Dialogue: 0,0:34:26.90,0:34:31.44,Chinese,,0,0,0,,顶级将是纯粹顺序的分区过程
+Dialogue: 0,0:34:26.90,0:34:31.44,Chinese,,0,0,0,,最开始是纯粹顺序的分区
 Dialogue: 0,0:34:32.60,0:34:38.50,English,,0,0,0,,And but then assuming a partition comes up with some non-trivial split
 Dialogue: 0,0:34:32.60,0:34:38.50,Chinese,,0,0,0,,然而，假设一个分区出现了一些非平凡的分裂
-Dialogue: 0,0:34:39.08,0:34:44.28,English,,0,0,0,,Then I will recursively begin fork off to threads
-Dialogue: 0,0:34:39.08,0:34:44.28,Chinese,,0,0,0,,然后我会递归地开始 fork 到线程
+Dialogue: 0,0:34:39.08,0:34:44.28,English,,0,0,0,,Then I will recursively begin fork of two threads
+Dialogue: 0,0:34:39.08,0:34:44.28,Chinese,,0,0,0,,我会开启两个线程进行递归
 Dialogue: 0,0:34:44.94,0:34:47.40,English,,0,0,0,,Each of which will be responsible for the other and
-Dialogue: 0,0:34:44.94,0:34:47.40,Chinese,,0,0,0,,其中每一个都将负责另一个和
+Dialogue: 0,0:34:44.94,0:34:47.40,Chinese,,0,0,0,,每一个线程负责一部分
 Dialogue: 0,0:34:47.40,0:34:51.44,English,,0,0,0,,So we'll sort of look like I'm working on the two parts in parallel
-Dialogue: 0,0:34:47.40,0:34:51.44,Chinese,,0,0,0,,所以我们看起来就像是在并行处理这两个部分
+Dialogue: 0,0:34:47.40,0:34:51.44,Chinese,,0,0,0,,看起来我在并行地处理两个部分
 Dialogue: 0,0:34:52.26,0:34:54.68,English,,0,0,0,,And eventually both sides will end up
 Dialogue: 0,0:34:52.26,0:34:54.68,Chinese,,0,0,0,,最终双方都会结束
 Dialogue: 0,0:34:55.18,0:34:59.08,English,,0,0,0,,Now this picture isn't really quite true and that it looked makes it look like
-Dialogue: 0,0:34:55.18,0:34:59.08,Chinese,,0,0,0,,现在这张照片真的不太真实，而且看起来很像
+Dialogue: 0,0:34:55.18,0:34:59.08,Chinese,,0,0,0,,这张图片不太真实，而且看起来很像
 Dialogue: 0,0:34:59.52,0:35:05.44,English,,0,0,0,,They're all kind of synchronized together and I'm doing a you know kaboom down like this
-Dialogue: 0,0:34:59.52,0:35:05.44,Chinese,,0,0,0,,他们都是同步在一起的，我正在做你知道的 kaboom 就像这样
-Dialogue: 0,0:35:05.66,0:35:09.02,English,,0,0,0,,In a strict way but in fact they're not it's very asynchronous
-Dialogue: 0,0:35:05.66,0:35:09.02,Chinese,,0,0,0,,严格地说，但事实上它们不是非常不同步
+Dialogue: 0,0:34:59.52,0:35:05.44,Chinese,,0,0,0,,它们像是一起同步进行，就像我做的这样
+Dialogue: 0,0:35:05.66,0:35:09.02,English,,0,0,0,,In a strict way but in fact they're not,it's very asynchronous
+Dialogue: 0,0:35:05.66,0:35:09.02,Chinese,,0,0,0,,严格地说，它们不是同步而是异步的
 Dialogue: 0,0:35:09.66,0:35:12.50,English,,0,0,0,,The left part is one thread the right is another
 Dialogue: 0,0:35:09.66,0:35:12.50,Chinese,,0,0,0,,左边是一个线程，右边是另一个
 Dialogue: 0,0:35:13.06,0:35:19.30,English,,0,0,0,,They just go at their own pace and at the end I'm just going to wait for it all to complete
-Dialogue: 0,0:35:13.06,0:35:19.30,Chinese,,0,0,0,,他们只是按照自己的节奏前进，最后我只是等待一切都完成
+Dialogue: 0,0:35:13.06,0:35:19.30,Chinese,,0,0,0,,它们按照自己的节奏前进，而我只是等待一切都结束
 Dialogue: 0,0:35:19.74,0:35:23.70,English,,0,0,0,,But there's no strict temporal ordering on how that all occurs
-Dialogue: 0,0:35:19.74,0:35:23.70,Chinese,,0,0,0,,但是对于如何发生这一切并没有严格的时间顺序
+Dialogue: 0,0:35:19.74,0:35:23.70,Chinese,,0,0,0,,但是这一切并没有严格的时间顺序
 Dialogue: 0,0:35:28.28,0:35:33.60,English,,0,0,0,,So the way I'll write this in the code is available on the course website
-Dialogue: 0,0:35:28.28,0:35:33.60,Chinese,,0,0,0,,因此，我将在课程网站上提供我在代码中编写此代码的方式
+Dialogue: 0,0:35:28.28,0:35:33.60,Chinese,,0,0,0,,因此，我将在课程网站上提供我写的这部分的代码
 Dialogue: 0,0:35:33.60,0:35:35.36,English,,0,0,0,,I'm only going to show you a glimpse of it
 Dialogue: 0,0:35:33.60,0:35:35.36,Chinese,,0,0,0,,我只会向你展示一下它
 Dialogue: 0,0:35:36.02,0:35:38.40,English,,0,0,0,,It's a non-trivial amount of code it takes to do it
-Dialogue: 0,0:35:36.02,0:35:38.40,Chinese,,0,0,0,,这是一个非常重要的代码来完成它
+Dialogue: 0,0:35:36.02,0:35:38.40,Chinese,,0,0,0,,这是一个不需要大量的代码就能完成的事情
 Dialogue: 0,0:35:38.88,0:35:43.36,English,,0,0,0,,But basically what I'm going to do is have a bunch of a pool of threads
-Dialogue: 0,0:35:38.88,0:35:43.36,Chinese,,0,0,0,,但基本上我要做的就是拥有一堆线程
+Dialogue: 0,0:35:38.88,0:35:43.36,Chinese,,0,0,0,,基本上我要用一堆线程来做这件事情
 Dialogue: 0,0:35:43.98,0:35:48.86,English,,0,0,0,,That are ready to work and that's a pretty typical way you write threaded code
-Dialogue: 0,0:35:43.98,0:35:48.86,Chinese,,0,0,0,,这已经准备好了，这是编写线程代码的一种非常典型的方式
+Dialogue: 0,0:35:43.98,0:35:48.86,Chinese,,0,0,0,,这已经准备好了，这是一种典型编写线程代码的方式
 Dialogue: 0,0:35:49.60,0:35:56.82,English,,0,0,0,,Because actually the initiation of a thread is a non-trivial amount of computation
-Dialogue: 0,0:35:49.60,0:35:56.82,Chinese,,0,0,0,,因为实际上线程的启动是非常重要的计算量
+Dialogue: 0,0:35:49.60,0:35:56.82,Chinese,,0,0,0,,因为实际上一个线程的启动是一个非微不足道的计算量
 Dialogue: 0,0:35:56.88,0:35:58.16,English,,0,0,0,,So usually what you do is
 Dialogue: 0,0:35:56.88,0:35:58.16,Chinese,,0,0,0,,通常你所做的就是
 Dialogue: 0,0:35:58.56,0:36:01.18,English,,0,0,0,,You say I've got this many cores
 Dialogue: 0,0:35:58.56,0:36:01.18,Chinese,,0,0,0,,你说我有这么多核心
 Dialogue: 0,0:36:01.68,0:36:05.76,English,,0,0,0,,I'm going to create a set of that many threads
-Dialogue: 0,0:36:01.68,0:36:05.76,Chinese,,0,0,0,,我要创建一组那么多线程
+Dialogue: 0,0:36:01.68,0:36:05.76,Chinese,,0,0,0,,我要创建一组多线程
 Dialogue: 0,0:36:06.58,0:36:10.95,English,,0,0,0,,And they will each work by sharing a task queue
-Dialogue: 0,0:36:06.58,0:36:10.95,Chinese,,0,0,0,,他们将通过共享任务队列来工作
-Dialogue: 0,0:36:11.52,0:36:19.34,English,,0,0,0,,So some agent that is a forking off work for the different threads to do
-Dialogue: 0,0:36:11.52,0:36:19.34,Chinese,,0,0,0,,所以一些代理人正在为不同的线程做分工
+Dialogue: 0,0:36:06.58,0:36:10.95,Chinese,,0,0,0,,他们将通过共享任务队列的方式来工作
+Dialogue: 0,0:36:11.52,0:36:19.34,English,,0,0,0,,So some agent that is a forking of work for the different threads to do
+Dialogue: 0,0:36:11.52,0:36:19.34,Chinese,,0,0,0,,所以一些代理正在创建不同的线程来工作
 Dialogue: 0,0:36:19.70,0:36:25.38,English,,0,0,0,,They will do the work assigned to them when that's complete they'll come back and say ok I'm ready for something new
-Dialogue: 0,0:36:19.70,0:36:25.38,Chinese,,0,0,0,,他们将完成分配给他们的工作，当他们完成后他们会回来说好，我已准备好接受新的事情了
+Dialogue: 0,0:36:19.70,0:36:25.38,Chinese,,0,0,0,,他们将完成分配给他们的工作，当他们完成后会回来说好，我已准备好接受新的事情了
 Dialogue: 0,0:36:25.68,0:36:27.02,English,,0,0,0,,And it will give them something new
 Dialogue: 0,0:36:25.68,0:36:27.02,Chinese,,0,0,0,,它会给他们一些新的东西
 Dialogue: 0,0:36:27.16,0:36:34.54,English,,0,0,0,,So I've there's a little bit of code a very rudimentary code there of creating this task model and task scheduling
-Dialogue: 0,0:36:27.16,0:36:34.54,Chinese,,0,0,0,,所以我有一些代码是创建这个任务模型和任务调度的非常基本的代码
+Dialogue: 0,0:36:27.16,0:36:34.54,Chinese,,0,0,0,,所以我有一点点代码......一个非常简单的代码......创建这个任务模型和任务调度的代码
 Dialogue: 0,0:36:35.52,0:36:38.08,English,,0,0,0,,So the basic rule will be any given task
 Dialogue: 0,0:36:35.52,0:36:38.08,Chinese,,0,0,0,,因此，基本规则将是任何给定的任务
 Dialogue: 0,0:36:39.02,0:36:46.68,English,,0,0,0,,Any given thread then at any given time has been assigned sub range of this array to be a sorting
-Dialogue: 0,0:36:39.02,0:36:46.68,Chinese,,0,0,0,,然后，在任何给定时间的任何给定线程都被指定为该数组的子范围以进行排序
+Dialogue: 0,0:36:39.02,0:36:46.68,Chinese,,0,0,0,,任何给定的线程，那么在任何给定的时间，这个数组的子范围都被分配给了一个排序任务
 Dialogue: 0,0:36:47.28,0:36:55.66,English,,0,0,0,,And it will be specified by the base meaning the starting point of this particular range
-Dialogue: 0,0:36:47.28,0:36:55.66,Chinese,,0,0,0,,并且它将由基数指定，意味着该特定范围的起点
+Dialogue: 0,0:36:47.28,0:36:55.66,Chinese,,0,0,0,,它将称为基准，意思是按照基准进行分割
 Dialogue: 0,0:36:56.26,0:37:01.26,English,,0,0,0,,And then the number of elements that it's a told it's sort
-Dialogue: 0,0:36:56.26,0:37:01.26,Chinese,,0,0,0,,然后它被告知它的元素数量排序
+Dialogue: 0,0:36:56.26,0:37:01.26,Chinese,,0,0,0,,然后对这些元素进行排序
 Dialogue: 0,0:37:03.74,0:37:05.70,English,,0,0,0,,And one other thing I'll do is
 Dialogue: 0,0:37:03.74,0:37:05.70,Chinese,,0,0,0,,我要做的另一件事是
 Dialogue: 0,0:37:06.04,0:37:10.32,English,,0,0,0,,Once get down to this array being small enough
-Dialogue: 0,0:37:06.04,0:37:10.32,Chinese,,0,0,0,,一旦得到这个阵列足够小
+Dialogue: 0,0:37:06.04,0:37:10.32,Chinese,,0,0,0,,一旦这个数组足够小
 Dialogue: 0,0:37:10.82,0:37:12.90,English,,0,0,0,,I'll just sort it sequentially
-Dialogue: 0,0:37:10.82,0:37:12.90,Chinese,,0,0,0,,我只是顺序排序
+Dialogue: 0,0:37:10.82,0:37:12.90,Chinese,,0,0,0,,我就只能顺序排序
 Dialogue: 0,0:37:13.60,0:37:20.96,English,,0,0,0,,And and we'll see how big that block is or not is actually performance parameter that you can use for tuning the program
-Dialogue: 0,0:37:13.60,0:37:20.96,Chinese,,0,0,0,,并且我们将看到该块有多大，实际上是可用于调整程序的性能参数
+Dialogue: 0,0:37:13.60,0:37:20.96,Chinese,,0,0,0,,并且我们将看到该块的大小，可用于调整程序的性能参数
 Dialogue: 0,0:37:21.82,0:37:25.32,English,,0,0,0,,So the point is that you don't want to take this down too far
-Dialogue: 0,0:37:21.82,0:37:25.32,Chinese,,0,0,0,,所以重点是你不想把它放得太远
+Dialogue: 0,0:37:21.82,0:37:25.32,Chinese,,0,0,0,,所以重点是你不想把块分的太小
 Dialogue: 0,0:37:25.34,0:37:29.60,English,,0,0,0,,Because the sort of overhead of threads is enough that
-Dialogue: 0,0:37:25.34,0:37:29.60,Chinese,,0,0,0,,因为线程的开销就足够了
+Dialogue: 0,0:37:25.34,0:37:29.60,Chinese,,0,0,0,,因为线程的开销的问题
 Dialogue: 0,0:37:29.98,0:37:33.00,English,,0,0,0,,When you get to fine-grained you're actually going to start losing performance
 Dialogue: 0,0:37:29.98,0:37:33.00,Chinese,,0,0,0,,当你得到细粒度时，你实际上会开始失去性能
 Dialogue: 0,0:37:35.38,0:37:39.48,English,,0,0,0,,So assume that it's bigger than that I've been given some block there
-Dialogue: 0,0:37:35.38,0:37:39.48,Chinese,,0,0,0,,因此，假设它比我在那里被给予一些阻止更大
+Dialogue: 0,0:37:35.38,0:37:39.48,Chinese,,0,0,0,,因此，假设这里块比我设定的参数要大
 Dialogue: 0,0:37:40.04,0:37:43.78,English,,0,0,0,,What I'll do then is I'll run the partition step
-Dialogue: 0,0:37:40.04,0:37:43.78,Chinese,,0,0,0,,那我要做的是我将运行分区步骤
-Dialogue: 0,0:37:44.12,0:37:50.50,English,,0,0,0,,This thread will run it a partition step just using the exact function   showed you or didn't show you
-Dialogue: 0,0:37:44.12,0:37:50.50,Chinese,,0,0,0,,这个线程将运行它一个分区步骤，只需使用显示你或没有显示给你的确切函数
+Dialogue: 0,0:37:40.04,0:37:43.78,Chinese,,0,0,0,,那我要做的是进行分区
+Dialogue: 0,0:37:44.12,0:37:50.50,English,,0,0,0,,This thread will run it a partition step just using the exact function showed you or didn't show you
+Dialogue: 0,0:37:44.12,0:37:50.50,Chinese,,0,0,0,,这个线程将运行分区操作，这里我没有该处代码
 Dialogue: 0,0:37:52.74,0:38:00.00,English,,0,0,0,,And then as long as and then I will create and add to the task queue two new tasks
-Dialogue: 0,0:37:52.74,0:38:00.00,Chinese,,0,0,0,,然后只要我再创建并向任务队列添加两个新任务
+Dialogue: 0,0:37:52.74,0:38:00.00,Chinese,,0,0,0,,然后我再创建两个任务并添加到任务队列当中
 Dialogue: 0,0:38:00.84,0:38:05.06,English,,0,0,0,,A one de for the left part and one for the right part
 Dialogue: 0,0:38:00.84,0:38:05.06,Chinese,,0,0,0,,左侧部分为一个，右侧部分为一个
 Dialogue: 0,0:38:05.78,0:38:13.50,English,,0,0,0,,And then the scheduler that will assign two threads to handle those two parts
-Dialogue: 0,0:38:05.78,0:38:13.50,Chinese,,0,0,0,,然后调度程序将分配两个线程来处理这两个部分
+Dialogue: 0,0:38:05.78,0:38:13.50,Chinese,,0,0,0,,然后调度程序将分配两个线程来处理这两部分
 Dialogue: 0,0:38:13.68,0:38:16.52,English,,0,0,0,,And so that code will that's exactly how the code is going to work
-Dialogue: 0,0:38:13.68,0:38:16.52,Chinese,,0,0,0,,因此，代码将正是代码的工作方式
+Dialogue: 0,0:38:13.68,0:38:16.52,Chinese,,0,0,0,,因此，代码将是......这就是代码的工作方式
 Dialogue: 0,0:38:16.66,0:38:21.78,English,,0,0,0,,It's going to keep reusing the same threads over and over again
 Dialogue: 0,0:38:16.66,0:38:21.78,Chinese,,0,0,0,,它会一遍又一遍地重复使用相同的线程
 Dialogue: 0,0:38:22.56,0:38:27.02,English,,0,0,0,,To but at any given time they'll be given a range of places
-Dialogue: 0,0:38:22.56,0:38:27.02,Chinese,,0,0,0,,但是在任何时候他们都会得到一系列的地方
+Dialogue: 0,0:38:22.56,0:38:27.02,Chinese,,0,0,0,,但在任何时候，他们都会得到一系列的名额
 Dialogue: 0,0:38:27.86,0:38:30.88,English,,0,0,0,,What typically will happen is they'll run their partitioning step
-Dialogue: 0,0:38:27.86,0:38:30.88,Chinese,,0,0,0,,通常会发生的是他们将运行他们的分区步骤
+Dialogue: 0,0:38:27.86,0:38:30.88,Chinese,,0,0,0,,通常会发生的是他们将运行分区操作
 Dialogue: 0,0:38:32.42,0:38:39.98,English,,0,0,0,,And then say okay I've done my job now assigned to new threads to do this and that's the general scheme of it
-Dialogue: 0,0:38:32.42,0:38:39.98,Chinese,,0,0,0,,然后说好，我已经完成了我的工作，现在分配到新线程来做这个，这是它的一般方案
+Dialogue: 0,0:38:32.42,0:38:39.98,Chinese,,0,0,0,,然后说好，我已经完成了我的工作，现在分配到新线程来做这个，这是它的通常做法
 Dialogue: 0,0:38:40.12,0:38:42.40,English,,0,0,0,,Or they'll say this is a small enough block
 Dialogue: 0,0:38:40.12,0:38:42.40,Chinese,,0,0,0,,或者他们会说这是一个足够小的块
 Dialogue: 0,0:38:43.26,0:38:45.72,English,,0,0,0,,I'm just going to sort the darn thing
 Dialogue: 0,0:38:43.26,0:38:45.72,Chinese,,0,0,0,,我只想解决这个问题
 Dialogue: 0,0:38:45.76,0:38:48.16,English,,0,0,0,,Okay so that's really all the code does it's online
-Dialogue: 0,0:38:45.76,0:38:48.16,Chinese,,0,0,0,,好的，这就是所有的代码都是在线的
+Dialogue: 0,0:38:45.76,0:38:48.16,Chinese,,0,0,0,,这就是所有的代码，都在课程网站上
 Dialogue: 0,0:38:48.68,0:38:54.94,English,,0,0,0,,If you're interested in this kind of stuff it's... I think it's pretty well written code because  wrote
-Dialogue: 0,0:38:48.68,0:38:54.94,Chinese,,0,0,0,,如果你对这种东西感兴趣那就是 ...... 我认为这是写得很好的代码
+Dialogue: 0,0:38:48.68,0:38:54.94,Chinese,,0,0,0,,如果你对它感兴趣的话 ...... 我认为这是写得很好的代码
 Dialogue: 0,0:38:57.62,0:39:00.52,English,,0,0,0,,It so this is sort of that the
 Dialogue: 0,0:38:57.62,0:39:00.52,Chinese,,0,0,0,,它就是这样的
 Dialogue: 0,0:39:01.50,0:39:04.66,English,,0,0,0,,Somewhat simplified version of the code say
-Dialogue: 0,0:39:01.50,0:39:04.66,Chinese,,0,0,0,,稍微简化的代码版本说
+Dialogue: 0,0:39:01.50,0:39:04.66,Chinese,,0,0,0,,这是一个稍微简化的版本
 Dialogue: 0,0:39:05.20,0:39:09.42,English,,0,0,0,,Initialize my task queue scheduling system
 Dialogue: 0,0:39:05.20,0:39:09.42,Chinese,,0,0,0,,初始化我的任务队列调度系统
 Dialogue: 0,0:39:10.88,0:39:20.30,English,,0,0,0,,Create global variables of describing the beginning and end of this array to be sorted create a new task queue
-Dialogue: 0,0:39:10.88,0:39:20.30,Chinese,,0,0,0,,创建描述要排序的此数组的开头和结尾的全局变量，创建一个新的任务队列
-Dialogue: 0,0:39:20.82,0:39:24.14,English,,0,0,0,,And then this is the main function the tqsort helper
-Dialogue: 0,0:39:20.82,0:39:24.14,Chinese,,0,0,0,,然后这是 tqsort 帮助器的主要功能
+Dialogue: 0,0:39:10.88,0:39:20.30,Chinese,,0,0,0,,新建全局变量保存要排序的数组的开头和结尾，创建一个新的任务队列
+Dialogue: 0,0:39:20.82,0:39:24.14,English,,0,0,0,,And then this is the main function the tqsort_helper
+Dialogue: 0,0:39:20.82,0:39:24.14,Chinese,,0,0,0,,然后是主函数 tqsort_helper
 Dialogue: 0,0:39:25.00,0:39:31.68,English,,0,0,0,,Is given some range of addresses and a pointer to the task queue
-Dialogue: 0,0:39:25.00,0:39:31.68,Chinese,,0,0,0,,给出一些范围的地址和指向任务队列的指针
+Dialogue: 0,0:39:25.00,0:39:31.68,Chinese,,0,0,0,,它接受一个地址范围和一个队列指针作为参数
 Dialogue: 0,0:39:31.86,0:39:34.72,English,,0,0,0,,That's used to manage these tasks
 Dialogue: 0,0:39:31.86,0:39:34.72,Chinese,,0,0,0,,那用于管理这些任务
 Dialogue: 0,0:39:35.64,0:39:36.82,English,,0,0,0,,And then uh
-Dialogue: 0,0:39:35.64,0:39:36.82,Chinese,,0,0,0,,然后呃
-Dialogue: 0,0:39:40.38,0:39:45.44,English,,0,0,0,,When it's all day we'll just wait till all the tasks have completed this is at the top level
-Dialogue: 0,0:39:40.38,0:39:45.44,Chinese,,0,0,0,,当它整天都在等待所有任务完成时，它就处于最高级别
-Dialogue: 0,0:39:46.04,0:39:49.70,English,,0,0,0,,This isn't part of any recursion this is the top level code
-Dialogue: 0,0:39:46.04,0:39:49.70,Chinese,,0,0,0,,这不是任何递归的一部分，这是顶级代码
+Dialogue: 0,0:39:35.64,0:39:36.82,Chinese,,0,0,0,,然后
+Dialogue: 0,0:39:40.38,0:39:43.84,English,,0,0,0,,When it's all done. We'll just wait till all the tasks have completed
+Dialogue: 0,0:39:40.38,0:39:43.84,Chinese,,0,0,0,,当它完成时......我们要等待所有的任务完成
+Dialogue: 0,0:39:43.84,0:39:49.70,English,,0,0,0,, This is at the top level, this isn't part of any recursion this is the top level code
+Dialogue: 0,0:39:43.84,0:39:49.70,Chinese,,0,0,0,,这不是任何递归的一部分，这是上层代码
 Dialogue: 0,0:39:50.08,0:39:51.84,English,,0,0,0,,And then it will free up the data structures
 Dialogue: 0,0:39:50.08,0:39:51.84,Chinese,,0,0,0,,然后它将释放数据结构
 Dialogue: 0,0:39:54.24,0:39:58.06,English,,0,0,0,,And then this is the part of it that actually does the real work
-Dialogue: 0,0:39:54.24,0:39:58.06,Chinese,,0,0,0,,然后，这是实际完成实际工作的一部分
-Dialogue: 0,0:39:59.00,0:40:04.82,English,,0,0,0,,It will say so now the tqsort helper is the part
-Dialogue: 0,0:39:59.00,0:40:04.82,Chinese,,0,0,0,,它会说现在 tqsort 助手就是这个部分
-Dialogue: 0,0:40:04.94,0:40:11.62,English,,0,0,0,,That's a scientists to sort some particulars poises from
-Dialogue: 0,0:40:04.94,0:40:11.62,Chinese,,0,0,0,,这是一个科学家来分析一些细节
-Dialogue: 0,0:40:12.36,0:40:17.16,English,,0,0,0,,The starting address the base and some number of elements
-Dialogue: 0,0:40:12.36,0:40:17.16,Chinese,,0,0,0,,起始地址是基数和一些元素
+Dialogue: 0,0:39:54.24,0:39:58.06,Chinese,,0,0,0,,这是实际完成工作的部分代码
+Dialogue: 0,0:39:59.00,0:40:04.82,English,,0,0,0,,It will say so now the tqsort_helper is the part
+Dialogue: 0,0:39:59.00,0:40:04.82,Chinese,,0,0,0,,现在可以说 tqsort_helper 是
+Dialogue: 0,0:40:04.94,0:40:17.16,English,,0,0,0,,That's a scientists to sort some particulars poises from the starting address the base and some number of elements
+Dialogue: 0,0:40:04.94,0:40:17.16,Chinese,,0,0,0,,这是一个科学方法从数组的起始地址和一些元素中整理出的一些特殊的元素
 Dialogue: 0,0:40:19.06,0:40:22.12,English,,0,0,0,,And so this is what each task will do
-Dialogue: 0,0:40:19.06,0:40:22.12,Chinese,,0,0,0,,所以这就是每项任务的作用
+Dialogue: 0,0:40:19.06,0:40:22.12,Chinese,,0,0,0,,所以这就是每项任务都需要
 Dialogue: 0,0:40:22.46,0:40:26.68,English,,0,0,0,,And it says okay if this is a small enough block of elements
-Dialogue: 0,0:40:22.46,0:40:26.68,Chinese,,0,0,0,,它说好的，如果这是一个足够小的元素块
+Dialogue: 0,0:40:22.46,0:40:26.68,Chinese,,0,0,0,,如果这是一个足够小的元素块
 Dialogue: 0,0:40:27.16,0:40:30.42,English,,0,0,0,,I'm just going to call my serial quicksort to do it
-Dialogue: 0,0:40:27.16,0:40:30.42,Chinese,,0,0,0,,我只是打电话给我的连续快速排序来做
+Dialogue: 0,0:40:27.16,0:40:30.42,Chinese,,0,0,0,,我就调用排序函数（qsort_serial）来处理
 Dialogue: 0,0:40:31.66,0:40:34.90,English,,0,0,0,,Otherwise I'm going to
-Dialogue: 0,0:40:31.66,0:40:34.90,Chinese,,0,0,0,,否则我会去
+Dialogue: 0,0:40:31.66,0:40:34.90,Chinese,,0,0,0,,否则
 Dialogue: 0,0:40:45.44,0:40:47.24,English,,0,0,0,,Oh it's a little bit messier this okay
-Dialogue: 0,0:40:45.44,0:40:47.24,Chinese,,0,0,0,,哦，这有点麻烦这没关系
+Dialogue: 0,0:40:45.44,0:40:47.24,Chinese,,0,0,0,,这下可就麻烦了 
 Dialogue: 0,0:40:47.86,0:40:53.56,English,,0,0,0,,Now otherwise it's going to spawn a task to do the sorting
-Dialogue: 0,0:40:47.86,0:40:53.56,Chinese,,0,0,0,,现在否则它将产生一个任务来进行排序
+Dialogue: 0,0:40:47.86,0:40:53.56,Chinese,,0,0,0,,否则会创建一个任务来进行排序
 Dialogue: 0,0:40:54.04,0:40:54.80,English,,0,0,0,,Let's see
-Dialogue: 0,0:40:54.04,0:40:54.80,Chinese,,0,0,0,,让我们来看看
-Dialogue: 0,0:40:55.32,0:40:57.90,English,,0,0,0,,I was a little mixed up this is a high level
-Dialogue: 0,0:40:55.32,0:40:57.90,Chinese,,0,0,0,,我有点混淆这是一个很高的水平
+Dialogue: 0,0:40:54.04,0:40:54.80,Chinese,,0,0,0,,让我们来康康
+Dialogue: 0,0:40:55.32,0:40:57.90,English,,0,0,0,,I was a little mixed up,this is a high level
+Dialogue: 0,0:40:55.32,0:40:57.90,Chinese,,0,0,0,,我有点混了，这个水平很高
 Dialogue: 0,0:40:57.90,0:41:04.22,English,,0,0,0,,So the actual splitting occurs in this thing which is where it
-Dialogue: 0,0:40:57.90,0:41:04.22,Chinese,,0,0,0,,所以实际的分裂发生在这个事物的地方
+Dialogue: 0,0:40:57.90,0:41:04.22,Chinese,,0,0,0,,所以实际的分割在这里发生
 Dialogue: 0,0:41:06.42,0:41:08.28,English,,0,0,0,,So this is the actual thread routine
 Dialogue: 0,0:41:06.42,0:41:08.28,Chinese,,0,0,0,,所以这是实际的线程例程
 Dialogue: 0,0:41:09.68,0:41:14.20,English,,0,0,0,,And what it's saying is run the partition here
-Dialogue: 0,0:41:09.68,0:41:14.20,Chinese,,0,0,0,,它说的是在这里运行分区
+Dialogue: 0,0:41:09.68,0:41:14.20,Chinese,,0,0,0,,这里运行 partition
 Dialogue: 0,0:41:15.36,0:41:20.98,English,,0,0,0,,And then call this tqsort helper which you just saw on the left and the right parts
-Dialogue: 0,0:41:15.36,0:41:20.98,Chinese,,0,0,0,,然后调用你刚才在左侧和右侧部分看到的 tqsort 助手
+Dialogue: 0,0:41:15.36,0:41:20.98,Chinese,,0,0,0,,然后在左右两边调用 tqsort_helper
 Dialogue: 0,0:41:25.00,0:41:31.36,English,,0,0,0,,Of it so just to review then the actual spawning of a task is done by this helper routine
-Dialogue: 0,0:41:25.00,0:41:31.36,Chinese,,0,0,0,,其中只是为了回顾一下，任务的实际产生是由这个辅助程序完成的
+Dialogue: 0,0:41:25.00,0:41:31.36,Chinese,,0,0,0,,回顾一下，任务的实际产生是由这个辅助程序完成的
 Dialogue: 0,0:41:32.10,0:41:37.02,English,,0,0,0,,But then that what it calls is the thread routine is
-Dialogue: 0,0:41:32.10,0:41:37.02,Chinese,,0,0,0,,但那就是它所谓的线程例程
+Dialogue: 0,0:41:32.10,0:41:37.02,Chinese,,0,0,0,,那就是所谓的线程例程
 Dialogue: 0,0:41:38.18,0:41:40.70,English,,0,0,0,,What does the work here and what it will do is
-Dialogue: 0,0:41:38.18,0:41:40.70,Chinese,,0,0,0,,这里的工作是什么，它将做什么
+Dialogue: 0,0:41:38.18,0:41:40.70,Chinese,,0,0,0,,在这里发生作用，它将做什么？
 Dialogue: 0,0:41:41.00,0:41:43.16,English,,0,0,0,,It will do the partitioning within that thread
 Dialogue: 0,0:41:41.00,0:41:43.16,Chinese,,0,0,0,,它将在该线程内进行分区
 Dialogue: 0,0:41:43.60,0:41:52.06,English,,0,0,0,,And then it will just throw back and add to the task queue two calls to this helper
-Dialogue: 0,0:41:43.60,0:41:52.06,Chinese,,0,0,0,,然后它会抛出并向任务队列添加两个对此帮助程序的调用
-Dialogue: 0,0:41:53.82,0:42:00.16,English,,0,0,0,,But as that kind of so between these two routines you can see it's doing this idea of a divide and conquer parallelism
-Dialogue: 0,0:41:53.82,0:42:00.16,Chinese,,0,0,0,,但正如在这两个例程之间那样，你可以看到它正在实现这种分裂并征服并行性的想法
+Dialogue: 0,0:41:43.60,0:41:52.06,Chinese,,0,0,0,,然后它向任务队列添加两个任务，并调用这函数
+Dialogue: 0,0:41:53.82,0:42:00.16,English,,0,0,0,,But as that kind of...So between these two routines you can see it's doing this idea of a divide and conquer parallelism
+Dialogue: 0,0:41:53.82,0:42:00.16,Chinese,,0,0,0,,所以在这两个例程之间，你可以看到它在做这种分而治之的想法
 Dialogue: 0,0:42:02.00,0:42:06.12,English,,0,0,0,,So this is a performance running on the shark machines
-Dialogue: 0,0:42:02.00,0:42:06.12,Chinese,,0,0,0,,所以这是在鲨鱼机器上运行的性能
+Dialogue: 0,0:42:02.00,0:42:06.12,Chinese,,0,0,0,,这是在鲨鱼机器上运行的表现
 Dialogue: 0,0:42:07.42,0:42:18.24,English,,0,0,0,,And this is a fairly straightforward I'm just taking some number of random value 2^37
 Dialogue: 0,0:42:07.42,0:42:18.24,Chinese,,0,0,0,,这是一个相当简单的我只是采取一些随机值 2 ^ 37
 Dialogue: 0,0:42:22.52,0:42:23.42,English,,0,0,0,,That can't be right
