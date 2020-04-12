@@ -16,9 +16,9 @@ Video File: ../../../../Desktop/csapp/Lecture 26 Thread Level Parallelism.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 1.000000
-Scroll Position: 1547
-Active Line: 1561
-Video Position: 117585
+Scroll Position: 1318
+Active Line: 1334
+Video Position: 100513
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -1245,128 +1245,122 @@ Dialogue: 0,0:50:46.90,0:50:50.92,English,,0,0,0,,But the two splits that you cr
 Dialogue: 0,0:50:46.90,0:50:50.92,Chinese,,0,0,0,,但是你创建的两个分裂可以同时进行
 Dialogue: 0,0:50:51.78,0:50:54.98,English,,0,0,0,,These other different types of parallelism to
 Dialogue: 0,0:50:51.78,0:50:54.98,Chinese,,0,0,0,,这些其他不同类型的并行性
-Dialogue: 0,0:50:55.60,0:51:00.06,English,,0,0,0,,In general you want to make the inner loops you can't have any synchronization primitives
-Dialogue: 0,0:50:55.60,0:51:00.06,Chinese,,0,0,0,,通常，你希望使内部循环不能具有任何同步原语
-Dialogue: 0,0:51:00.60,0:51:02.56,English,,0,0,0,,In there it will just run too slow
-Dialogue: 0,0:51:00.60,0:51:02.56,Chinese,,0,0,0,,在那里它会运行得太慢
+Dialogue: 0,0:50:55.60,0:50:57.74,English,,0,0,0,,In general you want to make the inner loops 
+Dialogue: 0,0:50:55.60,0:50:57.74,Chinese,,0,0,0,,通常，你在进行内部循环时
+Dialogue: 0,0:50:57.74,0:51:02.56,English,,0,0,0,,You can't have any synchronization primitives in there it will just run too slow
+Dialogue: 0,0:50:57.74,0:51:02.56,Chinese,,0,0,0,,你不能在里面写任何同步原语，因为这样会导致运行得很慢
 Dialogue: 0,0:51:03.28,0:51:07.90,English,,0,0,0,,Amdahl as I mentioned is always sort of lurking in the background of
-Dialogue: 0,0:51:03.28,0:51:07.90,Chinese,,0,0,0,,我提到的 Amdahl 总是潜伏在背景中
-Dialogue: 0,0:51:08.00,0:51:13.36,English,,0,0,0,,If you can always feed up a part of your program then the other part will become the bottleneck
-Dialogue: 0,0:51:08.00,0:51:13.36,Chinese,,0,0,0,,如果你总是可以提供程序的一部分，那么另一部分将成为瓶颈
+Dialogue: 0,0:51:03.28,0:51:07.90,Chinese,,0,0,0,,我提到的「阿姆达尔定律」总是起到潜在的作用
+Dialogue: 0,0:51:08.00,0:51:13.36,English,,0,0,0,,If you can always speedup a part of your program then the other part will become the bottleneck
+Dialogue: 0,0:51:08.00,0:51:13.36,Chinese,,0,0,0,,你经常会在提升程序某部分的速度时，那么另一些部分就将成为瓶颈
 Dialogue: 0,0:51:14.26,0:51:17.81,English,,0,0,0,,But the other thing is like I said you can do it
-Dialogue: 0,0:51:14.26,0:51:17.81,Chinese,,0,0,0,,但另一件事就是我说你可以做到
-Dialogue: 0,0:51:17.81,0:51:22.50,English,,0,0,0,,You've got the tools you've learned with p threads
-Dialogue: 0,0:51:17.81,0:51:22.50,Chinese,,0,0,0,,你已经掌握了用 p 线程学到的工具
+Dialogue: 0,0:51:14.26,0:51:17.81,Chinese,,0,0,0,,但是还有写事情你们可以尝试
+Dialogue: 0,0:51:17.81,0:51:22.50,English,,0,0,0,,You've got the tools you've learned with pthreads
+Dialogue: 0,0:51:17.81,0:51:22.50,Chinese,,0,0,0,,你已经掌握了线程
 Dialogue: 0,0:51:22.92,0:51:27.22,English,,0,0,0,,And your knowledge of programming and your understanding of cache memories and things like that
-Dialogue: 0,0:51:22.92,0:51:27.22,Chinese,,0,0,0,,以及你对编程的理解以及对缓存和类似事物的理解
+Dialogue: 0,0:51:22.92,0:51:27.22,Chinese,,0,0,0,,还有编程知识，缓存和内存之类的知识
 Dialogue: 0,0:51:27.74,0:51:32.80,English,,0,0,0,,You've got the tools you need to be an effective programmer of this kind of thing
-Dialogue: 0,0:51:27.74,0:51:32.80,Chinese,,0,0,0,,你已经拥有了成为这类事物的有效程序员所需的工具
+Dialogue: 0,0:51:27.74,0:51:32.80,Chinese,,0,0,0,,你已经掌握了成为一名高效程序员所需的工具
 Dialogue: 0,0:51:33.94,0:51:41.36,English,,0,0,0,,But you have to and there's nothing that beats sort of trial and error and testing and tuning experimenting
-Dialogue: 0,0:51:33.94,0:51:41.36,Chinese,,0,0,0,,但是你必须要而且没有什么比试验和错误以及测试和调试实验更好的了
+Dialogue: 0,0:51:33.94,0:51:41.36,Chinese,,0,0,0,,但你最好是测试，没有什么能比试错和测试还有图灵测试更重要了
 Dialogue: 0,0:51:41.78,0:51:44.16,English,,0,0,0,,If there's some parameters that need to be set
-Dialogue: 0,0:51:41.78,0:51:44.16,Chinese,,0,0,0,,如果有一些参数需要设置
-Dialogue: 0,0:51:44.32,0:51:48.28,English,,0,0,0,,Then you want to run experiments will sweep through the parameters to try and figure out
-Dialogue: 0,0:51:44.32,0:51:48.28,Chinese,,0,0,0,,然后你想运行实验将扫描参数来试图弄清楚
+Dialogue: 0,0:51:41.78,0:51:44.16,Chinese,,0,0,0,,如果需要设置一些参数
+Dialogue: 0,0:51:44.32,0:51:48.28,English,,0,0,0,,Then you want to run experiments through the parameters to try and figure out
+Dialogue: 0,0:51:44.32,0:51:48.28,Chinese,,0,0,0,,之后你通过提供的参数运行程序来试图弄清楚
 Dialogue: 0,0:51:48.88,0:51:50.14,English,,0,0,0,,What the setting should be
-Dialogue: 0,0:51:48.88,0:51:50.14,Chinese,,0,0,0,,设置应该是什么
+Dialogue: 0,0:51:48.88,0:51:50.14,Chinese,,0,0,0,,到底应该设置什么
 Dialogue: 0,0:51:52.08,0:51:54.76,English,,0,0,0,,So that's sort of a little bit about parallel programming
-Dialogue: 0,0:51:52.08,0:51:54.76,Chinese,,0,0,0,,这就是并行编程的一点点
+Dialogue: 0,0:51:52.08,0:51:54.76,Chinese,,0,0,0,,以上是并行编程的一点介绍
 Dialogue: 0,0:51:55.16,0:52:01.50,English,,0,0,0,,Let me just finish this lecture with a little bit of sort of classic issues about concurrency
-Dialogue: 0,0:51:55.16,0:52:01.50,Chinese,,0,0,0,,让我在本讲座中完成一些关于并发性的经典问题
-Dialogue: 0,0:52:01.62,0:52:05.32,English,,0,0,0,,That that are critical when you're dealing with
-Dialogue: 0,0:52:01.62,0:52:05.32,Chinese,,0,0,0,,当你处理时，那是至关重要的
+Dialogue: 0,0:51:55.16,0:52:01.50,Chinese,,0,0,0,,我会讲一些有关并发的经典问题来结束本次课
+Dialogue: 0,0:52:01.62,0:52:05.32,English,,0,0,0,,That are critical when you're dealing with
+Dialogue: 0,0:52:01.62,0:52:05.32,Chinese,,0,0,0,,这些问题很重要，特别是在
 Dialogue: 0,0:52:06.50,0:52:11.14,English,,0,0,0,,These systems based on what you call a shared memory model of computation
-Dialogue: 0,0:52:06.50,0:52:11.14,Chinese,,0,0,0,,这些系统基于你所谓的共享内存计算模型
-Dialogue: 0,0:52:11.76,0:52:18.00,English,,0,0,0,,So multi-core is an example of conceptually multi-threaded computation remember
-Dialogue: 0,0:52:11.76,0:52:18.00,Chinese,,0,0,0,,因此，多核是概念上多线程计算的一个例子
-Dialogue: 0,0:52:18.02,0:52:21.38,English,,0,0,0,,You're working within a single virtual address space
-Dialogue: 0,0:52:18.02,0:52:21.38,Chinese,,0,0,0,,你正在一个虚拟地址空间内工作
+Dialogue: 0,0:52:06.50,0:52:11.14,Chinese,,0,0,0,,基于共享内存计算模型的系统
+Dialogue: 0,0:52:11.76,0:52:17.62,English,,0,0,0,,So multi-core is an example of conceptually multi-threaded computation 
+Dialogue: 0,0:52:11.76,0:52:17.62,Chinese,,0,0,0,,因此，多核是多线程计算的一个例子
+Dialogue: 0,0:52:17.62,0:52:21.38,English,,0,0,0,,Remember you're working within a single virtual address space
+Dialogue: 0,0:52:17.62,0:52:21.38,Chinese,,0,0,0,,还记得，你是在单个虚拟地址内工作的
 Dialogue: 0,0:52:22.48,0:52:24.68,English,,0,0,0,,And you have private stacks
-Dialogue: 0,0:52:22.48,0:52:24.68,Chinese,,0,0,0,,你有私人堆栈
+Dialogue: 0,0:52:22.48,0:52:24.68,Chinese,,0,0,0,,你有私有堆栈
 Dialogue: 0,0:52:25.18,0:52:30.26,English,,0,0,0,,But the more global the heap memory is completely shared across threads
-Dialogue: 0,0:52:25.18,0:52:30.26,Chinese,,0,0,0,,但是，堆内存在线程之间完全共享的全局性越大
+Dialogue: 0,0:52:25.18,0:52:30.26,Chinese,,0,0,0,,但更多全局性的堆内存完全是跨线程共享的
 Dialogue: 0,0:52:31.04,0:52:35.06,English,,0,0,0,,And so that's what you call the shared memory programming model
-Dialogue: 0,0:52:31.04,0:52:35.06,Chinese,,0,0,0,,这就是你所说的共享内存编程模型
-Dialogue: 0,0:52:35.18,0:52:36.88,English,,0,0,0,,And that's what we've really been looking at this course
-Dialogue: 0,0:52:35.18,0:52:36.88,Chinese,,0,0,0,,这就是我们真正关注的课程
+Dialogue: 0,0:52:31.04,0:52:35.06,Chinese,,0,0,0,,这就是共享内存编程模型
+Dialogue: 0,0:52:35.18,0:52:36.88,English,,0,0,0,,What we've really been looking at this course
+Dialogue: 0,0:52:35.18,0:52:36.88,Chinese,,0,0,0,,这就是我们这次课真正关注的
 Dialogue: 0,0:52:38.76,0:52:42.97,English,,0,0,0,,So there's a certain interesting question about called memory consistency models
-Dialogue: 0,0:52:38.76,0:52:42.97,Chinese,,0,0,0,,因此，有一个关于被称为内存一致性模型的有趣问题
+Dialogue: 0,0:52:38.76,0:52:42.97,Chinese,,0,0,0,,关于内存一致性模型，有一个很有意思的问题
 Dialogue: 0,0:52:43.94,0:52:46.58,English,,0,0,0,,And here I'll illustrate it with a very simple example
-Dialogue: 0,0:52:43.94,0:52:46.58,Chinese,,0,0,0,,在这里，我将用一个非常简单的例子来说明它
+Dialogue: 0,0:52:43.94,0:52:46.58,Chinese,,0,0,0,,这里，我将用一个非常简单的例子来说明它
 Dialogue: 0,0:52:47.12,0:52:50.78,English,,0,0,0,,Imagine we have two global variables a and b
 Dialogue: 0,0:52:47.12,0:52:50.78,Chinese,,0,0,0,,想象一下，我们有两个全局变量 a 和 b
 Dialogue: 0,0:52:51.02,0:52:52.22,English,,0,0,0,,And we have two different threads
-Dialogue: 0,0:52:51.02,0:52:52.22,Chinese,,0,0,0,,我们有两个不同的主题
+Dialogue: 0,0:52:51.02,0:52:52.22,Chinese,,0,0,0,,我们有两个不同的线程
 Dialogue: 0,0:52:53.08,0:52:58.66,English,,0,0,0,,And so the first thread is going to write meaning assign a value to a
-Dialogue: 0,0:52:53.08,0:52:58.66,Chinese,,0,0,0,,所以第一个线程将写入含义为 a 赋值
+Dialogue: 0,0:52:53.08,0:52:58.66,Chinese,,0,0,0,,第一个线程将会进行写操作，给 a 赋值
 Dialogue: 0,0:52:59.12,0:53:02.02,English,,0,0,0,,And it's going to read meaning print the value of b
-Dialogue: 0,0:52:59.12,0:53:02.02,Chinese,,0,0,0,,并且它将读取意义打印 b 的值
+Dialogue: 0,0:52:59.12,0:53:02.02,Chinese,,0,0,0,,并且它将进行读操作，打印 b 的值
 Dialogue: 0,0:53:02.72,0:53:08.84,English,,0,0,0,,And the other thread is going to do the opposite it's going to write assigned a value to b and print the value of a
-Dialogue: 0,0:53:02.72,0:53:08.84,Chinese,,0,0,0,,另一个线程将执行相反的操作，它将为 b 分配一个值并打印 a 的值
+Dialogue: 0,0:53:02.72,0:53:08.84,Chinese,,0,0,0,,另一个线程将执行相反的操作，它将为 b 赋值，并打印 a 的值
 Dialogue: 0,0:53:09.40,0:53:14.20,English,,0,0,0,,And so now the question is what are the possible outputs for this program
-Dialogue: 0,0:53:09.40,0:53:14.20,Chinese,,0,0,0,,所以现在的问题是该计划的可能产出是什么
+Dialogue: 0,0:53:09.40,0:53:14.20,Chinese,,0,0,0,,现在问题来了，这个程序输出的结果可能是什么
 Dialogue: 0,0:53:15.52,0:53:21.12,English,,0,0,0,,And so there's a model that sort of the accepted standard called sequential consistency
-Dialogue: 0,0:53:15.52,0:53:21.12,Chinese,,0,0,0,,因此，有一种模型可以接受称为顺序一致性的标准
+Dialogue: 0,0:53:15.52,0:53:21.12,Chinese,,0,0,0,,有一个模型，像公认的标准一样，叫做「顺序一致性」
 Dialogue: 0,0:53:21.64,0:53:24.22,English,,0,0,0,,Which means that these events can occur
 Dialogue: 0,0:53:21.64,0:53:24.22,Chinese,,0,0,0,,这意味着可以发生这些事件
-Dialogue: 0,0:53:24.68,0:53:33.56,English,,0,0,0,,Well that these that within a single thread things have to occur in the sequential order of that thread
-Dialogue: 0,0:53:24.68,0:53:33.56,Chinese,,0,0,0,,那些在单个线程中的东西必须按照该线程的顺序发生
+Dialogue: 0,0:53:24.68,0:53:33.56,English,,0,0,0,,these that within a single thread things have to occur in the sequential order of that thread
+Dialogue: 0,0:53:24.68,0:53:33.56,Chinese,,0,0,0,,单个线程中的东西肯定按照该线程的顺序来进行的
 Dialogue: 0,0:53:34.52,0:53:40.98,English,,0,0,0,,But across threads whether write a write b occurs first is completely arbitrary
-Dialogue: 0,0:53:34.52,0:53:40.98,Chinese,,0,0,0,,但是跨线程是否先写入写入 b 是完全随意的
+Dialogue: 0,0:53:34.52,0:53:40.98,Chinese,,0,0,0,,但是对于跨线程先写 a 还是先写入 b 是完全随意的
 Dialogue: 0,0:53:41.30,0:53:43.80,English,,0,0,0,,And similarly whether writing of b occurs
-Dialogue: 0,0:53:41.30,0:53:43.80,Chinese,,0,0,0,,并且类似地是否发生 b 的写入
+Dialogue: 0,0:53:41.30,0:53:43.80,Chinese,,0,0,0,,并且类似地 b 的写入会发生在
 Dialogue: 0,0:53:44.56,0:53:52.20,English,,0,0,0,,Between these two actions or before is all too arbitrary
-Dialogue: 0,0:53:44.56,0:53:52.20,Chinese,,0,0,0,,在这两个行动之间或以前的行动都太随意了
-Dialogue: 0,0:53:52.28,0:53:56.68,English,,0,0,0,,So what it means is you can take two different threads
-Dialogue: 0,0:53:52.28,0:53:56.68,Chinese,,0,0,0,,所以这意味着你可以采取两种不同的线程
-Dialogue: 0,0:53:56.70,0:54:01.56,English,,0,0,0,,And you can interleave their events in anyway
-Dialogue: 0,0:53:56.70,0:54:01.56,Chinese,,0,0,0,,无论如何，你可以交错他们的事件
-Dialogue: 0,0:54:02.26,0:54:06.90,English,,0,0,0,,But you should be able to pull out of that interleaving
-Dialogue: 0,0:54:02.26,0:54:06.90,Chinese,,0,0,0,,但是你应该能够摆脱那种交错
-Dialogue: 0,0:54:07.44,0:54:10.98,English,,0,0,0,,The sequential order of either of both of the two threads
-Dialogue: 0,0:54:07.44,0:54:10.98,Chinese,,0,0,0,,两个线程中任何一个的顺序
+Dialogue: 0,0:53:44.56,0:53:52.20,Chinese,,0,0,0,,这两个行动之间或以前都有可能，这都太随意了
+Dialogue: 0,0:53:52.28,0:54:01.56,English,,0,0,0,,So what it means is you can take two different threads and you can interleave their events in anyway
+Dialogue: 0,0:53:52.28,0:54:01.56,Chinese,,0,0,0,,这意味着你可以创建两种不同的线程，而且你可以任意交错它们俩事件
+Dialogue: 0,0:54:02.26,0:54:10.98,English,,0,0,0,,But you should be able to pull out of that interleaving the sequential order of either of both of the two threads
+Dialogue: 0,0:54:02.26,0:54:10.98,Chinese,,0,0,0,,但是，你应该可以从这两个线程中的任何一个穿插顺序中抽出这两个线程的顺序
 Dialogue: 0,0:54:12.48,0:54:16.54,English,,0,0,0,,So when you do that you end up you can enumerate in the example like this
-Dialogue: 0,0:54:12.48,0:54:16.54,Chinese,,0,0,0,,因此，当你这样做时，你最终可以在这样的例子中枚举
+Dialogue: 0,0:54:12.48,0:54:16.54,Chinese,,0,0,0,,所以，当你这样做的时候，你可以像这样列出所有情况
 Dialogue: 0,0:54:17.00,0:54:19.26,English,,0,0,0,,All the possibilities you can say well look it
-Dialogue: 0,0:54:17.00,0:54:19.26,Chinese,,0,0,0,,你可以说很好看的所有可能性
-Dialogue: 0,0:54:20.12,0:54:22.48,English,,0,0,0,,First is either going to be right a or right b
-Dialogue: 0,0:54:20.12,0:54:22.48,Chinese,,0,0,0,,首先要么是正确的，要么是正确的 b
-Dialogue: 0,0:54:23.40,0:54:24.60,English,,0,0,0,,Let's pick right a
-Dialogue: 0,0:54:23.40,0:54:24.60,Chinese,,0,0,0,,让我们选择一个
-Dialogue: 0,0:54:25.42,0:54:30.04,English,,0,0,0,,So now the next event will be either a read of b or write of b
-Dialogue: 0,0:54:25.42,0:54:30.04,Chinese,,0,0,0,,所以现在下一个事件将是读取 b 或写入 b
-Dialogue: 0,0:54:31.86,0:54:36.10,English,,0,0,0,,And then if I do write a write read b
-Dialogue: 0,0:54:31.86,0:54:36.10,Chinese,,0,0,0,,如果我写了一个写入读取 b
+Dialogue: 0,0:54:17.00,0:54:19.26,Chinese,,0,0,0,,你们看到的就是所有的情况
+Dialogue: 0,0:54:20.12,0:54:22.48,English,,0,0,0,,First is either going to be write a or write b
+Dialogue: 0,0:54:20.12,0:54:22.48,Chinese,,0,0,0,,第一步，先写 a还是先写 b，两种情况选一个
+Dialogue: 0,0:54:23.40,0:54:24.60,English,,0,0,0,,Let's pick write a
+Dialogue: 0,0:54:23.40,0:54:24.60,Chinese,,0,0,0,,我们选择先写 a
+Dialogue: 0,0:54:25.42,0:54:30.04,English,,0,0,0,,So now the next event will be either read of b or write of b
+Dialogue: 0,0:54:25.42,0:54:30.04,Chinese,,0,0,0,,所以接下来事件就是要么读取 b 要么写入 b
+Dialogue: 0,0:54:31.86,0:54:36.10,English,,0,0,0,,And then if I do write a read b
+Dialogue: 0,0:54:31.86,0:54:36.10,Chinese,,0,0,0,,如果我选择写入 a 读取 b
 Dialogue: 0,0:54:36.78,0:54:38.42,English,,0,0,0,,Then I've completed this thread
-Dialogue: 0,0:54:36.78,0:54:38.42,Chinese,,0,0,0,,然后我完成了这个帖子
-Dialogue: 0,0:54:39.04,0:54:44.44,English,,0,0,0,,And so now the only possibility is to write to b and read a and so forth
-Dialogue: 0,0:54:39.04,0:54:44.44,Chinese,,0,0,0,,所以现在唯一的可能性是写入 b 并读取等等
+Dialogue: 0,0:54:36.78,0:54:38.42,Chinese,,0,0,0,,我就在这个线程中完成了
+Dialogue: 0,0:54:39.04,0:54:44.44,English,,0,0,0,,And so now the only possibility is to write to b and read a, and so forth
+Dialogue: 0,0:54:39.04,0:54:44.44,Chinese,,0,0,0,,所以现在唯一的可能是写入 b 并读取 a，等等其他情况
 Dialogue: 0,0:54:44.52,0:54:48.74,English,,0,0,0,,You work out all the possible things you get six different event orderings
-Dialogue: 0,0:54:44.52,0:54:48.74,Chinese,,0,0,0,,你可以计算出六种不同的事件顺序
-Dialogue: 0,0:54:49.52,0:54:55.46,English,,0,0,0,,And then what will be printed is well first of all whether you print before a
-Dialogue: 0,0:54:49.52,0:54:55.46,Chinese,,0,0,0,,然后，无论你是在打印之前打印，首先要打印的是什么
-Dialogue: 0,0:54:56.02,0:54:59.42,English,,0,0,0,,Would depend on the relative ordering of those two threads
-Dialogue: 0,0:54:56.02,0:54:59.42,Chinese,,0,0,0,,将取决于这两个线程的相对顺序
+Dialogue: 0,0:54:44.52,0:54:48.74,Chinese,,0,0,0,,如果你列出所有的可能性，你会得到 6 种不同的事件顺序
+Dialogue: 0,0:54:49.52,0:54:53.08,English,,0,0,0,,And then what will be printed is well first of all 
+Dialogue: 0,0:54:49.52,0:54:53.08,Chinese,,0,0,0,,然后首先要打印的是什么
+Dialogue: 0,0:54:53.22,0:54:59.42,English,,0,0,0,,Whether you print b before a would depend on the relative ordering of those two threads
+Dialogue: 0,0:54:53.22,0:54:59.42,Chinese,,0,0,0,,是否在a之前打印b，取决于这两个线程的相对顺序
 Dialogue: 0,0:54:59.42,0:55:02.34,English,,0,0,0,,So that's shown I'm showing the b value in blue
-Dialogue: 0,0:54:59.42,0:55:02.34,Chinese,,0,0,0,,所以我看到我用蓝色显示 b 值
+Dialogue: 0,0:54:59.42,0:55:02.34,Chinese,,0,0,0,,所以，这里我用蓝色显示 b 的值
 Dialogue: 0,0:55:03.06,0:55:07.54,English,,0,0,0,,And the red value in red I'm sorry the a value in red
-Dialogue: 0,0:55:03.06,0:55:07.54,Chinese,,0,0,0,,红色的红色值我很抱歉红色的值
-Dialogue: 0,0:55:09.02,0:55:10.46,English,,0,0,0,,And you'll get these different
-Dialogue: 0,0:55:09.02,0:55:10.46,Chinese,,0,0,0,,你会得到这些不同的东西
-Dialogue: 0,0:55:11.28,0:55:14.88,English,,0,0,0,,Possibilities these are all the six possible outputs of this program
-Dialogue: 0,0:55:11.28,0:55:14.88,Chinese,,0,0,0,,可能性这些都是该计划的六个可能输出
+Dialogue: 0,0:55:03.06,0:55:07.54,Chinese,,0,0,0,,红色的是 a 的值
+Dialogue: 0,0:55:09.02,0:55:14.88,English,,0,0,0,,And you'll get these different possibilities,these are all the six possible outputs of this program
+Dialogue: 0,0:55:09.02,0:55:14.88,Chinese,,0,0,0,,你会得到这个程序的六种不同可能的输出
 Dialogue: 0,0:55:15.54,0:55:22.88,English,,0,0,0,,But you'll see that there are two other outputs one could imagine that won't arise
-Dialogue: 0,0:55:15.54,0:55:22.88,Chinese,,0,0,0,,但是你会发现有两个可以想象的其他输出不会出现
-Dialogue: 0,0:55:23.78,0:55:30.48,English,,0,0,0,,One is to print 101 in other words to have them both print
-Dialogue: 0,0:55:23.78,0:55:30.48,Chinese,,0,0,0,,换句话说，就是打印 101 以使它们都打印
-Dialogue: 0,0:55:31.64,0:55:34.28,English,,0,0,0,,The original values of these two variables
-Dialogue: 0,0:55:31.64,0:55:34.28,Chinese,,0,0,0,,这两个变量的原始值
+Dialogue: 0,0:55:15.54,0:55:22.88,Chinese,,0,0,0,,但是你会发现有两个可能的输出不会出现
+Dialogue: 0,0:55:23.78,0:55:28.52,English,,0,0,0,,One is to print 100 and 1
+Dialogue: 0,0:55:23.78,0:55:28.52,Chinese,,0,0,0,,一种是打印 100， 1
+Dialogue: 0,0:55:28.58,0:55:34.28,English,,0,0,0,,In other words to have them both print the original values of these two variables
+Dialogue: 0,0:55:28.58,0:55:34.28,Chinese,,0,0,0,,换句话说就是打印这两个变量的原始值
 Dialogue: 0,0:55:34.88,0:55:36.62,English,,0,0,0,,And that's impossible because
-Dialogue: 0,0:55:34.88,0:55:36.62,Chinese,,0,0,0,,这是不可能的，因为
-Dialogue: 0,0:55:37.74,0:55:39.86,English,,0,0,0,,I have to have done at least one right
-Dialogue: 0,0:55:37.74,0:55:39.86,Chinese,,0,0,0,,我必须至少完成一项权利
+Dialogue: 0,0:55:34.88,0:55:36.62,Chinese,,0,0,0,,这是不可能的
+Dialogue: 0,0:55:37.74,0:55:39.86,English,,0,0,0,,I have to have done at least one write
+Dialogue: 0,0:55:37.74,0:55:39.86,Chinese,,0,0,0,,因为我必须至少完成一次写操作
 Dialogue: 0,0:55:42.26,0:55:45.84,English,,0,0,0,,Before I can reach either of these two print statements right
-Dialogue: 0,0:55:42.26,0:55:45.84,Chinese,,0,0,0,,在我能够正确地达到这两个印刷语句之前
+Dialogue: 0,0:55:42.26,0:55:45.84,Chinese,,0,0,0,,之后才能执行两条打印语句的其中一条
 Dialogue: 0,0:55:46.28,0:55:50.44,English,,0,0,0,,So it's not possible for these to still be in their original values of
 Dialogue: 0,0:55:46.28,0:55:50.44,Chinese,,0,0,0,,所以这些仍然不可能仍然是他们原来的价值观
 Dialogue: 0,0:55:51.70,0:55:53.62,English,,0,0,0,,When I hit these print statements
