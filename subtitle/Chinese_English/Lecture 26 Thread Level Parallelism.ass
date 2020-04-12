@@ -16,9 +16,9 @@ Video File: ../../../../Desktop/csapp/Lecture 26 Thread Level Parallelism.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 1.000000
-Scroll Position: 1000
-Active Line: 1017
-Video Position: 75783
+Scroll Position: 1547
+Active Line: 1561
+Video Position: 117585
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -605,7 +605,7 @@ Dialogue: 0,0:22:48.72,0:22:51.54,English,,0,0,0,,And then I met do it with p th
 Dialogue: 0,0:22:48.72,0:22:51.54,Chinese,,0,0,0,,然后比上 P 个线程或者核心的运行时间
 Dialogue: 0,0:22:52.16,0:22:53.18,English,,0,0,0,,I can get a speedup
 Dialogue: 0,0:22:52.16,0:22:53.18,Chinese,,0,0,0,,我得到一个（相对）加速比
-Dialogue: 0,0:22:53.18,0:22:54.84,English,,0,0,0,,But actually the true thing is 
+Dialogue: 0,0:22:53.18,0:22:54.84,English,,0,0,0,,But actually the true thing is
 Dialogue: 0,0:22:53.18,0:22:54.84,Chinese,,0,0,0,,但更准确的做法是
 Dialogue: 0,0:22:54.84,0:23:02.12,English,,0,0,0,,If I take the best-known sequential algorithm for performing this task with the best implementation of that
 Dialogue: 0,0:22:54.84,0:23:02.12,Chinese,,0,0,0,,采用最好的顺序算法用最好的实践来执行此任务
@@ -679,7 +679,7 @@ Dialogue: 0,0:26:04.14,0:26:05.72,English,,0,0,0,,And this is discussed in the b
 Dialogue: 0,0:26:04.14,0:26:05.72,Chinese,,0,0,0,,这在书中有讨论
 Dialogue: 0,0:26:06.16,0:26:09.78,English,,0,0,0,,You know this isn't just for computers it's any process that you want to speed up
 Dialogue: 0,0:26:06.16,0:26:09.78,Chinese,,0,0,0,,这不仅仅适用于计算机，也适用与你希望加速的任何过程
-Dialogue: 0,0:26:10.40,0:26:11.98,English,,0,0,0,,And it's a very simple observation 
+Dialogue: 0,0:26:10.40,0:26:11.98,English,,0,0,0,,And it's a very simple observation
 Dialogue: 0,0:26:10.40,0:26:11.98,Chinese,,0,0,0,,这是一个非常简单的量化标准
 Dialogue: 0,0:26:11.98,0:26:19.90,English,,0,0,0,,Which is suppose there's some fraction of a system that I can make go faster and I'll call that fraction P
 Dialogue: 0,0:26:11.98,0:26:19.90,Chinese,,0,0,0,,假设我为系统变快打分，并将这个分数称为 p
@@ -689,7 +689,7 @@ Dialogue: 0,0:26:27.96,0:26:31.46,English,,0,0,0,,And let's suppose we take that
 Dialogue: 0,0:26:27.96,0:26:31.46,Chinese,,0,0,0,,让我们假设我们采取那一部分，我们将更快地运行
 Dialogue: 0,0:26:31.86,0:26:34.24,English,,0,0,0,,And improve its performance by a factor K
 Dialogue: 0,0:26:31.86,0:26:34.24,Chinese,,0,0,0,,并通过 k 提高其性能
-Dialogue: 0,0:26:37.08,0:26:44.10,English,,0,0,0,,Then we can just very simply talk about what will be the benefit of that performance so we'll call it T(k) 
+Dialogue: 0,0:26:37.08,0:26:44.10,English,,0,0,0,,Then we can just very simply talk about what will be the benefit of that performance so we'll call it T(k)
 Dialogue: 0,0:26:37.08,0:26:44.10,Chinese,,0,0,0,,然后我们可以清楚的看到哪些对性能 T(k) 有好处
 Dialogue: 0,0:26:44.74,0:26:52.00,English,,0,0,0,,And what it says is the fraction p of the time will be reduced by k
 Dialogue: 0,0:26:44.74,0:26:52.00,Chinese,,0,0,0,,T(k) 和 p 成正比，和 k 成反比
@@ -747,7 +747,7 @@ Dialogue: 0,0:29:00.10,0:29:02.44,English,,0,0,0,,Let's think about sorting a bu
 Dialogue: 0,0:29:00.10,0:29:02.44,Chinese,,0,0,0,,我们来考虑排序一堆数字
 Dialogue: 0,0:29:02.52,0:29:05.84,English,,0,0,0,,So we have n numbers and we want to sort them
 Dialogue: 0,0:29:02.52,0:29:05.84,Chinese,,0,0,0,,我们有 n 个数字，要对它们进行排序
-Dialogue: 0,0:29:08.86,0:29:14.74,English,,0,0,0,,And we have some number of threads that we can do this with 
+Dialogue: 0,0:29:08.86,0:29:14.74,English,,0,0,0,,And we have some number of threads that we can do this with
 Dialogue: 0,0:29:08.86,0:29:14.74,Chinese,,0,0,0,,而且我们可以使用多线程来处理
 Dialogue: 0,0:29:14.74,0:29:16.52,English,,0,0,0,,Is there way we can speed this up？
 Dialogue: 0,0:29:14.74,0:29:16.52,Chinese,,0,0,0,,有什么办法可以加度吗？
@@ -785,7 +785,7 @@ Dialogue: 0,0:30:37.42,0:30:41.12,English,,0,0,0,,Now you creatively you recursi
 Dialogue: 0,0:30:37.42,0:30:41.12,Chinese,,0,0,0,,现在你对这两堆元素进行递归排序
 Dialogue: 0,0:30:42.50,0:30:46.42,English,,0,0,0,,By the same method and when it's all done you end up with everything sorted
 Dialogue: 0,0:30:42.50,0:30:46.42,Chinese,,0,0,0,,用同样的方法，当它们全部完成时，你会得到已排好序的数组
-Dialogue: 0,0:30:46.86,0:30:49.34,English,,0,0,0,,One nice thing about it is,it can be done in place 
+Dialogue: 0,0:30:46.86,0:30:49.34,English,,0,0,0,,One nice thing about it is,it can be done in place
 Dialogue: 0,0:30:46.86,0:30:49.34,Chinese,,0,0,0,,快排有一个好处是它可以在「原地」完成排序
 Dialogue: 0,0:30:49.34,0:30:57.36,English,,0,0,0,,Meaning if you have an array of data you can do this all just by swapping elements around and not have to use any extra space
 Dialogue: 0,0:30:49.34,0:30:57.36,Chinese,,0,0,0,,意思是如果你要对数组进行排序，你可以通过交换元素来完成，而不需要额外的空间
@@ -833,9 +833,9 @@ Dialogue: 0,0:32:33.04,0:32:35.28,English,,0,0,0,,And then you do this partition
 Dialogue: 0,0:32:33.04,0:32:35.28,Chinese,,0,0,0,,除此之外你要分区处理
 Dialogue: 0,0:32:35.28,0:32:41.50,English,,0,0,0,,So this routine of splitting it between the left and the right hand part is handled by a function called partition
 Dialogue: 0,0:32:35.28,0:32:41.50,Chinese,,0,0,0,,这里有一个函数 partition 会把它分成左右两部分
-Dialogue: 0,0:32:42.36,0:32:48.10,English,,0,0,0,,And then if there's more than one element in the left side you sort that 
+Dialogue: 0,0:32:42.36,0:32:48.10,English,,0,0,0,,And then if there's more than one element in the left side you sort that
 Dialogue: 0,0:32:42.36,0:32:48.10,Chinese,,0,0,0,,如果左边的元素大于 1 的话，继续进行递归
-Dialogue: 0,0:32:48.72,0:32:51.92,English,,0,0,0,,And if there's more than one element in the right hand side you sort that 
+Dialogue: 0,0:32:48.72,0:32:51.92,English,,0,0,0,,And if there's more than one element in the right hand side you sort that
 Dialogue: 0,0:32:48.72,0:32:51.92,Chinese,,0,0,0,,同样，如果右边也大于 1 个元素的话，就继续对它进行排序
 Dialogue: 0,0:32:53.68,0:32:58.66,English,,0,0,0,,And then when all these recursions are done then the array is sorted
 Dialogue: 0,0:32:53.68,0:32:58.66,Chinese,,0,0,0,,当所有的递归完成之后，数组就排序好了
@@ -977,7 +977,7 @@ Dialogue: 0,0:38:43.26,0:38:45.72,English,,0,0,0,,I'm just going to sort the dar
 Dialogue: 0,0:38:43.26,0:38:45.72,Chinese,,0,0,0,,我只想解决这个问题
 Dialogue: 0,0:38:45.76,0:38:48.16,English,,0,0,0,,Okay so that's really all the code does it's online
 Dialogue: 0,0:38:45.76,0:38:48.16,Chinese,,0,0,0,,这就是所有的代码，都在课程网站上
-Dialogue: 0,0:38:48.68,0:38:54.94,English,,0,0,0,,If you're interested in this kind of stuff it's... I think it's pretty well written code because  wrote
+Dialogue: 0,0:38:48.68,0:38:54.94,English,,0,0,0,,If you're interested in this kind of stuff it's... I think it's pretty well written code because I wrote it
 Dialogue: 0,0:38:48.68,0:38:54.94,Chinese,,0,0,0,,如果你对它感兴趣的话 ...... 我认为这是写得很好的代码
 Dialogue: 0,0:38:57.62,0:39:00.52,English,,0,0,0,,It so this is sort of that the
 Dialogue: 0,0:38:57.62,0:39:00.52,Chinese,,0,0,0,,它就是这样的
@@ -1016,7 +1016,7 @@ Dialogue: 0,0:40:27.16,0:40:30.42,Chinese,,0,0,0,,我就调用排序函数（qso
 Dialogue: 0,0:40:31.66,0:40:34.90,English,,0,0,0,,Otherwise I'm going to
 Dialogue: 0,0:40:31.66,0:40:34.90,Chinese,,0,0,0,,否则
 Dialogue: 0,0:40:45.44,0:40:47.24,English,,0,0,0,,Oh it's a little bit messier this okay
-Dialogue: 0,0:40:45.44,0:40:47.24,Chinese,,0,0,0,,这下可就麻烦了 
+Dialogue: 0,0:40:45.44,0:40:47.24,Chinese,,0,0,0,,这下可就麻烦了
 Dialogue: 0,0:40:47.86,0:40:53.56,English,,0,0,0,,Now otherwise it's going to spawn a task to do the sorting
 Dialogue: 0,0:40:47.86,0:40:53.56,Chinese,,0,0,0,,否则会创建一个任务来进行排序
 Dialogue: 0,0:40:54.04,0:40:54.80,English,,0,0,0,,Let's see
@@ -1029,9 +1029,9 @@ Dialogue: 0,0:41:06.42,0:41:08.28,English,,0,0,0,,So this is the actual thread r
 Dialogue: 0,0:41:06.42,0:41:08.28,Chinese,,0,0,0,,所以这是实际的线程例程
 Dialogue: 0,0:41:09.68,0:41:14.20,English,,0,0,0,,And what it's saying is run the partition here
 Dialogue: 0,0:41:09.68,0:41:14.20,Chinese,,0,0,0,,这里运行 partition
-Dialogue: 0,0:41:15.36,0:41:20.98,English,,0,0,0,,And then call this tqsort helper which you just saw on the left and the right parts
+Dialogue: 0,0:41:15.36,0:41:20.98,English,,0,0,0,,And then call this tqsort_helper which you just saw on the left and the right parts
 Dialogue: 0,0:41:15.36,0:41:20.98,Chinese,,0,0,0,,然后在左右两边调用 tqsort_helper
-Dialogue: 0,0:41:25.00,0:41:31.36,English,,0,0,0,,Of it so just to review then the actual spawning of a task is done by this helper routine
+Dialogue: 0,0:41:25.00,0:41:31.36,English,,0,0,0,,So just to review then the actual spawning of a task is done by this helper routine
 Dialogue: 0,0:41:25.00,0:41:31.36,Chinese,,0,0,0,,回顾一下，任务的实际产生是由这个辅助程序完成的
 Dialogue: 0,0:41:32.10,0:41:37.02,English,,0,0,0,,But then that what it calls is the thread routine is
 Dialogue: 0,0:41:32.10,0:41:37.02,Chinese,,0,0,0,,那就是所谓的线程例程
@@ -1045,174 +1045,166 @@ Dialogue: 0,0:41:53.82,0:42:00.16,English,,0,0,0,,But as that kind of...So betwe
 Dialogue: 0,0:41:53.82,0:42:00.16,Chinese,,0,0,0,,所以在这两个例程之间，你可以看到它在做这种分而治之的想法
 Dialogue: 0,0:42:02.00,0:42:06.12,English,,0,0,0,,So this is a performance running on the shark machines
 Dialogue: 0,0:42:02.00,0:42:06.12,Chinese,,0,0,0,,这是在鲨鱼机器上运行的表现
-Dialogue: 0,0:42:07.42,0:42:18.24,English,,0,0,0,,And this is a fairly straightforward I'm just taking some number of random value 2^37
-Dialogue: 0,0:42:07.42,0:42:18.24,Chinese,,0,0,0,,这是一个相当简单的我只是采取一些随机值 2 ^ 37
+Dialogue: 0,0:42:07.42,0:42:18.24,English,,0,0,0,,And this is a fairly straightforward,I'm just taking some number of random value 2^37
+Dialogue: 0,0:42:07.42,0:42:18.24,Chinese,,0,0,0,,而这是一个相当直接的方法，我取了 2^37 个随机数
 Dialogue: 0,0:42:22.52,0:42:23.42,English,,0,0,0,,That can't be right
-Dialogue: 0,0:42:22.52,0:42:23.42,Chinese,,0,0,0,,这不可能是正确的
+Dialogue: 0,0:42:22.52,0:42:23.42,Chinese,,0,0,0,,好像哪里不对
 Dialogue: 0,0:42:25.56,0:42:29.56,English,,0,0,0,,Finish this is numbers not 2^37 right you agree with me
-Dialogue: 0,0:42:25.56,0:42:29.56,Chinese,,0,0,0,,完成这是数字不是 2 ^ 37 你同意我
+Dialogue: 0,0:42:25.56,0:42:29.56,Chinese,,0,0,0,,这是数字（134,217,728）肯定不等于 2^37。你们同意吗？
 Dialogue: 0,0:42:31.04,0:42:34.28,English,,0,0,0,,2^37 is 128 billion roughly
-Dialogue: 0,0:42:31.04,0:42:34.28,Chinese,,0,0,0,, 2 ^ 37 大约是 1280 亿
+Dialogue: 0,0:42:31.04,0:42:34.28,Chinese,,0,0,0,, 2^37 大约是 1280 亿
 Dialogue: 0,0:42:34.52,0:42:37.46,English,,0,0,0,,So this number is not right I'll have to check it out
-Dialogue: 0,0:42:34.52,0:42:37.46,Chinese,,0,0,0,,所以这个号码不对，我得查看一下
+Dialogue: 0,0:42:34.52,0:42:37.46,Chinese,,0,0,0,,这个数字不对，我得去查一下
 Dialogue: 0,0:42:39.40,0:42:43.94,English,,0,0,0,,And now what this x axis
-Dialogue: 0,0:42:39.40,0:42:43.94,Chinese,,0,0,0,,而现在这个x轴是什么
+Dialogue: 0,0:42:39.40,0:42:43.94,Chinese,,0,0,0,,这个 x 轴表示什么
 Dialogue: 0,0:42:44.00,0:42:47.20,English,,0,0,0,,So the y axis just denotes how long does it take to complete
-Dialogue: 0,0:42:44.00,0:42:47.20,Chinese,,0,0,0,,所以y轴只表示完成所需的时间
+Dialogue: 0,0:42:44.00,0:42:47.20,Chinese,,0,0,0,,y 轴表示完成所需的时间
 Dialogue: 0,0:42:47.82,0:42:52.26,English,,0,0,0,,By the way one thing if you're used to measuring performance based on CPU time
-Dialogue: 0,0:42:47.82,0:42:52.26,Chinese,,0,0,0,,顺便提一下，如果你习惯于根据 CPU 时间测量性能
-Dialogue: 0,0:42:52.92,0:42:57.52,English,,0,0,0,,That's not useful when you're talking a parallel computing you really want to talk a elapsed time
-Dialogue: 0,0:42:52.92,0:42:57.52,Chinese,,0,0,0,,当你谈论并行计算时，你真的想谈谈经过的时间，那是没用的
-Dialogue: 0,0:42:57.56,0:43:04.52,English,,0,0,0,,The time that you'd get from looking at a clock  and measuring it and dealing with whatever inefficiency occurs
-Dialogue: 0,0:42:57.56,0:43:04.52,Chinese,,0,0,0,,从查看时钟并测量它并处理任何低效率的时间
-Dialogue: 0,0:43:04.98,0:43:08.66,English,,0,0,0,,There so these are actually the elapsed run time of the entire program
-Dialogue: 0,0:43:04.98,0:43:08.66,Chinese,,0,0,0,,所以这些实际上是整个程序的运行时间
-Dialogue: 0,0:43:11.04,0:43:14.78,English,,0,0,0,,And you'll see that it varies according to this thing called the serial fraction
-Dialogue: 0,0:43:11.04,0:43:14.78,Chinese,,0,0,0,,并且你会发现它根据称为连续分数的东西而变化
-Dialogue: 0,0:43:15.54,0:43:24.64,English,,0,0,0,,The serial fraction is just at what point do I slide between a serial quicksort  or keep dividing
-Dialogue: 0,0:43:15.54,0:43:24.64,Chinese,,0,0,0,,序列分数只是在串行快速排序或保持分割之间滑动的位置
+Dialogue: 0,0:42:47.82,0:42:52.26,Chinese,,0,0,0,,顺便提一下，如果你习惯根据 CPU 时间测量性能
+Dialogue: 0,0:42:52.92,0:42:57.92,English,,0,0,0,,That's not useful when you're talking a parallel computing you really want to talk a elapsed time
+Dialogue: 0,0:42:52.92,0:42:57.92,Chinese,,0,0,0,,而当你真的要谈一个并行计算的时间的时候，那是没有用的，你真正关心的是真实经过的时间
+Dialogue: 0,0:42:58.44,0:43:04.52,English,,0,0,0,,The time that you'd get from looking at a clock  and measuring it and dealing with whatever inefficiency occurs
+Dialogue: 0,0:42:58.44,0:43:04.52,Chinese,,0,0,0,,你需要通过时钟来观测，特别是在处理低效任务的时候
+Dialogue: 0,0:43:04.98,0:43:08.66,English,,0,0,0,,These are actually the elapsed run time of the entire program
+Dialogue: 0,0:43:04.98,0:43:08.66,Chinese,,0,0,0,,这实际上是整个程序的运行时间
+Dialogue: 0,0:43:11.04,0:43:15.20,English,,0,0,0,,And you'll see that it varies according to this thing called the serial fraction
+Dialogue: 0,0:43:11.04,0:43:15.20,Chinese,,0,0,0,,你会发现，它的变化是根据「serial fraction」而变化的
+Dialogue: 0,0:43:15.54,0:43:24.64,English,,0,0,0,,The serial fraction is just at what point do I slide between a serial quicksort or keep dividing
+Dialogue: 0,0:43:15.54,0:43:24.64,Chinese,,0,0,0,,「serial fraction」是快排和分割之间的滑动点
 Dialogue: 0,0:43:24.80,0:43:26.80,English,,0,0,0,,So how big does the array need to be
-Dialogue: 0,0:43:24.80,0:43:26.80,Chinese,,0,0,0,,那么阵列需要有多大
+Dialogue: 0,0:43:24.80,0:43:26.80,Chinese,,0,0,0,,那么我们需要多大的数组？
 Dialogue: 0,0:43:27.20,0:43:30.22,English,,0,0,0,,As a fraction expressed as a fraction of the original array
-Dialogue: 0,0:43:27.20,0:43:30.22,Chinese,,0,0,0,,作为原始数组的一部分表示的分数
+Dialogue: 0,0:43:27.20,0:43:30.22,Chinese,,0,0,0,,作为表示原始数组大小的分数
 Dialogue: 0,0:43:31.52,0:43:36.04,English,,0,0,0,,Before I will go into recursion
 Dialogue: 0,0:43:31.52,0:43:36.04,Chinese,,0,0,0,,在我进入递归之前
 Dialogue: 0,0:43:36.14,0:43:40.06,English,,0,0,0,,If I were actually to write this a real application I wouldn't do it based on a fraction
-Dialogue: 0,0:43:36.14,0:43:40.06,Chinese,,0,0,0,,如果我真的要写一个真正的应用程序，我不会基于一小部分
+Dialogue: 0,0:43:36.14,0:43:40.06,Chinese,,0,0,0,,如果我真的要把这个写成应用程序，我不会根据一小部分来做的
 Dialogue: 0,0:43:40.14,0:43:47.00,English,,0,0,0,,I'd do it based on a block size to say anything smaller than a thousand elements or some number like that
-Dialogue: 0,0:43:40.14,0:43:47.00,Chinese,,0,0,0,,我会根据块大小来表示任何小于千元素或类似数字的东西
+Dialogue: 0,0:43:40.14,0:43:47.00,Chinese,,0,0,0,,我会根据块的大小来做，可以说任何小于 1000 个元素或类似的数字
 Dialogue: 0,0:43:47.18,0:43:51.08,English,,0,0,0,,But this code just happens to be expressed this way
-Dialogue: 0,0:43:47.18,0:43:51.08,Chinese,,0,0,0,,但是这个代码恰好以这种方式表达
+Dialogue: 0,0:43:47.18,0:43:51.08,Chinese,,0,0,0,,但是这个代码恰好以这种方式表示
 Dialogue: 0,0:43:51.32,0:43:54.64,English,,0,0,0,,But the thing to notice that's interesting is you'll see here
-Dialogue: 0,0:43:51.32,0:43:54.64,Chinese,,0,0,0,,但要注意的是有趣的是你会在这里看到
+Dialogue: 0,0:43:51.32,0:43:54.64,Chinese,,0,0,0,,但要注意，这里有个有趣的事情
 Dialogue: 0,0:43:57.08,0:44:01.14,English,,0,0,0,,If the fraction is 1 it basically says I won't split this at all
-Dialogue: 0,0:43:57.08,0:44:01.14,Chinese,,0,0,0,,如果分数是 1 ，它基本上说我根本不会拆分它
+Dialogue: 0,0:43:57.08,0:44:01.14,Chinese,,0,0,0,,如果分数是 1 ，它根本不会拆分
 Dialogue: 0,0:44:01.14,0:44:04.10,English,,0,0,0,,I'm just going to call a sequential quicksort
-Dialogue: 0,0:44:01.14,0:44:04.10,Chinese,,0,0,0,,我只是打电话给顺序快速排序
+Dialogue: 0,0:44:01.14,0:44:04.10,Chinese,,0,0,0,,我仅仅是进行了顺序执行的快排
 Dialogue: 0,0:44:04.24,0:44:07.00,English,,0,0,0,,So this is a purely sequential version of it
-Dialogue: 0,0:44:04.24,0:44:07.00,Chinese,,0,0,0,,所以这是它的纯粹顺序版本
+Dialogue: 0,0:44:04.24,0:44:07.00,Chinese,,0,0,0,,所以这是纯粹顺序执行的版本
 Dialogue: 0,0:44:07.56,0:44:10.80,English,,0,0,0,,And what it shows is if I once I start 2
-Dialogue: 0,0:44:07.56,0:44:10.80,Chinese,,0,0,0,,它表明的是，如果我曾经开始 2
+Dialogue: 0,0:44:07.56,0:44:10.80,Chinese,,0,0,0,,一旦我们从 2 开始就能看到
 Dialogue: 0,0:44:11.48,0:44:15.43,English,,0,0,0,,I'll be willing to sort of split this up and do parallelism
-Dialogue: 0,0:44:11.48,0:44:15.43,Chinese,,0,0,0,,我愿意把它分开并做并行性
+Dialogue: 0,0:44:11.48,0:44:15.43,Chinese,,0,0,0,,我把这个拆开来做并行计算
 Dialogue: 0,0:44:15.92,0:44:18.92,English,,0,0,0,,I start making run faster and faster and faster
-Dialogue: 0,0:44:15.92,0:44:18.92,Chinese,,0,0,0,,我开始更快，更快，更快地运行
-Dialogue: 0,0:44:20.14,0:44:22.24,English,,0,0,0,,I'll and then I get into this trough
-Dialogue: 0,0:44:20.14,0:44:22.24,Chinese,,0,0,0,,我会，然后我进入这个低谷
+Dialogue: 0,0:44:15.92,0:44:18.92,Chinese,,0,0,0,,我运行的越来越快了
+Dialogue: 0,0:44:20.14,0:44:22.24,English,,0,0,0,,And then I get into this trough
+Dialogue: 0,0:44:20.14,0:44:22.24,Chinese,,0,0,0,,然后我进入这个低谷
 Dialogue: 0,0:44:22.94,0:44:27.76,English,,0,0,0,,And now if I start going finer and finer grain then I'm running into the problem
-Dialogue: 0,0:44:22.94,0:44:27.76,Chinese,,0,0,0,,现在，如果我开始越来越精细，那么我就遇到了问题
+Dialogue: 0,0:44:22.94,0:44:27.76,Chinese,,0,0,0,,现在，如果我拆分的越来越细，我就会遇到这个问题了
 Dialogue: 0,0:44:27.76,0:44:34.12,English,,0,0,0,,Where the thread overhead is more than the advantage I'm getting by doing the parallelism
-Dialogue: 0,0:44:27.76,0:44:34.12,Chinese,,0,0,0,,线程开销不仅仅是我通过并行操作获得的优势
+Dialogue: 0,0:44:27.76,0:44:34.12,Chinese,,0,0,0,,线程开销掩盖了我通过并行计算获得的优势
 Dialogue: 0,0:44:34.26,0:44:41.54,English,,0,0,0,,And I'm faster to run that block bigger sort just use a sequential algorithm rather than parallel
-Dialogue: 0,0:44:34.26,0:44:41.54,Chinese,,0,0,0,,并且我更快地运行该块更大的排序只使用顺序算法而不是并行
+Dialogue: 0,0:44:34.26,0:44:41.54,Chinese,,0,0,0,,而我更快的是，运行那个大块的排序，只是使用顺序算法，而不是并行算法
 Dialogue: 0,0:44:43.96,0:44:47.40,English,,0,0,0,,But the good news here is this is a pretty long trough here
 Dialogue: 0,0:44:43.96,0:44:47.40,Chinese,,0,0,0,,但这里的好消息是，这是一个相当长的低谷
 Dialogue: 0,0:44:47.64,0:44:50.72,English,,0,0,0,,So it means is if you're trying to tune this program
-Dialogue: 0,0:44:47.64,0:44:50.72,Chinese,,0,0,0,,所以这意味着如果你正在尝试调整这个程序
+Dialogue: 0,0:44:47.64,0:44:50.72,Chinese,,0,0,0,,这意味着，如果你正打算调整这个程序的话
 Dialogue: 0,0:44:51.74,0:44:57.40,English,,0,0,0,,It's not that hard you're not going to pay a huge penalty if you don't know a parameter exactly
-Dialogue: 0,0:44:51.74,0:44:57.40,Chinese,,0,0,0,,如果你不完全知道参数，那么你不会付出巨大代价就不那么难了
+Dialogue: 0,0:44:51.74,0:44:57.40,Chinese,,0,0,0,,如果你不完全知道参数，那么你就不知道要付出多大代价
 Dialogue: 0,0:44:58.04,0:45:04.26,English,,0,0,0,,So as long as this is a huge range right 30 from a 32 to 4096
-Dialogue: 0,0:44:58.04,0:45:04.26,Chinese,,0,0,0,,所以只要这是一个从 32 到 4096 的 30 的巨大范围
-Dialogue: 0,0:45:04.28,0:45:15.34,English,,0,0,0,,It's a factor of of a lot...2^15 and 2^12,2^7 fact 128
-Dialogue: 0,0:45:04.28,0:45:15.34,Chinese,,0,0,0,,这是一个很重要的因素 ... 2 ^ 15 和 2 ^ 12 , 2 ^ 7 事实 128
+Dialogue: 0,0:44:58.04,0:45:04.26,Chinese,,0,0,0,,这个范围巨大从 32 到 4096
+Dialogue: 0,0:45:04.28,0:45:15.34,English,,0,0,0,,It's a factor of a lot...2^15 and 2^12,2^7 fact 128
+Dialogue: 0,0:45:04.28,0:45:15.34,Chinese,,0,0,0,,这是一个很大的变量 ... 2^15 和 2^12 , 2^7 就是 128
 Dialogue: 0,0:45:16.12,0:45:19.04,English,,0,0,0,,See how I do my arithmetic and powers at 2
-Dialogue: 0,0:45:16.12,0:45:19.04,Chinese,,0,0,0,,看看我如何做算术和 2 的力量
-Dialogue: 0,0:45:19.42,0:45:27.15,English,,0,0,0,,Anyways it's roughly at you know 128 so several orders of magnitude decimal orders of magnitude over which
-Dialogue: 0,0:45:19.42,0:45:27.15,Chinese,,0,0,0,,无论如何，它大致在你知道 128 几十个数量级的十进制数量级
-Dialogue: 0,0:45:27.70,0:45:29.38,English,,0,0,0,,You get pretty comparable performance
-Dialogue: 0,0:45:27.70,0:45:29.38,Chinese,,0,0,0,,你的表现相当可观
+Dialogue: 0,0:45:16.12,0:45:19.04,Chinese,,0,0,0,,看看我如何做 2 的幂运算
+Dialogue: 0,0:45:19.42,0:45:23.66,English,,0,0,0,,Anyways it's roughly at you know 128 so
+Dialogue: 0,0:45:19.42,0:45:23.66,Chinese,,0,0,0,,不管怎么说，大概是想你知道的 128，所以......
+Dialogue: 0,0:45:23.82,0:45:29.38,English,,0,0,0,, Several orders of magnitude,decimal orders of magnitude over which you get pretty comparable performance
+Dialogue: 0,0:45:23.82,0:45:29.38,Chinese,,0,0,0,, 几个数量级，小数个数量级，在此基础上，你可以获得相当的性能
 Dialogue: 0,0:45:29.54,0:45:33.88,English,,0,0,0,,So that means from a performance tuning point of view it's not that hard to do
-Dialogue: 0,0:45:29.54,0:45:33.88,Chinese,,0,0,0,,所以从性能调优的角度来看，这并不难
-Dialogue: 0,0:45:34.62,0:45:37.78,English,,0,0,0,,And you also see we're getting a pretty decent speed up
-Dialogue: 0,0:45:34.62,0:45:37.78,Chinese,,0,0,0,,而且你也看到我们的速度相当不错
-Dialogue: 0,0:45:38.72,0:45:41.74,English,,0,0,0,,On our eight core to a hyper-threaded machine
-Dialogue: 0,0:45:38.72,0:45:41.74,Chinese,,0,0,0,,在我们的八核到超线程机器上
+Dialogue: 0,0:45:29.54,0:45:33.88,Chinese,,0,0,0,,所以，这意味着从性能调优的角度来看，这并不难
+Dialogue: 0,0:45:34.62,0:45:41.74,English,,0,0,0,,And you also see we're getting a pretty decent speed up on our eight core to a hyper-threaded machine
+Dialogue: 0,0:45:34.62,0:45:41.74,Chinese,,0,0,0,,而且你也看到我们的速度在我们的八核到超线程机器上表现的相当不错
 Dialogue: 0,0:45:41.80,0:45:44.80,English,,0,0,0,,We're getting up basically out 7x performance
-Dialogue: 0,0:45:41.80,0:45:44.80,Chinese,,0,0,0,,我们的性能基本上达到了 7 倍
+Dialogue: 0,0:45:41.80,0:45:44.80,Chinese,,0,0,0,,基本上我们的性能可以提升 7 倍
 Dialogue: 0,0:45:45.62,0:45:50.60,English,,0,0,0,,And hyper-threading really isn't helping us at all is part of the lesson here
-Dialogue: 0,0:45:45.62,0:45:50.60,Chinese,,0,0,0,,超线程实际上并没有帮助我们这里的课程的一部分
+Dialogue: 0,0:45:45.62,0:45:50.60,Chinese,,0,0,0,,在这里超线程真的对我们一点帮助都没有
 Dialogue: 0,0:45:51.24,0:45:53.86,English,,0,0,0,,But if you just think of it as eight cores then that's pretty good
-Dialogue: 0,0:45:51.24,0:45:53.86,Chinese,,0,0,0,,但如果你只把它想象成八个核心，那就非常好了
+Dialogue: 0,0:45:51.24,0:45:53.86,Chinese,,0,0,0,,但如果你只考虑八个核心，那就非常好了
 Dialogue: 0,0:45:59.28,0:46:05.78,English,,0,0,0,,So there is an obvious place here where there's Amdahl law issue going on
-Dialogue: 0,0:45:59.28,0:46:05.78,Chinese,,0,0,0,,所以这里有一个显而易见的地方，那就是 Amdahl 法律问题正在进行中
+Dialogue: 0,0:45:59.28,0:46:05.78,Chinese,,0,0,0,,很明显，这就是「阿姆达尔定律」所要表达的
 Dialogue: 0,0:46:05.80,0:46:08.26,English,,0,0,0,,If you think at that first top-level split
-Dialogue: 0,0:46:05.80,0:46:08.26,Chinese,,0,0,0,,如果你想到第一个顶级分裂
-Dialogue: 0,0:46:09.32,0:46:14.66,English,,0,0,0,,The first call to partition is being done over the entire ray by a serial sequential process
-Dialogue: 0,0:46:09.32,0:46:14.66,Chinese,,0,0,0,,第一次分区调用是通过串行顺序进程在整个光线上完成的
-Dialogue: 0,0:46:15.60,0:46:16.50,English,,0,0,0,,Right that
-Dialogue: 0,0:46:15.60,0:46:16.50,Chinese,,0,0,0,,对，那
-Dialogue: 0,0:46:16.82,0:46:24.38,English,,0,0,0,,So at the very least that is not going parallel at all there's going exactly one thread is doing the initial partition
-Dialogue: 0,0:46:16.82,0:46:24.38,Chinese,,0,0,0,,因此，至少根本没有并行，只有一个线程正在进行初始分区
+Dialogue: 0,0:46:05.80,0:46:08.26,Chinese,,0,0,0,,考虑第一个顶级分裂
+Dialogue: 0,0:46:09.32,0:46:16.50,English,,0,0,0,,The first call to partition is being done over the entire ray by a sequential process,right
+Dialogue: 0,0:46:09.32,0:46:16.50,Chinese,,0,0,0,,第一次调用 partition 是通过顺序执行的程序完成的
+Dialogue: 0,0:46:16.82,0:46:24.38,English,,0,0,0,,So at the very least that is not going parallel at all,there's going exactly one thread is doing the initial partition
+Dialogue: 0,0:46:16.82,0:46:24.38,Chinese,,0,0,0,,因此，这里根本没有并行，只有一个线程正在进行初始分区
 Dialogue: 0,0:46:25.72,0:46:30.64,English,,0,0,0,,And then that splits into two so at most you have two threads worth of parallelism
 Dialogue: 0,0:46:25.72,0:46:30.64,Chinese,,0,0,0,,然后分成两个，所以最多你有两个并行的线程
 Dialogue: 0,0:46:31.24,0:46:33.38,English,,0,0,0,,And then the next level down at most four
-Dialogue: 0,0:46:31.24,0:46:33.38,Chinese,,0,0,0,,然后下一级最多下降四级
-Dialogue: 0,0:46:33.42,0:46:37.48,English,,0,0,0,,And so you really don't you have to get several levels of recursion down
-Dialogue: 0,0:46:33.42,0:46:37.48,Chinese,,0,0,0,,所以你真的不需要进行几级递归
-Dialogue: 0,0:46:38.00,0:46:41.42,English,,0,0,0,,Before you're really running on all the course that you have available
-Dialogue: 0,0:46:38.00,0:46:41.42,Chinese,,0,0,0,,在你真正运行所有可用的课程之前
-Dialogue: 0,0:46:41.70,0:46:45.06,English,,0,0,0,,So you'd think that that's limiting your speed up and
-Dialogue: 0,0:46:41.70,0:46:45.06,Chinese,,0,0,0,,所以你认为这限制了你的速度和
-Dialogue: 0,0:46:45.06,0:46:49.22,English,,0,0,0,,It does and that's part of the reason why our best performance is
-Dialogue: 0,0:46:45.06,0:46:49.22,Chinese,,0,0,0,,这确实是我们最佳表现的部分原因
-Dialogue: 0,0:46:50.98,0:46:53.32,English,,0,0,0,,A factor of seven and not a factor of eight or more
-Dialogue: 0,0:46:50.98,0:46:53.32,Chinese,,0,0,0,,七分之一而不是八分之一或更多
-Dialogue: 0,0:46:59.10,0:47:09.30,English,,0,0,0,,So there's quite a bit of work as  mentioned on how to speed up performance including how to make quicksort go faster
-Dialogue: 0,0:46:59.10,0:47:09.30,Chinese,,0,0,0,,因此，关于如何加快性能，包括如何使快速排序更快，提到了相当多的工作
+Dialogue: 0,0:46:31.24,0:46:33.38,Chinese,,0,0,0,,然后再往下有 4 个线程
+Dialogue: 0,0:46:33.42,0:46:34.72,English,,0,0,0,,And so you really don't...
+Dialogue: 0,0:46:33.42,0:46:34.72,Chinese,,0,0,0,,所以你不必......
+Dialogue: 0,0:46:34.72,0:46:41.42,English,,0,0,0,,You have to get several levels of recursion down before you're really running on all the cores that you have available
+Dialogue: 0,0:46:34.72,0:46:41.42,Chinese,,0,0,0,,你必须进行几次递归之后才能在所有可用的内核上运行
+Dialogue: 0,0:46:41.70,0:46:46.04,English,,0,0,0,,So you'd think that that's limiting your speedup，it does
+Dialogue: 0,0:46:41.70,0:46:46.04,Chinese,,0,0,0,,所以你想想这限制了你的加速比？是的
+Dialogue: 0,0:46:46.04,0:46:53.32,English,,0,0,0,,That's part of the reason why our best performance is a factor of seven and not a factor of eight or more
+Dialogue: 0,0:46:46.04,0:46:53.32,Chinese,,0,0,0,,这也是我们最好的成绩是 7 分，而不是 8 分以上的部分原因
+Dialogue: 0,0:46:59.10,0:47:09.30,English,,0,0,0,,So there's quite a bit of work as mentioned on how to speed up performance,including how to make quicksort go faster
+Dialogue: 0,0:46:59.10,0:47:09.30,Chinese,,0,0,0,,因此，在如何提高性能方面有很多工作要做，包括如何让「快排」速度更快
 Dialogue: 0,0:47:12.00,0:47:15.62,English,,0,0,0,,So there's a vast body of literature on parallel sort
 Dialogue: 0,0:47:12.00,0:47:15.62,Chinese,,0,0,0,,因此，有大量关于并行排序的文献
-Dialogue: 0,0:47:19.92,0:47:24.88,English,,0,0,0,,So one thing I tried was to say okay well let's try and do this partitioning
-Dialogue: 0,0:47:19.92,0:47:24.88,Chinese,,0,0,0,,所以我试过的一件事就是说好吧让我们尝试做这个分区
-Dialogue: 0,0:47:27.94,0:47:32.70,English,,0,0,0,,Step they least the top couple levels let's try and do a parallel version of that and
-Dialogue: 0,0:47:27.94,0:47:32.70,Chinese,,0,0,0,,步骤他们最少的顶级夫妇级别让我们试着做一个并行版本
+Dialogue: 0,0:47:19.92,0:47:21.38,English,,0,0,0,,So one thing I tried
+Dialogue: 0,0:47:19.92,0:47:21.38,Chinese,,0,0,0,,我还试过
+Dialogue: 0,0:47:21.72,0:47:27.04,English,,0,0,0,,was to say okay well let's try and do this partitioning step
+Dialogue: 0,0:47:21.72,0:47:27.04,Chinese,,0,0,0,,就是将分区并行化
+Dialogue: 0,0:47:27.94,0:47:32.70,English,,0,0,0,,They least the top couple levels let's try and do a parallel version of that and
+Dialogue: 0,0:47:27.94,0:47:32.70,Chinese,,0,0,0,,至少是最层的几步，我试过并行处理
 Dialogue: 0,0:47:33.34,0:47:36.16,English,,0,0,0,,So the idea is you pick one pivot element
-Dialogue: 0,0:47:33.34,0:47:36.16,Chinese,,0,0,0,,所以你的想法就是选择一个枢轴元素
+Dialogue: 0,0:47:33.34,0:47:36.16,Chinese,,0,0,0,,现在你要选择一个基准元素
 Dialogue: 0,0:47:36.38,0:47:39.24,English,,0,0,0,,But now you fire in this example for threads
-Dialogue: 0,0:47:36.38,0:47:39.24,Chinese,,0,0,0,,但现在你在这个例子中为线程开火
+Dialogue: 0,0:47:36.38,0:47:39.24,Chinese,,0,0,0,,但这里你要用多个线程
 Dialogue: 0,0:47:40.42,0:47:47.18,English,,0,0,0,,And each of those four threads runs a partition step on one-fourth of the range
-Dialogue: 0,0:47:40.42,0:47:47.18,Chinese,,0,0,0,,并且这四个线程中的每一个都在该范围的四分之一上运行分区步骤
+Dialogue: 0,0:47:40.42,0:47:47.18,Chinese,,0,0,0,,这四个线程中的每一个都在各自的四分之一上执行分区步骤
 Dialogue: 0,0:47:48.26,0:47:51.12,English,,0,0,0,,And it don't generate their own versions of left and right
-Dialogue: 0,0:47:48.26,0:47:51.12,Chinese,,0,0,0,,并且它不会生成左右自己的版本
+Dialogue: 0,0:47:48.26,0:47:51.12,Chinese,,0,0,0,,并且它不会生成自己的左右部分
 Dialogue: 0,0:47:52.26,0:47:59.12,English,,0,0,0,,And then you globally figure out how many are in each of these sub ranges
-Dialogue: 0,0:47:52.26,0:47:59.12,Chinese,,0,0,0,,然后你全局计算每个子范围中有多少个
+Dialogue: 0,0:47:52.26,0:47:59.12,Chinese,,0,0,0,,然后你全局计算有多少的子分区
 Dialogue: 0,0:48:00.46,0:48:07.00,English,,0,0,0,,And then you tell each thread okay now you copy your part of it over to the relevant section of the array
-Dialogue: 0,0:48:00.46,0:48:07.00,Chinese,,0,0,0,,然后你告诉每个线程好了，现在你将它的一部分复制到数组的相关部分
+Dialogue: 0,0:48:00.46,0:48:07.00,Chinese,,0,0,0,,然后你告诉每个线程，复制对应的部分到数组的相关位置
 Dialogue: 0,0:48:09.60,0:48:13.78,English,,0,0,0,,But the good news so there's some amount of synchronization that goes on there
-Dialogue: 0,0:48:09.60,0:48:13.78,Chinese,,0,0,0,,但好消息是那里有一些同步
+Dialogue: 0,0:48:09.60,0:48:13.78,Chinese,,0,0,0,,但好消息是，那里是同步操作
 Dialogue: 0,0:48:14.48,0:48:18.14,English,,0,0,0,,But you can imagine that this partitioning step
 Dialogue: 0,0:48:14.48,0:48:18.14,Chinese,,0,0,0,,但你可以想象这个分区步骤
 Dialogue: 0,0:48:18.44,0:48:23.78,English,,0,0,0,,Once when you're running it is completely independent of across the different threads
-Dialogue: 0,0:48:18.44,0:48:23.78,Chinese,,0,0,0,,一旦你运行它就完全独立于不同的线程
+Dialogue: 0,0:48:18.44,0:48:23.78,Chinese,,0,0,0,,一旦你运行它就完全由不同的独立线程来处理
 Dialogue: 0,0:48:23.82,0:48:26.52,English,,0,0,0,,So it's getting a almost ideal speed-up
-Dialogue: 0,0:48:23.82,0:48:26.52,Chinese,,0,0,0,,所以它获得了几乎理想的加速
+Dialogue: 0,0:48:23.82,0:48:26.52,Chinese,,0,0,0,,所以能获得了几乎理想的加速比
 Dialogue: 0,0:48:27.62,0:48:32.90,English,,0,0,0,,So I implemented this and tried and I couldn't make it run faster than the original code
 Dialogue: 0,0:48:27.62,0:48:32.90,Chinese,,0,0,0,,所以我实现了这个并尝试了，我无法让它比原始代码运行得更快
 Dialogue: 0,0:48:33.72,0:48:39.68,English,,0,0,0,,And I think the the problem with this was the copying the cost of copying data
-Dialogue: 0,0:48:33.72,0:48:39.68,Chinese,,0,0,0,,我认为这个问题是复制数据的复制成本
+Dialogue: 0,0:48:33.72,0:48:39.68,Chinese,,0,0,0,,我认为问题是出在复制数据的开销上
 Dialogue: 0,0:48:41.96,0:48:47.80,English,,0,0,0,,Here was even though it's being done by multiple threads
-Dialogue: 0,0:48:41.96,0:48:47.80,Chinese,,0,0,0,,即使它是由多个线程完成的
+Dialogue: 0,0:48:41.96,0:48:47.80,Chinese,,0,0,0,,这里是由多个线程完成的
 Dialogue: 0,0:48:48.30,0:48:51.24,English,,0,0,0,,And getting pretty good performance out of the memory system
-Dialogue: 0,0:48:48.30,0:48:51.24,Chinese,,0,0,0,,从内存系统中获得相当不错的性能
+Dialogue: 0,0:48:48.30,0:48:51.24,Chinese,,0,0,0,,并从内存系统中获得相当不错的性能
 Dialogue: 0,0:48:51.26,0:48:56.12,English,,0,0,0,,Because you're doing sequential you know all the cache issues are pretty good here
-Dialogue: 0,0:48:51.26,0:48:56.12,Chinese,,0,0,0,,因为你正在执行顺序操作，所以你知道所有缓存问题都非常好
+Dialogue: 0,0:48:51.26,0:48:56.12,Chinese,,0,0,0,,因为你在做顺序复制，而这里的缓存都是相当不错的
 Dialogue: 0,0:48:56.80,0:48:58.94,English,,0,0,0,,But that's just enough extra work
-Dialogue: 0,0:48:56.80,0:48:58.94,Chinese,,0,0,0,,但那只是额外的工作
-Dialogue: 0,0:48:59.52,0:49:02.54,English,,0,0,0,,That has to be done for this parallel code that doesn't have to be done
-Dialogue: 0,0:48:59.52,0:49:02.54,Chinese,,0,0,0,,必须为这个不必完成的并行代码完成
-Dialogue: 0,0:49:02.86,0:49:04.88,English,,0,0,0,,The sequential code is totally in place
-Dialogue: 0,0:49:02.86,0:49:04.88,Chinese,,0,0,0,,顺序代码完全到位
+Dialogue: 0,0:48:56.80,0:48:58.94,Chinese,,0,0,0,,但这只是额外的工作
+Dialogue: 0,0:48:59.52,0:49:04.88,English,,0,0,0,,That has to be done for this parallel code that doesn't have to be done the sequential code is totally in place
+Dialogue: 0,0:48:59.52,0:49:04.88,Chinese,,0,0,0,,那必须要这样做，不需要做的并行代码，顺序代码完全到位了
 Dialogue: 0,0:49:05.82,0:49:08.96,English,,0,0,0,,Meaning not using any additional storage not copying
-Dialogue: 0,0:49:05.82,0:49:08.96,Chinese,,0,0,0,,意思是不使用任何其他存储而不是复制
+Dialogue: 0,0:49:05.82,0:49:08.96,Chinese,,0,0,0,,意思是不使用任何其他存储空间，不用复制
 Dialogue: 0,0:49:09.34,0:49:13.12,English,,0,0,0,,And so that's just enough of a penalty on the parallel part
-Dialogue: 0,0:49:09.34,0:49:13.12,Chinese,,0,0,0,,所以这对平行部分来说就足够了
+Dialogue: 0,0:49:09.34,0:49:13.12,Chinese,,0,0,0,,这部分已经足够了
 Dialogue: 0,0:49:13.56,0:49:16.04,English,,0,0,0,,That it didn't really improve performance at all
 Dialogue: 0,0:49:13.56,0:49:16.04,Chinese,,0,0,0,,它根本没有真正提高性能
 Dialogue: 0,0:49:16.56,0:49:20.54,English,,0,0,0,,So that code is shown as part of the code on the course website
-Dialogue: 0,0:49:16.56,0:49:20.54,Chinese,,0,0,0,,因此，该代码显示为课程网站上代码的一部分
-Dialogue: 0,0:49:20.68,0:49:25.70,English,,0,0,0,,But like I said I banged on it quite a bit and trying to tune it
-Dialogue: 0,0:49:20.68,0:49:25.70,Chinese,,0,0,0,,但就像我说的那样，我对它进行了很大的攻击并试图调整它
-Dialogue: 0,0:49:25.82,0:49:27.90,English,,0,0,0,,And squeak it in various ways and could never make it
-Dialogue: 0,0:49:25.82,0:49:27.90,Chinese,,0,0,0,,并以各种方式吱吱作响，永远无法成功
+Dialogue: 0,0:49:16.56,0:49:20.54,Chinese,,0,0,0,,这部分代码在课程网站上可以找到
+Dialogue: 0,0:49:20.68,0:49:27.90,English,,0,0,0,,But like I said I banged on it quite a bit and trying to tune it And squeak it in various ways and could never make it
+Dialogue: 0,0:49:20.68,0:49:27.90,Chinese,,0,0,0,,但就像我说的，我经常打磨它，并试图用各种方法来调整它，但始终无法让它变得更完美
 Dialogue: 0,0:49:28.46,0:49:31.54,English,,0,0,0,,So I got better overall performance out of this program
 Dialogue: 0,0:49:28.46,0:49:31.54,Chinese,,0,0,0,,所以我从这个项目中获得了更好的整体表现
 Dialogue: 0,0:49:33.34,0:49:38.70,English,,0,0,0,,And so that's again a lesson and that's one of the unfortunate lessons is you can spend a lot of time
@@ -1220,25 +1212,25 @@ Dialogue: 0,0:49:33.34,0:49:38.70,Chinese,,0,0,0,,所以这又是一个教训，
 Dialogue: 0,0:49:40.16,0:49:43.64,English,,0,0,0,,Trying to make a program run faster and get absolutely nowhere
 Dialogue: 0,0:49:40.16,0:49:43.64,Chinese,,0,0,0,,试图让程序运行得更快，绝对无处可去
 Dialogue: 0,0:49:44.72,0:49:47.34,English,,0,0,0,,And it's frustrating because you put in a lot of work
-Dialogue: 0,0:49:44.72,0:49:47.34,Chinese,,0,0,0,,这令人沮丧，因为你投入了大量的工作
+Dialogue: 0,0:49:44.72,0:49:47.34,Chinese,,0,0,0,,这令人沮丧，你投入了大量的工作
 Dialogue: 0,0:49:47.90,0:49:52.72,English,,0,0,0,,And you know it's a pretty cool idea and you'd love to publish a paper about it or tell your friends about it
-Dialogue: 0,0:49:47.90,0:49:52.72,Chinese,,0,0,0,,而且你知道这是一个非常酷的想法，你喜欢发表一篇关于它的论文或者告诉你的朋友
+Dialogue: 0,0:49:47.90,0:49:52.72,Chinese,,0,0,0,,而且你知道这是一个非常酷的想法，你打算发表一篇关于它的论文或者告诉你的朋友
 Dialogue: 0,0:49:53.02,0:49:55.64,English,,0,0,0,,And it just goes nowhere and it just sits there
 Dialogue: 0,0:49:53.02,0:49:55.64,Chinese,,0,0,0,,它只是无处可去，只是坐在那里
-Dialogue: 0,0:49:55.98,0:50:02.20,English,,0,0,0,,There's nothing unfortunately there's not an accumulated repository of the bad ideas of computer science
-Dialogue: 0,0:49:55.98,0:50:02.20,Chinese,,0,0,0,,遗憾的是，没有一个积累的计算机科学坏思想库
+Dialogue: 0,0:49:55.98,0:50:02.20,English,,0,0,0,,There's nothing...unfortunately there's not...an accumulated repository of the bad ideas of computer science
+Dialogue: 0,0:49:55.98,0:50:02.20,Chinese,,0,0,0,,这也没什么，积少成多的计算机科学思想宝库
 Dialogue: 0,0:50:02.30,0:50:03.70,English,,0,0,0,,Don't waste your time trying this
 Dialogue: 0,0:50:02.30,0:50:03.70,Chinese,,0,0,0,,不要浪费你的时间尝试这个
 Dialogue: 0,0:50:04.30,0:50:06.30,English,,0,0,0,,That people can talk about so
-Dialogue: 0,0:50:04.30,0:50:06.30,Chinese,,0,0,0,,人们可以这么说
+Dialogue: 0,0:50:04.30,0:50:06.30,Chinese,,0,0,0,,但我们可以谈论这个事情
 Dialogue: 0,0:50:06.88,0:50:09.18,English,,0,0,0,,This is just a lesson to learn
-Dialogue: 0,0:50:06.88,0:50:09.18,Chinese,,0,0,0,,这只是一个值得学习的课程
+Dialogue: 0,0:50:06.88,0:50:09.18,Chinese,,0,0,0,,这是你必须吸取的教训
 Dialogue: 0,0:50:11.90,0:50:15.34,English,,0,0,0,,So anyways that was my experience with that
-Dialogue: 0,0:50:11.90,0:50:15.34,Chinese,,0,0,0,,所以无论如何这是我的经验
+Dialogue: 0,0:50:11.90,0:50:15.34,Chinese,,0,0,0,,就我的经验
 Dialogue: 0,0:50:15.64,0:50:21.78,English,,0,0,0,,Again other people have spent a lot more time this is one of the most common applications
-Dialogue: 0,0:50:15.64,0:50:21.78,Chinese,,0,0,0,,其他人花了很多时间这是最常见的应用程序之一
+Dialogue: 0,0:50:15.64,0:50:21.78,Chinese,,0,0,0,,其他人花了很多时间，其中并行计算就是
 Dialogue: 0,0:50:22.10,0:50:24.52,English,,0,0,0,,That people try to do parallel programming for
-Dialogue: 0,0:50:22.10,0:50:24.52,Chinese,,0,0,0,,人们试图做并行编程
+Dialogue: 0,0:50:22.10,0:50:24.52,Chinese,,0,0,0,,最常见的应用程序之一
 Dialogue: 0,0:50:26.68,0:50:30.78,English,,0,0,0,,So some of the lessons from this is you need a good strategy
 Dialogue: 0,0:50:26.68,0:50:30.78,Chinese,,0,0,0,,因此，一些教训是你需要一个好的策略
 Dialogue: 0,0:50:30.80,0:50:33.42,English,,0,0,0,,For how you're going to get parallelism out of your application
@@ -1248,7 +1240,7 @@ Dialogue: 0,0:50:34.10,0:50:38.94,Chinese,,0,0,0,,我向你展示了两个基本
 Dialogue: 0,0:50:39.00,0:50:42.26,English,,0,0,0,,They're more or less completely independent of each other
 Dialogue: 0,0:50:39.00,0:50:42.26,Chinese,,0,0,0,,它们或多或少完全相互独立
 Dialogue: 0,0:50:42.78,0:50:46.78,English,,0,0,0,,Or something like a divide and conquer strategy where you can keep splitting it
-Dialogue: 0,0:50:42.78,0:50:46.78,Chinese,,0,0,0,,或者类似于分而治之的战略，你可以继续分裂它
+Dialogue: 0,0:50:42.78,0:50:46.78,Chinese,,0,0,0,,或者类似于分治的策略，你可以继续分裂它
 Dialogue: 0,0:50:46.90,0:50:50.92,English,,0,0,0,,But the two splits that you create out of that can go concurrently
 Dialogue: 0,0:50:46.90,0:50:50.92,Chinese,,0,0,0,,但是你创建的两个分裂可以同时进行
 Dialogue: 0,0:50:51.78,0:50:54.98,English,,0,0,0,,These other different types of parallelism to
@@ -1596,4 +1588,4 @@ Dialogue: 0,1:05:08.56,1:05:13.28,Chinese,,0,0,0,,是什么让程序在错误可
 Dialogue: 0,1:05:14.98,1:05:18.62,English,,0,0,0,,So that's just a little flavor of a much bigger topic
 Dialogue: 0,1:05:14.98,1:05:18.62,Chinese,,0,0,0,,所以这只是一个更大的话题的一点点味道
 Dialogue: 0,1:05:19.48,1:05:20.48,English,,0,0,0,,So that's it for today
-Dialogue: 0,1:05:19.48,1:05:20.48,Chinese,,0,0,0,,这就是今天的情况
+Dialogue: 0,1:05:19.48,1:05:20.48,Chinese,,0,0,0,,今天的课就到这里
