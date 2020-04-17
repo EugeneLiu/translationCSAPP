@@ -16,9 +16,9 @@ Video File: ../../../../Desktop/csapp/Lecture 26 Thread Level Parallelism.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 1.000000
-Scroll Position: 1318
-Active Line: 1334
-Video Position: 100513
+Scroll Position: 1534
+Active Line: 1541
+Video Position: 117257
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -1245,7 +1245,7 @@ Dialogue: 0,0:50:46.90,0:50:50.92,English,,0,0,0,,But the two splits that you cr
 Dialogue: 0,0:50:46.90,0:50:50.92,Chinese,,0,0,0,,但是你创建的两个分裂可以同时进行
 Dialogue: 0,0:50:51.78,0:50:54.98,English,,0,0,0,,These other different types of parallelism to
 Dialogue: 0,0:50:51.78,0:50:54.98,Chinese,,0,0,0,,这些其他不同类型的并行性
-Dialogue: 0,0:50:55.60,0:50:57.74,English,,0,0,0,,In general you want to make the inner loops 
+Dialogue: 0,0:50:55.60,0:50:57.74,English,,0,0,0,,In general you want to make the inner loops
 Dialogue: 0,0:50:55.60,0:50:57.74,Chinese,,0,0,0,,通常，你在进行内部循环时
 Dialogue: 0,0:50:57.74,0:51:02.56,English,,0,0,0,,You can't have any synchronization primitives in there it will just run too slow
 Dialogue: 0,0:50:57.74,0:51:02.56,Chinese,,0,0,0,,你不能在里面写任何同步原语，因为这样会导致运行得很慢
@@ -1277,7 +1277,7 @@ Dialogue: 0,0:52:01.62,0:52:05.32,English,,0,0,0,,That are critical when you're 
 Dialogue: 0,0:52:01.62,0:52:05.32,Chinese,,0,0,0,,这些问题很重要，特别是在
 Dialogue: 0,0:52:06.50,0:52:11.14,English,,0,0,0,,These systems based on what you call a shared memory model of computation
 Dialogue: 0,0:52:06.50,0:52:11.14,Chinese,,0,0,0,,基于共享内存计算模型的系统
-Dialogue: 0,0:52:11.76,0:52:17.62,English,,0,0,0,,So multi-core is an example of conceptually multi-threaded computation 
+Dialogue: 0,0:52:11.76,0:52:17.62,English,,0,0,0,,So multi-core is an example of conceptually multi-threaded computation
 Dialogue: 0,0:52:11.76,0:52:17.62,Chinese,,0,0,0,,因此，多核是多线程计算的一个例子
 Dialogue: 0,0:52:17.62,0:52:21.38,English,,0,0,0,,Remember you're working within a single virtual address space
 Dialogue: 0,0:52:17.62,0:52:21.38,Chinese,,0,0,0,,还记得，你是在单个虚拟地址内工作的
@@ -1339,7 +1339,7 @@ Dialogue: 0,0:54:39.04,0:54:44.44,English,,0,0,0,,And so now the only possibilit
 Dialogue: 0,0:54:39.04,0:54:44.44,Chinese,,0,0,0,,所以现在唯一的可能是写入 b 并读取 a，等等其他情况
 Dialogue: 0,0:54:44.52,0:54:48.74,English,,0,0,0,,You work out all the possible things you get six different event orderings
 Dialogue: 0,0:54:44.52,0:54:48.74,Chinese,,0,0,0,,如果你列出所有的可能性，你会得到 6 种不同的事件顺序
-Dialogue: 0,0:54:49.52,0:54:53.08,English,,0,0,0,,And then what will be printed is well first of all 
+Dialogue: 0,0:54:49.52,0:54:53.08,English,,0,0,0,,And then what will be printed is well first of all
 Dialogue: 0,0:54:49.52,0:54:53.08,Chinese,,0,0,0,,然后首先要打印的是什么
 Dialogue: 0,0:54:53.22,0:54:59.42,English,,0,0,0,,Whether you print b before a would depend on the relative ordering of those two threads
 Dialogue: 0,0:54:53.22,0:54:59.42,Chinese,,0,0,0,,是否在a之前打印b，取决于这两个线程的相对顺序
@@ -1361,225 +1361,215 @@ Dialogue: 0,0:55:37.74,0:55:39.86,English,,0,0,0,,I have to have done at least o
 Dialogue: 0,0:55:37.74,0:55:39.86,Chinese,,0,0,0,,因为我必须至少完成一次写操作
 Dialogue: 0,0:55:42.26,0:55:45.84,English,,0,0,0,,Before I can reach either of these two print statements right
 Dialogue: 0,0:55:42.26,0:55:45.84,Chinese,,0,0,0,,之后才能执行两条打印语句的其中一条
-Dialogue: 0,0:55:46.28,0:55:50.44,English,,0,0,0,,So it's not possible for these to still be in their original values of
-Dialogue: 0,0:55:46.28,0:55:50.44,Chinese,,0,0,0,,所以这些仍然不可能仍然是他们原来的价值观
-Dialogue: 0,0:55:51.70,0:55:53.62,English,,0,0,0,,When I hit these print statements
-Dialogue: 0,0:55:51.70,0:55:53.62,Chinese,,0,0,0,,当我点击这些打印语句时
+Dialogue: 0,0:55:46.28,0:55:53.62,English,,0,0,0,,So it's not possible for these to still be in their original values of When I hit these print statements
+Dialogue: 0,0:55:46.28,0:55:53.62,Chinese,,0,0,0,,所以在我执行打印语句时，它们不可能仍然是原来的值
 Dialogue: 0,0:55:56.14,0:56:01.06,English,,0,0,0,,And whichever order I hit these two,so those two are impossible
-Dialogue: 0,0:55:56.14,0:56:01.06,Chinese,,0,0,0,,无论我击中这两个顺序，所以这两个是不可能的
+Dialogue: 0,0:55:56.14,0:56:01.06,Chinese,,0,0,0,,无论是这两种情况中的哪一种都是不可能的
 Dialogue: 0,0:56:01.36,0:56:04.48,English,,0,0,0,,So that's the idea of sequential consistency that there's
-Dialogue: 0,0:56:01.36,0:56:04.48,Chinese,,0,0,0,,所以这就是顺序一致性的想法
+Dialogue: 0,0:56:01.36,0:56:04.48,Chinese,,0,0,0,,所以这就是顺序一致性
 Dialogue: 0,0:56:05.16,0:56:10.96,English,,0,0,0,,Some very large number but of possible outputs of a program
-Dialogue: 0,0:56:05.16,0:56:10.96,Chinese,,0,0,0,,一些非常大的但可能的程序输出
-Dialogue: 0,0:56:11.42,0:56:14.40,English,,0,0,0,,But in any case they can't violate
-Dialogue: 0,0:56:11.42,0:56:14.40,Chinese,,0,0,0,,但无论如何他们都不能违反
-Dialogue: 0,0:56:14.86,0:56:17.26,English,,0,0,0,,The ordering implied by the individual threads
-Dialogue: 0,0:56:14.86,0:56:17.26,Chinese,,0,0,0,,各个线程隐含的顺序
+Dialogue: 0,0:56:05.16,0:56:10.96,Chinese,,0,0,0,,即使这个程序会输出很大的值
+Dialogue: 0,0:56:11.42,0:56:17.26,English,,0,0,0,,But in any case they can't violate The ordering implied by the individual threads
+Dialogue: 0,0:56:11.42,0:56:17.26,Chinese,,0,0,0,,但无论如何，他们都不能违反线程隐含顺序
 Dialogue: 0,0:56:19.44,0:56:23.36,English,,0,0,0,,So you'd say okay that seems like pretty obvious thing
-Dialogue: 0,0:56:19.44,0:56:23.36,Chinese,,0,0,0,,所以你说好的，这看起来很明显
+Dialogue: 0,0:56:19.44,0:56:23.36,Chinese,,0,0,0,,所以你说那好吧，这本来看起来就很明显
 Dialogue: 0,0:56:24.66,0:56:29.16,English,,0,0,0,,But actually if you think from a hardware perspective it's not that trivial to make that happen
 Dialogue: 0,0:56:24.66,0:56:29.16,Chinese,,0,0,0,,但实际上，如果你从硬件的角度思考，实现这一目标并非易事
 Dialogue: 0,0:56:30.04,0:56:36.04,English,,0,0,0,,So let me just throw a show you a scenario of multi-core hardware
-Dialogue: 0,0:56:30.04,0:56:36.04,Chinese,,0,0,0,,所以，让我向你展示一个多核硬件的场景
+Dialogue: 0,0:56:30.04,0:56:36.04,Chinese,,0,0,0,,接下来我会展示一个多核的场景
 Dialogue: 0,0:56:36.58,0:56:38.70,English,,0,0,0,,That would violate sequential consistency
 Dialogue: 0,0:56:36.58,0:56:38.70,Chinese,,0,0,0,,这会违反顺序一致性
 Dialogue: 0,0:56:39.72,0:56:42.98,English,,0,0,0,,Assume that each of our threads has its own private cache
 Dialogue: 0,0:56:39.72,0:56:42.98,Chinese,,0,0,0,,假设我们的每个线程都有自己的私有缓存
 Dialogue: 0,0:56:44.68,0:56:49.74,English,,0,0,0,,And so if I execute this statement
-Dialogue: 0,0:56:44.68,0:56:49.74,Chinese,,0,0,0,,所以如果我执行这个声明
+Dialogue: 0,0:56:44.68,0:56:49.74,Chinese,,0,0,0,,所以如果我执行这条语句
 Dialogue: 0,0:56:50.14,0:56:57.26,English,,0,0,0,,What I'll do is I will grab a copy of a from the main memory and bring it into my cache
-Dialogue: 0,0:56:50.14,0:56:57.26,Chinese,,0,0,0,,我要做的是我将从主内存中获取一份副本并将其带入我的缓存中
+Dialogue: 0,0:56:50.14,0:56:57.26,Chinese,,0,0,0,,我要做的是从内存中复制 a 到线程的缓存中
 Dialogue: 0,0:56:57.82,0:56:59.92,English,,0,0,0,,And I will assign this new value to it
-Dialogue: 0,0:56:57.82,0:56:59.92,Chinese,,0,0,0,,我会将这个新值分配给它
+Dialogue: 0,0:56:57.82,0:56:59.92,Chinese,,0,0,0,,然后我给 a 赋一个新值
 Dialogue: 0,0:57:00.96,0:57:08.20,English,,0,0,0,,And similarly a thread to will grab a copy of its of b and update that
-Dialogue: 0,0:57:00.96,0:57:08.20,Chinese,,0,0,0,,类似地，一个线程将获取其 b 的副本并更新它
+Dialogue: 0,0:57:00.96,0:57:08.20,Chinese,,0,0,0,,类似地，线程 2 也将获得 b 的副本并更新它
 Dialogue: 0,0:57:09.68,0:57:13.98,English,,0,0,0,,And now if I do my two print statements
-Dialogue: 0,0:57:09.68,0:57:13.98,Chinese,,0,0,0,,现在，如果我做两个打印陈述
+Dialogue: 0,0:57:09.68,0:57:13.98,Chinese,,0,0,0,,如果我限制执行这两条打印语句
 Dialogue: 0,0:57:14.54,0:57:18.02,English,,0,0,0,,If thread two picks up the value from the memory
-Dialogue: 0,0:57:14.54,0:57:18.02,Chinese,,0,0,0,,如果线程 2 从内存中获取值
-Dialogue: 0,0:57:18.54,0:57:24.10,English,,0,0,0,,Not knowing that thread one as a modified copy of that value  then it would naturally print one
-Dialogue: 0,0:57:18.54,0:57:24.10,Chinese,,0,0,0,,不知道线程 1 作为该值的修改副本然后它会自然地打印一个
+Dialogue: 0,0:57:14.54,0:57:18.02,Chinese,,0,0,0,,如果线程 2 从内存中获取 a 的值
+Dialogue: 0,0:57:18.54,0:57:24.10,English,,0,0,0,,Not knowing that thread 1 as a modified copy of that value  then it would naturally print one
+Dialogue: 0,0:57:18.54,0:57:24.10,Chinese,,0,0,0,,但它不知道线程 1 已经修改了 a 的副本的值，所以这里很自然输出 1
 Dialogue: 0,0:57:24.96,0:57:30.44,English,,0,0,0,,And similarly if thread one picked up a copy of b from main memory it would print 100
-Dialogue: 0,0:57:24.96,0:57:30.44,Chinese,,0,0,0,,并且类似地，如果线程 1 从主存储器中拾取了 b 的副本，则它将打印 100
+Dialogue: 0,0:57:24.96,0:57:30.44,Chinese,,0,0,0,,类似地，如果线程 1 从内存中获取 b 的副本，那么这里会输出 100
 Dialogue: 0,0:57:30.54,0:57:36.90,English,,0,0,0,,So we'd see exactly this unallowable execution and the reason is
-Dialogue: 0,0:57:30.54,0:57:36.90,Chinese,,0,0,0,,所以我们确实看到了这种不允许的执行，原因是
+Dialogue: 0,0:57:30.54,0:57:36.90,Chinese,,0,0,0,,所以我们确实看到了出现了不可能的情况，原因是
 Dialogue: 0,0:57:37.48,0:57:42.36,English,,0,0,0,,Because each of these threads have their own private copies of these variables
-Dialogue: 0,0:57:37.48,0:57:42.36,Chinese,,0,0,0,,因为这些线程中的每一个都有自己的这些变量的私有副本
+Dialogue: 0,0:57:37.48,0:57:42.36,Chinese,,0,0,0,,因为这些线程中的每一个都有这些变量的私有副本
 Dialogue: 0,0:57:42.84,0:57:45.40,English,,0,0,0,,And they're not properly synchronized
 Dialogue: 0,0:57:42.84,0:57:45.40,Chinese,,0,0,0,,而且它们没有正确同步
 Dialogue: 0,0:57:46.18,0:57:50.90,English,,0,0,0,,But you could see in a hardware scenario it would be easy to build this hardware and make that mistake
-Dialogue: 0,0:57:46.18,0:57:50.90,Chinese,,0,0,0,,但是你可以在硬件场景中看到构建这个硬件并犯这个错误很容易
+Dialogue: 0,0:57:46.18,0:57:50.90,Chinese,,0,0,0,,但你可以看到，在硬件场景中，你很容易打造这种硬件并犯这样的错误
 Dialogue: 0,0:57:52.30,0:57:55.92,English,,0,0,0,,So how does it work in a multi-core processor well
-Dialogue: 0,0:57:52.30,0:57:55.92,Chinese,,0,0,0,,那么它如何在多核处理器中很好地工作呢
+Dialogue: 0,0:57:52.30,0:57:55.92,Chinese,,0,0,0,,那么如何在多核处理器中处理这种情况呢
 Dialogue: 0,0:57:56.46,0:57:59.26,English,,0,0,0,,They have a trick they call it snoopy caches
-Dialogue: 0,0:57:56.46,0:57:59.26,Chinese,,0,0,0,,他们有一个技巧，他们称之为史努比缓存
+Dialogue: 0,0:57:56.46,0:57:59.26,Chinese,,0,0,0,,这里会运用一个技巧，称之为「snoopy caches」
 Dialogue: 0,0:58:00.34,0:58:05.72,English,,0,0,0,,And it's a little bit like the readers writers of synchronization that
-Dialogue: 0,0:58:00.34,0:58:05.72,Chinese,,0,0,0,,它有点像同步的读者编写者那样
+Dialogue: 0,0:58:00.34,0:58:05.72,Chinese,,0,0,0,,它有点像读操作，写操作同步进行
 Dialogue: 0,0:58:05.72,0:58:07.94,English,,0,0,0,,You're working on for your proxies
-Dialogue: 0,0:58:05.72,0:58:07.94,Chinese,,0,0,0,,你正在为你的代理工作
+Dialogue: 0,0:58:05.72,0:58:07.94,Chinese,,0,0,0,,这些是由代理还完成的
 Dialogue: 0,0:58:08.56,0:58:13.28,English,,0,0,0,,That you want to make it so that if everyone's just reading some shared value
-Dialogue: 0,0:58:08.56,0:58:13.28,Chinese,,0,0,0,,如果每个人都只是阅读一些共享价值，那么你想做到这一点
+Dialogue: 0,0:58:08.56,0:58:13.28,Chinese,,0,0,0,,要想到每个人都会读取一些共享的值
 Dialogue: 0,0:58:13.64,0:58:19.44,English,,0,0,0,,They should be able to get copies into their own caches  to optimize the performance of it
-Dialogue: 0,0:58:13.64,0:58:19.44,Chinese,,0,0,0,,他们应该能够将副本复制到自己的缓存中以优化其性能
+Dialogue: 0,0:58:13.64,0:58:19.44,Chinese,,0,0,0,,并且他们会复制一份副本保存在自己的缓存中来提升性能
 Dialogue: 0,0:58:20.26,0:58:24.96,English,,0,0,0,,But if one of them wants to write to it,it needs to get an exclusive copy of it
-Dialogue: 0,0:58:20.26,0:58:24.96,Chinese,,0,0,0,,但如果其中一个人想要写它，它需要获得它的独家副本
+Dialogue: 0,0:58:20.26,0:58:24.96,Chinese,,0,0,0,,但如果其中一个人想要对它进行写操作，他需要获得一份独有的副本
 Dialogue: 0,0:58:25.62,0:58:27.58,English,,0,0,0,,And lock out any other thread
-Dialogue: 0,0:58:25.62,0:58:27.58,Chinese,,0,0,0,,并锁定任何其他线程
+Dialogue: 0,0:58:25.62,0:58:27.58,Chinese,,0,0,0,,并且要对它进行上锁
 Dialogue: 0,0:58:28.06,0:58:35.46,English,,0,0,0,,From accessing that either to read it or to write it from long enough to make the update
-Dialogue: 0,0:58:28.06,0:58:35.46,Chinese,,0,0,0,,从访问它来读取它或写入足够长的时间来进行更新
+Dialogue: 0,0:58:28.06,0:58:35.46,Chinese,,0,0,0,,阻止其他线程对它进行读操作或者写操作，以便获取足够的时间来对它进行更新
 Dialogue: 0,0:58:36.42,0:58:37.56,English,,0,0,0,,And so
 Dialogue: 0,0:58:36.42,0:58:37.56,Chinese,,0,0,0,,所以
 Dialogue: 0,0:58:40.12,0:58:48.16,English,,0,0,0,,They have a protocol where they tag actually and these tags are at the level of cache lines typically
-Dialogue: 0,0:58:40.12,0:58:48.16,Chinese,,0,0,0,,他们有一个实际标记的协议，这些标记通常位于缓存行的级别
+Dialogue: 0,0:58:40.12,0:58:48.16,Chinese,,0,0,0,,他们遵循一个协议，实际是一种标签，这些标签通常位于缓存行这个级别
 Dialogue: 0,0:58:48.78,0:58:55.28,English,,0,0,0,,So the tagged cache line in main memory with its state and the typical state would be invalid
-Dialogue: 0,0:58:48.78,0:58:55.28,Chinese,,0,0,0,,因此，主存储器中标记的高速缓存行及其状态和典型状态将是无效的
-Dialogue: 0,0:58:56.12,0:58:59.52,English,,0,0,0,,It's shared oryx its exclusive
-Dialogue: 0,0:58:56.12,0:58:59.52,Chinese,,0,0,0,,它是独家的 or yx
+Dialogue: 0,0:58:48.78,0:58:55.28,Chinese,,0,0,0,,因此，如果内存中有缓存行被标记了，就意味着缓存行的状态为「无效」\n（不能被其他线程进行读写）
+Dialogue: 0,0:58:56.12,0:58:59.52,English,,0,0,0,,It's shared or it's exclusive
+Dialogue: 0,0:58:56.12,0:58:59.52,Chinese,,0,0,0,,它要么是共享的，要么是排他的
 Dialogue: 0,0:59:00.14,0:59:06.74,English,,0,0,0,,So shared means that there can be a copies of it but they can only be read-only copies
-Dialogue: 0,0:59:00.14,0:59:06.74,Chinese,,0,0,0,,所以共享意味着可以有它的副本，但它们只能是只读副本
+Dialogue: 0,0:59:00.14,0:59:06.74,Chinese,,0,0,0,,所以「共享」意味着他们可以复制只读副本
 Dialogue: 0,0:59:07.34,0:59:14.08,English,,0,0,0,,And exclusive meaning that it's exclusively available to a single thread
-Dialogue: 0,0:59:07.34,0:59:14.08,Chinese,,0,0,0,,并且排他性意味着它仅供单个线程使用
+Dialogue: 0,0:59:07.34,0:59:14.08,Chinese,,0,0,0,,「排他」意味着它仅供单个线程使用
 Dialogue: 0,0:59:15.84,0:59:19.36,English,,0,0,0,,So this is built into them the hardware of a multi-core processor
-Dialogue: 0,0:59:15.84,0:59:19.36,Chinese,,0,0,0,,因此，它内置于多核处理器的硬件中
-Dialogue: 0,0:59:20.10,0:59:30.18,English,,0,0,0,,So what will happen that is in order to do a write to a thread one will acquire an exclusive copy of this element
-Dialogue: 0,0:59:20.10,0:59:30.18,Chinese,,0,0,0,,那么为了对线程进行写操作会发生什么，将获得该元素的独占副本
+Dialogue: 0,0:59:15.84,0:59:19.36,Chinese,,0,0,0,,它内置于多核处理器的硬件中
+Dialogue: 0,0:59:20.08,0:59:21.44,English,,0,0,0,,So what will happen that is 
+Dialogue: 0,0:59:20.08,0:59:21.44,Chinese,,0,0,0,,那么，会发生什么事呢？
+Dialogue: 0,0:59:22.76,0:59:30.18,English,,0,0,0,,In order to do a write to a thread 1 will acquire an exclusive copy of this element
+Dialogue: 0,0:59:22.76,0:59:30.18,Chinese,,0,0,0,,为了对 a 进行写操作， 线程 1 会获得这个元素独有的拷贝
 Dialogue: 0,0:59:30.18,0:59:34.88,English,,0,0,0,,And that actually tagging happens down here at the main memory and in the cache both
-Dialogue: 0,0:59:30.18,0:59:34.88,Chinese,,0,0,0,,实际上，标记发生在主存储器和缓存中
-Dialogue: 0,0:59:37.86,0:59:44.22,English,,0,0,0,,Oh and similarly if thread two wants a to write to b
-Dialogue: 0,0:59:37.86,0:59:44.22,Chinese,,0,0,0,,哦，类似的，如果线程 2 想要写入 b
+Dialogue: 0,0:59:30.18,0:59:34.88,Chinese,,0,0,0,,实际上，内存和缓存都会被标记
+Dialogue: 0,0:59:37.86,0:59:44.22,English,,0,0,0,,Oh and similarly if thread 2 wants a to write to b
+Dialogue: 0,0:59:37.86,0:59:44.22,Chinese,,0,0,0,,类似的，如果线程 2 想要对 b 进行写操作
 Dialogue: 0,0:59:44.52,0:59:46.72,English,,0,0,0,,It must get an exclusive copy of that
 Dialogue: 0,0:59:44.52,0:59:46.72,Chinese,,0,0,0,,它必须得到它的独家副本
-Dialogue: 0,0:59:48.44,0:59:52.88,English,,0,0,0,,And then when the read occurs what happens is actually this cache
-Dialogue: 0,0:59:48.44,0:59:52.88,Chinese,,0,0,0,,然后当读取发生时，实际发生的是这个缓存
-Dialogue: 0,0:59:53.96,0:59:59.60,English,,0,0,0,,Miss will send out a signal on a bus a shared communication medium saying
-Dialogue: 0,0:59:53.96,0:59:59.60,Chinese,,0,0,0,,小姐将在公共汽车上发出一个共享通信媒体的信号
-Dialogue: 0,1:00:00.10,1:00:01.34,English,,0,0,0,,I want to read a
-Dialogue: 0,1:00:00.10,1:00:01.34,Chinese,,0,0,0,,我想读一个
+Dialogue: 0,0:59:48.44,0:59:54.46,English,,0,0,0,,And then when the read occurs what happens is actually this cache miss
+Dialogue: 0,0:59:48.44,0:59:54.46,Chinese,,0,0,0,,然后进行读操作时，如果缓存没有命中会发生什么
+Dialogue: 0,0:59:54.68,1:00:01.34,English,,0,0,0,,Will send out a signal on a bus a shared communication medium saying I want to read a
+Dialogue: 0,0:59:54.68,1:00:01.34,Chinese,,0,0,0,,将会给共享通信总线发送一个信号，说我想要读取 a
 Dialogue: 0,1:00:02.50,1:00:06.32,English,,0,0,0,,And instead of the main memory responding to it actually it will
-Dialogue: 0,1:00:02.50,1:00:06.32,Chinese,,0,0,0,,而不是主内存响应它实际上它会
+Dialogue: 0,1:00:02.50,1:00:06.32,Chinese,,0,0,0,,但这次不会从内存中直接读取
 Dialogue: 0,1:00:07.84,1:00:11.54,English,,0,0,0,,That result will be supplied by the other cache
-Dialogue: 0,1:00:07.84,1:00:11.54,Chinese,,0,0,0,,该结果将由其他缓存提供
+Dialogue: 0,1:00:07.84,1:00:11.54,Chinese,,0,0,0,,而是由其他的缓存来提供对应的值
 Dialogue: 0,1:00:12.42,1:00:16.54,English,,0,0,0,,And it will convert the state of this element to being a shared element
-Dialogue: 0,1:00:12.42,1:00:16.54,Chinese,,0,0,0,,它会将此元素的状态转换为共享元素
+Dialogue: 0,1:00:12.42,1:00:16.54,Chinese,,0,0,0,,它会将该元素的状态设置为「共享」
 Dialogue: 0,1:00:18.74,1:00:23.20,English,,0,0,0,,Locally but you'll see that the main memory element isn't updated yet it
-Dialogue: 0,1:00:18.74,1:00:23.20,Chinese,,0,0,0,,在本地但你会看到主存储器元素尚未更新
-Dialogue: 0,1:00:23.20,1:00:26.30,English,,0,0,0,,Goes through the whole right-back protocol you've already seen
-Dialogue: 0,1:00:23.20,1:00:26.30,Chinese,,0,0,0,,完成你已经看过的整个右后卫协议
+Dialogue: 0,1:00:18.74,1:00:23.20,Chinese,,0,0,0,,但是你会看到内存中的元素尚未更新
+Dialogue: 0,1:00:23.20,1:00:26.30,English,,0,0,0,,Goes through the whole write back protocol you've already seen
+Dialogue: 0,1:00:23.20,1:00:26.30,Chinese,,0,0,0,,通过这个你已经看到了整个写入过程
 Dialogue: 0,1:00:26.82,1:00:29.50,English,,0,0,0,,And sometimes it will update that there's different implementations
 Dialogue: 0,1:00:26.82,1:00:29.50,Chinese,,0,0,0,,有时它会更新有不同的实现
 Dialogue: 0,1:00:30.16,1:00:31.88,English,,0,0,0,,But this is why it's called a snoopy cache is
-Dialogue: 0,1:00:30.16,1:00:31.88,Chinese,,0,0,0,,但这就是它被称为 snoop y缓存的原因
-Dialogue: 0,1:00:32.04,1:00:38.76,English,,0,0,0,,That it basically thread two is peeking into or getting it access to information
-Dialogue: 0,1:00:32.04,1:00:38.76,Chinese,,0,0,0,,它基本上是线程二是窥视或获取信息
-Dialogue: 0,1:00:38.82,1:00:40.70,English,,0,0,0,,That's available in thread ones cache
-Dialogue: 0,1:00:38.82,1:00:40.70,Chinese,,0,0,0,,这在线程缓存中可用
-Dialogue: 0,1:00:43.10,1:00:48.96,English,,0,0,0,,And so now thread two will correctly get a copy of a
-Dialogue: 0,1:00:43.10,1:00:48.96,Chinese,,0,0,0,,所以现在线程二将正确获得一个副本
+Dialogue: 0,1:00:30.16,1:00:31.88,Chinese,,0,0,0,,但它被称为 snoopy cache 的原因是
+Dialogue: 0,1:00:32.04,1:00:40.70,English,,0,0,0,,That it basically thread 2 is peeking into or getting it access to information That's available in thread 1 cache
+Dialogue: 0,1:00:32.04,1:00:40.70,Chinese,,0,0,0,,基本上是线程 2 想要读取线程 1 中已经缓存的信息
+Dialogue: 0,1:00:43.10,1:00:48.96,English,,0,0,0,,And so now thread 2 will correctly get a copy of a
+Dialogue: 0,1:00:43.10,1:00:48.96,Chinese,,0,0,0,,所以现在线程 2 获得了正确的 a 的拷贝
 Dialogue: 0,1:00:49.46,1:00:50.98,English,,0,0,0,,That's in this shared state
-Dialogue: 0,1:00:49.46,1:00:50.98,Chinese,,0,0,0,,那是在这个共享状态
+Dialogue: 0,1:00:49.46,1:00:50.98,Chinese,,0,0,0,,这个是共享状态
 Dialogue: 0,1:00:51.62,1:00:57.30,English,,0,0,0,,And the same goes would be it will snoop over and thread two will one will get a readable copy
-Dialogue: 0,1:00:51.62,1:00:57.30,Chinese,,0,0,0,,同样的情况是它会窥探而线程二将会得到一个可读的副本
+Dialogue: 0,1:00:51.62,1:00:57.30,Chinese,,0,0,0,,同样，线程 1 也获得了一个可读的副本
 Dialogue: 0,1:00:57.88,1:00:59.92,English,,0,0,0,,These are now all marked as shared state
 Dialogue: 0,1:00:57.88,1:00:59.92,Chinese,,0,0,0,,现在这些都标记为共享状态
 Dialogue: 0,1:01:00.52,1:01:04.68,English,,0,0,0,,And so if either of them want to write
-Dialogue: 0,1:01:00.52,1:01:04.68,Chinese,,0,0,0,,所以如果他们中的任何一个想写
+Dialogue: 0,1:01:00.52,1:01:04.68,Chinese,,0,0,0,,所以如果其中一个想要进行写操作
 Dialogue: 0,1:01:04.68,1:01:08.74,English,,0,0,0,,They'd have to now basically get exclusive access to it
-Dialogue: 0,1:01:04.68,1:01:08.74,Chinese,,0,0,0,,他们现在必须基本上获得独家访问权限
-Dialogue: 0,1:01:09.06,1:01:11.10,English,,0,0,0,,And that would have to then disable
-Dialogue: 0,1:01:09.06,1:01:11.10,Chinese,,0,0,0,,那将不得不禁用
-Dialogue: 0,1:01:11.82,1:01:16.04,English,,0,0,0,,The copy and the other in the other location
-Dialogue: 0,1:01:11.82,1:01:16.04,Chinese,,0,0,0,,副本和另一个位置的副本
+Dialogue: 0,1:01:04.68,1:01:08.74,Chinese,,0,0,0,,现在他们必须获得独占权限
+Dialogue: 0,1:01:09.06,1:01:16.04,English,,0,0,0,,And that would have to then disable the copy in the other location
+Dialogue: 0,1:01:09.06,1:01:16.04,Chinese,,0,0,0,,这样以来就会禁用其它地方的复制操作
 Dialogue: 0,1:01:16.16,1:01:20.48,English,,0,0,0,,So you can imagine this protocol being non-trivial actually to get right and to implement
-Dialogue: 0,1:01:16.16,1:01:20.48,Chinese,,0,0,0,,所以你可以想象这个协议实际上是非常重要的，以实现正确和实现
+Dialogue: 0,1:01:16.16,1:01:20.48,Chinese,,0,0,0,,所以你可以想象，这个协议实现起来有一定的难度
 Dialogue: 0,1:01:20.90,1:01:24.80,English,,0,0,0,,And it gets way more complicated than this with all the variations on it
-Dialogue: 0,1:01:20.90,1:01:24.80,Chinese,,0,0,0,,它的变化比这更复杂，并且有各种变化
+Dialogue: 0,1:01:20.90,1:01:24.80,Chinese,,0,0,0,,因为它比较复杂，而且有很多的变化
 Dialogue: 0,1:01:26.10,1:01:31.10,English,,0,0,0,,So but it's become the norm in multi-core hardware design
-Dialogue: 0,1:01:26.10,1:01:31.10,Chinese,,0,0,0,,因此，它已成为多核硬件设计的常态
+Dialogue: 0,1:01:26.10,1:01:31.10,Chinese,,0,0,0,,但是它已成为多核硬件设计的常态
 Dialogue: 0,1:01:31.86,1:01:36.36,English,,0,0,0,,But it's actually part of the factor that limits the core count on a processor
-Dialogue: 0,1:01:31.86,1:01:36.36,Chinese,,0,0,0,,但它实际上是限制处理器核心数量的因素之一
+Dialogue: 0,1:01:31.86,1:01:36.36,Chinese,,0,0,0,,实际上这也是限制处理器核心数量的因素之一
 Dialogue: 0,1:01:37.08,1:01:43.32,English,,0,0,0,,Because just the hardware involved in keeping the consistency across the caches is non-trivial
-Dialogue: 0,1:01:37.08,1:01:43.32,Chinese,,0,0,0,,因为保持高速缓存之间一致性所涉及的硬件并非易事
-Dialogue: 0,1:01:43.32,1:01:49.12,English,,0,0,0,,It has to work very fast we're talking at the cash rate access speeds
-Dialogue: 0,1:01:43.32,1:01:49.12,Chinese,,0,0,0,,它必须以非常快的速度工作，我们以现金利率访问速度进行讨论
+Dialogue: 0,1:01:37.08,1:01:43.32,Chinese,,0,0,0,,因为从硬件上保持高速缓存之间一致性及并非易事
+Dialogue: 0,1:01:43.32,1:01:49.12,English,,0,0,0,,It has to work very fast we're talking at the cache rate access speeds
+Dialogue: 0,1:01:43.32,1:01:49.12,Chinese,,0,0,0,,它的工作速度必须非常快，这里我们说的是缓存的访问速度
 Dialogue: 0,1:01:49.88,1:01:52.30,English,,0,0,0,,So there's not a lot of time involved in there
-Dialogue: 0,1:01:49.88,1:01:52.30,Chinese,,0,0,0,,所以那里没有太多时间
+Dialogue: 0,1:01:49.88,1:01:52.30,Chinese,,0,0,0,,所以在那里面的时间并不多
 Dialogue: 0,1:01:52.42,1:01:54.96,English,,0,0,0,,So actually implementing this stuff making it run
 Dialogue: 0,1:01:52.42,1:01:54.96,Chinese,,0,0,0,,所以实际上实现这个东西让它运行
 Dialogue: 0,1:01:55.42,1:02:01.70,English,,0,0,0,,Making it scale across say 8 cores,10 cores,16 cores is not a not a trivial thing
-Dialogue: 0,1:01:55.42,1:02:01.70,Chinese,,0,0,0,,将其扩展为 8 核， 10 核， 16 核并不是一件轻而易举的事
+Dialogue: 0,1:01:55.42,1:02:01.70,Chinese,,0,0,0,,将其扩展为 8 核， 10 核， 16 核并不是一件容易的事
 Dialogue: 0,1:02:02.20,1:02:07.72,English,,0,0,0,,But that that goes on in the background and so you can for most systems nowadays you can assume that
-Dialogue: 0,1:02:02.20,1:02:07.72,Chinese,,0,0,0,,但是这种情况在后台发生，所以你现在可以为大多数系统假设
+Dialogue: 0,1:02:02.20,1:02:07.72,Chinese,,0,0,0,,但是这种情况在后台发生，所以你假设现代大多数系统
 Dialogue: 0,1:02:09.88,1:02:15.84,English,,0,0,0,,There's some memory consistency model that you can program to that's supported by the hardware of the system
-Dialogue: 0,1:02:09.88,1:02:15.84,Chinese,,0,0,0,,有一些内存一致性模型，你可以编程到系统硬件支持的模型
+Dialogue: 0,1:02:09.88,1:02:15.84,Chinese,,0,0,0,,是内存一致性模型，你可以根据系统的硬件支持的内存一致性模型来编程
 Dialogue: 0,1:02:17.30,1:02:24.22,English,,0,0,0,,And that this serial serializability that's referred to as sort of the easiest to understand
-Dialogue: 0,1:02:17.30,1:02:24.22,Chinese,,0,0,0,,并且这种串行可串行性被称为最容易理解的类型
+Dialogue: 0,1:02:17.30,1:02:24.22,Chinese,,0,0,0,,而这种被称为最容易理解的序列化的序列化能力
 Dialogue: 0,1:02:24.34,1:02:26.28,English,,0,0,0,,There's others at a little bit more nuanced
 Dialogue: 0,1:02:24.34,1:02:26.28,Chinese,,0,0,0,,还有其他一些细微差别
 Dialogue: 0,1:02:29.04,1:02:33.40,English,,0,0,0,,Well guess that fell off the bottom here and doesn't seem right
-Dialogue: 0,1:02:29.04,1:02:33.40,Chinese,,0,0,0,,好吧，猜测从这里跌落到底部并且似乎不对
+Dialogue: 0,1:02:29.04,1:02:33.40,Chinese,,0,0,0,,好吧，落到底部，好像不对
 Dialogue: 0,1:02:42.30,1:02:42.98,English,,0,0,0,,That's it
 Dialogue: 0,1:02:42.30,1:02:42.98,Chinese,,0,0,0,,而已
 Dialogue: 0,1:02:43.88,1:02:46.80,English,,0,0,0,,Okay so just to wrap that up then
 Dialogue: 0,1:02:43.88,1:02:46.80,Chinese,,0,0,0,,好的，那就是把它包起来
 Dialogue: 0,1:02:48.56,1:02:50.82,English,,0,0,0,,It gives you a flavor of and
-Dialogue: 0,1:02:48.56,1:02:50.82,Chinese,,0,0,0,,它给你一种风味和
+Dialogue: 0,1:02:48.56,1:02:50.82,Chinese,,0,0,0,,它给你一种体会
 Dialogue: 0,1:02:52.10,1:02:57.62,English,,0,0,0,,You can see that getting programs to run fast through multi-threading is not easy
-Dialogue: 0,1:02:52.10,1:02:57.62,Chinese,,0,0,0,,你可以看到让程序快速通过多线程运行并不容易
-Dialogue: 0,1:02:58.16,1:03:02.98,English,,0,0,0,,You often have to rewrite your application you have to think about the algorithm you have to worry about debugging
-Dialogue: 0,1:02:58.16,1:03:02.98,Chinese,,0,0,0,,你经常需要重写你的应用程序，你必须考虑你必须担心调试的算法
+Dialogue: 0,1:02:52.10,1:02:57.62,Chinese,,0,0,0,,你可以看到想要通过多线程让加速程序的运行并不容易
+Dialogue: 0,1:02:58.16,1:03:02.98,English,,0,0,0,,You often have to rewrite your application,you have to think about the algorithm,you have to worry about debugging
+Dialogue: 0,1:02:58.16,1:03:02.98,Chinese,,0,0,0,,你经常需要重写你的应用程序，设计算法，调试代码
 Dialogue: 0,1:03:03.52,1:03:06.52,English,,0,0,0,,It as you've already discovered at both the
-Dialogue: 0,1:03:03.52,1:03:06.52,Chinese,,0,0,0,,就像你已经在这两个地方发现的一样
-Dialogue: 0,1:03:07.28,1:03:12.28,English,,0,0,0,,The shell web and the proxy lab that concurrency where you can't predict the order of events
-Dialogue: 0,1:03:07.28,1:03:12.28,Chinese,,0,0,0,, shell  w eb 和代理实验室，即并发性，你无法预测事件的顺序
+Dialogue: 0,1:03:03.52,1:03:06.52,Chinese,,0,0,0,,或许你已经发现
+Dialogue: 0,1:03:07.28,1:03:12.28,English,,0,0,0,,The shell lab and the proxy lab that concurrency where you can't predict the order of events
+Dialogue: 0,1:03:07.28,1:03:12.28,Chinese,,0,0,0,,「shell lab」 和「proxy lab」并发时你无法预测事件的顺序
 Dialogue: 0,1:03:12.88,1:03:16.30,English,,0,0,0,,Makes it much more difficult to debug code
-Dialogue: 0,1:03:12.88,1:03:16.30,Chinese,,0,0,0,,调试代码变得更加困难
+Dialogue: 0,1:03:12.88,1:03:16.30,Chinese,,0,0,0,,而且让调试代码变得更加困难
 Dialogue: 0,1:03:16.80,1:03:18.62,English,,0,0,0,,So all these factors come in
-Dialogue: 0,1:03:16.80,1:03:18.62,Chinese,,0,0,0,,因此所有这些因素都会出现
+Dialogue: 0,1:03:16.80,1:03:18.62,Chinese,,0,0,0,,当这些出现时
 Dialogue: 0,1:03:20.18,1:03:24.30,English,,0,0,0,,And you have to have some understanding of the underlying mechanisms that are used
-Dialogue: 0,1:03:20.18,1:03:24.30,Chinese,,0,0,0,,你必须对所使用的基础机制有所了解
+Dialogue: 0,1:03:20.18,1:03:24.30,Chinese,,0,0,0,,你必须对所使用的基本机制有一定的了解
 Dialogue: 0,1:03:24.98,1:03:27.02,English,,0,0,0,,And what their performance implications are
-Dialogue: 0,1:03:24.98,1:03:27.02,Chinese,,0,0,0,,它们的性能影响是什么
+Dialogue: 0,1:03:24.98,1:03:27.02,Chinese,,0,0,0,,以及它们的性能影响是什么
 Dialogue: 0,1:03:27.66,1:03:30.12,English,,0,0,0,,So in particular let me just observe here that
-Dialogue: 0,1:03:27.66,1:03:30.12,Chinese,,0,0,0,,所以特别让我在这里观察一下
+Dialogue: 0,1:03:27.66,1:03:30.12,Chinese,,0,0,0,,因此，我要在此特别指出
 Dialogue: 0,1:03:32.58,1:03:34.98,English,,0,0,0,,If I'm like doing synchronization
 Dialogue: 0,1:03:32.58,1:03:34.98,Chinese,,0,0,0,,如果我喜欢做同步
 Dialogue: 0,1:03:37.36,1:03:43.06,English,,0,0,0,,Across threads like you saw that original one where they are fighting over this global variable
-Dialogue: 0,1:03:37.36,1:03:43.06,Chinese,,0,0,0,,像你看过原始的那个线程，他们正在争夺这个全局变量
+Dialogue: 0,1:03:37.36,1:03:43.06,Chinese,,0,0,0,,像之前的那个版本，他们正在争夺这个全局变量
 Dialogue: 0,1:03:43.58,1:03:44.98,English,,0,0,0,, psum whatever it was called
 Dialogue: 0,1:03:43.58,1:03:44.98,Chinese,,0,0,0,, psum 无论它叫什么
 Dialogue: 0,1:03:46.12,1:03:48.24,English,,0,0,0,,You can imagine these the caches
-Dialogue: 0,1:03:46.12,1:03:48.24,Chinese,,0,0,0,,你可以想象这些缓存
+Dialogue: 0,1:03:46.12,1:03:48.24,Chinese,,0,0,0,,你可以想象这些缓存......
 Dialogue: 0,1:03:48.66,1:03:57.48,English,,0,0,0,,In this battle with each other to try and get exclusive access to this single memory of value
-Dialogue: 0,1:03:48.66,1:03:57.48,Chinese,,0,0,0,,在这场与对方的战斗中，尝试并获得对这一单一记忆价值的独占访问权
+Dialogue: 0,1:03:48.66,1:03:57.48,Chinese,,0,0,0,,在这场与对方的战斗中，都试图去抢占单个内存值的独占访问权限
 Dialogue: 0,1:03:58.34,1:04:04.04,English,,0,0,0,,And because each one is running as fast as it possibly can
-Dialogue: 0,1:03:58.34,1:04:04.04,Chinese,,0,0,0,,因为每个人都尽可能快地跑
+Dialogue: 0,1:03:58.34,1:04:04.04,Chinese,,0,0,0,,因为越快越有机会
 Dialogue: 0,1:04:04.20,1:04:11.20,English,,0,0,0,,But each one requires getting exclusive copy writing to it and releasing it
-Dialogue: 0,1:04:04.20,1:04:11.20,Chinese,,0,0,0,,但是每个人都需要获得独家的复制写作并发布它
+Dialogue: 0,1:04:04.20,1:04:11.20,Chinese,,0,0,0,,但是每个线程必须获得独占权限之后才能进行复制，写入，释放
 Dialogue: 0,1:04:11.32,1:04:15.98,English,,0,0,0,,So that locking mechanism is flying back and forth between these caches
-Dialogue: 0,1:04:11.32,1:04:15.98,Chinese,,0,0,0,,因此锁定机制在这些缓存之间来回飞行
+Dialogue: 0,1:04:11.32,1:04:15.98,Chinese,,0,0,0,,所以锁定机制在这些缓存之间来回飞舞着
 Dialogue: 0,1:04:16.68,1:04:18.72,English,,0,0,0,,And it's really not very fast so
 Dialogue: 0,1:04:16.68,1:04:18.72,Chinese,,0,0,0,,它真的不是很快
 Dialogue: 0,1:04:19.16,1:04:22.52,English,,0,0,0,,That's the kind of thing is why
-Dialogue: 0,1:04:19.16,1:04:22.52,Chinese,,0,0,0,,这就是为什么
+Dialogue: 0,1:04:19.16,1:04:22.52,Chinese,,0,0,0,,这就是为什么......
 Dialogue: 0,1:04:24.02,1:04:29.18,English,,0,0,0,,And also you know as an application programmer you're making calls
-Dialogue: 0,1:04:24.02,1:04:29.18,Chinese,,0,0,0,,而且你知道作为应用程序员你正在打电话
+Dialogue: 0,1:04:24.02,1:04:29.18,Chinese,,0,0,0,,而且你知道作为应用程序
 Dialogue: 0,1:04:30.18,1:04:35.50,English,,0,0,0,,Semaphore call bounces you up into the OS kernel which is a cost involved
-Dialogue: 0,1:04:30.18,1:04:35.50,Chinese,,0,0,0,,信号量调用会将你反弹到操作系统内核中，这是一个成本问题
+Dialogue: 0,1:04:30.18,1:04:35.50,Chinese,,0,0,0,,发送信号让操作系统内核来调用代价很高
 Dialogue: 0,1:04:36.20,1:04:43.04,English,,0,0,0,,So this thing has all the bad all the things that make programs not run the way you really like them to
-Dialogue: 0,1:04:36.20,1:04:43.04,Chinese,,0,0,0,,因此，所有使程序无法按照你真正喜欢的方式运行的事情都会变得非常糟糕
+Dialogue: 0,1:04:36.20,1:04:43.04,Chinese,,0,0,0,,所以这东西各有优缺点，所有的东西都会让程序不能按照你喜欢的方式运行
 Dialogue: 0,1:04:43.52,1:04:48.48,English,,0,0,0,,So that's one of the challenges in parallel programming is how do you actually
-Dialogue: 0,1:04:43.52,1:04:48.48,Chinese,,0,0,0,,因此，并行编程的挑战之一就是你如何实际
-Dialogue: 0,1:04:49.16,1:04:51.52,English,,0,0,0,,Make use of the parallelism that's there
-Dialogue: 0,1:04:49.16,1:04:51.52,Chinese,,0,0,0,,利用那里的并行性
-Dialogue: 0,1:04:51.78,1:04:57.24,English,,0,0,0,,Without getting bogged down by the cost of the various mechanisms of control
-Dialogue: 0,1:04:51.78,1:04:57.24,Chinese,,0,0,0,,不会因各种控制机制的成本而陷入困境
+Dialogue: 0,1:04:43.52,1:04:48.48,Chinese,,0,0,0,,因此，并行编程的挑战之一就是
+Dialogue: 0,1:04:49.16,1:04:57.24,English,,0,0,0,,Make use of the parallelism that's there Without getting bogged down by the cost of the various mechanisms of control
+Dialogue: 0,1:04:49.16,1:04:57.24,Chinese,,0,0,0,,你如何实际利用存在的并行性，而不被各种控制机制的成本所困住 
 Dialogue: 0,1:04:58.86,1:05:03.54,English,,0,0,0,,Oh so anyways this is part of what you have to appreciate and understand as a programmer
-Dialogue: 0,1:04:58.86,1:05:03.54,Chinese,,0,0,0,,哦，不管怎样，这是你作为程序员必须欣赏和理解的一部分
+Dialogue: 0,1:04:58.86,1:05:03.54,Chinese,,0,0,0,,所以无论如何，这是作为一个程序员，你必须接受和理解的这部分
 Dialogue: 0,1:05:04.00,1:05:08.56,English,,0,0,0,,Is how these things work at a level deep enough that you'll have some sense of
-Dialogue: 0,1:05:04.00,1:05:08.56,Chinese,,0,0,0,,这些东西是如何工作在足够深的水平，你会有一些感觉
+Dialogue: 0,1:05:04.00,1:05:08.56,Chinese,,0,0,0,,这些东西是如何运作的，是否有足够深的层次，让你有了一定的感悟
 Dialogue: 0,1:05:08.56,1:05:13.28,English,,0,0,0,,What makes programs run faster or slower where the mistakes could want
-Dialogue: 0,1:05:08.56,1:05:13.28,Chinese,,0,0,0,,是什么让程序在错误可能需要的地方运行得更快或更慢
+Dialogue: 0,1:05:08.56,1:05:13.28,Chinese,,0,0,0,,什么情况会让程序运行的更快或者更慢，什么情况会出错
 Dialogue: 0,1:05:14.98,1:05:18.62,English,,0,0,0,,So that's just a little flavor of a much bigger topic
-Dialogue: 0,1:05:14.98,1:05:18.62,Chinese,,0,0,0,,所以这只是一个更大的话题的一点点味道
+Dialogue: 0,1:05:14.98,1:05:18.62,Chinese,,0,0,0,,所以，这只是一个更大的话题了
 Dialogue: 0,1:05:19.48,1:05:20.48,English,,0,0,0,,So that's it for today
 Dialogue: 0,1:05:19.48,1:05:20.48,Chinese,,0,0,0,,今天的课就到这里
