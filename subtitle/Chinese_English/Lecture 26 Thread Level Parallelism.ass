@@ -15,10 +15,10 @@ Audio File: ../../../../Desktop/csapp/Lecture 26 Thread Level Parallelism.mp4
 Video File: ../../../../Desktop/csapp/Lecture 26 Thread Level Parallelism.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
-Video Zoom Percent: 1.000000
-Scroll Position: 1534
-Active Line: 1541
-Video Position: 117257
+Video Zoom Percent: 1.250000
+Scroll Position: 361
+Active Line: 363
+Video Position: 26972
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -36,11 +36,11 @@ Dialogue: 0,0:00:09.70,0:00:14.56,Chinese,,0,0,0,,显然，我们已经到了课
 Dialogue: 0,0:00:15.14,0:00:16.72,English,,0,0,0,,You're working on the last lab
 Dialogue: 0,0:00:15.14,0:00:16.72,Chinese,,0,0,0,,你正在做最后一个 Lab
 Dialogue: 0,0:00:17.44,0:00:23.58,English,,0,0,0,,And the material that we're covering both this lecture and next lecture are not on the exam
-Dialogue: 0,0:00:17.44,0:00:23.58,Chinese,,0,0,0,,本次讲座和下一次讲座中所涉及的资料都不在考试中
+Dialogue: 0,0:00:17.44,0:00:23.58,Chinese,,0,0,0,,本次课和下一次课中所涉及的内容都不在考试中
 Dialogue: 0,0:00:23.58,0:00:25.02,English,,0,0,0,,And you don't need them for your lab
 Dialogue: 0,0:00:23.58,0:00:25.02,Chinese,,0,0,0,,而且你正在做的 Lab 也不需要这些内容
 Dialogue: 0,0:00:25.02,0:00:28.38,English,,0,0,0,,So at some level you could just to know and skip it all
-Dialogue: 0,0:00:25.02,0:00:28.38,Chinese,,0,0,0,,所以在某种程度上你可以跳过本讲内容
+Dialogue: 0,0:00:25.02,0:00:28.38,Chinese,,0,0,0,,所以在某种程度上你可以跳过这些内容
 Dialogue: 0,0:00:28.38,0:00:31.40,English,,0,0,0,,And if your only purpose in taking this course is to pass it
 Dialogue: 0,0:00:28.38,0:00:31.40,Chinese,,0,0,0,,如果你参加这门课程的目的仅仅是通过考试的话
 Dialogue: 0,0:00:33.14,0:00:37.52,English,,0,0,0,,Or to get some grade in it and that's it well go ahead to now
@@ -58,11 +58,11 @@ Dialogue: 0,0:00:54.54,0:00:56.86,Chinese,,0,0,0,,我认为你会发现这些内
 Dialogue: 0,0:00:57.48,0:01:01.36,English,,0,0,0,,But so think of this more as the icing on the cake
 Dialogue: 0,0:00:57.48,0:01:01.36,Chinese,,0,0,0,,所以可以认为这些内容更多是锦上添花
 Dialogue: 0,0:01:01.40,0:01:05.28,English,,0,0,0,,You've learned the hard stuff you've done the grinding part
-Dialogue: 0,0:01:01.40,0:01:05.28,Chinese,,0,0,0,,你已经学习了困难的部分
+Dialogue: 0,0:01:01.40,0:01:05.28,Chinese,,0,0,0,,你已经学会了最难的东西，你已经完成了最艰难的部分
 Dialogue: 0,0:01:05.70,0:01:12.44,English,,0,0,0,,And now you get to think beyond the sort of narrow confines of the course material and think bigger
 Dialogue: 0,0:01:05.70,0:01:12.44,Chinese,,0,0,0,,现在，你可以不局限于课本的内容，进行更广阔的思考
 Dialogue: 0,0:01:12.50,0:01:18.00,English,,0,0,0,,But that's really the way you should be viewing this lecture and the last lecture which will be on Thursday
-Dialogue: 0,0:01:12.50,0:01:18.00,Chinese,,0,0,0,,这是你学习本次课和下周最后一次课的视角。
+Dialogue: 0,0:01:12.50,0:01:18.00,Chinese,,0,0,0,,这是应该是你学习本次课和下周最后一次课的视角
 Dialogue: 0,0:01:18.68,0:01:21.30,English,,0,0,0,,So today what we're going to talk about is parallelism
 Dialogue: 0,0:01:18.68,0:01:21.30,Chinese,,0,0,0,,所以今天我们要讨论的是并行性
 Dialogue: 0,0:01:22.98,0:01:24.20,English,,0,0,0,,And the issue is that...
@@ -120,7 +120,7 @@ Dialogue: 0,0:03:26.60,0:03:29.56,Chinese,,0,0,0,,但我们今天要讨论的更
 Dialogue: 0,0:03:29.82,0:03:37.40,English,,0,0,0,,Can  make use of multiple threads running on multiple cores to make a program run a single program run faster
 Dialogue: 0,0:03:29.82,0:03:37.40,Chinese,,0,0,0,,可以利用在多个内核上运行的多个线程，使运行单个程序更快
 Dialogue: 0,0:03:38.16,0:03:41.14,English,,0,0,0,,And the message behind that is yes but
-Dialogue: 0,0:03:38.16,0:03:41.14,Chinese,,0,0,0,,其背后的含义是肯定但有条件的。
+Dialogue: 0,0:03:38.16,0:03:41.14,Chinese,,0,0,0,,其背后的含义是肯定但有条件的
 Dialogue: 0,0:03:41.86,0:03:50.02,English,,0,0,0,,And what mean is it is truly possible and people spend a lot of time making programs run faster by using multiple threads
 Dialogue: 0,0:03:41.86,0:03:50.02,Chinese,,0,0,0,,人们确实可以通过花大量时间使程序多线程运行，从而变快
 Dialogue: 0,0:03:50.50,0:03:53.76,English,,0,0,0,,But it's harder than you'd think it should be and
@@ -138,9 +138,9 @@ Dialogue: 0,0:04:09.48,0:04:12.72,Chinese,,0,0,0,,然后我们将对它进行一
 Dialogue: 0,0:04:13.28,0:04:20.46,English,,0,0,0,,How when you writing concurrent programs you want to think about the state of memory
 Dialogue: 0,0:04:13.28,0:04:20.46,Chinese,,0,0,0,,如何在编写并发程序时考虑内存状态
 Dialogue: 0,0:04:20.92,0:04:27.78,English,,0,0,0,,And how that's a challenge for multi-core processors or in fact any concurrent system
-Dialogue: 0,0:04:20.92,0:04:27.78,Chinese,,0,0,0,,这对于多核处理器或实际上任何并发系统来说都是一个挑战
+Dialogue: 0,0:04:20.92,0:04:27.78,Chinese,,0,0,0,,这对于多核处理器或任何并发系统来说都是一个挑战
 Dialogue: 0,0:04:30.58,0:04:37.90,English,,0,0,0,,So there's actually two sources of concurrency on a modern processor multiple cores
-Dialogue: 0,0:04:30.58,0:04:37.90,Chinese,,0,0,0,,因此，在现代多核处理器上实际上有两个并发源
+Dialogue: 0,0:04:30.58,0:04:37.90,Chinese,,0,0,0,,所以在现代多核处理器上，其实有两个并发的来源
 Dialogue: 0,0:04:37.96,0:04:43.08,English,,0,0,0,,Which is you have actually a multiple cpus on a single chip
 Dialogue: 0,0:04:37.96,0:04:43.08,Chinese,,0,0,0,,你在一块芯片上实际上有多个 cpus
 Dialogue: 0,0:04:43.54,0:04:45.48,English,,0,0,0,,But there's also something called hyper-threading
@@ -150,7 +150,7 @@ Dialogue: 0,0:04:46.18,0:04:48.54,Chinese,,0,0,0,,根据我的经验，这不太
 Dialogue: 0,0:04:48.98,0:04:50.02,English,,0,0,0,,But let me go through this
 Dialogue: 0,0:04:48.98,0:04:50.02,Chinese,,0,0,0,,但让我来看看
 Dialogue: 0,0:04:50.50,0:04:56.36,English,,0,0,0,,So this is what a typical modern processor looks like processor chip
-Dialogue: 0,0:04:50.50,0:04:56.36,Chinese,,0,0,0,,所以这就是典型的现代处理器芯片看起来的样子
+Dialogue: 0,0:04:50.50,0:04:56.36,Chinese,,0,0,0,,这就是典型的现代处理器芯片看起来的样子
 Dialogue: 0,0:04:57.04,0:04:58.96,English,,0,0,0,,Is that there's actually on a single chip
 Dialogue: 0,0:04:57.04,0:04:58.96,Chinese,,0,0,0,,那是真的在一块芯片上吗？
 Dialogue: 0,0:04:59.66,0:05:03.28,English,,0,0,0,,There's multiple independent CPUs
@@ -162,23 +162,23 @@ Dialogue: 0,0:05:10.44,0:05:15.28,Chinese,,0,0,0,,这部分缓存是对每个 CP
 Dialogue: 0,0:05:15.94,0:05:20.04,English,,0,0,0,,And then there is another part of the cache hierarchy that's shared across cores
 Dialogue: 0,0:05:15.94,0:05:20.04,Chinese,,0,0,0,,然后这部分是共享的缓存结构
 Dialogue: 0,0:05:20.60,0:05:23.66,English,,0,0,0,,And then they all have a common interface to main memory
-Dialogue: 0,0:05:20.60,0:05:23.66,Chinese,,0,0,0,,然后他们都有一个与主内存的通用接口
+Dialogue: 0,0:05:20.60,0:05:23.66,Chinese,,0,0,0,,然后他们通过一个通用接口与内存连接
 Dialogue: 0,0:05:25.28,0:05:28.34,English,,0,0,0,,So if these cores are running and this is what happens a lot is
-Dialogue: 0,0:05:25.28,0:05:28.34,Chinese,,0,0,0,,因此，如果这些核心正在运行，那么就会发生很多事情
+Dialogue: 0,0:05:25.28,0:05:28.34,Chinese,,0,0,0,,因此，如果这些核心运行起来，那么就会发生很多事情
 Dialogue: 0,0:05:28.42,0:05:32.28,English,,0,0,0,,They're running programs that are completely independent have nothing to do with each
-Dialogue: 0,0:05:28.42,0:05:32.28,Chinese,,0,0,0,,他们运行各自完全独立，互不相关的程序
+Dialogue: 0,0:05:28.42,0:05:32.28,Chinese,,0,0,0,,他们各自完全独立运行自己的程序，不用相互关照
 Dialogue: 0,0:05:32.78,0:05:36.90,English,,0,0,0,,Other then they more or less just exist and run and they're happy as can be
 Dialogue: 0,0:05:32.78,0:05:36.90,Chinese,,0,0,0,,除此之外，他们各自存在和运行着
 Dialogue: 0,0:05:36.90,0:05:40.06,English,,0,0,0,,They are caching parts of their own state
 Dialogue: 0,0:05:36.90,0:05:40.06,Chinese,,0,0,0,,他们缓存着各自的状态
 Dialogue: 0,0:05:40.70,0:05:49.42,English,,0,0,0,,And you know sometimes this cache will get polluted by the junk from other programs in terms of performance
-Dialogue: 0,0:05:40.70,0:05:49.42,Chinese,,0,0,0,,而且在性能方面，有时这个缓存会其他程序的垃圾污染
+Dialogue: 0,0:05:40.70,0:05:49.42,Chinese,,0,0,0,,而且，有时候缓存会被其他程序污染，影响性能
 Dialogue: 0,0:05:49.66,0:05:51.74,English,,0,0,0,,But it will matter with functionality
-Dialogue: 0,0:05:49.66,0:05:51.74,Chinese,,0,0,0,,但这对功能性也有影响
+Dialogue: 0,0:05:49.66,0:05:51.74,Chinese,,0,0,0,,也对功能性也有影响
 Dialogue: 0,0:05:52.46,0:05:56.52,English,,0,0,0,,The trick when you're trying to do multi-core programming as a parallel computing thing
 Dialogue: 0,0:05:52.46,0:05:56.52,Chinese,,0,0,0,,当你使用多核程序来进行并行计算时，诀窍是
 Dialogue: 0,0:05:56.62,0:06:05.30,English,,0,0,0,,Somehow getting all these cores working on parts of different parts of a single problem in a way that
-Dialogue: 0,0:05:56.62,0:06:05.30,Chinese,,0,0,0,,通过某种方式，让这些核心处理单个问题的不同部分
+Dialogue: 0,0:05:56.62,0:06:05.30,Chinese,,0,0,0,,通过某种方式，让每个核处理单个问题的不同部分
 Dialogue: 0,0:06:06.52,0:06:09.12,English,,0,0,0,,Makes it so that you get the performance out of it
 Dialogue: 0,0:06:06.52,0:06:09.12,Chinese,,0,0,0,,从而获得所需性能
 Dialogue: 0,0:06:09.16,0:06:13.72,English,,0,0,0,,They don't spend all their time basically arguing with each other about who has access to what
@@ -204,7 +204,7 @@ Dialogue: 0,0:06:59.60,0:07:04.06,Chinese,,0,0,0,,自 1995 年以来，自 20 �
 Dialogue: 0,0:07:04.60,0:07:06.60,English,,0,0,0,,They do it in this totally different way
 Dialogue: 0,0:07:04.60,0:07:06.60,Chinese,,0,0,0,,他们以完全不同的方式来设计处理器结构
 Dialogue: 0,0:07:07.04,0:07:12.28,English,,0,0,0,,Which is sometimes referred to as out of order processing and so just real quickly
-Dialogue: 0,0:07:07.04,0:07:12.28,Chinese,,0,0,0,,这有时被称为无序处理
+Dialogue: 0,0:07:07.04,0:07:12.28,Chinese,,0,0,0,,这有时被称为无序处理，但是这样真的很快
 Dialogue: 0,0:07:13.14,0:07:16.36,English,,0,0,0,,The the basic idea is on the processor chip
 Dialogue: 0,0:07:13.14,0:07:16.36,Chinese,,0,0,0,,基本思路是在处理器芯片上
 Dialogue: 0,0:07:16.36,0:07:20.78,English,,0,0,0,,There's multiple functional units that are capable of doing different types of operation
@@ -218,17 +218,17 @@ Dialogue: 0,0:07:33.38,0:07:38.96,Chinese,,0,0,0,,而且它们都是从内存中
 Dialogue: 0,0:07:39.76,0:07:43.14,English,,0,0,0,,But these units are sort of operate independently
 Dialogue: 0,0:07:39.76,0:07:43.14,Chinese,,0,0,0,,但这些单位块有点像独立运作
 Dialogue: 0,0:07:43.60,0:07:50.88,English,,0,0,0,,And what happens is there's a block of logic which is actually enormous with huge block of logic in an x86 processor
-Dialogue: 0,0:07:43.60,0:07:50.88,Chinese,,0,0,0,,接下来会发生的是，在x 86 处理器中存在大量逻辑块，其中存在巨大的逻辑块
+Dialogue: 0,0:07:43.60,0:07:50.88,Chinese,,0,0,0,,接下来会发生的是，在 x86 处理器中存在大量逻辑块，其中存在巨大的逻辑块
 Dialogue: 0,0:07:51.44,0:07:54.40,English,,0,0,0,,That reads the instructions out of the instruction stream
 Dialogue: 0,0:07:51.44,0:07:54.40,Chinese,,0,0,0,,它从指令流中读取指令
 Dialogue: 0,0:07:54.86,0:08:01.16,English,,0,0,0,,Rips them apart into little pieces， keeps track of data dependencies and control dependencies
 Dialogue: 0,0:07:54.86,0:08:01.16,Chinese,,0,0,0,,将它们分成小，并可以跟踪数据依赖性和控制依赖性
 Dialogue: 0,0:08:01.66,0:08:07.92,English,,0,0,0,,And then schedules all the various operations in your program on these different functional units
 Dialogue: 0,0:08:01.66,0:08:07.92,Chinese,,0,0,0,,然后在这些不同的功能单元上，分配程序的各自操作指令
-Dialogue: 0,0:08:08.02,0:08:14.70,English,,0,0,0,,So we talked some about that of in the context of how can you write up program that chenguwill sort of maximize
-Dialogue: 0,0:08:08.02,0:08:14.70,Chinese,,0,0,0,,所以我们之前就如何编写程序来最大化处理器
+Dialogue: 0,0:08:08.02,0:08:14.70,English,,0,0,0,,So we talked some about that of in the context of how can you write up program that sort of maximize
+Dialogue: 0,0:08:08.02,0:08:14.70,Chinese,,0,0,0,,所以，我们之前谈了一些关于如何写出最大限度的程序的问题
 Dialogue: 0,0:08:15.78,0:08:21.64,English,,0,0,0,,How much is going on down here by writing your code in a particular ways
-Dialogue: 0,0:08:15.78,0:08:21.64,Chinese,,0,0,0,,这一内容讨论过
+Dialogue: 0,0:08:15.78,0:08:21.64,Chinese,,0,0,0,,以特定的方式写出你的代码，下面的情况到底有多严重
 Dialogue: 0,0:08:22.62,0:08:26.22,English,,0,0,0,,So all this is an introduction to say
 Dialogue: 0,0:08:22.62,0:08:26.22,Chinese,,0,0,0,,所以这一切都是介绍说
 Dialogue: 0,0:08:26.60,0:08:29.26,English,,0,0,0,,This is how you have to understand what hyper threading is
@@ -246,11 +246,9 @@ Dialogue: 0,0:08:54.52,0:09:01.84,Chinese,,0,0,0,,但是所有这些状态都是
 Dialogue: 0,0:09:02.82,0:09:05.26,English,,0,0,0,,With hyper threading basically what you do is
 Dialogue: 0,0:09:02.82,0:09:05.26,Chinese,,0,0,0,,超线程的基本思想是
 Dialogue: 0,0:09:05.82,0:09:12.78,English,,0,0,0,,The idea that is to say 90% of all programs don't really make use of all these functional units
-Dialogue: 0,0:09:05.82,0:09:12.78,Chinese,,0,0,0,, 90 ％的程序都没有完全利用所有这些功能单元
-Dialogue: 0,0:09:12.94,0:09:16.86,English,,0,0,0,,Especially if you're blocking on a load
-Dialogue: 0,0:09:12.94,0:09:16.86,Chinese,,0,0,0,,特别是因为缓存缺失
-Dialogue: 0,0:09:16.86,0:09:19.16,English,,0,0,0,,Because there's a miss in a cache
-Dialogue: 0,0:09:16.86,0:09:19.16,Chinese,,0,0,0,,而导致负载阻塞时
+Dialogue: 0,0:09:05.82,0:09:12.78,Chinese,,0,0,0,, 90% 的程序都没有完全利用所有这些功能单元
+Dialogue: 0,0:09:12.94,0:09:19.16,English,,0,0,0,,Especially if you're blocking on a load because there's a miss in a cache
+Dialogue: 0,0:09:12.94,0:09:19.16,Chinese,,0,0,0,,特别是因为缓存缺失而导致负载阻塞时
 Dialogue: 0,0:09:19.86,0:09:24.00,English,,0,0,0,,Then all these arithmetic units are sitting there without anything useful work to do
 Dialogue: 0,0:09:19.86,0:09:24.00,Chinese,,0,0,0,,所有这些算术单元都处于空闲状态
 Dialogue: 0,0:09:25.52,0:09:28.20,English,,0,0,0,,Oh and so why don't we just double up
@@ -268,13 +266,13 @@ Dialogue: 0,0:09:46.64,0:09:52.32,Chinese,,0,0,0,,因此，他们真正地独立
 Dialogue: 0,0:09:52.90,0:09:59.24,English,,0,0,0,,But they're sort of making more use of the available hardware for performing functions
 Dialogue: 0,0:09:52.90,0:09:59.24,Chinese,,0,0,0,,但他们某种程度上能更多的使用可用硬件来执行函数
 Dialogue: 0,0:09:59.56,0:10:02.32,English,,0,0,0,,And so that's called hyper threading that's an Intel term
-Dialogue: 0,0:09:59.56,0:10:02.32,Chinese,,0,0,0,,因此，这称为超线程，是英特尔术语
+Dialogue: 0,0:09:59.56,0:10:02.32,Chinese,,0,0,0,,因此，这称为「超线程」，是英特尔术语
 Dialogue: 0,0:10:02.90,0:10:06.78,English,,0,0,0,,You also sometimes hear call SMT simultaneous multi-threading
 Dialogue: 0,0:10:02.90,0:10:06.78,Chinese,,0,0,0,,有时也被称为 SMT 同步多线程
-Dialogue: 0,0:10:07.58,0:10:11.46,English,,0,0,0,,And in my experience and we'll see here the numbers
-Dialogue: 0,0:10:07.58,0:10:11.46,Chinese,,0,0,0,,根据我的经验，接下来我们将看到数据
-Dialogue: 0,0:10:11.98,0:10:13.72,English,,0,0,0,,It doesn't really make that big a difference
-Dialogue: 0,0:10:11.98,0:10:13.72,Chinese,,0,0,0,,它并没有发挥很大的作用
+Dialogue: 0,0:10:07.58,0:10:09.10,English,,0,0,0,,And in my experience...
+Dialogue: 0,0:10:07.58,0:10:09.10,Chinese,,0,0,0,,根据我的经验
+Dialogue: 0,0:10:10.08,0:10:13.72,English,,0,0,0,,And we'll see here the numbers it doesn't really make that big a difference
+Dialogue: 0,0:10:10.08,0:10:13.72,Chinese,,0,0,0,,接下来我们将看到数据它并没有发挥很大的作用
 Dialogue: 0,0:10:14.00,0:10:19.72,English,,0,0,0,,But it turns out to be in the sort of large picture things
 Dialogue: 0,0:10:14.00,0:10:19.72,Chinese,,0,0,0,,但事实证明，这是一种大局观
 Dialogue: 0,0:10:20.16,0:10:24.60,English,,0,0,0,,A relatively inexpensive feature for them to throw on to processors and so they do it
@@ -316,7 +314,7 @@ Dialogue: 0,0:11:44.74,0:11:50.36,Chinese,,0,0,0,,如果你能没有出错的正
 Dialogue: 0,0:11:55.18,0:12:01.94,English,,0,0,0,,So let's give a really trivial application one that should be very simple to make run in parallel
 Dialogue: 0,0:11:55.18,0:12:01.94,Chinese,,0,0,0,,接下来我们来看一个能够并行运行的简单程序
 Dialogue: 0,0:12:02.42,0:12:07.74,English,,0,0,0,,That says imaginary we want to sum up the numbers between 0 and n-1
-Dialogue: 0,0:12:02.42,0:12:07.74,Chinese,,0,0,0,,假设我们要求 0 到 n - 1 的数字和
+Dialogue: 0,0:12:02.42,0:12:07.74,Chinese,,0,0,0,,假设我们要求 0 到 n-1 的数字和
 Dialogue: 0,0:12:07.74,0:12:12.38,English,,0,0,0,,Which is by the way a really stupid thing to do because there's a very simple closed-form formula for it
 Dialogue: 0,0:12:07.74,0:12:12.38,Chinese,,0,0,0,,这是一个非常愚蠢的事情，因为它有一个非常简单的公式可以计算
 Dialogue: 0,0:12:13.28,0:12:15.58,English,,0,0,0,,Which is good in the sense it will let us check our work
@@ -392,21 +390,19 @@ Dialogue: 0,0:14:48.12,0:14:51.32,Chinese,,0,0,0,,你增加了 9 倍的时间
 Dialogue: 0,0:14:52.78,0:14:58.04,English,,0,0,0,,And it always starts to get better as you get up into eight threads and then it gets worse again
 Dialogue: 0,0:14:52.78,0:14:58.04,Chinese,,0,0,0,,当你增加到第八个线程时，耗时会少一点，但继续增加，耗时仍会越来越多
 Dialogue: 0,0:14:59.04,0:15:06.28,English,,0,0,0,,So the reason is that locking unlocking is a very time-consuming task
-Dialogue: 0,0:14:59.04,0:15:06.28,Chinese,,0,0,0,,因为锁定解锁是一项非常耗时的任务
+Dialogue: 0,0:14:59.04,0:15:06.28,Chinese,,0,0,0,,因为加锁、释放锁是一项非常耗时的任务
 Dialogue: 0,0:15:06.30,0:15:07.88,English,,0,0,0,,And basically you can think of...
 Dialogue: 0,0:15:06.30,0:15:07.88,Chinese,,0,0,0,,你可以这样设想 ......
 Dialogue: 0,0:15:09.90,0:15:15.40,English,,0,0,0,,If you have that map of the multi-core processors with all their private caches in one shared cache
 Dialogue: 0,0:15:09.90,0:15:15.40,Chinese,,0,0,0,,如果你有一个多核处理器，所有核地私有缓存都是一块共有的缓存区
-Dialogue: 0,0:15:16.10,0:15:22.30,English,,0,0,0,,These threads are basically fighting with each other for control for that one memory address
-Dialogue: 0,0:15:16.10,0:15:22.30,Chinese,,0,0,0,,这些线程会去互相争夺这块
-Dialogue: 0,0:15:22.48,0:15:25.90,English,,0,0,0,,That they that they're incrementing
-Dialogue: 0,0:15:22.48,0:15:25.90,Chinese,,0,0,0,,他们正在增加地址的内存区域
+Dialogue: 0,0:15:16.10,0:15:25.90,English,,0,0,0,,These threads are basically fighting with each other for control for that one memory address that they're incrementing
+Dialogue: 0,0:15:16.10,0:15:25.90,Chinese,,0,0,0,,这些线程基本上都是为了争夺那个正在递增的内存地址的控制权而互相争夺
 Dialogue: 0,0:15:26.48,0:15:31.14,English,,0,0,0,,And it has to grab the control away from one core to your the core
 Dialogue: 0,0:15:26.48,0:15:31.14,Chinese,,0,0,0,,控制权从一个核心抢到了
 Dialogue: 0,0:15:31.62,0:15:35.44,English,,0,0,0,,That's accessing it do the lock unlock
 Dialogue: 0,0:15:31.62,0:15:35.44,Chinese,,0,0,0,,另一个正在锁定和解锁的核心
 Dialogue: 0,0:15:35.98,0:15:39.60,English,,0,0,0,,And then it gets grabbed back for it so it's a miserable performance for cache
-Dialogue: 0,0:15:35.98,0:15:39.60,Chinese,,0,0,0,,然后它又被被抢回去，这对于缓存来说是很糟糕的
+Dialogue: 0,0:15:35.98,0:15:39.60,Chinese,,0,0,0,,然后它又被抢回去，这对于缓存来说是很糟糕的
 Dialogue: 0,0:15:40.24,0:15:42.80,English,,0,0,0,,Huge overhead for the semaphore activities
 Dialogue: 0,0:15:40.24,0:15:42.80,Chinese,,0,0,0,,信号量活动有巨大的开销
 Dialogue: 0,0:15:43.36,0:15:45.42,English,,0,0,0,,And just really a bad thing all around
@@ -1437,7 +1433,7 @@ Dialogue: 0,0:59:07.34,0:59:14.08,English,,0,0,0,,And exclusive meaning that it'
 Dialogue: 0,0:59:07.34,0:59:14.08,Chinese,,0,0,0,,「排他」意味着它仅供单个线程使用
 Dialogue: 0,0:59:15.84,0:59:19.36,English,,0,0,0,,So this is built into them the hardware of a multi-core processor
 Dialogue: 0,0:59:15.84,0:59:19.36,Chinese,,0,0,0,,它内置于多核处理器的硬件中
-Dialogue: 0,0:59:20.08,0:59:21.44,English,,0,0,0,,So what will happen that is 
+Dialogue: 0,0:59:20.08,0:59:21.44,English,,0,0,0,,So what will happen that is
 Dialogue: 0,0:59:20.08,0:59:21.44,Chinese,,0,0,0,,那么，会发生什么事呢？
 Dialogue: 0,0:59:22.76,0:59:30.18,English,,0,0,0,,In order to do a write to a thread 1 will acquire an exclusive copy of this element
 Dialogue: 0,0:59:22.76,0:59:30.18,Chinese,,0,0,0,,为了对 a 进行写操作， 线程 1 会获得这个元素独有的拷贝
@@ -1562,7 +1558,7 @@ Dialogue: 0,1:04:36.20,1:04:43.04,Chinese,,0,0,0,,所以这东西各有优缺点
 Dialogue: 0,1:04:43.52,1:04:48.48,English,,0,0,0,,So that's one of the challenges in parallel programming is how do you actually
 Dialogue: 0,1:04:43.52,1:04:48.48,Chinese,,0,0,0,,因此，并行编程的挑战之一就是
 Dialogue: 0,1:04:49.16,1:04:57.24,English,,0,0,0,,Make use of the parallelism that's there Without getting bogged down by the cost of the various mechanisms of control
-Dialogue: 0,1:04:49.16,1:04:57.24,Chinese,,0,0,0,,你如何实际利用存在的并行性，而不被各种控制机制的成本所困住 
+Dialogue: 0,1:04:49.16,1:04:57.24,Chinese,,0,0,0,,你如何实际利用存在的并行性，而不被各种控制机制的成本所困住
 Dialogue: 0,1:04:58.86,1:05:03.54,English,,0,0,0,,Oh so anyways this is part of what you have to appreciate and understand as a programmer
 Dialogue: 0,1:04:58.86,1:05:03.54,Chinese,,0,0,0,,所以无论如何，这是作为一个程序员，你必须接受和理解的这部分
 Dialogue: 0,1:05:04.00,1:05:08.56,English,,0,0,0,,Is how these things work at a level deep enough that you'll have some sense of
