@@ -15,10 +15,10 @@ Audio File: ../../../../Desktop/csapp/Lecture 22  Network Programming  Part II.m
 Video File: ../../../../Desktop/csapp/Lecture 22  Network Programming  Part II.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
-Video Zoom Percent: 1.125000
-Scroll Position: 1663
-Active Line: 1667
-Video Position: 138478
+Video Zoom Percent: 1.000000
+Scroll Position: 913
+Active Line: 917
+Video Position: 72636
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -209,186 +209,178 @@ Dialogue: 0,0:07:39.20,0:07:41.70,English,,0,0,0,,So it will let you do all kind
 Dialogue: 0,0:07:39.20,0:07:41.70,Chinese,,0,0,0,,你可以用它来做所有不同的事情
 Dialogue: 0,0:07:43.22,0:07:51.50,English,,0,0,0,,And as a result it's a big and messy api with zillions features and parameters and and so forth
 Dialogue: 0,0:07:43.22,0:07:51.50,Chinese,,0,0,0,,因此，它是一个十分庞杂的 api ，具有很多功能和参数
-Dialogue: 0,0:07:55.26,0:07:57.60,English,,0,0,0,,So you recall from last time that the
-Dialogue: 0,0:07:55.26,0:07:57.60,Chinese,,0,0,0,,回想一下上次课
-Dialogue: 0,0:07:59.12,0:08:05.44,English,,0,0,0,,The data structures we use to refer to a connection
-Dialogue: 0,0:07:59.12,0:08:05.44,Chinese,,0,0,0,,我们用来描述通用套接字地址的数据结构
+Dialogue: 0,0:07:55.26,0:08:05.44,English,,0,0,0,,So you recall from last time that the data structures we use to refer to a connection
+Dialogue: 0,0:07:55.26,0:08:05.44,Chinese,,0,0,0,,回想一下上次课我们使用 sockaddr 这种数据结构来表示网络连接
 Dialogue: 0,0:08:06.40,0:08:11.42,English,,0,0,0,,Whether it's an IPv4 or an IPv6 connection is called a sockaddr
-Dialogue: 0,0:08:06.40,0:08:11.42,Chinese,,0,0,0,,无论是 IPv4 还是 IPv6 连接都称为 sockaddr
+Dialogue: 0,0:08:06.40,0:08:11.42,Chinese,,0,0,0,,无论是 IPv4 还是 IPv6 连接都是使用这种数据结构
 Dialogue: 0,0:08:12.16,0:08:15.90,English,,0,0,0,,And as I mentioned this is sort of the C version of sub typing
-Dialogue: 0,0:08:12.16,0:08:15.90,Chinese,,0,0,0,,正如我所提到的，这是一种 C 语言版本的子类
-Dialogue: 0,0:08:15.96,0:08:18.78,English,,0,0,0,,If you know a language with a type inheritance
-Dialogue: 0,0:08:15.96,0:08:18.78,Chinese,,0,0,0,,如果你知道类继承的语言
-Dialogue: 0,0:08:19.30,0:08:22.20,English,,0,0,0,,This is how it's done in C it's done by casting
-Dialogue: 0,0:08:19.30,0:08:22.20,Chinese,,0,0,0,,那么这就是它在 C 语言中的表现形式
+Dialogue: 0,0:08:12.16,0:08:15.90,Chinese,,0,0,0,,说起来这是一种 C 语言版本的子类
+Dialogue: 0,0:08:15.96,0:08:20.50,English,,0,0,0,,If you know a language with a type inheritance, this is how it's done
+Dialogue: 0,0:08:15.96,0:08:20.50,Chinese,,0,0,0,,如果你了解有继承特性的编程语言，那是怎样处理的
+Dialogue: 0,0:08:20.50,0:08:22.20,English,,0,0,0,,In C it's done by casting
+Dialogue: 0,0:08:20.50,0:08:22.20,Chinese,,0,0,0,,但在 C 语言中就是这样
 Dialogue: 0,0:08:22.88,0:08:26.40,English,,0,0,0,,And so in particular the sort of generic socket address
-Dialogue: 0,0:08:22.88,0:08:26.40,Chinese,,0,0,0,,特别是在通用套接字地址中
+Dialogue: 0,0:08:22.88,0:08:26.40,Chinese,,0,0,0,,特别是在一般的套接字地址中
 Dialogue: 0,0:08:26.44,0:08:32.06,English,,0,0,0,,All it needs to know is a two byte field at the front that specifies what kind of socket is this
-Dialogue: 0,0:08:26.44,0:08:32.06,Chinese,,0,0,0,,要知道，前面的一个双字节字段，它指定了这种套接字的类型
-Dialogue: 0,0:08:33.20,0:08:34.46,English,,0,0,0,,And then in particular
-Dialogue: 0,0:08:33.20,0:08:34.46,Chinese,,0,0,0,,我们要特别关注
-Dialogue: 0,0:08:35.78,0:08:38.46,English,,0,0,0,,We'll be looking at what's called a sockaddr_in
-Dialogue: 0,0:08:35.78,0:08:38.46,Chinese,,0,0,0,,所谓的 sockaddr_in
-Dialogue: 0,0:08:39.02,0:08:43.26,English,,0,0,0,,Which is an IPv4 version of of a socket
-Dialogue: 0,0:08:39.02,0:08:43.26,Chinese,,0,0,0,,它是套接字的 IPv4 版本
-Dialogue: 0,0:08:43.44,0:08:52.02,English,,0,0,0,,And so what it needs to know is a port number which is a two byte integer and a IP address
-Dialogue: 0,0:08:43.44,0:08:52.02,Chinese,,0,0,0,,接下来是端口号（一个双字节无符号整数）和 IP 地址
-Dialogue: 0,0:08:52.12,0:08:56.58,English,,0,0,0,,Which is a 4 byte address for IPv4
-Dialogue: 0,0:08:52.12,0:08:56.58,Chinese,,0,0,0,,这是 IPv4 的 4 字节地址
+Dialogue: 0,0:08:26.44,0:08:32.06,Chinese,,0,0,0,,要知道套接字的类型，只需通过数据中最前面两个字节的值就可以判断
+Dialogue: 0,0:08:33.20,0:08:43.26,English,,0,0,0,,And then in particular, we'll be looking at what's called a sockaddr_in which is an IPv4 version of a socket
+Dialogue: 0,0:08:33.20,0:08:43.26,Chinese,,0,0,0,,我们要特别注意的是，要知道那个是 IPv4 的套接字可以在 sockaddr_in 中查找
+Dialogue: 0,0:08:43.44,0:08:49.38,English,,0,0,0,,And so what it needs to know is a port number which is a two byte integer
+Dialogue: 0,0:08:43.44,0:08:49.38,Chinese,,0,0,0,,接下来要了解的是端口号，由两个字节组成的无符号数
+Dialogue: 0,0:08:50.02,0:08:56.58,English,,0,0,0,,And a IP address Which is a 4 byte address for IPv4
+Dialogue: 0,0:08:52.12,0:08:56.58,Chinese,,0,0,0,,和 IP 地址，IPv4 的地址是 4 字节
 Dialogue: 0,0:08:59.02,0:09:02.44,English,,0,0,0,,Both of those are actually stored in this structure as I mentioned in
-Dialogue: 0,0:08:59.02,0:09:02.44,Chinese,,0,0,0,,正如我在上面提到的那样，这两个实际上都存储在这个结构中
+Dialogue: 0,0:08:59.02,0:09:02.44,Chinese,,0,0,0,,正如我上面提到的那样，这两个也都是保存在这个结构中
 Dialogue: 0,0:09:02.82,0:09:06.56,English,,0,0,0,,In big-endian order even if you're running it on a little endian machine
 Dialogue: 0,0:09:02.82,0:09:06.56,Chinese,,0,0,0,,即使你在一台小端机上运行它，也会以大端法的顺序存放
 Dialogue: 0,0:09:07.32,0:09:09.78,English,,0,0,0,,And one of the interesting features of that
-Dialogue: 0,0:09:07.32,0:09:09.78,Chinese,,0,0,0,,其中一个有趣的特点
-Dialogue: 0,0:09:10.32,0:09:12.36,English,,0,0,0,,This api this getaddrinfo
-Dialogue: 0,0:09:10.32,0:09:12.36,Chinese,,0,0,0,,这个 getaddrinfo 的 api
-Dialogue: 0,0:09:13.06,0:09:18.78,English,,0,0,0,,It's largely removed the need for you as a programmer to worry about byte ordering
-Dialogue: 0,0:09:13.06,0:09:18.78,Chinese,,0,0,0,,它在很大程度上消除了程序员对于字节顺序的烦恼
+Dialogue: 0,0:09:07.32,0:09:09.78,Chinese,,0,0,0,,这里有个有趣的特点
+Dialogue: 0,0:09:10.32,0:09:18.78,English,,0,0,0,,This api,this getaddrinfo,it's largely removed the need for you as a programmer to worry about byte ordering
+Dialogue: 0,0:09:10.32,0:09:18.78,Chinese,,0,0,0,,getaddrinfo 这个 api 在很大程度上消除了作为程序员的你对字节排序的担心
 Dialogue: 0,0:09:19.04,0:09:20.56,English,,0,0,0,,And that's a nice feature
 Dialogue: 0,0:09:19.04,0:09:20.56,Chinese,,0,0,0,,这是一个很好的功能
-Dialogue: 0,0:09:21.18,0:09:25.96,English,,0,0,0,,So in general for example and getaddrinfo if I want to pass an port number
-Dialogue: 0,0:09:21.18,0:09:25.96,Chinese,,0,0,0,,一般来说如果我想传递一个端口号给  getaddrinfo
-Dialogue: 0,0:09:26.44,0:09:28.46,English,,0,0,0,,I'll pass it as a character string
-Dialogue: 0,0:09:26.44,0:09:28.46,Chinese,,0,0,0,,将它作为一个字符串传递
+Dialogue: 0,0:09:21.18,0:09:24.06,English,,0,0,0,,So in general for example and getaddrinfo
+Dialogue: 0,0:09:21.18,0:09:24.06,Chinese,,0,0,0,,举例说明一下 getadrrinfo
+Dialogue: 0,0:09:24.06,0:09:28.46,English,,0,0,0,,If I want to pass an port number, I'll pass it as a character string
+Dialogue: 0,0:09:24.06,0:09:28.46,Chinese,,0,0,0,,如果我要传递一个端口号，我会以字符串的形式传递
 Dialogue: 0,0:09:29.24,0:09:33.56,English,,0,0,0,,A string representation of a decimal number in other words
-Dialogue: 0,0:09:29.24,0:09:33.56,Chinese,,0,0,0,,换句话说，用十进制数字表示的字符串传递
-Dialogue: 0,0:09:34.20,0:09:43.52,English,,0,0,0,,And then the code here within this api will automatically turn that into a 16-bit integer and  put it in the proper byte order
-Dialogue: 0,0:09:34.20,0:09:43.52,Chinese,,0,0,0,,这个 api 中的代码会自动将其转换为 16 位整数并按正确的字节顺序排列
+Dialogue: 0,0:09:29.24,0:09:33.56,Chinese,,0,0,0,,换句话说就是用十进制数的字符串表示形式
+Dialogue: 0,0:09:34.20,0:09:41.62,English,,0,0,0,,And then the code here within this api will automatically turn that into a 16-bit integer
+Dialogue: 0,0:09:34.20,0:09:41.62,Chinese,,0,0,0,,这个代码中使用这个 api 会自动将其转换为 16 位整数形式
+Dialogue: 0,0:09:41.62,0:09:43.52,English,,0,0,0,,And put it in the proper byte order
+Dialogue: 0,0:09:41.62,0:09:43.52,Chinese,,0,0,0,,并按正确的字节顺序排列
 Dialogue: 0,0:09:44.16,0:09:49.50,English,,0,0,0,,And same with how it takes use of this 32 bit IP address
-Dialogue: 0,0:09:44.16,0:09:49.50,Chinese,,0,0,0,,与使用这个 32 位 IP 地址的方式相同
+Dialogue: 0,0:09:44.16,0:09:49.50,Chinese,,0,0,0,,同样的 32 位的 IP 地址也是这种方式
 Dialogue: 0,0:09:50.16,0:09:53.80,English,,0,0,0,,And you want to get it into dotted decimal form it will do that for you
-Dialogue: 0,0:09:50.16,0:09:53.80,Chinese,,0,0,0,,而如果把它变成点分十进制形式表示的字符串也可以按正确的字节顺序排列
+Dialogue: 0,0:09:50.16,0:09:53.80,Chinese,,0,0,0,,如果你想要点分十进制的形式的 IP 地址也是可以的
 Dialogue: 0,0:09:54.26,0:09:57.88,English,,0,0,0,,Without you having to worry about byte order so it's kind of a nice thing
-Dialogue: 0,0:09:54.26,0:09:57.88,Chinese,,0,0,0,,这是一件好事，因为你不必担心字节顺序
+Dialogue: 0,0:09:54.26,0:09:57.88,Chinese,,0,0,0,,你不必担心任何字节顺序的问题，非常人性化
 Dialogue: 0,0:10:06.54,0:10:10.02,English,,0,0,0,,So getaddrinfo has a whole bunch of arguments
 Dialogue: 0,0:10:06.54,0:10:10.02,Chinese,,0,0,0,, getaddrinfo 有很多参数
-Dialogue: 0,0:10:10.48,0:10:12.92,English,,0,0,0,,And some of them are essentially outputs
-Dialogue: 0,0:10:10.48,0:10:12.92,Chinese,,0,0,0,,其中一些是基本输出
-Dialogue: 0,0:10:13.52,0:10:16.86,English,,0,0,0,,Some of them are inputs things you're passing into the function
-Dialogue: 0,0:10:13.52,0:10:16.86,Chinese,,0,0,0,,一些是你传递给函数的参数
+Dialogue: 0,0:10:10.48,0:10:16.86,English,,0,0,0,,And some of them are essentially outputs，some of them are inputs  Things you're passing into the function
+Dialogue: 0,0:10:10.48,0:10:16.86,Chinese,,0,0,0,,这些你传递给函数的参数，其中一些参数用于输入，而其中一些其实上用于输出
 Dialogue: 0,0:10:17.18,0:10:20.94,English,,0,0,0,,And others are really more like outputs how it gets information back to you
-Dialogue: 0,0:10:17.18,0:10:20.94,Chinese,,0,0,0,,而其他的则更像是它如何把信息反馈给你的输出
+Dialogue: 0,0:10:17.18,0:10:20.94,Chinese,,0,0,0,,还些像是输出的问题，比如如何把获取到的信息返回给你
 Dialogue: 0,0:10:21.68,0:10:22.64,English,,0,0,0,,So in particular
 Dialogue: 0,0:10:21.68,0:10:22.64,Chinese,,0,0,0,,具体来说
 Dialogue: 0,0:10:23.62,0:10:28.52,English,,0,0,0,,The first one is just the name of the host and that can be either a domain name
-Dialogue: 0,0:10:23.62,0:10:28.52,Chinese,,0,0,0,,第一个参数是主机的名称，也可以是域名
+Dialogue: 0,0:10:23.62,0:10:28.52,Chinese,,0,0,0,,第一个参数 host 是主机的名称，也可以是域名
 Dialogue: 0,0:10:29.18,0:10:38.10,English,,0,0,0,,Or a dotted decimal name or one of those funky looking things with the const that you solve for IPv6
-Dialogue: 0,0:10:29.18,0:10:38.10,Chinese,,0,0,0,,或数字十进制地址（如点分十进制 IP 地址），或者 IPv6 的 16 进制串
+Dialogue: 0,0:10:29.18,0:10:38.10,Chinese,,0,0,0,,或点分十进制 IP 地址，或者井分16 进制的 IPv6 地址
 Dialogue: 0,0:10:39.12,0:10:43.98,English,,0,0,0,,The service is usually if you're looking up so if we're using this to look up
-Dialogue: 0,0:10:39.12,0:10:43.98,Chinese,,0,0,0,, *service 这个参数如果用来查找
+Dialogue: 0,0:10:39.12,0:10:43.98,Chinese,,0,0,0,, *service 这个参数用与查找
 Dialogue: 0,0:10:44.62,0:10:46.44,English,,0,0,0,,That'll actually be a null pointer
-Dialogue: 0,0:10:44.62,0:10:46.44,Chinese,,0,0,0,,那实际上是一个空指针
+Dialogue: 0,0:10:44.62,0:10:46.44,Chinese,,0,0,0,,实际上它是一个空指针
 Dialogue: 0,0:10:47.10,0:10:54.96,English,,0,0,0,,And basically what typically you'll have is one of those two will be a string and the other will be a null pointer
-Dialogue: 0,0:10:47.10,0:10:54.96,Chinese,,0,0,0,,你必须指定 host 或者 service 其中一个是字符串，另外一个是空指针
+Dialogue: 0,0:10:47.10,0:10:54.96,Chinese,,0,0,0,,实际上你只须提供 host 或 service 其中一个就可以了，而另外一个设置为空指针
 Dialogue: 0,0:10:55.02,0:11:00.50,English,,0,0,0,,And the reason for that is the same function can be used either to look up a service like
-Dialogue: 0,0:10:55.02,0:11:00.50,Chinese,,0,0,0,,原因是这个函数可以用来查找
+Dialogue: 0,0:10:55.02,0:11:00.50,Chinese,,0,0,0,,原因是这个函数可以用来查找服务相关信息
 Dialogue: 0,0:11:00.94,0:11:03.88,English,,0,0,0,,What is the port number associated with http
-Dialogue: 0,0:11:00.94,0:11:03.88,Chinese,,0,0,0,,与 http 关联的端口号
+Dialogue: 0,0:11:00.94,0:11:03.88,Chinese,,0,0,0,,比如与 http 协议关联的端口号
 Dialogue: 0,0:11:04.68,0:11:10.22,English,,0,0,0,,Or it can be what is the IP address of www.cmu.edu
 Dialogue: 0,0:11:04.68,0:11:10.22,Chinese,,0,0,0,,或者查找 www.cmu.edu 的 IP 地址
 Dialogue: 0,0:11:11.44,0:11:14.40,English,,0,0,0,,The hints is something that you're passing in
-Dialogue: 0,0:11:11.44,0:11:14.40,Chinese,,0,0,0,,参数  hints  是你传递的东西
+Dialogue: 0,0:11:11.44,0:11:14.40,Chinese,,0,0,0,,参数 hints 用于输入信息
 Dialogue: 0,0:11:15.06,0:11:22.00,English,,0,0,0,,And it's basically as you fill in a small amount of a fairly large body of information
-Dialogue: 0,0:11:15.06,0:11:22.00,Chinese,,0,0,0,,大概就是当你在寻找到的很多信息中填入一小部分暗示
-Dialogue: 0,0:11:22.02,0:11:28.04,English,,0,0,0,,About what specifically are you looking for in this request are you looking for an IPv6
-Dialogue: 0,0:11:22.02,0:11:28.04,Chinese,,0,0,0,,这些信息是关于请求中你需要寻找的具体信息，比如请求寻找 IPv6
-Dialogue: 0,0:11:28.74,0:11:32.50,English,,0,0,0,,Information are you looking for IPv4 and so forth
-Dialogue: 0,0:11:28.74,0:11:32.50,Chinese,,0,0,0,,寻找 IPv4 等等
+Dialogue: 0,0:11:15.06,0:11:22.00,Chinese,,0,0,0,,而它基本上是作为你填写少量的相当大的信息量
+Dialogue: 0,0:11:22.02,0:11:26.12,English,,0,0,0,,About what specifically are you looking for in this request
+Dialogue: 0,0:11:22.02,0:11:26.12,Chinese,,0,0,0,,关于你在此请求中具体寻找什么？
+Dialogue: 0,0:11:26.12,0:11:32.50,English,,0,0,0,,Are you looking for an IPv6 information? Are you looking for IPv4 and so forth
+Dialogue: 0,0:11:26.12,0:11:32.50,Chinese,,0,0,0,,你是在寻在 IPv4 的信息还是 IPv6 的信息等等
 Dialogue: 0,0:11:34.34,0:11:36.76,English,,0,0,0,,And then what it returns back
-Dialogue: 0,0:11:34.34,0:11:36.76,Chinese,,0,0,0,,然后期望返回r的是什么
+Dialogue: 0,0:11:34.34,0:11:36.76,Chinese,,0,0,0,,那么这将返回什么呢？
 Dialogue: 0,0:11:37.32,0:11:46.84,English,,0,0,0,,That's why you pass a ** ,it will return back a linked list that it's generated of results
-Dialogue: 0,0:11:37.32,0:11:46.84,Chinese,,0,0,0,,这就是你传递 ** 的原因，它将返回一个由结果生成的链表
+Dialogue: 0,0:11:37.32,0:11:46.84,Chinese,,0,0,0,,这就是为什么你传递一个**，它将返回一个链接的结果列表
 Dialogue: 0,0:11:47.86,0:11:50.38,English,,0,0,0,,And the reason for that as I mentioned is
-Dialogue: 0,0:11:47.86,0:11:50.38,Chinese,,0,0,0,,我提到过这样的原因是
+Dialogue: 0,0:11:47.86,0:11:50.38,Chinese,,0,0,0,,这样的原因是
 Dialogue: 0,0:11:51.14,0:11:57.36,English,,0,0,0,,That IP addresses are sort of many to many mapping potentially there as you saw
 Dialogue: 0,0:11:51.14,0:11:57.36,Chinese,,0,0,0,,正如你所看到的那样，IP 地址可能会有多对多映射
 Dialogue: 0,0:11:57.80,0:12:01.58,English,,0,0,0,,It's possible for a single domain name to have multiple IP addresses
-Dialogue: 0,0:11:57.80,0:12:01.58,Chinese,,0,0,0,,单个域名可能有多个 IP 地址
+Dialogue: 0,0:11:57.80,0:12:01.58,Chinese,,0,0,0,,有可能单个域名拥有多个 IP 地址
 Dialogue: 0,0:12:02.18,0:12:05.44,English,,0,0,0,,It's possible for a single IP address to have multiple domain names
-Dialogue: 0,0:12:02.18,0:12:05.44,Chinese,,0,0,0,,单个 IP 地址可能有多个域名
+Dialogue: 0,0:12:02.18,0:12:05.44,Chinese,,0,0,0,,也可能单个 IP 地址有多个域名
 Dialogue: 0,0:12:05.96,0:12:11.60,English,,0,0,0,,And so this is how they handle that sort of fact that they return a whole list of results
-Dialogue: 0,0:12:05.96,0:12:11.60,Chinese,,0,0,0,,所以就返回一整个结果列表来处理这样的情况
+Dialogue: 0,0:12:05.96,0:12:11.60,Chinese,,0,0,0,,所以就返回整个结果列表来应对这样的情况
 Dialogue: 0,0:12:13.40,0:12:16.78,English,,0,0,0,,And associated with that once that result gets used
 Dialogue: 0,0:12:13.40,0:12:16.78,Chinese,,0,0,0,,一旦结果被使用就建立了关联
 Dialogue: 0,0:12:16.78,0:12:20.44,English,,0,0,0,,Once you done with it you're supposed to call a function called freeaddrinfo
 Dialogue: 0,0:12:16.78,0:12:20.44,Chinese,,0,0,0,,一旦你调用完它，还应该调用一个名为 freeaddrinfo 的函数
 Dialogue: 0,0:12:20.88,0:12:26.06,English,,0,0,0,,That will basically dispose of all the elements of that linked list you don't have to do it yourself with free
-Dialogue: 0,0:12:20.88,0:12:26.06,Chinese,,0,0,0,,它可以处理该链接列表的所有元素，你可以轻松自由的让它来完成
+Dialogue: 0,0:12:20.88,0:12:26.06,Chinese,,0,0,0,,它可以处理该链接列表的所有元素，你可以很轻松的让它来完成
 Dialogue: 0,0:12:26.86,0:12:31.26,English,,0,0,0,,And then there's a another helper function called gai_strerror
-Dialogue: 0,0:12:26.86,0:12:31.26,Chinese,,0,0,0,,然后是另一个名为 gai_strerror 的辅助函数
+Dialogue: 0,0:12:26.86,0:12:31.26,Chinese,,0,0,0,,然后是另一个有用的函数名为 gai_strerror
 Dialogue: 0,0:12:31.90,0:12:34.90,English,,0,0,0,,That you use if there's an error code to help you interpret that error
-Dialogue: 0,0:12:31.90,0:12:34.90,Chinese,,0,0,0,,它可以用来帮助你解释错误代码的错误
+Dialogue: 0,0:12:31.90,0:12:34.90,Chinese,,0,0,0,,如果有错误代码，你可以用它来帮助你解释错误
 Dialogue: 0,0:12:36.80,0:12:38.06,English,,0,0,0,,And it returns an error code
 Dialogue: 0,0:12:36.80,0:12:38.06,Chinese,,0,0,0,,并返回错误代码
 Dialogue: 0,0:12:40.26,0:12:44.50,English,,0,0,0,,So as I mentioned it returns up a linked list
 Dialogue: 0,0:12:40.26,0:12:44.50,Chinese,,0,0,0,,我提到它会返回一个链表
 Dialogue: 0,0:12:45.12,0:12:51.40,English,,0,0,0,,That result is a linked list of these a get of addr structs, addrinfo structs
-Dialogue: 0,0:12:45.12,0:12:51.40,Chinese,,0,0,0,,这个结果是这些 addrinfo 结构的链表
+Dialogue: 0,0:12:45.12,0:12:51.40,Chinese,,0,0,0,,这个结果是这些 addrinfo 结构体组成的链表
 Dialogue: 0,0:12:53.14,0:12:56.08,English,,0,0,0,,And the addrinfo struct has a zillion fields
-Dialogue: 0,0:12:53.14,0:12:56.08,Chinese,,0,0,0,, addrinfo 结构有很多成员
+Dialogue: 0,0:12:53.14,0:12:56.08,Chinese,,0,0,0,, addrinfo 结构体有很多成员
 Dialogue: 0,0:12:56.94,0:12:59.34,English,,0,0,0,,Some of which you'll use and some which you won't
-Dialogue: 0,0:12:56.94,0:12:59.34,Chinese,,0,0,0,,其中一些你将使用，一些你不会
+Dialogue: 0,0:12:56.94,0:12:59.34,Chinese,,0,0,0,,其中一些你会使用到，一些你不会
 Dialogue: 0,0:13:01.94,0:13:05.26,English,,0,0,0,,This is for example when you're passing in hints
 Dialogue: 0,0:13:01.94,0:13:05.26,Chinese,,0,0,0,,例如，当你传递 hints 参数的时候
 Dialogue: 0,0:13:06.78,0:13:11.40,English,,0,0,0,,Hints is sort of that what you're passing in the information you know some conditions about
-Dialogue: 0,0:13:06.78,0:13:11.40,Chinese,,0,0,0,, Hints 就是你在了解某些条件的信息中传递的内容，这个内容是关于
+Dialogue: 0,0:13:06.78,0:13:11.40,Chinese,,0,0,0,, Hints 就是你传递给函数的信息，你可以通过它来设置一些条件用来
 Dialogue: 0,0:13:11.70,0:13:13.68,English,,0,0,0,,What you're looking for in this request
-Dialogue: 0,0:13:11.70,0:13:13.68,Chinese,,0,0,0,,你想在这个请求中寻找什么
+Dialogue: 0,0:13:11.70,0:13:13.68,Chinese,,0,0,0,,定义你想在这个请求中寻找什么
 Dialogue: 0,0:13:17.24,0:13:21.20,English,,0,0,0,,And then what some of these you pass in and some of it returns
 Dialogue: 0,0:13:17.24,0:13:21.20,Chinese,,0,0,0,,你传递的这些内容的其中一些会返回
 Dialogue: 0,0:13:21.78,0:13:24.76,English,,0,0,0,,And so some of these fields are ones that then you can use
-Dialogue: 0,0:13:21.78,0:13:24.76,Chinese,,0,0,0,,这是一些参数
+Dialogue: 0,0:13:21.78,0:13:24.76,Chinese,,0,0,0,,这是一些参数你可以用来
 Dialogue: 0,0:13:25.16,0:13:30.88,English,,0,0,0,,When you're making calls to other socket functions,functions in the socket library
-Dialogue: 0,0:13:25.16,0:13:30.88,Chinese,,0,0,0,,当你调用套接字库中的其他套接字函数时
-Dialogue: 0,0:13:31.32,0:13:34.04,English,,0,0,0,,It'll fill in instead of you having to worry about
-Dialogue: 0,0:13:31.32,0:13:34.04,Chinese,,0,0,0,,它会自动传递，你不用去担心
-Dialogue: 0,0:13:34.26,0:13:40.60,English,,0,0,0,,What's the structure the format of a sockaddr in and how do I convert into network order and stuff
-Dialogue: 0,0:13:34.26,0:13:40.60,Chinese,,0,0,0,, sockaddr  的格式结构是什么，以及如何转换为网络顺序和内容
+Dialogue: 0,0:13:25.16,0:13:30.88,Chinese,,0,0,0,,调用套接字库中的其他套接字函数
+Dialogue: 0,0:13:31.32,0:13:37.80,English,,0,0,0,,It'll fill in instead of you having to worry about what's the structure the format of a sockaddr in
+Dialogue: 0,0:13:31.32,0:13:37.80,Chinese,,0,0,0,,它将填入，而不是让你担心 sockaddr 的结构和格式
+Dialogue: 0,0:13:37.80,0:13:40.60,English,,0,0,0,, and how do I convert into network order and stuff
+Dialogue: 0,0:13:37.84,0:13:40.60,Chinese,,0,0,0,,以及如何转换为网络顺序和内容
 Dialogue: 0,0:13:41.20,0:13:42.84,English,,0,0,0,,It will do all that for you
 Dialogue: 0,0:13:41.20,0:13:42.84,Chinese,,0,0,0,,它会为你做所有这些
-Dialogue: 0,0:13:46.88,0:13:50.94,English,,0,0,0,,So it's a little confusing to use though because sometimes the stuff you're providing
-Dialogue: 0,0:13:46.88,0:13:50.94,Chinese,,0,0,0,,使用它有点令人困惑，因为提供的参数有时
-Dialogue: 0,0:13:51.46,0:13:55.36,English,,0,0,0,,Is stuff you're giving it and sometimes it's stuff that it's returning back to you
-Dialogue: 0,0:13:51.46,0:13:55.36,Chinese,,0,0,0,,是你传递给它的，有时是返回给你的
+Dialogue: 0,0:13:46.88,0:13:52.56,English,,0,0,0,,So it's a little confusing to use though because sometimes the stuff you're providing is stuff you're giving it
+Dialogue: 0,0:13:46.88,0:13:52.56,Chinese,,0,0,0,,所以使用起来有点混乱，因为有时候你提供的东西就是你给它的东西
+Dialogue: 0,0:13:52.56,0:13:55.36,English,,0,0,0,, and sometimes it's stuff that it's returning back to you
+Dialogue: 0,0:13:52.56,0:13:55.36,Chinese,,0,0,0,,有时又是返回给你的
 Dialogue: 0,0:13:59.72,0:14:01.64,English,,0,0,0,,And then there's an inverse function
-Dialogue: 0,0:13:59.72,0:14:01.64,Chinese,,0,0,0,,有一个与之相反的函数
+Dialogue: 0,0:13:59.72,0:14:01.64,Chinese,,0,0,0,,这里有一个与之相反的函数
 Dialogue: 0,0:14:01.76,0:14:04.90,English,,0,0,0,,That so getaddrinfo is given a
-Dialogue: 0,0:14:01.76,0:14:04.90,Chinese,,0,0,0,,这样  getaddrinfo  给了一个
+Dialogue: 0,0:14:01.76,0:14:04.90,Chinese,,0,0,0,,这样 getaddrinfo 给了一个......
 Dialogue: 0,0:14:09.06,0:14:14.32,English,,0,0,0,,It's actually give me the address information about some name
-Dialogue: 0,0:14:09.06,0:14:14.32,Chinese,,0,0,0,,它实际上给了一些名称的地址信息
+Dialogue: 0,0:14:09.06,0:14:14.32,Chinese,,0,0,0,,它实际上返回了地址名称信息
 Dialogue: 0,0:14:15.50,0:14:19.34,English,,0,0,0,,And getnameinfo is I give you an address
-Dialogue: 0,0:14:15.50,0:14:19.34,Chinese,,0,0,0,,但  getnameinfo  函数是给一个地址
+Dialogue: 0,0:14:15.50,0:14:19.34,Chinese,,0,0,0,,但 getnameinfo 函数是给一个地址
 Dialogue: 0,0:14:19.88,0:14:24.88,English,,0,0,0,,And you give me back some documentation about it including potentially a domain name
-Dialogue: 0,0:14:19.88,0:14:24.88,Chinese,,0,0,0,,你给我一些关于它的文件，包括可能的域名
+Dialogue: 0,0:14:19.88,0:14:24.88,Chinese,,0,0,0,,你给我一些关于它的文档，包括潜在的域名
 Dialogue: 0,0:14:25.74,0:14:31.38,English,,0,0,0,,So there you pass in as a the first argument is a sockaddr struct
-Dialogue: 0,0:14:25.74,0:14:31.38,Chinese,,0,0,0,,所以你传入的第一个参数是一个  sockaddr  结构
+Dialogue: 0,0:14:25.74,0:14:31.38,Chinese,,0,0,0,,这里你需要传入的第一个参数是  sockaddr  结构体
 Dialogue: 0,0:14:32.08,0:14:35.86,English,,0,0,0,,Remember for this lecture and I think in the book in a few places
 Dialogue: 0,0:14:32.08,0:14:35.86,Chinese,,0,0,0,,我记得在书里面的这节有几个地方
 Dialogue: 0,0:14:35.86,0:14:39.86,English,,0,0,0,,We've sort of created a typedef to alias
-Dialogue: 0,0:14:35.86,0:14:39.86,Chinese,,0,0,0,,创建了一个类型定义  typedef  来定义别名
+Dialogue: 0,0:14:35.86,0:14:39.86,Chinese,,0,0,0,,使用了  typedef  来定义别名
 Dialogue: 0,0:14:40.52,0:14:45.02,English,,0,0,0,,So we don't have to say struct sockaddr all over the place but that's what the SA is
-Dialogue: 0,0:14:40.52,0:14:45.02,Chinese,,0,0,0,,所以不用在所有地方都使用  socket addr ，而是以  SA  来代替
+Dialogue: 0,0:14:40.52,0:14:45.02,Chinese,,0,0,0,,所以不用在所有地方都使用 sockaddr，而是以 SA 来代替
 Dialogue: 0,0:14:46.96,0:14:54.70,English,,0,0,0,,And it will provide back information about that address
-Dialogue: 0,0:14:46.96,0:14:54.70,Chinese,,0,0,0,,它将提供有关该地址的信息
+Dialogue: 0,0:14:46.96,0:14:54.70,Chinese,,0,0,0,,它将返回有关该地址的信息
 Dialogue: 0,0:14:54.92,0:14:57.84,English,,0,0,0,,So if you passing in a 32 bit IP address
-Dialogue: 0,0:14:54.92,0:14:57.84,Chinese,,0,0,0,,所以，如果你传入一个 32 位的 IP 地址
-Dialogue: 0,0:14:58.40,0:15:04.84,English,,0,0,0,,You can get it to return either a dotted decimal version of that or to do the DNS lookup
-Dialogue: 0,0:14:58.40,0:15:04.84,Chinese,,0,0,0,,你可以让它返回点分十进制版本或进行 DNS 查找
-Dialogue: 0,0:15:05.32,0:15:07.42,English,,0,0,0,,And have it come back with the domain name for that
-Dialogue: 0,0:15:05.32,0:15:07.42,Chinese,,0,0,0,,并让它返回域名
-Dialogue: 0,0:15:11.16,0:15:17.60,English,,0,0,0,,So this is that program that I just demoed to you this one called host info
-Dialogue: 0,0:15:11.16,0:15:17.60,Chinese,,0,0,0,,所以这就是我刚给你演示的程序，这个程序叫做 hostinfo
-Dialogue: 0,0:15:17.70,0:15:24.46,English,,0,0,0,,So all it's really going to do is use these features to all on the command line give a domain name you say
-Dialogue: 0,0:15:17.70,0:15:24.46,Chinese,,0,0,0,,它真正要做的就是在命令行中使用这些功能对你给的域名
-Dialogue: 0,0:15:25.00,0:15:28.50,English,,0,0,0,,And it will just come back with a list of IP addresses
-Dialogue: 0,0:15:25.00,0:15:28.50,Chinese,,0,0,0,,返回一个 IP 地址列表
+Dialogue: 0,0:14:54.92,0:14:57.84,Chinese,,0,0,0,,如果你传入一个 32 位的 IP 地址
+Dialogue: 0,0:14:58.40,0:15:02.30,English,,0,0,0,,You can get it to return either a dotted decimal version of that
+Dialogue: 0,0:14:58.40,0:15:02.30,Chinese,,0,0,0,,你可以从它返回中获得点分十进制版本的 IP 地址
+Dialogue: 0,0:15:02.30,0:15:07.42,English,,0,0,0,,Or to do the DNS lookup and have it come back with the domain name for that
+Dialogue: 0,0:15:02.30,0:15:07.42,Chinese,,0,0,0,,或者进行 DNS 查找并返回对应的域名
+Dialogue: 0,0:15:11.16,0:15:17.60,English,,0,0,0,,So this is that program that I just demoed to you this one called hostinfo
+Dialogue: 0,0:15:11.16,0:15:17.60,Chinese,,0,0,0,,这里有一个我写演示的程序，这个程序叫做 hostinfo
+Dialogue: 0,0:15:17.70,0:15:20.74,English,,0,0,0,,So all it's really going to do is use these features to
+Dialogue: 0,0:15:17.70,0:15:20.74,Chinese,,0,0,0,,这个程序的功能是......
+Dialogue: 0,0:15:21.16,0:15:28.50,English,,0,0,0,,All on the command line give a domain name and it will just come back with a list of IP addresses
+Dialogue: 0,0:15:21.16,0:15:28.50,Chinese,,0,0,0,,在命令行中给定一个域名，返回一个 IP 地址列表
 Dialogue: 0,0:15:30.04,0:15:30.88,English,,0,0,0,,So
 Dialogue: 0,0:15:30.04,0:15:30.88,Chinese,,0,0,0,,所以
 Dialogue: 0,0:15:32.22,0:15:37.80,English,,0,0,0,,And this is pretty much the way you write code for this getaddrinfo api
 Dialogue: 0,0:15:32.22,0:15:37.80,Chinese,,0,0,0,,这就是 getaddrinfo api 编写代码的方式
 Dialogue: 0,0:15:39.02,0:15:45.04,English,,0,0,0,,That you typically so hints is the information I'm passing about what it is I'm looking for here
-Dialogue: 0,0:15:39.02,0:15:45.04,Chinese,,0,0,0,, hints  就是我传递的关于我要找的内容的信息
+Dialogue: 0,0:15:39.02,0:15:45.04,Chinese,,0,0,0,, hints 就是我传递的关于我要找的内容的信息
 Dialogue: 0,0:15:46.62,0:15:51.98,English,,0,0,0,,And so you start typically by zeroing out that entire field
 Dialogue: 0,0:15:46.62,0:15:51.98,Chinese,,0,0,0,,因此，你通常会将整个字段归零
 Dialogue: 0,0:15:53.68,0:15:56.56,English,,0,0,0,,And then setting the particular things you want
@@ -401,8 +393,8 @@ Dialogue: 0,0:16:05.64,0:16:08.70,English,,0,0,0,,I'm only going to be looking f
 Dialogue: 0,0:16:05.64,0:16:08.70,Chinese,,0,0,0,,我只会寻找 IPv4 连接
 Dialogue: 0,0:16:09.30,0:16:14.20,English,,0,0,0,,And so I use the constant called AF_INET which is defined in the sockets interface
 Dialogue: 0,0:16:09.30,0:16:14.20,Chinese,,0,0,0,,所以我使用在套接字接口中定义的名为 AF_INET 的常量
-Dialogue: 0,0:16:14.94,0:16:20.00,English,,0,0,0,,And also I'll say that I want a TCP connection out what's called a socket stream
-Dialogue: 0,0:16:14.94,0:16:20.00,Chinese,,0,0,0,,而且我会说我想要一个 TCP 连接，这就是所谓的套接字流
+Dialogue: 0,0:16:14.94,0:16:20.00,English,,0,0,0,,And also I'll say that I want a TCP connection what's called a socket stream
+Dialogue: 0,0:16:14.94,0:16:20.00,Chinese,,0,0,0,,而且我会说我想要一个 TCP 连接，这就是套接字流
 Dialogue: 0,0:16:20.54,0:16:28.84,English,,0,0,0,,Which if you recall is the sort of protocol that 99% of the the IP traffic in the world is carrying is on TCP
 Dialogue: 0,0:16:20.54,0:16:28.84,Chinese,,0,0,0,,如果你还记得，就是世界上 99％ 的 IP 流量都是基于 TCP 的
 Dialogue: 0,0:16:29.34,0:16:35.78,English,,0,0,0,,Meaning it provides a somewhat higher level abstraction of what's going on of sending packets back and forth
@@ -410,13 +402,15 @@ Dialogue: 0,0:16:29.34,0:16:35.78,Chinese,,0,0,0,,这意味着它提供了对来
 Dialogue: 0,0:16:37.26,0:16:40.04,English,,0,0,0,,So that's as much hint as I'm giving it here
 Dialogue: 0,0:16:37.26,0:16:40.04,Chinese,,0,0,0,,这就是提供的 hints 参数
 Dialogue: 0,0:16:41.24,0:16:46.02,English,,0,0,0,,And now I'm making a call to getaddrinfo and this argument is the name
-Dialogue: 0,0:16:41.24,0:16:46.02,Chinese,,0,0,0,,现在我正在调用 getaddrinfo，参数就是这个名字
+Dialogue: 0,0:16:41.24,0:16:46.02,Chinese,,0,0,0,,现在我正在调用 getaddrinfo，参数就是这个名字（域名）
 Dialogue: 0,0:16:46.44,0:16:49.18,English,,0,0,0,,Which is I'm getting it right off of the command line here
 Dialogue: 0,0:16:46.44,0:16:49.18,Chinese,,0,0,0,,我从命令行得到的
 Dialogue: 0,0:16:49.26,0:16:55.54,English,,0,0,0,,So in my demo it was always the commit up a domain name
-Dialogue: 0,0:16:49.26,0:16:55.54,Chinese,,0,0,0,,所以在我的演示中，它始终是提交域名
-Dialogue: 0,0:16:55.92,0:17:04.02,English,,0,0,0,,I'm passing it null for the service as I mentioned this call you typically have one of the two are is null but not both
-Dialogue: 0,0:16:55.92,0:17:04.02,Chinese,,0,0,0,,我传递 NULL 给 service 参数，我说过这个通常这两个中的一个是 NULL 而不是两个都是
+Dialogue: 0,0:16:49.26,0:16:55.54,Chinese,,0,0,0,,在我的演示中，它始终是提交域名
+Dialogue: 0,0:16:55.92,0:16:58.10,English,,0,0,0,,I'm passing it NULL for the service
+Dialogue: 0,0:16:55.92,0:16:58.10,Chinese,,0,0,0,,我传递 NULL 给 service 作为参数
+Dialogue: 0,0:16:58.10,0:17:04.02,English,,0,0,0,,As I mentioned this call you typically have one of the two are is null but not both
+Dialogue: 0,0:16:58.10,0:17:04.02,Chinese,,0,0,0,,我之前提到过，通常这两个参数中的一个是 NULL ，不会两个都是 NULL
 Dialogue: 0,0:17:05.34,0:17:08.98,English,,0,0,0,,Hints is what I'm passing in is this is the kind of information I want
 Dialogue: 0,0:17:05.34,0:17:08.98,Chinese,,0,0,0,, hints  是传递我想要的信息类型
 Dialogue: 0,0:17:09.86,0:17:17.58,English,,0,0,0,,And listp is a will now become a pointer to the results that get returned by getaddrinfo
@@ -424,15 +418,15 @@ Dialogue: 0,0:17:09.86,0:17:17.58,Chinese,,0,0,0,,而 listp 现在将成为指�
 Dialogue: 0,0:17:21.24,0:17:24.76,English,,0,0,0,,So that's the calling all of its quarry
 Dialogue: 0,0:17:21.24,0:17:24.76,Chinese,,0,0,0,,这就是调用前所有的准备
 Dialogue: 0,0:17:29.18,0:17:32.62,English,,0,0,0,,Okay and now I want to go back so I got one of those linked lists
-Dialogue: 0,0:17:29.18,0:17:32.62,Chinese,,0,0,0,,好的，现在我想返回，所以我得到了一个链接列表
+Dialogue: 0,0:17:29.18,0:17:32.62,Chinese,,0,0,0,,好的，现在我想返回，我得到了一个链接列表
 Dialogue: 0,0:17:32.78,0:17:37.30,English,,0,0,0,,And that will have a whole bunch of IP address of potentially multiple IP addresses in it
-Dialogue: 0,0:17:32.78,0:17:37.30,Chinese,,0,0,0,,这将包含一大堆可能的 IP 地址
+Dialogue: 0,0:17:32.78,0:17:37.30,Chinese,,0,0,0,,而这里面会有一大堆可能的 IP 地址
 Dialogue: 0,0:17:37.80,0:17:39.56,English,,0,0,0,,Maybe just one maybe none
 Dialogue: 0,0:17:37.80,0:17:39.56,Chinese,,0,0,0,,也许只有一个，也许一个都没有
 Dialogue: 0,0:17:40.38,0:17:42.44,English,,0,0,0,,But some number of them in a linked list
 Dialogue: 0,0:17:40.38,0:17:42.44,Chinese,,0,0,0,,但其中有一些在链表中
 Dialogue: 0,0:17:43.08,0:17:47.84,English,,0,0,0,,And I want to walk through that list and get back the dotted decimal version of all those names
-Dialogue: 0,0:17:43.08,0:17:47.84,Chinese,,0,0,0,,我想遍历该列表并获取所有这些名称中的点分十进制版本
+Dialogue: 0,0:17:43.08,0:17:47.84,Chinese,,0,0,0,,我会遍历该列表并获取所有这些名称中的点分十进制版本（的 IP 地址）
 Dialogue: 0,0:17:48.36,0:17:53.98,English,,0,0,0,,Or the colon eyes of those IPv6 addresses I don't know how you refer to those by the way
 Dialogue: 0,0:17:48.36,0:17:53.98,Chinese,,0,0,0,,或者那些 IPv6 地址的带冒号的形式，我不知道你们是怎么命名它们的
 Dialogue: 0,0:17:54.86,0:17:58.60,English,,0,0,0,,I know relatively little about IPv6 I have to confess
@@ -440,7 +434,7 @@ Dialogue: 0,0:17:54.86,0:17:58.60,Chinese,,0,0,0,,我不得不承认我对 IPv6 
 Dialogue: 0,0:18:00.10,0:18:03.32,English,,0,0,0,,So then there's a function called Getnameinfo
 Dialogue: 0,0:18:00.10,0:18:03.32,Chinese,,0,0,0,,接下来是一个名为 Getnameinfo 的函数
 Dialogue: 0,0:18:03.32,0:18:09.66,English,,0,0,0,,Which usually you use to take a socket address IP address and go backward and get a domain name
-Dialogue: 0,0:18:03.32,0:18:09.66,Chinese,,0,0,0,,通常这个函数用于通过 套接字地址或 IP 地址获取对应的主机域名
+Dialogue: 0,0:18:03.32,0:18:09.66,Chinese,,0,0,0,,通常这个函数用于通过 IP 地址获取对应的主机域名
 Dialogue: 0,0:18:10.24,0:18:16.74,English,,0,0,0,,But if I tell it by a flag one of the final argument to it is a flag argument
 Dialogue: 0,0:18:10.24,0:18:16.74,Chinese,,0,0,0,,但如果我设置了最后一个参数 flag 的值
 Dialogue: 0,0:18:17.20,0:18:22.44,English,,0,0,0,,And say what I want back from this is not a domain name I wanted in this numeric format
@@ -448,11 +442,11 @@ Dialogue: 0,0:18:17.20,0:18:22.44,Chinese,,0,0,0,,告诉它我想要的不是主
 Dialogue: 0,0:18:22.82,0:18:27.42,English,,0,0,0,,Either dotted decimal or the colons between hex digits
 Dialogue: 0,0:18:22.82,0:18:27.42,Chinese,,0,0,0,,点分十进制或冒分十六进制
 Dialogue: 0,0:18:28.80,0:18:31.20,English,,0,0,0,,So by passing that to Getnameinfo
-Dialogue: 0,0:18:28.80,0:18:31.20,Chinese,,0,0,0,,通过传递这样的信息给 getnameinfo
-Dialogue: 0,0:18:31.84,0:18:36.92,English,,0,0,0,,What it's going to return and I'm passing in a buffer meaning of a char*
-Dialogue: 0,0:18:31.84,0:18:36.92,Chinese,,0,0,0,,它将返回什么，我向它传入了 buf ，指向一个字符缓冲区
-Dialogue: 0,0:18:37.68,0:18:43.82,English,,0,0,0,,And some size of that buffer and it's going to fill that in with the string representation of it
-Dialogue: 0,0:18:37.68,0:18:43.82,Chinese,,0,0,0,,和缓冲区的大小，将用代表它的字符串来填充这里
+Dialogue: 0,0:18:28.80,0:18:31.20,Chinese,,0,0,0,,通过传递这样的信息给 Getnameinfo
+Dialogue: 0,0:18:31.84,0:18:39.80,English,,0,0,0,,What it's going to return and I'm passing in a buffer meaning of a char* And some size of that buffer
+Dialogue: 0,0:18:31.84,0:18:39.80,Chinese,,0,0,0,,它将返回什么？我向它传入了 buf ，指向一个字符缓冲区，和缓冲区的大小
+Dialogue: 0,0:18:39.80,0:18:43.82,English,,0,0,0,,And it's going to fill that in with the string representation of it
+Dialogue: 0,0:18:39.80,0:18:43.82,Chinese,,0,0,0,,者将用代表它的字符串来填充这里
 Dialogue: 0,0:18:44.38,0:18:46.90,English,,0,0,0,,So you see this is a way I'm going from the
 Dialogue: 0,0:18:44.38,0:18:46.90,Chinese,,0,0,0,,我从这个方法出发
 Dialogue: 0,0:18:47.20,0:18:52.98,English,,0,0,0,,If you look at this is the actual sockaddr of each of the list elements
@@ -460,7 +454,7 @@ Dialogue: 0,0:18:47.20,0:18:52.98,Chinese,,0,0,0,,你看这是每个列表元素
 Dialogue: 0,0:18:55.26,0:18:59.88,English,,0,0,0,,I'm giving it,it's going from that sockaddr which embedded within it
 Dialogue: 0,0:18:55.26,0:18:59.88,Chinese,,0,0,0,,这些 sockaddr 都复制到了缓冲区
 Dialogue: 0,0:19:00.30,0:19:03.82,English,,0,0,0,,As you know is the 4 byte IP address
-Dialogue: 0,0:19:00.30,0:19:03.82,Chinese,,0,0,0,,如你所知，是 4 字节的 IP 地址
+Dialogue: 0,0:19:00.30,0:19:03.82,Chinese,,0,0,0,,如你所知，4 字节的 IP 地址
 Dialogue: 0,0:19:04.44,0:19:06.78,English,,0,0,0,,And what it's doing is it's taking that
 Dialogue: 0,0:19:04.44,0:19:06.78,Chinese,,0,0,0,,而它正在做的是
 Dialogue: 0,0:19:07.28,0:19:11.20,English,,0,0,0,,Flipping the bytes well and converting it to the dotted decimal form so
@@ -484,7 +478,7 @@ Dialogue: 0,0:19:36.90,0:19:42.16,Chinese,,0,0,0,,与前面的相比我所做的
 Dialogue: 0,0:19:42.60,0:19:44.66,English,,0,0,0,,Was I commented out this one
 Dialogue: 0,0:19:42.60,0:19:44.66,Chinese,,0,0,0,,就是我注释的这个
 Dialogue: 0,0:19:45.94,0:19:53.26,English,,0,0,0,, I don't demand that it be a IP, AF_INET is a shorthand for IPv4
-Dialogue: 0,0:19:45.94,0:19:53.26,Chinese,,0,0,0,,我不要求它是 IP， AF_INET 是 IPv4 的简写
+Dialogue: 0,0:19:45.94,0:19:53.26,Chinese,,0,0,0,,我不要求它是 IP...... AF_INET 是 IPv4 的简写
 Dialogue: 0,0:19:53.32,0:20:01.72,English,,0,0,0,,So by commenting that out it said okay I'll get whatever TCP connections this domain will support
 Dialogue: 0,0:19:53.32,0:20:01.72,Chinese,,0,0,0,,注释掉它，我会得到这个域支持的任何 TCP 连接
 Dialogue: 0,0:20:01.94,0:20:04.16,English,,0,0,0,,And that will include IPv6 addresses
@@ -493,36 +487,34 @@ Dialogue: 0,0:20:07.98,0:20:09.66,English,,0,0,0,,So I thought it's pretty neat
 Dialogue: 0,0:20:07.98,0:20:09.66,Chinese,,0,0,0,,所以我觉得它很巧妙
 Dialogue: 0,0:20:10.42,0:20:14.90,English,,0,0,0,,And you have to be a pretty nerdy but I am pretty nerdy to think this kind of thing is neat
 Dialogue: 0,0:20:10.42,0:20:14.90,Chinese,,0,0,0,,你也许觉得很乏味，但我坚持认为它是巧妙的
-Dialogue: 0,0:20:14.90,0:20:16.46,English,,0,0,0,,But that you could write code
-Dialogue: 0,0:20:14.90,0:20:16.46,Chinese,,0,0,0,,你可以编写代码
-Dialogue: 0,0:20:17.10,0:20:21.60,English,,0,0,0,,In this way that whether you're doing your different versions of the internet protocol
-Dialogue: 0,0:20:17.10,0:20:21.60,Chinese,,0,0,0,,通过这种方式，不管你是什么版本的互联网协议
-Dialogue: 0,0:20:22.96,0:20:25.30,English,,0,0,0,,Well it's all one common body of code
-Dialogue: 0,0:20:22.96,0:20:25.30,Chinese,,0,0,0,,这都是一个通用的代码
+Dialogue: 0,0:20:14.90,0:20:17.96,English,,0,0,0,,But that you could write code in this way
+Dialogue: 0,0:20:14.90,0:20:17.96,Chinese,,0,0,0,,你也可以使用这种方式编写代码
+Dialogue: 0,0:20:18.08,0:20:25.30,English,,0,0,0,,Whether you're doing your different versions of the internet protocol well it's all one common body of code
+Dialogue: 0,0:20:18.08,0:20:25.30,Chinese,,0,0,0,,无论你是处理的不同版本的互联网协议，它都是使用的相同的代码
 Dialogue: 0,0:20:27.78,0:20:29.30,English,,0,0,0,,So we've seen demo of this
 Dialogue: 0,0:20:27.78,0:20:29.30,Chinese,,0,0,0,,我们已经看到了这个的演示
 Dialogue: 0,0:20:30.16,0:20:37.60,English,,0,0,0,,Okay so now let's jump into that shows you sort of a little bit of this getaddrinfo api
-Dialogue: 0,0:20:30.16,0:20:37.60,Chinese,,0,0,0,,好的，现在让我们从 getaddrinfo api 开始
+Dialogue: 0,0:20:30.16,0:20:37.60,Chinese,,0,0,0,,现在让我们从 getaddrinfo api 开始
 Dialogue: 0,0:20:37.76,0:20:42.04,English,,0,0,0,,Now let's jump into the full-blown web server part
-Dialogue: 0,0:20:37.76,0:20:42.04,Chinese,,0,0,0,,进入整个的 Web 服务器部分
+Dialogue: 0,0:20:37.76,0:20:42.04,Chinese,,0,0,0,,现在让我们跳到完整的 Web 服务器部分吧
 Dialogue: 0,0:20:42.80,0:20:48.12,English,,0,0,0,,And as I mentioned in chronological order you actually want to set up the server first
 Dialogue: 0,0:20:42.80,0:20:48.12,Chinese,,0,0,0,,正如我提到的时间顺序，你首先要设置服务器
 Dialogue: 0,0:20:48.92,0:20:51.52,English,,0,0,0,,But it's easiest to understand the code for the client
-Dialogue: 0,0:20:48.92,0:20:51.52,Chinese,,0,0,0,,但是最容易理解客户端的代码
+Dialogue: 0,0:20:48.92,0:20:51.52,Chinese,,0,0,0,,但是最容易理解的是客户端的代码
 Dialogue: 0,0:20:51.80,0:20:56.20,English,,0,0,0,,Because as you see it has a couple fewer calls to make
 Dialogue: 0,0:20:51.80,0:20:56.20,Chinese,,0,0,0,,因为你可以看到它的调用次数减少了几次
-Dialogue: 0,0:20:56.68,0:20:59.24,English,,0,0,0,,So let's go for through the client and just imagine
-Dialogue: 0,0:20:56.68,0:20:59.24,Chinese,,0,0,0,,让我们通过客户端来想象一下
-Dialogue: 0,0:20:59.66,0:21:03.28,English,,0,0,0,,That somewhere out there there's a server that's waiting for us to connect to
-Dialogue: 0,0:20:59.66,0:21:03.28,Chinese,,0,0,0,,某个地方有一台等待着连接的服务器
+Dialogue: 0,0:20:56.68,0:20:58.14,English,,0,0,0,,So let's go for through the client
+Dialogue: 0,0:20:56.68,0:20:58.14,Chinese,,0,0,0,,让我们先来看看客户端
+Dialogue: 0,0:20:58.14,0:21:03.28,English,,0,0,0,,Just imagine that somewhere out there there's a server that's waiting for us to connect to
+Dialogue: 0,0:20:58.14,0:21:03.28,Chinese,,0,0,0,,想象一下，在某个地方，有一个服务器在等着我们连接
 Dialogue: 0,0:21:06.72,0:21:09.10,English,,0,0,0,,So this now doesn't perhaps
-Dialogue: 0,0:21:06.72,0:21:09.10,Chinese,,0,0,0,,现在也许
+Dialogue: 0,0:21:06.72,0:21:09.10,Chinese,,0,0,0,,也许......
 Dialogue: 0,0:21:09.56,0:21:13.18,English,,0,0,0,,When you break it down maybe this picture looks a little less daunting
 Dialogue: 0,0:21:09.56,0:21:13.18,Chinese,,0,0,0,,当你把它分开来看时，这张照片可能看起来不那么令人生畏
 Dialogue: 0,0:21:13.52,0:21:22.92,English,,0,0,0,,We already saw getaddrinfo is the way I'm going to get an IP address  out of whatever I'm where my server is
 Dialogue: 0,0:21:13.52,0:21:22.92,Chinese,,0,0,0,,我们已经看到 getaddrinfo 是我从服务器所在的地方获取 IP 地址的方法
 Dialogue: 0,0:21:23.50,0:21:26.88,English,,0,0,0,,Socket I mentioned this yesterday or last time
-Dialogue: 0,0:21:23.50,0:21:26.88,Chinese,,0,0,0,,我昨天还是上次提到过这个  Socket
+Dialogue: 0,0:21:23.50,0:21:26.88,Chinese,,0,0,0,,我昨天还是上次提到过这个 socket
 Dialogue: 0,0:21:27.40,0:21:33.90,English,,0,0,0,,It's just a local call that's used to allocate some data structures for this particular connection
 Dialogue: 0,0:21:27.40,0:21:33.90,Chinese,,0,0,0,,它只是一个本地调用，用于为此特定连接分配一些数据结构
 Dialogue: 0,0:21:34.48,0:21:37.10,English,,0,0,0,,And then connect is like placing a call
@@ -540,7 +532,7 @@ Dialogue: 0,0:21:58.94,0:22:03.44,Chinese,,0,0,0,,首先，我必须通过 getad
 Dialogue: 0,0:22:04.10,0:22:06.90,English,,0,0,0,,But it will look pretty similar to what you've seen before
 Dialogue: 0,0:22:04.10,0:22:06.90,Chinese,,0,0,0,,但它看起来与你之前看到的非常相似
 Dialogue: 0,0:22:07.30,0:22:10.80,English,,0,0,0,,Except I'm going to give a little more information because I want this to be
-Dialogue: 0,0:22:07.30,0:22:10.80,Chinese,,0,0,0,,除了我要提供更多信息，因为我希望
+Dialogue: 0,0:22:07.30,0:22:10.80,Chinese,,0,0,0,,除了我要提供更多信息，因为我希望......
 Dialogue: 0,0:22:14.26,0:22:18.56,English,,0,0,0,,I'm filling in a few more details here
 Dialogue: 0,0:22:14.26,0:22:18.56,Chinese,,0,0,0,,我在这里填写一些细节
 Dialogue: 0,0:22:18.56,0:22:21.48,English,,0,0,0,,Because I want to specify more features of this connection
@@ -560,7 +552,7 @@ Dialogue: 0,0:22:50.46,0:22:57.52,Chinese,,0,0,0,,然后，这个 AI_ADDRCONFIG 
 Dialogue: 0,0:22:57.56,0:22:59.68,English,,0,0,0,,And it they say it's a good idea to use it
 Dialogue: 0,0:22:57.56,0:22:59.68,Chinese,,0,0,0,,推荐使用这个标志
 Dialogue: 0,0:23:00.14,0:23:03.56,English,,0,0,0,,And then I'm making a call to my friend getaddrinfo
-Dialogue: 0,0:23:00.14,0:23:03.56,Chinese,,0,0,0,,当我调用 getaddrinfo 的时候
+Dialogue: 0,0:23:00.14,0:23:03.56,Chinese,,0,0,0,,当我调用 Getaddrinfo 的时候
 Dialogue: 0,0:23:04.38,0:23:13.04,English,,0,0,0,,With these hints and it's going to return back this linked list of representing the the results of this request
 Dialogue: 0,0:23:04.38,0:23:13.04,Chinese,,0,0,0,,根据这些 hints ，它将返回此请求的结果链表
 Dialogue: 0,0:23:13.64,0:23:16.02,English,,0,0,0,,So basically a linked list of IP addresses
@@ -568,7 +560,7 @@ Dialogue: 0,0:23:13.64,0:23:16.02,Chinese,,0,0,0,,是一个 IP 地址链表
 Dialogue: 0,0:23:18.30,0:23:21.84,English,,0,0,0,,And now just like you saw before I'm going to walk that list with a
 Dialogue: 0,0:23:18.30,0:23:21.84,Chinese,,0,0,0,,现在就像你之前看到的那样，我要遍历这个列表
 Dialogue: 0,0:23:23.44,0:23:26.92,English,,0,0,0,,Except now what I'm going to try and do is for each of those say
-Dialogue: 0,0:23:23.44,0:23:26.92,Chinese,,0,0,0,,现在我要尝试做的是
+Dialogue: 0,0:23:23.44,0:23:26.92,Chinese,,0,0,0,,现在我只需要遍历每一个结果
 Dialogue: 0,0:23:27.34,0:23:30.40,English,,0,0,0,,Well here's a number let me give that a try and if that fails
 Dialogue: 0,0:23:27.34,0:23:30.40,Chinese,,0,0,0,,那么让我尝试一下这个套接字地址，如果失败了
 Dialogue: 0,0:23:30.42,0:23:34.90,English,,0,0,0,,Here's another address let me give that a try so I'm going to just sequentially try
@@ -580,15 +572,15 @@ Dialogue: 0,0:23:37.74,0:23:41.14,Chinese,,0,0,0,,例如，针对 twitter 可能
 Dialogue: 0,0:23:41.70,0:23:43.24,English,,0,0,0,,I'll walk through all of those
 Dialogue: 0,0:23:41.70,0:23:43.24,Chinese,,0,0,0,,我将遍历所有的
 Dialogue: 0,0:23:44.72,0:23:47.46,English,,0,0,0,,And on each one I'm going to call for a socket
-Dialogue: 0,0:23:44.72,0:23:47.46,Chinese,,0,0,0,,能够调用 socket 的地址
+Dialogue: 0,0:23:44.72,0:23:47.46,Chinese,,0,0,0,,每一个我都会调用 socket 这个函数
 Dialogue: 0,0:23:48.36,0:23:50.48,English,,0,0,0,,And the socket is the one that
-Dialogue: 0,0:23:48.36,0:23:50.48,Chinese,,0,0,0,, socket 就是
+Dialogue: 0,0:23:48.36,0:23:50.48,Chinese,,0,0,0,, socket 函数是......
 Dialogue: 0,0:23:52.86,0:23:55.72,English,,0,0,0,,As I said it allocates some data structures
-Dialogue: 0,0:23:52.86,0:23:55.72,Chinese,,0,0,0,,它分配了一些数据结构
+Dialogue: 0,0:23:52.86,0:23:55.72,Chinese,,0,0,0,,它分配了一些数据结构所需内存
 Dialogue: 0,0:23:55.88,0:23:59.50,English,,0,0,0,,I talked about this last time that's why I'm rushing through is pretty fast
 Dialogue: 0,0:23:55.88,0:23:59.50,Chinese,,0,0,0,,我上次匆匆忙忙地谈到这个问题
 Dialogue: 0,0:24:00.04,0:24:10.76,English,,0,0,0,,But you'll notice that the fields that you're filling in are actually all been generated for us by the Getaddrinfo call
-Dialogue: 0,0:24:00.04,0:24:10.76,Chinese,,0,0,0,,你会注意到你填写的字段实际上都是由调用的 Getaddrinfo 自动生成的
+Dialogue: 0,0:24:00.04,0:24:10.76,Chinese,,0,0,0,,你会注意到这些字段的填充实际上都是由调用的 Getaddrinfo 自动生成的
 Dialogue: 0,0:24:11.28,0:24:18.00,English,,0,0,0,,So whereas the east have to remember oh this is a number and it should be a shortened network order and yada da
 Dialogue: 0,0:24:11.28,0:24:18.00,Chinese,,0,0,0,,但你必须记住这是一个数字，它是一个缩短的网络顺序
 Dialogue: 0,0:24:18.40,0:24:25.96,English,,0,0,0,,Pretty much nowadays you can just say here I'm just going to pass you this information that
@@ -596,7 +588,7 @@ Dialogue: 0,0:24:18.40,0:24:25.96,Chinese,,0,0,0,,现在你可以说，我传给
 Dialogue: 0,0:24:32.12,0:24:34.56,English,,0,0,0,,Was returned by a function call
 Dialogue: 0,0:24:32.12,0:24:34.56,Chinese,,0,0,0,,是通过函数调用返回的
 Dialogue: 0,0:24:35.46,0:24:39.04,English,,0,0,0,,Oh and then as I mentioned also last time
-Dialogue: 0,0:24:35.46,0:24:39.04,Chinese,,0,0,0,,哦，然后正如我上次提到的那样
+Dialogue: 0,0:24:35.46,0:24:39.04,Chinese,,0,0,0,,然后还是我上次提到的那样
 Dialogue: 0,0:24:39.24,0:24:41.14,English,,0,0,0,,I know I went through a pretty fast last time
 Dialogue: 0,0:24:39.24,0:24:41.14,Chinese,,0,0,0,,我知道上次我讲的很快
 Dialogue: 0,0:24:41.68,0:24:45.32,English,,0,0,0,,Socket actually returns back to you a file descriptor
@@ -618,13 +610,13 @@ Dialogue: 0,0:25:15.76,0:25:22.04,Chinese,,0,0,0,,这里的实际工作是，它
 Dialogue: 0,0:25:23.96,0:25:28.16,English,,0,0,0,,And then what I'll do is I'll attempt to connect to the server
 Dialogue: 0,0:25:23.96,0:25:28.16,Chinese,,0,0,0,,然后我将尝试连接到服务器
 Dialogue: 0,0:25:28.62,0:25:32.73,English,,0,0,0,,And again you'll see the various arguments I have to pass to the connect command
-Dialogue: 0,0:25:28.62,0:25:32.73,Chinese,,0,0,0,,你又看到了我传递给 connect 函数的各种参数
+Dialogue: 0,0:25:28.62,0:25:32.73,Chinese,,0,0,0,,你看到了我再次传递给 connect 函数的各种参数
 Dialogue: 0,0:25:33.24,0:25:38.24,English,,0,0,0,,I get provided for me out of this call I made to getaddrinfo
 Dialogue: 0,0:25:33.24,0:25:38.24,Chinese,,0,0,0,,这些参数是用 getaddrinfo 函数提供的
 Dialogue: 0,0:25:39.40,0:25:41.46,English,,0,0,0,,And that's either going to work or it's not going to work
 Dialogue: 0,0:25:39.40,0:25:41.46,Chinese,,0,0,0,,它们要么正在发挥作用，要么还没发挥作用
 Dialogue: 0,0:25:41.94,0:25:44.92,English,,0,0,0,,Similarly the socket call is either going to work or not work
-Dialogue: 0,0:25:41.94,0:25:44.92,Chinese,,0,0,0,,类似地，要么能调用 socket ，要么不能
+Dialogue: 0,0:25:41.94,0:25:44.92,Chinese,,0,0,0,,类似地，要判断 socket 是否能正常返回
 Dialogue: 0,0:25:45.44,0:25:48.06,English,,0,0,0,,Be very unusual for a call to socket to fail
 Dialogue: 0,0:25:45.44,0:25:48.06,Chinese,,0,0,0,, socket 连接失败很不寻常
 Dialogue: 0,0:25:48.72,0:25:54.74,English,,0,0,0,,But connect for example will fail if the server's not available or doesn't like you for some reason
@@ -634,7 +626,7 @@ Dialogue: 0,0:25:56.28,0:26:02.48,Chinese,,0,0,0,,如果连接成功，将跳出
 Dialogue: 0,0:26:03.16,0:26:11.10,English,,0,0,0,,I'm going to then free this data structure and return the client the file descriptor
 Dialogue: 0,0:26:03.16,0:26:11.10,Chinese,,0,0,0,,然后释放这个链表并返回给客户端文件描述符
 Dialogue: 0,0:26:11.98,0:26:19.76,English,,0,0,0,,For the this particular function its job is to open a connection to a client and return a file descriptor for it
-Dialogue: 0,0:26:11.98,0:26:19.76,Chinese,,0,0,0,,对于这个函数，其作用是打开客户端的连接并为其返回文件描述符
+Dialogue: 0,0:26:11.98,0:26:19.76,Chinese,,0,0,0,,这个函数的作用是打开客户端的连接并为其返回文件描述符
 Dialogue: 0,0:26:20.34,0:26:24.88,English,,0,0,0,,And this is just what happens if you fall out of the loop not having made any connections
 Dialogue: 0,0:26:20.34,0:26:24.88,Chinese,,0,0,0,,这就是如果你没有建立任何连接而退出循环会发生的事情
 Dialogue: 0,0:26:30.94,0:26:35.54,English,,0,0,0,,Ok so I know this is I'm marching this fast
@@ -646,11 +638,11 @@ Dialogue: 0,0:26:42.32,0:26:46.08,Chinese,,0,0,0,,只是需要时间来理解，
 Dialogue: 0,0:26:47.04,0:26:50.48,English,,0,0,0,,Ok but that's the idea is we're going to
 Dialogue: 0,0:26:47.04,0:26:50.48,Chinese,,0,0,0,,好的，这就是我们的正在讨论的
 Dialogue: 0,0:26:51.88,0:26:56.60,English,,0,0,0,,Now on this server side which as I mentioned is that actually what you do beforehand
-Dialogue: 0,0:26:51.88,0:26:56.60,Chinese,,0,0,0,,就像我说的，服务器端是首先要建立的
+Dialogue: 0,0:26:51.88,0:26:56.60,Chinese,,0,0,0,,就像我说的，对于服务器这端，这是你应该提前做的
 Dialogue: 0,0:26:56.60,0:27:00.46,English,,0,0,0,,Because you can't really have a client connect to a server that doesn't exist
 Dialogue: 0,0:26:56.60,0:27:00.46,Chinese,,0,0,0,,因为你无法将客户端连接到不存在的服务器
 Dialogue: 0,0:27:01.16,0:27:04.00,English,,0,0,0,,But it's just a little bit trickier to understand what's going on
-Dialogue: 0,0:27:01.16,0:27:04.00,Chinese,,0,0,0,,但要理解正在发生的事情只是有点棘手
+Dialogue: 0,0:27:01.16,0:27:04.00,Chinese,,0,0,0,,但要理解正在发生的事情有点棘手
 Dialogue: 0,0:27:05.00,0:27:07.84,English,,0,0,0,,But you'll see it the first two steps are the same I need a socket
 Dialogue: 0,0:27:05.00,0:27:07.84,Chinese,,0,0,0,,但你会看到它的前两个步骤是相同的，它们都需要一个 socket
 Dialogue: 0,0:27:08.54,0:27:13.22,English,,0,0,0,,But then remember what I want to do is essentially set up a server
@@ -658,25 +650,25 @@ Dialogue: 0,0:27:08.54,0:27:13.22,Chinese,,0,0,0,,但是记住我想要做的事
 Dialogue: 0,0:27:13.22,0:27:18.54,English,,0,0,0,,That's listening on a particular port for clients to request on it
 Dialogue: 0,0:27:13.22,0:27:18.54,Chinese,,0,0,0,,它在特定端口监听客户端的请求
 Dialogue: 0,0:27:18.98,0:27:21.62,English,,0,0,0,,And that's the function of the bind and the listen functions
-Dialogue: 0,0:27:18.98,0:27:21.62,Chinese,,0,0,0,,这就是  bind  和  listen  函数的功能
+Dialogue: 0,0:27:18.98,0:27:21.62,Chinese,,0,0,0,,这就是 bind 和 listen 函数的功能
 Dialogue: 0,0:27:22.68,0:27:26.44,English,,0,0,0,,And then the accept is when I'm saying ok the server is ready
-Dialogue: 0,0:27:22.68,0:27:26.44,Chinese,,0,0,0,,然后  accept  函数就是服务器准备就绪
+Dialogue: 0,0:27:22.68,0:27:26.44,Chinese,,0,0,0,,然后服务器准备就绪就调用 accept
 Dialogue: 0,0:27:27.04,0:27:28.50,English,,0,0,0,,I'm ready to accept requests
-Dialogue: 0,0:27:27.04,0:27:28.50,Chinese,,0,0,0,,我已经准备好接受请求了
+Dialogue: 0,0:27:27.04,0:27:28.50,Chinese,,0,0,0,,准备好接受请求
 Dialogue: 0,0:27:29.00,0:27:32.02,English,,0,0,0,,And it will fire that up
 Dialogue: 0,0:27:29.00,0:27:32.02,Chinese,,0,0,0,,它就会启动
-Dialogue: 0,0:27:33.04,0:27:39.06,English,,0,0,0,,In particular the accept will just stop and hang up and wait
-Dialogue: 0,0:27:33.04,0:27:39.06,Chinese,,0,0,0,,当接收停止，它会挂断并一直等待
-Dialogue: 0,0:27:39.34,0:27:43.02,English,,0,0,0,,Indefinitely until some connection request comes in
-Dialogue: 0,0:27:39.34,0:27:43.02,Chinese,,0,0,0,,直到某些连接请求进入
+Dialogue: 0,0:27:33.04,0:27:38.02,English,,0,0,0,,In particular the accept will just stop and hang up
+Dialogue: 0,0:27:33.04,0:27:38.02,Chinese,,0,0,0,,同步的是 accept 一直处理停止，挂起，
+Dialogue: 0,0:27:38.42,0:27:43.02,English,,0,0,0,,And wait indefinitely until some connection request comes in
+Dialogue: 0,0:27:38.42,0:27:43.02,Chinese,,0,0,0,,和无限期的等待中，直到某些连接请求进入
 Dialogue: 0,0:27:43.86,0:27:47.38,English,,0,0,0,,So if the server has no customers if there are no clients
 Dialogue: 0,0:27:43.86,0:27:47.38,Chinese,,0,0,0,,因此，如果没有客户端，服务器就没有客户
 Dialogue: 0,0:27:48.02,0:27:54.00,English,,0,0,0,,It will just be waiting potentially forever with the call to accept
-Dialogue: 0,0:27:48.02,0:27:54.00,Chinese,,0,0,0,,它只会在接收连接的状态下一直等待
+Dialogue: 0,0:27:48.02,0:27:54.00,Chinese,,0,0,0,,它只是调用 accept 函数，用于等待潜在的客户访问
 Dialogue: 0,0:27:55.64,0:27:57.82,English,,0,0,0,,Ok everything else goes through boom boom boom
-Dialogue: 0,0:27:55.64,0:27:57.82,Chinese,,0,0,0,,其他一切都在运转
+Dialogue: 0,0:27:55.64,0:27:57.82,Chinese,,0,0,0,,之前的一切都能砰！砰！砰！的运行
 Dialogue: 0,0:27:57.92,0:28:02.18,English,,0,0,0,,But that one is where the actual waiting occurs for client connections
-Dialogue: 0,0:27:57.92,0:28:02.18,Chinese,,0,0,0,,但那个是等待客户端连接的地方
+Dialogue: 0,0:27:57.92,0:28:02.18,Chinese,,0,0,0,,但这里却要等待客户端连接
 Dialogue: 0,0:28:07.00,0:28:08.74,English,,0,0,0,,Some way I should mention the connect
 Dialogue: 0,0:28:07.00,0:28:08.74,Chinese,,0,0,0,,我得提一下连接  connect
 Dialogue: 0,0:28:10.42,0:28:13.86,English,,0,0,0,,Will also hang up and wait until the connection is formed
@@ -684,7 +676,7 @@ Dialogue: 0,0:28:10.42,0:28:13.86,Chinese,,0,0,0,,也会挂起并等待连接形
 Dialogue: 0,0:28:14.36,0:28:19.10,English,,0,0,0,,But typically it's built in with a time out so that it will fail if it takes too long
 Dialogue: 0,0:28:14.36,0:28:19.10,Chinese,,0,0,0,,但通常情况下它是内置的超时时间，如果花费的时间太长就会失败
 Dialogue: 0,0:28:19.42,0:28:24.06,English,,0,0,0,,And there's you can adjust the parameters on both of these how long you wait for,whether your wait or not
-Dialogue: 0,0:28:19.42,0:28:24.06,Chinese,,0,0,0,,而且你可以调整这两个参数，等待多长时间，是否等待
+Dialogue: 0,0:28:19.42,0:28:24.06,Chinese,,0,0,0,,而且你可以调整这两个参数，设置等待多长时间，是否等待
 Dialogue: 0,0:28:26.28,0:28:28.00,English,,0,0,0,,But I'm talking the typical case
 Dialogue: 0,0:28:26.28,0:28:28.00,Chinese,,0,0,0,,我说的是一般情况
 Dialogue: 0,0:28:28.54,0:28:30.20,English,,0,0,0,,So anyways
@@ -692,9 +684,9 @@ Dialogue: 0,0:28:28.54,0:28:30.20,Chinese,,0,0,0,,那么
 Dialogue: 0,0:28:30.80,0:28:34.30,English,,0,0,0,,That again what will look a little those functions then
 Dialogue: 0,0:28:30.80,0:28:34.30,Chinese,,0,0,0,,那些其他的函数又是什么样的呢？
 Dialogue: 0,0:28:37.04,0:28:40.72,English,,0,0,0,,Okay so this again we have to make a call to getaddrinfo
-Dialogue: 0,0:28:37.04,0:28:40.72,Chinese,,0,0,0,,好的，我们再次调用 getaddrinfo
+Dialogue: 0,0:28:37.04,0:28:40.72,Chinese,,0,0,0,,这里好的，我们再次调用 Getaddrinfo
 Dialogue: 0,0:28:41.34,0:28:45.64,English,,0,0,0,,And this time it's not because I need any IP addresses I already have an IP address
-Dialogue: 0,0:28:41.34,0:28:45.64,Chinese,,0,0,0,,这次并不是需要 IP 地址，而是我已经有了 IP 地址
+Dialogue: 0,0:28:41.34,0:28:45.64,Chinese,,0,0,0,,这次并不是需要 IP 地址，因为我已经有了 IP 地址
 Dialogue: 0,0:28:45.64,0:28:52.64,English,,0,0,0,,I'm a local server I don't actually need to know the IP addresses of my of the clients
 Dialogue: 0,0:28:45.64,0:28:52.64,Chinese,,0,0,0,,我是本地服务器，实际上它不需要知道客户端的 IP 地址
 Dialogue: 0,0:28:52.74,0:28:53.94,English,,0,0,0,,I usually won't know them
@@ -702,9 +694,9 @@ Dialogue: 0,0:28:52.74,0:28:53.94,Chinese,,0,0,0,,通常不会认识他们
 Dialogue: 0,0:28:54.96,0:28:59.68,English,,0,0,0,,But I need to fill in all those nasty little data structures and so
 Dialogue: 0,0:28:54.96,0:28:59.68,Chinese,,0,0,0,,但需要填写那些讨厌的数据结构等等
 Dialogue: 0,0:29:00.00,0:29:02.76,English,,0,0,0,,That's what I'm going to use getaddrinfo here for here
-Dialogue: 0,0:29:00.00,0:29:02.76,Chinese,,0,0,0,,这时就要使用 getaddrinfo
+Dialogue: 0,0:29:00.00,0:29:02.76,Chinese,,0,0,0,,这时就要使用 Getaddrinfo
 Dialogue: 0,0:29:03.72,0:29:08.06,English,,0,0,0,,So I'm going to say this time again I want a TCP connection a sock stream
-Dialogue: 0,0:29:03.72,0:29:08.06,Chinese,,0,0,0,,我希望 TCP 连接是 SOCK_STREAM 形式的
+Dialogue: 0,0:29:03.72,0:29:08.06,Chinese,,0,0,0,,我希望 TCP 连接所以使用 SOCK_STREAM
 Dialogue: 0,0:29:09.16,0:29:19.24,English,,0,0,0,,I want it to be a listening for any IP address connection coming in
 Dialogue: 0,0:29:09.16,0:29:19.24,Chinese,,0,0,0,,我希望它能够监听任何 IP 地址连接
 Dialogue: 0,0:29:21.00,0:29:25.02,English,,0,0,0,,So it's passive meaning it's not actively reaching out
@@ -728,7 +720,7 @@ Dialogue: 0,0:29:57.34,0:29:59.40,Chinese,,0,0,0,,然后它将返回 listp ，�
 Dialogue: 0,0:29:59.40,0:30:02.06,English,,0,0,0,,[student speaking]
 Dialogue: 0,0:29:59.40,0:30:02.06,Chinese,,0,0,0,,【学生提问】
 Dialogue: 0,0:30:02.08,0:30:11.56,English,,0,0,0,,Memset is the standard way that you set all the bytes in some number of bytes to a fixed value
-Dialogue: 0,0:30:02.08,0:30:11.56,Chinese,,0,0,0,, Memset 是将某些字节设置为固定值的标准方法
+Dialogue: 0,0:30:11.51,0:30:11.56,Chinese,,0,0,0,, Memset 是将某些字节设置为固定值的标准方法
 Dialogue: 0,0:30:12.20,0:30:15.84,English,,0,0,0,,It's the same as if you've use be 0 before or be...
 Dialogue: 0,0:30:12.20,0:30:15.84,Chinese,,0,0,0,,它就像你之前使用 0 一样
 Dialogue: 0,0:30:16.94,0:30:20.82,English,,0,0,0,,It was is the way you often would zero out a bunch of bytes
@@ -797,10 +789,10 @@ Dialogue: 0,0:32:55.64,0:33:01.82,English,,0,0,0,,I want this file descriptor to
 Dialogue: 0,0:32:55.64,0:33:01.82,Chinese,,0,0,0,,它将套接字描述符与
 Dialogue: 0,0:33:03.20,0:33:07.78,English,,0,0,0,,This information which in particular specifies the port number
 Dialogue: 0,0:33:03.20,0:33:07.78,Chinese,,0,0,0,,套接字特别指定的端口号绑定
-Dialogue: 0,0:33:07.94,0:33:13.86,English,,0,0,0,,So that's where the binding occurs for this machine remember port numbers are
-Dialogue: 0,0:33:07.94,0:33:13.86,Chinese,,0,0,0,,这就是这台机器发生绑定的地方，记住端口号是
-Dialogue: 0,0:33:14.34,0:33:19.28,English,,0,0,0,,A resource that all the different applications on a single machine are sort of sharing
-Dialogue: 0,0:33:14.34,0:33:19.28,Chinese,,0,0,0,,一台机器里不同应用共享的
+Dialogue: 0,0:33:07.94,0:33:12.04,English,,0,0,0,,So that's where the binding occurs for this machine
+Dialogue: 0,0:33:07.94,0:33:12.04,Chinese,,0,0,0,,这就是绑定这台机器端口号的地方
+Dialogue: 0,0:33:12.04,0:33:19.28,English,,0,0,0,,Remember port numbers are a resource that all the different applications on a single machine are sort of sharing
+Dialogue: 0,0:33:12.04,0:33:19.28,Chinese,,0,0,0,,端口号是单机中所有不同应用共享的资源
 Dialogue: 0,0:33:19.72,0:33:21.32,English,,0,0,0,,Where are competing for
 Dialogue: 0,0:33:19.72,0:33:21.32,Chinese,,0,0,0,,同时也竞争的资源
 Dialogue: 0,0:33:21.88,0:33:30.00,English,,0,0,0,,And so this is requesting I want to use this particular port number in doing this in setting up a server
@@ -808,19 +800,19 @@ Dialogue: 0,0:33:21.88,0:33:30.00,Chinese,,0,0,0,,所以这要求在设置服务
 Dialogue: 0,0:33:30.48,0:33:33.00,English,,0,0,0,,And that may fail if the ports already in use
 Dialogue: 0,0:33:30.48,0:33:33.00,Chinese,,0,0,0,,如果端口已在使用中，则可能会失败
 Dialogue: 0,0:33:33.56,0:33:36.26,English,,0,0,0,,Or if you're trying to set up a service on a port
-Dialogue: 0,0:33:33.56,0:33:36.26,Chinese,,0,0,0,,如果你尝试在端口上设置一台服务器
+Dialogue: 0,0:33:33.56,0:33:36.26,Chinese,,0,0,0,,如果你尝试在端口上设置一个服务
 Dialogue: 0,0:33:36.28,0:33:45.18,English,,0,0,0,,That you're not allowed to do, you're not allowed to set up a service on port 80 unless you have root access
-Dialogue: 0,0:33:36.28,0:33:45.18,Chinese,,0,0,0,,除非你具有  root  访问权限，否则不允许你在  80  端口上设置服务
+Dialogue: 0,0:33:36.28,0:33:45.18,Chinese,,0,0,0,,除非你具有 root 访问权限，否则不允许你在 80 端口上设置服务
 Dialogue: 0,0:33:50.02,0:33:50.72,English,,0,0,0,,So and
 Dialogue: 0,0:33:50.02,0:33:50.72,Chinese,,0,0,0,,然后
 Dialogue: 0,0:33:51.96,0:33:58.14,English,,0,0,0,,Then again it passes in the information that was filled in by the call to getaddrinfo
-Dialogue: 0,0:33:51.96,0:33:58.14,Chinese,,0,0,0,,它再次传递 getaddrinfo 调用时填写的信息
+Dialogue: 0,0:33:51.96,0:33:58.14,Chinese,,0,0,0,,它再次传递 Getaddrinfo 调用时填写的信息
 Dialogue: 0,0:34:04.96,0:34:06.28,English,,0,0,0,,So we're not quite done yet
 Dialogue: 0,0:34:04.96,0:34:06.28,Chinese,,0,0,0,,还没有完成
 Dialogue: 0,0:34:07.00,0:34:12.96,English,,0,0,0,,But we if this succeeds then what we've done is we bound a port number
 Dialogue: 0,0:34:07.00,0:34:12.96,Chinese,,0,0,0,,但是，如果这成功，那么我们就绑定了一个端口号
 Dialogue: 0,0:34:13.34,0:34:17.42,English,,0,0,0,,And a file descriptor together and a socket
-Dialogue: 0,0:34:13.34,0:34:17.42,Chinese,,0,0,0,,和一个文件描述符，一个套接字
+Dialogue: 0,0:34:13.34,0:34:17.42,Chinese,,0,0,0,,也绑定一个文件描述符，一个套接字
 Dialogue: 0,0:34:23.28,0:34:29.44,English,,0,0,0,,But it all that's done is that's again just within the machine saying okay
 Dialogue: 0,0:34:23.28,0:34:29.44,Chinese,,0,0,0,,但所有这一切都得机器说可以
 Dialogue: 0,0:34:30.10,0:34:36.18,English,,0,0,0,,I agree you particularly this particular process gets to be listening on a particular port
@@ -904,7 +896,7 @@ Dialogue: 0,0:38:06.26,0:38:08.86,Chinese,,0,0,0,,所以这是分配给客户端
 Dialogue: 0,0:38:09.72,0:38:14.46,English,,0,0,0,,In making the connection the server is using port 15213
 Dialogue: 0,0:38:09.72,0:38:14.46,Chinese,,0,0,0,,在建立连接时，服务器使用端口 15213
 Dialogue: 0,0:38:14.80,0:38:21.80,English,,0,0,0,,And you recall we talked about last time that a link is defined by the host and port names on either end
-Dialogue: 0,0:38:14.80,0:38:21.80,Chinese,,0,0,0,,还记得我们上次谈到过，两端的主机和端口名定义了一个链接
+Dialogue: 0,0:38:14.80,0:38:21.80,Chinese,,0,0,0,,还记得我们上次谈到过，两端的主机和端口名定义了一个连接
 Dialogue: 0,0:38:22.46,0:38:26.54,English,,0,0,0,,And that the client side is usually assigned what they call a ephemeral port
 Dialogue: 0,0:38:22.46,0:38:26.54,Chinese,,0,0,0,,并且客户端通常被分配一个叫做临时端口的东西
 Dialogue: 0,0:38:26.76,0:38:31.74,English,,0,0,0,,It's meaning it's just assigned a trip for this particular session that I'm going to run
@@ -935,7 +927,7 @@ Dialogue: 0,0:39:29.54,0:39:31.78,English,,0,0,0,,and if I wanted to I could sta
 Dialogue: 0,0:39:29.54,0:39:31.78,Chinese,,0,0,0,,如果我想要重来一次，我需要重新运行
 Dialogue: 0,0:39:32.30,0:39:37.32,English,,0,0,0,,And you see this time it signed a different ephemeral port to the client
 Dialogue: 0,0:39:32.30,0:39:37.32,Chinese,,0,0,0,,你看到这次给客户端分配了一个不同的临时端口
-Dialogue: 0,0:39:39.50,0:39:41.46,English,,0,0,0,,But I can not only do one at a time 
+Dialogue: 0,0:39:39.50,0:39:41.46,English,,0,0,0,,But I can not only do one at a time
 Dialogue: 0,0:39:39.50,0:39:41.46,Chinese,,0,0,0,,但是我不想同时只请求一次
 Dialogue: 0,0:39:41.46,0:39:48.20,English,,0,0,0,,If I tried to now do another connection...I will try and do it
 Dialogue: 0,0:39:41.46,0:39:48.20,Chinese,,0,0,0,,如果我现在尝试发起另一次连接
@@ -952,7 +944,7 @@ Dialogue: 0,0:40:13.98,0:40:18.26,Chinese,,0,0,0,,这很简单，这是由我们
 Dialogue: 0,0:40:19.34,0:40:20.66,English,,0,0,0,,So here's the client side of it
 Dialogue: 0,0:40:19.34,0:40:20.66,Chinese,,0,0,0,,这是客户端的代码
 Dialogue: 0,0:40:21.18,0:40:25.62,English,,0,0,0,,It calls that function I went through called open the client file descriptor
-Dialogue: 0,0:40:21.18,0:40:25.62,Chinese,,0,0,0,,它调用了我之前说的  Open_clientfd  的函数
+Dialogue: 0,0:40:21.18,0:40:25.62,Chinese,,0,0,0,,它调用了我之前说的 Open_clientfd 的函数
 Dialogue: 0,0:40:25.64,0:40:29.40,English,,0,0,0,,Where you gave the name of the host and the name of the port
 Dialogue: 0,0:40:25.64,0:40:29.40,Chinese,,0,0,0,,这里提供了主机的名称和端口
 Dialogue: 0,0:40:30.28,0:40:32.52,English,,0,0,0,,That you're the server's operating on
