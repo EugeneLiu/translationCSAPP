@@ -16,9 +16,9 @@ Video File: ../../../../Desktop/csapp/Lecture 23  Concurrent Programming.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 1.125000
-Scroll Position: 1296
-Active Line: 1300
-Video Position: 110963
+Scroll Position: 1485
+Active Line: 1489
+Video Position: 128164
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -1341,27 +1341,27 @@ Dialogue: 0,1:02:09.90,1:02:13.76,Chinese,,0,0,0,,他们的资源在终止时自
 Dialogue: 0,1:02:14.88,1:02:21.62,English,,0,0,0,,So the default states joinable and you have to use this detach function call to make the thread detached
 Dialogue: 0,1:02:14.88,1:02:21.62,Chinese,,0,0,0,,所以默认状态是可连接的，你必须使用这个分离函数调用来分离线程
 Dialogue: 0,1:02:24.24,1:02:26.46,English,,0,0,0,,The biggest issue with threads though
-Dialogue: 0,1:02:24.24,1:02:26.46,Chinese,,0,0,0,,虽然线程最大的问题
+Dialogue: 0,1:02:24.24,1:02:26.46,Chinese,,0,0,0,,然而线程最大的问题是
 Dialogue: 0,1:02:26.76,1:02:30.56,English,,0,0,0,,Like the beautiful thing about threads is that you're sharing the same global address space
-Dialogue: 0,1:02:26.76,1:02:30.56,Chinese,,0,0,0,,就像线程的美妙之处在于，你正在共享相同的全局地址空间
+Dialogue: 0,1:02:26.76,1:02:30.56,Chinese,,0,0,0,,线程的美妙之处在于，你可以共享相同的全局地址空间
 Dialogue: 0,1:02:30.58,1:02:36.16,English,,0,0,0,,So it's very easy to share data structures you know if you had multiple threads
-Dialogue: 0,1:02:30.58,1:02:36.16,Chinese,,0,0,0,,因此，如果你有多个线程，那么共享你知道的数据结构非常容易
+Dialogue: 0,1:02:30.58,1:02:36.16,Chinese,,0,0,0,,如果你有多个线程，那么共享你知道的数据结构非常简单
 Dialogue: 0,1:02:36.16,1:02:42.16,English,,0,0,0,,If you had a web server a concurrent web server that was built with multiple threads be very easy to implement a cache
-Dialogue: 0,1:02:36.16,1:02:42.16,Chinese,,0,0,0,,如果你有一个 Web 服务器，使用多个线程构建的并发 Web 服务器很容易实现缓存
+Dialogue: 0,1:02:36.16,1:02:42.16,Chinese,,0,0,0,,如果你有一个 Web 服务器，使用多个线程构建的并发 Web 服务器很容易实现
 Dialogue: 0,1:02:43.48,1:02:47.96,English,,0,0,0,,All the threads could use right because they're all sharing that same virtual address space
 Dialogue: 0,1:02:43.48,1:02:47.96,Chinese,,0,0,0,,所有线程都可以正确使用，因为它们都共享相同的虚拟地址空间
 Dialogue: 0,1:02:48.80,1:02:51.60,English,,0,0,0,,But the thing that makes threads so nice
-Dialogue: 0,1:02:48.80,1:02:51.60,Chinese,,0,0,0,,但是让线程如此美妙的东西
+Dialogue: 0,1:02:48.80,1:02:51.60,Chinese,,0,0,0,,有了线程事情变得如此美妙
 Dialogue: 0,1:02:51.64,1:02:58.62,English,,0,0,0,,This ease the ease with which you can share resources  is also the thing that makes them very tricky to deal with
-Dialogue: 0,1:02:51.64,1:02:58.62,Chinese,,0,0,0,,这样可以轻松轻松地共享资源，这也使得处理它们变得非常棘手
+Dialogue: 0,1:02:51.64,1:02:58.62,Chinese,,0,0,0,,这样可以轻轻松松地共享资源，这也使得处理它们变得非常棘手
 Dialogue: 0,1:02:59.02,1:03:04.46,English,,0,0,0,,So as soon as just like we saw with our shell lab handlers
-Dialogue: 0,1:02:59.02,1:03:04.46,Chinese,,0,0,0,,就像我们看到我们的 shell 实验室处理程序一样
+Dialogue: 0,1:02:59.02,1:03:04.46,Chinese,,0,0,0,,就像我们在 「shell lab」处理程序看到的那样
 Dialogue: 0,1:03:05.28,1:03:10.61,English,,0,0,0,,You know as soon as you have multiple flows accessing shared resources you have to be very careful
 Dialogue: 0,1:03:05.28,1:03:10.61,Chinese,,0,0,0,,你知道，只要你有多个流访问共享资源，你就必须非常小心
 Dialogue: 0,1:03:11.30,1:03:12.86,English,,0,0,0,,It's very easy to make mistakes
-Dialogue: 0,1:03:11.30,1:03:12.86,Chinese,,0,0,0,,犯错很容易
+Dialogue: 0,1:03:11.30,1:03:12.86,Chinese,,0,0,0,,一不小心就会犯错
 Dialogue: 0,1:03:15.04,1:03:23.48,English,,0,0,0,,And it's very easy to or it's possible to to share resources in unexpected and unintended ways
-Dialogue: 0,1:03:15.04,1:03:23.48,Chinese,,0,0,0,,并且很容易或者有可能以意想不到的方式共享资源
+Dialogue: 0,1:03:15.04,1:03:23.48,Chinese,,0,0,0,,这很容易，或者很有可能以意想不到的方式共享资源
 Dialogue: 0,1:03:24.56,1:03:34.12,English,,0,0,0,,For example if one thread passes the address of a local variable on its stack to another thread
 Dialogue: 0,1:03:24.56,1:03:34.12,Chinese,,0,0,0,,例如，如果一个线程将其堆栈上的局部变量的地址传递给另一个线程
 Dialogue: 0,1:03:34.70,1:03:39.66,English,,0,0,0,,Then now that the called thread now has access to the callers thread
@@ -1369,13 +1369,13 @@ Dialogue: 0,1:03:34.70,1:03:39.66,Chinese,,0,0,0,,然后现在被调用的线程
 Dialogue: 0,1:03:40.00,1:03:49.04,English,,0,0,0,,And there's nothing to prevent that called thread from manipulating local variables on the caller stack
 Dialogue: 0,1:03:40.00,1:03:49.04,Chinese,,0,0,0,,并且没有什么可以阻止被调用的线程操纵调用者堆栈上的局部变量
 Dialogue: 0,1:03:49.88,1:03:51.64,English,,0,0,0,,You know that would be a very bad thing to do
-Dialogue: 0,1:03:49.88,1:03:51.64,Chinese,,0,0,0,,你知道这将是一件非常糟糕的事情
+Dialogue: 0,1:03:49.88,1:03:51.64,Chinese,,0,0,0,,你知道这是一件非常糟糕的事情
 Dialogue: 0,1:03:52.38,1:04:01.04,English,,0,0,0,,But it's possible you might forget,you know you might forget that the variable you're passing is a local variable, not a global
-Dialogue: 0,1:03:52.38,1:04:01.04,Chinese,,0,0,0,,但是你可能会忘记，你知道你可能会忘记你传递的变量是局部变量，而不是全局变量
+Dialogue: 0,1:03:52.38,1:04:01.04,Chinese,,0,0,0,,但是你可能会忘记，你可能会忘记你传递的变量是局部变量，而不是全局变量
 Dialogue: 0,1:04:07.10,1:04:10.10,English,,0,0,0,,Okay and a really bad mistake
-Dialogue: 0,1:04:07.10,1:04:10.10,Chinese,,0,0,0,,好吧，这是一个非常糟糕的错误
+Dialogue: 0,1:04:07.10,1:04:10.10,Chinese,,0,0,0,,这是一个非常糟糕的错误
 Dialogue: 0,1:04:11.98,1:04:15.76,English,,0,0,0,,In our hello...in our echo server example
-Dialogue: 0,1:04:11.98,1:04:15.76,Chinese,,0,0,0,,在我们的问候中 ... 在我们的 echo 服务器示例中
+Dialogue: 0,1:04:11.98,1:04:15.76,Chinese,,0,0,0,,在我们的 hello（world 服务器） ，在我们的 echo 服务器示例中
 Dialogue: 0,1:04:17.44,1:04:20.66,English,,0,0,0,,Notice we were very careful to malloc you space for this
 Dialogue: 0,1:04:17.44,1:04:20.66,Chinese,,0,0,0,,请注意，我们非常小心地为此安排了空间
 Dialogue: 0,1:04:25.52,1:04:31.10,English,,0,0,0,,For this connected file descriptor that we passed into that the peer thread that we are creating
@@ -1387,19 +1387,19 @@ Dialogue: 0,1:04:41.48,1:04:42.72,Chinese,,0,0,0,,但这也是错误的
 Dialogue: 0,1:04:50.74,1:04:51.58,English,,0,0,0,,Can you say why
 Dialogue: 0,1:04:50.74,1:04:51.58,Chinese,,0,0,0,,你能说出原因吗？
 Dialogue: 0,1:04:58.54,1:05:00.96,English,,0,0,0,,Okay let's say right here when we call pthread_create
-Dialogue: 0,1:04:58.54,1:05:00.96,Chinese,,0,0,0,,好的，我们在这里打电话给 pthread_create 吧
+Dialogue: 0,1:04:58.54,1:05:00.96,Chinese,,0,0,0,,我们在这里调用 pthread_create 吧
 Dialogue: 0,1:05:01.94,1:05:06.76,English,,0,0,0,,Instead of passing a pointer to a separately allocated region of the heap
 Dialogue: 0,1:05:01.94,1:05:06.76,Chinese,,0,0,0,,而不是将指针传递给堆的单独分配区域
 Dialogue: 0,1:05:07.70,1:05:11.92,English,,0,0,0,,Instead of doing that we just pass the address of the connected file descriptor same thing right
 Dialogue: 0,1:05:07.70,1:05:11.92,Chinese,,0,0,0,,而不是这样做我们只是传递连接文件描述符的地址同样的事情
 Dialogue: 0,1:05:17.98,1:05:27.40,English,,0,0,0,,Okay and then in a thread routine we dereference that pointer to to get the connected file descriptor
-Dialogue: 0,1:05:17.98,1:05:27.40,Chinese,,0,0,0,,好的，然后在一个线程例程中，我们取消引用指向获取连接文件描述符的指针
+Dialogue: 0,1:05:17.98,1:05:27.40,Chinese,,0,0,0,,然后在一个线程例程中，我们取消引用指向获取连接文件描述符的指针
 Dialogue: 0,1:05:28.66,1:05:31.28,English,,0,0,0,,Okay if we just pass the address of the connected file descriptor
-Dialogue: 0,1:05:28.66,1:05:31.28,Chinese,,0,0,0,,好的，如果我们只传递连接文件描述符的地址
+Dialogue: 0,1:05:28.66,1:05:31.28,Chinese,,0,0,0,,如果我们只传递连接文件描述符的地址
 Dialogue: 0,1:05:32.54,1:05:35.14,English,,0,0,0,,This is real it's really bad,can you say why
 Dialogue: 0,1:05:32.54,1:05:35.14,Chinese,,0,0,0,,这是真的很糟糕，你能说出原因吗？
 Dialogue: 0,1:05:36.32,1:05:43.58,English,,0,0,0,,Yes
-Dialogue: 0,1:05:36.32,1:05:43.58,Chinese,,0,0,0,,是
+Dialogue: 0,1:05:36.32,1:05:43.58,Chinese,,0,0,0,,请讲
 Dialogue: 0,1:05:43.60,1:05:47.36,English,,0,0,0,,It does, okay that's true, and why is that
 Dialogue: 0,1:05:43.60,1:05:47.36,Chinese,,0,0,0,,确实如此，这是真的，为什么会这样
 Dialogue: 0,1:05:51.74,1:05:58.90,English,,0,0,0,,[student speaking]
@@ -1408,9 +1408,9 @@ Dialogue: 0,1:05:58.90,1:06:03.16,Chinese,,0,0,0,,那是的，这是正确的，
 Dialogue: 0,1:06:04.16,1:06:08.62,English,,0,0,0,,This entered this bypassing the address of this connected file descriptor
 Dialogue: 0,1:06:04.16,1:06:08.62,Chinese,,0,0,0,,这导致绕过此连接文件描述符的地址
 Dialogue: 0,1:06:09.88,1:06:10.98,English,,0,0,0,,We're introducing a race
-Dialogue: 0,1:06:09.88,1:06:10.98,Chinese,,0,0,0,,我们正在引入一场比赛
+Dialogue: 0,1:06:09.88,1:06:10.98,Chinese,,0,0,0,,我们正在引入竞争
 Dialogue: 0,1:06:12.62,1:06:14.68,English,,0,0,0,,Okay in the race what we're assuming
-Dialogue: 0,1:06:12.62,1:06:14.68,Chinese,,0,0,0,,在比赛中我们正在假设
+Dialogue: 0,1:06:12.62,1:06:14.68,Chinese,,0,0,0,,在这场竞争中，我们假设
 Dialogue: 0,1:06:17.38,1:06:21.54,English,,0,0,0,,That the peer thread will be able to dereference that pointer
 Dialogue: 0,1:06:17.38,1:06:21.54,Chinese,,0,0,0,,对等线程将能够取消引用该指针
 Dialogue: 0,1:06:22.52,1:06:23.24,English,,0,0,0,,Before
@@ -1418,37 +1418,37 @@ Dialogue: 0,1:06:22.52,1:06:23.24,Chinese,,0,0,0,,之前
 Dialogue: 0,1:06:25.32,1:06:29.16,English,,0,0,0,,The main thread goes back up and gets a new connected file descriptor
 Dialogue: 0,1:06:25.32,1:06:29.16,Chinese,,0,0,0,,主线程返回并获取新的连接文件描述符
 Dialogue: 0,1:06:32.48,1:06:34.14,English,,0,0,0,,Right so what happens what happens
-Dialogue: 0,1:06:32.48,1:06:34.14,Chinese,,0,0,0,,对，所发生的事情发生了什么
+Dialogue: 0,1:06:32.48,1:06:34.14,Chinese,,0,0,0,,对，会发生什么
 Dialogue: 0,1:06:34.82,1:06:39.60,English,,0,0,0,,Right we can't in a concurrent system,we can't make any assumptions about how the kernel is going to schedule things
-Dialogue: 0,1:06:34.82,1:06:39.60,Chinese,,0,0,0,,对，我们不能在并发系统中，我们不能对内核如何安排事情做出任何假设
+Dialogue: 0,1:06:34.82,1:06:39.60,Chinese,,0,0,0,,我们不能在并发系统中，我们不能对内核如何安排事情做出任何假设
 Dialogue: 0,1:06:40.04,1:06:42.08,English,,0,0,0,,Right we saw the same thing with processes
-Dialogue: 0,1:06:40.04,1:06:42.08,Chinese,,0,0,0,,对，我们看到了与流程相同的事情
+Dialogue: 0,1:06:40.04,1:06:42.08,Chinese,,0,0,0,,我们看到了与进程相同的情况
 Dialogue: 0,1:06:43.82,1:06:46.26,English,,0,0,0,,So what happens if after pthread_create
-Dialogue: 0,1:06:43.82,1:06:46.26,Chinese,,0,0,0,,那么如果在 pthread_create 之后会发生什么
+Dialogue: 0,1:06:43.82,1:06:46.26,Chinese,,0,0,0,,那么在 pthread_create 之后会发生什么
 Dialogue: 0,1:06:48.40,1:06:50.64,English,,0,0,0,,The main thread runs instead of the peer thread
 Dialogue: 0,1:06:48.40,1:06:50.64,Chinese,,0,0,0,,主线程运行而不是对等线程
 Dialogue: 0,1:06:53.10,1:06:54.34,English,,0,0,0,,Okay so we've passed the
-Dialogue: 0,1:06:53.10,1:06:54.34,Chinese,,0,0,0,,好的，所以我们通过了
+Dialogue: 0,1:06:53.10,1:06:54.34,Chinese,,0,0,0,,所以我们传递......
 Dialogue: 0,1:06:55.30,1:06:59.54,English,,0,0,0,,We've passed the address of the connected file descriptor for this client
 Dialogue: 0,1:06:55.30,1:06:59.54,Chinese,,0,0,0,,我们已经传递了该客户端的连接文件描述符的地址
 Dialogue: 0,1:07:01.02,1:07:03.76,English,,0,0,0,,That we accepted the connection requests from
-Dialogue: 0,1:07:01.02,1:07:03.76,Chinese,,0,0,0,,我们接受了来自的连接请求
+Dialogue: 0,1:07:01.02,1:07:03.76,Chinese,,0,0,0,,我们接受了来自客户端的连接请求
 Dialogue: 0,1:07:05.92,1:07:13.54,English,,0,0,0,,And then before the peer thread can dereference that argument we get a new connected file descriptor
 Dialogue: 0,1:07:05.92,1:07:13.54,Chinese,,0,0,0,,然后在对等线程可以取消引用该参数之前，我们得到一个新的连接文件描述符
 Dialogue: 0,1:07:16.98,1:07:17.32,English,,0,0,0,,Okay
 Dialogue: 0,1:07:16.98,1:07:17.32,Chinese,,0,0,0,,好的
 Dialogue: 0,1:07:20.16,1:07:21.44,English,,0,0,0,,And now the child runs
-Dialogue: 0,1:07:20.16,1:07:21.44,Chinese,,0,0,0,,现在孩子跑了
+Dialogue: 0,1:07:20.16,1:07:21.44,Chinese,,0,0,0,,现在线程运行起来
 Dialogue: 0,1:07:22.32,1:07:25.98,English,,0,0,0,,And it dereferences that descriptor
-Dialogue: 0,1:07:22.32,1:07:25.98,Chinese,,0,0,0,,它解释了描述符
+Dialogue: 0,1:07:22.32,1:07:25.98,Chinese,,0,0,0,,它释放了描述符
 Dialogue: 0,1:07:27.26,1:07:29.38,English,,0,0,0,,But what it gets now is the descriptor
 Dialogue: 0,1:07:27.26,1:07:29.38,Chinese,,0,0,0,,但它现在得到的是描述符
 Dialogue: 0,1:07:30.92,1:07:36.08,English,,0,0,0,,That's corresponding to the second child not the first child
-Dialogue: 0,1:07:30.92,1:07:36.08,Chinese,,0,0,0,,这相当于第二个孩子而不是第一个孩子
+Dialogue: 0,1:07:30.92,1:07:36.08,Chinese,,0,0,0,,这相当于第二个线程而不是第一个线程
 Dialogue: 0,1:07:37.74,1:07:43.16,English,,0,0,0,,So now we have two threads talking to the same client using the same descriptor
 Dialogue: 0,1:07:37.74,1:07:43.16,Chinese,,0,0,0,,所以现在我们有两个线程使用相同的描述符与同一客户端通信
 Dialogue: 0,1:07:50.54,1:07:51.72,English,,0,0,0,,So do you see them hope
-Dialogue: 0,1:07:50.54,1:07:51.72,Chinese,,0,0,0,,那么你看到他们的希望吗？
+Dialogue: 0,1:07:50.54,1:07:51.72,Chinese,,0,0,0,,你们明白了吗？
 Dialogue: 0,1:07:54.98,1:08:01.48,English,,0,0,0,,So it's very tricky this is like a real subtle this is an example of sort of subtle errors that you can introduce
 Dialogue: 0,1:07:54.98,1:08:01.48,Chinese,,0,0,0,,所以它非常棘手，这就像一个真正的微妙，这是你可以介绍的一些细微错误的例子
 Dialogue: 0,1:08:01.52,1:08:03.12,English,,0,0,0,,Because of this unintended sharing
@@ -1456,18 +1456,19 @@ Dialogue: 0,1:08:01.52,1:08:03.12,Chinese,,0,0,0,,因为这种无意识的分享
 Dialogue: 0,1:08:08.32,1:08:15.94,English,,0,0,0,,And it's cause the root cause is as you correctly pointed out is that they're both sharing the same memory on the caller stack
 Dialogue: 0,1:08:08.32,1:08:15.94,Chinese,,0,0,0,,这是因为你正确指出的根本原因是它们在调用者堆栈上共享相同的内存
 Dialogue: 0,1:08:16.34,1:08:16.82,English,,0,0,0,,Yes
-Dialogue: 0,1:08:16.34,1:08:16.82,Chinese,,0,0,0,,是
+Dialogue: 0,1:08:16.34,1:08:16.82,Chinese,,0,0,0,,请讲
 Dialogue: 0,1:08:17.18,1:08:21.30,English,,0,0,0,,[student speaking]
+Dialogue: 0,1:08:17.18,1:08:21.30,Chinese,,0,0,0,,[同学提问]
 Dialogue: 0,1:08:21.36,1:08:28.66,English,,0,0,0,,In this case of what you could do there's another thing you could do you could just pass the descriptor itself
 Dialogue: 0,1:08:21.36,1:08:28.66,Chinese,,0,0,0,,在这种情况下你可以做什么，你可以做的另一件事你可以只传递描述符本身
 Dialogue: 0,1:08:29.98,1:08:35.72,English,,0,0,0,,Okay so you could just cast the descriptor to a generic pointer and just pass that
-Dialogue: 0,1:08:29.98,1:08:35.72,Chinese,,0,0,0,,好吧，你可以将描述符转换为通用指针，然后传递它
+Dialogue: 0,1:08:29.98,1:08:35.72,Chinese,,0,0,0,,你可以将描述符转换为通用指针，然后传递它
 Dialogue: 0,1:08:36.60,1:08:39.18,English,,0,0,0,,And that that's just kind of yucky though that that would work
 Dialogue: 0,1:08:36.60,1:08:39.18,Chinese,,0,0,0,,虽然那会有用，但这有点令人讨厌
 Dialogue: 0,1:08:40.88,1:08:47.12,English,,0,0,0,,Because instead of dereferencing it the child would just use it directly
-Dialogue: 0,1:08:40.88,1:08:47.12,Chinese,,0,0,0,,因为孩子不是解除引用它而是直接使用它
+Dialogue: 0,1:08:40.88,1:08:47.12,Chinese,,0,0,0,,因为线程不是释放引用它而是直接使用它
 Dialogue: 0,1:08:50.08,1:08:51.00,English,,0,0,0,,Okay so good that's good
-Dialogue: 0,1:08:50.08,1:08:51.00,Chinese,,0,0,0,,好的，这很好
+Dialogue: 0,1:08:50.08,1:08:51.00,Chinese,,0,0,0,,这个问题很好
 Dialogue: 0,1:09:01.22,1:09:02.02,English,,0,0,0,,Okay the
 Dialogue: 0,1:09:01.22,1:09:02.02,Chinese,,0,0,0,,好的
 Dialogue: 0,1:09:05.98,1:09:09.98,English,,0,0,0,,So the really good things with with threads is ease of sharing
@@ -1483,11 +1484,11 @@ Dialogue: 0,1:09:36.72,1:09:39.90,Chinese,,0,0,0,,好的，总结一下并发的
 Dialogue: 0,1:09:40.58,1:09:44.18,English,,0,0,0,,That we've looked at we have process based concurrency
 Dialogue: 0,1:09:40.58,1:09:44.18,Chinese,,0,0,0,,我们已经看过，我们有基于进程的并发性
 Dialogue: 0,1:09:44.62,1:09:47.94,English,,0,0,0,,So it's hard to share resources but
-Dialogue: 0,1:09:44.62,1:09:47.94,Chinese,,0,0,0,,所以很难分享资源但是
+Dialogue: 0,1:09:44.62,1:09:47.94,Chinese,,0,0,0,,但是这种方式共享资源很难
 Dialogue: 0,1:09:48.56,1:09:52.96,English,,0,0,0,,It's easy to avoid unintended sharing so in some ways it's safer and easier to program
 Dialogue: 0,1:09:48.56,1:09:52.96,Chinese,,0,0,0,,很容易避免意外共享，所以在某些方面它更安全，更容易编程
 Dialogue: 0,1:09:53.66,1:09:57.90,English,,0,0,0,,Event based so it's it's very low-level very tedious
-Dialogue: 0,1:09:53.66,1:09:57.90,Chinese,,0,0,0,,基于事件，所以这是非常低级非常乏味
+Dialogue: 0,1:09:53.66,1:09:57.90,Chinese,,0,0,0,,基于事件，是一种非常底层，比较乏味的方式
 Dialogue: 0,1:09:58.34,1:10:04.92,English,,0,0,0,,You have to be very careful about how you the granularity of the work that you do in response to events
 Dialogue: 0,1:09:58.34,1:10:04.92,Chinese,,0,0,0,,你必须非常小心你在响应事件时如何处理工作的粒度
 Dialogue: 0,1:10:07.00,1:10:11.54,English,,0,0,0,,But you have total control over scheduling so you can decide which
@@ -1499,23 +1500,23 @@ Dialogue: 0,1:10:19.18,1:10:21.32,Chinese,,0,0,0,,你可以使用调试器对其
 Dialogue: 0,1:10:23.16,1:10:27.30,English,,0,0,0,,But it doesn't make use of multi-core so there's a handful of trade-offs there
 Dialogue: 0,1:10:23.16,1:10:27.30,Chinese,,0,0,0,,但它没有使用多核，所以那里有一些权衡
 Dialogue: 0,1:10:27.96,1:10:29.16,English,,0,0,0,,And with thread based systems
-Dialogue: 0,1:10:27.96,1:10:29.16,Chinese,,0,0,0,,并使用基于线程的系统
+Dialogue: 0,1:10:27.96,1:10:29.16,Chinese,,0,0,0,,但是基于线程的系统
 Dialogue: 0,1:10:30.48,1:10:36.02,English,,0,0,0,,It's very easy to share resources but that sharing can create problems of its own
 Dialogue: 0,1:10:30.48,1:10:36.02,Chinese,,0,0,0,,共享资源非常容易，但共享可能会产生问题
 Dialogue: 0,1:10:37.28,1:10:40.34,English,,0,0,0,,It's fairly efficient compared to two processors
 Dialogue: 0,1:10:37.28,1:10:40.34,Chinese,,0,0,0,,与两个处理器相比，它相当有效
 Dialogue: 0,1:10:40.84,1:10:43.04,English,,0,0,0,,You don't have much control over the scheduling
-Dialogue: 0,1:10:40.84,1:10:43.04,Chinese,,0,0,0,,你无法控制日程安排
+Dialogue: 0,1:10:40.84,1:10:43.04,Chinese,,0,0,0,,你无法控制调度
 Dialogue: 0,1:10:43.04,1:10:49.84,English,,0,0,0,,So just like we saw you're not you can't really control which threads get executed in which order
-Dialogue: 0,1:10:43.04,1:10:49.84,Chinese,,0,0,0,,就像我们看到你不是，你无法真正控制哪个线程以哪个顺序执行
+Dialogue: 0,1:10:43.04,1:10:49.84,Chinese,,0,0,0,,就像我们看到......你无法真正控制哪个线程以哪个顺序执行
 Dialogue: 0,1:10:51.28,1:10:52.70,English,,0,0,0,,And it can be difficult to debug
 Dialogue: 0,1:10:51.28,1:10:52.70,Chinese,,0,0,0,,它可能很难调试
-Dialogue: 0,1:10:52.78,1:10:59.92,English,,0,0,0,,Because there can be races that occur very rarely very infrequently and
-Dialogue: 0,1:10:52.78,1:10:59.92,Chinese,,0,0,0,,因为很少有比赛很少发生
+Dialogue: 0,1:10:52.78,1:10:59.92,English,,0,0,0,,Because there can be races that occur very rarely very frequently and
+Dialogue: 0,1:10:52.78,1:10:59.92,Chinese,,0,0,0,,因为资源的竞争很常见
 Dialogue: 0,1:10:59.98,1:11:06.18,English,,0,0,0,,So the probability of sort of creating one of those race conditions is difficult
 Dialogue: 0,1:10:59.98,1:11:06.18,Chinese,,0,0,0,,因此，创造其中一种竞争条件的可能性很难
 Dialogue: 0,1:11:10.04,1:11:12.16,English,,0,0,0,,Okay so that's it for today
-Dialogue: 0,1:11:10.04,1:11:12.16,Chinese,,0,0,0,,好的，这就是今天的情况
+Dialogue: 0,1:11:10.04,1:11:12.16,Chinese,,0,0,0,,这就是今天所要讲的内容
 Dialogue: 0,1:11:12.80,1:11:16.06,English,,0,0,0,,Tomorrow we'll look at thread based servers in more detail
 Dialogue: 0,1:11:12.80,1:11:16.06,Chinese,,0,0,0,,明天我们将更详细地介绍基于线程的服务器
 Dialogue: 0,1:11:17.44,1:11:22.69,English,,0,0,0,,And how to write thread based systems efficiently and correctly
