@@ -16,9 +16,9 @@ Video File: ../../../../Desktop/csapp/Lecture 23  Concurrent Programming.mp4
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 1.125000
-Scroll Position: 658
-Active Line: 662
-Video Position: 56688
+Scroll Position: 1296
+Active Line: 1300
+Video Position: 110963
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -360,7 +360,7 @@ Dialogue: 0,0:15:10.68,0:15:16.34,English,,0,0,0,,So there's three ways to creat
 Dialogue: 0,0:15:10.68,0:15:16.34,Chinese,,0,0,0,,因此有三种方法可以创建这些并发流
 Dialogue: 0,0:15:18.42,0:15:21.18,English,,0,0,0,,One is to use processes okay like we've already seen
 Dialogue: 0,0:15:18.42,0:15:21.18,Chinese,,0,0,0,,一个是使用「进程」我们已经看到过
-Dialogue: 0,0:15:22.70,0:15:29.00,English,,0,0,0,,Okay so the kernel...so in this case the kernel handles all the scheduling for us 
+Dialogue: 0,0:15:22.70,0:15:29.00,English,,0,0,0,,Okay so the kernel...so in this case the kernel handles all the scheduling for us
 Dialogue: 0,0:15:22.70,0:15:29.00,Chinese,,0,0,0,,所以内核 ...... 所以在这种情况下，内核为我们处理所有的调度
 Dialogue: 0,0:15:30.20,0:15:34.88,English,,0,0,0,,And interleaves the process execution automatically for us
 Dialogue: 0,0:15:30.20,0:15:34.88,Chinese,,0,0,0,,自动交错的执行进程
@@ -693,27 +693,27 @@ Dialogue: 0,0:31:29.24,0:31:32.06,Chinese,,0,0,0,,但是这个想法是有一些
 Dialogue: 0,0:31:32.54,0:31:36.74,English,,0,0,0,,there's some set of descriptors connected descriptors that you're using
 Dialogue: 0,0:31:32.54,0:31:36.74,Chinese,,0,0,0,,你正在使用的一些连接描述符
 Dialogue: 0,0:31:38.30,0:31:41.98,English,,0,0,0,,That are being used right now to to interact with a client
-Dialogue: 0,0:31:38.30,0:31:41.98,Chinese,,0,0,0,,现在正在被用来与客户进行交互
+Dialogue: 0,0:31:38.30,0:31:41.98,Chinese,,0,0,0,,现在正用来与客户端进行交互
 Dialogue: 0,0:31:44.74,0:31:49.66,English,,0,0,0,,There's some that are inactive so if descriptors was closed
 Dialogue: 0,0:31:44.74,0:31:49.66,Chinese,,0,0,0,,如果描述符被关闭，有一些就是非活跃的
 Dialogue: 0,0:31:49.70,0:31:52.24,English,,0,0,0,,Then it's no longer active right
 Dialogue: 0,0:31:49.70,0:31:52.24,Chinese,,0,0,0,,然后它就不再活跃了
 Dialogue: 0,0:31:53.64,0:31:56.50,English,,0,0,0,,And then there's other descriptors that have never been used
-Dialogue: 0,0:31:53.64,0:31:56.50,Chinese,,0,0,0,,然后还有其他从未使用过的描述符
+Dialogue: 0,0:31:53.64,0:31:56.50,Chinese,,0,0,0,,然后还有些从未使用过的描述符
 Dialogue: 0,0:31:56.56,0:31:58.52,English,,0,0,0,,So we just have this array of descriptors
 Dialogue: 0,0:31:56.56,0:31:58.52,Chinese,,0,0,0,,所以我们只有这个描述符数组
 Dialogue: 0,0:32:01.00,0:32:12.14,English,,0,0,0,,And then we record there you know the the descriptor number for each of those connected for each of those descriptors
-Dialogue: 0,0:32:01.00,0:32:12.14,Chinese,,0,0,0,,然后我们在那里记录你知道每个描述符连接的每个描述符的描述符号
+Dialogue: 0,0:32:01.00,0:32:12.14,Chinese,,0,0,0,,然后我们在那里记录每个描述符连接和符号
 Dialogue: 0,0:32:17.50,0:32:20.38,English,,0,0,0,,And then using select or a epoll or some other mechanism
 Dialogue: 0,0:32:17.50,0:32:20.38,Chinese,,0,0,0,,然后使用 select 或 epoll 或其他一些机制
 Dialogue: 0,0:32:20.66,0:32:25.06,English,,0,0,0,,We somehow determine which of those active descriptors have input
 Dialogue: 0,0:32:20.66,0:32:25.06,Chinese,,0,0,0,,我们以某种方式确定哪些活动描述符有输入
 Dialogue: 0,0:32:26.02,0:32:27.54,English,,0,0,0,,And then we service each of those
 Dialogue: 0,0:32:26.02,0:32:27.54,Chinese,,0,0,0,,然后我们为每个人提供服务
-Dialogue: 0,0:32:28.26,0:32:30.68,English,,0,0,0,,In the case of listenfd by calling except
-Dialogue: 0,0:32:28.26,0:32:30.68,Chinese,,0,0,0,,在 listenfd 的情况下通过调用除外
+Dialogue: 0,0:32:28.26,0:32:30.68,English,,0,0,0,,In the case of listenfd by calling accept
+Dialogue: 0,0:32:28.26,0:32:30.68,Chinese,,0,0,0,,在这种情况下  listenfd 通过调用 accept 来赋值
 Dialogue: 0,0:32:31.30,0:32:35.58,English,,0,0,0,,In the case of these connected descriptors actually either
-Dialogue: 0,0:32:31.30,0:32:35.58,Chinese,,0,0,0,,在这些连接的描述符的情况下实际上也是
+Dialogue: 0,0:32:31.30,0:32:35.58,Chinese,,0,0,0,,在情况下这些连接描述符是可用的
 Dialogue: 0,0:32:36.66,0:32:39.00,English,,0,0,0,,This should be connectfd not clientfd
 Dialogue: 0,0:32:36.66,0:32:39.00,Chinese,,0,0,0,,这应该是 connectfd 而不是 clientfd
 Dialogue: 0,0:32:41.16,0:32:45.08,English,,0,0,0,,But in the case of these connected descriptors we read the data from them
@@ -721,29 +721,29 @@ Dialogue: 0,0:32:41.16,0:32:45.08,Chinese,,0,0,0,,但是在这些连接的描述
 Dialogue: 0,0:32:49.08,0:32:54.68,English,,0,0,0,,And the when we read the data from each descriptor we do some work
 Dialogue: 0,0:32:49.08,0:32:54.68,Chinese,,0,0,0,,当我们从每个描述符中读取数据时，我们会做一些工作
 Dialogue: 0,0:32:57.66,0:33:01.00,English,,0,0,0,,Okay so data arrives that a descriptor
-Dialogue: 0,0:32:57.66,0:33:01.00,Chinese,,0,0,0,,好的，所以数据到达描述符
+Dialogue: 0,0:32:57.66,0:33:01.00,Chinese,,0,0,0,,所以数据到达描述符
 Dialogue: 0,0:33:01.60,0:33:04.12,English,,0,0,0,,And then we read that data and then we do some kind of work
 Dialogue: 0,0:33:01.60,0:33:04.12,Chinese,,0,0,0,,然后我们读取数据，然后我们做了一些工作
 Dialogue: 0,0:33:07.02,0:33:11.18,English,,0,0,0,,Maybe in the case of an echo server we echo it right back okay
-Dialogue: 0,0:33:07.02,0:33:11.18,Chinese,,0,0,0,,也许在 echo 服务器的情况下，我们 echo 它就好了
+Dialogue: 0,0:33:07.02,0:33:11.18,Chinese,,0,0,0,,也许在 echo 服务器的情况下，会立马返回
 Dialogue: 0,0:33:12.44,0:33:14.40,English,,0,0,0,,In the case of a web server we may
 Dialogue: 0,0:33:12.44,0:33:14.40,Chinese,,0,0,0,,对于 Web 服务器，我们可以
 Dialogue: 0,0:33:15.54,0:33:22.18,English,,0,0,0,,If that data was http request we might go and fetch a file from disk and return it
 Dialogue: 0,0:33:15.54,0:33:22.18,Chinese,,0,0,0,,如果该数据是 http 请求，我们可能会从磁盘获取文件并将其返回
 Dialogue: 0,0:33:22.66,0:33:28.70,English,,0,0,0,,Okay but in any case we notice that the descriptor has some data
-Dialogue: 0,0:33:22.66,0:33:28.70,Chinese,,0,0,0,,好的，但无论如何我们都注意到描述符有一些数据
+Dialogue: 0,0:33:22.66,0:33:28.70,Chinese,,0,0,0,,但无论如何我们都注意到描述符有一些数据
 Dialogue: 0,0:33:29.50,0:33:33.16,English,,0,0,0,,We read that data and then we respond to it in some way
 Dialogue: 0,0:33:29.50,0:33:33.16,Chinese,,0,0,0,,我们读了那些数据，然后我们以某种方式回复它
 Dialogue: 0,0:33:34.54,0:33:39.64,English,,0,0,0,,Okay so that response those multiple responses are concurrent flows
-Dialogue: 0,0:33:34.54,0:33:39.64,Chinese,,0,0,0,,好的，那些多个响应是并发流
+Dialogue: 0,0:33:34.54,0:33:39.64,Chinese,,0,0,0,,那些多个响应是并发流
 Dialogue: 0,0:33:41.58,0:33:44.90,English,,0,0,0,,Okay the we're interacting with that client
-Dialogue: 0,0:33:41.58,0:33:44.90,Chinese,,0,0,0,,好的，我们正在与该客户进行互动
+Dialogue: 0,0:33:41.58,0:33:44.90,Chinese,,0,0,0,,我们正在与该客户端进行交互
 Dialogue: 0,0:33:46.06,0:33:51.84,English,,0,0,0,,We're interacting we're creating concurrent flows while concurrent flow for each client
-Dialogue: 0,0:33:46.06,0:33:51.84,Chinese,,0,0,0,,我们正在进行交互，我们在为每个客户端创建并发流时创建并发流
+Dialogue: 0,0:33:46.06,0:33:51.84,Chinese,,0,0,0,,我们正在进行交互，我们在为每个客户端创建单独并发流
 Dialogue: 0,0:33:52.74,0:33:55.40,English,,0,0,0,,And we're servicing those clients concurrently
 Dialogue: 0,0:33:52.74,0:33:55.40,Chinese,,0,0,0,,我们同时为这些客户提供服务
 Dialogue: 0,0:33:55.96,0:34:00.24,English,,0,0,0,,Okay so even though it's a sequential program right we're not using fork or anything
-Dialogue: 0,0:33:55.96,0:34:00.24,Chinese,,0,0,0,,好的，即使它是一个顺序程序，我们也没有使用 fork 或任何东西
+Dialogue: 0,0:33:55.96,0:34:00.24,Chinese,,0,0,0,,即使它是一个顺序程序，我们也没有使用 fork 这类程序
 Dialogue: 0,0:34:00.32,0:34:03.96,English,,0,0,0,,It's just a c program straightforward c program
 Dialogue: 0,0:34:00.32,0:34:03.96,Chinese,,0,0,0,,这其实就是一个 c 语言的程序
 Dialogue: 0,0:34:05.66,0:34:09.52,English,,0,0,0,,We're writing in such a way that we're creating our own concurrent flows
@@ -752,80 +752,78 @@ Dialogue: 0,0:34:16.34,0:34:20.48,English,,0,0,0,,So there's...as with any appro
 Dialogue: 0,0:34:16.34,0:34:20.48,Chinese,,0,0,0,,所以 ...... 就像任何方法一样，有优点和缺点
 Dialogue: 0,0:34:20.58,0:34:24.20,English,,0,0,0,,So the a big advantage of event based servers is that it's just
 Dialogue: 0,0:34:20.58,0:34:24.20,Chinese,,0,0,0,,所以基于事件的服务器的一大优势就在于它
-Dialogue: 0,0:34:24.60,0:34:29.16,English,,0,0,0,,A sequoia it's one process with one address space
-Dialogue: 0,0:34:24.60,0:34:29.16,Chinese,,0,0,0,,红杉这是一个具有一个地址空间的过程
+Dialogue: 0,0:34:24.60,0:34:29.16,English,,0,0,0,,It's one process with one address space
+Dialogue: 0,0:34:24.60,0:34:29.16,Chinese,,0,0,0,,它只有一个地址空间的进程
 Dialogue: 0,0:34:29.48,0:34:33.62,English,,0,0,0,,Right so it's very easy you can use conventional debugger gdb to step through
-Dialogue: 0,0:34:29.48,0:34:33.62,Chinese,,0,0,0,,这是非常容易的，你可以使用传统的调试器 gdb 来逐步完成
+Dialogue: 0,0:34:29.48,0:34:33.62,Chinese,,0,0,0,,这种结构很简单，你可以使用传统的调试器 gdb 来逐步调试
 Dialogue: 0,0:34:33.62,0:34:36.32,English,,0,0,0,,You can see everything you have access to everything
-Dialogue: 0,0:34:33.62,0:34:36.32,Chinese,,0,0,0,,你可以看到你可以访问所有内容的所有内容
+Dialogue: 0,0:34:33.62,0:34:36.32,Chinese,,0,0,0,,你可以拥有上帝视角剖析每一行代码
 Dialogue: 0,0:34:36.88,0:34:40.64,English,,0,0,0,,So in that sense they're much simpler to debug understand
-Dialogue: 0,0:34:36.88,0:34:40.64,Chinese,,0,0,0,,所以从这个意义上说，调试理解起来要简单得多
+Dialogue: 0,0:34:36.88,0:34:40.64,Chinese,,0,0,0,,从这个意义上说，调试起来要简单得多
 Dialogue: 0,0:34:42.90,0:34:45.48,English,,0,0,0,,And then there's no process or thread control overhead
 Dialogue: 0,0:34:42.90,0:34:45.48,Chinese,,0,0,0,,然后没有进程或线程控制开销
 Dialogue: 0,0:34:46.14,0:34:53.90,English,,0,0,0,,So when we service a particular descriptor it's very...there's very little overhead right
-Dialogue: 0,0:34:46.14,0:34:53.90,Chinese,,0,0,0,,因此，当我们为特定的描述符提供服务时，它非常 ...... 正常的开销非常小
+Dialogue: 0,0:34:46.14,0:34:53.90,Chinese,,0,0,0,,因此，当我们为特定的描述符提供服务时，正常开销非常非常小
 Dialogue: 0,0:34:54.18,0:34:58.98,English,,0,0,0,,We just the only overhead is sort of determining that descriptor has input available
 Dialogue: 0,0:34:54.18,0:34:58.98,Chinese,,0,0,0,,我们唯一的开销就是确定描述符有可用的输入
 Dialogue: 0,0:35:03.04,0:35:05.10,English,,0,0,0,,Okay and so because of that this is the
-Dialogue: 0,0:35:03.04,0:35:05.10,Chinese,,0,0,0,,好的因为这就是了
+Dialogue: 0,0:35:03.04,0:35:05.10,Chinese,,0,0,0,,正因为如此
 Dialogue: 0,0:35:06.88,0:35:13.54,English,,0,0,0,,High performance web servers like nodejs,nginx,tornado they all use this event based approach gates
-Dialogue: 0,0:35:06.88,0:35:13.54,Chinese,,0,0,0,,像 nodejs ， ngin x， tornado 这样的高性能 Web 服务器都使用这种基于事件的进程门
+Dialogue: 0,0:35:06.88,0:35:13.54,Chinese,,0,0,0,,像 nodejs，nginx，tornado 这样的高性能 Web 服务器都使用这种基于事件的方式
 Dialogue: 0,0:35:15.40,0:35:21.68,English,,0,0,0,,If you want to get over 10,000 requests per second you have to go with something like this
-Dialogue: 0,0:35:15.40,0:35:21.68,Chinese,,0,0,0,,如果你想每秒获得超过 10 , 000 个请求，你必须使用这样的东西
-Dialogue: 0,0:35:23.46,0:35:27.62,English,,0,0,0,,Okay the disadvantage is it's much harder to more complexed
-Dialogue: 0,0:35:23.46,0:35:27.62,Chinese,,0,0,0,,好吧，缺点是更难以复杂化
-Dialogue: 0,0:35:28.16,0:35:32.70,English,,0,0,0,,It to code up then the other processor thread based designs
-Dialogue: 0,0:35:28.16,0:35:32.70,Chinese,,0,0,0,,它编码然后基于其他处理器线程的设计
+Dialogue: 0,0:35:15.40,0:35:21.68,Chinese,,0,0,0,,如果你想每秒处理超过 10,000 个请求，你必须使用这样的东西
+Dialogue: 0,0:35:23.46,0:35:32.70,English,,0,0,0,,Okay the disadvantage is it's much harder to more complexed It to code up then the other processor thread based designs
+Dialogue: 0,0:35:23.46,0:35:32.70,Chinese,,0,0,0,,缺点是相对于基于进程的设计它的程序设计和编码会更复杂
 Dialogue: 0,0:35:35.84,0:35:37.22,English,,0,0,0,,And it's very difficult
 Dialogue: 0,0:35:35.84,0:35:37.22,Chinese,,0,0,0,,这非常困难
 Dialogue: 0,0:35:38.82,0:35:42.98,English,,0,0,0,,So one of the hardest aspects of the writing and event based server
-Dialogue: 0,0:35:38.82,0:35:42.98,Chinese,,0,0,0,,这是写作和基于事件的服务器中最难的一个方面
+Dialogue: 0,0:35:38.82,0:35:42.98,Chinese,,0,0,0,,编写基于事件的服务器程序中最难的一个方面是
 Dialogue: 0,0:35:43.60,0:35:47.26,English,,0,0,0,,Is that you have to figure out how much work you're going to do in response to an event
 Dialogue: 0,0:35:43.60,0:35:47.26,Chinese,,0,0,0,,那是你必须弄清楚你将要做多少工作来回应一个事件
 Dialogue: 0,0:35:49.46,0:35:52.18,English,,0,0,0,,Okay so let me give you...let's say that this server is a web server
-Dialogue: 0,0:35:49.46,0:35:52.18,Chinese,,0,0,0,,好吧，让我告诉你 ...... 让我们说这个服务器是一个 Web 服务器
+Dialogue: 0,0:35:49.46,0:35:52.18,Chinese,,0,0,0,,好吧，让我告诉你 ...... 我假设们这个服务器是一个 Web 服务器
 Dialogue: 0,0:35:53.50,0:35:58.10,English,,0,0,0,,And you get input on one of your connected file descriptor
-Dialogue: 0,0:35:53.50,0:35:58.10,Chinese,,0,0,0,,并且你可以在一个连接的文件描述符上获得输入
+Dialogue: 0,0:35:53.50,0:35:58.10,Chinese,,0,0,0,,并且你可以在一个连接文件描述符上获得输入
 Dialogue: 0,0:35:59.72,0:36:07.50,English,,0,0,0,,The simplest thing to do would be to then assume to read the entire http request
 Dialogue: 0,0:35:59.72,0:36:07.50,Chinese,,0,0,0,,最简单的方法是假设读取整个 http 请求
 Dialogue: 0,0:36:08.50,0:36:12.02,English,,0,0,0,,And not return until you've read the entire request
-Dialogue: 0,0:36:08.50,0:36:12.02,Chinese,,0,0,0,,在你阅读完整个请求之前不要返回
+Dialogue: 0,0:36:08.50,0:36:12.02,Chinese,,0,0,0,,在你读取完整个请求之前不要返回
 Dialogue: 0,0:36:13.48,0:36:21.00,English,,0,0,0,,Okay so in that case the amount of work that you do in response to an event is very coarse-grained
-Dialogue: 0,0:36:13.48,0:36:21.00,Chinese,,0,0,0,,好的，在这种情况下，你为响应事件所做的工作量非常粗糙
+Dialogue: 0,0:36:13.48,0:36:21.00,Chinese,,0,0,0,,在这种情况下，你为响应事件所做的工作非常粗糙
 Dialogue: 0,0:36:21.00,0:36:27.92,English,,0,0,0,,There's a lot of instructions because we're going to read every single line in that http request header
-Dialogue: 0,0:36:21.00,0:36:27.92,Chinese,,0,0,0,,有很多指令，因为我们将读取该 http 请求标头中的每一行
+Dialogue: 0,0:36:21.00,0:36:27.92,Chinese,,0,0,0,,有很多指令，因为我们将读取该 http 请求头中的每一行
 Dialogue: 0,0:36:28.68,0:36:31.88,English,,0,0,0,,But it's...so that's course that's an example of coarse grain
-Dialogue: 0,0:36:28.68,0:36:31.88,Chinese,,0,0,0,,但它是 ...... 所以当然这是粗浅的一个例子
+Dialogue: 0,0:36:28.68,0:36:31.88,Chinese,,0,0,0,,但它是 ...... 所以这当然是粗浅的一个例子
 Dialogue: 0,0:36:33.74,0:36:39.04,English,,0,0,0,,It's very simple because every time you get a request on a connected descriptor you just read the whole
-Dialogue: 0,0:36:33.74,0:36:39.04,Chinese,,0,0,0,,它非常简单，因为每次在连接的描述符上获得请求时，你只需阅读整个请求
+Dialogue: 0,0:36:33.74,0:36:39.04,Chinese,,0,0,0,,它非常简单，因为每次在连接的描述符上获得请求时，你只需读取整个请求
 Dialogue: 0,0:36:39.56,0:36:43.52,English,,0,0,0,,You just read the whole http request  and then send a response
-Dialogue: 0,0:36:39.56,0:36:43.52,Chinese,,0,0,0,,你只需阅读整个 http 请求，然后发送响应即可
+Dialogue: 0,0:36:39.56,0:36:43.52,Chinese,,0,0,0,,你只需读取整个 http 请求，然后发送响应即可
 Dialogue: 0,0:36:45.00,0:36:45.66,English,,0,0,0,,Okay so there's
-Dialogue: 0,0:36:45.00,0:36:45.66,Chinese,,0,0,0,,好的，那就是
+Dialogue: 0,0:36:45.00,0:36:45.66,Chinese,,0,0,0,,那就是
 Dialogue: 0,0:36:46.72,0:36:49.92,English,,0,0,0,,On the other hand it's vulnerable
 Dialogue: 0,0:36:46.72,0:36:49.92,Chinese,,0,0,0,,另一方面，它很脆弱
 Dialogue: 0,0:36:50.94,0:36:55.68,English,,0,0,0,,Because what if a client misbehaves and doesn't send the entire http request
-Dialogue: 0,0:36:50.94,0:36:55.68,Chinese,,0,0,0,,因为如果客户端行为不端并且没有发送整个 http 请求
+Dialogue: 0,0:36:50.94,0:36:55.68,Chinese,,0,0,0,,因为如果客户端出现异常行为且没有发送整个 http 请求
 Dialogue: 0,0:36:55.80,0:36:57.52,English,,0,0,0,,What if it sends half of the requests
 Dialogue: 0,0:36:55.80,0:36:57.52,Chinese,,0,0,0,,如果发送一半请求怎么办？
 Dialogue: 0,0:36:58.84,0:37:03.60,English,,0,0,0,,So if you were doing to design an event based web server you probably wouldn't want to do that
 Dialogue: 0,0:36:58.84,0:37:03.60,Chinese,,0,0,0,,因此，如果你正在设计基于事件的 Web 服务器，你可能不希望这样做
 Dialogue: 0,0:37:04.42,0:37:10.08,English,,0,0,0,,Right because that a single client we would be back in the situation we were before
-Dialogue: 0,0:37:04.42,0:37:10.08,Chinese,,0,0,0,,正确的是因为我们会回到原来的单一客户
+Dialogue: 0,0:37:04.42,0:37:10.08,Chinese,,0,0,0,,因为单个客户端我们能像之前一样返回
 Dialogue: 0,0:37:10.32,0:37:13.52,English,,0,0,0,,Where a single misbehaving client could sort of shut down the whole server
-Dialogue: 0,0:37:10.32,0:37:13.52,Chinese,,0,0,0,,如果一个行为不端的客户端可能会关闭整个服务器
+Dialogue: 0,0:37:10.32,0:37:13.52,Chinese,,0,0,0,,如果一个客户端出现异常请求可能会关闭整个服务器
 Dialogue: 0,0:37:14.64,0:37:15.72,English,,0,0,0,,So you might say well
-Dialogue: 0,0:37:14.64,0:37:15.72,Chinese,,0,0,0,,所以你可能会说得好
-Dialogue: 0,0:37:16.38,0:37:27.46,English,,0,0,0,,I'm going to my unit of work that i do in response to a request will be to read a single line from the request
-Dialogue: 0,0:37:16.38,0:37:27.46,Chinese,,0,0,0,,我要去我的工作单元，我做的是响应请求将从请求中读取一行
-Dialogue: 0,0:37:28.88,0:37:32.18,English,,0,0,0,,Okay so i'll read a single line and then i'll return
-Dialogue: 0,0:37:28.88,0:37:32.18,Chinese,,0,0,0,,好的，所以我会读一行，然后我会回来
+Dialogue: 0,0:37:14.64,0:37:15.72,Chinese,,0,0,0,,所以你可能会说那好吧
+Dialogue: 0,0:37:16.38,0:37:27.46,English,,0,0,0,,I'm going to my unit of work that I do in response to a request will be to read a single line from the request
+Dialogue: 0,0:37:16.38,0:37:27.46,Chinese,,0,0,0,,我把响应请求的单元做成只读取请求信息中的一行数据
+Dialogue: 0,0:37:28.88,0:37:32.18,English,,0,0,0,,Okay so I'll read a single line and then I'll return
+Dialogue: 0,0:37:28.88,0:37:32.18,Chinese,,0,0,0,,所以我会读一行，然后回来
 Dialogue: 0,0:37:33.70,0:37:38.34,English,,0,0,0,,Okay so every so now we're interleaving reading single lines
-Dialogue: 0,0:37:33.70,0:37:38.34,Chinese,,0,0,0,,好的，所以现在我们正在交错阅读单行
-Dialogue: 0,0:37:39.06,0:37:43.36,English,,0,0,0,,And once i've read the entire request then out then i'll send the response
+Dialogue: 0,0:37:33.70,0:37:38.34,Chinese,,0,0,0,,所以现在我们正在交错阅读单行
+Dialogue: 0,0:37:39.06,0:37:43.36,English,,0,0,0,,And once I've read the entire request then out then I'll send the response
 Dialogue: 0,0:37:39.06,0:37:43.36,Chinese,,0,0,0,,一旦我读完整个请求然后我就会发送回复
 Dialogue: 0,0:37:44.88,0:37:48.40,English,,0,0,0,,So that's better right so a misbehaving client
-Dialogue: 0,0:37:44.88,0:37:48.40,Chinese,,0,0,0,,所以这对一个行为不端的客户来说更好
+Dialogue: 0,0:37:44.88,0:37:48.40,Chinese,,0,0,0,,所以这对一个异常请求的客户端来说更好
 Dialogue: 0,0:37:49.48,0:37:54.04,English,,0,0,0,,If sending like whole text lines at a time
 Dialogue: 0,0:37:49.48,0:37:54.04,Chinese,,0,0,0,,如果一次发送像整个文本行
 Dialogue: 0,0:37:54.64,0:37:59.86,English,,0,0,0,,Even if it stops halfway through we'll still be able to make progress in service other other clients
@@ -833,51 +831,51 @@ Dialogue: 0,0:37:54.64,0:37:59.86,Chinese,,0,0,0,,即使它中途停止，我们
 Dialogue: 0,0:38:01.14,0:38:03.40,English,,0,0,0,,So that's a finer grained approach it's better
 Dialogue: 0,0:38:01.14,0:38:03.40,Chinese,,0,0,0,,所以这是一种更细粒度的方法，它会更好
 Dialogue: 0,0:38:03.82,0:38:08.28,English,,0,0,0,,It's probably more robust than waiting for the whole request
-Dialogue: 0,0:38:03.82,0:38:08.28,Chinese,,0,0,0,,它可能比等待整个请求更强大
+Dialogue: 0,0:38:03.82,0:38:08.28,Chinese,,0,0,0,,它可能比等待整个请求更健壮
 Dialogue: 0,0:38:08.38,0:38:09.48,English,,0,0,0,,But it's still vulnerable
 Dialogue: 0,0:38:08.38,0:38:09.48,Chinese,,0,0,0,,但它仍然很脆弱
 Dialogue: 0,0:38:10.52,0:38:12.64,English,,0,0,0,,Because the client could just send a partial line
 Dialogue: 0,0:38:10.52,0:38:12.64,Chinese,,0,0,0,,因为客户端只能发送部分行
 Dialogue: 0,0:38:14.22,0:38:14.94,English,,0,0,0,,So now we're back
-Dialogue: 0,0:38:14.22,0:38:14.94,Chinese,,0,0,0,,所以现在我们回来了
+Dialogue: 0,0:38:14.22,0:38:14.94,Chinese,,0,0,0,,然后我们返回
 Dialogue: 0,0:38:15.96,0:38:25.00,English,,0,0,0,,So really the only way to write a robust event based web server is to be able to handle partial lines
-Dialogue: 0,0:38:15.96,0:38:25.00,Chinese,,0,0,0,,因此，编写基于强大事件的 Web 服务器的唯一方法是能够处理部分行
+Dialogue: 0,0:38:15.96,0:38:25.00,Chinese,,0,0,0,,因此，编写强大的基于事件的 Web 服务器的唯一方法是能够处理部分行
 Dialogue: 0,0:38:25.16,0:38:29.62,English,,0,0,0,,Just read when there's data available on a descriptor
-Dialogue: 0,0:38:25.16,0:38:29.62,Chinese,,0,0,0,,只需在描述符上有可用数据时阅读
+Dialogue: 0,0:38:25.16,0:38:29.62,Chinese,,0,0,0,,只需读取描述符上的可用数据
 Dialogue: 0,0:38:29.62,0:38:31.52,English,,0,0,0,,You just read whatever data is available
-Dialogue: 0,0:38:29.62,0:38:31.52,Chinese,,0,0,0,,你只需阅读可用的任何数据
+Dialogue: 0,0:38:29.62,0:38:31.52,Chinese,,0,0,0,,你只需读取可用的任何数据
 Dialogue: 0,0:38:32.16,0:38:33.52,English,,0,0,0,,You remember how much you read
 Dialogue: 0,0:38:32.16,0:38:33.52,Chinese,,0,0,0,,你记得你读了多少
 Dialogue: 0,0:38:33.52,0:38:38.04,English,,0,0,0,,If it's not a whole line you somehow have to remember that you have to buffer it remember it
-Dialogue: 0,0:38:33.52,0:38:38.04,Chinese,,0,0,0,,如果它不是一个整行你必须记住你必须缓冲它记住它
+Dialogue: 0,0:38:33.52,0:38:38.04,Chinese,,0,0,0,,如果它不是一个整行，你必须设置缓存来记录它
 Dialogue: 0,0:38:38.40,0:38:40.18,English,,0,0,0,,So now it's getting really complicated right
 Dialogue: 0,0:38:38.40,0:38:40.18,Chinese,,0,0,0,,所以现在它变得非常复杂了
 Dialogue: 0,0:38:41.16,0:38:49.42,English,,0,0,0,,But that's what you that's the price you pay for this low overhead sort of easier to debug kind of kind of model
-Dialogue: 0,0:38:41.16,0:38:49.42,Chinese,,0,0,0,,但这就是你为这种低开销类型更容易调试的那种模型所付出的代价
+Dialogue: 0,0:38:41.16,0:38:49.42,Chinese,,0,0,0,,但这就是你为这种低开销类型更容易调试的模型所付出的代价
 Dialogue: 0,0:38:50.52,0:38:56.02,English,,0,0,0,,And then another disadvantage is that you can't since it's really a sequential program right it's one c program
-Dialogue: 0,0:38:50.52,0:38:56.02,Chinese,,0,0,0,,然后另一个缺点是你不能，因为它真的是一个顺序程序，它是一个 c 程序
+Dialogue: 0,0:38:50.52,0:38:56.02,Chinese,,0,0,0,,然后另一个缺点是你不能......因为它真的是一个顺序程序，它是一个 c 程序
 Dialogue: 0,0:38:56.44,0:38:58.42,English,,0,0,0,,You can't take advantage of multiple cores
 Dialogue: 0,0:38:56.44,0:38:58.42,Chinese,,0,0,0,,你无法利用多个核心
 Dialogue: 0,0:38:59.28,0:39:02.20,English,,0,0,0,,So the only way to get sort of more performance out of something
-Dialogue: 0,0:38:59.28,0:39:02.20,Chinese,,0,0,0,,因此，从某些方面获得更多性能的唯一方法
+Dialogue: 0,0:38:59.28,0:39:02.20,Chinese,,0,0,0,,因此，基于事件的服务器想要获得更多性能的方法是
 Dialogue: 0,0:39:02.74,0:39:06.42,English,,0,0,0,,An event-based servers just to replicate copies of that server
-Dialogue: 0,0:39:02.74,0:39:06.42,Chinese,,0,0,0,,基于事件的服务器只是为了复制该服务器的副本
+Dialogue: 0,0:39:02.74,0:39:06.42,Chinese,,0,0,0,,复制该服务器的副本
 Dialogue: 0,0:39:07.66,0:39:12.68,English,,0,0,0,,But you can't make an individual server go faster by using multiple cores
 Dialogue: 0,0:39:07.66,0:39:12.68,Chinese,,0,0,0,,但是，通过使用多个内核，你无法使单个服务器更快
 Dialogue: 0,0:39:15.76,0:39:21.54,English,,0,0,0,,Okay the third approach is to use threads to create these concurrent flows
-Dialogue: 0,0:39:15.76,0:39:21.54,Chinese,,0,0,0,,好的第三种方法是使用线程来创建这些并发流
+Dialogue: 0,0:39:15.76,0:39:21.54,Chinese,,0,0,0,,第三种方法是使用线程来创建并发流
 Dialogue: 0,0:39:22.52,0:39:27.62,English,,0,0,0,,It's very similar to processes but there are some important differences
-Dialogue: 0,0:39:22.52,0:39:27.62,Chinese,,0,0,0,,它与流程非常相似，但存在一些重要的差异
+Dialogue: 0,0:39:22.52,0:39:27.62,Chinese,,0,0,0,,它与使用进程的并发流类似，但存在一些重要的差异
 Dialogue: 0,0:39:29.02,0:39:33.44,English,,0,0,0,,So let's look first at what we mean by a thread
 Dialogue: 0,0:39:29.02,0:39:33.44,Chinese,,0,0,0,,那么让我们首先看一下线程的含义
 Dialogue: 0,0:39:35.40,0:39:41.76,English,,0,0,0,,So let's go back i'm going to...let's go back in and look at the traditional view of a process
 Dialogue: 0,0:39:35.40,0:39:41.76,Chinese,,0,0,0,,所以，让我们回去 ...... 我们回过头来看一下流程的传统观点
 Dialogue: 0,0:39:41.78,0:39:47.30,English,,0,0,0,,So we think of a process as some context that's data structures in the kernel
-Dialogue: 0,0:39:41.78,0:39:47.30,Chinese,,0,0,0,,因此，我们将流程视为内核中数据结构的上下文
+Dialogue: 0,0:39:41.78,0:39:47.30,Chinese,,0,0,0,,因此，我们将进程视为内核中数据结构的上下文
 Dialogue: 0,0:39:47.86,0:39:50.30,English,,0,0,0,,Okay data that the kernel keeps about that process
-Dialogue: 0,0:39:47.86,0:39:50.30,Chinese,,0,0,0,,好的数据，内核保留该进程
+Dialogue: 0,0:39:47.86,0:39:50.30,Chinese,,0,0,0,,内核保留了进程的数据
 Dialogue: 0,0:39:50.98,0:39:58.76,English,,0,0,0,,As well as this private address space which contains a stack  code and data and then the stack
-Dialogue: 0,0:39:50.98,0:39:58.76,Chinese,,0,0,0,,以及这个包含堆栈代码和数据然后堆栈的私有地址空间
+Dialogue: 0,0:39:50.98,0:39:58.76,Chinese,,0,0,0,,以及这个包含堆栈代码、数据、堆栈的私有地址空间
 Dialogue: 0,0:40:00.26,0:40:03.62,English,,0,0,0,,Okay and then as part of the and then the
 Dialogue: 0,0:40:00.26,0:40:03.62,Chinese,,0,0,0,,好的，然后作为一部分，然后是
 Dialogue: 0,0:40:04.24,0:40:12.62,English,,0,0,0,,The process context consists of context that's associated with the program like the registers,condition codes,program counter,stack pointer
@@ -885,33 +883,33 @@ Dialogue: 0,0:40:04.24,0:40:12.62,Chinese,,0,0,0,,进程上下文包含与程序
 Dialogue: 0,0:40:14.10,0:40:19.50,English,,0,0,0,,And then it contains kernel context which is information in the kernel
 Dialogue: 0,0:40:14.10,0:40:19.50,Chinese,,0,0,0,,然后它包含内核上下文，它是内核中的信息
 Dialogue: 0,0:40:20.02,0:40:23.76,English,,0,0,0,,That the kernel needs to implement this idea of a process
-Dialogue: 0,0:40:20.02,0:40:23.76,Chinese,,0,0,0,,内核需要实现这个过程的想法
+Dialogue: 0,0:40:20.02,0:40:23.76,Chinese,,0,0,0,,内核需要实现这个进程的想法
 Dialogue: 0,0:40:25.58,0:40:27.80,English,,0,0,0,,Okay so all of this data is actually stored in the kernel
-Dialogue: 0,0:40:25.58,0:40:27.80,Chinese,,0,0,0,,好的，所有这些数据实际上都存储在内核中
+Dialogue: 0,0:40:25.58,0:40:27.80,Chinese,,0,0,0,,所有这些数据实际上都存储在内核中
 Dialogue: 0,0:40:27.82,0:40:37.86,English,,0,0,0,,But some of the data is directly associated with the program and other data is sort of
 Dialogue: 0,0:40:27.82,0:40:37.86,Chinese,,0,0,0,,但有些数据与程序直接相关，而其他数据则有所不同
 Dialogue: 0,0:40:38.00,0:40:42.16,English,,0,0,0,,Support data that the kernel needs to implement processes
-Dialogue: 0,0:40:38.00,0:40:42.16,Chinese,,0,0,0,,支持内核实现进程所需的数据
+Dialogue: 0,0:40:38.00,0:40:42.16,Chinese,,0,0,0,,内核保存了进程所需的数据
 Dialogue: 0,0:40:43.76,0:40:45.32,English,,0,0,0,,Okay so let's just take this picture
-Dialogue: 0,0:40:43.76,0:40:45.32,Chinese,,0,0,0,,好吧，让我们注意这张照片
+Dialogue: 0,0:40:43.76,0:40:45.32,Chinese,,0,0,0,,让我们注意这张照片
 Dialogue: 0,0:40:46.90,0:40:49.74,English,,0,0,0,,And we're just going to just move things around a little bit
 Dialogue: 0,0:40:46.90,0:40:49.74,Chinese,,0,0,0,,而我们只是想稍微改变一下
 Dialogue: 0,0:40:54.76,0:41:00.78,English,,0,0,0,,So what i've done is i've taken the stack off of the this virtual address space
-Dialogue: 0,0:40:54.76,0:41:00.78,Chinese,,0,0,0,,所以我所做的就是把这个虚拟地址空间从堆栈中取出来
+Dialogue: 0,0:40:54.76,0:41:00.78,Chinese,,0,0,0,,我所做的就是把这个虚拟地址空间从堆栈中取出来
 Dialogue: 0,0:41:03.02,0:41:06.96,English,,0,0,0,,And sort of pulled it out along with its stack pointer
-Dialogue: 0,0:41:03.02,0:41:06.96,Chinese,,0,0,0,,有点把它和它的堆栈指针一起拉出来
+Dialogue: 0,0:41:03.02,0:41:06.96,Chinese,,0,0,0,,把它和它的堆栈指针一起拉出来
 Dialogue: 0,0:41:07.66,0:41:13.02,English,,0,0,0,,And the contacts that's associated with the program
-Dialogue: 0,0:41:07.66,0:41:13.02,Chinese,,0,0,0,,以及与该计划相关联的联系人
+Dialogue: 0,0:41:07.66,0:41:13.02,Chinese,,0,0,0,,以及与相关的数据
 Dialogue: 0,0:41:14.02,0:41:18.64,English,,0,0,0,,So the data registers the condition codes the stack pointer the program counter
 Dialogue: 0,0:41:14.02,0:41:18.64,Chinese,,0,0,0,,因此数据寄存条件代码堆栈指针程序计数器
-Dialogue: 0,0:41:19.40,0:41:23.64,English,,0,0,0,,Okay and i've just renamed a thread context instead of program context
-Dialogue: 0,0:41:19.40,0:41:23.64,Chinese,,0,0,0,,好的，我刚刚重命名了线程上下文而不是程序上下文
+Dialogue: 0,0:41:19.40,0:41:23.64,English,,0,0,0,,Okay and I've just renamed a thread context instead of program context
+Dialogue: 0,0:41:19.40,0:41:23.64,Chinese,,0,0,0,,我刚刚重命名了线程上下文而不是程序上下文
 Dialogue: 0,0:41:23.76,0:41:26.94,English,,0,0,0,,But it's the same it's the same thing
 Dialogue: 0,0:41:23.76,0:41:26.94,Chinese,,0,0,0,,但它也是一样的
-Dialogue: 0,0:41:28.02,0:41:31.78,English,,0,0,0,,And then i'm going to call this whole thing the combination of a stack
+Dialogue: 0,0:41:28.02,0:41:31.78,English,,0,0,0,,And then I'm going to call this whole thing the combination of a stack
 Dialogue: 0,0:41:28.02,0:41:31.78,Chinese,,0,0,0,,然后我将整个事情称为堆栈的组合
 Dialogue: 0,0:41:33.14,0:41:35.68,English,,0,0,0,,And this thread context i'm gonna call that a thread
-Dialogue: 0,0:41:33.14,0:41:35.68,Chinese,,0,0,0,,而这个线程上下文我将称之为一个线程
+Dialogue: 0,0:41:33.14,0:41:35.68,Chinese,,0,0,0,,而这个线程上下文就称之为一个线程
 Dialogue: 0,0:41:40.50,0:41:44.40,English,,0,0,0,,And then everything else remains the same
 Dialogue: 0,0:41:40.50,0:41:44.40,Chinese,,0,0,0,,然后其他一切都保持不变
 Dialogue: 0,0:41:44.42,0:41:47.12,English,,0,0,0,,It's we have...we still have a code and data
@@ -930,48 +928,48 @@ Dialogue: 0,0:42:12.22,0:42:16.06,English,,0,0,0,,But in this is a fairly small 
 Dialogue: 0,0:42:12.22,0:42:16.06,Chinese,,0,0,0,,但这是一个相当少量的数据
 Dialogue: 0,0:42:17.46,0:42:19.10,English,,0,0,0,,Now when i really like this
 Dialogue: 0,0:42:17.46,0:42:19.10,Chinese,,0,0,0,,现在，当我真的喜欢这个
-Dialogue: 0,0:42:20.18,0:42:21.00,English,,0,0,0,,Now i can
+Dialogue: 0,0:42:20.18,0:42:21.00,English,,0,0,0,,Now I can
 Dialogue: 0,0:42:20.18,0:42:21.00,Chinese,,0,0,0,,现在我能
 Dialogue: 0,0:42:22.36,0:42:26.54,English,,0,0,0,,I can think about there being multiple threads associated with the same process
 Dialogue: 0,0:42:22.36,0:42:26.54,Chinese,,0,0,0,,我可以想到有多个线程与同一个进程相关联
 Dialogue: 0,0:42:28.12,0:42:32.92,English,,0,0,0,,If i just keep different set of data thread context for each thread
-Dialogue: 0,0:42:28.12,0:42:32.92,Chinese,,0,0,0,,如果我只为每个线程保留不同的数据线程上下文集
+Dialogue: 0,0:42:28.12,0:42:32.92,Chinese,,0,0,0,,如果我只为每个线程保留不同的数据线程上下文
 Dialogue: 0,0:42:33.64,0:42:38.82,English,,0,0,0,,And then a private a separate portion of the stack that's associated with that thread
-Dialogue: 0,0:42:33.64,0:42:38.82,Chinese,,0,0,0,,然后私有一个与该线程关联的堆栈的单独部分
+Dialogue: 0,0:42:33.64,0:42:38.82,Chinese,,0,0,0,,然后拥有一个与该线程关联的堆栈的单独部分
 Dialogue: 0,0:42:40.72,0:42:45.73,English,,0,0,0,,So now each thread shares the same code and data
 Dialogue: 0,0:42:40.72,0:42:45.73,Chinese,,0,0,0,,所以现在每个线程共享相同的代码和数据
 Dialogue: 0,0:42:46.42,0:42:50.54,English,,0,0,0,,Same virtual address space has the same kernel context
 Dialogue: 0,0:42:46.42,0:42:50.54,Chinese,,0,0,0,,相同的虚拟地址空间具有相同的内核上下文
 Dialogue: 0,0:42:51.44,0:42:52.92,English,,0,0,0,,Okay the same i/o structures
-Dialogue: 0,0:42:51.44,0:42:52.92,Chinese,,0,0,0,,好的，相同的 i  /  o 结构
+Dialogue: 0,0:42:51.44,0:42:52.92,Chinese,,0,0,0,,相同的 i/o 结构
 Dialogue: 0,0:42:55.80,0:43:01.28,English,,0,0,0,,But now it has its own separate individual stack
 Dialogue: 0,0:42:55.80,0:43:01.28,Chinese,,0,0,0,,但现在它有自己独立的单独堆栈
 Dialogue: 0,0:43:02.84,0:43:09.90,English,,0,0,0,,Okay so local variables things that you would store on a stack now would be would be private sort of independent
-Dialogue: 0,0:43:02.84,0:43:09.90,Chinese,,0,0,0,,好的，那么你现在存储在堆栈上的局部变量将是私有的独立
+Dialogue: 0,0:43:02.84,0:43:09.90,Chinese,,0,0,0,,那么你现在存储在堆栈上的局部变量将是私有的独立
 Dialogue: 0,0:43:10.46,0:43:14.90,English,,0,0,0,,And it has its own set of its own program counter its own stack pointer
-Dialogue: 0,0:43:10.46,0:43:14.90,Chinese,,0,0,0,,并且它有自己的一组自己的程序计数器自己的堆栈指针
+Dialogue: 0,0:43:10.46,0:43:14.90,Chinese,,0,0,0,,并且它有自己的一组程序计数器，自己的堆栈指针
 Dialogue: 0,0:43:15.58,0:43:17.64,English,,0,0,0,,Its own set of registers and condition codes
-Dialogue: 0,0:43:15.58,0:43:17.64,Chinese,,0,0,0,,它自己的一组寄存器和条件代码
+Dialogue: 0,0:43:15.58,0:43:17.64,Chinese,,0,0,0,,自己的一组寄存器和条件代码
 Dialogue: 0,0:43:23.14,0:43:26.06,English,,0,0,0,,And then the one difference is now is that each thread
-Dialogue: 0,0:43:23.14,0:43:26.06,Chinese,,0,0,0,,然后现在的一个区别是每个线程
+Dialogue: 0,0:43:23.14,0:43:26.06,Chinese,,0,0,0,,其中的一个区别是每个线程
 Dialogue: 0,0:43:26.62,0:43:31.80,English,,0,0,0,,Instead of there's still a process id for this process that's pointed part of the kernel context
-Dialogue: 0,0:43:26.62,0:43:31.80,Chinese,,0,0,0,,而不是这个进程的进程 id 仍然是内核上下文的一部分
+Dialogue: 0,0:43:26.62,0:43:31.80,Chinese,,0,0,0,,使用主进程 id 作为自己的进程 id 而且它仍然是内核上下文的一部分
 Dialogue: 0,0:43:32.44,0:43:36.42,English,,0,0,0,,But each thread now has its own thread id as part of its thread context
 Dialogue: 0,0:43:32.44,0:43:36.42,Chinese,,0,0,0,,但是每个线程现在都有自己的线程 id 作为其线程上下文的一部分
 Dialogue: 0,0:43:39.62,0:43:40.38,English,,0,0,0,,Okay so now
 Dialogue: 0,0:43:39.62,0:43:40.38,Chinese,,0,0,0,,好的，现在
 Dialogue: 0,0:43:43.58,0:43:46.30,English,,0,0,0,,The kernel can just treat each of these as separate flows
-Dialogue: 0,0:43:43.58,0:43:46.30,Chinese,,0,0,0,,内核可以将每个流程视为单独的流程
+Dialogue: 0,0:43:43.58,0:43:46.30,Chinese,,0,0,0,,内核可以将每个线程视为单独的流程
 Dialogue: 0,0:43:46.80,0:43:49.34,English,,0,0,0,,Right there's a separate so it's just like a process now
-Dialogue: 0,0:43:46.80,0:43:49.34,Chinese,,0,0,0,,这是一个独立的，所以现在就像一个过程
+Dialogue: 0,0:43:46.80,0:43:49.34,Chinese,,0,0,0,,这是一个独立的，所以现在就像一个进程
 Dialogue: 0,0:43:49.84,0:43:54.42,English,,0,0,0,,The kernel can remember where the each thread has its own program counter
-Dialogue: 0,0:43:49.84,0:43:54.42,Chinese,,0,0,0,,内核可以记住每个线程在哪里有自己的程序计数器
+Dialogue: 0,0:43:49.84,0:43:54.42,Chinese,,0,0,0,,内核可以记住每个线程拥有了那些程序计数器
 Dialogue: 0,0:43:55.72,0:43:58.28,English,,0,0,0,,And but they're running code out of the same
 Dialogue: 0,0:43:55.72,0:43:58.28,Chinese,,0,0,0,,但他们正在运行相同的代码
 Dialogue: 0,0:43:58.88,0:44:02.64,English,,0,0,0,,That code the same code section in the virtual address space
 Dialogue: 0,0:43:58.88,0:44:02.64,Chinese,,0,0,0,,该代码与虚拟地址空间中的代码段相同
 Dialogue: 0,0:44:02.68,0:44:06.04,English,,0,0,0,,So the sharing code sharing data
-Dialogue: 0,0:44:02.68,0:44:06.04,Chinese,,0,0,0,,所以共享代码共享数据
+Dialogue: 0,0:44:02.68,0:44:06.04,Chinese,,0,0,0,,共享代码共享数据
 Dialogue: 0,0:44:06.42,0:44:07.88,English,,0,0,0,,But they have their own program counter
 Dialogue: 0,0:44:06.42,0:44:07.88,Chinese,,0,0,0,,但他们有自己的程序计数器
 Dialogue: 0,0:44:07.98,0:44:10.34,English,,0,0,0,,So they can the kernel can provide
@@ -979,31 +977,31 @@ Dialogue: 0,0:44:07.98,0:44:10.34,Chinese,,0,0,0,,所以内核可以提供它们
 Dialogue: 0,0:44:10.98,0:44:15.10,English,,0,0,0,,Can create each of these threads as a separate flow of control
 Dialogue: 0,0:44:10.98,0:44:15.10,Chinese,,0,0,0,,可以将每个线程创建为单独的控制流
 Dialogue: 0,0:44:15.48,0:44:17.96,English,,0,0,0,,That it then schedules just like it does of a process
-Dialogue: 0,0:44:15.48,0:44:17.96,Chinese,,0,0,0,,然后它就像进程一样安排
+Dialogue: 0,0:44:15.48,0:44:17.96,Chinese,,0,0,0,,然后它就像进程一样调度它们
 Dialogue: 0,0:44:18.48,0:44:21.02,English,,0,0,0,,Or in a similar way that does is a process
 Dialogue: 0,0:44:18.48,0:44:21.02,Chinese,,0,0,0,,或者以与进程相似的方式进行
-Dialogue: 0,0:44:21.94,0:44:32.80,English,,0,0,0,,But the difference is the reason that for threads in the first place is that when the colonel wants to contact switch from one thread to another
-Dialogue: 0,0:44:21.94,0:44:32.80,Chinese,,0,0,0,,但不同之处在于，对于线程而言，首先是当上校要联系从一个线程切换到另一个线程时
+Dialogue: 0,0:44:21.94,0:44:32.80,English,,0,0,0,,But the difference is the reason that for threads in the first place is that when the kernel wants to contact switch from one thread to another
+Dialogue: 0,0:44:21.94,0:44:32.80,Chinese,,0,0,0,,但不同之处在于，对于线程而言，第一条内核要从一个线程切换到另一个线程时
 Dialogue: 0,0:44:33.78,0:44:39.18,English,,0,0,0,,There's not that much information that has to be saved and restored
 Dialogue: 0,0:44:33.78,0:44:39.18,Chinese,,0,0,0,,没有那么多信息需要保存和恢复
 Dialogue: 0,0:44:39.24,0:44:40.76,English,,0,0,0,,It's just a small amount of data
 Dialogue: 0,0:44:39.24,0:44:40.76,Chinese,,0,0,0,,这只是一小部分数据
-Dialogue: 0,0:44:41.54,0:44:44.76,English,,0,0,0,,So the kernel has to save this the data thread one context
-Dialogue: 0,0:44:41.54,0:44:44.76,Chinese,,0,0,0,,所以内核必须将数据线程保存一个上下文
-Dialogue: 0,0:44:45.58,0:44:49.72,English,,0,0,0,,In some data structure some way and then restore the context for thread 2
-Dialogue: 0,0:44:45.58,0:44:49.72,Chinese,,0,0,0,,在某些数据结构中某种方式然后恢复线程 2 的上下文
+Dialogue: 0,0:44:41.54,0:44:47.06,English,,0,0,0,,So the kernel has to save this the data thread one context in some data structure some way
+Dialogue: 0,0:44:41.54,0:44:47.06,Chinese,,0,0,0,,所以内核只需使用某种方式保存线程上下文的数据
+Dialogue: 0,0:44:47.06,0:44:49.72,English,,0,0,0,, And then restore the context for thread 2
+Dialogue: 0,0:44:47.06,0:44:49.72,Chinese,,0,0,0,,然后恢复线程 2 的上下文
 Dialogue: 0,0:44:50.62,0:44:53.52,English,,0,0,0,,But we're talking about a very low overhead kind of operation
-Dialogue: 0,0:44:50.62,0:44:53.52,Chinese,,0,0,0,,但我们谈论的是一种非常低开销的操作
+Dialogue: 0,0:44:50.62,0:44:53.52,Chinese,,0,0,0,,我们认为这是一种非常低开销的操作
 Dialogue: 0,0:44:53.90,0:45:00.36,English,,0,0,0,,Right it doesn't have to mess around with page tables virtual address space or any other of the process context
-Dialogue: 0,0:44:53.90,0:45:00.36,Chinese,,0,0,0,,没错，它不必乱用页表虚拟地址空间或任何其他进程上下文
+Dialogue: 0,0:44:53.90,0:45:00.36,Chinese,,0,0,0,,它不必乱用页表虚拟地址空间或任何其他进程上下文
 Dialogue: 0,0:45:06.46,0:45:09.90,English,,0,0,0,,So threads are luck kind of like processes
-Dialogue: 0,0:45:06.46,0:45:09.90,Chinese,,0,0,0,,所以线程运气就像进程一样
+Dialogue: 0,0:45:06.46,0:45:09.90,Chinese,,0,0,0,,所以线就像进程一样
 Dialogue: 0,0:45:10.78,0:45:14.14,English,,0,0,0,,But they're different in the sense that they share the same virtual address space
 Dialogue: 0,0:45:10.78,0:45:14.14,Chinese,,0,0,0,,但是它们在共享相同的虚拟地址空间的意义上是不同的
 Dialogue: 0,0:45:16.40,0:45:20.58,English,,0,0,0,,And unlike processes which are created by fork
 Dialogue: 0,0:45:16.40,0:45:20.58,Chinese,,0,0,0,,而且与 fork 创建的进程不同
 Dialogue: 0,0:45:21.84,0:45:26.60,English,,0,0,0,,Which creates a strict process hierarchy threads are just pools
-Dialogue: 0,0:45:21.84,0:45:26.60,Chinese,,0,0,0,,这创建了一个严格的流程层次结构线程只是池
+Dialogue: 0,0:45:21.84,0:45:26.60,Chinese,,0,0,0,,于创建了一个完整的进程结构不同，线程只是池
 Dialogue: 0,0:45:27.26,0:45:32.94,English,,0,0,0,,You can think of threads as pools of concurrent flows that access the same code and data
 Dialogue: 0,0:45:27.26,0:45:32.94,Chinese,,0,0,0,,你可以将线程视为访问相同代码和数据的并发流池
 Dialogue: 0,0:45:36.64,0:45:39.98,English,,0,0,0,,And then the kernel is responsible for scheduling those flows
@@ -1011,51 +1009,51 @@ Dialogue: 0,0:45:36.64,0:45:39.98,Chinese,,0,0,0,,然后内核负责调度这些
 Dialogue: 0,0:45:39.98,0:45:43.60,English,,0,0,0,,And if in a way that so each flow gets time on the processor
 Dialogue: 0,0:45:39.98,0:45:43.60,Chinese,,0,0,0,,如果以某种方式让每个流程在处理器上获得时间
 Dialogue: 0,0:45:46.72,0:45:51.74,English,,0,0,0,,So much like processes,much like concurrent processes
-Dialogue: 0,0:45:46.72,0:45:51.74,Chinese,,0,0,0,,与流程非常相似，就像并发流程一样
+Dialogue: 0,0:45:46.72,0:45:51.74,Chinese,,0,0,0,,与进程非常相似，就像并发流程一样
 Dialogue: 0,0:45:52.26,0:45:54.62,English,,0,0,0,,We say the two threads are concurrent
 Dialogue: 0,0:45:52.26,0:45:54.62,Chinese,,0,0,0,,我们说这两个线程是并发的
 Dialogue: 0,0:45:55.66,0:45:59.78,English,,0,0,0,,If their flows overlap in time otherwise they're sequential so this is the exact same
 Dialogue: 0,0:45:55.66,0:45:59.78,Chinese,,0,0,0,,如果它们的流量在时间上重叠，否则它们是连续的，所以这是完全相同的
 Dialogue: 0,0:46:00.32,0:46:02.74,English,,0,0,0,,Example that i showed you when we looked at processes
-Dialogue: 0,0:46:00.32,0:46:02.74,Chinese,,0,0,0,,我们在查看流程时向你展示的示例
+Dialogue: 0,0:46:00.32,0:46:02.74,Chinese,,0,0,0,,我们在查看进程时向你展示的示例
 Dialogue: 0,0:46:03.22,0:46:08.50,English,,0,0,0,,So here you have instead of three processes we have three threads running it within the same process
-Dialogue: 0,0:46:03.22,0:46:08.50,Chinese,,0,0,0,,所以在这里你有三个进程而不是三个进程在同一进程中运行它
+Dialogue: 0,0:46:03.22,0:46:08.50,Chinese,,0,0,0,,所以在这里我们用三个线程代替三个进程在同一进程中运行它们
 Dialogue: 0,0:46:11.22,0:46:12.62,English,,0,0,0,,Thread a runs for a little bit
-Dialogue: 0,0:46:11.22,0:46:12.62,Chinese,,0,0,0,,线程运行一点点
+Dialogue: 0,0:46:11.22,0:46:12.62,Chinese,,0,0,0,,线程 a 运行一段时间
 Dialogue: 0,0:46:13.02,0:46:18.78,English,,0,0,0,,And then the kernel just decides to walk it out and run thread b
-Dialogue: 0,0:46:13.02,0:46:18.78,Chinese,,0,0,0,,然后内核决定将其移出并运行线程 b
+Dialogue: 0,0:46:13.02,0:46:18.78,Chinese,,0,0,0,,然后内核决定切换运行线程 b
 Dialogue: 0,0:46:19.46,0:46:24.80,English,,0,0,0,,So then thread b runs for a little bit and then the kernel decides to give thread c some time
-Dialogue: 0,0:46:19.46,0:46:24.80,Chinese,,0,0,0,,所以然后线程 b 运行一点，然后内核决定给线程 c 一些时间
+Dialogue: 0,0:46:19.46,0:46:24.80,Chinese,,0,0,0,,所以然后线程 b 运行一段时间，然后内核决定给线程 c 一些时间
 Dialogue: 0,0:46:24.84,0:46:30.02,English,,0,0,0,,So it saves thread b's context restores thread c's context
 Dialogue: 0,0:46:24.84,0:46:30.02,Chinese,,0,0,0,,因此它保存了线程 b 的上下文恢复线程 c 的上下文
-Dialogue: 0,0:46:30.32,0:46:36.58,English,,0,0,0,,And sets the pc to...the pc value
-Dialogue: 0,0:46:30.32,0:46:36.58,Chinese,,0,0,0,,并将 pc 设置为 ... pc 值
-Dialogue: 0,0:46:36.60,0:46:42.48,English,,0,0,0,,And thread c's context and so c runs and then the kernel decides to give a some time again
-Dialogue: 0,0:46:36.60,0:46:42.48,Chinese,,0,0,0,,并且线程 c 的上下文因此 c 运行然后内核决定再给一段时间
+Dialogue: 0,0:46:30.32,0:46:37.88,English,,0,0,0,,And sets the pc to...the pc value,and thread c's context
+Dialogue: 0,0:46:30.32,0:46:37.88,Chinese,,0,0,0,,并将 pc（程序计数器） 设置为 ... pc 值，和线程 c 的上线文
+Dialogue: 0,0:46:37.88,0:46:42.48,English,,0,0,0,,And so c runs and then the kernel decides to give a some time again
+Dialogue: 0,0:46:37.88,0:46:42.48,Chinese,,0,0,0,,因此 c 运行一段时间然后内核决定再给线程 a 一段时间
 Dialogue: 0,0:46:42.50,0:46:44.18,English,,0,0,0,,So then a runs some more
-Dialogue: 0,0:46:42.50,0:46:44.18,Chinese,,0,0,0,,那么再运行一些
+Dialogue: 0,0:46:42.50,0:46:44.18,Chinese,,0,0,0,,然后线程 a 开始运行
 Dialogue: 0,0:46:45.42,0:46:51.88,English,,0,0,0,,So because thread a and b overlap in time they're running concurrently
-Dialogue: 0,0:46:45.42,0:46:51.88,Chinese,,0,0,0,,因此，因为线程 a 和 b 在时间上重叠，所以它们同时运行
+Dialogue: 0,0:46:45.42,0:46:51.88,Chinese,,0,0,0,,因此，因为线程 a 和 b 在时间上重叠，所以它们是并发
 Dialogue: 0,0:46:54.10,0:46:57.98,English,,0,0,0,,B and c don't overlap in time so they're not running concurrently
 Dialogue: 0,0:46:54.10,0:46:57.98,Chinese,,0,0,0,, B 和 c 在时间上不重叠，因此它们不会同时运行
 Dialogue: 0,0:46:58.50,0:47:02.72,English,,0,0,0,,But a and c are concurrent because they overlap in time
 Dialogue: 0,0:46:58.50,0:47:02.72,Chinese,,0,0,0,,但是 a 和 c 是并发的，因为它们在时间上重叠
 Dialogue: 0,0:47:04.80,0:47:10.78,English,,0,0,0,,And so you can...you also have the option if there's multiple cores than multiple threat
-Dialogue: 0,0:47:04.80,0:47:10.78,Chinese,,0,0,0,,所以你可以 ... 如果有多个核心而不是多个威胁，你也可以选择
+Dialogue: 0,0:47:04.80,0:47:10.78,Chinese,,0,0,0,,所以你可以 ... 如果你所拥有的核心数多于线程数，你也可以选择
 Dialogue: 0,0:47:10.84,0:47:14.62,English,,0,0,0,,A thread can run on each core so then you can have true parallelism
 Dialogue: 0,0:47:10.84,0:47:14.62,Chinese,,0,0,0,,线程可以在每个核心上运行，因此你可以拥有真正的并行性
 Dialogue: 0,0:47:14.94,0:47:15.48,English,,0,0,0,,Okay
 Dialogue: 0,0:47:14.94,0:47:15.48,Chinese,,0,0,0,,好的
 Dialogue: 0,0:47:21.50,0:47:28.02,English,,0,0,0,,Okay so like i said threads and processes are similar ideas
-Dialogue: 0,0:47:21.50,0:47:28.02,Chinese,,0,0,0,,好吧，就像我说线程和流程是类似的想法
-Dialogue: 0,0:47:28.02,0:47:37.56,English,,0,0,0,,But in the sense that they each stage kinase and process corresponds to some kind of logical flow
-Dialogue: 0,0:47:28.02,0:47:37.56,Chinese,,0,0,0,,但从某种意义上说，他们每个阶段的激酶和过程都对应于某种逻辑流程
+Dialogue: 0,0:47:21.50,0:47:28.02,Chinese,,0,0,0,,就像我说线程和进程是类似的想法
+Dialogue: 0,0:47:28.02,0:47:37.56,English,,0,0,0,,But in the sense that they......each thread and process corresponds to some kind of logical flow
+Dialogue: 0,0:47:28.02,0:47:37.56,Chinese,,0,0,0,,从某种意义上说，线程和进程的并发像是一种逻辑流
 Dialogue: 0,0:47:40.00,0:47:42.42,English,,0,0,0,,And they can run concurrently with other flows
-Dialogue: 0,0:47:40.00,0:47:42.42,Chinese,,0,0,0,,它们可以与其他流程同时运行
+Dialogue: 0,0:47:40.00,0:47:42.42,Chinese,,0,0,0,,它们可以与其他进程同时运行
 Dialogue: 0,0:47:43.42,0:47:46.68,English,,0,0,0,,And each is scheduled and contact switched by the kernel
-Dialogue: 0,0:47:43.42,0:47:46.68,Chinese,,0,0,0,,并且每个都是由内核调度和联系人切换的
+Dialogue: 0,0:47:43.42,0:47:46.68,Chinese,,0,0,0,,并且每个都是由内核调度和切换的
 Dialogue: 0,0:47:48.98,0:47:54.30,English,,0,0,0,,Okay but they're different because threads share all code and data except their local stacks
-Dialogue: 0,0:47:48.98,0:47:54.30,Chinese,,0,0,0,,好吧但是它们是不同的，因为线程共享除本地堆栈之外的所有代码和数据
+Dialogue: 0,0:47:48.98,0:47:54.30,Chinese,,0,0,0,,但是它们是不同的，因为线程共享除本地堆栈之外的所有代码和数据
 Dialogue: 0,0:47:56.94,0:48:05.98,English,,0,0,0,,And in fact those local stacks although they're each thread has its own it's really just sharing the same stack
 Dialogue: 0,0:47:56.94,0:48:05.98,Chinese,,0,0,0,,事实上，那些本地堆栈虽然它们每个线程都有自己的，但它实际上只是共享相同的堆栈
 Dialogue: 0,0:48:08.14,0:48:10.80,English,,0,0,0,,And so it's really the same portion of the virtual address space
@@ -1063,111 +1061,111 @@ Dialogue: 0,0:48:08.14,0:48:10.80,Chinese,,0,0,0,,所以它实际上是虚拟地
 Dialogue: 0,0:48:10.94,0:48:15.52,English,,0,0,0,,It's just that each thread is assigned its own part of that stack
 Dialogue: 0,0:48:10.94,0:48:15.52,Chinese,,0,0,0,,只是为每个线程分配了自己的堆栈部分
 Dialogue: 0,0:48:15.70,0:48:19.04,English,,0,0,0,,Okay so even though threads have their own individual stacks
-Dialogue: 0,0:48:15.70,0:48:19.04,Chinese,,0,0,0,,好的，即使线程有自己独立的堆栈
+Dialogue: 0,0:48:15.70,0:48:19.04,Chinese,,0,0,0,,即使线程有自己独立的堆栈
 Dialogue: 0,0:48:20.86,0:48:22.96,English,,0,0,0,,Since it's all part of the same virtual address space
-Dialogue: 0,0:48:20.86,0:48:22.96,Chinese,,0,0,0,,因为它是同一虚拟地址空间的所有部分
+Dialogue: 0,0:48:20.86,0:48:22.96,Chinese,,0,0,0,,因为它也是同一虚拟地址空间的一部分
 Dialogue: 0,0:48:23.46,0:48:26.70,English,,0,0,0,,A thread can access the stack of any other thread
 Dialogue: 0,0:48:23.46,0:48:26.70,Chinese,,0,0,0,,线程可以访问任何其他线程的堆栈
 Dialogue: 0,0:48:27.92,0:48:29.98,English,,0,0,0,,If it's and that's not a good thing to do but it's possible
 Dialogue: 0,0:48:27.92,0:48:29.98,Chinese,,0,0,0,,如果它是，这不是一件好事，但它是可能的
 Dialogue: 0,0:48:33.10,0:48:35.26,English,,0,0,0,,Okay so processes don't share any of the state
-Dialogue: 0,0:48:33.10,0:48:35.26,Chinese,,0,0,0,,好的，所以流程不共享任何州
+Dialogue: 0,0:48:33.10,0:48:35.26,Chinese,,0,0,0,,所以进程不共享任何状态
 Dialogue: 0,0:48:35.42,0:48:38.42,English,,0,0,0,,Right they have their own private address spaces
 Dialogue: 0,0:48:35.42,0:48:38.42,Chinese,,0,0,0,,他们有自己的私人地址空间
 Dialogue: 0,0:48:39.00,0:48:42.96,English,,0,0,0,,And threads are less expensive than processes
-Dialogue: 0,0:48:39.00,0:48:42.96,Chinese,,0,0,0,,线程比流程便宜
+Dialogue: 0,0:48:39.00,0:48:42.96,Chinese,,0,0,0,,线程比进程更轻量级
 Dialogue: 0,0:48:46.26,0:48:47.80,English,,0,0,0,,It's cheaper to create them
-Dialogue: 0,0:48:46.26,0:48:47.80,Chinese,,0,0,0,,创建它们会更便宜
+Dialogue: 0,0:48:46.26,0:48:47.80,Chinese,,0,0,0,,创建它们会更容易
 Dialogue: 0,0:48:47.80,0:48:52.94,English,,0,0,0,,And the main reason is that there's just less context associated with the thread than there is as a process
-Dialogue: 0,0:48:47.80,0:48:52.94,Chinese,,0,0,0,,主要原因是与线程关联的上下文数量少于作为进程的上下文
+Dialogue: 0,0:48:47.80,0:48:52.94,Chinese,,0,0,0,,主要原因是与线程关联的上下文数量少于进程的上下文
 Dialogue: 0,0:48:53.70,0:48:55.76,English,,0,0,0,,And so on our system when we measure
-Dialogue: 0,0:48:53.70,0:48:55.76,Chinese,,0,0,0,,当我们测量时，我们的系统等等
+Dialogue: 0,0:48:53.70,0:48:55.76,Chinese,,0,0,0,,当在我们的系统中进行压力测试的时候
 Dialogue: 0,0:48:57.56,0:49:05.94,English,,0,0,0,,A bunch of we just create in and wait for a bunch of creative process wait for word process over and over again and measure the time
-Dialogue: 0,0:48:57.56,0:49:05.94,Chinese,,0,0,0,,我们刚刚创建了一堆并等待一堆创作过程一遍又一遍地等待文字处理并测量时间
-Dialogue: 0,0:49:06.40,0:49:10.38,English,,0,0,0,,Turns out to be about twenty thousand cycles to create and
-Dialogue: 0,0:49:06.40,0:49:10.38,Chinese,,0,0,0,,结果是大约两万个周期来创建和
-Dialogue: 0,0:49:10.78,0:49:15.90,English,,0,0,0,,Reap a process about ten thousand cycles to create an reapeth thread
-Dialogue: 0,0:49:10.78,0:49:15.90,Chinese,,0,0,0,,获得一个大约一万个周期的进程来创建一个 reapeth 线程
+Dialogue: 0,0:48:57.56,0:49:05.94,Chinese,,0,0,0,,我们创建一堆进程并等待它们创建完成记录创建的时间
+Dialogue: 0,0:49:06.40,0:49:11.98,English,,0,0,0,,Turns out to be about twenty thousand cycles to create and reap a process 
+Dialogue: 0,0:49:06.40,0:49:11.98,Chinese,,0,0,0,,结果是进程的创建和获取需要花大约两万个时间周期
+Dialogue: 0,0:49:12.30,0:49:15.90,English,,0,0,0,,About ten thousand cycles to create an reap thread
+Dialogue: 0,0:49:12.30,0:49:15.90,Chinese,,0,0,0,,线程的获取和创建大约需要 1 万个时间周期
 Dialogue: 0,0:49:17.54,0:49:24.66,English,,0,0,0,,So that the kernel provides threads to us using an interface called the pthreads  posix threads
-Dialogue: 0,0:49:17.54,0:49:24.66,Chinese,,0,0,0,,这样内核就可以使用名为 pthreads posi x线程的接口为我们提供线程
+Dialogue: 0,0:49:17.54,0:49:24.66,Chinese,,0,0,0,,这样内核为我们提供线程相关的接口名为 pthreads（posix thread）
 Dialogue: 0,0:49:25.52,0:49:36.48,English,,0,0,0,,So this is a fairly recent standard that all linux,unix systems and windows macintosh
-Dialogue: 0,0:49:25.52,0:49:36.48,Chinese,,0,0,0,,所以这是一个相当新的标准，所有 linu x， uni x系统和w indo w s macintosh
+Dialogue: 0,0:49:25.52,0:49:36.48,Chinese,,0,0,0,,所以这是一个相当新的标准，所有 linux、unix、windows、macintosh 都支持
 Dialogue: 0,0:49:36.56,0:49:46.70,English,,0,0,0,,So every this is a sort of standard posix standard for manipulating threads
-Dialogue: 0,0:49:36.56,0:49:46.70,Chinese,,0,0,0,,因此，每一个都是一种用于操纵线程的标准 posi x标准
+Dialogue: 0,0:49:36.56,0:49:46.70,Chinese,,0,0,0,,因此，这是一套用于操纵线程的标准—— posix 标准
 Dialogue: 0,0:49:47.64,0:49:50.86,English,,0,0,0,,And so you can do things like create and reap threads
-Dialogue: 0,0:49:47.64,0:49:50.86,Chinese,,0,0,0,,所以你可以做一些事情，比如创建和收获线程
+Dialogue: 0,0:49:47.64,0:49:50.86,Chinese,,0,0,0,,所以你可以做一些事情，比如创建和获取线程
 Dialogue: 0,0:49:50.86,0:49:53.60,English,,0,0,0,,So there's this is sort of sort of like fork
-Dialogue: 0,0:49:50.86,0:49:53.60,Chinese,,0,0,0,,所以这有点像叉子
+Dialogue: 0,0:49:50.86,0:49:53.60,Chinese,,0,0,0,,所以这有点像 fork
 Dialogue: 0,0:49:54.68,0:49:59.36,English,,0,0,0,,And this is sort of like weight but not quite because it doesn't create
-Dialogue: 0,0:49:54.68,0:49:59.36,Chinese,,0,0,0,,这有点像重量但不完全是因为它没有创造
+Dialogue: 0,0:49:54.68,0:49:59.36,Chinese,,0,0,0,,这看起来不是很重，因为它没有创造
 Dialogue: 0,0:50:01.92,0:50:04.22,English,,0,0,0,,There's no hierarchy associated with these
 Dialogue: 0,0:50:01.92,0:50:04.22,Chinese,,0,0,0,,没有与这些相关的层次结构
 Dialogue: 0,0:50:04.80,0:50:12.66,English,,0,0,0,,You can you could just like get pit you can retain there's a function to get your thread id
-Dialogue: 0,0:50:04.80,0:50:12.66,Chinese,,0,0,0,,你可以只想得到坑，你可以保留一个函数来获取你的线程 ID
+Dialogue: 0,0:50:04.80,0:50:12.66,Chinese,,0,0,0,,你只想获取线程，你可以使用这个函数来获取你的线程 ID
 Dialogue: 0,0:50:13.48,0:50:16.84,English,,0,0,0,,You can kill threads so one thread can kill another thread
-Dialogue: 0,0:50:13.48,0:50:16.84,Chinese,,0,0,0,,你可以杀死线程，以便一个线程可以杀死另一个线程
+Dialogue: 0,0:50:13.48,0:50:16.84,Chinese,,0,0,0,,你可以杀掉线程，一个线程可以杀死另一个线程
 Dialogue: 0,0:50:18.84,0:50:21.60,English,,0,0,0,,A thread there's a there's a function to exit a thread
-Dialogue: 0,0:50:18.84,0:50:21.60,Chinese,,0,0,0,,一个线程有一个退出线程的函数
+Dialogue: 0,0:50:18.84,0:50:21.60,Chinese,,0,0,0,,这是一个退出线程的函数
 Dialogue: 0,0:50:23.30,0:50:26.92,English,,0,0,0,,The normal exit system call terminates all the threads
-Dialogue: 0,0:50:23.30,0:50:26.92,Chinese,,0,0,0,,正常的退出系统调用终止所有线程
+Dialogue: 0,0:50:23.30,0:50:26.92,Chinese,,0,0,0,,正常的退出系统调用 exit 终止所有线程
 Dialogue: 0,0:50:27.72,0:50:35.10,English,,0,0,0,,And return is similar to pthread_exit in the sense that just terminates the current thread that calls it
-Dialogue: 0,0:50:27.72,0:50:35.10,Chinese,,0,0,0,,返回类似于 pthread_e x it ，只是终止调用它的当前线程
+Dialogue: 0,0:50:27.72,0:50:35.10,Chinese,,0,0,0,,返回类似于 pthread_exit ，只是终止调用它的当前线程
 Dialogue: 0,0:50:36.26,0:50:40.50,English,,0,0,0,,And then there's ways to access synchronize access to shared variables
 Dialogue: 0,0:50:36.26,0:50:40.50,Chinese,,0,0,0,,然后有办法访问共享变量的同步访问
 Dialogue: 0,0:50:41.04,0:50:43.92,English,,0,0,0,,Which we'll look at on thursday more detail
 Dialogue: 0,0:50:41.04,0:50:43.92,Chinese,,0,0,0,,我们将在周四详细介绍
 Dialogue: 0,0:50:47.22,0:50:50.50,English,,0,0,0,,Okay so here's the pthreads hello world program
-Dialogue: 0,0:50:47.22,0:50:50.50,Chinese,,0,0,0,,好的，这就是 pthreads 的  hello  w orld program
+Dialogue: 0,0:50:47.22,0:50:50.50,Chinese,,0,0,0,,好的，这就是 pthreads 版本的  hello,world 程序
 Dialogue: 0,0:50:52.66,0:50:56.38,English,,0,0,0,,You know your k&r book the the c reference manual
-Dialogue: 0,0:50:52.66,0:50:56.38,Chinese,,0,0,0,,你知道你的 k ＆ r 预订了 c 参考手册
+Dialogue: 0,0:50:52.66,0:50:56.38,Chinese,,0,0,0,,你知道你们的 k＆r 的 c 语言参考手册
 Dialogue: 0,0:50:57.12,0:51:03.34,English,,0,0,0,,The very first thing that it does is it shows you how to write the simplest possible c program called
 Dialogue: 0,0:50:57.12,0:51:03.34,Chinese,,0,0,0,,它首先要做的是它向你展示如何编写最简单的 c 程序
 Dialogue: 0,0:51:03.66,0:51:06.24,English,,0,0,0,,So the famous hello world program
-Dialogue: 0,0:51:03.66,0:51:06.24,Chinese,,0,0,0,,就是著名的 hello 程序
+Dialogue: 0,0:51:03.66,0:51:06.24,Chinese,,0,0,0,,就是著名的 hello world 程序
 Dialogue: 0,0:51:06.68,0:51:11.02,English,,0,0,0,,So that goes all the way back to like 1978 when k&r book was first written
-Dialogue: 0,0:51:06.68,0:51:11.02,Chinese,,0,0,0,,因此，当 k ＆ r 书籍首次编写时，这就像 1978 年一样
+Dialogue: 0,0:51:06.68,0:51:11.02,Chinese,,0,0,0,,因此，当 k＆r 书籍首次编写时，这就像 1978 年一样
 Dialogue: 0,0:51:11.76,0:51:14.36,English,,0,0,0,,But that's caught on
 Dialogue: 0,0:51:11.76,0:51:14.36,Chinese,,0,0,0,,但那已经流行起来了
 Dialogue: 0,0:51:14.86,0:51:19.60,English,,0,0,0,,And whenever we like learn a new language or we learn a new concept
 Dialogue: 0,0:51:14.86,0:51:19.60,Chinese,,0,0,0,,每当我们喜欢学习新语言或学习新概念时
 Dialogue: 0,0:51:19.92,0:51:22.48,English,,0,0,0,,We always write the hello world program for that concept
-Dialogue: 0,0:51:19.92,0:51:22.48,Chinese,,0,0,0,,我们总是为这个概念编写 hello  w orld 程序
+Dialogue: 0,0:51:19.92,0:51:22.48,Chinese,,0,0,0,,我们总是为这个概念编写 hello  world 程序
 Dialogue: 0,0:51:23.12,0:51:29.62,English,,0,0,0,,So the hello world program for threads this is a simplest threads program that i can think of
-Dialogue: 0,0:51:23.12,0:51:29.62,Chinese,,0,0,0,,所以线程的 hello  w orld 程序这是我能想到的最简单的线程程序
+Dialogue: 0,0:51:23.12,0:51:29.62,Chinese,,0,0,0,,所以线程的 hello  world 程序这是我能想到的最简单的线程程序
 Dialogue: 0,0:51:29.64,0:51:32.30,English,,0,0,0,,So i call it the hello world program for threads
-Dialogue: 0,0:51:29.64,0:51:32.30,Chinese,,0,0,0,,所以我把它称为线程的 hello  w orld 程序
+Dialogue: 0,0:51:29.64,0:51:32.30,Chinese,,0,0,0,,所以我把它称为线程的 hello  world 程序
 Dialogue: 0,0:51:33.56,0:51:38.16,English,,0,0,0,,So this program defines a function
 Dialogue: 0,0:51:33.56,0:51:38.16,Chinese,,0,0,0,,所以这个程序定义了一个函数
-Dialogue: 0,0:51:39.60,0:51:41.14,English,,0,0,0,,So court by in posix
-Dialogue: 0,0:51:39.60,0:51:41.14,Chinese,,0,0,0,,因此，在 posi x法院
+Dialogue: 0,0:51:39.60,0:51:41.14,English,,0,0,0,,So calls by in posix
+Dialogue: 0,0:51:39.60,0:51:41.14,Chinese,,0,0,0,,调用 posix 
 Dialogue: 0,0:51:41.70,0:51:49.12,English,,0,0,0,,A thread is actually executed by executing the the code and a function called the thread routine
-Dialogue: 0,0:51:41.70,0:51:49.12,Chinese,,0,0,0,,线程实际上是通过执行代码和一个称为线程例程的函数来执行的
+Dialogue: 0,0:51:41.70,0:51:49.12,Chinese,,0,0,0,,线程实际上是通过执行一个叫做程例程的函数来执行的
 Dialogue: 0,0:51:50.04,0:51:52.82,English,,0,0,0,,Okay and posix imposes
-Dialogue: 0,0:51:50.04,0:51:52.82,Chinese,,0,0,0,, posi x强加
+Dialogue: 0,0:51:50.04,0:51:52.82,Chinese,,0,0,0,, posix 强加
 Dialogue: 0,0:51:54.76,0:51:59.54,English,,0,0,0,,This thread routine takes a generic pointer as an argument optional generic pointer
 Dialogue: 0,0:51:54.76,0:51:59.54,Chinese,,0,0,0,,此线程例程将通用指针作为参数可选通用指针
 Dialogue: 0,0:52:00.16,0:52:02.02,English,,0,0,0,,And it returns a generic pointer
 Dialogue: 0,0:52:00.16,0:52:02.02,Chinese,,0,0,0,,它返回一个通用指针
 Dialogue: 0,0:52:02.82,0:52:10.54,English,,0,0,0,,Okay so anytime if you want to pass anything to a thread you somehow got to pack up all that data into a single object
-Dialogue: 0,0:52:02.82,0:52:10.54,Chinese,,0,0,0,,好的，所以如果你想将任何东西传递给一个线程，你就可以将所有数据打包成一个对象
+Dialogue: 0,0:52:02.82,0:52:10.54,Chinese,,0,0,0,,所以如果你想将任何东西传递给一个线程，你就可以将所有数据打包成一个对象
 Dialogue: 0,0:52:10.78,0:52:12.78,English,,0,0,0,,Then you can take an address up
 Dialogue: 0,0:52:10.78,0:52:12.78,Chinese,,0,0,0,,然后你可以拿一个地址
 Dialogue: 0,0:52:14.78,0:52:17.68,English,,0,0,0,,But it's it you can see that this is extremely general-purpose
 Dialogue: 0,0:52:14.78,0:52:17.68,Chinese,,0,0,0,,但是你可以看到这是非常通用的
 Dialogue: 0,0:52:21.22,0:52:28.00,English,,0,0,0,,So our hello world program creates a thread by calling pthread create
-Dialogue: 0,0:52:21.22,0:52:28.00,Chinese,,0,0,0,,所以我们的 hello  w orld 程序通过调用 pthread_create 来创建一个线程
+Dialogue: 0,0:52:21.22,0:52:28.00,Chinese,,0,0,0,,所以我们的 hello world 程序通过调用 pthread_create 来创建一个线程
 Dialogue: 0,0:52:29.72,0:52:32.84,English,,0,0,0,,And we say instead of a child we call this a peer thread
-Dialogue: 0,0:52:29.72,0:52:32.84,Chinese,,0,0,0,,而且我们说的不是孩子而是我们称之为同伴线程
+Dialogue: 0,0:52:29.72,0:52:32.84,Chinese,,0,0,0,,而且我们说的不是子线程而是我们称之为同伴线程
 Dialogue: 0,0:52:34.56,0:52:42.18,English,,0,0,0,,Okay so that there's no parent-child relationship any threads can threads can reap other threads
-Dialogue: 0,0:52:34.56,0:52:42.18,Chinese,,0,0,0,,好的，所以没有父子关系，任何线程都可以让线程获得其他线程
+Dialogue: 0,0:52:34.56,0:52:42.18,Chinese,,0,0,0,,所以没有父子关系，任何线程都可以让线程获得其他线程的数据
 Dialogue: 0,0:52:43.74,0:52:45.76,English,,0,0,0,,Whether they created those threads or not
 Dialogue: 0,0:52:43.74,0:52:45.76,Chinese,,0,0,0,,他们是否创建了这些线程
 Dialogue: 0,0:52:46.44,0:52:49.34,English,,0,0,0,,Okay so you don't have the strict parent-child hierarchy
-Dialogue: 0,0:52:46.44,0:52:49.34,Chinese,,0,0,0,,好的，所以你没有严格的父子层次结构
+Dialogue: 0,0:52:46.44,0:52:49.34,Chinese,,0,0,0,,所以你没有严格的父子层次结构
 Dialogue: 0,0:52:50.48,0:52:59.90,English,,0,0,0,,Pthread_create creates a thread that executes the thread routine in this third argument
-Dialogue: 0,0:52:50.48,0:52:59.90,Chinese,,0,0,0,, Pthread_create 创建一个线程，在第三个参数中执行线程例程
+Dialogue: 0,0:52:50.48,0:52:59.90,Chinese,,0,0,0,, Pthread_create 创建一个线程，其中第三个参数是线程例程
 Dialogue: 0,0:53:01.12,0:53:09.14,English,,0,0,0,,And returns the thread id of that thread in the address and the integer pointed at by the first argument
-Dialogue: 0,0:53:01.12,0:53:09.14,Chinese,,0,0,0,,并返回地址中该线程的线程 ID 和第一个参数指向的整数
+Dialogue: 0,0:53:01.12,0:53:09.14,Chinese,,0,0,0,,并返回地址中该线程的线程 ID 就是第一个参数，一个指向的整数的指针
 Dialogue: 0,0:53:10.82,0:53:18.42,English,,0,0,0,,The second argument is set up there's ways to set attributes of threads
 Dialogue: 0,0:53:10.82,0:53:18.42,Chinese,,0,0,0,,第二个参数设置有设置线程属性的方法
 Dialogue: 0,0:53:19.20,0:53:24.82,English,,0,0,0,,That are beyond the scope of this course and will always just have those no
@@ -1179,7 +1177,7 @@ Dialogue: 0,0:53:33.92,0:53:37.56,Chinese,,0,0,0,,好的，所以在这种情况
 Dialogue: 0,0:53:38.26,0:53:42.08,English,,0,0,0,,That's called thread with no arguments
 Dialogue: 0,0:53:38.26,0:53:42.08,Chinese,,0,0,0,,这被称为没有参数的线程
 Dialogue: 0,0:53:44.24,0:53:47.34,English,,0,0,0,,And then our thread routine just prints out hello world
-Dialogue: 0,0:53:44.24,0:53:47.34,Chinese,,0,0,0,,然后我们的线程例程就会打印出 hello  w orld
+Dialogue: 0,0:53:44.24,0:53:47.34,Chinese,,0,0,0,,然后我们的线程例程就会打印出 hello  world
 Dialogue: 0,0:53:48.08,0:53:52.14,English,,0,0,0,,And then it returns in this case it doesn't return anything so it returns no
 Dialogue: 0,0:53:48.08,0:53:52.14,Chinese,,0,0,0,,然后它返回在这种情况下它不返回任何东西，所以它返回否
 Dialogue: 0,0:53:53.04,0:53:57.82,English,,0,0,0,,But if we wanted to return something to the calling program
@@ -1187,35 +1185,35 @@ Dialogue: 0,0:53:53.04,0:53:57.82,Chinese,,0,0,0,,但是如果我们想要将某
 Dialogue: 0,0:53:58.26,0:54:03.82,English,,0,0,0,,We could have returned something a pointer to some generic object okay
 Dialogue: 0,0:53:58.26,0:54:03.82,Chinese,,0,0,0,,我们本可以返回指向某个通用对象的指针
 Dialogue: 0,0:54:11.40,0:54:17.62,English,,0,0,0,,Okay so the thread id the thread attributes are null that the thread routine the thread arguments are void *p
-Dialogue: 0,0:54:11.40,0:54:17.62,Chinese,,0,0,0,,好的，线程属性的线程 id 为 null ，线程参数为v oid  *  p 的线程例程
-Dialogue: 0,0:54:18.24,0:54:23.60,English,,0,0,0,,And the return value is a void double
-Dialogue: 0,0:54:18.24,0:54:23.60,Chinese,,0,0,0,,并且返回值是v oid double
+Dialogue: 0,0:54:11.40,0:54:17.62,Chinese,,0,0,0,,这是线程 id，这是线程 null，线程例程，线程参数 void  *p 
+Dialogue: 0,0:54:18.24,0:54:23.64,English,,0,0,0,,And the return value is a void **
+Dialogue: 0,0:54:18.24,0:54:23.64,Chinese,,0,0,0,,并且返回值是 void **
 Dialogue: 0,0:54:23.64,0:54:26.40,English,,0,0,0,,So it's a pointer to the pointer that you want to return
 Dialogue: 0,0:54:23.64,0:54:26.40,Chinese,,0,0,0,,所以它是指向要返回的指针的指针
 Dialogue: 0,0:54:29.44,0:54:32.18,English,,0,0,0,,Okay all right so let's look at what happens when we execute hello world
-Dialogue: 0,0:54:29.44,0:54:32.18,Chinese,,0,0,0,,好吧好吧让我们来看看当我们执行 hello  w orld 时会发生什么
+Dialogue: 0,0:54:29.44,0:54:32.18,Chinese,,0,0,0,,让我们来看看当我们执行 hello  world 时会发生什么
 Dialogue: 0,0:54:33.26,0:54:36.04,English,,0,0,0,,So the main thread runs for a while
 Dialogue: 0,0:54:33.26,0:54:36.04,Chinese,,0,0,0,,所以主线程运行了一段时间
 Dialogue: 0,0:54:37.94,0:54:39.74,English,,0,0,0,,Then it calls pthread_create
 Dialogue: 0,0:54:37.94,0:54:39.74,Chinese,,0,0,0,,然后它调用 pthread_create
 Dialogue: 0,0:54:42.14,0:54:45.90,English,,0,0,0,,Which creates the peer thread which now is a concurrent flow that's running
 Dialogue: 0,0:54:42.14,0:54:45.90,Chinese,,0,0,0,,这创建了对等线程，该线程现在是正在运行的并发流
-Dialogue: 0,0:54:46.38,0:54:53.86,English,,0,0,0,,Once the pthread create returns then we're running two concurrent flows or running the main thread
-Dialogue: 0,0:54:46.38,0:54:53.86,Chinese,,0,0,0,,一旦 pthread 创建返回，那么我们将运行两个并发流或运行主线程
-Dialogue: 0,0:54:54.64,0:54:57.10,English,,0,0,0,,And we're running the peer thread
-Dialogue: 0,0:54:54.64,0:54:57.10,Chinese,,0,0,0,,我们正在运行对等线程
+Dialogue: 0,0:54:46.38,0:54:52.66,English,,0,0,0,,Once the pthread create returns then we're running two concurrent flows 
+Dialogue: 0,0:54:46.38,0:54:52.66,Chinese,,0,0,0,,一旦 pthread 创建返回，那么我们将运行两个并发流
+Dialogue: 0,0:54:52.66,0:54:57.10,English,,0,0,0,,We're running the main thread and we're running the peer thread
+Dialogue: 0,0:54:52.66,0:54:57.10,Chinese,,0,0,0,,我们要么执行主线程，要么执行对等线程
 Dialogue: 0,0:55:02.04,0:55:08.40,English,,0,0,0,,And so in this case hello world waits for the peer thread to finish by calling pthread_join
-Dialogue: 0,0:55:02.04,0:55:08.40,Chinese,,0,0,0,,所以在这种情况下， hello  w orld 通过调用 pthread_join 等待对等线程完成
+Dialogue: 0,0:55:02.04,0:55:08.40,Chinese,,0,0,0,,所以在这种情况下，hello world 通过调用 pthread_join 等待对等线程完成
 Dialogue: 0,0:55:11.44,0:55:16.52,English,,0,0,0,,The peer thread after the calls it's printf it returns
 Dialogue: 0,0:55:11.44,0:55:16.52,Chinese,,0,0,0,,调用它之后的对等线程返回它的 printf
 Dialogue: 0,0:55:18.04,0:55:26.76,English,,0,0,0,,No which terminates the thread at that point the pthread_join returns and the main thread continues
 Dialogue: 0,0:55:18.04,0:55:26.76,Chinese,,0,0,0,,否则在该点终止线程 pthread_join 返回并且主线程继续
 Dialogue: 0,0:55:31.16,0:55:40.32,English,,0,0,0,,Okay so using these create this create function how would we write a thread based concurrent echo server
-Dialogue: 0,0:55:31.16,0:55:40.32,Chinese,,0,0,0,,好的，所以使用这些创建这个创建函数我们如何编写基于线程的并发 echo 服务器
+Dialogue: 0,0:55:31.16,0:55:40.32,Chinese,,0,0,0,,所以使用这种方式我们如何编写基于线程的并发 echo 服务器
 Dialogue: 0,0:55:41.14,0:55:44.58,English,,0,0,0,,And again it's very similar to the way we did it with the process based design
-Dialogue: 0,0:55:41.14,0:55:44.58,Chinese,,0,0,0,,而且它与我们使用基于流程的设计的方式非常相似
+Dialogue: 0,0:55:41.14,0:55:44.58,Chinese,,0,0,0,,而且它与我们使用基于进程的设计的方式非常相似
 Dialogue: 0,0:55:49.82,0:55:58.08,English,,0,0,0,,So we call we acquire a listening descriptor by calling open_listenfd function just as before
-Dialogue: 0,0:55:49.82,0:55:58.08,Chinese,,0,0,0,,所以我们称之为通过像以前一样调用 open_listenfd 函数来获取监听描述符
+Dialogue: 0,0:55:49.82,0:55:58.08,Chinese,,0,0,0,,所以我们像以前一样调用 open_listenfd 函数来获取监听描述符
 Dialogue: 0,0:55:59.06,0:56:01.22,English,,0,0,0,,And then inside this infinite server loop
 Dialogue: 0,0:55:59.06,0:56:01.22,Chinese,,0,0,0,,然后在这个无限的服务器循环里面
 Dialogue: 0,0:56:04.00,0:56:06.44,English,,0,0,0,,We get the size of the
@@ -1232,12 +1230,12 @@ Dialogue: 0,0:56:35.70,0:56:41.34,English,,0,0,0,,And we're going to...this is a
 Dialogue: 0,0:56:35.70,0:56:41.34,Chinese,,0,0,0,,而且我们要 ...... 这对于避免恶劣的竞争条件实际上非常重要
 Dialogue: 0,0:56:41.98,0:56:43.28,English,,0,0,0,,They'll show you in a second
 Dialogue: 0,0:56:41.98,0:56:43.28,Chinese,,0,0,0,,他们会在一秒钟内告诉你
-Dialogue: 0,0:56:45.46,0:56:52.84,English,,0,0,0,,So now we call except with our listening descriptor and clientaddr and clientlen just like before
-Dialogue: 0,0:56:45.46,0:56:52.84,Chinese,,0,0,0,,所以现在我们调用除了我们的侦听描述符和 clientaddr 以及 clientlen 之前就像之前一样
+Dialogue: 0,0:56:45.46,0:56:52.84,English,,0,0,0,,So now we call accept with our listening descriptor and clientaddr and clientlen just like before
+Dialogue: 0,0:56:45.46,0:56:52.84,Chinese,,0,0,0,,所以现在我们调用accept 函数传递监听描述符和 clientaddr 以及 clientlen，和之前一样
 Dialogue: 0,0:56:53.86,0:57:03.62,English,,0,0,0,,And except returns the connected descriptor and then we dereference this connected descriptor pointer
 Dialogue: 0,0:56:53.86,0:57:03.62,Chinese,,0,0,0,,除了返回连接的描述符，然后我们取消引用这个连接的描述符指针
-Dialogue: 0,0:57:04.02,0:57:09.56,English,,0,0,0,,And so and store that the value returned by except in this location in the heap
-Dialogue: 0,0:57:04.02,0:57:09.56,Chinese,,0,0,0,,所以并将除了在此位置之外返回的值存储在堆中
+Dialogue: 0,0:57:04.02,0:57:09.56,English,,0,0,0,,And so and store that the value returned by accept in this location in the heap
+Dialogue: 0,0:57:04.02,0:57:09.56,Chinese,,0,0,0,,所以并将返回的值保存在存储堆中
 Dialogue: 0,0:57:11.38,0:57:13.06,English,,0,0,0,,And then we call pthread_create
 Dialogue: 0,0:57:11.38,0:57:13.06,Chinese,,0,0,0,,然后我们调用 pthread_create
 Dialogue: 0,0:57:15.24,0:57:17.08,English,,0,0,0,,By giving it the name of our thread routine
@@ -1249,7 +1247,7 @@ Dialogue: 0,0:57:23.92,0:57:27.50,Chinese,,0,0,0,,以及指向连接文件描述
 Dialogue: 0,0:57:29.66,0:57:34.60,English,,0,0,0,,Okay now a client which a client which a thread routine then will use to interact with the client
 Dialogue: 0,0:57:29.66,0:57:34.60,Chinese,,0,0,0,,现在好了一个客户端，一个客户端，然后一个线程例程将用来与客户端进行交互
 Dialogue: 0,0:57:37.26,0:57:44.30,English,,0,0,0,,Okay so the thread routine dereferences the argument a member is a pointer to a connected file descriptor
-Dialogue: 0,0:57:37.26,0:57:44.30,Chinese,,0,0,0,,好的，所以线程例程取消引用参数，成员是指向连接文件描述符的指针
+Dialogue: 0,0:57:37.26,0:57:44.30,Chinese,,0,0,0,,所以线程例程取消引用参数，成员是指向连接文件描述符的指针
 Dialogue: 0,0:57:44.36,0:57:51.52,English,,0,0,0,,So it dereferences that pointer to get the to get the actual integer connected descriptor
 Dialogue: 0,0:57:44.36,0:57:51.52,Chinese,,0,0,0,,所以它取消引用指针来获取实际的整数连接描述符
 Dialogue: 0,0:57:54.68,0:57:56.86,English,,0,0,0,,And then it detaches the thread
@@ -1275,7 +1273,7 @@ Dialogue: 0,0:58:46.56,0:58:51.52,Chinese,,0,0,0,,恢复与该线程关联的资
 Dialogue: 0,0:58:52.14,0:58:54.70,English,,0,0,0,,So in this case we're going to just detach this thread
 Dialogue: 0,0:58:52.14,0:58:54.70,Chinese,,0,0,0,,所以在这种情况下，我们将分离这个线程
 Dialogue: 0,0:58:54.70,0:59:00.26,English,,0,0,0,,So we're not to worry about reaping it when it finishes
-Dialogue: 0,0:58:54.70,0:59:00.26,Chinese,,0,0,0,,所以我们不要担心它完成后会收获它
+Dialogue: 0,0:58:54.70,0:59:00.26,Chinese,,0,0,0,,所以我们不要担心它完成后会回收它
 Dialogue: 0,0:59:01.98,0:59:06.04,English,,0,0,0,,And then we're going to free this memory that was malloc
 Dialogue: 0,0:59:01.98,0:59:06.04,Chinese,,0,0,0,,然后我们将释放这个 malloc 内存
 Dialogue: 0,0:59:06.16,0:59:12.90,English,,0,0,0,,So this is important we have to free this memory that was malloc by the main thread in order to avoid a memory leak
@@ -1295,7 +1293,7 @@ Dialogue: 0,0:59:52.88,0:59:59.28,Chinese,,0,0,0,,然后我们为每个客户端
 Dialogue: 0,1:00:00.14,1:00:04.34,English,,0,0,0,,Using the connected descriptor that was passed in when we created the thread
 Dialogue: 0,1:00:00.14,1:00:04.34,Chinese,,0,0,0,,使用我们创建线程时传入的连接描述符
 Dialogue: 0,1:00:05.56,1:00:15.80,English,,0,0,0,,And then each thread has its own since it has its own stack it has separate space for its local variables
-Dialogue: 0,1:00:05.56,1:00:15.80,Chinese,,0,0,0,,然后每个线程都有自己的，因为它有自己的堆栈，它的局部变量有独立的空间
+Dialogue: 0,1:00:05.56,1:00:15.80,Chinese,,0,0,0,,然后每个线程都有自己的堆栈，局部变量有独立的空间
 Dialogue: 0,1:00:16.68,1:00:19.86,English,,0,0,0,,And this is really the powerful thing about threads
 Dialogue: 0,1:00:16.68,1:00:19.86,Chinese,,0,0,0,,这真的是关于线程的强大功能
 Dialogue: 0,1:00:19.86,1:00:26.98,English,,0,0,0,,Now we can with these things they by declaring these local variables we can
@@ -1305,6 +1303,7 @@ Dialogue: 0,1:00:28.28,1:00:31.64,Chinese,,0,0,0,,我们可以创建不会相互
 Dialogue: 0,1:00:32.00,1:00:33.42,English,,0,0,0,,It won't and can run independently yes
 Dialogue: 0,1:00:32.00,1:00:33.42,Chinese,,0,0,0,,它不会也可以独立运行是的
 Dialogue: 0,1:00:33.42,1:00:43.16,English,,0,0,0,,[student speaking]
+Dialogue: 0,1:00:33.42,1:00:43.16,Chinese,,0,0,0,,[同学提问]
 Dialogue: 0,1:00:43.16,1:00:46.54,English,,0,0,0,,I guess yeah the question is there any time you wouldn't want to run detached
 Dialogue: 0,1:00:43.16,1:00:46.54,Chinese,,0,0,0,,我想是的，问题是，任何时候你都不想分开运行
 Dialogue: 0,1:00:48.58,1:00:53.20,English,,0,0,0,,So when you run detached you give up the power to kill other threads so
@@ -1328,7 +1327,7 @@ Dialogue: 0,1:01:26.84,1:01:28.70,Chinese,,0,0,0,,而且你不需要其他线程
 Dialogue: 0,1:01:29.32,1:01:31.50,English,,0,0,0,,So you might just want to kill those threads
 Dialogue: 0,1:01:29.32,1:01:31.50,Chinese,,0,0,0,,所以你可能只想杀死那些线程
 Dialogue: 0,1:01:33.76,1:01:39.26,English,,0,0,0,,But it's yeah it's hard to come up with a really compelling reason
-Dialogue: 0,1:01:33.76,1:01:39.26,Chinese,,0,0,0,,但是，是的，很难找到一个非常令人信服的理由
+Dialogue: 0,1:01:33.76,1:01:39.26,Chinese,,0,0,0,,但是，很难找到一个非常令人信服的理由
 Dialogue: 0,1:01:47.20,1:01:50.84,English,,0,0,0,,Okay so there's a few things to think about when you're writing thread based servers
 Dialogue: 0,1:01:47.20,1:01:50.84,Chinese,,0,0,0,,好吧，当你编写基于线程的服务器时，需要考虑一些事项
 Dialogue: 0,1:01:50.88,1:01:55.56,English,,0,0,0,,So the first is that yet you need to run detach to avoid potential memory leaks
