@@ -979,7 +979,7 @@ Dialogue: 0,0:48:57.74,0:49:03.38,Chinese,,0,0,0,,但是你们必须知道代码
 Dialogue: 0,0:49:04.00,0:49:13.28,English,,0,0,0,,And so this is relying the attack is relying on the fact that it can somehow predict what the this address of the buffer is
 Dialogue: 0,0:49:04.00,0:49:13.28,Chinese,,0,0,0,,这个攻击必须要预测到缓冲区的地址
 Dialogue: 0,0:49:14.36,0:49:18.04,English,,0,0,0,,And so that it can store it in the right part of the string
-Dialogue: 0,0:49:14.36,0:49:18.04,Chinese,,0,0,0,,
+Dialogue: 0,0:49:14.36,0:49:18.04,Chinese,,0,0,0,,这样它才能储存正确的那一部分字符串
 Dialogue: 0,0:49:18.16,0:49:22.98,English,,0,0,0,,Put it encode it in the right part of the string so it will show up where the return pointer is supposed to be
 Dialogue: 0,0:49:14.36,0:49:22.98,Chinese,,0,0,0,,然后将编码后的字符串放在正确的位置并让它出现在返回指针的位置上
 Dialogue: 0,0:49:24.36,0:49:26.52,English,,0,0,0,,And and have it jump to that location
@@ -1381,11 +1381,11 @@ Dialogue: 0,1:10:43.40,1:10:52.16,Chinese,,0,0,0,,canary 仍然可以检测到�
 Dialogue: 0,1:10:52.16,1:10:54.82,English,,0,0,0,,So in your attack lab for example
 Dialogue: 0,1:10:52.16,1:10:54.82,Chinese,,0,0,0,,所以在你们的 attack lab 中
 Dialogue: 0,1:10:55.22,1:11:00.68,English,,0,0,0,,We've carefully compiled the code to make it vulnerable to these attacks
-Dialogue: 0,1:10:55.22,1:11:00.68,Chinese,,0,0,0,,我么已经使代码更容易受到攻击
+Dialogue: 0,1:10:55.22,1:11:00.68,Chinese,,0,0,0,,我们已经使代码更容易受到攻击
 Dialogue: 0,1:11:01.62,1:11:05.16,English,,0,0,0,,Otherwise it would be a lot harder lab
 Dialogue: 0,1:11:01.62,1:11:05.16,Chinese,,0,0,0,,否则这个 lab 就会很难
 Dialogue: 0,1:11:05.78,1:11:12.34,English,,0,0,0,,Like if you could do this you could probably go into the dark world and be very successful
-Dialogue: 0,1:11:05.78,1:11:12.34,Chinese,,0,0,0,,并且如果你们能完成这个实验，你们就会进入黑暗世界
+Dialogue: 0,1:11:05.78,1:11:12.34,Chinese,,0,0,0,,并且如果你们能完成这个实验，你们就可以进入黑客的世界并且能混的很成功
 Dialogue: 0,1:11:15.34,1:11:21.48,English,,0,0,0,,So we're actually sort of exposing the vulnerability
 Dialogue: 0,1:11:15.34,1:11:21.48,Chinese,,0,0,0,,所以我们已经将问题都暴露了出来
 Dialogue: 0,1:11:21.48,1:11:26.22,English,,0,0,0,,But in the first part of the lab you're using code injection attacks
