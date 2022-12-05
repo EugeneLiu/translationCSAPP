@@ -1555,7 +1555,7 @@ Dialogue: 0,1:10:15.38,1:10:20.26,Chinese,,0,0,0,,在矩阵乘法中，我们正
 Dialogue: 0,1:10:21.30,1:10:24.96,English,,0,0,0,,But we didn't really do anything to improve the temporal locality
 Dialogue: 0,1:10:21.30,1:10:24.96,Chinese,,0,0,0,,但我们并没有真正做任何改善时间局部性的事情
 Dialogue: 0,1:10:25.58,1:10:28.58,English,,0,0,0,,To improve temporal locality you have to use a technique called blocking
-Dialogue: 0,1:10:25.58,1:10:28.58,Chinese,,0,0,0,,要改善时间局部性，你必须使用称为阻塞的技术
+Dialogue: 0,1:10:25.58,1:10:28.58,Chinese,,0,0,0,,要改善时间局部性，你必须使用称为分块的技术
 Dialogue: 0,1:10:29.50,1:10:34.78,English,,0,0,0,,And this is important to understand because you're going to need it in your cache lab for one thing
 Dialogue: 0,1:10:29.50,1:10:34.78,Chinese,,0,0,0,,这一点很重要，因为你需要在缓存实验室中完成一件事
 Dialogue: 0,1:10:35.18,1:10:37.02,English,,0,0,0,,But it's also a very general technique
@@ -1581,7 +1581,7 @@ Dialogue: 0,1:11:16.92,1:11:21.66,Chinese,,0,0,0,,然后我将转到该行的j�
 Dialogue: 0,1:11:27.50,1:11:30.08,English,,0,0,0,,All right so let's...but it's the same idea as before
 Dialogue: 0,1:11:27.50,1:11:30.08,Chinese,,0,0,0,,好吧，让我们......但它和以前一样
 Dialogue: 0,1:11:31.04,1:11:38.16,English,,0,0,0,,So let's look at the miss rate for this, this is just an original this is an original unblocked matrix multiplied
-Dialogue: 0,1:11:31.04,1:11:38.16,Chinese,,0,0,0,,因此，让我们看一下这个未命中率，这只是一个原始的，这是一个原始的无阻塞矩阵相乘
+Dialogue: 0,1:11:31.04,1:11:38.16,Chinese,,0,0,0,,因此，让我们看一下这个未命中率，这只是一个原始的，这是一个原始的无分块矩阵相乘
 Dialogue: 0,1:11:39.34,1:11:44.78,English,,0,0,0,,So what we're doing is we're computing c[0][0]
 Dialogue: 0,1:11:39.34,1:11:44.78,Chinese,,0,0,0,,所以我们正在做的是我们计算c [0] [0]
 Dialogue: 0,1:11:45.46,1:11:50.24,English,,0,0,0,,And we're doing that by taking an inner product of row 0 and column 0
@@ -1619,7 +1619,7 @@ Dialogue: 0,1:13:11.24,1:13:18.30,Chinese,,0,0,0,,好的，总失误次数是我
 Dialogue: 0,1:13:18.94,1:13:23.20,English,,0,0,0,,Okay so our total misses is 9n/8*n^3
 Dialogue: 0,1:13:18.94,1:13:23.20,Chinese,,0,0,0,,好的，所以我们的总失误是9n / 8 * n ^ 3
 Dialogue: 0,1:13:25.62,1:13:28.38,English,,0,0,0,,Now let's rewrite the code to use blocking and so
-Dialogue: 0,1:13:25.62,1:13:28.38,Chinese,,0,0,0,,现在让我们重写代码以使用阻塞等等
+Dialogue: 0,1:13:25.62,1:13:28.38,Chinese,,0,0,0,,现在让我们重写代码以使用分块等等
 Dialogue: 0,1:13:30.44,1:13:31.94,English,,0,0,0,,You can look at this code later
 Dialogue: 0,1:13:30.44,1:13:31.94,Chinese,,0,0,0,,你可以稍后查看此代码
 Dialogue: 0,1:13:32.40,1:13:36.78,English,,0,0,0,,But it's much simpler just to look at it pictorially
@@ -1671,11 +1671,11 @@ Dialogue: 0,1:16:01.56,1:16:04.06,Chinese,,0,0,0,,好的，是（n / B）^ 2
 Dialogue: 0,1:16:05.80,1:16:10.20,English,,0,0,0,,So that all works out too it's still in n^3*(1/4B)
 Dialogue: 0,1:16:05.80,1:16:10.20,Chinese,,0,0,0,,这样一切都有效，它仍然在n ^ 3 *（1 / 4B）
 Dialogue: 0,1:16:12.86,1:16:19.48,English,,0,0,0,,So in our first case with no blocking although that the number of misses is asymptotically the same
-Dialogue: 0,1:16:12.86,1:16:19.48,Chinese,,0,0,0,,所以在我们的第一个没有阻塞的情况下，虽然未命中的数量是渐近相同的
+Dialogue: 0,1:16:12.86,1:16:19.48,Chinese,,0,0,0,,所以在我们的第一个没有分块的情况下，虽然未命中的数量是渐近相同的
 Dialogue: 0,1:16:20.06,1:16:25.40,English,,0,0,0,,But there's this pretty, this big difference in the constant factor so for no blocking it's 9/8
-Dialogue: 0,1:16:20.06,1:16:25.40,Chinese,,0,0,0,,但是有这个漂亮的，恒定因素的这个巨大差异，所以没有阻止它是9/8
+Dialogue: 0,1:16:20.06,1:16:25.40,Chinese,,0,0,0,,但是有这个漂亮的，恒定因素的这个巨大差异，所以没有分块它是9/8
 Dialogue: 0,1:16:26.26,1:16:31.08,English,,0,0,0,,For blocking it's 1/4b we're now we can we can just sort of drive that down
-Dialogue: 0,1:16:26.26,1:16:31.08,Chinese,,0,0,0,,为了阻止它的1 / 4b我们现在我们可以把它驱逐下来
+Dialogue: 0,1:16:26.26,1:16:31.08,Chinese,,0,0,0,,对于分块来说它是1 / 4b我们现在我们可以把它驱逐下来
 Dialogue: 0,1:16:31.52,1:16:36.38,English,,0,0,0,,By by increasing the block size so this gives us some control
 Dialogue: 0,1:16:31.52,1:16:36.38,Chinese,,0,0,0,,通过增加块大小，这给了我们一些控制
 Dialogue: 0,1:16:39.02,1:16:44.68,English,,0,0,0,,But we still we have...we can't make the block the blocks too big because we need to fit three blocks
@@ -1685,7 +1685,7 @@ Dialogue: 0,1:16:45.44,1:16:47.46,Chinese,,0,0,0,,在任何一个时间点的缓
 Dialogue: 0,1:16:50.44,1:16:52.80,English,,0,0,0,,Ok so the reason this is a dramatic difference right
 Dialogue: 0,1:16:50.44,1:16:52.80,Chinese,,0,0,0,,好吧，这是一个戏剧性的差异吧
 Dialogue: 0,1:16:54.34,1:16:59.80,English,,0,0,0,,And the reason for this is that by doing the blocking we're sort of exploiting
-Dialogue: 0,1:16:54.34,1:16:59.80,Chinese,,0,0,0,,其原因在于，通过阻止我们就是在利用
+Dialogue: 0,1:16:54.34,1:16:59.80,Chinese,,0,0,0,,其原因在于，通过分块我们就是在利用
 Dialogue: 0,1:17:00.54,1:17:04.74,English,,0,0,0,,Once we load a block into memory we're sort of reusing its items over and over again
 Dialogue: 0,1:17:00.54,1:17:04.74,Chinese,,0,0,0,,一旦我们将一个块加载到内存中，我们就会一遍又一遍地重复使用它
 Dialogue: 0,1:17:04.74,1:17:06.74,English,,0,0,0,,So we're exploiting more temporal locality
