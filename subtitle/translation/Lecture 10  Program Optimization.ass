@@ -1146,7 +1146,7 @@ Dialogue: 0,0:49:42.94,0:49:46.46,Chinese,,0,0,0,,但它们采用了流水线的
 Dialogue: 0,0:49:47.12,0:49:48.44,English,,0,0,0,,Just one cycle apart
 Dialogue: 0,0:49:47.12,0:49:48.44,Chinese,,0,0,0,,只需一个时钟周期
 Dialogue: 0,0:49:48.92,0:49:55.74,English,,0,0,0,,The only different ones that are does you'll notice the division is both very slow and it's not pipelined
-Dialogue: 0,0:49:48.92,0:49:55.74,Chinese,,0,0,0,,注意到，乘法操作非常慢，并且没有流水线
+Dialogue: 0,0:49:48.92,0:49:55.74,Chinese,,0,0,0,,注意到，除法操作非常慢，并且没有流水线
 Dialogue: 0,0:49:55.74,0:50:01.28,English,,0,0,0,,And division is a very expensive operation on most machines relatively speaking
 Dialogue: 0,0:49:55.74,0:50:01.28,Chinese,,0,0,0,,所以，相对而言，在大多数机器上，除法是一项非常昂贵的操作
 Dialogue: 0,0:50:05.18,0:50:17.90,English,,0,0,0,,So what I claim then is these characteristics then Provide a limit on how fast our program can run our original program
